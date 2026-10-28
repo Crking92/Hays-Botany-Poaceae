@@ -1,0 +1,67 @@
+name: Poaceae comprehensive migration gates (NO deployment)
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/poaceae-comprehensive-migration-gates.yml"
+      - "scripts/audit_poaceae_release_gates.py"
+      - "scripts/build_poaceae_site_preview.py"
+      - "site/**"
+  workflow_dispatch:
+permissions: {contents: read}
+concurrency:
+  group: poaceae-comprehensive-checks
+  cancel-in-progress: false
+jobs:
+  integrity-rights-anatomy-image-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pixel decoder
+        run: python -m pip install "Pillow>=10,<12"
+      - name: Build family preview WITHOUT publishing
+        run: |
+          python scripts/build_poaceae_site_preview.py
+          node --check site/app.js
+      - name: Strict byte identity, denied image, image decoding, license and arrow metadata gates
+        run: |
+          python scripts/audit_poaceae_release_gates.py \
+            --repo . \
+            --site dist \
+            --report qa-report/poaceae-release-gates.json
+      - name: Verify source file count and no publishing configuration
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          root=Path(".")
+          q=json.loads(Path("qa-report/poaceae-release-gates.json").read_text())
+          assert q['integrity']=='PASS'
+          assert not q['releasable']
+          assert q['counts']['copied_files']==1178
+          assert q['counts']['held_files']==224
+          assert q['counts']['images_decoded']==788
+          assert q['counts']['preview_panels']==956
+          assert q['counts']['preview_markers']==1261
+          assert q['counts']['preview_size_bytes']<850_000_000
+          assert not (root/"dist/CNAME").exists()
+          assert not (root/"dist/.nojekyll").exists()
+          print("ALL AUTOMATIC NONDEPLOYED MIGRATION GATES PASSED")
+          PY
+      - name: Upload reports only, never photographic assets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-migration-comprehensive-audit
+          path: |
+            qa-report/poaceae-release-gates.json
+            migration/site-preview-qa.json
+          retention-days: 14
+          if-no-files-found: warn
