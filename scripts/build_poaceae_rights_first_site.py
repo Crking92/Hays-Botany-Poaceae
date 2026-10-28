@@ -31,7 +31,17 @@ def main():
         codes={kind(str(rec.get("license") or "")) for rec in items}
         if len(codes)!=1:reasons["LICENSE_METADATA_CONFLICT"]+=1;continue
         classification=next(iter(codes))
-        if classification not in {"CC0","CC_BY","CC_BY_SA"}:
+        # Narrow provenance exception: Jim Conrad explicitly dedicates HIS OWN
+        # Backyard Nature photographs to the public domain. Each exact source
+        # photo record must identify him and a Backyard Nature newsletter page.
+        conrad_pd=(classification=="PUBLIC_DOMAIN_CLAIM" and all(
+            str(rec.get("creator") or "").strip().lower()=="jim conrad"
+            and "backyardnature.net" in str(rec.get("source_page") or "")
+            and "public domain" in str(rec.get("license") or "").lower()
+            and ("copyrite.htm" in str(rec.get("license_url") or "")
+                 or "jim conrad" in str(rec.get("license") or "").lower())
+            for rec in items))
+        if classification not in {"CC0","CC_BY","CC_BY_SA"} and not conrad_pd:
             reasons[classification+"_REVIEW"]+=1;continue
         if not all(str(rec.get("source_page") or "").startswith("https://") for rec in items):
             reasons["NO_HTTPS_SOURCE_PAGE"]+=1;continue
