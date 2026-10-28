@@ -164,6 +164,29 @@ def enrich(root:Path,out:Path):
             related.append({"scientific":label,"species_id":ref,
                             "location":"LOCAL_POACEAE" if ref else "UNIFIED_HUB_REFERENCE",
                             "status":"SOURCE_REFERENCE_ONLY_NOT_NEW_PHOTO_DETERMINATION"})
+        # Preserve every unavailable original panel as an explicitly non-embedded
+        # source/reference link. No uncertain photo pixels are published.
+        unavailable=[]
+        for original_i,panel in enumerate(panels):
+            if original_i in original_to_preview:
+                continue
+            image=panel.get("image_url")
+            source_page=panel.get("source_page")
+            link=""
+            if isinstance(source_page,str) and source_page.startswith("https://"):
+                link=source_page
+            elif isinstance(image,str) and image.startswith("https://"):
+                link=image
+            unavailable.append({
+                "original_panel_index":original_i,
+                "label":norm(panel.get("label")) or "Original comparison photograph",
+                "reason":"External-only reference; image not archived for new site" if
+                    isinstance(image,str) and image.startswith(("https://","http://"))
+                    else "Source photo withheld from public replacement pending rights review",
+                "reference_page":link,
+                "license_status":"NOT_CLEARED_FOR_PUBLIC_EMBED"
+            })
+        lesson["unavailable_references"]=unavailable
         lesson["steps"]=output_steps
         lesson["intro"]=norm((d.get("beginner_learning_path") or {}).get("intro")) or look
         lesson["memory_rule"]=norm((d.get("beginner_learning_path") or {}).get("memory_rule")) or norm(visual.get("memory_rule"))
