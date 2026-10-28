@@ -1,0 +1,26 @@
+name: iNaturalist exact observation-and-photo license check (no deployment)
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/audit_inat_exact_photo_licenses.py','.github/workflows/poaceae-inat-photo-rights.yml']
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false, filter: blob:none}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m pip install requests
+      - name: Query source observation once per second and match individual photo rights
+        run: python scripts/audit_inat_exact_photo_licenses.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: poaceae-inat-exact-photo-rights
+          path: qa-report/inat-exact-photo-license-review.json
+          retention-days: 30
+          if-no-files-found: warn
