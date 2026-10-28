@@ -43,7 +43,10 @@ def run():
             page.locator("#species-detail .learner-step").first.wait_for()
             page.locator("#glossary-open").click()
             page.locator("#all-glossary-dialog").wait_for(state="visible")
-            assert page.locator("#glossary-list .glossary-chip").count()==32
+            assert page.locator("#glossary-list .glossary-chip").count()==156
+            page.locator("#glossary-list .glossary-chip").filter(has_text="Ligule").first.click()
+            page.locator("#term-dialog").wait_for(state="visible")
+            page.locator("#term-close").click()
             page.locator("#all-glossary-close").click()
             page.locator("#all-glossary-dialog").wait_for(state="hidden")
             page.locator("#species-detail figure.photo").first.wait_for(state="visible",timeout=25000)
