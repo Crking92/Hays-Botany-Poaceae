@@ -1,0 +1,26 @@
+name: Poaceae photo provenance and public-use audit (no deployment)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/poaceae-photo-provenance-audit.yml', 'scripts/audit_poaceae_photo_provenance.py']
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false, filter: blob:none}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Reconcile 788 archived image source and licenses
+        run: python scripts/audit_poaceae_photo_provenance.py
+      - name: Save review inventory
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-photo-provenance-review
+          path: qa-report/rights-source-inventory.json
+          retention-days: 30
+          if-no-files-found: warn
