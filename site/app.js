@@ -81,6 +81,13 @@ function photoCard(panel,index,scientific){
  caption.append(txt("strong",panel.label));
  appendParagraph(caption,panel.caption);
  caption.append(txt("span",[panel.creator,panel.license].filter(Boolean).join(" · "),"credit"));
+ if(panel.license_url?.startsWith("https://")){
+   const licenseLink=make("a",{href:panel.license_url,target:"_blank",rel:"noopener noreferrer"});
+   licenseLink.textContent="License terms";
+   caption.append(licenseLink,document.createTextNode(" · "));
+ }
+ if(panel.modifications)caption.append(txt("span","Original source record notes: "+panel.modifications,"credit"));
+ if(markers.length)caption.append(txt("span","Displayed numbering and arrow overlays added by Hays Botany; original source JPEG unchanged.","credit"));
  if(panel.source_page?.startsWith("https://")){
    const a=make("a",{href:panel.source_page,target:"_blank",rel:"noopener noreferrer"});
    a.textContent="Original photo and photographer credit";
