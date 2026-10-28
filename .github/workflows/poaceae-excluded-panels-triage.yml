@@ -1,0 +1,35 @@
+name: Poaceae source-panel exclusion and cross-family dependency triage (NO deployment)
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/poaceae-excluded-panels-triage.yml"
+      - "scripts/triage_poaceae_excluded_panels.py"
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout: |
+            content/taxa/Poaceae
+            migration
+            scripts/triage_poaceae_excluded_panels.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Diagnose lost photo panels without publishing or migrating held media
+        run: python scripts/triage_poaceae_excluded_panels.py
+      - name: Retain review report only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-photo-exclusion-triage
+          path: qa-report/excluded-panel-triage.json
+          if-no-files-found: warn
+          retention-days: 14
