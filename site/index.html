@@ -12,12 +12,16 @@
     <div class="frame">
       <p class="eyebrow">HAYS COUNTY BOTANY · POACEAE</p>
       <h1>Grass Visual Learner</h1>
-      <p class="subhead">Authentic field photographs, diagnostic structures, and genus comparisons.</p>
+      <p class="subhead">Beginner-friendly grass ID, real source photographs, botanical terminology, and field comparisons.</p>
       <nav aria-label="Site navigation"><a href="https://crking92.github.io/Hays-County-Botany/">Original unified learner</a><a href="https://crking92.github.io/Hays-County-Botany/field-id.html">Main Field ID</a><a href="https://crking92.github.io/Hays-County-Botany/quiz.html">Universal quiz</a></nav>
       <p class="notice"><strong>Migration preview — not the public replacement.</strong> The original site remains authoritative. Some photos and comparisons are intentionally absent pending rights review.</p>
     </div>
   </header>
   <main class="frame">
+    <section class="anatomy-basics" aria-label="Grass anatomy introduction">
+      <div><strong>Start with a grass stem:</strong> identify the culm, node, blade, sheath and true ligule. Then follow the flowering head down to a single spikelet.</div>
+      <button type="button" id="glossary-open">Browse 32 grass anatomy terms</button>
+    </section>
     <section aria-label="Search species" class="searchbox">
       <label for="search">Find a grass by scientific or common name</label>
       <input id="search" type="search" autocomplete="off" placeholder="e.g., silver bluestem, Sorghastrum, switchgrass">
@@ -31,6 +35,8 @@
       </article>
     </div>
   </main>
+  <dialog id="term-dialog" aria-label="Botanical glossary definition"><div id="term-body"></div><button id="term-close" type="button">Close definition</button></dialog>
+  <dialog id="all-glossary-dialog" aria-label="Grass vocabulary library"><h2>Grass anatomy glossary</h2><p>Definitions adapted from the original Hays Botany teaching layer.</p><div id="glossary-list" class="glossary-chips"></div><button id="all-glossary-close" type="button">Close glossary</button></dialog>
   <footer class="frame"><p>Glass Root Garden · Hays County Botany project · Source credit and image licenses shown on each photograph. Always verify uncertain IDs using multiple structures.</p></footer>
   <script src="app.js" defer></script>
 </body>
