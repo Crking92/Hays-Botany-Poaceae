@@ -144,6 +144,8 @@ def main():
         dst=out/rel
         dst.parent.mkdir(parents=True,exist_ok=True)
         shutil.copy2(src,dst)
+    from enrich_poaceae_lessons import enrich
+    lesson_stats=enrich(root,out)
     found={f.relative_to(out).as_posix() for f in out.rglob("*") if f.is_file() and f.suffix.lower() in PHOTO_EXTS}
     assert found==allowed,{"missing":sorted(allowed-found)[:5],"unexpected":sorted(found-allowed)[:5]}
     assert not found.intersection(held)
@@ -162,6 +164,7 @@ def main():
        "excluded_panel_references":excluded_panels,
        "species_with_no_safe_local_panels":no_panels,
        "size_bytes":total,
+       "learner_parity":lesson_stats,
        "site_path":"dist",
        "original_main_website_unchanged":True,
        "production_pages_deployed":False,
