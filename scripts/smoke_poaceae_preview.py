@@ -50,6 +50,8 @@ def run():
             page.locator("#all-glossary-close").click()
             page.locator("#all-glossary-dialog").wait_for(state="hidden")
             page.locator("#species-detail figure.photo").first.wait_for(state="visible",timeout=25000)
+            assert page.locator("#species-detail .marker-number").count()>0, "Missing visible numbered anatomy targets"
+            assert page.locator("#species-detail .source-only-references").count()>0, "Missing safe source-only image references"
             assert page.locator("#species-detail .credit").count()>0
             assert page.locator("#species-detail a[href^='https://']").count()>0
             page.locator("#search").fill("Bothriochloa torreyana")
