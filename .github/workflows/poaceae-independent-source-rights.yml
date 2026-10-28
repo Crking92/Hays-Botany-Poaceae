@@ -1,0 +1,28 @@
+name: Independent Commons and iNaturalist source-license check (NO deployment)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/poaceae-independent-source-rights.yml'
+      - 'scripts/verify_poaceae_source_licenses.py'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {filter: blob:none, persist-credentials: false}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m pip install requests
+      - name: Verify exact source metadata without approving uncertain photos
+        run: python scripts/verify_poaceae_source_licenses.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: poaceae-independent-photo-rights-evidence
+          path: qa-report/independent-source-license-results.json
+          retention-days: 30
+          if-no-files-found: warn
