@@ -1,0 +1,41 @@
+{
+  "migration_phase": "Poaceae source transfer - initial staging",
+  "verified_on": "2026-10-28",
+  "source_repo": "Crking92/Hays-County-Botany",
+  "source_pinned_commit": "d5812999ea32d03b873110db1a526e20ac6ea730",
+  "destination_repo": "Crking92/Hays-Botany-Poaceae",
+  "destination_import_commit": "af6166896922601562bdd5622ae8a311320573e5",
+  "git_tree_independent_readback": {
+    "complete_and_untruncated": true,
+    "expected_source_records": 1402,
+    "source_data_files_copied": 390,
+    "conservative_license_candidate_images_copied": 788,
+    "held_source_images_not_copied": 224,
+    "total_files_compared": 1178,
+    "identical_git_blob_sha_and_sizes": 1178,
+    "missing_files": 0,
+    "changed_files": 0,
+    "wrong_source_image_files_in_destination": 0,
+    "extra_files_in_poaceae_folder": 0,
+    "copied_source_bytes": 396846177,
+    "original_source_bytes": 434996996
+  },
+  "source_latest_comparison": {
+    "source_latest_commit_checked": "3b380f7294793282fa1ffce671dc4ab879ba8a71",
+    "commits_after_pin": 1,
+    "changes_within_poaceae_source_folder": 0
+  },
+  "original_repository_and_main_untouched_by_import": true,
+  "website_replaced": false,
+  "github_pages_deployed_for_destination": false,
+  "ready_to_cutover": false,
+  "remaining": [
+    "Review exact rights of 788 photo candidates for publication on new public site",
+    "Reconcile the 224 source-held photos with original archive",
+    "Build family-specific Learner + Field ID pages while preserving original styling and anatomy arrows",
+    "Create explicit cross-family glossary, quiz, and lookalike links to unified main hub",
+    "Run mobile/public photo checks and verify Pages site size",
+    "Perform final source drift and file-by-file reconciliation before any cutover"
+  ],
+  "note": "This is a fully validated file transfer of the eligible subset, not a completed new website; original source canonical plant records were retained byte-exact and original source files remain untouched."
+}
