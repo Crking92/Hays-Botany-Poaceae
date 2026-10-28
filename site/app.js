@@ -9,7 +9,7 @@ const make=(tag,props={})=>{const n=document.createElement(tag);for(const [k,v] 
 const txt=(tag,value,cls)=>{const n=make(tag);if(cls)n.className=cls;n.textContent=esc(value);return n;};
 const text=(node,value)=>node.append(document.createTextNode(esc(value)));
 const appendParagraph=(node,value,cls)=>{if(value){node.append(txt("p",value,cls));}};
-const metadataWarning="Staging only: some photos and look-alike panels have been withheld for rights review. Images and arrows shown here are not a final biological or licensing certification.";
+const metadataWarning="Staging only: photo permissions and arrow landing positions are not fully certified. Original external and restricted references remain available below the gallery as source-only links.";
 function glossaryKeys(){return Object.keys(state.glossary?.terms||{}).sort();}
 function showTerm(key){
  const dialog=$("term-dialog"),data=state.glossary?.terms?.[key];
@@ -125,6 +125,27 @@ function photoGallery(data,root){
  if(!data.panels.length)gallery.append(txt("p","No local licensed-candidate photographs available in this staging copy."));
  data.panels.forEach((p,i)=>gallery.append(photoCard(p,i,data.scientific)));
  root.append(gallery);
+ const references=data.unavailable_references||[];
+ if(references.length){
+   const details=make("details",{className:"source-only-references"});
+   const summary=make("summary");
+   summary.textContent=references.length+" original photo references not embedded (permissions or external sources)";
+   details.append(summary);
+   details.append(txt("p","These original panel references are preserved as research pointers. The images themselves are not copied into the published gallery.","muted"));
+   const ul=make("ul");
+   for(const ref of references){
+     const li=make("li");
+     li.append(txt("strong",ref.label||"Reference photograph"));
+     li.append(txt("span"," — "+ref.reason,"muted"));
+     if(ref.reference_page?.startsWith("https://")){
+       const link=make("a",{href:ref.reference_page,target:"_blank",rel:"noopener noreferrer"});
+       link.textContent="View at original source";
+       li.append(document.createTextNode(" · "),link);
+     }
+     ul.append(li);
+   }
+   details.append(ul);root.append(details);
+ }
 }
 function appendTerms(root,terms){
  const unique=[...new Set(terms||[])];
