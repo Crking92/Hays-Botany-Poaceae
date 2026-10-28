@@ -39,3 +39,12 @@ dialog::backdrop{background:#132b20aa}dialog button[id$="-close"]{margin-top:12p
 @media(max-width:760px){.anatomy-basics{align-items:stretch;flex-direction:column}.step-image{width:105px;flex:0 0 105px}.step-thumb{max-height:95px}.learner-step{gap:9px}.view-switch button{flex:1;padding:9px 5px;font-size:.83rem}}
 
 .source-only-references{background:#f8faf5;border:1px solid var(--border);padding:13px 16px;border-radius:10px;margin:16px 0}.source-only-references summary{font-weight:650;color:#285a42;cursor:pointer}.source-only-references li{padding:7px 2px;border-bottom:1px solid #e6ebe1}.source-only-references li span{font-size:.8rem;display:inline}.source-only-references a{font-size:.82rem;display:inline-block}
+
+/* Numbered photographic arrow targets use true pixel-relative positions; readable on mobile. */
+.marker-number{position:absolute;transform:translate(-50%,-50%);width:24px;height:24px;
+display:flex;justify-content:center;align-items:center;pointer-events:none;
+border-radius:50%;border:2px solid white;box-shadow:0 1px 3px #0008;
+background:#e23f1a;color:white;font-weight:800;font-size:12px;line-height:1;z-index:2}
+ol.marker-list{padding-left:23px;list-style-type:decimal}
+ol.marker-list li{padding:2px 0}
+@media(max-width:600px){.marker-number{width:21px;height:21px;font-size:11px}}
