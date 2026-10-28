@@ -15,7 +15,7 @@ TAXA=[
 ("KR bluestem","Bothriochloa","bothriochloa-ischaemum"),
 ("Sideoats grama","Bouteloua","bouteloua-curtipendula"),
 ("Little bluestem","Schizachyrium","schizachyrium-scoparium"),
-("Big bluestem","Andropogon","andropogon-gerardii"),
+("Big bluestem","Andropogon","andropogon-gerardi"),
 ("Switchgrass","Panicum","panicum-virgatum"),
 ("Common reed","Phragmites","phragmites-australis")
 ]
