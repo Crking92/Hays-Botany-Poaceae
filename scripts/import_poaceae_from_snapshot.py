@@ -146,8 +146,8 @@ def main() -> None:
         status_counts[disposition]+=1
     assert written>0
     assert sum(status_counts.values())==1402
-    assert status_counts["LICENSE_CANDIDATE_IMAGE_COPIED"]==792, status_counts
-    assert status_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]==220, status_counts
+    assert status_counts["LICENSE_CANDIDATE_IMAGE_COPIED"]==788, status_counts
+    assert status_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]==224, status_counts
     assert status_counts["SOURCE_DATA_COPIED"]==390, status_counts
     assert len(record_decisions)==1026
 

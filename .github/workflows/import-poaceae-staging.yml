@@ -55,7 +55,7 @@ jobs:
           test -f destination/migration/poaceae-source-manifest-20261028.json
           echo "PINNED_CHECKOUT_OK"
 
-      - name: Verify ALL 1,402 original files and copy only broadly licensable source photos
+      - name: Verify ALL 1,402 original files and copy only rights-screened source photos
         run: |
           python destination/scripts/import_poaceae_from_snapshot.py \
             --source source-snapshot \
@@ -74,8 +74,8 @@ jobs:
           assert report['file_level_checksum_passed'] and report['no_original_deletion']
           assert len(rows)==1402
           total=sum(1 for x in rows if x['disposition']!='IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY')
-          assert total==1182
-          assert sum(1 for x in rows if x['disposition']=='IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY')==220
+          assert total==1178
+          assert sum(1 for x in rows if x['disposition']=='IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY')==224
           assert sum(x['path'].endswith('/species.json') for x in rows)==112
           assert sum(x['path'].endswith('/genus.json') for x in rows)==53
           assert sum(x['path'].endswith('/family.json') for x in rows)==1
@@ -87,7 +87,7 @@ jobs:
             assert size==item['bytes'],item['path']
           assert not (root/'content/taxa/Poaceae/.github').exists()
           print('STAGED_FILES',len(copied))
-          print('RIGHTS_HELD_IMAGES_NOT_COMMITTED',220)
+          print('RIGHTS_HELD_IMAGES_NOT_COMMITTED',224)
           print('NO_WEBSITE_PUBLISHED')
           PY
 
@@ -103,7 +103,7 @@ jobs:
             echo "NO_STAGING_CHANGES"
             exit 0
           fi
-          git commit -m "Stage 112 grasses and 792 broadly licensed photo candidates from pinned source snapshot"
+          git commit -m "Stage 112 grasses and 788 conservative license photo candidates from pinned source snapshot"
           git pull --rebase origin main
           git push origin HEAD:main
 
