@@ -61,6 +61,8 @@ def main():
                 c.append({"creator":normalize(photo.get("creator")),
                           "license":normalize(photo.get("license")),
                           "source_page":normalize(photo.get("source_page")),
+                          "license_url":normalize(photo.get("license_url")),
+                          "modifications":normalize(photo.get("modifications")),
                           "public_reuse":normalize(photo.get("public_reuse"))})
     assert set(credit_by_path)==allowed, (
       "Every copied candidate image must have at least one exact rights metadata record"
@@ -107,6 +109,9 @@ def main():
                 "creator":meta["creator"],
                 "license":meta["license"],
                 "source_page":meta["source_page"],
+                "license_url":meta["license_url"],
+                "modifications":meta["modifications"],
+                "annotation_note":"Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
                 "markers":markers
             })
             panel_count+=1;marker_count+=len(markers);image_refs.add(rel)
