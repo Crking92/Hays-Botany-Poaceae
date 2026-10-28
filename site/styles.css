@@ -37,3 +37,5 @@
 dialog{border:1px solid #b3c9b4;border-radius:13px;padding:25px;max-width:560px;width:calc(100% - 35px);max-height:85vh;overflow:auto;background:#fffefa;color:var(--ink);box-shadow:0 15px 65px #0003}
 dialog::backdrop{background:#132b20aa}dialog button[id$="-close"]{margin-top:12px;background:var(--forest);color:white;padding:9px 15px;border:0;border-radius:7px;cursor:pointer}
 @media(max-width:760px){.anatomy-basics{align-items:stretch;flex-direction:column}.step-image{width:105px;flex:0 0 105px}.step-thumb{max-height:95px}.learner-step{gap:9px}.view-switch button{flex:1;padding:9px 5px;font-size:.83rem}}
+
+.source-only-references{background:#f8faf5;border:1px solid var(--border);padding:13px 16px;border-radius:10px;margin:16px 0}.source-only-references summary{font-weight:650;color:#285a42;cursor:pointer}.source-only-references li{padding:7px 2px;border-bottom:1px solid #e6ebe1}.source-only-references li span{font-size:.8rem;display:inline}.source-only-references a{font-size:.82rem;display:inline-block}
