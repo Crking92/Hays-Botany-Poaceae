@@ -64,10 +64,10 @@ def main():
             actual=photos.get(entry["photo_id"])
             if not actual:status="PHOTO_NOT_FOUND_IN_OBSERVATION"
             else:
-                old=str(entry["license"] or "").lower().replace(" ","").replace("-","")
-                found=actual.replace("-","")
-                if old.startswith(found) or found in old:status="PHOTO_LICENSE_MATCH"
-                else:status="PHOTO_LICENSE_MISMATCH"
+                from audit_poaceae_photo_provenance import kind
+                expected_bucket=kind(str(entry["license"] or ""))
+                actual_bucket=kind(actual)
+                status="PHOTO_LICENSE_MATCH" if expected_bucket==actual_bucket and actual_bucket!="UNKNOWN_OR_RESTRICTED" else "PHOTO_LICENSE_MISMATCH"
                 entry["live_photo_license"]=actual
         entry["verification"]=status;totals[status]+=1
     result={"total_inat_source_records":len(rows),"unique_observations_queried":len(unique_obs),
