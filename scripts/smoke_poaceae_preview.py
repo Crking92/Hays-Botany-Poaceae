@@ -30,13 +30,14 @@ def run():
             page.locator("#species-list button").first.click()
             page.wait_for_function("document.querySelector('#species-detail h2')?.textContent.length>0",timeout=15000)
             heading=page.locator("#species-detail h2").inner_text()
-            assert page.locator("#species-detail figure.photo").count()>0
+            page.locator("#species-detail figure.photo").first.wait_for(state="visible",timeout=25000)
             assert page.locator("#species-detail .credit").count()>0
             assert page.locator("#species-detail a[href^='https://']").count()>0
             page.locator("#search").fill("Bothriochloa torreyana")
             page.wait_for_function("document.querySelectorAll('#species-list button').length===1",timeout=12000)
             page.locator("#species-list button").first.click()
             page.wait_for_function("document.querySelector('#species-detail h2')?.textContent.length>0",timeout=15000)
+            page.locator("#species-detail figure.photo").first.wait_for(state="visible",timeout=25000)
             panels=page.locator("#species-detail figure.photo").count()
             assert panels>0
             gal=page.locator("#species-detail figure.photo").first
