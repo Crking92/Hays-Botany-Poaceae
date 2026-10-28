@@ -1,0 +1,78 @@
+name: Poaceae Learner dry-run QA (never deploy)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/poaceae-site-preview-qa.yml"
+      - "scripts/build_poaceae_site_preview.py"
+      - "site/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build Poaceae family preview from staging files (NO PAGES DEPLOYMENT)
+        run: |
+          python -m py_compile scripts/build_poaceae_site_preview.py
+          node --check site/app.js
+          python scripts/build_poaceae_site_preview.py
+      - name: Verify photo URLs and sanitized species data do not leak held files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path("dist")
+          report=json.loads(Path("migration/site-preview-qa.json").read_text())
+          ledger=json.loads(Path("migration/source-file-ledger.json").read_text())
+          assert report["stage"]=="UNDEPLOYED_LOCAL_PREVIEW"
+          assert report["species"]==112 and report["genera"]==53
+          assert report["candidate_image_files"]==788
+          assert report["held_source_images_not_published"]==224
+          assert not report["production_pages_deployed"]
+          held={x["path"] for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"}
+          visible=0
+          for f in (root/"data/species").glob("*.json"):
+            doc=json.loads(f.read_text())
+            assert doc["preview_only"]
+            for p in doc["panels"]:
+              assert (root/p["src"]).is_file(),p["src"]
+              assert p["src"] not in held
+              assert not p["src"].startswith("http")
+              assert p["creator"] and p["license"]
+              for m in p.get("markers",[]):
+                assert all(0<=m[k]<=100 for k in ("target_x","target_y","label_x","label_y"))
+              visible+=1
+          assert report["visible_teaching_panels"]==visible
+          assert len(list((root/"data/species").glob("*.json")))==112
+          assert report["size_bytes"]<850000000
+          print("FAMILY_STAGED_QA_PASSED",json.dumps({k:v for k,v in report.items()
+            if k not in ("species_with_no_safe_local_panels",)}))
+          PY
+      - name: Upload only small QA reports and sample data, NOT image archive or public Pages site
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-undeployed-site-qa
+          path: |
+            migration/site-preview-qa.json
+            dist/data/poaceae-index.json
+            dist/data/species/sorghastrum-nutans.json
+            dist/data/species/bothriochloa-torreyana.json
+            dist/index.html
+            dist/styles.css
+            dist/app.js
+          retention-days: 14
+          if-no-files-found: warn
