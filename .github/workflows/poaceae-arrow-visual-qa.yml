@@ -1,0 +1,26 @@
+name: Priority grass actual-photo arrow contact-sheet review (no deployment)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/poaceae-arrow-visual-qa.yml','scripts/poaceae_priority_arrow_contact_sheets.py']
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  sheet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false, filter: blob:none}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m pip install Pillow
+      - name: Inspect actual archived photographic pixels with arrow targets
+        run: python scripts/poaceae_priority_arrow_contact_sheets.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: poaceae-priority-arrow-sheets
+          path: qa-report/arrow-review/
+          retention-days: 30
+          if-no-files-found: warn
