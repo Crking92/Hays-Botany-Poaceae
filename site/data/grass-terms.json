@@ -1,0 +1,363 @@
+{
+  "version": "1.0",
+  "source_commit": "Poaceae learning terms adapted from current unified Hays Botany data/learning-layer.json, October 28 2026",
+  "family_profile": {
+    "common_name": "Grass family",
+    "plain_signature": "Jointed stems and a leaf sheath/collar/ligule lead you to the spikelet—the tiny unit that actually carries the grass flowers.",
+    "look_here_first": "Start at a node, then pull the leaf blade away from the culm and inspect the sheath, collar and ligule. If flowering, isolate one spikelet.",
+    "field_signature": "Usually jointed culms with obvious nodes; leaves with sheath + blade + ligule; reduced flowers arranged as florets inside spikelets with glumes, lemma and palea.",
+    "key_terms": [
+      "culm",
+      "node",
+      "leaf-sheath",
+      "collar",
+      "ligule",
+      "spikelet",
+      "glume",
+      "lemma",
+      "palea",
+      "awn"
+    ],
+    "field_question": "Is there a real node, and what does the collar/ligule look like before I even touch the flower head?",
+    "caveat": "Grass color and general fuzziness are weak ID characters. Use architecture and spikelet parts."
+  },
+  "terms": {
+    "culm": {
+      "term": "Culm",
+      "aliases": [
+        "grass stem"
+      ],
+      "plain": "A culm is the stem of a grass.",
+      "formal": "The aerial stem of a grass, commonly jointed into nodes and internodes.",
+      "where": "Look for the main stem axis running upward between the leaf sheaths.",
+      "why": "Once you can separate culm, node, sheath, blade and ligule, grass structure becomes much easier to read.",
+      "pronunciation": "KULM"
+    },
+    "node": {
+      "term": "Node",
+      "aliases": [
+        "joint",
+        "grass node"
+      ],
+      "plain": "A node is a place on a stem where leaves, buds, or branches arise. On grasses, it often looks like a knuckle or joint.",
+      "formal": "A stem region from which one or more appendages such as leaves or branches arise.",
+      "where": "On a grass, find the joint along the culm. On another plant, follow a leaf stalk or branch back to its attachment point on the stem.",
+      "why": "Nodes help you identify leaf attachment, branching, and the internodes between attachment points; in grasses they also separate the culm segments.",
+      "pronunciation": "NOHD"
+    },
+    "leaf-sheath": {
+      "term": "Leaf sheath",
+      "aliases": [
+        "sheath"
+      ],
+      "plain": "The lower part of a grass leaf that wraps around the stem.",
+      "formal": "The basal, usually tubular or open portion of a leaf surrounding the culm.",
+      "where": "Below the blade, wrapped around the grass stem.",
+      "why": "Sheath characters are part of the standard vegetative grass-ID toolkit.",
+      "pronunciation": "LEEF sheeth"
+    },
+    "collar": {
+      "term": "Collar",
+      "aliases": [
+        "grass collar"
+      ],
+      "plain": "The collar is the band or zone where a grass leaf blade meets the sheath.",
+      "formal": "The external region at the blade-sheath junction, opposite the ligule.",
+      "where": "Look on the outside of the grass leaf where the blade joins the sheath.",
+      "why": "The collar region, together with the ligule and sheath, is one of the first places to check in grass identification.",
+      "pronunciation": "KAH-ler"
+    },
+    "ligule": {
+      "term": "Ligule",
+      "aliases": [
+        "grass ligule"
+      ],
+      "plain": "A tiny membrane, fringe of hairs or similar structure on the inside of a grass leaf where blade meets sheath.",
+      "formal": "An appendage at the adaxial blade-sheath junction in many grasses.",
+      "where": "Inside the leaf collar, between blade and culm.",
+      "why": "Ligule type and length are often species- or genus-level characters.",
+      "pronunciation": "LIG-yool"
+    },
+    "spikelet": {
+      "term": "Spikelet",
+      "aliases": [
+        "grass spikelet"
+      ],
+      "plain": "The small flowering unit you should isolate when identifying a grass.",
+      "formal": "A grass inflorescence unit containing one or more florets, usually subtended by glumes.",
+      "where": "Pick one unit from the grass inflorescence rather than studying the whole panicle at once.",
+      "why": "Most reproductive grass characters live at the spikelet/floret scale.",
+      "pronunciation": "SPYKE-let"
+    },
+    "glume": {
+      "term": "Glume",
+      "aliases": [
+        "glumes"
+      ],
+      "plain": "One of the bracts at the base of many grass spikelets.",
+      "formal": "A sterile bract, commonly one of a basal pair, subtending the florets of a grass spikelet.",
+      "where": "At the outside/base of an isolated spikelet.",
+      "why": "Glume size, veins, keels and awns are important grass characters.",
+      "pronunciation": "GLOOM"
+    },
+    "lemma": {
+      "term": "Lemma",
+      "aliases": [
+        "lemmas"
+      ],
+      "plain": "The outer of the two main bracts enclosing a grass floret.",
+      "formal": "The lower/outer bract of a grass floret, often bearing an awn.",
+      "where": "Inside the glumes, around each floret.",
+      "why": "Lemma shape, texture and awns are central to grass identification.",
+      "pronunciation": "LEM-uh"
+    },
+    "palea": {
+      "term": "Palea",
+      "aliases": [
+        "paleas"
+      ],
+      "plain": "The inner bract paired with the lemma around a grass floret.",
+      "formal": "The upper/inner bract enclosing the grass flower opposite the lemma.",
+      "where": "Inside a floret, tucked against the lemma.",
+      "why": "Lemma + palea define the floret envelope used in technical grass ID.",
+      "pronunciation": "PAY-lee-uh"
+    },
+    "awn": {
+      "term": "Awn",
+      "aliases": [
+        "awns"
+      ],
+      "plain": "An awn is a thin bristle-like extension sticking out from a grass spikelet part, often the lemma.",
+      "formal": "A slender bristle-like appendage, commonly arising from a lemma or glume.",
+      "where": "Look for a stiff or hairlike bristle projecting from a spikelet; it may be straight, bent or twisted.",
+      "why": "Presence, absence, number, length, position and shape of awns can quickly separate similar grasses.",
+      "pronunciation": "AWN"
+    },
+    "rhizome": {
+      "term": "Rhizome",
+      "aliases": [
+        "rhizomatous"
+      ],
+      "plain": "A rhizome is a horizontal stem, usually underground, that can produce roots and new shoots from its nodes.",
+      "formal": "A usually horizontal subterranean stem bearing nodes, buds, and roots.",
+      "where": "When a plant forms a colony, look at exposed or naturally disturbed soil for a thick horizontal stem connecting shoots. Do not dig up plants just to check.",
+      "why": "Recognizing a rhizome explains how many perennials spread and tells you that the underground structure is a stem, not simply a root.",
+      "pronunciation": "RYE-zohm"
+    },
+    "rachis": {
+      "term": "Rachis",
+      "aliases": [
+        "leaf rachis"
+      ],
+      "plain": "The rachis is the main central axis that continues beyond the petiole through a compound leaf and carries the leaflets.",
+      "formal": "A primary axis bearing leaflets, flowers, or other repeated units.",
+      "where": "Start at the leaf base. Follow the petiole outward; once leaflet pairs begin, the continuing central axis is the rachis.",
+      "why": "Distinguishing petiole from rachis makes compound leaves much easier to read and is essential for characters such as a winged rachis.",
+      "pronunciation": "RAY-kis"
+    },
+    "raceme": {
+      "term": "Raceme",
+      "aliases": [
+        "racemose cluster"
+      ],
+      "plain": "A raceme is an unbranched flower cluster with individual flowers on short stalks along one main axis.",
+      "formal": "An indeterminate, unbranched inflorescence bearing pedicellate flowers along an elongated main axis.",
+      "where": "Trace the flower cluster from bottom to top and look for one main axis with separate flower stalks coming off its sides.",
+      "why": "Recognizing a raceme helps separate one common inflorescence architecture from spikes, panicles, umbels and heads.",
+      "pronunciation": "ruh-SEEM"
+    },
+    "sessile": {
+      "term": "Sessile",
+      "aliases": [
+        "sessile leaf"
+      ],
+      "plain": "A sessile leaf attaches directly to the stem without a petiole.",
+      "formal": "Lacking a petiole or stalk.",
+      "where": "Look at the base of the leaf. If the blade reaches the stem directly with no stalk in between, it is sessile.",
+      "why": "Petiole present versus absent is an easy, repeatable character for separating similar plants.",
+      "pronunciation": "SESS-ile"
+    },
+    "glabrous": {
+      "term": "Glabrous",
+      "aliases": [
+        "hairless"
+      ],
+      "plain": "Glabrous means the plant surface has no hairs.",
+      "formal": "Lacking pubescence.",
+      "where": "Inspect the surface under side light and compare it with a nearby hairy surface if possible. A glabrous surface lacks projecting trichomes.",
+      "why": "Hairless versus pubescent is a simple but often decisive species-level character.",
+      "pronunciation": "GLAY-brus"
+    },
+    "pubescent": {
+      "term": "Pubescent",
+      "aliases": [
+        "pubescence",
+        "hairy"
+      ],
+      "plain": "Pubescent means a plant surface is covered with hairs.",
+      "formal": "Bearing trichomes or hairs on a plant surface.",
+      "where": "Use side light or a hand lens on the leaf, stem, bud or fruit. Look for tiny hairs projecting from the surface.",
+      "why": "Hair presence, density, direction and texture can separate species that otherwise look very similar.",
+      "pronunciation": "pyoo-BESS-ent"
+    },
+    "distichous": {
+      "term": "Distichous",
+      "aliases": [
+        "two-ranked"
+      ],
+      "plain": "Distichous means leaves are arranged in two ranks along opposite sides of a stem or twig, forming one broad plane.",
+      "formal": "Arranged in two ranks in a single plane.",
+      "where": "Look down the length of a leafy twig rather than at a single node and see whether the leaves line up into two rows.",
+      "why": "Two-ranked twig architecture is a useful whole-plant clue in elms and several unrelated groups.",
+      "pronunciation": "DIS-tih-kus"
+    },
+    "bract": {
+      "term": "Bract",
+      "aliases": [
+        "floral bract"
+      ],
+      "plain": "A bract is a modified leaf associated with a flower or flower cluster.",
+      "formal": "A foliar organ subtending a flower, branch, or inflorescence.",
+      "where": "Look directly beneath a flower or along the flowering axis for a leaf-like structure that is part of the reproductive display.",
+      "why": "Bracts can be more conspicuous than the true flowers, so learning to separate them prevents major ID mistakes.",
+      "pronunciation": "BRAKT"
+    },
+    "staminate": {
+      "term": "Staminate",
+      "aliases": [
+        "male flower"
+      ],
+      "plain": "A staminate flower functions as male: it has functional stamens and no functional pistil.",
+      "formal": "A unisexual flower bearing functional stamens and lacking a functional gynoecium.",
+      "where": "Look for pollen-bearing anthers and compare the center with a pistillate flower of the same species.",
+      "why": "Recognizing staminate flowers helps you read unisexual plants and understand male-versus-female reproductive roles.",
+      "pronunciation": "STAM-ih-nayt"
+    },
+    "pistillate": {
+      "term": "Pistillate",
+      "aliases": [
+        "female flower"
+      ],
+      "plain": "A pistillate flower functions as female: it has a functional pistil and no functional stamens.",
+      "formal": "A unisexual flower bearing a functional gynoecium and lacking functional stamens.",
+      "where": "Look for the central stigma/style/ovary structure and compare it with a staminate flower of the same species.",
+      "why": "Pistillate flowers develop the fruit after successful pollination.",
+      "pronunciation": "PIS-tih-layt"
+    },
+    "parallel-veined": {
+      "term": "Parallel-veined",
+      "aliases": [
+        "parallel venation"
+      ],
+      "plain": "Parallel-veined leaves have major veins running side by side from near the base toward the tip.",
+      "formal": "Venation in which primary veins course approximately parallel through the blade.",
+      "where": "Hold the leaf flat or to the light and trace several major veins at once.",
+      "why": "Parallel venation strongly supports monocot identification when combined with other characters.",
+      "pronunciation": "PAIR-uh-lel vaynd"
+    },
+    "rosette": {
+      "term": "Rosette",
+      "aliases": [
+        "basal rosette"
+      ],
+      "plain": "A rosette is a tight circular cluster of leaves produced from a very short stem, often close to the ground.",
+      "formal": "A compact radial arrangement of leaves with very short internodes.",
+      "where": "Look at the whole plant from above. The leaves radiate around a central growing point with little visible stem between them.",
+      "why": "Rosette architecture is a powerful first-pass growth-form clue in many unrelated plant groups.",
+      "pronunciation": "roh-ZET"
+    },
+    "corolla": {
+      "term": "Corolla",
+      "aliases": [
+        "petals",
+        "corolla lobes"
+      ],
+      "plain": "The corolla is all of a flower’s petals considered together.",
+      "formal": "The inner, usually showy whorl of the perianth, composed of petals.",
+      "where": "Find the calyx first, then move inward to the usually colored petal tissue. All of that petal tissue together is the corolla.",
+      "why": "Corolla fusion, symmetry, tube length and lobing are major family- and genus-level characters.",
+      "pronunciation": "kuh-ROL-uh"
+    },
+    "panicle": {
+      "aliases": [],
+      "formal": "A compound, branched inflorescence.",
+      "where": "Trace the axis from the base to the branches and then to individual spikelets.",
+      "why": "Compare open panicles with unbranched racemes and several finger-like racemes.",
+      "pronunciation": "",
+      "term": "Panicle",
+      "plain": "A flowering head with branches that may branch again; in grasses, the branches bear spikelets."
+    },
+    "floret": {
+      "aliases": [],
+      "formal": "In grasses, an individual flower with its subtending lemma and palea inside a spikelet.",
+      "where": "Examine a mature spikelet with magnification.",
+      "why": "Floret number and structure separate similar grasses.",
+      "pronunciation": "",
+      "term": "Floret",
+      "plain": "One tiny grass flower enclosed by a lemma and palea."
+    },
+    "tiller": {
+      "aliases": [],
+      "formal": "A vegetative shoot produced from a basal or axillary bud.",
+      "where": "Look where multiple leafy shoots arise around the crown.",
+      "why": "Helps distinguish clump growth from rhizomes and stolons.",
+      "pronunciation": "",
+      "term": "Tiller",
+      "plain": "A new grass shoot growing from near the base of the plant."
+    },
+    "crown": {
+      "aliases": [],
+      "formal": "The proximal shoot region connecting basal nodes, tillers and roots.",
+      "where": "Trace attached stems down to the soil or exposed root system.",
+      "why": "A real crown photograph is different from a view of stems that disappear into vegetation.",
+      "pronunciation": "",
+      "term": "Crown",
+      "plain": "The basal area where grass shoots and roots meet."
+    },
+    "anther": {
+      "aliases": [],
+      "formal": "Pollen-bearing structure of a stamen.",
+      "where": "Often hangs from a grass spikelet during flowering.",
+      "why": "Anthers are not awns, bristles or seeds.",
+      "pronunciation": "",
+      "term": "Anther",
+      "plain": "The pollen-producing part at the end of a stamen."
+    },
+    "stigma": {
+      "aliases": [],
+      "formal": "Receptive tissue of the pistil.",
+      "where": "Look for feathery structures emerging from flowering spikelets.",
+      "why": "Helps recognize an actively flowering grass.",
+      "pronunciation": "",
+      "term": "Stigma",
+      "plain": "The pollen-receiving part of a flower, often feathery in grasses."
+    },
+    "inflorescence": {
+      "aliases": [],
+      "formal": "The arrangement of flowers or spikelets on a flowering axis.",
+      "where": "Photograph the whole flowering head, not just one side branch.",
+      "why": "The overall shape and attachment of branches is a major grass ID trait.",
+      "pronunciation": "",
+      "term": "Inflorescence",
+      "plain": "The entire flowering or seed-bearing cluster."
+    },
+    "internode": {
+      "aliases": [],
+      "formal": "Axis segment between successive nodes.",
+      "where": "Find two visible transverse joints on a culm.",
+      "why": "Separates true nodes from leaf collars.",
+      "pronunciation": "",
+      "term": "Internode",
+      "plain": "The length of stem between two nodes."
+    },
+    "pedicel": {
+      "aliases": [],
+      "formal": "The stalk of a single flower or spikelet.",
+      "where": "Follow a spikelet to its attachment to the axis.",
+      "why": "In Indiangrass, a reduced partner can leave a bare pedicel that must not be mistaken for a complete spikelet.",
+      "pronunciation": "",
+      "term": "Pedicel",
+      "plain": "A small stalk supporting a flower or spikelet."
+    }
+  }
+}
