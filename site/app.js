@@ -58,7 +58,7 @@ function photoCard(panel,index,scientific){
    const svg=document.createElementNS(NS,"svg");
    svg.setAttribute("viewBox","0 0 100 100");svg.setAttribute("preserveAspectRatio","none");
    svg.setAttribute("aria-hidden","true");
-   for(const m of markers){
+   for(const [markerIndex,m] of markers.entries()){
      if(!["target_x","target_y","label_x","label_y"].every(k=>Number.isFinite(m[k])))continue;
      const line=document.createElementNS(NS,"line");
      for(const [k,v] of Object.entries({x1:m.label_x,y1:m.label_y,x2:m.target_x,y2:m.target_y,stroke:"#f34a27","stroke-width":"0.65"}))line.setAttribute(k,v);
@@ -68,6 +68,13 @@ function photoCard(panel,index,scientific){
      svg.append(dot);
    }
    art.append(svg);
+   for(const [markerIndex,m] of markers.entries()){
+      if(!Number.isFinite(m.target_x)||!Number.isFinite(m.target_y))continue;
+      const badge=make("span",{className:"marker-number",title:m.label||"",
+         style:"left:"+m.target_x+"%;top:"+m.target_y+"%;"});
+      badge.textContent=String(markerIndex+1);
+      art.append(badge);
+   }
  }
  fig.append(art);
  const caption=make("figcaption");
@@ -80,7 +87,7 @@ function photoCard(panel,index,scientific){
    caption.append(a);
  }
  if(markers.length){
-   const ul=make("ul",{className:"marker-list"});
+   const ul=make("ol",{className:"marker-list"});
    for(const m of markers)ul.append(txt("li",m.label));
    caption.append(ul);
  }
