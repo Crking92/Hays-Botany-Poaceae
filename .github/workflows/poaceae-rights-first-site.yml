@@ -2,7 +2,7 @@ name: Rights-first grass website strict-subset dry-run (NO deployment)
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/poaceae-rights-first-site.yml','scripts/build_poaceae_rights_first_site.py']
+    paths: ['.github/workflows/poaceae-rights-first-site.yml','scripts/build_poaceae_rights_first_site.py','scripts/smoke_poaceae_preview.py','site/**']
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
