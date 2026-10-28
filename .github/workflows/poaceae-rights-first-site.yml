@@ -1,0 +1,27 @@
+name: Rights-first grass website strict-subset dry-run (NO deployment)
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/poaceae-rights-first-site.yml','scripts/build_poaceae_rights_first_site.py']
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with: {persist-credentials: false, filter: blob:none}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Build full staging learner and more restrictive rights-only site
+        run: |
+          python scripts/build_poaceae_site_preview.py
+          python scripts/build_poaceae_rights_first_site.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: poaceae-strict-rights-first-preview-metadata
+          path: qa-report/rights-first-preview.json
+          retention-days: 30
+          if-no-files-found: warn
