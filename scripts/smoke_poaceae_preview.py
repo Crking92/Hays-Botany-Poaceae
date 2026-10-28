@@ -31,6 +31,21 @@ def run():
             page.wait_for_function("window.location.search.includes('sorghastrum-nutans')",timeout=25000)
             page.wait_for_function("document.querySelector('#species-detail h2')?.textContent.length>0",timeout=15000)
             heading=page.locator("#species-detail h2").inner_text()
+            assert page.locator("#species-detail .learner-step").count()>=6
+            assert page.locator(".view-switch button").count()==3
+            page.locator(".view-switch button").filter(has_text="Learn terms").click()
+            page.locator("#species-detail h3").filter(has_text="Grass anatomy basics").wait_for()
+            assert page.locator("#species-detail .glossary-chip").count()>=10
+            page.locator(".view-switch button").filter(has_text="Field ID").click()
+            page.locator("#species-detail .field-tile").first.wait_for()
+            assert page.locator("#species-detail .field-tile").count()>=3
+            page.locator(".view-switch button").filter(has_text="Learner").click()
+            page.locator("#species-detail .learner-step").first.wait_for()
+            page.locator("#glossary-open").click()
+            page.locator("#all-glossary-dialog").wait_for(state="visible")
+            assert page.locator("#glossary-list .glossary-chip").count()==32
+            page.locator("#all-glossary-close").click()
+            page.locator("#all-glossary-dialog").wait_for(state="hidden")
             page.locator("#species-detail figure.photo").first.wait_for(state="visible",timeout=25000)
             assert page.locator("#species-detail .credit").count()>0
             assert page.locator("#species-detail a[href^='https://']").count()>0
@@ -40,6 +55,7 @@ def run():
             page.wait_for_function("window.location.search.includes('bothriochloa-torreyana')",timeout=25000)
             page.wait_for_function("document.querySelector('#species-detail h2')?.textContent.length>0",timeout=15000)
             page.locator("#species-detail figure.photo").first.wait_for(state="visible",timeout=25000)
+            assert page.locator("#species-detail .learner-step").count()>=7
             panels=page.locator("#species-detail figure.photo").count()
             assert panels>0
             gal=page.locator("#species-detail figure.photo").first
@@ -47,6 +63,15 @@ def run():
             gal.locator("img").evaluate("(img)=>{img.loading='eager';}")
             page.wait_for_function("(()=>{const x=document.querySelector('#species-detail figure.photo img');return x&&x.complete&&x.naturalWidth>0})()",timeout=40000)
             imgdims=gal.locator("img").evaluate("(img)=>[img.naturalWidth,img.naturalHeight]")
+            page.locator("#search").fill("Bouteloua curtipendula")
+            page.wait_for_function("document.querySelectorAll('#species-list button').length===1",timeout=12000)
+            page.locator("#species-list button").first.click()
+            page.wait_for_function("window.location.search.includes('bouteloua-curtipendula')",timeout=25000)
+            assert page.locator("#species-detail .learner-step").count()>=3, "Missing restored original-card beginner fallback"
+            assert page.locator("#species-detail .step-image").count()>=1, "No matching real photo linked to navigation"
+            page.locator(".view-switch button").filter(has_text="Field ID").click()
+            assert page.locator("#species-detail .field-tile").count()>=3
+            page.locator(".view-switch button").filter(has_text="Learner").click()
             overflow=page.evaluate("document.documentElement.scrollWidth-document.documentElement.clientWidth")
             if overflow>12:raise AssertionError(f"{name} body horizontal overflow {overflow}px")
             assert not js,(name,js)
