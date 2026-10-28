@@ -1,0 +1,767 @@
+{
+  "id": "anatherum-virginicum",
+  "entry_type": "species",
+  "family": "Poaceae",
+  "genus": "Anatherum",
+  "species": "virginicum",
+  "scientific_name": "Anatherum virginicum",
+  "authority": "(L.) Spreng.",
+  "common_name": "Broomsedge bluestem",
+  "synonyms": [
+    "Andropogon virginicus",
+    "Andropogon virginicus L."
+  ],
+  "taxonomic_note": "Current Kew/POWO accepts Anatherum virginicum and treats Andropogon virginicus as a homotypic synonym. Retain the familiar Andropogon name as a primary search alias because most Texas field material still uses it.",
+  "look_here_first": "Look for narrow silky racemes tucked partly inside flattened spathe-like upper sheaths. Mature plants often turn straw to orange-brown and hold the pale silky seedheads into winter. It does not make the dense brushy crown of bushy bluestem or the digitate turkey foot of big bluestem.",
+  "county_occurrences_target_zone": [
+    "Hays",
+    "Real",
+    "San Saba"
+  ],
+  "target_zone_count": 3,
+  "native_target_zone_calculated": true,
+  "project_inclusion": {
+    "target_zone_status": "PASS",
+    "range_basis": "Kew accepts Anatherum virginicum and explicitly maps Andropogon virginicus into the accepted concept. USDA-derived county distribution under the familiar Andropogon virginicus name supports Hays, Real, and San Saba, all inside the project target zone.",
+    "range_guardrail": "Synonym-based county evidence is counted only because current Kew treatment explicitly links Andropogon virginicus to accepted Anatherum virginicum; do not infer counties from statewide or ecoregional presence."
+  },
+  "morphology_keys": {
+    "best_field_traits": [
+      "caespitose perennial grass",
+      "narrow silky racemes partly enclosed by spathe-like upper sheaths",
+      "silky hairs around spikelets create a pale fluffy look",
+      "mature clumps commonly turn straw to orange-brown and persist into winter",
+      "seedhead branches remain narrower and less brushlike than bushy bluestem"
+    ],
+    "comparison_training": "Anatherum glomeratum has a much denser, broader brushlike crown. Andropogon gerardi has open digitate turkey-foot racemes and a taller prairie-grass architecture."
+  },
+  "comparisons": {
+    "confused_with": [
+      "Anatherum glomeratum",
+      "Andropogon gerardi"
+    ],
+    "key_distinctions": "Broomsedge has narrow silky racemes tucked in upper sheaths; bushy bluestem forms a dense brushlike crown, while big bluestem carries a few open turkey-foot racemes."
+  },
+  "tags": [
+    "Poaceae",
+    "Anatherum",
+    "Broomsedge bluestem",
+    "Central Texas",
+    "bluestem"
+  ],
+  "curation_status": {
+    "version": "1.0-pass-closeout-2026-10-06",
+    "taxonomy_reviewed": true,
+    "range_reviewed": true,
+    "morphology_reviewed": true,
+    "lookalikes_reviewed": true,
+    "user_approved": true,
+    "last_reviewed": "2026-10-06",
+    "photo_metadata_count": 6,
+    "photo_files_present": 6,
+    "gbif_manual_photo_enrichment": "2026-10-15",
+    "field_photo_comparison_20261022": "Two existing source-licensed physical panels integrated, no new photos, no invented arrows; historical taxonomy/range untouched",
+    "lane3_physical_photo_count_reconciliation_20261027": "Four exact local GitHub JPEG blobs independently fetched and verified as existing: two prior CC BY field views and two Harry Rose CC BY 2.0 reproductive images. The older 2/2 count was stale. This does NOT add photos nor claim true ligule/root system proof.",
+    "lane3_harry_rose_real_paired_spikelet_macro_20261027": "2 source-verified photo JPEG(s) of paired awned spikelets and flowering raceme in spathe, copyright CC BY 2.0. True inner ligule with scale and connected rooted Texas bunch remain unfilled."
+  },
+  "photo_note": "Diagnostic roles are defined in the deep-review draft; exact reusable photos remain for the learner photo-backfill lanes. First exact licensed photo physically installed 2026-10-14; fine diagnostic gallery pending. Manual diagnostic-photo enrichment candidate installed from individually licensed source; verify anatomy against target before labeling.",
+  "images": [
+    {
+      "file": "images/inat-750285705-first-photo.jpg",
+      "role": "Slender reddish culms with narrow appressed inflorescence branches; ligule and spikelet macro still needed",
+      "creator": "haydenmolo",
+      "license": "CC BY",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_platform": "iNaturalist",
+      "source_page": "https://www.inaturalist.org/photos/750285705",
+      "observation_url": "https://www.inaturalist.org/observations/408192089",
+      "observation_id": 408192089,
+      "photo_id": 750285705,
+      "source_recorded_photo_license_at_download": "cc-by",
+      "source_recorded_photo_attribution_at_download": "(c) haydenmolo, some rights reserved (CC BY)",
+      "downloaded_from": "https://inaturalist-open-data.s3.amazonaws.com/photos/750285705/large.jpg",
+      "image_dimensions": [
+        768,
+        1024
+      ],
+      "study_use": "yes",
+      "public_reuse": "yes; retain attribution",
+      "modifications": "EXIF removed and JPEG normalized; no anatomy overlays",
+      "photo_review": "Exact Research Grade source record and actual pixels reviewed; provisional first-pass view"
+    },
+    {
+      "file": "images/gbif-manual-5938030520-130443b8a.jpg",
+      "role": "Additional distinct image candidate; target structures not yet visually verified",
+      "requested_diagnostic_view": "Silky inflorescence partially enclosed in spathe-like upper sheath; ligule",
+      "creator": "Lauren McLaurin",
+      "license": "CC BY",
+      "license_url": "http://creativecommons.org/licenses/by/4.0/",
+      "source_platform": "GBIF occurrence image, original creator retained",
+      "source_page": "https://www.gbif.org/occurrence/5938030520",
+      "gbif_occurrence_id": "5938030520",
+      "source_determination": "Anatherum virginicum Spreng.",
+      "accepted_target": "Anatherum virginicum",
+      "media_source_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604912087/original.jpg",
+      "image_dimensions": [
+        690,
+        1350
+      ],
+      "photo_review": "Exact source determination, individually licensed media, downloaded pixels, and basic near-duplicate filter checked. Anatomy NOT visually confirmed.",
+      "anatomy_arrows": "not added; image anatomy not verified",
+      "study_use": "follow individual license conditions; noncommercial only for CC BY-NC",
+      "public_reuse": "Respect recorded photo-specific license",
+      "modifications": "Resized JPEG and EXIF removed"
+    },
+    {
+      "file": "images/harry-rose-virginicum-open-spathe-silky-raceme-ccby2.jpg",
+      "role": "Photographed, actual pale spathe/bract with emerging feathery slender raceme branch from source-identified A. virginicus; not a complete same-plant spikelet/glume dissection",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_flowerhead_racemes_(6802476704)_(2).jpg",
+      "source_flickr_photo_id": "6802476704",
+      "original_download_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Andropogon_virginicus_flowerhead_racemes_%286802476704%29_%282%29.jpg",
+      "source_taxon_name": "Andropogon virginicus",
+      "image_dimensions": [
+        2200,
+        1463
+      ],
+      "sha256": "7b3f6209e5a9cf7c12fa4c97357384968e49ccd543a1a4454fb1adca2984c527",
+      "modifications": "Source JPEG resized to 2200px max, re-encoded quality 91 and all EXIF/GPS removed; arrows are separate website overlays",
+      "public_reuse": "YES under individual CC BY 2.0 photo license with creator, source, version and modifications",
+      "photo_status": "PHYSICALLY_ARCHIVED_CC_BY_2_REPRODUCTIVE_ANATOMY"
+    },
+    {
+      "file": "images/harry-rose-virginicum-hairy-dispersal-unit-ccby2.jpg",
+      "role": "True source-identified detached seed-bearing dispersal unit magnified against fingertips: actual narrow pointed central bracts and radiating long white hairs; glumes/awn/floret identities not dissected and no millimeter scale",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_seed1_(6948584315)_(2).jpg",
+      "source_flickr_photo_id": "6948584315",
+      "original_download_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Andropogon_virginicus_seed1_%286948584315%29_%282%29.jpg",
+      "source_taxon_name": "Andropogon virginicus",
+      "image_dimensions": [
+        1600,
+        1200
+      ],
+      "sha256": "9adf6f6516407039ddc8d7727e47274b506d083846d6adaedd62b68f7ddf413e",
+      "modifications": "Source JPEG resized to 2200px max, re-encoded quality 91 and all EXIF/GPS removed; arrows are separate website overlays",
+      "public_reuse": "YES under individual CC BY 2.0 photo license with creator, source, version and modifications",
+      "photo_status": "PHYSICALLY_ARCHIVED_CC_BY_2_REPRODUCTIVE_ANATOMY"
+    },
+    {
+      "file": "images/harry-rose-broomsedge-spikelet-pair-ccby2.jpg",
+      "role": "MATURE PAIRED SPIKELET MACRO — source identified Andropogon virginicus; long awn and hairy reduced stalked structures visible",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_spikelets10_(6966375226)_(2).jpg",
+      "source_image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Andropogon_virginicus_spikelets10_%286966375226%29_%282%29.jpg",
+      "source_taxon_name": "Andropogon virginicus",
+      "accepted_taxon_name": "Anatherum virginicum",
+      "source_photo_id": "6966375226",
+      "source_locality": "South West Rocks, Australia; introduced species photographed there",
+      "public_reuse": "CC BY 2.0 (attribution required; no noncommercial restriction)",
+      "photo_status": "ACTUAL_SOURCE_JPEG_GITHUB_ARCHIVED_PHOTOGRAPH_NOT_ILLUSTRATION",
+      "modifications": "Resized if larger than 2200px; RGB JPEG saved without EXIF/GPS, no crop or labels",
+      "original_sha256": "d39f6f836d5ceee8f84ff7cf7374869ae4ccd48adb4d1976ba86e68e7598d4b4",
+      "stored_sha256": "9eef7df34a05d368979be166a2afe6ef8271c5bd680ca970b8084492bbcf6b3d",
+      "source_dimensions": [
+        2048,
+        1536
+      ],
+      "stored_dimensions": [
+        2048,
+        1536
+      ],
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/2/21/Andropogon_virginicus_spikelets10_%286966375226%29_%282%29.jpg"
+    },
+    {
+      "file": "images/harry-rose-broomsedge-spathe-emerging-raceme-ccby2.jpg",
+      "role": "ATTACHED FLOWERING RACEME — source identified A. virginicum, hair-bearing spikelets emerging beside reddish enclosing spathe",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_head_branch1_(7117321563)_(2).jpg",
+      "source_image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Andropogon_virginicus_head_branch1_%287117321563%29_%282%29.jpg",
+      "source_taxon_name": "Andropogon virginicus",
+      "accepted_taxon_name": "Anatherum virginicum",
+      "source_photo_id": "7117321563",
+      "source_locality": "South West Rocks, Australia; introduced species photographed there",
+      "public_reuse": "CC BY 2.0 (attribution required; no noncommercial restriction)",
+      "photo_status": "ACTUAL_SOURCE_JPEG_GITHUB_ARCHIVED_PHOTOGRAPH_NOT_ILLUSTRATION",
+      "modifications": "Resized if larger than 2200px; RGB JPEG saved without EXIF/GPS, no crop or labels",
+      "original_sha256": "aa0feda112bcc71076fed2ddee5822c3a7fafe6230f2acd5c3523b0332ee100b",
+      "stored_sha256": "f93a59467b34841fd5c37ce99d78c009ccde8bd00317e9d193c6edd1a21767a5",
+      "source_dimensions": [
+        3000,
+        4000
+      ],
+      "stored_dimensions": [
+        1650,
+        2200
+      ],
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/8/86/Andropogon_virginicus_head_branch1_%287117321563%29_%282%29.jpg"
+    }
+  ],
+  "learner_visual_status": {
+    "status": "FIELD_READY_PHOTO_GAPS",
+    "mode": "learner_fast_fill",
+    "image_count": 6,
+    "note": "4 local species-identified images, including actually photographed spathe and mature silky propagule. True inner ligule, 1 mm spikelet/glume proof, connected rooted Texas flowering clump and look-alike matched anatomy remain missing."
+  },
+  "field_id_lesson": {
+    "status": "FIELD-READY, PHOTO GAPS",
+    "look_here_first": "Broomsedge: follow a flowering culm upward and find many narrow silky racemes partly tucked into flattened leafy spathes, usually separated along the upper stem rather than packed into one bushy terminal crown. Brown winter color supports recognition but does not prove identity.",
+    "crew_checkpoints": [
+      "Photograph the entire rooted clump and upper flowering stem, showing the spacing of spathe-enclosed units.",
+      "Open one mature spathe without destroying its connection to the stem; photograph paired racemes and the spathe with a millimeter scale.",
+      "Use a hand lens to document paired sessile and pedicellate spikelets, rachis hairs and awn attachment; record actual dimensions from the specimen.",
+      "Photograph the ligule and collar in focus, and compare the same structures against bushy bluestem."
+    ],
+    "look_alikes": [
+      {
+        "taxon": "Anatherum glomeratum",
+        "check": "Bushy bluestem produces a broad densely crowded brushlike terminal cluster of many short hairy racemes, unlike the more individually separated broomsedge spathes."
+      },
+      {
+        "taxon": "Schizachyrium scoparium",
+        "check": "Little bluestem has silky racemes on distinct branches; compare branch arrangement, spathes and mature spikelet pairs rather than winter color."
+      },
+      {
+        "taxon": "Andropogon gerardi",
+        "check": "Big bluestem usually shows a few exposed turkey-foot branches instead of numerous spathe-enclosed narrow units."
+      }
+    ],
+    "photo_handoff": [
+      {
+        "role": "whole flowering stem",
+        "status": "NEEDS_DIAGNOSTIC_PHOTO: spaced spathes and upper culm with scale"
+      },
+      {
+        "role": "spathe and raceme",
+        "status": "NEEDS_DIAGNOSTIC_PHOTO: opened intact mature spathe with paired racemes"
+      },
+      {
+        "role": "spikelet anatomy",
+        "status": "NEEDS_DIAGNOSTIC_PHOTO: sessile/pedicellate spikelets, hairs and awn at mm scale"
+      },
+      {
+        "role": "collar/ligule",
+        "status": "NEEDS_DIAGNOSTIC_PHOTO: sharp intact leaf collar"
+      }
+    ],
+    "annotation_status": "2 source-labelled credited archived photo panels displayed without anatomical arrows; true spathe/raceme/spikelet annotations remain pending high-resolution pixel review.",
+    "public_photo_note": "Both existing CC BY images and source/license metadata preserved; no new media rights asserted.",
+    "vegetative_bushy_vs_broomsedge": {
+      "source": "Hagenbuch & Lemke 2015 Phytoneuron 2015-4 page 34, Texas Hill Country vegetative key",
+      "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "look_here_first": "Broomsedge can also have visible collar or sheath-edge hairs, despite a Texas Hill Country description of usually entire sheath margins. Do not exclude broomsedge just because you see hairs. Photograph the correctly identified inner AND outer margins and also compare the separate spathe-held flowering branches with bushy bluestem's crowded brush.",
+      "photo_handoff": "Leaf/sheath micro PHOTO gap: need matched correctly determined living Texas specimens, one photo to prove inner opened SHEATH margin and a second to prove outer SHEATH margin, then the true collar/ligule and ruler. Existing USGS broomsedge leaf/stem photos show some hairs near the sheath, but neither is yet proven to show both identifiable margins with enough resolution. University/extension photos with unclear public reuse rights must not be installed.",
+      "field_caution": {
+        "reviewed": "2026-10-22",
+        "summary": "IMPORTANT REVISION (2026-10-22): Do NOT key bushy versus broomsedge as simple 'hairy sheaths = glomeratum, hairless = virginicum'. The 2015 Texas Hill Country key describes hair on the distinct/open bushy sheath margins and generally entire broomsedge margins, sometimes with cilia on the outer edge. However Missouri, Texas A&M and Oklahoma sources explicitly show or describe broomsedge sheath or leaf-base hairs too. Species, growth stage, which margin is imaged, and geographic treatment can change the apparent difference. Inspect actual UPPER sheath shape and both separated margins on the SAME confirmed plant; treat hairs as one supporting character only. Big mature flowering architecture and measured rames/spikelets remain needed for confident separation.",
+        "additional_authorities": [
+          {
+            "name": "Missouri WeedID / broomsedge description",
+            "url": "https://weedid.missouri.edu/weedinfo.cfm?weed_id=23"
+          },
+          {
+            "name": "Oklahoma State broomsedge plant profile",
+            "url": "https://extension.okstate.edu/programs/plant-id/plant-profiles/broomsedge-bluestem"
+          },
+          {
+            "name": "Texas A&M Rangelands broomsedge",
+            "url": "https://rangeplants.tamu.edu/plant/broomsedge-bluestem/nggallery/slideshow"
+          },
+          {
+            "name": "Flora Novae Angliae (Andropogon key)",
+            "url": "https://gobotany.nativeplanttrust.org/dkey/andropogon/"
+          },
+          {
+            "name": "Texas Hill Country vegetative descriptions",
+            "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+          }
+        ],
+        "photo_candidates": [
+          {
+            "taxon": "Anatherum glomeratum",
+            "site": "University of Florida IFAS",
+            "url": "https://plant-directory.ifas.ufl.edu/site/assets/files/1297/andglo4.0x1800.jpg",
+            "source_page": "https://plant-directory.ifas.ufl.edu/plant-directory/andropogon-glomeratus/",
+            "credit": "Ann Murray / University of Florida",
+            "license_status": "RESTRICTED / permission unknown for public republishing; LINK ONLY; do not import",
+            "role": "True source-labeled bushy stem with sheathing leaf and visible marginal hairs; actual INNER vs OUTER margin not fully demonstrated"
+          },
+          {
+            "taxon": "Anatherum virginicum",
+            "site": "USGS Plants of Louisiana",
+            "url": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Andropogon+virginicus_2714.JPG&id=2793&size=w",
+            "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/2793",
+            "credit": "USGS Plants of Louisiana (specific photographer not yet confirmed)",
+            "license_status": "POTENTIALLY FEDERAL PUBLIC DOMAIN; CHECK IMAGE-SPECIFIC AUTHOR/RIGHTS BEFORE PUBLIC IMPORT",
+            "role": "Actual green broomsedge sheath/stem region with sparse outward hairs at overlap; visible does NOT establish both margins"
+          },
+          {
+            "taxon": "Anatherum virginicum",
+            "site": "USGS Plants of Louisiana",
+            "url": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Andropogon+virginiana_2695.JPG&id=2793",
+            "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/2793",
+            "credit": "USGS Plants of Louisiana (specific photographer not yet confirmed)",
+            "license_status": "POTENTIALLY FEDERAL PUBLIC DOMAIN; CHECK IMAGE-SPECIFIC AUTHOR/RIGHTS BEFORE PUBLIC IMPORT",
+            "role": "Leaf sheath node context, short marginal hairs, no confirmed opened two-sided inner/outer edge"
+          },
+          {
+            "taxon": "Anatherum virginicum",
+            "site": "Oklahoma State University Extension",
+            "url": "https://extension.okstate.edu/programs/plant-id/plant-profiles/broomsedge/images/broomsedge-bluestem-blades-folded-near-collar.jpg",
+            "source_page": "https://extension.okstate.edu/programs/plant-id/plant-profiles/broomsedge-bluestem",
+            "credit": "Oklahoma State University Extension (individual photographer unverified)",
+            "license_status": "IMAGE REUSE NOT ESTABLISHED, REFERENCE ONLY",
+            "role": "Very good illustrative photograph of actual hairs near collar and folded leaf"
+          },
+          {
+            "taxon": "Anatherum virginicum",
+            "site": "Missouri State University",
+            "url": "https://ag.missouristate.edu/PBTrewatha/_Files/Broomsedge5.jpg",
+            "source_page": "https://ag.missouristate.edu/PBTrewatha/broomsedge.htm",
+            "credit": "Pamela Borden Trewatha / Missouri State (image photographer unverified)",
+            "license_status": "IMAGE REUSE NOT ESTABLISHED, REFERENCE ONLY",
+            "role": "Detached green broomsedge leaf/sheath sections with several long hairs; not a matched two-margin face-on macro"
+          }
+        ],
+        "annotation_status": "NO NEW DIAGNOSTIC ANATOMY ARROWS: available photos do not prove consistent paired sheath-margin differences or all have verified public reuse rights",
+        "best_next_captures": [
+          "Same confirmed glomeratum plant: one opened inner sheath margin with mm scale",
+          "Same confirmed glomeratum plant: outer margin with mm scale",
+          "Same confirmed virginicum plant: opened inner + outer margins in matched frame",
+          "Measured attached blade/sheath ligule and upper sheath cross-section of each plant"
+        ],
+        "public_reuse_gate": "Do not copy images without exact image-specific rights and creator; existing photo/gallery files remain untouched"
+      }
+    }
+  },
+  "visual_comparison": {
+    "title": "BROOMSEDGE — distinguish scattered spathe-held racemes from dense bushy crown",
+    "subtitle": "Source verified CC BY 2.0 broomsedge true flowering-spathe and wind-dispersal detail now accompany existing 2 field views. An actual opened ligule, calibrated spikelet glumes and Texas rooted flowering specimen remain missing.",
+    "memory_rule": "BROOMSEDGE = more individually separated silky, spathe-held upper racemes; BUSHY = dense clustered terminal brush. A. tenuispatheum is separate accepted species, not just another photo of either.",
+    "items": [
+      {
+        "image_fit": "contain",
+        "markers": [
+          {
+            "label": "Visible silky flowering hairs",
+            "label_x": 5,
+            "label_y": 22,
+            "target_x": 42,
+            "target_y": 34
+          },
+          {
+            "label": "Reddish narrow upper culm",
+            "label_x": 65,
+            "label_y": 62,
+            "target_x": 44,
+            "target_y": 53
+          }
+        ],
+        "label": "BROOMSEDGE — slender branches on photographed flowering culm",
+        "scientific_name": "Anatherum virginicum",
+        "image_url": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/inat-750285705-first-photo.jpg",
+        "image_role": "Existing source-determined CC BY photograph; real silky upper flowering hairs and reddish upper culm visible, but no measured spikelet/ligule anatomy.",
+        "caption": "Actual archived source-determined broomsedge photo: pale silky hairs project from a narrow upper flowering area, with reddish upright culm tissue below. These arrows identify only visible gross structures. The precise spathe opening, individual rames, paired spikelets, ligule and glumes are NOT resolved here; seasonal color alone is not diagnostic.",
+        "why_it_matters": "Gives the genus lesson its first canonical broomsedge field context instead of comparing two textual paragraphs.",
+        "creator": "haydenmolo",
+        "license": "CC BY",
+        "source_page": "https://www.inaturalist.org/photos/750285705",
+        "photo_status": "2026-10-23 actual canonical 768×1024 JPEG inspected; Git blob c1e139a8405659cb4ef5ef84edf1aaf2cc62f442; 285623 verified bytes, valid JPEG SOI/EOI, no APP1 segment. Two gross-feature overlay arrows visually checked. Source iNaturalist photo 750285705 by haydenmolo, recorded CC BY 4.0; original source page inaccessible for independent fresh rights recheck, so recorded license preserved without new permission claim. Source species identification remains provisional at microscopic level; unmodified JPEG."
+      },
+      {
+        "image_fit": "contain",
+        "markers": [
+          {
+            "label": "Dry basal leaf blades",
+            "label_x": 69,
+            "label_y": 78,
+            "target_x": 47,
+            "target_y": 88
+          }
+        ],
+        "label": "BROOMSEDGE — additional licensed species-labelled photograph",
+        "scientific_name": "Anatherum virginicum",
+        "image_url": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/gbif-manual-5938030520-130443b8a.jpg",
+        "image_role": "Existing CC BY source-determined winter stand with many dry upright culms and basal leaves; no individually vouchered roots or measured reproductive anatomy.",
+        "caption": "Second archived source-determined broomsedge image shows a stand of upright dry culms and dense dry basal foliage. The single arrow identifies visible basal leaf blades, NOT a proved rooted perennial crown or a traced same-plant flowering stem. True spathes, ligule and spikelet pairs are not resolved.",
+        "why_it_matters": "Puts the existing photographed taxon alongside bushy bluestem for useful first-pass comparison, while clearly documenting the precise missing macro.",
+        "creator": "Lauren McLaurin",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_page": "https://www.gbif.org/occurrence/5938030520",
+        "photo_status": "2026-10-23 actual canonical 690×1350 JPEG inspected; Git blob bb2075c5812128c95d3ae0aa5499832e177fe734; 365822 verified bytes, valid JPEG SOI/EOI, no APP1 segment. One gross basal-blade overlay arrow visually checked. GBIF occurrence 5938030520, photographer Lauren McLaurin, recorded CC BY 4.0; independent source page inaccessible, no broader permission inferred. Unmodified JPEG; taxon identity remains source-determined, not microscopic voucher-certified."
+      },
+      {
+        "label": "BROOMSEDGE — real exposed silky flowering branch and enclosing spathe",
+        "scientific_name": "Anatherum virginicum",
+        "image_url": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-virginicum-open-spathe-silky-raceme-ccby2.jpg",
+        "image_fit": "contain",
+        "image_role": "Photographed, actual pale spathe/bract with emerging feathery slender raceme branch from source-identified A. virginicus; not a complete same-plant spikelet/glume dissection",
+        "caption": "Harry Rose's actual A. virginicus (broomsedge) flowering spathe. The narrow golden leaflike bract runs diagonally above the hand, and a hairy, pale-white flowering branch projects sideways. Photo made in Australia, where the same species is introduced: this does not independently document a native Hays County specimen. The two arrows indicate only visible spathe and silky reproductive branch, not unmeasured sessile/pedicellate spikelets.",
+        "why_it_matters": "A real recognizable spathe-covered broomsedge branch, especially useful against un-spathed native little bluestem.",
+        "creator": "Harry Rose",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_flowerhead_racemes_(6802476704)_(2).jpg",
+        "original_flickr_id": "6802476704",
+        "source_taxon_name": "Andropogon virginicus (synonym of canonical Anatherum virginicum)",
+        "photo_review": "Actual source photograph visually inspected before upload: spathe, hairy raceme and detached mature dispersal unit; no true ligule, microscopic glumes or authenticated Hays roots claimed.",
+        "source_locality": "Australia (species introduced there; taxon same but not Texas-local photograph)",
+        "modification_note": "Source JPEG resized to 2200px max, re-encoded quality 91 and all EXIF/GPS removed; arrows are separate website overlays",
+        "photo_status": "EXACT_SPECIES_CC_BY_2_0_PHYSICALLY_ARCHIVED_REPRODUCTIVE_ONLY",
+        "markers": [
+          {
+            "label": "Narrow straw-colored spathe (floral bract)",
+            "label_x": 2,
+            "label_y": 9,
+            "target_x": 53,
+            "target_y": 35
+          },
+          {
+            "label": "Exposed branch with long white dispersal hairs",
+            "label_x": 61,
+            "label_y": 77,
+            "target_x": 57,
+            "target_y": 49
+          }
+        ]
+      },
+      {
+        "label": "BROOMSEDGE — mature wind-dispersal unit with radiating silky hairs",
+        "scientific_name": "Anatherum virginicum",
+        "image_url": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-virginicum-hairy-dispersal-unit-ccby2.jpg",
+        "image_fit": "contain",
+        "image_role": "True source-identified detached seed-bearing dispersal unit magnified against fingertips: actual narrow pointed central bracts and radiating long white hairs; glumes/awn/floret identities not dissected and no millimeter scale",
+        "caption": "Harry Rose CC BY 2.0 photograph of a detached mature broomsedge dispersal unit. Long translucent silky hairs radiate from a narrow central bract structure. The fingertip shows informal scale, not a calibrated ruler. Do not call this individual hair a lemma awn, or the bract a measured glume, without specimen dissection.",
+        "why_it_matters": "Demonstrates what disperses in the wind from the grass, with real close-up silky hairs rather than an unrelated seedhead.",
+        "creator": "Harry Rose",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_seed1_(6948584315)_(2).jpg",
+        "original_flickr_id": "6948584315",
+        "source_taxon_name": "Andropogon virginicus (synonym of canonical Anatherum virginicum)",
+        "photo_review": "Actual source photograph visually inspected before upload: spathe, hairy raceme and detached mature dispersal unit; no true ligule, microscopic glumes or authenticated Hays roots claimed.",
+        "source_locality": "Australia (species introduced there; taxon same but not Texas-local photograph)",
+        "modification_note": "Source JPEG resized to 2200px max, re-encoded quality 91 and all EXIF/GPS removed; arrows are separate website overlays",
+        "photo_status": "EXACT_SPECIES_CC_BY_2_0_PHYSICALLY_ARCHIVED_REPRODUCTIVE_ONLY",
+        "markers": [
+          {
+            "label": "Long spreading translucent dispersal hairs",
+            "label_x": 66,
+            "label_y": 23,
+            "target_x": 63,
+            "target_y": 41
+          },
+          {
+            "label": "Narrow central bract structure; not dissected",
+            "label_x": 3,
+            "label_y": 16,
+            "target_x": 49,
+            "target_y": 40
+          }
+        ]
+      },
+      {
+        "label": "ACTUAL REPRODUCTIVE MICRO — awned fertile spikelet, silky stalked partner",
+        "scientific_name": "Anatherum virginicum",
+        "image_url": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-broomsedge-spikelet-pair-ccby2.jpg",
+        "image_fit": "contain",
+        "image_role": "MATURE PAIRED SPIKELET MACRO — source identified Andropogon virginicus; long awn and hairy reduced stalked structures visible",
+        "caption": "Genuine Harry Rose photographed spikelet unit: the central elongated fertile unit bears a long fine awn; curved lateral hairy stalks and reduced sterile partners radiate either side. Actual structures clearly visible. NO printed millimeter reference in frame; do not label exact lemma veins or lengths. Photographer sampled this species in Australia, where it is introduced, NOT a local Texas voucher.",
+        "why_it_matters": "Real paired fertile + stalked sterile spikelets and enclosed spathe structure for new field botany learners.",
+        "creator": "Harry Rose",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_spikelets10_(6966375226)_(2).jpg",
+        "source_image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Andropogon_virginicus_spikelets10_%286966375226%29_%282%29.jpg",
+        "source_photo_id": "6966375226",
+        "source_taxon_name": "Andropogon virginicus",
+        "accepted_taxon_name": "Anatherum virginicum",
+        "markers": [],
+        "photo_status": "Verified real source-specific CC BY original locally archived, photo pixels not illustrated; microscopic details without scale remain unmeasured"
+      },
+      {
+        "label": "REAL SPATHE ARCHITECTURE — flowering raceme emerging from sheath",
+        "scientific_name": "Anatherum virginicum",
+        "image_url": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-broomsedge-spathe-emerging-raceme-ccby2.jpg",
+        "image_fit": "contain",
+        "image_role": "ATTACHED FLOWERING RACEME — source identified A. virginicum, hair-bearing spikelets emerging beside reddish enclosing spathe",
+        "caption": "Photographed hair-bearing raceme with individual green/brown spikelets immediately beside a long reddish green spathe. Distinct from the separate already stored mature seed and gross flowering head photographs; macro structure visible, ligule NOT shown. Original is Australian field material, not a Hays County rooted voucher.",
+        "why_it_matters": "Real paired fertile + stalked sterile spikelets and enclosed spathe structure for new field botany learners.",
+        "creator": "Harry Rose",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_head_branch1_(7117321563)_(2).jpg",
+        "source_image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Andropogon_virginicus_head_branch1_%287117321563%29_%282%29.jpg",
+        "source_photo_id": "7117321563",
+        "source_taxon_name": "Andropogon virginicus",
+        "accepted_taxon_name": "Anatherum virginicum",
+        "markers": [],
+        "photo_status": "Verified real source-specific CC BY original locally archived, photo pixels not illustrated; microscopic details without scale remain unmeasured"
+      }
+    ],
+    "overlay_note": "Both existing JPEGs inspected in full and byte-verified 2026-10-23 (285623 + 365822 bytes). Three new separate browser-overlay arrows identify only visible silky flowering hairs, reddish upper culm, and dry basal blades. No source pixels altered, no new media installed, no precise spathe/rachis/ligule/glume labels inferred. Original CC BY attribution and source URLs preserved; original source pages could not be freshly rechecked. Exact mature same-plant spathe, sessile/pedicellate pair, ligule and 1-mm scale remain NEEDS_PUBLIC_PHOTO / annotation_pending. 2026-10-27: individual Harry Rose CC BY 2.0 source photographs added after full-pixel inspection; four gross-structure arrow targets only. Anatomical free ligule and measured sessile/pedicellate pair are NOT proven."
+  },
+  "field_id_finish_pass": {
+    "stage": "FIELD_READY_PHOTO_GAPS",
+    "measured_diagnostic_key_20261022": {
+      "look_here_first": "BROOMSEDGE: trace one culm upward to numerous SEPARATE narrow, silky flowering units, each with usually 2–5 short rames partly enclosed by an upper leafy spathe. Do not use orange-brown winter color or sheath hairs alone.",
+      "growth_form": "Warm-season, tufted perennial without spreading rhizomes; stems roughly 50–110 cm in Iowa/USFS treatments, flattened/keeled basal sheaths; blades often 2–5 mm wide. Rooted crown and flowering culm should be verified as one plant.",
+      "ligule_collar": "True ciliate membranous ligule is small, about 0.2–1.5 mm across regional treatments; leaf/sheath margin hairs are separate and variable, NOT a simple bushy-versus-broomsedge binary. Photograph unfolded inner and outer sheath margins plus true free ligule with 1-mm scale.",
+      "flowering_architecture": "Interrupted upper inflorescence; each spathe partly encloses commonly 2–5 slender hairy rames about 1–3 cm long. Hairy rachis internodes and companion pedicels must be distinguished from florets.",
+      "spikelet_glumes": "Each fertile sessile spikelet roughly 2.6–4.7 mm (Iowa 3.3–3.5 mm); pedicellate partner usually reduced/absent, leaving a silky-haired pedicel about 4.5–5 mm in Iowa. Two awnless glumes enclose the sessile spikelet; lower glume with two lateral keels, upper with one mid-keel; verify actual detached glumes before labeling.",
+      "lemma_awn": "Lower floret sterile with thin hyaline lemma; upper fertile floret has a deeply notched/two-lobed thin lemma bearing ONE slender awn from the sinus, often 6.5–18 mm in Iowa (broader treatments 6–26 mm). This is a LEMMA awn, not a glume awn; palea minute/absent in some descriptions.",
+      "local_lookalikes": "Anatherum glomeratum (bushy) crowds many short silky racemes into a broad brushlike terminal crown; A. virginicum has more separated spathe-held units. A. tenuispatheum is a distinct accepted species, not an A. glomeratum photo variant; compare its narrow raceme sheaths and measured spikelets with voucher. Schizachyrium scoparium has different upper-branch/raceme architecture; Andropogon gerardi has exposed turkey-foot fingers.",
+      "last_mile_photo_arrow_gaps": [
+        "Same Hays/Texas vouchered rooted tuft with complete upper culm and individually traceable spathe-held flowering units; cm ruler.",
+        "Same specimen: opened intact spathe, 2–5 rames and hairy rachis/pedicel with 1-mm scale; do not arrow a hidden spathe from overview.",
+        "10–20× attached fertile sessile spikelet and reduced/absent pedicellate partner with 1-mm ruler; separate BOTH glumes, sterile lemma and awned fertile lemma to prove awn origin.",
+        "True ciliate membrane and both opened sheath margins, matched to correctly determined A. glomeratum; 1-mm ruler, no invented anatomical arrows."
+      ],
+      "public_ready_criteria": "Existing two archived CC BY photographs, their credits and original taxonomy/native-range decisions remain unchanged. FIELD_READY_PHOTO_GAPS until source-verified same-plant reproductive/collar macros, image-level public rights, and accurate pixel-arrow/site QA are confirmed.",
+      "handoff": [
+        "NEEDS_PUBLIC_PHOTO",
+        "NEEDS_SITE_QA"
+      ],
+      "evidence_scope": "Published descriptions and genus review, NOT measurements demonstrated by the two existing gallery photos.",
+      "sources": [
+        "https://www.eeob.iastate.edu/research/IowaGrasses/speciespages/AndroVirgi/AndroVirgi.html",
+        "https://gobotany.nativeplanttrust.org/species/andropogon/virginicus/",
+        "https://www.srs.fs.usda.gov/pubs/rp/rp_so210.pdf",
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      ]
+    },
+    "photo_pixel_audit_20261023": {
+      "stage": "FIELD_READY_PHOTO_GAPS",
+      "inspected_existing_archived_jpegs": 2,
+      "verified_bytes": 651445,
+      "new_image_files": 0,
+      "new_overlay_arrows": 3,
+      "binary_checks": "Both JPEG SOI/EOI valid, APP1/EXIF absent; actual pixels inspected, originals unchanged.",
+      "files": [
+        {
+          "path": "images/inat-750285705-first-photo.jpg",
+          "blob_sha": "c1e139a8405659cb4ef5ef84edf1aaf2cc62f442",
+          "bytes": 285623,
+          "dimensions": [
+            768,
+            1024
+          ],
+          "creator": "haydenmolo",
+          "recorded_license": "CC BY 4.0",
+          "source_page": "https://www.inaturalist.org/photos/750285705",
+          "visible": "silky upper flowering hairs and reddish upper culm",
+          "arrows": 2
+        },
+        {
+          "path": "images/gbif-manual-5938030520-130443b8a.jpg",
+          "blob_sha": "bb2075c5812128c95d3ae0aa5499832e177fe734",
+          "bytes": 365822,
+          "dimensions": [
+            690,
+            1350
+          ],
+          "creator": "Lauren McLaurin",
+          "recorded_license": "CC BY 4.0",
+          "source_page": "https://www.gbif.org/occurrence/5938030520",
+          "visible": "dry upright culms and basal blades; roots not proven",
+          "arrows": 1
+        }
+      ],
+      "rights_note": "Original source pages inaccessible to fresh independent check; preserve existing individual license/version/creator/URL without upgrading permissions. No new images or adaptations of original JPEGs.",
+      "NEEDS_PUBLIC_PHOTO": [
+        "Texas vouchered complete rooted plant and attached flowering upper culm, cm scale",
+        "Opened spathe showing 2–5 rames and hairy rachis/pedicels, 1-mm scale",
+        "True ciliate ligule at opened sheath junction, 1-mm scale",
+        "Dissected attached sessile spikelet and reduced pedicellate companion, two glumes and awned fertile lemma, 1-mm scale"
+      ],
+      "annotation_pending": [
+        "Exact spathe boundary",
+        "True ligule",
+        "Sessile/pedicellate spikelet pair",
+        "Glumes, lemma awn insertion and rachis hairs"
+      ]
+    },
+    "lane3_virginicum_spathe_photos_20261027": {
+      "status": "ACTUAL_REPRODUCTIVE_PHOTOS_INSTALLED; SIX_ROLE_GAPS_REMAIN",
+      "new_image_ids": [
+        "6802476704",
+        "6948584315"
+      ],
+      "new_browser_arrows": 4,
+      "not_completed": [
+        "free inner ligule with mm scale",
+        "rooted whole flowering Texas plant in one view",
+        "1mm calibrated sessile/pedicellate spikelet pair",
+        "matched lookalike anatomy"
+      ],
+      "photo_source_country": "Australia, where species introduced (no county nativity claim)"
+    }
+  },
+  "lane3_photo_finish_20261023": {
+    "status": "MEASURED_FIELD_ID_KEY_ADDED_DIAGNOSTIC_MACROS_MISSING",
+    "taxonomic_name_note": "The name Andropogon virginicus L. is the basionym for Anatherum virginicum (L.) Spreng.; preserve accepted local canonical name and original source determinations.",
+    "sources": [
+      "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=512653",
+      "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8679&taxauthid=1&tid=3052",
+      "https://keyserver.lucidcentral.org/weeds/data/media/Html/andropogon_virginicus.htm"
+    ],
+    "measured_diagnosis": [
+      {
+        "structure": "True ligule",
+        "measurement": "0.2–1 mm; ciliate, hairs may extend to 1.3 mm",
+        "evidence": "Published Flora of North America character; not measured from local photos"
+      },
+      {
+        "structure": "Subtending spathe/sheath",
+        "measurement": "Usually 3.1–4.6 cm long; partly encloses raceme units",
+        "evidence": "Published treatment, not visually measured"
+      },
+      {
+        "structure": "Racemes",
+        "measurement": "Mostly 1.7–2.8 cm, frequently paired or clustered",
+        "evidence": "Published treatment"
+      },
+      {
+        "structure": "Fertile sessile spikelets",
+        "measurement": "Around 2.5–4 mm",
+        "evidence": "Lucid botanical description"
+      },
+      {
+        "structure": "Awn",
+        "measurement": "Usually 10–25 mm long",
+        "evidence": "Lucid botanical description"
+      }
+    ],
+    "key_comparison": "Compared with little bluestem (Schizachyrium scoparium), look for paired short silky racemes partly enclosed by a conspicuous spathe; do not use winter color alone. Compare A. tenuispatheum with actual collar/spathe/spikelet dimensions, not a fluffy head silhouette.",
+    "anatomical_photo_checklist": [
+      "Rooted entire tuft and full mature flowering shoot",
+      "Partially enclosing spathe shown beside ruler",
+      "Single individual raceme with white hairs and sessile vs pedicellate units",
+      "True collar and ligule photographed at mm scale",
+      "Detached mature fertile spikelet and straight awn, plus glumes and lemma"
+    ],
+    "existing_archived_images": 2,
+    "licensed_open_images": 2,
+    "annotation_hold": "Two source-labelled photos are present but don't establish microscopic glume/ligule detail; add arrows only after inspecting JPEG pixels; existing annotations preserved.",
+    "unverified": "No measured microscopic morphology established by image pixels and no complete species-level photo voucher."
+  },
+  "field_id_short_tiles": [
+    {
+      "heading": "01 · START AT THE SPATHE",
+      "short": "Several narrow silky racemes are partly tucked into leafy sheaths",
+      "details": "Follow one attached upper culm, not its winter color. Broomsedge is a warm-season tufted perennial; its narrow flowering units are commonly 2–5 short rames per spathe, mostly 1–3 cm long. Panel 1 shows gross flowering hairs, but cannot prove the number or attachment of individual rames.",
+      "photo_panel_indices": [
+        0
+      ],
+      "glossary": [
+        "spathe",
+        "raceme",
+        "culm",
+        "panicle"
+      ],
+      "status": "ACTUAL TARGET PHOTO — GROSS CLUE"
+    },
+    {
+      "heading": "02 · OPEN ONE SPIKELET PAIR",
+      "short": "Fertile sessile spikelet + reduced/absent pedicellate partner",
+      "details": "At 10–20× look for a fertile sessile spikelet about 2.5–4 mm and a silky-haired pedicel, usually bearing only a rudiment or no companion spikelet. Identify two enclosing glumes and the thin fertile lemma carrying a straight awn roughly 7–25 mm, depending on treatment. These exact organs are NOT demonstrated by the existing photos; do not arrow hairs as a pedicellate spikelet.",
+      "photo_panel_indices": [],
+      "glossary": [
+        "sessile",
+        "pedicel",
+        "spikelet",
+        "glume",
+        "lemma",
+        "awn"
+      ],
+      "status": "NEEDS_PUBLIC_PHOTO"
+    },
+    {
+      "heading": "03 · OPEN THE TRUE COLLAR",
+      "short": "Tiny fringed membrane; variable sheath-edge hairs",
+      "details": "Unfold the blade–sheath junction and photograph the true ciliate membranous ligule beside a 1-mm ruler (published ranges roughly 0.2–1.5 mm). Separate the ligule from hairs on the upper blade or sheath margin. The current gallery does not resolve this structure.",
+      "photo_panel_indices": [],
+      "glossary": [
+        "ligule",
+        "collar",
+        "sheath",
+        "blade"
+      ],
+      "status": "NEEDS_PUBLIC_PHOTO"
+    },
+    {
+      "heading": "04 · CHECK LOCAL BLUESTEMS",
+      "short": "Broomsedge ≠ bushy bluestem ≠ little bluestem",
+      "details": "Anatherum glomeratum forms a broad densely crowded brushlike crown; broomsedge has more separate, narrow spathe-held flowering units. Little bluestem (Schizachyrium scoparium) lacks the same prominent enclosing spathes. Anatherum tenuispatheum requires voucher-based anatomy; do not merge it into bushy bluestem or identify from a fluffy silhouette alone.",
+      "photo_panel_indices": [
+        0,
+        1
+      ],
+      "glossary": [
+        "spathe",
+        "raceme",
+        "inflorescence"
+      ],
+      "status": "COMPARISON TEXT — MATCHED PHOTO GAP"
+    },
+    {
+      "heading": "05 · FINISHING EVIDENCE",
+      "short": "Rooted plant + measured spathe, ligule and fertile lemma",
+      "details": "To reach public-ready, obtain same-specimen Texas-vouchered rooted growth and complete upper flowering culm (cm scale), opened spathe/rames, true ligule, and dissected paired spikelets, glumes and awned lemma (mm scale). Verify image-level public rights and exact arrows against source pixels, then complete live-site QA. Until then retain FIELD_READY_PHOTO_GAPS.",
+      "photo_panel_indices": [],
+      "glossary": [
+        "spathe",
+        "ligule",
+        "glume",
+        "lemma",
+        "awn"
+      ],
+      "status": "NEEDS_PUBLIC_PHOTO · NEEDS_SITE_QA"
+    },
+    {
+      "heading": "06 · TRACE THE ROOTED CROWN",
+      "short": "Perennial tuft, often keeled sheaths; winter copper color is not proof",
+      "details": "Follow a flowering culm down to the same rooted bunch. Broomsedge is a perennial bunchgrass rather than a long-rhizomed colony; published culms are roughly 50–110 cm, with commonly 2–5 mm blades. Basal sheaths may be flattened or keeled, but sheath-edge hairs vary and overlap with bushy bluestem. Use the whole plant plus attached spathe-held racemes and measured sessile spikelets, never fall color or one hairy node, to decide. Existing gallery photos show standing culms and leaves but do not prove exposed roots or a dissected collar.",
+      "photo_panel_indices": [
+        1
+      ],
+      "glossary": [
+        "culm",
+        "sheath",
+        "keel",
+        "rhizome",
+        "spathe"
+      ],
+      "status": "ACTUAL TARGET PHOTO — ROOTS/COLLAR NOT RESOLVED"
+    }
+  ],
+  "grass_species_finalization_20261025": {
+    "stage": "FIELD_READY_PHOTO_GAPS",
+    "run_scope": "Existing canonical card: add missing rooted-growth-form tile; preserve existing 5 tiles and all scientific/photo records.",
+    "published_traits": "Tufted perennial; culms ~50–110 cm and blades 2–5 mm in cited regional treatments; keeled sheath and hairs overlap with A. glomeratum. Existing reproductive lesson documents sessile spikelet 2.6–4.7 mm, 2 glumes, awned fertile lemma and variable 0.2–1.5 mm ciliate membrane; these are literature traits, not image measurements.",
+    "NEEDS_PUBLIC_PHOTO": [
+      "Same Texas-vouchered plant: rooted crown, flowering culm and attached spathe units, centimeter scale.",
+      "Opened true ligule and both sheath margins with 1-mm scale, independently determined comparison with A. glomeratum.",
+      "Opened spathe with 2–5 rames, attached fertile sessile spikelet and reduced pedicellate partner, glumes and fertile-lemma awn origin, 1-mm scale."
+    ],
+    "NEEDS_SITE_QA": [
+      "Check both existing CC BY image records, source URLs and attribution; do not upgrade licenses.",
+      "Check existing gross arrows against source pixels; no anatomical arrows to hidden roots, ligule or spikelets.",
+      "Verify six short tiles and look-alike labels render on public learner; no Pages/deployment claim."
+    ],
+    "public_ready_criteria": "Same-voucher diagnostic reproductive and collar evidence, rights and pixel-accurate annotation QA plus site review; retain FIELD_READY_PHOTO_GAPS.",
+    "sources": [
+      "https://www.eeob.iastate.edu/research/IowaGrasses/speciespages/AndroVirgi/AndroVirgi.html",
+      "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+    ]
+  }
+}

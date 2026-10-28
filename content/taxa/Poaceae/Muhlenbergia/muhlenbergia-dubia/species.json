@@ -1,0 +1,591 @@
+{
+  "id": "muhlenbergia-dubia",
+  "entry_type": "provisional_species",
+  "family": "Poaceae",
+  "genus": "Muhlenbergia",
+  "species": "dubia",
+  "scientific_name": "Muhlenbergia dubia",
+  "authority": "E.Fourn.",
+  "common_name": "Pine muhly",
+  "look_here_first": "Pine muhly (Muhlenbergia dubia): densely tufted narrow-leaved perennial with erect slender stems and a narrow contracted panicle. Confirm with membranous ligule (about 4–10 mm) and measured spikelets (about 3.8–5 mm); never identify from habit alone.",
+  "county_occurrences_target_zone": [],
+  "target_zone_count": 0,
+  "native_target_zone_calculated": false,
+  "native_metrics_excluded": true,
+  "project_inclusion": {
+    "target_zone_status": "UNRESOLVED",
+    "range_basis": "County-level native status not certified from the old source name.",
+    "range_guardrail": "Do not count as native in target county metrics pending BONAP/NAPA evidence."
+  },
+  "learner_role": "PROVISIONAL_LEARNER",
+  "morphology_keys": {
+    "best_field_traits": [
+      "Perennial tuft with narrow often rolled blades",
+      "Narrow contracted inflorescence rather than broad plume",
+      "Measure true membranous ligule, commonly 4–10 mm",
+      "Check mature spikelets under magnification, approximately 3.8–5 mm"
+    ]
+  },
+  "curation_status": {
+    "version": "1.0-provisional-2026-10-03",
+    "taxonomy_reviewed": true,
+    "range_reviewed": true,
+    "morphology_reviewed": true,
+    "lookalikes_reviewed": true,
+    "user_approved": true,
+    "provisional": true,
+    "last_reviewed": "2026-10-03",
+    "visual_reviewed": false,
+    "photo_source_checked": false,
+    "photo_files_present": 7,
+    "photo_metadata_count": 7
+  },
+  "taxonomy_correction_20261023": {
+    "status": "VERIFIED_CORRECTION_AWAITING_ATOMIC_MANIFEST_MIGRATION",
+    "accepted_name": "Muhlenbergia dubia E.Fourn.",
+    "source_name": "Muhlenbergia piniflora",
+    "source_name_is_synonym": false,
+    "photo_state": "ZERO_PHOTOS; CC0/Public Domain candidates identified but not yet physically installed",
+    "source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:408994-1"
+  },
+  "taxonomy_source": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:408994-1",
+  "images": [
+    {
+      "file": "images/pine-muhly-patrick-alexander-cc0.jpg",
+      "role": "Wild plant recognition; anatomy not diagnostic",
+      "creator": "Patrick Alexander",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3AMuhlenbergia_dubia_-_Flickr_-_aspidoscelis.jpg",
+      "source_determination": "Muhlenbergia dubia",
+      "publication_scope": "PUBLIC-WEB-CLEARED",
+      "public_reuse": "Source declares CC0/public domain; source and creator retained",
+      "sha256": "fe0982f95c4dcf772f978b4502ec05ceeac2c1b60e0811301a007d48c40a35d6",
+      "photo_status": "LOCAL_FILE_VERIFIED; NOT diagnostic ligule/spikelet"
+    },
+    {
+      "file": "images/pine-muhly-stickpen-public-domain.jpg",
+      "role": "Cultivated clump recognition; anatomy not diagnostic",
+      "creator": "Stickpen",
+      "license": "Public domain",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3AMuhlenbergia_dubia_001.jpg",
+      "source_determination": "Muhlenbergia dubia",
+      "publication_scope": "PUBLIC-WEB-CLEARED",
+      "public_reuse": "Source declares CC0/public domain; source and creator retained",
+      "sha256": "6fff96f5f60d277e8d53092d05ed8b73f3e76b2be57a5ad41283f978721eca0b",
+      "photo_status": "LOCAL_FILE_VERIFIED; NOT diagnostic ligule/spikelet"
+    },
+    {
+      "file": "images/ligule-junction-carlos-martorell-ccby.jpg",
+      "role": "Attached leaf blade and sheath junction; exposed pale membranous flap consistent with true ligule, but not ruler-calibrated or dissected",
+      "creator": "Carlos Martorell",
+      "license": "CC BY",
+      "source_page": "https://www.inaturalist.org/photos/325197748",
+      "source_observation": "https://www.inaturalist.org/observations/186123879",
+      "source_photo_id": 325197748,
+      "original_source_photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/325197748/original.jpg",
+      "original_source_sha256": "2f394f417d4c82cb4cef224f5784394f4beb3d149c7f873eb658f50de6610617",
+      "archive_sha256": "304829199862cc1074682f0440b4a1b32e81d93a2e623d33c3fc5f6e2d2cc86f",
+      "source_dimensions": [
+        1536,
+        2048
+      ],
+      "source_determination": "Muhlenbergia dubia (iNaturalist observation; needs-ID not independently vouchered)",
+      "taxonomic_caution": "Reported source taxon, needs-ID; visually similar Muhlenbergia rigens and other muhly species must be independently considered before definitive teaching label.",
+      "public_reuse": "CC BY source photo; credit creator/photo link. JPEG re-encoded without EXIF. Public website can publish under proper attribution.",
+      "photo_review": "Actual original enlarged pixels and separate independent photo contact-sheet inspected; coarse visible role reviewed, submillimeter dissections not proven."
+    },
+    {
+      "file": "images/mature-panicle-spikelets-carlos-martorell-ccby.jpg",
+      "role": "Mature clustered lanceolate spikelet-like units photographed close-up; no individual glume, lemma or awn origin independently dissected",
+      "creator": "Carlos Martorell",
+      "license": "CC BY",
+      "source_page": "https://www.inaturalist.org/photos/321497847",
+      "source_observation": "https://www.inaturalist.org/observations/184200360",
+      "source_photo_id": 321497847,
+      "original_source_photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/321497847/original.jpg",
+      "original_source_sha256": "2ae7390f288bfa09a8116129dad1d29946e1e68b2c67ca3d1ef8f7b5f43ccd36",
+      "archive_sha256": "667168db4a3b881ac3de6672740d0cc6ea7cd810f25e8bec771e9bc846fd2ddf",
+      "source_dimensions": [
+        1536,
+        2048
+      ],
+      "source_determination": "Muhlenbergia dubia (iNaturalist observation; needs-ID not independently vouchered)",
+      "taxonomic_caution": "Reported source taxon, needs-ID; visually similar Muhlenbergia rigens and other muhly species must be independently considered before definitive teaching label.",
+      "public_reuse": "CC BY source photo; credit creator/photo link. JPEG re-encoded without EXIF. Public website can publish under proper attribution.",
+      "photo_review": "Actual original enlarged pixels and separate independent photo contact-sheet inspected; coarse visible role reviewed, submillimeter dissections not proven."
+    },
+    {
+      "file": "images/flowering-head-cleveland-powell-ccby.jpg",
+      "role": "Flowering panicle tip supported on the photographer's fingers with many narrow spikelet-like units; finger gives non-metric scale",
+      "creator": "Cleveland Powell",
+      "license": "CC BY",
+      "source_page": "https://www.inaturalist.org/photos/665790824",
+      "source_observation": "https://www.inaturalist.org/observations/364698197",
+      "source_photo_id": 665790824,
+      "original_source_photo_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/665790824/original.jpg",
+      "original_source_sha256": "1905ba390dcd7e76a8052acc0b40d4721ae1b477afe1c8c0730d0e7a042eed9e",
+      "archive_sha256": "317fcb8b783b737b8854867aeceae37b62245f2d86be2e6b254832f878976335",
+      "source_dimensions": [
+        1536,
+        2048
+      ],
+      "source_determination": "Muhlenbergia dubia (iNaturalist observation; needs-ID not independently vouchered)",
+      "taxonomic_caution": "Reported source taxon, needs-ID; visually similar Muhlenbergia rigens and other muhly species must be independently considered before definitive teaching label.",
+      "public_reuse": "CC BY source photo; credit creator/photo link. JPEG re-encoded without EXIF. Public website can publish under proper attribution.",
+      "photo_review": "Actual original enlarged pixels and separate independent photo contact-sheet inspected; coarse visible role reviewed, submillimeter dissections not proven."
+    },
+    {
+      "file": "images/smithsonian-us3771355-vouchered-cc0.jpg",
+      "role": "Certified museum herbarium specimen reference with collection accession US 3771355. Pressed flowering material and herbarium label; individual ligule/glume/lemma pixel identities NOT inspected.",
+      "creator": "Smithsonian NMNH herbarium; specimen image by Ingrid P. Lin",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_page": "https://www.gbif.org/occurrence/4418651350",
+      "specimen_institution": "National Museum of Natural History, US National Herbarium (US)",
+      "specimen_catalog": "US 3771355",
+      "original_source_photo_url": "https://collections.nmnh.si.edu/media/?i=17195176&h=2000",
+      "source_taxon_name": "Muhlenbergia dubia E.Fourn.",
+      "verified_source_basis": "PRESERVED_SPECIMEN",
+      "archive_sha256": "8614d111182d4f14b7a233af72105365d45bdffd86acd6379eb714b277b9e985",
+      "original_dimensions": [
+        1503,
+        2000
+      ],
+      "license_verification": "GBIF record and attached specimen-media license both CC0",
+      "public_reuse": "CC0 1.0, public website cleared; credit Smithsonian and Ingrid P. Lin retained",
+      "photo_review": "A registered source-determined dried specimen. Does not certify the independent identity of earlier needs-ID iNaturalist photos or a measured ligule."
+    },
+    {
+      "file": "images/ccby-wendy-mccrady-237946166-narrow-leaf.jpg",
+      "role": "True source-labelled narrow green grass BLADE held between fingers. Shows fine blade and visible longitudinal veins, but true free inner ligule NOT depicted/verified.",
+      "creator": "Wendy McCrady",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_page": "https://www.inaturalist.org/photos/237946166",
+      "source_observation": "https://www.inaturalist.org/observations/139156693",
+      "source_photo_id": 237946166,
+      "source_taxon_name": "Muhlenbergia dubia",
+      "source_research_grade_on_import": true,
+      "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/237946166/original.jpg",
+      "original_sha256": "9777d46114319729ab8189eca0a5157682216874a51da5534519fba2f5db54cd",
+      "archive_sha256": "c8b7f93d86f0cb337d75af8b054538463d0e9acd62ef1a426774659bc4941a35",
+      "source_dimensions": [
+        1640,
+        2000
+      ],
+      "photo_status": "ORIGINAL_SOURCE_RGB_ARCHIVED__TRUE_BLADE_RECOGNITION_ONLY__LIGULE_AND_CROSS_SECTION_UNVERIFIED",
+      "public_reuse": "CC BY original source photo. Photographer/URL and resize/EXIF-strip modification acknowledged.",
+      "modifications": "Reencoded JPEG, resized if needed, EXIF/GPS stripped.",
+      "photo_review": "Research-grade source identification checked against iNat API for exact observation and photo; blade orientation/fine texture source-image pre-screened. No measured ligule or certified blade cross-section."
+    }
+  ],
+  "source_label_correction": {
+    "erroneous_label": "Muhlenbergia piniflora",
+    "not_a_synonym": true,
+    "source_record": "research-drafts/muhlenbergia-piniflora/draft.json"
+  },
+  "learner_visual_status": {
+    "status": "FIELD_READY_PHOTO_GAPS",
+    "image_count": 7,
+    "note": "Seven locally stored publicly reusable photos: includes a separately research-grade, source-labelled pine muhly blade view, provisional iNat leaf collar/reproductive photos and certified Smithsonian voucher. Exact calibrated free ligule and floret dissection still missing."
+  },
+  "photo_candidates": [
+    {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_dubia_-_Flickr_-_aspidoscelis.jpg",
+      "creator": "Patrick Alexander",
+      "license": "CC0 1.0",
+      "status": "NOT_DOWNLOADED"
+    },
+    {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_dubia_001.jpg",
+      "creator": "Stickpen",
+      "license": "Public domain",
+      "status": "NOT_DOWNLOADED"
+    }
+  ],
+  "visual_comparison": {
+    "title": "Pine muhly — two authentic, openly reusable photographs",
+    "subtitle": "Wild and cultivated tuft comparisons; no diagnostic ligule or spikelet photograph is yet available.",
+    "memory_rule": "Narrow, erect contracted panicles and fine often rolled blades suggest pine muhly; confirm with true ligule and measured spikelets.",
+    "items": [
+      {
+        "label": "Wild pine muhly — flowering habit",
+        "scientific_name": "Muhlenbergia dubia",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/pine-muhly-patrick-alexander-cc0.jpg",
+        "image_fit": "contain",
+        "image_role": "Wild plant recognition; anatomy not diagnostic",
+        "caption": "Source-identified wild plant photographed under the accepted name. Compare overall growth form, but do not infer fine ligule, glumes, lemma or spikelet anatomy from this image.",
+        "why_it_matters": "Authentic field or cultivation reference for initial recognition; reproductive diagnosis still needs macro photographs.",
+        "creator": "Patrick Alexander",
+        "license": "CC0",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AMuhlenbergia_dubia_-_Flickr_-_aspidoscelis.jpg",
+        "photo_status": "LOCAL_JPEG_VERIFIED; ANATOMY_REVIEW_PENDING",
+        "markers": []
+      },
+      {
+        "label": "Cultivated pine muhly — clump and foliage",
+        "scientific_name": "Muhlenbergia dubia",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/pine-muhly-stickpen-public-domain.jpg",
+        "image_fit": "contain",
+        "image_role": "Cultivated clump recognition; anatomy not diagnostic",
+        "caption": "Source-identified cultivated plant photographed under the accepted name. Compare overall growth form, but do not infer fine ligule, glumes, lemma or spikelet anatomy from this image.",
+        "why_it_matters": "Authentic field or cultivation reference for initial recognition; reproductive diagnosis still needs macro photographs.",
+        "creator": "Stickpen",
+        "license": "Public domain",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3AMuhlenbergia_dubia_001.jpg",
+        "photo_status": "LOCAL_JPEG_VERIFIED; ANATOMY_REVIEW_PENDING",
+        "markers": []
+      },
+      {
+        "label": "Pine muhly — exposed blade/sheath junction (ligule candidate)",
+        "scientific_name": "Muhlenbergia dubia (source reported, provisional)",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/ligule-junction-carlos-martorell-ccby.jpg",
+        "image_fit": "contain",
+        "image_role": "Attached leaf blade and sheath junction; exposed pale membranous flap consistent with true ligule, but not ruler-calibrated or dissected",
+        "caption": "Original CC BY photo shows a papery flap at the opened leaf junction; this is a good ligule-view candidate, but its free membrane, precise boundaries and 4–10 mm length are NOT independently specimen-verified. No anatomy arrow yet.",
+        "why_it_matters": "Provides genuine close diagnostic teaching view, beyond habit photos, while clearly holding taxon verification and calibrated microanatomy.",
+        "creator": "Carlos Martorell",
+        "license": "CC BY",
+        "source_page": "https://www.inaturalist.org/photos/325197748",
+        "photo_status": "LOCAL_JPEG_VERIFIED__SOURCE_TAXON_NEEDS_ID__METRIC_MACRO_UNVERIFIED",
+        "markers": []
+      },
+      {
+        "label": "Pine muhly — photographed mature flowering units",
+        "scientific_name": "Muhlenbergia dubia (source reported, provisional)",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/mature-panicle-spikelets-carlos-martorell-ccby.jpg",
+        "image_fit": "contain",
+        "image_role": "Mature clustered lanceolate spikelet-like units photographed close-up; no individual glume, lemma or awn origin independently dissected",
+        "caption": "An enlarged actual source-identified mature grass head. It supports seeing many narrow reproductive units, NOT measured or separately identified glumes, lemmas, awns or exact spikelet dimensions.",
+        "why_it_matters": "Provides genuine close diagnostic teaching view, beyond habit photos, while clearly holding taxon verification and calibrated microanatomy.",
+        "creator": "Carlos Martorell",
+        "license": "CC BY",
+        "source_page": "https://www.inaturalist.org/photos/321497847",
+        "photo_status": "SOURCE_CC_BY_NEEDS_ID__GROSS_REPRODUCTIVE_UNITS_ARROW_PIXELS_INSPECTED__BRACHTS_HELD",
+        "markers": [
+          {
+            "label": "Dense narrow flowering units; individual bracts not identified",
+            "label_x": 5,
+            "label_y": 12,
+            "target_x": 56,
+            "target_y": 54
+          }
+        ]
+      },
+      {
+        "label": "Pine muhly — intact flowerhead against fingers",
+        "scientific_name": "Muhlenbergia dubia (source reported, provisional)",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/flowering-head-cleveland-powell-ccby.jpg",
+        "image_fit": "contain",
+        "image_role": "Flowering panicle tip supported on the photographer's fingers with many narrow spikelet-like units; finger gives non-metric scale",
+        "caption": "A separate source-identification photographed near fingers for visual size reference. No millimeter ruler or individual spikelet dissection; independent species identification remains provisional.",
+        "why_it_matters": "Provides genuine close diagnostic teaching view, beyond habit photos, while clearly holding taxon verification and calibrated microanatomy.",
+        "creator": "Cleveland Powell",
+        "license": "CC BY",
+        "source_page": "https://www.inaturalist.org/photos/665790824",
+        "photo_status": "SOURCE_CC_BY_NEEDS_ID__GROSS_FLOWERING_HEAD_ARROW_PIXELS_INSPECTED__NO_METRIC_CERTIFICATION",
+        "markers": [
+          {
+            "label": "Intact narrow flowering head; fingers are not a metric scale",
+            "label_x": 5,
+            "label_y": 12,
+            "target_x": 57,
+            "target_y": 44
+          }
+        ]
+      },
+      {
+        "label": "SPECIMEN CHECK — Smithsonian US 3771355 pine muhly voucher",
+        "scientific_name": "Muhlenbergia dubia",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/smithsonian-us3771355-vouchered-cc0.jpg",
+        "image_fit": "contain",
+        "image_role": "Institutionally catalogued source-labelled PRESERVED SPECIMEN; no microscopic dissection claimed",
+        "caption": "Smithsonian US National Herbarium voucher US 3771355. Image Ingrid P. Lin, CC0. Cross-check the pressed habit and inflorescence; not a measured ligule or separated glumes/lemma. Does NOT authenticate unrelated provisional iNaturalist photos.",
+        "why_it_matters": "Provides independent museum-vouchered reference for the species when field close-up photographs have unresolved Needs-ID determinations.",
+        "creator": "Smithsonian NMNH / Ingrid P. Lin",
+        "license": "CC0 1.0",
+        "source_page": "https://www.gbif.org/occurrence/4418651350",
+        "photo_status": "CC0_ARCHIVED_INSTITUTIONAL_VOUCHER__ANATOMY_PIXEL_REVIEW_HOLD",
+        "markers": []
+      },
+      {
+        "label": "PINE MUHLY — fine real leaf blade held between fingers",
+        "scientific_name": "Muhlenbergia dubia",
+        "image_url": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/ccby-wendy-mccrady-237946166-narrow-leaf.jpg",
+        "image_fit": "contain",
+        "image_role": "Source-reported research-grade thin leaf blade view; NOT a free ligule, rolled-leaf cross-section or dissected spikelet.",
+        "caption": "Wendy McCrady, CC BY 4.0, iNaturalist Research Grade observation 139156693. A useful source-photo blade-scale comparison. No inner membrane, mature glumes or lemma length demonstrated.",
+        "why_it_matters": "Separates the blade recognition lesson from the uncertain leaf-collar candidate and makes the photo limitations explicit.",
+        "creator": "Wendy McCrady",
+        "license": "CC BY 4.0",
+        "source_page": "https://www.inaturalist.org/photos/237946166",
+        "photo_status": "ORIGINAL_CC_BY_RESEARCH_GRADE_LEAF_ONLY__NO_MICRO_ANATOMY_ARROW",
+        "markers": []
+      }
+    ],
+    "overlay_note": "No arrows are added until original-pixel inspection supports the target structure. Native-county claims remain unresolved."
+  },
+  "field_id_lesson": {
+    "status": "FIELD_READY_PHOTO_GAPS",
+    "look_here_first": "A dense perennial tuft with fine often involute leaves and narrow erect gray-green panicles; not a broad pink cloud of flowers.",
+    "crew_checkpoints": [
+      "Check basal tussock versus creeping/rhizomatous growth",
+      "Photograph an entire attached mature narrow panicle",
+      "Measure the membranous, acute-to-lacerate ligule (4–10 mm according to Flora of North America); don't infer it from habit photos.",
+      "Measure mature spikelets (3.8–5 mm) and glumes (mostly 2–3 mm), then compare awn and lemma; requires magnified photo with scale.",
+      "Compare with Muhlenbergia rigens and M. lindheimeri using multiple characters, not just fountain habit"
+    ],
+    "photo_handoff": [
+      "Ligule with millimeter scale",
+      "Single mature spikelet and glumes with millimeter scale",
+      "Mature panicle macro and branch spacing"
+    ],
+    "annotation_status": "Two recognition images; zero new anatomy arrows pending pixel review."
+  },
+  "fna_measured_diagnostic_review_20261023": {
+    "source": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630304",
+    "source_attribution": "Flora of North America treatment by Paul M. Peterson, mirrored at Open Herbarium",
+    "diagnostic_traits": [
+      {
+        "character": "Ligule",
+        "range": "4–10 mm; membranous, firm, acute, lacerate"
+      },
+      {
+        "character": "Panicle",
+        "range": "10–40 cm long and 0.6–2.4 cm wide, contracted but not spikelike; primary branches divergent ≤40°"
+      },
+      {
+        "character": "Spikelets",
+        "range": "3.8–5 mm"
+      },
+      {
+        "character": "Glumes",
+        "range": "(1.8–)2–3 mm, approximately equal, shorter than florets"
+      },
+      {
+        "character": "Lemmas",
+        "range": "3.8–5 mm; awn absent or up to 6 mm"
+      }
+    ],
+    "lookalike_difference": "FNA distinguishes M. rigens by pine muhly's looser panicle, longer ligules, olive-green anthers and often longer lemmas.",
+    "photographic_coverage": "Two source-labelled open-license habit images archived; no diagnostic macro or ruler-scaled ligule image in repository.",
+    "status": "TEXT_AND_MEASUREMENTS_SOURCE_VERIFIED_PHOTO_ANATOMY_PENDING"
+  },
+  "field_id_finish_pass": {
+    "stage": "FIELD_READY_PHOTO_GAPS — new true source-attributed leaf-junction, flowering head and reproductive close-ups installed and pictured; photographed membranous part not mm-calibrated or source-vouchered, glumes/lemma not dissected",
+    "crew_teaching_summary": "PINE MUHLY = densely tufted, non-rhizomatous perennial with narrow rolled blades and erect gray-green, contracted but not rigidly spikelike panicle. Important test against deergrass: open attached collar and measure long 4–10(12) mm membrane ligule; inspect mature small spikelet with paired shorter glumes and longer lemma. The two current photos document only gross habit: NOT ligule, glumes or lemma. Do not equate pine muhly with nonexistent Muhlenbergia piniflora.",
+    "measured_diagnostic_key": {
+      "growth_form": "Densely cespitose perennial, not rhizomatous; culms roughly 30–100 cm; narrow usually inrolled blades about 1–2 mm wide.",
+      "ligule": "Firm membranous ligule, often acute/lacerate, FNA 4–10 mm; Kew GrassBase 4–12 mm. TRUE free membrane must be photographed at attached sheath/blade junction with 1 mm ruler.",
+      "panicle": "Contracted gray-green panicle; Flora of North America 10–40 cm long and 0.6–2.4 cm wide, with stiff primary branches up to 7 cm, often ascending rather than strict spikelike cylinder. Kew describes narrower commonly 10–30 cm form.",
+      "spikelets": "Solitary one-fertile-floret spikelets approx. 3.8–5 mm (FNA); Kew approximately 4–5 mm. Source literature, not measurements made from photographs.",
+      "glumes": "Pair approximately equal, shorter than lemma, ~2–3 mm, faintly one-veined.",
+      "lemma_awn": "Lemma approximately 3.8–5 mm, narrowly lanceolate, three-veined, hairy callus, awn variable including awnless or straight awned; FNA awns to ~6 mm, GrassBase gives 0–4 mm. Never identify a presumed awn from the habit photo.",
+      "anthers": "Anthers ~1.5–2.2 mm, olivaceous or greenish; color depends on reproductive stage and photography."
+    },
+    "compare_deergrass": {
+      "taxon": "Muhlenbergia rigens",
+      "first_clue": "Deergrass usually has a more rigid, narrower, denser spikelike panicle. Pine muhly has looser ascending branches and can reach 2.4 cm across.",
+      "ligule": "Pine muhly ~4–10(12) mm versus deergrass FNA 0.5–2(3) mm; capture several mature leaves of BOTH species at the same scale.",
+      "lemma": "Pine muhly ~3.8–5 mm versus deergrass ~2.4–4 mm; ranges overlap. Distinguish after specimen dissection.",
+      "flower_anthers": "Pine typically greenish/olivaceous; deergrass yellow or purple, but color is supporting evidence only.",
+      "caution": "Not reliably separated by tuft silhouette or one old flowering head photo; record actual ligule and lemma measurements."
+    },
+    "photo_targets": [
+      "FOLLOW-UP: verify the exposed papery leaf-junction structure in installed Carlos Martorell CC BY photo 325197748 on an expert-determined plant and photograph a 1-mm ruler showing the free membranous ligule",
+      "FOLLOW-UP: independently determine and measure one actual mature 3.8–5 mm spikelet, both 2–3 mm glumes and the 3.8–5 mm lemma in a dissected same-voucher series",
+      "FOLLOW-UP: photograph dissected lemma callus, veins and true awn origin at 10–20× with millimeter scale, placing arrows only after pixel inspection",
+      "FOLLOW-UP: matched M. rigens collar and spikelet at equal scale and growth stage",
+      "Rooted attached wild tuft and full panicle from a separately verified specimen; existing source observations are Needs ID"
+    ],
+    "photo_license_holds": [
+      "Existing two archived images are public-domain or CC0 but show general plant form only",
+      "Smithsonian journal's labeled ligule/glume/floret illustration is LINK-ONLY; copyright grant for embedding its panels not verified",
+      "Nursery/iNaturalist close inflorescence pictures must not be hosted without original per-image public-reuse permission"
+    ],
+    "reference_only_anatomy_illustration": {
+      "description": "Peterson et al. published Fig. 8 of vouchered M. dubia showing A ligule, B glumes, C floret, in Journal of the Botanical Research Institute of Texas 1(2), page 956",
+      "url": "https://repository.si.edu/bitstream/10088/3347/1/Peterson_etal_Muhlenbergiinae_JBRIT_933-1000.pdf",
+      "publication_rights": "Not verified for public mirroring: link for scientifically grounded study only"
+    },
+    "source_references": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:408994-1/general-information",
+      "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630304",
+      "https://sernecportal.org/portal/taxa/index.php?clid=73&taxauthid=1&tid=2558"
+    ],
+    "taxonomy_caution": "Accepted name is Muhlenbergia dubia E. Fourn. 'M. piniflora' lane assignment typo never installed or resurrected. No new Hays County nativity claim.",
+    "annotation_rule": "No anatomical arrows on current whole plant images; actual measured ligule/lemma pixels are missing.",
+    "status": "FIELD_READY_PHOTO_GAPS"
+  },
+  "field_id_short_tiles": [
+    {
+      "heading": "01 · TUFT",
+      "cue": "Dense perennial bunch, thin rolled leaves",
+      "expand": "Look at crown continuity and narrow inrolled blades. Foliage alone is not unique; capture entire clump connected to flowering stem. No photograph proves roots.",
+      "photo_status": "TWO HABIT PHOTOS; NO ROOT EXPOSURE",
+      "term_links": [
+        "cespitose",
+        "leaf blade",
+        "culm"
+      ],
+      "short": "Dense perennial bunch, thin rolled leaves",
+      "details": "Look at crown continuity and narrow inrolled blades. Foliage alone is not unique; capture entire clump connected to flowering stem. No photograph proves roots.",
+      "status": "TWO HABIT PHOTOS; NO ROOT EXPOSURE"
+    },
+    {
+      "heading": "02 · COLLAR",
+      "cue": "Long papery ligule: usually 4–10 mm",
+      "expand": "One attributed CC BY original now shows an opened blade/sheath junction with a visible pale papery flap consistent with a ligule. It has NO millimeter ruler; whether the exact free membrane measures 4–10 mm is NOT established by the photo. Compare a vouchered leaf collar with deergrass's generally shorter ligule before definitive ID.",
+      "photo_status": "ACTUAL OPENED LEAF-COLLAR PHOTO INSTALLED — MEMBRANE LENGTH AND TAXON STILL NEED VERIFICATION",
+      "term_links": [
+        "ligule",
+        "collar",
+        "sheath"
+      ],
+      "short": "Long papery ligule: usually 4–10 mm",
+      "details": "One attributed CC BY original now shows an opened blade/sheath junction with a visible pale papery flap consistent with a ligule. It has NO millimeter ruler; whether the exact free membrane measures 4–10 mm is NOT established by the photo. Compare a vouchered leaf collar with deergrass's generally shorter ligule before definitive ID.",
+      "status": "ACTUAL OPENED LEAF-COLLAR PHOTO INSTALLED — MEMBRANE LENGTH AND TAXON STILL NEED VERIFICATION"
+    },
+    {
+      "heading": "03 · PANICLE",
+      "cue": "Narrow contracted head, not a rigid spike",
+      "expand": "Two real source-attributed CC BY photos now show a narrow flowering head against fingers and densely gathered reproductive units close up. Literature reports panicle length 10–40 cm and width 0.6–2.4 cm. Branch insertions are not ruler-measured; deergrass may share a narrow head.",
+      "photo_status": "MATURE FLOWERING-HEAD MACROS INSTALLED — RACHIS BRANCH LENGTH NOT MEASURED",
+      "term_links": [
+        "panicle",
+        "rachis",
+        "spikelet"
+      ],
+      "short": "Narrow contracted head, not a rigid spike",
+      "details": "Two real source-attributed CC BY photos now show a narrow flowering head against fingers and densely gathered reproductive units close up. Literature reports panicle length 10–40 cm and width 0.6–2.4 cm. Branch insertions are not ruler-measured; deergrass may share a narrow head.",
+      "status": "MATURE FLOWERING-HEAD MACROS INSTALLED — RACHIS BRANCH LENGTH NOT MEASURED"
+    },
+    {
+      "heading": "04 · SPIKELET",
+      "cue": "One floret; glumes ~2–3 mm, lemma ~4–5 mm",
+      "expand": "One enlarged CC BY mature reproductive photo shows narrow units but DOES NOT certify which pieces are the 2–3 mm paired glumes versus the 3.8–5 mm lemma. Those lengths are published botanical traits, not pixel measurements. Need an independently determined ripe specimen under 10–20× with actual 1-mm scale.",
+      "photo_status": "REPRODUCTIVE CLOSE-UP INSTALLED — NO RULER-CALIBRATED DISSECTED SPIKELET",
+      "term_links": [
+        "floret",
+        "glume",
+        "lemma",
+        "awn"
+      ],
+      "short": "One floret; glumes ~2–3 mm, lemma ~4–5 mm",
+      "details": "One enlarged CC BY mature reproductive photo shows narrow units but DOES NOT certify which pieces are the 2–3 mm paired glumes versus the 3.8–5 mm lemma. Those lengths are published botanical traits, not pixel measurements. Need an independently determined ripe specimen under 10–20× with actual 1-mm scale.",
+      "status": "REPRODUCTIVE CLOSE-UP INSTALLED — NO RULER-CALIBRATED DISSECTED SPIKELET"
+    },
+    {
+      "heading": "05 · DISSECT THE LEMMA, CALLUS AND AWN",
+      "cue": "Fertile lemma about 3.8–5 mm; a single terminal awn may be absent or short.",
+      "expand": "The FNA treatment gives fertile lemmas about 3.8–5 mm, with an awn absent or to 6 mm; Kew GrassBase describes a 4–5 mm, three-veined lemma and a 0–4 mm awn. Preserve these source-specific ranges. Dissect a mature same-voucher spikelet: separate its two shorter one-veined glumes, expose the three-veined lemma, two-veined palea, hairy callus and any true awn attachment. An entire grass head, finger for scale, or undissected narrow floret is NOT proof of bract identity, awn origin or dimensions.",
+      "short": "Fertile lemma about 3.8–5 mm; a single terminal awn may be absent or short.",
+      "details": "The FNA treatment gives fertile lemmas about 3.8–5 mm, with an awn absent or to 6 mm; Kew GrassBase describes a 4–5 mm, three-veined lemma and a 0–4 mm awn. Preserve these source-specific ranges. Dissect a mature same-voucher spikelet: separate its two shorter one-veined glumes, expose the three-veined lemma, two-veined palea, hairy callus and any true awn attachment. An entire grass head, finger for scale, or undissected narrow floret is NOT proof of bract identity, awn origin or dimensions.",
+      "photo_status": "NEEDS_PUBLIC_PHOTO — SAME-SPIKELET CALIBRATED GLUME/LEMMA/PALEA DISSECTION",
+      "status": "NEEDS_PUBLIC_PHOTO — SAME-SPIKELET CALIBRATED GLUME/LEMMA/PALEA DISSECTION",
+      "term_links": [
+        "lemma",
+        "palea",
+        "glume",
+        "callus",
+        "awn"
+      ]
+    },
+    {
+      "heading": "06 · CENTRAL TEXAS LOOK-ALIKES + RELEASE GATE",
+      "cue": "Separate deergrass by its shorter ligule and usually tighter panicle; don't rely on silhouette.",
+      "expand": "Deergrass (M. rigens) has a generally shorter membranous ligule, often 0.5–2(3) mm in FNA, and typically a more rigid, spikelike panicle; pine muhly has a longer 4–10(12) mm ligule and usually less rigid flowering branches. Their lemma lengths overlap. Lindheimer muhly (M. lindheimeri) forms a much larger fountain-shaped bunch, and seep muhly (M. reverchonii) has a more open fine-textured panicle. Do not confuse accepted M. dubia with the held source name M. piniflora or certify county nativity from it. NEEDS_PUBLIC_PHOTO: rooted local crown connected to mature head, 1-mm-calibrated true ligule, same-voucher 3.8–5 mm spikelet with both glumes, lemma, palea, callus and any awn, matched deergrass. NEEDS_SITE_QA: verify seven archived photos and comparison panels, research-grade/voucher vs provisional labels, all licenses/attribution, actual arrows and public mobile display. Retain FIELD_READY_PHOTO_GAPS.",
+      "short": "Separate deergrass by its shorter ligule and usually tighter panicle; don't rely on silhouette.",
+      "details": "Deergrass (M. rigens) has a generally shorter membranous ligule, often 0.5–2(3) mm in FNA, and typically a more rigid, spikelike panicle; pine muhly has a longer 4–10(12) mm ligule and usually less rigid flowering branches. Their lemma lengths overlap. Lindheimer muhly (M. lindheimeri) forms a much larger fountain-shaped bunch, and seep muhly (M. reverchonii) has a more open fine-textured panicle. Do not confuse accepted M. dubia with the held source name M. piniflora or certify county nativity from it. NEEDS_PUBLIC_PHOTO: rooted local crown connected to mature head, 1-mm-calibrated true ligule, same-voucher 3.8–5 mm spikelet with both glumes, lemma, palea, callus and any awn, matched deergrass. NEEDS_SITE_QA: verify seven archived photos and comparison panels, research-grade/voucher vs provisional labels, all licenses/attribution, actual arrows and public mobile display. Retain FIELD_READY_PHOTO_GAPS.",
+      "photo_status": "PHOTO + SITE-QA HANDOFF — NOT FINISHED",
+      "status": "PHOTO + SITE-QA HANDOFF — NOT FINISHED",
+      "term_links": [
+        "ligule",
+        "panicle",
+        "glume",
+        "lemma",
+        "awn"
+      ]
+    }
+  ],
+  "lane3_anatomy_archive_20261025": {
+    "status": "LOCALLY_ARCHIVED_SOURCE_DETERMINED_CLOSEUP_PHOTOS__SCIENTIFIC_AND_METRIC_HOLDS",
+    "added_photo_ids": [
+      325197748,
+      321497847,
+      665790824
+    ],
+    "source_license": "CC BY",
+    "pixel_visual_review": "Enlarged full-original source views screened; no submillimeter arrows placed",
+    "hard_holds": [
+      "True detached/free ligule measured 4–10 mm on a species-verified specimen with mm ruler",
+      "Independently identified specimen fully dissected into persistent 2–3 mm paired glumes, 3.8–5 mm fertile lemma, hairy callus",
+      "Matched verified M. rigens ligule and mature spikelet at same scale",
+      "Original source observations listed needs-ID, do not mark taxon expert-certified or native-to-Hays from these"
+    ],
+    "public_page_status": "Not verified"
+  },
+  "lane3_voucher_anchor_20261025": {
+    "catalog": "US 3771355",
+    "gbif_key": 4418651350,
+    "license": "CC0 1.0",
+    "status": "PUBLIC_VOUCHER_REFERENCE_ONLY__NOT_MICRO_COMPLETE",
+    "source_photo_rights": "Smithsonian specimen and media license CC0",
+    "source_identification_hold": "Registered source taxon M. dubia; earlier three close-up field photos remain iNaturalist Needs ID.",
+    "photo_anatomy_hold": "True scale measured attached ligule, separate glumes/lemma and deergrass matched comparison still require expert-verified microscopic photographs.",
+    "native_county_hold": "Do not infer Hays County native occurrence from Mexico or outside-Hays voucher."
+  },
+  "lane3_gross_arrows_20261025": {
+    "status": "TWO_GROSS_VISUAL_ARROWS__FINE_ANATOMY_UNVERIFIED",
+    "arrow_count": 2,
+    "source_image_ids": [
+      665790824,
+      321497847
+    ],
+    "visual_review": "Reviewed enlarged source-original contact sheet for distinct narrow flowering head and dense photographed reproductive units; source JPEG fingerprints preserved from original download/archival report.",
+    "exclusions": [
+      "No arrow assigned to the possible free ligule, since flap provenance and free margin not unambiguous",
+      "No microscopic glume, lemma, awn base or callus labels placed",
+      "The original iNaturalist determinations of these particular plants remain Needs ID."
+    ],
+    "site_check": "Public build not reverified after this edit.",
+    "remaining": "True 1-mm calibrated ligule and one vouchered, dissected mature spikelet remain missing."
+  },
+  "lane3_leaf_detail_20261025": {
+    "source_photo": 237946166,
+    "source_observation": 139156693,
+    "source_grade": "research",
+    "license": "CC BY 4.0",
+    "status": "LEAF_BLADE_REFERENCE_ONLY",
+    "holds": [
+      "No photograph measures 4–10 mm free membranous ligule",
+      "No photograph separates the two 2–3 mm glumes from fertile lemma under a metric scale",
+      "True inrolled blade cross section not independently resolved"
+    ],
+    "arrows": 0
+  },
+  "grass_species_finalization_20261026": {
+    "status": "FIELD_READY_PHOTO_GAPS",
+    "handoff": [
+      "NEEDS_PUBLIC_PHOTO",
+      "NEEDS_SITE_QA"
+    ],
+    "NEEDS_PUBLIC_PHOTO": [
+      "One independently authenticated Central Texas M. dubia with rooted non-rhizomatous crown connected to the full 10–40 cm mature panicle and centimeter scale; separate source observations marked Needs ID are not local voucher proof.",
+      "Opened attached firm membranous ligule with a 1-mm ruler: FNA 4–10 mm, Kew 4–12 mm; verify exact free membrane boundaries on a confirmed specimen, not a provisional papery flap.",
+      "Same-voucher mature 3.8–5 mm spikelet at 10–20×: both shorter 2–3 mm one-veined glumes, three-veined 3.8–5 mm lemma, palea, hairy callus and any true terminal awn with metric scale; annotate only visible dissected structures.",
+      "Matched M. rigens ligule/panicle/spikelet at the same scale and mature stage, explicitly labeled DIFFERENT SPECIES; compare with M. reverchonii and M. lindheimeri as supporting local forms."
+    ],
+    "NEEDS_SITE_QA": [
+      "Verify all seven locally archived source-specific photos, creator/source/per-photo CC0/Public Domain/CC BY rights and original image bytes; preserve Smithsonian voucher vs iNaturalist Needs ID provisional distinctions.",
+      "Inspect existing comparison panels and all gross arrow endpoints against actual pixels; withhold measured ligule, glume, lemma and awn arrows without source-vouchered calibrated dissection.",
+      "Verify accepted name M. dubia, separate held M. piniflora source-name problem, county-native metrics exclusion, EXIF/GPS handling, and mobile public-gallery rights filter; no live deployment asserted."
+    ],
+    "public_ready_criteria": "FINISHED only after authenticated same-plant rooted habit, measured true membranous ligule, dissected ripe glumes/lemma/palea/callus/awn and matched look-alike, with independently inspected anatomically correct arrows, individual public photo rights and live site QA. Maintain county/taxonomy hold.",
+    "sources": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:408994-1/general-information",
+      "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630304"
+    ],
+    "notes": "Existing four field-ID tiles retained and normalized for six-tile rendering; two new reproductive and comparison/release tiles. Seven photo records and all scientific holds preserved. No photo, arrow, taxonomy, county, website or Pages edits."
+  }
+}

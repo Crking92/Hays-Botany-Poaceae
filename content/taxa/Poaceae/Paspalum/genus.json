@@ -1,0 +1,621 @@
+{
+  "rank": "genus",
+  "family": "Poaceae",
+  "name": "Paspalum",
+  "common_group": "Paspalums — six existing Hays County Botany learner species",
+  "project_scope": {
+    "selection_mode": "existing manifest species FINISH/ENRICH (no new first-card admission)",
+    "canonical_species_count": 6,
+    "canonical_species_ids": [
+      "paspalum-dilatatum",
+      "paspalum-distichum",
+      "paspalum-floridanum",
+      "paspalum-pubiflorum",
+      "paspalum-setaceum",
+      "paspalum-urvillei"
+    ],
+    "taxonomic_review": "Species-level identity and native-by-county audit remain as they were; this is a structural visual learner pass, not new verification."
+  },
+  "look_here_first": "PASPALUM: start with ONE complete flowering head, count the one-sided racemes and inspect flat oval spikelets in rows. Then check the rooted base (wet stolon mat or perennial tuft) and five measured ripe spikelets for glume size/hairs. Branch count overlaps, so two racemes alone do not prove knotgrass, and many racemes alone do not prove vaseygrass.",
+  "shared_morphology": [
+    "Paspalum usually has one or more unilateral, spike-like reproductive RACEMES; each raceme is a branch of the full inflorescence.",
+    "Green oval compressed units seen on these racemes are SPIKELETS, each with distinct glumes/sterile and fertile florets; purple flower parts may protrude during anthesis.",
+    "A grass leaf consists of blade, basal sheath and a ligule at their junction. Correct collar photography requires blade/sheath movement rather than a distant tuft photo.",
+    "A mature measured spikelet macro plus habitat/growth habit and a complete raceme count is often required for species-level separation."
+  ],
+  "study_strategy": {
+    "priority": "Photo-led field recognition first, reproductive anatomy second",
+    "crew_sequence": [
+      "1. Photograph one entire flowering stem and count attached unilateral racemes; do not count overlapping stems.",
+      "2. Learn original head photos plus added Florida paspalum seedhead, thin paspalum full-raceme, and knotgrass low mat.",
+      "3. On DALLIS vs VASEY measure 5 mature spikelets: roughly 3–4 vs 2–3 mm, respectively; both can have long marginal hairs, and raceme counts overlap.",
+      "4. For FLORIDA vs PUBIFLORUM compare true large rounded vs smaller oval spikelets and upper-glume details, not tuft height.",
+      "5. For KNOTGRASS vs THIN PASPALUM locate a genuine rooting stolon and leaf blade/collar hairs; V-shaped heads do not prove knotgrass.",
+      "6. Photograph blade-sheath collar, rooted base, ripe glume and mm scale from the same plant; preserve existing nativity status."
+    ]
+  },
+  "six_species_field_key": [
+    {
+      "taxon": "Paspalum distichum",
+      "field_hint": "Usually V-shaped two-raceme head PLUS an actually rooted aboveground stolon; new Aussie mat photograph illustrates low habit only.",
+      "next_check": "Photo of ROOTED node, same-plant full seedhead and mature spikelets to exclude P. notatum."
+    },
+    {
+      "taxon": "Paspalum setaceum",
+      "field_hint": "One/few slim one-sided flowering racemes; new full raceme/leaf view complements prior spikelet macro. Purple projections are flowers, not seeds.",
+      "next_check": "Check true blade/sheath hairs, collar, mature glumes and variety—not diagnosable from two flowering photos alone."
+    },
+    {
+      "taxon": "Paspalum pubiflorum",
+      "field_hint": "Usually several racemes with tight oval flattened spikelet pairs about 2.7–3.2 mm in references",
+      "next_check": "Upper-glume fine hairs, spikelet size, full raceme count and collar; source photo only shows one fragment"
+    },
+    {
+      "taxon": "Paspalum floridanum",
+      "field_hint": "Large perennial tuft with usually a FEW flowering racemes. Newly available licensed real photo shows a 3-branched head with rounded attached spikelets.",
+      "next_check": "True mature 3.5–5 mm spikelets with a 1-mm ruler and glumes; garden photo is not a Hays voucher."
+    },
+    {
+      "taxon": "Paspalum dilatatum",
+      "field_hint": "Coarse dallisgrass, generally several (often 3–7) racemes, hairy larger about 3–4 mm spikelets",
+      "next_check": "Measure multiple mature silky-margined spikelets; compare entire head with vaseygrass"
+    },
+    {
+      "taxon": "Paspalum urvillei",
+      "field_hint": "Tall coarse introduced vaseygrass, generally MANY (commonly 10–20) slender racemes on elongated axis",
+      "next_check": "Measure smaller roughly 2–3 mm edge-hairy spikelets, check true basal plant and collar; count overlaps"
+    },
+    {
+      "taxon": "Uncertain Paspalum species",
+      "field_hint": "Head fragment, overlap, juvenile flowering stage or missing collar/mature spikelets",
+      "next_check": "Label Paspalum sp. pending properly documented flowering mature specimens"
+    }
+  ],
+  "comparison_cards": [
+    {
+      "title": "Dallisgrass versus vaseygrass",
+      "species_ids": [
+        "paspalum-dilatatum",
+        "paspalum-urvillei"
+      ],
+      "look_here_first": "Count racemes attached to the WHOLE head and examine measured marginally hairy spikelets.",
+      "field_matrix": [
+        {
+          "character": "Habit",
+          "dilatatum": "Coarse clumping grass, often around 1 m",
+          "urvillei": "Usually taller robust grass, often 1–2.5 m"
+        },
+        {
+          "character": "Branch count",
+          "dilatatum": "Usually around 3–7, variable",
+          "urvillei": "Frequently 10–20, variable"
+        },
+        {
+          "character": "Spikelets",
+          "dilatatum": "Larger around 3–4 mm with conspicuous long silky margin hairs",
+          "urvillei": "Smaller around 2–3 mm with hairs at margin"
+        }
+      ],
+      "stop_rule": "Don't classify without a complete head and several measured spikelets; height and branch counts overlap."
+    },
+    {
+      "title": "Knotgrass versus thin paspalum",
+      "species_ids": [
+        "paspalum-distichum",
+        "paspalum-setaceum"
+      ],
+      "look_here_first": "Trace actual creeping stolon nodes and check full flowering head/leaf hairiness.",
+      "field_matrix": [
+        {
+          "character": "Growth",
+          "distichum": "Wetland mat with rooting stolons",
+          "setaceum": "More variable leafy growth with varieties needing foliage inspection"
+        },
+        {
+          "character": "Seedhead",
+          "distichum": "Typically two terminal V-shaped unilateral racemes",
+          "setaceum": "Often one to a few unilateral branches; can look close"
+        },
+        {
+          "character": "Best macro",
+          "distichum": "Rooted node and paired head",
+          "setaceum": "Leaf hairs, measured small spikelets, collar"
+        }
+      ],
+      "stop_rule": "Additional knotgrass wet-meadow habit and thin paspalum full-raceme photos available. Neither shows the required actual rooted stolon or variety-level leaf pubescence. Two racemes also occur in P. notatum."
+    },
+    {
+      "title": "Florida paspalum versus pubiflorum",
+      "species_ids": [
+        "paspalum-floridanum",
+        "paspalum-pubiflorum"
+      ],
+      "look_here_first": "Measure mature spikelets and show the COMPLETE head, don't just compare plant size.",
+      "field_matrix": [
+        {
+          "character": "Floridanum",
+          "clue": "Often large coarser upright clump and larger rounded mature spikelets"
+        },
+        {
+          "character": "Pubiflorum",
+          "clue": "Several racemes and smaller roughly 2.7–3.2 mm oval spikelets, glumes variable pubescence"
+        }
+      ],
+      "stop_rule": "Florida paspalum now has real source-labelled flowering racemes as well as tuft, but NO measured glume macro. Pubiflorum still lacks full head and glume hair detail. No definitive species call from imagery alone."
+    }
+  ],
+  "visual_comparison": {
+    "title": "Paspalum — 6 installed species, 10 real credited photo panels",
+    "subtitle": "Seven preserved archived panels plus three independently licensed external references, awaiting user photo review; new arrows target visible structures only. Four additional genuinely original Bob Harms P. pubiflorum photos now physically stored, shared by species and genus, original creator and copyright preserved, not CC.",
+    "memory_rule": "WHOLE HEAD → RACEME COUNT → 1-mm RIPE SPIKELET → EDGE HAIRS → ROOTED BASE + COLLAR.",
+    "items": [
+      {
+        "label": "1 · Several arching seedhead branches",
+        "scientific_name": "Paspalum dilatatum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/joey-421763076.jpg",
+        "image_fit": "contain",
+        "image_role": "Wide field image of several thin arching seedhead racemes attached to an elongated axis",
+        "caption": "The long raceme stalks extend across a green backdrop. Individual spikelets are too small to measure, and other overlapping plants make counts uncertain.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "Joey Santore",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/421763076",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Arched raceme",
+            "label_x": 4,
+            "label_y": 9,
+            "target_x": 21,
+            "target_y": 31
+          },
+          {
+            "label": "Another flowering branch",
+            "label_x": 72,
+            "label_y": 9,
+            "target_x": 48,
+            "target_y": 28
+          }
+        ]
+      },
+      {
+        "label": "2 · Blade/sheath junction with actual collar texture",
+        "scientific_name": "Paspalum dilatatum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/joey-421763021.jpg",
+        "image_fit": "contain",
+        "image_role": "Close view of green leaf base, adjacent sheath and pale hairs at the collar region",
+        "caption": "The flat green blade extends across the frame from left and a pale hair tuft is visible at the junction. It is NOT a measured ligule and the rippled blade margins should not be mistaken for plant hairs.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "Joey Santore",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/421763021",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Blade base",
+            "label_x": 5,
+            "label_y": 67,
+            "target_x": 39,
+            "target_y": 59
+          },
+          {
+            "label": "Pale collar hairs",
+            "label_x": 76,
+            "label_y": 9,
+            "target_x": 47,
+            "target_y": 32
+          }
+        ]
+      },
+      {
+        "label": "1 · Many thin branches from elongated seedhead axis",
+        "scientific_name": "Paspalum urvillei",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/commons-paspalum-urvillei.jpg",
+        "image_fit": "contain",
+        "image_role": "Long seedhead against blue sky with many separated green slender one-sided racemes",
+        "caption": "Multiple long thin racemes depart along a single inflorescence stem, most drooping toward the right. The photograph is not scaled, so spikelet lengths or ligule hairs cannot be judged.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_head10_(7391798316).jpg",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Central axis",
+            "label_x": 9,
+            "label_y": 13,
+            "target_x": 45,
+            "target_y": 27
+          },
+          {
+            "label": "One raceme",
+            "label_x": 76,
+            "label_y": 69,
+            "target_x": 67,
+            "target_y": 48
+          },
+          {
+            "label": "Many branches",
+            "label_x": 76,
+            "label_y": 10,
+            "target_x": 66,
+            "target_y": 33
+          }
+        ]
+      },
+      {
+        "label": "1 · Paired flowering racemes in a V",
+        "scientific_name": "Paspalum distichum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/commons-paspalum-distichum.jpg",
+        "image_fit": "contain",
+        "image_role": "Two closely paired erect seedhead branches above fingers against sky",
+        "caption": "The one-sided green spikelets line both racemes. Dark reddish male anthers/stigmas protrude from flowering units; they are not awns. No stolon is visible.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_distichum_flowerhead1_(8251279964).jpg",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Left raceme",
+            "label_x": 5,
+            "label_y": 14,
+            "target_x": 39,
+            "target_y": 37
+          },
+          {
+            "label": "Right raceme",
+            "label_x": 72,
+            "label_y": 9,
+            "target_x": 61,
+            "target_y": 31
+          },
+          {
+            "label": "Green spikelets",
+            "label_x": 6,
+            "label_y": 75,
+            "target_x": 47,
+            "target_y": 50
+          }
+        ]
+      },
+      {
+        "label": "1 · Pale flattened spikelets and purple flowers",
+        "scientific_name": "Paspalum setaceum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/commons-paspalum-setaceum.jpg",
+        "image_fit": "contain",
+        "image_role": "Extremely close real picture of one flowering raceme with oval green spikelets and purple projecting floral parts",
+        "caption": "Ovoid green spikelets align along the axis. Purple flower parts protrude from between them; they are NOT 'purple seeds'. The full seedhead, variety and hairy leaf margins are not shown.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "Alex Abair",
+        "license": "CC BY 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_setaceum_49099686.jpg",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Green spikelet",
+            "label_x": 8,
+            "label_y": 20,
+            "target_x": 48,
+            "target_y": 25
+          },
+          {
+            "label": "Purple flower parts",
+            "label_x": 7,
+            "label_y": 64,
+            "target_x": 44,
+            "target_y": 58
+          },
+          {
+            "label": "Raceme axis",
+            "label_x": 76,
+            "label_y": 86,
+            "target_x": 60,
+            "target_y": 64
+          }
+        ]
+      },
+      {
+        "label": "1 · Rows of oval green spikelets against fingers",
+        "scientific_name": "Paspalum pubiflorum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-pubiflorum/images/inat-331600888.jpg",
+        "image_fit": "contain",
+        "image_role": "Single compact unilateral raceme of paired-looking ovate green spikelets with leafy blade and sheath in same frame",
+        "caption": "The densely arranged oval green spikelets and central raceme are clearly visible. Their tiny surface hairs and glumes are not independently resolved, and the single raceme does not prove whole-plant branch count.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "(c) Beth, some rights reserved (CC BY-NC)",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/331600888",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Oval spikelets",
+            "label_x": 6,
+            "label_y": 38,
+            "target_x": 49,
+            "target_y": 51
+          },
+          {
+            "label": "Raceme axis",
+            "label_x": 77,
+            "label_y": 86,
+            "target_x": 59,
+            "target_y": 67
+          },
+          {
+            "label": "Leaf blade",
+            "label_x": 9,
+            "label_y": 11,
+            "target_x": 32,
+            "target_y": 43
+          }
+        ]
+      },
+      {
+        "label": "1 · Broad, upright bunchgrass habit",
+        "scientific_name": "Paspalum floridanum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-floridanum/images/commons-paspalum-floridanum.jpg",
+        "image_fit": "contain",
+        "image_role": "Large leafy erect grass clump with stiff flowering stalks among lush foliage",
+        "caption": "The central bunch is broad, upright and leafy, but no distinct flowering raceme or measured spikelet is clearly visible. Don't mark imaginary flowers here.",
+        "why_it_matters": "Shows a real photographed identification structure rather than an assumed close-up.",
+        "creator": "Sesamehoneytart",
+        "license": "CC BY-SA 3.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Florida_Paspalum_floridanum.JPG",
+        "photo_status": "Existing source-attributed physically saved photographic file; visible structure was inspected directly on 2026-10-20. Source taxon ID provisional; no unobserved or measured microscopic traits represented.",
+        "markers": [
+          {
+            "label": "Coarse grass clump",
+            "label_x": 4,
+            "label_y": 76,
+            "target_x": 48,
+            "target_y": 59
+          },
+          {
+            "label": "Long leaf blade",
+            "label_x": 71,
+            "label_y": 12,
+            "target_x": 52,
+            "target_y": 31
+          }
+        ]
+      },
+      {
+        "label": "KNOTGRASS — wetland groundcover habit",
+        "scientific_name": "Paspalum distichum",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Paspalum_distichum_habit5_%288250226941%29.jpg/960px-Paspalum_distichum_habit5_%288250226941%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Groundcover-scale habitat image of source-labelled Australian knotgrass growing in a wet meadow; no individual root nodes visible",
+        "caption": "Harry Rose's Australian source-labelled wetland photograph illustrates a low, dense, mat-forming grass patch. It does NOT show distinct rooting stolon nodes, so the image is context for patch habit and not proof of underground rooting or Hays County origin.",
+        "why_it_matters": "Pairs the original close V-shaped two-raceme flowering image with a real landscape-scale low wet-site form, while recording that nodes still need their own close-up.",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_distichum_habit5_(8250226941).jpg",
+        "markers": [
+          {
+            "label": "Low mat of grass",
+            "label_x": 4,
+            "label_y": 78,
+            "target_x": 50,
+            "target_y": 62
+          }
+        ],
+        "photo_status": "Wikimedia Flickr license checked and 960px actual pixels viewed 2026-10-21. PROVISIONAL — USER PHOTO REVIEW PENDING. Habitat-scale gross arrow only; rooting stolon and flowers are NOT visible."
+      },
+      {
+        "label": "FLORIDA PASPALUM — actual flowering racemes",
+        "scientific_name": "Paspalum floridanum",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Paspalum_floridanum_8zz.jpg/960px-Paspalum_floridanum_8zz.jpg",
+        "image_fit": "contain",
+        "image_role": "Separate real flowering-head photograph from US Botanic Garden: three one-sided spikelet-bearing racemes on one stem, not a Texas wild voucher",
+        "caption": "David J. Stang photographed a flowering Florida paspalum with three divergent racemes and clearly visible rounded green attached spikelets. Unlike the original plant-habit photo, this actually shows the inflorescence. There is no millimeter scale, collar or dissected glume: do not claim 3.5–5 mm spikelet measurements from these pixels.",
+        "why_it_matters": "Closes the missing seedhead shape in the original Florida paspalum learner. Compare the few branches and large-looking rounded spikelets with pubiflorum and dallisgrass, then measure a real specimen.",
+        "creator": "David J. Stang",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_floridanum_8zz.jpg",
+        "markers": [
+          {
+            "label": "Divergent flowering racemes",
+            "label_x": 4,
+            "label_y": 14,
+            "target_x": 50,
+            "target_y": 23
+          },
+          {
+            "label": "Rounded spikelets in a row",
+            "label_x": 75,
+            "label_y": 16,
+            "target_x": 52,
+            "target_y": 12
+          },
+          {
+            "label": "Main flowering axis",
+            "label_x": 72,
+            "label_y": 78,
+            "target_x": 86,
+            "target_y": 61
+          }
+        ],
+        "photo_status": "Exact Wikimedia Commons author/license/source verified; actual image visually inspected 2026-10-21. Three arrows to visible gross parts. PROVISIONAL — USER PHOTO REVIEW PENDING. Garden accession, not Hays County plant; no measured reproductive anatomy."
+      },
+      {
+        "label": "THIN PASPALUM — full raceme with leaf visible",
+        "scientific_name": "Paspalum setaceum",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Paspalum_setaceum_49099709.jpg/960px-Paspalum_setaceum_49099709.jpg",
+        "image_fit": "contain",
+        "image_role": "Additional source-observation same taxon but different photograph: intact slim flowering raceme and blade, not exact variety ID",
+        "caption": "Alex Abair's second image shows a long slender upright raceme lined with pale oval spikelets and purple flowering parts, plus a curved green leaf blade. The sharply fringed-looking leaf edge is not enough to decide microscopic hairs or P. setaceum variety; purple flowering parts are not seeds.",
+        "why_it_matters": "The existing macro shows spikelet/flower close-up; this shows how an entire terminal flowering branch looks next to a leaf. Still needs whole rooted plant and hair/ligule macro.",
+        "creator": "Alex Abair",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_setaceum_49099709.jpg",
+        "markers": [
+          {
+            "label": "Long narrow raceme",
+            "label_x": 72,
+            "label_y": 11,
+            "target_x": 43,
+            "target_y": 34
+          },
+          {
+            "label": "Aligned pale spikelets",
+            "label_x": 71,
+            "label_y": 64,
+            "target_x": 38,
+            "target_y": 53
+          },
+          {
+            "label": "Curved leaf blade",
+            "label_x": 5,
+            "label_y": 54,
+            "target_x": 19,
+            "target_y": 69
+          }
+        ],
+        "photo_status": "Wikimedia Commons CC BY 4.0 iNaturalist cross-source and real pixels checked 2026-10-21. PROVISIONAL — USER PHOTO REVIEW PENDING. Three labels target visible reproductive head/leaf only, not hair density or county provenance."
+      },
+      {
+        "label": "3 · WHOLE HEAD — several actual one-sided spikelet racemes",
+        "scientific_name": "Paspalum pubiflorum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-pubiflorum/images/bob-harms-papu5-i-full-inflorescence.jpg",
+        "image_fit": "contain",
+        "image_role": "3 · WHOLE HEAD — several actual one-sided spikelet racemes",
+        "caption": "Author-identified inflorescence photograph of hairyseed paspalum. Examine the COMPLETE flowering head and count racemes attached to this same central stem; don't infer branch count from a crop of a single side branch.",
+        "why_it_matters": "First confirm the whole reproductive architecture. Compare to Florida paspalum and Dallisgrass using independently labelled photographs.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/PAPU5-I.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/PAPU5-I.jpg",
+        "source_taxon_name": "Paspalum pubiflorum",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "Credited scientific/educational public learner only under author permission, not CC or transferable photo license",
+        "photo_status": "Real, physically stored Bob Harms source-original photo; © photographer, allowed credited science/education use only, not CC. Provisional public ID review; not a local voucher; 0 speculative microscopic arrows.",
+        "markers": []
+      },
+      {
+        "label": "4 · FLOWERING — actual open pollen-bearing parts",
+        "scientific_name": "Paspalum pubiflorum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-pubiflorum/images/bob-harms-papu5-j-flowering-detail.jpg",
+        "image_fit": "contain",
+        "image_role": "4 · FLOWERING — actual open pollen-bearing parts",
+        "caption": "Actual Bob Harms photographed flowering material of Paspalum pubiflorum. Flowers are visible in the source image; do not label isolated green scales as fertile fruit nor assume a glume-hair count without a 1 mm scale.",
+        "why_it_matters": "Shows the crew that floral tissue and glumes are distinct from each other and from mature spikelets.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/PAPU5-J.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/PAPU5-J.jpg",
+        "source_taxon_name": "Paspalum pubiflorum",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "Credited scientific/educational public learner only under author permission, not CC or transferable photo license",
+        "photo_status": "Real, physically stored Bob Harms source-original photo; © photographer, allowed credited science/education use only, not CC. Provisional public ID review; not a local voucher; 0 speculative microscopic arrows.",
+        "markers": []
+      },
+      {
+        "label": "5 · SPIKELET DETAIL — small ovoid units on a one-sided branch",
+        "scientific_name": "Paspalum pubiflorum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-pubiflorum/images/bob-harms-papu5-j1-flowering-anatomy.jpg",
+        "image_fit": "contain",
+        "image_role": "5 · SPIKELET DETAIL — small ovoid units on a one-sided branch",
+        "caption": "Real source-determined reproductive close-up. Identify rows of compressed oval spikelets and look for fine hairs on the upper glume; their length and precise position require a more magnified side-lit view with a ruler.",
+        "why_it_matters": "The close comparison with Paspalum floridanum depends on a real mature 2.7–3.2 mm unit, not image-based guesswork.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/PAPU5-J1.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/PAPU5-J1.jpg",
+        "source_taxon_name": "Paspalum pubiflorum",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "Credited scientific/educational public learner only under author permission, not CC or transferable photo license",
+        "photo_status": "Real, physically stored Bob Harms source-original photo; © photographer, allowed credited science/education use only, not CC. Provisional public ID review; not a local voucher; 0 speculative microscopic arrows.",
+        "markers": []
+      },
+      {
+        "label": "6 · COLLAR — real blade/sheath junction and ligule area",
+        "scientific_name": "Paspalum pubiflorum",
+        "image_url": "content/taxa/Poaceae/Paspalum/paspalum-pubiflorum/images/bob-harms-papu5-l-true-ligule-sheath.jpg",
+        "image_fit": "contain",
+        "image_role": "6 · COLLAR — real blade/sheath junction and ligule area",
+        "caption": "Real Bob Harms leaf collar/sheath photograph. The true ligule is found inside the blade/sheath joint, not in longer unrelated basal hairs. Actual length must be established with a 1 mm ruler from a same-vouchered local specimen.",
+        "why_it_matters": "Replaces the previous absence of an exact-species collar view, without calling an unmeasured membrane 2 mm.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/PAPU5-L.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/PAPU5-L.jpg",
+        "source_taxon_name": "Paspalum pubiflorum",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "Credited scientific/educational public learner only under author permission, not CC or transferable photo license",
+        "photo_status": "Real, physically stored Bob Harms source-original photo; © photographer, allowed credited science/education use only, not CC. Provisional public ID review; not a local voucher; 0 speculative microscopic arrows.",
+        "markers": []
+      }
+    ],
+    "overlay_note": "Preserved original 7 source panels and their arrows/credits. New Commons photos: Florida paspalum flowering head, thin paspalum raceme+leaf, knotgrass wet-meadow mat. All three: PROVISIONAL — USER PHOTO REVIEW PENDING. No actual rooted stolon, confirmed tiny glume hairs, measured ligule or Hays voucher is shown.",
+    "study_only_photo_links": [
+      {
+        "label": "Kew genus overview",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325790-2/general-information",
+        "look_for": "Unilateral raceme and flattened spikelet general structures"
+      },
+      {
+        "label": "Dallisgrass versus vaseygrass technical key",
+        "url": "https://keyserver.lucidcentral.org/weeds/data/03080008-0301-4c05-8c0e-0c0f040b0803/media/Html/paspalum_dilatatum.htm",
+        "look_for": "Branch counts plus measured and margin-hairy mature spikelets"
+      },
+      {
+        "label": "Kew pubiflorum description",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184614-2/general-information",
+        "look_for": "Pubiflorum spikelet size and glume morphology"
+      }
+    ]
+  },
+  "visual_needs": [
+    "Dallisgrass versus vaseygrass: matched true 1-mm ruler macro of silky-edged 3–4 mm versus 2–3 mm mature spikelets and complete heads.",
+    "Knotgrass: actually rooted aboveground stolon node with complete V-head; meadow photo is only habit context.",
+    "Florida paspalum: full flower head now shown, but ripe large rounded spikelet with glume detail and ruler still missing.",
+    "Pubiflorum: full head, measured ~2.7–3.2 mm ripe spikelets and glume fine hairs.",
+    "Thin paspalum: whole flowering branch now shown, but leaf sheath/ligule and variety-level hairs remain unverified.",
+    "All six: same-plant true collars and verified rooted bases; species-level taxonomy/nativity statuses unchanged."
+  ],
+  "visual_status": "FIELD_READY_PHOTO_GAPS — genus now includes actual P. pubiflorum flowering head, bloom, spikelets, and collar; calibrated microhair and same-voucher Hays plant need finishing.",
+  "curation_status": {
+    "version": "1.1-paspalum-public-photo-refine-20261021",
+    "source_photo_files_examined": 8,
+    "photo_panels": 10,
+    "canonical_species_count": 6,
+    "science_or_nativity_not_reopened": true,
+    "source_identity_provisional_where_previously_unreviewed": true,
+    "stage": "FIELD_READY_PHOTO_GAPS",
+    "genus_photos_annotated_visible_parts_only": true,
+    "preserved_original_panels": 7,
+    "new_external_licensed_panels": 3,
+    "gross_visible_arrow_targets": 25,
+    "new_local_media_files": 0,
+    "native_status_unchanged": true,
+    "provisional_public_photo_review": true,
+    "pubiflorum_real_photo_archiving_20261022": {
+      "new_archived_exact_species_originals": 4,
+      "all_genus_panels": 14,
+      "license": "Bob Harms original science/educational permission with credit, NOT CC",
+      "science_and_county_nativity_untouched": true
+    }
+  },
+  "handoffs": [
+    {
+      "lane": "diagnostic-photo",
+      "need": "Capture flowerhead full-axis and matched true spikelet length/margin macros for dilatatum/urvillei/floridanum/pubiflorum."
+    },
+    {
+      "lane": "growth-habit",
+      "need": "Stolon/root photo in wet soil for P. distichum and a full plant/leaf hair series for P. setaceum."
+    },
+    {
+      "lane": "taxon-identity",
+      "need": "Most source taxa currently taxonomy_reviewed:false. Keep their species-level determinations provisional until a qualified key/voucher review."
+    }
+  ]
+}

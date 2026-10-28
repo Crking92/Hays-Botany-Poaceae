@@ -1,0 +1,418 @@
+{
+  "rank": "genus",
+  "name": "Cenchrus",
+  "family": "Poaceae",
+  "common_group": "sandburs and bristlegrasses (including buffelgrass in modern broad Cenchrus)",
+  "project_scope": {
+    "selection_mode": "Existing canonical C. spinifex FINISH/ENRICH; genus comparison only for other Cenchrus species, no first-card admissions",
+    "canonical_species_ids": [
+      "cenchrus-spinifex"
+    ],
+    "canonical_species_count": 1,
+    "native_target_zone_status": "NOT_ASSESSED — county BONAP/NAPA or vouchered Texas data required for county-level assertion",
+    "caution": "Some native sandburs and introduced or invasive grasses belong to Cenchrus. Genus recognition does not confer native-range PASS.",
+    "note": "One Cenchrus spinifex species.json already installed and three physical JPGs checked on 2026-10-21. Former zero count was stale. C. longispinus, C. echinatus and 2026 reinstated incertus are comparisons only. Native-by-Hays county unreviewed and original range/science status preserved."
+  },
+  "look_here_first": "CENCHRUS: sandbur fruit is a bristly FASCICLE enclosing the actual grass spikelets, NOT a naked seed or awn. Three original C. spinifex group photos show the attached burrs; two new CC-licensed comparison photos teach C. longispinus head habit and an actual ruler-scaled dry bur. Both can look alike. Count all coarse and fine bristles and examine the fused cupule of a ripe intact bur. The 2026 Wipff revision resurrected Texas segregates, so don't determine exact species or Hays nativity from a dramatic spine photo.",
+  "genus_diagnostics": {
+    "habit": "Annual and perennial grasses; tufted, erect, ascending or sprawling forms. Size and growth form differ substantially among taxa.",
+    "leaf": "Typical grass node, sheath, blade and collar. Inspect the LIGULE as a hair fringe when visible, but this alone does not diagnose Cenchrus.",
+    "inflorescence": "Panicle commonly contracted into a dense spike-like array, sometimes with bristly units surrounding spikelets. Bur-bearing species have stiff, sometimes barbed or fused basal bristles that detach as a unit.",
+    "spikelet": "Each apparent bur or bristly fascicle may contain one or multiple grass spikelets. Separate bristles (modified branch structures) from GLUMES, LEMMAS, and PALEAS.",
+    "fruit": "Grass caryopsis enclosed in associated spikelet parts; dispersal structures vary by species. Do not treat the whole detachable bur as one naked seed.",
+    "taxonomy": "Modern broad Cenchrus includes taxa historically placed in Pennisetum. Many non-spiny bottlebrush grasses share the genus, so a painful bur cannot define the entire genus.",
+    "bristle_attachment": "Observe an entire mature unit from base: inner enclosing bristles may be united into a cupule, shorter outer bristles may be directed backwards, and grass spikelets sit inside. Whole fused fascicle ≠ bare seed.",
+    "texas_2026_revision": "Wipff (2026, Journal of the Botanical Research Institute of Texas 20:1) reinstates Texas/US taxa previously synonymized with C. spinifex, including C. incertus, and names C. densiflorus from southern Texas. Legacy 'spinifex' source IDs therefore deserve conditional species review, not automated changes to existing taxa/ranges.",
+    "classroom_safety": "Gloves/forceps and isolated mature bur before dissection. Avoid pressing barbed fascicles into skin."
+  },
+  "visual_lesson": {
+    "status": "FIELD_READY_PHOTO_GAPS — 3 C. spinifex source photos, 2 C. longispinus comparison photos, 14 visible arrows; cupule dissection and 2026 segregate key unresolved",
+    "teaching_order": "whole grass with several separate burrs → attached cluster macro → one undamaged ripe detached fascicle → true inner bristle cupule and outer elements → actual 1–4 enclosed spikelets → collar/rooted base → current Texas species-level key",
+    "steps": [
+      {
+        "title": "1 · Recognize the bur-bearing grass",
+        "photo_role": "Existing source labelled sandbur in sandy field, entire grass with narrow blades and more than one fruiting culm",
+        "look_for": "Discrete spiny round burrs separated along a slender grass inflorescence; the whole grass visible with small sandy clump.",
+        "status": "photographed_gross_architecture"
+      },
+      {
+        "title": "2 · See actual bur spines",
+        "photo_role": "Existing real green burrs against finger, with several visible separate fascicles on head",
+        "look_for": "Radiating pointed green outer elements and distinct burr bodies; these are enclosing bristles, not seeds or awns.",
+        "status": "photographed_gross_architecture; exact_bristle_count_not_verified"
+      },
+      {
+        "title": "3 · Compare a second full head",
+        "photo_role": "Existing real yellow-green spiny burr groups along flowering branches",
+        "look_for": "Individual burr units and radiating spine shape; reproductive inner spikelets are not exposed.",
+        "status": "photographed_gross_architecture"
+      },
+      {
+        "title": "4 · Count mature bristles and cupule",
+        "photo_role": "Detached single intact mature fascicle, with 1-mm scale and base exposed",
+        "look_for": "Count ALL large AND tiny bristles and measure the broad fused inner bases. Classic regional key: spinifex 8–40, longispinus 45–75; extensive overlap with resurrected 2026 Texan segregates requires current species key.",
+        "status": "NEEDS_DIAGNOSTIC_MACRO"
+      },
+      {
+        "title": "5 · Expose enclosed true spikelets",
+        "photo_role": "Forceps-opened full mature bur showing spikelet count and glumes",
+        "look_for": "Identify the true grass spikelets INSIDE the bristles and any fused cupule; distinguish lower glume, lemma and palea.",
+        "status": "NEEDS_DIAGNOSTIC_MACRO"
+      },
+      {
+        "title": "6 · Find true ligule",
+        "photo_role": "True leaf collar/sheath/blade junction under 1-mm ruler",
+        "look_for": "Hair fringe at ligule is supporting genus context, not sufficient for species distinction.",
+        "status": "NEEDS_COLLAR_PHOTO"
+      }
+    ]
+  },
+  "comparison_cards": [
+    {
+      "title": "Cenchrus spinifex group versus C. longispinus — counted mature fascicles",
+      "look_here_first": "Longispinus often has MANY more THIN bristles; spinifex sensu older keys tends fewer stouter bristles. Count the whole bur, not just the conspicuous dominant spines.",
+      "field_note": "Go Botany's classic key for spinifex gives total 8–40 bristles and broader inner bases ~1–3 mm; longispinus gives 45–75 bristles and narrower bases ~0.5–0.9(–1.4) mm. 2026 Wipff Texas group revision means this two-species comparison does not exhaust regional segregates.",
+      "status": "Licensed longispinus exterior photos available; mature full bristle count and species key still missing",
+      "field_matrix": [
+        {
+          "character": "All burr bristles — not just big spines",
+          "spinifex": "Typically 8–40 total, often around 6–10 stout dominant spines in some treatments",
+          "longispinus": "Often 45–75 slender bristles of different lengths"
+        },
+        {
+          "character": "Inner bristle base width",
+          "spinifex": "Typically 1–3 mm, often broad flattened bristle bases",
+          "longispinus": "0.5–0.9(–1.4) mm, relatively narrow bases"
+        },
+        {
+          "character": "Fascicle length excluding projecting spines",
+          "spinifex": "Often 5.5–10.2 mm",
+          "longispinus": "Often 8.3–11.9 mm; range overlaps"
+        },
+        {
+          "character": "Species determination caution",
+          "spinifex": "Texas 2026 spinifex-group resurrected taxa require rekey of a mature voucher",
+          "longispinus": "Source determination and geography alone not proof; use count and cupule plus key"
+        }
+      ],
+      "photo_evidence": "Source-labelled Russian flowering head and source-categorized dry sandspur with centimeter scale. Gross burr structure only; no Texas voucher."
+    },
+    {
+      "title": "C. spinifex versus C. echinatus and resurrected C. incertus",
+      "look_here_first": "These are all potentially spiny burr-bearing sandburs. Separate by the WHOLE mature fascicle, bristle whorls/bases and current Texas species key.",
+      "status": "comparison_only__no_additional_canonical_cards",
+      "field_note": "Wipff (2026) shows that earlier broad C. spinifex usage covers more than one Texas species. This lesson does not rename current approved card or certify Hays nativity."
+    },
+    {
+      "title": "Sandburs versus Setaria foxtails",
+      "look_here_first": "Hard sandburs enclose spikelets in a coherent spine-and-bristle BUR/CUPULE; ordinary Setaria foxtails have separate softer persistent bristles subtending spikelets along the head.",
+      "caution": "Cenchrus in the modern broad genus ALSO includes nonspiny soft-bristled lineages; prickliness cannot delimit the genus."
+    },
+    {
+      "title": "Field burrs versus a true grass seed/awn",
+      "look_here_first": "Pull an undamaged mature bur with forceps, observe the enclosing barbed bristles, then expose true spikelets and their glumes/lemmas. A solid thorn is not an awn and the entire bur is not the caryopsis."
+    }
+  ],
+  "safety_and_field_notes": [
+    "Wear gloves and use forceps for mature sharp burs; never press a barbed cluster into bare skin.",
+    "The WHOLE bur is a bristly fascicle, not a naked seed, and its sharp outer parts are not floral awns.",
+    "The visible photo of a hand provides rough context but not a millimeter measurement or license to demonstrate punctures.",
+    "Habitat disturbance or prickliness does not automatically establish exotic status. Texas contains native sandburs as well as introduced or invasive Cenchrus.",
+    "Wipff's April 2026 taxonomic revision reinstates several C. spinifex-group segregates in Texas; do not declare a source-labelled photo a species-proof identification.",
+    "Do not install unrelated hard burr and soft bottlebrush species under the single spinifex name; historic Pennisetum names require synonym checks."
+  ],
+  "photo_requirements": [
+    {
+      "role": "whole plant plus mature inflorescence",
+      "status": "PARTIAL: genuine source-labelled spinifex whole plant/head visible; rooted base duration and complete mature detached bur still missing"
+    },
+    {
+      "role": "in situ several spiny bur units",
+      "status": "DONE_FIRST_PASS: two real macro/head views with visible separate thorny fascicles, no true mm scale"
+    },
+    {
+      "role": "undamaged mature bur with ruler and total bristle count",
+      "status": "PARTIAL: longispinus dry exterior with real scale; actual spinifex voucher, total bristle count and cupule remain missing."
+    },
+    {
+      "role": "inner bristle cupule base and true enclosed spikelet(s)",
+      "status": "CRITICAL_MISSING: use forceps 10–20x with 1-mm scale"
+    },
+    {
+      "role": "collar/ligule close-up",
+      "status": "MISSING"
+    },
+    {
+      "role": "matched comparison with longispinus and newly separated Texas species",
+      "status": "PARTIAL: 2 licensed C. longispinus comparison panels. Matched Texas vouchers with counted mature burs still missing."
+    }
+  ],
+  "sources": [
+    {
+      "source": "Kew Plants of the World Online — Cenchrus",
+      "url": "https://powo.science.kew.org/taxon/30002698-2",
+      "supports": "accepted broad genus and global range"
+    },
+    {
+      "source": "Kew POWO — C. spinifex",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395325-1/general-information",
+      "supports": "morphology and Texas native distribution"
+    },
+    {
+      "source": "Kew POWO — C. longispinus",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:51256-2/general-information",
+      "supports": "morphology and Texas native distribution"
+    },
+    {
+      "source": "Flora of North America via Burke Herbarium",
+      "url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Cenchrus+longispinus",
+      "supports": "bristle count, cupule, spikelets"
+    },
+    {
+      "source": "Cornell CALS sandbur comparison",
+      "url": "https://cals.cornell.edu/weed-science/weed-profiles/sandburs",
+      "supports": "field photos and habit"
+    },
+    {
+      "source": "Canadian Food Inspection Agency",
+      "url": "https://inspection.canada.ca/en/plant-health/seeds/seed-testing-and-grading/seeds-identification/cenchrus-longispinus",
+      "supports": "bur anatomy"
+    },
+    {
+      "source": "2026 Texas Cenchrus spinifex-group revision",
+      "url": "https://journals.brit.org/jbrit/article/view/1461",
+      "supports": "April 2026 type- and voucher-based group revision; reinstated species and new species in southern Texas"
+    },
+    {
+      "source": "New England Cenchrus comparison key",
+      "url": "https://gobotany.nativeplanttrust.org/dkey/cenchrus/",
+      "supports": "8–40 and 45–75 bristle differences plus inner cupule widths under classic key"
+    }
+  ],
+  "curation_status": {
+    "phase": "FIELD_READY_PHOTO_GAPS — 1 installed Cenchrus species, 3 real photo panels and 9 visible arrows",
+    "date": "2026-10-21",
+    "photos_installed": 3,
+    "county_nativeness_certified": false,
+    "canonical_species_added": 0,
+    "external_photo_references": 3,
+    "photo_panels": 5,
+    "gross_visible_anatomy_arrows": 14,
+    "canonical_species_count_corrected": 1,
+    "original_source_rights_preserved": true,
+    "taxon_revision_warning_added": true,
+    "manual_cenchrus_visual_pass_20261021": true,
+    "extra_external_photo_panels": 2,
+    "native_status_unchanged": true,
+    "provisional_user_photo_review": true
+  },
+  "photo_reference_gallery": [
+    {
+      "taxon": "Cenchrus longispinus",
+      "role": "bur",
+      "url": "https://commons.wikimedia.org/wiki/File:Cenchrus_longispinus_31254531.jpg",
+      "credit": "Yuriy Danilevsky · CC BY 4.0",
+      "status": "external_only"
+    },
+    {
+      "taxon": "Cenchrus longispinus",
+      "role": "flowering head",
+      "url": "https://commons.wikimedia.org/wiki/File:Cenchrus_longispinus_(long-spined_sandbur),_Middletown,_RI_(31324581884).jpg",
+      "credit": "Doug McGrady · CC BY 2.0",
+      "status": "external_only"
+    },
+    {
+      "taxon": "Cenchrus spinifex and Cenchrus longispinus",
+      "role": "field comparison",
+      "url": "https://cals.cornell.edu/weed-science/weed-profiles/sandburs",
+      "credit": "Joseph DiTomaso · reuse rights not established",
+      "status": "reference_only"
+    }
+  ],
+  "visual_comparison": {
+    "title": "Cenchrus — sandbur fascicles and longispinus look-alikes",
+    "subtitle": "Three existing canonical sandbur reference panels, plus two source-identified C. longispinus comparison images. Five images and 14 gross-feature arrows, no species-level reidentification.",
+    "memory_rule": "LOOK → BUR FASCICLE → BRISTLE COUNT + CUPULE WIDTH → ENCLOSED SPIKELET → CURRENT TEXAS KEY.",
+    "items": [
+      {
+        "label": "Field sandbur — mature plant in sandy ground",
+        "scientific_name": "Cenchrus spinifex",
+        "image_url": "content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/inat-48441018.jpg",
+        "image_fit": "contain",
+        "image_role": "Existing actual archived source-labelled JPG, visually checked. Gross field anatomy only; source species determination remains provisional.",
+        "caption": "The original source-labelled photograph shows a grass clump with narrow green blades on dry sand, and two thin spiny flowering stalks. Useful for whole-plant recognition, but sand habitat, root type and county provenance do not determine the exact sandbur species.",
+        "why_it_matters": "Shows the bur-bearing grass and spiny fascicles; still need a detached mature counted bur and true reproductive dissection to establish exact Cenchrus species.",
+        "creator": "(c) Davide Grillo, some rights reserved (CC BY-NC)",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/48441018",
+        "markers": [
+          {
+            "label": "Flowering stalk with burs",
+            "label_x": 4,
+            "label_y": 12,
+            "target_x": 57,
+            "target_y": 36
+          },
+          {
+            "label": "Another bur-bearing stem",
+            "label_x": 5,
+            "label_y": 63,
+            "target_x": 26,
+            "target_y": 62
+          },
+          {
+            "label": "Narrow grass blades",
+            "label_x": 73,
+            "label_y": 74,
+            "target_x": 61,
+            "target_y": 59
+          }
+        ],
+        "photo_status": "Original iNaturalist CC BY-NC real image visually rechecked. Source-determined taxon, not confirmed species voucher."
+      },
+      {
+        "label": "Field sandbur — several actual green spiny bur units",
+        "scientific_name": "Cenchrus spinifex",
+        "image_url": "content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/library-review045-4933214f5a67c4e.jpg",
+        "image_fit": "contain",
+        "image_role": "Existing actual archived source-labelled JPG, visually checked. Gross field anatomy only; source species determination remains provisional.",
+        "caption": "Linda Jo Conn's saved macro shows individual green burr-like fascicles lined up along a flowering axis, with stout pointed radiating outer structures. Their thick basal envelope can be seen. No exact bristle count, cupule-width measurement, seed number or species confirmation is possible from this angle alone.",
+        "why_it_matters": "Shows the bur-bearing grass and spiny fascicles; still need a detached mature counted bur and true reproductive dissection to establish exact Cenchrus species.",
+        "creator": "Linda Jo Conn",
+        "license": "CC BY",
+        "license_url": "https://creativecommons.org/licenses/by/",
+        "source_page": "https://www.gbif.org/occurrence/5938530261",
+        "markers": [
+          {
+            "label": "Upper spiny bur cluster",
+            "label_x": 5,
+            "label_y": 13,
+            "target_x": 50,
+            "target_y": 30
+          },
+          {
+            "label": "Radiating pointed spines",
+            "label_x": 73,
+            "label_y": 26,
+            "target_x": 52,
+            "target_y": 38
+          },
+          {
+            "label": "Separate lower bur unit",
+            "label_x": 4,
+            "label_y": 81,
+            "target_x": 46,
+            "target_y": 70
+          }
+        ],
+        "photo_status": "Real already archived CC-labelled photo inspected. Existing rights shorthand/credit retained without inventing license version; original source license version still requires checking before wider reuse. Source-determined exact taxon remains provisional."
+      },
+      {
+        "label": "Field sandbur — many separate spiny fascicles",
+        "scientific_name": "Cenchrus spinifex",
+        "image_url": "content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/library-review045-5936a0729dd48d9.jpg",
+        "image_fit": "contain",
+        "image_role": "Existing actual archived source-labelled JPG, visually checked. Gross field anatomy only; source species determination remains provisional.",
+        "caption": "The saved Pl@ntNet/GBIF-sourced photograph shows several round yellow-green spiny burrs spaced along flowering branches, with individual needlelike projections. The orange material near some florets may be flower parts, not the actual grass seed. Photograph a detached mature bur under a ruler for identification.",
+        "why_it_matters": "Shows the bur-bearing grass and spiny fascicles; still need a detached mature counted bur and true reproductive dissection to establish exact Cenchrus species.",
+        "creator": "mike",
+        "license": "CC BY-SA",
+        "license_url": "https://creativecommons.org/licenses/by-sa/",
+        "source_page": "https://www.gbif.org/occurrence/5110314051",
+        "markers": [
+          {
+            "label": "Separate green spiny burs",
+            "label_x": 4,
+            "label_y": 14,
+            "target_x": 29,
+            "target_y": 31
+          },
+          {
+            "label": "Long radiating bristles",
+            "label_x": 76,
+            "label_y": 10,
+            "target_x": 57,
+            "target_y": 39
+          },
+          {
+            "label": "Individual bur at branch tip",
+            "label_x": 72,
+            "label_y": 78,
+            "target_x": 62,
+            "target_y": 48
+          }
+        ],
+        "photo_status": "Real already archived CC-labelled photo inspected. Existing rights shorthand/credit retained without inventing license version; original source license version still requires checking before wider reuse. Source-determined exact taxon remains provisional."
+      },
+      {
+        "label": "LOOK-ALIKE: long-spined sandbur — full head of separate spiny fascicles",
+        "scientific_name": "Cenchrus longispinus",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Cenchrus_longispinus_31254531.jpg/960px-Cenchrus_longispinus_31254531.jpg",
+        "image_fit": "contain",
+        "image_role": "Comparison only. Real source-labelled C. longispinus photograph of burr-bearing head from Russia, not Texas or a new species card.",
+        "caption": "Yuriy Danilevsky's source-labelled grass shows distinct radiating spiny fascicles separated along an upright flowering axis. This tells crew where to find and photograph a complete bur, but does not resolve exact total bristle counts or an inner cupule. DO NOT count the large obvious spines as all bristles.",
+        "why_it_matters": "C. spinifex-group and C. longispinus can look similarly spiny at head scale. Count the entire detached mature fascicle and compare the inner bristle bases with current Texas key instead of ID from one dramatic thorn.",
+        "creator": "Yuriy Danilevsky",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cenchrus_longispinus_31254531.jpg",
+        "markers": [
+          {
+            "label": "Separate spiny bur unit",
+            "label_x": 3,
+            "label_y": 12,
+            "target_x": 59,
+            "target_y": 27
+          },
+          {
+            "label": "Burr-bearing flowering axis",
+            "label_x": 5,
+            "label_y": 79,
+            "target_x": 55,
+            "target_y": 67
+          }
+        ],
+        "photo_status": "PROVISIONAL — USER PHOTO REVIEW PENDING. Original Wikimedia Commons/iNaturalist CC BY 4.0 and Russia origin independently checked on 2026-10-21. Pictured gross features verified, exact Cenchrus taxonomy not verified with Wipff's 2026 Texas revision. No local image bytes, no new canonical card."
+      },
+      {
+        "label": "LOOK-ALIKE: long-spined sandbur — ripe fascicle with scale",
+        "scientific_name": "Cenchrus longispinus",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Sand_spur_with_centimeter_scale.jpg/960px-Sand_spur_with_centimeter_scale.jpg",
+        "image_fit": "contain",
+        "image_role": "Comparison only. Source-classified C. longispinus dry mature sandspur macro with physical ruler graduations: evaluate bristle spines/hairs, not a single-seed diagram.",
+        "caption": "Bubba73 (Judson McCranie) photographed a ripe spiny fascicle or tightly overlapping fascicles in front of centimeter scale ticks. Fine pale enclosing bristles and much longer stiff sharp projections are visible. Ruler provides genuine scale, but perspective, overlapping parts and source-only determination prevent certifying all bristle counts or exact species.",
+        "why_it_matters": "Shows the fine hairs and long spines surrounding true enclosed spikelets. Useful prep for forceps dissection: count all large and fine bristles and examine the fused cupule, not the apparent giant seed.",
+        "creator": "Bubba73 (Judson McCranie)",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Sand_spur_with_centimeter_scale.jpg",
+        "markers": [
+          {
+            "label": "Real scale marks",
+            "label_x": 4,
+            "label_y": 10,
+            "target_x": 40,
+            "target_y": 23
+          },
+          {
+            "label": "Fine enclosing bristles",
+            "label_x": 4,
+            "label_y": 55,
+            "target_x": 44,
+            "target_y": 51
+          },
+          {
+            "label": "Stiff outward spine",
+            "label_x": 72,
+            "label_y": 80,
+            "target_x": 87,
+            "target_y": 63
+          }
+        ],
+        "photo_status": "PROVISIONAL — USER PHOTO REVIEW PENDING. Exact Commons CC BY-SA 3.0 and authorship verified; image manually inspected. Outer bristles visible; concealed true spikelets, microscopic hook structure, or specific millimeter dimensions not resolved. No new local JPG."
+      }
+    ],
+    "overlay_note": "Three original physically archived source photo files reused without changes, 9 arrow annotations on visible structures only. Individual original creator/source and recorded CC terms preserved; archive CC shorthand license version is not invented. Original names provisional. No additional Cenchrus species installed. Hays native status not certified. Two new comparison-only CC-licensed photos (Yuriy Danilevsky CC BY 4.0; Bubba73/Judson McCranie CC BY-SA 3.0) display longispinus burrs and genuine scale. Provisional user review; no new species or claimed Texas occurrence. Exact bristle counts, 2026 species complex and cupule measurements require fresh voucher."
+  },
+  "visual_status": "FIELD_READY_PHOTO_GAPS: 1 installed C. spinifex species and 5 real photo panels (3 original, 2 C. longispinus comparison), 14 visible structure arrows; mature counted bur, 2026 species group key, ligule, cupule and Hays nativity unresolved."
+}

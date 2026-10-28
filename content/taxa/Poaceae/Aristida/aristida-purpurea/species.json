@@ -1,0 +1,682 @@
+{
+  "id": "aristida-purpurea",
+  "entry_type": "species",
+  "family": "Poaceae",
+  "genus": "Aristida",
+  "species": "purpurea",
+  "scientific_name": "Aristida purpurea",
+  "authority": "Nutt.",
+  "common_name": "Purple Threeawn",
+  "look_here_first": "PURPLE THREEAWN = perennial tuft with basal narrow inrolled leaves. On ONE mature spikelet the LOWER GLUME is usually markedly SHORTER than the UPPER and typically ONE-veined; Kew's example is ~6–8 versus 11–15 mm, BUT some varieties (notably var. longiseta) have a much longer upper glume (14–25 mm). Oldfield is an annual with BOTH glumes near-equal and lower with 3–7 veins. Measure both glumes on one spikelet and inspect crown before deciding; purple color and absolute upper-glume length alone are unreliable.",
+  "county_occurrences_target_zone": [
+    "Hays",
+    "Williamson",
+    "Travis"
+  ],
+  "target_zone_count": 3,
+  "native_target_zone_calculated": true,
+  "project_inclusion": {
+    "target_zone_status": "PASS",
+    "range_basis": "Hays — Purola Preserve natural flora; Williamson — detailed county treatment of A. purpurea var. purpurea; Travis — USDA ARS herbarium collections from Austin/Travis County.",
+    "range_guardrail": "Exact county evidence only."
+  },
+  "morphology_keys": {
+    "best_field_traits": [
+      "Count THREE AWNS arising from ONE fertile lemma, not from three independent florets. This recognizes Aristida GENUS only.",
+      "PURPLE is a PERENNIAL: a persistent dense old basal tuft/crown with numerous thin, often inrolled BASAL leaves; photograph rooted crown from side.",
+      "Main species test: lower glume generally substantially shorter than upper, typically ONE lower-glume vein; Kew broad treatment illustrates 6–8 mm lower vs 11–15 mm upper but varietal upper glumes can reach 14–25 mm (var. longiseta) — DO NOT treat 15 mm as a species-wide cutoff.",
+      "Texas forms often have conspicuous relatively LONG hairs around true leaf COLLAR; take a true collar macro, not a stem-node photograph. Other Aristida forms can overlap.",
+      "Open or nodding often purplish panicles and long near-equal 3 awns help only as supporting pattern. Purple color NOT reliable.",
+      "Oldfield THREEAWN: annual freely branched wiry stems, very long near equal glumes (~18–25 mm) and multiple lower-glume veins.",
+      "Very short tightly coiled central awn is churchmouse THREEAWN; contracted short-glumed uneven-awned head raises slimspike THREEAWN (comparison-only)."
+    ],
+    "comparison_training": "Use glume relative length and LOWER glume vein count on a mature intact spikelet: A. purpurea has ~6–8 mm lower and ~11–15 mm upper (1-veined lower), while A. oligantha has ~18–25 mm subequal glumes (3–7-veined lower). Confirm a perennial vs annual basal crown; panicle shape and awn color are supporting only."
+  },
+  "comparisons": {
+    "confused_with": [
+      "Aristida oligantha"
+    ],
+    "key_distinctions": "PURPLE A. purpurea: persistently perennial root crown, lower glume notably shorter than upper, usually 1 lower vein; lengths vary by variety including var. longiseta. OLDFIELD A. oligantha: annual, mature lower AND upper glumes near-equal and rather long (often 18–25 mm) with lower 3–7 veins. Use a matched dissection of ONE intact spikelet, not color, absolute upper glume length or openness.",
+    "field_matrix": [
+      {
+        "taxon": "Oldfield / prairie threeawn · Aristida oligantha",
+        "where_to_look": "Compare one intact mature spikelet and the basal crown, not the purple seedhead color.",
+        "this_species": "PURPLE perennial old tuft and rolled mostly basal leaves; LOWER glume typically about HALF upper (6–8 vs 11–15 mm), usually 1 lower-glume vein.",
+        "look_alike": "OLD FIELD is annual, much more freely branched, glumes much longer and NEARLY EQUAL (~18–25 mm) with 3–7 lower veins.",
+        "quick_rule": "Shorter lower glume + 1 vein + perennial tuft → PURPLE candidate; long equal multi-veined + annual branching → OLDFIELD candidate."
+      },
+      {
+        "taxon": "Churchmouse threeawn · Aristida dichotoma (comparison only)",
+        "where_to_look": "Look at central awn base on an intact mature floret.",
+        "this_species": "Oldfield has 3 spreading long, roughly equal awns typically 30–70 mm.",
+        "look_alike": "Churchmouse has very short awns: central ~3–8 mm with a basal spiral, lateral ~1–4 mm.",
+        "quick_rule": "Short coiled central awn means investigate churchmouse, not oldfield."
+      },
+      {
+        "taxon": "Slimspike threeawn · Aristida longespica (comparison only)",
+        "where_to_look": "Compare whole panicle shape, glume length and central versus lateral awns.",
+        "this_species": "Oldfield typically has open sparse branches and long subequal glumes 18–25 mm.",
+        "look_alike": "Slimspike is annual with relatively contracted head, short glumes (~3–9 mm in Texas regional descriptions) and central awn longer than lateral, no strong central basal spiral.",
+        "quick_rule": "A narrow compact short-glumed inflorescence with uneven shorter awns needs slimspike comparison."
+      },
+      {
+        "taxon": "Muhlenbergia / Nassella / Bouteloua",
+        "where_to_look": "Inspect awns arising from ONE fertile lemma instead of counting surrounding spikelets.",
+        "this_species": "Aristida typically has THREE lemma awns.",
+        "look_alike": "Many muhlys or needlegrasses bear a single awn or none; gramas have characteristic branches of many spikelets.",
+        "quick_rule": "Enter the Aristida key only after seeing awns on one lemma."
+      }
+    ],
+    "not_reliable_alone": [
+      "Three awns is GENUS, not species.",
+      "Purple-tan fall color.",
+      "Open versus narrow panicle without mature glumes.",
+      "Annual appearance from a detached stalk.",
+      "Broken lower glume or glume measurements including awn.",
+      "Long awn length alone, which overlaps varieties."
+    ]
+  },
+  "tags": [
+    "Poaceae",
+    "Aristida",
+    "Purple Threeawn",
+    "Central Texas"
+  ],
+  "curation_status": {
+    "version": "1.0-b038",
+    "taxonomy_reviewed": true,
+    "range_reviewed": true,
+    "morphology_reviewed": true,
+    "lookalikes_reviewed": true,
+    "user_approved": true,
+    "last_reviewed": "2026-10-21",
+    "photo_metadata_count": 4,
+    "photo_files_present": 4,
+    "visual_id_pass": "genus-and-species-character-aligned",
+    "manual_aristida_crew_key_20261021": "FIELD_READY_PHOTO_GAPS",
+    "visual_finish": "FIELD_READY_PHOTO_GAPS",
+    "measured_variety_warning_20261022": "Evidence-based longiseta glume-length overlap caution, preserves genus native-range and photo rights; local measured pair pending.",
+    "existing_physical_gallery_expansion_20261022": {
+      "source_photos_reused": 2,
+      "panels_added": 2,
+      "status": "FIELD_READY_PHOTO_GAPS"
+    },
+    "diagnostic_photo_audit_20261025": "Existing Stan Shebs 112547-byte JPEG visually verified, 2 gross-structure arrows, featured photo order expanded; no new photo files, no glume/ligule proof, Curtis Clark JPEG verification pending.",
+    "lane2_threeawn_real_collar_repro_20261027": {
+      "state": "FIELD_READY_PHOTO_GAPS",
+      "new_local_JPEGs": 2,
+      "new_browser_arrows": 2,
+      "true_inner_ligule": "NOT photographed; only real OUTER junction is documented",
+      "actual_exposed_roots": "NOT photographed; oldfield has in-ground crown view with roots hidden",
+      "reproductive_macro": "REAL visible awns and bracts, not a vein-count or measured glume",
+      "confirmed_hill_country_source": "purple: Horseshoe Bay; oldfield: Lavaca, Greenville, Sealy",
+      "publish": "Pending controlled rights-filtered Pages deployment"
+    }
+  },
+  "photo_note": "Photo fast-fill 017 physicalizes the three previously vetted exact-species image selections for the learner. Scientific taxonomy/range/morphology fields are unchanged.\n2026-10-27 Lane 2 photograph-first: actual Texas source photo originals archived for mature awned florets and species-specific outer blade/sheath. Oldfield additionally has in-soil tuft habit; ligule tips, actual roots and individually venated glumes still require field collection. Only gross visible arrows.",
+  "images": [
+    {
+      "file": "images/01-habit.jpg",
+      "role": "Recognize · dense tufted perennial-looking grass with fine upright leaves in dry open ground; crown age not confirmed",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3742173733).jpg",
+      "study_use": "yes",
+      "public_reuse": "yes",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    },
+    {
+      "file": "images/02-mature-florets-awns.jpg",
+      "role": "Look closer · individual florets with three long radiating awns over a fingertip; glume vein count and lengths not measurable",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3877125836).jpg",
+      "study_use": "yes",
+      "public_reuse": "yes",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
+    },
+    {
+      "file": "images/03-three-awn-close.jpg",
+      "role": "Look closer · reddish-purple narrow flowering structures and threadlike awns; not a calibrated glume comparison",
+      "creator": "Stan Shebs",
+      "license": "CC BY-SA 3.0 / GFDL",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_close.jpg",
+      "study_use": "yes",
+      "public_reuse": "yes",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "file": "images/curtis-clark-threeawn-fruits-awns.jpg",
+      "role": "Separate source-identified mature fruits and three-awn visual reference; no glumes/ligule asserted without pixel inspection",
+      "creator": "Curtis Clark",
+      "license": "CC BY-SA 2.5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_fruits_with_awns_2003-07-03.jpg",
+      "public_reuse": "Attribution, ShareAlike, note JPEG re-encoding; preserve creator",
+      "photo_status": "PROVISIONAL — USER PHOTO REVIEW PENDING; awn attachment arrows withheld pending actual pixel verification",
+      "modifications": "Metadata-stripped RGB JPEG re-encode"
+    },
+    {
+      "file": "images/colleendieter-purple-threeawn-exterior-blade-sheath-749623255.jpg",
+      "role": "Original TX photo of Aristida purpurea narrow green blade, culm and exterior adjoining leaf sheath. Inner fringe ligule NOT opened.",
+      "creator": "colleendieter",
+      "license": "CC BY-NC 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "source_page": "https://www.inaturalist.org/photos/749623255",
+      "source_observation_id": 407870376,
+      "source_locality": "Indian Paint Blvd, Horseshoe Bay, TX, US",
+      "public_reuse": "yes, only on confirmed genuinely noncommercial education site and visible credit",
+      "modifications": "EXIF/GPS stripped by RGB clean JPEG re-encode; overlay arrows are separate web annotations",
+      "original_dimensions_px": [
+        2048,
+        1536
+      ],
+      "file_sha256": "721ec6b37d15480b41cf7d65ba43567ba3eb4114ceb86f1913e086914cb47432"
+    },
+    {
+      "file": "images/cc0-purple-threeawn-triple-awn-mature-units-754606055.jpg",
+      "role": "Actual narrow mature awned spikelet-bearing inflorescence viewed at hand scale, showing the slender starburst awn silhouette; tiny glume veins not measured.",
+      "creator": "iNaturalist CC0 photographer (source credit retained)",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_page": "https://www.inaturalist.org/photos/754606055",
+      "source_observation_id": 410317237,
+      "source_locality": "Mountain View Cc, Dallas, TX 75211, USA",
+      "public_reuse": "yes, CC0 source verified",
+      "modifications": "EXIF/GPS stripped by RGB clean JPEG re-encode; overlay arrows are separate web annotations",
+      "original_dimensions_px": [
+        2048,
+        1536
+      ],
+      "file_sha256": "f5bf93b709582486b12234894b1958776fc0b29bf45a6a3bd4a62e04d40dcdea"
+    }
+  ],
+  "learner_visual_status": {
+    "status": "provisional_learner_ready",
+    "mode": "learner_fast_fill",
+    "image_count": 3,
+    "filled_at": "2026-10-05",
+    "note": "Three vetted exact-species images staged for physical installation; final physical-file verification follows the curation run. Scientific PASS unchanged."
+  },
+  "diagnostic_photo_polish": {
+    "status": "FIRST_PASS_VISUAL_ID_READY_FINE_GLUME_MACROS_PENDING",
+    "distinguish_from": "Aristida oligantha",
+    "core_anatomy": [
+      "glume length ratio on the same mature spikelet, metric scale",
+      "lower-glume vein count at 10–20× transmitted light"
+    ],
+    "supplemental": [
+      "rooted basal habit showing perennial or annual",
+      "whole mature panicle and awn anatomy"
+    ],
+    "existing_photo_limits": "Three physical existing habitat/awn images do not yet provide a matched glume pair.",
+    "source_urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information",
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325343-2/general-information",
+      "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/CommonName.html"
+    ],
+    "scientific_status_preserved": true,
+    "measured_variety_caution_20261022": "VARIETY / MEASUREMENT CAUTION: Kew GrassBase's A. purpurea broad-description lower glume 6–8 mm and upper 11–15 mm are a useful example, NOT a strict limit for every variety. A. purpurea var. longiseta can have upper glumes 14–25 mm (PNW revised flora), and an independently measured var. longiseta specimen had lower 11 mm, upper 20 mm (Schweich collection 1140). Use RELATIVE shorter lower glume + typically one lower vein, confirmed permanent perennial base and variety-aware local key. DO NOT reject purple or declare oldfield solely because an upper glume measures ~20 mm. A. oligantha's character is long NEAR-EQUAL 18–25 mm glumes AND a lower glume with 3–7 veins; photograph BOTH same-spikelet glumes.",
+    "additional_sources": [
+      "https://www.pnwherbaria.org/florapnw/treatmentpdfs/Aristida_FloraPNW_Revised.pdf",
+      "https://www.schweich.com/imagehtml/TAS011400Oview.html"
+    ],
+    "physical_photo_audit_20261023": {
+      "status": "THREE_EXISTING_BYTES_VERIFIED_NO_NEW_JPEG",
+      "images": [
+        {
+          "file": "images/01-habit.jpg",
+          "blob_sha": "e3d03efbdf9ffbdbe2055af4506c5eba09a2d010",
+          "verified_bytes": 380600,
+          "creator": "Matt Lavin",
+          "license": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3742173733).jpg",
+          "visible": "bunch habit and basal fine leaves; age of crown, true ligule and roots not resolved"
+        },
+        {
+          "file": "images/02-mature-florets-awns.jpg",
+          "blob_sha": "77830542bd7aa7e53a57e563c1c7707f958eccf3",
+          "verified_bytes": 157214,
+          "creator": "Matt Lavin",
+          "license": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3877125836).jpg",
+          "visible": "radiating awns and an awn fork above a fingertip; fingertip is not millimeter scale"
+        },
+        {
+          "file": "images/03-three-awn-close.jpg",
+          "blob_sha": "d14f311e0fd2d2eef0d0bea8d634aaa5bc9c5d68",
+          "verified_bytes": 112547,
+          "creator": "Stan Shebs",
+          "license": "CC BY-SA 3.0 (chosen from author's multiple licenses)",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_close.jpg",
+          "visible": "reddish mature floral parts and awns; glume and lemma identity not resolved"
+        }
+      ],
+      "rights": "Original JPEGs unchanged; first two Matt Lavin photos CC BY-SA 2.0, third Stan Shebs selected CC BY-SA 3.0 dual-licensed source. Keep creator, license URL, source URL and overlay change notice; attribution and ShareAlike remain applicable.",
+      "last_mile_photo_holds": [
+        {
+          "organ": "Same ripe spikelet lower+upper glumes with lower vein count",
+          "scale": "physical 1-mm bar, 10–20× backlight",
+          "status": "NEEDS_PUBLIC_PHOTO"
+        },
+        {
+          "organ": "True leaf blade–sheath collar and ligule",
+          "scale": "1-mm bar, front and side, hairs separately identifiable",
+          "status": "NEEDS_PUBLIC_PHOTO"
+        },
+        {
+          "organ": "Rooted Texas perennial crown with attached flowering culm",
+          "scale": "whole rooted plant plus linked flowering stem",
+          "status": "NEEDS_PUBLIC_PHOTO"
+        },
+        {
+          "organ": "Same-scale Aristida oligantha glumes and crown",
+          "scale": "matched 1-mm dissected spikelet + rooted habit",
+          "status": "NEEDS_PUBLIC_PHOTO"
+        }
+      ],
+      "rights_hold": "Minnesota Wildflowers offers valuable exact-taxon glume and collar photos but image-specific public reuse permission not established; DO NOT rehost or use as public teaching panels without permission.",
+      "no_new_photo_files": true,
+      "new_arrow_coordinates_visually_checked": true,
+      "annotation_pending": "True glume veins, lower/upper glume labels, ligule hairs, and complete three-awn attachment to one lemma remain unannotated pending measured close-up."
+    }
+  },
+  "visual_comparison": {
+    "title": "Purple threeawn — actual awns plus oldfield look-alike",
+    "subtitle": "Four credited visual teaching panels: one physical awned floret, an oldfield comparison and two MORE pre-existing physical purple-threeawn examples (whole bunch and another close reproductive view). Matched glumes still missing.",
+    "memory_rule": "PURPLE = PERENNIAL crown + LOWER glume ~HALF upper, 1 vein. OLD FIELD = ANNUAL + glumes nearly EQUAL, 3–7 lower veins.",
+    "items": [
+      {
+        "label": "Purple threeawn — long radiating awns above a fingertip",
+        "scientific_name": "Aristida purpurea",
+        "image_url": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/02-mature-florets-awns.jpg",
+        "image_fit": "contain",
+        "image_role": "Matt Lavin multiple awned florets at fingertip scale, without matched dissected glumes",
+        "caption": "Purple threeawn source photographed in Idaho. A long spreading awn and a visible awn branching junction are arrowed on the actual fingertip-held florets. The exact three-awn attachment to one lemma, lower/upper glume ratio and veins are NOT resolved or measured by this image.",
+        "why_it_matters": "Three awns identify the genus, not purple versus oldfield species.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3877125836).jpg",
+        "markers": [
+          {
+            "label": "Spreading awn",
+            "label_x": 68,
+            "label_y": 17,
+            "target_x": 82,
+            "target_y": 52
+          },
+          {
+            "label": "Visible awn fork",
+            "label_x": 9,
+            "label_y": 64,
+            "target_x": 54,
+            "target_y": 73
+          }
+        ],
+        "photo_status": "2026-10-23 GitHub JPEG re-rendered and visually inspected at 960×1280. Blob 77830542bd7aa7e53a57e563c1c7707f958eccf3; 157214 actual bytes. Existing spreading-awn arrow retained; new gross awn-fork arrow points to visible junction at 54%/73%, NOT to a measured glume or a claimed fully resolved lemma tip. Matt Lavin CC BY-SA 2.0 verified on source Commons page; no JPEG modification; annotation overlay only."
+      },
+      {
+        "label": "REAL LEAF JUNCTION · outer blade and sheath against neutral background",
+        "scientific_name": "Aristida purpurea",
+        "image_url": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/colleendieter-purple-threeawn-exterior-blade-sheath-749623255.jpg",
+        "image_fit": "contain",
+        "image_role": "Original TX photo of Aristida purpurea narrow green blade, culm and exterior adjoining leaf sheath. Inner fringe ligule NOT opened.",
+        "caption": "An actual purple threeawn green leaf and sheath photographed by colleendieter in Horseshoe Bay, Texas. The narrow diagonal blade meets a narrow vertical shoot near its sleeve-like base. Look for the insertion, then GENTLY TURN BACK the leaf to find the true hair-fringe ligule, which this exterior view does not expose or measure. Do not identify the orange background as plant tissue.",
+        "why_it_matters": "Direct species-labelled blade/sheath growth from the Hill Country rather than inferring collar parts from flowering stems.",
+        "markers": [
+          {
+            "label": "Exterior blade–sheath junction (inner ligule unseen)",
+            "label_x": 60,
+            "label_y": 8,
+            "target_x": 53,
+            "target_y": 46
+          }
+        ],
+        "photo_status": "ORIGINAL photograph pixels individually reviewed on 2026-10-27. Gross visible external junction/flowering/base only. Inner ligule, roots and glume veins NOT demonstrable.",
+        "creator": "colleendieter",
+        "license": "CC BY-NC 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "source_page": "https://www.inaturalist.org/photos/749623255",
+        "source_observation_id": 407870376,
+        "source_locality": "Indian Paint Blvd, Horseshoe Bay, TX, US",
+        "public_reuse": "yes, only on confirmed genuinely noncommercial education site and visible credit",
+        "modifications": "EXIF/GPS stripped by RGB clean JPEG re-encode; overlay arrows are separate web annotations",
+        "original_dimensions_px": [
+          2048,
+          1536
+        ],
+        "file_sha256": "721ec6b37d15480b41cf7d65ba43567ba3eb4114ceb86f1913e086914cb47432"
+      },
+      {
+        "label": "MATURE THREEAWN · long spreading individual awns against a hand",
+        "scientific_name": "Aristida purpurea",
+        "image_url": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/cc0-purple-threeawn-triple-awn-mature-units-754606055.jpg",
+        "image_fit": "contain",
+        "image_role": "Actual narrow mature awned spikelet-bearing inflorescence viewed at hand scale, showing the slender starburst awn silhouette; tiny glume veins not measured.",
+        "caption": "A Dallas research-grade purple threeawn CC0 original shows long radiating threadlike awns and narrow attached fruiting portions above fingers. Compare an equivalent open mature oldfield threeawn image; both have three awns, so COUNTING THREE alone is not enough to identify either species. Do not label glume-vein number, lemma callus or ligule from this photo.",
+        "why_it_matters": "Provides an up-close true reproductive view matched with oldfield threeawn instead of a generic distant tuft.",
+        "markers": [
+          {
+            "label": "Long spreading lemma awns (gross view)",
+            "label_x": 7,
+            "label_y": 24,
+            "target_x": 30,
+            "target_y": 54
+          }
+        ],
+        "photo_status": "ORIGINAL photograph pixels individually reviewed on 2026-10-27. Gross visible external junction/flowering/base only. Inner ligule, roots and glume veins NOT demonstrable.",
+        "creator": "iNaturalist CC0 photographer (source credit retained)",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_page": "https://www.inaturalist.org/photos/754606055",
+        "source_observation_id": 410317237,
+        "source_locality": "Mountain View Cc, Dallas, TX 75211, USA",
+        "public_reuse": "yes, CC0 source verified",
+        "modifications": "EXIF/GPS stripped by RGB clean JPEG re-encode; overlay arrows are separate web annotations",
+        "original_dimensions_px": [
+          2048,
+          1536
+        ],
+        "file_sha256": "f5bf93b709582486b12234894b1958776fc0b29bf45a6a3bd4a62e04d40dcdea"
+      },
+      {
+        "label": "Oldfield threeawn — long awns on an open panicle",
+        "scientific_name": "Aristida oligantha",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Aristida_oligantha_600896755.jpg/960px-Aristida_oligantha_600896755.jpg",
+        "image_fit": "contain",
+        "image_role": "Scattered mature spikelets and long awns on wiry branching stems; vein anatomy NOT resolved",
+        "caption": "CC0 species-labelled oldfield threeawn in Minnesota. Long delicate awns and spaced reproductive branches are visible. The lower/upper glume lengths and vein count are NOT measured from this image.",
+        "why_it_matters": "Recognize an airy reproductive habit before examining intact glumes and rooted life cycle.",
+        "creator": "infiniteuniverse",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_oligantha_600896755.jpg",
+        "markers": [
+          {
+            "label": "Fine long awn",
+            "label_x": 68,
+            "label_y": 10,
+            "target_x": 61,
+            "target_y": 23
+          },
+          {
+            "label": "Open branching panicle",
+            "label_x": 4,
+            "label_y": 84,
+            "target_x": 48,
+            "target_y": 57
+          }
+        ],
+        "photo_status": "960×640 Commons source inspected 2026-10-21; coarse arrows only, no glume-vein claim"
+      },
+      {
+        "label": "PURPLE THREEAWN — entire source-identified perennial-looking tuft",
+        "scientific_name": "Aristida purpurea",
+        "image_url": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/01-habit.jpg",
+        "image_fit": "contain",
+        "image_role": "Recognize · dense tufted perennial-looking grass with fine upright leaves in dry open ground; crown age not confirmed",
+        "caption": "Original CC BY-SA image of purple-threeawn bunch and mostly basal narrow leaves. Source identifies this grass; one still image cannot itself prove how many years its crown has persisted. Compare a field-dug mature rooted perennial tuft.",
+        "why_it_matters": "Connects the reproductive awns to a whole plant rather than only the finger-held awned close-up.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3742173733).jpg",
+        "markers": [],
+        "photo_status": "ALREADY physically archived exact-taxon/source-labelled, image file metadata and attribution retained in species images[]. Only broad description of existing intake role; no newly placed anatomical arrows, species determination provisional at microscopic level."
+      },
+      {
+        "label": "PURPLE THREEAWN — distinct second close-up of reddish flowering units",
+        "scientific_name": "Aristida purpurea",
+        "image_url": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/03-three-awn-close.jpg",
+        "image_fit": "contain",
+        "image_role": "Look closer · reddish-purple narrow flowering structures and threadlike awns; not a calibrated glume comparison",
+        "caption": "Stan Shebs's source-identified Nevada photograph shows reddish narrow flowering units and long threadlike awns. Two conservative overlay arrows mark only visible broad reproductive structures; they do not identify a glume, lemma, precise awn origin or measured spikelet. Purple color alone does not distinguish this species.",
+        "why_it_matters": "A second existing physical old threeawn view without requiring a redundant external photograph.",
+        "creator": "Stan Shebs",
+        "license": "CC BY-SA 3.0 / GFDL",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_close.jpg",
+        "markers": [
+          {
+            "label": "Reddish narrow flowering unit (not dissected)",
+            "label_x": 2,
+            "label_y": 48,
+            "target_x": 29,
+            "target_y": 42
+          },
+          {
+            "label": "Threadlike awns (not individually measured)",
+            "label_x": 66,
+            "label_y": 8,
+            "target_x": 44,
+            "target_y": 16
+          }
+        ],
+        "photo_status": "2026-10-25: existing archived JPEG independently decoded (112547 bytes, 900×1235, Git blob d14f311e0fd2d2eef0d0bea8d634aaa5bc9c5d68), JPEG SOI/EOI passed, APP1/EXIF 0, APP13 0; actual pixels visually inspected. Commons exact-source photo: Stan Shebs, May 2005, Las Vegas Nevada, CC BY-SA 3.0 Unported (also GFDL/CC BY-SA 2.5 alternative). Two new browser-overlay gross-structure arrows; original JPEG unchanged; credit, source and ShareAlike/adaptation notice preserved. No Texas voucher or individual glume/lemma proof."
+      },
+      {
+        "label": "PURPLE THREEAWN — fruits and spreading awns (Curtis Clark)",
+        "scientific_name": "Aristida purpurea",
+        "image_url": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/curtis-clark-threeawn-fruits-awns.jpg",
+        "image_fit": "contain",
+        "image_role": "Mature fruit and awn review photo, source-determined; specific microscopic parts not yet verified",
+        "caption": "Curtis Clark's photographed fruits and awns. Compare spreading awn form with the already archived fingertip photograph; glume venation, ligule and same-plant roots remain undocumented.",
+        "why_it_matters": "Provides a separate mature-fruit view without borrowing a look-alike species.",
+        "creator": "Curtis Clark",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_fruits_with_awns_2003-07-03.jpg",
+        "markers": [],
+        "photo_status": "PROVISIONAL — photo for public review; no new anatomy arrows"
+      }
+    ],
+    "overlay_note": "The purple-threeawn panel now uses its already installed canonical JPEG instead of an external thumbnail. Matt Lavin photo: CC BY-SA 2.0; creator/source/license retained, image not modified in this update. Lower-versus-upper glume lengths and veins are NOT visible or measured. Oldfield comparison remains a separately labeled CC0 external source. Two existing physically archived CC BY-SA whole-plant/other-flowering details now shown, no invented anatomical arrows. Perennial root age and full 1-veined lower glume still unphotographed."
+  },
+  "field_photo_quickcheck": {
+    "heading": "Purple threeawn — start at basal crown then lower glume",
+    "featured_photo_indices": [
+      0,
+      1,
+      2
+    ],
+    "steps": [
+      "Two visually checked arrows identify one spreading awn and the visible awn-fork junction on a source-identified purple-threeawn photograph. The three-awn genus character still requires confirming three branches attached to ONE lemma on a separate inspected mature spikelet.",
+      "Compare Stan Shebs's verified reddish close-up: arrows show a narrow reproductive unit and threadlike awns, not the precise three-awn origin, lower/upper glumes, or measurable anatomy. Color alone is not a species ID.",
+      "Photograph rooted PERENNIAL tuft with many fine inrolled BASAL leaves; don't infer perennial crown from one isolated flowering stem.",
+      "Dissect ONE ripe spikelet on a millimeter ruler, preserving both glumes; lower usually about HALF upper in Kew broad description.",
+      "Backlight LOWER glume to confirm ONE main vein; compare oldfield's 3–7 and larger near-equal glumes.",
+      "At a true LEAF COLLAR look for conspicuous long hairs in local purple threeawn, but do not use that alone to confirm species."
+    ],
+    "field_rule": "Use lower/upper glume RATIO, lower vein count, and rooted perennial crown; do not identify by purplish fall awns alone.",
+    "warning": "Variety-aware key: Kew glume dimensions are typical, not fixed. Var. longiseta upper glumes 14–25 mm overlap absolute oldfield sizes; compare LOWER/UPPER ratio and lower glume veins with rooted crown. Need true matched local macro. 2026-10-25: a previously archived Stan Shebs 900×1235 CC BY-SA 3.0 reproductive close-up was byte/pixel verified and added to featured photos with two conservative broad-structure arrows; the separate Curtis Clark JPEG could not be decoded through the repository read and remains annotation_pending."
+  },
+  "photo_targets_crew": [
+    "Verified rooted Hays-area perennial basal bunch and attached complete flowering head",
+    "Same-plant 1 mm lower/upper glumes, both intact and separately measured",
+    "Backlit lower glume 10–20× to confirm ONE vein",
+    "Leaf blade-sheath collar with long hairs and sheath/ligule anatomy, 1 mm ruler",
+    "Single detached mature floret and exactly three awns emerging from same lemma, scale",
+    "Photograph LOCAL varietal differences especially var. longiseta longer glumes; do not impose universal 15 mm upper limit. Same spikelet: both glumes with mm scale and LOWER one backlit."
+  ],
+  "field_id_references": [
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information",
+    "https://rangeplants.tamu.edu/plant/purple-threeawn/",
+    "https://rangeplants.tamu.edu/plant/oldfield-threeawn/",
+    "https://www.minnesotawildflowers.info/grass-sedge-rush/churchmouse-three-awn"
+  ],
+  "field_id_finish_pass": {
+    "stage": "FIELD_READY_PHOTO_GAPS",
+    "updated_at": "2026-10-23",
+    "look_here_first": "PURPLE THREEAWN: first trace the persistent PERENNIAL bunch and rolled basal leaves; then isolate ONE fertile lemma bearing THREE awns. On one ripe spikelet compare the two glumes and backlight the LOWER glume (usually one-veined). Typical lower glume is markedly shorter than upper, but several named varieties overlap in lengths: don't use one fixed glume cutoff.",
+    "measured_confirmation": {
+      "evidence_level": "Published botanical treatment ranges; NOT dimensions measured from current gallery pixels. Kew GrassBase species-level description and variety-aware supplemental flora differ.",
+      "growth_form": "Native warm-season perennial bunchgrass, typically slender culms approximately 25–70 cm (Kew GrassBase), without long creeping runners; persistent fibrous crown with mostly basal inrolled leaves.",
+      "panicle": "Often narrow, flexuous and somewhat nodding, approximately 10–25 cm long in Kew treatment; panicle color/opening are supporting only.",
+      "ligule_and_collar": "Ligule a short FRINGE OF HAIRS about 0.3–0.6 mm (Kew GrassBase), with often longer conspicuous hairs at the collar (Texas A&M). Separate true inner ligule hairs from outer collar tufts; auricles absent.",
+      "spikelet": "One fertile floret per spikelet; body about 11–15 mm in Kew broad treatment, excluding long three-branched awns. Some varieties differ in floret and glume size.",
+      "lower_glume": "Typically about 6–8 mm in Kew GrassBase, one-veined; often around HALF length of upper glume. Regional varieties can vary: do not treat ratio as absolute across all named forms.",
+      "upper_glume": "Typically 11–15 mm, one-veined (Kew GrassBase); var. longiseta can reach approximately 14–25 mm, overlapping oldfield absolute length. Measure BOTH glumes from same spikelet.",
+      "fertile_lemma": "About 10–12 mm in Kew broad treatment, firm and three-veined, roughened above, with a short hairy pointed callus; variety-dependent lengths can differ.",
+      "lemma_awns": "THREE long spreading awn branches from ONE lemma, typically approximately 35–45 mm each in Kew GrassBase, without a prominent column; other regional varieties can have longer or shorter limbs.",
+      "callus": "Short, pungent and hairy (~0.5 mm in Kew treatment); actual pixel-level confirmation requires dissected mature floret.",
+      "variety_and_photo_limit": "Var. longiseta may have 14–25-mm upper glumes; other varieties (including var. parishii) can weaken a simplistic half-length lower/upper glume rule. Kew's dimensions are examples, NOT hard all-variety boundaries. When ambiguous use a variety-aware regional key and retain Aristida sp. rather than force oldfield/purple."
+    },
+    "lookalikes": [
+      {
+        "taxon": "Aristida oligantha — oldfield threeawn",
+        "split": "Wiry freely branching ANNUAL, mature glumes usually long and nearly EQUAL (~18–25 mm) and lower glume 3–7-veined. Purple typically has persistent perennial crown and one-veined lower glume, often shorter than upper."
+      },
+      {
+        "taxon": "Aristida dichotoma — churchmouse threeawn (comparison only)",
+        "split": "Central awn with distinctive short tight basal coil and much shorter lateral awns; purple typically has three long spreading awns."
+      },
+      {
+        "taxon": "Aristida longespica — slimspike threeawn (comparison only)",
+        "split": "Annual with contracted narrow head and much shorter glumes; compare intact spikelet and rooted plant, not purple color."
+      }
+    ],
+    "crew_field_sequence": [
+      "1. Photograph a rooted mature bunch, old basal leaf bases and entire flowering culm together; a detached panicle cannot prove perennial life history.",
+      "2. Expose a real blade–sheath collar, separately showing ~0.3–0.6-mm ligule hair fringe and longer external collar hairs, with 0.5–1-mm scale.",
+      "3. Photograph one ripe intact spikelet with mm ruler; separately measure lower and upper glumes and backlight LOWER one to see its main vein.",
+      "4. Separate a mature ~10–12-mm three-veined lemma and its three awns (~35–45 mm in Kew typical treatment), with the true awn fork in focus and any hairy callus shown.",
+      "5. Compare same-scale A. oligantha lower 3–7-veined glume, paired long glumes and annual base; account for A. purpurea varieties before making a species claim.",
+      "6. Keep uncertain local material at Aristida sp./A. purpurea complex until mature paired glumes, root crown and variety-aware characters can be inspected."
+    ],
+    "public_readiness": {
+      "status": "FIELD_READY_PHOTO_GAPS",
+      "NEEDS_PUBLIC_PHOTO": [
+        "Locally identified perennial rooted A. purpurea crown linked to complete flowering culm, with cm scale and same-specimen provenance.",
+        "Intact mature same-spikelet LOWER and UPPER glumes under 1-mm ruler, backlit LOWER one-veined blade; include varietal variation if present.",
+        "TRUE ~0.3–0.6-mm ligule hair fringe with 20–40× and 0.5-mm scale, collar long hairs labeled separately.",
+        "Isolated mature lemma, hairy callus and all THREE attached awn branches with mm scale; no fabricated microscopic arrows.",
+        "Matched, separately verified A. oligantha rooted annual and near-equal multiveined glumes at same scale."
+      ],
+      "NEEDS_SITE_QA": "Confirm all three physically archived Matt Lavin/Stan Shebs source rights, attribution and ShareAlike notices, existing gross-structure arrows, responsive gallery and public Pages inclusion after separately controlled publication. No new anatomical arrows in this text pass.",
+      "photo_rights": "Preserve CC BY-SA 2.0 and CC BY-SA 3.0 original individual creator/source/license records and prior photo audits; no new media or implied blanket photo permission.",
+      "finish_gate": "FINISHED only after a correctly determined same-plant rooted perennial, true ligule, measured paired glumes/veins and lemma-awns are visible in permitted photos with independently checked arrow targets and public-site QA."
+    },
+    "evidence_urls": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information",
+      "https://rangeplants.tamu.edu/plant/purple-threeawn/",
+      "https://www.pnwherbaria.org/florapnw/treatmentpdfs/Aristida_FloraPNW_Revised.pdf",
+      "https://www.govinfo.gov/content/pkg/GOVPUB-I29-PURL-gpo136141/pdf/GOVPUB-I29-PURL-gpo136141.pdf"
+    ]
+  },
+  "field_id_short_tiles": [
+    {
+      "heading": "01 · LOOK HERE FIRST",
+      "short": "Perennial tuft with rolled narrow leaves and three long lemma awns",
+      "details": "Kew describes a persistent bunchgrass about 25–70 cm tall, with narrow mostly basal rolled leaves and a 10–25 cm often nodding panicle. Panel 2 shows a source-identified tuft, but a single photograph does not prove the crown's age.",
+      "photo_panel_indices": [
+        0,
+        2,
+        3
+      ],
+      "glossary": [
+        "perennial",
+        "panicle",
+        "awn",
+        "crown"
+      ],
+      "status": "VISIBLE TUFT AND AWNS; ROOTED CROWN STILL UNPROVEN"
+    },
+    {
+      "heading": "02 · OPEN THE INNER COLLAR",
+      "short": "True hair-fringe ligule about 0.3–0.6 mm",
+      "details": "Use 20–40× and a 0.5 mm scale at the blade–sheath junction. The true ligule is a short inner hair fringe; longer external collar or sheath-mouth hairs are different structures. Existing gallery panels do not resolve the actual ligule.",
+      "photo_panel_indices": [],
+      "glossary": [
+        "ligule",
+        "collar",
+        "sheath"
+      ],
+      "status": "NEEDS_PUBLIC_PHOTO — MEASURED TRUE LIGULE"
+    },
+    {
+      "heading": "03 · ISOLATE ONE MATURE SPIKELET",
+      "short": "Typically 11–15 mm body with one fertile floret",
+      "details": "Published Kew measurements exclude the much longer awns. A ripe spikelet has one fertile floret and a short hairy pointed callus (~0.5 mm). Panels 0, 3 and 4 show actual reproductive structures but not a verified millimeter-calibrated same-spikelet dissection.",
+      "photo_panel_indices": [
+        0,
+        3,
+        4
+      ],
+      "glossary": [
+        "spikelet",
+        "floret",
+        "callus"
+      ],
+      "status": "REAL REPRODUCTIVE PHOTOS; CALIBRATED DISSECTION GAP"
+    },
+    {
+      "heading": "04 · COMPARE THE TWO GLUMES",
+      "short": "Typical lower 6–8 mm; upper 11–15 mm, both one-veined",
+      "details": "Kew's broad species treatment describes a lower glume often about half the upper. Named varieties, including var. longiseta, can overlap oldfield threeawn in upper-glume length; measure BOTH glumes from one spikelet and check the lower vein, never enforce one universal cutoff.",
+      "photo_panel_indices": [
+        0,
+        3
+      ],
+      "glossary": [
+        "glume",
+        "vein",
+        "variety"
+      ],
+      "status": "NEEDS_PUBLIC_PHOTO — SAME-SPIKELET GLUME PAIR"
+    },
+    {
+      "heading": "05 · FOLLOW THE LEMMA AWN FORK",
+      "short": "Fertile lemma ~10–12 mm; three awn limbs ~35–45 mm typically",
+      "details": "The three-veined fertile lemma carries three long spreading awn branches, not three independent spikelets. Panels 0 and 4 show awns but do not establish the exact lemma attachment, hairy callus or ruler lengths; Kew's values vary by named variety.",
+      "photo_panel_indices": [
+        0,
+        4
+      ],
+      "glossary": [
+        "lemma",
+        "awn",
+        "floret",
+        "callus"
+      ],
+      "status": "NEEDS_PUBLIC_PHOTO — ATTACHED LEMMA/AWN FORK"
+    },
+    {
+      "heading": "06 · SPLIT FROM OLDFIELD THREEAWN",
+      "short": "Purple perennial with one-veined lower glume; oldfield annual",
+      "details": "Panel 1 is explicitly OTHER SPECIES: A. oligantha. Oldfield usually has nearly equal 18–25 mm glumes and 3–7 lower-glume veins, while purple typically has a shorter one-veined lower glume. Rooted life history and backlit glumes outweigh flower color or awn length.",
+      "photo_panel_indices": [
+        1,
+        2
+      ],
+      "glossary": [
+        "annual",
+        "perennial",
+        "glume",
+        "vein"
+      ],
+      "status": "LOOK-ALIKE KEY PRESENT; MATCHED GLUME MACROS MISSING"
+    }
+  ],
+  "grass_species_finalization_20261025": {
+    "stage": "FIELD_READY_PHOTO_GAPS",
+    "scope": "Existing Aristida purpurea card: six concise crew field-ID tiles only; no image, license, taxonomy, range, genus, website or Pages changes.",
+    "sources": [
+      "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information",
+      "https://rangeplants.tamu.edu/plant/purple-threeawn/",
+      "https://rangeplants.tamu.edu/plant/oldfield-threeawn/"
+    ],
+    "NEEDS_PUBLIC_PHOTO": [
+      "Locally determined persistent perennial rooted tuft connected to flowering culm and 10–25 cm panicle, with cm scale.",
+      "Actual inner 0.3–0.6 mm hair-fringe ligule separately from external collar hairs at 20–40× with 0.5 mm scale.",
+      "One intact mature same-spikelet lower and upper glume pair, mm scale and transmitted-light one-veined lower glume; note variety.",
+      "One mature 10–12 mm three-veined lemma with its three attached typically 35–45 mm awn branches and ~0.5 mm hairy callus, mm scale.",
+      "Matched source-verified A. oligantha rooted annual and nearly equal 3–7-veined lower glume."
+    ],
+    "NEEDS_SITE_QA": [
+      "Verify six new short tiles and indices against five existing visual-comparison panels; panel 1 is OTHER SPECIES.",
+      "Verify all four original photo records, Matt Lavin/Stan Shebs/Curtis Clark credits and CC BY-SA/GFDL notices; do not modify license fields.",
+      "Verify existing gross awn/fork arrows against actual visible pixels; no new microscopic annotations.",
+      "Confirm public/mobile rendering only after separate owning-lane Pages deployment; not checked in this run."
+    ],
+    "public_ready_criteria": "Remain FIELD_READY_PHOTO_GAPS until the rooted perennial, true ligule, variety-aware paired glumes, lemma/awn insertion, individual public-rights evidence, verified anatomical arrows and public site QA are documented."
+  }
+}

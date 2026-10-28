@@ -1,0 +1,38 @@
+{
+  "stage": "STAGING_ONLY_NOT_PUBLISHED",
+  "source_repository": "Crking92/Hays-County-Botany",
+  "source_commit": "d5812999ea32d03b873110db1a526e20ac6ea730",
+  "original_source_files": 1402,
+  "original_source_bytes": 434996996,
+  "destination_file_counts": {
+    "SOURCE_DATA_COPIED": 390,
+    "LICENSE_CANDIDATE_IMAGE_COPIED": 788,
+    "IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY": 224
+  },
+  "destination_bytes_copied": 396846177,
+  "source_image_record_classification": {
+    "license_candidate": 788,
+    "site_specific_permission_review": 138,
+    "explicit_reuse_hold": 44,
+    "external_url_stays_as_metadata": 31,
+    "missing_general_reuse_license": 25
+  },
+  "conflicting_source_license_paths": [],
+  "source_image_records": 1026,
+  "file_level_checksum_passed": true,
+  "source_preserved": true,
+  "no_original_deletion": true,
+  "external_and_held_image_metadata_remains_in_species_json": true,
+  "website_enabled": false,
+  "species_json_originals_unchanged": true,
+  "pending_checks": [
+    "Exact license/source metadata and NC use review for all migrated images",
+    "Check 220 held/unreferenced images against original-only archive",
+    "Sanitize published species.json galleries to avoid broken/restricted image references",
+    "Verify all arrows point at actual pictured structures",
+    "Implement family frontend and cross-family links, glossary, universal search and quiz",
+    "Final sync to newest main after staged source snapshot",
+    "Verify mobile Pages before cutover"
+  ],
+  "note": "This staging data retains raw canonical species metadata (including references to excluded photos); it is NOT a website-ready or rights-cleared release."
+}

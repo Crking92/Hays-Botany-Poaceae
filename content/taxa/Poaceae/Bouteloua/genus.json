@@ -1,0 +1,997 @@
+{
+  "rank": "genus",
+  "family": "Poaceae",
+  "name": "Bouteloua",
+  "authority": "Lag.",
+  "common_group": "Grama grasses",
+  "project_scope": {
+    "selection_mode": "comparison-first / B133 source-concept reconciliation",
+    "canonical_species_count": 7,
+    "canonical_species_ids": [
+      "bouteloua-curtipendula",
+      "bouteloua-dactyloides",
+      "bouteloua-gracilis",
+      "bouteloua-hirsuta",
+      "bouteloua-pectinata",
+      "bouteloua-rigidiseta",
+      "bouteloua-trifida"
+    ],
+    "represented_source_concepts": [
+      "bouteloua-hirsuta-var-pectinata"
+    ],
+    "source_concept_count": 8,
+    "note": "B002 established the original four-species comparison set; B078 added B. hirsuta, B. pectinata, and B. trifida. The older source name Bouteloua hirsuta var. pectinata is represented by canonical B. pectinata rather than duplicated."
+  },
+  "study_strategy": {
+    "shared_traits": [
+      "warm-season C4 grasses",
+      "inflorescences built from short unilateral spicate branches/racemes",
+      "spikelets arranged mainly along one side of each branch",
+      "narrow linear leaf blades typical of Chloridoideae grasses"
+    ],
+    "priority": [
+      "stoloniferous sod versus tufted/bunchgrass habit",
+      "number of inflorescence branches",
+      "branch length, width, curvature, and whether branches are appressed",
+      "whether branches are spaced down a long axis or clustered near the top",
+      "naked branch-tip projections beyond the spikelets",
+      "awn and pubescence pattern",
+      "male versus female inflorescence differences in buffalograss"
+    ],
+    "warning": "Do not identify Bouteloua from leaf color or overall 'grassiness.' Start with growth form and inflorescence architecture, then use branch-tip, awn, and hair characters.",
+    "crew_visual_key": "Look at all seven side by side at the same organ level. Number of branches alone is not safe; compare attachment point, shape, length, hair bases, naked rachis projection, and the base of plant. Photos show actual organs; microscope detail not inferred.",
+    "highest_confusion_groups": [
+      "Bouteloua gracilis vs hirsuta",
+      "Bouteloua hirsuta vs pectinata",
+      "Bouteloua rigidiseta vs trifida",
+      "Bouteloua curtipendula vs all terminal-comb gramas",
+      "Bouteloua dactyloides vs Hilaria belangeri"
+    ]
+  },
+  "quick_key": [
+    {
+      "if": "creeping stoloniferous sod; male and female inflorescences strongly different, with female clusters low and bur-like",
+      "then": "Bouteloua dactyloides"
+    },
+    {
+      "if": "many short oat-like racemes spaced down one side of a long central axis",
+      "then": "Bouteloua curtipendula"
+    },
+    {
+      "if": "usually 1–3 longer curved eyebrow/rooster-comb branches",
+      "then": "Bouteloua gracilis"
+    },
+    {
+      "if": "tufted perennial; usually 1–4 comb-like branches and conspicuous papillose-based hairs near leaf bases; branch tip continues naked beyond terminal spikelets",
+      "then": "Bouteloua hirsuta"
+    },
+    {
+      "if": "taller, more robust hairy-grama relative with usually 3–5 longer straight to slightly curved combs, roughly 2.5–4.5 cm; old source names include B. hirsuta var./subsp. pectinata",
+      "then": "Bouteloua pectinata"
+    },
+    {
+      "if": "about 5–9 very short fuzzy/awned branches clustered near the top",
+      "then": "Bouteloua rigidiseta"
+    },
+    {
+      "if": "small wiry reddish plant with 2–7 narrow red/purplish branches held close to the main axis and three short awns on spikelets",
+      "then": "Bouteloua trifida"
+    }
+  ],
+  "curation_status": {
+    "version": "1.1-b133-reconciliation",
+    "source_concepts_reconciled": true,
+    "full_installed_set_in_genus_lesson": true,
+    "last_reviewed": "2026-10-05",
+    "manual_grama_genus_20261020": "11 verified-referenced local photo panels, seven species, 1 macro group comparison, branch architecture field key",
+    "visual_status": "FIELD_READY_PHOTO_GAPS",
+    "science_held_original_labels": true,
+    "buffalograss_sex_gallery_20261022": {
+      "species_panels": 7,
+      "genus_panels": 14,
+      "previous_other_taxa_unchanged": true,
+      "added_licensed_external_photo_panels": 3,
+      "physical_new_files": 0,
+      "photo_status": "FIELD_READY_PHOTO_GAPS"
+    },
+    "jim_conrad_buffalo_physically_archived_20261022": "Two Uvalde male flower/collar images now local. Commons healthy female/male vs infected middle comparison remains EXTERNAL REVIEW photo.",
+    "sideoats_diagnostic_photo_enrichment_20261022": "FIRST FULL-HABIT_AND_BLOOM_SOURCE_PHOTO_ROLES_ON_SPECIES; REAL_FLOWER_COMPARISON_IN_GENUS; MICROSCALE_LIGULE_HOLD",
+    "genus_photo_panels": 15
+  },
+  "visual_status": "7 CANONICAL SPECIES FIELD-READY PHOTO COMPARISONS — missing macro/sex-structure views, not finished microscopic",
+  "fast_fill_note": "FAST-FILL status: B. curtipendula 4; B. dactyloides 3; B. gracilis 3; B. hirsuta 3; B. trifida 2; B. rigidiseta 1; B. pectinata 0. Remaining gaps are source-limited presentation gaps, not scientific uncertainty. Do not substitute older varietal imagery for current B. pectinata without exact-concept verification.",
+  "source_concept_status": [
+    {
+      "id": "bouteloua-curtipendula",
+      "scientific_name": "Bouteloua curtipendula",
+      "status": "CANONICAL_PASS"
+    },
+    {
+      "id": "bouteloua-dactyloides",
+      "scientific_name": "Bouteloua dactyloides",
+      "status": "CANONICAL_PASS"
+    },
+    {
+      "id": "bouteloua-gracilis",
+      "scientific_name": "Bouteloua gracilis",
+      "status": "CANONICAL_PASS"
+    },
+    {
+      "id": "bouteloua-hirsuta",
+      "scientific_name": "Bouteloua hirsuta",
+      "status": "CANONICAL_PASS"
+    },
+    {
+      "id": "bouteloua-hirsuta-var-pectinata",
+      "scientific_name": "Bouteloua hirsuta var. pectinata",
+      "status": "SOURCE_ALIAS_REPRESENTED_BY_BOUTELOUA_PECTINATA"
+    },
+    {
+      "id": "bouteloua-pectinata",
+      "scientific_name": "Bouteloua pectinata",
+      "status": "CANONICAL_PASS"
+    },
+    {
+      "id": "bouteloua-rigidiseta",
+      "scientific_name": "Bouteloua rigidiseta",
+      "status": "CANONICAL_PASS"
+    },
+    {
+      "id": "bouteloua-trifida",
+      "scientific_name": "Bouteloua trifida",
+      "status": "CANONICAL_PASS"
+    }
+  ],
+  "taxonomy_note": "Current Kew/POWO accepts Bouteloua pectinata Feath. as a species native from Oklahoma to Texas and Mexico. Older treatments use Bouteloua hirsuta var. pectinata or B. hirsuta subsp. pectinata; the project preserves those source names as aliases but uses one canonical B. pectinata learner.",
+  "look_here_first": "Start at the WHOLE FLOWERING AXIS. Are the units MANY SHORT OATS distributed along a long central stem (sideoats), one to three LONG CURVED eyebrows (blue), one to four HAIRY combs with naked stingers (hairy), several LONGER straight combs on a more robust culm (pectinata), several VERY SHORT FUZZY terminal units (Texas), or a few NARROW APPRESSED reddish units (red)? Buffalograss is the exception: identify creeping stoloniferous turf and check separately for MALE and FEMALE heads. Always inspect sheath/ligule, rachis tip and mature spikelet before forcing uncertain species.",
+  "shared_morphology": [
+    "Warm-season C4 grasses with narrow blades, a blade–sheath collar and small spikelets grouped on one-sided spicate branches.",
+    "A 'comb' is a short inflorescence branch; the tiny units attached to it are spikelets, each enclosed by glumes. Count whole branches before counting spikelets.",
+    "Growth form varies: B. dactyloides spreads by stolons; the other study species are chiefly tufted. Male and female buffalograss inflorescences differ strongly."
+  ],
+  "species_comparison_matrix": {
+    "0": {
+      "character": "One-sided inflorescence branch count and distribution",
+      "curtipendula": "Many short branches spaced down a long central axis",
+      "dactyloides": "Sex-specific heads; female low bur-like clusters, not a typical tall comb array",
+      "gracilis": "Usually 1–3 longer curved combs near top",
+      "hirsuta": "Usually 1–4 combs",
+      "pectinata": "Usually 3–5 longer combs",
+      "rigidiseta": "About 5–9 short fuzzy/awned branches clustered at top",
+      "trifida": "Usually 2–7 narrow, close-held branches",
+      "caution": "Ranges overlap; count several mature inflorescences and inspect their attachment points."
+    },
+    "1": {
+      "character": "Branch shape, length and tip",
+      "curtipendula": "Short oat-like side branches",
+      "gracilis": "Curved eyebrow/rooster-comb",
+      "hirsuta": "Comb-like, often naked projection past terminal spikelets",
+      "pectinata": "Straighter to slightly curved, roughly 2.5–4.5 cm long",
+      "rigidiseta": "Very short fuzzy/awned units",
+      "trifida": "Narrow, often red-purple close-held units",
+      "caution": "Branch shape varies with age and wind; hirsuta vs pectinata requires hairs and spikelets too."
+    },
+    "2": {
+      "character": "Spikelet/leaf-base macro",
+      "hirsuta": "Conspicuous papillose-based hairs near leaf base; check naked branch tip",
+      "pectinata": "Hairy-grama relative; measure longer branches and inspect hair arrangement",
+      "rigidiseta": "Bristly/fuzzy awned spikelet units",
+      "trifida": "Three short awns on spikelets",
+      "caution": "Hair/awn details are not proven by distant habit photos; photograph with mm scale."
+    },
+    "3": {
+      "character": "Growth base and flower sex",
+      "dactyloides": "Creeping stoloniferous sod; separate male and female inflorescences",
+      "other_study_species": "Primarily tufted graminoids; ordinary comb-like reproductive branches",
+      "caution": "Young mown plants may obscure growth form; do not mistake female buffalograss burs for seedheads of another genus."
+    },
+    "crew_photo_comparison": {
+      "heading": "Seven local grama learner concepts: compare seedhead architecture",
+      "columns": [
+        "Species",
+        "Seedhead silhouette",
+        "Best micro confirmation",
+        "Dangerous shortcut"
+      ],
+      "rows": [
+        [
+          "Sideoats grama",
+          "Many short hanging units spaced along long axis",
+          "One-sided raceme and complete mature spikelet",
+          "One hanging unit mistaken for whole inflorescence"
+        ],
+        [
+          "Buffalograss",
+          "Short sod with sex-distinct male and low female flowering clusters",
+          "Stolon roots at nodes; male versus bur-like female inflorescences",
+          "Assuming all gramas have eyebrow combs"
+        ],
+        [
+          "Blue grama",
+          "1–3 longer curved terminal eyebrows",
+          "Spikelets up to branch tip; no distinct long bare rachis",
+          "Purple comb or number alone"
+        ],
+        [
+          "Hairy grama",
+          "1–4 bristly combs and visibly naked distal point",
+          "True branch hairs/papillose leaf hairs; terminal rachis",
+          "Ignoring wide overlap with tall pectinata"
+        ],
+        [
+          "Tall/pectinate grama",
+          "3–5 longer often straighter combs on robust culms",
+          "Terminal rudimentary spikelet and actual comb length; hirsuta pairing",
+          "Height or branch count as categorical"
+        ],
+        [
+          "Texas grama",
+          "Several very short fuzzy terminal flowering branches",
+          "Magnified bristly short unit and awns",
+          "Counting mixed heads across adjacent stems"
+        ],
+        [
+          "Red grama",
+          "Several slim, appressed, often reddish branches",
+          "Mature dissected awned spikelet with mm ruler",
+          "Red hue or threeawn name without awn photo"
+        ]
+      ],
+      "caution": "Species vary across habitats and flowering ages. This matrix teaches starting distinctions, not a guaranteed dichotomous key. All exact-species images follow source-level determinations until expert field specimen review."
+    }
+  },
+  "anatomy_lessons": [
+    {
+      "title": "1 · Read the full flowering axis",
+      "botanical_terms": [
+        "rachis",
+        "unilateral spicate branch",
+        "raceme",
+        "spikelet"
+      ],
+      "plain_language": "Count the one-sided comb branches from bottom to top. Sideoats grama spreads many little oat-like branches along a long axis; blue grama often has 1–3 curved eyebrows; Texas grama has roughly 5–9 short fuzzy units near the top.",
+      "measurement": "Count complete mature branches on several stems; B. pectinata typically has 3–5 branches around 2.5–4.5 cm long.",
+      "photo_role": "Matched full mature inflorescences of curtipendula, gracilis, rigidiseta and pectinata with cm scale.",
+      "status": "needs_verified_diagnostic_views",
+      "annotation_status": "annotation_pending",
+      "caution": "Cropping the bottom of the axis can make sideoats grama look like a few-branched grama."
+    },
+    {
+      "title": "2 · Comb-tip and papillose hair macro",
+      "botanical_terms": [
+        "rachis extension",
+        "papillose-based trichome",
+        "glume"
+      ],
+      "plain_language": "At the tip of a mature comb, check whether the axis extends naked beyond the last spikelet. Also inspect the leaf base and spikelet hairs: these are the useful fine structures in the hairy-grama group.",
+      "measurement": "Show naked tip and individual hair bases beside a millimeter scale; count branches and measure their lengths separately.",
+      "photo_role": "Matched hirsuta versus pectinata branch-tip and basal-hair macros; do not substitute old hirsuta var. pectinata media without exact-concept review.",
+      "status": "needs_photo",
+      "annotation_status": "annotation_pending",
+      "caution": "Hairiness and comb count can overlap; a generic tuft image does not prove either feature."
+    },
+    {
+      "title": "3 · Awning and spikelet structure",
+      "botanical_terms": [
+        "awn",
+        "glume",
+        "lemma",
+        "spikelet"
+      ],
+      "plain_language": "Dissect a mature one-sided branch. Find a single spikelet and distinguish its enclosing glumes from the slender awns. B. trifida has three short awns, while B. rigidiseta appears very fuzzy/awned at the branch scale.",
+      "measurement": "Count awns on multiple mature intact spikelets at 10–20× with a 1-mm scale.",
+      "photo_role": "Matched rigidiseta and trifida spikelet dissections with labeled glume/awn positions after pixel verification.",
+      "status": "needs_photo",
+      "annotation_status": "annotation_pending",
+      "caution": "Anthers, detached bristles and immature spikelets can mimic awns in distant photos."
+    },
+    {
+      "title": "4 · Buffalograss: stolons and two sexes",
+      "botanical_terms": [
+        "stolon",
+        "staminate",
+        "pistillate",
+        "bur-like female head"
+      ],
+      "plain_language": "Trace horizontal aboveground runners to see buffalograss sod. Then compare anthers in a male head with the low, bur-like female flowering/fruiting clusters; these may be on separate plants.",
+      "measurement": "Include 1-cm ruler beside stolon nodes and matched male/female heads; photograph attachment to the same identified plant.",
+      "photo_role": "Dactyloides stolon node plus male and female reproductive close-ups, compared against an ordinary Bouteloua comb.",
+      "status": "needs_photo",
+      "annotation_status": "annotation_pending",
+      "caution": "A male-only or female-only photograph cannot teach the full buffalograss reproductive pattern."
+    }
+  ],
+  "comparison_cards": [
+    {
+      "title": "Sideoats vs blue vs Texas grama",
+      "look_here_first": "Count branch units along the entire central axis.",
+      "field_matrix": [
+        {
+          "character": "Branch position",
+          "curtipendula": "Many short side units distributed down long axis",
+          "gracilis": "1–3 curved combs near tip",
+          "rigidiseta": "5–9 short fuzzy units crowded toward tip"
+        }
+      ],
+      "caution": "Number alone is insufficient at range edges; photograph attachment, scale and mature spikelets."
+    },
+    {
+      "title": "Hairy grama vs pectinata",
+      "look_here_first": "Compare complete mature combs and magnified tip/hair bases.",
+      "field_matrix": [
+        {
+          "character": "Branch count",
+          "hirsuta": "Usually 1–4",
+          "pectinata": "Usually 3–5"
+        },
+        {
+          "character": "Branch length / form",
+          "hirsuta": "Comb-like with naked tip projection",
+          "pectinata": "Longer straighter combs ~2.5–4.5 cm"
+        }
+      ],
+      "caution": "Overlapping counts and old hirsuta var. pectinata synonym labels require exact-source identity verification."
+    },
+    {
+      "title": "Buffalograss vs comb-forming gramas",
+      "look_here_first": "Look for stolons and sex-specific flower heads.",
+      "field_matrix": [
+        {
+          "character": "Growth base",
+          "dactyloides": "Creeping stoloniferous sod",
+          "other": "Mostly tufts"
+        },
+        {
+          "character": "Reproduction",
+          "dactyloides": "Male heads and low female burs differ",
+          "other": "Comb-like inflorescence branches"
+        }
+      ],
+      "caution": "Sex and grazing/mowing can obscure the usual field appearance."
+    }
+  ],
+  "media_rights_reconciliation": {
+    "gallery_record_counts": {
+      "bouteloua-curtipendula": 4,
+      "bouteloua-dactyloides": 3,
+      "bouteloua-gracilis": 6,
+      "bouteloua-hirsuta": 3,
+      "bouteloua-pectinata": 3,
+      "bouteloua-rigidiseta": 3,
+      "bouteloua-trifida": 7
+    },
+    "total_gallery_records": 29,
+    "status": "species.json metadata read; not all records are physical files and fine anatomy is unverified",
+    "historical_fast_fill_note": "The older B. pectinata 0 / rigidiseta 1 / trifida 2 counts above are outdated; current species records report 3 / 3 / 7 gallery records respectively.",
+    "rights_examples": [
+      {
+        "species_id": "bouteloua-rigidiseta",
+        "creator": "Glass Root Garden",
+        "license": "owner-authorized private study",
+        "public_reuse": "no",
+        "source_page": "https://www.inaturalist.org/photos/498683355",
+        "file_verified_present": true,
+        "anatomy_verified": false
+      },
+      {
+        "species_id": "bouteloua-pectinata",
+        "creator": "Martha",
+        "license": "CC BY-NC",
+        "public_reuse": "noncommercial only",
+        "source_page": "https://www.gbif.org/occurrence/5938706593",
+        "anatomy_verified": false
+      },
+      {
+        "species_id": "bouteloua-hirsuta",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "public_reuse": "attribution and sharealike",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_hirsuta_(4087876904).jpg",
+        "file_verified_present": true,
+        "anatomy_verified": false
+      },
+      {
+        "species_id": "bouteloua-curtipendula",
+        "creator": "Tallgrass Prairie Center",
+        "license": "not verified",
+        "public_reuse": "no",
+        "source_page": "https://tallgrassprairiecenter.org/native-seed-production-manual/species-production-guides/warm-season-grasses/sideoats-grama",
+        "anatomy_verified": false
+      }
+    ],
+    "annotation_status": "annotation_pending"
+  },
+  "targeted_handoffs": [
+    {
+      "lane": "Diagnostic Photo Fast-Fill",
+      "task": "Use existing canonical galleries and permanent photo library first; request measured mature axes, hirsuta/pectinata hair and comb-tip macros, trifida/rigidiseta awn dissections, and dactyloides male/female heads. Verify actual pixels, file and license before anatomy arrows."
+    },
+    {
+      "lane": "Taxonomy + Diagnostic Review",
+      "task": "Verify old B. hirsuta var. pectinata alias versus canonical B. pectinata and assess branch count overlap. No taxonomic/range changes in this genus pass."
+    },
+    {
+      "lane": "Approved Taxa Installer",
+      "task": "All seven current Bouteloua species already have canonical cards. Do not install duplicate source concepts or interpret the genus photo-role list as an installation request."
+    }
+  ],
+  "crew_seven_species_field_key": [
+    {
+      "taxon": "Bouteloua curtipendula",
+      "first": "MANY separated SHORT pendent oats along an ELONGATED axis",
+      "follow": "Check one-sided raceme attachment, true spikelet and orange anthers in bloom",
+      "confusions": "Tumblegrass has far longer stiff racemes; Texas/red grama much shorter axis distributions"
+    },
+    {
+      "taxon": "Bouteloua dactyloides",
+      "first": "LOW connected stoloniferous SOD instead of a single erect bunch; male/female inflorescences differ",
+      "follow": "Photograph a true ROOTING stolon node plus individual male and low burrlike female heads",
+      "confusions": "Curlymesquite sod and Cynodon stolons; male terminal flaglike spikes not a classic blue grama eyebrow"
+    },
+    {
+      "taxon": "Bouteloua gracilis",
+      "first": "Usually 1–3 relatively LONG CURVED eyebrow combs near flowering stem tip",
+      "follow": "Trace crowded spikelets to raceme end; normally NO extended bare spikelet-free point",
+      "confusions": "Hairy grama's long hairs and bare tip; Texas grama's many much shorter bristly units"
+    },
+    {
+      "taxon": "Bouteloua hirsuta",
+      "first": "Hairy one-sided comb plus conspicuously BARE TERMINAL RACHIS TIP after last spikelet",
+      "follow": "Photo branch tip and true spreading hairs; check basal papillose blade hairs",
+      "confusions": "Blue grama comb lacks such clear prolonged naked point; pectinata may overlap in tip/hair characters"
+    },
+    {
+      "taxon": "Bouteloua pectinata",
+      "first": "Taller more robust bunch, often 3–5 LONGER STRAIGHT to slightly curved combs",
+      "follow": "Count on ONE intact culm, measure intact mature comb and terminal tip, pair with hirsuta specimen",
+      "confusions": "B. hirsuta shares naked rachis; branch count and height alone overlap"
+    },
+    {
+      "taxon": "Bouteloua rigidiseta",
+      "first": "Several VERY SHORT BRISTLY/FUZZY awned groups clustered toward head tip",
+      "follow": "Photograph whole culm, isolate short branch and awn/basal hair anatomy",
+      "confusions": "Blue longer curved combs; red thinner more appressed narrow units"
+    },
+    {
+      "taxon": "Bouteloua trifida",
+      "first": "Tiny wiry grass with a few NARROW APPRESSED reddish branches",
+      "follow": "Look for three awns on a REAL isolated mature spikelet with mm ruler",
+      "confusions": "Texas grama's fuzzy clustered starbursts, hairy grama's broader comb"
+    }
+  ],
+  "visual_comparison": {
+    "title": "Bouteloua gramas — full axes plus buffalograss male/female flowers",
+    "subtitle": "Seven species still canonically installed. Added two regional public-domain buffalograss male/collar photos plus clear CC BY-SA 4.0 triptych of true healthy female LEFT, infected abnormal MIDDLE, healthy male RIGHT. Existing 11 licensed comparison panels preserved; still missing actual rooted stolon and naturally intact local female bur.",
+    "memory_rule": "FIRST WHOLE SEEDHEAD — LONG AXIS versus CURVED COMB versus BRISTLY SHORT UNIT versus TINY APPRESSED branch. BUFFALOGRASS is a creeping male/female exception.",
+    "items": [
+      {
+        "label": "1 · Many pendent units down a long axis",
+        "scientific_name": "Bouteloua curtipendula",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-curtipendula/images/03-hays-area-field-reference.jpeg",
+        "image_fit": "contain",
+        "image_role": "Complete segment of sideoats flowering axis with many separated pendulous units and visible red anthers",
+        "caption": "The long central stem runs diagonally across the photo; many small hanging racemes attach along it. The bright red filaments belong to flowering anthers, not petals.",
+        "why_it_matters": "Most reliable walking-distance visual identifier.",
+        "creator": "Eric Seaberg",
+        "license": "cc-by-nc",
+        "source_page": "https://www.inaturalist.org/observations/235335405",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Long flowering axis",
+            "label_x": 72,
+            "label_y": 11,
+            "target_x": 55,
+            "target_y": 19
+          },
+          {
+            "label": "One dangling raceme",
+            "label_x": 13,
+            "label_y": 59,
+            "target_x": 20,
+            "target_y": 45
+          },
+          {
+            "label": "Red anthers",
+            "label_x": 75,
+            "label_y": 52,
+            "target_x": 68,
+            "target_y": 39
+          }
+        ]
+      },
+      {
+        "label": "SIDEOATS GRAMA — real orange ANTHERS and feathery white STIGMAS (PROVISIONAL REVIEW)",
+        "scientific_name": "Bouteloua curtipendula",
+        "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bouteloua%20curtipendula%20closeup%20of%20spikes%20in%20bloom.jpg",
+        "image_fit": "contain",
+        "image_role": "Exact species flowering lateral units; orange dangling pollen-bearing anthers are distinct from horizontally spreading feathery receptive stigmas; different organ types, not awns.",
+        "caption": "Orange dangling tubes = ANTHERS (male pollen organs). White feathery plumes extending laterally = STIGMAS (female pollen-catching organs). The little drooping side unit is a RACEME carrying multiple spikelets.",
+        "why_it_matters": "Separates side-oats flower structures from grass bristles/awns for crew training and offers a reproductive comparison to terminal combs in other grama species.",
+        "creator": "Erutuon",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_curtipendula_closeup_of_spikes_in_bloom.jpg",
+        "markers": [],
+        "photo_status": "Public-permitted original Commons photo and organ-level pixels reviewed 2026-10-22. No invented fine-scale arrows. PROVISIONAL — USER PHOTO REVIEW PENDING."
+      },
+      {
+        "label": "MALE BUFFALOGRASS — two raised comb-like flowering branches",
+        "scientific_name": "Bouteloua dactyloides",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-dactyloides/images/jim-conrad-uvalde-male-combs.jpg",
+        "image_fit": "contain",
+        "image_role": "Close photograph of two staminate racemes with one-sided overlapping spikelets and pale protruding stamens; glumes and lemma venation still cannot be quantified.",
+        "caption": "Two compact leafy-looking combs arise on short side branches from the same upright culm. Anthers protrude from the lower comb. These are MALE flowering structures; do not label them female seed burs or assume individual bract cells are measured.",
+        "why_it_matters": "Photographs the raised two-row male rachillas and pollen organs, distinguishing this head from hidden female bur clusters.",
+        "creator": "Jim Conrad",
+        "license": "Public domain — author's own original photograph",
+        "license_url": "https://www.backyardnature.net/j/copyrite.htm",
+        "source_page": "https://www.backyardnature.net/n/h/bufgrass.htm",
+        "source_image": "https://www.backyardnature.net/n/14/140601bw.jpg",
+        "source_locality": "Dry Frio River, Uvalde County, Texas",
+        "source_date": "2014-06-01",
+        "photo_status": "PHYSICALLY ARCHIVED Jim Conrad author-public-domain source Uvalde male grass photograph. Actual original and archived SHA256 recorded, EXIF/GPS cleaned; annotations only to visible organs. No female structures or actual rooted stolon node alleged.",
+        "markers": [
+          {
+            "label": "Upper staminate comb",
+            "label_x": 8,
+            "label_y": 7,
+            "target_x": 52,
+            "target_y": 23
+          },
+          {
+            "label": "Lower staminate comb",
+            "label_x": 5,
+            "label_y": 74,
+            "target_x": 55,
+            "target_y": 54
+          },
+          {
+            "label": "Exposed anther",
+            "label_x": 79,
+            "label_y": 88,
+            "target_x": 89,
+            "target_y": 51
+          }
+        ]
+      },
+      {
+        "label": "NORMAL FEMALE (LEFT) vs NORMAL MALE (RIGHT) — fungal infection (MIDDLE)",
+        "scientific_name": "Bouteloua dactyloides",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Grass_species%2C_Buttaloua_dactyloides_infected_with_fungal_species%2C_Salmacisia_buchlo%C3%ABana.png",
+        "image_fit": "contain",
+        "image_role": "Source photographer's triptych labelled: LEFT uninfected female buffalograss bur, MIDDLE Salmacisia buchloëana-infected abnormal male flower, RIGHT uninfected male buffalograss flowering comb. The MIDDLE is NOT normal female buffalograss, and this is NOT a comparison of different grass species.",
+        "caption": "READ LEFT TO RIGHT: (1) normal FEMALE compact green bur-like reproductive structures; (2) ABNORMAL fungus-infected male inflorescence, which must NOT be taught as normal male or normal female; (3) normal MALE combs with dangling orange anthers. The image is a three-panel research comparison with the reproductive fungus Salmacisia buchloëana. Source photographer labels sex classes but this is NOT a Hays County voucher; no individual female glume/ovary is measured.",
+        "why_it_matters": "First image-level example in this genus comparison that visually contrasts actual female burs against actual male combs; explicit infected-middle warning prevents teaching disease-modified organs as normal anatomy.",
+        "creator": "Cb841011 (Wikimedia Commons author)",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Grass_species,_Buttaloua_dactyloides_infected_with_fungal_species,_Salmacisia_buchlo%C3%ABana.png",
+        "source_image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Grass_species%2C_Buttaloua_dactyloides_infected_with_fungal_species%2C_Salmacisia_buchlo%C3%ABana.png",
+        "photo_status": "2023 Commons exact-source licensed original publicly reviewed: left female, center fungus-infected abnormal male, right healthy male. EXTERNAL PROVISIONAL — USER PHOTO REVIEW PENDING. CC BY-SA 4.0, original artwork unchanged. Browser annotations only. Direct photograph bytes not physically archived.",
+        "markers": [
+          {
+            "label": "NORMAL female bur cluster — LEFT",
+            "label_x": 3,
+            "label_y": 8,
+            "target_x": 18,
+            "target_y": 54
+          },
+          {
+            "label": "NORMAL male comb/anthers — RIGHT",
+            "label_x": 74,
+            "label_y": 9,
+            "target_x": 84,
+            "target_y": 55
+          }
+        ],
+        "research_context": "The infected center illustrates sex-altering fungus Salmacisia buchloëana; it is not typical healthy anatomy."
+      },
+      {
+        "label": "BUFFALOGRASS — real leaf collar hair fringe",
+        "scientific_name": "Bouteloua dactyloides",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-dactyloides/images/jim-conrad-uvalde-hairy-ligule.jpg",
+        "image_fit": "contain",
+        "image_role": "Close photo of a genuine grass collar showing a short central ligule fringe and longer hairs rising near the blade/sheath margins. No millimeter ruler or exact hair counts.",
+        "caption": "The blade emerges at a distinct sheath mouth with fine hairs projecting from the top. This photograph is sufficient to teach WHERE to look for the hairy ridge, not to measure ligule length or imply that collar hairs alone prove buffalograss.",
+        "why_it_matters": "Fills a missing leaf-structure PHOTO ROLE while maintaining that ligule detail is supporting, not a stand-alone species diagnosis.",
+        "creator": "Jim Conrad",
+        "license": "Public domain — author's own original photograph",
+        "license_url": "https://www.backyardnature.net/j/copyrite.htm",
+        "source_page": "https://www.backyardnature.net/n/h/bufgrass.htm",
+        "source_image": "https://www.backyardnature.net/n/14/140601bx.jpg",
+        "source_locality": "Dry Frio River, Uvalde County, Texas",
+        "source_date": "2014-06-01",
+        "photo_status": "PHYSICALLY ARCHIVED Jim Conrad author-public-domain source Uvalde male grass photograph. Actual original and archived SHA256 recorded, EXIF/GPS cleaned; annotations only to visible organs. No female structures or actual rooted stolon node alleged.",
+        "markers": [
+          {
+            "label": "Hair fringe at collar",
+            "label_x": 1,
+            "label_y": 12,
+            "target_x": 55,
+            "target_y": 27
+          }
+        ]
+      },
+      {
+        "label": "1 · Low connected grass mat",
+        "scientific_name": "Bouteloua dactyloides",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-dactyloides/images/02-mat-forming-habit.jpg",
+        "image_fit": "contain",
+        "image_role": "Mat-forming turf with short curled blades and low crown",
+        "caption": "A broad near-ground grass patch shows matlike growth, but individual stolon roots aren't resolved; don't add a root arrow here.",
+        "why_it_matters": "Growth habit separates buffalograss from many upright gramas.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Buchloe_dactyloides.jpg",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Low turf patch",
+            "label_x": 5,
+            "label_y": 27,
+            "target_x": 48,
+            "target_y": 42
+          }
+        ]
+      },
+      {
+        "label": "2 · Small heads above shortgrass foliage",
+        "scientific_name": "Bouteloua dactyloides",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-dactyloides/images/01-seedheads-habit.jpg",
+        "image_fit": "contain",
+        "image_role": "Numerous flowering stalks over a low grass stand",
+        "caption": "Short complex flowering heads are visible among low blades. This image by itself does not clearly establish the sex of each head or show a female bur.",
+        "why_it_matters": "Teaches the overall setting before crews photograph separate male and female flower structures.",
+        "creator": "Patrick Alexander",
+        "license": "CC0 1.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_dactyloides_-_Patrick_Alexander_01.jpg",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Flowering head",
+            "label_x": 75,
+            "label_y": 22,
+            "target_x": 53,
+            "target_y": 31
+          }
+        ]
+      },
+      {
+        "label": "1 · Curved terminal eyebrow combs",
+        "scientific_name": "Bouteloua gracilis",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-gracilis/images/joey-review034-046a700b9d54f673.jpg",
+        "image_fit": "contain",
+        "image_role": "Several elongated curved flowering branches held for scale",
+        "caption": "The photographed handful shows long, slightly curved combs; do not count all visible combs as belonging to the SAME flowering stalk.",
+        "why_it_matters": "Teaches recognizably long curved branch architecture, avoiding a false stem count.",
+        "creator": "Joey Santore",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/429247732",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Curved comb",
+            "label_x": 5,
+            "label_y": 12,
+            "target_x": 30,
+            "target_y": 15
+          },
+          {
+            "label": "Packed spikelets",
+            "label_x": 72,
+            "label_y": 64,
+            "target_x": 47,
+            "target_y": 65
+          }
+        ]
+      },
+      {
+        "label": "2 · One comb with protruding pale anthers",
+        "scientific_name": "Bouteloua gracilis",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-gracilis/images/joey-review034-1d376f2e4b50d961.jpg",
+        "image_fit": "contain",
+        "image_role": "A flowering comb with white dangling anthers and fine purple-tinged branch",
+        "caption": "A narrow comb is in focus and pale anthers dangle below. Those dangling white features are ANTHERS, not extra seeds or awns. A detailed mature tip is still needed.",
+        "why_it_matters": "Distinguish the actual flowering parts from the comb's spikelets.",
+        "creator": "Joey Santore",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/99438542",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Curved comb",
+            "label_x": 6,
+            "label_y": 22,
+            "target_x": 38,
+            "target_y": 43
+          },
+          {
+            "label": "Dangling anthers",
+            "label_x": 76,
+            "label_y": 77,
+            "target_x": 51,
+            "target_y": 57
+          }
+        ]
+      },
+      {
+        "label": "1 · The naked branch-tip 'stinger'",
+        "scientific_name": "Bouteloua hirsuta",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-hirsuta/images/02-branch-glume-hairs.jpg",
+        "image_fit": "contain",
+        "image_role": "Side-view flowering branch showing very long spreading hairs and bare terminal extension",
+        "caption": "The bare pointed rachis extends leftward beyond the last fertile spikelets. Thin pale hairs project from the photographed branch. Neither is a blade ligule.",
+        "why_it_matters": "Probably the best single structure for teaching hairy grama vs blue grama.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_hirsuta_(4087876904).jpg",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Bare rachis tip",
+            "label_x": 9,
+            "label_y": 10,
+            "target_x": 15,
+            "target_y": 52
+          },
+          {
+            "label": "Long spreading hairs",
+            "label_x": 65,
+            "label_y": 83,
+            "target_x": 53,
+            "target_y": 52
+          }
+        ]
+      },
+      {
+        "label": "2 · Comb tip above dangling anthers",
+        "scientific_name": "Bouteloua hirsuta",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-hirsuta/images/03-field-habit.jpg",
+        "image_fit": "contain",
+        "image_role": "Side-view of flowering grama branch and pale hanging anthers",
+        "caption": "The long slender naked portion extends to the left of the packed flowering units. Cream-colored structures drooping underneath are anthers, not spikelet bristles.",
+        "why_it_matters": "Pairs the morphological tip and floral parts on a second photo.",
+        "creator": "Patrick Alexander",
+        "license": "CC0 1.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_hirsuta_-_Flickr_-_aspidoscelis.jpg",
+        "photo_status": "Existing canonical exact-source original image individually visually inspected 2026-10-20; arrows only on visible structure; independent exact specimen botanical ID not re-vouchered.",
+        "markers": [
+          {
+            "label": "Naked terminal projection",
+            "label_x": 8,
+            "label_y": 11,
+            "target_x": 42,
+            "target_y": 23
+          },
+          {
+            "label": "Dangling anthers",
+            "label_x": 75,
+            "label_y": 76,
+            "target_x": 66,
+            "target_y": 65
+          }
+        ]
+      },
+      {
+        "label": "1 · Long grama comb held against a hand",
+        "scientific_name": "Bouteloua pectinata",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-pectinata/images/gbif-first-5938706593-f16a269795.jpg",
+        "image_fit": "contain",
+        "image_role": "Long rigid narrow comb with many spikelets arranged along one side and multiple flowering heads in background",
+        "caption": "One long comb lies diagonally across fingers. Its spikelets form a comb and the slightly darker projecting slender branch section lies on the right. No microscopic terminal rudimentary spikelet is diagnosed.",
+        "why_it_matters": "Helps compare size and comb architecture with hairy and blue grama.",
+        "creator": "Martha",
+        "license": "CC BY-NC",
+        "source_page": "https://www.gbif.org/occurrence/5938706593",
+        "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+        "photo_status": "Existing canonical media inspected original JPEG pixels October 20, 2026; arrows only to clearly visible structures; source ID provisional, exact species not independently re-determined.",
+        "markers": [
+          {
+            "label": "Long comb",
+            "label_x": 7,
+            "label_y": 25,
+            "target_x": 29,
+            "target_y": 38
+          },
+          {
+            "label": "Branch attachment",
+            "label_x": 75,
+            "label_y": 48,
+            "target_x": 48,
+            "target_y": 33
+          }
+        ]
+      },
+      {
+        "label": "1 · Small fuzzy flowering heads on rooted grass",
+        "scientific_name": "Bouteloua rigidiseta",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/joey-inat-667340906.jpg",
+        "image_fit": "contain",
+        "image_role": "Several small pale bristly flowering units in open rocky ground; many blades and stems overlap",
+        "caption": "The small pale tufts of awned reproductive branches are visible among grass stems. Crowded stems prevent certain branch-unit counts, and microscopic individual florets are NOT resolved.",
+        "why_it_matters": "Introduces the fuzzy clustered look; independent exact taxon determination remains provisional.",
+        "creator": "Joey Santore",
+        "license": "CC BY-NC 4.0",
+        "source_page": "https://www.inaturalist.org/photos/667340906",
+        "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "photo_status": "Existing canonical media inspected original JPEG pixels October 20, 2026; arrows only to clearly visible structures; source ID provisional, exact species not independently re-determined.",
+        "markers": [
+          {
+            "label": "Bristly head",
+            "label_x": 7,
+            "label_y": 14,
+            "target_x": 34,
+            "target_y": 16
+          },
+          {
+            "label": "Short flowering unit",
+            "label_x": 76,
+            "label_y": 23,
+            "target_x": 55,
+            "target_y": 29
+          }
+        ]
+      },
+      {
+        "label": "1 · Thin reddish side branches against fingers",
+        "scientific_name": "Bouteloua trifida",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review014-99e072d2647eeac.jpg",
+        "image_fit": "contain",
+        "image_role": "Several narrow wine-red branches attached along delicate grass axis",
+        "caption": "Narrow reddish branches clearly arise at different points along delicate stem. Their individual three awns are not reliably separated at this image scale.",
+        "why_it_matters": "Genuine fine-structure contrast against blue and hairy grama broad combs.",
+        "creator": "Sam Kieschnick",
+        "license": "CC BY",
+        "source_page": "https://www.gbif.org/occurrence/6185432117",
+        "license_url": "https://creativecommons.org/licenses/by/",
+        "photo_status": "Existing canonical media inspected original JPEG pixels October 20, 2026; arrows only to clearly visible structures; source ID provisional, exact species not independently re-determined.",
+        "markers": [
+          {
+            "label": "Narrow red branch",
+            "label_x": 7,
+            "label_y": 35,
+            "target_x": 33,
+            "target_y": 45
+          },
+          {
+            "label": "Central thin axis",
+            "label_x": 75,
+            "label_y": 88,
+            "target_x": 49,
+            "target_y": 69
+          }
+        ]
+      },
+      {
+        "label": "2 · Narrow appressed flowering branch macro",
+        "scientific_name": "Bouteloua trifida",
+        "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review033-bb7d16fe9c3f170.jpg",
+        "image_fit": "contain",
+        "image_role": "Single narrow reddish branch photographed against a fingertip",
+        "caption": "The slim reproductive branch lies nearly parallel to its attached flowering stem. Individual pointed parts are visible, but no measured three-awned spikelet is claimed.",
+        "why_it_matters": "Shows the unusually slender form without overclaiming reproductive anatomy.",
+        "creator": "Cleveland Powell",
+        "license": "CC BY",
+        "source_page": "https://www.gbif.org/occurrence/6252396364",
+        "license_url": "https://creativecommons.org/licenses/by/",
+        "photo_status": "Existing canonical media inspected original JPEG pixels October 20, 2026; arrows only to clearly visible structures; source ID provisional, exact species not independently re-determined.",
+        "markers": [
+          {
+            "label": "Narrow branch",
+            "label_x": 76,
+            "label_y": 12,
+            "target_x": 68,
+            "target_y": 32
+          }
+        ]
+      }
+    ],
+    "overlay_note": "Every panel references an EXISTING physically saved local media file. Cross-species comparisons remain clearly named. Red anthers are real flower parts, not petals; projecting hairy-grama rachis is a bare branch extension, not an awn. Buffalograss female burrs, true rooted stolon nodes, measured awns, ligules and hairs on basal leaves still lack calibrated diagnostic photos. No new image files or unknown-license photos added. The existing owner private-study-only Texas-grama image and sideoats photo of unverified license are NOT included in this public visual lesson; source files warrant separate rights audit. CC BY-NC photo use limited to current noncommercial educational build; photographer credits and applicable SA retained. Final phone positioning and rights-filtered publish independently verified. 2026-10-22: Source-exact Jim Conrad Uvalde male flowering pair/collar and CC BY-SA 4.0 Commons sex triptych added as source-attributed external provisional panels. Distinguish female LOW BUR from male RAISED COMBS and warn that triptych center is fungus infected; no invented sex arrows to other original photos.\nNew public-permitted true flowering B. curtipendula photo by Erutuon added to genus panel, with male ANTHERS distinct from fuzzy female STIGMAS, but no exact awn/lemma microscope labels. The external image has CC BY-SA 4.0 terms and no local copy. Field-ready with targeted photo gaps.",
+    "part_examples": [
+      {
+        "title": "Sideoats: side units attached along stem",
+        "anchor_species_id": "bouteloua-curtipendula",
+        "image_file": "images/03-hays-area-field-reference.jpeg",
+        "role": "whole inflorescence branch architecture",
+        "look_for": "Short hanging racemes along long axis; red anthers protrude below",
+        "why_it_matters": "Contrasts long spaced-out stalk with terminal grama combs"
+      },
+      {
+        "title": "Hairy: long branch hairs and bare extended tip",
+        "anchor_species_id": "bouteloua-hirsuta",
+        "image_file": "images/02-branch-glume-hairs.jpg",
+        "role": "rachis tip",
+        "look_for": "Actual naked pointed branch-axis extension to the left of crowded spikelets and long spreading hairs",
+        "why_it_matters": "Best visual split from blue grama's comb without a similar exposed stinger"
+      },
+      {
+        "title": "Red grama: extremely narrow lateral unit",
+        "anchor_species_id": "bouteloua-trifida",
+        "image_file": "images/library-review033-bb7d16fe9c3f170.jpg",
+        "role": "reproductive branch",
+        "look_for": "Long very thin appressed red/green reproductive unit; don't assume each awn independently measured",
+        "why_it_matters": "Distinguishes the wiry slender look from Texas grama's fuzzy units"
+      }
+    ],
+    "study_only_photo_links": [
+      {
+        "label": "B. pectinata vs hirsuta",
+        "url": "https://swbiodiversity.org/seinet/taxa/index.php?taxon=Bouteloua%20pectinata",
+        "look_for": "Full mature branches, naked rachis tip and leaf-hair patterns",
+        "reuse": "Botany reference; don't imply image reuse rights"
+      },
+      {
+        "label": "Poaceae botanical key",
+        "url": "https://floranorthamerica.org/Bouteloua",
+        "look_for": "Branch number, glumes, awns, vegetative architecture",
+        "reuse": "Scientific reference; check individual photo permissions"
+      }
+    ]
+  },
+  "diagnostic_photo_handoffs": [
+    {
+      "targets": [
+        "bouteloua-gracilis",
+        "bouteloua-hirsuta"
+      ],
+      "need": "Matched 10× full COMB end views proving blue tip versus hairy's naked extended rachis; proper mature spikelets and basal hairs"
+    },
+    {
+      "targets": [
+        "bouteloua-hirsuta",
+        "bouteloua-pectinata"
+      ],
+      "need": "Same-scale measured mature combs/terminal rudimentary spikelets and full plant culm counts; taxon source/voucher confirmation"
+    },
+    {
+      "targets": [
+        "bouteloua-rigidiseta",
+        "bouteloua-trifida"
+      ],
+      "need": "Closeup isolated individual very short fuzzy Texas grama branch versus thin appressed red grama and actual counted awns"
+    },
+    {
+      "targets": [
+        "bouteloua-dactyloides"
+      ],
+      "need": "Two verified sex-specific photographed heads: low female burrs and male flowering spikes; exposed stolon node rooted in soil"
+    },
+    {
+      "targets": [
+        "bouteloua-curtipendula"
+      ],
+      "need": "Whole flowering axis plus collar and dissected mature raceme/spikelets; separately review old 04 image with unknown public license"
+    }
+  ],
+  "buffalograss_sex_field_lesson": {
+    "title": "Buffalograss sexual heads are radically different",
+    "first_photo": "Dry Frio male head Jim Conrad 140601bw.jpg",
+    "sex_triptych_source": "https://commons.wikimedia.org/wiki/File:Grass_species,_Buttaloua_dactyloides_infected_with_fungal_species,_Salmacisia_buchlo%C3%ABana.png",
+    "field_key": [
+      "Small, low sod with creeping stolons/rooting nodes; plant shape alone is not final ID",
+      "MALE: taller, raised 1–5 slender comb-like branches, exposed pollen-bearing anthers",
+      "FEMALE: short compact burr-like structures partly concealed near leaves, very different from tall male heads",
+      "MOSTLY sexes on separate plants, but monoecious plants and rare perfect flowers documented",
+      "IMPORTANT: Licensed Commons reference triptych shows left NORMAL FEMALE, center ABNORMAL fungus-infected male, right NORMAL MALE. Do NOT treat infected center as normal female or as another species",
+      "Neither the 2014 male-only Texas photos nor original low-turf image proves actual flowering female structure or rooting stolon nodes in Texas. Still seek actual verified female field macro."
+    ],
+    "photo_roles": {
+      "regional_male": "https://www.backyardnature.net/n/14/140601bw.jpg",
+      "regional_ligule": "https://www.backyardnature.net/n/14/140601bx.jpg",
+      "sex_contrast": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Grass_species%2C_Buttaloua_dactyloides_infected_with_fungal_species%2C_Salmacisia_buchlo%C3%ABana.png",
+      "original_male_look": "external_provisional_review",
+      "native_range_unchanged": true
+    },
+    "source_research": [
+      "https://research.fs.usda.gov/feis/species-reviews/boudac",
+      "https://aggieturf.tamu.edu/texas-turfgrasses/buffalograss/",
+      "https://mynpn.usanpn.org/npnapps/species/Bouteloua/dactyloides",
+      "https://www.backyardnature.net/n/h/bufgrass.htm",
+      "https://commons.wikimedia.org/wiki/File:Grass_species,_Buttaloua_dactyloides_infected_with_fungal_species,_Salmacisia_buchlo%C3%ABana.png"
+    ],
+    "photo_gap": "Source-verified female bur cluster naturally growing on a local plant, transverse and longitudinal with 1-mm ruler, plus actual adventitious root from stolon node; verified in-focus microscope female floret optional final."
+  }
+}

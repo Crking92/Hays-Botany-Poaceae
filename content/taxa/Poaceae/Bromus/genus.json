@@ -1,0 +1,547 @@
+{
+  "rank": "genus",
+  "family": "Poaceae",
+  "name": "Bromus",
+  "common_group": "Bromes — compare 4 installed species and native vs introduced risks",
+  "project_scope": {
+    "selection_mode": "FINISH/ENRICH existing canonical taxon cards",
+    "species_count": 4,
+    "species_ids": [
+      "bromus-japonicus",
+      "bromus-lanceolatus",
+      "bromus-pubescens",
+      "bromus-texensis"
+    ],
+    "native_range_fields_unchanged": true,
+    "new_species_admissions": 0
+  },
+  "look_here_first": "BROMUS: every species has separate MULTI-FLOWERED SPIKELETS along a branched PANICLE, not a tight Hordeum/Elymus true spike. For the four installed species: JAPANESE = introduced annual, flexuous long-awned head with more GLUME VEINS (often 3–5 lower/7 upper); TEXAS BROME = native Texas annual with ONE-veined lower/THREE-veined upper glume; LANCEOLATE = introduced annual with VERY LARGE ~25–50 mm 8–20-flowered narrow spikelets; WOODLAND BROME = native perennial with truly HAIRY lemmas, moist woods. RESCUEGRASS is COMPARISON ONLY: broad flat oatlike short/no-awn spikelets.",
+  "recognition": {
+    "where_to_look_first": "BROMUS: every species has separate MULTI-FLOWERED SPIKELETS along a branched PANICLE, not a tight Hordeum/Elymus true spike. For the four installed species: JAPANESE = introduced annual, flexuous long-awned head with more GLUME VEINS (often 3–5 lower/7 upper); TEXAS BROME = native Texas annual with ONE-veined lower/THREE-veined upper glume; LANCEOLATE = introduced annual with VERY LARGE ~25–50 mm 8–20-flowered narrow spikelets; WOODLAND BROME = native perennial with truly HAIRY lemmas, moist woods. RESCUEGRASS is COMPARISON ONLY: broad flat oatlike short/no-awn spikelets.",
+    "priority": [
+      "WHOLE PANICLE with actual spikelet branching, contrasted with true barley/wildrye SPIKE",
+      "NATIVE / INTRODUCED STOP: do not decide Texas vs Japanese brome from hanging heads; compare GLUME VEINS",
+      "ON RIPENED SPIKELET, measure lower/upper GLUMES and count VEINS",
+      "Measure LEMMA and single attached AWN, count FLORETS, observe flat vs narrow spikelet profile",
+      "ROOTED annual vs perennial crown",
+      "TRUE leaf sheath hair, ligule and auricles (if any), not distant foliage"
+    ]
+  },
+  "comparison_lesson": {
+    "title": "Four canonical bromes plus rescuegrass — anatomy-first field key",
+    "memory_rule": "Japonicus introduced + higher glume veins vs rare native texensis 1/3; lanceolatus giant narrow 8–20-flowered; pubescens perennial hairy lemma; catharticus broad flat short/no-awn comparison.",
+    "quick_split": [
+      "Japanese brome — Bromus japonicus: Introduced cool-season annual. Usually small-to-moderate narrow awned spikelets on flexible, often nodding/kinked panicle branches. Flora of North America typically gives lower glume 3–5 veins, upper 7 veins; separate from native Texas brome's 1/3-veined pair.",
+      "Lanceolate brome — Bromus lanceolatus: Introduced annual. Typically larger long lance-shaped spikelets ~25–50 mm, with roughly 8–20 florets and ~12–18 mm mature lemmas; open panicle.",
+      "Hairy woodland brome — Bromus pubescens: Native North American woodland perennial, often taller with broader soft leaves, and open drooping panicle. Shorter generally straight lemma awns commonly 3–8 mm. Lower glume typically 1-veined; true pubescence may be obvious on entire lemma.",
+      "Texas brome — Bromus texensis: Texas-native annual restricted to limited Texas sites. Flora of North America: often 20–30 mm spikelets with 4–7 florets, lower glume ONE vein (~6–9 mm), upper THREE (~8–10.5 mm), lemma ~9–15 mm and awn ~4–8 mm.",
+      "Rescuegrass — Bromus catharticus (comparison only): Introduced South American cool-season grass, often annual or short-lived perennial depending ecology/treatment. Larger broad 16–40 mm strongly flattened spikelets, many florets and short/no awns (often 0–4 mm)."
+    ],
+    "guardrails": [
+      "All four Bromus cards already installed. B. catharticus RESCUEGRASS is comparison ONLY, not an added approved species.",
+      "Kew and FNA disagree on precise B. japonicus spikelet size ranges; do not promote narrow cutoff as decisive.",
+      "Texas brome lemma apex entire in FNA versus 2-toothed in other accounts; use glume veins and matched lemma/awn instead.",
+      "Bromus pubescens old photo only 389×589, so actual lemma hair macro remains a gap.",
+      "No native-by-county audit in this finishing pass; native at broad scale does not establish Hays county occurrence."
+    ],
+    "field_photo_steps": [
+      "Count distinct FLORETS (many overlapping LEMMAS) within ONE spikelet.",
+      "Photograph WHOLE PANICLE: drooping flexuous, large stiff-lanceolate, broad flat or wooded perennial architecture.",
+      "Check ROOTED duration: pubescens perennial; Japanese, lanceolate and texensis annual; rescuegrass short-lived annual OR perennial depending treatment.",
+      "For native Texas vs introduced Japanese, backlight LOWER/UPPER GLUMES: native often 1 and 3 longitudinal nerves, introduced Japanese often 3–5 and 7, with variation.",
+      "Photograph LEMMA and AWN side-by-side with ruler. Don't conflate awn tip, length of floret body or glume.",
+      "Compare 1-mm botanical photos against original source-tagged pictures; if anatomy absent keep Bromus sp."
+    ]
+  },
+  "comparisons": [
+    {
+      "species": "Bromus japonicus",
+      "common_name": "Japanese brome",
+      "key_characters": [
+        "Annual cool-season bunch grass; senesces after seed set.",
+        "Panicle often open or nodding with thin flexuous branches, sometimes conspicuously kinked.",
+        "Spikelets typically contain 6–12 florets; published size descriptions differ (Oklahoma State 15–25 mm; FNA 20–40 mm), so length is not a stand-alone ID character.",
+        "Lemma awns frequently longer than on woodland brome, sometimes ~15 mm; lengths overlap other annual bromes.",
+        "Soft retrorse hairs on lower sheaths and often bent lower culms."
+      ],
+      "against_group": "Compared to B. lanceolatus, usually shorter spikelets with fewer florets and more relaxed/kinked drooping branches; lanceolatus often has ~25–50 mm spikelets with 8–20 florets. Compared to native B. texensis, note Texas brome generally shorter 6–10 mm awns and requires lemma/branch dissection, not habitat alone. Unlike perennial B. pubescens, this is an annual and usually shorter-lived."
+    },
+    {
+      "species": "Bromus lanceolatus",
+      "common_name": "Lanceolate brome",
+      "key_characters": [
+        "Annual grass with often ascending or spreading branches, less filmy and flexuous than Japanese brome.",
+        "Lanceolate to oblong elongated spikelets often ~25–50 mm with 8–20 florets, much larger than typical Japanese brome.",
+        "Mature fertile lemma usually ~12–18 mm and awned around 6–12 mm in GrassBase treatment; measurements overlap.",
+        "Membranous ligule, hairy to nearly smooth sheaths, variable leaf-blade pubescence.",
+        "Awn arises from notched lemma tip; detailed shape/length and glume nerves require hand lens."
+      ],
+      "against_group": "Introduced B. japonicus has slender, sometimes kinked/nodding panicle branches; its variable 15–40 mm reported spikelet lengths overlap other bromes. Native B. texensis has 1-veined lower and 3-veined upper glumes, 9–15 mm lemmas and straight 4–8 mm awns (FNA). Compare mature dissected spikelets. B. pubescens is a perennial of woodland understory with hairy lemmas and a loose drooping head; do not decide from habitat alone."
+    },
+    {
+      "species": "Bromus pubescens",
+      "common_name": "Hairy woodland brome / Canada brome",
+      "key_characters": [
+        "Perennial in shady moist woods rather than short-lived cool-season weed.",
+        "Erect to arching leafy culms often 0.6–1.5 m high, with relatively broad 6–19 mm grass blades.",
+        "Open spreading/drooping panicle generally ~10–25 cm long.",
+        "Multi-flowered spikelets ~13–30 mm, often with 5–10 florets.",
+        "Lemma short straight awn usually ~3–8 mm; surfaces often fine-hairy, but this cannot be confirmed from current photo.",
+        "Closed sheaths with soft retrorse hairs, ligule short membranous; botanical treatments differ slightly in typical lengths."
+      ],
+      "against_group": "Unlike the three other currently installed Bromus cards, B. pubescens is PERENNIAL and often found in shaded moist woodland understory. Japanese brome is a small-spikeleted annual with flexuous panicle branches; B. lanceolatus has unusually long, many-flowered annual spikelets; B. texensis is an annual with shorter awns and requires mature glume/lemma comparison. Habitat or hairiness alone cannot clinch this one."
+    },
+    {
+      "species": "Bromus texensis",
+      "common_name": "Texas brome",
+      "key_characters": [
+        "Annual (not perennial) native Texas brome of open woodland/grassland sites.",
+        "Sheaths with soft recurved/retrorse hairs; blades often ~3–7 mm wide.",
+        "Fertile lemmas typically ~9–12 mm, with a two-toothed apex and one 6–10 mm awn.",
+        "Spikelets multi-flowered, borne on branching panicle.",
+        "Fertilizing yellow anthers may be conspicuous at flowering, but are common to other grass taxa."
+      ],
+      "against_group": "B. japonicus is an introduced annual with slender, flexuous and sometimes nodding panicle branches; reported spikelet size overlaps native B. texensis, so use lower/upper glume nerves (typically 3–5/7 versus 1/3). B. lanceolatus has densely many-flowered longer lanceolate spikelets; B. pubescens is a woodland perennial with hairy lemmas. Green slender spikelets alone are never enough for a native-versus-introduced call."
+    }
+  ],
+  "comparison_matrix": {
+    "title": "Bromus practical 5-species evidence matrix",
+    "columns": [
+      "Taxon",
+      "Fast split",
+      "Required confirmation"
+    ],
+    "rows": [
+      [
+        "Japanese brome — Bromus japonicus",
+        "Introduced cool-season annual. Usually small-to-moderate narrow awned spikelets on flexible, often nodding/kinked panicle branches. Flora of North America typically gives lower glume 3–5 veins, upper 7 veins; separate from native Texas brome's 1/3-veined pair.",
+        "Open macro: overlapping lemmas have long often twisted/recurving awns from below their apices; source descriptions vary considerably in spikelet length. Do not use a 10–15 mm cutoff to exclude Japanese brome."
+      ],
+      [
+        "Lanceolate brome — Bromus lanceolatus",
+        "Introduced annual. Typically larger long lance-shaped spikelets ~25–50 mm, with roughly 8–20 florets and ~12–18 mm mature lemmas; open panicle.",
+        "Compare long often pointed spikelets with Japanese brome's often smaller fewer florets, but both dimensions vary; check true lemma body and awn attachment at 10–20×."
+      ],
+      [
+        "Hairy woodland brome — Bromus pubescens",
+        "Native North American woodland perennial, often taller with broader soft leaves, and open drooping panicle. Shorter generally straight lemma awns commonly 3–8 mm. Lower glume typically 1-veined; true pubescence may be obvious on entire lemma.",
+        "A mature persistent perennial tuft/crown and hairy lemmas support pubescens, unlike short-lived Japanese, lanceolate and Texas annuals."
+      ],
+      [
+        "Texas brome — Bromus texensis",
+        "Texas-native annual restricted to limited Texas sites. Flora of North America: often 20–30 mm spikelets with 4–7 florets, lower glume ONE vein (~6–9 mm), upper THREE (~8–10.5 mm), lemma ~9–15 mm and awn ~4–8 mm.",
+        "This 1/3 vein pair distinguishes from Japanese's commonly higher 3–5/7 vein counts. The lemma apex described as entire by FNA but sometimes toothed in other treatments: DO NOT force an ID from 'two teeth'."
+      ],
+      [
+        "Rescuegrass — Bromus catharticus (comparison only)",
+        "Introduced South American cool-season grass, often annual or short-lived perennial depending ecology/treatment. Larger broad 16–40 mm strongly flattened spikelets, many florets and short/no awns (often 0–4 mm).",
+        "Large flattened overlapping V/oat-like florets contrast with Japanese brome's narrow long-awned units and lanceolate brome's narrower long densely floret spikelets."
+      ]
+    ]
+  },
+  "what_to_teach_crew": [
+    "Brome spikelets have several actual FLORETS, unlike single-seed grass ID assumptions.",
+    "Do not remove a possible native Texas brome because Japanese brome has similar nodding awned branches; photograph glume veins first.",
+    "Rescuegrass B. catharticus is already common in disturbed Texas habitats but is comparison-only in our learner, not installed.",
+    "Woodland perennial pubescens can have hairy foliage like annual invasives: check rooted crown and lemma surface (different organs).",
+    "The fast wide-head rescuegrass contrast is broad and FLAT with short/no awns, not only a 'droops' decision.",
+    "True source photographs have individual author and licenses; no arrows to unreadable glume veins."
+  ],
+  "visual_status": "FIELD_READY_PHOTO_GAPS: four canonical bromes, nine source-credited photo panels and labelled visible arrow targets; mature glume vein, measured spikelet, ligule and woodland lemma-hair evidence remain incomplete. Rescuegrass comparison-only.",
+  "visual_needs": [
+    "Native Texas B. texensis vs invasive Japanese B. japonicus: MATCHED 10–20× lower/upper glume veination, both on 1-mm ruler",
+    "B. lanceolatus 25–50 mm spikelet and 8–20 florets, scale",
+    "B. pubescens true lemma PUBESCENCE and rooted perennial tuft vs hairy annual SHEATH",
+    "B. catharticus very broad flattened short/no-awn spikelets measured against Japanese, comparison-only",
+    "Each canonical species same plant ligule/sheath hair, actual lemma apex and awn attachment"
+  ],
+  "visual_comparison": {
+    "title": "BROMUS — Four installed species plus rescuegrass comparison",
+    "subtitle": "The four original credited source/arrow views plus one additional licensed source-verified JAPANESE lemma macro and two licensed RESCUEGRASS context/flat-spikelet views (comparison-only). True vein counts still need measured photos.",
+    "memory_rule": "Japonicus introduced + higher glume veins vs rare native texensis 1/3; lanceolatus giant narrow 8–20-flowered; pubescens perennial hairy lemma; catharticus broad flat short/no-awn comparison.",
+    "items": [
+      {
+        "label": "Existing Japanese brome photo",
+        "scientific_name": "Bromus japonicus",
+        "image_url": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/inat-606131756.jpg",
+        "image_fit": "contain",
+        "image_role": "Original physically stored and pixel-inspected species-labelled photograph; IDs remain based on the credited source determination",
+        "caption": "Archived source photograph shows green awned spikelets held against fingers, with arching fine panicle branches. It does NOT show the true ligule or basal sheaths.",
+        "why_it_matters": "Cool-season INTRODUCED annual; slender, often kinked or drooping panicle branches carry several awned, multi-flowered spikelets. Published spikelet lengths overlap other Bromus species (Oklahoma State ~15–25 mm; FNA ~20–40 mm), so use mature glume veins and lemma/awn anatomy instead of a short size cutoff. Lower sheaths may be soft-haired.",
+        "creator": "Alexey P. Seregin",
+        "license": "CC BY-NC",
+        "source_page": "https://www.inaturalist.org/photos/606131756",
+        "markers": [
+          {
+            "label": "Drooping panicle branch",
+            "label_x": 6,
+            "label_y": 12,
+            "target_x": 35,
+            "target_y": 23
+          },
+          {
+            "label": "Clustered multi-flowered spikelet",
+            "label_x": 67,
+            "label_y": 77,
+            "target_x": 64,
+            "target_y": 68
+          },
+          {
+            "label": "Long awns",
+            "label_x": 56,
+            "label_y": 7,
+            "target_x": 55,
+            "target_y": 39
+          }
+        ],
+        "photo_status": "EXISTING ORIGINAL JPEG INSPECTED; only obvious visible structures arrowed; collar/glume/lemma anatomy not certified from photo; rights and creator retained."
+      },
+      {
+        "label": "JAPANESE BROME — visible nervation, overlapping lemmas, awn origins",
+        "scientific_name": "Bromus japonicus",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Bromus_japonicus_%283920836312%29.jpg/960px-Bromus_japonicus_%283920836312%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Actual Montana source-labelled Japanese brome closeup, photographed by Matt Lavin: several overlapping lemmas, prominent veins, long lemma awns",
+        "caption": "Look at the folded overlapping florets and the fine awns projecting from near, but slightly below, each lemma apex. The branching grassy head and glume pairs are OFF FRAME: this close-up teaches florets and awn attachment only, not exact glume nerve counts or Hays County provenance.",
+        "why_it_matters": "Japanese brome's small distant spikelets can resemble native Texas brome. The mature lemma shape, awn attachment and actual lower/upper glume vein counts are more valuable than simply counting drooping branches.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_(3920836312).jpg",
+        "markers": [
+          {
+            "label": "Lemma longitudinal ribs",
+            "label_x": 5,
+            "label_y": 8,
+            "target_x": 38,
+            "target_y": 20
+          },
+          {
+            "label": "Long lemma awn",
+            "label_x": 78,
+            "label_y": 10,
+            "target_x": 70,
+            "target_y": 8
+          },
+          {
+            "label": "Overlapping florets",
+            "label_x": 5,
+            "label_y": 73,
+            "target_x": 52,
+            "target_y": 53
+          }
+        ],
+        "photo_status": "Exact 960×457 Wikimedia thumbnail visually checked 2026-10-21. Three arrows target visible gross lemma ribbing/awn/florets only; no countable glume nerves, hair cells or Hays voucher asserted. Photo source CC BY-SA 2.0."
+      },
+      {
+        "label": "Existing Texas brome photo",
+        "scientific_name": "Bromus texensis",
+        "image_url": "content/taxa/Poaceae/Bromus/bromus-texensis/images/inat-120239539.jpg",
+        "image_fit": "contain",
+        "image_role": "Original physically stored and pixel-inspected species-labelled photograph; IDs remain based on the credited source determination",
+        "caption": "Original species-tagged flowering photograph clearly shows narrow green spikelets, long fine projecting awns, and protruding yellow anthers. Does NOT show basal hair or exact lemma teeth.",
+        "why_it_matters": "Native Texas annual; inspect mature green elongated narrow spikelets with several florets. Lemma bodies are commonly 9–12 mm, with an awn around 6–10 mm and slightly 2-toothed tip; measure glume, lemma, and awn to rule out introduced Japanese and lanceolate bromes. Flowering yellow anthers can be visible, but are NOT species-specific.",
+        "creator": "Cleveland Powell",
+        "license": "CC BY",
+        "source_page": "https://www.inaturalist.org/photos/120239539",
+        "markers": [
+          {
+            "label": "Narrow multi-flowered spikelet",
+            "label_x": 62,
+            "label_y": 10,
+            "target_x": 54,
+            "target_y": 33
+          },
+          {
+            "label": "Visible yellow anthers",
+            "label_x": 5,
+            "label_y": 60,
+            "target_x": 25,
+            "target_y": 56
+          },
+          {
+            "label": "Terminal awn",
+            "label_x": 74,
+            "label_y": 48,
+            "target_x": 73,
+            "target_y": 38
+          }
+        ],
+        "photo_status": "EXISTING ORIGINAL JPEG INSPECTED; only obvious visible structures arrowed; collar/glume/lemma anatomy not certified from photo; rights and creator retained."
+      },
+      {
+        "label": "Existing Lanceolate brome photo",
+        "scientific_name": "Bromus lanceolatus",
+        "image_url": "content/taxa/Poaceae/Bromus/bromus-lanceolatus/images/inat-283645783.jpg",
+        "image_fit": "contain",
+        "image_role": "Original physically stored and pixel-inspected species-labelled photograph; IDs remain based on the credited source determination",
+        "caption": "Original archive shows multiple long green many-flowered spikelets against rocky background; exact mm measurements are NOT derivable from the image.",
+        "why_it_matters": "Introduced Mediterranean-region annual; check the LONG, narrow lance-shaped many-flowered spikelets (often roughly 25–50 mm) on an open branching panicle. For separation from other bromes, count florets and check the mature awn insertion and lemma-tip teeth with magnification.",
+        "creator": "Dave Richardson",
+        "license": "CC BY",
+        "source_page": "https://www.inaturalist.org/photos/283645783",
+        "markers": [
+          {
+            "label": "Elongate many-flowered spikelet",
+            "label_x": 60,
+            "label_y": 7,
+            "target_x": 48,
+            "target_y": 12
+          },
+          {
+            "label": "Overlapping florets",
+            "label_x": 5,
+            "label_y": 41,
+            "target_x": 42,
+            "target_y": 45
+          },
+          {
+            "label": "Open branching panicle",
+            "label_x": 57,
+            "label_y": 70,
+            "target_x": 43,
+            "target_y": 57
+          }
+        ],
+        "photo_status": "EXISTING ORIGINAL JPEG INSPECTED; only obvious visible structures arrowed; collar/glume/lemma anatomy not certified from photo; rights and creator retained."
+      },
+      {
+        "label": "Existing Hairy woodland brome / Canada brome photo",
+        "scientific_name": "Bromus pubescens",
+        "image_url": "content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-bromus-pubescens-epa.jpg",
+        "image_fit": "contain",
+        "image_role": "Original physically stored and pixel-inspected species-labelled photograph; IDs remain based on the credited source determination",
+        "caption": "Small 389x589 original EPA photo shows overall drooping panicle and leaves only; cannot certify hairs, ligule, individual lemma or awn anatomy.",
+        "why_it_matters": "Native North American woodland PERENNIAL with a fairly tall loose, drooping flowering head, relatively broad soft leaves, and hairy sheaths. Check a true membranous ligule and awned multi-flowered spikelets. This existing photograph is low resolution, so lemma-level confirmation remains OPEN.",
+        "creator": "U.S. Environmental Protection Agency (Great Lakes image collection)",
+        "license": "Public domain (U.S. federal government)",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_pubescens.jpg",
+        "markers": [
+          {
+            "label": "Nodding panicle branches",
+            "label_x": 4,
+            "label_y": 14,
+            "target_x": 60,
+            "target_y": 30
+          },
+          {
+            "label": "Broad woodland grass blade",
+            "label_x": 51,
+            "label_y": 80,
+            "target_x": 43,
+            "target_y": 62
+          }
+        ],
+        "photo_status": "EXISTING ORIGINAL JPEG INSPECTED; only obvious visible structures arrowed; collar/glume/lemma anatomy not certified from photo; rights and creator retained."
+      },
+      {
+        "label": "RESCUEGRASS (comparison only) — broad flattened drooping spikelets",
+        "scientific_name": "Bromus catharticus",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bromus_catharticus_plant1_%287020236591%29.jpg/960px-Bromus_catharticus_plant1_%287020236591%29.jpg",
+        "image_fit": "contain",
+        "image_role": "True living Bromus catharticus plant with hanging relatively wide flat green spikelets and leafy basal tuft at creek bank",
+        "caption": "Australian-source mature rescuegrass shows broad, flattened spikelets in a more open hanging head; they overlap like small flat oat grains. Its lemmas bear short or no awns compared with Japanese brome's longer and more divergent awns. A basal tuft is visible; no microscopic glumes/ligule or annual-versus-perennial proof is available from this photograph.",
+        "why_it_matters": "Rescuegrass is introduced in Texas and often appears in disturbed lawns, riparian margins and cool-season seed mixes. Broad flat short/awnless florets are a practical alternative to the much narrower long-awned annual bromes.",
+        "creator": "Harry Rose / Macleay Grass Man",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_plant1_(7020236591).jpg",
+        "markers": [
+          {
+            "label": "Broad flattened hanging spikelets",
+            "label_x": 6,
+            "label_y": 10,
+            "target_x": 58,
+            "target_y": 25
+          },
+          {
+            "label": "Dense basal tuft",
+            "label_x": 3,
+            "label_y": 84,
+            "target_x": 39,
+            "target_y": 86
+          }
+        ],
+        "photo_status": "Original Wikimedia Commons 960×~700 landscape crop source inspected 2026-10-21; CC BY 2.0 attribution and Australian setting confirmed. Arrows to gross visible drooping spikelets and base; no microscopic lemma claims."
+      },
+      {
+        "label": "RESCUEGRASS (comparison only) — true wide spikelet detail",
+        "scientific_name": "Bromus catharticus",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Bromus_catharticus_spikelets3_%286874132374%29.jpg/960px-Bromus_catharticus_spikelets3_%286874132374%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Licensed Australian source-labelled rescuegrass spikelet reference; multiple broad flattened floral units",
+        "caption": "At this source-labelled rescuegrass spikelet, see overlapping broad flattened green floret surfaces, a fine projecting awn, and an exposed yellow anther. This photo does NOT show a verified glume vein count, exact lemma anatomy, or the collar; comparison only, not a new species admission.",
+        "why_it_matters": "Adds a closer rescuegrass comparison than a whole plant alone while protecting licensing and non-installed status.",
+        "creator": "Harry Rose / Macleay Grass Man",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_spikelets3_(6874132374).jpg",
+        "markers": [
+          {
+            "label": "Flattened overlapping floral units",
+            "label_x": 2,
+            "label_y": 18,
+            "target_x": 57,
+            "target_y": 49
+          },
+          {
+            "label": "Fine projecting awn",
+            "label_x": 74,
+            "label_y": 7,
+            "target_x": 71,
+            "target_y": 17
+          },
+          {
+            "label": "Visible yellow anther",
+            "label_x": 3,
+            "label_y": 80,
+            "target_x": 44,
+            "target_y": 69
+          }
+        ],
+        "photo_status": "Visual source inspected at Commons 960x720 preview on 2026-10-21; three marker endpoints restricted to clearly visible broad florets, fine awn and yellow anther. CC BY 2.0 author/source preserved; no new local image bytes."
+      },
+      {
+        "label": "LANCEOLATE BROME — dried mature crowded spikelets",
+        "scientific_name": "Bromus lanceolatus",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Bromus_lanceolatus_dry.jpg/960px-Bromus_lanceolatus_dry.jpg",
+        "image_fit": "contain",
+        "image_role": "Source-labelled dry mature inflorescence, visible narrow tightly overlapping florets and several outward-projecting awns",
+        "caption": "Dry source-labelled B. lanceolatus shows long crowded lance-shaped spikelets with overlapping lemmas and awns projecting from the sides. No millimeter ruler, detached glumes or ligule is shown: do not claim a measured spikelet length or precise floret count from this picture.",
+        "why_it_matters": "Complement to the original green specimen photograph: crew can recognize the persistent densely stacked florets at the dry stage before checking diagnostic lengths and vein counts on a collected ripe spikelet.",
+        "creator": "Yves Bas",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_lanceolatus_dry.jpg",
+        "markers": [
+          {
+            "label": "Long crowded spikelet",
+            "label_x": 3,
+            "label_y": 11,
+            "target_x": 49,
+            "target_y": 27
+          },
+          {
+            "label": "Overlapping florets",
+            "label_x": 3,
+            "label_y": 71,
+            "target_x": 44,
+            "target_y": 55
+          },
+          {
+            "label": "Outward awns",
+            "label_x": 73,
+            "label_y": 11,
+            "target_x": 67,
+            "target_y": 33
+          }
+        ],
+        "photo_status": "Commons 960×1057 image visually inspected and Commons creator/license checked 2026-10-21. Three arrows target only visible gross structures. Cropped image source iNaturalist 51130457, not a Texas voucher; no anatomy macros or fresh local image bytes."
+      },
+      {
+        "label": "WOODLAND BROME — labelled living rooted grass tufts",
+        "scientific_name": "Bromus pubescens",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Bromus_pubescens_-_Copenhagen_Botanical_Garden_-_DSC07693.JPG/960px-Bromus_pubescens_-_Copenhagen_Botanical_Garden_-_DSC07693.JPG",
+        "image_fit": "contain",
+        "image_role": "Living ex situ garden specimen under its Bromopsis pubescens synonym sign; visible green leaf tufts and lower crown regions, no reproductive anatomy",
+        "caption": "Copenhagen Botanical Garden accession labelled BROMOPSIS PUBESCENS (synonym used for Bromus pubescens). This view records the rooted plant's tuft and leaves. It does NOT show mature spikelets, pubescent lemmas, a ligule, or prove perennial duration from one photo. Not a wild Texas occurrence.",
+        "why_it_matters": "A useful second season/habit image beside the old tiny EPA flowering-head photo. The true hairy-lemma and rooted-crown diagnostic macros remain open.",
+        "creator": "Daderot",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_pubescens_-_Copenhagen_Botanical_Garden_-_DSC07693.JPG",
+        "markers": [
+          {
+            "label": "Green leaf blades",
+            "label_x": 68,
+            "label_y": 8,
+            "target_x": 80,
+            "target_y": 33
+          },
+          {
+            "label": "Tufted crown region",
+            "label_x": 60,
+            "label_y": 80,
+            "target_x": 76,
+            "target_y": 54
+          }
+        ],
+        "photo_status": "Commons 960×720 preview visually inspected and creator CC0 dedication checked 2026-10-21. Two gross-habit arrows only. Garden-labelled synonym ID, no Texas provenance or claim that photographed plant hairs were resolved. No new local image bytes."
+      }
+    ],
+    "overlay_note": "Nine credited field-photo panels: original four installed species, Japanese closeup, two rescuegrass comparisons, lanceolate mature dry spikelets, and woodland brome garden-labelled basal tufts. Arrows target visible gross structures only. No counted glume veins, confirmed woodland lemma hairs or measured spikelet dimensions in these photos."
+  },
+  "study_only_photo_links": [
+    {
+      "label": "Bromus japonicus reference",
+      "url": "https://rangeplants.tamu.edu/plant/japanese-brome/",
+      "look_for": "Cool-season INTRODUCED annual; slender, often kinked or drooping panicle branches carry several awned, multi-flowered spikelets. Published spikelet lengths overlap other Bromus species (Oklahoma State ~15–25 mm; FNA ~20–40 mm), so use mature glume veins and lemma/awn anatomy instead of a short size cutoff. Lower sheaths may be soft-haired."
+    },
+    {
+      "label": "Bromus japonicus reference",
+      "url": "https://powo.science.kew.org/results?q=Bromus%20japonicus",
+      "look_for": "Cool-season INTRODUCED annual; slender, often kinked or drooping panicle branches carry several awned, multi-flowered spikelets. Published spikelet lengths overlap other Bromus species (Oklahoma State ~15–25 mm; FNA ~20–40 mm), so use mature glume veins and lemma/awn anatomy instead of a short size cutoff. Lower sheaths may be soft-haired."
+    },
+    {
+      "label": "Bromus lanceolatus reference",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:393818-1/general-information",
+      "look_for": "Introduced Mediterranean-region annual; check the LONG, narrow lance-shaped many-flowered spikelets (often roughly 25–50 mm) on an open branching panicle. For separation from other bromes, count florets and check the mature awn insertion and lemma-tip teeth with magnification."
+    },
+    {
+      "label": "Bromus lanceolatus reference",
+      "url": "https://www.worldfloraonline.org/taxon/wfo-0000855870",
+      "look_for": "Introduced Mediterranean-region annual; check the LONG, narrow lance-shaped many-flowered spikelets (often roughly 25–50 mm) on an open branching panicle. For separation from other bromes, count florets and check the mature awn insertion and lemma-tip teeth with magnification."
+    },
+    {
+      "label": "Bromus pubescens reference",
+      "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Bromus%20pubescens",
+      "look_for": "Native North American woodland PERENNIAL with a fairly tall loose, drooping flowering head, relatively broad soft leaves, and hairy sheaths. Check a true membranous ligule and awned multi-flowered spikelets. This existing photograph is low resolution, so lemma-level confirmation remains OPEN."
+    },
+    {
+      "label": "Bromus pubescens reference",
+      "url": "https://gobotany.nativeplanttrust.org/species/bromus/pubescens/",
+      "look_for": "Native North American woodland PERENNIAL with a fairly tall loose, drooping flowering head, relatively broad soft leaves, and hairy sheaths. Check a true membranous ligule and awned multi-flowered spikelets. This existing photograph is low resolution, so lemma-level confirmation remains OPEN."
+    },
+    {
+      "label": "Bromus texensis reference",
+      "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37176-2/general-information",
+      "look_for": "Native Texas annual; inspect mature green elongated narrow spikelets with several florets. Lemma bodies are commonly 9–12 mm, with an awn around 6–10 mm and slightly 2-toothed tip; measure glume, lemma, and awn to rule out introduced Japanese and lanceolate bromes. Flowering yellow anthers can be visible, but are NOT species-specific."
+    }
+  ],
+  "references": [
+    "https://rangeplants.tamu.edu/plant/japanese-brome/",
+    "https://powo.science.kew.org/results?q=Bromus%20japonicus",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:393818-1/general-information",
+    "https://www.worldfloraonline.org/taxon/wfo-0000855870",
+    "https://w3.biosci.utexas.edu/prc/K12/pdf/Bromus%20pubescens",
+    "https://gobotany.nativeplanttrust.org/species/bromus/pubescens/",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37176-2/general-information",
+    "https://floranorthamerica.org/Bromus_texensis",
+    "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Bromus+japonicus",
+    "https://rangeplants.tamu.edu/plant/rescuegrass/",
+    "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37001-2/general-information",
+    "https://www.maine.gov/dacf/mnap/features/bropub.htm",
+    "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_(3920836312).jpg",
+    "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_plant1_(7020236591).jpg",
+    "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_spikelets3_(6874132374).jpg"
+  ],
+  "curation_status": {
+    "manual_grass_batch_20261021": "2026-10-21",
+    "stage": "FIELD_READY_WITH_DIAGNOSTIC_PHOTO_GAPS",
+    "physical_original_photos_inspected": 4,
+    "existing_photo_count": 4,
+    "valid_marker_count": 11,
+    "native_range_unchanged": true,
+    "photos_downloaded": 0,
+    "manual_bromus_fiveway_20261021": "FIELD_READY_PHOTO_GAPS",
+    "species_count": 4,
+    "comparison_only_rescuegrass": true,
+    "genus_photo_panels": 9,
+    "additional_source_photo_panels": 5,
+    "new_local_files": 0,
+    "verified_original_arrows": 11,
+    "additional_photo_arrows": 13,
+    "last_reviewed": "2026-10-21",
+    "verified_rescue_spikelet_arrows": 3
+  }
+}

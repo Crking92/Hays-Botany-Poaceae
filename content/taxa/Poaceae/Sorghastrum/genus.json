@@ -1,0 +1,454 @@
+{
+  "rank": "genus",
+  "family": "Poaceae",
+  "name": "Sorghastrum",
+  "common_group": "Indiangrasses",
+  "project_scope": {
+    "selection_mode": "B042 same-genus comparison",
+    "species_ids": [
+      "sorghastrum-elliottii",
+      "sorghastrum-nutans"
+    ],
+    "species_count": 2,
+    "holds": [
+      "sorghastrum-elliottii"
+    ]
+  },
+  "study_strategy": {
+    "priority": [
+      "spikelet pairing and sterile pedicel",
+      "lemma awn bend count and length",
+      "panicle branch spacing and hairiness",
+      "collar/ligule architecture",
+      "rhizomes, nodes and growth form",
+      "habitat/distribution context (secondary only)"
+    ],
+    "warning": "Do not treat statewide Texas nativity as local presence. S. elliottii is much more eastern in Texas.",
+    "look_here_first_sequence": [
+      "1. Confirm Poaceae from culm node, sheath and ligule; inspect a mature collar, not just a yellow plume.",
+      "2. Confirm Sorghastrum from a branched panicle with awned fertile spikelets accompanied by reduced hairy sterile pedicels; inspect one branch joint.",
+      "3. Compare panicle density/hairs and count the bends of several complete lemma awns with a millimeter ruler.",
+      "4. Check basal growth for short scaly rhizomes, culm-node hairs and matched leaf blades; treat stature and habitat as secondary.",
+      "5. If fertile material is missing or the awn/ligule characters conflict, retain Sorghastrum sp. pending targeted review."
+    ]
+  },
+  "comparison_lesson": {
+    "quick_split": [
+      "S. nutans — robust tallgrass prairie species with strong collar/ligule cue and dense golden panicle.",
+      "S. elliottii — slender eastern/sandy woodland comparison, range HOLD in this project."
+    ]
+  },
+  "curation_status": {
+    "version": "2.3-sorghastrum-photo-status-reconciliation-20261021",
+    "last_reviewed": "2026-10-21",
+    "comparison_text_complete": true,
+    "visual_lock": "S. nutans collar and bare-pedicel diagnostic photographs installed; precise arrows require pixel QA. S. elliottii comparison photo exists provisionally but taxon-level diagnostic confirmation, matched collar and mature awn macros remain pending.",
+    "indiangrass_field_pass_20261021": "Real ligule and bare-pedicel photos physically installed; other Sorghastrum species canonical science not modified.",
+    "indiangrass_macro_enrichment_20261021": "two licensed Matt Lavin Commons macro photos physically installed; arrows still need pixel QA",
+    "manual_elliottii_source_photo_review_20261022": "PROVISIONAL_SOURCE_ID_HOLD",
+    "native_range_unchanged": true,
+    "manual_hold_resolution_evidence_20261022": "MEASURED_KEY_OR_INSTITUTIONAL_REFERENCE_FOUND__HOLD_REMAINS",
+    "indiangrass_detailed_second_pass_20261022": {
+      "added_USGS_second_angle_external": 1,
+      "genus_panels": 7,
+      "original_other_spp_photos_unchanged": true,
+      "native_range_untouched": true,
+      "scientific_elliottii_HOLD_kept": true,
+      "near_complete_field_key": true,
+      "still_missing": "measured local ligule and matured attached paired flower; independently vouchered slender contrast"
+    }
+  },
+  "visual_status": "field_comparison_ready_photo_gaps",
+  "fast_fill_note": "Canonical Sorghastrum nutans now has a 3-image FAST-FILL gallery. Existing Joey Santore flowering/anther frame remains the preferred diagnostic private-study anchor, supplemented by licensed whole-plant and panicle views. 2026-10-21: S. nutans field lesson updated with public Commons panicle and fertile spikelet reference; original video frame remains private.",
+  "shared_genus_recognition": {
+    "look_here_first": "At the grass collar inspect the ligule; then examine mature spikelets and twisted awns. Habitat and panicle color alone cannot identify the species.",
+    "shared_traits": [
+      "Warm-season perennial grasses with narrow blades and panicles of awned spikelets",
+      "Awn and spikelet hair details are more reliable than golden panicle color"
+    ]
+  },
+  "species_comparison_matrix": [
+    {
+      "character": "Lemma awn bend count and length (primary reproductive comparison)",
+      "nutans": "Generally once-bent, twisted awn; Iowa grass treatment reports (6–)8–17 mm, while canonical card uses approximately 10–22 mm.",
+      "elliottii": "Northeastern Flora treatment describes twice-bent, twisted awn 20–35 mm.",
+      "how_to_check": "Measure multiple mature intact awns from lemma attachment to tip with a millimeter scale; note overlapping lengths and abnormal/broken awns; verify local material before hard-key use."
+    },
+    {
+      "character": "Panicle density and pubescence",
+      "nutans": "Usually dense golden-tawny panicle with conspicuous silky-white hairs along branch joints and spikelet stalks.",
+      "elliottii": "Usually more open, less hairy panicle with darker spikelets in Northeastern Flora treatment.",
+      "how_to_check": "Compare same-stage intact panicles and macro views of branch-joint hairs; color alone is unreliable."
+    },
+    {
+      "character": "Rhizomes / basal crown",
+      "nutans": "Short, stout scaly rhizomes usually present, forming loose clumps.",
+      "elliottii": "Northeastern Flora describes lacking rhizomes, with fibrous roots.",
+      "how_to_check": "Expose base carefully only where collection is appropriate; roots and rhizomes are often absent from photos, so do not force a sterile ID."
+    },
+    {
+      "character": "Collar / ligule",
+      "nutans": "Stiff membranous ligule, typically ~2–7 mm, flanked by prominent pointed auricle-like projections ('rifle sight').",
+      "elliottii": "Canonical species review has not locked an exact ligule/auricle contrast; needs a matched specimen-level check.",
+      "how_to_check": "Macro at sheath-blade junction with 1-mm scale; do not infer absence of projections without inspecting several mature leaves."
+    },
+    {
+      "character": "Growth form and stem nodes",
+      "nutans": "Often robust 70–220 cm culms with hairy nodes; dimensions vary with site.",
+      "elliottii": "Often slender culms, sometimes glabrous; overall height can still be substantial.",
+      "how_to_check": "Record culm thickness and node pubescence with ruler; stature alone is weak."
+    },
+    {
+      "character": "Habitat and project range (context only)",
+      "nutans": "Tallgrass prairie; canonical target-zone PASS retained unchanged.",
+      "elliottii": "Eastern sandy woodland / coastal-plain tendency; canonical learner range UNRESOLVED retained unchanged.",
+      "how_to_check": "Habitat may support a hypothesis but never replaces mature spikelet evidence or project county proof."
+    }
+  ],
+  "overlap_cautions": [
+    "Both species are awned grasses; stature, color and habitat are insufficient alone.",
+    "S. elliottii remains a canonical learner comparison with existing range HOLD; this lesson does not change that scientific status.",
+    "Published S. nutans awn-length ranges differ among floras; use bend count, panicle hairiness and rhizomes together. Do not use a single absolute length threshold.",
+    "S. elliottii now has two physically installed provisional photographs, but neither establishes validated ligule/awn characters. Review their exact pixels and licenses before anatomical arrows.",
+    "A source photo of S. nutans flowering anthers does not resolve the ligule, awn bend count or S. elliottii comparison.",
+    "Retain source-pool status and target-zone native-range labels; this genus lesson makes no new county determination."
+  ],
+  "local_lookalikes": [
+    "Andropogon and Anatherum: compare spikelet grouping, raceme architecture, and awn attachment rather than inflorescence color."
+  ],
+  "diagnostic_photo_checklist": [
+    "P1 both: matched fertile lemma awn close-ups with 1-mm ruler, attachment point and bend count visible",
+    "P1 both: same-scale complete mature panicles plus panicle-joint hair macros",
+    "P1 both: paired collar/ligule and pointed auricle-like projections photographed from two angles",
+    "P1 both: fertile spikelet, glumes and reduced hairy sterile pedicel at same magnification",
+    "P2 both: basal crowns with/without short scaly rhizomes, only from ethically documented material",
+    "P2 both: mature culm nodes and leaf-blade width with millimeter scale",
+    "P1 S. elliottii: acquire at least one exact-species licensed learner face photo before claiming visual completion"
+  ],
+  "targeted_handoff": [
+    {
+      "lane": "Taxonomy + Diagnostic Review",
+      "request": "Verify S. elliottii collar, ligule, glume, fertile spikelet and awn characters against S. nutans before issuing a firm two-way key."
+    },
+    {
+      "lane": "Diagnostic Photo Polish",
+      "request": "Find matched collar and spikelet macros; preserve existing Joey reference and source licenses."
+    },
+    {
+      "lane": "Taxonomy + Diagnostic Review",
+      "request": "Compare Sorghastrum elliottii twice-bent 20–35 mm awns, absence of rhizomes and open less-hairy panicle (Northeastern Flora via WFO) against S. nutans once-bent ~8–17 mm awns, short scaly rhizomes and dense silky panicle (Iowa grass treatment); check regional variability before promoting to firm field key.",
+      "references": [
+        "https://worldfloraonline.org/taxon/wfo-0000900085",
+        "https://www.eeob.iastate.edu/research/IowaGrasses/speciespages/SorghNutan/SorghNutan.html"
+      ]
+    }
+  ],
+  "genus_diagnostics": {
+    "look_here_first": "Find the grass node and leaf collar. Lift the blade to expose the membranous ligule and paired pointed auricle-like projections, then follow a mature panicle branch to one fertile awned spikelet and its neighboring hairy sterile pedicel. Compare awn bends and lengths before trusting panicle color.",
+    "shared_structure_examples": [
+      {
+        "term": "collar, ligule and auricle-like projections",
+        "plain": "The collar is where the leaf blade meets its wrapped stem sheath; the ligule is a little membrane, and two pointed 'ears' can rise beside it.",
+        "where_to_look": "Unfold the blade-sheath junction on a mature leaf; photograph both sides at millimeter scale.",
+        "photo_role": "collar and membranous ligule macro, including pointed side projections",
+        "why": "Recognizes Indiangrass architecture. The conspicuous rifle-sight collar is especially useful for S. nutans, but S. elliottii needs matched verification before using it as a strict species split."
+      },
+      {
+        "term": "panicle and rachis",
+        "plain": "The branched seedhead and its main axis, not a single giant flower.",
+        "where_to_look": "View a complete ripe panicle side-on; compare spacing of branches and visible hairiness.",
+        "photo_role": "matched mature panicle and panicle-rachis side views",
+        "why": "S. nutans is often dense and silky; S. elliottii is described as more open and less hairy. Stage and damage can change this impression."
+      },
+      {
+        "term": "fertile spikelet and sterile pedicel",
+        "plain": "One seed-bearing grass unit with an awn beside a little hairy stalk that does not bear a normal fertile flower.",
+        "where_to_look": "On one mature branch joint, separate the awned spikelet from its adjacent sterile stalk with a hand lens.",
+        "photo_role": "fertile spikelet, glumes and attached sterile pedicel macro",
+        "why": "Confirms Sorghastrum reproductive architecture; distinguishes it from superficially similar panicles and raceme groups."
+      },
+      {
+        "term": "lemma awn and bend count",
+        "plain": "A bristle emerging from the tiny floret covering; its twists and knees are measurable.",
+        "where_to_look": "Follow the awn from its base on the fertile lemma to the tip; measure the whole awn and count obvious bends.",
+        "photo_role": "matched intact awns with mm ruler, side-on and base attached",
+        "why": "Regional floras contrast generally once-bent shorter awns in S. nutans with usually twice-bent longer awns in S. elliottii; require a series of mature intact awns, not one broken example."
+      }
+    ],
+    "confusable_genera": [
+      {
+        "genus": "Andropogon / Anatherum",
+        "difference": "Bluestems commonly organize paired spikelets along conspicuous racemes, sometimes in fingerlike groups or enclosed by spathes. Sorghastrum has a branched panicle with fertile spikelets beside reduced sterile pedicels; inspect one branch joint."
+      },
+      {
+        "genus": "Sorghum",
+        "difference": "Cultivated and escaped sorghums can also bear branched panicles; inspect spikelet-pair fertility, glumes, rachis disarticulation and growth context rather than the similar name."
+      },
+      {
+        "genus": "Panicum / Tridens",
+        "difference": "Panicles can be similarly narrow or diffuse, but spikelet architecture, lemma/awn configuration and sterile-pedicel pairing separate them under magnification."
+      }
+    ]
+  },
+  "comparison_cards": [
+    {
+      "title": "Indiangrasses: count the awn knees",
+      "taxon_ids": [
+        "sorghastrum-nutans",
+        "sorghastrum-elliottii"
+      ],
+      "look_here_first": "Isolate several mature fertile spikelets, keeping the lemma awn attached; compare the number of bends and total awn length.",
+      "difference": "Typical S. nutans: once-bent and usually shorter; S. elliottii: described as twice-bent and longer (20–35 mm) in Northeastern Flora.",
+      "caution": "Bent awns may look differently angled when rotated or broken; source treatments vary for S. nutans lengths. Taxonomy + Diagnostic Review should confirm the two-way rule against regional specimens.",
+      "photo_roles": [
+        "matched lemma awns with 1-mm ruler",
+        "macro showing awn attachment to fertile lemma",
+        "whole spikelet with adjacent sterile pedicel"
+      ]
+    },
+    {
+      "title": "Dense silky panicle versus open sparse panicle",
+      "taxon_ids": [
+        "sorghastrum-nutans",
+        "sorghastrum-elliottii"
+      ],
+      "look_here_first": "Compare fully expanded panicles at matched maturity, then zoom in to branch joints for hairs.",
+      "difference": "S. nutans often appears dense and silky; S. elliottii generally more open and less hairy.",
+      "caution": "Weathering, developmental stage and variable panicle color overlap. Use awns and vegetative details as corroboration.",
+      "photo_roles": [
+        "matched whole mature panicles",
+        "panicle rachis and joint hair macros"
+      ]
+    },
+    {
+      "title": "The 'rifle sight' is a collar feature",
+      "taxon_ids": [
+        "sorghastrum-nutans",
+        "sorghastrum-elliottii"
+      ],
+      "look_here_first": "Start on Matt Lavin's now-installed REAL S. nutans collar photo: a membrane projects from the sheath between pointed side projections. S. elliottii collar needs a separate source-authenticated same-scale photograph; don't assert it lacks the structure.",
+      "difference": "A prominent rifle-sight-like collar is characteristic of S. nutans; S. elliottii collar needs direct verified comparative documentation.",
+      "caution": "Source-author and CC BY-SA 2.0 confirmed and physical JPEG checked; exact pixel-arrow placements and direct S. elliottii 1-mm paired collar still pending.",
+      "photo_roles": [
+        "Now-installed real S. nutans membranous collar photo",
+        "Matched S. elliottii collar macro with mm scale (MISSING)"
+      ]
+    },
+    {
+      "title": "Indiangrass versus big bluestem, switchgrass and Johnsongrass",
+      "taxon_ids": [
+        "sorghastrum-nutans",
+        "sorghastrum-elliottii"
+      ],
+      "look_here_first": "Collar first: S. nutans has a long notched membranous ligule with pointed rifle-sight sides; big bluestem has a short hairy ligule and turkey-foot seedhead, switchgrass has a triangular dense hair ligule and airy panicle. Indiangrass's paired-position sterile spikelet is absent, leaving a NAKED pedicel; Johnsongrass retains developed pedicelled spikelets.",
+      "field_matrix": [
+        {
+          "character": "Collar",
+          "indiangrass": "Prominent stiff membranous rifle-sight",
+          "big_bluestem": "Short hairs",
+          "switchgrass": "Dense ligular hairs",
+          "johnsongrass": "No conspicuous rifle-sight"
+        },
+        {
+          "character": "Inflorescence",
+          "indiangrass": "ONE branched golden plume",
+          "big_bluestem": "Distinct 2–6 finger turkey foot",
+          "switchgrass": "Very airy panicle",
+          "johnsongrass": "Open large panicle"
+        },
+        {
+          "character": "Spikelet partner",
+          "indiangrass": "Awned fertile sessile spikelet plus bare sterile pedicel",
+          "big_bluestem": "Paired developed sessile and pedicelled spikelets",
+          "switchgrass": "Different unpaired type",
+          "johnsongrass": "Developed pedicelled sterile spikelets"
+        }
+      ],
+      "photo_roles": [
+        "Installed Matt Lavin S. nutans true collar CC BY-SA 2.0",
+        "Installed Matt Lavin S. nutans naked pedicel CC BY-SA 2.0"
+      ],
+      "caution": "S. elliottii still needs truly attached awn comparison: do not use leaf/habit/height alone for that species."
+    }
+  ],
+  "visual_comparison": {
+    "status": "S. nutans exact macro examples retained, 2 actual archived S. elliottii panicle views added. S. elliottii identity/county hold remains pending mature measured vouchered flowers.",
+    "teaching_order": "WHOLE flowering habit → REAL membranous collar → USGS green side-corner angle → one elongated branched panicle → one fertile awned sessile spikelet plus naked sterile pedicel → provisional slender Indiangrass direct comparator → measured 1mm awns and rootstocks as last-mile",
+    "items": [
+      {
+        "label": "INDIANGRASS — real ligule/collar CC photo",
+        "scientific_name": "Sorghastrum nutans",
+        "image_url": "content/taxa/Poaceae/Sorghastrum/sorghastrum-nutans/images/matt-lavin-cc-by-sa-2-ligule-sheath.jpg",
+        "image_fit": "contain",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_(3912211835).jpg",
+        "image_role": "Mature leaf sheath/collar close-up; membranous ligule at blade/sheath junction",
+        "caption": "Real Matt Lavin image of INDIANGRASS ligule emerging from sheath at collar. This is the anatomical starting point for recognizing the projecting 'rifle-sight' edge; no claimed hair or mm count without detailed review.",
+        "why_it_matters": "Look for the true membrane, not a fuzzy tuft of hairs; distinguish the separate pointed side extensions where visible.",
+        "markers": [],
+        "photo_status": "Physically downloaded verified original; anatomy/collar present by source description; arrow coordinates and mm sizes need independent visual QA before addition.",
+        "species_id": "sorghastrum-nutans",
+        "observed_anatomy": "Original photographer labels leaf-collar ligule or naked pedicels, respectively; no new pixel arrows yet.",
+        "visual_status": "physical_source_verified_arrow_review_pending"
+      },
+      {
+        "label": "INDIANGRASS — true ligule vs ear-like upper sheath corners (USGS source)",
+        "scientific_name": "Sorghastrum nutans",
+        "image_url": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Sorghastrum+nutans_auricles+3.JPG&id=3114&size=w",
+        "image_fit": "contain",
+        "image_role": "Second angle of actual Sorghastrum nutans green leaf blade and open sheath at the stem; short projecting pointed ear-like sheath corners and actual pale ligule region are pictured. Do not label these pointed projections as the MEMBRANOUS LIGULE itself.",
+        "caption": "The close USDA/USGS field photo shows the blade joining an OPEN green sheath. Two pointed ear-like margins flank the collar and the smaller pale ligule lies INSIDE that joint. The outer 'mule ears' are not, by themselves, the entire membrane. Compare the physical Matt Lavin collar photo and open a live sheath before trying to measure anything. Louisiana source, not Hays County; no ruler or precise length in this picture.",
+        "why_it_matters": "The existing photo teaches the membrane; this complementary official close-up teaches where the ear-like side corners fit and prevents calling collar hairs or sheath tips the ligule.",
+        "creator": "USGS Plants of Louisiana — Larry Allain / Chris Reid (per agency collection credit)",
+        "license": "Public domain — USGS Plants of Louisiana (agency photo collection)",
+        "license_url": "https://warcapps.usgs.gov/PlantID/Home/About",
+        "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3114",
+        "source_image": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Sorghastrum+nutans_auricles+3.JPG&id=3114&size=w",
+        "source_locality": "Louisiana, United States; not a Texas voucher",
+        "photo_status": "OFFICIAL public-domain species-labelled reference; EXTERNAL PROVISIONAL USER PHOTO REVIEW PENDING. Visible side corners and collar are described, but exact organ boundary/ruler not pixel-certified; zero new anatomical arrows and no new locally archived image bytes.",
+        "markers": [],
+        "species_id": "sorghastrum-nutans"
+      },
+      {
+        "label": "INDIANGRASS — fertile spikelet and NAKED pedicels CC photo",
+        "scientific_name": "Sorghastrum nutans",
+        "image_url": "content/taxa/Poaceae/Sorghastrum/sorghastrum-nutans/images/matt-lavin-cc-by-sa-2-fertile-spikelet-pedicels.jpg",
+        "image_fit": "contain",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_(3912213615).jpg",
+        "image_role": "Mature fertile sessile spikelet, a bent/twisted awn, and naked sterile pedicels",
+        "caption": "Real Matt Lavin macro of fertile sessile spikelet with conspicuous bent awn and adjacent NAKED pedicels, where a paired pedicelled spikelet is reduced/absent. Do not confuse bare pedicel for an awn.",
+        "why_it_matters": "Spikelet/pedicel anatomy corroborates Sorghastrum; pair with a mature awn and collar before exact-species conclusion.",
+        "markers": [],
+        "photo_status": "Physically downloaded verified original; anatomy/collar present by source description; arrow coordinates and mm sizes need independent visual QA before addition.",
+        "species_id": "sorghastrum-nutans",
+        "observed_anatomy": "Original photographer labels leaf-collar ligule or naked pedicels, respectively; no new pixel arrows yet.",
+        "visual_status": "physical_source_verified_arrow_review_pending"
+      },
+      {
+        "species_id": "sorghastrum-nutans",
+        "scientific_name": "Sorghastrum nutans",
+        "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sorghastrum%20nutans%201zz.jpg",
+        "image_role": "whole flowering habit",
+        "creator": "David J. Stang",
+        "license": "CC BY-SA 4.0",
+        "public_reuse": "yes",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_1zz.jpg",
+        "observed_anatomy": "Existing exact-species source metadata describes whole-plant flowering habit; binary not inspected in this run.",
+        "caption": "External reference for overall Indiangrass habit; do not label small collar or spikelet parts from this distant view.",
+        "visual_status": "external_reference; annotation_pending",
+        "markers": []
+      },
+      {
+        "species_id": "sorghastrum-nutans",
+        "scientific_name": "Sorghastrum nutans",
+        "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Sorghastrum%20nutans%20566649681.jpg",
+        "image_role": "panicle architecture",
+        "creator": "Alex Abair",
+        "license": "CC BY 4.0",
+        "public_reuse": "yes",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_566649681.jpg",
+        "observation_id": "313766834",
+        "photo_id": "566649681",
+        "observed_anatomy": "Species metadata lists a panicle field view; actual external image not visually checked in this run.",
+        "caption": "External reference for the shape of the mature panicle; individual awn bends and ligules still require close-ups.",
+        "visual_status": "external_reference; annotation_pending",
+        "markers": []
+      },
+      {
+        "label": "SLENDER INDIANGRASS — source-identified narrow arching awned panicle",
+        "scientific_name": "Sorghastrum elliottii",
+        "image_url": "content/taxa/Poaceae/Sorghastrum/sorghastrum-elliottii/images/gbif-first-6579687595-882fa8783e.jpg",
+        "image_fit": "contain",
+        "image_role": "Source labelled Sorghastrum elliottii; confirmed photograph of slender arching awned head, species ID provisionally source-determined.",
+        "caption": "The real CC0 observation photograph shows a long, brown, remarkably curved/arching slender grass seedhead carried across the photographer's hand; many fine twisted dark awns project from its spikelets. It does not reveal a true collar, rooted clump, or measured awn insertion.",
+        "why_it_matters": "An arched slender open panicle may suggest this species, but yellow Indiangrass can have variable heads.",
+        "creator": "Casey Harless",
+        "license": "CC0 1.0",
+        "source_page": "https://www.gbif.org/occurrence/6579687595",
+        "markers": [],
+        "photo_status": "Original physically archived exact taxon image with creator and license, visually inspected at source full resolution; fine floret and mm-scale ID remain subject to botanical review."
+      },
+      {
+        "label": "SLENDER INDIANGRASS — second long bent panicle",
+        "scientific_name": "Sorghastrum elliottii",
+        "image_url": "content/taxa/Poaceae/Sorghastrum/sorghastrum-elliottii/images/library-review013-a61e80195782691.jpg",
+        "image_fit": "contain",
+        "image_role": "Source labelled S. elliottii; different licensed photographer/source and second flowering-head view.",
+        "caption": "This second real source-identified photograph shows another strongly curved tan-golden awned seedhead over an open palm. This is an independently archived source view, not a dissection or proof of 1–1½ inch awn lengths.",
+        "why_it_matters": "Pair this with exact-named S. nutans collar and fertile spikelet imagery to check actual genus.",
+        "creator": "IDClaire",
+        "license": "CC BY",
+        "source_page": "https://www.gbif.org/occurrence/5889865297",
+        "markers": [],
+        "photo_status": "Original physically archived exact taxon image with creator and license, visually inspected at source full resolution; fine floret and mm-scale ID remain subject to botanical review."
+      }
+    ],
+    "photo_gaps": [
+      "S. elliottii has two provisional canonical photographs; matched diagnostic collar and attached awn evidence still needed.",
+      "Both: paired mature attached awns with mm scale to compare bends and lengths on voucher-confirmed specimens.",
+      "Both: fertile sessile spikelet and naked sterile pedicel macros, same magnification.",
+      "Both: local or project-region authenticated flowering plant with whole panicle and basal tuft.",
+      "S. nutans CC BY-SA collar and naked-pedicel macros physically installed; precise arrow coordinates and 1-mm calibrated local closeup remain.",
+      "Same rooted entire perennial tuft, full 4–14 inch panicle with ruler and habitat/voucher coordinates",
+      "Mature fertile awn under mm scale with bend and twisted basal column",
+      "Genus feature: sessile fertile spikelet and naked sterile pedicel at 10–20×",
+      "True membrane ligule/collar and side extensions with 1 mm scale",
+      "S. nutans from a vouchered reference at same reproductive stage and magnification",
+      "S. nutans: new USGS official public-domain collar angle external provisional, not 1mm measured or locally downloaded. Needs true collar membrane vs sheath tip pixel arrows validated.",
+      "NUTANS VS ELLIOTTII: same-stage vouchered rootstocks plus attached 1mm mature awns; usually once-bent short versus longer twice-bent is NOT categorical from silhouette."
+    ],
+    "handoff": "Second-pass canonical S. nutans photo guide added as eight real licensed species gallery panels, 9 photo teaching steps, including actual public-domain USGS green sheath corners and genuine S. elliottii other-species examples; no downloaded file or marker guessed."
+  },
+  "scientific_sources": [
+    {
+      "title": "World Flora Online / Northeastern Flora Sorghastrum elliottii morphology",
+      "url": "https://worldfloraonline.org/taxon/wfo-0000900085"
+    },
+    {
+      "title": "Iowa State University Sorghastrum nutans species treatment",
+      "url": "https://www.eeob.iastate.edu/research/IowaGrasses/speciespages/SorghNutan/SorghNutan.html"
+    },
+    {
+      "title": "Tallgrass Prairie Center Indiangrass ligule and seedhead",
+      "url": "https://tallgrassprairiecenter.org/native-seed-production-manual/species-production-guides/warm-season-grasses/indiangrass"
+    }
+  ],
+  "manual_closeout_check_20261021": {
+    "verified_species_cards": [
+      "sorghastrum-nutans",
+      "sorghastrum-elliottii"
+    ],
+    "comparison_rows": 6,
+    "field_ready": "S. nutans morphology and cross-grass comparisons are practical; S. elliottii is provisional and range unresolved",
+    "needs_photo_qa": [
+      "Check exact arrow positions on S. nutans ligule and naked pedicel macro",
+      "Confirm S. elliottii fertile spikelet identity and measure intact awns",
+      "Photograph S. elliottii collar/ligule against S. nutans at comparable stage"
+    ],
+    "guardrails": [
+      "Do not mark S. elliottii target-zone native PASS",
+      "Do not promote provisional source determinations to specimen-verified IDs",
+      "No fabricated image annotations"
+    ]
+  },
+  "what_to_teach_crew": [
+    "Slender Indiangrass source-candidate vs Yellow Indiangrass: Florida Museum 2024 key says S. elliottii commonly TUSSOK without scaly rhizomes, long mostly 25–40 mm TWICE bent awn, ARCHING PANICLE with branches mainly on one side; S. nutans RHIZOMATOUS, mostly 2–15 mm ONCE bent awn, typically more condensed. Two existing S. elliottii source-labelled heads aren't a measured rhizome + awn voucher, so keep scientific hold and do not infer Hays nativity."
+  ],
+  "hold_resolution_pass_20261022": {
+    "stage": "TARGET_MEASURED_EVIDENCE_FOUND__PHOTOGRAPH_OR_INDIVIDUAL_VOUCHER_HOLD_REMAINS",
+    "target_taxon": "sorghastrum-elliottii",
+    "science_references": [
+      "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/67/2024/10/Flora-of-Florida-Franck-31-Oct-2024.pdf",
+      "https://extension.uga.edu/publications/detail.html?number=B987-4"
+    ],
+    "recommended_crew_rule": "Slender Indiangrass source-candidate vs Yellow Indiangrass: Florida Museum 2024 key says S. elliottii commonly TUSSOK without scaly rhizomes, long mostly 25–40 mm TWICE bent awn, ARCHING PANICLE with branches mainly on one side; S. nutans RHIZOMATOUS, mostly 2–15 mm ONCE bent awn, typically more condensed. Two existing S. elliottii source-labelled heads aren't a measured rhizome + awn voucher, so keep scientific hold and do not infer Hays nativity.",
+    "published_exact_photo_gallery_changed": false,
+    "native_range_decisions_changed": false,
+    "need_more_verified_anatomy": true
+  }
+}

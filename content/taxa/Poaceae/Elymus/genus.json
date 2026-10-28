@@ -1,0 +1,818 @@
+{
+  "rank": "genus",
+  "name": "Elymus",
+  "family": "Poaceae",
+  "common_name": "wildryes",
+  "project_scope": {
+    "selection_mode": "Genus comparison lesson from live Master Plant Pool and existing Poaceae family module",
+    "included_source_pool_taxa": [
+      "Elymus canadensis",
+      "Elymus virginicus"
+    ],
+    "admission_note": "Both taxa occur in the approved Master Plant Pool. This lesson does not install taxa or change settled range status."
+  },
+  "shared_genus_characters": {
+    "look_here_first": "ELYMUS (wildryes) makes a continuous WHEATLIKE SPIKE with several-flowered SPIKELETS at nodes along the central RACHIS, not a loose branching PANICLE. To split the two installed species, inspect MATURE GLUME BASES: Canada often relatively straight/narrow V with DROOPING long-bristled heads; Virginia often hard, pale U-BOWED feet with ERECT more compact heads. Texas A&M cautions they hybridize, so conflicting characters stay Elymus sp.",
+    "vegetative": "Perennial cool-season grasses with jointed culms, leaf sheaths/blades and a ligule at the collar.",
+    "reproductive": "Inflorescence a terminal spike; spikelets sit along the rachis and contain multiple florets. Glumes and lemmas/awns carry the useful species characters.",
+    "genus_confirmation": "Node + sheath/collar/ligule confirms the grass doorway; a true terminal spike with multi-flowered spikelets along the rachis moves the learner into Elymus rather than the branched-panicle grasses."
+  },
+  "species_comparison_matrix": [
+    {
+      "taxon": "Elymus canadensis",
+      "common_name": "Canada wildrye",
+      "look_first": "Whole spike posture, then awns/glumes at one intact spikelet",
+      "architecture": "Mature spikes commonly arch or nod conspicuously and have a long-bristly appearance from spreading/curving awns.",
+      "spikelet": "Use the long conspicuous lemma awns and the glume/awn package as reproductive confirmation.",
+      "best_separator": "A strongly nodding mature spike with long spreading/curving awns is the fast field door; confirm on an intact spikelet.",
+      "caution": "Do not identify from 'nodding' alone—wind, maturity and damage change posture."
+    },
+    {
+      "taxon": "Elymus virginicus",
+      "common_name": "Virginia wildrye",
+      "look_first": "Whole spike posture, then glumes/awns at one intact spikelet",
+      "architecture": "Spike is typically more erect/straight and visually tighter than Canada wildrye; awns are less dramatically spreading.",
+      "spikelet": "Confirm with the comparatively compact spikelet/glume-awn architecture rather than leaf width or color.",
+      "best_separator": "More erect compact spike + less dramatically spreading awns favors E. virginicus; reproductive close-up should confirm.",
+      "caution": "Vegetative plants are unsafe for a forced species ID in this two-species lesson."
+    }
+  ],
+  "decision_sequence": [
+    "Confirm Poaceae at a real culm node and collar/ligule.",
+    "Find a mature terminal spike and photograph the whole spike before zooming in.",
+    "Strongly nodding/arching, shaggy spike with long spreading/curving awns → E. canadensis door.",
+    "More erect/compact spike with less dramatically spreading awns → E. virginicus door.",
+    "Zoom to one intact spikelet and document glumes, florets and awns before finalizing.",
+    "If only leaves are present or the reproductive characters conflict, leave the plant at Elymus and route the observation to Taxonomy + Diagnostic Review."
+  ],
+  "overlap_and_cautions": [
+    "Spike posture is a fast first split, not a stand-alone proof.",
+    "Leaf width, plant height, green color and habitat overlap and should remain supporting context only.",
+    "Broken or immature spikes can erase the strongest visual differences; require an intact mature reproductive unit for difficult plants.",
+    "Do not use generic 'wild rye' gestalt when spikelet structures are available."
+  ],
+  "realistic_lookalikes": [
+    {
+      "lookalike": "Hordeum spp.",
+      "separate_by": "Compare the spikelet arrangement at each rachis node and the bristly awn architecture; photograph a node-level spikelet cluster rather than relying on the fuzzy silhouette."
+    },
+    {
+      "lookalike": "other spike-forming Poaceae",
+      "separate_by": "Use an intact spikelet to document glumes, number of florets and awn origin; branched panicles exit the Elymus doorway immediately."
+    }
+  ],
+  "diagnostic_photo_checklist": [
+    {
+      "priority": 1,
+      "role": "same-scale mature whole-spike comparison",
+      "target": "E. canadensis vs E. virginicus",
+      "labels": [
+        "spike posture",
+        "rachis",
+        "awn spread"
+      ],
+      "purpose": "Teach the quickest field split without relying on color."
+    },
+    {
+      "priority": 1,
+      "role": "matched intact spikelet macro",
+      "target": "both species",
+      "labels": [
+        "glumes",
+        "florets",
+        "lemma awns",
+        "rachis attachment"
+      ],
+      "purpose": "Tie the fast silhouette cue to reproductive structure."
+    },
+    {
+      "priority": 2,
+      "role": "spike rachis-node macro",
+      "target": "representative Elymus",
+      "labels": [
+        "rachis",
+        "spikelet attachment"
+      ],
+      "purpose": "Teach what makes this a spike and separate look-alike spike grasses."
+    },
+    {
+      "priority": 2,
+      "role": "culm node + collar/ligule",
+      "target": "representative Elymus",
+      "labels": [
+        "node",
+        "sheath",
+        "ligule",
+        "blade"
+      ],
+      "purpose": "Reinforce the grass/genus workflow before species separation."
+    },
+    {
+      "priority": 3,
+      "role": "vegetative-only caution card",
+      "target": "both species",
+      "labels": [
+        "species ID deferred",
+        "seek mature spike"
+      ],
+      "purpose": "Prevent false confidence from overlapping leaves/habit."
+    }
+  ],
+  "media_routing": {
+    "existing_project_media": "Reuse exact Elymus project/user/Joey media only when it clearly shows one of the listed diagnostic roles.",
+    "acquisition_owner": "Diagnostic Photo Polish",
+    "instruction": "Highest-value acquisition is a matched mature-spike pair plus intact spikelet macros; generic meadow/habit photos are secondary."
+  },
+  "diagnostic_review_handoffs": [
+    "Verify difficult/intermediate Elymus material from an intact mature spikelet; do not force species from leaves alone.",
+    "Species taxonomy/range certification and canonical installation remain outside this lane."
+  ],
+  "sources": [
+    {
+      "source": "Existing project Poaceae family module",
+      "path": "content/taxa/Poaceae/family.json",
+      "supports": "grass anatomy, collar/ligule workflow and spikelet terminology"
+    },
+    {
+      "source": "Live Master Plant Pool",
+      "supports": "approved source-pool membership for E. canadensis and E. virginicus"
+    },
+    {
+      "source": "Texas A&M Plants of Texas Rangelands — Canada/Virginia comparison",
+      "url": "https://rangeplants.tamu.edu/plant/canada-wildrye/"
+    },
+    {
+      "source": "Texas A&M Plants of Texas Rangelands — Virginia/Canada comparison",
+      "url": "https://rangeplants.tamu.edu/plant/virginia-wildrye/"
+    },
+    {
+      "source": "Matt Lavin Wikimedia Commons Virginia bowed U glumes (CC BY-SA)",
+      "url": "https://commons.wikimedia.org/wiki/File:Elymus_virginicus_(3923888937).jpg"
+    },
+    {
+      "source": "Matt Lavin Wikimedia Commons Canada glume pair (CC BY-SA)",
+      "url": "https://commons.wikimedia.org/wiki/File:Elymus_canadensis_(3920850346).jpg"
+    }
+  ],
+  "curation_status": {
+    "version": "1.0-genus-comparison-builder",
+    "last_reviewed": "2026-10-21",
+    "structural_lesson": "complete",
+    "visual_lock": "matched spike + spikelet comparison pending",
+    "species_installation": "independent",
+    "manual_elymus_pair_20261021": "FIELD_READY_PHOTO_GAPS",
+    "canonical_species_count": 2,
+    "photo_roles_verified": 4,
+    "added_public_galleries": 1,
+    "actual_new_installed_jpegs": 0,
+    "diagnostic_second_pass_canada_20261022": {
+      "status": "FIELD_READY_PHOTO_GAPS",
+      "new_central_texas_photo_panels": 9,
+      "genus_photo_panels": 14,
+      "source_collection": "© Bob Harms, Selected Central Texas Monocots; permitted scientific and educational use with attribution ONLY (NOT Creative Commons)",
+      "source_subject": "Elymus canadensis (Canada wildrye)",
+      "new_local_jpeg_files": 0,
+      "new_pixel_arrows": 0,
+      "diagnostic_roles": [
+        "attached upper flowering culm",
+        "ripening awned single spike",
+        "flowering anthers",
+        "pair/group of multi-flowered spikelets per rachis node",
+        "true detached glumes and florets",
+        "clasping claw auricles and short central membranous ligule"
+      ],
+      "remaining": [
+        "measured locally attached Canadian-vs-Virginia glume bases; hybrids source hold",
+        "whole rooted same Texas plant (not pictured in b)",
+        "mm-exact hidden ligule edge and final mobile pixel QA"
+      ],
+      "original_taxa_rights_native_county_status_untouched": true
+    },
+    "virginia_harms_five_source_pixel_arrows_20261023": 10,
+    "elymus_canadensis_harms_nine_local_arrows_20261023": {
+      "source_photo_origins": "Elymus canadensis nine real Bob Harms original exact source photos",
+      "arrow_total": 18,
+      "status": "BROAD_ORGAN_ONLY__FINE_LIGULE_GLUML1MM_HOLD"
+    }
+  },
+  "genus_diagnostics": {
+    "rachis": "RACHIS is the central spike axis. Look at a node for attached multi-flowered spikelets, each with outer GLUMES and inner LEMMAS.",
+    "glume_bases": "On multiple ripe spikelets: pale outward bowing U of hardened outer glume feet supports VIRGINIA; straighter narrower V supports CANADA. The CC BY-SA Montana Virginia macro is source-reviewed and actually displays the U-shaped feet; do not assume all photos have enough detail. Hybrid intermediates cannot be forced.",
+    "awns": "The AWN is a bristle from a lemma. Canada wildrye often has long spreading or curving awns and a nodding spike; Virginia wildrye tends toward a tighter erect spike with shorter, straighter awns.",
+    "collar": "COLLAR is the blade/sheath junction; LIGULE is the small membrane inside. Useful grass anatomy, not a reliable species separator."
+  },
+  "look_here_first": "ELYMUS (wildryes) makes a continuous WHEATLIKE SPIKE with several-flowered SPIKELETS at nodes along the central RACHIS, not a loose branching PANICLE. To split the two installed species, inspect MATURE GLUME BASES: Canada often relatively straight/narrow V with DROOPING long-bristled heads; Virginia often hard, pale U-BOWED feet with ERECT more compact heads. Texas A&M cautions they hybridize, so conflicting characters stay Elymus sp.",
+  "comparison_lesson": {
+    "title": "Canada vs Virginia wildrye — true spike, glume bases and mature awns",
+    "memory_rule": "CANADA: often long drooping spike and splayed awns; narrow V-like glume base. VIRGINIA: compact upright spike, paler bony U-like glume bases.",
+    "quick_split": [
+      "Canada = mature spike generally arches or nods and has long spreading lemma awns. Base of outer glumes relatively slender/straight at central node.",
+      "Virginia = spike stays stiffer and upright, often compact; awns usually shorter/straighter; outer glume feet turn outward and harden pale/bony with U-like open base.",
+      "Both = cool-season perennial wildryes with MULTIFLOWERED spikelets attached at successive nodes on one central SPIKE; unlike Texas wintergrass's loose branching PANICLE.",
+      "Texas A&M notes hybridization between Canada and Virginia wildrye. Treat intermediate nodes/awns/posture as Elymus sp. unless voucher work resolves them."
+    ],
+    "field_safety": "Cannot certify either species as target-zone native from this work; preserve UNRESOLVED range fields. Do not use vegetation-only or source image metadata to claim Hays specimen.",
+    "field_matrix": [
+      {
+        "character": "Mature seed spike",
+        "canada": "Longer, arching or nodding",
+        "virginia": "Stiffer, erect, densely crowded",
+        "check": "Always include entire attached mature spike."
+      },
+      {
+        "character": "Awns",
+        "canada": "Long, visibly divergent/curved",
+        "virginia": "Usually shorter, straighter",
+        "check": "Check many spikelets on one intact spike; overlap possible."
+      },
+      {
+        "character": "Paired glume bases",
+        "canada": "Relatively straight and narrower, sharp V-type",
+        "virginia": "Pale hardened, bowed outward, cup/U-type",
+        "check": "Best anatomical comparison at 10–20× on multiple mature nodes."
+      },
+      {
+        "character": "How spikelets attach",
+        "canada": "Two (sometimes more) multi-flowered spikelets along one central spike",
+        "virginia": "Likewise multi-flowered spikelets at successive central nodes",
+        "check": "Genus trait; not a species split."
+      },
+      {
+        "character": "Cool-season grass comparison",
+        "canada": "Elymus spike, not branched",
+        "virginia": "Elymus spike, not branched",
+        "check": "Texas wintergrass has loose panicle of single-flowered spikelets."
+      }
+    ]
+  },
+  "visual_comparison": {
+    "title": "Elymus wildryes — real Canada awn/spikelet, flower, auricle and detached-bract lessons",
+    "subtitle": "Canada 9 Bob Harms source-original closeups now physically archived alongside five Virginia wildrye source originals and Canada vs Virginia structural comparison. Incomplete mm-level glume bases and local taxon vouchers remain flagged.",
+    "memory_rule": "ELYMUS: SPIKE not branched panicle; 2+ multi-FLORETED spikelets at rachis NODE; ligule a SHORT MEMBRANE, auricles = paired CLAWS. Canada (long awned mature nodding spikes, straighter narrow basal V glumes) vs Virginia (upright compact, thick outbowed U glume feet) but hybrids occur.",
+    "items": [
+      {
+        "label": "CANADA — two paired spikelets and narrow glumes at a rachis node",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Elymus_canadensis_%283920850346%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Original Montana macro shows pointed glumes and multiple florets, source-captioned as pairs at each central rachis joint",
+        "caption": "Look for the central spike rachis and paired multiflowered spikelets. Long, narrow glumes flank their bases; leaflike bracts enclosing florets are lemmas. This source illustration is about GENUS architecture, not a pixel-proven V-shape glume-base measurement. Wikimedia's taxon depiction metadata is not fully consistent with the original source species label; use as source-labelled teaching reference.",
+        "why_it_matters": "Explains what a spikelet, glume, rachis and lemma mean before the Canada versus Virginia distinction.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Elymus_canadensis_(3920850346).jpg",
+        "markers": [
+          {
+            "label": "Paired spikelet region",
+            "label_x": 4,
+            "label_y": 8,
+            "target_x": 39,
+            "target_y": 31
+          },
+          {
+            "label": "Spike rachis joint",
+            "label_x": 6,
+            "label_y": 86,
+            "target_x": 22,
+            "target_y": 63
+          }
+        ],
+        "photo_status": "Original 1264×644 Commons photograph visibly inspected. Two gross structure arrows only; source describes glume/rachis group but not a botanically independently verified node-level taxon. Montana, not Hays."
+      },
+      {
+        "label": "CANADA — several mature arching/nodding spikes",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Elymus_canadensis_%283738625511%29.jpg/960px-Elymus_canadensis_%283738625511%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Actual Montana landscape photo of multiple arching Canada wildrye heads; seedheads visible against dry roadcut",
+        "caption": "Mature spikes arc and droop downward; the longer awns spread away from the spike axis. Look for the upper-left and mid-left bent spikes, not the unrelated plants in the background.",
+        "why_it_matters": "Naturalistic growth form: several heads have obvious downward curves while the connected culms emerge from the clump.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Elymus_canadensis_(3738625511).jpg",
+        "markers": [
+          {
+            "label": "Drooping mature spike",
+            "label_x": 4,
+            "label_y": 16,
+            "target_x": 43,
+            "target_y": 32
+          },
+          {
+            "label": "Second bent spike",
+            "label_x": 4,
+            "label_y": 61,
+            "target_x": 43,
+            "target_y": 56
+          }
+        ],
+        "photo_status": "960×720 Wikimedia source was visually inspected. Gross spike silhouettes arrowed; exact awn and glume-base anatomy not resolved from this wide scene."
+      },
+      {
+        "label": "VIRGINIA — actual pale, outward-bowed bony glume bases",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Elymus_virginicus_%283923888937%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Diagnostic Montana Matt Lavin high-contrast macro of two spikelets and four pale glumes with hardened divergent bases",
+        "caption": "At the lowest part of the picture, each group of paired pale glumes bows away from the central point, creating a broad U or cup-shaped basal opening. The slender outer glumes flank hairy inner lemma/floret bodies. Compare Canada wildrye's typically narrower, straighter V-like glume bases, but allow intermediate hybrids.",
+        "why_it_matters": "This is the species-level structure the existing Virginia gallery lacked; it is much stronger than an upright-head silhouette alone.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Elymus_virginicus_(3923888937).jpg",
+        "markers": [
+          {
+            "label": "Outward-bowed glume bases",
+            "label_x": 2,
+            "label_y": 72,
+            "target_x": 47,
+            "target_y": 79
+          },
+          {
+            "label": "Pale paired glumes",
+            "label_x": 71,
+            "label_y": 22,
+            "target_x": 78,
+            "target_y": 51
+          }
+        ],
+        "photo_status": "Actual 544×1344 Wikimedia file visually inspected at native aspect ratio; lower bowed/bony bases and paired outer glumes are legible, arrows only to gross photographed structures. Original photographer specifically identifies this feature; no local Hays morphology claimed."
+      },
+      {
+        "label": "VIRGINIA — upright compact flowering spikes",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Elymus_virginicus_%286181469182%29.jpg/500px-Elymus_virginicus_%286181469182%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Montana source-labelled Virginia wildrye photograph, three erect crowded wheatlike mature heads with short straighter awns",
+        "caption": "Three stiffly ascending seed spikes with closely packed awned spikelets. Their posture and compactness support Virginia compared to the looser Canada mature head; photographed spikelets alone are not enough if hybridization is suspected.",
+        "why_it_matters": "Shows the upright compact seedhead silhouette as the first field decision.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Elymus_virginicus_(6181469182).jpg",
+        "markers": [
+          {
+            "label": "Erect tight spike",
+            "label_x": 77,
+            "label_y": 15,
+            "target_x": 63,
+            "target_y": 43
+          },
+          {
+            "label": "Compact spikelets",
+            "label_x": 7,
+            "label_y": 65,
+            "target_x": 32,
+            "target_y": 53
+          }
+        ],
+        "photo_status": "500×667 Commons image inspected. Gross seedhead and spikelet grouping arrowed, NOT glume-base anatomy; original source Montana."
+      },
+      {
+        "label": "TEXAS WINTERGRASS — loose PANICLE, one long awn per hard floret (comparison only)",
+        "scientific_name": "Nassella leucotricha",
+        "image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Nassella%20leucotricha.jpg",
+        "image_fit": "contain",
+        "image_role": "USDA-ARS public-domain mature fruit; different grass genus with open panicle not a crowded multiflowered spike",
+        "caption": "One very long twisted awn emerges from one hard sharply pointed fertile lemma; Elymus has a central spike axis with multiple florets within spikelets at successive nodes. Compare the whole flowering head before counting awns.",
+        "why_it_matters": "Prevents confusion between two cool-season Texas native-looking grasses by distinguishing a true spike and an open panicle.",
+        "creator": "Tracey Slotta / USDA-ARS",
+        "license": "Public Domain (US federal work)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Nassella_leucotricha.jpg",
+        "markers": [],
+        "photo_status": "USDA-PD source previously verified and annotated on original wintergrass card; comparison-only with no reused incorrect coordinate markers."
+      },
+      {
+        "label": "NEW · ATTACHED flowering culm and flag leaf · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-b.jpg",
+        "image_fit": "contain",
+        "image_role": "Source-labelled single adult Elymus canadensis upper flowering culm with an upright spike and visible leaf/sheath attachment and centimeter reference; lower roots and crown are NOT pictured.",
+        "caption": "The original photographer calls this a whole-plant illustration, but the available photograph actually shows an UPPER flowering culm with a leaf, not an exposed rooted plant. Learn the single continuous stem supporting a compact spike; the full basal crown is still a gap.",
+        "why_it_matters": "Connect leaf position to a source-labelled real flowering culm rather than relying on one isolated head.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-b.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Single upright spike",
+            "label_x": 4,
+            "label_y": 7,
+            "target_x": 25,
+            "target_y": 20
+          },
+          {
+            "label": "Attached upper leaf",
+            "label_x": 55,
+            "label_y": 15,
+            "target_x": 75,
+            "target_y": 28
+          }
+        ]
+      },
+      {
+        "label": "NEW · BLOOMING awned spike — one axis not a panicle · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-i.jpg",
+        "image_fit": "contain",
+        "image_role": "Photographed live Canada wildrye flowering spike with long diverging lemma awns; overall spike and flowering stages visible, not a measured whole rooted clump.",
+        "caption": "One upright-to-arching flowering SPIKE, not a branching panicle. The long awns spread from several spikelet-bearing nodes. A single spike photo is not enough to distinguish Virginia wildrye when the glume bases are not examined.",
+        "why_it_matters": "Whole inflorescence structure before any microscopic dissection.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-I.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Long divergent awns",
+            "label_x": 63,
+            "label_y": 8,
+            "target_x": 69,
+            "target_y": 32
+          },
+          {
+            "label": "Crowded flowering spikelets",
+            "label_x": 2,
+            "label_y": 72,
+            "target_x": 49,
+            "target_y": 63
+          }
+        ]
+      },
+      {
+        "label": "NEW · DRYING spikelet heads — long awns and ripening units · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-i1.jpg",
+        "image_fit": "contain",
+        "image_role": "Source-photographed two-panel dry mature Elymus canadensis spike and close textured awns, with original segmented metric ruler at margin; individual lemma awn origin unarrowed.",
+        "caption": "The mature dried head develops many straw-colored divergent awns. Note the original photo scale and the way the spikelet bodies overlap. Two views are from the original source collage, not two confirmed different plants.",
+        "why_it_matters": "Shows seasonal shift from green blooming heads to ripe golden awns.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-i1.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Close-up mature dry spikelets",
+            "label_x": 1,
+            "label_y": 7,
+            "target_x": 29,
+            "target_y": 36
+          },
+          {
+            "label": "Complete dry awned spike",
+            "label_x": 60,
+            "label_y": 92,
+            "target_x": 83,
+            "target_y": 48
+          }
+        ]
+      },
+      {
+        "label": "NEW · NODE DETAIL — crowded multiflowered paired spikelets · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-j1.jpg",
+        "image_fit": "contain",
+        "image_role": "Source photographed attached E. canadensis central rachis showing grouped narrow many-flowered awned spikelets; original physical scale at left, no individualized glume-tip pixel labels.",
+        "caption": "Follow the central RACHIS vertically. At successive joints narrow awned MULTIFLORED spikelets crowd together, their floral units enclosed in long pointed lemmas. Count the true spikelets per one node with the stem unobstructed, rather than treating each awn as a spikelet.",
+        "why_it_matters": "A crucial photo for separating Elymus from Hordeum, Nassella and panicle-forming grasses.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-J1.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Attached spikelet cluster",
+            "label_x": 1,
+            "label_y": 20,
+            "target_x": 40,
+            "target_y": 32
+          },
+          {
+            "label": "Main flowering rachis",
+            "label_x": 4,
+            "label_y": 87,
+            "target_x": 33,
+            "target_y": 75
+          }
+        ]
+      },
+      {
+        "label": "NEW · FLOWERING DETAIL — true rachis and anthers · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-j.jpg",
+        "image_fit": "contain",
+        "image_role": "Two photographed views of exact E. canadensis flowering axis with small pale/cream anthers emerging among narrow glumes and awned lemmas; source photos with real original metric scale.",
+        "caption": "These are REAL flowering wildrye units on a central spike rachis. The little dangling pale-yellow units are ANTHERS, not additional grains or basal glumes. The major side structures are awns, and multiple florets share a spikelet.",
+        "why_it_matters": "Distinguishes exposed pollen-bearing organs from the glumes, lemma awns and entire spikelets.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-J.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Pale dangling anthers",
+            "label_x": 1,
+            "label_y": 43,
+            "target_x": 31,
+            "target_y": 51
+          },
+          {
+            "label": "Fine awns beyond spikelets",
+            "label_x": 64,
+            "label_y": 5,
+            "target_x": 83,
+            "target_y": 25
+          }
+        ]
+      },
+      {
+        "label": "NEW · EXPOSED PALE ANTHERS — pollen release, awns separate · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-j3.jpg",
+        "image_fit": "contain",
+        "image_role": "Close actual E. canadensis flowering rachis with protruding short pale/yellowish anthers and many long slender awns, original photo reference ruler on right.",
+        "caption": "REAL open blooms: numerous light oblong pollen-bearing ANTHERS protrude from green spikelet parts. The long hair-thin lines belong to the AWNS, not purple stigmas or bare pedicels. This is a flowering rather than fully ripe spikelet specimen.",
+        "why_it_matters": "Teaches living pollen-stage anatomy and reduces wrong anther/awn arrows.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-J3.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Pale yellow pollen anthers",
+            "label_x": 1,
+            "label_y": 8,
+            "target_x": 37,
+            "target_y": 11
+          },
+          {
+            "label": "Long fine awns",
+            "label_x": 66,
+            "label_y": 89,
+            "target_x": 81,
+            "target_y": 53
+          }
+        ]
+      },
+      {
+        "label": "NEW · SINGLE detached SPIKELET — glumes, lemmas and divergent awns · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-s.jpg",
+        "image_fit": "contain",
+        "image_role": "Two photographed magnification levels of original E. canadensis detached awned spikelet; greenish narrow two glumes and multiple overlapping lemma-bearing florets spread along one rachilla with author scale.",
+        "caption": "One FULL spikelet detached from the true whole SPIKE: at its base lie the pair of slender outer GLUMES, above them several florets each enclosed in a LEMMA and PALEA, their long awns diverging. The left/superior scale is real; no individual microscopic palea margin arrow added.",
+        "why_it_matters": "True species reproductive anatomy was previously barely photographed; makes one spikelet versus several florets obvious.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-S.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Single separated multi-flowered spikelet",
+            "label_x": 3,
+            "label_y": 10,
+            "target_x": 22,
+            "target_y": 28
+          },
+          {
+            "label": "Long slender awns",
+            "label_x": 58,
+            "label_y": 8,
+            "target_x": 62,
+            "target_y": 17
+          }
+        ]
+      },
+      {
+        "label": "NEW · DISARTICULATION — one node with glumes, individual florets · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-d.jpg",
+        "image_fit": "contain",
+        "image_role": "Photographed mature Elymus canadensis rachis segments, pairs of whole spikelets and two separately detached lemma/palea units at original ruler, with each true glume and awn line visible; no newly fabricated micro-arrows.",
+        "caption": "This is a genuine anatomical dissection showing pieces the plant sheds. On the left is the central rachis with attachment nodes; below are intact narrow outer glumes around a spikelet, and upper-center two individually detached flowering bracts/floret parts. Shedding BETWEEN FLORETS differs from a panicle losing a whole seed.",
+        "why_it_matters": "Helps crew learn what a rachilla, disarticulation, glume and individual floret actually refer to.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-d.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Central rachis segment",
+            "label_x": 4,
+            "label_y": 13,
+            "target_x": 26,
+            "target_y": 34
+          },
+          {
+            "label": "Separated outer awned structures",
+            "label_x": 51,
+            "label_y": 93,
+            "target_x": 54,
+            "target_y": 73
+          }
+        ]
+      },
+      {
+        "label": "NEW · TRUE COLLAR — clasping auricles and short membranous ligule · PROVISIONAL PHOTO REVIEW",
+        "scientific_name": "Elymus canadensis",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/bob-harms-canada-wildrye-elca4-l.jpg",
+        "image_fit": "contain",
+        "image_role": "Three photographed source-verified attached Elymus canadensis leaf blade/split sheath junction views and true black/white original scale. Lateral clasping pointed AURICLES clearly shown; thin true membrane near inner throat not independently outlined by new arrow.",
+        "caption": "This image finally shows a real CANADA WILDRYE blade–sheath junction: small curved pointed AURICLES clasp the culm at both sides. A short MEMBRANOUS LIGULE lies just inside where leaf blade separates from sheath; don't call the whole collar, pointed auricles or torn sheath lip 'the ligule'. The original photographer's scale is visible, but the membrane margin has NOT been separately measured/arrow-certified.",
+        "why_it_matters": "Closes the absolute missing vegetative anatomy photo and separates true auricles from true ligule.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELCA4-L.html",
+        "photo_status": "Visually inspected the true original author-photographed local JPEG at full source dimensions. Two BROAD anatomical arrows to actually visible spike, leafy culm, rachis, multi-flowered spikelet, awns, anthers, separated parts, or collar/auricle. No asserted sub-mm true free ligule membrane, palea origin, measured U/V glume-base difference, or same-Hays voucher. PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Clasping leaf auricle",
+            "label_x": 1,
+            "label_y": 36,
+            "target_x": 34,
+            "target_y": 50
+          },
+          {
+            "label": "Blade–sheath collar junction",
+            "label_x": 58,
+            "label_y": 10,
+            "target_x": 58,
+            "target_y": 48
+          }
+        ]
+      },
+      {
+        "label": "TRUE CENTRAL TEXAS UPPER PLANT HABIT — original source-labelled plant",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/bob-harms-virginia-wildrye-elvi3-b.jpg",
+        "image_fit": "contain",
+        "image_role": "TRUE CENTRAL TEXAS UPPER PLANT HABIT — original source-labelled plant",
+        "caption": "Bob Harms original depicts an actual Virginia wildrye culm and its leaves in the Central Texas collection. Do not claim exposed same-voucher roots unless they are clearly in frame.",
+        "why_it_matters": "True Central Texas source-confirmed photographs add local botanical detail to out-of-state glume and Canada comparisons, without asserting a measured local voucher.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELVI3-b.html",
+        "photo_status": "Original Central Texas Bob Harms RGB JPEG inspected at full intrinsic resolution. New arrows point ONLY to actual gross structures: roots, spike, flowering spikelets, rachis, awns and blade. No claim that photo shows measured U-shaped mature glume base, 0.5mm true ligule, or independent Hays voucher; PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Upright compact spike",
+            "label_x": 1,
+            "label_y": 10,
+            "target_x": 58,
+            "target_y": 17
+          },
+          {
+            "label": "Blade along flowering culm",
+            "label_x": 2,
+            "label_y": 87,
+            "target_x": 52,
+            "target_y": 80
+          }
+        ]
+      },
+      {
+        "label": "SECOND CENTRAL TEXAS PLANT / SHEATH VIEW — author original",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/bob-harms-virginia-wildrye-elvi3-b1.jpg",
+        "image_fit": "contain",
+        "image_role": "SECOND CENTRAL TEXAS PLANT / SHEATH VIEW — author original",
+        "caption": "A second source-labelled Virginia wildrye plant view: use for stem, sheath or crown only where actual pictured parts are clear; not a certified separate county-vouched plant.",
+        "why_it_matters": "True Central Texas source-confirmed photographs add local botanical detail to out-of-state glume and Canada comparisons, without asserting a measured local voucher.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELVI3-b1.html",
+        "photo_status": "Original Central Texas Bob Harms RGB JPEG inspected at full intrinsic resolution. New arrows point ONLY to actual gross structures: roots, spike, flowering spikelets, rachis, awns and blade. No claim that photo shows measured U-shaped mature glume base, 0.5mm true ligule, or independent Hays voucher; PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Connected fibrous root tuft on source specimen",
+            "label_x": 5,
+            "label_y": 94,
+            "target_x": 41,
+            "target_y": 88
+          },
+          {
+            "label": "Mature wildrye spike",
+            "label_x": 60,
+            "label_y": 5,
+            "target_x": 83,
+            "target_y": 9
+          }
+        ]
+      },
+      {
+        "label": "TRUE FLOWERING SPIKE — Virginia wildrye",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/bob-harms-virginia-wildrye-elvi3-i.jpg",
+        "image_fit": "contain",
+        "image_role": "TRUE FLOWERING SPIKE — Virginia wildrye",
+        "caption": "Source photograph of flowering Virginia wildrye; note the main unbranched rachis bearing crowded spikelets, unlike an open Nassella panicle.",
+        "why_it_matters": "True Central Texas source-confirmed photographs add local botanical detail to out-of-state glume and Canada comparisons, without asserting a measured local voucher.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELVI3-I.html",
+        "photo_status": "Original Central Texas Bob Harms RGB JPEG inspected at full intrinsic resolution. New arrows point ONLY to actual gross structures: roots, spike, flowering spikelets, rachis, awns and blade. No claim that photo shows measured U-shaped mature glume base, 0.5mm true ligule, or independent Hays voucher; PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Crowded green flowering spikelets",
+            "label_x": 1,
+            "label_y": 62,
+            "target_x": 54,
+            "target_y": 51
+          },
+          {
+            "label": "Slender awns outside spike",
+            "label_x": 6,
+            "label_y": 11,
+            "target_x": 40,
+            "target_y": 26
+          }
+        ]
+      },
+      {
+        "label": "INFLORESCENCE CLOSER — authentic spike and awns",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/bob-harms-virginia-wildrye-elvi3-i1.jpg",
+        "image_fit": "contain",
+        "image_role": "INFLORESCENCE CLOSER — authentic spike and awns",
+        "caption": "Bob Harms authentic flowering spike close-up: follow its upright central axis, awned spikelets and enclosed units. Compare bent Canada wildrye separately; posture alone is unreliable.",
+        "why_it_matters": "True Central Texas source-confirmed photographs add local botanical detail to out-of-state glume and Canada comparisons, without asserting a measured local voucher.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELVI3-i1.html",
+        "photo_status": "Original Central Texas Bob Harms RGB JPEG inspected at full intrinsic resolution. New arrows point ONLY to actual gross structures: roots, spike, flowering spikelets, rachis, awns and blade. No claim that photo shows measured U-shaped mature glume base, 0.5mm true ligule, or independent Hays voucher; PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Mature, tightly packed straw-colored spike",
+            "label_x": 1,
+            "label_y": 54,
+            "target_x": 50,
+            "target_y": 51
+          },
+          {
+            "label": "Long fine awns",
+            "label_x": 61,
+            "label_y": 5,
+            "target_x": 66,
+            "target_y": 23
+          }
+        ]
+      },
+      {
+        "label": "FLOWERING REPRODUCTIVE DETAIL — source-confirmed Virginia wildrye",
+        "scientific_name": "Elymus virginicus",
+        "image_url": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/bob-harms-virginia-wildrye-elvi3-j2.jpg",
+        "image_fit": "contain",
+        "image_role": "FLOWERING REPRODUCTIVE DETAIL — source-confirmed Virginia wildrye",
+        "caption": "Source labelled actual close flowering units; do not declare one individual glume base U-shaped without genuine visible outline, nor label anthers or ligule unless shown.",
+        "why_it_matters": "True Central Texas source-confirmed photographs add local botanical detail to out-of-state glume and Canada comparisons, without asserting a measured local voucher.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ELVI3-J2.html",
+        "photo_status": "Original Central Texas Bob Harms RGB JPEG inspected at full intrinsic resolution. New arrows point ONLY to actual gross structures: roots, spike, flowering spikelets, rachis, awns and blade. No claim that photo shows measured U-shaped mature glume base, 0.5mm true ligule, or independent Hays voucher; PROVISIONAL — USER PHOTO REVIEW PENDING.",
+        "markers": [
+          {
+            "label": "Actual central spike rachis",
+            "label_x": 55,
+            "label_y": 78,
+            "target_x": 51,
+            "target_y": 62
+          },
+          {
+            "label": "Long slender awns",
+            "label_x": 5,
+            "label_y": 10,
+            "target_x": 25,
+            "target_y": 31
+          }
+        ]
+      }
+    ],
+    "overlay_note": "Each Matt Lavin photo individually credited CC BY-SA 2.0 (Montana). No false arrow on wide vegetation-only Virginia source; its image gallery metadata corrected. No locally vouchered Hays spikelet macro obtained.\nCanada wildrye manual licensed photo role upgrade 2026-10-22: nine original Bob Harms ELCA4-b,I,i1,J,J1,J3,S,d,L source photos from Selected Central Texas Monocots. The original image b is only an upper flowering CULM with leaf and spike, not actual roots; exact source collection predominantly Travis/N Hays but no individual plant voucher. Copyright Bob Harms — free for scientific/educational use with attribution, NOT CC. All nine linked unchanged to the ordinary public grass genus learner as PROVISIONAL USER PHOTO REVIEW; no binary file added, no invented new arrow. Preserve older Montana Commons Matt Lavin photo's inconsistent structured species depiction (Elymus wiegandii) warning and the documented E. canadensis × virginicus hybrid caution."
+  },
+  "visual_status": "FIELD_READY_PHOTO_GAPS — 2 canonical species, four actually diagnostic licensed Elymus images with gross arrows, Texas wintergrass one-awed comparison; local 1-mm glume macro and possible hybrid voucher remain",
+  "visual_needs": [
+    "Matched Hays mature spike portraits Canada vs Virginia with multiple attached rachis nodes",
+    "Canada straight V and Virginia pale U hardened glume BASE closeups with millimeter ruler from same plants",
+    "Fresh vs dry hybrid/intermediate spikelet documentation",
+    "Verified Hays leaf blade auricles/ligules from mature flowering shoot"
+  ]
+}

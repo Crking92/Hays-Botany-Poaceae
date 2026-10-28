@@ -1,0 +1,698 @@
+{
+  "rank": "genus",
+  "family": "Poaceae",
+  "name": "Schizachyrium",
+  "common_group": "Little bluestems",
+  "project_scope": {
+    "selection_mode": "small-genus structural learner batch",
+    "species_ids": [
+      "schizachyrium-scoparium"
+    ],
+    "species_count": 1,
+    "note": "The current project pool has one canonical Schizachyrium anchor; species taxonomy/range decisions remain in the species package."
+  },
+  "recognition": {
+    "where_to_look_first": "Native little bluestem shows DISTINCT relatively tight bunches and many SHORT silvery racemes terminating separate leafy upper branches. Introduced KR bluestem instead presents several LONG fingerlike racemes gathered into one terminal panicle; both require same-plant leaf collars and paired spikelet macro.",
+    "priority": [
+      "numerous separate SHORT terminal or axillary racemes throughout upper culm",
+      "tight perennial bunch",
+      "true leaf collar and mature paired spikelets",
+      "tight bunch habit",
+      "branched upper culm",
+      "short terminal fuzzy racemes on branchlets",
+      "silvery fluffy seed stage",
+      "reddish to mahogany late-season stems"
+    ]
+  },
+  "comparisons": [
+    {
+      "with": "Bothriochloa",
+      "rule": "Schizachyrium scatters many short racemes across branched upper stems; Bothriochloa concentrates its rames into a more unified terminal head whose node hair and branch architecture are major ID clues."
+    },
+    {
+      "with": "Anatherum",
+      "rule": "Anatherum glomeratum builds a dense brushlike fluffy crown; Schizachyrium scoparium shows repeated short racemes terminating separate upper branchlets."
+    }
+  ],
+  "visual_anchors": [
+    {
+      "species_id": "schizachyrium-scoparium",
+      "roles": [
+        "Field reference / bunch habit",
+        "Central Texas field reference",
+        "Feathery inflorescence / infructescence",
+        "Ligule / sheath / node morphology"
+      ]
+    }
+  ],
+  "visual_needs": [
+    "annotated whole-plant image tracing the branched upper culm and its short terminal racemes",
+    "side-by-side with KR bluestem showing distributed short racemes versus a compact fingerlike terminal head",
+    "Four original local images physically inspected, only gross recognizable features arrowed.",
+    "Bothriochloa known source photo files are from Sam Kieschnick with CC BY shorthand; review version if needed.",
+    "Schizachyrium 01 CC0 and 02 CC BY-NC-SA used; two existing externally sourced 03 and 04 with unverified licenses remain excluded from any new public visual panels.",
+    "No anatomy arrow for true ligule, leaf papillose hairs, paired spikelets, or long versus short node hairs without suitable macro.",
+    "Detailed photo pass 2026-10-22: actual Hays live little-bluestem true membrane ligule 10–20x 1-mm ruler (USGS sheath photo not enough)",
+    "Matched mature sessile/pedicellate pair and true rachis segment 1-mm scale from same Hays plant; variety-aware, exact arrow locations",
+    "DONE: original Larry Allain USGS sheath photograph physically archived and verified in GitHub. Remaining need is truly unfolded measured membrane free tip and same-voucher paired spikelet photo.",
+    "Specific photo research links now stored in little-bluestem species field_id_finish_pass.last_mile_external_evidence_search_20261022: real attached A/F/P pair + dissection, copyrighted external only; actual same-voucher 1mm ligule and Hays root-to-raceme still missing",
+    "Research-only LINK: northern Hays Bob Harms DigFlora actual L-labelled true ligule with mm reference https://w3.biosci.utexas.edu/prc/DigFlora/KR/0-BOISS4Web/SCSC-L-Shth-Nod.JPG; actual rooted tuft https://w3.biosci.utexas.edu/prc/DigFlora/KR/0-BOISS4Web/SCSC-04-P-bX.JPG. Photos are not one matched voucher and separate DigFlora copyright needs confirmation; do NOT rehost or claim 100%."
+  ],
+  "visual_status": "FIELD_READY_PHOTO_GAPS — local true flower, spikelet, separately scaled bract and ligule-zone 9-photo source series substantially closes field training; microscope same-voucher free ligule/pair still required for 100%.",
+  "curation_status": {
+    "version": "1.0-small-genus-poaceae-002",
+    "genus_audit": "adequate",
+    "species_work_independent": true,
+    "last_reviewed": "2026-10-04",
+    "manual_native_KR_pair_20261021": "2026-10-21",
+    "field_stage": "FIELD_READY_PHOTO_GAPS",
+    "original_restricted_photos_excluded": true,
+    "node_hair_conflict_flagged": true,
+    "approved_species_range_unchanged": true,
+    "rights_held_photo_excluded_20261021": true,
+    "kr_photo_clue_cleanup_20261021": true,
+    "little_bluestem_repro_photo_20261021": "FIELD_READY_PHOTO_GAPS",
+    "manual_little_kr_detail_20261021": "FIELD_READY_PHOTO_GAPS",
+    "scoparium_detailed_second_pass_20261022": {
+      "source_shown": "https://warcapps.usgs.gov/PlantID/Species/Details/2568",
+      "photo_gaps": "calibrated ligule and intact spikelet pair",
+      "source_licensed": "Public domain USGS Larry Allain photograph, EXTERNAL PROVISIONAL",
+      "added_panel": 1,
+      "added_arrows": 0,
+      "native_taxon_scope_untouched": true
+    },
+    "little_blues_nine_original_harms_20261022": {
+      "new_sp_panels": 9,
+      "new_genus_panels": 7,
+      "local_new_image_files": 9,
+      "source_license": "Copyright Bob Harms, education/science with attribution, NOT CC",
+      "original_taxa_scope_unchanged": true,
+      "remaining_unresolved_microscopic_gaps": 2
+    },
+    "usgs_little_bluestem_real_sheath_20261022": {
+      "new_local_photos": 1,
+      "source": "https://warcapps.usgs.gov/PlantID/Species/Details/2568",
+      "right": "Federal PD Larry Allain",
+      "existing_genus_panel_reused": true,
+      "native_taxonomy_unchanged": true
+    },
+    "little_bluestem_final_research_20261022": {
+      "original_scale_spikelet_pair": "Bob Harms DigFlora SCSC-disart-w-red.JPG, research link only",
+      "dissected_first_second_glume": "Bob Harms DigFlora SCSC-spkcut.JPG, research link only",
+      "short_ligule_unscaled": "G D Bebeau split sheath photo, research link only",
+      "county_voucher": "Lyday 147 SWT cited Hays Co., scanned image not found",
+      "photos_new": 0,
+      "confirmed_final_100_percent": false,
+      "status": "FIELD_READY_PHOTO_GAPS"
+    },
+    "little_bluestem_hays_ligule_root_source_find_20261022": {
+      "new_source_research_links": 2,
+      "images_downloaded": 0,
+      "image_rights": "Separate DigFlora copyrighted photos not independently cleared, source links only",
+      "right_status": "FIELD_READY_PHOTO_GAPS; need one-voucher 1-mm ligule and intact paired spikelet dissection",
+      "science_unchanged": true
+    },
+    "four_original_hays_schizachyrium_anatomy_sha_audit_20261022": {
+      "source_photos": 4,
+      "original_jpeg_sha_verified": true,
+      "hashes_and_anatomy_report": "reports/schizachyrium-digflora-four-source-verification-20261022.json",
+      "figure_labels": "A=axis, F=fertile sessile, P=pedicellate; g1/g2 glumes, lf/ls lemmas, ps palea; original L labels true ligule; visible roots",
+      "ligule_conflict": "FNA 0.5–2 mm vs Kew 1–3 eciliate vs SDSU fringed; real specimen variability or source interpretation, not rigid hair-only",
+      "distinct_rights": "DigFlora/KR photos research-link only until separate public-rehosting grant; Harms Selected Monocots credit grant not extended automatically",
+      "stage": "FIELD_READY_PHOTO_GAPS",
+      "no_new_local_jpegs": true,
+      "native_taxonomy_hold_unchanged": true
+    }
+  },
+  "look_here_first": "LITTLE BLUESTEM: upper flowering shoots have separate SHORT silk-haired solitary racemes at MANY leafy branch tips; KR has a few-or-many LONG terminal fingers from one grouped terminal panicle. New official USGS leaf-base photo shows green overlapped sheath and some fine sheath-margin hairs, but this is NOT a ligule measurement. Verify the flattened/keeled actual sheath, TRUE short membranous ligule (FNA 0.5–2 mm; Kew GrassBase 1–3 mm and describes margin as eciliate; some regional descriptions call the margin fringed) with scale, and same-plant paired spikelets. Pedicellate companions differ across little-bluestem varieties, so avoid a tiny-spikelet-only rigid key. See the species updated 16-step source-backed photo course and original DigFlora linked anatomy.",
+  "cross_genus_bluestem_comparison": {
+    "with": "Bothriochloa ischaemum",
+    "title": "Native little bluestem vs invasive KR — flowering & nonflowering field key",
+    "memory_rule": "A FEW LONG fingers together (KR) versus MANY SHORT fuzzy racemes on SEPARATE upper branches (little bluestem).",
+    "quick_split": [
+      "KR / Bothriochloa ischaemum — introduced Old World bluestem; terminal panicle typically 3–8 or more elongated fingerlike spikelet-bearing branches. Leaf UPPER surface just above collar may have stiff papilla-based hairs. Node hair sources conflict; not a single-character proof.",
+      "Little bluestem / Schizachyrium scoparium — Hays native, generally dense persistent bunch; many short racemes arise from different branches in the upper plant and become silvery/fluffy in fruit. Roots/leaf collar and actual spikelet pairs strengthen ID."
+    ],
+    "field_crew_sequence": [
+      "Photograph rooted whole clump and top-to-bottom reproductive architecture.",
+      "Trace WHERE each raceme originates: all near one terminal center = KR candidate; dispersed short units on many upper culm branches = little bluestem candidate.",
+      "At 10×, inspect KR upper leaf surface right above collar for papilla-based hairs; check true ligule on same culm.",
+      "Check paired sessile fertile/pedicelled companion spikelet details with 1-mm scale; where unresolved label bluestem sp.",
+      "Before removal or seed collection, rule out native cane bluestem and silver bluestem plus introduced Kleberg bluestem."
+    ],
+    "node_hair_caution": "Do not enforce smooth KR nodes: Texas A&M calls songarica nodes hairless; local UT Austin morphological work reports short or appressed hairs. Use combined characters. Cane bluestem tends to bear a pronounced BEARD at nodes.",
+    "species_key_table": [
+      [
+        "Plant structure",
+        "KR (introduced)",
+        "Little (native)"
+      ],
+      [
+        "Origin of flowering racemes",
+        "Several LONG branches grouped at one terminal panicle center",
+        "Multiple SHORT branches on distinct upper leafy culm branches"
+      ],
+      [
+        "Culm/base",
+        "Can branch/sprawl, often dense competitive clumps, especially when mowed",
+        "Often distinct upright dense persistent bunch"
+      ],
+      [
+        "Leaf collar clue",
+        "Stiff papilla-based hairs on upper blade near collar common",
+        "Upper blade generally lacking equivalent marked papillose patch in local UT treatments"
+      ],
+      [
+        "Node hairs",
+        "VARIABLE descriptions; not decisive",
+        "Often relatively smooth; sheath hairs possible"
+      ],
+      [
+        "Mature seed stage",
+        "Slender paired spikelets along long fingers; awned",
+        "Silky white short racemes distributed among branches; awned"
+      ],
+      [
+        "Photo still needed",
+        "Same rooted plant + complete head + collar + mature pair",
+        "Same rooted plant + true branching + short raceme + mature pair"
+      ]
+    ],
+    "photo_gap_notes": [
+      "Four original local images physically inspected, only gross recognizable features arrowed.",
+      "Bothriochloa known source photo files are from Sam Kieschnick with CC BY shorthand; review version if needed.",
+      "Schizachyrium 01 CC0 and 02 CC BY-NC-SA used; two existing externally sourced 03 and 04 with unverified licenses remain excluded from any new public visual panels.",
+      "No anatomy arrow for true ligule, leaf papillose hairs, paired spikelets, or long versus short node hairs without suitable macro."
+    ],
+    "citations": [
+      "https://www.biosci.utexas.edu/prc/DigFlora/KR/BOISS-morph.html",
+      "https://www.biosci.utexas.edu/prc/DigFlora/KR/SCSC.html",
+      "https://rangeplants.tamu.edu/plant/king-ranch-bluestem/",
+      "https://rangeplants.tamu.edu/plant/little-bluestem/"
+    ],
+    "first_clue": "KR bluestem (introduced): look for several long, slender fingerlike flowering branches clustered together at the tip of a stem. Native little bluestem has shorter fuzzy flowering branches along separate upper stems.",
+    "expert_collar_and_node_notes": {
+      "Leaf collar": "On a confirmed same-plant specimen, inspect stiff papilla-based hairs on the upper leaf blade near the collar; photograph the true ligule with a ruler.",
+      "Spikelet pairs": "At 10–20× magnification, separate an attached sessile fertile spikelet from its pedicelled companion and check the awn; the current photos do not resolve this.",
+      "Node-hair caution": "Do NOT use hairless stem nodes as a required test. Texas A&M describes glabrous KR nodes, while local UT Austin treatments have noted short hairs. A heavy beard is useful when considering native cane bluestem.",
+      "Native versus invasive decision": "Use multiple characters and preserve the project's nonnative invasive-comparison status; never remove native bluestem on a seedhead silhouette alone."
+    },
+    "photo_gallery_update_20261021": "2 existing KR close-ups plus 2 licensed Commons external references. Three safe original-photo arrows, unchanged little bluestem CC0 image.",
+    "added_little_bluestem_macro_20261021": true,
+    "short_separate_raceme_evidence": "Licensed Matt Lavin flowering close-up: short silky rachis and sheath-bearing upper inflorescence branches visible; individual pedicelled spikelet not separately determined.",
+    "native_and_introduced_status_preserved": true,
+    "diagnostic_steps": [
+      "STEP 1 — LITTLE: look at the annotated photo. Follow a short silky raceme DOWN to its own leafy branch/sheath. Find that same pattern repeated on another branch.",
+      "STEP 2 — BEFORE FLUFF: use the yellow-anther photo to recognize little bluestem in flower before dense white seed hairs develop.",
+      "STEP 3 — KR: open the next side-by-side photos and trace several LONG fingers that converge into ONE terminal panicle (these photographs show architecture, not collar).",
+      "STEP 4 — IF NO FLOWERS: look for sharply keeled/flattened leaf sheath on a tight little-bluestem bunch; examine suspected KR upper blade above collar for long stiff papilla-based hairs; neither is decisive without corroboration."
+    ],
+    "no_flower_rule": "Nonflowering grass: sharply keeled little bluestem sheaths and tidy tuft vs often spreading KR crowns; inspect upper leaf blade for KR papilla-based hairs; NEVER a reliable final ID without further mature structures.",
+    "field_matrix": [
+      {
+        "taxon": "King Ranch bluestem · Bothriochloa ischaemum",
+        "where_to_look": "Follow one complete upper culm from the flag leaf to EVERY flowering branch. Inspect the upper blade surface immediately above its ligule.",
+        "little_bluestem": "Separate SHORT silky racemes end many leafy lateral branches, usually one unit per sheath. The sheath may be sharply keeled; the blade usually lacks long stiff papillose hairs near its collar.",
+        "look_alike": "KR makes several much LONGER narrow fingers in a terminal cluster, generally 3–8 in Texas A&M; up to 17 in complex regional flora. KR often has scattered long stiff papilla-based hairs immediately above collar.",
+        "no_seedhead": "A tight perennial base + keeled sheath favors little, spreading/kinked stems + papilla-based collar hairs favors KR; take more than one leaf and do not treat habit as a final answer.",
+        "quick_rule": "Several long fingers all connected near ONE central panicle = KR candidate; numerous separate short racemes on leafy side branches = native LITTLE candidate. Under uncertainty preserve the plant."
+      },
+      {
+        "taxon": "Big bluestem · Andropogon gerardi",
+        "where_to_look": "Count the relatively stout exposed flowering fingers and inspect their common attachment point.",
+        "little_bluestem": "Many short individual racemes at distinct upper leafy branch tips.",
+        "look_alike": "Big has a few comparatively stout exposed turkey-foot-like racemes clustered together (commonly 2–6); inspect complete tip and spikelets.",
+        "quick_rule": "Few stout fingers at one tip = BIG; numerous separate short fluffy plumes along upper shoots = LITTLE."
+      },
+      {
+        "taxon": "Bushy bluestem · Anatherum glomeratum",
+        "where_to_look": "Inspect entire silhouette; part the cottony head to see hidden short paired racemes and their spathe-like bracts.",
+        "little_bluestem": "Multiple individual short racemes arise from spaced leafy upper branches rather than one compact brush.",
+        "look_alike": "Bushy has a densely crowded, often broad oblong cottony crown with many short paired rames packed together, commonly at moist sites.",
+        "quick_rule": "Big broad dense brush = BUSHY candidate; distinct separated short upper branch tips = LITTLE candidate."
+      },
+      {
+        "taxon": "Broomsedge · Anatherum virginicum",
+        "where_to_look": "Inspect how paired rames sit inside and emerge from long, flattened spathe-like sheaths.",
+        "little_bluestem": "Generally single short raceme per upper leafy branch/sheath; distinguish in several units.",
+        "look_alike": "Broomsedge usually holds paired hairy rames partly within more conspicuous longer flattened spathes; narrow upper flowering outline.",
+        "quick_rule": "One short raceme per upper leafy branch favors LITTLE; paired sheath-held flowering units favor BROOMSEDGE."
+      },
+      {
+        "taxon": "Cane bluestem · Bothriochloa barbinodis",
+        "where_to_look": "Inspect two true culm nodes just above the leaf sheath and the complete silver inflorescence.",
+        "little_bluestem": "Short individual branch-end racemes; tight bunch without a distinctive ring of long silky hairs around every true node.",
+        "look_alike": "Cane has a conspicuous long soft white beard at stem nodes and broad multi-branched fanlike seedhead.",
+        "quick_rule": "Heavy true node beard + broad fan = CANE; separate short silky upper branchlets = LITTLE."
+      },
+      {
+        "taxon": "Silver bluestem · Bothriochloa torreyana",
+        "where_to_look": "Trace whether flowering units make a narrow contracted cottony head or independent upper leafy branches.",
+        "little_bluestem": "Upper leafy branches each carry an individual short silky raceme, not a singular narrow cotton column.",
+        "look_alike": "Silver is a compact narrow white-silky plume with numerous SHORT crowded branches and usually smooth pale nodes.",
+        "quick_rule": "One narrow cottony panicle with many crowded short rames = SILVER candidate; distributed separate racemes = LITTLE."
+      },
+      {
+        "taxon": "Kleberg bluestem · Dichanthium annulatum",
+        "where_to_look": "Check mature terminal raceme-group arrangement, true nodes, ligule and complete reproductive structure.",
+        "little_bluestem": "Different leafy upper branch origins with individual shorter racemes and characteristic keeled sheaths.",
+        "look_alike": "Introduced Kleberg can mimic the terminal fingerlike KR bluestem silhouette; swollen or whitish node/raceme details require regional key.",
+        "quick_rule": "Do not call every fingered nonnative-looking grass KR or confuse it with native little without attached full head and collar."
+      }
+    ],
+    "sources": [
+      "https://www.biosci.utexas.edu/prc/DigFlora/KR/SCSC.html",
+      "https://www.biosci.utexas.edu/prc/DigFlora/KR/BOISS-morph.html",
+      "https://rangeplants.tamu.edu/plant/little-bluestem/",
+      "https://rangeplants.tamu.edu/plant/king-ranch-bluestem/",
+      "https://w3.biosci.utexas.edu/prc/K12/pdf/Bothriochloa%20ischaemum%20songarica"
+    ],
+    "stage": "FIELD_READY_PHOTO_GAPS"
+  },
+  "visual_comparison": {
+    "title": "LITTLE vs KR — live photo comparison with flowering and seed-stage views",
+    "subtitle": "See short separated little-bluestem racemes beside Texas KR's longer grouped terminal fingers. Early flowering anthers and later silky seed are separate stages. Seven new original Bob Harms local true Schizachyrium photos now physically backed by canonical species JPEGs: North Hays bunch, branching, flowers, attached and isolated units and true collar/sheath. Microscopy 1mm exact membrane/paired voucher remains.",
+    "memory_rule": "KR = several LONG terminal fingers together; LITTLE = SHORT silky racemes arising separately among upper leafy branches.",
+    "items": [
+      {
+        "label": "B. ischaemum species habit — non-Texas example",
+        "scientific_name": "Bothriochloa ischaemum",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Bothriochloa_ischaemum_sl32.jpg/960px-Bothriochloa_ischaemum_sl32.jpg",
+        "image_fit": "contain",
+        "image_role": "Whole plant in flower — European species-level habit reference, not a confirmed Texas var. songarica specimen",
+        "caption": "Full rooted-looking tuft with flowering culms and several terminal heads from Austria. This is the accepted species B. ischaemum, but NOT a Texas-vouchered King Ranch / songarica plant. It teaches overall habit only; do not use its crown form as a diagnostic Texas-variety character.",
+        "why_it_matters": "The page previously opened on a detached seedhead without any whole-plant context. This wider view makes it easier to recognize the growth form while documenting regional limits.",
+        "creator": "Stefan.lefnaer",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_ischaemum_sl32.jpg",
+        "markers": [],
+        "photo_status": "Visually inspected 960px licensed Commons reference on 2026-10-21. External file only, not archived locally; provenance is Austria, not Hays County."
+      },
+      {
+        "label": "Texas KR (var. songarica) — complete flowering head",
+        "scientific_name": "Bothriochloa ischaemum",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Bothriochloa_ischaemum_var._songarica.jpg/960px-Bothriochloa_ischaemum_var._songarica.jpg",
+        "image_fit": "contain",
+        "image_role": "Texas field view of terminal panicle: many long narrow branches, CC BY photograph",
+        "caption": "Austin-area source-labelled var. songarica flowering stem with numerous branches clustered near the terminal axis. Visible terminal panicle architecture is useful; no true plant base, leaf collar or individual glume anatomy is legible in this photograph.",
+        "why_it_matters": "Provides a clear attached green flowering-head context to complement the two dry close-up photographs.",
+        "creator": "Tyler Cannon",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_ischaemum_var._songarica.jpg",
+        "markers": [],
+        "photo_status": "Visually inspected 960px Commons reference on 2026-10-21. Exact Texas source concept and CC BY 4.0 verified; external source, no downloaded local image bytes."
+      },
+      {
+        "label": "KR bluestem — straw-colored flowering racemes",
+        "scientific_name": "Bothriochloa ischaemum",
+        "image_url": "content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/library-review020-60183cbe63cfcef.jpg",
+        "image_fit": "contain",
+        "image_role": "Actual archived source-labelled mature flowering spike, hand scale, two long racemes visible",
+        "caption": "One long flowering raceme is clearly visible against the hand. Awn-bearing units appear along its length, but they are too small in this view for a precise individual-spikelet arrow. This image does NOT show the plant base, node or collar.",
+        "why_it_matters": "Shows characteristic elongated fingerlike reproductive branches instead of little bluestem's many SHORT flowering segments distributed over the upper plant.",
+        "creator": "Sam Kieschnick",
+        "license": "CC BY",
+        "source_page": "https://www.gbif.org/occurrence/5938064759",
+        "markers": [
+          {
+            "label": "Long flowering raceme",
+            "label_x": 5,
+            "label_y": 17,
+            "target_x": 48,
+            "target_y": 33
+          }
+        ],
+        "photo_status": "Pixel-inspected original Sam Kieschnick image. ONE precise raceme annotation retained; former vague awned-unit arrow removed pending a dedicated spikelet macro."
+      },
+      {
+        "label": "KR bluestem — 3 radiating long racemes",
+        "scientific_name": "Bothriochloa ischaemum",
+        "image_url": "content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/library-review020-e6ef887fa56e784.jpg",
+        "image_fit": "contain",
+        "image_role": "Actual archived source-labelled photo, several long flowering branches spreading from clustered lower portion",
+        "caption": "Three distinct long, narrow flowering racemes and their approximate convergence are visible against the hand. The vegetative stem node, ligule, papilla-based blade hairs and microscopic spikelets are off-camera.",
+        "why_it_matters": "Shows how separate long racemes converge toward one clustered reproductive head, unlike scattered short axillary racemes of little bluestem.",
+        "creator": "Sam Kieschnick",
+        "license": "CC BY",
+        "source_page": "https://www.gbif.org/occurrence/5938120389",
+        "markers": [
+          {
+            "label": "Three slender racemes",
+            "label_x": 5,
+            "label_y": 19,
+            "target_x": 47,
+            "target_y": 38
+          },
+          {
+            "label": "Racemes gather near base",
+            "label_x": 67,
+            "label_y": 78,
+            "target_x": 48,
+            "target_y": 79
+          }
+        ],
+        "photo_status": "Existing local JPEG physically inspected and only gross head architecture annotated; exact CC BY version unresolved."
+      },
+      {
+        "label": "Little bluestem — dense perennial bunch",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/01-field-reference.jpeg",
+        "image_fit": "contain",
+        "image_role": "Actual archived overall green perennial bunch / upright vegetative shoots",
+        "caption": "A dense clump of fine upright culms and narrow leaves; its base and upper culms are visible. This is NOT an adequate view of an individual flowering raceme, glume/awn, ligule, or a botanically proven species from anatomy.",
+        "why_it_matters": "Learn the usually dense narrow bunch form of native little bluestem, contrasting with KR's often broader sprawling crowns in heavily managed/disturbed vegetation.",
+        "creator": "TheMongrelKoi",
+        "license": "CC0",
+        "source_page": "https://www.inaturalist.org/observations/88166662",
+        "markers": [
+          {
+            "label": "Distinct dense bunch",
+            "label_x": 3,
+            "label_y": 83,
+            "target_x": 48,
+            "target_y": 86
+          },
+          {
+            "label": "Many upright narrow culms",
+            "label_x": 72,
+            "label_y": 19,
+            "target_x": 48,
+            "target_y": 40
+          }
+        ],
+        "photo_status": "Original real JPEG pixels inspected; image licensed CC0 in original canonical card, original taxon label source-based."
+      },
+      {
+        "label": "Little bluestem — separate short silky racemes on upper flowering shoots",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Andropogon_scoparius_%283904157742%29.jpg/960px-Andropogon_scoparius_%283904157742%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Source-labelled Montana wild-type little bluestem, close-up of flowering branches bearing distinct short silky racemes and subtending sheaths",
+        "caption": "At the branch tips, each narrow pale hairy raceme emerges from a reddish leaf-sheath/spathe area. The feathery hairs along the short spikelet-bearing axes are visible, but individual sessile versus reduced pedicelled spikelets, the real basal ligule, and precise awn lengths cannot be confirmed from this photograph.",
+        "why_it_matters": "Shows the SHORT flowering units along DIFFERENT upper branches, instead of KR bluestem's several LONG fingerlike racemes collected in one terminal cluster.",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_scoparius_(3904157742).jpg",
+        "markers": [
+          {
+            "label": "Short silky raceme",
+            "label_x": 67,
+            "label_y": 9,
+            "target_x": 55,
+            "target_y": 25
+          },
+          {
+            "label": "Raceme above sheath",
+            "label_x": 64,
+            "label_y": 62,
+            "target_x": 39,
+            "target_y": 40
+          },
+          {
+            "label": "Hairy raceme axis",
+            "label_x": 4,
+            "label_y": 26,
+            "target_x": 28,
+            "target_y": 27
+          }
+        ],
+        "photo_status": "Exact 960×1280 Wikimedia thumbnail viewed and licensed source file checked 2026-10-21; photo from Montana; original label Andropogon scoparius is accepted synonym of Schizachyrium scoparium; visible gross arrows only, not microscopy."
+      },
+      {
+        "label": "Little bluestem — early flowering, anthers protruding",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Little_Bluestem_-_Schizachyrium_scoparium%2C_Mason_Neck%2C_Virginia%2C_September_9%2C_2019_%2853252974868%29.jpg/960px-Little_Bluestem_-_Schizachyrium_scoparium%2C_Mason_Neck%2C_Virginia%2C_September_9%2C_2019_%2853252974868%29.jpg",
+        "image_fit": "contain",
+        "image_role": "Flowering close-up of several separate short racemes; yellow anthers protruding from grass florets at anthesis",
+        "caption": "These are EARLY flower-stage short racemes. The yellow dangling structures are pollen-bearing anthers; white silky seed hairs develop later. Trace each slim flowering branch rather than expecting a fluffy late-season plume here. Source is Virginia, not Hays County.",
+        "why_it_matters": "Explains why little bluestem looks quite different before seeds become fluffy, and shows reproductive branches before seed release.",
+        "creator": "Judy Gallagher",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Little_Bluestem_-_Schizachyrium_scoparium,_Mason_Neck,_Virginia,_September_9,_2019_(53252974868).jpg",
+        "markers": [
+          {
+            "label": "Yellow dangling anthers",
+            "label_x": 5,
+            "label_y": 13,
+            "target_x": 47,
+            "target_y": 42
+          }
+        ],
+        "photo_status": "960×640 Wikimedia image visually inspected 2026-10-21; yellow projecting anthers at target; source file 2019 Virginia by Judy Gallagher CC BY 2.0. No sheath/node/microscopic spikelet arrow."
+      },
+      {
+        "label": "LITTLE BLUESTEM — TRUE LEAF SHEATH close-up (USGS), NOT a measured ligule",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/usgs-larry-allain-schizachyrium-sheath-leaf.jpg",
+        "image_fit": "contain",
+        "image_role": "Exact species image from USGS Plants of Louisiana. Close photo shows the longitudinally folded/flattened green sheath/leaf base and slender white hairs along the overlapping sheath opening. Actual free membranous ligule tip and mm length are NOT independently isolated.",
+        "caption": "USGS Larry Allain photographed an intact little-bluestem leaf base. Follow the GREEN SHEATH up from its overlap at the stem to the emerging narrow leaf blade. Fine whitish marginal hairs appear near the junction; they are NOT a measured membranous ligule. The picture shows sheath architecture, but not a 0.5–2.5 mm ligule measurement or the full 3-D keel cross-section. Louisiana source, not a Hays voucher.",
+        "why_it_matters": "Fills the previously missing close VIEW of the real SHEATH instead of more distant flowering heads. Teach the crew to find collar/sheath first, then demand an opened edge with a 1-mm ruler before labeling the ligule.",
+        "creator": "Larry Allain / U.S. Geological Survey",
+        "license": "Public domain — USGS employee federal plant photograph",
+        "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/2568",
+        "source_image": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Schizachrium_scoparium_sheath+and+leaf_2.JPG&id=2568&size=w",
+        "source_locality": "Louisiana, not a Hays County voucher",
+        "markers": [],
+        "photo_status": "Real original source-verified USGS Larry Allain Little bluestem photo physically archived and SHA-recorded with accurate USGS public-domain credit. Photographs sheath and hairs; NO unmeasured real free membranous ligule tip marked. User review provisional."
+      },
+      {
+        "label": "BUNCH BASE: real North Hays grass tuft",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-a.jpg",
+        "image_fit": "contain",
+        "image_role": "BUNCH BASE: real North Hays grass tuft",
+        "caption": "Root-zone-level close-up of a dense actual little-bluestem tuft, narrow erect culms and lower dry persistent sheaths. This is a field photograph, not extracted roots, so fibrous roots and short rhizomes remain unknown.",
+        "why_it_matters": "Teach compact tuft and many erect stems. Source grass is Texas; individual voucher coordinates beyond the author's North Hays/Travis collection are not established.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-a.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-a.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "Clustered culm bases",
+            "label_x": 5,
+            "label_y": 87,
+            "target_x": 46,
+            "target_y": 81
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      },
+      {
+        "label": "FLOWERING ARCHITECTURE: multiple branches each bearing short raceme",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-i.jpg",
+        "image_fit": "contain",
+        "image_role": "FLOWERING ARCHITECTURE: multiple branches each bearing short raceme",
+        "caption": "Detached upper flowering culms with MANY short separate narrow racemes distributed along branched leafy stems. The BASE of this specimen is below the frame; it is not a rooted plant photo.",
+        "why_it_matters": "Distinguish from introduced King Ranch bluestem, which has multiple longer fingers clustered at one apex. Follow branching connection instead of color.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-i.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-i.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "Short separate racemes",
+            "label_x": 3,
+            "label_y": 12,
+            "target_x": 48,
+            "target_y": 13
+          },
+          {
+            "label": "Leafy upper branch",
+            "label_x": 68,
+            "label_y": 86,
+            "target_x": 53,
+            "target_y": 61
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      },
+      {
+        "label": "BLOOM CLOSE-UP: dark anthers, pale stigmas and mm scale",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-j1.jpg",
+        "image_fit": "contain",
+        "image_role": "BLOOM CLOSE-UP: dark anthers, pale stigmas and mm scale",
+        "caption": "Two original source images juxtaposed of actual purple/brown projecting ANTHERS and nearby pale hairy floral tissue. Millimeter reference printed on left image only; do not treat paired halves as exactly one plant or count florets from image background.",
+        "why_it_matters": "Distinguish anthers during flowering from later airy white pappus-like rachis/pedicel hairs, and compare stages.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-J1.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-J1.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "Protruding anthers",
+            "label_x": 2,
+            "label_y": 30,
+            "target_x": 46,
+            "target_y": 33
+          },
+          {
+            "label": "Scale strip visible",
+            "label_x": 76,
+            "label_y": 92,
+            "target_x": 2,
+            "target_y": 66
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      },
+      {
+        "label": "ATTACHED MATURE: actual awned spikelet pair with hairy axis",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-s.jpg",
+        "image_fit": "contain",
+        "image_role": "ATTACHED MATURE: actual awned spikelet pair with hairy axis",
+        "caption": "True attached mature little-bluestem raceme on culm; long twisted/bent awn lines extend from brown fertile units and fine hairs surround the axis/short companion. This frame has no isolated 1-mm scale for a confirmed length.",
+        "why_it_matters": "Real connected flowering architecture and attached hairy segment, before laboratory dissection of the two paired spikelets.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-s.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-s.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "Awned fertile unit",
+            "label_x": 1,
+            "label_y": 32,
+            "target_x": 44,
+            "target_y": 43
+          },
+          {
+            "label": "Hairy raceme axis",
+            "label_x": 63,
+            "label_y": 84,
+            "target_x": 45,
+            "target_y": 55
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      },
+      {
+        "label": "DISSECTION: genuine isolated awned spikelets and white-haired segments with ruler",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-9.jpg",
+        "image_fit": "contain",
+        "image_role": "DISSECTION: genuine isolated awned spikelets and white-haired segments with ruler",
+        "caption": "An original Bob Harms photograph of several separated dry source-identified little-bluestem spikelet and rachis parts on dark background, with the PHYSICAL original ruler at left. Parts are from the botanical source, but they are separated; do not imply all nine positions belonged to one intact specimen. Advanced dissection of lower/upper glumes, lemma and pedicelled companion still requires adjacent same-spikelet lab macro.",
+        "why_it_matters": "Best real source for isolated parts and scale, showing how awn-bearing fertile body differs from plume-like dispersal structures; no incorrect organ-specific pixels marked.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-9.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-9.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "Isolated awned unit",
+            "label_x": 64,
+            "label_y": 7,
+            "target_x": 62,
+            "target_y": 48
+          },
+          {
+            "label": "Ruler at image edge",
+            "label_x": 2,
+            "label_y": 10,
+            "target_x": 1,
+            "target_y": 55
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      },
+      {
+        "label": "CULM ANATOMY: actual keeled leaf sheath, flattened stem and node",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-c.jpg",
+        "image_fit": "contain",
+        "image_role": "CULM ANATOMY: actual keeled leaf sheath, flattened stem and node",
+        "caption": "Harms original photo of little-bluestem longitudinal flattened culm and overlapping green sheath, elongated hairs near the lower sheath opening; a node and original black-and-white metric strip at lower left. This is not a cross-section or proof of an anatomical ligule at this viewing angle.",
+        "why_it_matters": "Observe ACTUAL compressed culm and visible node, compare KR. Do not miscall white sheath-edge hair as the true membrane.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-C.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-C.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "Visible stem node",
+            "label_x": 58,
+            "label_y": 2,
+            "target_x": 51,
+            "target_y": 17
+          },
+          {
+            "label": "Flattened culm surface",
+            "label_x": 1,
+            "label_y": 62,
+            "target_x": 46,
+            "target_y": 63
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      },
+      {
+        "label": "COLLAR & LIGULE ZONE: actual blade/sheath junction with mm ruler",
+        "scientific_name": "Schizachyrium scoparium",
+        "image_url": "content/taxa/Poaceae/Schizachyrium/schizachyrium-scoparium/images/bob-harms-schizachyrium-scoparium-scsc-l.jpg",
+        "image_fit": "contain",
+        "image_role": "COLLAR & LIGULE ZONE: actual blade/sheath junction with mm ruler",
+        "caption": "Source-authenticated photograph of the little-bluestem collar: narrow blade bends upward, overlapping sheath below, hair tufts beside the opening and pale inner junction membrane. Original ruler strip at upper right and inset sheath cross-section at left. A precise free membranous edge 0.5–2.5 mm cannot be definitively measured in this overlapping/cropped photo, so arrow COLLAR ZONE rather than an invented ligule-tip pixel.",
+        "why_it_matters": "Closes the major shortage of REAL leaf-junction imagery from Central Texas. The 0.5–2.5 mm membranous fringed ligule still merits a calibrated, pulled-open same-voucher macro for strict 100%.",
+        "creator": "Bob Harms",
+        "license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+        "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+        "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/SCSC-L.html",
+        "source_image": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/SCSC-L.jpg",
+        "source_taxon_name": "Schizachyrium scoparium",
+        "site_specific_public_permission": "BOB_HARMS_SELECTED_MONOCOTS_EDU_WITH_CREDIT_20261022",
+        "public_reuse": "YES for credited scientific/educational use of the author's originals only; COPYRIGHTED not CC/general redistribution",
+        "markers": [
+          {
+            "label": "True collar junction zone",
+            "label_x": 1,
+            "label_y": 8,
+            "target_x": 39,
+            "target_y": 44
+          },
+          {
+            "label": "Sheath-edge hair tufts",
+            "label_x": 64,
+            "label_y": 89,
+            "target_x": 51,
+            "target_y": 66
+          }
+        ],
+        "photo_status": "Source-specific genuine central Texas botanical anatomy, originally photographed and credited to Bob Harms, copyrighted education/science with credit (NOT CC). Archival SHA and image dimensions verified, markers intentionally broad and provisional; not a same-vouchered 0.5mm ligule/sessile-pedicelled pair series."
+      }
+    ],
+    "overlay_note": "Matt Lavin's reproductive close-up was recorded in Montana, not Hays County; source calls the species Andropogon scoparius (accepted synonym). The historic held/restricted little-bluestem images are excluded. True ligule and measured mature spikelet-pair macros remain unavailable. 2026-10-22: Official-source Larry Allain USGS actual sheath macro appended as licensed EXTERNAL PROVISIONAL, no arrow to ligule because membrane position/length unmeasured. Follow Schizachyrium species 8-step detailed gallery; all original 7 genus comparison panels retained."
+  }
+}
