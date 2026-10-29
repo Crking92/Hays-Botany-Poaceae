@@ -44,7 +44,22 @@ def main():
             and ("copyrite.htm" in str(rec.get("license_url") or "")
                  or "jim conrad" in str(rec.get("license") or "").lower())
             for rec in items))
-        if classification not in {"CC0","CC_BY","CC_BY_SA"} and not conrad_pd:
+        # Exact public-domain federal employee photos already archived in
+        # the original Texas wild-rice card. Do not extend this exception to
+        # arbitrary government-hosted or third-party images.
+        usfws_pd=(classification=="PUBLIC_DOMAIN_CLAIM"
+            and path.startswith("content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-")
+            and all(
+                "Ryan Hagerty" in str(rec.get("creator") or "")
+                and "U.S. Fish and Wildlife Service" in str(rec.get("creator") or "")
+                and "public domain" in str(rec.get("license") or "").lower()
+                and (
+                    str(rec.get("source_page") or "").startswith("https://commons.wikimedia.org/wiki/File:Zizania_texana_")
+                    or str(rec.get("source_page") or "").startswith("https://www.fws.gov/media/texas-wild-rice")
+                )
+                for rec in items
+            ))
+        if classification not in {"CC0","CC_BY","CC_BY_SA"} and not (conrad_pd or usfws_pd):
             reasons[classification+"_REVIEW"]+=1;continue
         if not all(str(rec.get("source_page") or "").startswith("https://") for rec in items):
             reasons["NO_HTTPS_SOURCE_PAGE"]+=1;continue
