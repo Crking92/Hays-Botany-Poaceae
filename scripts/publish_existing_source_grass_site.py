@@ -71,6 +71,11 @@ def is_eligible(p):
     ):
         return True
     return False
+def source_species_id(src):
+    """Read the on-disk source-folder owner; not a botanical voucher claim."""
+    m=re.search(r"(?:^|/)content/taxa/Poaceae/[^/]+/([^/]+)/images/",str(src))
+    return m.group(1) if m else None
+
 # A single original file may be used in many panels. A conflicting credit record
 # holds the entire file rather than allowing selective publication.
 references=defaultdict(list)
