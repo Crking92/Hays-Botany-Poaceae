@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/poaceae-site-preview-qa.yml"
       - "scripts/build_poaceae_site_preview.py"
+      - "scripts/enrich_poaceae_lessons.py"
       - "site/**"
   workflow_dispatch:
 

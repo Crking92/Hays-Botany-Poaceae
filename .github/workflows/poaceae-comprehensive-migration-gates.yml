@@ -6,6 +6,7 @@ on:
       - ".github/workflows/poaceae-comprehensive-migration-gates.yml"
       - "scripts/audit_poaceae_release_gates.py"
       - "scripts/build_poaceae_site_preview.py"
+      - "scripts/enrich_poaceae_lessons.py"
       - "site/**"
   workflow_dispatch:
 permissions: {contents: read}
