@@ -22,12 +22,12 @@
         5
       ],
       "preview_panel_indices": [
-        0,
-        1
+        1,
+        2,
+        3
       ],
       "missing_original_panel_indices": [
-        0,
-        3
+        0
       ]
     },
     {
@@ -45,11 +45,12 @@
         0,
         2
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
         1,
-        0,
-        2
+        0
       ]
     },
     {
@@ -69,12 +70,12 @@
         5
       ],
       "preview_panel_indices": [
-        0,
-        1
+        1,
+        2,
+        3
       ],
       "missing_original_panel_indices": [
-        0,
-        3
+        0
       ]
     },
     {
@@ -169,6 +170,53 @@
   ],
   "panels": [
     {
+      "label": "ARCHIVED — Patrick Alexander's exact-taxon flowering/habit reference",
+      "src": "../content/taxa/Poaceae/Munroa/munroa-pulchella/images/commons-79ab04a78c4f.jpg",
+      "caption": "Original source-identified fluffgrass photograph stored in the project. Inspect the leafy flowering clusters; do not identify the true ligule, separated glumes, deeply bifid lemma or awn from this photograph without pixel verification.",
+      "creator": "Patrick Alexander from Las Cruces, NM",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ADasyochloa_pulchella_-_Flickr_-_aspidoscelis_%283%29.jpg",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "munroa-pulchella",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "CLOSE DETAIL — pointed enclosing leaves and nested woolly flowering region",
+      "src": "../content/taxa/Poaceae/Munroa/munroa-pulchella/images/commons-8aae4ee18987.jpg",
+      "caption": "Alex Abair's CC BY 4.0 close-up makes the key visible: stiff thin acute-pointed leaves form a starburst and surround woolly flowering clusters near the shoot tips. The arrows identify a genuine pointed LEAF and the pale hairy FLOWERING REGION, not individual awns, glumes, or dissected florets. The apparent fuzz is not proof of a particular lemma organ.",
+      "creator": "Alex Abair",
+      "license": "CC BY 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ADasyochloa_pulchella_24026826.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Pointed enclosing LEAF — not an awn",
+          "target_x": 62,
+          "target_y": 33,
+          "label_x": 6,
+          "label_y": 24
+        },
+        {
+          "label": "Woolly flowering cluster among leaves",
+          "target_x": 66,
+          "target_y": 45,
+          "label_x": 57,
+          "label_y": 12
+        }
+      ],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "munroa-pulchella",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "2 · ACTUAL FLUFFGRASS — close leafy spikelet clusters against sky",
       "src": "../content/taxa/Poaceae/Munroa/munroa-pulchella/images/alex-abair-fluffgrass-woolly-nested-flowering-ccby4.jpg",
       "caption": "Alex Abair's Commons photo (2018) shows a close-up of pale pointed leafy fascicles and compact flowering tufts held at a stem tip. This is the SAME accepted Munroa taxon under its older name Dasyochloa pulchella. It does NOT show a dissected floret: do not mistake long pointed surrounding LEAVES for lemma awns.",
@@ -244,20 +292,6 @@
       "label": "TEXAS VOUCHER — CC0 whole pressed plant, roots and flowering shoots (NA0068870)",
       "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
       "reference_page": "https://biocollections.ars.usda.gov/collections/individual/index.php?occid=10517",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "ARCHIVED — Patrick Alexander's exact-taxon flowering/habit reference",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ADasyochloa_pulchella_-_Flickr_-_aspidoscelis_%283%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 3,
-      "label": "CLOSE DETAIL — pointed enclosing leaves and nested woolly flowering region",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ADasyochloa_pulchella_24026826.jpg",
       "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],

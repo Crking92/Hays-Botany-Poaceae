@@ -22,10 +22,11 @@
         2,
         20
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        1
+      ],
       "missing_original_panel_indices": [
         0,
-        2,
         20
       ]
     },
@@ -51,10 +52,10 @@
         20
       ],
       "preview_panel_indices": [
-        0,
         2,
-        1,
-        3
+        8,
+        7,
+        9
       ],
       "missing_original_panel_indices": [
         13,
@@ -84,9 +85,9 @@
         19
       ],
       "preview_panel_indices": [
-        0,
         2,
-        3
+        8,
+        9
       ],
       "missing_original_panel_indices": [
         4,
@@ -115,9 +116,9 @@
         19
       ],
       "preview_panel_indices": [
-        0,
         2,
-        3
+        8,
+        9
       ],
       "missing_original_panel_indices": [
         4,
@@ -145,12 +146,12 @@
         18
       ],
       "preview_panel_indices": [
-        6,
-        4,
-        5
+        0,
+        12,
+        10,
+        11
       ],
       "missing_original_panel_indices": [
-        1,
         5,
         18
       ]
@@ -170,11 +171,11 @@
         2,
         7
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        2,
-        7
-      ]
+      "preview_panel_indices": [
+        1,
+        4
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "07 · DECISION AND MANAGEMENT HOLD",
@@ -197,13 +198,13 @@
         11
       ],
       "preview_panel_indices": [
+        2,
         0,
-        6
+        1,
+        12
       ],
       "missing_original_panel_indices": [
         4,
-        1,
-        2,
         11
       ]
     },
@@ -227,12 +228,12 @@
         17
       ],
       "preview_panel_indices": [
-        4,
-        5
+        0,
+        10,
+        11
       ],
       "missing_original_panel_indices": [
         0,
-        1,
         5
       ]
     },
@@ -249,10 +250,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        2
-      ]
+      "preview_panel_indices": [
+        1
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "10 · LEMMA, PALEA AND HAIR INSERTION",
@@ -269,10 +270,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        2
-      ]
+      "preview_panel_indices": [
+        1
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "11 · SEPARATE ARUNDO AND GIANT CUTGRASS",
@@ -289,10 +290,11 @@
         0,
         2
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        1
+      ],
       "missing_original_panel_indices": [
-        0,
-        2
+        0
       ]
     },
     {
@@ -311,11 +313,11 @@
         2,
         7
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        2,
-        7
-      ]
+      "preview_panel_indices": [
+        1,
+        4
+      ],
+      "missing_original_panel_indices": []
     }
   ],
   "steps": [
@@ -334,8 +336,8 @@
       "why_it_matters": "The collar confirms part of the grass anatomy, but a hairy ligule alone does NOT determine a native or introduced Phragmites lineage.",
       "source": "EXPLICIT_ORIGINAL_BEGINNER_STEP",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Open one tiny part of the plume",
@@ -343,8 +345,8 @@
       "why_it_matters": "Use the photographer's existing labels. Do not confuse a long sterile-floret lemma with an upper glume, and do not infer lineage from an unvouchered close-up.",
       "source": "EXPLICIT_ORIGINAL_BEGINNER_STEP",
       "original_panel_index": 2,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Texas lineage check: don't guess",
@@ -357,6 +359,60 @@
     }
   ],
   "panels": [
+    {
+      "label": "LOCALLY ARCHIVED — actual common reed collar and ligule",
+      "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/harry-rose-ligule-8253945012.jpg",
+      "caption": "Harry Rose's real blade–sheath junction of Phragmites australis: green blade extends right, pale ridged sheath extends downward, and a conspicuous whitish hair-fringed ligule is exposed between them. The source describes a short membranous rim with ~1-mm hairs and surrounding hairs to ~10 mm. Arrow targets were visually checked against the actual archived 847×1205 JPEG. This is species-level anatomy, NOT a native/introduced/Gulf Coast lineage determination.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_ligule1_%288253945012%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "White ciliate ligule fringe",
+          "target_x": 46,
+          "target_y": 43,
+          "label_x": 6,
+          "label_y": 23
+        },
+        {
+          "label": "Leaf blade",
+          "target_x": 81,
+          "target_y": 52,
+          "label_x": 73,
+          "label_y": 25
+        },
+        {
+          "label": "Leaf sheath below collar",
+          "target_x": 40,
+          "target_y": 78,
+          "label_x": 66,
+          "label_y": 91
+        }
+      ],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "phragmites-australis",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "LOCALLY ARCHIVED — photographed and annotated reed spikelet",
+      "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/harry-rose-spikelet-6966477736.jpg",
+      "caption": "Real Phragmites australis opened spikelet already annotated by photographer Harry Rose: lower/upper glumes, multiple florets, long pointed lemmas, paleas, anthers and stigmas are indicated directly on the pixels. Retain those original labels; no second set of arrows is needed. This cannot establish whether a Texas population is native or introduced.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_spikelet1_annotated_%286966477736%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "phragmites-australis",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "Native American reed — reddish exposed stem and loose sheath",
       "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/native-americanus-reference-24224288.jpg",
@@ -391,6 +447,99 @@
         }
       ],
       "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "phragmites-australis",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "Annotated common reed floret — Harry Rose",
+      "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/harry-rose-floret1-annotated-7112553425.jpg",
+      "caption": "Source-annotated individual floret photograph. Use the original photographer's anatomical labels; independently verify lemma, palea and hair attachment before adding overlay arrows. This image does not establish native or introduced lineage.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_floret1_annotated_%287112553425%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 6,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "phragmites-australis",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "Annotated common reed spikelet, second view — Harry Rose",
+      "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/harry-rose-spikelet2-annotated-6966469564.jpg",
+      "caption": "Additional source-annotated spikelet view for studying glume and floret arrangement. Confirm the original labels and exact visible structures before placing arrows; no lineage conclusion from this image.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_spikelet2_annotated_%286966469564%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 7,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "phragmites-australis",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "Excavated horizontal rhizome — common reed",
+      "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/kenraiz-rhizome-kz.jpg",
+      "caption": "Kenraiz's photographed Phragmites australis rhizome from Poland: the horizontal creeping underground STEM has clear nodes, thin true roots, branches, and a connected green shoot. Do not describe the whole structure as a root or use this European specimen as proof of native or introduced ancestry in Texas.",
+      "creator": "Kenraiz",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_rhizome_kz.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Rhizome node and branching point",
+          "target_x": 26,
+          "target_y": 75,
+          "label_x": 4,
+          "label_y": 48
+        },
+        {
+          "label": "Fine roots emerging at node",
+          "target_x": 25,
+          "target_y": 84,
+          "label_x": 5,
+          "label_y": 94
+        },
+        {
+          "label": "Horizontal rhizome (underground stem)",
+          "target_x": 49,
+          "target_y": 74,
+          "label_x": 50,
+          "label_y": 91
+        },
+        {
+          "label": "Green shoot emerging above rhizome",
+          "target_x": 85,
+          "target_y": 54,
+          "label_x": 72,
+          "label_y": 23
+        }
+      ],
+      "original_panel_index": 8,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "phragmites-australis",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "Excavated rhizomes after tarp removal — common reed",
+      "src": "../content/taxa/Poaceae/Phragmites/phragmites-australis/images/nonenmacher-rhizomes-sca-00129.jpg",
+      "caption": "Excavated Phragmites australis rhizomes laid on a tarp at a North American conservation area. This is removed underground material, not a still-rooted whole plant or confirmed native-versus-introduced specimen.",
+      "creator": "R.A.Nonenmacher",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_SCA-00129.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 9,
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "phragmites-australis",
       "photo_role": "TARGET_SPECIES_SOURCE"
@@ -550,48 +699,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://www.inaturalist.org/observations/98558182",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "LOCALLY ARCHIVED — actual common reed collar and ligule",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_ligule1_%288253945012%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "LOCALLY ARCHIVED — photographed and annotated reed spikelet",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_spikelet1_annotated_%286966477736%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 6,
-      "label": "Annotated common reed floret — Harry Rose",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_floret1_annotated_%287112553425%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 7,
-      "label": "Annotated common reed spikelet, second view — Harry Rose",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_spikelet2_annotated_%286966469564%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 8,
-      "label": "Excavated horizontal rhizome — common reed",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_rhizome_kz.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 9,
-      "label": "Excavated rhizomes after tarp removal — common reed",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_SCA-00129.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
     },
     {
       "original_panel_index": 11,

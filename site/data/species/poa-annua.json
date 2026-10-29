@@ -24,7 +24,7 @@
       "preview_panel_indices": [
         0,
         1,
-        3
+        4
       ],
       "missing_original_panel_indices": []
     },
@@ -63,11 +63,10 @@
         5
       ],
       "preview_panel_indices": [
-        4
+        3,
+        5
       ],
-      "missing_original_panel_indices": [
-        3
-      ]
+      "missing_original_panel_indices": []
     },
     {
       "heading": "04 · LOWER / UPPER GLUME MEASUREMENTS",
@@ -100,11 +99,10 @@
         5
       ],
       "preview_panel_indices": [
-        4
+        3,
+        5
       ],
-      "missing_original_panel_indices": [
-        3
-      ]
+      "missing_original_panel_indices": []
     },
     {
       "heading": "06 · PUBLIC-READY GATE / PHOTO AND SITE QA HANDOFF",
@@ -130,11 +128,10 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ],
-      "missing_original_panel_indices": [
-        3
-      ]
+      "missing_original_panel_indices": []
     }
   ],
   "steps": [
@@ -180,8 +177,8 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 3,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 3,
+      "photo_unavailable": false
     }
   ],
   "panels": [
@@ -286,6 +283,44 @@
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
+      "label": "ANNUAL BLUEGRASS — source-identified spikelet with upper-floret palea",
+      "src": "../content/taxa/Poaceae/Poa/poa-annua/images/commons-51ef89cd5d3d.jpg",
+      "caption": "Harry Rose's source-identified P. annua close-up shows green overlapping spikelet scales, a visibly pink-tinged tip, and the flowering branch. Three arrows mark only these clearly visible structures. His original caption identifies a palea in an upper floret, but this crop does not independently resolve which scale is the palea versus glume or lemma. No millimeter scale or proof of bisexuality is visible.",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APoa_annua_spikelet9_%288038350836%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Pink-tinged outer scale tip",
+          "target_x": 42,
+          "target_y": 35,
+          "label_x": 4,
+          "label_y": 19
+        },
+        {
+          "label": "Overlapping spikelet scales — exact organs unresolved",
+          "target_x": 49,
+          "target_y": 43,
+          "label_x": 3,
+          "label_y": 57
+        },
+        {
+          "label": "Spikelet-bearing flowering branch",
+          "target_x": 51,
+          "target_y": 68,
+          "label_x": 72,
+          "label_y": 77
+        }
+      ],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "poa-annua",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "ANNUAL BLUEGRASS — ACTUAL EXPOSED FIBROUS ROOTS AND LEAFY CROWN",
       "src": "../content/taxa/Poaceae/Poa/poa-annua/images/sten-porse-poa-annua-exposed-fibrous-roots-ccby-sa30.jpg",
       "caption": "Source-identified Poa annua pulled aside at a stone edge, revealing long white fibrous roots connected to a green leafy crown. This is a Danish vegetative plant, not a Hays County flowering voucher. No visible root system alone proves a complete absence of rhizomes.",
@@ -349,15 +384,7 @@
     }
   ],
   "preview_only": false,
-  "unavailable_references": [
-    {
-      "original_panel_index": 3,
-      "label": "ANNUAL BLUEGRASS — source-identified spikelet with upper-floret palea",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APoa_annua_spikelet9_%288038350836%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    }
-  ],
+  "unavailable_references": [],
   "intro": "ANNUAL BLUEGRASS — INTRODUCED, usually low cool-season annual. Recognize low soft green flowering tufts, often many small open triangular panicles and folded boat-prow leaf tips. The NEW macro really shows the boat tip, and the NEW four-view photo shows a membrane-like LIGULE at the blade/sheath junction. BOTH details are shared by other Poa: for species confirmation, document an intact rooted tuft (usually no persistent connected rhizomes) and a ripe spikelet of normally bisexual florets. The length of a photographed ligule or green head alone is NOT decisive.",
   "memory_rule": "BOAT TIP + LIGULE = POA GENUS. P. ANNUA = usually annual and bisexual; P. ARACHNIFERA = perennial rhizomes and separate SEXES with WEBBY female lemma bases.",
   "safety_note": "Photographed 30× leaf tip and 4-view ligule images belong to P. annua sources, not Texas bluegrass. Texas female webby lemma hairs and connected rhizomes are unphotographed.",

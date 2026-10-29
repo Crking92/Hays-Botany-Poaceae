@@ -36,10 +36,10 @@
       "original_panel_indices": [
         1
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         1
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · BRISTLES ARE NOT AWNS",
@@ -56,11 +56,10 @@
         2
       ],
       "preview_panel_indices": [
-        0
-      ],
-      "missing_original_panel_indices": [
+        0,
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "04 · MEASURE GLUMES ON A MATURE SPIKELET",
@@ -75,10 +74,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "05 · SEPARATE STERILE AND FERTILE LEMMAS",
@@ -94,10 +93,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "06 · DON'T CONFUSE IT WITH NATIVE FOXTAILS",
@@ -116,7 +115,7 @@
         0
       ],
       "preview_panel_indices": [
-        1,
+        3,
         0
       ],
       "missing_original_panel_indices": [
@@ -141,8 +140,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -150,8 +149,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -159,8 +158,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 2,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -212,6 +211,38 @@
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
+      "label": "2 · Actual ligule and blade–sheath close-up",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-ligule-stefan-lefnaer.jpg",
+      "caption": "Source-labelled ligule/sheath photograph; anatomy requires visual confirmation before any new arrows.",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_italica_subsp._italica_sl21.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-italica",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "3 · Actual source-annotated spikelet anatomy",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-spikelet-stefan-lefnaer.jpg",
+      "caption": "Photographer-annotated glume, lemma and palea. These floret parts are not the persistent bristles.",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_italica_subsp._italica_sl48.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-italica",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "Knotroot bristlegrass — reproductive close-up with 2-mm scale",
       "src": "../content/taxa/Poaceae/Setaria/setaria-parviflora/images/commons-setaria-parviflora-stefan-lefnaer.jpg",
       "caption": "Original Stefan.lefnaer macro has green bract-like structures, a magenta protruding flowering tuft and photographer's 2-mm ruler. This view does NOT resolve 4–12 subtending bristles or the short knotty rhizome. Do not label magenta floral parts as sterile bristles.",
@@ -258,20 +289,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://www.inaturalist.org/photos/237392332",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "2 · Actual ligule and blade–sheath close-up",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_italica_subsp._italica_sl21.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "3 · Actual source-annotated spikelet anatomy",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_italica_subsp._italica_sl48.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
     },
     {
       "original_panel_index": 4,

@@ -24,9 +24,9 @@
       ],
       "preview_panel_indices": [
         1,
-        2,
+        4,
         0,
-        3
+        5
       ],
       "missing_original_panel_indices": []
     },
@@ -44,11 +44,11 @@
         2,
         7
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         2,
-        7
-      ]
+        6
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · RIPE SPIKELET ROWS AND REDUCED LOWER GLUME",
@@ -64,10 +64,10 @@
       "original_panel_indices": [
         3
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         3
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "04 · STERILE VERSUS FERTILE LEMMAS; NO LONG AWN",
@@ -83,10 +83,10 @@
       "original_panel_indices": [
         3
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         3
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "05 · LOCAL LOOK-ALIKES — BAHIA, THIN PASPALUM, DALLISGRASS",
@@ -107,8 +107,8 @@
       ],
       "preview_panel_indices": [
         1,
-        4,
-        3,
+        7,
+        5,
         0
       ],
       "missing_original_panel_indices": []
@@ -137,15 +137,14 @@
       "preview_panel_indices": [
         0,
         1,
-        4,
-        2,
-        3
-      ],
-      "missing_original_panel_indices": [
         2,
         3,
-        7
-      ]
+        7,
+        4,
+        5,
+        6
+      ],
+      "missing_original_panel_indices": []
     }
   ],
   "steps": [
@@ -173,8 +172,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 2,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -191,8 +190,8 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 3,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 3,
+      "photo_unavailable": false
     }
   ],
   "panels": [
@@ -294,6 +293,54 @@
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
+      "label": "2 · TRUE LIGULE — translucent membrane at blade–sheath junction",
+      "src": "../content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-95106e2c32d1.jpg",
+      "caption": "The translucent ragged-edged flap rising from the green sheath mouth is the membranous LIGULE. The arrow points to that visible flap, not the sheath. The source reports 0.5–1.5 mm, but this image contains NO ruler, so no length is measured here. Australian source specimen, not a Texas voucher.",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_distichum_ligule1_%288251276202%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "True membranous ligule",
+          "target_x": 44,
+          "target_y": 20,
+          "label_x": 5,
+          "label_y": 8
+        }
+      ],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-distichum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "3 · ATTACHED SPIKELETS — green ovals along one-sided raceme",
+      "src": "../content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-610da1987dad.jpg",
+      "caption": "The arrow identifies ONE actual green SPIKELET attached to the flowering branch, not a glume, lemma or awn. Dark feathery flowering parts are visible but not independently dissected or measured. No physical ruler or Texas voucher is present.",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_distichum_spikelets1_%288250207803%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "One attached green spikelet",
+          "target_x": 54,
+          "target_y": 32,
+          "label_x": 4,
+          "label_y": 31
+        }
+      ],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-distichum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "KNOTGRASS — wetland groundcover habit",
       "src": "../content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-knotgrass-wetland-habit5.jpg",
       "caption": "Harry Rose's Australian source-labelled wetland photograph illustrates a low, dense, mat-forming grass patch. It does NOT show distinct rooting stolon nodes, so the image is context for patch habit and not proof of underground rooting or Hays County origin.",
@@ -356,6 +403,30 @@
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
+      "label": "TRUE LIGULE, SECOND ANGLE — actual projecting translucent membrane",
+      "src": "../content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-577e63e6937f.jpg",
+      "caption": "Harry Rose's separate close-up of the upper grass sheath plainly shows a thin translucent tongue projecting above the sheath rim, plus longer peripheral sheath hairs. This confirms the morphology of a true inner MEMBRANOUS ligule rather than an outer hair tuft; the photographer reports 0.5–1.5 mm, but this unscaled photo cannot verify the numeric height. See original licensed photo, not a diagram.",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_distichum_ligule2_%288250242625%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "Re-encoded RGB JPEG, EXIF/GPS stripped; arrow is separate browser overlay; photo pixels otherwise not cropped.",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Real projecting membranous ligule — not hairs",
+          "target_x": 54,
+          "target_y": 34,
+          "label_x": 3,
+          "label_y": 13
+        }
+      ],
+      "original_panel_index": 7,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-distichum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "LOOK-ALIKE: Paspalum setaceum (different species)",
       "src": "../content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/commons-paspalum-setaceum.jpg",
       "caption": "This is Paspalum setaceum according to its existing source photo, NOT Paspalum distichum. Compare the pictured flowering architecture or plant habit; different frames are not measured side-by-side specimens.",
@@ -373,29 +444,7 @@
     }
   ],
   "preview_only": false,
-  "unavailable_references": [
-    {
-      "original_panel_index": 2,
-      "label": "2 · TRUE LIGULE — translucent membrane at blade–sheath junction",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_distichum_ligule1_%288251276202%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 3,
-      "label": "3 · ATTACHED SPIKELETS — green ovals along one-sided raceme",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_distichum_spikelets1_%288250207803%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 7,
-      "label": "TRUE LIGULE, SECOND ANGLE — actual projecting translucent membrane",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_distichum_ligule2_%288250242625%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    }
-  ],
+  "unavailable_references": [],
   "intro": "KNOTGRASS / WETLAND PASPALUM: the two narrow unilateral V-shaped flowering racemes are a first clue only (bahiagrass can look the same). Follow the creeping wetland mat to ACTUAL nodes: gallery already shows an authentic root-bearing RHIZOME, true short inner membranous ligule, attached flowering racemes and oval spikelets. An aboveground root-bearing STOLON at a visible soil line and calibrated glume/lemma series remain missing; do not use the rhizome photo as a substitute.",
   "memory_rule": "COUNT COMPLETE RACEMES → MEASURE 5 RIPE SPIKELETS → CHECK MARGINAL HAIRS → ROOTED BASE/COLLAR. DALLIS few large silky; VASEY many small silky; FLORIDA few big round; PUBIFLORUM smaller oval; SETACEUM narrow variable; DISTICHUM two + real stolons.",
   "safety_note": "Eight visible gallery panels: SIX true knotgrass photos, TWO other-species comparisons; seven physically stored files in this species images folder (six own, one P. notatum), plus separately archived P. setaceum in its own folder. True underground rhizome, two genuine inner ligule angles and paired inflorescence covered; actual visible soil-rooting ABOVEGROUND stolon and mature dissected glumes/lemmas still absent. Public Pages deployment unverified.",
