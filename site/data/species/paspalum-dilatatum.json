@@ -22,9 +22,9 @@
         8
       ],
       "preview_panel_indices": [
+        2,
         3,
-        4,
-        5
+        4
       ],
       "missing_original_panel_indices": [
         0
@@ -64,7 +64,7 @@
         2
       ],
       "preview_panel_indices": [
-        1
+        0
       ],
       "missing_original_panel_indices": [
         1,
@@ -88,10 +88,10 @@
         8
       ],
       "preview_panel_indices": [
+        1,
         2,
         3,
-        4,
-        5
+        4
       ],
       "missing_original_panel_indices": []
     },
@@ -114,10 +114,10 @@
         9
       ],
       "preview_panel_indices": [
+        1,
         2,
         3,
-        4,
-        5
+        4
       ],
       "missing_original_panel_indices": [
         9
@@ -142,9 +142,9 @@
         10
       ],
       "preview_panel_indices": [
-        0,
-        2,
-        5
+        6,
+        1,
+        4
       ],
       "missing_original_panel_indices": [
         0,
@@ -169,7 +169,7 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 4,
-      "panel_index": 1,
+      "panel_index": 0,
       "photo_unavailable": false
     },
     {
@@ -178,7 +178,7 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 4,
-      "panel_index": 1,
+      "panel_index": 0,
       "photo_unavailable": false
     },
     {
@@ -187,7 +187,7 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 5,
-      "panel_index": 2,
+      "panel_index": 1,
       "photo_unavailable": false
     },
     {
@@ -201,20 +201,6 @@
     }
   ],
   "panels": [
-    {
-      "label": "LOOK-ALIKE: Paspalum urvillei (different species)",
-      "src": "../content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/commons-paspalum-urvillei.jpg",
-      "caption": "This is Paspalum urvillei according to its existing source photo, NOT Paspalum dilatatum. Compare the pictured flowering architecture or plant habit; different frames are not measured side-by-side specimens.",
-      "creator": "Harry Rose (Macleay Grass Man)",
-      "license": "CC BY 2.0",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_head10_(7391798316).jpg",
-      "license_url": "",
-      "modifications": "",
-      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
-      "markers": [],
-      "original_panel_index": 3,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
-    },
     {
       "label": "DALLISGRASS — TRUE LIGULE PHOTO",
       "src": "../content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/stefan-lefnaer-dallisgrass-ligule.jpg",
@@ -249,7 +235,9 @@
         }
       ],
       "original_panel_index": 4,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-dilatatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
       "label": "DALLISGRASS — HAIRY SPIKELETS PHOTO",
@@ -278,7 +266,9 @@
         }
       ],
       "original_panel_index": 5,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-dilatatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
       "label": "TRUE SPIKELETS AT SCALE — silky margins and dark feathery reproductive organs",
@@ -307,7 +297,9 @@
         }
       ],
       "original_panel_index": 6,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-dilatatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
       "label": "SPIKELET ROWS — silky-edged green oval spikelets at 5-mm scale",
@@ -329,7 +321,9 @@
         }
       ],
       "original_panel_index": 7,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-dilatatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
       "label": "EIGHT SPIKELET FACES — oval shape, marginal hairs and 5-mm calibration",
@@ -351,7 +345,9 @@
         }
       ],
       "original_panel_index": 8,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-dilatatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
       "label": "CONNECTED ROOTED CROWN — Dallisgrass dug from the ground",
@@ -380,7 +376,25 @@
         }
       ],
       "original_panel_index": 11,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-dilatatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "LOOK-ALIKE: Paspalum urvillei (different species)",
+      "src": "../content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/commons-paspalum-urvillei.jpg",
+      "caption": "This is Paspalum urvillei according to its existing source photo, NOT Paspalum dilatatum. Compare the pictured flowering architecture or plant habit; different frames are not measured side-by-side specimens.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_head10_(7391798316).jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "paspalum-urvillei",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
     }
   ],
   "preview_only": false,
