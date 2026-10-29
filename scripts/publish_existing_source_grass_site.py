@@ -29,6 +29,14 @@ def is_eligible(p):
     if re.search(r"public domain",name,re.I) and creator.strip().lower()=="jim conrad":
         return "backyardnature.net" in source
     return False
+
+def source_species_id(src):
+    """Use the exact original Poaceae photo-folder owner for display-role QA.
+    This does NOT independently verify the specimen's taxonomic identification.
+    """
+    match=re.search(r"(?:^|/)content/taxa/Poaceae/[^/]+/([^/]+)/images/",str(src))
+    return match.group(1) if match else None
+
 # A single original file may be used in many panels. A conflicting credit record
 # holds the entire file rather than allowing selective publication.
 references=defaultdict(list)
@@ -47,6 +55,9 @@ for _,d in cards:
     original=d.get("panels",[])
     selected=[p for p in original if p["src"] in keep]
     rejected=[p for p in original if p["src"] not in keep]
+    # Actual target-species source-folder images lead; comparison panels remain
+    # after them, in their original order. Step/tile links are rebuilt below.
+    selected.sort(key=lambda p: source_species_id(p["src"])!=sid)
     mapping={p.get("original_panel_index"):i for i,p in enumerate(selected)
              if isinstance(p.get("original_panel_index"),int)}
     for step in d.get("steps",[]):
@@ -67,6 +78,10 @@ for _,d in cards:
         })
     for p in selected:
         src=p["src"]
+        photo_owner=source_species_id(src)
+        p["source_species_id"]=photo_owner
+        p["photo_role"]=("TARGET_SPECIES_SOURCE" if photo_owner==sid else
+                         "COMPARISON_SPECIES_SOURCE" if photo_owner else "SOURCE_OWNER_UNKNOWN")
         assert (ROOT/src).is_file()
         source_credits[src]={"creator":p.get("creator"),"license":p.get("license"),
                              "source_page":p.get("source_page")}
@@ -75,13 +90,19 @@ for _,d in cards:
     d["preview_only"]=False
     d["note"]="Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination."
     stats["panels"]+=len(selected);stats["held_panels"]+=len(rejected)
-    photosBySpecies[sid]={"count":len(selected),"first_src":selected[0]["src"] if selected else None}
+    actual=sum(p["photo_role"]=="TARGET_SPECIES_SOURCE" for p in selected)
+    comparison=sum(p["photo_role"]=="COMPARISON_SPECIES_SOURCE" for p in selected)
+    photosBySpecies[sid]={"count":len(selected),"first_src":selected[0]["src"] if selected else None,
+                           "target_species_source_panels":actual,
+                           "comparison_source_panels":comparison}
     target=SITE/"data/species"/(sid+".json")
     target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n")
     for row in manifest:
         if row["id"]==sid:
             row["local_panel_count"]=len(selected)
+            row["target_species_source_panels"]=actual
+            row["comparison_source_panels"]=comparison
             row["source_photo_status"]="STRICT_PUBLIC_LICENSE_FILTERED" if selected else "NO_AUTOMATICALLY_CLEARED_PHOTO"
         stats["species"]+=0
     stats["species"]+=1

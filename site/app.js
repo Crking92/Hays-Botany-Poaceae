@@ -43,6 +43,8 @@ function list(q=""){
  for(const x of entries){
    const b=make("button",{type:"button","aria-current":String(state.active===x.id)});
    b.append(txt("strong",x.common||x.scientific),txt("em",x.scientific));
+   if(x.local_panel_count>0 && x.target_species_source_panels===0 && x.comparison_source_panels>0)
+      b.append(txt("small","Comparison photos only — target species photo pending","comparison-count"));
    b.addEventListener("click",()=>select(x.id));
    root.append(b);
  }
@@ -75,6 +77,12 @@ function photoCard(panel,index,scientific){
       badge.textContent=String(markerIndex+1);
       art.append(badge);
    }
+ }
+ if(panel.photo_role==="COMPARISON_SPECIES_SOURCE"){
+    fig.classList.add("comparison-photo");
+    const source=(panel.source_species_id||"another species").replace(/-/g," ");
+    fig.append(txt("p","LOOK-ALIKE / COMPARISON ONLY — original photo filed under "+source+
+                   ", not the target species "+scientific+".","comparison-photo-note"));
  }
  fig.append(art);
  const caption=make("figcaption");
@@ -135,6 +143,13 @@ function relatedSection(data,root){
 }
 function photoGallery(data,root){
  root.append(txt("h3","Source photographs ("+data.panels.length+")"));
+ const target=data.panels.filter(p=>p.photo_role==="TARGET_SPECIES_SOURCE").length;
+ const comparisons=data.panels.filter(p=>p.photo_role==="COMPARISON_SPECIES_SOURCE").length;
+ if(data.panels.length && !target && comparisons)
+   root.append(txt("p","COMPARISON PHOTOS ONLY: There is no source-folder-matched photograph of "+
+       data.scientific+" in this release. The pictures below show other identified grasses for comparison, NOT "+data.scientific+".","comparison-gallery-warning"));
+ else if(target && comparisons)
+   root.append(txt("p","Photos filed under this species appear first. Other-species look-alike examples are marked separately.","muted"));
  const gallery=make("div",{className:"gallery"});
  if(!data.panels.length)gallery.append(txt("p","No local licensed-candidate photographs available in this staging copy."));
  data.panels.forEach((p,i)=>gallery.append(photoCard(p,i,data.scientific)));

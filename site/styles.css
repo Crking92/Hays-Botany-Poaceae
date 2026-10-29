@@ -48,3 +48,8 @@ background:#e23f1a;color:white;font-weight:800;font-size:12px;line-height:1;z-in
 ol.marker-list{padding-left:23px;list-style-type:decimal}
 ol.marker-list li{padding:2px 0}
 @media(max-width:600px){.marker-number{width:21px;height:21px;font-size:11px}}
+
+/* Keep photo identity visibly separate from useful look-alike lessons. */
+.comparison-gallery-warning{border-left:4px solid #9a6f21;background:#fff7e9;padding:11px 13px;border-radius:5px;font-weight:700}
+.comparison-photo-note{color:#6c4b19;background:#fff5e2;border:1px solid #e6c88b;border-radius:6px;padding:7px 10px;margin:0 0 8px;font-size:.82rem;font-weight:700}
+.comparison-count{display:block;margin-top:4px;color:#765427;font-size:.73rem}
