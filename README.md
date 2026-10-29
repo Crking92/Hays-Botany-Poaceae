@@ -2,15 +2,16 @@
 
 ## Current existing-file transfer checkpoint — October 28, 2026
 
-**GitHub Actions transfer jobs passed; source-image rights and original-byte hashes tracked individually.** The current Poaceae repository contains **1,344 / 1,402 original source files**, including **390 data/text files** and **954 source photos**. **58 original images remain held in the original hub** pending permission/metadata checks. No newly collected or replacement photos were introduced for this transfer.
+**GitHub Actions transfer jobs passed; source-image rights and original-byte hashes tracked individually.** The current Poaceae repository contains **1,346 / 1,402 original source files**, including **390 data/text files** and **956 source photos**. **56 original images remain held out of the public Poaceae repository** pending permission/metadata checks; every one also has a byte-verified private holding copy. No newly collected or replacement photos were introduced for this transfer.
 
 - **788 previously imported conservative license candidates** (not automatically cleared for unrestricted public release).
 - **157 Bob Harms originals** added under the photographer's scientific/educational permission with credit — **not Creative Commons**.
 - **2 Dave Thayer photographs** and **3 Tom Chester photographs** copied under their distinct site-specific author permission terms.
 - **4 currently source-verified CC BY-SA Commons originals** (sideoats grama and *Setaria parviflora* anatomy). A fifth Commons photo remains held due to upstream HTTP 429 rate limits, not because its license was rejected.
-- **58 remaining held originals** have not been promoted to this public repository. Original source, exact files, and rights records remain in `Crking92/Hays-County-Botany`.
+- **2 exact-current CC0 GBIF specimen photographs** of silver bluestem now source/pixel-verified and copied.
+- **56 remaining held originals** have not been promoted to this public repository. All 56 are also backed up in a separate private repository with their original SHA/credits; the original hub remains unchanged.
 
-[Bob Harms exact-image transfer and credit terms](migration/poaceae-bob-harms-educational-transfer.json) · [Other author-specific permissions](migration/poaceae-author-photo-5-transfer.json) · [Existing Commons exact image/CC audit](migration/poaceae-existing-commons-photo-transfer.json) · [Full source-file dispositions](migration/source-file-ledger.json).
+[Complete original-source preservation proof — 1,402 of 1,402 across public/private repositories](https://github.com/Crking92/Hays-Botany-Monocots-Aquatics/blob/staging/original-source-transfer/migration/poaceae-all-originals-public-private-reconciliation.json) · [GBIF CC0 exact-source transfer](migration/poaceae-gbif-cc0-existing-source-check.json) · [Bob Harms exact-image transfer and credit terms](migration/poaceae-bob-harms-educational-transfer.json) · [Other author-specific permissions](migration/poaceae-author-photo-5-transfer.json) · [Existing Commons exact image/CC audit](migration/poaceae-existing-commons-photo-transfer.json) · [Full source-file dispositions](migration/source-file-ledger.json).
 
 **This is a source-file transfer, not a newly published GitHub Pages learner.** Public repository source access does not mean every photograph is open for commercial reuse. The original Hays Botany website remains authoritative; no cutover or public gallery deployment has been made.
 
@@ -19,7 +20,7 @@ This is the new family repository for the **unified Hays County Botany Visual Le
 
 ## Current original-file transfer checkpoint — October 28, 2026
 
-**1,344 / 1,402 exact original source files copied (390 data and credit records + 954 original image files).** The 954 images consist of 788 original conservative license-candidate photos, 157 Bob Harms photographs under the copyright holder's credited educational/scientific-use terms, 2 Dave Thayer freely reusable originals, 3 Tom Chester credited-reproduction originals, and 4 verified current Commons CC BY-SA originals. **58 original photos are still held in the canonical hub** because permissions, identity, or attribution were not sufficiently verified. The full 1,402 originals remain in the original hub; no replacement photos have been collected.
+**1,346 / 1,402 exact original source files copied (390 data and credit records + 956 original image files).** The 956 images consist of 788 original conservative license-candidate photos, 157 Bob Harms photographs under the copyright holder's credited educational/scientific-use terms, 2 Dave Thayer freely reusable originals, 3 Tom Chester credited-reproduction originals, 4 verified current Commons CC BY-SA originals, and 2 source/photo-matched GBIF CC0 specimen originals. **56 original photos remain outside the public Poaceae repository** because permissions, identity, or attribution were not sufficiently verified; all 56 are preserved in the private original-source hold archive. The full 1,402 originals remain in the original hub; no replacement photos have been collected.
 
 This is **source-code repository transfer only**. No Poaceae Pages site or main hub cutover occurred. Copyright and noncommercial/share-alike limits continue to apply individually; a public GitHub repository does not convert photo rights to Creative Commons. The remaining held images must not be silently incorporated into a public website.
 
