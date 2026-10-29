@@ -1,5 +1,20 @@
 # Hays Botany — Poaceae (verified staging)
 
+## Current existing-file transfer checkpoint — October 28, 2026
+
+**GitHub Actions transfer jobs passed; source-image rights and original-byte hashes tracked individually.** The current Poaceae repository contains **1,344 / 1,402 original source files**, including **390 data/text files** and **954 source photos**. **58 original images remain held in the original hub** pending permission/metadata checks. No newly collected or replacement photos were introduced for this transfer.
+
+- **788 previously imported conservative license candidates** (not automatically cleared for unrestricted public release).
+- **157 Bob Harms originals** added under the photographer's scientific/educational permission with credit — **not Creative Commons**.
+- **2 Dave Thayer photographs** and **3 Tom Chester photographs** copied under their distinct site-specific author permission terms.
+- **4 currently source-verified CC BY-SA Commons originals** (sideoats grama and *Setaria parviflora* anatomy). A fifth Commons photo remains held due to upstream HTTP 429 rate limits, not because its license was rejected.
+- **58 remaining held originals** have not been promoted to this public repository. Original source, exact files, and rights records remain in `Crking92/Hays-County-Botany`.
+
+[Bob Harms exact-image transfer and credit terms](migration/poaceae-bob-harms-educational-transfer.json) · [Other author-specific permissions](migration/poaceae-author-photo-5-transfer.json) · [Existing Commons exact image/CC audit](migration/poaceae-existing-commons-photo-transfer.json) · [Full source-file dispositions](migration/source-file-ledger.json).
+
+**This is a source-file transfer, not a newly published GitHub Pages learner.** Public repository source access does not mean every photograph is open for commercial reuse. The original Hays Botany website remains authoritative; no cutover or public gallery deployment has been made.
+
+
 This is the new family repository for the **unified Hays County Botany Visual Learner**. The original [Hays County Botany](https://github.com/Crking92/Hays-County-Botany) repository and GitHub Pages website remain unchanged and authoritative until final sign-off.
 
 ## Initial non-destructive transfer — October 28, 2026
