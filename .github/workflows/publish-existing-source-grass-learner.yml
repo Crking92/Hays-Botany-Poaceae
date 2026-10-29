@@ -1,0 +1,75 @@
+name: Publish existing-source strict-license Poaceae learner
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/publish_existing_source_grass_site.py'
+      - '.github/workflows/publish-existing-source-grass-learner.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-existing-source-poaceae-learner
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rebuild already-migrated source teaching lessons and strict photo subset
+        run: |
+          set -euo pipefail
+          python3 scripts/build_poaceae_site_preview.py
+          python3 scripts/build_poaceae_rights_first_site.py
+          python3 scripts/publish_existing_source_grass_site.py
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('site/data/poaceae-release.json')
+          x=json.loads(p.read_text())
+          assert x['species']==112
+          assert x['photo_files_referenced_on_public_site']>=10
+          assert x['new_media_files_copied']==0 and x['new_external_media_downloaded']==0
+          assert len(list(Path('site/data/species').glob('*.json')))==112
+          assert not Path('site/content').exists()
+          print('POACEAE_SOURCE_ONLY_PHOTO_RELEASE_GATE_PASS',x['photo_files_referenced_on_public_site'])
+          PY
+      - name: Commit only derived safe teaching data and website source in batches
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          mapfile -t cards < <(find site/data/species -maxdepth 1 -name '*.json' -type f | sort)
+          for ((i=0; i<${#cards[@]}; i+=45)); do
+            chunk=("${cards[@]:i:45}")
+            git add -- "${chunk[@]}"
+            git diff --cached --check
+            if ! git diff --cached --quiet; then
+              git commit -m "Publish bounded batch of existing-source strict-rights grass lessons"
+            fi
+          done
+          git add index.html site/index.html site/app.js site/data/poaceae-index.json site/data/gallery-index.json site/data/poaceae-release.json site/PHOTO_PUBLICATION_SCOPE.md
+          git add site/data/ || true
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m "Enable public Poaceae existing-source strict photo subset with credits and glossary"
+          fi
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:refs/heads/main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: poaceae-existing-source-strict-photo-publication-ledger
+          path: site/data/poaceae-release.json
+          retention-days: 60
+          if-no-files-found: warn
