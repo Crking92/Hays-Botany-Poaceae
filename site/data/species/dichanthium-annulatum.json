@@ -20,7 +20,7 @@
         1
       ],
       "preview_panel_indices": [
-        3
+        5
       ],
       "missing_original_panel_indices": [
         1
@@ -42,11 +42,10 @@
         5
       ],
       "preview_panel_indices": [
-        0
+        0,
+        3
       ],
-      "missing_original_panel_indices": [
-        5
-      ]
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · ROOTED BASE AND BASAL RACEME PAIRS",
@@ -79,11 +78,10 @@
         3
       ],
       "preview_panel_indices": [
+        4,
         1
       ],
-      "missing_original_panel_indices": [
-        6
-      ]
+      "missing_original_panel_indices": []
     },
     {
       "heading": "05 · GLUMES, REDUCED LEMMA AND AWN",
@@ -122,12 +120,12 @@
         3
       ],
       "preview_panel_indices": [
-        3,
+        5,
+        6,
         1
       ],
       "missing_original_panel_indices": [
-        7,
-        8
+        7
       ]
     }
   ],
@@ -138,7 +136,7 @@
       "why_it_matters": "Start with the recorded recognition characters before making a species identification.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 9,
-      "panel_index": 3,
+      "panel_index": 5,
       "photo_unavailable": false
     },
     {
@@ -174,7 +172,7 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 9,
-      "panel_index": 3,
+      "panel_index": 5,
       "photo_unavailable": false
     }
   ],
@@ -280,6 +278,53 @@
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
+      "label": "REAL UPPER SHEATH AND CULM — inner blade ligule NOT exposed",
+      "src": "../content/taxa/Poaceae/Dichanthium/dichanthium-annulatum/images/harry-rose-9ce8b67219e6.jpg",
+      "caption": "The narrow green vertical stem (upper center) emerges from a green surrounding sheath (lower center). A pale furry sheath rim is visible at its upper edge. The blade is not opened to expose the actual inner membranous ligule, so do NOT teach the pale sheath rim or its hairs as the free ligule. Two arrows mark only the true visible culm and its enclosing sheath. This Australian source is not a Texas voucher and provides no reliable 1-mm ligule measurement.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_annulatum_ligule1_%286955112994%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Green culm above sheath — not ligule",
+          "target_x": 47,
+          "target_y": 24,
+          "label_x": 5,
+          "label_y": 17
+        },
+        {
+          "label": "Enclosing hairy sheath — membrane hidden",
+          "target_x": 49,
+          "target_y": 73,
+          "label_x": 65,
+          "label_y": 87
+        }
+      ],
+      "original_panel_index": 5,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "dichanthium-annulatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "KLEBERG — actual attached paired spikelets",
+      "src": "../content/taxa/Poaceae/Dichanthium/dichanthium-annulatum/images/harry-rose-c672177c9e32.jpg",
+      "caption": "Harry Rose's genuine source-labelled spikelet pair. Look for two associated reproductive units, then confirm which is sessile versus pedicelled and measure glumes and awn origin on a fully resolved photograph. No unverified labels are placed.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_annulatum_spikelet_pair3_%287101179421%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 6,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "dichanthium-annulatum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "Kleberg bluestem — inspected source photograph",
       "src": "../content/taxa/Poaceae/Dichanthium/dichanthium-annulatum/images/commons-dichanthium-annulatum-macleay-grass-man.jpg",
       "caption": "Original photo visibly shows an erect bundle of slender pigmented seed-bearing branches and long fine awns. It cannot resolve the diagnostic WHITE RING at the vegetative stem node, which lies off-frame.",
@@ -316,6 +361,30 @@
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "dichanthium-annulatum",
       "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "Silky node",
+      "src": "../content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-7c3f960605f8.jpg",
+      "caption": "SILKY BLUESTEM also grows a fluffy white node beard. This disproves the simplistic 'white hairy ring = only Kleberg' rule. Compare attached flowering head and microscopically measured glumes for species-level certainty.",
+      "creator": "Harry Rose (Macleay Grass Man)",
+      "license": "CC BY 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_sericeum_node3_%2814157759518%29.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Also a bearded node",
+          "target_x": 49,
+          "target_y": 50,
+          "label_x": 5,
+          "label_y": 16
+        }
+      ],
+      "original_panel_index": 8,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "dichanthium-sericeum",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
     }
   ],
   "preview_only": false,
@@ -340,27 +409,6 @@
       "reason": "External-only reference; image not archived for new site",
       "reference_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_ischaemum_var._songarica.jpg",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 5,
-      "label": "REAL UPPER SHEATH AND CULM — inner blade ligule NOT exposed",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_annulatum_ligule1_%286955112994%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 6,
-      "label": "KLEBERG — actual attached paired spikelets",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_annulatum_spikelet_pair3_%287101179421%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 8,
-      "label": "Silky node",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_sericeum_node3_%2814157759518%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "KLEBERG BLUESTEM (introduced): LOOK HERE FIRST at the complete cluster of slender terminal racemes, then trace an attached fertile sessile spikelet and its pedicelled companion. Check the true culm node and basal shoots, but a conspicuous white node beard is variable in North American material and also occurs in silky and native cane bluestems; do NOT require it. Verify the broad/obtuse lower glume, upper marginal hairs and twisted fertile-lemma awn under magnification. KR bluestem overlaps in raceme count and color, so never decide from a purple head or hair ring alone.",

@@ -23,12 +23,13 @@
         3,
         4
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0,
+        1
+      ],
       "missing_original_panel_indices": [
         0,
-        1,
-        3,
-        4
+        1
       ]
     },
     {
@@ -71,11 +72,12 @@
         3,
         4
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0,
+        1
+      ],
       "missing_original_panel_indices": [
-        1,
-        3,
-        4
+        1
       ]
     },
     {
@@ -94,11 +96,11 @@
         3,
         4
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        3,
-        4
-      ]
+      "preview_panel_indices": [
+        0,
+        1
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "05 · UPPER STERILE FLORET AND CENTRAL TEXAS LOOK-ALIKES",
@@ -115,9 +117,10 @@
         4,
         6
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        1
+      ],
       "missing_original_panel_indices": [
-        4,
         6
       ]
     },
@@ -139,12 +142,13 @@
         4,
         6
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0,
+        1
+      ],
       "missing_original_panel_indices": [
         0,
         2,
-        3,
-        4,
         6
       ]
     }
@@ -164,9 +168,9 @@
       "look_for": "Perennial warm-season bunchgrass; culms erect to ascending from a tufted base.",
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
-      "original_panel_index": 2,
-      "panel_index": null,
-      "photo_unavailable": true
+      "original_panel_index": 4,
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -191,12 +195,75 @@
       "look_for": "Numerous short pendent RACEMES regularly spaced down a LONG flowering axis favor sideoats; blue grama has just a few longer terminal eyebrows, Texas grama several short dense fuzzy terminal branches, red grama tiny appressed units. Tumblegrass (Muhlenbergia paniculata) has much longer stiff divergent one-sided racemes rather than many short oats.",
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
-      "original_panel_index": 6,
-      "panel_index": null,
-      "photo_unavailable": true
+      "original_panel_index": 4,
+      "panel_index": 1,
+      "photo_unavailable": false
     }
   ],
-  "panels": [],
+  "panels": [
+    {
+      "label": "3 · FLOWERING — orange anthers vs feathery stigmas · PROVISIONAL REVIEW",
+      "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-curtipendula/images/commons-archive-3cfaed3839529c4e.jpg",
+      "caption": "Bright orange tubes hanging down are pollen-bearing ANTHERS; fuzzy white delicate plumes projecting sideways are receptive STIGMAS. Both are reproductive parts and neither is an awn. No fertile-lemma length is measured here.",
+      "creator": "Erutuon",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_curtipendula_closeup_of_spikes_in_bloom.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Unmodified Commons-hosted photo, no annotations baked into source. Source JPEG unchanged by 2026-10-26 verification.",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Orange pollen-bearing anther",
+          "target_x": 61,
+          "target_y": 56,
+          "label_x": 77,
+          "label_y": 34
+        },
+        {
+          "label": "White feathery stigma",
+          "target_x": 48,
+          "target_y": 52,
+          "label_x": 6,
+          "label_y": 64
+        }
+      ],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bouteloua-curtipendula",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "4 · MATURING AXIS — one-sided short branches · PROVISIONAL REVIEW",
+      "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-curtipendula/images/commons-archive-d4a656e91e56257b.jpg",
+      "caption": "The nearly continuous central flowering axis runs vertically through this photograph, carrying multiple small one-sided pendant RACEMES. The arrow onto one drooping lateral unit marks the whole little raceme with several spikelets, NOT a single spikelet. This mature head is connected to a flowering stem outside frame; it does not show the root crown or the true ligule.",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_curtipendula_(3797561432).jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "modifications": "Unmodified remote original photo, linked only. Source JPEG unchanged by 2026-10-26 verification.",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Long main flowering axis",
+          "target_x": 50,
+          "target_y": 51,
+          "label_x": 5,
+          "label_y": 27
+        },
+        {
+          "label": "One short pendent raceme (NOT one spikelet)",
+          "target_x": 55,
+          "target_y": 36,
+          "label_x": 64,
+          "label_y": 13
+        }
+      ],
+      "original_panel_index": 4,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bouteloua-curtipendula",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    }
+  ],
   "preview_only": false,
   "unavailable_references": [
     {
@@ -204,20 +271,6 @@
       "label": "1 · HABIT — Central Texas full sideoats grama bunch · PROVISIONAL REVIEW",
       "reason": "Source photo withheld from public replacement pending rights review",
       "reference_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_curtipendula_(4087879908).jpg",
-      "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 3,
-      "label": "3 · FLOWERING — orange anthers vs feathery stigmas · PROVISIONAL REVIEW",
-      "reason": "Source photo withheld from public replacement pending rights review",
-      "reference_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_curtipendula_closeup_of_spikes_in_bloom.jpg",
-      "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 4,
-      "label": "4 · MATURING AXIS — one-sided short branches · PROVISIONAL REVIEW",
-      "reason": "Source photo withheld from public replacement pending rights review",
-      "reference_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_curtipendula_(3797561432).jpg",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
     },
     {

@@ -22,7 +22,7 @@
       ],
       "preview_panel_indices": [
         0,
-        1
+        3
       ],
       "missing_original_panel_indices": []
     },
@@ -41,11 +41,11 @@
         1,
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         1,
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · FOLLOW THE SHORT PEDICEL",
@@ -62,8 +62,8 @@
         6
       ],
       "preview_panel_indices": [
-        1,
-        2
+        3,
+        4
       ],
       "missing_original_panel_indices": []
     },
@@ -83,8 +83,8 @@
         7
       ],
       "preview_panel_indices": [
-        2,
-        3
+        4,
+        5
       ],
       "missing_original_panel_indices": []
     },
@@ -104,8 +104,8 @@
         7
       ],
       "preview_panel_indices": [
-        2,
-        3
+        4,
+        5
       ],
       "missing_original_panel_indices": []
     },
@@ -128,8 +128,8 @@
       ],
       "preview_panel_indices": [
         0,
-        4,
-        2
+        6,
+        4
       ],
       "missing_original_panel_indices": [
         4
@@ -152,8 +152,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -161,7 +161,7 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 6,
-      "panel_index": 2,
+      "panel_index": 4,
       "photo_unavailable": false
     },
     {
@@ -202,6 +202,53 @@
         }
       ],
       "original_panel_index": 0,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "catapodium-rigidum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "ARCHIVED FERN GRASS — source-labelled ligule/collar 1",
+      "src": "../content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/commons-catapodium-ligule-1.jpg",
+      "caption": "Stefan.lefnaer's Catapodium rigidum leaf collar photograph. Study the junction between leaf blade and sheath to locate the true membranous ligule; don't infer measured membrane length or add an anatomy arrow before pixel-level inspection against a scale.",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ACatapodium_rigidum_sl15.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "catapodium-rigidum",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "FERN GRASS — true translucent ligule area and 2 mm reference",
+      "src": "../content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/commons-catapodium-ligule-2.jpg",
+      "caption": "Stefan.lefnaer's actual C. rigidum stem and leaf-sheath collar macro shows pale translucent membranous tissue beside the green axis and the photographer's original 2 mm scale bar. The arrows point to visible tissue and the printed scale, not a claimed exact 1–3 mm ligule measurement. The free membrane tip is not unambiguously isolated; glumes, lemmas and flowering spikelets are not pictured.",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ACatapodium_rigidum_sl16.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Translucent membranous collar tissue",
+          "target_x": 76,
+          "target_y": 43,
+          "label_x": 4,
+          "label_y": 31
+        },
+        {
+          "label": "Photographer's 2 mm scale bar",
+          "target_x": 49,
+          "target_y": 94,
+          "label_x": 5,
+          "label_y": 85
+        }
+      ],
+      "original_panel_index": 2,
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "catapodium-rigidum",
       "photo_role": "TARGET_SPECIES_SOURCE"
@@ -303,20 +350,6 @@
   ],
   "preview_only": false,
   "unavailable_references": [
-    {
-      "original_panel_index": 1,
-      "label": "ARCHIVED FERN GRASS — source-labelled ligule/collar 1",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ACatapodium_rigidum_sl15.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "FERN GRASS — true translucent ligule area and 2 mm reference",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ACatapodium_rigidum_sl16.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
     {
       "original_panel_index": 4,
       "label": "3 · STINKGRASS — OTHER species, not the same membrane collar",

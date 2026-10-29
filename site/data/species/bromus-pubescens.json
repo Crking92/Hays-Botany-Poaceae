@@ -21,10 +21,11 @@
         6,
         8
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
         0,
-        6,
         8
       ]
     },
@@ -46,10 +47,11 @@
         8,
         9
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
         0,
-        6,
         7,
         8,
         9
@@ -76,11 +78,11 @@
         11
       ],
       "preview_panel_indices": [
-        0
+        0,
+        1
       ],
       "missing_original_panel_indices": [
         0,
-        6,
         2,
         3,
         10,
@@ -106,7 +108,7 @@
         11
       ],
       "preview_panel_indices": [
-        0
+        1
       ],
       "missing_original_panel_indices": [
         0,
@@ -131,10 +133,11 @@
         6,
         11
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
         0,
-        6,
         11
       ]
     },
@@ -164,7 +167,8 @@
         5
       ],
       "preview_panel_indices": [
-        0
+        0,
+        1
       ],
       "missing_original_panel_indices": [
         0,
@@ -173,7 +177,6 @@
         9,
         10,
         11,
-        6,
         2,
         3,
         4,
@@ -229,6 +232,37 @@
     }
   ],
   "panels": [
+    {
+      "label": "WOODLAND BROME — labelled living rooted grass tufts",
+      "src": "../content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-d4a51a66c607.jpg",
+      "caption": "Copenhagen Botanical Garden accession labelled BROMOPSIS PUBESCENS (synonym used for Bromus pubescens). This view records the rooted plant's tuft and leaves. It does NOT show mature spikelets, pubescent lemmas, a ligule, or prove perennial duration from one photo. Not a wild Texas occurrence.",
+      "creator": "Daderot",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ABromus_pubescens_-_Copenhagen_Botanical_Garden_-_DSC07693.JPG",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Green leaf blades",
+          "target_x": 80,
+          "target_y": 33,
+          "label_x": 68,
+          "label_y": 8
+        },
+        {
+          "label": "Tufted crown region",
+          "target_x": 76,
+          "target_y": 54,
+          "label_x": 60,
+          "label_y": 80
+        }
+      ],
+      "original_panel_index": 6,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bromus-pubescens",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "JAPANESE BROME — visible nervation, overlapping lemmas, awn origins",
       "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
@@ -303,13 +337,6 @@
       "label": "Existing Lanceolate brome photo",
       "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
       "reference_page": "https://www.inaturalist.org/photos/283645783",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 6,
-      "label": "WOODLAND BROME — labelled living rooted grass tufts",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ABromus_pubescens_-_Copenhagen_Botanical_Garden_-_DSC07693.JPG",
       "license_status": "SOURCE_REFERENCE_HELD"
     },
     {

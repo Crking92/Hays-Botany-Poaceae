@@ -24,11 +24,11 @@
       ],
       "preview_panel_indices": [
         0,
-        1
+        1,
+        2
       ],
       "missing_original_panel_indices": [
-        11,
-        0
+        11
       ]
     },
     {
@@ -50,8 +50,8 @@
         13
       ],
       "preview_panel_indices": [
-        2,
-        3
+        3,
+        4
       ],
       "missing_original_panel_indices": [
         11,
@@ -77,11 +77,11 @@
         3
       ],
       "preview_panel_indices": [
-        4,
-        1
+        5,
+        0,
+        2
       ],
       "missing_original_panel_indices": [
-        0,
         3
       ]
     },
@@ -101,8 +101,8 @@
         2
       ],
       "preview_panel_indices": [
-        0,
-        1
+        1,
+        2
       ],
       "missing_original_panel_indices": []
     },
@@ -127,10 +127,10 @@
         10
       ],
       "preview_panel_indices": [
-        4
+        0,
+        5
       ],
       "missing_original_panel_indices": [
-        0,
         3,
         4,
         5,
@@ -164,17 +164,17 @@
         5
       ],
       "preview_panel_indices": [
-        2,
         3,
         4,
+        5,
         0,
-        1
+        1,
+        2
       ],
       "missing_original_panel_indices": [
         11,
         12,
         13,
-        0,
         3,
         4,
         5
@@ -197,8 +197,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -215,7 +215,7 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 10,
-      "panel_index": 4,
+      "panel_index": 5,
       "photo_unavailable": false
     },
     {
@@ -224,11 +224,42 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     }
   ],
   "panels": [
+    {
+      "label": "JAPANESE BROME — archived mature flowering spikelets",
+      "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/commons-bromus-japonicus-bf6282e4125a.jpg",
+      "caption": "Matt Lavin's verified Japanese brome close-up shows overlapping green florets within awned spikelets. Follow the long narrow awn from its visible spikelet, then compare the layered spikelet body. These are broad photo-reading cues: this image has no millimeter scale, and individual glume veins, lemma nerve counts, and precise awn insertion are NOT established.",
+      "creator": "Matt Lavin from Bozeman, Montana, USA",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ABromus_japonicus_%283860476601%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Visible spikelet body",
+          "target_x": 36,
+          "target_y": 24,
+          "label_x": 7,
+          "label_y": 17
+        },
+        {
+          "label": "Long awn (bristle)",
+          "target_x": 48,
+          "target_y": 13,
+          "label_x": 68,
+          "label_y": 9
+        }
+      ],
+      "original_panel_index": 0,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bromus-japonicus",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "JAPANESE BROME — actual scaled lemma and long awn (archived)",
       "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-lemma-awn.jpg",
@@ -383,13 +414,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://commons.wikimedia.org/wiki/File:Bromus_pubescens.jpg",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 0,
-      "label": "JAPANESE BROME — archived mature flowering spikelets",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ABromus_japonicus_%283860476601%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
     },
     {
       "original_panel_index": 3,

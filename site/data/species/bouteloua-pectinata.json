@@ -58,10 +58,11 @@
         0,
         3
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
-        3
+        0
       ]
     },
     {
@@ -111,12 +112,13 @@
         2,
         3
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
         0,
         1,
-        2,
-        3
+        2
       ]
     }
   ],
@@ -169,6 +171,53 @@
   ],
   "panels": [
     {
+      "label": "UVALDE CC0 REFERENCE — habitat and elevated culms",
+      "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-pectinata/images/jim-conrad-uvalde-tallgram-habit-cc0.jpg",
+      "caption": "Real Uvalde thin-soil limestone habitat with long nearly upright flowering culms rising above a sparse short prairie grass layer; individual stems overlap with other plants, and the photographer's species ID is not an independently vouchered same-plant rooted specimen. No specific belowground root/crown structures or true leaf collars resolve at this image scale.",
+      "creator": "Jim Conrad",
+      "license": "Public domain (Jim Conrad's express dedication)",
+      "source_page": "https://www.backyardnature.net/n/h/tallgram.htm",
+      "license_url": "https://www.backyardnature.net/j/copyrite.htm",
+      "modifications": "Re-encoded JPEG RGB after EXIF transpose; all GPS/EXIF stripped; no morphology changed",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bouteloua-pectinata",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "UVALDE CC0 REFERENCE — long eyebrow and naked distal rachis",
+      "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-pectinata/images/jim-conrad-uvalde-tallgram-comb-tip-cc0.jpg",
+      "caption": "Jim Conrad's real Uvalde County Bouteloua pectinata close-up: the lateral branch is an entire COMB/RACEME containing many overlapping spikelets. The right tip tapers into a pale bristly terminal region, which the source describes as a bare projection. Fine hairs and spikelet structures are visible, but an exact naked-rachis boundary, bifid rudiment, separate glumes and their length cannot be resolved at this scale.",
+      "creator": "Jim Conrad",
+      "license": "Public domain (Jim Conrad's express dedication)",
+      "source_page": "https://www.backyardnature.net/n/h/tallgram.htm",
+      "license_url": "https://www.backyardnature.net/j/copyrite.htm",
+      "modifications": "Re-encoded JPEG RGB after EXIF transpose; all GPS/EXIF stripped; no morphology changed",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Attached long eyebrow-shaped raceme",
+          "target_x": 51,
+          "target_y": 52,
+          "label_x": 3,
+          "label_y": 12
+        },
+        {
+          "label": "Pale tapered distal tip (not individual glumes)",
+          "target_x": 93,
+          "target_y": 10,
+          "label_x": 57,
+          "label_y": 5
+        }
+      ],
+      "original_panel_index": 4,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bouteloua-pectinata",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
       "label": "LOOK-ALIKE — hairy grama's branch hairs and pointed tip",
       "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-hirsuta/images/02-branch-glume-hairs.jpg",
       "caption": "DIFFERENT SPECIES: a sharply detailed hairy grama branch shows its long spreading hairs and terminal bare rachis; overlap makes matched specimens important.",
@@ -206,20 +255,6 @@
       "label": "2 · Multiple flowering culms in a grass stand",
       "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
       "reference_page": "https://www.gbif.org/occurrence/6162779361",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 3,
-      "label": "UVALDE CC0 REFERENCE — habitat and elevated culms",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.backyardnature.net/n/h/tallgram.htm",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 4,
-      "label": "UVALDE CC0 REFERENCE — long eyebrow and naked distal rachis",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.backyardnature.net/n/h/tallgram.htm",
       "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
