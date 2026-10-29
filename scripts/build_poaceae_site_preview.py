@@ -35,9 +35,14 @@ def main():
     ledger=json.loads((root/"migration/source-file-ledger.json").read_text())
     assert report["stage"] in ("STAGING_ONLY_NOT_PUBLISHED","BOB_HARMS_PLUS_CURRENT_COMMONS_SOURCE_TRANSFER_NOT_DEPLOYED")
     assert not report["website_enabled"]
-    allowed={x["path"] for x in ledger if x["disposition"]=="LICENSE_CANDIDATE_IMAGE_COPIED"}
+    # Include only pre-existing copied Commons assets with individually verified CC
+    # evidence; these four were added after the original 788-file baseline.
+    accepted_dispositions={"LICENSE_CANDIDATE_IMAGE_COPIED","CURRENT_COMMONS_CC_PHOTO_COPIED"}
+    allowed={x["path"] for x in ledger if x["disposition"] in accepted_dispositions}
     held={x["path"] for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"}
-    assert len(allowed)==788 and len(held)==56,("Updated original-copy source ledger counts changed",len(allowed),len(held))
+    counts=report["destination_file_counts"]
+    assert len(allowed)==sum(counts[k] for k in accepted_dispositions)
+    assert len(held)==counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
 
     # Canonical photo records are the attribution authority, not panel prose.
     credit_by_path={}

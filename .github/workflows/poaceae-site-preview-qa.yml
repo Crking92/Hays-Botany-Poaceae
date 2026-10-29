@@ -40,7 +40,7 @@ jobs:
           assert report["stage"]=="UNDEPLOYED_LOCAL_PREVIEW"
           assert report["species"]==112 and report["genera"]==53
           expected_counts=json.loads(Path("migration/poaceae-transfer-status.json").read_text())["destination_file_counts"]
-          assert report["candidate_image_files"]==expected_counts["LICENSE_CANDIDATE_IMAGE_COPIED"]
+          assert report["candidate_image_files"]==sum(expected_counts[k] for k in ("LICENSE_CANDIDATE_IMAGE_COPIED","CURRENT_COMMONS_CC_PHOTO_COPIED"))
           assert report["held_source_images_not_published"]==expected_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
           assert sum(expected_counts.values())==len(ledger)==1402
           assert not report["production_pages_deployed"]

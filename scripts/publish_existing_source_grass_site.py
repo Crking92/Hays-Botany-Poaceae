@@ -16,27 +16,61 @@ assert len(manifest)==112
 candidate_files={p.relative_to(PREVIEW).as_posix() for p in PREVIEW.rglob("*")
                  if p.is_file() and p.suffix.lower() in (".jpg",".jpeg",".png",".webp")}
 assert candidate_files
+# Audit scope for restoring existing on-disk exact-species photographs only.
+# These are not blanket source-domain or CC version assumptions.
+RESTORATION_TAXA={
+    "bouteloua-curtipendula","bouteloua-pectinata","bromus-pubescens",
+    "bromus-texensis","sorghum-halepense","sporobolus-compositus",
+    "urochloa-reptans","zizania-texana"
+}
+def normalize_commons(source):
+    # The repo used both /wiki/File: and URL-escaped /wiki/File%3A links.
+    return re.sub(r"/wiki/File%3[Aa]", "/wiki/File:", source)
 def is_eligible(p):
     name=str(p.get("license") or "").strip()
     source=str(p.get("source_page") or "")
     creator=str(p.get("creator") or "")
+    src=str(p.get("src") or "")
+    match=re.search(r"content/taxa/Poaceae/[^/]+/([^/]+)/images/",src)
+    sid=match.group(1) if match else ""
+    normalized=normalize_commons(source)
+    commons=normalized.startswith("https://commons.wikimedia.org/wiki/File:")
+    inat=source.startswith("https://www.inaturalist.org/photos/")
     if not creator or not source.startswith("https://"):return False
     if re.search(r"NC|ND|not verified|review|all rights reserved|permission",name,re.I):return False
-    if re.fullmatch(r"CC0(?:\s*1\.0)?",name,re.I):
-        return source.startswith("https://commons.wikimedia.org/wiki/File:") or source.startswith("https://www.inaturalist.org/photos/")
-    if re.fullmatch(r"CC BY(-SA)?\s*(2\.0|2\.5|3\.0|4\.0)(?:\s+US)?",name,re.I):
-        return source.startswith("https://commons.wikimedia.org/wiki/File:") or source.startswith("https://www.inaturalist.org/photos/")
+    if re.fullmatch(r"CC0(?:\\s*1\\.0)?",name,re.I):
+        return commons or inat
+    if re.fullmatch(r"CC BY(-SA)?\\s*(2\\.0|2\\.5|3\\.0|4\\.0)(?:\\s+US)?",name,re.I):
+        return commons or inat
     if re.search(r"public domain",name,re.I) and creator.strip().lower()=="jim conrad":
         return "backyardnature.net" in source
+    if sid not in RESTORATION_TAXA:return False
+    license_url=str(p.get("license_url") or "")
+    # Original photo-level metadata documents CC BY 4.0 for the individual
+    # iNaturalist photographs, not merely for their observation records.
+    if name.upper()=="CC BY" and inat and re.fullmatch(
+        r"https://creativecommons\\.org/licenses/by/4\\.0/?",license_url,re.I
+    ):
+        return True
+    if name.upper()=="CC BY-SA" and commons and re.fullmatch(
+        r"https://creativecommons\\.org/licenses/by-sa/(2\\.0|4\\.0)/?",license_url,re.I
+    ):
+        return True
+    # Jim Conrad expressly releases his self-authored Backyard Nature photos;
+    # his dedication is public domain, not necessarily CC0 as source shorthand.
+    if sid=="bouteloua-pectinata" and creator=="Jim Conrad" and (
+        name=="CC0 1.0 — author-page linked public-domain dedication"
+    ) and source=="https://www.backyardnature.net/n/h/tallgram.htm":
+        return True
+    # Ryan Hagerty's already-archived official USFWS employee photos are PD-USGov.
+    if sid=="zizania-texana" and "Ryan Hagerty" in creator and (
+        "U.S. Fish and Wildlife Service" in creator
+    ) and re.search(r"public domain",name,re.I) and (
+        commons and "Zizania_texana_" in normalized or
+        source.startswith("https://www.fws.gov/media/texas-wild-rice")
+    ):
+        return True
     return False
-
-def source_species_id(src):
-    """Use the exact original Poaceae photo-folder owner for display-role QA.
-    This does NOT independently verify the specimen's taxonomic identification.
-    """
-    match=re.search(r"(?:^|/)content/taxa/Poaceae/[^/]+/([^/]+)/images/",str(src))
-    return match.group(1) if match else None
-
 # A single original file may be used in many panels. A conflicting credit record
 # holds the entire file rather than allowing selective publication.
 references=defaultdict(list)
@@ -78,6 +112,20 @@ for _,d in cards:
         })
     for p in selected:
         src=p["src"]
+        if sid=="bouteloua-pectinata" and p.get("creator")=="Jim Conrad":
+            p["license"]="Public domain (Jim Conrad's express dedication)"
+            p["license_url"]="https://www.backyardnature.net/j/copyrite.htm"
+        if sid=="zizania-texana" and "Ryan Hagerty" in str(p.get("creator")):
+            p["license_url"]=p.get("license_url") or "https://commons.wikimedia.org/wiki/Template:PD-USGov-FWS"
+        if str(p.get("license") or "").upper()=="CC BY" and re.search(
+            r"/licenses/by/4\\.0/?$",str(p.get("license_url") or "")
+        ):
+            p["license"]="CC BY 4.0"
+        if str(p.get("license") or "").upper()=="CC BY-SA":
+            found=re.search(r"/licenses/by-sa/(2\\.0|4\\.0)/?$",str(p.get("license_url") or ""))
+            if found:p["license"]="CC BY-SA "+found.group(1)
+        if str(p.get("license") or "").upper()=="CC0" and not p.get("license_url"):
+            p["license_url"]="https://creativecommons.org/publicdomain/zero/1.0/"
         photo_owner=source_species_id(src)
         p["source_species_id"]=photo_owner
         p["photo_role"]=("TARGET_SPECIES_SOURCE" if photo_owner==sid else

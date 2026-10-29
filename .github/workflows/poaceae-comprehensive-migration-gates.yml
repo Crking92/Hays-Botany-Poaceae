@@ -52,7 +52,7 @@ jobs:
           assert q['counts']['source_canonical_files']==len(ledger)==1402
           assert q['counts']['copied_files']==expected_copied
           assert q['counts']['held_files']==counts['IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY']
-          assert q['counts']['images_decoded']==counts['LICENSE_CANDIDATE_IMAGE_COPIED']
+          assert q['counts']['images_decoded']==sum(counts[k] for k in ('LICENSE_CANDIDATE_IMAGE_COPIED','CURRENT_COMMONS_CC_PHOTO_COPIED'))
           assert q['counts']['preview_panels']==preview['visible_teaching_panels']
           assert q['counts']['preview_markers']==preview['photo_markers_in_preview']
           assert q['counts']['preview_size_bytes']<850_000_000

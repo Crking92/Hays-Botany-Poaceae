@@ -35,11 +35,12 @@ def audit(root:Path, site:Path):
     assert all(i["path"].startswith("content/taxa/Poaceae/") for i in ledger)
     copied=[x for x in ledger if x["disposition"]!="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
     held=[x for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
-    allowed={x["path"] for x in ledger if x["disposition"]=="LICENSE_CANDIDATE_IMAGE_COPIED"}
+    accepted_dispositions={"LICENSE_CANDIDATE_IMAGE_COPIED","CURRENT_COMMONS_CC_PHOTO_COPIED"}
+    allowed={x["path"] for x in ledger if x["disposition"] in accepted_dispositions}
     expected_counts=status["destination_file_counts"]
     assert len(copied)==sum(v for k,v in expected_counts.items() if k!="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY")
     assert len(held)==expected_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
-    assert len(allowed)==expected_counts["LICENSE_CANDIDATE_IMAGE_COPIED"]
+    assert len(allowed)==sum(expected_counts[k] for k in accepted_dispositions)
     assert len(copied)+len(held)==1402
     problems=defaultdict(list);review=defaultdict(list);summary=Counter()
     bypath={i["path"]:i for i in ledger}
