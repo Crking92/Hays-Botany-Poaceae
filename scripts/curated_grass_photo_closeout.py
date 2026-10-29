@@ -30,7 +30,7 @@ def make_panel(spec):
     category=spec["permission_kind"]
     if category=="BOB_HARMS_AUTHOR_EDUCATIONAL_WITH_CREDIT":
         if not (p.get("creator")=="Bob Harms"
-            and "NOT Creative Commons" in str(p.get("license") or "")
+            and ("NOT Creative Commons" in str(p.get("license") or "") or "NOT CC" in str(p.get("license") or ""))
             and "educational" in str(p.get("public_reuse") or "").lower()
             and "credit" in str(p.get("public_reuse") or "").lower()
             and str(p.get("source_page") or "").startswith(
@@ -53,11 +53,18 @@ def make_panel(spec):
         with (parent/"image-sources.csv").open(encoding="utf-8",newline="") as f:
             rows=list(csv.DictReader(f))
         row=next((x for x in rows if x.get("file_name")==found.group(3)),None)
-        if not row or any(row.get(k)!=spec[k] for k in ("creator","license","source_page")):
-            return None
-        url=str(row.get("direct_url") or "")
-        if not re.fullmatch(
-            r"https://inaturalist-open-data\.s3\.amazonaws\.com/photos/[0-9]+/(?:large|original)\.(?:jpe?g|png)",url):
+        if row:
+            if any(row.get(k)!=spec[k] for k in ("creator","license","source_page")):
+                return None
+            url=str(row.get("direct_url") or "")
+            if not re.fullmatch(
+                r"https://inaturalist-open-data\.s3\.amazonaws\.com/photos/[0-9]+/(?:large|original)\.(?:jpe?g|png)",url):
+                return None
+        elif not (spec["species_id"]=="eriochloa-sericea"
+                and str(p.get("source_page") or "").startswith("https://www.gbif.org/occurrence/")
+                and "subject to recorded CC source license and creator credit" in str(p.get("public_reuse") or "")):
+            # Eriochloa's 2026 CC0/CC BY review images were entered directly in
+            # canonical image metadata rather than the old per-photo CSV.
             return None
         if expected=="CC0":
             if spec.get("license_url")!="https://creativecommons.org/publicdomain/zero/1.0/":
