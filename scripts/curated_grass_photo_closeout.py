@@ -5,12 +5,12 @@ photos are educational-use-with-credit, NOT CC-licensed. This is a closed
 source-photo list, not a global exception for copyrighted archive material.
 """
 from pathlib import Path
-import csv,json,re
+import csv,json,re,subprocess
 ROOT=Path(__file__).resolve().parents[1]
 m=json.loads((ROOT/"migration/curated-existing-grass-photo-closeout-20261029.json").read_text())
-assert m["schema_version"]==1 and len(m["entries"])==22
+assert m["schema_version"]==1 and len(m["entries"])==25
 CURATED_BY_SRC={x["src"]:x for x in m["entries"]}
-assert len(CURATED_BY_SRC)==22
+assert len(CURATED_BY_SRC)==25
 
 def make_panel(spec):
     src=spec["src"]
@@ -39,6 +39,16 @@ def make_panel(spec):
         lic="© Bob Harms — scientific/educational use with credit (not CC)"
         lurl="https://w3.biosci.utexas.edu/prc/Monocots/"
         note="© Bob Harms. Credited scientific/educational use only under the author's terms; NOT Creative Commons and not general redistribution permission."
+    elif category=="USGS_LARRY_ALLAIN_ORIGINAL_PUBLIC_DOMAIN":
+        if not (p.get("creator")=="Larry Allain / U.S. Geological Survey"
+            and p.get("license")=="US Public Domain (USGS employee-authored)"
+            and p.get("source_page")=="https://warcapps.usgs.gov/PlantID/Species/Details/3292"):
+            return None
+        sha=subprocess.check_output(["git","hash-object",str(ROOT/src)],text=True).strip()
+        if sha!=spec["pinned_original_blob_sha"]:return None
+        lic="Public domain — Larry Allain / USGS"
+        lurl="https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
+        note="Original Larry Allain / U.S. Geological Survey employee photograph (U.S. public domain); exact bytes verified against pinned original Git blob. Credit USGS/Larry Allain."
     elif category=="USDA_FEIS_CC_BY_SA_4_0":
         if not (p["creator"]=="Cecelia Alexander" and p["license"]=="CC BY-SA 4.0"
             and p["source_page"]=="https://research.fs.usda.gov/feis/species-reviews/eraint"):
