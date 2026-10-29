@@ -1,0 +1,65 @@
+name: Transfer existing Bob Harms source originals with educational copyright terms (NO Pages)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/transfer_bob_harms_credited_educational_originals.py'
+      - '.github/workflows/poaceae-bob-harms-educational-transfer.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: poaceae-source-transfer-educational
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout migration code and existing Poaceae public-source repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: destination
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Verify script and source manifest input
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile destination/scripts/transfer_bob_harms_credited_educational_originals.py
+          test -f destination/migration/source-file-ledger.json
+          test -f destination/migration/image-record-review-ledger.json
+      - name: Read exact Poaceae source snapshot, not later grass edits from other chats
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth 1 --sparse --no-checkout \
+            https://github.com/Crking92/Hays-County-Botany.git \
+            "$RUNNER_TEMP/hays-source"
+          git -C "$RUNNER_TEMP/hays-source" fetch --depth 1 origin d5812999ea32d03b873110db1a526e20ac6ea730
+          git -C "$RUNNER_TEMP/hays-source" sparse-checkout set content/taxa/Poaceae
+          git -C "$RUNNER_TEMP/hays-source" checkout --detach d5812999ea32d03b873110db1a526e20ac6ea730
+          test "$(git -C "$RUNNER_TEMP/hays-source" rev-parse HEAD)" = d5812999ea32d03b873110db1a526e20ac6ea730
+      - name: Verify prior 1178 source blobs and import 157 credited Bob Harms originals (70 photo files max per commit)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 destination/scripts/transfer_bob_harms_credited_educational_originals.py "$RUNNER_TEMP/hays-source" destination
+      - name: Push educational source import to existing Poaceae main, without any Pages or hub edits
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd destination
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:refs/heads/main
+      - name: Save permission and file-count QA without uploading photograph copies as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-bob-harms-157-educational-originals-transfer-check
+          path: |
+            destination/migration/poaceae-bob-harms-educational-transfer.json
+            destination/BOB_HARMS_PHOTO_PERMISSION.md
+          retention-days: 30
+          if-no-files-found: warn
