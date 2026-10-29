@@ -33,7 +33,9 @@ jobs:
                   live_release=json.loads(get(BASE+"data/poaceae-release.json")[0])
                   if (len(index)==112 and
                       live_release["photo_files_referenced_on_public_site"]==local_release["photo_files_referenced_on_public_site"] and
-                      live_release["photo_panels_visible"]==local_release["photo_panels_visible"]):
+                      live_release["photo_panels_visible"]==local_release["photo_panels_visible"] and
+                      live_release.get("species_with_target_species_source_photos")==112 and
+                      live_release.get("curated_exact_photo_files")==25):
                       break
                   print("Pages deployment not yet current",attempt+1,live_release.get("photo_files_referenced_on_public_site"))
               except Exception as e:print("Pages not ready",repr(e))
