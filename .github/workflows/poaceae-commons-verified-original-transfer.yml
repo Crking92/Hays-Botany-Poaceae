@@ -1,0 +1,60 @@
+name: Verify and transfer already-held Commons CC grass originals (no Pages)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/transfer_existing_commons_verified_grass_photos.py'
+      - '.github/workflows/poaceae-commons-verified-original-transfer.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: poaceae-source-transfer-educational
+  cancel-in-progress: false
+jobs:
+  check-and-copy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: destination
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Install exact photograph pixel and license metadata validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install 'Pillow>=10,<12' 'ImageHash>=4,<5'
+          PYTHONPYCACHEPREFIX="$RUNNER_TEMP/python-compile" python -m py_compile destination/scripts/transfer_existing_commons_verified_grass_photos.py
+      - name: Clone exact previously recorded grass source original files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth 1 --sparse --no-checkout \
+            https://github.com/Crking92/Hays-County-Botany.git \
+            "$RUNNER_TEMP/hays-source"
+          git -C "$RUNNER_TEMP/hays-source" fetch --depth 1 origin d5812999ea32d03b873110db1a526e20ac6ea730
+          git -C "$RUNNER_TEMP/hays-source" sparse-checkout set content/taxa/Poaceae
+          git -C "$RUNNER_TEMP/hays-source" checkout --detach d5812999ea32d03b873110db1a526e20ac6ea730
+      - name: Compare original bytes to live Commons current license, photo, taxon and author
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 destination/scripts/transfer_existing_commons_verified_grass_photos.py "$RUNNER_TEMP/hays-source" destination
+      - name: Push only source-approved original Commons images, not website release
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd destination
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:refs/heads/main
+      - name: Keep individual license/hold decisions available without photo artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-commons-existing-photos-exact-rights-matching
+          path: destination/migration/poaceae-existing-commons-license-transfer.json
+          retention-days: 30
+          if-no-files-found: warn
