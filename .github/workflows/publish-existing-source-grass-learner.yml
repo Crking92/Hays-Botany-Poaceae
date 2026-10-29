@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/publish_existing_source_grass_site.py'
+      - 'scripts/curated_grass_photo_closeout.py'
+      - 'migration/curated-existing-grass-photo-closeout-20261029.json'
       - 'scripts/build_poaceae_site_preview.py'
       - 'scripts/enrich_poaceae_lessons.py'
       - 'scripts/build_poaceae_rights_first_site.py'
