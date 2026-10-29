@@ -9,7 +9,7 @@ const make=(tag,props={})=>{const n=document.createElement(tag);for(const [k,v] 
 const txt=(tag,value,cls)=>{const n=make(tag);if(cls)n.className=cls;n.textContent=esc(value);return n;};
 const text=(node,value)=>node.append(document.createTextNode(esc(value)));
 const appendParagraph=(node,value,cls)=>{if(value){node.append(txt("p",value,cls));}};
-const metadataWarning="Source-licensed photo subset: anatomy arrow landing positions are not all manually certified. Original external and restricted references remain available below the gallery as source-only links.";
+const metadataWarning="Source-credited photos (including separately licensed educational-use images); subtle anatomy arrows may still need field verification. Original external and restricted references remain available below the gallery as source-only links.";
 function glossaryKeys(){return Object.keys(state.glossary?.terms||{}).sort();}
 function showTerm(key){
  const dialog=$("term-dialog"),data=state.glossary?.terms?.[key];
