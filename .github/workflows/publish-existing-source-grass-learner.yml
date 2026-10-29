@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/publish_existing_source_grass_site.py'
+      - 'scripts/build_poaceae_site_preview.py'
+      - 'scripts/build_poaceae_rights_first_site.py'
       - '.github/workflows/publish-existing-source-grass-learner.yml'
   workflow_dispatch:
 permissions:
