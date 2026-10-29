@@ -32,7 +32,7 @@ def make_panel(spec):
         if not (p.get("creator")=="Bob Harms"
             and ("NOT Creative Commons" in str(p.get("license") or "") or "NOT CC" in str(p.get("license") or ""))
             and "educational" in str(p.get("public_reuse") or "").lower()
-            and "credit" in str(p.get("public_reuse") or "").lower()
+            and any(term in str(p.get("public_reuse") or "").lower() for term in ("credit","attribution"))
             and str(p.get("source_page") or "").startswith(
                 "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/")):
             return None
