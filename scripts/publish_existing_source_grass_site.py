@@ -38,9 +38,9 @@ def is_eligible(p):
     inat=source.startswith("https://www.inaturalist.org/photos/")
     if not creator or not source.startswith("https://"):return False
     if re.search(r"NC|ND|not verified|review|all rights reserved|permission",name,re.I):return False
-    if re.fullmatch(r"CC0(?:\\s*1\\.0)?",name,re.I):
+    if re.fullmatch(r"CC0(?:\s*1\.0)?",name,re.I):
         return commons or inat
-    if re.fullmatch(r"CC BY(-SA)?\\s*(2\\.0|2\\.5|3\\.0|4\\.0)(?:\\s+US)?",name,re.I):
+    if re.fullmatch(r"CC BY(-SA)?\s*(2\.0|2\.5|3\.0|4\.0)(?:\s+US)?",name,re.I):
         return commons or inat
     if re.search(r"public domain",name,re.I) and creator.strip().lower()=="jim conrad":
         return "backyardnature.net" in source
@@ -49,11 +49,11 @@ def is_eligible(p):
     # Original photo-level metadata documents CC BY 4.0 for the individual
     # iNaturalist photographs, not merely for their observation records.
     if name.upper()=="CC BY" and inat and re.fullmatch(
-        r"https://creativecommons\\.org/licenses/by/4\\.0/?",license_url,re.I
+        r"https://creativecommons\.org/licenses/by/4\.0/?",license_url,re.I
     ):
         return True
     if name.upper()=="CC BY-SA" and commons and re.fullmatch(
-        r"https://creativecommons\\.org/licenses/by-sa/(2\\.0|4\\.0)/?",license_url,re.I
+        r"https://creativecommons\.org/licenses/by-sa/(2\.0|4\.0)/?",license_url,re.I
     ):
         return True
     # Jim Conrad expressly releases his self-authored Backyard Nature photos;
@@ -118,11 +118,11 @@ for _,d in cards:
         if sid=="zizania-texana" and "Ryan Hagerty" in str(p.get("creator")):
             p["license_url"]=p.get("license_url") or "https://commons.wikimedia.org/wiki/Template:PD-USGov-FWS"
         if str(p.get("license") or "").upper()=="CC BY" and re.search(
-            r"/licenses/by/4\\.0/?$",str(p.get("license_url") or "")
+            r"/licenses/by/4\.0/?$",str(p.get("license_url") or "")
         ):
             p["license"]="CC BY 4.0"
         if str(p.get("license") or "").upper()=="CC BY-SA":
-            found=re.search(r"/licenses/by-sa/(2\\.0|4\\.0)/?$",str(p.get("license_url") or ""))
+            found=re.search(r"/licenses/by-sa/(2\.0|4\.0)/?$",str(p.get("license_url") or ""))
             if found:p["license"]="CC BY-SA "+found.group(1)
         if str(p.get("license") or "").upper()=="CC0" and not p.get("license_url"):
             p["license_url"]="https://creativecommons.org/publicdomain/zero/1.0/"
