@@ -6,6 +6,7 @@ underlying source taxon cards. Filters additional non-exact provenance conservat
 import json,re,shutil,sys
 from collections import defaultdict,Counter
 from pathlib import Path
+from curated_grass_photo_closeout import CURATED_BY_SRC,make_panel
 ROOT=Path(__file__).resolve().parents[1]
 PREVIEW=ROOT/"dist-safe"
 SITE=ROOT/"site"
@@ -138,6 +139,18 @@ for _,d in cards:
     original=d.get("panels",[])
     selected=[p for p in original if p["src"] in keep]
     rejected=[p for p in original if p["src"] not in keep]
+    newly_restored=set()
+    for src,spec in CURATED_BY_SRC.items():
+        if spec["species_id"]!=sid or any(p["src"]==src for p in selected):continue
+        photo=make_panel(spec)
+        assert photo is not None,("Curated photo rights/source mismatch",src)
+        selected.append(photo)
+        newly_restored.add(spec["panel_index"])
+    if newly_restored:
+        d["unavailable_references"]=[
+          u for u in d.get("unavailable_references",[])
+          if u.get("original_panel_index") not in newly_restored
+        ]
     # Actual target-species source-folder images lead; comparison panels remain
     # after them, in their original order. Step/tile links are rebuilt below.
     selected.sort(key=lambda p: source_species_id(p["src"])!=sid)
@@ -152,6 +165,7 @@ for _,d in cards:
         tile["preview_panel_indices"]=[mapping[i] for i in indices if i in mapping]
         tile["missing_original_panel_indices"]=[i for i in indices if i not in mapping]
     for p in rejected:
+        if p.get("original_panel_index") in newly_restored:continue
         d.setdefault("unavailable_references",[]).append({
           "original_panel_index":p.get("original_panel_index"),
           "label":p.get("label"),
@@ -193,8 +207,8 @@ for _,d in cards:
         p["src"]="../"+src
     d["panels"]=selected
     d["preview_only"]=False
-    d["note"]="Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination."
-    stats["panels"]+=len(selected);stats["held_panels"]+=len(rejected)
+    d["note"]="Existing-source public educational gallery: CC photos and explicitly credited Bob Harms science/education-only photographs are distinguished. Source labels and arrows are not independent specimen voucher certification."
+    stats["panels"]+=len(selected);stats["held_panels"]+=len(rejected)-len(newly_restored)
     actual=sum(p["photo_role"]=="TARGET_SPECIES_SOURCE" for p in selected)
     comparison=sum(p["photo_role"]=="COMPARISON_SPECIES_SOURCE" for p in selected)
     photosBySpecies[sid]={"count":len(selected),"first_src":selected[0]["src"] if selected else None,
@@ -214,30 +228,30 @@ for _,d in cards:
     stats["photographed_species"]+=int(bool(selected))
 assert stats["species"]==112
 distinct={p["src"].removeprefix("../") for _,d in cards for p in d["panels"]}
-assert distinct==keep
+assert distinct==keep.union(CURATED_BY_SRC)
 # Copy text-only teaching indexes/glossary generated from the canonical original records.
 for p in (PREVIEW/"data").glob("*.json"):
     if p.name=="poaceae-index.json":continue
     shutil.copy2(p,SITE/"data"/p.name)
 (SITE/"data/poaceae-index.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
 (SITE/"data/gallery-index.json").write_text(json.dumps({
-  "schema_version":1,"status":"EXISTING_ONLY_STRICT_SOURCE_RIGHTS_SCREENED",
+  "schema_version":1,"status":"EXISTING_ONLY_SOURCE_CREDITED_EDUCATIONAL_RIGHTS_SCREENED",
   "species":112,"photo_species":stats["photographed_species"],
-  "photo_panels":stats["panels"],"photo_files":len(keep),"entries":photosBySpecies
+  "photo_panels":stats["panels"],"photo_files":len(distinct),"entries":photosBySpecies
 },ensure_ascii=False,indent=2)+"\n")
-release={"stage":"EXISTING_SOURCE_STRICT_PUBLIC_GALLERY",
+release={"stage":"EXISTING_SOURCE_CREDITED_EDUCATIONAL_GALLERY",
          "source_image_candidates_in_rights_first_preview":len(candidate_files),
-         "photo_files_referenced_on_public_site":len(keep),
+         "photo_files_referenced_on_public_site":len(distinct),
          "photo_panels_visible":stats["panels"],
          "photo_panels_excluded_in_final_gate":stats["held_panels"],
          "species":112,"species_with_visible_photos":stats["photographed_species"],
          "new_media_files_copied":0,"new_external_media_downloaded":0,
          "source_photo_files_unchanged":True,
          "excluded_source_images_stay_in_original_repo":True,
-         "rights_note":"Source metadata screening is not proof that individual arrow targets or every public license determination has undergone manual visual re-review."}
+         "rights_note":"Existing-source educational gallery. Some photographed anatomy is under Bob Harms author educational-use-only permission, not a Creative Commons grant. Archived photo-level attribution does not independently prove diagnostic identity or current rights."}
 (SITE/"data/poaceae-release.json").write_text(json.dumps(release,indent=2)+"\n")
 (SITE/"PHOTO_PUBLICATION_SCOPE.md").write_text(
- f"# Existing-grass-image release\n\n{len(keep)} original physical source files are referenced by "+
+ f"# Existing-grass-image release\n\n{len(distinct)} original physical source files are referenced by "+
  f"{stats['panels']} visual panels for {stats['photographed_species']} of 112 grass species. "+
  "Only strict CC/public-domain and specifically sourced existing files were selected. "+
  "No new photo file bytes were moved or downloaded; the JPEGs remain in content/taxa/Poaceae. "+
