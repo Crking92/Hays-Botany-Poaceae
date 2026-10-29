@@ -227,6 +227,8 @@ for _,d in cards:
     stats["species"]+=1
     stats["photographed_species"]+=int(bool(selected))
 assert stats["species"]==112
+assert all(entry["target_species_source_panels"]>0 and entry["count"]>0 for entry in photosBySpecies.values()),"Regression: every Poaceae card must retain at least one target-species source photo"
+
 distinct={p["src"].removeprefix("../") for _,d in cards for p in d["panels"]}
 assert distinct==keep.union(CURATED_BY_SRC)
 # Copy text-only teaching indexes/glossary generated from the canonical original records.
@@ -245,6 +247,9 @@ release={"stage":"EXISTING_SOURCE_CREDITED_EDUCATIONAL_GALLERY",
          "photo_panels_visible":stats["panels"],
          "photo_panels_excluded_in_final_gate":stats["held_panels"],
          "species":112,"species_with_visible_photos":stats["photographed_species"],
+         "species_with_target_species_source_photos":sum(x["target_species_source_panels"]>0 for x in photosBySpecies.values()),
+         "previously_held_usgs_source_files_recovered_into_family_repo":3,
+         "curated_exact_photo_files":len(CURATED_BY_SRC),
          "new_media_files_copied":0,"new_external_media_downloaded":0,
          "source_photo_files_unchanged":True,
          "excluded_source_images_stay_in_original_repo":True,
@@ -253,8 +258,8 @@ release={"stage":"EXISTING_SOURCE_CREDITED_EDUCATIONAL_GALLERY",
 (SITE/"PHOTO_PUBLICATION_SCOPE.md").write_text(
  f"# Existing-grass-image release\n\n{len(distinct)} original physical source files are referenced by "+
  f"{stats['panels']} visual panels for {stats['photographed_species']} of 112 grass species. "+
- "Only strict CC/public-domain and specifically sourced existing files were selected. "+
- "No new photo file bytes were moved or downloaded; the JPEGs remain in content/taxa/Poaceae. "+
+ "Existing CC/CC0 and narrowly credited Bob Harms educational-only photos are distinguished; no blanket third-party reuse. "+
+ "Three original Larry Allain/USGS public-domain JPEGs were copied byte-for-byte from the legacy archive with Git blob hash verification; no new external media were harvested. "+
  "Remaining source images stay accounted for and are not included in this photo gallery. "+
  "Human verification of arrows and subtle infraspecific taxa is separate.\n")
 html=(SITE/"index.html").read_text()
@@ -263,7 +268,14 @@ html=html.replace("Migration preview — not the public replacement.","Existing-
 html=html.replace("The original site remains authoritative. Some photos and comparisons are intentionally absent pending rights review.",
                   "The original site remains available. The images shown here passed an additional conservative source/CC license check; held photos remain excluded.")
 html=html.replace("physically archived license-screened photographs present in this staging copy.",
-                  "source-credited photographs cleared for the strict existing-source public release.")
+                  "source-credited photographs with each image's actual reuse conditions.")
+html=html.replace("The images shown here passed an additional conservative source/CC license check; held photos remain excluded.",
+                  "All 112 species have existing archived source photographs. Attribution and photo-specific rights are displayed, including Bob Harms scientific/educational-only use; held photos remain separate.")
+html=html.replace("Each gallery shows only source-credited photographs cleared for the strict existing-source public release.",
+                  "Every grass has source-credited photos. Bob Harms images are educational-use-only (not CC); see the credit under each photograph.")
+html=html.replace("staging preview</title>","Visual Learner</title>")
+html=html.replace("app.js?v=photo-level-ccby-20261029","app.js?v=poaceae-photo-coverage-112-20261029")
+html=html.replace("styles.css?v=grass-comparison-roles-20261029","styles.css?v=poaceae-photo-coverage-112-20261029")
 html=html.replace('href="styles.css"','href="styles.css?v=existing-grass-20261029"')
 html=html.replace('src="app.js"','src="app.js?v=existing-grass-20261029"')
 (SITE/"index.html").write_text(html)
@@ -271,7 +283,9 @@ js=(SITE/"app.js").read_text()
 js=js.replace("// Non-deployed Hays Botany Poaceae staging learner. Do not enable Pages or\n// treat broadly licensed photo candidates as fully cleared by this interface.",
               "// Rights-filtered existing-source public Poaceae teaching learner.\n// Original specimen/photo sources and unresolved permissions remain separately preserved.")
 js=js.replace("Staging only: photo permissions and arrow landing positions are not fully certified.",
-              "Source-licensed photo subset: anatomy arrow landing positions are not all manually certified.")
+              "Source-credited photographs: some are CC-licensed, while Bob Harms photos are copyrighted and educational-use-only. Anatomy arrows are not all independently certified.")
+js=js.replace("Source-licensed photo subset: anatomy arrow landing positions are not all manually certified.",
+              "Source-credited photos (including separately licensed educational-use images); subtle anatomy arrows may still need field verification.")
 (SITE/"app.js").write_text(js)
 (ROOT/"index.html").write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><meta http-equiv="refresh" content="0;url=./site/"><title>Hays Botany — Grasses</title></head><body><a href="./site/">Open Poaceae Visual Learner</a></body></html>\n')
 print("POACEAE_STRICT_EXISTING_SOURCE_SITE_READY",json.dumps(release,sort_keys=True),flush=True)
