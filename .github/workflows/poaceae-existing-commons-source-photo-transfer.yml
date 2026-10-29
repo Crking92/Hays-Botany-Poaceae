@@ -1,0 +1,62 @@
+name: Recheck 5 existing Commons grass originals and transfer only validated copies
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/transfer_existing_commons_held_source_photos.py'
+      - '.github/workflows/poaceae-existing-commons-source-photo-transfer.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: poaceae-source-transfer-educational
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    steps:
+      - name: Checkout Poaceae with original photo-ledgers, no Pages changes
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: destination
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Install image comparison tool outside destination working copy
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install 'Pillow>=10,<12' 'ImageHash>=4,<5'
+          PYTHONPYCACHEPREFIX="$RUNNER_TEMP/pycache" python3 -m py_compile destination/scripts/transfer_existing_commons_held_source_photos.py
+      - name: Read same original Poaceae source snapshot used in previous transfer
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth 1 --sparse --no-checkout \
+            https://github.com/Crking92/Hays-County-Botany.git \
+            "$RUNNER_TEMP/hays-source"
+          git -C "$RUNNER_TEMP/hays-source" fetch --depth 1 origin d5812999ea32d03b873110db1a526e20ac6ea730
+          git -C "$RUNNER_TEMP/hays-source" sparse-checkout set content/taxa/Poaceae
+          git -C "$RUNNER_TEMP/hays-source" checkout --detach d5812999ea32d03b873110db1a526e20ac6ea730
+          test "$(git -C "$RUNNER_TEMP/hays-source" rev-parse HEAD)" = d5812999ea32d03b873110db1a526e20ac6ea730
+      - name: Verify original file hash, current Commons author/license and matching pixels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 destination/scripts/transfer_existing_commons_held_source_photos.py "$RUNNER_TEMP/hays-source" destination
+      - name: Commit only checked originals and detailed hold decisions
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd destination
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:refs/heads/main
+      - name: Save source verification record without publishing website
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-five-original-commons-photo-source-review
+          path: destination/migration/poaceae-existing-commons-photo-transfer.json
+          retention-days: 30
+          if-no-files-found: warn
