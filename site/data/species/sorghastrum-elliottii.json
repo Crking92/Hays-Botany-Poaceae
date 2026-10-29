@@ -59,7 +59,7 @@
         2
       ],
       "preview_panel_indices": [
-        0
+        1
       ],
       "missing_original_panel_indices": []
     },
@@ -78,7 +78,7 @@
         3
       ],
       "preview_panel_indices": [
-        1
+        2
       ],
       "missing_original_panel_indices": []
     },
@@ -99,7 +99,7 @@
         3
       ],
       "preview_panel_indices": [
-        1
+        2
       ],
       "missing_original_panel_indices": [
         0,
@@ -124,8 +124,8 @@
         3
       ],
       "preview_panel_indices": [
-        0,
-        1
+        1,
+        2
       ],
       "missing_original_panel_indices": [
         0,
@@ -158,7 +158,7 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": 0,
+      "panel_index": 1,
       "photo_unavailable": false
     },
     {
@@ -167,7 +167,7 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 3,
-      "panel_index": 1,
+      "panel_index": 2,
       "photo_unavailable": false
     },
     {
@@ -181,34 +181,6 @@
     }
   ],
   "panels": [
-    {
-      "label": "3 · YELLOW INDIANGRASS (OTHER species) — real collar membrane",
-      "src": "../content/taxa/Poaceae/Sorghastrum/sorghastrum-nutans/images/matt-lavin-cc-by-sa-2-ligule-sheath.jpg",
-      "caption": "Real Matt Lavin image of INDIANGRASS ligule emerging from sheath at collar. This is the anatomical starting point for recognizing the projecting 'rifle-sight' edge; no claimed hair or mm count without detailed review.",
-      "creator": "Matt Lavin",
-      "license": "CC BY-SA 2.0",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_(3912211835).jpg",
-      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "modifications": "downscaled / recompressed JPEG, EXIF/GPS removed; no added overlays",
-      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
-      "markers": [],
-      "original_panel_index": 2,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
-    },
-    {
-      "label": "4 · YELLOW INDIANGRASS (OTHER species) — fertile spikelet and naked pedicels",
-      "src": "../content/taxa/Poaceae/Sorghastrum/sorghastrum-nutans/images/matt-lavin-cc-by-sa-2-fertile-spikelet-pedicels.jpg",
-      "caption": "Real Matt Lavin macro of fertile sessile spikelet with conspicuous bent awn and adjacent NAKED pedicels, where a paired pedicelled spikelet is reduced/absent. Do not confuse bare pedicel for an awn.",
-      "creator": "Matt Lavin",
-      "license": "CC BY-SA 2.0",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_(3912213615).jpg",
-      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "modifications": "downscaled / recompressed JPEG, EXIF/GPS removed; no added overlays",
-      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
-      "markers": [],
-      "original_panel_index": 3,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
-    },
     {
       "label": "LIVE FIELD LEAF SHEATH — real green/brown stems, roots below soil unseen",
       "src": "../content/taxa/Poaceae/Sorghastrum/sorghastrum-elliottii/images/inat-public-582983609-southcarolina-basal-live-plant-cc0.jpg",
@@ -236,7 +208,41 @@
         }
       ],
       "original_panel_index": 9,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghastrum-elliottii",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "3 · YELLOW INDIANGRASS (OTHER species) — real collar membrane",
+      "src": "../content/taxa/Poaceae/Sorghastrum/sorghastrum-nutans/images/matt-lavin-cc-by-sa-2-ligule-sheath.jpg",
+      "caption": "Real Matt Lavin image of INDIANGRASS ligule emerging from sheath at collar. This is the anatomical starting point for recognizing the projecting 'rifle-sight' edge; no claimed hair or mm count without detailed review.",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_(3912211835).jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "modifications": "downscaled / recompressed JPEG, EXIF/GPS removed; no added overlays",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghastrum-nutans",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
+    },
+    {
+      "label": "4 · YELLOW INDIANGRASS (OTHER species) — fertile spikelet and naked pedicels",
+      "src": "../content/taxa/Poaceae/Sorghastrum/sorghastrum-nutans/images/matt-lavin-cc-by-sa-2-fertile-spikelet-pedicels.jpg",
+      "caption": "Real Matt Lavin macro of fertile sessile spikelet with conspicuous bent awn and adjacent NAKED pedicels, where a paired pedicelled spikelet is reduced/absent. Do not confuse bare pedicel for an awn.",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sorghastrum_nutans_(3912213615).jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "modifications": "downscaled / recompressed JPEG, EXIF/GPS removed; no added overlays",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 3,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghastrum-nutans",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
     }
   ],
   "preview_only": false,
