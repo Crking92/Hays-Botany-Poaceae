@@ -24,6 +24,13 @@ ledgerfile=MIG/"source-file-ledger.json"
 ledger=json.loads(ledgerfile.read_text())
 statusfile=MIG/"poaceae-transfer-status.json"
 status=json.loads(statusfile.read_text())
+# This project may be updated from another active conversation. If the existing
+# exact-source Commons verification workflow has already reconciled this same
+# five-photo set, do not attempt a competing source-ledger rewrite or duplicate
+# source-image transfer. Preserve that workflow's individual rights decisions.
+if (MIG/"poaceae-existing-commons-photo-transfer.json").is_file():
+ print("POACEAE_COMMONS_DUPLICATE_IMPORT_SKIPPED: prior existing-source audit already staged",flush=True)
+ raise SystemExit(0)
 assert subprocess.check_output(["git","-C",str(SOURCE),"rev-parse","HEAD"],text=True).strip()==original["snapshot_commit"]
 assert subprocess.check_output(["git","-C",str(DEST),"status","--porcelain"])==b""
 assert status["destination_file_counts"]=={
