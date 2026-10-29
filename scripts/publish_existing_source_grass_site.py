@@ -21,8 +21,49 @@ assert candidate_files
 RESTORATION_TAXA={
     "bouteloua-curtipendula","bouteloua-pectinata","bromus-pubescens",
     "bromus-texensis","sorghum-halepense","sporobolus-compositus",
-    "urochloa-reptans","zizania-texana"
+    "urochloa-reptans","zizania-texana",
+    "dichanthelium-lindheimeri","dichanthelium-pedicellatum","festuca-versuta"
 }
+# A closed, exact-photo list checked against still-matching source-card image records.
+# A CC BY class is not evidence that the license version is 4.0.
+reviewed=json.loads((ROOT/"migration/reviewed-photo-level-ccby-20261029.json").read_text())
+assert reviewed["schema_version"]==1 and len(reviewed["entries"])==18
+REVIEW_BY_SRC={e["path"]:e for e in reviewed["entries"]}
+assert len(REVIEW_BY_SRC)==18
+
+def exact_reviewed_ccby(panel):
+    src=str(panel.get("src") or "")
+    rec=REVIEW_BY_SRC.get(src)
+    if not rec:return False
+    match=re.fullmatch(r"content/taxa/Poaceae/([^/]+)/([^/]+)/images/([^/]+)",src)
+    if not match or match.group(2)!=rec["species_id"]:return False
+    source=panel.get("source_page")
+    if source!=rec["source_page"] or panel.get("creator")!=rec["creator"]:return False
+    if not re.fullmatch(r"https://www.inaturalist.org/photos/[0-9]+",str(source)):return False
+    card=ROOT/"content/taxa/Poaceae"/match.group(1)/match.group(2)/"species.json"
+    original=json.loads(card.read_text())
+    candidate=next((im for im in original.get("images",[])
+                    if im.get("file")=="images/"+match.group(3)),None)
+    if not candidate:return False
+    if (candidate.get("creator")!=rec["creator"] or
+        candidate.get("source_page")!=source or
+        candidate.get("license")!="CC BY"):return False
+    pid=str(rec["photo_id"])
+    if str(candidate.get("photo_id") or candidate.get("source_photo_id"))!=pid:
+        return False
+    if source!="https://www.inaturalist.org/photos/"+pid:return False
+    if rec["recorded_license"]!="CC BY" or rec["license_version"]!="NOT_RECORDED":
+        return False
+    if rec["evidence_type"]=="IMAGE_LEVEL_CC_BY_CODE_ARCHIVED":
+        return (str(candidate.get("license_code") or "").lower()=="cc-by" and
+                bool(re.search(r"exact individual photo CC BY|current exact iNaturalist observation photo license_code cc-by",
+                               str(candidate.get("photo_status") or "")+" "+str(candidate.get("source_rights_verified") or ""),re.I)))
+    if rec["evidence_type"]=="IMAGE_LEVEL_CC_BY_PIXEL_REVIEW_ARCHIVED":
+        return (bool(re.search(r"Source rights and byte archive plus saved pixels verified 2026-10-27",
+                               str(candidate.get("photo_status") or ""))) and
+                "original individual source image" in str(candidate.get("public_reuse") or "") and
+                rec["species_id"]=="dichanthelium-pedicellatum")
+    return False
 def normalize_commons(source):
     # The repo used both /wiki/File: and URL-escaped /wiki/File%3A links.
     return re.sub(r"/wiki/File%3[Aa]", "/wiki/File:", source)
@@ -45,6 +86,8 @@ def is_eligible(p):
     if re.search(r"public domain",name,re.I) and creator.strip().lower()=="jim conrad":
         return "backyardnature.net" in source
     if sid not in RESTORATION_TAXA:return False
+    if name.upper().replace("-"," ")=="CC BY" and inat and exact_reviewed_ccby(p):
+        return True
     license_url=str(p.get("license_url") or "")
     # Original photo-level metadata documents CC BY 4.0 for the individual
     # iNaturalist photographs, not merely for their observation records.
@@ -88,6 +131,7 @@ for path in sorted((PREVIEW/"data/species").glob("*.json")):
 assert len(cards)==112
 keep={name for name,refs in references.items() if all(is_eligible(p) for p in refs)}
 assert keep and keep.issubset(candidate_files)
+assert set(REVIEW_BY_SRC).issubset(keep),("Some reviewed exact photos are not included",sorted(set(REVIEW_BY_SRC)-keep))
 stats=Counter(); photosBySpecies={}; source_credits={}
 for _,d in cards:
     sid=d["id"]
@@ -117,6 +161,14 @@ for _,d in cards:
         })
     for p in selected:
         src=p["src"]
+        if src in REVIEW_BY_SRC:
+            assert exact_reviewed_ccby(p),("photo review record no longer matches",src)
+            p["license"]="CC BY"
+            # A versionless generic Creative Commons link cannot establish 4.0.
+            # The exact individual photo URL is the reliable license pointer.
+            p["license_url"]=None
+            p["photo_license_note"]="Individual photo recorded CC BY in the archived source review; exact license version not recorded. Check original photo for its applicable terms."
+            p["photo_review_status"]="EXACT_PHOTO_RECORD_ARCHIVED_20261026_27"
         if sid=="bouteloua-pectinata" and p.get("creator")=="Jim Conrad":
             p["license"]="Public domain (Jim Conrad's express dedication)"
             p["license_url"]="https://www.backyardnature.net/j/copyrite.htm"

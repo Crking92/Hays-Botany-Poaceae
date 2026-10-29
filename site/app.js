@@ -94,6 +94,7 @@ function photoCard(panel,index,scientific){
    licenseLink.textContent="License terms";
    caption.append(licenseLink,document.createTextNode(" · "));
  }
+ if(panel.photo_license_note)caption.append(txt("span",panel.photo_license_note,"credit"));
  if(panel.modifications)caption.append(txt("span","Original source record notes: "+panel.modifications,"credit"));
  if(markers.length)caption.append(txt("span","Displayed numbering and arrow overlays added by Hays Botany; original source JPEG unchanged.","credit"));
  if(panel.source_page?.startsWith("https://")){
