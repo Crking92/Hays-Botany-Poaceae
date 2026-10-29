@@ -17,6 +17,14 @@
 
 This is the new family repository for the **unified Hays County Botany Visual Learner**. The original [Hays County Botany](https://github.com/Crking92/Hays-County-Botany) repository and GitHub Pages website remain unchanged and authoritative until final sign-off.
 
+## Current original-file transfer checkpoint — October 28, 2026
+
+**1,344 / 1,402 exact original source files copied (390 data and credit records + 954 original image files).** The 954 images consist of 788 original conservative license-candidate photos, 157 Bob Harms photographs under the copyright holder's credited educational/scientific-use terms, 2 Dave Thayer freely reusable originals, 3 Tom Chester credited-reproduction originals, and 4 verified current Commons CC BY-SA originals. **58 original photos are still held in the canonical hub** because permissions, identity, or attribution were not sufficiently verified. The full 1,402 originals remain in the original hub; no replacement photos have been collected.
+
+This is **source-code repository transfer only**. No Poaceae Pages site or main hub cutover occurred. Copyright and noncommercial/share-alike limits continue to apply individually; a public GitHub repository does not convert photo rights to Creative Commons. The remaining held images must not be silently incorporated into a public website.
+
+[Current transfer counts](migration/poaceae-transfer-status.json) · [Bob Harms photo source rights](migration/poaceae-bob-harms-educational-transfer.json) · [Dave Thayer / Tom Chester photo credits](migration/poaceae-author-photo-5-transfer.json) · [Current exact Commons CC source check](migration/poaceae-existing-commons-photo-transfer.json)
+
 ## Initial non-destructive transfer — October 28, 2026
 
 - Original complete pinned inventory: **1,402 files** (435.0 MB), including 112 species cards, 53 genera and 1,012 physical image files.
