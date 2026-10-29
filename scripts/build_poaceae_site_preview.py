@@ -33,11 +33,11 @@ def main():
     out.mkdir(parents=True)
     report=json.loads((root/"migration/poaceae-transfer-status.json").read_text())
     ledger=json.loads((root/"migration/source-file-ledger.json").read_text())
-    assert report["stage"]=="STAGING_ONLY_NOT_PUBLISHED"
+    assert report["stage"] in ("STAGING_ONLY_NOT_PUBLISHED","BOB_HARMS_PLUS_CURRENT_COMMONS_SOURCE_TRANSFER_NOT_DEPLOYED")
     assert not report["website_enabled"]
     allowed={x["path"] for x in ledger if x["disposition"]=="LICENSE_CANDIDATE_IMAGE_COPIED"}
     held={x["path"] for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"}
-    assert len(allowed)==788 and len(held)==224
+    assert len(allowed)==788 and len(held)==56,("Updated original-copy source ledger counts changed",len(allowed),len(held))
 
     # Canonical photo records are the attribution authority, not panel prose.
     credit_by_path={}
