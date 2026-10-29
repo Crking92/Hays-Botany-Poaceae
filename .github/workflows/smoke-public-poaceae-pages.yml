@@ -11,7 +11,7 @@ permissions:
 jobs:
   smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 18
+    timeout-minutes: 28
     steps:
       - uses: actions/checkout@v4
       - name: Test actual public Pages photo and glossary delivery
@@ -87,6 +87,64 @@ jobs:
                   assert mime.lower().startswith("image/") and body==Path(path).read_bytes(),path
                   exact_checked+=1
           assert exact_checked==18
+          # Full 112-species live gallery test, including every original JPEG,
+          # credited source, author-only permission and comparison link.
+          # These are already hosted files; no new photos are sourced.
+          from concurrent.futures import ThreadPoolExecutor,as_completed
+          from collections import Counter
+          assert release["species_with_visible_photos"]==112
+          assert release["species_with_target_species_source_photos"]==112
+          gallery=json.loads(get(BASE+"data/gallery-index.json")[0])
+          assert gallery["photo_species"]==112 and len(gallery["entries"])==112
+          assert gallery["photo_panels"]==release["photo_panels_visible"]
+          refs=set();counts=Counter();all_panels=0
+          for row in index:
+              sid=row["id"]
+              card=json.loads(get(BASE+"data/species/"+sid+".json")[0])
+              assert card["panels"],sid
+              assert any(p.get("photo_role")=="TARGET_SPECIES_SOURCE"
+                  and p.get("source_species_id")==sid for p in card["panels"]),sid
+              assert gallery["entries"][sid]["count"]==len(card["panels"])
+              all_panels+=len(card["panels"])
+              for p in card["panels"]:
+                  assert p.get("source_page","").startswith("https://"),(sid,p.get("label"))
+                  assert p.get("creator") and p.get("license")
+                  license_text=p["license"].lower()
+                  assert "by-nc" not in license_text and "all rights reserved" not in license_text,(sid,license_text)
+                  if "bob harms" in p["creator"].lower():
+                      assert "not cc" in license_text
+                      assert "educational" in p.get("photo_license_note","").lower()
+                  sourcepath=p["src"].removeprefix("../")
+                  assert Path(sourcepath).is_file(),sourcepath
+                  refs.add(sourcepath)
+                  counts[p.get("photo_review_status","OTHER")]+=1
+          assert len(refs)==release["photo_files_referenced_on_public_site"]==486
+          assert all_panels==release["photo_panels_visible"]==604
+          def verify_image(path):
+              url=urllib.parse.urljoin(BASE,"../"+path)
+              for attempt in range(3):
+                  try:
+                      body,mime=get(url)
+                      assert mime.lower().startswith("image/"),(path,mime)
+                      assert body==Path(path).read_bytes(),path
+                      return path
+                  except Exception:
+                      if attempt==2:raise
+                      time.sleep(2)
+          with ThreadPoolExecutor(max_workers=7) as executor:
+              done=list(executor.map(verify_image,sorted(refs)))
+          assert len(done)==486
+          closeout=json.loads(Path("migration/curated-existing-grass-photo-closeout-20261029.json").read_text())
+          assert len(closeout["entries"])==25
+          assert all(r["src"] in refs for r in closeout["entries"])
+          print("POACEAE_FULL_EXISTING_IMAGE_RELEASE_PASS",json.dumps({
+              "species_with_own_species_source_photo":112,
+              "unique_original_images_live_byte_identical":len(done),
+              "teaching_panels":all_panels,
+              "selected_narrow_author_or_archived_credits":len(closeout["entries"]),
+              "individual_existing_ccby_photo_records":exact_checked,
+              "new_external_photos":0
+          },sort_keys=True))
           print("POACEAE_EXACT_PHOTO_RECOVERY_LIVE_PASS",json.dumps({
               "exact_individually_credited_ccby_photos":exact_checked,
               "review_species":sorted(reviewed_by_species),
