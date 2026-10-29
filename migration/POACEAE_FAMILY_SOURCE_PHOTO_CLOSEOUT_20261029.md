@@ -1,3 +1,5 @@
+> **FINAL LIVE QA PASS — verified October 29, 2026.** The [GitHub Actions full-site test](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/40930752538) completed **successfully**, fetched all **486** public photo URLs and compared the downloaded bytes to the corresponding original photo files in Poaceae main, confirmed **112/112 own-species photo galleries**, all **604 teaching panels** and the 25 curated credited photos. No broken hosted source image was detected by this check. The test also verified the earlier 18 exact iNaturalist CC BY records. This is a verified **photo delivery and attribution gate**, not independent taxonomic/anatomical-arrow approval.
+
 # Poaceae existing-source family migration — photo coverage closeout
 
 **As of October 29, 2026 — snapshot of generated `site/data/gallery-index.json` and `poaceae-release.json` after Poaceae main's successful source-only publisher.**
