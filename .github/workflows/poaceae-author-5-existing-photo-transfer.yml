@@ -1,0 +1,58 @@
+name: Transfer 5 existing Dave Thayer and Tom Chester authored grass photos (no Pages)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/transfer_existing_thayer_chester_credited_photos.py'
+      - '.github/workflows/poaceae-author-5-existing-photo-transfer.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: poaceae-source-transfer-educational
+  cancel-in-progress: false
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: destination
+          persist-credentials: true
+          fetch-depth: 0
+      - name: Compile without creating untracked files in target repository
+        shell: bash
+        run: PYTHONPYCACHEPREFIX="$RUNNER_TEMP/pyc" python3 -m py_compile destination/scripts/transfer_existing_thayer_chester_credited_photos.py
+      - name: Fetch unchanged original Poaceae snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth 1 --sparse --no-checkout \
+            https://github.com/Crking92/Hays-County-Botany.git \
+            "$RUNNER_TEMP/hays-source"
+          git -C "$RUNNER_TEMP/hays-source" fetch --depth 1 origin d5812999ea32d03b873110db1a526e20ac6ea730
+          git -C "$RUNNER_TEMP/hays-source" sparse-checkout set content/taxa/Poaceae
+          git -C "$RUNNER_TEMP/hays-source" checkout --detach d5812999ea32d03b873110db1a526e20ac6ea730
+      - name: Transfer only five pre-existing original photos under explicit authored reuse and credit conditions
+        shell: bash
+        run: |
+          python3 destination/scripts/transfer_existing_thayer_chester_credited_photos.py "$RUNNER_TEMP/hays-source" destination
+      - name: Push source-only import, not a website release
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd destination
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:refs/heads/main
+      - name: Save attribution report only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-existing-thayer-chester-five-photo-transfer-rights
+          path: |
+            destination/migration/poaceae-author-photo-5-transfer.json
+            destination/OTHER_AUTHOR_PHOTO_PERMISSION.md
+          retention-days: 30
+          if-no-files-found: warn
