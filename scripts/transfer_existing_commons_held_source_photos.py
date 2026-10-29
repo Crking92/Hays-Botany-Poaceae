@@ -24,11 +24,15 @@ assert source_manifest["snapshot_commit"]==previous["source_commit"]
 assert subprocess.check_output(["git","-C",str(SRC),"rev-parse","HEAD"],text=True).strip()==source_manifest["snapshot_commit"]
 assert len(rows)==len(source_manifest["files"])==1402
 assert previous["destination_file_counts"]["SITE_SPECIFIC_EDUCATIONAL_PERMISSION_IMAGE_COPIED"]==157
-assert previous["destination_file_counts"]["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]==67
+assert 0<previous["destination_file_counts"]["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]<=67
 byfile={r["path"]:r for r in source_manifest["files"]}
 byright={r.get("resolved_path"):r for r in rights}
 assert len(byfile)==1402
 assert subprocess.check_output(["git","-C",str(DEST),"status","--porcelain"])==b"","Destination tree is dirty"
+original_counts=Counter(x["disposition"] for x in rows)
+assert dict(original_counts)==previous["destination_file_counts"]
+previous_hold_count=original_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
+previous_copied=1402-previous_hold_count
 def gitsha(b):return hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
 def phash(b):
  with Image.open(io.BytesIO(b)) as im:return imagehash.phash(ImageOps.exif_transpose(im).convert("RGB"))
@@ -137,15 +141,19 @@ for r in targets:
   failed.append({"source_path":r["path"],"hold_reason":str(e)[:180]})
  time.sleep(1.1)
 counts=Counter(r["disposition"] for r in rows)
-assert counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]==67-len(new)
+assert counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]==previous_hold_count-len(new)
+assert sum(counts.values())==1402
+for group,number in original_counts.items():
+ if group not in ("IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY","CURRENT_COMMONS_CC_PHOTO_COPIED"):
+  assert counts[group]==number,(group,counts[group],number)
 assert counts["CURRENT_COMMONS_CC_PHOTO_COPIED"]==len(new)
 assert counts["SITE_SPECIFIC_EDUCATIONAL_PERMISSION_IMAGE_COPIED"]==157
 assert counts["SOURCE_DATA_COPIED"]==390 and counts["LICENSE_CANDIDATE_IMAGE_COPIED"]==788
 report={
  "status":"POACEAE_EXACT_EXISTING_COMMONS_PHOTO_RIGHTS_AND_BYTES_RECHECKED",
  "candidate_original_photos_checked":5,"new_exact_commons_cc_photos_copied":len(new),
- "still_held_original_photos":67-len(new),
- "original_source_files_copied":1335+len(new),
+ "still_held_original_photos":previous_hold_count-len(new),
+ "original_source_files_copied":previous_copied+len(new),
  "public_source_repository":True,"new_site_deployment":False,
  "replacements_or_newly_sourced_images":0,
  "verified_source_photo_records":new,"held_original_photo_records":failed
@@ -155,7 +163,7 @@ ledger_path.write_text(json.dumps(rows,indent=2,ensure_ascii=False)+"\n")
 previous["destination_file_counts"]=dict(counts)
 previous["destination_bytes_copied"]+=sum(p["source_size_bytes"] for p in new)
 previous["stage"]="BOB_HARMS_PLUS_CURRENT_COMMONS_SOURCE_TRANSFER_NOT_DEPLOYED"
-previous["remaining_original_source_photos_held"]=67-len(new)
+previous["remaining_original_source_photos_held"]=previous_hold_count-len(new)
 status_path=MIG/"poaceae-transfer-status.json"
 status_path.write_text(json.dumps(previous,indent=2,ensure_ascii=False)+"\n")
 def git(*args):subprocess.run(["git","-C",str(DEST),*args],check=True)
