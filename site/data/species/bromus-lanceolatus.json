@@ -24,7 +24,7 @@
         10
       ],
       "preview_panel_indices": [
-        2
+        0
       ],
       "missing_original_panel_indices": [
         0,
@@ -51,7 +51,7 @@
         11
       ],
       "preview_panel_indices": [
-        2
+        0
       ],
       "missing_original_panel_indices": [
         0,
@@ -76,7 +76,7 @@
         10
       ],
       "preview_panel_indices": [
-        2
+        0
       ],
       "missing_original_panel_indices": [
         0,
@@ -101,7 +101,7 @@
         10
       ],
       "preview_panel_indices": [
-        2
+        0
       ],
       "missing_original_panel_indices": [
         0,
@@ -131,9 +131,9 @@
         8
       ],
       "preview_panel_indices": [
-        2,
         0,
-        1
+        1,
+        2
       ],
       "missing_original_panel_indices": [
         0,
@@ -169,8 +169,8 @@
         6
       ],
       "preview_panel_indices": [
-        2,
-        0
+        0,
+        1
       ],
       "missing_original_panel_indices": [
         0,
@@ -234,56 +234,6 @@
   ],
   "panels": [
     {
-      "label": "JAPANESE BROME — licensed lemma and awn comparison",
-      "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
-      "caption": "Archived source photograph shows green awned spikelets held against fingers, with arching fine panicle branches. It does NOT show the true ligule or basal sheaths.",
-      "creator": "Matt Lavin",
-      "license": "CC BY-SA 2.0",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_(3920836312).jpg",
-      "license_url": "",
-      "modifications": "",
-      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
-      "markers": [],
-      "original_panel_index": 1,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
-    },
-    {
-      "label": "JAPANESE BROME — visible nervation, overlapping lemmas, awn origins",
-      "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
-      "caption": "Look at the folded overlapping florets and the fine awns projecting from near, but slightly below, each lemma apex. The branching grassy head and glume pairs are OFF FRAME: this close-up teaches florets and awn attachment only, not exact glume nerve counts or Hays County provenance.",
-      "creator": "Matt Lavin",
-      "license": "CC BY-SA 2.0",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_(3920836312).jpg",
-      "license_url": "",
-      "modifications": "",
-      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
-      "markers": [
-        {
-          "label": "Lemma longitudinal ribs",
-          "target_x": 38,
-          "target_y": 20,
-          "label_x": 5,
-          "label_y": 8
-        },
-        {
-          "label": "Long lemma awn",
-          "target_x": 70,
-          "target_y": 8,
-          "label_x": 78,
-          "label_y": 10
-        },
-        {
-          "label": "Overlapping florets",
-          "target_x": 52,
-          "target_y": 53,
-          "label_x": 5,
-          "label_y": 73
-        }
-      ],
-      "original_panel_index": 2,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
-    },
-    {
       "label": "LANCEOLATE BROME — dried mature crowded spikelets",
       "src": "../content/taxa/Poaceae/Bromus/bromus-lanceolatus/images/yves-bas-bromus-lanceolatus-dry.jpg",
       "caption": "Dry source-labelled B. lanceolatus shows long crowded spikelets with overlapping bracts and outward-projecting awns. The new arrow marks a visible fine fringe along one bract edge; it does NOT certify which bract is a glume versus lemma. No millimeter ruler, glume-vein count, detached lemma, or ligule is shown.",
@@ -324,7 +274,63 @@
         }
       ],
       "original_panel_index": 7,
-      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE"
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bromus-lanceolatus",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "JAPANESE BROME — licensed lemma and awn comparison",
+      "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
+      "caption": "Archived source photograph shows green awned spikelets held against fingers, with arching fine panicle branches. It does NOT show the true ligule or basal sheaths.",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_(3920836312).jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bromus-japonicus",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
+    },
+    {
+      "label": "JAPANESE BROME — visible nervation, overlapping lemmas, awn origins",
+      "src": "../content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
+      "caption": "Look at the folded overlapping florets and the fine awns projecting from near, but slightly below, each lemma apex. The branching grassy head and glume pairs are OFF FRAME: this close-up teaches florets and awn attachment only, not exact glume nerve counts or Hays County provenance.",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_(3920836312).jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Lemma longitudinal ribs",
+          "target_x": 38,
+          "target_y": 20,
+          "label_x": 5,
+          "label_y": 8
+        },
+        {
+          "label": "Long lemma awn",
+          "target_x": 70,
+          "target_y": 8,
+          "label_x": 78,
+          "label_y": 10
+        },
+        {
+          "label": "Overlapping florets",
+          "target_x": 52,
+          "target_y": 53,
+          "label_x": 5,
+          "label_y": 73
+        }
+      ],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "bromus-japonicus",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
     }
   ],
   "preview_only": false,
