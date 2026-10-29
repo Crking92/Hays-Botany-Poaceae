@@ -1,6 +1,6 @@
 "use strict";
-// Non-deployed Hays Botany Poaceae staging learner. Do not enable Pages or
-// treat broadly licensed photo candidates as fully cleared by this interface.
+// Rights-filtered existing-source public Poaceae teaching learner.
+// Original specimen/photo sources and unresolved permissions remain separately preserved.
 const $=id=>document.getElementById(id);
 const hub="https://crking92.github.io/Hays-County-Botany/";
 const esc=(s)=>String(s??"");
@@ -9,7 +9,7 @@ const make=(tag,props={})=>{const n=document.createElement(tag);for(const [k,v] 
 const txt=(tag,value,cls)=>{const n=make(tag);if(cls)n.className=cls;n.textContent=esc(value);return n;};
 const text=(node,value)=>node.append(document.createTextNode(esc(value)));
 const appendParagraph=(node,value,cls)=>{if(value){node.append(txt("p",value,cls));}};
-const metadataWarning="Staging only: photo permissions and arrow landing positions are not fully certified. Original external and restricted references remain available below the gallery as source-only links.";
+const metadataWarning="Source-licensed photo subset: anatomy arrow landing positions are not all manually certified. Original external and restricted references remain available below the gallery as source-only links.";
 function glossaryKeys(){return Object.keys(state.glossary?.terms||{}).sort();}
 function showTerm(key){
  const dialog=$("term-dialog"),data=state.glossary?.terms?.[key];
