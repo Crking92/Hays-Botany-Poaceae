@@ -15,7 +15,10 @@ def main():
     if safe.exists():shutil.rmtree(safe)
     shutil.copytree(stage,safe)
     ledger=json.loads((ROOT/"migration/source-file-ledger.json").read_text())
-    candidates={x["path"] for x in ledger if x["disposition"]=="LICENSE_CANDIDATE_IMAGE_COPIED"}
+    # Match the original preview's exact copied-file set; newer public-license
+    # verified Commons originals were transferred after the baseline census.
+    allowed_dispositions={"LICENSE_CANDIDATE_IMAGE_COPIED","CURRENT_COMMONS_CC_PHOTO_COPIED"}
+    candidates={x["path"] for x in ledger if x["disposition"] in allowed_dispositions}
     records=defaultdict(list)
     for cp in (ROOT/"content/taxa/Poaceae").rglob("species.json"):
         d=json.loads(cp.read_text())
