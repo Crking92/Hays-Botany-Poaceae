@@ -18,7 +18,9 @@ def norm(v):
 def enrich(root:Path,out:Path):
     root=root.resolve();out=out.resolve()
     ledger=json.loads((root/"migration/source-file-ledger.json").read_text())
-    allowed={x["path"] for x in ledger if x["disposition"]=="LICENSE_CANDIDATE_IMAGE_COPIED"}
+    # Match the preview builder's current copied, photo-specific Commons subset.
+    accepted={"LICENSE_CANDIDATE_IMAGE_COPIED","CURRENT_COMMONS_CC_PHOTO_COPIED"}
+    allowed={x["path"] for x in ledger if x["disposition"] in accepted}
     term_file=root/"site/data/grass-terms.json"
     glossary=json.loads(term_file.read_text(encoding="utf-8"))
     (out/"data").mkdir(parents=True,exist_ok=True)
