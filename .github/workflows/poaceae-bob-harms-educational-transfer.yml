@@ -26,7 +26,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python3 -m py_compile destination/scripts/transfer_bob_harms_credited_educational_originals.py
+          PYTHONPYCACHEPREFIX="$RUNNER_TEMP/poaceae-pycache" python3 -m py_compile destination/scripts/transfer_bob_harms_credited_educational_originals.py
           test -f destination/migration/source-file-ledger.json
           test -f destination/migration/image-record-review-ledger.json
       - name: Read exact Poaceae source snapshot, not later grass edits from other chats
