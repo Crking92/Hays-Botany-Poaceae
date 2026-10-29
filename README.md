@@ -1,5 +1,8 @@
 # Hays Botany — Poaceae (verified staging)
 
+> **Owner decision — defer remaining 56 Poaceae originals (Oct 28):** No more original-photo transfers or fresh licensing search is required for this phase. All 56 are preserved in the original hub AND already byte-verified in an existing private archive on the `Hays-Botany-Monocots-Aquatics` staging branch. The [56 individually marked holds](migration/poaceae-originals-56-deferred-no-public-import-20261028.json) must stay outside this public family repository and any new public gallery unless exact-photo reuse evidence is checked during a later, user-requested grass review. **No new archive repository is needed. Original source-file preservation is complete, but publication QA remains separate.**
+
+
 ## Current existing-file transfer checkpoint — October 28, 2026
 
 **GitHub Actions transfer jobs passed; source-image rights and original-byte hashes tracked individually.** The current Poaceae repository contains **1,346 / 1,402 original source files**, including **390 data/text files** and **956 source photos**. **56 original images remain held out of the public Poaceae repository** pending permission/metadata checks; every one also has a byte-verified private holding copy. No newly collected or replacement photos were introduced for this transfer.
