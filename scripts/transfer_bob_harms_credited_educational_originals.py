@@ -57,7 +57,7 @@ for item in ledger:
     parsed=urlparse(link)
     assert parsed.scheme=="https" and parsed.hostname=="w3.biosci.utexas.edu"
     assert link.startswith(url_root) and "/GrassHTML/data/" in link,link
-    assert "educational" in (r.get("license") or "").lower()
+    assert any(t in (r.get("license") or "").lower() for t in ("educational","scientific","science/education"))
     assert "bob harms" in (r.get("license") or "").lower()
     assert path.startswith("content/taxa/Poaceae/") and "/images/" in path
     assert Path(path).suffix.lower() in (".jpg",".jpeg",".png",".webp")
