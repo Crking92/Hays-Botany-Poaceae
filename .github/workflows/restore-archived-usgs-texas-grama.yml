@@ -42,7 +42,7 @@ jobs:
                           with urlopen(req,timeout=40) as response:
                               assert response.status==200
                               data=response.read()
-                          assert data[:3]==b"\\xff\\xd8\\xff" and len(data)>20000
+                          assert data[:3]==b"\xff\xd8\xff" and len(data)>20000
                           path.parent.mkdir(parents=True,exist_ok=True)
                           path.write_bytes(data)
                           break
