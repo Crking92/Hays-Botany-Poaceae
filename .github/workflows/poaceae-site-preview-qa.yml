@@ -39,8 +39,10 @@ jobs:
           ledger=json.loads(Path("migration/source-file-ledger.json").read_text())
           assert report["stage"]=="UNDEPLOYED_LOCAL_PREVIEW"
           assert report["species"]==112 and report["genera"]==53
-          assert report["candidate_image_files"]==788
-          assert report["held_source_images_not_published"]==224
+          expected_counts=json.loads(Path("migration/poaceae-transfer-status.json").read_text())["destination_file_counts"]
+          assert report["candidate_image_files"]==expected_counts["LICENSE_CANDIDATE_IMAGE_COPIED"]
+          assert report["held_source_images_not_published"]==expected_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
+          assert sum(expected_counts.values())==len(ledger)==1402
           assert not report["production_pages_deployed"]
           held={x["path"] for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"}
           visible=0

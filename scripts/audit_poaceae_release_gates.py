@@ -36,7 +36,11 @@ def audit(root:Path, site:Path):
     copied=[x for x in ledger if x["disposition"]!="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
     held=[x for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
     allowed={x["path"] for x in ledger if x["disposition"]=="LICENSE_CANDIDATE_IMAGE_COPIED"}
-    assert len(copied)==1178 and len(held)==224 and len(allowed)==788
+    expected_counts=status["destination_file_counts"]
+    assert len(copied)==sum(v for k,v in expected_counts.items() if k!="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY")
+    assert len(held)==expected_counts["IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"]
+    assert len(allowed)==expected_counts["LICENSE_CANDIDATE_IMAGE_COPIED"]
+    assert len(copied)+len(held)==1402
     problems=defaultdict(list);review=defaultdict(list);summary=Counter()
     bypath={i["path"]:i for i in ledger}
     for i in copied:

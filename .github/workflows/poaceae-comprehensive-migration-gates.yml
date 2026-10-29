@@ -45,11 +45,16 @@ jobs:
           q=json.loads(Path("qa-report/poaceae-release-gates.json").read_text())
           assert q['integrity']=='PASS'
           assert not q['releasable']
-          assert q['counts']['copied_files']==1178
-          assert q['counts']['held_files']==224
-          assert q['counts']['images_decoded']==788
-          assert q['counts']['preview_panels']==956
-          assert q['counts']['preview_markers']==1261
+          ledger=json.loads(Path("migration/source-file-ledger.json").read_text())
+          preview=json.loads(Path("migration/site-preview-qa.json").read_text())
+          counts=json.loads(Path("migration/poaceae-transfer-status.json").read_text())['destination_file_counts']
+          expected_copied=sum(v for k,v in counts.items() if k!='IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY')
+          assert q['counts']['source_canonical_files']==len(ledger)==1402
+          assert q['counts']['copied_files']==expected_copied
+          assert q['counts']['held_files']==counts['IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY']
+          assert q['counts']['images_decoded']==counts['LICENSE_CANDIDATE_IMAGE_COPIED']
+          assert q['counts']['preview_panels']==preview['visible_teaching_panels']
+          assert q['counts']['preview_markers']==preview['photo_markers_in_preview']
           assert q['counts']['preview_size_bytes']<850_000_000
           assert not (root/"dist/CNAME").exists()
           assert not (root/"dist/.nojekyll").exists()
