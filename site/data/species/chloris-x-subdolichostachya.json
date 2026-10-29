@@ -3,7 +3,7 @@
   "scientific": "Chloris × subdolichostachya",
   "common": "Shortspike windmill grass",
   "genus": "Chloris",
-  "note": "Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination.",
+  "note": "Existing-source public educational gallery: CC photos and explicitly credited Bob Harms science/education-only photographs are distinguished. Source labels and arrows are not independent specimen voucher certification.",
   "tiles": [
     {
       "heading": "01 · WHAT WE REALLY HAVE",
@@ -19,10 +19,10 @@
       "original_panel_indices": [
         0
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "02 · ROOTED HABIT AND TRUE LIGULE",
@@ -38,10 +38,10 @@
       "original_panel_indices": [
         0
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · DISSECT A MATURE SPIKELET",
@@ -58,9 +58,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     },
@@ -79,10 +80,11 @@
         1,
         0
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        1,
+      "preview_panel_indices": [
         0
+      ],
+      "missing_original_panel_indices": [
+        1
       ]
     },
     {
@@ -102,12 +104,11 @@
         0
       ],
       "preview_panel_indices": [
-        0,
-        1
-      ],
-      "missing_original_panel_indices": [
+        1,
+        2,
         0
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "06 · HOW TO CLEAR THE SCIENTIFIC HOLD",
@@ -128,10 +129,10 @@
       ],
       "preview_panel_indices": [
         0,
-        1
+        1,
+        2
       ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     }
@@ -143,8 +144,8 @@
       "why_it_matters": "Start with the recorded recognition characters before making a species identification.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "2 · Examine the whole plant",
@@ -152,8 +153,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -161,8 +162,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -170,8 +171,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -179,11 +180,48 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": 0,
+      "panel_index": 1,
       "photo_unavailable": false
     }
   ],
   "panels": [
+    {
+      "label": "1 · Source-labeled hybrid head (not yet independently proven)",
+      "scientific_name": "Chloris × subdolichostachya",
+      "image_url": "content/taxa/Poaceae/Chloris/chloris-x-subdolichostachya/images/inat-341942574.jpg",
+      "image_fit": "contain",
+      "image_role": "Purple-tinged radiating narrow racemes held against hand",
+      "caption": "Several long slender radiating racemes meet at the central attachment point and visible spikelets line branches. The characteristic sterile lemma and awns are not magnified enough to independently prove a natural hybrid.",
+      "why_it_matters": "Makes hybrid uncertainty explicit rather than mistaking an intermediate-looking flowering wheel for a determined hybrid.",
+      "creator": "(c) Brand R, some rights reserved (CC BY)",
+      "license": "CC BY (version not recorded)",
+      "source_page": "https://www.inaturalist.org/photos/341942574",
+      "photo_status": "Actual existing file visually inspected 2026-10-20. Photo-level original rights retained. Macro characters invisible in the pixels are explicitly excluded; source taxon name not independently vouchered.",
+      "markers": [
+        {
+          "label": "Radiating head junction",
+          "label_x": 74,
+          "label_y": 82,
+          "target_x": 46,
+          "target_y": 48
+        },
+        {
+          "label": "Single unilateral raceme",
+          "label_x": 8,
+          "label_y": 14,
+          "target_x": 35,
+          "target_y": 37
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Chloris/chloris-x-subdolichostachya/images/inat-341942574.jpg",
+      "original_panel_index": 0,
+      "license_url": null,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": null,
+      "source_species_id": "chloris-x-subdolichostachya",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "LOOK-ALIKE / PARENT: Chloris cucullata",
       "src": "../content/taxa/Poaceae/Chloris/chloris-cucullata/images/chloris-cucullata-fonseca-head.jpg",
@@ -225,13 +263,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://commons.wikimedia.org/wiki/File:Manual_of_the_grasses_of_the_United_States_(Page_529)_BHL42021168.jpg",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 0,
-      "label": "1 · Source-labeled hybrid head (not yet independently proven)",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.inaturalist.org/photos/341942574",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "SHORTSPIKE WINDMILLGRASS is the accepted seed-producing natural hybrid of Chloris cucullata × C. verticillata, documented in USDA NRCS Welder Germplasm accession 9085260 / PI 645601. The installed windmill photo is still a SOURCE-LABELLED candidate, not a voucher. Check longish 5–16 one-sided racemes, upper sterile oblong lemma ~1.7–2.2 mm and shorter ~1–2 mm awn versus fertile lemma ~2.2–2.9 mm with ~2–5 mm awn on the SAME specimen. Parent images don't prove hybrid identity. Macro-voucher hold stays.",

@@ -3,7 +3,7 @@
   "scientific": "Bouteloua trifida",
   "common": "Red grama / threeawn grama",
   "genus": "Bouteloua",
-  "note": "Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination.",
+  "note": "Existing-source public educational gallery: CC photos and explicitly credited Bob Harms science/education-only photographs are distinguished. Source labels and arrows are not independent specimen voucher certification.",
   "tiles": [
     {
       "heading": "01 · LOOK HERE FIRST — SHORT, APPRESSED RED-GRAMA BRANCHES",
@@ -21,10 +21,11 @@
         1,
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
+        1
+      ],
+      "missing_original_panel_indices": [
         2
       ]
     },
@@ -67,10 +68,11 @@
         1,
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
+        1
+      ],
+      "missing_original_panel_indices": [
         2
       ]
     },
@@ -105,10 +107,11 @@
         1,
         5
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
+        1
+      ],
+      "missing_original_panel_indices": [
         5
       ]
     },
@@ -131,10 +134,11 @@
         4,
         5
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
+        1
+      ],
+      "missing_original_panel_indices": [
         2,
         3,
         4,
@@ -149,8 +153,8 @@
       "why_it_matters": "Start with the recorded recognition characters before making a species identification.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "2 · Examine the whole plant",
@@ -158,8 +162,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -176,8 +180,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -185,11 +189,79 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     }
   ],
-  "panels": [],
+  "panels": [
+    {
+      "label": "1 · Thin reddish side branches against fingers",
+      "scientific_name": "Bouteloua trifida",
+      "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review014-99e072d2647eeac.jpg",
+      "image_fit": "contain",
+      "image_role": "Several narrow wine-red branches attached along delicate grass axis",
+      "caption": "Narrow reddish branches clearly arise at different points along delicate stem. Their individual three awns are not reliably separated at this image scale.",
+      "why_it_matters": "Genuine fine-structure contrast against blue and hairy grama broad combs.",
+      "creator": "Sam Kieschnick",
+      "license": "CC BY (version not recorded)",
+      "source_page": "https://www.gbif.org/occurrence/6185432117",
+      "license_url": null,
+      "photo_status": "Existing canonical media inspected original JPEG pixels October 20, 2026; arrows only to clearly visible structures; source ID provisional, exact species not independently re-determined.",
+      "markers": [
+        {
+          "label": "Narrow red branch",
+          "label_x": 7,
+          "label_y": 35,
+          "target_x": 33,
+          "target_y": 45
+        },
+        {
+          "label": "Central thin axis",
+          "label_x": 75,
+          "label_y": 88,
+          "target_x": 49,
+          "target_y": 69
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review014-99e072d2647eeac.jpg",
+      "original_panel_index": 0,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "Resaved JPEG with metadata removed (original source rights remain attached)",
+      "source_species_id": "bouteloua-trifida",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "2 · Narrow appressed flowering branch macro",
+      "scientific_name": "Bouteloua trifida",
+      "image_url": "content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review033-bb7d16fe9c3f170.jpg",
+      "image_fit": "contain",
+      "image_role": "Single narrow reddish branch photographed against a fingertip",
+      "caption": "The slim reproductive branch lies nearly parallel to its attached flowering stem. Individual pointed parts are visible, but no measured three-awned spikelet is claimed.",
+      "why_it_matters": "Shows the unusually slender form without overclaiming reproductive anatomy.",
+      "creator": "Cleveland Powell",
+      "license": "CC BY (version not recorded)",
+      "source_page": "https://www.gbif.org/occurrence/6252396364",
+      "license_url": null,
+      "photo_status": "Existing canonical media inspected original JPEG pixels October 20, 2026; arrows only to clearly visible structures; source ID provisional, exact species not independently re-determined.",
+      "markers": [
+        {
+          "label": "Narrow branch",
+          "label_x": 76,
+          "label_y": 12,
+          "target_x": 68,
+          "target_y": 32
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review033-bb7d16fe9c3f170.jpg",
+      "original_panel_index": 1,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "Resaved JPEG with metadata removed (original source rights remain attached)",
+      "source_species_id": "bouteloua-trifida",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    }
+  ],
   "preview_only": false,
   "unavailable_references": [
     {
@@ -219,20 +291,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://www.inaturalist.org/photos/667340906",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 0,
-      "label": "1 · Thin reddish side branches against fingers",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/6185432117",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "2 · Narrow appressed flowering branch macro",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/6252396364",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "A small WIRY grama with thin branching stems and typically TWO TO SEVEN narrow branches that lie quite close to the axis (APPRESSED). Many flowering parts are red to purplish, but do not rely on color. On a magnified spikelet inspect the three awns that give 'threeawn grama' its name; the awn count is not proven from the distant photos.",
