@@ -1,0 +1,62 @@
+name: Transfer existing held GBIF CC0 Poaceae originals only after exact source/rights check
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/transfer_existing_gbif_cc0_originals.py'
+      - '.github/workflows/poaceae-existing-gbif-cc0-transfer.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+concurrency:
+  group: poaceae-source-transfer-educational
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout existing Poaceae source and photo rights ledgers
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: destination
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Install source image match dependency (outside tracked repo)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m pip install 'Pillow>=10,<12' 'ImageHash>=4,<5'
+          PYTHONPYCACHEPREFIX="$RUNNER_TEMP/pycache" python3 -m py_compile destination/scripts/transfer_existing_gbif_cc0_originals.py
+      - name: Clone exact original 1402-file Poaceae source snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --filter=blob:none --depth 1 --sparse --no-checkout \
+            https://github.com/Crking92/Hays-County-Botany.git \
+            "$RUNNER_TEMP/hays-source"
+          git -C "$RUNNER_TEMP/hays-source" fetch --depth 1 origin d5812999ea32d03b873110db1a526e20ac6ea730
+          git -C "$RUNNER_TEMP/hays-source" sparse-checkout set content/taxa/Poaceae
+          git -C "$RUNNER_TEMP/hays-source" checkout --detach d5812999ea32d03b873110db1a526e20ac6ea730
+          test "$(git -C "$RUNNER_TEMP/hays-source" rev-parse HEAD)" = d5812999ea32d03b873110db1a526e20ac6ea730
+      - name: Check only two existing original photos for GBIF image-level CC0 and source pixel identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 destination/scripts/transfer_existing_gbif_cc0_originals.py "$RUNNER_TEMP/hays-source" destination
+      - name: Push verified source-file updates only, no Pages deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd destination
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:refs/heads/main
+      - name: Store metadata-only report, no new images from the web
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-original-gbif-two-cc0-source-verification
+          path: destination/migration/poaceae-gbif-cc0-existing-source-check.json
+          retention-days: 30
+          if-no-files-found: warn
