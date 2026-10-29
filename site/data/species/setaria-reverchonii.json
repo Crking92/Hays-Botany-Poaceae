@@ -21,11 +21,12 @@
         1,
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
-        2
+        1
+      ],
+      "missing_original_panel_indices": [
+        0
       ]
     },
     {
@@ -43,9 +44,10 @@
         2,
         0
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        1
+      ],
       "missing_original_panel_indices": [
-        2,
         0
       ]
     },
@@ -64,9 +66,10 @@
         1,
         0
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        1,
         0
       ]
     },
@@ -84,11 +87,11 @@
         1,
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        1,
-        2
-      ]
+      "preview_panel_indices": [
+        0,
+        1
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "05 · WRINKLED FERTILE LEMMA, NO LONG AWN",
@@ -105,10 +108,10 @@
       "original_panel_indices": [
         1
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
-        1
-      ]
+      "preview_panel_indices": [
+        0
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "06 · COMPARE THREE LOCAL FOXTAILS",
@@ -125,11 +128,12 @@
         1,
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
-        2
+        1
+      ],
+      "missing_original_panel_indices": [
+        0
       ]
     }
   ],
@@ -158,8 +162,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -167,8 +171,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -181,6 +185,68 @@
     }
   ],
   "panels": [
+    {
+      "label": "2 · REAL SPIKELETS: separated along the narrow flowering axis",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg",
+      "caption": "Patrick Alexander's original CC0 photograph, physically stored on GitHub and inspected at source pixels. Real ovate spikelets with green-purple markings are visibly attached separately along a slender axis. This proves pictured gross spikelet form, NOT their millimeter length, a counted bristle at their bases or resolved glume/lemma identity.",
+      "creator": "Patrick Alexander from Las Cruces, NM",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_reverchonii_-_Flickr_-_aspidoscelis_%281%29.jpg",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Distinct attached spikelet",
+          "target_x": 47,
+          "target_y": 46,
+          "label_x": 5,
+          "label_y": 20
+        },
+        {
+          "label": "Lower separate spikelet",
+          "target_x": 38,
+          "target_y": 87,
+          "label_x": 66,
+          "label_y": 87
+        }
+      ],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-reverchonii",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "3 · LEAF AND HAIRY JUNCTION: ligule still unproven",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg",
+      "caption": "Patrick Alexander's original CC0 photograph visibly shows a narrow projecting leaf blade and pale hair at a junction with its sheath; the opened internal true ligule is not independently measurable from this angle. Don't equate this white tuft with proof of the 1–2 mm stiff-hair ligule.",
+      "creator": "Patrick Alexander from Las Cruces, NM",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_reverchonii_-_Flickr_-_aspidoscelis_%282%29.jpg",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Projecting narrow leaf blade",
+          "target_x": 51,
+          "target_y": 29,
+          "label_x": 69,
+          "label_y": 15
+        },
+        {
+          "label": "White hairs at junction (not measured ligule)",
+          "target_x": 39,
+          "target_y": 61,
+          "label_x": 4,
+          "label_y": 76
+        }
+      ],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-reverchonii",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "DUVAL COUNTY · one living tuft with narrow blades and attached green flowering heads",
       "src": "../content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-living-flowering-tuft-681610420.jpg",
@@ -311,6 +377,44 @@
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "setaria-parviflora",
       "photo_role": "COMPARISON_SPECIES_SOURCE"
+    },
+    {
+      "label": "LOOK-ALIKE: Scheele's bristlegrass — long bristled heads and broad blades",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-f0f1c812bc84.jpg",
+      "caption": "Gaiacoyote's source-labelled overview shows two separate tapered bristly flowering heads above long, flat green leaf blades, with several culms emerging from the leafy base. The photograph does NOT show a measured true ligule, roots/rhizomes, or the attachment of an individual bristle to a spikelet. The original source identification is retained without claiming a Hays County voucher. Look-alike species, NOT Setaria reverchonii; measured bristles cannot be resolved.",
+      "creator": "Gaiacoyote",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_scheelei_%282%29.jpg",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Tapered flowering head",
+          "target_x": 91,
+          "target_y": 29,
+          "label_x": 72,
+          "label_y": 10
+        },
+        {
+          "label": "Broad leaf blade",
+          "target_x": 69,
+          "target_y": 59,
+          "label_x": 73,
+          "label_y": 77
+        },
+        {
+          "label": "Clustered basal culms (not roots)",
+          "target_x": 43,
+          "target_y": 81,
+          "label_x": 3,
+          "label_y": 91
+        }
+      ],
+      "original_panel_index": 9,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-scheelei",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
     }
   ],
   "preview_only": false,
@@ -334,27 +438,6 @@
       "label": "Reverchon's bristlegrass — interrupted slender panicle",
       "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
       "reference_page": "https://www.inaturalist.org/photos/286180500",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "2 · REAL SPIKELETS: separated along the narrow flowering axis",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_reverchonii_-_Flickr_-_aspidoscelis_%281%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "3 · LEAF AND HAIRY JUNCTION: ligule still unproven",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_reverchonii_-_Flickr_-_aspidoscelis_%282%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 9,
-      "label": "LOOK-ALIKE: Scheele's bristlegrass — long bristled heads and broad blades",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_scheelei_%282%29.jpg",
       "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],

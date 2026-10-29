@@ -56,9 +56,10 @@
         1,
         4
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        1
+      ],
       "missing_original_panel_indices": [
-        1,
         4
       ]
     },
@@ -76,10 +77,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "05 · DISSECT GLUMES AND LEMMA",
@@ -95,10 +96,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "06 · RULE OUT JOHNSONGRASS AND SHATTERCANE",
@@ -149,8 +150,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -158,8 +159,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 2,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -187,24 +188,74 @@
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "sorghum-bicolor",
       "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "SORGHUM — real blade/sheath LIGULE photograph",
+      "src": "../content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg",
+      "caption": "Original Rasbak source-labelled photo shows sorghum at the true blade-sheath junction. Examine membrane at collar; image is not a millimeter-calibrated demonstration, and no new fine anatomy arrow was placed.",
+      "creator": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASorghum_bicolor_ligule_%2803%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghum-bicolor",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "SORGHUM — real flowering branch close-up",
+      "src": "../content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg",
+      "caption": "Original Rasbak source-labelled reproductive photograph offers a closer look at flowers. Do not assert a measured sessile/pedicelled spikelet pair or mark precise glumes without further pixel review.",
+      "creator": "Rasbak",
+      "license": "CC BY-SA 3.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASorghum_bicolor_flower_%2803%29.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghum-bicolor",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "2 · JOHNSONGRASS (OTHER species) — real rhizome network",
+      "src": "../content/taxa/Poaceae/Sorghum/sorghum-halepense/images/commons-moadeeb-johnsongrass-rhizome.jpg",
+      "caption": "Moadeeb's licensed Austin/Texas photo shows a horizontal whitish underground stem with segmentation and attached roots. Trace true stem joints/nodes along the rhizome; individual buds are NOT verified at this image scale. Avoid digging and moving viable invasive pieces except with proper collection protocol.",
+      "creator": "Moadeeb",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sorghum_Halepense_Rhizome.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Downscaled/resaved JPEG, EXIF removed; no illustrative arrows added.",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 5,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghum-halepense",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
+    },
+    {
+      "label": "3 · JOHNSONGRASS (OTHER species) — source ligule collar",
+      "src": "../content/taxa/Poaceae/Sorghum/sorghum-halepense/images/commons-matt-lavin-johnsongrass-ligule.jpg",
+      "caption": "A dense whitish hair fringe is visible at the leaf sheath/blade collar. The transparent 2–6 mm membrane itself has not been separately measured from this angle, so mark the broader collar/ligule region only in instructional text, not a numerical arrow.",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sorghum_halepense_(6134701986).jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "modifications": "Downscaled/resaved JPEG, EXIF removed; no illustrative arrows added.",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 6,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "sorghum-halepense",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
     }
   ],
   "preview_only": false,
   "unavailable_references": [
-    {
-      "original_panel_index": 1,
-      "label": "SORGHUM — real blade/sheath LIGULE photograph",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASorghum_bicolor_ligule_%2803%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "SORGHUM — real flowering branch close-up",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASorghum_bicolor_flower_%2803%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
     {
       "original_panel_index": 3,
       "label": "ACTUAL SEEDLING ROOTS · adventitious roots (not mature crown)",
@@ -217,20 +268,6 @@
       "label": "ACTUAL SPIKELET GROUPS · terminal paired/triplet architecture",
       "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
       "reference_page": "https://commons.wikimedia.org/wiki/File:Sorghum_bicolor_(4055518933).jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 5,
-      "label": "2 · JOHNSONGRASS (OTHER species) — real rhizome network",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File:Sorghum_Halepense_Rhizome.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 6,
-      "label": "3 · JOHNSONGRASS (OTHER species) — source ligule collar",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File:Sorghum_halepense_(6134701986).jpg",
       "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],

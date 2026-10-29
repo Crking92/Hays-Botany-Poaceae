@@ -20,9 +20,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     },
@@ -41,9 +42,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     },
@@ -62,9 +64,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     },
@@ -82,9 +85,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     },
@@ -103,9 +107,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     },
@@ -123,9 +128,10 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
-        0,
         1
       ]
     }
@@ -137,8 +143,8 @@
       "why_it_matters": "Start with the recorded recognition characters before making a species identification.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "2 · Examine the whole plant",
@@ -146,8 +152,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -155,8 +161,8 @@
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -164,8 +170,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -178,6 +184,60 @@
     }
   ],
   "panels": [
+    {
+      "label": "Scheele's bristlegrass — two flowering heads and broad leaf blades",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-f0f1c812bc84.jpg",
+      "caption": "Gaiacoyote's source-labelled overview shows two separate tapered bristly flowering heads above long, flat green leaf blades, with several culms emerging from the leafy base. The photograph does NOT show a measured true ligule, roots/rhizomes, or the attachment of an individual bristle to a spikelet. The original source identification is retained without claiming a Hays County voucher.",
+      "creator": "Gaiacoyote",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_scheelei_%282%29.jpg",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Tapered flowering head",
+          "target_x": 91,
+          "target_y": 29,
+          "label_x": 72,
+          "label_y": 10
+        },
+        {
+          "label": "Broad leaf blade",
+          "target_x": 69,
+          "target_y": 59,
+          "label_x": 73,
+          "label_y": 77
+        },
+        {
+          "label": "Clustered basal culms (not roots)",
+          "target_x": 43,
+          "target_y": 81,
+          "label_x": 3,
+          "label_y": 91
+        }
+      ],
+      "original_panel_index": 0,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-scheelei",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "Scheele's bristlegrass — additional original-source photograph 2",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-bd07b9665c3b.jpg",
+      "caption": "Additional physically GitHub-stored, publicly licensed original photograph of source-reported taxon. Examine whole plant, head or spikelets if plainly visible; no fine reproductive anatomy or measured ligule is asserted.",
+      "creator": "Annika Lindqvist",
+      "license": "CC BY 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_scheelei_538587868.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 2,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-scheelei",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "UVALDE COUNTY · living plant in Dry Frio rocky gulley habitat",
       "src": "../content/taxa/Poaceae/Setaria/setaria-scheelei/images/jim-conrad-dry-frio-whole-plant-habitat-2013.jpg",
@@ -348,20 +408,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://www.inaturalist.org/photos/728484502",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 0,
-      "label": "Scheele's bristlegrass — two flowering heads and broad leaf blades",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_scheelei_%282%29.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "Scheele's bristlegrass — additional original-source photograph 2",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_scheelei_538587868.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
     },
     {
       "original_panel_index": 8,

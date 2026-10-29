@@ -95,11 +95,10 @@
       ],
       "preview_panel_indices": [
         6,
-        7
+        7,
+        8
       ],
-      "missing_original_panel_indices": [
-        6
-      ]
+      "missing_original_panel_indices": []
     },
     {
       "heading": "06 · PUBLIC-READY GATE",
@@ -160,8 +159,8 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 6,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 6,
+      "photo_unavailable": false
     }
   ],
   "panels": [
@@ -345,6 +344,22 @@
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
+      "label": "PUBLIC-ELIGIBLE LOOK-ALIKE — different species creeping signalgrass (U. reptans)",
+      "src": "../content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-cd006c0bc5b0.jpg",
+      "caption": "Look-alike, not brownseed signalgrass: this depicts Urochloa reptans. Do not decide between the two from general grass silhouettes. Compare the true hairy ligule, measured mature spikelet size and one-sided flowering branches in separately attributed same-species panels.",
+      "creator": "Dan Johnson",
+      "license": "CC BY 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_102647425.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 6,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "urochloa-reptans",
+      "photo_role": "COMPARISON_SPECIES_SOURCE"
+    },
+    {
       "label": "Existing Texas signalgrass photo",
       "src": "../content/taxa/Poaceae/Urochloa/urochloa-texana/images/commons-urochloa-texana.jpg",
       "caption": "Whole-plant original shows broad grass leaves and flowering stems amid other grasses; no individual spikelet/glume anatomy resolves, so arrows intentionally avoid species-diagnostic claims.",
@@ -422,13 +437,6 @@
       "reason": "Source photo excluded from rights-first site pending rights verification",
       "reference_page": "https://www.inaturalist.org/photos/146282466",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 6,
-      "label": "PUBLIC-ELIGIBLE LOOK-ALIKE — different species creeping signalgrass (U. reptans)",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_102647425.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "BROWNSEED SIGNALGRASS: begin with several ascending one-sided racemes, then inspect ripe plump blunt spikelets (roughly 2.4–3.4 mm across botanical treatments). Its lower glume is short relative to the spikelet: broad treatments often say ~1/4–1/3, while the UT Central Texas treatment measures ~1–1.3 mm on 2.9–3.4 mm spikelets, sometimes exceeding 1/3. Compare actual glume and spikelet lengths, the true hair-fringe ligule and the annual rooted base; do not infer ratios from the overview photograph.",

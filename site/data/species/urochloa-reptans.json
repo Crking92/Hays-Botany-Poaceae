@@ -20,11 +20,11 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
         1
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "02 · TRACE THE FLOWERING RACEMES",
@@ -41,11 +41,11 @@
         0,
         1
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
         1
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · TRUE COLLAR, NOT SHEATH HAIRS",
@@ -110,10 +110,10 @@
         5
       ],
       "preview_panel_indices": [
-        0,
-        1,
         2,
-        3
+        3,
+        4,
+        5
       ],
       "missing_original_panel_indices": []
     }
@@ -125,8 +125,8 @@
       "why_it_matters": "Start with the recorded recognition characters before making a species identification.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "2 · Examine the whole plant",
@@ -134,8 +134,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -152,8 +152,8 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -161,11 +161,43 @@
       "why_it_matters": "Confirm at least two independent botanical characters; do not remove a native candidate from color alone.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 2,
-      "panel_index": 0,
+      "panel_index": 2,
       "photo_unavailable": false
     }
   ],
   "panels": [
+    {
+      "label": "UROCHLOA REPTANS — additional archived source-labelled photo 1",
+      "src": "../content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-cd006c0bc5b0.jpg",
+      "caption": "An additional species-labelled plant photograph from Wikimedia Commons. Inspect the seedhead and leaf junction if visible; the image is not yet validated as a genuine ligule or measured floret macro.",
+      "creator": "Dan Johnson",
+      "license": "CC BY 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_102647425.jpg",
+      "license_url": "",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 0,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "urochloa-reptans",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "UROCHLOA REPTANS — additional archived source-labelled photo 2",
+      "src": "../content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-bebff5054ac5.jpg",
+      "caption": "An additional species-labelled plant photograph from Wikimedia Commons. Inspect the seedhead and leaf junction if visible; the image is not yet validated as a genuine ligule or measured floret macro.",
+      "creator": "葉子",
+      "license": "CC0",
+      "source_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_239077466.jpg",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "modifications": "",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "urochloa-reptans",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "MATCHED REPRODUCTIVE LOOK-ALIKE — OTHER SPECIES U. fusca actual attached spikelets",
       "src": "../content/taxa/Poaceae/Urochloa/urochloa-fusca/images/jim-conrad-urochloa-fusca-attached-spikelet-macro-public-domain.jpg",
@@ -284,22 +316,7 @@
     }
   ],
   "preview_only": false,
-  "unavailable_references": [
-    {
-      "original_panel_index": 0,
-      "label": "UROCHLOA REPTANS — additional archived source-labelled photo 1",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_102647425.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "UROCHLOA REPTANS — additional archived source-labelled photo 2",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_239077466.jpg",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    }
-  ],
+  "unavailable_references": [],
   "intro": "CREEPING SIGNALGRASS: source-labelled photo shows multiple slender radiating racemes with tiny crowded spikelets. Verify 1.5–2.2 mm ripe spikelets and their extremely short lower glume (about 1/8–1/4). In vegetative material, seek real lower STEM NODES rooting on the soil—do not infer rooted creeping stems from an isolated seedhead photograph.",
   "memory_rule": "U. reptans tiny ~1.5–2.2 mm and minute basal glume; U. fusca blunt ~2.4–3.4 mm with shorter glume; U. texana much larger ~4.5–5.9 mm with lower glume about half/two-thirds.",
   "safety_note": "Strict site display filter removes five CC BY-NC teaching panels (four same species, one U. fusca comparison). Six publicly eligible panels remain, of which only two represent U. reptans. No true ligule, glume dissection or rooted node photographed at diagnostic quality. Scientific photo gaps and Pages render QA remain.",

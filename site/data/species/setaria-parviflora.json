@@ -20,11 +20,10 @@
         1
       ],
       "preview_panel_indices": [
-        0
-      ],
-      "missing_original_panel_indices": [
+        0,
         1
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "02 · TRUE HAIR-FRINGE LIGULE",
@@ -39,10 +38,10 @@
       "original_panel_indices": [
         2
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         2
-      ]
+      ],
+      "missing_original_panel_indices": []
     },
     {
       "heading": "03 · COUNT BRISTLES BELOW A SPIKELET",
@@ -59,8 +58,8 @@
         4
       ],
       "preview_panel_indices": [
-        1,
-        2
+        3,
+        4
       ],
       "missing_original_panel_indices": []
     },
@@ -78,7 +77,7 @@
         5
       ],
       "preview_panel_indices": [
-        3
+        5
       ],
       "missing_original_panel_indices": []
     },
@@ -97,7 +96,7 @@
         5
       ],
       "preview_panel_indices": [
-        3
+        5
       ],
       "missing_original_panel_indices": []
     },
@@ -118,11 +117,10 @@
       ],
       "preview_panel_indices": [
         0,
-        1
+        1,
+        3
       ],
-      "missing_original_panel_indices": [
-        1
-      ]
+      "missing_original_panel_indices": []
     }
   ],
   "steps": [
@@ -149,9 +147,9 @@
       "look_for": "FNA reports the true ligule <1 mm; Kew/GrassBase reports about 0.4–1.2 mm. Leaf blades often 2–8 mm wide. The source-labelled sl16 photo shows collar placement but cannot establish a measured Texas ligule. Do not point to purple stigmas or sheath-mouth hairs as the ligule.",
       "why_it_matters": "Examine the real structures; the photo may not expose or measure all the described characters.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
-      "original_panel_index": null,
-      "panel_index": null,
-      "photo_unavailable": true
+      "original_panel_index": 2,
+      "panel_index": 2,
+      "photo_unavailable": false
     },
     {
       "title": "4 · Check the flowering structure",
@@ -159,7 +157,7 @@
       "why_it_matters": "Use an attached, correctly identified specimen when deciding the flower or spikelet structures.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 3,
-      "panel_index": 1,
+      "panel_index": 3,
       "photo_unavailable": false
     },
     {
@@ -207,6 +205,53 @@
         }
       ],
       "original_panel_index": 0,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-parviflora",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "KNOTROOT — actual hard knotty rhizome and pointed bud · PROVISIONAL — USER PHOTO REVIEW PENDING",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-knotty-rhizome.jpg",
+      "caption": "The excavated source plant shows short pale, swollen, knobby underground stems and pointed budlike projections next to fine roots, with a real 10 mm scale. Contrast with fibrous annual Setaria bases; avoid treating every white root tip as a bud.",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl13.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Original RGB JPEG re-encoded, EXIF/GPS stripped",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [],
+      "original_panel_index": 1,
+      "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
+      "source_species_id": "setaria-parviflora",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "LIGULE — hair fringe at sheath mouth (not a membrane) · PROVISIONAL — USER PHOTO REVIEW PENDING",
+      "src": "../content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-ligule.jpg",
+      "caption": "Real exact-species collar photograph: the tiny translucent hair-like ligule fringe is visible at the blade–sheath junction (arrow), and the photographer's original 5-mm scale is shown below. The 0.4–1.2 mm ligule range is published morphology, NOT a length measured from these pixels. Croatian source, not a Hays County specimen.",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl16.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "modifications": "Archived RGB JPEG re-encoded, EXIF/GPS stripped; two new separate browser arrow overlays (2026-10-25), original JPEG unchanged",
+      "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
+      "markers": [
+        {
+          "label": "Short hair-like ligule fringe at collar",
+          "target_x": 61,
+          "target_y": 36,
+          "label_x": 80,
+          "label_y": 24
+        },
+        {
+          "label": "Original 5-mm scale bar",
+          "target_x": 49,
+          "target_y": 94,
+          "label_x": 77,
+          "label_y": 86
+        }
+      ],
+      "original_panel_index": 2,
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "setaria-parviflora",
       "photo_role": "TARGET_SPECIES_SOURCE"
@@ -337,20 +382,6 @@
   ],
   "preview_only": false,
   "unavailable_references": [
-    {
-      "original_panel_index": 1,
-      "label": "KNOTROOT — actual hard knotty rhizome and pointed bud · PROVISIONAL — USER PHOTO REVIEW PENDING",
-      "reason": "Source photo withheld from public replacement pending rights review",
-      "reference_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl13.jpg",
-      "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "LIGULE — hair fringe at sheath mouth (not a membrane) · PROVISIONAL — USER PHOTO REVIEW PENDING",
-      "reason": "Source photo withheld from public replacement pending rights review",
-      "reference_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl16.jpg",
-      "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
     {
       "original_panel_index": 8,
       "label": "Southwestern bristlegrass — long projecting bristles",
