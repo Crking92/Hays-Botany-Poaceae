@@ -3,7 +3,7 @@
   "scientific": "Eriochloa sericea",
   "common": "Silky cupgrass",
   "genus": "Eriochloa",
-  "note": "Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination.",
+  "note": "Existing-source public educational gallery: CC photos and explicitly credited Bob Harms science/education-only photographs are distinguished. Source labels and arrows are not independent specimen voucher certification.",
   "tiles": [
     {
       "heading": "01 · FIND THE BUNCH",
@@ -82,8 +82,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 4,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 3,
+      "photo_unavailable": false
     },
     {
       "title": "5 · Compare similar grasses",
@@ -95,7 +95,152 @@
       "photo_unavailable": true
     }
   ],
-  "panels": [],
+  "panels": [
+    {
+      "label": "Texas cupgrass — narrow flowering head",
+      "scientific_name": "Eriochloa sericea",
+      "image_url": "content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/inat-199148666.jpg",
+      "image_fit": "contain",
+      "image_role": "Actual original project photograph: flowering head photographed against palm; narrow axis and protruding spikelets visible",
+      "caption": "This inspected image shows an elongated narrow flowering head, individual green spikelets and scale from a hand. It does NOT resolve the tiny cup/ring structure at each spikelet base, the collar ligule or the plant's tufted root system.",
+      "why_it_matters": "Shows where to begin searching for cupgrass reproductive structures; confirmation requires a spikelet-pedicel macro.",
+      "creator": "(c) Nathan May, some rights reserved (CC BY)",
+      "license": "CC BY (version not recorded)",
+      "source_page": "https://www.inaturalist.org/photos/199148666",
+      "photo_status": "EXISTING local image pixels visually inspected in this pass; arrows limited to visible flowering structures; species determination source-labeled, not independently redetermined.",
+      "markers": [
+        {
+          "label": "Green spikelets",
+          "label_x": 7,
+          "label_y": 18,
+          "target_x": 41,
+          "target_y": 35
+        },
+        {
+          "label": "Narrow flowering axis",
+          "label_x": 60,
+          "label_y": 75,
+          "target_x": 51,
+          "target_y": 54
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/inat-199148666.jpg",
+      "original_panel_index": 0,
+      "license_url": null,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": null,
+      "source_species_id": "eriochloa-sericea",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "DRY HEAD — real archived narrow flowering panicle",
+      "scientific_name": "Eriochloa sericea",
+      "image_url": "content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/public-review006-e242c195cab04e.jpg",
+      "image_fit": "contain",
+      "image_role": "Existing physical JPEG, source-determined Eriochloa sericea; narrow dried flowering head and visible small lateral units, photographed against fingers",
+      "caption": "Look at the narrow axis and many tiny lateral spikelet-like units. A finger provides rough visual context, NOT a millimeter scale. The decisive cup at an individual spikelet base, glume/lemma boundaries and ligule cannot be resolved here.",
+      "why_it_matters": "Useful dry-stage comparison with the original greener flowering head. Do not confuse visible feathery hairs with a verified basal cup.",
+      "creator": "sonoresmore",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_page": "https://www.gbif.org/occurrence/5938631934",
+      "photo_status": "PROVISIONAL — USER PHOTO REVIEW PENDING. Existing archived JPEG visually inspected and byte-retrieved; taxon ID from source metadata, not independently re-determined. Original image-level license version not reopened at source.",
+      "markers": [
+        {
+          "label": "Narrow flowering axis",
+          "label_x": 7,
+          "label_y": 43,
+          "target_x": 49,
+          "target_y": 39
+        },
+        {
+          "label": "Visible lateral units",
+          "label_x": 69,
+          "label_y": 9,
+          "target_x": 48,
+          "target_y": 14
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/public-review006-e242c195cab04e.jpg",
+      "original_panel_index": 1,
+      "photo_license_note": "Exact archived photographer/photo CC0 attribution; latest upstream image metadata not independently rechecked.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "EXIF/GPS removed, normalized JPEG; no labels or arrows applied",
+      "source_species_id": "eriochloa-sericea",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "DRY HEAD — wider comparison of existing archived specimen",
+      "scientific_name": "Eriochloa sericea",
+      "image_url": "content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/public-review006-5f63be257c625b.jpg",
+      "image_fit": "contain",
+      "image_role": "Second existing physical JPEG of source-determined Eriochloa sericea; dried panicle with visible elongated axis and small lateral units",
+      "caption": "Compare this slightly wider view of the dried head to the preceding close-up. The central axis and attached flowering clusters are visible; this does not show a measurable spikelet cup, exposed true ligule or rooted plant.",
+      "why_it_matters": "Helps recognize the reproductive architecture across angles without presenting unresolved cup anatomy as photographed.",
+      "creator": "sonoresmore",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_page": "https://www.gbif.org/occurrence/5938631934",
+      "photo_status": "PROVISIONAL — USER PHOTO REVIEW PENDING. Existing archived JPEG visually inspected and byte-retrieved; taxon ID from source metadata, not independently re-determined. Original image-level license version not reopened at source.",
+      "markers": [
+        {
+          "label": "Dry flowering head",
+          "label_x": 69,
+          "label_y": 8,
+          "target_x": 42,
+          "target_y": 16
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/public-review006-5f63be257c625b.jpg",
+      "original_panel_index": 2,
+      "photo_license_note": "Exact archived photographer/photo CC0 attribution; latest upstream image metadata not independently rechecked.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "EXIF/GPS removed, normalized JPEG; no labels or arrows applied",
+      "source_species_id": "eriochloa-sericea",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "TEXAS CUPGRASS — actual living tuft with narrow leafy basal shoots",
+      "scientific_name": "Eriochloa sericea",
+      "image_url": "content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/public-review006-6f6d39ec8ac20b.jpg",
+      "image_fit": "contain",
+      "image_role": "In-ground living grass bunch with radiating narrow blades and upright flowering culms in source-identified stand; soil conceals root origin and individual flower-to-root identity",
+      "caption": "Previously archived original source-labelled Texas cupgrass by Theresa Strickler. A green central tuft of long narrow basal blades and upright slender culms is photographed in natural dry leaf litter. Several flowering axes are visible within the broader photographed field, but belowground roots are not exposed. This is the source-identified plant's actual live growth form, not a dug-out specimen or independently vouchered same-root flowering culm.",
+      "why_it_matters": "Crew can recognize the genuine living basal bunch in dry woodland field habitat alongside its diagnostic flowering-head and basal cup photographs.",
+      "creator": "Theresa Strickler",
+      "license": "CC BY (version not recorded)",
+      "license_url": null,
+      "license_version_note": "Archived GBIF media record identifies individual photograph as CC BY; precise Creative Commons version not independently reopened; verify before broader derivative redistribution.",
+      "source_page": "https://www.gbif.org/occurrence/6188378681",
+      "original_photo": "https://inaturalist-open-data.s3.amazonaws.com/photos/632912345/original.jpg",
+      "photo_status": "EXISTING_GITHUB_JPEG_PHYSICAL_BYTES_VISUALLY_INSPECTED_20261027; living field tuft and upright leafy culms only; actual roots and true inner ligule not shown; determination from source",
+      "modification_note": "Previously archived EXIF-stripped original normalized JPEG. Added only two overlay arrows on actual gross structures; pixels unchanged.",
+      "markers": [
+        {
+          "label": "Narrow live green leaves radiate from basal bunch",
+          "label_x": 3,
+          "label_y": 18,
+          "target_x": 47,
+          "target_y": 50
+        },
+        {
+          "label": "Upright slender culms in field tuft",
+          "label_x": 63,
+          "label_y": 9,
+          "target_x": 59,
+          "target_y": 27
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Eriochloa/eriochloa-sericea/images/public-review006-6f6d39ec8ac20b.jpg",
+      "original_panel_index": 4,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "EXIF/GPS removed, normalized JPEG; no labels or arrows applied",
+      "source_species_id": "eriochloa-sericea",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    }
+  ],
   "preview_only": false,
   "unavailable_references": [
     {
@@ -125,34 +270,6 @@
       "reason": "Source photo withheld from public replacement pending rights review",
       "reference_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ERSE5-C.html",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 0,
-      "label": "Texas cupgrass — narrow flowering head",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.inaturalist.org/photos/199148666",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "DRY HEAD — real archived narrow flowering panicle",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/5938631934",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 2,
-      "label": "DRY HEAD — wider comparison of existing archived specimen",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/5938631934",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 4,
-      "label": "TEXAS CUPGRASS — actual living tuft with narrow leafy basal shoots",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/6188378681",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "Start with the very small CUP/RING at an individual spikelet's base, and a DENSE HAIR RING for the true leaf ligule. Texas cupgrass is a robust perennial rooted BUNCH (not a rhizomatous sodgrass) with soft leaves and short closely pressed flowering racemes holding silky spikelets. The existing photo shows visible spikelets and axis but NOT the tiny cup or leaf collar: inspect a macro before confirming.",

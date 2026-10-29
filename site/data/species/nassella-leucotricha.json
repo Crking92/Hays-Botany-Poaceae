@@ -3,7 +3,7 @@
   "scientific": "Nassella leucotricha",
   "common": "Texas wintergrass",
   "genus": "Nassella",
-  "note": "Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination.",
+  "note": "Existing-source public educational gallery: CC photos and explicitly credited Bob Harms science/education-only photographs are distinguished. Source labels and arrows are not independent specimen voucher certification.",
   "tiles": [
     {
       "heading": "01 · LOOK HERE FIRST",
@@ -21,10 +21,11 @@
         1,
         7
       ],
-      "preview_panel_indices": [],
-      "missing_original_panel_indices": [
+      "preview_panel_indices": [
         0,
-        1,
+        1
+      ],
+      "missing_original_panel_indices": [
         7
       ]
     },
@@ -134,7 +135,7 @@
         10
       ],
       "preview_panel_indices": [
-        0
+        2
       ],
       "missing_original_panel_indices": [
         2,
@@ -150,8 +151,8 @@
       "why_it_matters": "Start with the recorded recognition characters before making a species identification.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "2 · Examine the whole plant",
@@ -159,8 +160,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 0,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 0,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -191,6 +192,75 @@
     }
   ],
   "panels": [
+    {
+      "label": "1 · WINTER TUFT — actual green bunch among dry leaves",
+      "scientific_name": "Nassella leucotricha",
+      "image_url": "content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-8194cc1de3d1874.jpg",
+      "image_fit": "contain",
+      "image_role": "Actual archived source-determined Texas wintergrass vegetative tuft; narrow live green blades in dry litter, no seedhead in this photograph",
+      "caption": "True pixel-inspected archived photograph shows multiple fine green blades arising in a dense small bunch amid brown fallen leaves and dry blades. This is HABIT evidence only: there is no exposed root/collar, no confirmed attached panicle, and no flowering character that independently determines the species.",
+      "why_it_matters": "Crew first look in late fall to spring: locate the green cool-season bunch, but wait for mature fruit before naming Texas wintergrass.",
+      "creator": "John Thomlinson",
+      "license": "CC BY (version not recorded)",
+      "license_url": null,
+      "source_page": "https://www.gbif.org/occurrence/6147668649",
+      "source_image_photo_id": 613508904,
+      "photo_status": "2026-10-21 inspected actual 1400x933 JPEG stored in canonical folder, archived GBIF CC BY/John Thomlinson record; original exact photo license version and taxon independently unreviewed, retained provisional. One arrow marks visibly dense green leaf tuft only.",
+      "markers": [
+        {
+          "label": "Winter-green leaf tuft",
+          "label_x": 6,
+          "label_y": 12,
+          "target_x": 51,
+          "target_y": 54
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-8194cc1de3d1874.jpg",
+      "original_panel_index": 0,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "Resaved JPEG with metadata removed (original source rights remain attached)",
+      "source_species_id": "nassella-leucotricha",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "2 · SPRING HEAD — source-identified awned panicle in hand",
+      "scientific_name": "Nassella leucotricha",
+      "image_url": "content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-f7b0de3365baf08.jpg",
+      "image_fit": "contain",
+      "image_role": "Real photographed Texas wintergrass open-to-narrow panicle with several attached slender sharp-looking spikelets and long awns against a hand",
+      "caption": "Archived Sam Kieschnick photograph visibly shows slender branching panicle with multiple narrow florets and exceptionally long threadlike AWNS, fingers behind for broad size. Photograph is not a dissection and cannot establish actual callus length, lemma corona or glume veins. Do NOT label multiple awn threads in this image as one three-awned Aristida fruit.",
+      "why_it_matters": "Links field recognition of a real awned spring flowering head to the USDA enlarged example showing ONE awn on ONE hardened lemma.",
+      "creator": "Sam Kieschnick",
+      "license": "CC BY (version not recorded)",
+      "license_url": null,
+      "source_page": "https://www.gbif.org/occurrence/6179385496",
+      "source_image_photo_id": 625062186,
+      "photo_status": "2026-10-21 inspected actual 1050x1400 JPEG stored in canonical folder, archived GBIF CC BY/Sam Kieschnick record; source species determination follows recorded observation and original per-photo license version recheck desirable. Two conservative gross structure arrows, no invisible microscopic claims.",
+      "markers": [
+        {
+          "label": "Narrow flowering head",
+          "label_x": 7,
+          "label_y": 14,
+          "target_x": 51,
+          "target_y": 29
+        },
+        {
+          "label": "Long threadlike awns",
+          "label_x": 77,
+          "label_y": 48,
+          "target_x": 57,
+          "target_y": 48
+        }
+      ],
+      "src": "../content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-f7b0de3365baf08.jpg",
+      "original_panel_index": 1,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "Resaved JPEG with metadata removed (original source rights remain attached)",
+      "source_species_id": "nassella-leucotricha",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
     {
       "label": "Purple threeawn — three bristles arise from each lemma",
       "src": "../content/taxa/Poaceae/Aristida/aristida-purpurea/images/02-mature-florets-awns.jpg",
@@ -272,20 +342,6 @@
       "reason": "Source photo withheld from public replacement pending rights review",
       "reference_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/NALE3-d.html",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 0,
-      "label": "1 · WINTER TUFT — actual green bunch among dry leaves",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/6147668649",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "2 · SPRING HEAD — source-identified awned panicle in hand",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/6179385496",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "COOL-SEASON winter-green clump first: Texas wintergrass often greens during winter while warm-season grasses brown. At bloom in spring, the panicle is loose or somewhat narrowed with distinct long-awned individual spikelets, as the new Sam Kieschnick photo shows. Crucially, FOLLOW ONE mature floret to its ONE long, twisted and twice-bent awn attached to a hard lemma, then verify a long sharp hairy callus at the opposite base. The USDA example arrows show the callus, lemma and awn of ONE fruit. Nearby Aristida has THREE awn limbs from one lemma; cultivated Mexican feathergrass also has a single awn but a tiny blunt callus and thinner rolled foliage. New same-taxon actual Harms scaled photos show collar/sheath, spikelet flowers, mature one-awed hard fruit and empty glumes. The true ligule is a SHORT glabrous membranous structure often 0-1 mm and may appear absent. Do not mistake long collar hairs for the ligule or pale empty glumes for the hardened sharp fruit.",

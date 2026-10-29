@@ -3,7 +3,7 @@
   "scientific": "Hopia obtusa",
   "common": "Vine mesquite",
   "genus": "Hopia",
-  "note": "Existing-source, strict-license-screened public gallery. Additional historical photos remain held from this site. Anatomy overlays are teaching annotations, not a separate verified voucher determination.",
+  "note": "Existing-source public educational gallery: CC photos and explicitly credited Bob Harms science/education-only photographs are distinguished. Source labels and arrows are not independent specimen voucher certification.",
   "tiles": [
     {
       "heading": "01 · LOOK HERE FIRST",
@@ -138,8 +138,8 @@
       "why_it_matters": "Habit and growing context are supporting evidence, not proof of hidden roots or rhizomes.",
       "source": "EXISTING_CARD_FIELD_GUIDANCE",
       "original_panel_index": 1,
-      "panel_index": null,
-      "photo_unavailable": true
+      "panel_index": 1,
+      "photo_unavailable": false
     },
     {
       "title": "3 · Inspect leaves, collar and nodes",
@@ -169,7 +169,52 @@
       "photo_unavailable": true
     }
   ],
-  "panels": [],
+  "panels": [
+    {
+      "label": "4 · SECOND LOCAL IMAGE — exact-source CC BY photo",
+      "scientific_name": "Hopia obtusa",
+      "image_url": "content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-2100db3bb8b7444.jpg",
+      "image_fit": "contain",
+      "image_role": "Existing physically installed complementary JPEG; source taxon and license recorded but exact close-up structures still need hand-check",
+      "caption": "A complementary archive image with a documented photographer and source. The site must not claim that its true rooting nodes or membranous collar are visible without verifying those organs in the original photograph.",
+      "why_it_matters": "Keep photo source evidence adjacent to morphological teaching while documenting what still needs a closer view.",
+      "creator": "CH Hemphill",
+      "license": "CC BY (version not recorded)",
+      "license_url": null,
+      "source_page": "https://www.gbif.org/occurrence/5938363154",
+      "markers": [],
+      "photo_status": "Existing archived 787×1400 JPEG, recorded CC BY rights/creator; precise anatomy targets remain pending original-pixel review.",
+      "src": "../content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-2100db3bb8b7444.jpg",
+      "original_panel_index": 3,
+      "photo_license_note": "Individual archived photo recorded as CC BY; precise version not documented. Original source photo remains linked. Species determination can be provisional.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "Resaved JPEG with metadata removed (original source rights remain attached)",
+      "source_species_id": "hopia-obtusa",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    },
+    {
+      "label": "2 · LOCAL ARCHIVE — source-determined Hopia photograph",
+      "scientific_name": "Hopia obtusa",
+      "image_url": "content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-ad387625b8c87e5.jpg",
+      "image_fit": "contain",
+      "image_role": "Previously installed actual JPEG, image-level CC0 source determination; user-facing photo review pending, not microscopic diagnostic proof",
+      "caption": "A separate physically stored Hopia source-determined view. Use it to learn the range of appearance; until the original pixels are fully inspected here, do not point to a particular hairy node, rooting site, inner ligule or spikelet vein.",
+      "why_it_matters": "A second physically installed view avoids pretending that the one ideal photograph shows all the structures.",
+      "creator": "sonoresmore",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_page": "https://www.gbif.org/occurrence/5938643995",
+      "markers": [],
+      "photo_status": "Existing archived 1400×662 JPEG, original GBIF/iNaturalist creator/CC0 record preserved; anatomy arrows pending original photo review.",
+      "src": "../content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-ad387625b8c87e5.jpg",
+      "original_panel_index": 1,
+      "photo_license_note": "Exact archived photographer/photo CC0 attribution; latest upstream image metadata not independently rechecked.",
+      "photo_review_status": "CURATED_ARCHIVED_EXISTING_PHOTO_20261029",
+      "modifications": "Resaved JPEG with metadata removed (original source rights remain attached)",
+      "source_species_id": "hopia-obtusa",
+      "photo_role": "TARGET_SPECIES_SOURCE"
+    }
+  ],
   "preview_only": false,
   "unavailable_references": [
     {
@@ -213,20 +258,6 @@
       "reason": "Source photo withheld from public replacement pending rights review",
       "reference_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/PAOB-L.html",
       "license_status": "NOT_CLEARED_FOR_PUBLIC_EMBED"
-    },
-    {
-      "original_panel_index": 1,
-      "label": "2 · LOCAL ARCHIVE — source-determined Hopia photograph",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/5938643995",
-      "license_status": "SOURCE_REFERENCE_HELD"
-    },
-    {
-      "original_panel_index": 3,
-      "label": "4 · SECOND LOCAL IMAGE — exact-source CC BY photo",
-      "reason": "Source-specific CC/public domain provenance not independently strong enough for automatic public site release",
-      "reference_page": "https://www.gbif.org/occurrence/5938363154",
-      "license_status": "SOURCE_REFERENCE_HELD"
     }
   ],
   "intro": "FIRST trace the long aboveground vine-like stolon to a SWOLLEN, hairy node with actual roots and young shoot (if visible) on the same live plant. THEN verify the contracted narrow seedhead of rounded, blunt spikelets. The four new Harms source photographs show reproductive branches, stem and collar but NOT one verified connected root-to-seed voucher. Compare Cynodon terminal fingers; do not call a node 'rooted' from a merely hairy stem macro.",
