@@ -1,0 +1,65 @@
+name: Restore original USGS Texas grama files from legacy archive
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/restore-archived-usgs-texas-grama.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: original-usgs-texas-grama-copy
+  cancel-in-progress: false
+jobs:
+  transfer_existing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Copy three pinned original government photo bytes, hash verify, commit
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.request import urlopen,Request
+          import subprocess,time
+          original_commit="d4d1ebec8ca7b1f46b7ef2f3b58cbd79e583de42"
+          folder="content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/"
+          files={
+            "larry-allain-usgs-texas-grama-field-habit.jpg":"fe66c9e2fd88ace5ac0801abdf4bc915d6df4f43",
+            "larry-allain-usgs-texas-grama-flower-head-1.jpg":"658d550e28a1ea4a9f418e0e3a6d241e20ebad01",
+            "larry-allain-usgs-texas-grama-flower-head-2.jpg":"7baa05de0aba1e0672a9a43f532523e14a359ed7",
+          }
+          for name,expected_blob in files.items():
+              path=Path(folder)/name
+              if not path.exists():
+                  url=f"https://raw.githubusercontent.com/Crking92/Hays-County-Botany/{original_commit}/{folder}{name}"
+                  for attempt in range(4):
+                      try:
+                          req=Request(url,headers={"User-Agent":"Hays-Botany-Archived-USGS-Transfer"})
+                          with urlopen(req,timeout=40) as response:
+                              assert response.status==200
+                              data=response.read()
+                          assert data[:3]==b"\\xff\\xd8\\xff" and len(data)>20000
+                          path.parent.mkdir(parents=True,exist_ok=True)
+                          path.write_bytes(data)
+                          break
+                      except Exception:
+                          if attempt==3:raise
+                          time.sleep(3)
+              digest=subprocess.check_output(["git","hash-object",str(path)],text=True).strip()
+              assert digest==expected_blob,(name,"original Git blob mismatches",digest,expected_blob)
+              print("SOURCE_GIT_BLOB_MATCH",name,len(path.read_bytes()),expected_blob)
+          PY
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/larry-allain-usgs-texas-grama-*.jpg
+          if git diff --staged --quiet; then
+            echo "Already copied with identical verified original bytes"
+          else
+            git commit -m "Recover three original Larry Allain USGS public-domain Texas grama photos"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
