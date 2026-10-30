@@ -1,0 +1,14 @@
+name: Test automatic Poaceae source card updates and panel preservation
+on:
+  push:
+    branches: [main]
+    paths: ['scripts/sync_grass_source_species.py','scripts/test_grass_source_sync.py','.github/workflows/test-grass-source-sync.yml']
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test_grass_source_sync.py
