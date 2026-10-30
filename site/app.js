@@ -282,6 +282,8 @@ function renderSelected(){
  const root=$("species-detail");root.replaceChildren();
  root.append(txt("p","POACEAE · "+d.genus,"eyebrow"),txt("h2",d.common||d.scientific),txt("p",d.scientific,"subtitle"));
  root.append(txt("p",metadataWarning,"notice-stage"));
+ if(d.source_sync_status==="AUTO_IMPORTED_SOURCE_RECORD_REVIEW_WELCOME")
+   root.append(txt("p","Automatically imported grass source record — confirm identification, county nativity and anatomy before field use.","photo-hold"));
  if(d.native_target_zone_calculated===false)root.append(txt("p","Native target-zone qualification is unresolved or excluded in the canonical record. Do not infer Hays County nativity from a picture.","photo-hold"));
  renderModeHeader(root);
  if(state.mode==="terms")renderTerms(d,root);
