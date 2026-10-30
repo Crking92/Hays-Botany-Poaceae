@@ -1,0 +1,73 @@
+name: Automatically sync new grass source records into dedicated learner
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/taxa/Poaceae/**/species.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: poaceae-family-auto-photo-release
+  cancel-in-progress: false
+jobs:
+  new-grass:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create separate current public grass site
+        run: |
+          git fetch origin main
+          git worktree add "$RUNNER_TEMP/grass-release" origin/main
+      - name: Update only newly edited grass source files, never historic arrows
+        env:
+          SOURCE_BEFORE: ${{ github.event.before }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$SOURCE_BEFORE" || "$SOURCE_BEFORE" =~ ^0+$ ]]; then
+            echo "No reliable prior commit; skip bulk sync."
+            exit 0
+          fi
+          python3 "$RUNNER_TEMP/grass-release/scripts/sync_grass_source_species.py" --source-root . --site-root "$RUNNER_TEMP/grass-release/site" --changed-from "$SOURCE_BEFORE" --check
+          python3 "$RUNNER_TEMP/grass-release/scripts/sync_grass_source_species.py" --source-root . --site-root "$RUNNER_TEMP/grass-release/site" --changed-from "$SOURCE_BEFORE"
+      - name: Validate new and existing photo panels and indexes
+        working-directory: ${{ runner.temp }}/grass-release
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          s=pathlib.Path('site')
+          ix=json.loads((s/'data/poaceae-index.json').read_text())
+          gal=json.loads((s/'data/gallery-index.json').read_text())
+          assert len(ix)==gal['species']==len({x['id'] for x in ix})
+          assert set(gal['entries'])=={x['id'] for x in ix}
+          for row in ix:
+              doc=json.loads((s/'data/species'/(row['id']+'.json')).read_text())
+              assert doc['id']==row['id']
+              assert len(doc['panels'])==row['local_panel_count']==gal['entries'][row['id']]['count']
+          print('PASS: all grass source species, annotated photo panels and counts retained')
+          PY
+      - name: Commit only dedicated grass site records and indexes
+        id: release
+        working-directory: ${{ runner.temp }}/grass-release
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/species/ site/data/poaceae-index.json site/data/gallery-index.json
+          if git diff --cached --quiet; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --cached --check
+          git commit -m "Auto-sync new or edited grass source lesson into site"
+          git push origin HEAD:main
+          echo "published=true" >> "$GITHUB_OUTPUT"
+      - name: Request GitHub Pages rebuild for changed grass records
+        if: steps.release.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
