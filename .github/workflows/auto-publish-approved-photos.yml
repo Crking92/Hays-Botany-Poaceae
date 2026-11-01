@@ -45,7 +45,7 @@ jobs:
               for panel in card["panels"]:
                   if not panel["src"].startswith("media/"+sid+"/"):continue
                   data=(root/panel["src"]).read_bytes()
-                  digest=hashlib.sha1(b"blob "+str(len(data)).encode()+b"\\0"+data).hexdigest()
+                  digest=hashlib.sha1(b"blob "+str(len(data)).encode()+b"\0"+data).hexdigest()
                   assert digest==panel["source_blob_sha"]
           print("PASS: no grass panel lost and all new gallery images have matching bytes")
           PY
