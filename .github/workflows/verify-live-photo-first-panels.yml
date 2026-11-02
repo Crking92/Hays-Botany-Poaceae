@@ -1,0 +1,77 @@
+name: Verify new Poaceae photo panels and credits on live Pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/data/gallery-index.json'
+      - 'site/data/poaceae-index.json'
+      - 'site/data/species/**'
+      - 'site/media/**'
+      - '.github/workflows/verify-live-photo-first-panels.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  delivery:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm newly approved photos are actually delivered by Pages
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,hashlib,json,time,urllib.parse,urllib.request
+          from pathlib import Path
+          base="https://crking92.github.io/Hays-Botany-Poaceae/site/"
+          root=Path("site")
+          expected=(root/"data/gallery-index.json").read_bytes()
+          def fetch(path):
+              url=urllib.parse.urljoin(base,path)
+              req=urllib.request.Request(url,headers={"User-Agent":"HaysBotanyPoaceaePhotoFirstAudit/1.0"})
+              with urllib.request.urlopen(req,timeout=24) as response:
+                  assert response.status==200,url
+                  return response.read()
+          for attempt in range(30):
+              try:
+                  if fetch("data/gallery-index.json")==expected:
+                      print("POACEAE_GALLERY_DEPLOYMENT_CURRENT")
+                      break
+              except Exception as error:
+                  print("Pages update pending",str(error))
+              time.sleep(8)
+          else: raise AssertionError("Public grass gallery did not reach current commit")
+          gallery=json.loads(expected)
+          index=json.loads((root/"data/poaceae-index.json").read_text())
+          assert gallery["species"]==len(index)==112
+          paths=[]
+          for entry in index:
+              sid=entry["id"]
+              rel="data/species/"+sid+".json"
+              paths.append(rel)
+              card=json.loads((root/rel).read_text())
+              assert len(card["panels"])==gallery["entries"][sid]["count"]
+              for panel in card["panels"]:
+                  src=panel.get("src","")
+                  if not src.startswith("media/"):continue
+                  assert src.startswith("media/"+sid+"/") and (root/src).is_file()
+                  assert panel.get("creator") and panel.get("source_page") and panel.get("license")
+                  assert not panel.get("private_rights_review_only")
+                  if panel.get("noncommercial_only"):
+                      assert panel["license"] in {"CC BY-NC 4.0","CC BY-NC-SA 4.0"}
+                  else:
+                      assert "NC" not in panel["license"].upper()
+                  paths.append(src)
+          paths+=["data/poaceae-index.json"]
+          paths=list(dict.fromkeys(paths))
+          def verify(path):
+              local=(root/path).read_bytes()
+              remote=fetch(path)
+              assert hashlib.sha256(local).digest()==hashlib.sha256(remote).digest(),path
+              return path
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+              delivered=list(pool.map(verify,paths))
+          assert gallery["photo_panels"]==sum(e["count"] for e in gallery["entries"].values())
+          print("POACEAE_LIVE_PHOTO_FIRST_PASS",json.dumps({
+              "species":len(index),"panels":gallery["photo_panels"],
+              "live_photo_and_card_files_byte_verified":len(delivered)
+          }))
+          PY
