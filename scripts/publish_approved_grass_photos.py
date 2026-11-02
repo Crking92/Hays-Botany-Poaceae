@@ -42,6 +42,11 @@ def main():
         sid=sidecar.parent.name
         if sid not in by_id:fail("Species not in grass learner: "+sid)
         meta,image,payload,sha256=read_approved(source,sid,sidecar)
+        nc_license=meta["license"] in {"CC BY-NC 4.0","CC BY-NC-SA 4.0"}
+        if nc_license:
+            policy=load(site/"data/photo-license-policy.json")
+            if policy.get("repository_full_name")!="Crking92/Hays-Botany-Poaceae" or policy.get("noncommercial_educational_use") is not True or meta.get("noncommercial_site_use_confirmed") is not True:
+                fail("CC BY-NC grass photo requires confirmed noncommercial site and exact-media permission: "+str(sidecar))
         dest=site/"media"/sid/image.name
         if not dest.resolve().is_relative_to((site/"media").resolve()):fail("Unsafe destination")
         if dest.exists() and (dest.is_symlink() or dest.read_bytes()!=payload):fail("Image name collision")
@@ -67,8 +72,13 @@ def main():
                "source_page_is_exact":True,"modifications":meta.get("modifications") or "Unmodified credited original",
                "photo_role":"TARGET_SPECIES_SOURCE","source_species_id":sid,
                "publication_status":"APPROVED_PUBLIC_FAMILY_PHOTO",
+               "noncommercial_only":nc_license,
+               "photo_approval_mode":meta.get("approval_mode","NAMED_HUMAN_PHOTO_REVIEW"),
+               "source_review_evidence":meta.get("source_review_evidence"),
+               "taxon_review_evidence":meta.get("taxon_review_evidence"),
                "source_blob_sha":blob_sha(payload),"sha256":sha256,
-               "approval_note":meta["approval_note"],"approved_by":meta["approved_by"],
+               "approval_note":meta["approval_note"],
+               "approved_by":meta["approved_by"] if meta.get("approval_mode","NAMED_HUMAN_PHOTO_REVIEW")=="NAMED_HUMAN_PHOTO_REVIEW" else "Owner standing photo-first policy; photo-specific checks documented by "+meta["review_operator"],
                "markers":[]}
         panels.append(panel)
         row=by_id[sid]
