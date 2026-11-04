@@ -14,7 +14,9 @@ LICENSES={
 }
 RECORD_SIZE=42
 # Only names already checked as direct synonyms, not broader unidentified look-alikes.
-SYNONYMS={}
+# iNaturalist omits the subspecies rank marker; Kew accepts the ranked concept:
+# https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458622-2
+SYNONYMS={"dinebra-panicea-subsp-mucronata":{"dinebra panicea mucronata"}}
 def grab(url,maxsize):
     req=urllib.request.Request(url,headers={"User-Agent":"HaysBotanyEducationalPhotoFirst/1.0 (original-media license verification)"})
     for attempt in range(3):
