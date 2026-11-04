@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Poaceae 002 exact GBIF-media backfill. No source-specific license or original match means HOLD."""
+# Rerun source-level checks after correcting the accepted Leptochloa -> Dinebra synonym, without overriding mismatched licenses.
+
 from __future__ import annotations
 import argparse,base64,hashlib,io,json,re,struct,time,urllib.request
 from pathlib import Path
