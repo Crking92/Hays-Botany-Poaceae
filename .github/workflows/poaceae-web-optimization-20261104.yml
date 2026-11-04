@@ -30,18 +30,23 @@ jobs:
         run: |
           set -euo pipefail
           for i in $(seq 1 32); do
-            busy=$(gh api "repos/${{ github.repository }}/actions/runs?per_page=80" --jq '[.workflow_runs[] | select(.status != "completed") | select(.id != ${{ github.run_id }}) | select(.name | test("Publish|photo|Photo|Verify new Poaceae";"i"))] | length')
+            busy=$(gh api "repos/${{ github.repository }}/actions/runs?per_page=80" --jq '[.workflow_runs[] | select(.status != "completed") | select(.id != ${{ github.run_id }}) | select(.name | test("Publish|Import|Transfer|Restore";"i"))] | length')
             echo "Other active photo-related runs: $busy"
             if [[ "$busy" == "0" ]]; then exit 0; fi
             sleep 25
           done
           echo "Other Poaceae photo publishers still active; no image changed." >&2
           exit 1
+      - name: Refresh from newest Poaceae main once publishers finish
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git checkout -B main origin/main
       - name: Verify original full-resolution archive branch exists
         run: |
           set -euo pipefail
-          git fetch origin archive/poaceae-full-resolution-before-web-optimization-20261104
-          test -n "$(git rev-parse FETCH_HEAD)"
+          git fetch origin refs/heads/archive/poaceae-full-resolution-before-web-optimization-20261104:refs/remotes/origin/archive/poaceae-full-resolution-before-web-optimization-20261104
+          test -n "$(git rev-parse origin/archive/poaceae-full-resolution-before-web-optimization-20261104)"
       - name: Install image processing dependencies
         run: python -m pip install --disable-pip-version-check Pillow==11.3.0
       - name: Optimize web JPEGs while retaining full-resolution archive
@@ -78,13 +83,34 @@ jobs:
           git add site/media/ site/data/species/ migration/poaceae-web-image-optimization-20261104.json
           git diff --cached --check
           if git diff --cached --quiet; then echo "No eligible change"; exit 0; fi
-          git fetch origin main
-          if [[ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]]; then
-            echo "Concurrent publisher advanced main: stop without overwriting photo files" >&2
-            exit 1
-          fi
-          git commit -m "Compress only oversized Poaceae web JPEGs with exact preserved credit records"
-          git push origin HEAD:main
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            if [[ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]]; then
+              echo "Main moved since checkout; re-computing derivatives from newest Poaceae main (attempt $attempt)"
+              git reset --hard origin/main
+              python scripts/optimize_poaceae_web_images_20261104.py
+              python - <<'PY'
+          import json,pathlib
+          x=json.loads(pathlib.Path("migration/poaceae-web-image-optimization-20261104.json").read_text())
+          assert x["optimized_images"]>0
+          touched={e["website_image"] for e in x["images"]}
+          for c in pathlib.Path("site/data/species").glob("*.json"):
+            for p in json.loads(c.read_text()).get("panels",[]):
+              if p.get("src") in touched:
+                assert "Public web display derivative:" in p.get("modifications","")
+                assert p.get("creator") and p.get("license") and p.get("source_page")
+                assert pathlib.Path("site",p["src"]).is_file()
+          PY
+              git add site/media/ site/data/species/ migration/poaceae-web-image-optimization-20261104.json
+              git diff --cached --check
+              if git diff --cached --quiet; then echo "No eligible change after concurrent publisher"; exit 0; fi
+            fi
+            git commit -m "Compress only oversized Poaceae web JPEGs with exact preserved credit records"
+            if git push origin HEAD:main; then echo "POACEAE_OPTIMIZATION_COMMITTED"; exit 0; fi
+            echo "Push raced another publisher; recalculating safely"
+          done
+          echo "Poaceae main remained busy: no successful optimized push" >&2
+          exit 1
       - name: Report optimized size
         if: always()
         run: |
