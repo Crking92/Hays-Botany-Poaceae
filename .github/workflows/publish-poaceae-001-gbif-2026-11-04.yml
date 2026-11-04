@@ -1,0 +1,96 @@
+name: Verify Poaceae_001 institutional specimens and publish eligible photos
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'photo-intake/remote-photo-manifests/poaceae-001-gbif-2026-11-04.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: poaceae-001-original-zip-gallery-release
+  cancel-in-progress: false
+jobs:
+  verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up image source-validation dependencies
+        run: python3 -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Verify exact GBIF media licenses and original archive hashes
+        run: |
+          python3 scripts/publish_verified_poaceae_001_gbif.py \
+            --manifest photo-intake/remote-photo-manifests/poaceae-001-gbif-2026-11-04.json \
+            --site-root site --report "$RUNNER_TEMP/poaceae-001-gbif-audit.json"
+      - name: Check published photo IDs, original panels and counters
+        run: |
+          python3 - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          p=Path("site")
+          index=json.loads((p/"data/poaceae-index.json").read_text())
+          gal=json.loads((p/"data/gallery-index.json").read_text())
+          assert len(index)==gal["species"]==112
+          assert gal["photo_panels"]==sum(gal["entries"][x["id"]]["count"] for x in index)
+          for row in index:
+              sid=row["id"]
+              data=json.loads((p/"data/species"/(sid+".json")).read_text())
+              assert row["local_panel_count"]==len(data["panels"])==gal["entries"][sid]["count"]
+              for panel in data["panels"]:
+                  if not panel.get("src","").startswith("media/"+sid+"/"):continue
+                  src=p/panel["src"]
+                  assert src.is_file()
+                  raw=src.read_bytes()
+                  assert hashlib.sha1(b"blob "+str(len(raw)).encode()+b"\0"+raw).hexdigest()==panel["source_blob_sha"]
+                  assert panel.get("creator") and panel.get("source_page") and panel.get("license_url")
+          print("PASS: existing panel lessons and credited new source photos")
+          PY
+      - name: Commit only eligible media and audit results with concurrency retry
+        id: release
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p photo-intake/remote-photo-results
+          cp "$RUNNER_TEMP/poaceae-001-gbif-audit.json" photo-intake/remote-photo-results/poaceae-001-gbif-2026-11-04.json
+          git add site/media site/data/species site/data/poaceae-index.json site/data/gallery-index.json photo-intake/remote-photo-results/poaceae-001-gbif-2026-11-04.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --cached --check
+          git commit -m "Publish source-verified Poaceae_001 voucher photos and recorded institutional rights holds"
+          for retry in 1 2 3 4; do
+            if git push origin HEAD:main; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if test "$retry" -eq 4; then
+              echo "Public repository changed during 4 safe publication attempts" >&2
+              exit 1
+            fi
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/publish_verified_poaceae_001_gbif.py \
+              --manifest photo-intake/remote-photo-manifests/poaceae-001-gbif-2026-11-04.json \
+              --site-root site --report "$RUNNER_TEMP/poaceae-001-gbif-audit.json"
+            mkdir -p photo-intake/remote-photo-results
+            cp "$RUNNER_TEMP/poaceae-001-gbif-audit.json" photo-intake/remote-photo-results/poaceae-001-gbif-2026-11-04.json
+            git add site/media site/data/species site/data/poaceae-index.json site/data/gallery-index.json photo-intake/remote-photo-results/poaceae-001-gbif-2026-11-04.json
+            if git diff --cached --quiet; then
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git diff --cached --check
+            git commit -m "Publish verified Poaceae_001 vouchers after concurrent update"
+          done
+      - name: Request GitHub Pages rebuild
+        if: steps.release.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
