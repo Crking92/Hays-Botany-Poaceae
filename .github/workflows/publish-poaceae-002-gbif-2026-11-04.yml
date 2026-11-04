@@ -91,3 +91,5 @@ jobs:
           path: "${{ runner.temp }}/poaceae-002-gbif-source-audit.json"
           retention-days: 30
           if-no-files-found: warn
+
+# Source-verification rerun: use latest site state after concurrent Poaceae_001 and 002 pushes.
