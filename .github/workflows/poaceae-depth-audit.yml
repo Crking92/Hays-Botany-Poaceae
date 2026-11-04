@@ -1,0 +1,74 @@
+name: Read-only Poaceae species lesson arrow and gallery depth audit
+on:
+  push:
+    paths: ['.github/workflows/poaceae-depth-audit.yml']
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit each published grass species without modifying any files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, collections, statistics
+          root=pathlib.Path('site/data/species')
+          d=[json.loads(p.read_text()) for p in sorted(root.glob('*.json'))]
+          idx=json.loads(pathlib.Path('site/data/gallery-index.json').read_text())
+          total=collections.Counter(); buckets=collections.Counter(); rows=[]
+          for s in d:
+            panels=s.get('panels',[]); steps=s.get('steps',[]); tiles=s.get('tiles',[])
+            source=[p for p in panels if p.get('photo_role')=='TARGET_SPECIES_SOURCE']
+            comparison=[p for p in panels if p.get('photo_role')=='COMPARISON_SOURCE']
+            annotations=[p for p in panels if p.get('markers')]
+            marker_count=sum(len(p.get('markers',[])) for p in panels)
+            links=sum((isinstance(v.get('panel_index'),int) and not v.get('photo_unavailable',False)) for v in steps)
+            unavailable=sum(v.get('photo_unavailable',False) for v in steps)
+            missing=sum(bool(v.get('missing_original_panel_indices')) for v in tiles)
+            src_missing=0
+            for p in panels:
+              src=p.get('src') or ''
+              if not src.startswith(('https://','http://')):
+                local=(pathlib.Path('site')/src).resolve()
+                if not local.is_file():src_missing+=1
+            related=s.get('related') or []
+            if isinstance(related,dict):related=list(related)
+            row={'id':s['id'],'name':s.get('scientific'),'panels':len(panels),
+                 'target_panels':len(source),'comparison_panels':len(comparison),
+                 'annotated_panels':len(annotations),'arrows':marker_count,
+                 'steps':len(steps),'photo_linked_steps':links,'unavailable_steps':unavailable,
+                 'tiles':len(tiles),'tiles_with_missing_source_references':missing,
+                 'missing_image_files':src_missing,'related':len(related),
+                 'has_intro':bool(s.get('intro')),'has_comparison_text':bool(s.get('comparison_text')),
+                 'has_morphology':bool(s.get('morphology')),'has_field_rule':bool(s.get('field_rule')),
+                 'has_look_here_first':bool(s.get('memory_rule')),
+                 'photo_gap_text':sum('NEED' in str(t.get('status','')).upper() or 'MISSING' in str(t.get('status','')).upper() for t in tiles)}
+            rows.append(row)
+            for k in ('panels','target_panels','comparison_panels','annotated_panels','arrows','steps','photo_linked_steps','unavailable_steps','tiles','tiles_with_missing_source_references','missing_image_files','related','photo_gap_text'):
+              total[k]+=row[k]
+            for k in ('has_intro','has_comparison_text','has_morphology','has_field_rule','has_look_here_first'):
+              total[k]+=int(row[k])
+            buckets['species_with_arrows']+=int(marker_count>0)
+            buckets['species_with_3plus_arrows']+=int(marker_count>=3)
+            buckets['species_with_5plus_target_panels']+=int(len(source)>=5)
+            buckets['species_with_3plus_target_panels']+=int(len(source)>=3)
+            buckets['species_with_no_photo_linked_steps']+=int(links==0)
+            buckets['species_with_annotated_panels']+=int(len(annotations)>0)
+            buckets['species_with_unavailable_steps']+=int(unavailable>0)
+            buckets['species_with_missing_image_file']+=int(src_missing>0)
+            buckets['species_with_at_least_one_gallery_photo']+=int(len(panels)>0)
+            buckets['species_with_missing_original_refs_in_tiles']+=int(missing>0)
+            buckets['species_with_unfinished_status_in_tiles']+=int(row['photo_gap_text']>0)
+          print('POACEAE_DEPTH_TOTALS',json.dumps({'species':len(rows),'gallery_photo_species':idx.get('photo_species'),
+            'gallery_panels_indexed':idx.get('photo_panels'),'source_photo_files_indexed':idx.get('photo_files'),
+            'counts':dict(total),'species_distribution':dict(buckets)},sort_keys=True))
+          print('POACEAE_MORE_COMPLETED',json.dumps(sorted(rows,key=lambda r:(-r['arrows'],-r['target_panels']))[:16]))
+          print('POACEAE_FEWEST_PANELS',json.dumps(sorted(rows,key=lambda r:(r['target_panels'],r['panels'],r['arrows']))[:25]))
+          print('POACEAE_NO_ARROWS',json.dumps([r['id'] for r in rows if not r['arrows']]))
+          print('POACEAE_MISSING_SOURCE_IMAGE',json.dumps([{'id':r['id'],'count':r['missing_image_files']} for r in rows if r['missing_image_files']]))
+          print('POACEAE_PHOTO_STEP_GAPS',json.dumps(sorted(rows,key=lambda r:-r['unavailable_steps'])[:15]))
+          PY
