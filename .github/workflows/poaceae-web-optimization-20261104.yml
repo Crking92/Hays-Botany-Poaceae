@@ -1,0 +1,93 @@
+name: Optimize ONLY Poaceae oversized published JPEGs (reversible)
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/poaceae-web-optimization-20261104.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: poaceae-web-derivatives-20261104
+  cancel-in-progress: false
+jobs:
+  optimize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Wait for other photo publishers to finish (bounded)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 32); do
+            busy=$(gh api "repos/${{ github.repository }}/actions/runs?per_page=80" --jq '[.workflow_runs[] | select(.status != "completed") | select(.id != ${{ github.run_id }}) | select(.name | test("Publish|photo|Photo|Verify new Poaceae";"i"))] | length')
+            echo "Other active photo-related runs: $busy"
+            if [[ "$busy" == "0" ]]; then exit 0; fi
+            sleep 25
+          done
+          echo "Other Poaceae photo publishers still active; no image changed." >&2
+          exit 1
+      - name: Verify original full-resolution archive branch exists
+        run: |
+          set -euo pipefail
+          git fetch origin archive/poaceae-full-resolution-before-web-optimization-20261104
+          test -n "$(git rev-parse FETCH_HEAD)"
+      - name: Install image processing dependencies
+        run: python -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Optimize web JPEGs while retaining full-resolution archive
+        run: python scripts/optimize_poaceae_web_images_20261104.py
+      - name: Validate exact species image references and credit preservation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,pathlib
+          x=json.loads(pathlib.Path('migration/poaceae-web-image-optimization-20261104.json').read_text())
+          assert x['optimized_images']>0, 'No images optimized; no website mutation needed'
+          paths={e['website_image'] for e in x['images']}
+          cards=[json.loads(p.read_text()) for p in pathlib.Path('site/data/species').glob('*.json')]
+          assert len(cards)==112
+          for d in cards:
+            for p in d.get('panels',[]):
+              src=p.get('src','')
+              if src in paths:
+                assert 'Public web display derivative:' in p.get('modifications','')
+                assert p.get('creator') and p.get('license') and p.get('source_page')
+                assert pathlib.Path('site',src).is_file()
+          gallery=json.loads(pathlib.Path('site/data/gallery-index.json').read_text())
+          assert gallery['photo_species']==112
+          print('WEB_DERIVATIVE_INTEGRITY_OK',x['optimized_images'],x['saved_bytes'])
+          PY
+          git diff --check
+      - name: Publish one conflict-safe atomic commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/media/ site/data/species/ migration/poaceae-web-image-optimization-20261104.json
+          git diff --cached --check
+          if git diff --cached --quiet; then echo "No eligible change"; exit 0; fi
+          git fetch origin main
+          if [[ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]]; then
+            echo "Concurrent publisher advanced main: stop without overwriting photo files" >&2
+            exit 1
+          fi
+          git commit -m "Compress only oversized Poaceae web JPEGs with exact preserved credit records"
+          git push origin HEAD:main
+      - name: Report optimized size
+        if: always()
+        run: |
+          if [[ -f migration/poaceae-web-image-optimization-20261104.json ]]; then
+            python -c "import json; x=json.load(open('migration/poaceae-web-image-optimization-20261104.json')); print('POACEAE_SAVED_MIB',round(x['saved_bytes']/1048576,2),'OPTIMIZED',x['optimized_images'])"
+          fi
