@@ -74,7 +74,8 @@ def main():
             f"at Poaceae Git branch {ORIGINAL_BRANCH}, blob {original_blob}; "
             f"photographer and source license unchanged.")
    for card,d,p in associations:
-    p["modifications"]=message
+    previous=p.get("modifications") or ""
+    p["modifications"]=(previous+" | "+message) if previous else message
    saved+=len(original)-len(new)
    manifest.append({"website_image":rel,"original_git_blob":original_blob,
      "original_sha256":sha(original),"website_sha256":sha(new),
