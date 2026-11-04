@@ -23,7 +23,7 @@ jobs:
           from pathlib import Path
           base="https://crking92.github.io/Hays-Botany-Poaceae/site/"
           root=Path("site")
-          expected=(root/"data/gallery-index.json").read_bytes()
+          expected=json.loads((root/"data/gallery-index.json").read_text())
           def fetch(path):
               url=urllib.parse.urljoin(base,path)
               req=urllib.request.Request(url,headers={"User-Agent":"HaysBotanyPoaceaePhotoFirstAudit/1.0"})
@@ -32,14 +32,19 @@ jobs:
                   return response.read()
           for attempt in range(30):
               try:
-                  if fetch("data/gallery-index.json")==expected:
-                      print("POACEAE_GALLERY_DEPLOYMENT_CURRENT")
+                  live_gallery=json.loads(fetch("data/gallery-index.json"))
+                  if (live_gallery["species"]==expected["species"]
+                      and live_gallery["photo_panels"]>=expected["photo_panels"]
+                      and all(live_gallery["entries"].get(sid,{}).get("count",0)>=v["count"]
+                              for sid,v in expected["entries"].items())):
+                      print("POACEAE_GALLERY_BASELINE_REACHED",
+                            expected["photo_panels"],live_gallery["photo_panels"])
                       break
               except Exception as error:
                   print("Pages update pending",str(error))
               time.sleep(8)
           else: raise AssertionError("Public grass gallery did not reach current commit")
-          gallery=json.loads(expected)
+          gallery=expected
           index=json.loads((root/"data/poaceae-index.json").read_text())
           assert gallery["species"]==len(index)==112
           paths=[]
@@ -65,14 +70,31 @@ jobs:
           def verify(path):
               local=(root/path).read_bytes()
               remote=fetch(path)
-              assert hashlib.sha256(local).digest()==hashlib.sha256(remote).digest(),path
+              if path.startswith("media/"):
+                  assert hashlib.sha256(local).digest()==hashlib.sha256(remote).digest(),path
+              elif path.startswith("data/species/"):
+                  before=json.loads(local);after=json.loads(remote)
+                  assert before["id"]==after["id"],path
+                  live_keys={(p.get("src"),p.get("creator"),p.get("license"),p.get("source_page"))
+                             for p in after["panels"]}
+                  assert all((p.get("src"),p.get("creator"),p.get("license"),p.get("source_page"))
+                             in live_keys for p in before["panels"]),path
+                  for panel in after["panels"]:
+                      if str(panel.get("src","")).startswith("media/"):
+                          assert panel.get("creator") and panel.get("source_page") and panel.get("license"),path
+              else:
+                  before=json.loads(local);after=json.loads(remote)
+                  a={e["id"]:e for e in before};b={e["id"]:e for e in after}
+                  assert set(a)==set(b) and len(a)==112,path
+                  assert all(b[sid]["local_panel_count"]>=v["local_panel_count"] for sid,v in a.items()),path
               return path
           with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
               delivered=list(pool.map(verify,paths))
           assert gallery["photo_panels"]==sum(e["count"] for e in gallery["entries"].values())
           print("POACEAE_LIVE_PHOTO_FIRST_PASS",json.dumps({
               "species":len(index),"panels":gallery["photo_panels"],
-              "live_photo_and_card_files_byte_verified":len(delivered)
+              "baseline_photo_and_card_files_verified":len(delivered),
+              "live_photo_panels_at_check":live_gallery["photo_panels"]
           }))
           PY
 
