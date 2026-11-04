@@ -32,6 +32,10 @@ def taxon_matches(target,name):
     n=normal_taxon(name)
     if n==t:return True
     if len(t.split())==2 and (n.startswith(t+" var ") or n.startswith(t+" subsp ")):return True
+    # Kew POWO verifies Leptochloa mucronata as homotypic synonym of
+    # Dinebra panicea subsp. mucronata:
+    # https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1059142-2
+    if t=="dinebra panicea subsp mucronata" and n=="leptochloa mucronata":return True
     return False
 def main():
     p=argparse.ArgumentParser()

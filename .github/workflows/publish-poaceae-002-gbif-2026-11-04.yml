@@ -68,11 +68,19 @@ jobs:
           else
             git diff --cached --check
             git commit -m "Publish source-verified Poaceae 002 GBIF grass herbarium photos"
-            for attempt in 1 2 3 4 5; do
+            for attempt in 1 2 3 4 5 6; do
               if git push origin HEAD:main; then echo "POACEAE_002_PUBLISHED_GITHUB"; break; fi
-              if test "$attempt" -eq 5; then echo "Concurrent publication conflict" >&2; exit 1; fi
+              if test "$attempt" -eq 6; then echo "Concurrent publication conflict" >&2; exit 1; fi
+              # Do not attempt a textual rebase of concurrent JSON gallery indexes.
+              # Reapply approved original bytes against the latest site instead.
               git fetch origin main
-              git rebase origin/main
+              git reset --hard origin/main
+              python3 scripts/publish_approved_grass_photos.py --source-root "$RUNNER_TEMP/poaceae-002-gbif-verified" --site-root site --check
+              python3 scripts/publish_approved_grass_photos.py --source-root "$RUNNER_TEMP/poaceae-002-gbif-verified" --site-root site
+              git add site/media/ site/data/species/ site/data/poaceae-index.json site/data/gallery-index.json
+              if git diff --cached --quiet; then echo "All eligible GBIF photos already published"; break; fi
+              git diff --cached --check
+              git commit -m "Reapply exact-source Poaceae 002 GBIF grass photos to latest gallery"
             done
           fi
       - name: Preserve verification and holds
