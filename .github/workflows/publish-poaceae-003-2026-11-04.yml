@@ -1,0 +1,69 @@
+name: Publish Poaceae 003 exact-source licensed photos
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'photo-intake/remote-photo-manifests/poaceae-003-2026-11-04.json'
+      - 'scripts/publish_verified_poaceae_003.py'
+      - '.github/workflows/publish-poaceae-003-2026-11-04.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: poaceae-003-exact-original-photo-publish
+  cancel-in-progress: false
+jobs:
+  verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up image integrity validation
+        run: python3 -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Independently verify photo-level source rights and install in five waves
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m py_compile scripts/publish_verified_poaceae_003.py scripts/publish_approved_grass_photos.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for wave in 1 2 3 4 5; do
+            finished=0
+            for attempt in 1 2 3 4 5; do
+              git fetch origin main
+              git reset --hard origin/main
+              report="$RUNNER_TEMP/poaceae-003-source-audit-wave-$wave.json"
+              python3 scripts/publish_verified_poaceae_003.py \
+                --manifest photo-intake/remote-photo-manifests/poaceae-003-2026-11-04.json \
+                --site-root site --wave "$wave" --report "$report"
+              git add site/media site/data/species site/data/poaceae-index.json site/data/gallery-index.json
+              if git diff --cached --quiet; then
+                echo "POACEAE_003_ALREADY_PUBLISHED_OR_HELD wave=$wave"
+                finished=1
+                break
+              fi
+              git diff --cached --check
+              git commit -m "Publish photo-specific verified Poaceae 003 wave $wave"
+              if git push origin HEAD:main; then
+                echo "POACEAE_003_PUSHED_GALLERY wave=$wave"
+                finished=1
+                break
+              fi
+              echo "Concurrent update; refresh and retry wave $wave attempt $attempt"
+            done
+            if [ "$finished" != 1 ]; then
+              echo "Unable to safely commit source-verified wave $wave" >&2
+              exit 1
+            fi
+          done
+      - name: Preserve photo-rights, duplicate and identification holds
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-003-source-license-identity-audit
+          path: "${{ runner.temp }}/poaceae-003-source-audit-wave-*.json"
+          if-no-files-found: warn
+          retention-days: 30
