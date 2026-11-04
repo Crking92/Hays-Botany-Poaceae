@@ -73,8 +73,15 @@ def main():
             f"progressive, longest side <= {MAX_LONG_SIDE}px; source original retained "
             f"at Poaceae Git branch {ORIGINAL_BRANCH}, blob {original_blob}; "
             f"photographer and source license unchanged.")
+   new_blob=gitblob(path)
+   new_sha=sha(new)
    for card,d,p in associations:
     previous=p.get("modifications") or ""
+    # The archived original is immutable; the site photo is now a derived JPEG.
+    p["source_original_sha256"]=p.get("source_original_sha256") or sha(original)
+    p["source_original_blob_sha"]=p.get("source_original_blob_sha") or original_blob
+    p["sha256"]=new_sha
+    p["source_blob_sha"]=new_blob
     p["modifications"]=(previous+" | "+message) if previous else message
    saved+=len(original)-len(new)
    manifest.append({"website_image":rel,"original_git_blob":original_blob,

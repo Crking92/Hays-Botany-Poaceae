@@ -39,8 +39,15 @@ def expected_batch():
         out.setdefault(sid,{})["media/"+sid+"/"+name]=sha.hex()
     assert sum(map(len,out.values()))==123
     for sid,items in out.items():
-        for path,sha in items.items():
-            assert hashlib.sha256((ROOT/"site"/path).read_bytes()).hexdigest()==sha, path
+        card=json.loads((ROOT/"site/data/species"/(sid+".json")).read_text())
+        cards={p.get("src"):p for p in card["panels"]}
+        for path,original_sha in list(items.items()):
+            actual_sha=hashlib.sha256((ROOT/"site"/path).read_bytes()).hexdigest()
+            if actual_sha!=original_sha:
+                p=cards.get(path)
+                if not p or p.get("source_original_sha256")!=original_sha or "Public web display derivative:" not in p.get("modifications",""):
+                    raise ValueError("Unaccounted change to original Poaceae_002 photo: "+path)
+            items[path]=actual_sha
     return out
 
 def cards_and_gallery():
