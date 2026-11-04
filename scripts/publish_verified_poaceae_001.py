@@ -12,6 +12,7 @@ import json
 import re
 import struct
 import subprocess
+import shutil
 import sys
 import tempfile
 import time
@@ -105,6 +106,7 @@ def main():
     ap.add_argument("--manifest",required=True)
     ap.add_argument("--site-root",required=True)
     ap.add_argument("--report",required=True)
+    ap.add_argument("--retain-approved-root",help="Keep only checked and credited derivatives for safe fast publication replay")
     args=ap.parse_args()
     m=json.loads(Path(args.manifest).read_text())
     if m.get("batch")!="Poaceae_001" or m.get("record_size")!=RECORD_SIZE:
@@ -197,6 +199,12 @@ def main():
                 "inat_source_candidates":len(results),"held_institutional_photo_metadata":11,
                 "absent_originals_dichanthium_sericeum":5,
                 "installed":0,"status_counts":counts,"results":results}
+        if ready and args.retain_approved_root:
+            persistent=Path(args.retain_approved_root)
+            persistent.mkdir(parents=True,exist_ok=True)
+            shutil.copytree(staging/"photo-intake/approved",
+                            persistent/"photo-intake/approved",dirs_exist_ok=True)
+            print("VERIFIED_DERIVATIVES_CACHED",len(ready),flush=True)
         if ready:
             cmd=[sys.executable,"scripts/publish_approved_grass_photos.py",
                  "--source-root",str(staging),"--site-root",str(site)]
