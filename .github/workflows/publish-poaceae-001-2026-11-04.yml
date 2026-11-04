@@ -1,0 +1,133 @@
+name: Publish source-verified Poaceae_001 gallery photographs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'photo-intake/remote-photo-manifests/poaceae-001-2026-11-04.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: poaceae-001-original-zip-gallery-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up JPEG and source-photo verification
+        run: python3 -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Match live individual photo rights, taxon, original bytes and install approved photos
+        run: |
+          python3 scripts/publish_verified_poaceae_001.py \
+            --manifest photo-intake/remote-photo-manifests/poaceae-001-2026-11-04.json \
+            --site-root site --report "$RUNNER_TEMP/poaceae-001-audit.json"
+      - name: Check all existing teaching panels and new source-photo records
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          root=Path("site")
+          index=json.loads((root/"data/poaceae-index.json").read_text())
+          gal=json.loads((root/"data/gallery-index.json").read_text())
+          assert len(index)==112==gal["species"]==len(gal["entries"])
+          assert gal["photo_panels"]==sum(gal["entries"][r["id"]]["count"] for r in index)
+          for r in index:
+              sid=r["id"]
+              card=json.loads((root/"data/species"/(sid+".json")).read_text())
+              panels=card["panels"]
+              assert len(panels)==r["local_panel_count"]==gal["entries"][sid]["count"],sid
+              for photo in panels:
+                  if not photo.get("src","").startswith("media/"+sid+"/"):continue
+                  img=root/photo["src"]
+                  assert img.is_file(),img
+                  blob=img.read_bytes()
+                  sha=hashlib.sha1(b"blob "+str(len(blob)).encode()+b"\0"+blob).hexdigest()
+                  assert sha==photo["source_blob_sha"],img
+                  assert photo.get("source_page","").startswith("https://")
+                  assert photo.get("creator") and photo.get("license_url")
+          print("PASS: exact image bytes, credited gallery and all previous panels retained")
+          PY
+      - name: Publish released photo bytes and source/hold audit with safe retries
+        id: release
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p photo-intake/remote-photo-results
+          cp "$RUNNER_TEMP/poaceae-001-audit.json" photo-intake/remote-photo-results/poaceae-001-2026-11-04.json
+          git add site/media site/data/species site/data/poaceae-index.json site/data/gallery-index.json photo-intake/remote-photo-results/poaceae-001-2026-11-04.json
+          if git diff --cached --quiet; then
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --cached --check
+          git commit -m "Publish source-verified and credited Poaceae_001 general photographs"
+          for retry in 1 2 3 4; do
+            if git push origin HEAD:main; then
+              echo "published=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if test "$retry" -eq 4; then
+              echo "Concurrent writers prevented safe publication" >&2
+              exit 1
+            fi
+            git fetch origin main
+            git reset --hard origin/main
+            python3 scripts/publish_verified_poaceae_001.py \
+              --manifest photo-intake/remote-photo-manifests/poaceae-001-2026-11-04.json \
+              --site-root site --report "$RUNNER_TEMP/poaceae-001-audit.json"
+            mkdir -p photo-intake/remote-photo-results
+            cp "$RUNNER_TEMP/poaceae-001-audit.json" photo-intake/remote-photo-results/poaceae-001-2026-11-04.json
+            git add site/media site/data/species site/data/poaceae-index.json site/data/gallery-index.json photo-intake/remote-photo-results/poaceae-001-2026-11-04.json
+            if git diff --cached --quiet; then
+              echo "published=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git diff --cached --check
+            git commit -m "Publish verified Poaceae_001 photos after concurrent source update"
+          done
+      - name: Request public Pages refresh for bot-authored release commit
+        if: steps.release.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
+      - name: Verify the public photo index and exact media on Pages
+        if: steps.release.outputs.published == 'true'
+        run: |
+          python3 - <<'PY'
+          import json,time,urllib.request,hashlib
+          from pathlib import Path
+          base="https://crking92.github.io/Hays-Botany-Poaceae/site/"
+          gal=Path("site/data/gallery-index.json").read_bytes()
+          def get(path):
+              request=urllib.request.Request(base+path,headers={"User-Agent":"HaysBotany-Poaceae-001-Pages-QA/1.0","Cache-Control":"no-cache"})
+              with urllib.request.urlopen(request,timeout=30) as response:
+                  assert response.status==200
+                  return response.read()
+          for n in range(25):
+              try:
+                  if get("data/gallery-index.json")==gal:break
+              except Exception as exc:
+                  print("Site has not refreshed yet:",str(exc),flush=True)
+              time.sleep(12)
+          else:raise AssertionError("Current public site gallery index did not publish")
+          report=json.loads(Path("photo-intake/remote-photo-results/poaceae-001-2026-11-04.json").read_text())
+          approved=[r for r in report["results"] if r["status"]=="SOURCE_RIGHTS_AND_IMAGE_VERIFIED"]
+          count=0
+          for r in approved:
+              rel=f"media/{r['species_id']}/inat-{r['photo_id']}.jpg"
+              original=Path("site")/rel
+              live=get(rel)
+              assert hashlib.sha256(live).digest()==hashlib.sha256(original.read_bytes()).digest(),rel
+              card=json.loads(get("data/species/"+r["species_id"]+".json"))
+              assert any(p.get("src")==rel and p.get("source_page")=="https://www.inaturalist.org/photos/"+str(r["photo_id"]) for p in card["panels"]),rel
+              count+=1
+          assert count==report["installed"]
+          print("POACEAE_001_PUBLIC_SITE_VERIFIED",count)
+          PY
