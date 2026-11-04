@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'photo-intake/remote-photo-manifests/poaceae-001-2026-11-04.json'
+      - '.github/workflows/publish-poaceae-001-2026-11-04.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -26,7 +27,7 @@ jobs:
         run: |
           python3 scripts/publish_verified_poaceae_001.py \
             --manifest photo-intake/remote-photo-manifests/poaceae-001-2026-11-04.json \
-            --site-root site --report "$RUNNER_TEMP/poaceae-001-audit.json"
+            --site-root site --report "$RUNNER_TEMP/poaceae-001-audit.json" --retain-approved-root "$RUNNER_TEMP/poaceae-001-verified"
       - name: Check all existing teaching panels and new source-photo records
         run: |
           python3 - <<'PY'
@@ -68,20 +69,39 @@ jobs:
           fi
           git diff --cached --check
           git commit -m "Publish source-verified and credited Poaceae_001 general photographs"
-          for retry in 1 2 3 4; do
+          for retry in $(seq 1 16); do
             if git push origin HEAD:main; then
               echo "published=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
-            if test "$retry" -eq 4; then
-              echo "Concurrent writers prevented safe publication" >&2
+            if test "$retry" -eq 16; then
+              echo "Other publication writers prevented 16 conflict-safe retries; verified source cache remains only on this runner" >&2
               exit 1
             fi
             git fetch origin main
             git reset --hard origin/main
-            python3 scripts/publish_verified_poaceae_001.py \
-              --manifest photo-intake/remote-photo-manifests/poaceae-001-2026-11-04.json \
-              --site-root site --report "$RUNNER_TEMP/poaceae-001-audit.json"
+            rm -rf "$RUNNER_TEMP/poaceae-001-replay"
+            cp -a "$RUNNER_TEMP/poaceae-001-verified" "$RUNNER_TEMP/poaceae-001-replay"
+            python3 - <<'PY'
+          import json, pathlib
+          root=pathlib.Path("site/data/species")
+          staged=pathlib.Path(__import__("os").environ["RUNNER_TEMP"])/"poaceae-001-replay/photo-intake/approved"
+          removed=0
+          for meta in sorted(staged.glob("*/*.json")):
+              sid=meta.parent.name
+              data=json.loads(meta.read_text())
+              card=json.loads((root/(sid+".json")).read_text())
+              if any(p.get("source_page")==data["source_page"] or p.get("sha256")==data["sha256"] for p in card.get("panels",[])):
+                  photo=meta.with_suffix("")
+                  meta.unlink()
+                  photo.unlink()
+                  removed+=1
+          print("VERIFIED_ALREADY_IN_CURRENT_SITE",removed)
+          PY
+            python3 scripts/publish_approved_grass_photos.py \
+              --source-root "$RUNNER_TEMP/poaceae-001-replay" --site-root site --check
+            python3 scripts/publish_approved_grass_photos.py \
+              --source-root "$RUNNER_TEMP/poaceae-001-replay" --site-root site
             mkdir -p photo-intake/remote-photo-results
             cp "$RUNNER_TEMP/poaceae-001-audit.json" photo-intake/remote-photo-results/poaceae-001-2026-11-04.json
             git add site/media site/data/species site/data/poaceae-index.json site/data/gallery-index.json photo-intake/remote-photo-results/poaceae-001-2026-11-04.json
@@ -90,7 +110,8 @@ jobs:
               exit 0
             fi
             git diff --cached --check
-            git commit -m "Publish verified Poaceae_001 photos after concurrent source update"
+            git commit -m "Publish cached, verified Poaceae_001 photos after concurrent family update"
+            sleep 1
           done
       - name: Request public Pages refresh for bot-authored release commit
         if: steps.release.outputs.published == 'true'
