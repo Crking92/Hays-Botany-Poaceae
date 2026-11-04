@@ -40,6 +40,16 @@ def main():
    continue
   original=path.read_bytes()
   original_blob=gitblob(path)
+  try:
+   archived_blob=subprocess.check_output(
+    ["git","rev-parse",f"origin/{ORIGINAL_BRANCH}:site/{rel}"],
+    text=True,stderr=subprocess.DEVNULL).strip()
+  except subprocess.CalledProcessError:
+   print("SKIP_NOT_IN_IMMUTABLE_FULL_RES_ARCHIVE",rel,flush=True)
+   continue
+  if archived_blob!=original_blob:
+   print("SKIP_ORIGINAL_NOT_MATCHING_ARCHIVED_BLOB",rel,flush=True)
+   continue
   with Image.open(io.BytesIO(original)) as source:
    source.verify()
   with Image.open(io.BytesIO(original)) as source:
