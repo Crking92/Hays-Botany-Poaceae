@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'photo-intake/remote-photo-manifests/poaceae-001-gbif-2026-11-04.json'
+      - '.github/workflows/publish-poaceae-001-gbif-2026-11-04.yml'
   workflow_dispatch:
 permissions:
   contents: write
