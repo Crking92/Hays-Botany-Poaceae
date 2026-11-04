@@ -53,7 +53,7 @@ jobs:
               for panel in d["panels"]:
                   if not str(panel.get("src","")).startswith("media/"+sid+"/"):continue
                   b=(site/panel["src"]).read_bytes()
-                  h=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\\0"+b).hexdigest()
+                  h=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
                   assert h==panel["source_blob_sha"],(sid,panel["src"])
           print("PASS_POACEAE_002_INTACT_GALLERY",gal["photo_panels"],gal["photo_files"])
           PY
