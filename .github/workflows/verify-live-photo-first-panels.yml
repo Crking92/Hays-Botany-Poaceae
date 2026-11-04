@@ -13,89 +13,127 @@ permissions: {contents: read}
 jobs:
   delivery:
     runs-on: ubuntu-24.04
-    timeout-minutes: 18
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - name: Confirm newly approved photos are actually delivered by Pages
+      - name: Verify all 112 grass cards and every archived or new photograph on public Pages
         run: |
           python3 - <<'PY'
-          import concurrent.futures,hashlib,json,time,urllib.parse,urllib.request
+          import concurrent.futures
+          import hashlib
+          import json
+          import time
+          import urllib.parse
+          import urllib.request
           from pathlib import Path
-          base="https://crking92.github.io/Hays-Botany-Poaceae/site/"
-          root=Path("site")
-          expected=json.loads((root/"data/gallery-index.json").read_text())
-          def fetch(path):
-              url=urllib.parse.urljoin(base,path)
-              req=urllib.request.Request(url,headers={"User-Agent":"HaysBotanyPoaceaePhotoFirstAudit/1.0"})
-              with urllib.request.urlopen(req,timeout=24) as response:
-                  assert response.status==200,url
-                  return response.read()
-          for attempt in range(30):
+          
+          base = "https://crking92.github.io/Hays-Botany-Poaceae/site/"
+          root = Path("site")
+          gallery = json.loads((root/"data/gallery-index.json").read_text())
+          index = json.loads((root/"data/poaceae-index.json").read_text())
+          assert len(index) == gallery["species"] == 112
+          assert gallery["photo_panels"] == sum(gallery["entries"][s["id"]]["count"] for s in index)
+          assert gallery["photo_species"] == 112
+          
+          def fetch(rel):
+              url = urllib.parse.quote(urllib.parse.urljoin(base, rel), safe=":/%?=&")
+              req = urllib.request.Request(url, headers={"User-Agent":"HaysBotanyPoaceaeAllPhotoPublicQA/1.0","Cache-Control":"no-cache","Accept-Encoding":"identity"})
+              for attempt in range(4):
+                  try:
+                      with urllib.request.urlopen(req, timeout=40) as response:
+                          assert response.status == 200, url
+                          return response.read()
+                  except Exception:
+                      if attempt == 3:
+                          raise
+                      time.sleep(2 * (attempt + 1))
+          
+          for attempt in range(85):
               try:
-                  live_gallery=json.loads(fetch("data/gallery-index.json"))
-                  if (live_gallery["species"]==expected["species"]
-                      and live_gallery["photo_panels"]>=expected["photo_panels"]
-                      and all(live_gallery["entries"].get(sid,{}).get("count",0)>=v["count"]
-                              for sid,v in expected["entries"].items())):
-                      print("POACEAE_GALLERY_BASELINE_REACHED",
-                            expected["photo_panels"],live_gallery["photo_panels"])
+                  live = json.loads(fetch("data/gallery-index.json"))
+                  if live.get("photo_panels",0) >= gallery["photo_panels"] and live.get("species") == 112 and all(
+                      live.get("entries",{}).get(row["id"],{}).get("count",0) >= gallery["entries"][row["id"]]["count"]
+                      for row in index
+                  ):
+                      print("PAGES_GALLERY_REACHED_CHECKOUT",live["photo_panels"],gallery["photo_panels"],flush=True)
                       break
-              except Exception as error:
-                  print("Pages update pending",str(error))
-              time.sleep(8)
-          else: raise AssertionError("Public grass gallery did not reach current commit")
-          gallery=expected
-          index=json.loads((root/"data/poaceae-index.json").read_text())
-          assert gallery["species"]==len(index)==112
-          paths=[]
-          for entry in index:
-              sid=entry["id"]
-              rel="data/species/"+sid+".json"
-              paths.append(rel)
-              card=json.loads((root/rel).read_text())
-              assert len(card["panels"])==gallery["entries"][sid]["count"]
-              for panel in card["panels"]:
-                  src=panel.get("src","")
-                  if not src.startswith("media/"):continue
-                  assert src.startswith("media/"+sid+"/") and (root/src).is_file()
-                  assert panel.get("creator") and panel.get("source_page") and panel.get("license")
-                  assert not panel.get("private_rights_review_only")
-                  if panel.get("noncommercial_only"):
-                      assert panel["license"] in {"CC BY-NC 4.0","CC BY-NC-SA 4.0"}
-                  else:
-                      assert "NC" not in panel["license"].upper()
-                  paths.append(src)
-          paths+=["data/poaceae-index.json"]
-          paths=list(dict.fromkeys(paths))
-          def verify(path):
-              local=(root/path).read_bytes()
-              remote=fetch(path)
-              if path.startswith("media/"):
-                  assert hashlib.sha256(local).digest()==hashlib.sha256(remote).digest(),path
-              elif path.startswith("data/species/"):
-                  before=json.loads(local);after=json.loads(remote)
-                  assert before["id"]==after["id"],path
-                  live_keys={(p.get("src"),p.get("creator"),p.get("license"),p.get("source_page"))
-                             for p in after["panels"]}
-                  assert all((p.get("src"),p.get("creator"),p.get("license"),p.get("source_page"))
-                             in live_keys for p in before["panels"]),path
-                  for panel in after["panels"]:
-                      if str(panel.get("src","")).startswith("media/"):
-                          assert panel.get("creator") and panel.get("source_page") and panel.get("license"),path
-              else:
-                  before=json.loads(local);after=json.loads(remote)
-                  a={e["id"]:e for e in before};b={e["id"]:e for e in after}
-                  assert set(a)==set(b) and len(a)==112,path
-                  assert all(b[sid]["local_panel_count"]>=v["local_panel_count"] for sid,v in a.items()),path
-              return path
+                  print("Pages deployment still behind",live.get("photo_panels"),gallery["photo_panels"],flush=True)
+              except Exception as err:
+                  print("Pages gallery not yet available",str(err)[:150],flush=True)
+              time.sleep(10)
+          else:
+              raise AssertionError("Latest Pages publication has not reached the audited 112-species gallery")
+          
+          html = fetch("index.html")
+          js = fetch("app.js")
+          assert b"species-list" in html and b"app.js" in html
+          assert b"photoCard" in js and b"panel.creator" in js and b"panel.license" in js and b"panel.src" in js
+          
+          paths = ["data/poaceae-index.json","data/photo-license-policy.json"]
+          image_refs = {}
+          for row in index:
+              sid = row["id"]
+              card_path = "data/species/"+sid+".json"
+              paths.append(card_path)
+              card = json.loads((root/card_path).read_text())
+              panels = card["panels"]
+              assert len(panels) == row["local_panel_count"] == gallery["entries"][sid]["count"], sid
+              for p in panels:
+                  src = p.get("src","")
+                  assert src.startswith("media/"+sid+"/") or src.startswith("../content/taxa/Poaceae/"), (sid,src)
+                  assert (root/src).is_file(), (sid,src)
+                  assert p.get("creator") and p.get("license") and p.get("source_page"), (sid,src,"credit")
+                  assert not p.get("private_rights_review_only"), (sid,src,"rights")
+                  if p.get("noncommercial_only"):
+                      assert "-NC" in p["license"], (sid,src,"noncommercial flag")
+                  image_refs.setdefault(src,set()).add(sid)
+          paths.extend(image_refs)
+          
+          def verify(rel):
+              local_file = root/rel
+              local = local_file.read_bytes()
+              remote = fetch(rel)
+              if rel == "data/poaceae-index.json":
+                  actual = json.loads(remote)
+                  by_id = {r["id"]:r for r in actual}
+                  assert len(by_id)==112, "live species index wrong count"
+                  assert all(by_id[r["id"]].get("local_panel_count",0) >= r["local_panel_count"] for r in index), "live species panel counts outdated"
+                  return ("index",rel,len(remote))
+              if rel == "data/photo-license-policy.json":
+                  actual = json.loads(remote)
+                  assert actual.get("noncommercial_educational_use") is True, "site does not disclose CC BY-NC conditions"
+                  return ("policy",rel,len(remote))
+              if rel.startswith("data/species/"):
+                  a = json.loads(local)
+                  b = json.loads(remote)
+                  assert a["id"] == b["id"], (rel,"wrong taxon")
+                  expected = {(p.get("src"),p.get("creator"),p.get("license"),p.get("source_page")) for p in a["panels"]}
+                  served = {(p.get("src"),p.get("creator"),p.get("license"),p.get("source_page")) for p in b["panels"]}
+                  assert expected.issubset(served), (rel,"missing or changed photo/credit in live species page")
+                  return ("card",rel,len(remote))
+              assert hashlib.sha256(local).digest() == hashlib.sha256(remote).digest(), (rel,"image bytes differ")
+              assert len(remote)>100, (rel,"empty photo")
+              return ("image",rel,len(remote))
+          
+          stats = {"card":0,"image":0,"index":0,"policy":0}
+          bytes_checked=0
+          failures=[]
+          unique=list(dict.fromkeys(paths))
+          print("AUDITING_ALL_PHOTOS",json.dumps({"species":112,"panels":gallery["photo_panels"],"distinct_image_urls":len(image_refs),"urls_to_check":len(unique)}),flush=True)
           with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
-              delivered=list(pool.map(verify,paths))
-          assert gallery["photo_panels"]==sum(e["count"] for e in gallery["entries"].values())
-          print("POACEAE_LIVE_PHOTO_FIRST_PASS",json.dumps({
-              "species":len(index),"panels":gallery["photo_panels"],
-              "baseline_photo_and_card_files_verified":len(delivered),
-              "live_photo_panels_at_check":live_gallery["photo_panels"]
-          }))
+              futures={pool.submit(verify,rel):rel for rel in unique}
+              for n,f in enumerate(concurrent.futures.as_completed(futures),1):
+                  try:
+                      category,rel,size=f.result()
+                      stats[category]+=1
+                      bytes_checked+=size
+                  except Exception as exc:
+                      failures.append({"path":futures[f],"error":str(exc)[:320]})
+                  if n%100==0:
+                      print("AUDIT_PROGRESS",n,len(unique),"failed",len(failures),flush=True)
+          result={"site":base,"species":112,"source_panels":gallery["photo_panels"],"unique_photo_urls":len(image_refs),"verified_photo_urls":stats["image"],"verified_species_cards":stats["card"],"bytes_compared":bytes_checked,"failures":failures}
+          print("POACEAE_ALL_PHOTOS_LIVE_AUDIT",json.dumps(result),flush=True)
+          if failures:
+              raise SystemExit(str(len(failures))+" public-site photo/card assets failed verification")
+          assert stats["card"]==112 and stats["image"]==len(image_refs), "incomplete all-photo public-site audit"
           PY
-
-# Poaceae 002 Pages release confirmation: compare the live credited 729+ grass gallery after concurrent publication.
