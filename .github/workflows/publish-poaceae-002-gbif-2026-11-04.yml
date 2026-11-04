@@ -1,0 +1,85 @@
+name: Publish exact-source Poaceae 002 GBIF herbarium photographs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'photo-intake/remote-photo-manifests/poaceae-002-institutional-2026-11-04.json'
+      - 'scripts/publish_verified_poaceae_002_gbif.py'
+      - '.github/workflows/publish-poaceae-002-gbif-2026-11-04.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: poaceae-002-gbif-source-publication
+  cancel-in-progress: false
+jobs:
+  publish-exact-originals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Install image validation library
+        run: python3 -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Verify exact GBIF occurrence media license, rights holder, source taxon, URL and original ZIP hash
+        run: |
+          python3 -m py_compile scripts/publish_verified_poaceae_002_gbif.py scripts/publish_approved_grass_photos.py
+          python3 scripts/publish_verified_poaceae_002_gbif.py \
+            --manifest photo-intake/remote-photo-manifests/poaceae-002-institutional-2026-11-04.json \
+            --source-root "$RUNNER_TEMP/poaceae-002-gbif-verified" \
+            --report "$RUNNER_TEMP/poaceae-002-gbif-source-audit.json"
+      - name: Add only verified originals as unannotated source-credited species panels
+        run: |
+          python3 scripts/publish_approved_grass_photos.py --source-root "$RUNNER_TEMP/poaceae-002-gbif-verified" --site-root site --check
+          python3 scripts/publish_approved_grass_photos.py --source-root "$RUNNER_TEMP/poaceae-002-gbif-verified" --site-root site
+      - name: Validate that every previous grass card and annotation remains, and newly referenced image bytes exist
+        run: |
+          python3 - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          site=Path("site")
+          idx=json.loads((site/"data/poaceae-index.json").read_text())
+          gal=json.loads((site/"data/gallery-index.json").read_text())
+          assert len(idx)==gal["species"]==112
+          assert set(x["id"] for x in idx)==set(gal["entries"])
+          assert gal["photo_panels"]==sum(gal["entries"][x["id"]]["count"] for x in idx)
+          for x in idx:
+              sid=x["id"]
+              d=json.loads((site/"data/species"/(sid+".json")).read_text())
+              assert d["id"]==sid
+              assert len(d["panels"])==x["local_panel_count"]==gal["entries"][sid]["count"]
+              for panel in d["panels"]:
+                  if not str(panel.get("src","")).startswith("media/"+sid+"/"):continue
+                  b=(site/panel["src"]).read_bytes()
+                  h=hashlib.sha1(b"blob "+str(len(b)).encode()+b"\0"+b).hexdigest()
+                  assert h==panel["source_blob_sha"],(sid,panel["src"])
+          print("PASS_POACEAE_002_INTACT_GALLERY",gal["photo_panels"],gal["photo_files"])
+          PY
+      - name: Commit only verified gallery images and species cards
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/media/ site/data/species/ site/data/poaceae-index.json site/data/gallery-index.json
+          if git diff --cached --quiet; then
+            echo "No new publishable originals; audit holds and duplicates."
+          else
+            git diff --cached --check
+            git commit -m "Publish source-verified Poaceae 002 GBIF grass herbarium photos"
+            for attempt in 1 2 3 4 5; do
+              if git push origin HEAD:main; then echo "POACEAE_002_PUBLISHED_GITHUB"; break; fi
+              if test "$attempt" -eq 5; then echo "Concurrent publication conflict" >&2; exit 1; fi
+              git fetch origin main
+              git rebase origin/main
+            done
+          fi
+      - name: Preserve verification and holds
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-002-gbif-source-license-and-id-audit
+          path: "${{ runner.temp }}/poaceae-002-gbif-source-audit.json"
+          retention-days: 30
+          if-no-files-found: warn
