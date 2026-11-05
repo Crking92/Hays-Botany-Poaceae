@@ -5,9 +5,10 @@ Main-branch intake photo-intake/approved/<species>/<image> plus image.json.
 Never overwrites existing lessons, panels or the older original learner.
 """
 from __future__ import annotations
-import argparse, json
+import argparse, json, hashlib
 from pathlib import Path
 from publish_approved_family_photos import read_approved, load, save, blob_sha, fail
+from web_display_policy import make_display_bytes, ensure_site_budget
 
 def main():
     ap=argparse.ArgumentParser()
@@ -42,6 +43,10 @@ def main():
         sid=sidecar.parent.name
         if sid not in by_id:fail("Species not in grass learner: "+sid)
         meta,image,payload,sha256=read_approved(source,sid,sidecar)
+        try:
+            display_payload,web_modified=make_display_bytes(payload,image.name)
+        except ValueError as exc:
+            fail("Cannot create source-preserving grass display photo: "+str(exc))
         nc_license=meta["license"] in {"CC BY-NC 4.0","CC BY-NC-SA 4.0"}
         if nc_license:
             policy=load(site/"data/photo-license-policy.json")
@@ -49,7 +54,7 @@ def main():
                 fail("CC BY-NC grass photo requires confirmed noncommercial site and exact-media permission: "+str(sidecar))
         dest=site/"media"/sid/image.name
         if not dest.resolve().is_relative_to((site/"media").resolve()):fail("Unsafe destination")
-        if dest.exists() and (dest.is_symlink() or dest.read_bytes()!=payload):fail("Image name collision")
+        if dest.exists() and (dest.is_symlink() or dest.read_bytes()!=display_payload):fail("Image name collision")
         record_path=site/"data/species"/(sid+".json")
         if sid not in changed:changed[sid]=load(record_path)
         record=changed[sid]
@@ -80,6 +85,13 @@ def main():
                "approval_note":meta["approval_note"],
                "approved_by":meta["approved_by"] if meta.get("approval_mode","NAMED_HUMAN_PHOTO_REVIEW")=="NAMED_HUMAN_PHOTO_REVIEW" else "Owner standing photo-first policy; photo-specific checks documented by "+meta["review_operator"],
                "markers":[]}
+        if web_modified:
+            panel["display_sha256"]=hashlib.sha256(display_payload).hexdigest()
+            panel["display_blob_sha"]=blob_sha(display_payload)
+            panel["display_original_site_sha256"]=sha256
+            panel["display_original_intake_path"]="photo-intake/approved/"+sid+"/"+image.name
+            panel["display_modifications"]="Web JPEG derivative; original credited photo retained in source intake"
+            panel["modifications"]+="; resized and recompressed for website display"
         panels.append(panel)
         row=by_id[sid]
         row["local_panel_count"]=len(panels)
@@ -88,11 +100,15 @@ def main():
         slot["count"]=len(panels)
         slot["target_species_source_panels"]=int(slot.get("target_species_source_panels") or 0)+1
         if not slot.get("first_src"):slot["first_src"]=url
-        if not dest.is_file():pending.append((dest,payload))
+        if not dest.is_file():pending.append((dest,display_payload))
         added.append({"species_id":sid,"photo":url})
     if not added:
         print(json.dumps({"status":"NO_NEW_APPROVED_PHOTOS","installed":0}))
         return
+    try:
+        budget=ensure_site_budget(site,sum(len(raw) for _,raw in pending),len(pending))
+    except ValueError as exc:
+        fail(str(exc))
     gallery["photo_panels"]=sum(len(changed[x["id"]]["panels"]) if x["id"] in changed else len(load(site/"data/species"/(x["id"]+".json"))["panels"]) for x in index)
     gallery["photo_files"]=int(gallery["photo_files"])+len(pending)
     gallery["photo_species"]=sum(x["count"]>0 for x in gallery["entries"].values())
@@ -100,7 +116,7 @@ def main():
         fail("Grass index/panel mismatch")
     result={"status":"CHECK_PASSED" if args.check else "PUBLISHED_SITE_SOURCE_UPDATED",
             "installed":len(added),"new_panels":len(added),"photo_panels":gallery["photo_panels"],
-            "added":added}
+            "added":added,"site_budget":budget}
     if not args.check:
         for dst,data in pending:
             dst.parent.mkdir(parents=True,exist_ok=True);dst.write_bytes(data)
