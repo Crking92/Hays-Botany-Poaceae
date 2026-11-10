@@ -436,6 +436,37 @@
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Follow the narrow crowded head before counting flowers",
+        "check": "The contracted narrow lance-shaped PANICLE is typically about 8–25 cm long but only 0.6–1.5 cm wide, with 2–6 cm close-appressed branches; count complete spikelets, not bare flowering axis joints.",
+        "compare": "Purpletop Tridens flavus has very long drooping/spreading panicle branches; Buckley's Tridentopsis has much more openly spaced spreading branches.",
+        "certainty": "Kew GrassBase source, whole attached head photo pending",
+        "source": "Kew GrassBase — Tridens albescens",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257751-2/general-information"
+      },
+      {
+        "look": "Open a spikelet and compare the TWO near-equal glumes",
+        "check": "Kew gives 4–10 florets within 4–10 mm laterally compressed spikelets. The two glumes are about 3–4 mm and ONE-veined, nearly equal in length; fertile lemma 3–4 mm and three-veined.",
+        "compare": "T. texanus glumes usually only 2–3 mm and distinctly shorter than a 4–5 mm lemma. Narrow-headed Tridentopsis mutica has usually longer 8–13 mm spikelets.",
+        "certainty": "Source-backed ranges; mm-scale single-plant dissection not independently verified",
+        "source": "Kew GrassBase — Tridens albescens",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257751-2/general-information"
+      },
+      {
+        "look": "Inspect lemma NERVE HAIRS and short ligule",
+        "check": "White tridens is the relatively glabrous exception: Kew reports the lemma midvein and margins without conspicuous cilia, a very short HAIR-FRINGE ligule 0.2–0.5 mm, and short knotty rhizomes.",
+        "compare": "Tridentopsis mutica has clearly pubescent lower lemma nerves and a ciliate membrane ligule. The whitish head color alone is not evidence.",
+        "certainty": "Comparison is useful but 'glabrous' may require microscopy; photo pending",
+        "source": "Kew GrassBase — Tridens albescens",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257751-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS8_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     }
   },
   {
@@ -465,7 +496,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -483,7 +515,45 @@
         "reference": "Long 15–35 cm or larger drooping panicle with flexuous, often viscid branches; airy silhouette retained.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO GrassBase (source under accepted or historical combination); FNA regional descriptions",
+        "source_url": "https://biogator.org/taxa/index.php?tid=7132",
+        "reference": "A ciliate membrane (not just a pure hair ring) may be visually interpreted as fringe of hairs in a photo; allow both broad visual answers pending actual leaf-junction macro.",
+        "status": "SOURCE_BACKED_TINY_CILIATE_MEMBRANE_VISUAL_DUALSTATE_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Look along an open head at bare bases of drooping branches",
+        "check": "FNA describes an open 15–40 cm panicle, with long branches that are often bare for roughly the lower THIRD to HALF and become conspicuously divergent or drooping; hairy branch axils and viscid/glandular branch surfaces may be present.",
+        "compare": "T. albescens branches hug a thin, narrow crowded panicle; T. texanus has a smaller, flexuous open panicle with many flowers per spikelet.",
+        "certainty": "FNA and GrassBase; shape varies by growth stage and variety",
+        "source": "Flora of North America — Tridens flavus",
+        "url": "https://biogator.org/taxa/index.php?tid=7132"
+      },
+      {
+        "look": "Count florets and the three lemma nerves",
+        "check": "The FNA/GrassBase accounts give 4–8 fertile florets per 5–10 mm spikelet; one-veined lower and upper glumes and a 3–5 mm fertile THREE-veined lemma. Midvein and lateral veins can extend as very short points beyond the two-toothed lemma tip.",
+        "compare": "Triplasiella has an open head but often a smaller 2–3 mm lemma with only the midvein continuing as a point; photograph the actual three nerve tips.",
+        "certainty": "Source-backed; needs separated mature lemma with 10–20x and same-scale lookalike",
+        "source": "FNA — Tridens flavus",
+        "url": "https://biogator.org/taxa/index.php?tid=7132"
+      },
+      {
+        "look": "Reveal the ciliate membrane beneath the collar hairs",
+        "check": "FNA reports a tiny ciliate MEMBRANE ligule up to 0.5 mm, while Kew GrassBase calls it a hair fringe. The broad visual key permits both visible forms, NOT two different species.",
+        "compare": "T. albescens usually has a short hair-fringe-only account and close narrow head, but both need a collar macro to compare.",
+        "certainty": "Source-category difference retained; no inner-collar image certified",
+        "source": "FNA / Kew — Tridens flavus",
+        "url": "https://biogator.org/taxa/index.php?tid=7132"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS8_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     }
   },
   {
@@ -540,7 +610,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -558,7 +629,45 @@
         "reference": "Panicles 5–16 cm with flexuous branches bare near their bases and 6–12-flowered spikelets; do not rely on purple tint alone.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO GrassBase (source under accepted or historical combination); FNA regional descriptions",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257787-2/general-information",
+        "reference": "A ciliate membrane (not just a pure hair ring) may be visually interpreted as fringe of hairs in a photo; allow both broad visual answers pending actual leaf-junction macro.",
+        "status": "SOURCE_BACKED_TINY_CILIATE_MEMBRANE_VISUAL_DUALSTATE_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Trace the flexible branches of the shorter open panicle",
+        "check": "The 5–16 cm ovate panicle has flexible often drooping rough/hispid branches, usually bare of spikelets toward the BASE. Leaf collars can be distinctly hairy.",
+        "compare": "Purpletop has a much taller often broader head with very long flexuous sticky branches; contracted White tridens is a different silhouette.",
+        "certainty": "Kew GrassBase source; source-locality and flowering stage need care",
+        "source": "Kew GrassBase — Tridens texanus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257787-2/general-information"
+      },
+      {
+        "look": "Count a developed spikelet and its shorter glumes",
+        "check": "Kew reports 6–12 florets in a 6–13 mm compressed spikelet, with both glumes generally only 2–3 mm long and ONE-veined, roughly HALF to TWO THIRDS length of the fertile lemma.",
+        "compare": "White tridens has glumes ~3–4 mm nearly as long as lemma; purpletop glumes/lemma ratios differ and floret numbers overlap.",
+        "certainty": "Source-based; species level depends on measured mature same-plant florets",
+        "source": "Kew GrassBase — Tridens texanus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257787-2/general-information"
+      },
+      {
+        "look": "Examine the soft hairs on three lemma nerves",
+        "check": "Fertile lemma is about 4–5 mm with 3 veins; midnerve, side veins and margins bear hairs below the middle, and the tip is minutely two-toothed or mucronate. True ligule is a ciliate MEMBRANE only ~0.2–0.5 mm; at field scale it appears hairlike.",
+        "compare": "White tridens has largely glabrous lemma midvein; genus-level pink/red color not decisive, and FNA Tridens groups have different pubescence.",
+        "certainty": "Kew GrassBase morphology; small ligule visually multi-state pending image",
+        "source": "Kew GrassBase — Tridens texanus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257787-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS8_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     }
   },
   {
@@ -668,6 +777,37 @@
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Check very long spaced branches with few spikelets",
+        "check": "The open 10–28 cm panicle often has stiff, widely spaced spreading/ascending 4–13 cm primary branches with scattered spikelets. This is not a dense slender bottlebrush.",
+        "compare": "T. mutica has a very narrow contracted linear head, 7–20(25) cm long but only 0.3–0.8 cm across.",
+        "certainty": "Kew GrassBase under older Tridens buckleyanus; whole flowering head needs photo certification",
+        "source": "Kew GrassBase — Tridentopsis buckleyana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77160904-1/general-information"
+      },
+      {
+        "look": "Measure the unusually LONG lower glume",
+        "check": "Its 7–10 mm spikelets usually contain 3–5 florets. LOWER glume ~5–6 mm is often slightly LONGER than upper glume ~4–5 mm, BOTH one-veined; fertile lemma 4–6 mm and three-veined.",
+        "compare": "T. mutica typically has 5–11 florets, 8–13 mm spikelets and glumes 3–5.5 mm with 1–7 veins; overlap demands actual dissection.",
+        "certainty": "Kew/GrassBase typical treatment; exact-photo macro pending",
+        "source": "Kew GrassBase — Tridentopsis buckleyana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77160904-1/general-information"
+      },
+      {
+        "look": "Find the ciliate membrane, then isolate a lemma",
+        "check": "True ligule is a ciliate MEMBRANE ~0.4–1 mm, and lemma nerve/margins may be hairy below, with an obtuse, notched or tiny point tip and no long awn. This isn't a grass with three long lemma awns.",
+        "compare": "Aristida has a single floret carrying THREE long awns; Tridens also has multifloret spikelets but distinct overall branch structure.",
+        "certainty": "Kew/GrassBase under old name; don't equate visible hairs with a hair-only ligule",
+        "source": "Kew GrassBase — Tridentopsis buckleyana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77160904-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS8_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     }
   },
   {
@@ -697,7 +837,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -715,7 +856,45 @@
         "reference": "Flora treatment gives muticous (= awnless) lemma; generic no-conspicuous-long-awn choice supported. Synonyms and look-alikes still require finer florets.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO GrassBase (source under accepted or historical combination); FNA regional descriptions",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77138756-1/general-information",
+        "reference": "A ciliate membrane (not just a pure hair ring) may be visually interpreted as fringe of hairs in a photo; allow both broad visual answers pending actual leaf-junction macro.",
+        "status": "SOURCE_BACKED_TINY_CILIATE_MEMBRANE_VISUAL_DUALSTATE_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Confirm the exceptionally narrow compressed head",
+        "check": "The mature panicle is commonly LINEAR, 7–20(25) cm long and only 0.3–0.8 cm wide, with dense appressed spikelets; source documents a tufted perennial. Don't judge a flattened dried voucher as original branch width.",
+        "compare": "Buckley's Tridentopsis is very open and widely branched, while Tridens albescens can also be narrow but has more glabrous lemma nerves.",
+        "certainty": "Kew GrassBase under Tridens muticus synonym; exact inflorescence photos pending",
+        "source": "Kew GrassBase — Tridentopsis mutica",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77138756-1/general-information"
+      },
+      {
+        "look": "Measure glumes before deciding which variety",
+        "check": "Typical 8–13 mm spikelets bear 5–11 florets. LOWER and UPPER glumes ~3–5.5 mm can vary from ONE to SEVEN veins. Historic varietal keys separate shorter one-veined var. mutica from longer 3–7-veined var. elongata; do not force a single vein cutoff on the species.",
+        "compare": "Buckley's Tridentopsis has usually 3–5 florets and both glumes consistently one-veined, with lower ~5–6 mm and upper ~4–5 mm.",
+        "certainty": "Species-level Kew account; variety concepts require source/voucher crosswalk",
+        "source": "Kew GrassBase — Tridentopsis mutica",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77138756-1/general-information"
+      },
+      {
+        "look": "Inspect hairy lower lemma nerves and short ciliate membrane",
+        "check": "Mature fertile lemma ~3.5–5.5 mm, three-veined, hairy below on the midvein and margins; apex entire to shallowly notched but **muticous** (= NO long lemma awn). Ligule is a ciliate MEMBRANE ~0.5–1 mm, not merely an unspecified hair ring.",
+        "compare": "Tridens albescens has largely glabrous lemma midvein, 0.2–0.5 mm hair ligule. Both may show contracted heads, so microscopy matters.",
+        "certainty": "Accepted-name/old-synonym source-backed; field membrane may look hair-fringed",
+        "source": "Kew GrassBase — Tridentopsis mutica",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77138756-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS8_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     }
   },
   {
@@ -808,7 +987,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -827,7 +1007,53 @@
         "reference": "Triplasiella separated from Triplasis by wide, open panicles 10–30 cm long and 8–20 cm wide, palea keels smooth/scabrous and absence of cleistogamous spikelets in upper sheaths. Correct accepted name vs historical Tridens eragrostoides is explicitly documented.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Peterson et al. 2016 Triplasiella diagnosis plus regional older Tridens eragrostoides ligule descriptions",
+        "source_url": "https://repository.si.edu/server/api/core/bitstreams/7e78bec8-ad6d-4d03-8c00-cef7b003b014/content",
+        "reference": "Historic sources document membranous true ligule under older Tridens eragrostoides; current hair-only state was unsafe; keep both broad visual answers, photo microscopy pending. Do not assert genus-level 2016 diagnosis alone certifies ligule type.",
+        "status": "SOURCE_BACKED_TINY_CILIATE_MEMBRANE_VISUAL_DUALSTATE_PHOTO_PENDING",
+        "review_date": "2026-11-10"
+      },
+      "taxonomy": {
+        "source": "Kew POWO accepted Triplasiella eragrostoides; Peterson et al. (2016) new genus",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77160907-1",
+        "secondary_source_url": "https://repository.si.edu/server/api/core/bitstreams/7e78bec8-ad6d-4d03-8c00-cef7b003b014/content",
+        "reference": "Accepted: Triplasiella eragrostoides. Historical Tridens eragrostoides and Tridentopsis eragrostoides are homotypic synonyms; not separate species. Distinct from true Triplasis by smooth/scabrous palea keels and absence of upper-sheath cleistogamous spikelets.",
+        "status": "ACCEPTED_NAME_AND_GENUS_DIAGNOSIS_CONFIRMED_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Examine the complete wide, open flowering head",
+        "check": "Peterson et al. (2016) defines the genus with a broad 10–30 cm long by 8–20 cm wide open panicle, much wider than true Triplasis species (usually 1–7 x 1–6 cm). This is a first sorting clue, not standalone ID.",
+        "compare": "Tridens flavus also forms open panicles; compare actual mature lemmas and nerve tips, not overall silhouette.",
+        "certainty": "Peer-reviewed 2016 genus diagnosis; exact photos not yet anatomy-certified",
+        "source": "Peterson et al. 2016 — Triplasiella genus diagnosis",
+        "url": "https://repository.si.edu/server/api/core/bitstreams/7e78bec8-ad6d-4d03-8c00-cef7b003b014/content"
+      },
+      {
+        "look": "Compare BOTH palea keels and a mature lemma nerve tip",
+        "check": "Triplasiella has PALEA KEELS that are smooth or scabrous, NOT densely ciliate like Triplasis; a regional grass key describes a typically 2–3 mm lemma with MIDNERVE extending slightly as a point, while Tridens flavus usually 3–5 mm with midvein and both lateral nerves tending to project.",
+        "compare": "The key's old Tridentopsis eragrostoides name is a SYNONYM of Triplasiella, not a separate species. Compare an attached mature floret from the same plant.",
+        "certainty": "Peer-reviewed genus-level distinction plus regional comparison; lemma dimensions concept dependent",
+        "source": "Peterson et al. 2016 — Triplasiella vs Triplasis",
+        "url": "https://repository.si.edu/server/api/core/bitstreams/7e78bec8-ad6d-4d03-8c00-cef7b003b014/content"
+      },
+      {
+        "look": "Search upper leaf sheaths but do not invent hidden flowers",
+        "check": "Triplasiella differs from true Triplasis in NOT producing CLEISTOGAMOUS spikelets concealed in upper leaf sheaths. The prior FNA/range treatments have described a membranous ligule while older broad categories sometimes emphasize hairs. Keep both visual collar states until a sharp same-plant macro.",
+        "compare": "Triplasis commonly bears upper-sheath hidden flowers and densely HAIRY palea keels; look at the actual sheath and 2-keeled palea, not neighboring plants in a background photo.",
+        "certainty": "2016 genus concept and modern accepted-name Kew crosswalk; absence must be assessed on real specimen",
+        "source": "Peterson et al. 2016; accepted name in Kew POWO",
+        "url": "https://repository.si.edu/server/api/core/bitstreams/7e78bec8-ad6d-4d03-8c00-cef7b003b014/content"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS8_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     }
   },
   {
