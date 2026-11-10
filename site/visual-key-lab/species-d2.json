@@ -97,8 +97,16 @@
     },
     "source_blob_sha": "b44c90683aed803f23aab22d1672d9834b6d9758",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "habit": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 194",
+        "reference": "Flora confirms tufted perennial growth, small 2–4(–6)-flowered spikelets; existing airy habit provisional until more direct panicle review.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "eragrostis-lugens",
@@ -265,7 +273,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -273,8 +282,16 @@
     },
     "source_blob_sha": "de564b3166241368f1852e7c610db5fa6646bb36",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "ligule": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 196",
+        "reference": "Regional subsp. oxylepis has very short ligule with a membranous base obscured by longer blade-base hairs; source-specific variation, not an assertion that every taxon shows same collar.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "eriochloa-sericea",
@@ -851,13 +868,22 @@
         "membrane"
       ],
       "awns": [
-        "none_obvious"
+        "none_obvious",
+        "long"
       ]
     },
     "source_blob_sha": "a794199d1c3d7a3dd28db602b9188e3c57f529d6",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "awns": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 212",
+        "reference": "Lemma awn 0.5–4(–7) mm; short awns may look inconspicuous in whole-head field view, the long end may be visible in close-up; variable choice states retained.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "muhlenbergia-schreberi",
@@ -916,12 +942,21 @@
         "membrane"
       ],
       "awns": [
-        "none_obvious"
+        "none_obvious",
+        "long"
       ]
     },
     "source_blob_sha": "ff92455a1017128b7ec03f1917fe919a59ba6fdc",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "awns": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 214",
+        "reference": "Short/narrow contracted panicle; decumbent stems ROOT AT LOWER NODES; lemma awn 1.5–5 mm (visible at closer range, often not conspicuous in distant whole-head photo). Surface mat recorded without asserting verified root nodes in photos.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   }
 ]
