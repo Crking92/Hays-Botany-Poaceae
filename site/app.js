@@ -221,9 +221,36 @@ function renderLearner(d,root){
  relatedSection(d,root);
  photoGallery(d,root);
 }
+// Show an honest, credited same-species reference in otherwise empty Field ID cards.
+// Context is NOT a diagnostic photograph and never satisfies the missing-part need.
+function chooseFieldContextPhoto(data,tile,used){
+ const head=[tile.heading,tile.short].filter(Boolean).join(" ").toLowerCase();
+ const terms=[
+  {test:/ligule|collar|sheath|node|blade|leaf|foliage/,want:/ligule|collar|sheath|node|leaf|blade|foliage/},
+  {test:/spikelet|glume|lemma|floret|awn|bristle/,want:/spikelet|glume|lemma|floret|awn|bristle|seedhead|seed head/},
+  {test:/panicle|raceme|spike|flower|plume|inflorescence|seedhead/,want:/panicle|raceme|spike|flower|plume|inflorescence|seedhead/},
+  {test:/base|root|clump|tuft|habit|whole|growth|crown|stem|culm/,want:/base|root|clump|tuft|habit|whole|growth|crown|stem|culm/},
+  {test:/look-alike|compare|versus|similar|vs\\./,want:/habit|whole|panicle|flower|clump|tuft|inflorescence/}
+ ].filter(x=>x.test.test(head));
+ const eligible=(data.panels||[]).map((panel,index)=>({panel,index})).filter(({panel})=>
+  panel?.src && panel.photo_role==="TARGET_SPECIES_SOURCE" &&
+  panel.source_species_id===data.id && panel.creator && panel.license && panel.source_page);
+ if(!eligible.length)return null;
+ const scored=eligible.map(item=>{
+  const label=String(item.panel.label||"").toLowerCase();
+  const priority=terms.reduce((sum,x)=>sum+(x.want.test(label)?4:0),0);
+  const original=(tile.original_panel_indices||[]).includes(item.panel.original_panel_index)?3:0;
+  const overview=/whole|plant|habit|clump|tuft|flower|panicle|seedhead/.test(label)?2:0;
+  const repeats=used.get(item.index)||0;
+  return {...item,score:priority+original+overview-repeats*5};
+ }).sort((a,b)=>b.score-a.score||a.index-b.index);
+ const chosen=scored[0];used.set(chosen.index,(used.get(chosen.index)||0)+1);
+ return chosen.panel;
+}
 function renderField(d,root){
  root.append(txt("h3","Field ID — expand each diagnostic character"));
  if(d.field_rule)root.append(txt("p",d.field_rule,"memory-rule"));
+ const usedContextPhotos=new Map();
  for(const [index,t] of (d.tiles||[]).entries()){
    const details=make("details",{className:"field-tile"});
    if(index===0)details.open=true;
@@ -238,7 +265,15 @@ function renderField(d,root){
      matches.forEach(p=>photos.append(photoCard(p,null,d.scientific)));
      details.append(photos);
    }else{
-     details.append(txt("p","A photo of this exact feature is still needed. See the source gallery for other views.","photo-hold"));
+     const context=chooseFieldContextPhoto(d,t,usedContextPhotos);
+     if(context){
+       const photos=make("div",{className:"gallery"});
+       photos.append(photoCard(context,null,d.scientific));
+       details.append(photos);
+       details.append(txt("p","Plant reference only — this is a credited photograph of the same species, NOT proof of the particular diagnostic feature. A clear close-up of that feature is still needed.","muted"));
+     }else{
+       details.append(txt("p","A photo of this exact feature is still needed. See the source gallery for other views.","photo-hold"));
+     }
    }
    appendParagraph(details,t.details);
    if(t.status)appendParagraph(details,t.status,"source-flag");
