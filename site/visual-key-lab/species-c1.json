@@ -303,8 +303,8 @@
     "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1246) — Look all the way around a stem node for a ring of short, spreading white hairs. The Flora key uses this alongside spikelet length to separate Cane Bluestem from Silver Bluestem.\n\nFirst find a genuine CULM node, NOT the base of a leaf blade or a fluffy flowering rachis. New real cane photos 5 and 6 show thick rings of long ascending soft hairs at true stem joints on a research-grade Williamson County plant. Photo 5 has a millimeter ruler beside two photographed nodes. Then compare the broader silvery head to KR and silver. Published hair-length ranges remain source claims, n",
     "traits": {
       "head": [
-        "fingers",
-        "bushy"
+        "bushy",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft"
@@ -318,7 +318,16 @@
     },
     "source_blob_sha": "ffdea16d5a1cc7bff0e98aefc9468fe977cfdc55",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.170 (printed 1246): silvery contracted branches, main axis typically longer than branches, unlike KR digitate inflorescence",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "bothriochloa-torreyana",
@@ -362,7 +371,8 @@
     "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1246) — Trace the axis of the silvery head. In the Flora key it usually extends farther than the individual branches.\n\nStart with Matt Lavin's genuine silvery panicle (panel 0), then see Austin flowering habitat (panel 7). Trace the MANY SHORT crowded hairy flowering branches along a central axis, not just their white hairs. Compare introduced KR (panel 4): several longer finger-like terminal racemes. A detached fuzzy head alone is insufficient.",
     "traits": {
       "head": [
-        "bushy"
+        "bushy",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft"
@@ -376,7 +386,16 @@
     },
     "source_blob_sha": "2da860c6b5aa608a4fbab2bde0de115b73a043de",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "pp.170–171 (printed 1246–47): silver bluestem (B. laguroides subsp. torreyana) in silvery contracted rather than terminal digitate group",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "bouteloua-pectinata",
@@ -468,7 +487,7 @@
     "field_rule": "B. rigidiseta typically has several (often about 5–9) SHORT bristly/awned units near the top. Blue grama has only about 1–3 long curved combs. Sideoats grama carries many short pendant oats down a much longer axis. Red grama has narrower, more appressed, often purplish branches and awned spikelets; color alone is not sufficient. If an entire culm/branch cannot be resolved, keep Bouteloua sp.",
     "traits": {
       "head": [
-        "combs"
+        "short_side_racemes"
       ],
       "habit": [
         "tuft"
@@ -476,13 +495,26 @@
       "ligule": [
         "hairs"
       ],
-      "awns": [
-        "none_obvious"
-      ]
+      "awns": []
     },
     "source_blob_sha": "92457419f3bc22f266bd9c99ed539d43e9b89b04",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "pp.171–172 (printed 1247–48): Texas grama 6–8(–10) SHORT NON-PECTINATE branches; 3-awned florets documented but generic Aristida three-long-awn photo unsuitable; awn state deferred",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "pp.171–172 (printed 1247–48): Texas grama 6–8(–10) SHORT NON-PECTINATE branches; 3-awned florets documented but generic Aristida three-long-awn photo unsuitable; awn state deferred",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "bouteloua-trifida",
