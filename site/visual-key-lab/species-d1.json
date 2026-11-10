@@ -786,15 +786,31 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "membrane"
+      ],
       "awns": [
         "none_obvious"
       ]
     },
     "source_blob_sha": "3d6366f2e4949a8b952e89698701d4e2832676b0",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.187",
+        "reference": "Unlike typical digitate Digitaria, D. cognata has a much-branched very open panicle with spikelets on long pedicels, often detaching and tumbling.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.187",
+        "reference": "Flora states the ligule is a membrane; Hays source notes a short erose membrane that remains unverified photographically.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "dinebra-panicea-subsp-mucronata",
@@ -876,8 +892,22 @@
     },
     "source_blob_sha": "5b2060852e2aacfacffe8368395ea7c6bbf42b4d",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Kew POWO GrassBase under Leptochloa panicea, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information",
+        "reference": "Numerous slender straight ascending one-sided racemes along central axis, not clustered terminal fingers; subspecies-specific character unverified.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO GrassBase under Leptochloa panicea, same source",
+        "reference": "Eciliate membranous ligule described at species level; subspecies treatment requires separate crosswalk.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "elymus-virginicus",
