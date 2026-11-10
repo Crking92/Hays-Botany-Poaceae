@@ -61,20 +61,36 @@
     "field_rule": "Hooded windmillgrass generally has crowded shorter racemes (~2–5 cm) and a conspicuous rounded sterile hood with short awns. Tumble windmillgrass typically has longer (~5–15 cm) racemes in separated tiers and longer awns. Feather fingergrass commonly has a feathery terminal fan with long apical fertile-lemma hairs. The hybrid may be intermediate.",
     "traits": {
       "head": [
-        "fingers",
-        "whorls"
+        "fingers"
       ],
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "membrane"
+      ],
       "awns": [
         "none_obvious"
       ]
     },
     "source_blob_sha": "06fc5445e1cfcfbf0ef6c800aa4ecabb957028c3",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.180 (printed 1256): one terminal whorl of short 2–5cm branches, not several spaced tiers; ciliate membranous ligule",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.180 (printed 1256): one terminal whorl of short 2–5cm branches, not several spaced tiers; ciliate membranous ligule",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "dichanthelium-commutatum",
