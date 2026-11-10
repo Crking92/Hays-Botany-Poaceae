@@ -375,7 +375,8 @@
         "rhizome"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -410,13 +411,46 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.172 (printed 1248): both tufted and rhizomatous forms; existing Hays/FNA record says short ciliate membrane",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "source": "Flora of North America (membranous+ciliate); Kew GrassBase (hair fringe)",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=6630",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1198286-2/general-information",
+        "reference": "FNA describes a membranous ciliate ligule 0.3–0.5 mm, while Kew GrassBase describes a 0.5 mm fringe of hairs. The hairlike ciliate margin may obscure the minute membrane; accept both visual filter choices pending same-plant scaled images.",
+        "status": "CONFLICTING_CATEGORY_MEMBRANOUS_CILIATE_VS_HAIR_FRINGE",
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count the little hanging branches on the main axis",
+        "check": "FNA describes a long one-sided axis about 13–30 cm with (12)30–80 short, reflexed branches; each generally carries several spikelets and eventually drops off intact.",
+        "compare": "blue and hairy grama have far fewer terminal eyebrow combs",
+        "certainty": "FNA-backed; maturity and variety vary",
+        "source": "Flora of North America — Bouteloua curtipendula",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=6630"
+      },
+      {
+        "look": "Find the actual leaf ligule",
+        "check": "FNA says a 0.3–0.5 mm MEMBRANOUS ligule with cilia. Kew GrassBase describes a ~0.5 mm hair fringe. Inspect the tiny membrane base: the two descriptions may reflect cilia dominating the view.",
+        "compare": "hair ligules of blue and hairy gramas; do not assume a hair-looking margin means a membrane is absent",
+        "certainty": "Published descriptions conflict in category, not necessarily tissue; keep both broad filters provisionally",
+        "source": "FNA sideoats account versus Kew GrassBase",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=6630"
+      },
+      {
+        "look": "Observe the fall-off point of one mature branch",
+        "check": "The entire short spike-bearing branch separates at its base, leaving marks along the central rachis; a fallen unit is not a single spikelet. The axis of a branch extends a few mm beyond its last attached spikelet.",
+        "compare": "Texas grama's relatively short clustered upper branches",
+        "certainty": "FNA-backed; close same-plant attachment photo pending",
+        "source": "Flora of North America — Bouteloua curtipendula",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=6630"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    }
   },
   {
     "id": "bouteloua-dactyloides",
@@ -826,7 +860,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Trace where raceme whorls join the main axis",
+        "check": "FNA describes around 10–16 branches, 5–15 cm long, in WIDELY SEPARATED whorls along a 1–4 cm axis, often with a single erect terminal branch. Check actual attachment points.",
+        "compare": "hooded windmillgrass has much shorter racemes in a tightly crowded group",
+        "certainty": "FNA-backed; mature head photo needed",
+        "source": "Flora of North America — Chloris verticillata",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=17600"
+      },
+      {
+        "look": "Magnify the fertile and sterile lemma awns separately",
+        "check": "FNA gives fertile-lemma awns about 4.8–9 mm and upper sterile-floret lemma awns about 3.2–7 mm; the upper floret is elongate/oblong rather than hood-shaped and globular.",
+        "compare": "hooded windmillgrass's conspicuously rounded inflated sterile floret and much shorter awns",
+        "certainty": "FNA-backed; not identifiable from generic windmill silhouette alone",
+        "source": "Flora of North America — Chloris verticillata",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=17600"
+      },
+      {
+        "look": "Check the folded basal blade and inner ligule",
+        "check": "Hill Country plants have often folded narrow blades and a ciliate membrane ligule around 1–2 mm. The account describes tufted growth without rhizomes or stolons, though other field sources report occasional rooting at low nodes.",
+        "compare": "C. cucullata and C. andropogonoides also have ciliate membranes: this is a genus-level check",
+        "certainty": "Regional source plus FNA; growth observations vary",
+        "source": "Hagenbuch & Lemke 2015, p.42",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    }
   },
   {
     "id": "chloris-virgata",
@@ -932,7 +997,30 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect the feathery crown on the fertile lemma",
+        "check": "The lower fertile lemma bears a conspicuous tuft of long hairs just below its tip, often around 1.5–4 mm; source awns around 5–15 mm make the short spikelets look feathery even close up.",
+        "compare": "hooded windmillgrass with an inflated sterile hood and short awns",
+        "certainty": "Kew/GrassBase-backed; macro photo pending",
+        "source": "Kew POWO / GrassBase — Chloris virgata",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396063-1/general-information"
+      },
+      {
+        "look": "Check the rooted life-cycle and head architecture",
+        "check": "Regional Hill Country flora treats this as a tufted ANNUAL, with 4–12 or more digitate racemes near the apex (not regularly separated tiers). Perennial regrowth at the base would argue against a typical plant.",
+        "compare": "tumble windmillgrass is perennial and often has several spaced whorls",
+        "certainty": "Annuality source-checked; environmental variation possible",
+        "source": "Hagenbuch & Lemke 2015, p.42; Kew GrassBase",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    }
   },
   {
     "id": "chasmanthium-latifolium",
