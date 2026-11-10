@@ -28,7 +28,7 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 <main class="wrap">
   <section class="hero"><div><p class="eyebrow">Picture-first identification · 112 grasses · Phase 3 anatomy</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small>grasses in the initial key</small></div></section>
   <p class="notice" style="background:#e9f2e6;border-color:#cce0cc;color:#295c3e"><strong>New complete grass lesson:</strong> <a href="johnsongrass.html" style="font-weight:800">Test the six-step Johnsongrass photo-ID lesson →</a> · Includes hidden-answer practice, real morphology photos, and look-alike comparisons.</p>
-  <p class="notice"><strong>Phase 3 in progress:</strong> 44 grasses now have 111 source-linked botanical checks, including Setaria bristles, Sorghastrum empty pedicels, and paired Sorghum spikelets. Open a grass result to compare culm nodes, true ligules, rachis tips, glumes, spikelets, and awns. These notes do not certify the example photos or a specimen identification.</p>
+  <p class="notice"><strong>Phase 3 in progress:</strong> 53 grasses now have 138 source-linked botanical checks, including Paspalum glume differences, hidden axillary heads, and Urochloa lower glumes. Open a grass result to compare culm nodes, true ligules, rachis tips, glumes, spikelets, and awns. These notes do not certify the example photos or a specimen identification.</p>
   <p class="notice"><strong>Field-testing prototype:</strong> all 112 Hays Botany grasses now have initial identification character profiles. These broad states are provisional and must be cross-checked with the regional flora, GrassBase, and the original lessons before treating the key as field-verified. This is not a confirmed species determination. Some choices are broad, some source photos are not local, and incomplete characters remain labeled as uncertain. Similar-looking Chloris species can hybridize; use the species-detail anatomy list before calling a definitive identification. We use your existing Hays Botany records and credited photos; the full GrassBase trait matrix has not yet been imported.</p>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
@@ -73,7 +73,7 @@ const qs=[
 ["tangled_awns","Dark awns twisted into a tangle","A narrow flowering raceme whose long dark awns twist together at maturity (tanglehead example).","heteropogon-contortus",0],
 ["long_narrow_panicle","Long, narrow panicle","A relatively contracted and elongated head, not a broad cloud.","sporobolus-compositus",0],
 ["golden_plume","Narrow upright plume","One elongated, fairly narrow panicle, often golden or bronze in flower.","sorghastrum-nutans",2],
-["paired_spikes","Two spreading flower branches in a V","Two close one-sided racemes, often like a V at the tip.","paspalum-distichum",1],
+["paired_spikes","Two spreading flower branches in a V","Usually two near-terminal racemes, sometimes a third below (knotgrass). Check the insertion points.","paspalum-distichum",1],
 ["mixed_gender","Upper male / lower female sections","One flowering branch with light upper male and thick lower female units.","tripsacum-dactyloides",1],
 ["aquatic_gender","Lower male and upper female branches","Texas wild-rice flowering stalk with dangling male flowers beneath erect awned female branches.","zizania-texana",5],
 ["aquatic_mixed","Male and female spikelets intermixed","Giant cutgrass: both floral sexes mixed along a big open wetland panicle.","zizaniopsis-miliacea",0]
@@ -84,7 +84,7 @@ const qs=[
 ["rhizome","Underground spreading stems","Creeping rhizomes or underground connections are present.","sorghum-halepense",0],
 ["aquatic_rooted","Rooted in running water, leaves trail downstream","A fully aquatic grass whose long submerged ribbons flow with the current; observe only, do not touch protected wild-rice.","zizania-texana",2]
 ]},
-{id:"ligule",short:"Leaf collar",title:"What does the true ligule look like?",hint:"Open a leaf where the blade joins the sheath. Ignore hairs on a distant stem node.",options:[
+{id:"ligule",short:"Leaf collar",title:"What does the true ligule look like?",hint:"Open a leaf where the blade joins the sheath. A tiny membrane with cilia may look like only hairs; check beneath the hair tips. Ignore hairs on a distant stem node.",options:[
 ["hairs","A fringe of hairs","The inner blade–sheath junction shows short hairlike structures.","panicum-hallii",5],
 ["membrane","A thin membrane","A small papery flap rises at the inner blade–sheath junction.","dichanthium-sericeum",4],
 ["absent","No true ligule apparent","No membrane or hair fringe at the inner blade–sheath junction.","echinochloa-crus-galli",1]
