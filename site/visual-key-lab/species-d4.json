@@ -50,7 +50,8 @@
         "sparse_bristles"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "hairs"
@@ -71,11 +72,43 @@
         "review_date": "2026-11-10"
       },
       "habit": {
-        "source": "Same regional flora p.244",
-        "reference": "Tufted erect perennial with swollen hard bases; previously inferred rhizomatous state should not be imposed.",
-        "status": "REFERENCE_CHECKED_PARTIAL",
+        "source": "Flora of North America, Setaria reverchonii",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004",
+        "reference": "FNA explicitly describes perennial with short sometimes knotty rhizomes, while tufted habit is also visible; use both broad visual choices, rooted connection not yet photo-verified.",
+        "status": "SOURCE_CHECKED_DUAL_VISIBLE_HABIT",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Look for interruptions rather than a dense foxtail",
+        "check": "A narrow upright 5–20 cm panicle has spikelets scattered irregularly along its branches, with bristles about 2–8 mm; some upper branchlets may look unbristled. Do not require a uniform bottlebrush.",
+        "compare": "Setaria parviflora makes a much denser, more regular foxtail",
+        "certainty": "FNA-backed; reproductive photo QA pending",
+        "source": "Flora of North America — Setaria reverchonii",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004"
+      },
+      {
+        "look": "Inspect the rooted base before selecting growth form",
+        "check": "FNA reports this perennial may have short, sometimes knotty rhizomes. An apparent isolated tuft in a field photo does not prove a plant lacks underground connections.",
+        "compare": "Perennial knotroot foxtail also has rhizomes; branching pattern and florets remain necessary",
+        "certainty": "FNA-backed; rootstock variation allowed",
+        "source": "Flora of North America — Setaria reverchonii",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004"
+      },
+      {
+        "look": "Measure the spikelet and count lower glume veins",
+        "check": "FNA describes spikelets about 2.1–4.5 mm, scattered along the branching axis, with a lower glume often 5–7-veined and an upper glume around 7–9-veined. Hair-fringe true ligule around 1–2 mm.",
+        "compare": "Setaria parviflora typically lower glume three-veined and tightly clustered in a denser head",
+        "certainty": "FNA-backed; magnified same-plant glume photo pending",
+        "source": "Flora of North America — Setaria reverchonii",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     }
   },
   {
@@ -123,7 +156,9 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "membrane"
+      ],
       "awns": [
         "long"
       ]
@@ -146,7 +181,45 @@
         "reference": "Tufted, explicitly not rhizomatous; compare short scaly rhizomes in S. nutans.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO / GrassBase, Sorghastrum elliottii",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:240815-2/general-information",
+        "reference": "Ciliolate membrane 2–4 mm; ligule not a pure hair fringe and should not be left unknown in broad key.",
+        "status": "EXTERNAL_SOURCE_CHECKED_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Look for slender open non-golden flowering branches",
+        "check": "Kew GrassBase describes an open roughly 10–25 cm panicle with dark brown spikelets around 6–7.5 mm, and a tufted perennial base without the characteristic stout rhizomes of typical S. nutans.",
+        "compare": "Indiangrass S. nutans often has denser golden panicles and short scaly rhizomes",
+        "certainty": "Kew/GrassBase-backed; same-plant root and seedhead needed",
+        "source": "Kew GrassBase — Sorghastrum elliottii",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:240815-2/general-information"
+      },
+      {
+        "look": "Measure the AWN and count its bends",
+        "check": "The fertile lemma has a usually 25–40 mm, twice-bent (bigeniculate) twisted awn; compare the actual fully extended awn on a mature attached floret.",
+        "compare": "S. nutans usually has a 10–22(30) mm once-bent awn; lengths overlap",
+        "certainty": "Kew/GrassBase-backed; high-magnification specimen pending",
+        "source": "Kew GrassBase — Sorghastrum elliottii",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:240815-2/general-information"
+      },
+      {
+        "look": "Confirm true membrane and empty pedicels",
+        "check": "The ligule is a ciliate membrane around 2–4 mm, not a pure hair fringe. Like other Sorghastrum, it has awned fertile sessile spikelets and companion barren pedicels where the paired spikelet would occur.",
+        "compare": "Sorghum has well-developed companion pedicelled spikelets",
+        "certainty": "Kew GrassBase-backed; separate collar and spikelet-pair photos required",
+        "source": "Kew GrassBase — Sorghastrum elliottii",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:240815-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     }
   },
   {
