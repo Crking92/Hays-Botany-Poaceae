@@ -180,9 +180,39 @@
         "reference": "Three awns from a single floret, not three nearby florets.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "glumes": {
+        "source": "Kew POWO / GrassBase Aristida oligantha",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325343-2/general-information",
+        "reference": "Lower glume 18–25 mm, 3–7 veined, versus A. purpurea typical 6–8 mm and one-veined; population/variety differences require caution.",
+        "status": "SOURCE_CHECKED",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count veins in the LOWER glume",
+        "check": "A mature spikelet has a lower glume usually 3–7-veined, in published descriptions about 18–25 mm long. Look at the actual lower bract with a hand lens or backlight—not the narrower lemma.",
+        "compare": "Purple threeawn: generally one-veined and much shorter lower glume (around 6–8 mm)",
+        "certainty": "Kew GrassBase-backed; actual local glume photo pending",
+        "source": "Kew POWO / GrassBase — Aristida oligantha",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325343-2/general-information"
+      },
+      {
+        "look": "Follow the roots and one full three-awn floret",
+        "check": "This is an annual grass with a relatively open few-spikeleted panicle. The fertile lemma carries three long, commonly subequal, widely spreading awns, mostly around 30–70 mm; all belong to ONE floret.",
+        "compare": "Purple threeawn can also have long subequal awns; life cycle plus glume vein count are needed",
+        "certainty": "Kew and Smithsonian sources; field rooting not authenticated",
+        "source": "Kew POWO / GrassBase — Aristida oligantha",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325343-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "arundo-donax",
@@ -344,7 +374,30 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count florets inside ONE hanging spikelet",
+        "check": "The regional flora reports typically about 3–4 developed florets in a large, pendent oat spikelet, with a loose, branched panicle rather than a true barley or rye spike.",
+        "compare": "Bromus often has 6–20 florets, rye and barley flowering units are attached directly along a spike",
+        "certainty": "Regional morphology source, exact local florets not photo-counted",
+        "source": "Illustrated Flora of North Central Texas — Avena fatua account",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      },
+      {
+        "look": "Inspect a long bent lemma awn at maturity",
+        "check": "Wild oat's conspicuous awn commonly bends and twists, in the regional treatment approximately 25–40 mm. Attached lemmas and floret shedding scars are more useful than mature color alone.",
+        "compare": "Threeawns have THREE awns on one lemma; brome awns are typically straight to divergent",
+        "certainty": "Regional-flora sourced; section not independently photo-certified",
+        "source": "Illustrated Flora of North Central Texas — Avena fatua account",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "bothriochloa-barbinodis",
@@ -867,7 +920,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count the veins in the LOWER glume",
+        "check": "Japanese brome is an annual. FNA describes the lower glume typically (3)5-veined and the upper usually 7-veined; inspect both on the SAME spikelet.",
+        "compare": "Native perennial B. pubescens usually has a one-veined lower glume",
+        "certainty": "FNA source checked; floret-scale photo pending",
+        "source": "Flora of North America — Bromus japonicus",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236949"
+      },
+      {
+        "look": "Measure lemma length and the AWN origin",
+        "check": "FNA describes 7–9 mm lemmas with 8–13 mm awns, often spreading strongly at maturity; the awn attaches at least 1.5 mm below the lemma apex (subapical), not from a bare stem node.",
+        "compare": "B. pubescens generally 3–8 mm awns; B. lanceolatus has larger lemmas",
+        "certainty": "FNA source checked, maturation and awn bending vary",
+        "source": "Flora of North America — Bromus japonicus",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236949"
+      },
+      {
+        "look": "Follow mature panicle branches and life cycle",
+        "check": "Often open, nodding panicles with flexible drooping branches longer than the spikelets; confirm annual base and attached 6–12-flowered spikelets before using silhouette to distinguish.",
+        "compare": "Native woodland brome also droops; B. lanceolatus often has stiffer, shorter panicle branches",
+        "certainty": "FNA source checked; habit alone insufficient",
+        "source": "Flora of North America — Bromus japonicus",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236949"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "bromus-pubescens",
@@ -916,7 +1000,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect the perennial basal crown and leaf sheath",
+        "check": "Canada/hairy woodland brome is a perennial with a lasting crown (sometimes condensed rhizomes); hairier lower sheaths commonly bear downward-facing hairs. Do not infer perenniality from last year's dry flowering stems alone.",
+        "compare": "Annual Japanese, Texas and lanceolate bromes, all potentially encountered as dry stems in winter",
+        "certainty": "Texas PRC and FNA-backed; live rooted image pending",
+        "source": "UT Plant Resources Center / FNA — Bromus pubescens",
+        "url": "https://www.minnesotawildflowers.info/grass-sedge-rush/hairy-woodland-brome"
+      },
+      {
+        "look": "Count veins and look at lemma hairs",
+        "check": "Lower glume usually one-veined, upper often three-veined; typical lemmas roughly 8–12 mm with dense fine hairs BETWEEN veins and short straight awns about 3–8 mm.",
+        "compare": "B. japonicus typically has a 3–5-veined lower glume and longer spreading awns",
+        "certainty": "Species ranges from regional field guides; exact glumes/lemmas not yet photo-certified",
+        "source": "Minnesota Wildflowers — Bromus pubescens morphological account",
+        "url": "https://www.minnesotawildflowers.info/grass-sedge-rush/hairy-woodland-brome"
+      },
+      {
+        "look": "Confirm a TRUE membrane at the collar",
+        "check": "Bromus has a membrane ligule, even if hair fringes occur at adjacent collar or sheath positions; B. pubescens accounts describe about 2–4 mm in a Texas study. Look inside the blade–sheath junction.",
+        "compare": "Annual bromes also have membranes, so this confirms group but not species",
+        "certainty": "Texas PRC regional source; not species-separating alone",
+        "source": "UT Austin Plant Resources Center, Vascular Plants of Williamson County — Bromus pubescens",
+        "url": "https://www.minnesotawildflowers.info/grass-sedge-rush/hairy-woodland-brome"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "cenchrus-spinifex",
