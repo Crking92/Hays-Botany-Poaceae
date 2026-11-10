@@ -247,7 +247,22 @@
     },
     "source_blob_sha": "15fbbd77b890fe1dcf69599df57c2d384a7c2176",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 230",
+        "reference": "Usually two racemes but occasionally three or four; follow an attached whole flowering stalk.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 230",
+        "reference": "Long trailing culms rooting at nodes in wet areas; mat-forming appearance may be observed.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "phalaris-caroliniana",
@@ -295,7 +310,22 @@
     },
     "source_blob_sha": "919eb22a8540213a67e9acb1e8ac55e68fca1645",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 234",
+        "reference": "Compact, narrow cylindrical SPICELIKE PANICLE, not a true simple grass spike.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 234",
+        "reference": "Membranous ligule 1–5 mm.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "poa-annua",
@@ -539,7 +569,22 @@
     },
     "source_blob_sha": "961fb79e0313d4be6640c776f594d50b1fc11996",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 243",
+        "reference": "Broad-leaved, strongly tapered, relatively loose foxtail panicle (7–35 cm) with very long bristles.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 243",
+        "reference": "Usually 1–2 elongated sterile-branch bristles, not lemma awns.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "sorghastrum-nutans",
@@ -671,11 +716,35 @@
       "ligule": [
         "membrane"
       ],
-      "awns": []
+      "awns": [
+        "none_obvious",
+        "long"
+      ]
     },
     "source_blob_sha": "70af51b2bda254a71476c05ac1d971f2c49e73e4",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 246",
+        "reference": "Cultivated compact and Sudan-grass open panicles differ within the complex; both remain allowed.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 246",
+        "reference": "Sorghum bicolor is annual and lacks the perennial rhizome system of Johnsongrass.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 246",
+        "reference": "Subsp. bicolor usually awnless; subsp. drummondii fertile lemmas awned about 10 mm. Do not use fixed awn choice for the species complex.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "sporobolus-compositus",
@@ -794,7 +863,8 @@
         "rhizome"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -802,7 +872,22 @@
     },
     "source_blob_sha": "57d6d583090a9f6c05179419b6a3326916756b31",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 256",
+        "reference": "Single spike-like axis has separate upper male and hardened lower female segments.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 256",
+        "reference": "Membranous base with fringe/ring of hairs; both structures can be seen at magnification.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "urochloa-texana",
@@ -839,10 +924,11 @@
         "one_sided"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
-        "membrane"
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -850,6 +936,27 @@
     },
     "source_blob_sha": "f44ba6c0df7ac8a60927f02cc3be9dd512ee7392",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 259",
+        "reference": "Compact panicle of erect-appressed one-sided spikelet-bearing branches.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 259",
+        "reference": "Annual that may creep and root from lower nodes; not always an upright tuft.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 259",
+        "reference": "Ligule a fringe of hairs up to 1 mm, not an obvious papery flap.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   }
 ]
