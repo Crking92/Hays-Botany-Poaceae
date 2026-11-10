@@ -47,10 +47,10 @@
     "field_rule": "Sparse interrupted flowering axis + fewer bristles, sometimes absent at terminal upper spikelets; verify BRISTLE INSERTION on branchlet and perennial knotty base, not a guessed hair arrow.",
     "traits": {
       "head": [
-        "foxtail"
+        "sparse_bristles"
       ],
       "habit": [
-        "rhizome"
+        "tuft"
       ],
       "ligule": [
         "hairs"
@@ -61,8 +61,22 @@
     },
     "source_blob_sha": "b13c256d97ec509d660549d220b9a91c3251b289",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas (1999), uploaded p.242–244",
+        "reference": "Sparse, interrupted panicle resembling a Panicum; short bristles usually near terminal spikelets only, not a dense foxtail cylinder.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Same regional flora p.244",
+        "reference": "Tufted erect perennial with swollen hard bases; previously inferred rhizomatous state should not be imposed.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "sorghastrum-elliottii",
@@ -708,7 +722,8 @@
         "one_sided"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "hairs"
@@ -719,8 +734,28 @@
     },
     "source_blob_sha": "192e6d6094c0804e3ddcb4e27ecb61f3e0910aba",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Kew POWO GrassBase under Brachiaria fasciculata, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1156554-2/general-information",
+        "reference": "3–20 unilateral racemes along a central axis; sometimes secondary branches; one-sided state supported.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Same Kew GrassBase",
+        "reference": "Annual decumbent culms rooting from lower nodes; surface-running mat possible.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Same Kew GrassBase",
+        "reference": "Hair-fringe ligule ~1 mm.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "urochloa-reptans",
@@ -767,8 +802,28 @@
     },
     "source_blob_sha": "67cb627ac95b0166055f0bcacb33e99224a561d1",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Kew POWO GrassBase under Brachiaria reptans, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:426280-1/general-information",
+        "reference": "5–15 short unilateral racemes along central axis, spikelets in pairs.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Same Kew GrassBase",
+        "reference": "Annual decumbent stems root at lower nodes; may form surface mats.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Same Kew GrassBase",
+        "reference": "Hair-fringe ligule, not an obvious free papery flap.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "zizania-texana",
@@ -857,19 +912,40 @@
         "aquatic_gender"
       ],
       "habit": [
-        "rhizome"
+        "aquatic_rooted"
       ],
       "ligule": [
         "membrane"
       ],
       "awns": [
+        "long",
         "none_obvious"
       ]
     },
     "source_blob_sha": "1ea0c620dd0ca5d3beb1bc73afa69cca507112b6",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Texas Parks and Wildlife Dept., https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/listed-species/plants/texas_wild_rice.phtml",
+        "reference": "Flowering stalk holds lower hanging male flowers and upper erect female flowers; Hays County San Marcos River endemic. Do not touch or collect protected plants.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Same TPWD + USFWS, https://www.fws.gov/species/texas-wild-rice-zizania-texana",
+        "reference": "Rooted under running water, leaves stream parallel to current; stolons permit clonal spread. Do not require an exposed underground rhizome to match a field observation. Published GrassBase account calls it annual under some conditions; TPWD/USFWS emphasize perennial aquatic behavior.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Same TPWD",
+        "reference": "Pistillate/female spikelets have slender awns 9–35 mm; male spikelets lack this feature, so observable awn state depends on sex and reproductive stage.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "zizaniopsis-miliacea",
@@ -943,7 +1019,27 @@
     },
     "source_blob_sha": "f34815a52db26f7e3cb45b154dd999baf5a02a78",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, uploaded p.262",
+        "reference": "Large loose 30–60 cm wetland panicle with staminate and pistillate spikelets intermingled, unlike clearly separated upper female/lower male branches in Texas wild-rice.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Same regional flora p.262",
+        "reference": "Strong rhizomatous wetland perennial, often 1.5–3 m.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Same regional flora p.262",
+        "reference": "Prominent membranous ligule 6–20 mm.",
+        "status": "REFERENCE_CHECKED_PARTIAL",
+        "review_date": "2026-11-10"
+      }
+    }
   }
 ]
