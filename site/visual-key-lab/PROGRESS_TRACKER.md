@@ -10,11 +10,23 @@
 |---|---|---|---|
 | 1. Complete species framework | **COMPLETE** | **112/112 species** (100%), 53 genera, 9 JSON species files, all load and pass integrity tests | Every indexed species available to candidate filtering, unknown traits permitted |
 | 2. Initial top-level morphology **source-coverage** | **INITIAL PASS COMPLETE; DETAIL OPEN** | **112/112 species (100%) have at least one source-backed broad or visible character** after group screening across all 112. Individual head, habit, ligule and awn states remain **partly provisional** and must be checked more deeply. | Initial broad group review and at least one cited morphology character per species; **NOT** full morphology verification |
-| 3. Diagnostic genus/species characters | **IN PROGRESS — PASS 1 (11/112 source-backed checklists)** | **24** cited anatomical check prompts across **11** bluestem/grama species; KR awn units corrected, blue/hairy grama ligules source-checked. **0/112** fully photo-and-dissection certified. | Complete comparable morphology matrix, measurements, contradictions, source taxon concepts, and photographs |
+| 3. Diagnostic genus/species characters | **IN PROGRESS — PASSES 1–2 (21/112 checklist profiles, 18.75%)** | **49** source-linked anatomical check prompts across **21** grass species. Source differences in sideoats ligule and hooded windmill whorls recorded; all anatomical photo-role QA remains pending. **0/112** fully photo-and-dissection certified. | Complete comparable morphology matrix, measurements, contradictions, source taxon concepts, and photographs |
 | 4. Character-photo matching QA | **NEEDS SYSTEMATIC PASS** | **514** source-licensed image references linked; one key-photo gap at Canyon muhly; presence of a photo does not mean it demonstrates the chosen character | Each public visual character image clearly demonstrates the specified structure and carries exact-source rights |
 | 5. Full-key and field acceptance | **NOT COMPLETE** | Data integrity and **24/24** targeted candidate-retention tests passed; actual picture crops, live latest deployment and field specimens still need verification | Key and pages function on desktop/mobile and field testing confirms paths and avoids false exclusions |
 
-**How far from completion?** Species framework **and the first complete source-coverage pass** are finished: **112/112** indexed and **112/112** with at least one externally supported morphological character. This is NOT 100% completion of the project. The remaining work is the 101 species without Phase 3 source-linked checklists, deeper verification of all diagnostic checks, photo-role verification and attribution (Phase 4), and live field acceptance (Phase 5). The current key is an unverified prototype.
+**How far from completion?** Species framework **and the first complete source-coverage pass** are finished: **112/112** indexed and **112/112** with at least one externally supported morphological character. This is NOT 100% completion of the project. The remaining work is the 91 species without Phase 3 source-linked checklists, deeper verification of all diagnostic checks, photo-role verification and attribution (Phase 4), and live field acceptance (Phase 5). The current key is an unverified prototype.
+
+## Phase 3 — latest cumulative status (Pass 2, 2026-11-10)
+
+- **21 of 112 (18.75%)** now have first source-linked anatomical diagnostic checklists, containing **49** individual checks. **91** remaining for first checklist screening. This is *checklist coverage*, not 21 species confirmed by dissected specimens and diagnostic photos.
+- Second pass added **10 species / 25 anatomical checks**: big bluestem, sideoats grama, bushy bluestem, broomsedge, *Anatherum tenuispatheum*, tumble windmillgrass, feather fingergrass, hooded windmillgrass, slender windmillgrass and shortspike windmillgrass hybrid.
+- Evidence correction: hooded windmillgrass may have **closely packed whorls**, not necessarily only one; compare shape/awn of the inflated upper sterile floret against *C. verticillata* and possible hybrid intermediates.
+- Source inconsistency: FNA describes sideoats grama as **membranous ciliate ligule (0.3–0.5 mm)** while Kew GrassBase describes a **hair fringe (~0.5 mm)**. Two broad key states allowed provisionally, flagged as source-category conflict for collar macro QA.
+- *A. tenuispatheum*: published raceme-spathe width, ligule and sessile-spikelet measurements are now stored under its accepted-name profile with older-source taxon-concept warnings; no local voucher/photo anatomy verified.
+- **20/20** new candidate-retention scenarios passed on all 112 profiles; the **14/14** previous specific checks and **24/24** legacy candidate tests were also reported passing in their respective passes. These are filtering tests, not specimen-validation tests.
+- **514** already linked source-photo references still need actual role/crop/rights QA under Phase 4. **No new photo bytes published** during the key work.
+- [Pass 2 report](TOP_DOWN_PHASE3_PASS2_WINDBLUESTEM_2026-11-10.md) · [Pass 1 report](TOP_DOWN_PHASE3_PASS1_BLUESTEMS_GRAMAS_2026-11-10.md).
+- **Next batch suggestion:** native/introduced bristlegrasses and sorghums, or Poa/Aristida/Bromus regional look-alikes; keep genus/photo decisions skippable pending source-backed anatomy.
 
 ## Phase 3 — first species-separating anatomy pass (2026-11-10)
 
@@ -25,7 +37,7 @@
 - **New candidate-retention regression:** **14/14** comparison scenarios kept the expected species in the filtered results, including KR with visible and hidden awns, KR after cutting, six bluestem examples, and grama distinctions. Candidate retention does **not** prove that a single result is correctly identified.
 - **Photo and specimen QA still pending:** photo-role accuracy for all **514** references remains an independent Phase 4 task; do not mark any species photo verified merely because a textual character is externally supported.
 - Source notes: [Phase 3 pass 1 detailed report](TOP_DOWN_PHASE3_PASS1_BLUESTEMS_GRAMAS_2026-11-10.md); [FNA KR](https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483); [FNA hairy grama](https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427); [Kew POWO/GrassBase](https://powo.science.kew.org/).
-- **Next Phase 3 batch:** complete additional big bluestem, sideoats and remaining native/introduced bluestem look-alikes, then the windmillgrasses. Preserve all 112 as candidates when traits are unknown. No photos imported in this pass.
+- **Pass 1 handoff (completed by Pass 2):** additional big bluestem, sideoats and windmillgrass look-alikes now have first-pass checklist coverage. Preserve all 112 as candidates when traits are unknown. No photos imported in either pass.
 
 ## Broad-morphology group-level review — coverage status
 
