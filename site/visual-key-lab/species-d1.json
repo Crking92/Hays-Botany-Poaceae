@@ -1085,6 +1085,37 @@
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Trace a complete, widely branching flowering panicle",
+        "check": "Fall witchgrass produces a diffuse, wiry, spreading panicle with usually SOLITARY oval or lanceolate spikelets at ends of long pedicels. Mature branches may detach and tumble; a 'finger' cluster is not typical.",
+        "compare": "Southern crabgrass has 3–7(+) relatively straight racemes with *paired* crowded spikelets along their lower edges.",
+        "certainty": "Texas A&M + Oklahoma State field accounts; whole-attached panicle photo needed",
+        "source": "Texas A&M — Fall witchgrass",
+        "url": "https://rangeplants.tamu.edu/plant/fall-witchgrass/"
+      },
+      {
+        "look": "Look for a nearly absent LOWER glume",
+        "check": "Oklahoma State reports a lower glume tiny or absent, upper glume nearly as long as the lower sterile lemma. Each spikelet contains a sterile lower and fertile upper floret; this fits the panicoid pair, not a 4–13-flowered sprangletop spikelet.",
+        "compare": "Digitaria ciliaris instead has a distinct small triangular lower glume and short winged racemes carrying spikelets in pairs.",
+        "certainty": "Oklahoma State floral account; close scaled floret anatomy pending",
+        "source": "Oklahoma State Plant ID — Digitaria cognata",
+        "url": "https://extension.okstate.edu/programs/plant-id/plant-profiles/fall-witchgrass"
+      },
+      {
+        "look": "Separate crinkled leaf edge from inner ligule",
+        "check": "The short MEMBRANOUS ligule is at the blade–sheath junction. A white, often wavy or crinkled blade margin, densely hairy LOWER sheaths and a perennial wiry, horizontal stem base are useful together.",
+        "compare": "Southern crabgrass is generally annual, usually with somewhat broader leaves and a digitate seedhead; color and leaf-edge curl alone are insufficient.",
+        "certainty": "Oklahoma State + Texas A&M vegetative treatment; no winter rooted voucher confirmed",
+        "source": "Oklahoma State Plant ID — Digitaria cognata",
+        "url": "https://extension.okstate.edu/programs/plant-id/plant-profiles/fall-witchgrass"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     }
   },
   {
@@ -1181,7 +1212,45 @@
         "reference": "Eciliate membranous ligule described at species level; subspecies treatment requires separate crosswalk.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "taxon_concept": {
+        "source": "Kew POWO Dinebra panicea / synonym Leptochloa panicea Flora of Tropical East Africa",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information",
+        "reference": "Species-level panicea complex morphology can be applied to broad comparison but does not authenticate ssp. mucronata; needs local voucher and diagnostic subspecies treatment.",
+        "status": "SUBSPECIES_ID_UNVERIFIED",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Trace the numerous slender parallel flowering branches",
+        "check": "Kew's older *Leptochloa panicea* morphology gives a narrow, brushlike 9–36 cm head of many slender straight ascending unilateral branches, often 2–14 cm long, arranged along the central axis.",
+        "compare": "Green sprangletop (*Disakisperma dubium*) often has fewer, looser, outward-flexing branches and much larger spikelets.",
+        "certainty": "Species-level old-name source; NOT independently proof of the subspecies mucronata",
+        "source": "Kew POWO / GrassBase under Leptochloa panicea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information"
+      },
+      {
+        "look": "Dissect a tiny MULTIFLORED spikelet",
+        "check": "The older species account gives a laterally compressed 1.8–2.5 mm spikelet with about 2–4(5) florets, unequal glumes ~0.9–1.7 mm and minute blunt two-toothed lemmas ~0.9–1.2 mm.",
+        "compare": "Green sprangletop typically has 4–13 florets but a much larger 4–12 mm spikelet and longer glumes; don't mistake a single spikelet for a whole branch.",
+        "certainty": "Species-level old-name account; subspecies-level diagnostic characters remain unresolved",
+        "source": "Kew POWO — Dinebra panicea source under Leptochloa",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information"
+      },
+      {
+        "look": "Check true ligule and record taxon concept",
+        "check": "A short membranous ligule, rather than a pure hair ring, and hairy sheath/blade may fit the broader Dinebra panicea complex. The published older name *Leptochloa panicea* must be crosswalked before claiming subsp. *mucronata*.",
+        "compare": "Disakisperma has a 0.5–1.5 mm ciliate membrane but differs more reliably in mature floral structures and hidden cleistogamous shoots.",
+        "certainty": "Generic/species morphology source; do NOT mark exact subspecies verified without voucher treatment",
+        "source": "Kew POWO — Dinebra panicea accepted-name page",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     }
   },
   {
