@@ -646,7 +646,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Trace one bristle to its point of origin",
+        "check": "A Setaria bristle is a persistent sterile branchlet BELOW the spikelet, not a pointed awn from the lemma. Count the cluster around an intact spikelet: Flora of North America gives usually 4–12 bristles about 2–12 mm.",
+        "compare": "Scheele's bristlegrass usually has one much longer bristle; sandbur spines form a fused burr cup",
+        "certainty": "FNA-backed; exact attached macro pending",
+        "source": "Flora of North America — Setaria parviflora",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=16593"
+      },
+      {
+        "look": "Find the living knotty rhizome",
+        "check": "Perennial plants have short, knotty underground rhizomes and a dense uniform foxtail head about 3–8(10) cm. Show the real connection under the soil, not a detached swollen stem base.",
+        "compare": "Annual foxtail millet lacks this connected perennial rhizome",
+        "certainty": "FNA-backed; existing gallery root photo not certified",
+        "source": "Flora of North America — Setaria parviflora",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=16593"
+      },
+      {
+        "look": "Open a spikelet and the INNER collar",
+        "check": "The hair-fringe ligule is usually less than 1 mm. Spikelets are roughly 2–2.8 mm; upper fertile lemmas are distinctly wrinkled across their width, unlike the smooth/shiny fertile lemmas possible in cultivated millet.",
+        "compare": "Foxtail millet is much more variable in its large heavy head and has smoother upper lemmas",
+        "certainty": "FNA-backed; scale and same-plant macro pending",
+        "source": "Flora of North America — Setaria parviflora",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=16593"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    }
   },
   {
     "id": "sorghum-halepense",
@@ -667,7 +698,8 @@
         "membrane"
       ],
       "awns": [
-        "none_obvious"
+        "none_obvious",
+        "long"
       ]
     },
     "photos": [
@@ -705,9 +737,10 @@
         "review_date": "2026-11-10"
       },
       "awns": {
-        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
-        "reference": "Illustrated Flora of North Central Texas, Sorghum halepense, printed p.1324: lemma awn absent or short (~1–1.5 mm). 'No conspicuous LONG awn' is supported; 'always awnless' would not be.",
-        "status": "REGIONAL_FLORA_CHECKED",
+        "source": "Flora of North America, Sorghum halepense; versus Illustrated Flora of North Central Texas",
+        "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Sorghum+halepense",
+        "reference": "FNA allows awnless upper fertile lemma OR a geniculate twisted awn to 13 mm. Previous regional-flora 1–1.5 mm statement cannot be a universal cap. Broad key retains both inconspicuous and long-visible awn states.",
+        "status": "FNA_CHECKED_BROAD_VISUAL_VARIATION_SOURCE_CONFLICT",
         "review_date": "2026-11-10"
       },
       "habit": {
@@ -717,7 +750,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Expose a connected underground rhizome",
+        "check": "Johnsongrass is a robust perennial producing long, scaly, creeping rhizomes. Keep the connected underground stem attached to a leafy shoot in one photo; a detached white root is not a rhizome.",
+        "compare": "Sorghum bicolor lacks this extensive persistent rhizome system and is usually annual/short lived",
+        "certainty": "FNA-backed; existing rhizome photo still needs photo-role QA",
+        "source": "Flora of North America — Sorghum halepense",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Sorghum+halepense"
+      },
+      {
+        "look": "Examine a sessile AND its pedicelled companion spikelet",
+        "check": "A Johnsongrass branch ends in short spikelet-pair rames; FNA describes a fertile sessile spikelet about 3.8–6.5 mm and a developed pedicelled mostly staminate companion about 3.6–5.6 mm. This is NOT an empty pedicel as in Indiangrass.",
+        "compare": "Sorghastrum nutans has only a bare companion pedicel; Sorghum bicolor has heavier often persistent grain-bearing spikelets",
+        "certainty": "FNA-backed; paired unit macro pending",
+        "source": "Flora of North America — Sorghum halepense",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Sorghum+halepense"
+      },
+      {
+        "look": "Do not force Johnsongrass to be awnless",
+        "check": "FNA permits a mature sessile spikelet lemma either without an awn OR with a twisted, bent awn up to about 13 mm. Examine the true blade–sheath junction: membrane 2–6 mm with a ciliate edge.",
+        "compare": "S. bicolor can also be awnless or long-awned, so this is a safe filter state rather than stand-alone diagnosis",
+        "certainty": "FNA regional contrast with older North Central Texas short-awn claim: retain both options",
+        "source": "Flora of North America — Sorghum halepense",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Sorghum+halepense"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    }
   },
   {
     "id": "andropogon-gerardi",
