@@ -9,22 +9,24 @@
 | Phase | Status | Progress / evidence | Definition of complete |
 |---|---|---|---|
 | 1. Complete species framework | **COMPLETE** | **112/112 species** (100%), 53 genera, 9 JSON species files, all load and pass integrity tests | Every indexed species available to candidate filtering, unknown traits permitted |
-| 2. Top-level structural character accuracy | **IN PROGRESS** | **33/112 species (29.5%) have at least one regional-flora-checked character.** Two groups screened: 22 bluestem/grama/windmill grasses (11 newly corrected plus buffalograss previously checked) and 24 airy-panicle grasses (20 now partially flora-checked, four pending). These species are NOT fully verified. | All 112 have checked head/growth states and documented overlapping or variable forms |
+| 2. Top-level structural character accuracy | **IN PROGRESS** | **60/112 species (53.6%) have at least one reference-checked morphological character.** Three group-level screening batches cover 74 species: 22 bluestems/gramas/windmillgrasses, 24 airy-panicle grasses, and 28 one-sided raceme/bristle/reed/wetland grasses. **52** species have no comparable external character check yet. These 60 are **not** fully species-verified. | All 112 have checked head/growth states and documented overlapping or variable forms |
 | 3. Diagnostic genus/species characters | **NOT STARTED AS A COMPLETE PASS** | Existing Hays Botany cards contain many ligule, spikelet, glume, lemma, awn notes, but no 112-species consistent checked morphology matrix | Distinguishing microcharacters and measurements verified by source and taxon concept, with uncertainty |
 | 4. Character-photo matching QA | **NEEDS SYSTEMATIC PASS** | **514** source-licensed image references linked; one key-photo gap at Canyon muhly; presence of a photo does not mean it demonstrates the chosen character | Each public visual character image clearly demonstrates the specified structure and carries exact-source rights |
 | 5. Full-key and field acceptance | **NOT COMPLETE** | Automated syntax, mapping and selected combinations run; live 112-species page/photo behavior and real Hays County field specimens still need validation | Key and pages function on desktop/mobile and field testing confirms paths and avoids false exclusions |
 
-**How far from completion?** The 112-species construction phase is finished, but the larger scientific-validation workload remains. Treat `33/112` as **partial source-backed species coverage**, not 29.5% of the entire project completed. One phase complete, one in progress, three still requiring a systematic pass.
+**How far from completion?** The 112-species construction phase is finished, but the larger scientific-validation workload remains. Treat `60/112` as **partial source-backed species coverage**, not 53.6% of the entire project completed. **38** grasses have not yet had their first group-level screening, including various spike/awn and fine-panicle groups. One phase complete, one in progress, three still requiring a systematic pass.
 
 ## Broad-morphology accuracy progress by related-grass group
 
-| Group | Species screened | Species with partial regional flora checks | Remaining provisional in group |
+| Group | Species given broad screening | At least one reference-checked character | Still provisional in group |
 |---|---:|---:|---:|
-| Bluestems, gramas and windmillgrasses | 22 | 12 (includes buffalograss) | 10 |
-| Airy-panicle groups (*Panicum, Dichanthelium, Poa, Eragrostis, Muhlenbergia*) | 24 | 20 | 4 |
-| Other genera (including Johnsongrass) | Not yet group-reviewed | 1 (Johnsongrass) | Regional and taxonomic review pending |
+| Bluestems, gramas, windmillgrasses | 22 | 12 | 10 |
+| Airy panicles (*Panicum, Dichanthelium, Poa, Eragrostis, Muhlenbergia*) | 24 | 20 | 4 |
+| One-sided racemes, bristlegrasses, sorghums, reeds, wetland grasses | 28 | 28 (Johnsongrass was already checked) | 0 without any partial source check |
+| Not yet grouped/screened | 38 | 0 | 38 |
+| **Total** | **112** | **60** | **52** |
 
-These group counts sum to **33 distinct partially checked species** (12 + 20 + 1); none of these should be called fully botanically verified.
+**Interpretation:** A “reference-checked” species may have only one broad character supported by a flora or GrassBase. It does **not** mean all of its four coded characters, its photograph assignments, taxon concept, native range or diagnostic field ID are verified.
 
 ## Current subphase: broad morphology by related-grass group
 
@@ -75,12 +77,23 @@ QA: every one of **112 indexed species** remains unique, all character-state key
 
 Full detail: [Airy-panicle source checks](TOP_DOWN_QA_PASS3_AIRY_PANICLES_2026-11-10.md).
 
+## Latest pass — one-sided racemes, bristles, reeds, wetland grasses (2026-11-10)
+
+All **28** species in the selected group now have at least one partial source check, including Johnsongrass from the earlier pass. **27 newly source-checked species** bring the project total to **60/112**. Source descriptions, uncertainties and old-to-new taxon name crosswalks are preserved in the nine species JSON files; underlying Hays Botany species lessons were **not** rewritten.
+
+Key changes: distinct sparse-interrupted *Setaria reverchonii* choice; vaseygrass's numerous ascending one-sided racemes; hairs and rooting lower nodes on *Urochloa texana*; grain sorghum awned/awnless variability; aquatic current-swept Texas wild-rice with separated lower male / upper female floral branches; giant cutgrass with sexes intermingled; glume rather than lemma awns in *Polypogon*. No further species were added.
+
+**18/18** targeted combination tests retained the expected species. Some paths correctly retain multiple candidates (*Paspalum*, *Arundo*/*Phragmites*); they require fine anatomy in Phase 3. JavaScript syntax, state mappings and all photo-choice references passed metadata checks, **not live image inspection**.
+
+Detailed source notes: [Pass 4 — racemes, bristles, reeds and wetlands](TOP_DOWN_QA_PASS4_RACEMES_REEDS_2026-11-10.md).
+
 ## Next subphases (order)
 
-1. Continue **broad-structure accuracy** with *Paspalum, Digitaria, Setaria, Urochloa, Sorghum*, reed and wetland groups, including misleading whole-head choices.
-2. Resolve the four pending airy-panicle taxon/season/ligule issues using updated Kew GrassBase and appropriate regional revisions.
-3. Return to previously screened groups for detailed branch insertions, true ligules, measured glumes/lemmas, and species-distinguishing reproductive traits.
-4. QA genuine diagnostic photographs and rights one character at a time (not every existing generic image is a valid diagnostic example).
-5. Run automated and real-world key tests, then promote to permanent navigation after acceptance.
+1. Screen the **remaining 38** first-pass grasses, clustering true spikes, awned grains, dropseeds and small cool-season grasses; flag unresolved forms rather than forcing their states.
+2. Resolve the **14** already screened but still provisional species (10 in the bluestem/grama/windmill group, 4 airy-panicle species) with taxonomic crosswalks and applicable regional sources.
+3. Begin systematic Phase 3 checks of species-separating structures: ligule type and dimensions, floret sex/arrangement, rachilla hairs, true glume versus lemma awns, and source-supported measurements.
+4. Run photo-by-photo diagnostic cropping and attribution checks, prioritizing the photographed choices already causing confusion, and find legal Canyon muhly images.
+5. Test candidate filtering and real field specimens on mobile/desktop, and move to the permanent `grass-id` location only after acceptance.
+
 
 **Project workflow guardrails:** no changes to the old hub; source species galleries remain untouched, no extra spreadsheets, no forced guessing, unknown states do not eliminate a species, regional-native labels must not be inferred from an old flora's geographic range alone.
