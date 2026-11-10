@@ -135,7 +135,8 @@
         "rhizome"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -156,9 +157,48 @@
         "reference": "Flora confirms large rhizomatous perennial, both open panicle and clumped versus rhizomatous upland forms, fringed membranous ligule. Existing multistates retained.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew GrassBase Panicum virgatum + FNA/UMass field descriptions",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information",
+        "secondary_source_url": "https://www.umass.edu/agriculture-food-environment/landscape/publications-resources/weed-identification/switchgrass--panicum-virgatum",
+        "reference": "True ligule is a ciliate MEMBRANE; after it abrades it may LOOK like dense white hair fringe. Hair triangle on upper blade is a SEPARATE structure. Both visual collar options permitted to avoid false exclusion.",
+        "status": "SOURCE_CHECKED_WORN_LIGULE_APPEARANCE_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect the hair TRIANGLE and true ligule separately",
+        "check": "Switchgrass commonly shows a wedge/triangle of hairs on the UPPER blade surface immediately above the collar. Its anatomical ligule is a CILIATE MEMBRANE; some descriptions note it wears away leaving a prominent ring of white hairs. The hair patch is NOT the ligule.",
+        "compare": "Indiangrass has the conspicuous rifle-sight pointed auricles on either side of a membranous ligule; Hall's panicgrass lacks the robust switchgrass collar and rhizome combination.",
+        "certainty": "Kew/FNA/UMass sources; same-plant opened collar photo pending, two broad visual appearances accepted",
+        "source": "Kew GrassBase — Panicum virgatum; field collar description",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information"
+      },
+      {
+        "look": "Expose the long, scaly rhizomes under a mature flowering culm",
+        "check": "Large perennial switchgrass usually has sturdy scaly creeping RHIZOMES connecting shoots; FNA descriptions note variable tufted and sod-forming ecotypes. Its large airy, typically 15–55 cm long panicle can persist dry into winter.",
+        "compare": "Kleingrass may have very short knotty rhizomes but not the same long stout scaly system; witchgrass is an annual with a loose fall tumblehead.",
+        "certainty": "FNA and Kew; no winter rooted same-plant photo certified; don't infer rhizomes from a detached clump",
+        "source": "Flora of North America — Panicum virgatum",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Panicum+virgatum"
+      },
+      {
+        "look": "Compare the wide, large two-floret spikelets with Hall's and kleingrass",
+        "check": "FNA allows broad intraspecific spikelet variation (~2.5–8 mm); Kew typical GrassBase 3–5 mm. The lower glume is roughly 1/2–4/5 length, with prominent veins; upper glume and lower staminate lemma exceed the smooth, shiny smaller fertile upper floret. Don't interpret separate florets as separate spikelets.",
+        "compare": "Hall's panicgrass has mainly 2.2–3.9 mm spikelets in close clusters; kleingrass mainly 2.5–3.5 mm spikelets with a lower glume often only 1/3 length.",
+        "certainty": "Species-wide source measurement range differs; no universal spikelet cutoff or exact local specimen proof",
+        "source": "Flora of North America — Panicum virgatum",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Panicum+virgatum"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS9_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published Panicum flowerhead and floral/collar anatomy; fine-scale and winter same-specimen photo roles, local identity, and field acceptance pending."
+    }
   },
   {
     "id": "paspalum-distichum",
