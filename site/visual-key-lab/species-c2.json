@@ -189,14 +189,32 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "hairs",
+        "absent"
+      ],
       "awns": [
         "none_obvious"
       ]
     },
     "source_blob_sha": "5d0b4a364187336eadc62e27d153259b0f22b4a7",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "World Flora Online Dichanthelium commutatum, https://worldfloraonline.org/taxon/wfo-0000863400",
+        "reference": "Open relatively few-flowered panicle ~5–10 cm with wiry stems; seasonal phase and look-alikes require photo examination.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Same WFO taxonomic account",
+        "reference": "Ligule minute hair fringe OR absent. Do not confuse hairy sheath margins/collar with actual ligule.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "dichanthelium-oligosanthes",
