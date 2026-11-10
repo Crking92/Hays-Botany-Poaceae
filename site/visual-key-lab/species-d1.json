@@ -410,8 +410,16 @@
     },
     "source_blob_sha": "3b562d9f365f251425f217d41aa47297d5f43613",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "ligule": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.180 (printed 1256): Chloris generic ciliate membrane, also supported by existing Hays species card; detailed form unverified",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "chloris-x-subdolichostachya",
@@ -434,8 +442,7 @@
     "field_rule": "Confirmed hybrid concept in Kew/USDA does not establish photo-level hybrid diagnosis: separately measure BOTH lemma bodies and BOTH awns, show reproductive insertion and field voucher; a windmill head alone is Chloris sp.",
     "traits": {
       "head": [
-        "fingers",
-        "whorls"
+        "fingers"
       ],
       "habit": [
         "mat"
@@ -447,8 +454,16 @@
     },
     "source_blob_sha": "d9bd94f715a5e24d0df39b7180cf099c89817537",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.180 (printed 1256): one terminal whorl in regional key; newer taxon hybrid concept makes photo-based diagnosis provisional",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "dichanthelium-lindheimeri",
