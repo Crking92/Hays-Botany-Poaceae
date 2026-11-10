@@ -517,13 +517,18 @@
     "hero_i": 0,
     "traits": {
       "head": [
-        "airy"
+        "airy",
+        "long_narrow_panicle"
       ],
       "habit": [
         "rhizome"
       ],
-      "ligule": [],
-      "awns": []
+      "ligule": [
+        "membrane"
+      ],
+      "awns": [
+        "none_obvious"
+      ]
     },
     "photos": [
       {
@@ -545,7 +550,28 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
       }
     ],
-    "genus": "Sorghum"
+    "genus": "Sorghum",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
+        "reference": "Illustrated Flora of North Central Texas, Sorghum halepense, printed p.1324 (uploaded PDF p.248): mature panicles can be narrow/dense OR loose/open. A fixed open-only head state is not supported.",
+        "status": "REGIONAL_FLORA_CHECKED",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
+        "reference": "Illustrated Flora of North Central Texas, Sorghum halepense, printed p.1324: the ligule is membranous with a hair fringe; not an exclusively hair-only ligule.",
+        "status": "REGIONAL_FLORA_CHECKED",
+        "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
+        "reference": "Illustrated Flora of North Central Texas, Sorghum halepense, printed p.1324: lemma awn absent or short (~1–1.5 mm). 'No conspicuous LONG awn' is supported; 'always awnless' would not be.",
+        "status": "REGIONAL_FLORA_CHECKED",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "andropogon-gerardi",
