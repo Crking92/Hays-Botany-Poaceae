@@ -414,7 +414,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count awns on ONE fertile lemma",
+        "check": "Texas wintergrass carries ONE long 40–90 mm (4–9 cm) twice-bent awn on the mature lemma, not three branches from a single lemma. Check the actual floret base.",
+        "compare": "Aristida spp. have three lemma awns; native Texas needlegrasses may have a single awn too",
+        "certainty": "FNA morphological account; local winter specimen macro pending",
+        "source": "Flora of North America — Nassella leucotricha",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630064"
+      },
+      {
+        "look": "Check the sharp hairy callus and lemma crown",
+        "check": "A mature floret is about 6.5–13 mm with a very sharp hairy callus ~1–5.5 mm and a narrowed, distinct crown below the awn. Avoid misidentifying by the long awn alone.",
+        "compare": "Other Nassella/Stipa with long awns; one sharp callus and crown together matter",
+        "certainty": "FNA-backed; measured dissection pending",
+        "source": "Flora of North America — Nassella leucotricha",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630064"
+      },
+      {
+        "look": "Do not confuse collar side hairs with the ligule",
+        "check": "FNA describes a short true membrane ligule around 0.2–1.2 mm, and tufts of hairs at the SIDES of the collar. Older regional flora also mentions ligules apparently absent: preserve uncertainty for worn material.",
+        "compare": "Aristida hair fringe and other winter grasses; separate true ligule from adjacent auricle-like hair tufts",
+        "certainty": "Sources differ on visibility; no collar photo certified",
+        "source": "Flora of North America — Nassella leucotricha",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630064"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "panicum-hallii",
@@ -848,8 +879,38 @@
         "reference": "Species complex includes contracted and open panicles across named varieties; do not require one universally airy head.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "glumes": {
+        "source": "Kew POWO / GrassBase Aristida purpurea (species account); concept varies by infraspecific name",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information",
+        "reference": "Lower glume about 6–8 mm, usually 1-veined; upper about 11–15 mm. Compare A. oligantha lower glume normally 3–7-veined. Do not apply as universal cutoffs to every A. purpurea variety.",
+        "status": "SOURCE_CHECKED_TYPICAL_TREATMENT_INFRASPECIFIC_VARIATION",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Compare the lengths and veins of both glumes",
+        "check": "In GrassBase's typical species account, the LOWER glume is roughly 6–8 mm and one-veined, versus an UPPER glume about 11–15 mm and one-veined. Measurements can differ among varieties: record the taxon concept.",
+        "compare": "Prairie threeawn has a longer 3–7-veined lower glume usually closer to the upper glume length",
+        "certainty": "Published typical-species measurements, not universal variety cutoffs",
+        "source": "Kew POWO / GrassBase — Aristida purpurea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information"
+      },
+      {
+        "look": "Inspect the perennial crown and a mature floret",
+        "check": "Purple threeawn is a perennial rooted tuft; mature florets normally show three spreading awns arising from ONE lemma. A purple color or a narrow panicle by itself does not confirm this species.",
+        "compare": "A. oligantha is annual; its three long awns can look very similar at a distance",
+        "certainty": "Kew GrassBase and broad FNA genus morphology; root/photo QA pending",
+        "source": "Kew POWO / GrassBase — Aristida purpurea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327975-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   }
 ]
