@@ -224,6 +224,7 @@
       ],
       "ligule": [
         "hairs",
+        "membrane",
         "absent"
       ],
       "awns": [
@@ -241,13 +242,46 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Same WFO taxonomic account",
-        "reference": "Ligule minute hair fringe OR absent. Do not confuse hairy sheath margins/collar with actual ligule.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "source": "FNA Dichanthelium commutatum (ciliate membrane ~0.3 mm) versus WFO short hair fringe or absent",
+        "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+        "secondary_source_url": "https://worldfloraonline.org/taxon/wfo-0000863400",
+        "reference": "A tiny true membrane topped by longer cilia may appear like hairs or be completely worn/indiscernible; accept hairlike, membrane and absent-looking broad visual choices. Absence of visible ligule in a photo is not true anatomical absence.",
+        "status": "SOURCE_CONFLICT_OR_WORN_STAGE_VISUAL_TRIPLESTATE_PHOTO_PENDING",
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Check spring versus summer–fall flowering heads on ONE identified plant",
+        "check": "Flora of North America reports primary OPEN spring panicles about 5–12 cm, often April–June, and secondary mostly self-fertilizing (cleistogamous) small panicles from June to fall. Fall branches with reduced leaves may carry heads partly hidden by the flag sheaths.",
+        "compare": "D. oligosanthes also makes fall reduced panicles; seasonal head alone proves the genus, not the species.",
+        "certainty": "FNA spring/autumn account; no time-series same-plant local photos certified",
+        "source": "Flora of North America — Dichanthelium commutatum",
+        "url": "https://biogator.org/taxa/index.php?tid=11963"
+      },
+      {
+        "look": "Open the short ligule and inspect the leaf-base attachment",
+        "check": "FNA describes an approximately 0.3 mm CILIATE MEMBRANE, with cilia longer than the membrane and occasionally long neighboring hairs. Leaves can have asymmetrical, cordate-clasping bases with 9–13 prominent veins.",
+        "compare": "D. oligosanthes commonly has a conspicuous band of hairs ~1–3 mm with narrower blades; D. pedicellatum has very narrow leaves and a cormlike base.",
+        "certainty": "FNA vs WFO which may call the minute ligule a fringe or absent: preserve all three FIELD-APPEARANCE options; actual tissue needs magnification",
+        "source": "FNA Dichanthelium commutatum (compare World Flora Online)",
+        "url": "https://biogator.org/taxa/index.php?tid=11963"
+      },
+      {
+        "look": "Measure the two-floret spikelet and glume proportions",
+        "check": "Typical FNA spring spikelets about 2.2–3.2 mm long, pubescent, with a short LOWER glume ~0.7–1.8 mm and upper glume plus sterile lower lemma near spikelet length; hardened fertile upper floret has an often tiny raised apex.",
+        "compare": "D. oligosanthes spikelets overlap but are generally broader/rounder and 2.7–4.2 mm; check both against ruler and upper-glume vein prominence.",
+        "certainty": "Species/taxon variety variability; same-plant dissected glumes and fertility unconfirmed",
+        "source": "Flora of North America — Dichanthelium commutatum",
+        "url": "https://biogator.org/taxa/index.php?tid=11963"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS9_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-backed flowering phase/ligule/spikelet checklists; no same-plant spring/fall/winter photo certification or confirmed Hays County voucher."
+    }
   },
   {
     "id": "dichanthelium-oligosanthes",
@@ -302,9 +336,48 @@
         "reference": "Flora reports ligule length 0.1–4.2 mm varying between varieties, while Hays card reports hair fringe. Do not treat length or a distant collar photo as a species-level separator.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "winter_rosette": {
+        "source": "FNA D. oligosanthes; Texas A&M Scribner Dichanthelium (variety example)",
+        "source_url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Dichanthelium+oligosanthes",
+        "secondary_source_url": "https://rangeplants.tamu.edu/plant/scribner-dichanthelium/",
+        "reference": "Well-developed basal winter rosette, primary spring and secondary summer-fall flowering panicles. The Texas variety illustration is NOT automatically exact species/variety confirmation for gallery records.",
+        "status": "PUBLISHED_SEASONAL_BOTANY_PHOTO_ROLE_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Locate the genuine WINTER rosette and spring flowering culm",
+        "check": "FNA describes a well-differentiated basal winter rosette of several ovate/lanceolate blades ~2–6 cm, then stiffly erect vernal culms ~20–75 cm. Later stems can branch into bushy little fascicles with reduced blades.",
+        "compare": "D. pedicellatum is specifically documented as NOT rosette-forming and instead has a tiny shallow cormlike base. Do not require a winter rosette for every Dichanthelium.",
+        "certainty": "FNA and Texas A&M genus/variety examples; actual November–February rooted rosette remains photo-pending",
+        "source": "Flora of North America — Dichanthelium oligosanthes",
+        "url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Dichanthelium+oligosanthes"
+      },
+      {
+        "look": "Compare spring open and late short PANICLES, not separate species",
+        "check": "Primary spring panicles about 5–9 cm with ~6–60 spikelets; later secondary panicles can be short, included in sheaths and self-fertilizing. A winter rosette with no visible head is a vegetative candidate, NOT a finished species call.",
+        "compare": "D. commutatum also produces spring open heads and later concealed selfing heads, so measure spikelets and leaf morphology.",
+        "certainty": "FNA seasonal phase account; individual fall head photo not checked",
+        "source": "Flora of North America — Dichanthelium oligosanthes",
+        "url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Dichanthelium+oligosanthes"
+      },
+      {
+        "look": "Magnify the orange/purple upper-glume base and true hair ligule",
+        "check": "Spikelets ~2.7–4.2 mm, often broadened/obovoid, with a strongly veined UPPER glume sometimes orange-to-purple at the base; true ligule 1–3 mm of hairs. In some Texas var. scribnerianum specimens lower glume is ~0.85 mm and the upper ~2.5 mm.",
+        "compare": "D. commutatum can also show purple bases but usually smaller/narrower spikelets and tiny ciliate membrane; don't force color or a single variety measurement.",
+        "certainty": "FNA species range versus UT Texas var. scribnerianum; not equivalent to exact Texas variety ID",
+        "source": "Flora of North America — Dichanthelium oligosanthes",
+        "url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Dichanthelium+oligosanthes"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS9_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-backed flowering phase/ligule/spikelet checklists; no same-plant spring/fall/winter photo certification or confirmed Hays County voucher."
+    }
   },
   {
     "id": "digitaria-ciliaris",
