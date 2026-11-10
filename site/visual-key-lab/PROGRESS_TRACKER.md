@@ -9,12 +9,22 @@
 | Phase | Status | Progress / evidence | Definition of complete |
 |---|---|---|---|
 | 1. Complete species framework | **COMPLETE** | **112/112 species** (100%), 53 genera, 9 JSON species files, all load and pass integrity tests | Every indexed species available to candidate filtering, unknown traits permitted |
-| 2. Top-level structural character accuracy | **IN PROGRESS** | **15/112 species (13.4%) have at least one regional-flora-checked character.** First 22-species bluestem/grama/windmill group screened; 11 current group species edited, 11 remain provisional. Four earlier species have previous partial checks (including buffalograss). | All 112 have checked head/growth states and documented overlapping or variable forms |
+| 2. Top-level structural character accuracy | **IN PROGRESS** | **33/112 species (29.5%) have at least one regional-flora-checked character.** Two groups screened: 22 bluestem/grama/windmill grasses (11 newly corrected plus buffalograss previously checked) and 24 airy-panicle grasses (20 now partially flora-checked, four pending). These species are NOT fully verified. | All 112 have checked head/growth states and documented overlapping or variable forms |
 | 3. Diagnostic genus/species characters | **NOT STARTED AS A COMPLETE PASS** | Existing Hays Botany cards contain many ligule, spikelet, glume, lemma, awn notes, but no 112-species consistent checked morphology matrix | Distinguishing microcharacters and measurements verified by source and taxon concept, with uncertainty |
 | 4. Character-photo matching QA | **NEEDS SYSTEMATIC PASS** | **514** source-licensed image references linked; one key-photo gap at Canyon muhly; presence of a photo does not mean it demonstrates the chosen character | Each public visual character image clearly demonstrates the specified structure and carries exact-source rights |
 | 5. Full-key and field acceptance | **NOT COMPLETE** | Automated syntax, mapping and selected combinations run; live 112-species page/photo behavior and real Hays County field specimens still need validation | Key and pages function on desktop/mobile and field testing confirms paths and avoids false exclusions |
 
-**How far from completion?** The 112-species construction phase is finished, but the larger scientific-validation workload remains. Treat `15/112` as **partial source-backed species coverage**, not 13.4% of the entire project completed. One phase complete, one in progress, three still requiring a systematic pass.
+**How far from completion?** The 112-species construction phase is finished, but the larger scientific-validation workload remains. Treat `33/112` as **partial source-backed species coverage**, not 29.5% of the entire project completed. One phase complete, one in progress, three still requiring a systematic pass.
+
+## Broad-morphology accuracy progress by related-grass group
+
+| Group | Species screened | Species with partial regional flora checks | Remaining provisional in group |
+|---|---:|---:|---:|
+| Bluestems, gramas and windmillgrasses | 22 | 12 (includes buffalograss) | 10 |
+| Airy-panicle groups (*Panicum, Dichanthelium, Poa, Eragrostis, Muhlenbergia*) | 24 | 20 | 4 |
+| Other genera (including Johnsongrass) | Not yet group-reviewed | 1 (Johnsongrass) | Regional and taxonomic review pending |
+
+These group counts sum to **33 distinct partially checked species** (12 + 20 + 1); none of these should be called fully botanically verified.
 
 ## Current subphase: broad morphology by related-grass group
 
@@ -47,12 +57,30 @@ All nine of these combinations retain their expected species:
 
 These checks do **not** certify field IDs, local nativity, or the candidate system's final botanical accuracy.
 
+## Latest pass — airy and contracted panicles (2026-11-10)
+
+All **24** species in *Panicum, Dichanthelium, Poa, Eragrostis,* and *Muhlenbergia* were screened at the broad-character level; **20** now have partial regional-flora character evidence (two Poa species already had evidence). This is not full species-level validation.
+
+- Hall's panicgrass: a **short splitting membranous ligule fringed with hairs**, so either broad choice can represent what is visible.
+- Witchgrass: regional flora says hair ligule; existing FNA-backed record describes a ciliate membrane. Both are provisionally tolerated pending a scaled collar photo.
+- Purple lovegrass: tufted but with a short, knotty rhizomatous base (not exposed in the archived habit photos).
+- Seep muhly and nimblewill: published awn lengths overlap the visual long/short boundary, so the broad key allows variation.
+- Red lovegrass: the regional oxylepis treatment has a very short membranous ligule base partly hidden by hairs; don't extend subspecies-level anatomy to every plant.
+- Canyon muhly: the flora supports a short awn (0.5–2 mm), membranous genus-level ligule, and open fine-branched panicle; no CC-cleared public key photo yet.
+- Cedar rosette grass: the flora describes a 0.3–1 mm true **hair-fringe ligule** under the historical name *Panicum pedicellatum*.
+- Tumblegrass: the older *Schedonnardus paniculatus* name is cross-referenced; the long sparse radiating head is now source-checked.
+- Four pending source/taxon issues: *Dichanthelium commutatum, D. lindheimeri, Eragrostis lugens,* and *Muhlenbergia dubia*. Leave existing states provisional, not forced.
+
+QA: every one of **112 indexed species** remains unique, all character-state keys are valid, and 7 targeted selection routes retain their expected grasses. The 514 photo references are unchanged.
+
+Full detail: [Airy-panicle source checks](TOP_DOWN_QA_PASS3_AIRY_PANICLES_2026-11-10.md).
+
 ## Next subphases (order)
 
-1. Continue the remaining broad-character genus groups: *Panicum, Dichanthelium, Poa, Eragrostis, Muhlenbergia* (airy and contracted panicles), with source-backed exceptions.
-2. Then *Paspalum, Digitaria, Setaria, Urochloa, Sorghum*, reeds and wetland species, including more complex flowering architectures.
-3. Return to the 22 species already screened for detailed raceme attachments, ligule types, reproductive measurements, taxon synonyms and picture QA.
-4. Integrate appropriately licensed and correctly mapped GrassBase v2 character data, comparing any conflicting source claims against the regional flora rather than blindly overwriting them.
-5. Run automated and real-world key tests, then promote the key to the proposed permanent location only after acceptance.
+1. Continue **broad-structure accuracy** with *Paspalum, Digitaria, Setaria, Urochloa, Sorghum*, reed and wetland groups, including misleading whole-head choices.
+2. Resolve the four pending airy-panicle taxon/season/ligule issues using updated Kew GrassBase and appropriate regional revisions.
+3. Return to previously screened groups for detailed branch insertions, true ligules, measured glumes/lemmas, and species-distinguishing reproductive traits.
+4. QA genuine diagnostic photographs and rights one character at a time (not every existing generic image is a valid diagnostic example).
+5. Run automated and real-world key tests, then promote to permanent navigation after acceptance.
 
 **Project workflow guardrails:** no changes to the old hub; source species galleries remain untouched, no extra spreadsheets, no forced guessing, unknown states do not eliminate a species, regional-native labels must not be inferred from an old flora's geographic range alone.
