@@ -1091,13 +1091,46 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Smithsonian Hawaii Flora and Australian descriptions; AusGrass hair fringe account",
-        "reference": "Short ciliate membrane/hairy rim, 0.5–1 mm; sources differ in emphasis, so both broad visual choices allowed.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "source": "Smithsonian Hawaiian Flora (ciliate membrane), Kew GrassBase (hair fringe)",
+        "source_url": "https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Heteropogon&species=contortus",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:404772-1/general-information",
+        "reference": "Short ciliate membrane ~1 mm in Smithsonian; some GrassBase descriptions emphasize hair fringe. Both broad visible key states retained until actual photo shows tissue.",
+        "status": "CONFLICTING_SOURCE_CATEGORY_SAFE_MULTISTATE",
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Follow a whole raceme from base to tip",
+        "check": "Near the base the paired units are often alike, male or sterile and WITHOUT the long twisted awns; fertile sessile awned spikelets appear higher on the same raceme, beside unlike pedicelled companions.",
+        "compare": "Other bluestems with awned paired spikelets; tanglehead is not uniformly awned from bottom to top",
+        "certainty": "Smithsonian and Kew-backed; attached raceme photograph needed",
+        "source": "Smithsonian Hawaiian Flora — Heteropogon contortus",
+        "url": "https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Heteropogon&species=contortus"
+      },
+      {
+        "look": "Look at the sharp brown-bearded callus",
+        "check": "Mature fertile sessile spikelets are equipped with a very sharp, reddish-brown bearded callus (often 2–3 mm) and very long dark twisted awns, often about 5–12 cm; a detached unit may be prickly.",
+        "compare": "Aristida threeawns have three lemma awns; tanglehead has one long awn on each fertile sessile spikelet",
+        "certainty": "Kew/Smithsonian-backed; actual scaled callus photo pending",
+        "source": "Kew POWO / GrassBase — Heteropogon contortus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:404772-1/general-information"
+      },
+      {
+        "look": "Distinguish a true ligule from hairs at the collar",
+        "check": "Smithsonian describes a short CILIATE MEMBRANE about 1 mm; other GrassBase treatments call it a hair fringe. Keep both broad visual states provisionally and inspect the tissue in a real collar macro.",
+        "compare": "The ligule alone does not separate tanglehead from other Andropogoneae",
+        "certainty": "Cross-source terminology variation, photo check pending",
+        "source": "Smithsonian Hawaiian Flora — Heteropogon contortus",
+        "url": "https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Heteropogon&species=contortus"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    }
   },
   {
     "id": "hordeum-pusillum",
