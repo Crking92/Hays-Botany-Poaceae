@@ -421,9 +421,47 @@
         "reference": "Illustrated Flora of North Central Texas, Poa annua, printed p.1313 (uploaded PDF p.236): flowering panicles small, compact and erect. Retaining prior open/airy state pending photo-stage QA avoids excluding possible age-dependent branches.",
         "status": "REGIONAL_FLORA_CHECKED",
         "review_date": "2026-11-10"
+      },
+      "sexual_system": {
+        "source": "Flora of North America Poa annua",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236928",
+        "reference": "Usually annual, not rhizomatous; gynomonoecious reproductive system, not separate dioecious male/female plants as P. arachnifera.",
+        "status": "SOURCE_CHECKED",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Observe the short flowering stem AND its rooted crown",
+        "check": "Annual bluegrass is normally an annual (rarely persists another season), densely tufted and without true rhizomes; culms in FNA usually 2–20 cm and the panicle only 1–7(10) cm. A low plant alone is not diagnostic.",
+        "compare": "Texas bluegrass is taller, perennial and rhizomatous; heavily mown plants of either can mislead",
+        "certainty": "FNA source checked; rooted specimen and cut-age variation pending",
+        "source": "Flora of North America — Poa annua",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236928"
+      },
+      {
+        "look": "Measure one intact spikelet and leaf ligule",
+        "check": "Typical spikelets are 3–5 mm with 2–6 florets; lemmas 2.5–4 mm. The TRUE ligule is a smooth membrane, normally 0.5–3 mm (up to 5), despite a hooded leaf tip; the tip is shared by other Poa.",
+        "compare": "Texas bluegrass often has larger, dense spikelet arrays and sex-specific floret features",
+        "certainty": "FNA source checked; attached floral parts need macro",
+        "source": "Flora of North America — Poa annua",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236928"
+      },
+      {
+        "look": "Do not mistake one sex for separate male/female plants",
+        "check": "Poa annua can bear female and perfect florets in its sexual system; it is not the strictly dioecious Texas bluegrass. Inspect reproductive structures, not just the green/blue color of leaves.",
+        "compare": "Poa arachnifera has male and female flowers on separate plants",
+        "certainty": "FNA reproductive source; requires flowering plants",
+        "source": "Flora of North America — Poa annua",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236928"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "poa-arachnifera",
@@ -479,9 +517,47 @@
         "reference": "Illustrated Flora of North Central Texas, Poa arachnifera, printed p.1313: dense, rather narrow, erect panicles; old airy-only state conflicts with regional diagnosis. Floral sexes on separate plants and pistillate lemmas have long cobwebby basal hairs.",
         "status": "REGIONAL_FLORA_CHECKED",
         "review_date": "2026-11-10"
+      },
+      "sexual_system": {
+        "source": "Flora of North America Poa arachnifera",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=629190",
+        "reference": "Strictly dioecious; pistillate florets with 3 long silky callus webs (4–10 mm), staminate flowers may lack conspicuous webs. Do not require female webs on every plant.",
+        "status": "SOURCE_CHECKED_SEX_SPECIFIC",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Locate a real underground rhizome",
+        "check": "Texas bluegrass is a perennial with slender spreading rhizomes. FNA describes culms 20–85 cm and mostly narrow crowded flowering heads 3–12(18) cm; winter-green shoots are not proof alone.",
+        "compare": "Annual bluegrass lacks rhizomes, is usually much shorter, and may open its panicle with age",
+        "certainty": "FNA source checked; exact rhizome connection/photo pending",
+        "source": "Flora of North America — Poa arachnifera",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=629190"
+      },
+      {
+        "look": "Identify the sex before inspecting cobweb hairs",
+        "check": "The species is strictly dioecious: an entire plant has functionally pistillate OR staminate florets. FEMALE floret calluses have three conspicuous silky webs of hairs about 4–10 mm. Male florets may have little or no webbing; lack of webbing on a male is not absence of this species.",
+        "compare": "Poa annua has different reproductive biology, without the female-specific 3-web Texas bluegrass pattern",
+        "certainty": "FNA female/male anatomy checked; both sex samples still need photographs",
+        "source": "Flora of North America — Poa arachnifera",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=629190"
+      },
+      {
+        "look": "Check the female lemma and true ligule",
+        "check": "FNA gives pistillate lemmas about 4.2–6.4 mm, and a true membrane ligule 1–4 mm; do not mistake cobwebby hairs at the floret's callus for the ligule at the leaf collar.",
+        "compare": "Poa annua has much smaller panicles and lemmas and a similarly membranous ligule",
+        "certainty": "FNA checked; needs paired macro at same scale",
+        "source": "Flora of North America — Poa arachnifera",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=629190"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    }
   },
   {
     "id": "setaria-scheelei",
