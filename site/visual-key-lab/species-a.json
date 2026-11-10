@@ -63,13 +63,15 @@
         "fingers"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat",
+        "rhizome"
       ],
       "ligule": [
         "membrane"
       ],
       "awns": [
-        "long"
+        "none_obvious"
       ]
     },
     "photos": [
@@ -119,7 +121,22 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
       }
     ],
-    "genus": "Bothriochloa"
+    "genus": "Bothriochloa",
+    "character_evidence": {
+      "awns": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.170 (printed 1246): awn 1–1.5mm, and stolons/rhizomes can develop under mowing/grazing",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.170 (printed 1246): awn 1–1.5mm, and stolons/rhizomes can develop under mowing/grazing",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "dichanthium-sericeum",
@@ -230,9 +247,12 @@
         "side_oats"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
-      "ligule": [],
+      "ligule": [
+        "membrane"
+      ],
       "awns": [
         "none_obvious"
       ]
@@ -257,7 +277,22 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
       }
     ],
-    "genus": "Bouteloua"
+    "genus": "Bouteloua",
+    "character_evidence": {
+      "habit": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.172 (printed 1248): both tufted and rhizomatous forms; existing Hays/FNA record says short ciliate membrane",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.172 (printed 1248): both tufted and rhizomatous forms; existing Hays/FNA record says short ciliate membrane",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "bouteloua-dactyloides",
@@ -495,7 +530,9 @@
         "whorls"
       ],
       "habit": [],
-      "ligule": [],
+      "ligule": [
+        "membrane"
+      ],
       "awns": [
         "long"
       ]
@@ -574,7 +611,16 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/"
       }
     ],
-    "genus": "Chloris"
+    "genus": "Chloris",
+    "character_evidence": {
+      "ligule": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.180 (printed 1256): Chloris ligules are ciliate membranes",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "chloris-virgata",
@@ -590,7 +636,9 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "membrane"
+      ],
       "awns": [
         "long"
       ]
@@ -669,7 +717,16 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0/"
       }
     ],
-    "genus": "Chloris"
+    "genus": "Chloris",
+    "character_evidence": {
+      "ligule": {
+        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
+        "reference": "p.180 (printed 1256): Chloris ligules are ciliate membranes",
+        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "chasmanthium-latifolium",
