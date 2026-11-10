@@ -61,7 +61,8 @@
     "field_rule": "Hooded windmillgrass generally has crowded shorter racemes (~2–5 cm) and a conspicuous rounded sterile hood with short awns. Tumble windmillgrass typically has longer (~5–15 cm) racemes in separated tiers and longer awns. Feather fingergrass commonly has a feathery terminal fan with long apical fertile-lemma hairs. The hybrid may be intermediate.",
     "traits": {
       "head": [
-        "fingers"
+        "fingers",
+        "whorls"
       ],
       "habit": [
         "tuft"
@@ -78,9 +79,10 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.180 (printed 1256): one terminal whorl of short 2–5cm branches, not several spaced tiers; ciliate membranous ligule",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "source": "Kew GrassBase; Texas Hill Country 2015; Illustrated Flora of North Central Texas",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information",
+        "reference": "10–20 short (2–5 cm) racemes close together at apex; treatments describe one whorl or 1–3 closely spaced whorls. Broad visual coding allows both digitate and whorled; do not equate with C. verticillata's well-separated tiers.",
+        "status": "SOURCE_VARIATION_KEEP_MULTIPLE_STATES",
         "review_date": "2026-11-10"
       },
       "ligule": {
@@ -90,7 +92,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Isolate the upper sterile floret",
+        "check": "Its upper sterile lemma is expanded into a markedly rounded, inflated, hood-like body approximately 1–1.5 mm long. This is a real sterile floral part, not swollen seed tissue.",
+        "compare": "tumble windmillgrass's upper sterile lemma is more oblong, often carrying a longer awn",
+        "certainty": "Kew GrassBase-backed; photo dissection pending",
+        "source": "Kew POWO / GrassBase — Chloris cucullata",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information"
+      },
+      {
+        "look": "Compare both kinds of awn",
+        "check": "Published lower fertile-lemma awn around 0.3–1.5 mm and the upper sterile-lemma awn to about 1.5 mm: far shorter than tumble windmillgrass's several-mm awns.",
+        "compare": "C. verticillata; the hybrid can overlap and should not be diagnosed from one awn",
+        "certainty": "Kew GrassBase-backed; photo dissection pending",
+        "source": "Kew POWO / GrassBase — Chloris cucullata",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information"
+      },
+      {
+        "look": "Inspect how tightly the short rays cluster",
+        "check": "Often 10–20 racemes of about 2–5 cm close together in 1–3 very tight apical whorls. Older keys may say 'one whorl'; do not exclude a hooded specimen merely for a few adjacent tiers.",
+        "compare": "C. verticillata's widely separated, longer tiered racemes",
+        "certainty": "Different floras describe 1 vs closely spaced whorls; broad key must tolerate both",
+        "source": "Kew GrassBase + Texas Hill Country regional descriptions",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    }
   },
   {
     "id": "dichanthelium-commutatum",
