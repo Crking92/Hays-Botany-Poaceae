@@ -401,7 +401,8 @@
         "fingers"
       ],
       "habit": [
-        "mat"
+        "mat",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -425,9 +426,47 @@
         "reference": "Digitaria generic morphology: membranous ligule.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "UT Austin PRC Digitaria ciliaris var. ciliaris; Kew GrassBase",
+        "source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Digitaria%20ciliaris%20ciliaris.html",
+        "reference": "Annual geniculately ascending low stems sometimes root at lower nodes or appear tufted; broad mat and tuft visual states both allowed, both photo-provisional.",
+        "status": "EXTERNAL_SOURCE_VISUAL_VARIABILITY",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count paired spikelets along the underside of each finger",
+        "check": "A typical annual southern crabgrass head has about 3–7 (sometimes more) digitate or subdigitate one-sided racemes. PAIRED spikelets sit along the angled, narrowly winged branch rachis; each spikelet has a sterile lower and fertile upper floret.",
+        "compare": "Fall witchgrass (*D. cognata*) carries mostly solitary long-stalked spikelets across a very open branched panicle, not paired units on a few fingers.",
+        "certainty": "UT Austin PRC species account; source check, attached macro photo pending",
+        "source": "UT Austin Plant Resources Center — Digitaria ciliaris",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pages/Digitaria%20ciliaris%20ciliaris.html"
+      },
+      {
+        "look": "Measure the tiny lower and taller upper glumes",
+        "check": "A very small triangular LOWER glume often 0.3–0.4 mm; 3-veined upper glume around 1.7–2 mm, commonly about two-thirds to three-quarters of spikelet length; lower sterile lemma generally about 7-veined and ciliate.",
+        "compare": "D. sanguinalis (comparison outside the 112-indexed set) overlaps; use glume ratio and lower-lemma vein texture, not head shape alone.",
+        "certainty": "UT Austin PRC and Kew GrassBase; photo must show both faces of same spikelet",
+        "source": "UT Austin PRC — Digitaria ciliaris spikelet anatomy",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pages/Digitaria%20ciliaris%20ciliaris.html"
+      },
+      {
+        "look": "Expose the membrane and follow the rooted annual base",
+        "check": "True ligule is a short membranous flap at the INNER blade–sheath junction, not hairs around a culm node. Annual culms can sprawl/root at lower nodes or rise into a loose tuft; blades may be hairy close to the throat.",
+        "compare": "Chloris fingergrass has differently arranged florets and often ciliate membranes; the grass head alone does not confirm Digitaria.",
+        "certainty": "Regional UT morphological account; rooted specimen still pending",
+        "source": "UT Austin PRC — Digitaria ciliaris",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pages/Digitaria%20ciliaris%20ciliaris.html"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    }
   },
   {
     "id": "disakisperma-dubium",
@@ -542,9 +581,47 @@
         "reference": "Membranous ligule 0.5–1.5 mm, ciliate at apex; hairs at margin do not indicate hair-only ligule.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "hidden_floral_heads": {
+        "source": "Peterson et al. 2014 Systematics of Disakisperma",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3817421/",
+        "reference": "D. dubium usually makes hidden cleistogamous lateral inflorescences in lower leaf sheaths in addition to exserted terminal panicles; 4–13 florets in spikelets.",
+        "status": "PEER_REVIEWED_TAXONOMIC_TREATMENT_SOURCE_CHECKED_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Look inside the LOWEST leaf sheaths for hidden flowers",
+        "check": "In addition to exserted terminal heads, mature green sprangletop frequently produces hidden CLEISTOGAMOUS (self-pollinating, unopened) lateral spikelets inside lower leaf sheaths. These are reproductive organs, not insect galls.",
+        "compare": "Mucronate Dinebra sprangletop has a brushlike head and is not documented as routinely producing these hidden basal flowers.",
+        "certainty": "Peer-reviewed genus revision, Texas vouchers; hidden structures need careful same-plant inspection",
+        "source": "Peterson et al. 2014 — Systematics of Disakisperma",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3817421/"
+      },
+      {
+        "look": "Count florets in one mature spikelet and measure glumes",
+        "check": "The 2014 taxonomic revision gives 4–13 florets per 4–12 mm spikelet, lower glume (1.6–)2.3–4.8 mm, upper glume 3.3–6 mm. Three-veined lemmas roughly 3.5–5 mm, typically notched or blunt.",
+        "compare": "Dinebra panicea usually has 2–4(5) florets in only 1.8–2.5 mm spikelets; counting and measurement separate similar one-sided heads.",
+        "certainty": "Taxonomic revision source checked; locally measured glume/lemma photo pending",
+        "source": "Peterson et al. 2014 — Disakisperma dubium description",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3817421/"
+      },
+      {
+        "look": "Find a tiny membrane UNDER its hairy rim",
+        "check": "The true ligule is a 0.5–1.5 mm CILIATE MEMBRANE, sometimes visually like a fringe of hairs. Terminal panicle branches may be 2–15 and flexuous/reflexed, not necessarily strict terminal fingers.",
+        "compare": "Dinebra panicea has numerous straighter, tightly ascending rays and minute spikelets; collar hair alone cannot decide.",
+        "certainty": "Published revision explicitly distinguishes membrane plus cilia; accept both broad visible states",
+        "source": "Peterson et al. 2014 — Disakisperma",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3817421/"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    }
   },
   {
     "id": "echinochloa-crus-galli",
@@ -668,7 +745,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Open the inner leaf collar: there is NO true ligule",
+        "check": "Barnyardgrass lacks a membranous or hair-fringe LIGULE, though the collar area can carry a few hairs. Keep 'absent' as a botanical absence, not just 'not visible in photo.'",
+        "compare": "Paspalum/Disakisperma generally have membranes and Setaria hair ligules; this is a fast high-value group character.",
+        "certainty": "FNA + Texas A&M both support absence; photo-specific collar role pending",
+        "source": "Flora of North America — Echinochloa crus-galli",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=140&taxauthid=1&tid=628984"
+      },
+      {
+        "look": "Compare sterile lower floret with fertile upper floret",
+        "check": "The spikelet is ~2.5–4 mm and TWO-FLORET; the LOWER sterile lemma may have no awn or a long 5 cm awn, even on the same panicle. The hardened UPPER fertile lemma has a narrower membranous tip demarcated by minute hairs (≈25× lens).",
+        "compare": "Sprangletops have several florets per spikelet, with different lemma layout; other Echinochloa species can be very similar.",
+        "certainty": "FNA anatomy supported; *E. muricata* versus *E. crus-galli* remains specimen-level",
+        "source": "Flora of North America — Echinochloa crus-galli",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=140&taxauthid=1&tid=628984"
+      },
+      {
+        "look": "Follow the dense branching panicle and root crown",
+        "check": "Often stout annual with 5–25 cm paniculate head; lateral branches bear dense close spikelets, sometimes with secondary branchlets. Broad awned OR awnless states must not force exclusion.",
+        "compare": "Goosegrass has relatively few flat finger branches and a short membrane, not this many-branched bristly head.",
+        "certainty": "FNA source checked; fresh local specimen and proper mature stage still needed",
+        "source": "Flora of North America — Echinochloa crus-galli",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=140&taxauthid=1&tid=628984"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    }
   },
   {
     "id": "eleusine-indica",
@@ -737,7 +845,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Check the flattened whitish crown and flowering fingers",
+        "check": "Goosegrass is an ANNUAL with a conspicuously compressed, keeled, often pale-white base; a crown of 4–10(17) flat, narrow 3.5–16 cm digitate branches, sometimes with one lower branch up to 3 cm below the cluster.",
+        "compare": "Crabgrass can also have fingers but often sprawls and carries *paired two-flowered spikelets* on a winged axis.",
+        "certainty": "FNA source checked; white crown must be a live basal close-up, not an inferred color",
+        "source": "Flora of North America — Eleusine indica",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=141&taxauthid=1&tid=239829"
+      },
+      {
+        "look": "Count 5–7 FLORETS in a single spikelet",
+        "check": "FNA describes each 4–7 mm laterally compressed spikelet with 5–7 florets in overlapping ranks; lower glume 1.1–2.3 mm, one-veined. These are distinct from *Digitaria* two-floret spikelets.",
+        "compare": "Southern crabgrass spikelets contain sterile lower plus fertile upper floret (2 total), and Green sprangletop has 4–13 but different long branched architecture.",
+        "certainty": "FNA source checked; dissect one mature attached spikelet under 10–20×",
+        "source": "Flora of North America — Eleusine indica",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=141&taxauthid=1&tid=239829"
+      },
+      {
+        "look": "Locate the actual short membrane",
+        "check": "A truncate, ragged/erose membranous ligule ~0.2–1 mm occurs at the inner blade–sheath junction; nearby papillose-based throat hairs are not the ligule itself. Pale central blade vein can be a field clue.",
+        "compare": "Barnyardgrass lacks a true ligule; not all flattened weed grasses are goosegrass.",
+        "certainty": "FNA leaf-collar anatomy supported; fresh macro pending",
+        "source": "Flora of North America — Eleusine indica",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=141&taxauthid=1&tid=239829"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    }
   },
   {
     "id": "elymus-canadensis",
