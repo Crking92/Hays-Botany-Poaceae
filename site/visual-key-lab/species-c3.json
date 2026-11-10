@@ -232,7 +232,8 @@
     "field_rule": "Knotgrass combines wet-ground creeping stolons with usually paired (rarely three) unilateral flowering racemes. Bahia grass can produce two racemes but differs in low turf/rhizome architecture and spikelet structure. Thin paspalum may form just one or a few flowering branches but has different leafy habit and varietal hair traits; Florida paspalum forms robust upright bunches and bigger oval spikelets.",
     "traits": {
       "head": [
-        "paired_spikes"
+        "paired_spikes",
+        "one_sided"
       ],
       "habit": [
         "mat",
@@ -250,9 +251,10 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 230",
-        "reference": "Usually two racemes but occasionally three or four; follow an attached whole flowering stalk.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "source": "Flora of North America, Paspalum distichum",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900",
+        "reference": "Usually two near-digitate branches, sometimes a third below; allow paired_spikes and general one_sided in broad visual selection until detailed head photo QA.",
+        "status": "FNA_SOURCE_CHECKED_VARIABLE_BRANCH_NUMBER",
         "review_date": "2026-11-10"
       },
       "habit": {
@@ -262,7 +264,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Follow the flowering branch all the way to its base",
+        "check": "Usually TWO terminal, spreading, one-sided branches arise very close together; FNA also allows a THIRD below the pair. Mature branches are approximately 1.4–7 cm; do not exclude a plant with three branches.",
+        "compare": "Thin paspalum can have one to several branches but also axillary flowering heads; tall Dallisgrass usually has more separate branches.",
+        "certainty": "Flora of North America species description; attachment photo pending",
+        "source": "FNA — Paspalum distichum",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900"
+      },
+      {
+        "look": "Check if the spikelets are solitary or paired",
+        "check": "FNA describes mostly SINGLE 2.4–3.2 mm spikelets along each flat, winged branch axis (rarely paired). The LOWER glume is absent or a tiny triangular scale; the upper glume and lower sterile lemma each have three veins.",
+        "compare": "Most of the other six Paspalum species here have paired spikelets; Urochloa has a more developed lower glume.",
+        "certainty": "FNA source checked; magnified attached branch needed",
+        "source": "FNA — Paspalum distichum",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900"
+      },
+      {
+        "look": "Document an actual surface runner and rooting node",
+        "check": "Look for long creeping stolons or rhizomes in wet ground and a node that roots into the soil. A rooted runner with leaves is a stem, not an ordinary fibrous root. Compare the living crown along the bank.",
+        "compare": "Dallisgrass and Vaseygrass mainly form erect clumps with only very short knotty rhizomes, not long mats.",
+        "certainty": "FNA account plus regional field observations; connected photo needed",
+        "source": "FNA — Paspalum distichum",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS5_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
+    }
   },
   {
     "id": "phalaris-caroliniana",
@@ -1151,7 +1184,8 @@
         "mat"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -1174,12 +1208,44 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 259",
-        "reference": "Ligule a fringe of hairs up to 1 mm, not an obvious papery flap.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "source": "Kew GrassBase under Brachiaria texana; UT Austin regional morphology",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information",
+        "reference": "True ligule is a ciliate MEMBRANE, ~1–1.5 mm (UT Austin 1–1.8 mm). Hairlike cilia conceal the membrane base; retain hair and membrane broad visual states, not absence.",
+        "status": "SOURCE_CHECKED_CILIATE_MEMBRANE_VISUAL_DUALSTATE",
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Open the true collar beneath the hair fringe",
+        "check": "Texas signalgrass has a ciliate MEMBRANE 1–1.5 mm, often appearing like pure hairs until magnified. Regional UT Austin material describes a 1–1.8 mm fused membrane at the blade–sheath joint.",
+        "compare": "Paspalum usually has a more evident plain papery ligule; collar shape alone is genus-level.",
+        "certainty": "Kew GrassBase / UT Texas morphology; retain both broad visual states pending actual photo",
+        "source": "Kew GrassBase — Urochloa texana under Brachiaria",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information"
+      },
+      {
+        "look": "Measure spikelet and LOWER glume",
+        "check": "Published spikelets around 5–6 mm, paired along unilateral erect-appressed branches. The developed lower glume is around TWO-THIRDS the spikelet, usually 5–7 veined. The upper glume is about full spikelet length.",
+        "compare": "Paspalum mostly has no lower glume; Brownseed signalgrass has smaller 2.4–3 mm spikelets and a much shorter lower glume.",
+        "certainty": "Kew source checked; mature same-plant dissection needed",
+        "source": "Kew GrassBase — Urochloa texana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information"
+      },
+      {
+        "look": "Look at the textured upper fertile lemma",
+        "check": "The hard upper fertile lemma is usually 3.5–4 mm, finely wrinkled across its back. Plants may be upright or sprawl and root at low nodes. Verify the annual growth base as well as a complete head.",
+        "compare": "Other Urochloa species also have wrinkled fertile lemmas: combine with the large spikelet and lower glume.",
+        "certainty": "Kew GrassBase checked; local specimen and photo pending",
+        "source": "Kew GrassBase — Urochloa texana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS5_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
+    }
   }
 ]
