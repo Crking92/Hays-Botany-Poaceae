@@ -16,6 +16,10 @@
 
 **How far from completion?** Species framework **and the first complete source-coverage pass** are finished: **112/112** indexed and **112/112** with at least one externally supported morphological character. This is NOT 100% completion of the project. The remaining work is the 68 species without Phase 3 source-linked checklists, deeper verification of all diagnostic checks, photo-role verification and attribution (Phase 4), and live field acceptance (Phase 5). The current key is an unverified prototype.
 
+## Cross-project release-gate caution (2026-11-10)
+
+The separate **Poaceae comprehensive migration gates (NO deployment)** workflow failed on a **pre-existing broader source/photo-release audit**, distinct from the 112-species visual key's 25/25 candidate-retention tests. [Failing workflow run](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/42915891685) reported **3 held image files in the PUBLIC repository** and **2 source checksum mismatches**; these were not modified, removed, or cleared in this morphology pass. They require exact-path source/photo rights and byte-identity investigation in the appropriate photo-quality workflow before any public release claim. Manual photo inspection and release rights cannot be inferred from a successful key metadata test.
+
 ## Phase 3 — latest cumulative status (Pass 4, 2026-11-10)
 
 - **44/112 grass species (39.29%)** now have first source-backed anatomical checklists, comprising **111 individual checks**, leaving **68** species without their Phase 3 first checklist pass. **Zero** have complete per-specimen dissection and exact-image character-role certification.
