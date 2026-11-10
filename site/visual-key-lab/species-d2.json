@@ -352,7 +352,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "",
+    "field_rule": "Texas cupgrass: separate hair-FRINGE true LIGULE from hairy culm nodes; inspect the little CUP/RING just under a fallen spikelet (reduced lower glume fused to callus); check 4–10 upright fuzzy one-sided racemes and attached paired 3.6–4.2 mm spikelets. Do not certify from a fuzzy flowering head alone.",
     "traits": {
       "head": [
         "one_sided",
@@ -361,7 +361,9 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "hairs"
+      ],
       "awns": [
         "none_obvious"
       ]
@@ -378,7 +380,46 @@
         "reference": "Tufted 30–100 cm grass with dense soft pubescence; species-level true ligule still not verified.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO / GrassBase Eriochloa sericea; Texas A&M Plants of Texas Rangelands",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:402055-1/general-information",
+        "secondary_source_url": "https://rangeplants.tamu.edu/plant/texas-cupgrass/",
+        "reference": "Dense ring/fringe of straight hairs at inner blade/sheath junction; this is a true hair ligule, not a ciliate papery membrane, independently attested.",
+        "status": "TWO_SOURCES_MATCH_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Examine the ringlike CUP beneath the falling spikelet",
+        "check": "The cup of Texas cupgrass is a globose CALLUS/cupule representing the lowest rachilla internode with the reduced, fused lower glume, directly below the spikelet. After spikelets fall, little cup rings may remain at their points of attachment.",
+        "compare": "Signalgrasses have developed lower glumes but do not create this same rounded ring/cup beneath each fuzzy spikelet.",
+        "certainty": "Kew GrassBase plus Texas A&M regionally checked; actual empty attachment photo pending",
+        "source": "Kew GrassBase — Eriochloa sericea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:402055-1/general-information"
+      },
+      {
+        "look": "Check the REAL hair-fringe ligule",
+        "check": "Texas A&M and Kew both describe a DENSE FRINGE/RING of straight hairs at the inside blade–sheath junction, rather than a distinct papery membranous flap. Distinguish it from hairy culm nodes.",
+        "compare": "Paspalum flowering heads can also have one-sided racemes but usually membranous inner ligules.",
+        "certainty": "Two independent regional/GrassBase source checks; current source photo has not been validated for collar",
+        "source": "Texas A&M — Texas cupgrass",
+        "url": "https://rangeplants.tamu.edu/plant/texas-cupgrass/"
+      },
+      {
+        "look": "Count the fuzzy racemes and inspect actual fertile spikelets",
+        "check": "Usually 4–10 short, erect unilateral racemes about 1.5–3 cm; spikelets PAIRED, around 3.6–4.2 mm, ovate and covered with hairs; five-veined upper glume and five-veined lower sterile lemma. A perennial rooted TUFT has no long runners.",
+        "compare": "Brownseed signalgrass has smaller ~2.4–3 mm spikelets and a different developed lower glume, and Vaseygrass has many longer racemes.",
+        "certainty": "Kew GrassBase description; need two-face floral closeup and rooted perennial base",
+        "source": "Kew GrassBase — Eriochloa sericea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:402055-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     }
   },
   {
@@ -901,6 +942,37 @@
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Handle the blade edge carefully for backward-pointing prickles",
+        "check": "Rice cutgrass has sharply SCABROUS leaf margins that catch when a finger moves toward the leaf base. In wet riparian habitat this is a useful vegetative clue; don't assume every rough wetland grass is Leersia.",
+        "compare": "Phragmites and other wetland grasses may have rough blades, but their spikelet floral construction differs.",
+        "certainty": "FNA and wetlands flora support; use noninjurious loupe rather than dragging bare skin",
+        "source": "Burke Herbarium / FNA — Leersia oryzoides",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Leersia+oryzoides"
+      },
+      {
+        "look": "Dissect a mature compressed spikelet—both glumes are absent",
+        "check": "Rice cutgrass has a ONE-FLORET flattened spikelet, normally 3.5–5(6.5) mm, **no glumes**, and a five-veined strongly hairy/rough keel on its hardened lemma; palea nearly equal to lemma.",
+        "compare": "Paspalum may lack LOWER glume but has an UPPER glume and typically two florets, so 'glumeless' has different meaning here.",
+        "certainty": "FNA plus USDA wetland guide; true lemma/palea photo needs 10–20×",
+        "source": "Burke Herbarium / FNA — Leersia oryzoides",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Leersia+oryzoides"
+      },
+      {
+        "look": "Search upper leaf sheaths for a hidden panicle",
+        "check": "Perennial, rhizomatous rice cutgrass can have an OPEN 10–20 cm panicle or reduced CLEISTOGAMOUS (selfing) panicles partly/fully enclosed in upper leaf sheaths. Check rooted runners and hidden flowers before marking 'no head'.",
+        "compare": "Green sprangletop hides similar selfing structures in LOWER leaf sheaths, but has multiple florets and glumes; they differ substantially.",
+        "certainty": "FNA wetland biology; upper-sheath observation and root connection pending",
+        "source": "Burke Herbarium / FNA — Leersia oryzoides",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Leersia+oryzoides"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     }
   },
   {
