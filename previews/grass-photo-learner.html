@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hays Botany · Grass photo learner</title>
+<style>
+*{box-sizing:border-box}body{background:#f5f0e3;color:#20362a;font:1rem/1.55 system-ui;margin:0}main{max-width:68rem;margin:auto;padding:clamp(1rem,4vw,3rem)}header{background:#233d30;color:#fff8e6;border-radius:1rem;padding:1.4rem}h1,h2{font-family:Georgia,serif}h1{font-size:clamp(2rem,7vw,4rem);margin:.2em 0}select{max-width:100%;font:inherit;padding:.6rem;margin:.5rem 0}details{background:#fffcf5;border:1px solid #dbd4c3;border-radius:.8rem;margin:.7rem 0;padding:.8rem}summary{cursor:pointer;font-weight:700}figure{margin:1rem 0}.photo{position:relative;display:table;margin:auto}.photo img{display:block;max-width:100%;max-height:32rem;width:auto;height:auto}.dot{position:absolute;transform:translate(-50%,-50%);background:#233d30;color:white;border:2px solid white;border-radius:50%;width:1.5rem;height:1.5rem;text-align:center;line-height:1.2rem;font-size:.8rem;font-weight:bold}a{color:#225441}small{display:block}
+</style>
+<main><header><small>HAYS BOTANY · POACEAE · PREVIEW</small><h1>Learn the grasses by sight</h1><p>Choose a grass, then open a field trait to see its photo and where to look.</p></header>
+<p><a id="pilot" href="little-bluestem.html">Open the illustrated Little Bluestem pilot</a></p>
+<label for="species">Grass</label><br><select id="species"></select><section id="lesson" aria-live="polite"></section></main>
+<script>
+const bundled = null;
+const root = '../';
+const select = document.querySelector('#species');
+const lesson = document.querySelector('#lesson');
+document.querySelector('#pilot').href = 'little-bluestem.html';
+function add(parent, tag, text) {
+  const node = document.createElement(tag);
+  if (text) node.textContent = text;
+  parent.append(node);
+  return node;
+}
+function link(parent, text, href) {
+  if (!href || !/^https:\/\//i.test(href)) return;
+  add(parent, 'a', text).href = href;
+}
+function showPhoto(parent, panel) {
+  const figure = add(parent, 'figure');
+  const box = add(figure, 'div');
+  box.className = 'photo';
+  const img = add(box, 'img');
+  img.loading = 'lazy';
+  img.alt = panel.label;
+  img.src = root + panel.src.replace(/^\.\.\//, '');
+  img.onerror = () => { box.remove(); add(figure, 'p', 'Photo file unavailable in this copy.'); };
+  const markers = (panel.markers || []).filter(m => Number.isFinite(m.target_x) && Number.isFinite(m.target_y));
+  markers.forEach((m, i) => {
+    const dot = add(box, 'span', String(i + 1));
+    dot.className = 'dot';
+    dot.style.left = m.target_x + '%';
+    dot.style.top = m.target_y + '%';
+    dot.setAttribute('aria-hidden', 'true');
+  });
+  if (markers.length) {
+    const key = add(figure, 'ol');
+    markers.forEach(m => add(key, 'li', m.label));
+  }
+  const cap = add(figure, 'figcaption', panel.caption);
+  const credit = add(cap, 'small');
+  link(credit, panel.creator || 'Photo source', panel.source_page);
+  if (panel.license) add(credit, 'span', ' · ' + panel.license);
+  if (panel.modifications) add(credit, 'small', panel.modifications);
+}
+async function render() {
+  const id = select.value;
+  lesson.textContent = 'Loading lesson…';
+  try {
+    const row = bundled ? bundled.find(x => x.id === id) : await read('species/' + id + '.json');
+    if (select.value !== id) return;
+    lesson.replaceChildren();
+    add(lesson, 'h2', row.common || row.scientific);
+    add(lesson, 'i', row.scientific);
+    add(lesson, 'p', 'Field guidance and photo labels from the existing Hays lesson. Photo matches are available for review.');
+    (row.tiles || []).forEach((tile, i) => {
+      const card = add(lesson, 'details');
+      card.open = i === 0;
+      add(card, 'summary', tile.heading);
+      add(card, 'p', tile.short);
+      const panels = (tile.preview_panel_indices || []).map(n => row.panels[n]).filter(p =>
+        p && p.photo_role === 'TARGET_SPECIES_SOURCE' && p.source_species_id === id && p.src && p.license);
+      if (panels.length) panels.forEach(p => showPhoto(card, p));
+      else add(card, 'p', 'Photo gap · This trait needs a matched image of this species.');
+      add(card, 'p', tile.details);
+    });
+  } catch (err) {
+    if (select.value === id) lesson.textContent = 'Could not load this lesson. ' + err.message;
+  }
+}
+async function read(path) {
+  const response = await fetch(root + 'site/data/' + path);
+  if (!response.ok) throw Error('Data returned HTTP ' + response.status);
+  return response.json();
+}
+async function start() {
+  try {
+    const rows = bundled || await read('poaceae-index.json');
+    rows.sort((a, b) => (a.common || a.scientific).localeCompare(b.common || b.scientific));
+    rows.forEach(row => add(select, 'option', (row.common || row.scientific) + ' · ' + row.scientific).value = row.id);
+    if (rows.some(row => row.id === 'panicum-virgatum')) select.value = 'panicum-virgatum';
+    select.addEventListener('change', render);
+    await render();
+  } catch (err) { lesson.textContent = 'Could not load the grass list. ' + err.message; }
+}
+start();
+</script></html>
