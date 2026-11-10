@@ -28,7 +28,7 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 <main class="wrap">
   <section class="hero"><div><p class="eyebrow">Picture-first identification · 112 grasses · Phase 3 anatomy</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small>grasses in the initial key</small></div></section>
   <p class="notice" style="background:#e9f2e6;border-color:#cce0cc;color:#295c3e"><strong>New complete grass lesson:</strong> <a href="johnsongrass.html" style="font-weight:800">Test the six-step Johnsongrass photo-ID lesson →</a> · Includes hidden-answer practice, real morphology photos, and look-alike comparisons.</p>
-  <p class="notice"><strong>Phase 3 in progress:</strong> 33 grasses now have 81 source-linked botanical checks for similar-looking species, including winter-active Poa, Bromus and threeawns. Open a grass result to compare culm nodes, true ligules, rachis tips, glumes, spikelets, and awns. These notes do not certify the example photos or a specimen identification.</p>
+  <p class="notice"><strong>Phase 3 in progress:</strong> 44 grasses now have 111 source-linked botanical checks, including Setaria bristles, Sorghastrum empty pedicels, and paired Sorghum spikelets. Open a grass result to compare culm nodes, true ligules, rachis tips, glumes, spikelets, and awns. These notes do not certify the example photos or a specimen identification.</p>
   <p class="notice"><strong>Field-testing prototype:</strong> all 112 Hays Botany grasses now have initial identification character profiles. These broad states are provisional and must be cross-checked with the regional flora, GrassBase, and the original lessons before treating the key as field-verified. This is not a confirmed species determination. Some choices are broad, some source photos are not local, and incomplete characters remain labeled as uncertain. Similar-looking Chloris species can hybridize; use the species-detail anatomy list before calling a definitive identification. We use your existing Hays Botany records and credited photos; the full GrassBase trait matrix has not yet been imported.</p>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
@@ -89,12 +89,12 @@ const qs=[
 ["membrane","A thin membrane","A small papery flap rises at the inner blade–sheath junction.","dichanthium-sericeum",4],
 ["absent","No true ligule apparent","No membrane or hair fringe at the inner blade–sheath junction.","echinochloa-crus-galli",1]
 ]},
-{id:"awns",short:"Awns / bristles",title:"What projections surround the spikelet?",hint:"Awns may extend from lemmas or glumes; foxtail bristles are separate sterile branches, and feathery stigmas are neither. A hand lens helps.",options:[
+{id:"awns",short:"Awns / bristles",title:"What projections surround the spikelet?",hint:"Awns are projections of the lemma or glume. Foxtail (Setaria) bristles are separate sterile branchlets; sandbur (Cenchrus) bristles fuse into a prickly cup. Long hairs and feathery stigmas are neither. A hand lens helps.",options:[
 ["three","Three long awns","Three threadlike awns extend from one fertile floret.","aristida-purpurea",1],
 ["long","Long, obvious awns","Long straight, bent, or twisted projections extend from the reproductive units.","bothriochloa-ischaemum",2],
-["bristles","Bristles beneath some or many spikelets","Sterile branch bristles may be few or numerous. Do not confuse pink feathery stigmas with bristles.","setaria-parviflora",3],
+["bristles","Separate bristles under spikelets","Setaria bristles are sterile branchlets below the spikelet. Count them and compare attachment; these are NOT lemma awns.","setaria-parviflora",3],
 ["none_obvious","No conspicuous long awns","The spikelets do not show obvious long awns in a general field view.","bouteloua-curtipendula",1],
-["burs","Spiny sandbur involucres","Spines fused into a prickly bur around true spikelets.","cenchrus-spinifex",1]
+["burs","Spiny sandbur involucres","Fused bristles form a cup enclosing several actual spikelets. This is not a many-awned lemma.","cenchrus-spinifex",1]
 ]}];
 const selectedPhotoOverrides={
 "head:airy":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Sorghum_halepense_head4_%287412713132%29.jpg?width=900",label:"Johnsongrass: whole open panicle",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Sorghum_halepense_head4_(7412713132).jpg"},
