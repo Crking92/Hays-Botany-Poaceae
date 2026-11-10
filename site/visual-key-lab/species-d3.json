@@ -79,8 +79,16 @@
     },
     "source_blob_sha": "78b4b05ef65d6b9a6ec77e79ec3a6669c7b9cf6d",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "habit": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 214",
+        "reference": "Flora confirms low rhizomatous perennial, narrow interrupted panicles 1–4 cm and barely pointed lemmas; existing head/habit states supported.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "muhlenbergia-x-involuta",
@@ -229,15 +237,26 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "hairs",
+        "membrane"
+      ],
       "awns": [
         "none_obvious"
       ]
     },
     "source_blob_sha": "e8fc800ba87d48a78a2c14e7da8279b5b2ff263a",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "ligule": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 220",
+        "reference": "Regional flora describes hair-fringe ligule; existing Hays card/FNA notes ciliate short membrane. Source interpretations conflict: preserve either observed state pending scaled inner-collar photograph.",
+        "status": "REGIONAL_FLORA_CONFLICT_RETAIN_ALTERNATES",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "panicum-coloratum",
@@ -302,8 +321,16 @@
     },
     "source_blob_sha": "3256629edd6866efa41e3d8d885365f714212b26",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "habit": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 220",
+        "reference": "Flora confirms tufted perennial often knotty basal crown and fringed membranous ligule; optional short rhizomes supported by existing Hays Botany card, not proven by an undug photograph.",
+        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "paspalum-dilatatum",
