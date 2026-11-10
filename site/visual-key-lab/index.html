@@ -21,6 +21,14 @@
 .footer{border-top:1px solid #d5e1d5;padding:20px 0 32px;color:#657b6d;font-size:.84rem}.footer a{margin-right:12px}
 dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-height:88vh;overflow:auto;box-shadow:0 25px 70px rgba(13,43,28,.32);padding:0;color:var(--ink)}dialog::backdrop{background:rgba(18,35,25,.6)}.detail-head{padding:22px 22px 5px;display:flex;justify-content:space-between;gap:10px}.detail-head h2{font-family:Georgia,serif;font-size:1.85rem;margin:4px 0 0}.close{border-radius:20px;background:#ecf2eb;border:0;width:38px;height:38px;font-size:1.25rem}.detail-grid{padding:16px 22px 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.detail-grid .photo-frame{aspect-ratio:4/3;border-radius:10px}.detail-copy{padding:0 22px 24px;font-size:.95rem}.detail-copy p{color:#42594b}.mini-credit{font-size:.7rem;color:#6d8271;margin:4px 0 0}.detail-botany{margin:18px 0 20px;padding:15px;border:1px solid #dbe5da;border-radius:13px;background:#f8faf6}.detail-botany h3{margin:0 0 6px;font-family:Georgia,serif;font-size:1.2rem}.diagnostic-check{border-top:1px solid #dce6da;margin-top:12px;padding-top:12px}.diagnostic-check h4{margin:0 0 5px;font-size:.99rem;color:#264e38}.diagnostic-check p{margin:5px 0;font-size:.89rem}.diagnostic-check .check-compare{font-weight:650;color:#315f49}.diagnostic-check .check-status{font-size:.78rem;color:#7b5927}.diagnostic-check a{display:inline-block;margin-top:5px;overflow-wrap:anywhere}.linkbutton{display:inline-block;background:#1b5b40;color:white;text-decoration:none;border-radius:9px;padding:10px 15px;font-weight:700;font-size:.87rem}.linkbutton:hover{background:#247853}
 @media(min-width:1040px){.answer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:830px){.workspace{grid-template-columns:1fr}.results{position:static;max-height:none}.results-list{max-height:480px}.hero{grid-template-columns:1fr}.hero-stamp{justify-self:start;padding:9px 17px}.hero-stamp b{display:inline;font-size:1.45rem;margin-right:8px}.results .result{grid-template-columns:95px 1fr}}@media(max-width:480px){.wrap{width:calc(100% - 24px)}.sitebar{padding:13px}.sitebar a{font-size:.75rem}.hero{padding-top:24px}.panel-head{padding:17px 15px 8px}.steps{padding:12px}.question{padding:14px}.answer-grid{gap:9px}.answer-body{padding:9px 10px 11px}.answer-title{font-size:.85rem}.answer-note{font-size:.76rem}.photo-credit{font-size:.63rem}.detail-grid{grid-template-columns:1fr}.question-actions{flex-wrap:wrap}}
+
+/* Flowerhead line drawings supplement, never replace, credited real-world photographs. */
+.head-jumps .head-jump{display:inline-flex;align-items:center;gap:7px;padding:3px 12px 3px 5px;min-height:48px;text-align:left;line-height:1.2}
+.head-jump .head-shape{width:45px;height:44px;flex:0 0 45px}
+.head-card-label{display:flex;align-items:center;gap:10px;margin:0 0 5px}
+.head-card-label .head-shape{width:63px;height:63px;flex:0 0 63px;background:#f7f9f2;border:1px solid #e2e9d8;border-radius:10px;padding:3px}
+.head-illustration-note{font-size:.78rem;line-height:1.4;color:#657869;margin:-5px 0 16px}
+@media(max-width:480px){.head-card-label{gap:6px}.head-card-label .head-shape{width:46px;height:52px;flex-basis:46px;padding:0}.head-jumps .head-jump{font-size:.75rem}.head-jump .head-shape{width:38px;height:38px;flex-basis:38px}}
 </style>
 </head>
 <body>
@@ -118,12 +126,62 @@ return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else conflict++}
 return{s,unknown,confirmed,conflict}}).filter(x=>!x.conflict).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>a.unknown-b.unknown||b.confirmed-a.confirmed||a.s.common.localeCompare(b.s.common))}
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""),q.short);b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
+
+/* Original outline diagrams for beginners; these are shapes, NOT photographs or species-level determinations. */
+function headIcon(key){
+ const NS="http://www.w3.org/2000/svg", svg=document.createElementNS(NS,"svg");
+ svg.setAttribute("viewBox","0 0 110 110");svg.setAttribute("aria-hidden","true");svg.classList.add("head-shape");
+ const parts=[], green="#315d43", olive="#5c8051", gold="#deb45a", pale="#f0d78d";
+ const path=(d,w=2,col=green)=>parts.push('<path d="'+d+'" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round" fill="none"/>');
+ const ellipse=(x,y,rx=3.1,ry=5.1,rot=0,col=gold)=>parts.push('<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" transform="rotate('+rot+' '+x+' '+y+')" fill="'+col+'" stroke="'+green+'" stroke-width=".85"/>');
+ const bead=(x,y,a=0,sc=1)=>ellipse(x,y,3.1*sc,5*sc,a,gold);
+ const branch=(x,y,xx,yy,count=3,scale=.85)=>{path('M'+x+' '+y+' L'+xx+' '+yy,1.65);for(let i=1;i<=count;i++){const t=i/(count+1);bead(+(x+(xx-x)*t).toFixed(1),+(y+(yy-y)*t).toFixed(1),Math.sign(xx-x)*55,scale)}bead(xx,yy,Math.sign(xx-x)*48,scale)};
+ const main=()=>path("M55 104 L55 15",2.6);
+ const grainSpike=(x=55,yTop=19,yBottom=96,steps=10,spread=8)=>{path('M'+x+' '+yBottom+' L'+x+' '+yTop,2.5);for(let j=0;j<steps;j++){const y=yBottom-10-j*((yBottom-yTop-14)/Math.max(steps-1,1));bead(x+(j%2?spread:-spread),+y.toFixed(1),j%2?-40:40,.9)}};
+ const comb=(y,dx=38,items=6,flip=false)=>{path('M55 '+y+' Q'+(55+dx*.5)+' '+(y-(flip?-6:7))+' '+(55+dx)+' '+(y-(flip?14:4)),1.8);for(let j=1;j<=items;j++){const t=j/(items+1),xx=55+dx*t,yy=y-(flip?14:4)*t;bead(+xx.toFixed(1),+(yy+(flip?4:7)).toFixed(1),flip?40:-28,.65)}};
+ switch(key){
+ case "airy":case "broad_panicle":
+  main();[["L",37,27,4],["R",76,28,4],["L",18,52,4],["R",95,56,4],["L",34,77,3],["R",84,81,3]].forEach(([side,x,y,n])=>branch(55,y+9,x,y,n,.78)); break;
+ case "wiry":
+  path("M52 105 Q64 67 57 12",2.3);branch(58,28,8,8,2,.55);branch(58,45,98,17,2,.55);branch(58,61,8,53,2,.55);branch(58,77,100,68,2,.55);break;
+ case "flat_oats":case "branched_oat":{
+  main();for(let j=0;j<4;j++){let y=25+j*21,dir=j%2?1:-1, endX=55+dir*(28+j%2*9);path('M55 '+y+' Q'+(55+dir*18)+' '+(y-4)+' '+endX+' '+(y+5),1.7);for(let k=0;k<3;k++){let xx=endX+dir*(k-1)*8,yy=y+9+k*6;path('M'+xx+' '+(y+4)+' L'+xx+' '+(yy-1),1);ellipse(xx,yy, key==="flat_oats"?4.2:3.5,key==="flat_oats"?7.5:6,dir*15,pale)}}break;
+ }
+ case "reed_plume":case "golden_plume":{
+  main();const count=key==="reed_plume"?11:8,spread=key==="reed_plume"?40:24;
+  for(let j=0;j<count;j++){const t=j/(count-1),x=55+(t-.5)*spread*2,y=17+Math.abs(t-.5)*22;path('M55 93 Q'+(55+(t-.5)*18)+' 42 '+x+' '+y,1.4,olive);for(let k=0;k<8;k++){const h=85-k*7,px=55+(x-55)*((85-h)/70),off=2+(k%3)*1.3;path('M'+px.toFixed(1)+' '+h+' l'+(t<.5?-off:off)+' -5',1.1,gold)}}break;
+ }
+ case "long_narrow_panicle": main();for(let j=0;j<11;j++){let yy=92-j*7,dx=(j%2?11:-11)*(j>8?.6:1);branch(55,yy,55+dx,yy-10,1,.78)}break;
+ case "compact":main();for(let j=0;j<12;j++){const y=92-j*6,dx=j%2?13:-13;branch(55,y,55+dx,y-12,2,.85)}break;
+ case "bushy":main();for(let j=0;j<14;j++){const y=96-j*5.5,dx=(j%2?-1:1)*(16+(j%3)*6);branch(55,y,55+dx,y-14,3,.65)}break;
+ case "fingers":path("M55 105 L55 72",2.8);for(let j=0;j<7;j++){const x=11+j*14.5,y=13+Math.abs(3-j)*13;branch(55,73,x,y,5,.65)}break;
+ case "whorls":main();for(let y of [30,58,84])for(let d of [-1,1])for(let a of [0,20])branch(55,y,55+d*(31-a*.3),y-9-a*.6,3,.65);break;
+ case "combs":main();for(let y of [32,53,74,92])comb(y,y%2?37:45,6,false);break;
+ case "side_oats":path("M55 105 Q52 57 31 9",2.4);for(let j=0;j<7;j++){const y=22+j*11,x=34+j*3;path('M'+x+' '+y+' Q'+(x+20)+' '+(y+4)+' '+(x+22)+' '+(y+12),1.4);ellipse(x+22,y+14,4.7,7.7,13,pale)}break;
+ case "short_side_racemes":main();for(let y of [29,47,65,83])branch(55,y,55+(y%2?31:-31),y-9,4,.6);break;
+ case "short_racemes": main();for(let y of [30,50,70,90]){let dir=(y/10)%2?1:-1;branch(55,y,55+dir*26,y-13,3,.72)}break;
+ case "one_sided":path("M56 105 Q44 59 66 12",2.4);for(let j=0;j<10;j++){let y=95-j*7.3,x=56-(95-y)*.13;bead(x+9,y-3,50,.75)}break;
+ case "many_one_sided":main();for(let y of [30,49,68,87]){let dx=y%2?39:-39;branch(55,y,55+dx,y-21,5,.64)}break;
+ case "paired_spikes":path("M55 104 L55 76 M55 76 L25 17 M55 76 L86 17",2.8);for(let d of [-1,1])for(let j=0;j<8;j++){let t=(j+1)/9,x=55+d*31*t,y=76-59*t;bead(x+d*5,y,48*d,.73)}break;
+ case "spike":grainSpike(55,19,102,12,6);break;
+ case "foxtail":path("M55 105 L55 29",2.6);ellipse(55,50,13,34,-10,pale);for(let j=0;j<36;j++){const y=20+(j%18)*3.2,side=j<18?-1:1,x=55+side*(9+Math.sin((y-20)/60*Math.PI)*5),xx=x+side*(7+(j%3)*2);path('M'+x.toFixed(1)+' '+y.toFixed(1)+' L'+xx.toFixed(1)+' '+(y-5).toFixed(1),.95,gold)}break;
+ case "sparse_bristles":main();for(let y of [29,46,64,84]){let dir=y%2?1:-1;bead(55+dir*6,y,-dir*30,.9);path('M'+(55+dir*8)+' '+y+' l'+(dir*21)+' -21',1.25,gold)}break;
+ case "burrs":main();for(let j=0;j<4;j++){let y=26+j*23,x=55+(j%2?21:-21);path('M55 '+(y+5)+' L'+x+' '+y,1.6);ellipse(x,y,12,12,0,olive);for(let k=0;k<12;k++){let a=k*Math.PI/6;path('M'+(x+10*Math.cos(a)).toFixed(1)+' '+(y+10*Math.sin(a)).toFixed(1)+' L'+(x+17*Math.cos(a)).toFixed(1)+' '+(y+17*Math.sin(a)).toFixed(1),1.4,olive)}}break;
+ case "tangled_awns":main();for(let j=0;j<5;j++){let y=29+j*16,dir=j%2?1:-1;bead(55+dir*5,y,dir*40,1);for(let k=0;k<3;k++){let sx=55+dir*6,ex=sx+dir*(15+k*9);path('M'+sx+' '+y+' Q'+(ex-dir*14)+' '+(y-35-k*4)+' '+ex+' '+(y-40+k*4),1.35,gold)}}break;
+ case "mixed_gender":main();for(let y of [28,42,56]){path('M55 '+y+' L'+(y%2?80:29)+' '+(y-7),1.5);for(let j=0;j<4;j++){let x=(y%2?80:29)+j*2;path('M'+x+' '+(y-7)+' l0 7',1.2,gold);ellipse(x,y+1,2.7,4,0,gold)}}for(let y of [72,86,98]){ellipse(55,y,8,6,0,olive);bead(47,y-2,65,.65);bead(63,y-2,-65,.65)}break;
+ case "aquatic_gender":main();for(let y of [24,38,49]){branch(55,y,55+(y%2?25:-23),y-9,2,.85)}for(let y of [65,78,90]){path('M55 '+y+' L'+(y%2?72:37)+' '+(y+8),1.5);for(let j=0;j<3;j++)ellipse((y%2?72:37)+j*3,y+11+j*3,2,4,0,gold)}break;
+ case "aquatic_mixed":main();for(let y of [28,48,68,87]){branch(55,y,55+(y%2?33:-33),y-11,3,.7);ellipse(53+(y%2?19:-19),y-4,2.4,4,0,gold)}break;
+ default: main();bead(55,26);break;
+ }
+ svg.innerHTML=parts.join("");return svg;
+}
+
 const flowerheadSections=[
-{title:"Open or spreading panicles",help:"A main stalk divides into visible branches, with spikelets hanging or scattered along them.",keys:["airy","wiry","branched_oat","flat_oats","reed_plume"]},
-{title:"Narrow, plumed, or crowded heads",help:"Branches remain closer to the main axis, forming a narrower or denser outline.",keys:["long_narrow_panicle","golden_plume","compact","bushy"]},
-{title:"Distinct fingers, racemes, or combs",help:"Several recognizable side branches or one-sided rows carry the flowering units.",keys:["short_racemes","fingers","side_oats","short_side_racemes","combs","whorls","one_sided","many_one_sided","paired_spikes"]},
-{title:"Spikes, foxtails, and burs",help:"A central spike or bristle-bearing, bottlebrush-like, or bur-bearing axis.",keys:["spike","tangled_awns","foxtail","sparse_bristles","burrs"]},
-{title:"Unusual male / female arrangements",help:"Specialized flowerheads with differently shaped pollen-bearing and seed-bearing parts.",keys:["mixed_gender","aquatic_gender","aquatic_mixed"]}
+{title:"Open or spreading panicles",icon:"airy",help:"A main stalk divides into visible branches, with spikelets hanging or scattered along them.",keys:["airy","wiry","branched_oat","flat_oats","reed_plume"]},
+{title:"Narrow, plumed, or crowded heads",icon:"golden_plume",help:"Branches remain closer to the main axis, forming a narrower or denser outline.",keys:["long_narrow_panicle","golden_plume","compact","bushy"]},
+{title:"Distinct fingers, racemes, or combs",icon:"fingers",help:"Several recognizable side branches or one-sided rows carry the flowering units.",keys:["short_racemes","fingers","side_oats","short_side_racemes","combs","whorls","one_sided","many_one_sided","paired_spikes"]},
+{title:"Spikes, foxtails, and burs",icon:"foxtail",help:"A central spike or bristle-bearing, bottlebrush-like, or bur-bearing axis.",keys:["spike","tangled_awns","foxtail","sparse_bristles","burrs"]},
+{title:"Unusual male / female arrangements",icon:"mixed_gender",help:"Specialized flowerheads with differently shaped pollen-bearing and seed-bearing parts.",keys:["mixed_gender","aquatic_gender","aquatic_mixed"]}
 ];
 function renderQuestion(){
 const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));
@@ -132,7 +190,8 @@ const specimen=byId(refId),p=selectedPhotoOverrides[q.id+":"+key]||pic(specimen,
 const b=node("button","answer");b.type="button";b.setAttribute("aria-pressed",String(state.selected[q.id]===key));
 const f=image(p,title+" — photo example");f.append(node("span","tick","✓"));b.append(f);
 const body=node("div","answer-body");
-body.append(node("div","answer-title",title),node("span","answer-note",note),node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
+if(q.id==="head"){const label=node("div","head-card-label");label.append(headIcon(key),node("div","answer-title",title));body.append(label)}else body.append(node("div","answer-title",title));
+body.append(node("span","answer-note",note),node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
 b.append(body);b.addEventListener("click",()=>choose(q.id,key));return b;
 }
 if(q.id==="head"){
@@ -142,9 +201,9 @@ const group=flowerheadSections[i],part=node("section","head-group"),heading=node
 const grid=node("div","answer-grid");
 for(const option of q.options.filter(o=>group.keys.includes(o[0])))grid.append(buildChoice(option));
 part.append(heading,help,grid);sections.push(part);
-const jump=node("button","",group.title);jump.type="button";jump.addEventListener("click",()=>part.scrollIntoView({behavior:"smooth",block:"start"}));jumps.append(jump);
+const jump=node("button","head-jump");jump.append(headIcon(group.icon),node("span","",group.title));jump.type="button";jump.addEventListener("click",()=>part.scrollIntoView({behavior:"smooth",block:"start"}));jumps.append(jump);
 }
-area.append(jumps,...sections);
+area.append(jumps,node("p","head-illustration-note","The little drawings show simplified flowerhead shapes. Compare them with the real, credited photographs below; these shapes alone are not enough to identify a species."),...sections);
 }else{
 const grid=node("div","answer-grid");q.options.forEach(o=>grid.append(buildChoice(o)));area.append(grid);
 }
