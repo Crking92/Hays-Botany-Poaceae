@@ -590,9 +590,48 @@
         "reference": "Flora treats the ligule as a SHORT SPLITTING FIBROUS MEMBRANE WITH HAIR FRINGE (to 1.3 mm). Either visible hair fringe or membrane can be selected in broad key; not proof of a hair-only structure.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "lower_floret": {
+        "source": "Kew GrassBase Panicum hallii vs SW Arizona/New Mexico FNA-style field account",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:411627-1/general-information",
+        "secondary_source_url": "https://swbiodiversity.org/seinet/taxa/index.php?tid=1609",
+        "reference": "Lower floret consistently sterile in cited sources, but whether lower PALEA is absent/insignificant or nearly full length differs by treatment. Preserve contradiction and do not force a binary palea-presence filter.",
+        "status": "SOURCE_CONFLICT_LOWER_PALEA_MORPHOLOGY",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Trace the short-branched head and leaf blades to the rooted base",
+        "check": "Hall's panicgrass is a tufted perennial with a relatively orderly, ascending 6–20(30) cm panicle and short pedicels that leave close, overlapping small clusters of spikelets. Its older basal blades often curl like wood shavings as they dry.",
+        "compare": "Kleingrass has more diffusely dispersed smaller spikelets and may have knotty rhizomes; switchgrass is usually tall and strongly rhizomatous.",
+        "certainty": "Texas A&M + FNA; photo of intact flowerhead and basal dry/winter leaves not yet certified",
+        "source": "Texas A&M — Hall Panicgrass",
+        "url": "https://rangeplants.tamu.edu/plant/hall-panicum/nggallery/slideshow"
+      },
+      {
+        "look": "Measure the tiny two-floret spikelet and shiny fertile lemma",
+        "check": "Kew GrassBase gives ovate 2.2–3.7(3.9) mm spikelets; lower glume ~one-third to two-thirds of their length and mostly FIVE-veined, upper glume reaching the spikelet tip. One basal floret is sterile, and the hardened fertile upper lemma becomes dark, smooth and shiny.",
+        "compare": "Kleingrass commonly has 2–3.5 mm spikelets and much SHORTER lower glume (~one-quarter to one-third); compare a mature same-scale spikelet and lower floret anatomy.",
+        "certainty": "Kew GrassBase and Texas A&M; taxon variety affects spikelet size/branch spreading",
+        "source": "Kew GrassBase — Panicum hallii",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:411627-1/general-information"
+      },
+      {
+        "look": "Inspect the short ciliate membrane and possible lower floret palea",
+        "check": "Hall's panicgrass has a very short ciliate membrane (about 0.5–1.5 mm in a regional guide), which can look like hairs. An external NM flora describes the sterile lower floret palea as nearly full length while the GrassBase entry calls it absent or insignificant. Do not build an exclusive filter from this conflict.",
+        "compare": "P. coloratum has an explicitly STAMINATE (male) lower floret with developed palea; this may be useful under microscopy but needs a true taxon-concept cross-check.",
+        "certainty": "Palea descriptions conflict; record as uncertain, not definitive for specimen ID",
+        "source": "Kew GrassBase — Panicum hallii and SW Field Guide",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:411627-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS9_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published Panicum flowerhead and floral/collar anatomy; fine-scale and winter same-specimen photo roles, local identity, and field acceptance pending."
+    }
   },
   {
     "id": "setaria-parviflora",
