@@ -571,11 +571,19 @@
     },
     "source_blob_sha": "32aa492aa6418de1061f3d9a2dda572dd909ff28",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
-    "broad_group_note": "Broad source-card morphology screened; exact external flora crosswalk for Festuca versuta not yet completed. Keep states provisional."
+    "broad_group_note": "Broad source-card morphology screened; exact external flora crosswalk for Festuca versuta not yet completed. Keep states provisional.",
+    "character_evidence": {
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country: Vegetative Key and Descriptions, Phytoneuron; https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "reference": "Texas fescue: perennial tuft-forming grass, no stolons or rhizomes, membrane ligule 0.5–1 mm and 2–5 mm blades. Vegetative source checked; panicle remains independently photo-provisional.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "hilaria-mutica",
@@ -961,13 +969,40 @@
         "membrane"
       ],
       "awns": [
-        "none_obvious"
+        "none_obvious",
+        "long"
       ]
     },
     "source_blob_sha": "f1894d81638ca281b816b1ab03b194e9dc42d40b",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
-    "character_review": "PROVISIONAL",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "character_evidence": {
+      "head": {
+        "source": "Flora of North America treatment by Paul M. Peterson, https://openherbarium.org/portal/taxa/index.php?tid=630304",
+        "reference": "Pine muhly 10–40 cm narrow gray-green contracted panicles, not broad cloudlike head.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Same FNA treatment",
+        "reference": "Dense tufted perennial, not rhizomatous.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Same FNA treatment",
+        "reference": "Firm membranous ligule 4–10 mm.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Same FNA treatment",
+        "reference": "Awns may be absent OR reach 6 mm; do not equate whole-panicle invisibility with strict awnlessness.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    }
   },
   {
     "id": "muhlenbergia-reverchonii",
