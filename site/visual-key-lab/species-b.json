@@ -110,7 +110,8 @@
         "rhizome"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -197,9 +198,48 @@
         "reference": "Knotty rhizomatous base as well as tufted perennial habit. Underground short rhizome requires exposed field material rather than photo inference.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew GrassBase (hair fringe) vs University of Missouri WeedID (very short membranous ligule)",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1137778-2/general-information",
+        "secondary_source_url": "https://weedid.missouri.edu/weedinfo.cfm?weed_id=111",
+        "reference": "Field-view states hairs/membrane both eligible pending 10–20x same-plant inner-collar examination; sources may be emphasizing cilia vs minute membrane; not established as two unrelated ligule anatomies.",
+        "status": "SOURCE_CATEGORY_CONFLICT_KEEP_TWO_VISUAL_STATES",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Examine an entire mature panicle before it breaks away",
+        "check": "Published GrassBase description gives a very open, broad 25–45 cm panicle with wiry branches; when ripe the panicle may detach and tumble. A purple cloud alone does not distinguish it from other airy lovegrasses.",
+        "compare": "Plains and sand lovegrass also have transparent panicles but usually retain the head; open heads do not equal identical spikelets.",
+        "certainty": "Kew GrassBase-backed; mature head attachment and dry season photo not independently checked",
+        "source": "Kew GrassBase — Eragrostis spectabilis",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1137778-2/general-information"
+      },
+      {
+        "look": "Count florets and view a three-veined lemma",
+        "check": "Kew gives 5–7 mm long narrow spikelets usually with 7–11 florets; the lower and upper glumes are one-veined, and fertile lemmas are about 1.8–2.2 mm with three veins. Measure an intact mature spikelet.",
+        "compare": "Red lovegrass has generally larger, compressed and much more multi-flowered spikelets (source subsp. oxylepis variation); purple color alone is not a species ID.",
+        "certainty": "Published typical morphology; same-specimen glume, floret and lemma macro pending",
+        "source": "Kew GrassBase — Eragrostis spectabilis",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1137778-2/general-information"
+      },
+      {
+        "look": "Open the ligule and trace any knotty underground base",
+        "check": "Kew calls the ligule a hair fringe; Missouri WeedID instead calls a very short membrane, well under 1 mm. Purple lovegrass may form short KNOTTY rhizomes and a perennial tuft. Image-hair appearance may conceal a minute membrane.",
+        "compare": "A tufted, non-rhizomatous plains lovegrass can superficially match a purple lovegrass without a flowering head; neither collar nor root alone is decisive.",
+        "certainty": "SOURCE TERMINOLOGY CONFLICT; hair and membrane are alternative broad field looks, not proof of two biologically separate ligules",
+        "source": "Kew GrassBase — Eragrostis spectabilis (see also Missouri WeedID)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1137778-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS7_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published source morphology; photos, local vouchers, individual organ measurements and county nativity not certified. Conflicting/variety-level traits explicitly provisional."
+    }
   },
   {
     "id": "hilaria-belangeri",
