@@ -345,7 +345,8 @@
     "field_rule": "Document same-plant base and reproductive sex; do not identify species from boat-shaped leaf apex alone.",
     "traits": {
       "head": [
-        "airy"
+        "airy",
+        "compact"
       ],
       "habit": [
         "tuft"
@@ -359,7 +360,16 @@
     },
     "source_blob_sha": "e5bb2d68f6e1085caf34af633ab522423e5a41a3",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
+        "reference": "Illustrated Flora of North Central Texas, Poa annua, printed p.1313 (uploaded PDF p.236): flowering panicles small, compact and erect. Retaining prior open/airy state pending photo-stage QA avoids excluding possible age-dependent branches.",
+        "status": "REGIONAL_FLORA_CHECKED",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "poa-arachnifera",
@@ -393,7 +403,8 @@
     "field_rule": "Real PISTILLATE POAR-FS / F2 webbing is a useful evidence-backed target species photo; true Poa L membrane is genus-wide. Final species call needs attached/reviewed female floret with sexual morphology and independently documented connected rhizome and male reference.",
     "traits": {
       "head": [
-        "airy"
+        "compact",
+        "long_narrow_panicle"
       ],
       "habit": [
         "rhizome"
@@ -407,7 +418,16 @@
     },
     "source_blob_sha": "6a3efb79824b943baadefe7d06c35102a03043b7",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED"
+    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "character_evidence": {
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
+        "reference": "Illustrated Flora of North Central Texas, Poa arachnifera, printed p.1313: dense, rather narrow, erect panicles; old airy-only state conflicts with regional diagnosis. Floral sexes on separate plants and pistillate lemmas have long cobwebby basal hairs.",
+        "status": "REGIONAL_FLORA_CHECKED",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "setaria-scheelei",
