@@ -9,24 +9,25 @@
 | Phase | Status | Progress / evidence | Definition of complete |
 |---|---|---|---|
 | 1. Complete species framework | **COMPLETE** | **112/112 species** (100%), 53 genera, 9 JSON species files, all load and pass integrity tests | Every indexed species available to candidate filtering, unknown traits permitted |
-| 2. Top-level structural character accuracy | **IN PROGRESS** | **60/112 species (53.6%) have at least one reference-checked morphological character.** Three group-level screening batches cover 74 species: 22 bluestems/gramas/windmillgrasses, 24 airy-panicle grasses, and 28 one-sided raceme/bristle/reed/wetland grasses. **52** species have no comparable external character check yet. These 60 are **not** fully species-verified. | All 112 have checked head/growth states and documented overlapping or variable forms |
+| 2. Initial top-level morphology **source-coverage** | **INITIAL PASS COMPLETE; DETAIL OPEN** | **112/112 species (100%) have at least one source-backed broad or visible character** after group screening across all 112. Individual head, habit, ligule and awn states remain **partly provisional** and must be checked more deeply. | Initial broad group review and at least one cited morphology character per species; **NOT** full morphology verification |
 | 3. Diagnostic genus/species characters | **NOT STARTED AS A COMPLETE PASS** | Existing Hays Botany cards contain many ligule, spikelet, glume, lemma, awn notes, but no 112-species consistent checked morphology matrix | Distinguishing microcharacters and measurements verified by source and taxon concept, with uncertainty |
 | 4. Character-photo matching QA | **NEEDS SYSTEMATIC PASS** | **514** source-licensed image references linked; one key-photo gap at Canyon muhly; presence of a photo does not mean it demonstrates the chosen character | Each public visual character image clearly demonstrates the specified structure and carries exact-source rights |
-| 5. Full-key and field acceptance | **NOT COMPLETE** | Automated syntax, mapping and selected combinations run; live 112-species page/photo behavior and real Hays County field specimens still need validation | Key and pages function on desktop/mobile and field testing confirms paths and avoids false exclusions |
+| 5. Full-key and field acceptance | **NOT COMPLETE** | Data integrity and **24/24** targeted candidate-retention tests passed; actual picture crops, live latest deployment and field specimens still need verification | Key and pages function on desktop/mobile and field testing confirms paths and avoids false exclusions |
 
-**How far from completion?** The 112-species construction phase is finished, but the larger scientific-validation workload remains. Treat `60/112` as **partial source-backed species coverage**, not 53.6% of the entire project completed. **38** grasses have not yet had their first group-level screening, including various spike/awn and fine-panicle groups. One phase complete, one in progress, three still requiring a systematic pass.
+**How far from completion?** Species framework **and the first complete source-coverage pass** are finished: **112/112** indexed and **112/112** with at least one externally supported morphological character. This is NOT 100% completion of the project. The big remaining work is systematic species-separating anatomy (Phase 3), visual/photo verification and attribution (Phase 4), and live field acceptance (Phase 5). The current key is an unverified prototype.
 
-## Broad-morphology accuracy progress by related-grass group
+## Broad-morphology group-level review — coverage status
 
-| Group | Species given broad screening | At least one reference-checked character | Still provisional in group |
+| Review group | Species first-pass screened | With ≥1 external morphology source | Still without any source reference |
 |---|---:|---:|---:|
-| Bluestems, gramas, windmillgrasses | 22 | 12 | 10 |
-| Airy panicles (*Panicum, Dichanthelium, Poa, Eragrostis, Muhlenbergia*) | 24 | 20 | 4 |
-| One-sided racemes, bristlegrasses, sorghums, reeds, wetland grasses | 28 | 28 (Johnsongrass was already checked) | 0 without any partial source check |
-| Not yet grouped/screened | 38 | 0 | 38 |
-| **Total** | **112** | **60** | **52** |
+| Bluestems, gramas, windmillgrasses | 22 | 22 | 0 |
+| Airy-panicle groups (*Panicum, Dichanthelium, Poa, Eragrostis, Muhlenbergia*) | 24 | 24 | 0 |
+| One-sided racemes, bristles, sorghums, reeds, wetlands | 28 | 28 | 0 |
+| Spikes, awned grasses, dropseeds, cool-season and remaining groups | 38 | 38 | 0 |
+| **TOTAL** | **112 / 112** | **112 / 112** | **0** |
 
-**Interpretation:** A “reference-checked” species may have only one broad character supported by a flora or GrassBase. It does **not** mean all of its four coded characters, its photograph assignments, taxon concept, native range or diagnostic field ID are verified.
+**Interpretation:** The **112/112** source-coverage metric only means every species has **at least one** externally supported or compared morphological feature. It is not independent confirmation of the identity of all photographs, measurements, every coded state, taxon synonyms, Hays County native status, or plant specimens. All remaining uncertainty remains eligible for "Can't tell / skip" and source discrepancy review.
+
 
 ## Current subphase: broad morphology by related-grass group
 
@@ -71,7 +72,7 @@ All **24** species in *Panicum, Dichanthelium, Poa, Eragrostis,* and *Muhlenberg
 - Canyon muhly: the flora supports a short awn (0.5–2 mm), membranous genus-level ligule, and open fine-branched panicle; no CC-cleared public key photo yet.
 - Cedar rosette grass: the flora describes a 0.3–1 mm true **hair-fringe ligule** under the historical name *Panicum pedicellatum*.
 - Tumblegrass: the older *Schedonnardus paniculatus* name is cross-referenced; the long sparse radiating head is now source-checked.
-- Four pending source/taxon issues: *Dichanthelium commutatum, D. lindheimeri, Eragrostis lugens,* and *Muhlenbergia dubia*. Leave existing states provisional, not forced.
+- These four were pending at the time of the earlier airy-panicle pass: *Dichanthelium commutatum, D. lindheimeri, Eragrostis lugens,* and *Muhlenbergia dubia*. They later received partial external-source evidence in the full-coverage pass; difficult characters still need confirmation.
 
 QA: every one of **112 indexed species** remains unique, all character-state keys are valid, and 7 targeted selection routes retain their expected grasses. The 514 photo references are unchanged.
 
@@ -87,13 +88,28 @@ Key changes: distinct sparse-interrupted *Setaria reverchonii* choice; vaseygras
 
 Detailed source notes: [Pass 4 — racemes, bristles, reeds and wetlands](TOP_DOWN_QA_PASS4_RACEMES_REEDS_2026-11-10.md).
 
-## Next subphases (order)
+## Latest pass — full 112-species initial broad-source coverage (2026-11-10)
 
-1. Screen the **remaining 38** first-pass grasses, clustering true spikes, awned grains, dropseeds and small cool-season grasses; flag unresolved forms rather than forcing their states.
-2. Resolve the **14** already screened but still provisional species (10 in the bluestem/grama/windmill group, 4 airy-panicle species) with taxonomic crosswalks and applicable regional sources.
-3. Begin systematic Phase 3 checks of species-separating structures: ligule type and dimensions, floret sex/arrangement, rachilla hairs, true glume versus lemma awns, and source-supported measurements.
-4. Run photo-by-photo diagnostic cropping and attribution checks, prioritizing the photographed choices already causing confusion, and find legal Canyon muhly images.
-5. Test candidate filtering and real field specimens on mobile/desktop, and move to the permanent `grass-id` location only after acceptance.
+The formerly unscreened **38** grasses were reviewed for broad head/habit/ligule/awn characters in one pass. Their data files now contain a group-screened marker and external source notes where evidence supports a character. This pass also reconciled the **17** previously pending source gaps in the earlier groups. The project now has **112/112 species with partial external morphology support**, not 112 fully botanically authenticated keys.
 
+Important corrections include:
+- **Bermudagrass**: a short **ciliate membranous** ligule, in addition to stolons and rhizomes.
+- **Texas wintergrass**: ligule may be effectively absent **or** a tiny membrane; very long *single* floret awn.
+- **Tanglehead**: a new photograph-backed **tangled awn raceme** head choice.
+- **Threeawns, bromegrasses and fescues**: allow documented head/awn variation and distinguish annuals from perennials by real connected growth habit.
+- **Munroa**, tobosa, curlymesquite and hidden dropseeds: retain small clustered/spiciform heads but distinguish stolons from rhizomes and note when a panicle is partially sheathed.
+- **Blue, hairy, tall and red gramas**: pectinate branching differs from Texas grama's short *non-pectinate* lateral branches; branch-axis extensions remain high-value Phase 3 targets.
+- **Triplasiella eragrostoides**: accepted name crosswalk and broad open panicle size source-checked against Peterson et al. (2016), not a blanket merger with *Triplasis*.
+- **Dichanthelium** ligules and **Muhlenbergia dubia** narrow panicle/variable awns: recorded literature variation and historic taxon treatment explicitly.
+
+**Quality gates:** all **112 indexed IDs** unique across **53 genera**; **514** existing photo references; **26** head shapes, **4** growth forms, **3** ligule states and **5** awn/bristle states; every state valid; head choices grouped exactly once; selection-photo references resolved in metadata; JS syntax valid; **24/24** targeted expected-species candidate checks passed. These are static and logical tests, not proof of successful image loading or botanical ID.
+
+[Read full broad-group Pass 5 and source notes](TOP_DOWN_QA_PASS5_FULL_112_2026-11-10.md).
+
+## Next phases — where most work remains
+
+1. **Phase 3: species-separating anatomy**. Organize by real look-alike families starting with bluestems and gramas, then windmillgrasses, panicgrasses, dropseeds, cool-season wildryes, and reeds. Review ligule/collar, spathe vs sheath, rachilla, glume/lemma awn vs foxtail branch bristle, branch insertion, spikelet sex, floret count and measurements. Reconcile old names with Kew/GrassBase, Flora of North America and regional Texas floras rather than silently changing accepted names.
+2. **Phase 4: visual photo QA**. For the **26 flowering-head options** and every other trait choice, inspect actual photos at field-usable size. Replace misleading crops with legitimate diagnostic photographs and keep exact creator, source URL and license. Canyon muhly (*Muhlenbergia ×involuta*) remains the one species with zero key-photo refs.
+3. **Phase 5: live website and field acceptance**. Verify latest GitHub Pages deployment, photo URLs and mobile interactions; sample real winter, dormant, vegetative and flowering specimens from the Hays County teaching set; compare look-alikes and review false exclusions. Do not promote a final public key until verified.
 
 **Project workflow guardrails:** no changes to the old hub; source species galleries remain untouched, no extra spreadsheets, no forced guessing, unknown states do not eliminate a species, regional-native labels must not be inferred from an old flora's geographic range alone.
