@@ -372,25 +372,32 @@
         "reference": "Open flowering head with large hanging multi-flowered spikelets (typically 3–4 florets); awn often geniculate ~2.5–4 cm.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "floral_count": {
+        "source": "Flora of North America Avena fatua; older Illustrated Flora of North Central Texas",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?taxon=240108",
+        "reference": "FNA: 2, sometimes 3, florets in a spikelet, 18–32 mm. Older North Central Texas flora suggests usually 3–4; treat as source conflict to verify with local specimen, not a definitive cut-off.",
+        "status": "CONFLICTING_SOURCE_FLORET_COUNTS",
+        "review_date": "2026-11-10"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_checks": [
       {
         "look": "Count florets inside ONE hanging spikelet",
-        "check": "The regional flora reports typically about 3–4 developed florets in a large, pendent oat spikelet, with a loose, branched panicle rather than a true barley or rye spike.",
+        "check": "Flora of North America gives usually 2, sometimes 3, florets in each large 18–32 mm hanging wild-oat spikelet. The older North Central Texas regional flora indicates usually 3–4; preserve that discrepancy rather than forcing a count. Also inspect the open branched panicle, not just a detached lemma.",
         "compare": "Bromus often has 6–20 florets, rye and barley flowering units are attached directly along a spike",
-        "certainty": "Regional morphology source, exact local florets not photo-counted",
-        "source": "Illustrated Flora of North Central Texas — Avena fatua account",
-        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+        "certainty": "CONFLICTING floret counts: FNA 2(3), older regional flora 3–4; verify attached Texas specimens",
+        "source": "Flora of North America — Avena fatua, with regional-flora discrepancy noted",
+        "url": "https://openherbarium.org/portal/taxa/index.php?taxon=240108"
       },
       {
         "look": "Inspect a long bent lemma awn at maturity",
-        "check": "Wild oat's conspicuous awn commonly bends and twists, in the regional treatment approximately 25–40 mm. Attached lemmas and floret shedding scars are more useful than mature color alone.",
+        "check": "FNA gives a 23–42 mm awn arising from the middle THIRD of a 14–22 mm lemma, usually twisted and bent; this dorsal insertion differs from the terminal awns of Aristida and the subapical awns of many Bromus.",
         "compare": "Threeawns have THREE awns on one lemma; brome awns are typically straight to divergent",
         "certainty": "Regional-flora sourced; section not independently photo-certified",
-        "source": "Illustrated Flora of North Central Texas — Avena fatua account",
-        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+        "source": "Flora of North America — Avena fatua",
+        "url": "https://openherbarium.org/portal/taxa/index.php?taxon=240108"
       }
     ],
     "diagnostic_review": {
