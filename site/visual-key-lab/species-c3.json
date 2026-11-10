@@ -21,7 +21,8 @@
     "field_rule": "First check SCALE and the BASAL BUNCH: Lindheimer muhly forms a large coarse, densely tufted fountain often around 0.8–1.5 m tall, with tall relatively contracted, densely flowered panicles. At the leaf collar a LONG MEMBRANOUS ligule is the high-value confirmation; photograph it with a ruler rather than inferring it from plant size.",
     "traits": {
       "head": [
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "airy"
       ],
       "habit": [
         "tuft"
@@ -38,13 +39,46 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 212",
-        "reference": "Panicles tightly OR loosely contracted, 10–54 cm, densely flowered; existing narrow contracted head remains appropriate, open-cloud assumption would be misleading.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "source": "Kew GrassBase contracted 20–40 cm panicle; UT Austin Williamson County M. lindheimeri aging more open/feathery 30–62.5 cm panicle",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information",
+        "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Muhlenbergia%20lindheimeri",
+        "reference": "Young contracted head may appear long_narrow_panicle, older opened/loosely feathery head may appear airy; photo-first both allowed. This is variation within species and different descriptions, NOT proof of hybrid.",
+        "status": "SOURCE_AND_STAGE_VARIATION_TWO_VISUAL_STATES",
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect the TRUE long membrane at the leaf collar",
+        "check": "A firm, eciliate MEMBRANOUS ligule is usually 8–15 mm in the Kew treatment. Its pale triangular sheath base must be opened at the actual blade–sheath junction. A large fountain-shaped bunch alone is not species ID.",
+        "compare": "Seep muhly generally has a shorter 2–4(9) mm membrane and much narrower 1–2 mm threadlike rolled blades; the hybrid overlaps both parents.",
+        "certainty": "Kew GrassBase-backed; collar scale photo on authenticated local plant pending",
+        "source": "Kew GrassBase — Muhlenbergia lindheimeri",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
+      },
+      {
+        "look": "Compare YOUNG contracted and OLDER opening panicles",
+        "check": "Kew describes a narrow, densely flowered panicle ~20–40 cm by 1–1.5 cm; a Williamson County Texas specimen account describes an older, more open/feathery 30–62.5 cm panicle. Stage, branch width and treatment vary. Record actual stage; do NOT reject mature spreading heads as impossible.",
+        "compare": "Seep muhly is a much more open 10–30 cm wide-oval cloud; Canyon hybrid falls between and requires floret anatomy.",
+        "certainty": "Cross-source width/age differences retained; broad head candidate allows narrow and airy views without identifying hybrid from silhouette",
+        "source": "Kew GrassBase — Muhlenbergia lindheimeri; UT Texas local account",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
+      },
+      {
+        "look": "Measure glumes, floret and short awn on the SAME spikelet",
+        "check": "A mature spikelet has ONE fertile floret, usually ~2–3.5 mm; paired glumes are each generally ~2–3.5 mm, roughly floret length, one-veined. Lemma three-veined, may be awnless or carry a fine 0–4 mm awn. Record a whole attached mature spikelet and mm ruler.",
+        "compare": "Seep muhly glumes tend to be much shorter (1–2.5 mm versus 3.5–5 mm spikelet). Canyon hybrid glumes ~2–2.5 and spikelet ~3–4 mm: strong overlap.",
+        "certainty": "Kew GrassBase plus Texas local specimen; overlapping sizes cannot alone certify a hybrid or parent",
+        "source": "Kew GrassBase — Muhlenbergia lindheimeri",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    }
   },
   {
     "id": "panicum-virgatum",
@@ -1053,9 +1087,47 @@
         "reference": "Tiny CILIATE MEMBRANOUS ligule; hair fringe and membrane both permitted as broad photographic appearances. Taxon complexes/varieties still unresolved.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "pericarp": {
+        "source": "UT Austin Plant Resources Center, Bob Harms, Texas Sporobolus complexes",
+        "source_url": "https://w3.biosci.utexas.edu/prc/SPORO/SPORO-pericarp-comp.html",
+        "reference": "Many modern keys use gelatinizing/swelling pericarp when wet vs non-gelatinizing in S. clandestinus. UT explains ambiguity of wet/moist/loose terms; requires multiple grains and lemma pubescence, not binary photograph based choice.",
+        "status": "SOURCE_TEST_AMBIGUOUS_DO_NOT_AUTOMATE_BINARY",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Look for the partly SHEATHED tall contracted panicle",
+        "check": "Tall/composite dropseed is usually a tufted perennial with narrow contracted flowering panicles ~5–26 cm, often partly hidden by the subtending leaf sheath. The ligule is a very short ciliate membrane/hair-fringe at field scale.",
+        "compare": "Poverty dropseed is an annual with much shorter 1–4 cm terminal AND axillary often sheathed panicles; S. clandestinus also forms narrow enclosed perennial heads.",
+        "certainty": "FNA/Iowa grass account and UT Texas complex; sheath photo pending",
+        "source": "Iowa State — Sporobolus compositus",
+        "url": "https://www.eeob.iastate.edu/research/IowaGrasses/speciespages/SporoCompo/SporoCompo.html"
+      },
+      {
+        "look": "Examine LEMMA surface rather than assuming all rough dropseed names agree",
+        "check": "The S. compositus complex is often diagnosed by relatively smooth, GLABROUS mature fertile lemma vs the visibly pubescent/scabrous opaque lemma of S. clandestinus. Typical S. compositus 4.5–5.4 mm single-floret spikelets and lemmas ~4.4–5.2 mm.",
+        "compare": "S. clandestinus typical 5–7 mm spikelets with pubescent 4–5 mm lemmas. Variation and both current/older names exist; compare actual same-scale spikelets.",
+        "certainty": "Iowa State and UT Bob Harms; species-complex and variety interpretations not interchangeable",
+        "source": "UT Austin Plant Resources Center — Sporobolus compositus complex",
+        "url": "https://w3.biosci.utexas.edu/prc/SPORO/index.html"
+      },
+      {
+        "look": "Be cautious with the moist pericarp test",
+        "check": "Pericarp of S. compositus is generally reported swelling/gelatinizing on soaking, whereas S. clandestinus stays loose but not gelatinous. UT Harms documents disagreement and ambiguity about interpreting 'loose', 'moist', and 'wet': a single uncertain drop does not confirm an identification.",
+        "compare": "Never perform a destructive wet seed test on the only voucher; record several grains and microscope lemma surface first.",
+        "certainty": "UT Texas detailed critique of pericarp key vs FNA/Riggins; source-qualified evidence, not pass/fail filter",
+        "source": "UT Plant Resources Center — Sporobolus pericarp caveats",
+        "url": "https://w3.biosci.utexas.edu/prc/SPORO/SPORO-pericarp-comp.html"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    }
   },
   {
     "id": "tripsacum-dactyloides",
