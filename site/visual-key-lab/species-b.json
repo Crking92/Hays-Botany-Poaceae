@@ -326,7 +326,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Find a real creeping STOLON with hairy rooting nodes",
+        "check": "Curlymesquite forms low sod by slender, wirelike SURFACE stolons rooting at leafy nodes, usually with a conspicuous tuft of white hairs at some nodes. Often only top 1–2 internodes rise. This is not a buried rhizome.",
+        "compare": "Tobosa (*Hilaria mutica*) forms stiffer erect tufts from short underground rhizomes; it does not grow a long surface stolon like curlymesquite.",
+        "certainty": "Texas A&M regional account, but exact reference image rooting-node verification pending",
+        "source": "Texas A&M — Common curlymesquite",
+        "url": "https://rangeplants.tamu.edu/plant/common-curlymesquite/"
+      },
+      {
+        "look": "Count a THREE-SPIKELET fascicle, not three awns",
+        "check": "The short roughly 2–3.5 cm spike-like head bears around 4–9 clusters, each a triad: a central fertile spikelet flanked by two generally male/sterile spikelets. Glumes can have short points. A three-spikelet fascicle is NOT three lemma awns from one floret.",
+        "compare": "Aristida threeawns have one fertile floret with three long terminal awns. Tobosa also has repeated Hilaria triads but larger, more upright perennial growth.",
+        "certainty": "Regional flora and Texas A&M architecture; complete fascicle macro needed",
+        "source": "Texas A&M — Common curlymesquite",
+        "url": "https://rangeplants.tamu.edu/plant/common-curlymesquite/"
+      },
+      {
+        "look": "Check the tiny membrane and connected turf",
+        "check": "True inner ligule is a very short lacerate membrane, often about 0.5–1 mm in western US descriptions; do not mistake hairy culm NODES for this ligule. Ground-hugging turf and nodal roots reinforce but do not replace triad inspection.",
+        "compare": "Tobosa has a ~1 mm lacerate membrane too; neither collar alone identifies a Hilaria species.",
+        "certainty": "Existing regional flora and western description; UT/Texas field sample pending",
+        "source": "Texas A&M — Common curlymesquite",
+        "url": "https://rangeplants.tamu.edu/plant/common-curlymesquite/"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    }
   },
   {
     "id": "muhlenbergia-paniculata",
@@ -337,7 +368,8 @@
     "hero_i": 0,
     "traits": {
       "head": [
-        "wiry"
+        "wiry",
+        "one_sided"
       ],
       "habit": [
         "tuft"
@@ -391,9 +423,48 @@
         "reference": "Historical treatment confirms tufted perennial 8–50(–70) cm; root connectivity remains unphotographed.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "taxonomy": {
+        "source": "Kew POWO accepted Muhlenbergia paniculata; Texas A&M older Schedonnardus paniculatus",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77107594-1",
+        "secondary_source_url": "https://rangeplants.tamu.edu/plant/tumblegrass/",
+        "reference": "Schedonnardus paniculatus is a homotypic synonym of Muhlenbergia paniculata; old synonym shouldn't create another indexed species. One-sided spreading rays can look like wiry or one-sided head. Kew reports annual or perennial in broad range; TAMU Texas perennial.",
+        "status": "NAME_SYNONYM_CONFIRMED_LOCAL_GROWTH_VARIANCE",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Trace the curved main rachis and widely spaced lateral rays",
+        "check": "Tumblegrass has a curling, scythe-shaped or bent main flowering axis with few (commonly 1–5) long spreading unilateral rays bearing widely spaced spikelets. Whole branched head may break away and tumble at maturity. This is NOT an ordinary open cloud panicle.",
+        "compare": "Nimblewill has a contracted straight narrow 5–15 cm panicle; other tumbling grasses may have different numbers of florets.",
+        "certainty": "Texas A&M and Kew genus under old Schedonnardus; older morphological taxonomy explicit",
+        "source": "Texas A&M — Tumblegrass (Schedonnardus paniculatus)",
+        "url": "https://rangeplants.tamu.edu/plant/tumblegrass/"
+      },
+      {
+        "look": "Open a tiny one-FLORET spikelet attached to its ONE-SIDED ray",
+        "check": "Kew under historical *Schedonnardus* describes linear 3–4 mm single-floret spikelets SESSILE and appressed to one side of angular ray rachises, falling attached to branch structures. The LOWER glume is about half the upper; not a three-awn floret.",
+        "compare": "Hilaria/Hop three-spikelet clusters contain TWO lateral mostly male spikelets plus a central fertile, not one solitary floret on a unilateral branch.",
+        "certainty": "Genus-level former Schedonnardus morphology, coupled with species field description; exact photo macro pending",
+        "source": "Kew GrassBase under Schedonnardus in Muhlenbergia genus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30000924-2/general-information"
+      },
+      {
+        "look": "Keep nomenclature and botanical life cycle separate",
+        "check": "Kew recognizes *Muhlenbergia paniculata* (2010 combination) and lists *Schedonnardus paniculatus* as its synonym; older Texas A&M resources keep Schedonnardus. Both point to the same tumblegrass. The Texas regional species account calls it perennial, while Kew global distribution says annual OR perennial: local rooted stage still requires checking.",
+        "compare": "Do not count historical name as a second species; a detached tumbling seedhead alone cannot determine whether the plant was annual or perennial.",
+        "certainty": "Kew accepted-name crosswalk and TAMU ecology; local longevity unresolved at range scale",
+        "source": "Kew POWO — Muhlenbergia paniculata accepted name and synonyms",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77107594-1"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    }
   },
   {
     "id": "nassella-leucotricha",
