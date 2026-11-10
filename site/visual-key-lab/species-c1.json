@@ -1097,6 +1097,29 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Open a mature fused burr carefully",
+        "check": "The spiny unit is a cup-shaped INVOLUCRE of fused bristles around roughly 2–4 actual spikelets, not a seed with many lemma awns. Kew describes a burr 5.5–10.2 mm long and flattened reflex-barbed spines.",
+        "compare": "Setaria has individual, unfused bristles that persist below spikelets when the spikelets fall",
+        "certainty": "Kew GrassBase-backed; avoid handling barehanded; fused cup macro pending",
+        "source": "Kew POWO / GrassBase — Cenchrus spinifex",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395325-1/general-information"
+      },
+      {
+        "look": "Check the collar and break-off scar",
+        "check": "The ligule is a fringe of hairs (~0.5–1.5 mm); burr clusters break away along the axis, leaving scars. Count the actual spikelets inside a burr with magnification, and retain species-level caution if the burr is immature.",
+        "compare": "Other sandbur species can also have fused spiny involucres; species requires correctly measured mature burr",
+        "certainty": "Kew GrassBase-backed; species-level macro pending",
+        "source": "Kew POWO / GrassBase — Cenchrus spinifex",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395325-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    }
   }
 ]
