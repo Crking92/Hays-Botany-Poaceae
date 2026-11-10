@@ -86,13 +86,46 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Same flora p.183",
-        "reference": "Ligule is a 0.2–0.5 mm CILIATE MEMBRANE: the fringe hairs do not make it hair-only.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
+        "source": "Kew GrassBase Cynodon dactylon ciliolate membrane versus FNA hair fringe",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:397065-1/general-information",
+        "secondary_source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Cynodon+dactylon",
+        "reference": "Tiny true ligule ~0.2–0.5 mm with cilia may be described as membrane or hair fringe; long side collar hairs are a different structure. Accept existing two broad visual appearances.",
+        "status": "SOURCE_TERMINOLOGY_2_VISIBLE_CHOICES_PHOTO_PENDING",
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Compare DIGITATE racemes and individual spikelets",
+        "check": "Bermudagrass commonly has 4–6 (occasionally more or fewer) thin unilateral racemes radiating from one flowering tip. An individual flattened axis carries one-flowered 2–3 mm spikelets in two close rows; the lemma keel may be SILKY-HIRSŪTE but has no long awn.",
+        "compare": "Buffalograss male flowerheads can also be comb-like, but females have distinct bur-like head units; goosegrass has 5–7 FLORETS per spikelet and a flattened whitish crown.",
+        "certainty": "Kew GrassBase/FNA source-backed; intact flowering fingers and one separated spikelet needed",
+        "source": "Kew POWO / GrassBase — Cynodon dactylon",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:397065-1/general-information"
+      },
+      {
+        "look": "Trace both surface STOLONS and buried RHIZOMES",
+        "check": "A perennial ground mat normally has long creeping SURFACE stolons rooting at joints as well as underground slender SCALY rhizomes. The same plant may have a mat and exposed underground stem, so do not equate bare root with rhizome.",
+        "compare": "Buffalograss spreads with surface stolons but does not have this same extensive pair of creeping stem systems; curlymesquite shows distinctive white-hairy stolon nodes.",
+        "certainty": "Kew/FNA morphology; exact underground connecting stem not yet certified in gallery",
+        "source": "FNA — Cynodon dactylon",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Cynodon+dactylon"
+      },
+      {
+        "look": "Find the ligule UNDER the much longer sheath-mouth hairs",
+        "check": "Kew calls the TRUE ligule a minute (~0.2–0.3 mm) CILIATE MEMBRANE, while FNA emphasizes a ~0.5 mm line/fringe of hairs and often long side collar hairs. Both visible choices can look valid; isolate the inside blade–sheath junction.",
+        "compare": "Goosegrass has a small erose membrane and different 5–7-flowered spikelets; the outer collar hair tufts alone are not species proof.",
+        "certainty": "Kew vs FNA wording retained; microscopic same-plant collar pending",
+        "source": "Kew GrassBase / FNA — Cynodon dactylon",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:397065-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
+    }
   },
   {
     "id": "eragrostis-spectabilis",
