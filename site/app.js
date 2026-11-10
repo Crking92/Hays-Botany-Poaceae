@@ -4,7 +4,7 @@
 const $=id=>document.getElementById(id);
 const hub="https://crking92.github.io/Hays-County-Botany/";
 const esc=(s)=>String(s??"");
-const state={index:[],active:null,mode:"learner",glossary:null,cache:new Map()};
+const state={index:[],active:null,mode:"field",glossary:null,cache:new Map()};
 const make=(tag,props={})=>{const n=document.createElement(tag);for(const [k,v] of Object.entries(props)){if(k==="className")n.className=v;else n.setAttribute(k,v)}return n;};
 const txt=(tag,value,cls)=>{const n=make(tag);if(cls)n.className=cls;n.textContent=esc(value);return n;};
 const text=(node,value)=>node.append(document.createTextNode(esc(value)));
@@ -50,9 +50,13 @@ function list(q=""){
  }
 }
 function photoCard(panel,index,scientific){
- const fig=make("figure",{className:"photo",id:"photo-"+index});
+ const fig=make("figure",{className:"photo"});
+ if(Number.isInteger(index))fig.id="photo-"+index;
  const art=make("div",{className:"photo-artwork"});
  const img=make("img",{src:panel.src,alt:panel.label||scientific,loading:"lazy"});
+ img.addEventListener("error",()=>{
+   art.replaceChildren(txt("p","This source photo could not load.","photo-hold"));
+ });
  art.append(img);
  const markers=panel.markers||[];
  if(markers.length){
@@ -226,11 +230,21 @@ function renderField(d,root){
    const summary=make("summary");
    summary.append(txt("strong",t.heading||"Diagnostic feature"),txt("span",t.short||"","muted"));
    details.append(summary);
+   const matches=[...new Set(t.preview_panel_indices||[])]
+     .map(n=>d.panels[n])
+     .filter(p=>p?.src && p.photo_role==="TARGET_SPECIES_SOURCE" && p.source_species_id===d.id);
+   if(matches.length){
+     const photos=make("div",{className:"gallery"});
+     matches.forEach(p=>photos.append(photoCard(p,null,d.scientific)));
+     details.append(photos);
+   }else{
+     details.append(txt("p","A photo of this exact feature is still needed. See the source gallery for other views.","photo-hold"));
+   }
    appendParagraph(details,t.details);
    if(t.status)appendParagraph(details,t.status,"source-flag");
    appendTerms(details,t.glossary||[]);
    for(const n of t.preview_panel_indices||[]){
-      if(d.panels[n])details.append(photoJump(n,"View matching documented photo"));
+      if(d.panels[n]?.photo_role==="COMPARISON_SPECIES_SOURCE")details.append(photoJump(n,"View look-alike photo"));
    }
    if(t.missing_original_panel_indices?.length){
      details.append(txt("p",t.missing_original_panel_indices.length+" original teaching photo reference(s) held for rights or source review.","photo-hold"));
