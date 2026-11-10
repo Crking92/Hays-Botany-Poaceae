@@ -55,7 +55,7 @@
     },
     {
       "heading": "03 · TWO ZIPPER ROWS ON FLAT FINGERS",
-      "details": "Flora field cue (Illustrated Flora of North Central Texas, p. 1268) — Turn one flat flowering finger to see the two overlapping rows of awnless spikelets. Then check the whole head for one or two branches that may attach below the top cluster.\n\nBob Harms's actual complete attached head (panel 9) and raceme macro (panel 8) show the stout fingerlike branches with neatly paired ranks of nearly awnless flattened spikelets; the original NC-SA flowering photo is panel 0 and remains license-conditional. Head architecture is photographed, but not continuously linked to one locally collected living crown. An additional head-only picture is not a priority.",
+      "details": "Flora field cue (Illustrated Flora of North Central Texas, p. 1268) — Turn one flat flowering finger to see the two overlapping rows of awnless spikelets. Then check the whole head for one or two branches that may attach below the top cluster.\n\nBob Harms's actual complete attached head (panel 9) and raceme macro (panel 8) show the stout fingerlike branches with neatly paired ranks of nearly awnless flattened spikelets; the original NC-SA flowering photo is panel 0 and remains license-conditional. Head architecture is photographed, but not continuously linked to one locally collected living crown. An additional head-only picture is not a priority.\n\nUse the whole plant photo to trace the fingers to their center. A face-on close-up of one finger is still needed to show both rows clearly.",
       "short": "Several stiff digitate or subdigitate branches carry two neat ranks of tightly appressed spikelets",
       "status": "COMPLETE ATTACHED FLOWERING HEAD AND ZIPPER ROWS PHOTOGRAPHED",
       "glossary": [
@@ -69,7 +69,9 @@
         8,
         0
       ],
-      "preview_panel_indices": [],
+      "preview_panel_indices": [
+        0
+      ],
       "missing_original_panel_indices": [
         9,
         8,
@@ -200,14 +202,29 @@
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "modifications": "",
       "annotation_note": "Hays Botany displays overlaid numbered anatomy pointers; the source JPEG itself is unchanged.",
-      "markers": [],
+      "markers": [
+        {
+          "label": "One flat flowering finger",
+          "target_x": 35,
+          "target_y": 44.5,
+          "label_x": 20,
+          "label_y": 32
+        },
+        {
+          "label": "Center of one flowering head",
+          "target_x": 40.5,
+          "target_y": 49,
+          "label_x": 53,
+          "label_y": 35
+        }
+      ],
       "original_panel_index": 1,
       "publication_status": "TRANSFER_CANDIDATE_NOT_FINAL_PHOTO_PERMISSION_CLEARANCE",
       "source_species_id": "eleusine-indica",
       "photo_role": "TARGET_SPECIES_SOURCE"
     },
     {
-      "label": "Actual blade–sheath collar — short membrane area and longer side hairs",
+      "label": "Goosegrass — blade–sheath junction and long side hairs",
       "src": "../content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-1032fdbf120c.jpg",
       "caption": "Harry Rose's source-identified true collar photo shows a pale inner blade–sheath joining zone and much longer side hairs. The inner short membranous ligule itself is not fully resolved against a physical millimeter scale. Do not label long lateral hairs as a hair-only ligule.",
       "creator": "Harry Rose (Macleay Grass Man)",
@@ -219,8 +236,8 @@
       "markers": [
         {
           "label": "Blade–sheath junction",
-          "target_x": 51,
-          "target_y": 51,
+          "target_x": 49,
+          "target_y": 46,
           "label_x": 5,
           "label_y": 25
         },
