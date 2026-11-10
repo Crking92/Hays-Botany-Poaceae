@@ -748,7 +748,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count the rames on one mature terminal head",
+        "check": "Flora of North America describes usually 2–6(10) rames (the slender flowering branches), roughly 5–11 cm long. The turkey-foot outline helps choose a group but is not species proof.",
+        "compare": "KR's slenderer, usually shorter rames and different paired spikelets",
+        "certainty": "FNA-backed; specimen photo still needed",
+        "source": "Flora of North America — Andropogon gerardii",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=36&taxauthid=1&taxon=3055"
+      },
+      {
+        "look": "View the true ligule and blade base separately",
+        "check": "Texas Hill Country treatment describes a membranous ligule about 1–2.5 mm, occasionally sparsely ciliate, with noticeably longer blade-base hairs behind/above it. Do not label all blade hairs 'ligule'.",
+        "compare": "silky and Kleberg's conspicuous culm-node hairs, which are at a different location",
+        "certainty": "Texas Hill Country vegetative morphology checked; photo pending",
+        "source": "Hagenbuch & Lemke 2015, p.34",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      },
+      {
+        "look": "Compare the attached spikelet pair",
+        "check": "Mature sessile spikelets are about 5–11 mm and the normally developed pedicelled spikelets are often staminate; FNA reports sessile awns about 8–25 mm, variable with form.",
+        "compare": "KR, little bluestem and sorghum relatives; avoid diagnosing by the number of fingers alone",
+        "certainty": "FNA-backed; photo macro pending",
+        "source": "Flora of North America — Andropogon gerardii",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=36&taxauthid=1&taxon=3055"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    }
   },
   {
     "id": "aristida-purpurea",
