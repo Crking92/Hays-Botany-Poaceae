@@ -64,7 +64,30 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Trace the crowded raceme pairs through their spathes",
+        "check": "The bushy cluster is a compound group of short hairy paired racemes, typically about 1.5–3 cm, tightly crowded near the top; each pair has sessile fertile spikelets and often reduced pedicelled companions.",
+        "compare": "broomsedge's more separate spathe-held flower units and the narrow-spathed A. tenuispatheum",
+        "certainty": "Published morphology; exact image-to-character QA pending",
+        "source": "Kew POWO / GrassBase under Andropogon glomeratus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77339188-1/general-information"
+      },
+      {
+        "look": "Use a vegetative check when heads are missing",
+        "check": "Regional Hill Country treatment reports compressed, keeled leaf sheaths broader than the blades, and a membranous, marginally ciliate ligule about 1–2 mm. This does not alone identify the species.",
+        "compare": "broomsedge has lower compressed sheaths but upper sheaths more rounded",
+        "certainty": "Regionally sourced; not sufficient alone",
+        "source": "Hagenbuch & Lemke 2015, p.34",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    }
   },
   {
     "id": "aristida-oligantha",
