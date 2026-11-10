@@ -64,7 +64,30 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Follow the flowering stem",
+        "check": "Short silky spike-bearing branches terminate separate leafy branches higher on the culm; do not confuse them with several long fingers from a single terminal point.",
+        "compare": "KR bluestem's compact terminal fan",
+        "certainty": "Regional-flora-supported; photo verification pending",
+        "source": "Illustrated Flora of North Central Texas, Schizachyrium account",
+        "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      },
+      {
+        "look": "Open the true ligule",
+        "check": "A thin membranous flap at the inner blade–sheath junction, reported at about 1–3 mm. A white beard at a distant culm node is not this ligule.",
+        "compare": "node hairs of silky and Kleberg bluestems",
+        "certainty": "Regional-flora-supported; photo verification pending",
+        "source": "Illustrated Flora of North Central Texas, Schizachyrium account",
+        "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    }
   },
   {
     "id": "bothriochloa-ischaemum",
@@ -86,6 +109,7 @@
         "membrane"
       ],
       "awns": [
+        "long",
         "none_obvious"
       ]
     },
@@ -139,9 +163,10 @@
     "genus": "Bothriochloa",
     "character_evidence": {
       "awns": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.170 (printed 1246): awn 1–1.5mm, and stolons/rhizomes can develop under mowing/grazing",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "source": "Flora of North America, Bothriochloa ischaemum",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483",
+        "reference": "True sessile-spikelet lemma awns 9–17 mm, twisted and geniculate. Previous 1–1.5 mm claim was erroneous; field silhouette may still obscure the awn. Both long and none_obvious are kept in broad visual filtering until photo QA.",
+        "status": "EXTERNAL_SOURCE_CHECKED_FIELD_VISIBILITY_PROVISIONAL",
         "review_date": "2026-11-10"
       },
       "habit": {
@@ -151,7 +176,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Trace the fan's axis",
+        "check": "Usually 2–8 long spike-bearing branches, about 3–9 cm, on a short 0.5–2 cm central axis; inspect attachment rather than the color.",
+        "compare": "the longer central axes and many crowded branches of cane/silver bluestem",
+        "certainty": "FNA-supported; photo verification pending",
+        "source": "Flora of North America, Bothriochloa ischaemum",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483"
+      },
+      {
+        "look": "Check the true awn on one sessile spikelet",
+        "check": "Awns are about 9–17 mm, often twisted and bent. They may be difficult to resolve in an ordinary whole-head photograph; do not assume awnless.",
+        "compare": "silky, Kleberg, and native Bothriochloa by measured spikelet parts—not only awn visibility",
+        "certainty": "FNA-supported; source-unit correction",
+        "source": "Flora of North America, Bothriochloa ischaemum",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483"
+      },
+      {
+        "look": "Inspect hairs right above the leaf collar",
+        "check": "Look for papilla-based hairs on the lower blade. Short node hairs can occur in var. songarica and are not alone a safe KR-versus-Kleberg test.",
+        "compare": "silky or Kleberg node beards",
+        "certainty": "UT Plant Resources Center-supported; photo verification pending",
+        "source": "UT Austin Plant Resources Center, KR morphology",
+        "url": "https://www.biosci.utexas.edu/prc/DigFlora/KR/BOISS-morph.html"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    }
   },
   {
     "id": "dichanthium-sericeum",
@@ -270,7 +326,38 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Distinguish the white node beard from a ligule",
+        "check": "Locate an actual culm joint and then separately open the blade–sheath junction. The beard is on the node; the ligule is a short membrane.",
+        "compare": "Kleberg can also show node hairs; the node alone does not settle the ID",
+        "certainty": "Published morphology; photo verification pending",
+        "source": "VicFlora, Dichanthium sericeum subsp. sericeum",
+        "url": "https://vicflora.rbg.vic.gov.au/flora/taxon/4b5a18dd-783f-4ab6-b1ac-75181b1c6878"
+      },
+      {
+        "look": "Magnify the lower glume",
+        "check": "Look for a transverse subapical fringe of long, tubercle-based hairs; published species descriptions give individual fringe hairs up to roughly 5–6 mm.",
+        "compare": "other Dichanthium spikelets; this fringe is not unique to silky",
+        "certainty": "GrassBase-backed; not single-character diagnosis",
+        "source": "Kew POWO / GrassBase, Dichanthium sericeum",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398571-1/general-information"
+      },
+      {
+        "look": "Check the spikelet's fertile lemma awn",
+        "check": "The fertile floret has a bent, twisted awn around 25–30 mm in the published accounts; compare mature units with the actual sessile/pedicellate pair intact.",
+        "compare": "KR's smaller fertile spikelets and shorter awns",
+        "certainty": "GrassBase-backed; photo verification pending",
+        "source": "Kew POWO / GrassBase, Dichanthium sericeum",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398571-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    }
   },
   {
     "id": "bouteloua-curtipendula",
@@ -424,7 +511,9 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "hairs"
+      ],
       "awns": [
         "none_obvious"
       ]
@@ -492,9 +581,39 @@
         "reference": "Usually 1–3 curved pectinate comb branches; unlike B. hirsuta, branch axis does not extend beyond spikelets.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Kew POWO / GrassBase, Bouteloua gracilis",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1026047-2/general-information",
+        "reference": "Ligule a fringe of hairs, not an eciliate membrane.",
+        "status": "EXTERNAL_SOURCE_CHECKED",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Study the comb tip",
+        "check": "Usually 1–3(4) curved comb branches. The tip tends to end with a rudimentary spikelet rather than a long bare needle extending beyond the fertile spikelets.",
+        "compare": "hairy grama's 5–10 mm naked rachis tip",
+        "certainty": "Published comparison; photo verification pending",
+        "source": "Utah Valley University, blue/hairy grama identification",
+        "url": "https://www.uvu.edu/crfs/native-plants/bouteoua-gracilis.html"
+      },
+      {
+        "look": "Open the collar and spikelet",
+        "check": "The ligule is a hair fringe. Published GrassBase treatment gives fertile spikelets near 5–6 mm and very short fertile-lemma awns (often 1–3 mm), plus sterile-floret awns.",
+        "compare": "hairy grama and red grama; do not confuse short fertile-lemma awns with Aristida threeawns",
+        "certainty": "GrassBase-backed; photo verification pending",
+        "source": "Kew POWO / GrassBase, Bouteloua gracilis",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1026047-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    }
   },
   {
     "id": "bouteloua-hirsuta",
@@ -510,7 +629,9 @@
       "habit": [
         "tuft"
       ],
-      "ligule": [],
+      "ligule": [
+        "hairs"
+      ],
       "awns": [
         "none_obvious"
       ]
@@ -569,9 +690,39 @@
         "reference": "1–4 straight or curved pectinate branches with a conspicuous rough extension of branch axis beyond the true spikelets, unlike B. gracilis.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Flora of North America, Bouteloua hirsuta",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427",
+        "reference": "Ligule a hair fringe 0.2–0.5 mm; separate from leaf sheath/base hairs.",
+        "status": "EXTERNAL_SOURCE_CHECKED",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect the naked projecting comb tip",
+        "check": "The raceme axis commonly continues about 5–10 mm past the last spikelet. This is rachis extension, not a lemma awn.",
+        "compare": "blue grama's generally spikelet-terminated or much less naked tip",
+        "certainty": "FNA-supported; photo verification pending",
+        "source": "Flora of North America, Bouteloua hirsuta",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427"
+      },
+      {
+        "look": "Check the hair-fringe ligule and spikelet texture",
+        "check": "True ligule is a very short 0.2–0.5 mm hair fringe; papillose-based hairs are frequent on leaves and reproductive parts, but hairiness varies.",
+        "compare": "blue grama, which also has a hair ligule; combine two characters",
+        "certainty": "FNA-supported; photo verification pending",
+        "source": "Flora of North America, Bouteloua hirsuta",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    }
   },
   {
     "id": "chloris-verticillata",
