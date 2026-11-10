@@ -60,6 +60,37 @@
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Measure the raceme spathe's width",
+        "check": "In the 2018 Texas-focused treatment the sheath around a raceme is usually under 2.5 mm wide. This is a measured structure, not the total width of the fluffy flowering cluster.",
+        "compare": "A. glomeratum sensu lato and the similar western segregate described as Andropogon eremicus",
+        "certainty": "Taxon-concept-specific; no Hays specimen verified",
+        "source": "Wipff & Shaw 2018 (under Andropogon tenuispatheus), p.2",
+        "url": "https://www.phytoneuron.net/2018Phytoneuron/73PhytoN-Andropogoneremicus.pdf"
+      },
+      {
+        "look": "Open the inner ligule with a hand lens",
+        "check": "Published ligule membrane typically under 1 mm, its margin bearing relatively long cilia; leaf sheaths usually smooth, occasionally scabrous. Distinguish the cilia from a free-standing hair-only ligule.",
+        "compare": "bushy bluestem regional descriptions with generally larger ligules, but ranges may overlap",
+        "certainty": "Taxon-concept-specific, not a standalone determination",
+        "source": "Wipff & Shaw 2018, p.2",
+        "url": "https://www.phytoneuron.net/2018Phytoneuron/73PhytoN-Andropogoneremicus.pdf"
+      },
+      {
+        "look": "Measure the attached sessile spikelet",
+        "check": "Sessile spikelets are usually under 3.8 mm in the 2018 account. This is more useful than labeling a white, fluffy head, but specimen and taxon-name crosswalk are still required.",
+        "compare": "A. glomeratum and other Anatherum relatives; older A. glomeratus var. pumilus citations require concept tracing",
+        "certainty": "Taxon-concept-specific; no photographed dissection yet",
+        "source": "Wipff & Shaw 2018, p.2; POWO accepted-name crosswalk",
+        "url": "https://www.phytoneuron.net/2018Phytoneuron/73PhytoN-Andropogoneremicus.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
     }
   },
   {
@@ -142,6 +173,29 @@
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Follow several separate spathe-held flowering units",
+        "check": "Each upper culm bears separate straw-colored subtending spatheoles; within them, often 2–5 short, hairy rames around 2–3 cm, rather than one thick tight terminal brush.",
+        "compare": "bushy bluestem's denser corymbose flowering mass",
+        "certainty": "Kew GrassBase-backed; photo sequence pending",
+        "source": "Kew POWO / GrassBase under Andropogon virginicus",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30016735-2/general-information"
+      },
+      {
+        "look": "Inspect a true ligule and sheath form",
+        "check": "A membrane about 1–2 mm with a ciliate margin; in the Texas Hill Country treatment upper sheaths are rounded, keeled toward the collar, and lower sheaths more compressed. Node hairs alone do not diagnose it.",
+        "compare": "bushy bluestem's usually strongly compressed, keeled sheaths",
+        "certainty": "Local regional vegetative source; comparisons require attached leaves",
+        "source": "Hagenbuch & Lemke 2015, p.34",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
     }
   },
   {
@@ -485,6 +539,29 @@
         "status": "PARTIAL_REGIONAL_FLORA_CHECK",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Check the unflowering leaf sheath and blade tip",
+        "check": "Regional Hill Country study reports a slightly laterally compressed, weakly keeled sheath, blunt/mucronate leaf apex, and membrane ligule to about 1 mm. This combination is useful for narrowing a slimspike candidate.",
+        "compare": "other Chloris species overlap, so vegetative characters alone are provisional",
+        "certainty": "Hill Country vegetative source checked; floral species diagnosis pending",
+        "source": "Hagenbuch & Lemke 2015, p.41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      },
+      {
+        "look": "Inspect one intact floret, and beware the hybrid population",
+        "check": "The small slender fan alone cannot prove slimspike windmillgrass. Regional authors report mixed populations with C. cucullata and C. verticillata producing intermediates; keep uncertain plants as Chloris sp.",
+        "compare": "C. ×subdolichostachya and both other parental-looking forms",
+        "certainty": "Regional hybridization warning; detailed floral discriminants still needed",
+        "source": "Hagenbuch & Lemke 2015, p.41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
     }
   },
   {
@@ -508,7 +585,8 @@
     "field_rule": "Confirmed hybrid concept in Kew/USDA does not establish photo-level hybrid diagnosis: separately measure BOTH lemma bodies and BOTH awns, show reproductive insertion and field voucher; a windmill head alone is Chloris sp.",
     "traits": {
       "head": [
-        "fingers"
+        "fingers",
+        "whorls"
       ],
       "habit": [
         "mat"
@@ -524,11 +602,35 @@
     "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
     "character_evidence": {
       "head": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.180 (printed 1256): one terminal whorl in regional key; newer taxon hybrid concept makes photo-based diagnosis provisional",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
+        "source": "Kew POWO hybrid concept; regional Texas Hill Country flora",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information",
+        "reference": "Accepted hybrid of C. cucullata × C. verticillata; digitate or closely whorled heads and intermediate sterile-floret anatomy. Both broad states permitted; hybrid identification from appearance not verified.",
+        "status": "HYBRID_INTERMEDIATE_PROVISIONAL",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Confirm why this is an intermediate form",
+        "check": "Kew recognizes the accepted hybrid C. cucullata × C. verticillata. Regional treatments describe intermediate digitate/closely-whorled heads, variably inflated sterile florets, and relatively short awns.",
+        "compare": "C. cucullata, C. verticillata, C. andropogonoides in mixed Central Texas populations",
+        "certainty": "Hybrid concept supported; morphological proof of any individual plant pending",
+        "source": "Kew POWO hybrid account; Hays-area flora discussion",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information"
+      },
+      {
+        "look": "Document reproductive structures and population, not just silhouette",
+        "check": "Collect paired, measured fertile/sterile lemma and awn details from an attached mature plant, along with upper raceme insertion and a voucher/observation series; leave 'Chloris sp.' when intermediate.",
+        "compare": "No photo alone can securely demonstrate parentage; other Chloris introgression occurs",
+        "certainty": "Research/photo worklist; this check is a caution not a confirmed diagnosis",
+        "source": "Kew POWO hybrid concept; Hagenbuch & Lemke p.41",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
     }
   },
   {
