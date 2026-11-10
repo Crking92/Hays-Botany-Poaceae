@@ -779,13 +779,15 @@
     "field_rule": "Use visible macro morphology first and defer difficult perennial-species separations to mature material, reliable grain tests and microscope when necessary.",
     "traits": {
       "head": [
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "compact"
       ],
       "habit": [
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -796,7 +798,22 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
-    "broad_group_note": "Existing Hays Botany description screened; historical flora treats Sporobolus compositus in infraspecific aggregates that do not directly map to all modern accepted species. Retain provisional head/habit states and flag taxon crosswalk."
+    "broad_group_note": "Existing Hays Botany description screened; historical flora treats Sporobolus compositus in infraspecific aggregates that do not directly map to all modern accepted species. Retain provisional head/habit states and flag taxon crosswalk.",
+    "character_evidence": {
+      "head": {
+        "source": "Oklahoma State University Extension, https://extension.okstate.edu/programs/plant-id/plant-profiles/tall-dropseed",
+        "reference": "Vertical narrow panicle often partly enclosed by subtending upper sheath; contracted spike-like appearance, not a true single spike.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Same OSU source",
+        "reference": "Tiny CILIATE MEMBRANOUS ligule; hair fringe and membrane both permitted as broad photographic appearances. Taxon complexes/varieties still unresolved.",
+        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "review_date": "2026-11-10"
+      }
+    },
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
   },
   {
     "id": "tripsacum-dactyloides",
