@@ -288,9 +288,11 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Same Kew account",
-        "reference": "Hair-fringe ligule about 0.5 mm.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "source": "Kew GrassBase under Erioneuron pulchellum versus FNA under Dasyochloa pulchella",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77139483-1/general-information",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=26287",
+        "reference": "GrassBase ~0.5 mm hair-fringe true ligule; FNA 3–5 mm. Measurements conflict, potentially source scope or tissue definition; no absolute cutoff until same-voucher resolution.",
+        "status": "SOURCE_CONFLICT_QUANTITATIVE_LIGULE_LENGTH",
         "review_date": "2026-11-10"
       },
       "awns": {
@@ -299,6 +301,37 @@
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Look INSIDE short pointed LEAFY FASCICLES for the flowering packet",
+        "check": "Munroa pulchella (older Dasyochloa / Erioneuron pulchellum) is a dwarf perennial with alternating long and bunched internodes in its short stolons. Panicles only ~1–2(2.5) cm can hold **1–5 spikelets**, enclosed by expanded leafy fascicles, not on an obvious long naked flower stalk.",
+        "compare": "Hairy woollygrass bears a compact hairy club above the lower leaves on a comparatively bare 10–30 cm culm.",
+        "certainty": "Kew GrassBase under Erioneuron pulchellum and FNA under older name; actual leaflet-spikelet placement photo pending",
+        "source": "Kew POWO / GrassBase — Munroa pulchella",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77139483-1/general-information"
+      },
+      {
+        "look": "Dissect a 7–13 mm woolly MULTIFLORET spikelet",
+        "check": "Kew describes 6–12 fertile florets per 7–13 mm spikelet; persistent nearly equal glumes ~6–8 mm both one-veined. Fertile lemma ~3–5 mm and THREE-veined with TWO deep lobes and ONE short (1.5–2.5 mm) central awn. A frayed tuft isn't a new species.",
+        "compare": "Erioneuron pilosum often has 7–18 florets in ~12–19 mm spikelets and its lemma apex is less deeply lobed.",
+        "certainty": "GrassBase source; FNA ranges differ slightly and require same-plant scale; macro pending",
+        "source": "Kew GrassBase under Erioneuron pulchellum",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77139483-1/general-information"
+      },
+      {
+        "look": "Keep LIGULE LENGTH disagreements explicit",
+        "check": "Kew GrassBase under synonym Erioneuron pulchellum describes a **~0.5 mm HAIR FRINGE** ligule, whereas the FNA treatment under Dasyochloa pulchella gives **3–5 mm ligules**. Do NOT teach one absolute dimension until taxon concept and tissue were independently checked in a Hays or Texas herbarium voucher.",
+        "compare": "Erioneuron pilosum also has an approximately 0.5 mm hair ligule; the hidden leafy fascicle and deep-2-lobed lemmas matter more.",
+        "certainty": "FNA/Kew published quantitative disagreement; flagged for later taxon reconciliation and actual collar macro",
+        "source": "FNA (via NEON) — Dasyochloa/Munroa pulchella",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=26287"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
     }
   },
   {
