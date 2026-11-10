@@ -461,7 +461,8 @@
     "hero_i": 1,
     "traits": {
       "head": [
-        "combs"
+        "combs",
+        "burrs"
       ],
       "habit": [
         "mat"
@@ -527,9 +528,54 @@
         "reference": "Illustrated Flora of North Central Texas, Poaceae under Buchloe dactyloides, printed p.1253 (uploaded monocots PDF p.177): ~0.5 mm CILIATE MEMBRANOUS ligule; hair-bearing membrane should not be treated as an exclusively hair-only ligule. Male combs raised; female bur-like inflorescences near leaves are not Cenchrus spine-involucres.",
         "status": "REGIONAL_FLORA_CHECKED",
         "review_date": "2026-11-10"
+      },
+      "head": {
+        "source": "Kew GrassBase / FNA Bouteloua dactyloides",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information",
+        "reference": "MALE heads have comb-like racemes; FEMALE heads have hard short bur-like clusters, formed by stiffened glumes and floral branches, not Cenchrus fused bristle burs. Most plants dioecious, occasionally monoecious. Broad key must not eliminate female form.",
+        "status": "PUBLISHED_SEX_SPECIFIC_HEAD_STATES_PHOTO_PENDING",
+        "review_date": "2026-11-10"
+      },
+      "sexual_system": {
+        "source": "Kew POWO / GrassBase",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information",
+        "reference": "Usually dioecious, rarely monoecious; sexes have quite different heads. Do not label it as male/female zones on the same flowerhead.",
+        "status": "BOTANICAL_SOURCE_VERIFIED_EXACT_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Find the MALE and FEMALE heads, even if on different plants",
+        "check": "Buffalograss is usually DIOECIOUS, with male and female inflorescences on separate plants (occasionally both on one). MALE heads carry 1–4 comb-like branches with orderly two-rowed spikelets, while FEMALE seed-bearing clusters are short, hard bur-like units often tucked among leaves.",
+        "compare": "Blue grama has curved comb-like branches but not this striking female bur-like head; Cenchrus sandbur has a spiny fused bristle involucre rather than a buffalograss female branched reproductive cluster.",
+        "certainty": "Kew GrassBase male/female morphology; each photo must have authenticated sex and intact attachment",
+        "source": "Kew POWO / GrassBase — Bouteloua dactyloides",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information"
+      },
+      {
+        "look": "Open a FEMALE cluster without mistaking it for spiny sandbur",
+        "check": "Female branches contain normally 2–5 ONE-FLORET spikelets; thickened upper glumes and the branch axis form a small hardened globular toothed unit. Glume tips can have three teeth but it is NOT a Cenchrus burr of fused bristles.",
+        "compare": "Sandbur involucres have bristle-derived spines surrounding several spikelets; buffalograss female clusters have hardened glumes and branching axes.",
+        "certainty": "Kew / FNA-linked source checked, opened female branch with ruler still pending",
+        "source": "Kew POWO / GrassBase — female Bouteloua dactyloides",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information"
+      },
+      {
+        "look": "Follow a ground-level STOLON to a rooted node and inner ligule",
+        "check": "Gray-green leaves arise from creeping ABOVEGROUND stolons making close sod; blade tips can curl dry. Inner collar has a tiny ~0.5–1 mm CILIATE MEMBRANE, not a true hair-only ring. Rooted surface runners alone do not rule out bermudagrass.",
+        "compare": "Bermudagrass has both long scaly underground rhizomes and surface stolons, with typically 4–6 slender fingers on flowering culms.",
+        "certainty": "Regional flora / Kew morphology; rooted runner and collar macro not yet checked",
+        "source": "Kew POWO / GrassBase — Bouteloua dactyloides",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
+    }
   },
   {
     "id": "bouteloua-gracilis",
