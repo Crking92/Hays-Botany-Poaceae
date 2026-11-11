@@ -984,7 +984,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-japonicus/images/commons-bromus-japonicus-bf6282e4125a.jpg",
-        "label": "JAPANESE BROME — archived mature flowering spikelets",
+        "label": "JAPANESE BROME — green developing awned spikelets (not mature)",
         "creator": "Matt Lavin from Bozeman, Montana, USA",
         "license": "CC BY-SA 2.0",
         "license_url": "",
@@ -1004,7 +1004,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
-        "label": "JAPANESE BROME — visible nervation, overlapping lemmas, awn origins",
+        "label": "JAPANESE BROME — overlapping awned scales; lower glume vein count not isolated",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "",
@@ -1101,6 +1101,95 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_6",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4/6 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "green developing spikelets and long projecting awns"
+          ],
+          "cannot_verify": [
+            "dry maturity",
+            "glume vein counts"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/commons-bromus-japonicus-bf6282e4125a.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "776e208b70794d6a3836c573335d03ba0abb8ab6",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "narrow elongated floral scale and long awn with millimeter ruler"
+          ],
+          "cannot_verify": [
+            "precise insertion and calibrated lemma length"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-lemma-awn.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "264f6099799e5b3f57fea3851fee9d593012cdf6",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "overlapping green awned spikelet scales with visible veins"
+          ],
+          "cannot_verify": [
+            "isolated lower glume, validated vein number"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/matt-lavin-bromus-japonicus-spikelet-nervation.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "400e2ef79dbe896d68686ff0d7dcf712dfd63201",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "hairy leaf sheath near blade–sheath junction"
+          ],
+          "cannot_verify": [
+            "hidden inner membrane ligule"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-true-hairy-leaf-sheath-sl21.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "a80a0f00cd7f918245aae864e8a829f3e18f7342",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        3,
+        5
+      ],
+      "unmet_roles": [
+        "separated lower/upper glumes with vein counts",
+        "true inner ligule"
+      ],
+      "summary": "3 directly show scoped features; 1 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   },
   {
