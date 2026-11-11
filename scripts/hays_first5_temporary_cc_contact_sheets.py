@@ -12,7 +12,7 @@ RAW=json.loads((ROOT/"audits/hays-58-photo-evidence-review.json").read_text())
 LOOK={x["name"]:x for x in RAW["records"]}
 CANDIDATES=["Melica nitens","Bothriochloa longipaniculata","Paspalum langei","Coelorachis cylindrica","Bromus catharticus"]
 OUT=ROOT/"review_temporary";OUT.mkdir(exist_ok=True)
-LICENSES={"cc0","cc-by","cc-by-sa"}
+LICENSES={"cc0","cc-by","cc-by-sa","cc-by-nc","cc-by-nc-sa"}
 def fetch_json(url):
   req=urllib.request.Request(url,headers={"User-Agent":"HaysBotanyImageVisualReview/1.0 (https://github.com/Crking92/Hays-Botany-Poaceae)"})
   with urllib.request.urlopen(req,timeout=35) as res:return json.load(res)
@@ -43,7 +43,7 @@ def render(name,items):
 full=[]
 for candidate in CANDIDATES:
   src=LOOK[candidate]
-  best=sorted(src["observations"],key=lambda o:(o["photo_count"],o.get("identifications_count",0)),reverse=True)[:4]
+  best=sorted(src["observations"],key=lambda o:(o["photo_count"],o.get("identifications_count",0)),reverse=True)[:9]
   saved=[];metadata=[];seen=set()
   for v in best:
     if len(saved)>=12:break
@@ -76,6 +76,6 @@ for candidate in CANDIDATES:
     print("CONTACT_SHEET",candidate,str(p),len(saved),flush=True)
   else:print("NO_CC_PHOTOS",candidate,flush=True)
   full+=metadata
-(OUT/"attributions.json").write_text(json.dumps({"generated":"2026-11-11","purpose":"Temporary visually-inspected review contact sheets of Hays County sourced CC0/CC-BY/CC-BY-SA photos; not intended for webpage publication","licenses":sorted(LICENSES),"photos":full},indent=2)+"\n")
-(OUT/"README.txt").write_text("CREDITED TEMPORARY REVIEW ONLY. 1-day GitHub Actions artifact retention. Third-party photos are not in the repository; DO NOT rehost on public website without confirming exact-source rights and credit. See attributions.json.\n")
+(OUT/"attributions.json").write_text(json.dumps({"generated":"2026-11-11","purpose":"Temporary NONCOMMERCIAL educational review contact sheets of Hays County source photos with exact CC0, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA photo licenses; no image site publication","licenses":sorted(LICENSES),"photos":full},indent=2)+"\n")
+(OUT/"README.txt").write_text("CREDITED NONCOMMERCIAL TEMPORARY REVIEW ONLY. 1-day GitHub Actions artifact retention. Photos include CC BY-NC licenses, cannot be rehosted on commercial sites. Third-party images are not in the repository; DO NOT publish on website without confirming exact-source permissions, use and credit. See attributions.json.\n")
 print("SUMMARY_CC_PHOTOS",len(full),"PER_SPECIES",json.dumps({k:sum(x["candidate"]==k for x in full) for k in CANDIDATES}),flush=True)
