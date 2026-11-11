@@ -1645,7 +1645,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/sam-kieschnick-sheath-and-blades-746040999.jpg",
-        "label": "Sand Lovegrass — where to look at the sheath mouth",
+        "label": "SAND LOVEGRASS — narrow ribbed blades and partly obscured lower sheath in a hand; true inner ligule not exposed",
         "creator": "(c) Sam Kieschnick, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1665,7 +1665,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-trichodes/gbif-2807293618-a428084d204e.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "SAND LOVEGRASS — TEX Caldwell County 2013 specimen with long fine open panicle; determination label visible; image rights hold",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1685,7 +1685,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-trichodes/gbif-3866887404-e2318717b33d.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "SAND LOVEGRASS — TEX Hays County 30 Dec 2021 specimen with roots, narrow leaves and open panicles; imported-soil/seeded-site locality; rights hold",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1750,6 +1750,96 @@
       "stage": "PHASE3_PASS7_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published source morphology; photos, local vouchers, individual organ measurements and county nativity not certified. Conflicting/variety-level traits explicitly provisional."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS32_9_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_3_OF_6",
+      "rights_status": "TWO_VISIBLE_TEX_SCANS_RIGHTS_CONFLICT_HOLD; ORIGINAL_SOURCE_FIELDS_UNCHANGED",
+      "scope": "3 of 6 existing Lab gallery photo references actually opened and inspected from GitHub image bytes; missing assets uncounted, no independent photo-specific source rights or taxon vouchers certified.",
+      "photo_roles": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Hand-held lower green grass stem and several long narrow lengthwise-ribbed blades, with a low sheath transition obscured by fingers and surrounding leaves"
+          ],
+          "cannot_verify": [
+            "Actual inside blade–sheath ligule or hair fringe, crown roots, traceable same-plant flowering head and diagnostic spikelet anatomy"
+          ],
+          "pass": "PHASE4_PASS32_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/sam-kieschnick-sheath-and-blades-746040999.jpg",
+          "git_blob_sha": "044662cb6ade8244d19af7bd27f4eaf97d8b4bb8",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE LICENSE, ORIGINAL OBSERVATION/VOUCHER IDENTITY AND PHOTO DATE NOT INDEPENDENTLY REVALIDATED"
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "TEX pressed specimen with long thin arching culms and many finely separated branches of an open panicle carrying small elongated spikelets; label reads Caldwell County, collected 6 July 2013, determined Eragrostis trichodes by B. L. Turner 2014; image has copyright reserved notice"
+          ],
+          "cannot_verify": [
+            "Species ID independently confirmed beyond specimen determination, separated floral parts/ligule, naturally occurring Hays County provenance, exact image redistribution rights"
+          ],
+          "pass": "PHASE4_PASS32_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-trichodes/gbif-2807293618-a428084d204e.jpg",
+          "git_blob_sha": "0a138ce719e9d84de2b901730ea2c93ddb3a35cb",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE LICENSE, ORIGINAL OBSERVATION/VOUCHER IDENTITY AND PHOTO DATE NOT INDEPENDENTLY REVALIDATED",
+          "rights_review": "HOLD_EXACT_MEDIA_LICENSE_CONFLICT; TEX COPYRIGHT_RESERVED_BANNER_VS_STORED_CC_BY_4_0",
+          "not_newly_approved_for_publication": true
+        },
+        {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "TEX pressed grass with connected fibrous root clump, several long narrow leaves, thin culms and diffuse open panicles with small spikelets. Label reads Hays County, Cypress Springs Elementary School, 30 December 2021, Thomas L. Watson 2021-133, in sandy imported soil in a commercially seeded area; copyright reserved banner visible"
+          ],
+          "cannot_verify": [
+            "A wild self-sustaining native Hays population inferred from seeded/imported-soil site, same-plant true ligule and spikelet floral dissections, exact image redistribution rights"
+          ],
+          "pass": "PHASE4_PASS32_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-trichodes/gbif-3866887404-e2318717b33d.jpg",
+          "git_blob_sha": "38afe88954e27f7f0bddb44f6f1572bba0c6c5d3",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE LICENSE, ORIGINAL OBSERVATION/VOUCHER IDENTITY AND PHOTO DATE NOT INDEPENDENTLY REVALIDATED",
+          "rights_review": "HOLD_EXACT_MEDIA_LICENSE_CONFLICT; TEX COPYRIGHT_RESERVED_BANNER_VS_STORED_CC_BY_4_0",
+          "not_newly_approved_for_publication": true,
+          "locality_note": "Hays County TEX 2021-12-30, sandy imported soil commercially seeded area; Hays occurrence, not proof of natural county nativity"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0,
+        2,
+        5
+      ],
+      "unmet_roles": [
+        "Existing i=0, i=2, and i=5 returned blob metadata without image bytes and remain uncounted; recovery belongs to separate image-access lane",
+        "Exact-image rights hold for TEX i=4 and i=6: both scans visibly mark copyright reserved despite stored CC BY 4.0 metadata; reconcile individual media license with institution before new authorization",
+        "True opened inner ligule and scaled separated glume, lemma and palea from verified specimen",
+        "Hays County 2021 voucher from imported sandy soil and commercially seeded location; do NOT infer autochthonous/native county population or natural seed origin",
+        "Date-verified late-fall standing grass at natural local sites (historic voucher date alone is not photo of live winter plant)"
+      ],
+      "summary": "Three real images checked. Texas field blade i=1 partly shows outer stem/sheath but no true ligule. TEX Caldwell County i=4 shows an open slender panicle and dated 2013 voucher; TEX Hays County i=6 shows rooted culms and open panicles collected 30 Dec 2021 in sandy imported soil at a commercially seeded site. Hays herbarium voucher is county occurrence evidence, NOT independent proof of naturally occurring native population. Both opened TEX scans display copyright reserved while stored CC BY 4.0 records remain; exact photo release held. Other i=0/2/5 inaccessible metadata-only.",
+      "seasonal_review": {
+        "observed": "TEX herbarium specimen was physically collected December 30 2021 in Hays County at a commercially seeded imported-sand site; this is not a live winter habit photograph or native-population proof.",
+        "queue_action": "Use existing master Photo Needs Queue for seasonal and anatomical photo gaps. No new spreadsheet."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo appearance only; existing source-backed key values and plant identity records unchanged.",
+      "rights_reconciliation_queue": [
+        {
+          "i": 4,
+          "reason": "TEX photo visible copyright reserved banner vs existing CC BY 4.0 stored license; Caldwell County 2013 specimen",
+          "status": "HOLD_NO_NEW_APPROVAL"
+        },
+        {
+          "i": 6,
+          "reason": "TEX photo visible copyright reserved banner vs existing CC BY 4.0 stored license; Hays County December 2021, imported sandy soil at commercially seeded site",
+          "status": "HOLD_NO_NEW_APPROVAL"
+        }
+      ]
     }
   },
   {
