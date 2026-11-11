@@ -534,7 +534,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/turner-brockman-hairy-tridens-green-attached-spikelet-698633127.jpg",
-        "label": "Hairy Tridens — white-edged blade beside young spikelets",
+        "label": "HAIRY WOOLLYGRASS — green overlapping spikelets and hairy blade margin",
         "creator": "Turner Brockman",
         "license": "CC BY-SA 4.0",
         "source_page": "https://www.inaturalist.org/photos/698633127",
@@ -606,6 +606,42 @@
       "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_1_OF_1",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "1/1 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "overlapping green spikelets and conspicuous white marginal leaf hairs"
+          ],
+          "cannot_verify": [
+            "individual lemma nerves and inner ligule"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/turner-brockman-hairy-tridens-green-attached-spikelet-698633127.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "a15308b0ee895fc3521bbba71d558d45b133e988",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "lemma nerve hairs, glumes, ligule, and winter rooted tuft"
+      ],
+      "summary": "1 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
@@ -1066,7 +1102,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-2100db3bb8b7444.jpg",
-        "label": "4 · SECOND LOCAL IMAGE — exact-source CC BY photo",
+        "label": "VINE MESQUITE — dry grass field view; key spikelet anatomy indistinct",
         "creator": "CH Hemphill",
         "license": "CC BY (version not recorded)",
         "source_page": "https://www.gbif.org/occurrence/5938363154",
@@ -1075,7 +1111,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-ad387625b8c87e5.jpg",
-        "label": "Vine Mesquite — spikelets along one narrow flowering branch",
+        "label": "VINE MESQUITE — dry oval spikelets along one narrow flowering axis",
         "creator": "sonoresmore",
         "license": "CC0 1.0",
         "source_page": "https://www.gbif.org/occurrence/5938643995",
@@ -1146,6 +1182,58 @@
       "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/2 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "thin pale dry head surrounded by field litter"
+          ],
+          "cannot_verify": [
+            "clear spikelet architecture, roots or collar"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-2100db3bb8b7444.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "3547c8c11f58b56b6e1b7180f60fa252c0020f31",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "many tan oval mature-looking spikelets overlapping along thin axis against fingers"
+          ],
+          "cannot_verify": [
+            "dissected glumes or basal stolons"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hopia/hopia-obtusa/images/library-review020-ad387625b8c87e5.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "cd1f8516142a4247fa897cb81ea05bda9f476de5",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "rooted stolon, open ligule and isolated spikelet"
+      ],
+      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {

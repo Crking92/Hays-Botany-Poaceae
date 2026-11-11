@@ -28,7 +28,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-living-flowering-tuft-681610420.jpg",
-        "label": "DUVAL COUNTY · one living tuft with narrow blades and attached green flowering heads",
+        "label": "REVERCHON BRISTLEGRASS — living tuft and attached green flowering branches",
         "creator": "Clifton Ladd, C.W.B.",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/681610420",
@@ -109,6 +109,46 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_1_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "1/4 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "living green leafy tuft with several green spikelet-bearing branches"
+          ],
+          "cannot_verify": [
+            "isolated bristle, ligule or roots"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-living-flowering-tuft-681610420.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "289dfd3fdeeb7006aa09af4d3f389f5a27fd76e1",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0,
+        1,
+        3
+      ],
+      "unmet_roles": [
+        "inner hair ligule, isolated bristle/spikelet and dry habit"
+      ],
+      "summary": "1 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
@@ -122,7 +162,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sorghastrum/sorghastrum-elliottii/images/inat-public-582983609-southcarolina-basal-live-plant-cc0.jpg",
-        "label": "Slender Indiangrass — sheath and collar orientation",
+        "label": "SLENDER INDIANGRASS — opened outer sheath and red culm; inner ligule unresolved",
         "creator": "no rights reserved",
         "license": "CC0",
         "source_page": "https://www.inaturalist.org/photos/582983609",
@@ -131,7 +171,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/sorghastrum-elliottii/inat-237655001.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "SLENDER INDIANGRASS — narrow brown awned flowering head in hand",
         "creator": "(c) Eric Knight, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/237655001",
@@ -220,6 +260,60 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "purple-green external sheath partly spread away from reddish culm"
+          ],
+          "cannot_verify": [
+            "true inner ligule and Texas voucher"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sorghastrum/sorghastrum-elliottii/images/inat-public-582983609-southcarolina-basal-live-plant-cc0.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "fc8bfe5a74bd374e00e765ad85161869098f790d",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long brown narrow panicle with twisted projecting awns held on palm"
+          ],
+          "cannot_verify": [
+            "dissected fertile lemma, collar or seasonal date"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/sorghastrum-elliottii/inat-237655001.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "101a6e366f8078567ac1d6d124f9c22b69ca355c",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        6
+      ],
+      "unmet_roles": [
+        "inner ligule and isolated awned floret with scale"
+      ],
+      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {

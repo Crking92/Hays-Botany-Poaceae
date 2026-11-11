@@ -506,7 +506,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Muhlenbergia/muhlenbergia-paniculata/images/matt-lavin-schedonnardus-paniculatus-inflorescence.jpg",
-        "label": "TUMBLEGRASS — archived branching inflorescence detail",
+        "label": "TUMBLEGRASS — long flowering branches above narrow blades; not spikelet dissection",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ASchedonnardus_paniculatus_%283884661542%29_%282%29.jpg",
@@ -515,7 +515,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Muhlenbergia/muhlenbergia-paniculata/images/matt-lavin-schedonnardus-stand-3883870771-cc-by-sa2.jpg",
-        "label": "Tumblegrass — mature spreading stand and dispersal heads",
+        "label": "TUMBLEGRASS — broad stand; single dispersal head not resolved",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Schedonnardus_paniculatus_(3883870771).jpg",
@@ -585,6 +585,60 @@
       "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long thin branched panicle above narrow green leaves"
+          ],
+          "cannot_verify": [
+            "isolated spikelet or detached rolling tumblehead"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-paniculata/images/matt-lavin-schedonnardus-paniculatus-inflorescence.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "6c6e73290ee3cf732b8f45585c68110993ea4744",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "wide tawny-green grass stand with erect stalks"
+          ],
+          "cannot_verify": [
+            "individual mature dispersal head or rooted source"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-paniculata/images/matt-lavin-schedonnardus-stand-3883870771-cc-by-sa2.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "79ce277cd29dd81e97b150bdd74be62d8ed6947b",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        3
+      ],
+      "unmet_roles": [
+        "detached tumblehead and one isolated spikelet at scale"
+      ],
+      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
@@ -1042,7 +1096,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sorghum/sorghum-halepense/images/commons-matt-lavin-johnsongrass-ligule.jpg",
-        "label": "Johnsongrass — where to look for the ligule",
+        "label": "JOHNSONGRASS — hairy sheath mouth and collar; full inner ligule not exposed",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Sorghum_halepense_(6134701986).jpg",
@@ -1108,6 +1162,58 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/2 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long jointed white underground rhizome with roots and upright shoot"
+          ],
+          "cannot_verify": [
+            "entire root system"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sorghum/sorghum-halepense/images/commons-moadeeb-johnsongrass-rhizome.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "3a63c0f9cd94cdddbc3515cf892abbcaac0676fd",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "hairy sheath mouth and pale membrane-like inner rim"
+          ],
+          "cannot_verify": [
+            "complete undamaged true ligule and its length"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sorghum/sorghum-halepense/images/commons-matt-lavin-johnsongrass-ligule.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "39227f86724551c57a3790de779feda42f94f136",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "undamaged opened ligule at scale and mature flowering head"
+      ],
+      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
@@ -1136,7 +1242,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Andropogon/andropogon-gerardi/images/commons-archive-c667565f3c222eb0.jpg",
-        "label": "NEW · TEXAS SOURCE — flowering culms and branching turkey-foot heads — PROVISIONAL USER REVIEW",
+        "label": "BIG BLUESTEM — turkeyfoot-style flowering racemes; roots and full plant not shown",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_gerardii_(4056252610).jpg",
@@ -1145,7 +1251,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Andropogon/andropogon-gerardi/images/01-whole-plant.jpg",
-        "label": "True big bluestem collar and membranous ligule",
+        "label": "BIG BLUESTEM — inner membranous ligule at leaf collar (not whole plant)",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_gerardii_(3904162732).jpg",
@@ -1154,7 +1260,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Andropogon/andropogon-gerardi/images/commons-archive-393de172aa45a0ff.jpg",
-        "label": "NEW · REPRODUCTIVE PHOTO — yellow anthers on big bluestem — PROVISIONAL USER REVIEW",
+        "label": "BIG BLUESTEM — yellow anthers on purplish flowering racemes",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_gerardii_(3904163898).jpg",
@@ -1201,6 +1307,74 @@
       "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several narrow turkey-foot flowering racemes on culms"
+          ],
+          "cannot_verify": [
+            "rooted whole plant or paired floral dissection"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Andropogon/andropogon-gerardi/images/commons-archive-c667565f3c222eb0.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "1a4a8561ccf17afe818f0c79a5882b41c0af85ba",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pale membranous inner ligule at ridged sheath mouth with adjacent hairs"
+          ],
+          "cannot_verify": [
+            "length and whole-plant habit"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Andropogon/andropogon-gerardi/images/01-whole-plant.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "47e049c1c79ce9a51ec2c473fa03b81e83b6220b",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "yellow-orange anthers exposed on purple racemes"
+          ],
+          "cannot_verify": [
+            "isolated lemma/glume measurements"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Andropogon/andropogon-gerardi/images/commons-archive-393de172aa45a0ff.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "b71a7c6f81c24d9dd658a9ec113face6ffb19ae6",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "paired floral units at rachis node, root crown and full dormant bunch"
+      ],
+      "summary": "3 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
