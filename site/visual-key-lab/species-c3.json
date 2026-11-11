@@ -141,7 +141,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-virgatum/images/stefan-lefnaer-switchgrass-fertile-floret-cc-by-sa4.jpg",
-        "label": "NEW · FERTILE FLORET — true complete lemma and palea enclosing the flower · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "SWITCHGRASS — two macro views of pale green fertile floret units; enclosing floral parts not separately exposed",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -151,7 +151,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-virgatum/images/02-fruit-seed.jpg",
-        "label": "2 · Switchgrass ripe fruits — spikelet scale",
+        "label": "SWITCHGRASS — attached green and reddish spikelets; ripe fruit is not exposed",
         "creator": "peterwchen",
         "license": "CC BY 4.0",
         "license_url": "",
@@ -234,11 +234,11 @@
       "note": "Published Panicum flowerhead and floral/collar anatomy; fine-scale and winter same-specimen photo roles, local identity, and field acceptance pending."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS11_23_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_7",
+      "status": "PARTIAL_VISUAL_REVIEW_6_OF_7",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "Four exact GitHub-hosted gallery photos visually rendered; three current gallery images still unreviewed. Photo role evidence not species identity, dissection, source rights or season certification.",
+      "scope": "6 of 7 current Lab photo references inspected from actual hosted image bytes. Photos with metadata only are excluded. Source rights, specimen ID, season/date and calibrated anatomy not revalidated.",
       "photo_roles": [
         {
           "i": 0,
@@ -299,25 +299,53 @@
           "hosted_file": "content/taxa/Poaceae/Panicum/panicum-virgatum/images/stefan-lefnaer-cc-by-sa-4-switchgrass-flowering-spikelets.jpg",
           "git_blob_sha": "3766fd1fffe82481c5a3c6b802d828aeb6629858",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "two smooth pale-green elongated fertile floret units photographed under magnification beside 2-mm printed scale"
+          ],
+          "cannot_verify": [
+            "separate lemma, palea and enclosed flower; ripe caryopsis"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-virgatum/images/stefan-lefnaer-switchgrass-fertile-floret-cc-by-sa4.jpg",
+          "git_blob_sha": "00565133117737d18bc7398e00a478fe567f1ca7",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "attached pointed green and reddish spikelets on flowering branches"
+          ],
+          "cannot_verify": [
+            "isolated ripe fruit or seed, caryopsis identity, late-season collection date"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-virgatum/images/02-fruit-seed.jpg",
+          "git_blob_sha": "00595943ca9e88aceac25cecd83fc75ad0624e14",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
       "unreviewed_hosted_indices": [
-        4,
-        5,
-        6
+        4
       ],
       "unmet_roles": [
-        "detached fertile floret and glume/lemma dissection to examine",
-        "clear subterranean connection tracing horizontal stem",
+        "hosted glume-lemma-palea dissection i=4 image exceeds connector render limit; do not certify without actual image view",
+        "clear connected subterranean rhizomes from same specimen",
         "dated winter standing culm and crown"
       ],
-      "summary": "3 direct and 1 partial image observations. Rooted horizontal stem cannot by itself prove a fully traced rhizome.",
+      "summary": "Four prior images retained; one fertile-floret macro direct, one attached-spikelet image partial. Image i=4 remains uncounted due to no renderable bytes.",
       "seasonal_review": {
-        "observed": "Green leafy and flowering tissue; no source-verified November–February date.",
-        "queue_action": "Inspect existing unused archive and three unreviewed hosted images before winter gap request."
+        "observed": "Flowering tissue visible; no independently verified November–February collection date.",
+        "queue_action": "Inspect existing dated archive before adding any winter/dormant photo need."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-only update; diagnostic traits, taxon and key filters untouched."
+      "morphology_reference_note": "Photo-only evidence and label QA; existing diagnostics, species taxonomy, morphology states and key filters unchanged."
     }
   },
   {
@@ -331,7 +359,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-rhizomes1-8251311954.jpg",
-        "label": "ROOTING BASE — actual rhizome with nodal root masses",
+        "label": "KNOTGRASS — horizontal runner with roots at nodes; rhizome depth not shown",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -341,7 +369,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-distichum/images/commons-paspalum-distichum.jpg",
-        "label": "1 · Paired flowering racemes in a V",
+        "label": "KNOTGRASS — paired V-shaped flowering racemes with protruding dark anthers and feathery stigmas",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -455,6 +483,64 @@
       "stage": "PHASE3_PASS5_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_6",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2 of 6 current Lab photo references inspected from actual hosted image bytes. Photos with metadata only are excluded. Source rights, specimen ID, season/date and calibrated anatomy not revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "green horizontal jointed runner and obvious tufts of fibrous roots from multiple nodes"
+          ],
+          "cannot_verify": [
+            "whether the runner was subterranean rhizome or aboveground stolon before removal"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-rhizomes1-8251311954.jpg",
+          "git_blob_sha": "a0d39543c1e9115648a073ab437193d6cab1f902",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pair of ascending V-shaped racemes bearing overlapping green spikelets and protruding purplish reproductive parts"
+          ],
+          "cannot_verify": [
+            "isolated scale-bearing glumes, fertile lemmas, or underground node continuity"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/commons-paspalum-distichum.jpg",
+          "git_blob_sha": "07e9fd6a13e992ece99cbbc2dd1ad3b99b377159",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "unmet_roles": [
+        "true ligule at collar",
+        "close one-sided attached spikelet and fertile floret",
+        "stolon versus rhizome in situ under soil or water",
+        "dated dormant-season mat"
+      ],
+      "summary": "Runner root masses are unmistakable, but underground rhizome status is not established by the removed stem; paired flowered racemes directly visible.",
+      "seasonal_review": {
+        "observed": "Green growing stems and flowering racemes; no winter date established.",
+        "queue_action": "Inspect existing dated archive before adding any winter/dormant photo need."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-only evidence and label QA; existing diagnostics, species taxonomy, morphology states and key filters unchanged."
     }
   },
   {
@@ -1183,7 +1269,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/sorghastrum-nutans/inat-272912253.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "INDIANGRASS — dry tan flowering head held beside culm; winter date unverified",
         "creator": "no rights reserved",
         "license": "CC0 1.0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -1193,7 +1279,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/sorghastrum-nutans/inat-495311301.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "INDIANGRASS — narrow golden flowering head with projecting awns; ligule not visible",
         "creator": "no rights reserved",
         "license": "CC0 1.0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -1263,11 +1349,11 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2/4 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "4 of 4 current Lab photo references inspected from actual hosted image bytes. Photos with metadata only are excluded. Source rights, specimen ID, season/date and calibrated anatomy not revalidated.",
       "photo_roles": [
         {
           "i": 0,
@@ -1300,22 +1386,50 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "00b58f1fb5606c873d5f480dc71b6112940c8260",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dry tan elongated flowering head with crowded narrow branches held in hand beside grass culm"
+          ],
+          "cannot_verify": [
+            "anatomical spikelet dissections, rooted crown, verified winter collection month"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/sorghastrum-nutans/inat-272912253.jpg",
+          "git_blob_sha": "a2c4884878431b70b5886e303b52a159a31c7bad",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "narrow green-golden head with tightly crowded flowering units and many projecting fine awns beside hand"
+          ],
+          "cannot_verify": [
+            "true ligule, isolated spikelet anatomy, authenticated specimen base or collection month"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/sorghastrum-nutans/inat-495311301.jpg",
+          "git_blob_sha": "148f0cb33a625374fa51f403484f12cc783ad34d",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        2,
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
-        "dated dormant rooted habit and dissected fertile spikelet"
+        "dissected attached spikelets for direct glume/lemma and awn origin distinction",
+        "dated winter rooted crown with standing seedhead"
       ],
-      "summary": "2 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "summary": "Both remaining hosted photos directly show distinct tan dry and green-golden elongated flowering-head appearances; not proof of November–February season.",
       "seasonal_review": {
-        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
-        "queue_action": "Check previously collected winter images before new requests."
+        "observed": "One inflorescence visibly tan and dry, one green-golden; actual collection months not checked.",
+        "queue_action": "Inspect existing dated archive before adding any winter/dormant photo need."
       },
-      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-only evidence and label QA; existing diagnostics, species taxonomy, morphology states and key filters unchanged."
     }
   },
   {
@@ -1451,7 +1565,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sporobolus/sporobolus-compositus/images/inat-750208140-first-photo.jpg",
-        "label": "Tall Dropseed — narrow flowering head above its sheath",
+        "label": "TALL DROPSEED — narrow upright green flowering head held for scale; sheath not visible",
         "creator": "Cody Stricker",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1534,6 +1648,43 @@
       "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_1_OF_1",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "1 of 1 current Lab photo references inspected from actual hosted image bytes. Photos with metadata only are excluded. Source rights, specimen ID, season/date and calibrated anatomy not revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "slender pale-green densely clustered upright flowering head held between fingers"
+          ],
+          "cannot_verify": [
+            "blade-sheath collar, individual floret dissection, root crown, winter collection date"
+          ],
+          "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sporobolus/sporobolus-compositus/images/inat-750208140-first-photo.jpg",
+          "git_blob_sha": "aecf257a3768350402a67650ba57dc9a630bce6d",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "inner collar and true ligule",
+        "single open spikelet and mature fruit",
+        "dated dry winter tuft"
+      ],
+      "summary": "One image directly shows the narrow attached inflorescence; old caption incorrectly stated that the sheath was in frame.",
+      "seasonal_review": {
+        "observed": "Pale-green flowering head; no confirmed winter stage.",
+        "queue_action": "Inspect existing dated archive before adding any winter/dormant photo need."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-only evidence and label QA; existing diagnostics, species taxonomy, morphology states and key filters unchanged."
     }
   },
   {
