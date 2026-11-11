@@ -417,11 +417,88 @@ function headIcon(key){
     if(awn)path("M"+(55+dir*6)+" "+(y+2)+" Q"+(55+dir*(awn*.6))+" "+(y-5)+" "+(55+dir*(awn+8))+" "+(y-15),.95,gold);
   }
   break;
- case "burrs":main();for(let j=0;j<4;j++){let y=26+j*23,x=55+(j%2?21:-21);path('M55 '+(y+5)+' L'+x+' '+y,1.6);ellipse(x,y,12,12,0,olive);for(let k=0;k<12;k++){let a=k*Math.PI/6;path('M'+(x+10*Math.cos(a)).toFixed(1)+' '+(y+10*Math.sin(a)).toFixed(1)+' L'+(x+17*Math.cos(a)).toFixed(1)+' '+(y+17*Math.sin(a)).toFixed(1),1.4,olive)}}break;
- case "tangled_awns":main();for(let j=0;j<5;j++){let y=29+j*16,dir=j%2?1:-1;bead(55+dir*5,y,dir*40,1);for(let k=0;k<3;k++){let sx=55+dir*6,ex=sx+dir*(15+k*9);path('M'+sx+' '+y+' Q'+(ex-dir*14)+' '+(y-35-k*4)+' '+ex+' '+(y-40+k*4),1.35,gold)}}break;
- case "mixed_gender":main();for(let y of [28,42,56]){path('M55 '+y+' L'+(y%2?80:29)+' '+(y-7),1.5);for(let j=0;j<4;j++){let x=(y%2?80:29)+j*2;path('M'+x+' '+(y-7)+' l0 7',1.2,gold);ellipse(x,y+1,2.7,4,0,gold)}}for(let y of [72,86,98]){ellipse(55,y,8,6,0,olive);bead(47,y-2,65,.65);bead(63,y-2,-65,.65)}break;
- case "aquatic_gender":main();for(let y of [24,38,49]){branch(55,y,55+(y%2?25:-23),y-9,2,.85)}for(let y of [65,78,90]){path('M55 '+y+' L'+(y%2?72:37)+' '+(y+8),1.5);for(let j=0;j<3;j++)ellipse((y%2?72:37)+j*3,y+11+j*3,2,4,0,gold)}break;
- case "aquatic_mixed":main();for(let y of [28,48,68,87]){branch(55,y,55+(y%2?33:-33),y-11,3,.7);ellipse(53+(y%2?19:-19),y-4,2.4,4,0,gold)}break;
+ case "burrs":{
+  // Cenchrus: sharp-spined involucres enclosing multiple spikelets.
+  path("M55 106 L55 16",2.45);
+  for(const [y,dir] of [[28,-1],[49,1],[70,-1],[89,1]]){
+    const x=55+dir*8;path("M55 "+y+" L"+x+" "+(y-1),1.55,green);
+    ellipse(x,y,8.6,10.2,0,olive);
+    for(let k=0;k<10;k++){
+      const angle=k*Math.PI/5,bx=x+8*Math.cos(angle),by=y+9*Math.sin(angle);
+      const tx=x+(k%3===0?16:13.5)*Math.cos(angle),ty=y+(k%3===0?18:14.5)*Math.sin(angle);
+      path("M"+bx.toFixed(1)+" "+by.toFixed(1)+" L"+tx.toFixed(1)+" "+ty.toFixed(1),1.35,gold);
+    }
+    ellipse(x-2.7,y-1.9,2.25,4.3,-19,pale);
+    ellipse(x+2.7,y+.6,2.15,4,16,pale);
+  }
+  break;
+ }
+ case "tangled_awns":{
+  // Tanglehead: long recurving, crossing awns rise from actual spikelets.
+  path("M55 105 Q54 68 56 25",2.35);
+  for(const [y,dir,len] of [[88,-1,28],[76,1,32],[63,-1,31],[51,1,29],[38,-1,24]]){
+    const x=55+dir*4;
+    ellipse(x,y,3,6.2,dir*24,pale);
+    path("M"+x+" "+(y-6)+" Q"+(x+dir*len*.9)+" "+(y-34)+" "+(x+dir*len)+" "+(y-47)+" Q"+(x+dir*len*.4)+" "+(y-57)+" "+(55-dir*5)+" "+(y-51),1.3,green);
+    path("M"+(x+dir*.7)+" "+(y-6)+" Q"+(x+dir*len*.5)+" "+(y-34)+" "+(x+dir*len*.62)+" "+(y-45),.75,gold);
+  }
+  break;
+ }
+ case "mixed_gender":{
+  // Eastern gamagrass: paired staminate units above hard jointed pistillate units.
+  path("M55 106 L55 16",2.5);
+  for(const y of [82,92,102]){
+    ellipse(55,y,6.6,5.7,0,olive);
+    path("M49 "+(y+1)+" L61 "+(y+1),1,green);
+  }
+  for(const y of [22,32,42,52,62,72]){
+    for(const dir of [-1,1]){
+      const x=55+dir*6;
+      ellipse(x,y,3.45,4.7,dir*19,pale);
+      path("M"+(x+dir*1.5)+" "+(y+3)+" l"+(dir*3)+" 5",.8,gold);
+    }
+  }
+  break;
+ }
+ case "aquatic_gender":{
+  // Endemic Texas wild-rice: upper stiff awned female vs lower dangling male.
+  path("M55 106 L55 11",2.35);
+  for(const [y,dir,reach,rise] of [[27,-1,20,14],[39,1,23,14],[51,-1,19,12]]){
+    path("M55 "+y+" L"+(55+dir*reach)+" "+(y-rise),1.65,green);
+    for(let k=1;k<=3;k++){
+      const t=k/4,x=55+dir*reach*t,yy=y-rise*t;
+      ellipse(x,yy,1.85,4,dir*32,pale);
+      path("M"+x.toFixed(1)+" "+(yy-3).toFixed(1)+" l"+(dir*3)+" -9",.9,gold);
+    }
+  }
+  for(const [y,dir,reach,drop] of [[63,1,24,14],[76,-1,26,17],[88,1,25,15]]){
+    path("M55 "+y+" Q"+(55+dir*reach*.75)+" "+(y+3)+" "+(55+dir*reach)+" "+(y+drop),1.6,green);
+    for(let k=1;k<=3;k++){
+      const t=k/4,x=55+dir*reach*t,yy=y+drop*t*t;
+      path("M"+x.toFixed(1)+" "+yy.toFixed(1)+" l0 5",.8,olive);
+      ellipse(x,yy+8,2.05,3.45,0,gold);
+    }
+  }
+  break;
+ }
+ case "aquatic_mixed":{
+  // Giant cutgrass: both sexes on the SAME branch; male proximal, female distal.
+  path("M55 106 L55 13",2.45);
+  for(const [y,dir,reach,rise] of [[30,-1,28,16],[44,1,35,15],[58,-1,38,11],[73,1,34,8],[87,-1,26,6]]){
+    path("M55 "+y+" Q"+(55+dir*reach*.5)+" "+(y-rise*.75)+" "+(55+dir*reach)+" "+(y-rise),1.5,green);
+    for(let k=1;k<=5;k++){
+      const t=k/6,x=55+dir*reach*t,yy=y-rise*(.75*t+.25*t*t);
+      if(k<=2){
+        path("M"+x.toFixed(1)+" "+yy.toFixed(1)+" l0 5",.85,olive);
+        ellipse(x,yy+8.3,2,3.4,0,gold);
+      }else{
+        ellipse(x,yy,2.1,4,dir*22,pale);
+        path("M"+(x+dir*1).toFixed(1)+" "+(yy-4).toFixed(1)+" l"+(dir*3)+" -7",.8,olive);
+      }
+    }
+  }
+  break;
+ }
  default: main();bead(55,26);break;
  }
  svg.innerHTML=parts.join("");return svg;
