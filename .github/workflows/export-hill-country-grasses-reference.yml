@@ -1,0 +1,30 @@
+name: Export author-hosted 2015 Hill Country grasses PDF for Library
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/export-hill-country-grasses-reference.yml'
+permissions: {contents: read}
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Fetch and validate original 93-page PDF
+        run: |
+          set -euo pipefail
+          mkdir -p reference_export
+          curl -fL --retry 4 --connect-timeout 20 --max-time 110 \
+            -A "Mozilla/5.0" \
+            "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf" \
+            -o reference_export/Hagenbuch_Lemke_2015_Grasses_of_the_Texas_Hill_Country.pdf
+          test "$(head -c4 reference_export/Hagenbuch_Lemke_2015_Grasses_of_the_Texas_Hill_Country.pdf)" = "%PDF"
+          file reference_export/Hagenbuch_Lemke_2015_Grasses_of_the_Texas_Hill_Country.pdf
+          sha256sum reference_export/Hagenbuch_Lemke_2015_Grasses_of_the_Texas_Hill_Country.pdf
+          ls -lh reference_export/Hagenbuch_Lemke_2015_Grasses_of_the_Texas_Hill_Country.pdf
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hill-country-grasses-2015-original-pdf
+          path: reference_export/Hagenbuch_Lemke_2015_Grasses_of_the_Texas_Hill_Country.pdf
+          retention-days: 7
+          if-no-files-found: error
