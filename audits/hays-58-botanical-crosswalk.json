@@ -1,0 +1,3515 @@
+{
+  "version": "v1-2026-11-11",
+  "scope": "Hays County Texas",
+  "baseline_grasses": 112,
+  "candidate_count": 58,
+  "status": "ALL_58_IN_TAXONOMIC_SCREENING_NONE_MERGE_READY",
+  "automated_screen_counts": {
+    "NAME_MATCHED_BOTANICAL_ID_PENDING": 53,
+    "BACKBONE_SYNONYM_REVIEW": 2,
+    "FUZZY_OR_LOW_CONFIDENCE_REVIEW": 3
+  },
+  "limitations": [
+    "iNaturalist research-grade wild-tagged records do not prove correct species identity or wild establishment.",
+    "GBIF is only a secondary nomenclature screen, not a replacement for Flora of North Central Texas or Flora of North America.",
+    "The sample may not represent all county observers.",
+    "No specimen photos were visually checked in this machine pass; no image bytes were downloaded.",
+    "All 58 remain pending verification; none is authorized for merge."
+  ],
+  "records": [
+    {
+      "queue_id": "HAYS-001",
+      "inat_name": "Bromus catharticus",
+      "common_name": "Rescue Brome",
+      "inat_taxon_id": 60276,
+      "hays_records": 171,
+      "observers_in_saved_sample": 17,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/379499753",
+          "date": "2026-07-08",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/366862129",
+          "date": "2026-05-30",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/366673949",
+          "date": "2026-05-16",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/361899953",
+          "date": "2026-05-15",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/361264509",
+          "date": "2026-05-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/359939750",
+          "date": "2026-05-09",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/358472027",
+          "date": "2026-05-04",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/358017136",
+          "date": "2026-05-03",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/356658945",
+          "date": "2026-04-29",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/355819030",
+          "date": "2026-04-27",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/355815174",
+          "date": "2026-04-27",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/355785955",
+          "date": "2026-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354628163",
+          "date": "2026-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354331392",
+          "date": "2026-04-24",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/352764877",
+          "date": "2026-04-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/350287119",
+          "date": "2026-04-16",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/348602426",
+          "date": "2026-04-09",
+          "photos": 5
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/347885589",
+          "date": "2026-04-06",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/345942830",
+          "date": "2026-03-29",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/359066137",
+          "date": "2026-03-28",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Bromus+catharticus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Bromus catharticus Vahl",
+        "accepted_name": "Bromus catharticus Vahl",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2703723,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 2
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-002",
+      "inat_name": "Melica nitens",
+      "common_name": "Threeflower Melicgrass",
+      "inat_taxon_id": 165237,
+      "hays_records": 125,
+      "observers_in_saved_sample": 18,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/379835068",
+          "date": "2026-06-21",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/363172021",
+          "date": "2026-05-17",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/361851494",
+          "date": "2026-05-15",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/361695388",
+          "date": "2026-05-15",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/358720336",
+          "date": "2026-05-05",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/350867217",
+          "date": "2026-04-18",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/350058256",
+          "date": "2026-04-15",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/349531276",
+          "date": "2026-04-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/349316710",
+          "date": "2026-04-10",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/290019815",
+          "date": "2025-06-15",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/285603951",
+          "date": "2025-05-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/282514813",
+          "date": "2025-05-19",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/281247566",
+          "date": "2025-05-13",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/279834733",
+          "date": "2025-05-09",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/278234731",
+          "date": "2025-05-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/277462242",
+          "date": "2025-04-30",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/276084621",
+          "date": "2025-04-28",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/275692092",
+          "date": "2025-04-27",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/276634527",
+          "date": "2025-04-27",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/274899297",
+          "date": "2025-04-27",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Melica+nitens&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Melica nitens (Scribn.) Nutt. ex Piper",
+        "accepted_name": "Melica nitens (Scribn.) Nutt. ex Piper",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2703105,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 5
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-003",
+      "inat_name": "Eragrostis superba",
+      "common_name": "Wilman lovegrass",
+      "inat_taxon_id": 162412,
+      "hays_records": 59,
+      "observers_in_saved_sample": 8,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/396903239",
+          "date": "2026-09-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/394713386",
+          "date": "2026-08-26",
+          "photos": 8
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/359405762",
+          "date": "2026-05-07",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/358751551",
+          "date": "2026-05-05",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354818424",
+          "date": "2026-04-25",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353979477",
+          "date": "2026-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353032341",
+          "date": "2026-04-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/321291694",
+          "date": "2025-10-16",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Eragrostis+superba&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Eragrostis superba Peyr.",
+        "accepted_name": "Eragrostis superba Peyr.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705445,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-004",
+      "inat_name": "Lolium perenne",
+      "common_name": "Perennial Ryegrass",
+      "inat_taxon_id": 52801,
+      "hays_records": 53,
+      "observers_in_saved_sample": 5,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/365063951",
+          "date": "2026-05-25",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/360912372",
+          "date": "2026-05-12",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354912942",
+          "date": "2026-04-26",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354778320",
+          "date": "2026-04-26",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354772388",
+          "date": "2026-04-26",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354843192",
+          "date": "2026-04-26",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354756814",
+          "date": "2026-04-26",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353778659",
+          "date": "2026-04-25",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Lolium+perenne&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Lolium perenne L.",
+        "accepted_name": "Lolium perenne L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2706241,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-005",
+      "inat_name": "Bothriochloa longipaniculata",
+      "common_name": "Longspike Beardgrass",
+      "inat_taxon_id": 159321,
+      "hays_records": 25,
+      "observers_in_saved_sample": 13,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/392143264",
+          "date": "2026-08-17",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/377598342",
+          "date": "2026-07-02",
+          "photos": 16
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/364866470",
+          "date": "2026-05-24",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/360090624",
+          "date": "2026-05-09",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353721821",
+          "date": "2026-04-25",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353603714",
+          "date": "2026-04-25",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354335885",
+          "date": "2026-04-25",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353902207",
+          "date": "2025-08-04",
+          "photos": 5
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/274856156",
+          "date": "2025-04-27",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/274288791",
+          "date": "2025-04-26",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/273737911",
+          "date": "2025-04-25",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/256113263",
+          "date": "2024-12-23",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/256114248",
+          "date": "2024-12-23",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/196704386",
+          "date": "2024-01-14",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/194253825",
+          "date": "2023-12-17",
+          "photos": 9
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/137360518",
+          "date": "2022-10-02",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/136298138",
+          "date": "2022-09-24",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/135559232",
+          "date": "2022-09-18",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/134788365",
+          "date": "2022-09-12",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/133487432",
+          "date": "2022-09-03",
+          "photos": 7
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Bothriochloa+longipaniculata&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Bothriochloa longipaniculata (Gould) Allred & Gould",
+        "accepted_name": "Bothriochloa longipaniculata (Gould) Allred & Gould",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2704113,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-006",
+      "inat_name": "Paspalum langei",
+      "common_name": "rustyseed paspalum",
+      "inat_taxon_id": 166181,
+      "hays_records": 23,
+      "observers_in_saved_sample": 15,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/393289733",
+          "date": "2026-08-21",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/374141829",
+          "date": "2026-06-21",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/355601663",
+          "date": "2026-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/323535066",
+          "date": "2025-10-27",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/316624121",
+          "date": "2025-09-25",
+          "photos": 7
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/295425903",
+          "date": "2025-07-05",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/257665363",
+          "date": "2025-01-01",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/239026231",
+          "date": "2024-08-31",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/238764730",
+          "date": "2024-08-30",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/221600231",
+          "date": "2024-06-09",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/221211304",
+          "date": "2024-06-07",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/218195198",
+          "date": "2024-05-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/172208728",
+          "date": "2023-07-10",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/164242556",
+          "date": "2023-05-28",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/142251221",
+          "date": "2022-11-17",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/135005810",
+          "date": "2022-09-14",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/118542740",
+          "date": "2022-05-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/103218250",
+          "date": "2021-12-17",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/76681099",
+          "date": "2021-05-02",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/61797248",
+          "date": "2020-10-05",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Paspalum+langei&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Paspalum langei (E.Fourn.) Nash",
+        "accepted_name": "Paspalum langei (E.Fourn.) Nash",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705573,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 13
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "TAXONOMIC_REVIEW"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-007",
+      "inat_name": "Bothriochloa bladhii",
+      "common_name": "Australian Bluestem",
+      "inat_taxon_id": 159317,
+      "hays_records": 18,
+      "observers_in_saved_sample": 6,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/410398752",
+          "date": "2026-10-22",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/331046168",
+          "date": "2025-12-10",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/331046186",
+          "date": "2025-12-10",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/331046199",
+          "date": "2025-12-10",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/330139581",
+          "date": "2025-11-17",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/309005126",
+          "date": "2025-08-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/299919704",
+          "date": "2025-07-21",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/241279356",
+          "date": "2024-09-12",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Bothriochloa+bladhii&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Bothriochloa bladhii (Retz.) S.T.Blake",
+        "accepted_name": "Bothriochloa bladhii (Retz.) S.T.Blake",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2704093,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-008",
+      "inat_name": "Dichanthium aristatum",
+      "common_name": "Angleton Bluestem",
+      "inat_taxon_id": 161812,
+      "hays_records": 15,
+      "observers_in_saved_sample": 8,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/374898786",
+          "date": "2026-06-24",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/359421744",
+          "date": "2026-05-07",
+          "photos": 7
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/326368914",
+          "date": "2025-11-13",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/323706267",
+          "date": "2025-10-28",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/253933152",
+          "date": "2024-12-02",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/253538114",
+          "date": "2024-11-29",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/249351808",
+          "date": "2024-10-27",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/249689736",
+          "date": "2024-10-26",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Dichanthium+aristatum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Dichanthium aristatum (Poir.) C.E.Hubb.",
+        "accepted_name": "Dichanthium aristatum (Poir.) C.E.Hubb.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2702445,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-009",
+      "inat_name": "Phyllostachys aurea",
+      "common_name": "fishpole bamboo",
+      "inat_taxon_id": 78563,
+      "hays_records": 12,
+      "observers_in_saved_sample": 6,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/355471088",
+          "date": "2026-04-27",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/337005807",
+          "date": "2026-02-01",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/337005707",
+          "date": "2026-02-01",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/337005282",
+          "date": "2026-02-01",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/329633572",
+          "date": "2025-12-04",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/322978968",
+          "date": "2025-10-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/314362564",
+          "date": "2025-09-16",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/231317598",
+          "date": "2024-07-18",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Phyllostachys+aurea&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Phyllostachys aurea (André) Rivière & C.Rivière",
+        "accepted_name": "Phyllostachys aurea (André) Rivière & C.Rivière",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5290167,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-010",
+      "inat_name": "Lolium multiflorum",
+      "common_name": "Italian Ryegrass",
+      "inat_taxon_id": 68479,
+      "hays_records": 11,
+      "observers_in_saved_sample": 7,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/352048437",
+          "date": "2026-04-22",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/275049650",
+          "date": "2025-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/274652755",
+          "date": "2025-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/209103445",
+          "date": "2024-04-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/159552822",
+          "date": "2023-05-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/44466836",
+          "date": "2020-04-29",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/44466742",
+          "date": "2020-04-29",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/44291762",
+          "date": "2020-04-29",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Lolium+multiflorum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Lolium multiflorum Lam.",
+        "accepted_name": "Lolium multiflorum Lam.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 4129708,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-011",
+      "inat_name": "Bromus brevis",
+      "common_name": "Pampas Brome",
+      "inat_taxon_id": 407432,
+      "hays_records": 10,
+      "observers_in_saved_sample": 8,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/353987691",
+          "date": "2026-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/387710543",
+          "date": "2026-04-18",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/359066167",
+          "date": "2026-03-29",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/276102450",
+          "date": "2025-04-28",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/267702112",
+          "date": "2025-03-30",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/208777132",
+          "date": "2024-04-22",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/207333673",
+          "date": "2024-04-04",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/159349528",
+          "date": "2023-05-02",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Bromus+brevis&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Bromus brevis Steud.",
+        "accepted_name": "Bromus brevis Steud.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2703731,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "TAXONOMIC_REVIEW"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-012",
+      "inat_name": "Coelorachis cylindrica",
+      "common_name": "Carolina jointgrass",
+      "inat_taxon_id": 160775,
+      "hays_records": 10,
+      "observers_in_saved_sample": 7,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/374594336",
+          "date": "2026-06-23",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/279943509",
+          "date": "2025-05-10",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/232106369",
+          "date": "2024-07-27",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/224007596",
+          "date": "2024-06-20",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/166995826",
+          "date": "2023-05-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/80635134",
+          "date": "2021-05-28",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/80635062",
+          "date": "2021-05-28",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/54843842",
+          "date": "2020-07-30",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/28554959",
+          "date": "2019-07-10",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/208733",
+          "date": "2008-09-27",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Coelorachis+cylindrica&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Coelorachis cylindrica (Michx.) Nash",
+        "accepted_name": "Coelorachis cylindrica (Michx.) Nash",
+        "rank": "SPECIES",
+        "status": "SYNONYM",
+        "confidence": 100,
+        "usage_key": 2704492,
+        "accepted_usage_key": 4123347,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "BACKBONE_SYNONYM_REVIEW",
+      "flags": [
+        "TAXONOMIC_REVIEW",
+        "CHECK_TAXONOMY"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-013",
+      "inat_name": "Oplismenus hirtellus",
+      "common_name": "Basket Grass",
+      "inat_taxon_id": 165865,
+      "hays_records": 9,
+      "observers_in_saved_sample": 8,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/353967258",
+          "date": "2026-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/316622995",
+          "date": "2025-09-25",
+          "photos": 5
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/283663950",
+          "date": "2025-05-22",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/98791209",
+          "date": "2021-10-02",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/35705679",
+          "date": "2019-11-15",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/23760110",
+          "date": "2019-04-28",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/23055153",
+          "date": "2019-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/13478914",
+          "date": "2018-06-16",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Oplismenus+hirtellus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Oplismenus hirtellus (L.) P.Beauv.",
+        "accepted_name": "Oplismenus hirtellus (L.) P.Beauv.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705737,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 4
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-014",
+      "inat_name": "Stenotaphrum secundatum",
+      "common_name": "Saint Augustine grass",
+      "inat_taxon_id": 79210,
+      "hays_records": 9,
+      "observers_in_saved_sample": 6,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/257665322",
+          "date": "2025-01-01",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/76952094",
+          "date": "2021-05-03",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/51176200",
+          "date": "2020-06-28",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/43612564",
+          "date": "2020-04-26",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/40030898",
+          "date": "2020-03-15",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/33036327",
+          "date": "2019-09-19",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/9341344",
+          "date": "2018-01-01",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/8793576",
+          "date": "2017-11-13",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Stenotaphrum+secundatum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Stenotaphrum secundatum (Walter) Kuntze",
+        "accepted_name": "Stenotaphrum secundatum (Walter) Kuntze",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2702870,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-015",
+      "inat_name": "Triticum aestivum",
+      "common_name": "Bread Wheat",
+      "inat_taxon_id": 64161,
+      "hays_records": 8,
+      "observers_in_saved_sample": 7,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/278500939",
+          "date": "2025-05-04",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/274743485",
+          "date": "2025-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/275283904",
+          "date": "2025-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/275283744",
+          "date": "2025-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/276321132",
+          "date": "2025-04-27",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/45983745",
+          "date": "2020-05-15",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/44539312",
+          "date": "2020-05-01",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/22969272",
+          "date": "2019-04-23",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Triticum+aestivum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Triticum aestivum L.",
+        "accepted_name": "Triticum aestivum L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 7795888,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-016",
+      "inat_name": "Echinochloa colona",
+      "common_name": "Jungle Rice",
+      "inat_taxon_id": 76755,
+      "hays_records": 7,
+      "observers_in_saved_sample": 7,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/373733962",
+          "date": "2026-06-20",
+          "photos": 7
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/368040343",
+          "date": "2026-06-03",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/354850191",
+          "date": "2026-04-26",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/315686336",
+          "date": "2025-09-21",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/353177417",
+          "date": "2025-06-16",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/223116008",
+          "date": "2024-06-16",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/136025063",
+          "date": "2022-09-21",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Echinochloa+colona&family=Poaceae&strict=false&verbose=true",
+        "match_type": "FUZZY",
+        "name": "Echinochloa colonum (L.) Link",
+        "accepted_name": "Echinochloa colonum (L.) Link",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 6431411,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "FUZZY_OR_LOW_CONFIDENCE_REVIEW",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS",
+        "CHECK_TAXONOMY"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-017",
+      "inat_name": "Paspalum notatum",
+      "common_name": "Bahia grass",
+      "inat_taxon_id": 166188,
+      "hays_records": 7,
+      "observers_in_saved_sample": 7,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/379830371",
+          "date": "2026-06-21",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/376894248",
+          "date": "2026-06-19",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/192677193",
+          "date": "2023-11-30",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/192676981",
+          "date": "2023-11-30",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/192676809",
+          "date": "2023-11-30",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/141259657",
+          "date": "2022-11-02",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/8441988",
+          "date": "2017-10-06",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Paspalum+notatum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Paspalum notatum Flüggé",
+        "accepted_name": "Paspalum notatum Flüggé",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705621,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 8
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-018",
+      "inat_name": "Setaria viridis",
+      "common_name": "Green Bristle Grass",
+      "inat_taxon_id": 79070,
+      "hays_records": 7,
+      "observers_in_saved_sample": 7,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/326920046",
+          "date": "2025-11-11",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/273230417",
+          "date": "2025-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/272725049",
+          "date": "2025-04-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/254005512",
+          "date": "2024-12-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/252033465",
+          "date": "2024-11-16",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/208777994",
+          "date": "2024-04-22",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/52685738",
+          "date": "2020-07-11",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Setaria+viridis&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Setaria viridis (L.) P.Beauv.",
+        "accepted_name": "Setaria viridis (L.) P.Beauv.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289684,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 4
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-019",
+      "inat_name": "Cortaderia selloana",
+      "common_name": "Pampas Grass",
+      "inat_taxon_id": 64240,
+      "hays_records": 6,
+      "observers_in_saved_sample": 6,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/306566662",
+          "date": "2025-08-15",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/62141431",
+          "date": "2020-10-07",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/36035841",
+          "date": "2019-11-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/35745717",
+          "date": "2019-11-16",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/34559895",
+          "date": "2019-10-13",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/16070876",
+          "date": "2010-11-17",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Cortaderia+selloana&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Cortaderia selloana (Schult. & Schult.f.) Asch. & Graebn.",
+        "accepted_name": "Cortaderia selloana (Schult. & Schult.f.) Asch. & Graebn.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2704523,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-020",
+      "inat_name": "Echinochloa walteri",
+      "common_name": "Walter's barnyard grass",
+      "inat_taxon_id": 162195,
+      "hays_records": 6,
+      "observers_in_saved_sample": 5,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/313351555",
+          "date": "2025-09-12",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/304955914",
+          "date": "2025-08-09",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/301282408",
+          "date": "2025-07-26",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/242978468",
+          "date": "2024-09-20",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/182490335",
+          "date": "2023-09-09",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/134323843",
+          "date": "2022-09-09",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Echinochloa+walteri&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Echinochloa walteri (Pursh) A.Heller",
+        "accepted_name": "Echinochloa walteri (Pursh) A.Heller",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 8152867,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-021",
+      "inat_name": "Rostraria cristata",
+      "common_name": "Mediterranean Hair-grass",
+      "inat_taxon_id": 167999,
+      "hays_records": 5,
+      "observers_in_saved_sample": 4,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/281345779",
+          "date": "2025-05-15",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/276345150",
+          "date": "2025-04-28",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/273467058",
+          "date": "2025-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/275155567",
+          "date": "2025-04-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/74683342",
+          "date": "2021-04-20",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Rostraria+cristata&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Rostraria cristata (L.) Tzvelev",
+        "accepted_name": "Rostraria cristata (L.) Tzvelev",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289906,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-022",
+      "inat_name": "Panicum miliaceum",
+      "common_name": "Proso Millet",
+      "inat_taxon_id": 78340,
+      "hays_records": 4,
+      "observers_in_saved_sample": 4,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/232929491",
+          "date": "2024-07-31",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/220772915",
+          "date": "2024-06-05",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/205146982",
+          "date": "2024-04-02",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/117019222",
+          "date": "2022-05-14",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Panicum+miliaceum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Panicum miliaceum L.",
+        "accepted_name": "Panicum miliaceum L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705090,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 8
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-023",
+      "inat_name": "Setaria leucopila",
+      "common_name": "plains bristlegrass",
+      "inat_taxon_id": 122606,
+      "hays_records": 4,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/353823803",
+          "date": "2026-04-25",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/142578061",
+          "date": "2022-11-15",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/61797989",
+          "date": "2020-10-05",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/61798023",
+          "date": "2020-10-05",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Setaria+leucopila&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Setaria leucopila (Scribn. & Merr.) K.Schum.",
+        "accepted_name": "Setaria leucopila (Scribn. & Merr.) K.Schum.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289682,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-024",
+      "inat_name": "Sphenopholis obtusata",
+      "common_name": "prairie wedge grass",
+      "inat_taxon_id": 79182,
+      "hays_records": 4,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/275820080",
+          "date": "2025-04-28",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/118433196",
+          "date": "2022-05-23",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/118412090",
+          "date": "2022-05-21",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/115453422",
+          "date": "2022-05-04",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Sphenopholis+obtusata&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Sphenopholis obtusata (Michx.) Scribn.",
+        "accepted_name": "Sphenopholis obtusata (Michx.) Scribn.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2703349,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-025",
+      "inat_name": "Steinchisma hians",
+      "common_name": "Gaping Panicgrass",
+      "inat_taxon_id": 156003,
+      "hays_records": 4,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/387883882",
+          "date": "2026-08-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/82946399",
+          "date": "2021-06-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/82930069",
+          "date": "2021-06-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/5938520",
+          "date": "2017-04-23",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Steinchisma+hians&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Steinchisma hians (Elliott) Nash",
+        "accepted_name": "Steinchisma hians (Elliott) Nash",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2702930,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-026",
+      "inat_name": "Aegilops cylindrica",
+      "common_name": "jointed goat grass",
+      "inat_taxon_id": 75290,
+      "hays_records": 3,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/373694422",
+          "date": "2026-06-20",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/223212033",
+          "date": "2024-05-10",
+          "photos": 6
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/164689332",
+          "date": "2023-05-28",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Aegilops+cylindrica&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Aegilops cylindrica Host",
+        "accepted_name": "Aegilops cylindrica Host",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289783,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-027",
+      "inat_name": "Avena sativa",
+      "common_name": "Common Oat",
+      "inat_taxon_id": 57156,
+      "hays_records": 3,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/82948317",
+          "date": "2021-06-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/82945689",
+          "date": "2021-06-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/21997658",
+          "date": "2019-04-04",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Avena+sativa&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Avena sativa L.",
+        "accepted_name": "Avena sativa L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705290,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-028",
+      "inat_name": "Elymus glabriflorus",
+      "common_name": "Southeastern Wildrye",
+      "inat_taxon_id": 204310,
+      "hays_records": 3,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/311264599",
+          "date": "2025-09-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/142332225",
+          "date": "2022-10-10",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/87437868",
+          "date": "2021-07-07",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Elymus+glabriflorus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Elymus glabriflorus (Vasey ex L.H.Dewey) Scribn. & C.R.Ball",
+        "accepted_name": "Elymus glabriflorus (Vasey ex L.H.Dewey) Scribn. & C.R.Ball",
+        "rank": "SPECIES",
+        "status": "SYNONYM",
+        "confidence": 100,
+        "usage_key": 4110220,
+        "accepted_usage_key": 5290318,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "BACKBONE_SYNONYM_REVIEW",
+      "flags": [
+        "CHECK_TAXONOMY"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-029",
+      "inat_name": "Megathyrsus maximus",
+      "common_name": "Guinea Grass",
+      "inat_taxon_id": 1064938,
+      "hays_records": 3,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/254054788",
+          "date": "2024-12-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/254055102",
+          "date": "2024-12-03",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/142221594",
+          "date": "2022-11-17",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Megathyrsus+maximus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs",
+        "accepted_name": "Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 4108550,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-030",
+      "inat_name": "Muhlenbergia capillaris",
+      "common_name": "Hairawn Muhly",
+      "inat_taxon_id": 165543,
+      "hays_records": 3,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/65015271",
+          "date": "2020-11-16",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/36441935",
+          "date": "2019-12-07",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/17126784",
+          "date": "2018-10-02",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Muhlenbergia+capillaris&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Muhlenbergia capillaris (Lam.) Trin.",
+        "accepted_name": "Muhlenbergia capillaris (Lam.) Trin.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2704016,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-031",
+      "inat_name": "Polypogon viridis",
+      "common_name": "water beard grass",
+      "inat_taxon_id": 64144,
+      "hays_records": 3,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/156821533",
+          "date": "2023-04-26",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/76750381",
+          "date": "2021-05-02",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/44142099",
+          "date": "2020-04-28",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Polypogon+viridis&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Polypogon viridis (Gouan) Breistr.",
+        "accepted_name": "Polypogon viridis (Gouan) Breistr.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289919,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-032",
+      "inat_name": "Sphenopholis interrupta",
+      "common_name": "Prairie False Oat",
+      "inat_taxon_id": 281636,
+      "hays_records": 3,
+      "observers_in_saved_sample": 3,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/359410608",
+          "date": "2026-05-07",
+          "photos": 5
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/349892863",
+          "date": "2026-04-14",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/157853430",
+          "date": "2023-04-29",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Sphenopholis+interrupta&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Sphenopholis interrupta (Buckley) Scribn.",
+        "accepted_name": "Sphenopholis interrupta (Buckley) Scribn.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 4153486,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-033",
+      "inat_name": "Tridentopsis elongata",
+      "common_name": "Rough Tridens",
+      "inat_taxon_id": 1505965,
+      "hays_records": 3,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/377001623",
+          "date": "2026-06-30",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/367070671",
+          "date": "2026-05-31",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/366639842",
+          "date": "2026-05-30",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Tridentopsis+elongata&family=Poaceae&strict=false&verbose=true",
+        "match_type": "FUZZY",
+        "name": "Trisetopsis elongata (Hochst. ex A.Rich.) Röser & A.Wölk",
+        "accepted_name": "Trisetopsis elongata (Hochst. ex A.Rich.) Röser & A.Wölk",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 93,
+        "usage_key": 9269991,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "FUZZY_OR_LOW_CONFIDENCE_REVIEW",
+      "flags": [
+        "TAXONOMIC_REVIEW",
+        "CHECK_TAXONOMY"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-034",
+      "inat_name": "Bromus tectorum",
+      "common_name": "Cheatgrass",
+      "inat_taxon_id": 58369,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/209232730",
+          "date": "2024-04-24",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/3092228",
+          "date": "2016-05-03",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Bromus+tectorum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Bromus tectorum L.",
+        "accepted_name": "Bromus tectorum L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2703746,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 11
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-035",
+      "inat_name": "Dactyloctenium aegyptium",
+      "common_name": "Durban Crowfoot",
+      "inat_taxon_id": 76599,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/388784436",
+          "date": "2026-08-06",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/379049304",
+          "date": "2026-07-07",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Dactyloctenium+aegyptium&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Dactyloctenium aegyptium (L.) Willd.",
+        "accepted_name": "Dactyloctenium aegyptium (L.) Willd.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2706188,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-036",
+      "inat_name": "Dichanthelium acuminatum",
+      "common_name": "hairy rosette-panicgrass",
+      "inat_taxon_id": 128949,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/206239171",
+          "date": "2024-04-08",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/203380293",
+          "date": "2024-03-21",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Dichanthelium+acuminatum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Dichanthelium acuminatum (Sw.) Gould & C.A.Clark",
+        "accepted_name": "Dichanthelium acuminatum (Sw.) Gould & C.A.Clark",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2702678,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-037",
+      "inat_name": "Eragrostis curtipedicellata",
+      "common_name": "Gummy Lovegrass",
+      "inat_taxon_id": 162383,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/82930092",
+          "date": "2021-06-13",
+          "photos": 1
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/62485653",
+          "date": "2020-10-13",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Eragrostis+curtipedicellata&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Eragrostis curtipedicellata Buckley",
+        "accepted_name": "Eragrostis curtipedicellata Buckley",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705331,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-038",
+      "inat_name": "Eragrostis minor",
+      "common_name": "Little Lovegrass",
+      "inat_taxon_id": 76855,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/368372291",
+          "date": "2026-06-04",
+          "photos": 8
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/32237529",
+          "date": "2019-09-06",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Eragrostis+minor&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Eragrostis minor Host",
+        "accepted_name": "Eragrostis minor Host",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705449,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 4
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-039",
+      "inat_name": "Hordeum murinum",
+      "common_name": "wall barley",
+      "inat_taxon_id": 52796,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/354336431",
+          "date": "2026-04-25",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/113160838",
+          "date": "2022-04-27",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Hordeum+murinum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Hordeum murinum L.",
+        "accepted_name": "Hordeum murinum L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 7886346,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 4
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-040",
+      "inat_name": "Melinis repens",
+      "common_name": "natal grass",
+      "inat_taxon_id": 77987,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/62114751",
+          "date": "2020-10-09",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/34747879",
+          "date": "2019-10-22",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Melinis+repens&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Melinis repens (Willd.) Zizka",
+        "accepted_name": "Melinis repens (Willd.) Zizka",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2702504,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-041",
+      "inat_name": "Nassella tenuissima",
+      "common_name": "Mexican feathergrass",
+      "inat_taxon_id": 165660,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/118195974",
+          "date": "2022-05-21",
+          "photos": 2
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/111091761",
+          "date": "2022-04-11",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Nassella+tenuissima&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Nassella tenuissima (Trin.) Barkworth",
+        "accepted_name": "Nassella tenuissima (Trin.) Barkworth",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289833,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-042",
+      "inat_name": "Stapfochloa ciliata",
+      "common_name": "Fringed Windmill Grass",
+      "inat_taxon_id": 969790,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/141035831",
+          "date": "2022-11-02",
+          "photos": 4
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/23580302",
+          "date": "2019-04-27",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Stapfochloa+ciliata&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Stapfochloa ciliata (Sw.) P.M.Peterson",
+        "accepted_name": "Stapfochloa ciliata (Sw.) P.M.Peterson",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 9300357,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-043",
+      "inat_name": "Tridens congestus",
+      "common_name": "Pink Fluffgrass",
+      "inat_taxon_id": 169949,
+      "hays_records": 2,
+      "observers_in_saved_sample": 2,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/232038649",
+          "date": "2024-07-27",
+          "photos": 3
+        },
+        {
+          "url": "https://www.inaturalist.org/observations/135964547",
+          "date": "2022-09-21",
+          "photos": 4
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Tridens+congestus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Tridens congestus (L.H.Dewey) Nash",
+        "accepted_name": "Tridens congestus (L.H.Dewey) Nash",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289659,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-044",
+      "inat_name": "Alopecurus carolinianus",
+      "common_name": "Tufted Foxtail",
+      "inat_taxon_id": 75382,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/5938511",
+          "date": "2017-04-23",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Alopecurus+carolinianus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Alopecurus carolinianus Walter",
+        "accepted_name": "Alopecurus carolinianus Walter",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5290094,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-045",
+      "inat_name": "Briza minor",
+      "common_name": "Little quaking-grass",
+      "inat_taxon_id": 57162,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/346027854",
+          "date": "2026-03-29",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Briza+minor&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Briza minor L.",
+        "accepted_name": "Briza minor L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2702793,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 6
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-046",
+      "inat_name": "Cenchrus ciliaris",
+      "common_name": "buffelgrass",
+      "inat_taxon_id": 199408,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/135456536",
+          "date": "2022-09-12",
+          "photos": 5
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Cenchrus+ciliaris&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Cenchrus ciliaris L.",
+        "accepted_name": "Cenchrus ciliaris L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 4109540,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 3
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-047",
+      "inat_name": "Cenchrus setaceus",
+      "common_name": "Fountain Grass",
+      "inat_taxon_id": 430581,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/36111263",
+          "date": "2019-11-26",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Cenchrus+setaceus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Cenchrus setaceus (Forssk.) Morrone",
+        "accepted_name": "Cenchrus setaceus (Forssk.) Morrone",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5828232,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-048",
+      "inat_name": "Digitaria californica",
+      "common_name": "Arizona cottontop",
+      "inat_taxon_id": 76656,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/387716642",
+          "date": "2026-07-09",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Digitaria+californica&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Digitaria californica (Benth.) Henrard",
+        "accepted_name": "Digitaria californica (Benth.) Henrard",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5289937,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-049",
+      "inat_name": "Elymus macgregorii",
+      "common_name": "MacGregor's Wildrye",
+      "inat_taxon_id": 162284,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/314369187",
+          "date": "2025-09-16",
+          "photos": 12
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Elymus+macgregorii&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Elymus macgregorii R.E.Brooks & J.J.N.Campb.",
+        "accepted_name": "Elymus macgregorii R.E.Brooks & J.J.N.Campb.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 5672390,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-050",
+      "inat_name": "Janochloa antidotalis",
+      "common_name": "blue panic grass",
+      "inat_taxon_id": 1545945,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/331384094",
+          "date": "2025-12-14",
+          "photos": 8
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Janochloa+antidotalis&family=Poaceae&strict=false&verbose=true",
+        "match_type": "HIGHERRANK",
+        "name": "Poaceae",
+        "accepted_name": "Poaceae",
+        "rank": "FAMILY",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 3073,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "FUZZY_OR_LOW_CONFIDENCE_REVIEW",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD",
+        "CHECK_TAXONOMY"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-051",
+      "inat_name": "Lolium × boucheanum",
+      "common_name": "Hybrid Ryegrass",
+      "inat_taxon_id": 1199528,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/45834760",
+          "date": "2020-05-13",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Lolium+%C3%97+boucheanum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Lolium × boucheanum Kunth",
+        "accepted_name": "Lolium × boucheanum Kunth",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 4133390,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-052",
+      "inat_name": "Miscanthus sinensis",
+      "common_name": "Chinese silver grass",
+      "inat_taxon_id": 165474,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/352734605",
+          "date": "2026-04-24",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Miscanthus+sinensis&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Miscanthus sinensis Andersson",
+        "accepted_name": "Miscanthus sinensis Andersson",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2706026,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-053",
+      "inat_name": "Panicum dichotomiflorum",
+      "common_name": "Smooth Witchgrass",
+      "inat_taxon_id": 78338,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/61315171",
+          "date": "2020-09-30",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Panicum+dichotomiflorum&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Panicum dichotomiflorum Michx.",
+        "accepted_name": "Panicum dichotomiflorum Michx.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705144,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-054",
+      "inat_name": "Panicum repens",
+      "common_name": "Torpedo grass",
+      "inat_taxon_id": 166096,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/136945230",
+          "date": "2022-09-29",
+          "photos": 1
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Panicum+repens&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Panicum repens L.",
+        "accepted_name": "Panicum repens L.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705093,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 18
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "CHECK_INTRODUCED_STATUS",
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-055",
+      "inat_name": "Pappophorum bicolor",
+      "common_name": "Pink Pappusgrass",
+      "inat_taxon_id": 166119,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/136755826",
+          "date": "2022-09-27",
+          "photos": 4
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Pappophorum+bicolor&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Pappophorum bicolor E.Fourn.",
+        "accepted_name": "Pappophorum bicolor E.Fourn.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2705178,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 1
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-056",
+      "inat_name": "Sclerochloa dura",
+      "common_name": "hardgrass",
+      "inat_taxon_id": 79006,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/148348772",
+          "date": "2023-02-08",
+          "photos": 2
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Sclerochloa+dura&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Sclerochloa dura (L.) P.Beauv.",
+        "accepted_name": "Sclerochloa dura (L.) P.Beauv.",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2704841,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-057",
+      "inat_name": "Sporobolus cryptandrus",
+      "common_name": "Sand Dropseed",
+      "inat_taxon_id": 79185,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/192579863",
+          "date": "2023-11-29",
+          "photos": 3
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Sporobolus+cryptandrus&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Sporobolus cryptandrus (Torr.) A.Gray",
+        "accepted_name": "Sporobolus cryptandrus (Torr.) A.Gray",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 2704769,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    },
+    {
+      "queue_id": "HAYS-058",
+      "inat_name": "Stapfochloa canterae",
+      "common_name": "Paraguayan windmill grass",
+      "inat_taxon_id": 969791,
+      "hays_records": 1,
+      "observers_in_saved_sample": 1,
+      "record_links": [
+        {
+          "url": "https://www.inaturalist.org/observations/137935400",
+          "date": "2022-10-05",
+          "photos": 4
+        }
+      ],
+      "gbif": {
+        "query_url": "https://api.gbif.org/v1/species/match?name=Stapfochloa+canterae&family=Poaceae&strict=false&verbose=true",
+        "match_type": "EXACT",
+        "name": "Stapfochloa canterae (Arechav.) P.M.Peterson",
+        "accepted_name": "Stapfochloa canterae (Arechav.) P.M.Peterson",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "confidence": 100,
+        "usage_key": 9322877,
+        "accepted_usage_key": null,
+        "possible_existing_species_id": null,
+        "alternatives_count": 0
+      },
+      "automated_screen": "NAME_MATCHED_BOTANICAL_ID_PENDING",
+      "flags": [
+        "SINGLE_OR_DOUBLE_HAYS_RECORD"
+      ],
+      "documented_in_hays": "RESEARCH_GRADE_PHOTOGRAPHED_WILD_TAGGED_RECORD",
+      "photo_identification_qa": "PENDING",
+      "natural_establishment_qa": "PENDING",
+      "flora_of_north_central_texas": "PENDING",
+      "flora_of_north_america": "PENDING",
+      "accepted_species_decision": "PENDING",
+      "photo_rights": "NOT_STARTED",
+      "visual_key_lesson": "NOT_STARTED",
+      "merge_ready": false
+    }
+  ]
+}
