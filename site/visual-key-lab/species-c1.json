@@ -370,7 +370,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Arundo/arundo-donax/images/01-reed-stand-habit.jpg",
-        "label": "GIANT REED — archived stand and broad leaves",
+        "label": "GIANT REED — distant cane-like stand with broad leaves and some flowering heads; individual plant structure not isolated",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0",
         "license_url": "",
@@ -380,7 +380,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Arundo/arundo-donax/images/commons-arundo-2009db5a4faf.jpg",
-        "label": "GIANT REED — real leaf collar, ciliate membranous ligule and clasping blade base",
+        "label": "GIANT REED — inside blade–sheath collar showing pale clasping blade-base lobes and short fringed membrane; dimensions not measured",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -390,7 +390,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Arundo/arundo-donax/images/commons-arundo-7c8063c64e89.jpg",
-        "label": "GIANT REED — actual tall upright branching flowering panicle",
+        "label": "GIANT REED — erect branching flowering panicle on an attached culm; floret detail not visible",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -400,7 +400,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Arundo/arundo-donax/images/harry-rose-spikelets-6804285202.jpg",
-        "label": "GIANT REED — true photographed Arundo spikelets (hair-origin macro still needed)",
+        "label": "GIANT REED — close narrow overlapping reddish-tipped spikelets on branch; location of lemma hairs not visible",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -488,6 +488,92 @@
       "stage": "PHASE3_PASS13_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "rights_status": "EXISTING_CREDITS_PRESERVED_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
+      "scope": "4 of 5 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Distant landscape view of a large stand of tall upright cane-like grasses with broad leaves and several pale flowering tops, mixed with foreground shrubs and many thin bare culms"
+          ],
+          "cannot_verify": [
+            "Independent verification that all visible cane-like culms belong to Arundo, actual same-plant attachment of leaf/collar/seedhead or Hays County occurrence"
+          ],
+          "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Arundo/arundo-donax/images/01-reed-stand-habit.jpg",
+          "git_blob_sha": "02d26a36f3df26f98a997ee55b19308d66809232",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "An opened broad green blade/sheath collar with an obvious clasping pale winged blade base and short inner arch of pale membranous margin bearing short hair fringes, plus longer delicate strands near center"
+          ],
+          "cannot_verify": [
+            "Exact membranous ligule height without scale, underground rhizomes or floret hair placement"
+          ],
+          "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Arundo/arundo-donax/images/commons-arundo-2009db5a4faf.jpg",
+          "git_blob_sha": "eff1e265003ed7c5f7ac72300d1350720f773887",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "One attached erect large, loosely pyramidal many-branched flowering panicle with many narrow dry brownish spikelet-bearing branches rising above hand-held culm"
+          ],
+          "cannot_verify": [
+            "Exact plant height or local specimen determination, single spikelet glume/lemma detail, winter photograph date"
+          ],
+          "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Arundo/arundo-donax/images/commons-arundo-7c8063c64e89.jpg",
+          "git_blob_sha": "d5302c92b68dc61a87ed18ea6e91de422b43e3bb",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Attached upright branch closeup shows several long lanceolate overlapping reddish-tipped narrow spikelet-like structures arranged along a slender green axis"
+          ],
+          "cannot_verify": [
+            "Silky hair attachment to lemma base, rachilla hairlessness, separated sterile/fertile florets and floret size"
+          ],
+          "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Arundo/arundo-donax/images/harry-rose-spikelets-6804285202.jpg",
+          "git_blob_sha": "d652fe8f70ea6a643a81e8d685c49a02509455cf",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        6
+      ],
+      "unmet_roles": [
+        "Original i=6 cane-node photograph returned blob metadata only and remains uncounted; route to existing image-access work rather than repeated QA",
+        "A matched dissection of one Arundo spikelet with long silky hairs confirmed on the basal lemma and glabrous rachilla internode, including glumes, awn and scale, compared with Phragmites",
+        "True underground rhizome cross section from an authorized historical/voucher specimen, not by collecting in protected riparian areas",
+        "Same-plant field view tying cane, blade base, flowering head and voucher together for locally relevant training",
+        "Exact source photo licenses and November–February photo dates not independently verified"
+      ],
+      "summary": "Four actual GitHub-hosted images reviewed. Source landscape shows a tall dense stand but does not isolate one diagnosed plant. Harry Rose collar exposes a pale short fringed membrane and clasping lobed leaf base; erect open branching panicle is clear; tight narrow spikelets visible but without the crucial lemma-side silk hair insertion. i=6 lateral shoot and cane-node photo returned metadata only, excluded. No independent exact photo-rights recheck or Hays voucher.",
+      "seasonal_review": {
+        "observed": "Dry stems or plumes in some photos do not establish a Nov–Feb original capture date.",
+        "queue_action": "Use existing master Photo Needs Queue for targeted missing anatomy, winter dates and inaccessible originals. No separate sheet."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-structure QA only. Original key, lineage/source caveats and FNA-backed diagnostic checks unchanged; annotated source labels not independently recertified."
     }
   },
   {
