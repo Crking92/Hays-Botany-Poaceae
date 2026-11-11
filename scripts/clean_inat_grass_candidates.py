@@ -23,8 +23,12 @@ def norm(s):
     s=re.sub(r"\b[x]\s+(?=[a-z])","x",s)  # × involuta -> xinvoluta
     return s
 def taxon_key(s):
-    bits=norm(s).split(" ")
+    bits=norm(s).replace("var.","var").replace("subsp.","subsp").replace("f.","f").split(" ")
     if len(bits)<2:return None
+    # Crucial: "Eragrostis pilosa var. lugens" must NOT equal
+    # "Eragrostis pilosa". The same applies to subspecies/forms.
+    if len(bits)>=4 and bits[2] in {"var","subsp","ssp","subvar","f","forma"}:
+        return " ".join(bits[:4])
     return " ".join(bits[:2])
 index_aliases=defaultdict(set)
 for row in base:index_aliases[taxon_key(row["scientific"])].add(row["scientific"])
