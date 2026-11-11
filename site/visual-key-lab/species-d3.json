@@ -1363,7 +1363,45 @@
         "reference": "Rhizomatous tall reed; this species-level description does not distinguish native/introduced lineages.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "lineage": {
+        "source": "Annual Review of Ecology, Evolution, and Systematics — Phragmites North American lineages",
+        "source_url": "https://doi.org/10.1146/annurev-ecolsys-102723-051221",
+        "reference": "Native americanus / introduced australis / Gulf Coast berlandieri may look similar. Do NOT mark local Texas stands invasive or prescribe removal from morphology alone; exact lineage is unverified until suitable voucher/genetic work.",
+        "status": "LINEAGE_UNKNOWN_DO_NOT_USE_SPECIES_ONLY_FOR_CONTROL",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Find long SILKY HAIRS on the rachilla between florets",
+        "check": "Common reed has 3–10-flowered spikelets, with WHITE SILKY rachilla segments between florets commonly ~6–10 mm. The fertile lemma itself is generally GLABROUS and long-tapered; do not mislabel the silky rachilla as hairy lemma.",
+        "compare": "Giant reed has the opposite distribution: virtually naked rachilla internodes and long hairs low on the lemma body.",
+        "certainty": "FNA and peer-reviewed source; diagnostic closeup of separated floret/rachilla not certified",
+        "source": "Flora of North America — Phragmites australis",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=22934"
+      },
+      {
+        "look": "Check upper/lower glumes and the entire reed colony",
+        "check": "FNA gives lower glume ~3–7 mm, upper ~5–10 mm, and single large 15–35 cm (often drooping) plume on a rhizomatous 1–4 m reed. Inner ligule is a minute ciliolate membrane ~1 mm; dried husks and detached leaves often distort the apparent plume.",
+        "compare": "Arundo commonly has subequal glumes ~8–11.5 mm, broader canes and an upright plume. Head direction, height and color are only first sorting clues.",
+        "certainty": "FNA-based, true same-plant glumes/rhizome and winter stages pending",
+        "source": "Flora of North America — Phragmites australis",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=22934"
+      },
+      {
+        "look": "STOP at species level unless the lineage is established",
+        "check": "North American Phragmites includes native subsp. americanus, introduced subsp. australis, and Gulf Coast var. berlandieri; stem color, sheaths, ligule height and glume length help but can overlap. Field pictures DO NOT establish genetic lineage or native/invasive management eligibility. Record Phragmites australis lineage unknown if uncertain.",
+        "compare": "Do not label a photographed stand invasive or authorize control from the species name alone. Genetic test or expert vouchers may be required for lineage certainty.",
+        "certainty": "Current review notes genetically and morphologically overlapping lineages; no Texas stand reidentification performed",
+        "source": "Annual Review — Phragmites lineages",
+        "url": "https://doi.org/10.1146/annurev-ecolsys-102723-051221"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS13_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     }
   },
   {
