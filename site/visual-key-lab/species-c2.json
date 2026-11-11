@@ -697,7 +697,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/commons-cc7d082781da.jpg",
-        "label": "Southern crabgrass — one-sided, overlapping dry spikelets",
+        "label": "Dry unilateral flowering branch — overlapping flattened ribbed spikelets; parts not dissected",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0",
         "license_url": "",
@@ -707,7 +707,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-090121-1189-second-base-view.jpg",
-        "label": "ACTUAL CONNECTED ROOTS — Southern crabgrass lower culm and fibrous root system",
+        "label": "Preserved lower culm with attached branching roots and sheaths — whole plant not shown",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0",
         "license_url": "https://creativecommons.org/licenses/by/3.0/",
@@ -737,7 +737,7 @@
       {
         "i": 8,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/digitaria-ciliaris/gbif-2807319489-a0c8182866e6.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "UT preserved sheet — digitate flowering branches; old D. sanguinalis label and later D. ciliaris annotation",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -747,7 +747,7 @@
       {
         "i": 9,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/digitaria-ciliaris/gbif-2807502768-63f05f123abc.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "UT preserved D. ciliaris sheet — spreading lower stems, nodes and two fingerlike flowering heads",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -783,7 +783,7 @@
     },
     "source_blob_sha": "b81a0da09c8b467a4d7869a32bcbe44057df13fd",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "PHASE4_PARTIAL_4_OF_8; ANATOMY_AND_UT_RIGHTS_UNVERIFIED",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 187",
@@ -836,6 +836,139 @@
       "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    },
+    "review": {
+      "pass": "PHASE4_PASS40_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_8",
+      "rights_status": "EXISTING_LICENSE_STRINGS_PRESERVED; TWO_UT_HERBARIUM_SCANS_HAVE_COPYRIGHT_RESERVED_TEXT; EXACT_INSTITUTIONAL_RIGHTS_HOLD",
+      "scope": "4 of 8 original hosted images rendered and visually inspected. Original images/credits retained. The two UT scanned sheets i=8,9 visibly say 'copyright reserved' on their rulers despite the existing CC BY metadata; exact permission must be verified before any new reuse. Older D. sanguinalis handwritten/printed label on i=8 coexists with later D. ciliaris determination; specimen-level taxonomy not newly certified.",
+      "photo_roles": [
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dry tan flowering branch with flattened strongly longitudinally ribbed spikelets aligned along one side of the axis",
+            "overlapping spikelets toward each end of the branch"
+          ],
+          "cannot_verify": [
+            "separate lower/upper glumes and sterile versus fertile florets",
+            "whole head, inner ligule, same-plant local specimen"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/commons-cc7d082781da.jpg",
+          "git_blob_sha": "2ecfbe4e936b083006a727dedf7c9b92b89e7c78",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "brown lower stem with several dry leaf sheaths continuing to a basal crown",
+            "a few long fibrous rootlike branches still connected to the base and side nodes"
+          ],
+          "cannot_verify": [
+            "full root architecture, flowering head or exact number of roots",
+            "living seasonal stage, source specimen taxon independently identified"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-090121-1189-second-base-view.jpg",
+          "git_blob_sha": "328a76716eec77f617828b1b8ac92639a5bd95c0",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 8,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pressed grass with an upright stalk ending in several fingerlike one-sided flowering branches",
+            "dry leaf blades and partly spreading basal stems with rooting segments",
+            "one original paper label reads 'Digitaria sanguinalis'; a later annotation reads 'Digitaria ciliaris'"
+          ],
+          "cannot_verify": [
+            "which historical taxonomic opinion is correct from image alone",
+            "fine glume lengths or the inner ligule",
+            "whether displayed CC BY claim overrides visible copyright-reserved notation"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/digitaria-ciliaris/gbif-2807319489-a0c8182866e6.jpg",
+          "git_blob_sha": "256057efa2065db6870d122debc928ca43cc0b99",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 9,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "preserved grasses with spreading connected lower nodes, roots and long narrow blades",
+            "two well-separated heads each having several slender fingerlike flowering branches",
+            "current sheet reads Digitaria ciliaris and records Travis County Texas"
+          ],
+          "cannot_verify": [
+            "exact spikelet micromorphology and true ligule in this scan",
+            "whether herbarium's visible copyright-reserved mark is covered by precise CC BY reuse terms"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/digitaria-ciliaris/gbif-2807502768-63f05f123abc.jpg",
+          "git_blob_sha": "07958b1a3e2061ad958470fd0618e5846b1ce09b",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0,
+        3,
+        7,
+        10
+      ],
+      "image_access_holds": [
+        {
+          "i": 0,
+          "git_blob_sha": "a1a8fc616f34f620a0bae12af111c5e9e2f4e490",
+          "reason": "GitHub returned metadata only, no viewable image bytes; defer to existing image-access workflow, do not count or retry routinely."
+        },
+        {
+          "i": 3,
+          "git_blob_sha": "d15fe04a92d8e1648c92ed19d18f9c459b38b59f",
+          "reason": "GitHub returned metadata only, no viewable image bytes; defer to existing image-access workflow, do not count or retry routinely."
+        },
+        {
+          "i": 7,
+          "git_blob_sha": "515e10fa51f02be857b66c4342b76ba4cc849622",
+          "reason": "GitHub returned metadata only, no viewable image bytes; defer to existing image-access workflow, do not count or retry routinely."
+        },
+        {
+          "i": 10,
+          "git_blob_sha": "3344ec6492dd9a9d9b15992915d07670fecbda0d",
+          "reason": "GitHub returned metadata only, no viewable image bytes; defer to existing image-access workflow, do not count or retry routinely."
+        }
+      ],
+      "identity_cautions": [
+        "Specimen i=8 bears an older label 'Digitaria sanguinalis', plus later 'Digitaria ciliaris' determination; use the specimen as a historical labeled herbarium example with revision caution, not proof from photo alone."
+      ],
+      "rights_holds": [
+        {
+          "indices": [
+            8,
+            9
+          ],
+          "reason": "University of Texas Austin herbarium scans visibly include the words 'copyright reserved' on the ruler, while existing species records claim CC BY 4.0; the text may pertain to the ruler rather than the image, so do not infer license validity or invalidity. Require exact-photo source license confirmation before new publishing/redistribution."
+        }
+      ],
+      "unmet_roles": [
+        "true inner ligule at blade–sheath junction",
+        "separated upper/lower glumes and mature fertile/sterile floret at a 1-mm scale",
+        "clear field habit from a locally verified Hays population",
+        "four inaccessible hosted references"
+      ],
+      "summary": "4 DIRECT_VISIBLE / 0 PARTIAL_VISIBLE images for their specific visible external roles; two herbarium scans flagged for exact-image rights verification and one historical species-name crosswalk.",
+      "seasonal_review": {
+        "observed": "Dry flowering units and pressed specimens are visible; no independent November–February field season certification.",
+        "queue_action": "Existing master Photo Needs Queue only, no new spreadsheet or duplicate general-photo downloads."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Illustrated Flora of North Central Texas retained as primary; no taxonomy, range or filter-state edits."
     }
   },
   {
@@ -1132,7 +1265,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-plant14-cc-by2.jpg",
-        "label": "WHOLE LIFTED ANNUAL TUFT — actual basal culms and attached flowering heads",
+        "label": "Lifted leafy flowering clump against sky — basal tangle exposed, roots not separated",
         "creator": "Harry Rose / Macleay Grass Man",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1142,7 +1275,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-absent-ligule-cc-by2.jpg",
-        "label": "TRUE COLLAR — no ligule present · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "Opened green sheath mouth — no raised ligule obvious; inner junction needs confirmation",
         "creator": "Harry Rose / Macleay Grass Man",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1152,7 +1285,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/echinochloa-crus-galli-mark-marathon.jpg",
-        "label": "1 · Crowded seedhead and lateral flowering branches",
+        "label": "Upright branched mature inflorescence — dense overlapping pale spikelets",
         "creator": "Mark Marathon",
         "license": "CC BY-SA 4.0",
         "license_url": "",
@@ -1162,7 +1295,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-annotated-spikelet-cc-by2.jpg",
-        "label": "TRUE SPIKELET — source-annotated floral anatomy · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "Source-annotated opened spikelet — glumes, lemmas and lower palea labeled by photographer",
         "creator": "Harry Rose / Macleay Grass Man",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1172,7 +1305,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-mature-spikelets-cc-by2.jpg",
-        "label": "MATURE SPIKELETS — two actual dried spikelets with marginal bristles (Australian reference)",
+        "label": "Two dry mature spikelets — short hairs and pointed tips, Australian reference",
         "creator": "Harry Rose / Macleay Grass Man",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1182,7 +1315,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/echinochloa-crus-galli/gbif-2807218711-02c51e8fbf3b.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "UT preserved barnyardgrass sheet — mature seedhead and dry foliage; rights need checking",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1192,7 +1325,7 @@
       {
         "i": 8,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/echinochloa-crus-galli/gbif-2807342939-16aebc8f9a5f.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "UT preserved barnyardgrass sheet — two dense heads, dry culms and basal roots; rights need checking",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1228,7 +1361,7 @@
     },
     "source_blob_sha": "08a1596cf2a92a32e954ae1dc1bd59d15316ed97",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "PHASE4_PARTIAL_7_OF_8; TRUE_LIGULE_ABSENCE_AND_UT_RIGHTS_UNVERIFIED",
     "character_evidence": {
       "ligule": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 190",
@@ -1274,6 +1407,171 @@
       "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    },
+    "review": {
+      "pass": "PHASE4_PASS40_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "rights_status": "EXISTING_LICENSE_STRINGS_PRESERVED; TWO_UT_HERBARIUM_SCANS_HAVE_COPYRIGHT_RESERVED_TEXT; EXACT_INSTITUTIONAL_RIGHTS_HOLD",
+      "scope": "7 of 8 hosted images rendered and visually inspected from actual GitHub image bytes; one UT institutional image remains metadata-only. The two viewable UT scans i=7,8 visibly say 'copyright reserved' on the embedded scale despite CC BY metadata; legal meaning/photograph-specific rights uncertain and held for new reuse, not overwritten.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "lifted dense green leafy crown with multiple upright culms and branching mature flowerheads against blue sky",
+            "broad arching leaves and numerous fine inflorescence side branches"
+          ],
+          "cannot_verify": [
+            "separated basal roots, collection date, full source voucher determination",
+            "individual spikelets or true ligule at this scale"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-plant14-cc-by2.jpg",
+          "git_blob_sha": "bea0da49a90be4eb749d4b348704e142c1ca4cbe",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "open green sheath mouth with pale smooth rim behind erect blade/stem and a few isolated hairs on exterior",
+            "no obvious tall membranous flap or continuous fringe in the visible junction"
+          ],
+          "cannot_verify": [
+            "categorical absence of a true ligule without complete same-side inner blade/sheath view and scale",
+            "precise collar anatomy, neighboring leaf identities"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-absent-ligule-cc-by2.jpg",
+          "git_blob_sha": "3c2fd09116024e486a15c95acb6facc0db9d1a77",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "erect dense branched pale brown inflorescence with several narrow flowering axes",
+            "closely crowded small dry spikelets over a green grassy field"
+          ],
+          "cannot_verify": [
+            "awn origin and floret dissection",
+            "whole linked plant crown and true ligule"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/echinochloa-crus-galli-mark-marathon.jpg",
+          "git_blob_sha": "d016ebf3d1ef4f08b760506b2a2156abdac57595",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "opened grass spikelet showing distinct overlapping pale-green to purple bracts",
+            "printed source labels pointing to upper glume, short lower glume, lower lemma, upper lemma, and lower palea"
+          ],
+          "cannot_verify": [
+            "independent taxonomic accuracy of the photographer's organ labels or specimen ID",
+            "dimensions without a millimeter scale, fertile floret attachment retained in whole seedhead"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-annotated-spikelet-cc-by2.jpg",
+          "git_blob_sha": "26cca237633fbc5ff83fe9e6effd6a7f0a84e59f",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "two isolated amber-brown mature compressed pointed spikelets viewed from different faces",
+            "short stiff hairs/spines along margins and bract edges"
+          ],
+          "cannot_verify": [
+            "individual lemma versus glume identity without opening",
+            "further morphological dimensions or origin of a long awn"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Echinochloa/echinochloa-crus-galli/images/harry-rose-barnyardgrass-mature-spikelets-cc-by2.jpg",
+          "git_blob_sha": "a9cfe771263d1b0370728e16133878fa4e85cd39",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "UT preserved grass sheet with straw-colored blades and upright dense flowering panicle",
+            "historical Travis County Colorado River collection with older rank 'E. crusgalli var. mitis' and later species-level annotation"
+          ],
+          "cannot_verify": [
+            "modern varietal status from image alone",
+            "inner collar and glume measurements",
+            "exact-image CC BY usage rights despite visible copyright-reserved wording on scan ruler"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/echinochloa-crus-galli/gbif-2807218711-02c51e8fbf3b.jpg",
+          "git_blob_sha": "7093db0b1111b63b2666dc818f8980daad58aae3",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 8,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "UT herbarium preserved specimens with two dense narrow maturing heads, leaves and basal roots",
+            "source record from San Marcos, Texas with later species-level determination of Echinochloa crus-galli"
+          ],
+          "cannot_verify": [
+            "variety/taxonomic changes independently resolved from the image",
+            "true ligule, individual spikelet anatomy",
+            "exact institutional image license despite copyright-reserved wording on scan ruler"
+          ],
+          "pass": "PHASE4_PASS40",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/echinochloa-crus-galli/gbif-2807342939-16aebc8f9a5f.jpg",
+          "git_blob_sha": "0d7282cce81aa02c7d44b4fcc79e2c38d7b9e9be",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        9
+      ],
+      "image_access_holds": [
+        {
+          "i": 9,
+          "git_blob_sha": "81d974e4c9a1d105363c950ffdb938a6d862beb6",
+          "reason": "GitHub read returned only blob metadata; defer image-access recovery, do not count."
+        }
+      ],
+      "rights_holds": [
+        {
+          "indices": [
+            7,
+            8
+          ],
+          "reason": "'copyright reserved' visible on embedded UT scan scale alongside existing CC BY 4.0 fields; do not assume either approves or disproves reuse. Confirm specific source-image rights before further publication."
+        }
+      ],
+      "identity_cautions": [
+        "Old herbarium infraspecific names such as Echinochloa crusgalli var. mitis appear on one historical sheet, later species annotations not independently reconciled.",
+        "Photo i=3 has original labels for spikelet parts, but biological validity of every label is not independently microscopy-certified."
+      ],
+      "unmet_roles": [
+        "same-plant inner leaf collar clearly pulled open to prove true ligule absence, ideally at scale",
+        "same-scaled mature seedhead and dissected spikelets including sterile lower and fertile upper florets",
+        "one metadata-only hosted herbarium image i=9"
+      ],
+      "summary": "6 DIRECT_VISIBLE / 1 PARTIAL_VISIBLE scoped photo roles. Existing Australian source macro labels helpful; 'absent ligule' not fully photograph-certified. Two UT sheets held for exact-photo rights verification.",
+      "seasonal_review": {
+        "observed": "Green live clumps and mature tan spikelets and dried herbarium parts; none certifies a specific winter field period.",
+        "queue_action": "Use existing Photo Needs Queue for true collar/ligule no-flap macro and compare with other Echinochloa; no duplicate sheet."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Source morphology and current scientific identity treated as provisional on specimen photos; no new key state, taxon or nativity edits."
     }
   },
   {
