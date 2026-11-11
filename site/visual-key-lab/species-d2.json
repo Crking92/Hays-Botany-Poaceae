@@ -1978,7 +1978,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/pine-muhly-patrick-alexander-cc0.jpg",
-        "label": "Pine Muhly — a whole tuft with upright flowering stems",
+        "label": "PINE MUHLY — dry pale clumps with fine tall upright flowering stems in pine woodland; spikelet anatomy unresolved",
         "creator": "Patrick Alexander",
         "license": "CC0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3AMuhlenbergia_dubia_-_Flickr_-_aspidoscelis.jpg",
@@ -1987,7 +1987,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/ccby-wendy-mccrady-237946166-narrow-leaf.jpg",
-        "label": "PINE MUHLY — fine real leaf blade held between fingers",
+        "label": "PINE MUHLY — very narrow blue-green leaf blade with strong parallel ridges shown against fingers; collar not shown",
         "creator": "Wendy McCrady",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/237946166",
@@ -2070,6 +2070,59 @@
       "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS24_9_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2 of 2 current Lab gallery references actually viewed using GitHub-hosted image bytes. Original photo-specific rights, regional voucher identity and capture dates were not independently verified.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Several large straw-tan dense upright tufted grass crowns, with many thin tall flowering stems and very narrow sparse upright panicles in a pine woodland scene"
+          ],
+          "cannot_verify": [
+            "Clearly isolated glumes or lemma awn, proof of precise specimen identification, visible roots and winter field collection date"
+          ],
+          "pass": "PHASE4_PASS24_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/pine-muhly-patrick-alexander-cc0.jpg",
+          "git_blob_sha": "0639a1fa5cae3a1589358fd465b44a7564b78c51",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS AND COLLECTION DATE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "An extremely narrow blue-green leaf blade between fingers, with many conspicuous longitudinal ridges running along it and a second greener narrow blade behind"
+          ],
+          "cannot_verify": [
+            "True inner ligule, leaf width with a millimeter scale, leaf cross section or independently verified species identity from blade alone"
+          ],
+          "pass": "PHASE4_PASS24_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/ccby-wendy-mccrady-237946166-narrow-leaf.jpg",
+          "git_blob_sha": "5ddf490f5cffebbbc6b8fbe361c70f5c37a92de0",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS AND COLLECTION DATE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "Original natural-habitat rooted clump with leaf attachment traceable to identified flowering head",
+        "True inside collar/ligule and measured blade width",
+        "Individual spikelet and glume/lemma dissection with scale",
+        "Verified November–February field date and precise regional voucher, if needed for Hays-region lesson"
+      ],
+      "summary": "Two accessible photos: dry straw-tan upright tufted grass habit with narrow panicles in a pine woodland and very narrow strongly ribbed blue-green leaf blade in hand; neither confirms ligule or spikelet details. Native Hays-region provenance not established.",
+      "seasonal_review": {
+        "observed": "Dry/old tan material visible but exact November–February photograph dates not independently verified.",
+        "queue_action": "Use existing master Photo Needs Queue for specific missing seasonal and anatomy views; do not launch general re-downloads."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-caption QA only; preserved prior source-backed anatomy and key choices, no local nativity claims."
     }
   },
   {
