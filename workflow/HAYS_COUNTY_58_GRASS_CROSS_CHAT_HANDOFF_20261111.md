@@ -101,6 +101,19 @@ Seventeen targets (7 photo-access holds + 10 high-value morphology candidates) w
 
 No-hit species may still have physical/unindexed vouchers, incorrect county fields, or holdings under old synonyms; a zero is NOT absence proof. The central Hays review JSON now carries the three Paspalum source URLs and the Tridentopsis false-positive rejection.
 
+## Actual TEX Paspalum specimen sheet review — November 11, 2026
+
+Three **original UT Austin TEX herbarium sheet images and their readable labels have now actually been examined** (not just GBIF metadata): *Paspalum langei* TEX00485588 (2019-10-01), TEX00568499 (2021-11-09), TEX00568501 (2021-11-12). The images are individually CC BY 4.0 under UT Austin as rights holder and were inspected in a one-day temporary review artifact; image bytes were **not** committed or published.
+
+- [Actual 3-sheet visual inspection report, habitat labels and exact unconfirmed microscopic characters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-paspalum-langei-3-sheets-visual-inspection-20261111.md)
+- [Machine-readable 3-sheet provenance, collector initials and review flags](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-paspalum-langei-3-sheets-visual-inspection-20261111.json)
+
+**Important Hays habitat findings:** Nov 9 2021 shaded slope label says **"Many plants here"**; Nov 12 2021 Onion Creek conservation-area floodplain label says **"Five plants here"**, including co-occurring *Paspalum pubiflorum* that needs explicit discrimination. The 2019 label describes a residential yard under Ashe juniper, so cultivation versus naturally occurring there is unclear.
+
+**Specimen metadata correction:** GBIF lists Thomas J. Watson as recordedBy for all three; physical 2021 sheet labels instead read **Thomas L. Watson**, while the 2019 label reads **Thomas J. Watson**. This could reflect transcription/initial error and is NOT evidence by itself of two independent collectors.
+
+**Species confidence:** Pressed plants support the general *P. langei* habit, several narrow racemes and closely arranged spikelets, but the definitive lower glumes and papillose-based hairs cannot be independently checked at full sheet image scale. Species-level anatomical signoff remains PENDING; no live merge.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
