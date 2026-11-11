@@ -131,6 +131,13 @@ The enlarged photos confirm strong *group-level* inflorescence traits for *Aegil
 
 Priority follow-up: examine TEX *Paspalum langei* mature glumes and papilla hairs under microscope, with comparison to sympatric *P. pubiflorum*; then controlled scale-matched *Stapfochloa canterae* vs *S. ciliata* dissections, and *Tridentopsis elongata* second glume vein count against *T. mutica*.
 
+## New species-level distinctions and GBIF correction — November 11
+
+- [Three higher-confidence species differentiations with Hays photo IDs](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-three-species-level-differentials-20261111.md) — *Stapfochloa canterae* vs *S. ciliata*: published key uses **<12 versus 12–20 spikelets per centimeter** and sterile lemma awn **1.4–3.6 versus 0.4–1.6 mm**. Hays ruler/photo 235666609 appears to support the lower-density branch; count is preliminary. *Paspalum langei* vs co-occurring *P. pubiflorum*: lower glume present vs absent, overlapping lengths. *Tridentopsis elongata*: Kew distinct species, USDA GRIN variety, FNA broader *T. mutica*, with 3–7 versus mostly one-veined upper glume differential. **None is signed off for species identification.**
+- **Correction to historical voucher search:** GBIF's `county=Hays` parameter was ignored, and the script saw only the first 30 broad hits, so old "no Hays voucher" conclusions are invalid. Read [correction](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-gbif-county-query-correction-20261111.md). The actual three *P. langei* TEX sheets remain valid individually confirmed Hays collections.
+- [Corrected 17-taxon Texas-paginated Hays specimen query code](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/scripts/hays_17_texas_paginated_voucher_recheck.py) and [Action run](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/43097640595) — **queued, not yet completed or verified** at last check. Do not treat its future output as a completed result until the run succeeds and per-specimen county/name screening is checked. Supplement with GADM for specimens lacking county text.
+- Current real status remains 51/58 candidate names with 317 original photo pixels viewed, seven copyright-held image review cases, three genuine TEX Hays specimen sheets viewed, zero species signed off and zero live merges.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
