@@ -10,7 +10,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Muhlenbergia/muhlenbergia-lindheimeri/images/lindheimeri-cody-stricker-ccby4.jpg",
-        "label": "Lindheimer's muhly — Cody Stricker Texas plant",
+        "label": "Upright blue-green basal foliage of a Texas Lindheimer muhly bunch — no exposed inner ligule or mature flowering head",
         "creator": "Cody Stricker",
         "license": "CC BY 4.0",
         "license_url": "",
@@ -36,7 +36,7 @@
     },
     "source_blob_sha": "72276a3421245d5f9a28ef848674e879b039d6ac",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "PHASE4_PASS42_SOURCE_PREVIEW_ONLY; HOSTED_IMAGE_QA_PENDING",
     "character_evidence": {
       "head": {
         "source": "Kew GrassBase contracted 20–40 cm panicle; UT Austin Williamson County M. lindheimeri aging more open/feathery 30–62.5 cm panicle",
@@ -78,6 +78,44 @@
       "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    },
+    "review": {
+      "pass": "PHASE4_PASS42_EXACT_SOURCE_PREVIEW",
+      "review_date": "2026-11-11",
+      "status": "SOURCE_PREVIEW_ONLY_NOT_HOSTED_AUDITED",
+      "scope": "The Commons original-file image was visually rendered through its source page. GitHub-hosted photo bytes could not be viewed or image-matched this pass; this source inspection does NOT increase 421/514 hosted-photo QA count.",
+      "rights_status": "COMMONS_SOURCE_PAGE_CREATOR_AND_LICENSE_MATCH_ORIGINAL_RECORD; NOT_A_NEW_CLEARANCE_FOR_EXACT_HOSTED_FILE",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "SOURCE_PREVIEW_ONLY",
+          "shows": [
+            "dense erect slender gray-blue to green leaves arising together from a basal clump",
+            "some dry basal blades and surrounding grass"
+          ],
+          "cannot_verify": [
+            "ligule, sheath interior, rhizome absence, floret anatomy and mature panicle not shown",
+            "single source-labelled field plant does not itself certify all hybrid separations"
+          ],
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_lindheimeri.jpg",
+          "source_page_license_evidence": "CC BY 4.0; Cody Stricker; Commons preserves iNaturalist photo 85414368 and license check",
+          "hosted_match": "NOT_HASH_OR_PIXEL_VERIFIED",
+          "hosted_photo_status": "PENDING_ACTUAL_HOSTED_VISUAL_QA"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0
+      ],
+      "unmet_roles": [
+        "ligule, sheath interior, rhizome absence, floret anatomy and mature panicle not shown",
+        "single source-labelled field plant does not itself certify all hybrid separations"
+      ],
+      "summary": "Exact original photo source visually reviewed. This is source-preview QA only, not certified hosted-image evidence, diagnostic ID, or a new photo installation.",
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_CHECKLIST_PRESERVED_NOT_RECHECKED",
+      "seasonal_review": {
+        "observed": "No independently established Hays County November–February date",
+        "queue_action": "Existing master Photo Needs Queue only; seek diagnostic anatomy rather than duplicate general plant shots"
+      }
     }
   },
   {
