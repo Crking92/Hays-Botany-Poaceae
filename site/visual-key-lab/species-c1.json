@@ -1640,7 +1640,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-d4a51a66c607.jpg",
-        "label": "WOODLAND BROME — labelled living rooted grass tufts",
+        "label": "Two cultivated leafy bunches beside a Bromopsis pubescens garden sign — no flowering panicle, opened collar, or exposed roots",
         "creator": "Daderot",
         "license": "CC0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -1665,7 +1665,7 @@
     },
     "source_blob_sha": "f439a3ee2234c67036eaadd8e99645441f620360",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "PHASE4_PASS42_SOURCE_PREVIEW_ONLY; HOSTED_IMAGE_QA_PENDING",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -1707,6 +1707,44 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "review": {
+      "pass": "PHASE4_PASS42_EXACT_SOURCE_PREVIEW",
+      "review_date": "2026-11-11",
+      "status": "SOURCE_PREVIEW_ONLY_NOT_HOSTED_AUDITED",
+      "scope": "The Commons original-file image was visually rendered through its source page. GitHub-hosted photo bytes could not be viewed or image-matched this pass; this source inspection does NOT increase 421/514 hosted-photo QA count.",
+      "rights_status": "COMMONS_SOURCE_PAGE_CREATOR_AND_LICENSE_MATCH_ORIGINAL_RECORD; NOT_A_NEW_CLEARANCE_FOR_EXACT_HOSTED_FILE",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "SOURCE_PREVIEW_ONLY",
+          "shows": [
+            "two separate green leafy clumps growing in open garden soil",
+            "botanical-garden label reads Bromopsis pubescens"
+          ],
+          "cannot_verify": [
+            "no flowering panicle, awns, glumes, or lemmas visible",
+            "root connections, annual versus perennial crown and inner ligule not visible"
+          ],
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Bromus_pubescens_-_Copenhagen_Botanical_Garden_-_DSC07693.JPG",
+          "source_page_license_evidence": "CC0 1.0; Daderot; Commons original-work declaration",
+          "hosted_match": "NOT_HASH_OR_PIXEL_VERIFIED",
+          "hosted_photo_status": "PENDING_ACTUAL_HOSTED_VISUAL_QA"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0
+      ],
+      "unmet_roles": [
+        "no flowering panicle, awns, glumes, or lemmas visible",
+        "root connections, annual versus perennial crown and inner ligule not visible"
+      ],
+      "summary": "Exact original photo source visually reviewed. This is source-preview QA only, not certified hosted-image evidence, diagnostic ID, or a new photo installation.",
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_CHECKLIST_PRESERVED_NOT_RECHECKED",
+      "seasonal_review": {
+        "observed": "No independently established Hays County November–February date",
+        "queue_action": "Existing master Photo Needs Queue only; seek diagnostic anatomy rather than duplicate general plant shots"
+      }
     }
   },
   {
