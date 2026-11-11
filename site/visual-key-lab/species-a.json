@@ -578,7 +578,7 @@
     "common": "Buffalograss",
     "scientific": "Bouteloua dactyloides",
     "range": "PASS",
-    "field_rule": "Blue grama has a prominent curved terminal rooster-comb inflorescence and generally forms a tuft or short rhizomatous crown, while buffalograss spreads by stolons and has distinct male and female heads. Curlymesquite also mats but often has visibly hairy stolon nodes and a different flower head. Bermudagrass often has several finger-like racemes and an introduced lawn-grass context; stolons alone are not proof of buffalograss.",
+    "field_rule": "Buffalograss is a perennial sod-former that spreads characteristically by ABOVEGROUND stolons rooting at leafy nodes; some botanical treatments also report occasional underground rhizomes, so rhizomes alone must not automatically exclude it. Blue grama typically has curved rooster-comb heads and is tufted or short-rhizomatous, while buffalograss usually has separate male combs and female hard bur-like clusters. Curlymesquite has often visibly hairy stolon nodes and a different three-spikelet fascicle; bermudagrass usually has multiple terminal fingers and both stolons and extensive rhizomes. Compare actual flowering and rooted features rather than identifying from one creeping stem.",
     "hero_i": 1,
     "traits": {
       "head": [
@@ -586,9 +586,11 @@
         "burrs"
       ],
       "habit": [
-        "mat"
+        "mat",
+        "rhizome"
       ],
       "ligule": [
+        "hairs",
         "membrane"
       ],
       "awns": [
@@ -645,9 +647,11 @@
     "genus": "Bouteloua",
     "character_evidence": {
       "ligule": {
-        "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
-        "reference": "Illustrated Flora of North Central Texas, Poaceae under Buchloe dactyloides, printed p.1253 (uploaded monocots PDF p.177): ~0.5 mm CILIATE MEMBRANOUS ligule; hair-bearing membrane should not be treated as an exclusively hair-only ligule. Male combs raised; female bur-like inflorescences near leaves are not Cenchrus spine-involucres.",
-        "status": "REGIONAL_FLORA_CHECKED",
+        "source": "Diggs et al. Illustrated Flora of North Central Texas (under Buchloe) vs Kew GrassBase and NC State TurfFiles",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information",
+        "secondary_source_url": "https://www.turffiles.ncsu.edu/grasses/buffalograss/",
+        "reference": "The regional North Central Texas treatment gives an ~0.5 mm CILIATE MEMBRANE, whereas Kew GrassBase and NC State call it a ~0.5–1 mm HAIR FRINGE. A tiny membrane concealed by long cilia or differences in tissue interpretation remain unresolved because hosted collar photo only clearly shows projecting hairs. Broad field selection allows hairs OR membrane; no claim of two unrelated true ligules or measured membrane from that photo.",
+        "status": "CILIATE_MEMBRANE_VS_HAIR_FRINGE_SOURCE_TERMINOLOGY_CONFLICT_PHOTO_PENDING",
         "review_date": "2026-11-10"
       },
       "head": {
@@ -662,6 +666,15 @@
         "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information",
         "reference": "Usually dioecious, rarely monoecious; sexes have quite different heads. Do not label it as male/female zones on the same flowerhead.",
         "status": "BOTANICAL_SOURCE_VERIFIED_EXACT_PHOTO_PENDING",
+        "review_date": "2026-11-10"
+      },
+      "growth_stems": {
+        "source": "USDA Forest Service FEIS — Bouteloua dactyloides; Texas A&M Plants of Texas Rangelands; contrast NC State TurfFiles",
+        "source_url": "https://research.fs.usda.gov/feis/species-reviews/boudac",
+        "secondary_source_url": "https://rangeplants.tamu.edu/plant/buffalograss/",
+        "contrast_url": "https://www.turffiles.ncsu.edu/grasses/buffalograss/",
+        "reference": "Usually strongly stoloniferous with aboveground stolons rooted at leafy nodes. USFS FEIS states it OCCASIONALLY forms rhizomes; NC State turf guide records rhizomes absent. Wildflower Center also describes spreading by rhizomes. This discrepancy is not resolved for a local voucher: preserve mat/stolon as the usual field habit and permit rhizome as an occasional source-reported visual state, never an automatic species proof.",
+        "status": "SOURCE_RECONCILED_STOLONS_TYPICAL_RHIZOMES_OCCASIONAL_CONFLICT",
         "review_date": "2026-11-10"
       }
     },
@@ -685,11 +698,11 @@
       },
       {
         "look": "Follow a ground-level STOLON to a rooted node and inner ligule",
-        "check": "Gray-green leaves arise from creeping ABOVEGROUND stolons making close sod; blade tips can curl dry. Inner collar has a tiny ~0.5–1 mm CILIATE MEMBRANE, not a true hair-only ring. Rooted surface runners alone do not rule out bermudagrass.",
-        "compare": "Bermudagrass has both long scaly underground rhizomes and surface stolons, with typically 4–6 slender fingers on flowering culms.",
-        "certainty": "Regional flora / Kew morphology; rooted runner and collar macro not yet checked",
-        "source": "Kew POWO / GrassBase — Bouteloua dactyloides",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information"
+        "check": "Gray-green leaves arise from creeping ABOVEGROUND stolons, usually producing close sod; some authoritative sources report occasional UNDERGROUND rhizomes. Blade tips can curl when dry. The inner collar has a tiny ligule commonly described either as a short HAIR FRINGE or a CILIATE MEMBRANE (~0.5–1 mm); the currently hosted collar photo shows hairs but does not resolve the membranous base.",
+        "compare": "Bermudagrass commonly has both abundant surface stolons and extensive underground rhizomes, with 4–6 digitate flowering branches. Presence of a rare rhizome does not by itself eliminate buffalograss; flowering anatomy and sex-specific heads are stronger.",
+        "certainty": "USFS FEIS reports usual stolons and occasional rhizomes; Kew/NC State ligule fringe versus regional ciliate-membrane terminology remains unverified on real collar photo",
+        "source": "USFS FEIS + regional Texas flora + Kew/NC State comparative morphology",
+        "url": "https://research.fs.usda.gov/feis/species-reviews/boudac"
       }
     ],
     "diagnostic_review": {
