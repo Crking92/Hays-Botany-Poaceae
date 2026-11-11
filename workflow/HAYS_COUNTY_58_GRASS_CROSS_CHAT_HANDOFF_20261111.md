@@ -138,6 +138,20 @@ Priority follow-up: examine TEX *Paspalum langei* mature glumes and papilla hair
 - [Corrected 17-taxon Texas-paginated Hays specimen query code](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/scripts/hays_17_texas_paginated_voucher_recheck.py) and [Action run](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/43097640595) — **queued, not yet completed or verified** at last check. Do not treat its future output as a completed result until the run succeeds and per-specimen county/name screening is checked. Supplement with GADM for specimens lacking county text.
 - Current real status remains 51/58 candidate names with 317 original photo pixels viewed, seven copyright-held image review cases, three genuine TEX Hays specimen sheets viewed, zero species signed off and zero live merges.
 
+## Newly added regional authority — 2015 Texas Hill Country grass vegetative key
+
+**Important November 11 progress:** Found and indexed *Grasses of the Texas Hill Country: Vegetative Key and Descriptions* by Karl W. Hagenbuch and David E. Lemke (Texas State University), Phytoneuron 2015-4:1–93. This is directly Hays/Edwards Plateau relevant and has a **160-species vegetative key** plus **Appendix B cited herbarium collections by county**. Treat as a second regional plant-structure authority alongside *Flora of North Central Texas*, NOT replacement for its reproductive anatomy or Kew current accepted names.
+
+- [Original 2015 scientific PDF](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf)
+- [All 58 Hays candidate names crossed against the 2015 key, with vegetative trait leads and seven positive Hays gathering references](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-texas-hill-country-2015-crosswalk.md)
+- [Structured 58-name comparative evidence for another chat/merger](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-texas-hill-country-2015-crosswalk.json)
+
+**Crosswalk status:** 23 exact Appendix A names, 4 under historical names or existing covered taxon concepts, 2 found only under broader historical concepts, 29 not included as named 2015 species. **Seven original Hays candidate names have 10 individual published county specimen-gathering citations** transcribed from Appendix B: *Melica nitens* (Dingee 89/SWT); *Coelorachis cylindrica* = *Rottboellia campestris* (Carr 10681, Sanders 4100/TEX-LL); *Echinochloa colona* (Breckenridge 441/SWT); *Setaria viridis* (Liang 50, Osborn 35/SWT); *Setaria leucopila* (Breckenridge 490, Tabler s.n./SWT); *Stenotaphrum secundatum* (Litchfield s.n./SWT); *Triticum aestivum* (Ruiseco 128/SWT). These are **published specimen literature citations**, original sheets **NOT yet directly inspected**. The three prior *Paspalum langei* TEX sheets remain a separate stronger original-sheet source.
+
+**Diagnostic photo targets improved:** *Melica nitens* nearly closed sheaths + 3–6 mm membranous ligule; *Eragrostis curtipedicellata* viscid stems and ~90-degree spreading blades; *Setaria leucopila* distinctly hairy sheath throat vs annual *S. viridis*; *Echinochloa colona* ligule absent; *Stenotaphrum secundatum* distichous foliage + stolons; *Sphenopholis obtusata* divided collar; *Digitaria californica* paper explicitly warns vegetative features alone cannot reliably differentiate from some other Digitaria.
+
+**Lookalike safeguards:** The same 2015 Appendix B names Hays vouchers of *Paspalum pubiflorum* and *Tridens muticus* under broad historical concepts, but **do not** reassign them as *P. langei* or modern distinct *Tridentopsis elongata*. No new species signed off from this paper alone.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
