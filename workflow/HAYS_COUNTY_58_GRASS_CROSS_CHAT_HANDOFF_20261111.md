@@ -89,6 +89,18 @@
 
 **Status unchanged:** 51/58 names visually inspected across 317 individual source photos; seven copyright-held source images still not visually inspected; zero species fully confirmed for publication and zero live species merges. The 58-name staging JSON points to all new audit files.
 
+## Independent Hays specimen indexing — November 11, 2026
+
+Seventeen targets (7 photo-access holds + 10 high-value morphology candidates) were checked against GBIF's preserved-specimen index for Hays County. Only **three direct name-aligned Hays TEX herbarium specimen index records** surfaced, all for ***Paspalum langei***: accessions TEX00568499 (2021), TEX00568501 (2021), TEX00485588 (2019). Original specimen sheets/labels and flower parts have NOT been independently inspected yet. Do not claim voucher confirmation, only credible leads.
+
+**Crucial false-positive correction:** Searching an old broad *Tridens muticus var. elongatus* name returned two Hays *Tridens muticus var. muticus* records, accepted as *Tridentopsis mutica*, NOT the candidate *T. elongata*. These are excluded from positive evidence for elongata (and may later be used as look-alike voucher comparisons).
+
+- [Curated Hays herbarium voucher evidence and rejected taxon false positives](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-grasses-curated-voucher-evidence-20261111.md)
+- [Structured name-aligned preserved specimen evidence](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-grasses-curated-voucher-evidence-20261111.json)
+- [Unfiltered GBIF query ledger (CAUTION: includes broad-name matches, not all correctly identified as the requested candidate)](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-grasses-independent-voucher-leads-20261111.md)
+
+No-hit species may still have physical/unindexed vouchers, incorrect county fields, or holdings under old synonyms; a zero is NOT absence proof. The central Hays review JSON now carries the three Paspalum source URLs and the Tridentopsis false-positive rejection.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
