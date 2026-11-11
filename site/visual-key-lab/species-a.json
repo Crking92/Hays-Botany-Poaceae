@@ -87,6 +87,54 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS3_20_ADDITIONAL_ORIGINAL_GITHUB_IMAGE_BYTES",
+      "review_date": "2026-11-10",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3 of 3 existing gallery photo records visually inspected at least once across Passes 1-3. No specimen identity or source licensing independently revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "detached paired reproductive units with elongated awn and conspicuous long hairs"
+          ],
+          "cannot_verify": [
+            "fertility of each partner and exact structure without specimen annotation",
+            "individual floret lengths"
+          ]
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "held narrow stem, sheath and aged leaves at field scale"
+          ],
+          "cannot_verify": [
+            "flowering-head architecture, opened inner collar and ligule"
+          ]
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "silky white hairs and spikelet pairs along several attached flowering racemes",
+            "reddish sheath/inflorescence bracts"
+          ],
+          "cannot_verify": [
+            "paired fertile/sessile versus sterile/pedicelled anatomical dissection",
+            "leaf ligule"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "ligule and basal leaves at magnified collar",
+        "scaled sessile/pedicelled spikelet pair in one focal plane",
+        "dormant whole plant next to living season head"
+      ],
+      "summary": "All three hosted images initially inspected; strong spikelet-pair and white silky-hair examples, but one field image cannot prove a mature head or leaf collar."
     }
   },
   {
@@ -436,6 +484,61 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS3_20_ADDITIONAL_ORIGINAL_GITHUB_IMAGE_BYTES",
+      "review_date": "2026-11-10",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_8_IMAGES",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4 of 8 existing gallery photo records visually inspected at least once across Passes 1-3. No specimen identity or source licensing independently revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "circumferential ring of long fine hairs at a culm NODE"
+          ],
+          "cannot_verify": [
+            "leaf blade-sheath ligule (node is not ligule)"
+          ]
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "attached silky flowering racemes with numerous long dark awns and fine white hairs"
+          ],
+          "cannot_verify": [
+            "precise origin of each awn or dissection"
+          ]
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "short pale membranous INNER ligule protruding above leaf sheath mouth"
+          ],
+          "cannot_verify": [
+            "membrane length without mm scale"
+          ]
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "isolated hairy spikelet with ruler divisions visible above it"
+          ],
+          "cannot_verify": [
+            "attachment as sessile when detached, paired companion in this single frame"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "inspect remaining existing gallery photos i=1,2,5,7",
+        "source-check taxon/location of Australian images when using them for Hays County comparison",
+        "scaled paired spikelets with clear pedicel attachment"
+      ],
+      "summary": "Four of eight existing photos inspected; excellent node-hair ring, flowering racemes, actual membranous ligule and scaled isolated sessile spikelet. Four other photos remain unopened."
     }
   },
   {
@@ -822,7 +925,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bouteloua/bouteloua-gracilis/images/commons-archive-33759a354892ca50.jpg",
-        "label": "BLUE GRAMA — photographed mature eyelash-shaped seedhead close-up",
+        "label": "BLUE GRAMA — detached developing floral parts / spikelet details; NOT an entire mature comb",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_gracilis_(4080038299).jpg",
@@ -906,12 +1009,42 @@
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS2_TWO_ACTUAL_IMAGE_FILES_FLORA_REFERENCE",
+      "pass": "PHASE4_PASS3_20_ADDITIONAL_ORIGINAL_GITHUB_IMAGE_BYTES",
       "review_date": "2026-11-10",
-      "status": "PARTIAL_VISUAL_REVIEW_1_OF_6_IMAGES",
-      "rights_status": "SOURCE_CREDIT_IN_RECORD_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
-      "scope": "ONE of six existing gallery images opened as actual image bytes and compared to primary regional flora. Do not count the five unopened images as visually inspected.",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_6_OF_6",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "6 of 6 existing gallery photo records visually inspected at least once across Passes 1-3. No specimen identity or source licensing independently revalidated.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "low, patch-forming green grass and multiple narrow blades among mixed vegetation"
+          ],
+          "cannot_verify": [
+            "individual plant boundary, runners, rooting and ligule"
+          ]
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "detached developing floral/spikelet parts with awnlike tips"
+          ],
+          "cannot_verify": [
+            "complete mature curved comb, exact spikelet organ identity without dissection notes"
+          ]
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "noticeable hairs around the outer collar/sheath region"
+          ],
+          "cannot_verify": [
+            "true inner ligule margin and pure hair-fringe versus underlying membrane"
+          ]
+        },
         {
           "i": 3,
           "verdict": "DIRECT_VISIBLE",
@@ -925,15 +1058,35 @@
             "separated fertile/sterile florets and glumes",
             "entire image-based specimen name attribution and source rights"
           ]
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "green dangling anthers from attached comb spikelets",
+            "curved comb axes and overlapping spikelets"
+          ],
+          "cannot_verify": [
+            "isolated glumes, exact terminal rachis anatomy, ligule"
+          ]
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several mature one-sided combs with narrow pointed spikelets held beside fingers"
+          ],
+          "cannot_verify": [
+            "tiny apical rudimentary-spikelet absence by itself, exact ratio/length, inner ligule"
+          ]
         }
       ],
       "unmet_roles": [
-        "individually examine other five existing gallery images before comprehensive photo grade",
-        "true hair-fringe ligule at opened inner collar with mm scale",
-        "one mature dissected normal and any terminal spikelet showing rachis ending",
-        "same-scale side-by-side comparison with hairy grama and optional pectinata"
+        "magnified inner hair-fringe ligule with opened collar and mm scale",
+        "separated terminal spikelet plus entire rachis tip",
+        "source-verified same-scale comparison with hairy grama"
       ],
-      "summary": "Only photo i=3 opened: good DIRECT evidence of curved comb and no conspicuous bare continuing axis. Regional flora separately states absent apical rudimentary spikelets, NOT proven photographically."
+      "summary": "All six existing gallery photos initially inspected; only some prove actual head shapes/anthers. No isolated inner hair ligule or definitive terminal floret dissection."
     }
   },
   {
@@ -988,7 +1141,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bouteloua/bouteloua-hirsuta/images/matt-lavin-hairy-grama-glume-gland-hairs-49158063571-by-sa2.jpg",
-        "label": "HAIRY GRAMA — second-glume spreading hairs and bare branch extension (real macro)",
+        "label": "HAIRY GRAMA — macro of crowded hairy spikelets and awns; second-glume identity not separately resolved",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_hirsuta_-_hairy_grama_-_Flickr_-_Matt_Lavin.jpg",
@@ -1045,12 +1198,22 @@
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS2_TWO_ACTUAL_IMAGE_FILES_FLORA_REFERENCE",
+      "pass": "PHASE4_PASS3_20_ADDITIONAL_ORIGINAL_GITHUB_IMAGE_BYTES",
       "review_date": "2026-11-10",
-      "status": "PARTIAL_VISUAL_REVIEW_1_OF_5_IMAGES",
-      "rights_status": "SOURCE_CREDIT_IN_RECORD_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
-      "scope": "ONE of five gallery images opened as original bytes; other four remain unreviewed in this pass.",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "5 of 5 existing gallery photo records visually inspected at least once across Passes 1-3. No specimen identity or source licensing independently revalidated.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dense flowering comb with fine pale outward projections and conspicuously protruding bare branch-axis tip"
+          ],
+          "cannot_verify": [
+            "bare axis length, separately isolated second glume, hair type confirmed anatomically"
+          ]
+        },
         {
           "i": 1,
           "verdict": "DIRECT_VISIBLE",
@@ -1064,16 +1227,45 @@
             "glume or lemma dissection and hair-tuft character distinguishing tall grama",
             "full panicle branch count and associated rooted individual"
           ]
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "horizontal one-sided flowering comb with many hanging pale anthers"
+          ],
+          "cannot_verify": [
+            "hair-fringe ligule, glume surface anatomy or exact length of naked tip"
+          ]
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "macro of crowded comb spikelets, awns and pale spreading hairs"
+          ],
+          "cannot_verify": [
+            "which exact floret bract bears each hair",
+            "lowermost rudimentary-floret hair tuft comparison with tall grama"
+          ]
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "flowering stem with multiple separate combs and tapered awned units"
+          ],
+          "cannot_verify": [
+            "ligule, dissected spikelet, scaled naked extension"
+          ]
         }
       ],
       "unmet_roles": [
-        "individually inspect four other existing gallery images",
-        "paired comb terminal macro with mm ruler and annotated naked RACHIS tip versus lemma awns",
-        "inner true ligule with high magnification",
-        "tuft of hairs absent at base of lowermost rudimentary floret: check B. pectinata comparison",
-        "separated mature glume and lemma on correct species voucher"
+        "separate true glume and lowermost rudimentary floret at same scale as tall grama",
+        "true inner ligule with a millimeter scale",
+        "source verification of each individual photo"
       ],
-      "summary": "Only photo i=1 opened: clearly shows projecting dark bare branch continuation consistent with flora's rachis character; floral organs and precise length not certified."
+      "summary": "All five existing photos initially reviewed. Flowering combs and projecting branch-axis tips are represented; the isolated second glume and lowermost rudimentary-floret hair tuft remain unproved."
     }
   },
   {
