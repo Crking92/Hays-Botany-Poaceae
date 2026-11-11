@@ -1642,7 +1642,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/goldman-paspalums5-rachis-underside.jpg",
-        "label": "FLOWERING RACHIS — paired spikelets attach along the wavy axis",
+        "label": "THIN PASPALUM — zigzag green raceme rachis with small pale spikelets nestled at alternating bends; pairing not independently established",
         "creator": "Douglas Goldman",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:PaspalumS5.jpg",
@@ -1709,11 +1709,11 @@
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS29_10_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_6_OF_8",
-      "rights_status": "EXISTING_PHOTO_CREDITS_PRESERVED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "6 of 8 hosted current Lab gallery photo references actually opened in GitHub. Photo-visual role only, not identity, license or regional voucher approval.",
+      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "7 of 8 hosted Lab photo references visually reviewed from actual GitHub image bytes; one P. setaceum reference remains inaccessible. No independent exact rights, botanical voucher or original collection dates confirmed.",
       "photo_roles": [
         {
           "i": 0,
@@ -1804,28 +1804,43 @@
           "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/goldman-paspalums4-ligule.jpg",
           "git_blob_sha": "049dabcb89cd7661182224d58e9c1b599dc98b64",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT PHOTO SOURCE RIGHTS, OBSERVATION ID AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "A markedly zigzag or sinusoidal green raceme rachis with repeated small pale-green flattened oval spikelets tucked into alternating recesses along both sides"
+          ],
+          "cannot_verify": [
+            "Whether individual spikelets occur in definite pairs at every rachis node, floret count, inner ligule or same-plant root connection"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/goldman-paspalums5-rachis-underside.jpg",
+          "git_blob_sha": "b02cfe33396c993c73a15f9c764a10f9536242cd",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
         }
       ],
       "unreviewed_hosted_indices": [
-        3,
-        7
+        3
       ],
       "unmet_roles": [
-        "i=3 Alex Abair field-habit photo metadata-only and not countable until separately recovered; i=7 rachis photo still requires first-pass visual QA",
-        "True inner membranous ligule: opened brown rim i=6 not conclusively resolved from this image alone, obtain calibrated inside blade–sheath view if needed",
-        "Separate floral glumes and lemmas and compare to Florida paspalum with matched scale and regional voucher",
-        "Independent source-observation/image license and photographer validation, and a date-verified winter standing habit if available"
+        "Existing field-habit i=3 has GitHub blob metadata but no viewable image bytes; recover only in separate image-access process",
+        "Open true inner ligule with measured blade–sheath interface; brown membranous-looking tissue in i=6 not fully verified",
+        "Voucher-linked specimen dissection of glumes/lemmas and floral parts with measured spikelets",
+        "Exact-image licensing and dated Nov–Feb field habit to be checked where material"
       ],
-      "summary": "Six hosted references opened. Alex Abair i=0–2 capture green ovate crowded spikelets, prominent purple feathery structures, an upright raceme and roughened leaf margin; Douglas Goldman i=4–6 show exterior long sheath/base hairs, a real transverse stem node and an opened brown-rimmed collar. Brown tissue in i=6 appears near the ligule position but its true inner origin remains uncertain; never conflate i=4 hairs or i=5 node with ligule. The i=3 field habit file returned blob metadata only; i=7 rachis photo not yet opened.",
+      "summary": "Pass 29 covered six accessible images of flowering purple structures, blade margins, sheath hairs, true node and ambiguous opened collar. Pass 30 adds the actual zigzag raceme rachis close-up with small pale spikelets at successive bends; do not claim each attachment is definitively a paired spikelet without dissection. Historical i=3 field-habit JPEG returned metadata only and remains unreviewed.",
       "review_history": [
-        "PHASE4_PASS29_10_HOSTED_IMAGES"
+        "PHASE4_PASS29_10_HOSTED_IMAGES",
+        "PHASE4_PASS30_9_HOSTED_IMAGES"
       ],
       "seasonal_review": {
-        "observed": "Dry spikelets visible for P. floridanum, but no November–February photograph date independently established.",
-        "queue_action": "Use existing master Photo Needs Queue for missing ligules, dissections and dated winter habit; no new spreadsheet."
+        "observed": "No actual November–February image dates independently verified in this pass.",
+        "queue_action": "Retain remaining seasonal and anatomy gaps in existing master Photo Needs Queue; no separate spreadsheet."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo evidence review only. Existing key, source-backed diagnostics and source metadata preserved."
+      "morphology_reference_note": "Photo appearance review only. Source labels in photographer's annotated i=1 image treated as source annotation and not independently re-certified; prior morphology/key unchanged."
     }
   },
   {
@@ -1839,7 +1854,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/commons-paspalum-urvillei.jpg",
-        "label": "1 · Many thin branches from elongated seedhead axis",
+        "label": "VASEYGRASS — elongated many-branched flowering head with slender drooping unilateral racemes; individual spikelets not dissected",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_head10_(7391798316).jpg",
@@ -1848,7 +1863,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-spikelet-annotated.jpg",
-        "label": "VASEYGRASS — true separated floret parts, original photographer's labels",
+        "label": "VASEYGRASS — original photographer's annotated glume, sterile lemma, fertile lemma, palea and stigma close-up; anatomical labels not independently rechecked",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_urvillei_spikelet3_annotated_%287391787304%29.jpg",
@@ -1857,7 +1872,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-spikelets-attached.jpg",
-        "label": "VASEYGRASS — attached paired spikelets (Harry Rose source photo)",
+        "label": "VASEYGRASS — attached crowded oval green spikelets with projecting orange anthers and fine pale edge hairs; floret parts not separated",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3APaspalum_urvillei_spikelets1_%287391789558%29.jpg",
@@ -1866,7 +1881,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-node1.jpg",
-        "label": "VASEYGRASS — long hairs around a photographed stem node",
+        "label": "VASEYGRASS — long pale hairs on reddish-green exterior sheath/joint region; true inner ligule not shown",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_node1_(7391784488).jpg",
@@ -1875,7 +1890,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-habit1.jpg",
-        "label": "VASEYGRASS — tall roadside flowering stand, habitat view",
+        "label": "VASEYGRASS — tall dense roadside flowering stand with many narrow panicle branches; individual plants not isolated",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_habit1_(7391812884).jpg",
@@ -1884,7 +1899,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-leaf-sheath1.jpg",
-        "label": "BASAL LEAF SHEATHS — real exterior sheath hairs and reddish-purple sheathing bases",
+        "label": "VASEYGRASS — purple-pink ribbed basal sheath surfaces, sparse hairs and soil at crown; inner collar not shown",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_leaf_sheath1_(7391817130).jpg",
@@ -1893,7 +1908,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-leaf-sheath2.jpg",
-        "label": "GENUINE CONNECTED ROOTS — fibrous roots attached to purple basal sheaths",
+        "label": "VASEYGRASS — excavated crown with purple sheaths and actual attached roots; rooted anatomy clearly visible",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_leaf_sheath2_(7391814972).jpg",
@@ -1902,7 +1917,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-leaf-sheath3.jpg",
-        "label": "BASAL SHEATH HAIRS — clear external surfaces but no true inner ligule",
+        "label": "VASEYGRASS — hairy green and purple-brown outer basal sheath layers; inner ligule not shown",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_urvillei_leaf_sheath3_(7398277156).jpg",
@@ -1967,6 +1982,152 @@
       "stage": "PHASE3_PASS5_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_8_OF_8",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "8 of 8 hosted Lab photo references visually reviewed from actual GitHub image bytes; one P. setaceum reference remains inaccessible. No independent exact rights, botanical voucher or original collection dates confirmed.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "An elongated flowering head with a long central axis bearing many thin narrow green racemes, several descending or drooping, each with densely arranged small spikelets"
+          ],
+          "cannot_verify": [
+            "A whole rooted plant, inner ligule, dissected fertile lemma or exact count from a regional specimen"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/commons-paspalum-urvillei.jpg",
+          "git_blob_sha": "2117173a3e5a3a359f596d9e9a206f04b585135d",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Two enlarged green spikelets with separately exposed pale green outer bracts and smooth inner oval floral units, dark feathered stigma-like structures, and original photographer's text labels for glume, sterile lemma, fertile lemma, palea, and stigma"
+          ],
+          "cannot_verify": [
+            "Independent microscopic confirmation of exact bract identity, 'upper fertile' terminology, or measured glume/lemma dimensions; labels are source annotations, not this audit's own dissection"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-spikelet-annotated.jpg",
+          "git_blob_sha": "90880e4477bbd1cbef051bd0c4072802e8613f00",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Dense overlapping oval green spikelets along a narrow rachis with some orange-brown elongated anther-like parts protruding, and thin pale hairs at the margins"
+          ],
+          "cannot_verify": [
+            "Independent count of paired fertile units or individually separated glume/lemma assignments"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-spikelets-attached.jpg",
+          "git_blob_sha": "8448f3cf892fbcb68a5849bee877d2d99c5876ef",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Close exterior green-to-purple sheathing stem junction with conspicuous long pale hairs standing from the margin and adjoining surface"
+          ],
+          "cannot_verify": [
+            "Whether the pictured junction is a true nodal ring versus sheath overlap, inside membranous ligule and precise hair length"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-node1.jpg",
+          "git_blob_sha": "922647631ea4062a9c28ec14eb9530258f5cb894",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Tall green roadside grass stand with many extended upright culms and slender branching flowering heads in a dense group"
+          ],
+          "cannot_verify": [
+            "Definite species identity of every individual in the roadside mix, single rooted plant, full spikelet anatomy or confirmed local voucher"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-habit1.jpg",
+          "git_blob_sha": "0e65de2f917657934a44d4836cef6b4d2ca71c8d",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Large basal sheaths at the crown are strongly purple-pink, longitudinally ribbed, with scattered short fine hairs and exposed external sheath layers; some roots/soil near top edge"
+          ],
+          "cannot_verify": [
+            "Precise sheath hair lengths, ligule, complete root morphology or winter stage"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-leaf-sheath1.jpg",
+          "git_blob_sha": "1342b2e4a0231ee954c8ebf5851b30156fdfc17b",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "An excavated stem base with several purple/red-brown tapering leaf sheaths attached to one dark basal crown and multiple extending stout pale roots and finer roots, all visibly connected"
+          ],
+          "cannot_verify": [
+            "Underground rhizome classification, exact plant age, entire root-system length or Hays county origin"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-leaf-sheath2.jpg",
+          "git_blob_sha": "c7b579e2483bd622609100bf907dd2087849779e",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Several overlapping green and dried purple-brown external basal sheaths showing dense short-to-medium pale hairs, ribbing and partially peeling outer layers"
+          ],
+          "cannot_verify": [
+            "Opened inner blade–sheath ligule, true nodal meristem or microscopic reproductive parts"
+          ],
+          "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-vasey-leaf-sheath3.jpg",
+          "git_blob_sha": "06887b7c6835a103a72ac33ef48c26f3a8bd6ee9",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "Open the TRUE inner blade/sheath ligule with ruler rather than relying on hairy external sheaths",
+        "Independently check annotated Harry Rose i=1 dissection labels against the Flora and original specimen; do not silently recertify terms",
+        "Date-verified Nov–Feb dormant and mature dry inflorescence if absent from existing master Photo Needs Queue",
+        "Compare many drooping Vaseygrass branches and distinctive reddish crown against Paspalum dilatatum and P. floridanum on locally verified vouchers"
+      ],
+      "summary": "All eight Vaseygrass photo files opened: elongated many-racemed head, source-annotated two-spikelet floral detail (source labels preserved but not independently proved), crowded green spikelets with orange floral parts, exterior sheath hairs, tall stand habitat, thick red-purple basal sheath growth, and clearly connected roots/crown. No image actually opens the inner ligule. All Harry Rose photos are from linked Commons source records; collection in Hays or winter month not established.",
+      "review_history": [
+        "PHASE4_PASS30_9_HOSTED_IMAGES"
+      ],
+      "seasonal_review": {
+        "observed": "No actual November–February image dates independently verified in this pass.",
+        "queue_action": "Retain remaining seasonal and anatomy gaps in existing master Photo Needs Queue; no separate spreadsheet."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo appearance review only. Source labels in photographer's annotated i=1 image treated as source annotation and not independently re-certified; prior morphology/key unchanged."
     }
   },
   {
