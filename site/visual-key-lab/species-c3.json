@@ -430,9 +430,48 @@
         "reference": "Membranous ligule 1–5 mm.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "fertile_sterile_florets": {
+        "source": "UT Austin PRC Williamson County Phalaris caroliniana; Kew GrassBase",
+        "source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Phalaris%20caroliniana.html",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415591-1/general-information",
+        "reference": "3 florets per spikelet: TWO basal sterile (small/awl-shaped lemmas) + ONE upper bisexual fertile floret; narrow winged glume keels. The broad photos cannot independently certify this without dissection.",
+        "status": "TWO_SOURCES_CONCUR_MACRO_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect the DENSE head: it is a PANICLE, not a true spike",
+        "check": "Carolina canarygrass is an ANNUAL with a compact ovate to cylindrical spike-like panicle usually ~1–7 cm long, 0.8–2 cm wide. Short densely branched rays carry spikelets; a short head alone cannot distinguish it from other canarygrasses.",
+        "compare": "Annual beardgrass also has dense heads but their fuzzy outline comes from long AWNS on the glumes; Phalaris is typically unawned.",
+        "certainty": "Kew GrassBase and UT Williamson County, existing head photo helps silhouette only",
+        "source": "Kew GrassBase — Phalaris caroliniana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415591-1/general-information"
+      },
+      {
+        "look": "Count TWO small basal STERILE florets beneath one fertile floret",
+        "check": "A Phalaris caroliniana spikelet has THREE florets TOTAL: the two lower ones sterile and represented by thin, small, hairy 1.2–2.5 mm lemmas; the upper fertile floret has a much larger smooth-to-hairy cartilaginous 3–4.7 mm lemma. Count florets by dissection.",
+        "compare": "Other Phalaris species such as P. minor may have only ONE developed basal sterile lemma; do not identify all Phalaris from compact panicle alone.",
+        "certainty": "Kew and UT Texas species account both explicitly give 2 sterile + 1 bisexual; specific plant dissection pending",
+        "source": "UT Austin — Phalaris caroliniana",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pages/Phalaris%20caroliniana.html"
+      },
+      {
+        "look": "Examine the WINGED glume keels and true membrane ligule",
+        "check": "Strongly flattened ~4.2–5.6 mm glumes have three or sometimes five veins, with a NARROW translucent WING on each keel above midpoint. The inner true ligule is a visible 1–6.5 mm membrane in a Texas specimen account.",
+        "compare": "Polypogon glumes have a split/notched tip and long projecting awns that create fuzz; canarygrass lacks that glume-awn halo.",
+        "certainty": "Kew / UT local specimen measurements; close detached glume and inner collar image pending",
+        "source": "Kew GrassBase — Phalaris caroliniana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415591-1/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    }
   },
   {
     "id": "poa-annua",
