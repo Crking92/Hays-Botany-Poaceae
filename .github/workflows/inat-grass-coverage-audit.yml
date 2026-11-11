@@ -99,6 +99,9 @@ jobs:
           print("AUDIT_JSON_BEGIN",flush=True)
           print(json.dumps({"total_observed_taxa":len(merged),"matched_taxa":len(matched_taxa),"county_count":len(bycounty),"candidate_counts":dict(totals),"hays_candidates":[c for c in candidates if c["hays_count"]],"regional_top":[c for c in candidates if c["tier"]=="REGIONAL_2COUNTIES"][:80],"unresolved_counties":[x for x in counties if x not in bycounty]},separators=(",",":")),flush=True)
           print("AUDIT_JSON_END",flush=True)
+          print("AUDIT_ALL_BEGIN",flush=True)
+          print(json.dumps(candidates,separators=(",",":")),flush=True)
+          print("AUDIT_ALL_END",flush=True)
           PY
       - name: Store the complete CSV-ready JSON audit
         uses: actions/upload-artifact@v4
