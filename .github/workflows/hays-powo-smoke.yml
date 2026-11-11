@@ -1,0 +1,31 @@
+name: Hays grass taxonomy - POWO API smoke check
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths: ['.github/workflows/hays-powo-smoke.yml']
+permissions: {contents: read}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query 3 taxon-name cases from Kew POWO
+        run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.parse,json,time
+          for name in ['Melica nitens','Elymus glabriflorus','Bothriochloa longipaniculata','Tridentopsis elongata']:
+            u='https://powo.science.kew.org/api/2/search?q='+urllib.parse.quote(name)
+            try:
+              req=urllib.request.Request(u,headers={'User-Agent':'Mozilla/5.0 HaysBotanyTaxonomyCheck/1.0','Accept':'application/json'})
+              with urllib.request.urlopen(req,timeout=20) as x: d=json.load(x)
+              print('POWO_SMOKE',name,'SEARCH',json.dumps(d,ensure_ascii=False)[:4500],flush=True)
+              rr=(d.get('results') or [])
+              if rr and rr[0].get('fqId'):
+                fq=rr[0]['fqId']
+                uu='https://powo.science.kew.org/api/2/taxon/'+urllib.parse.quote(fq,safe=':')
+                with urllib.request.urlopen(urllib.request.Request(uu,headers={'User-Agent':'Mozilla/5.0 HaysBotanyTaxonomyCheck/1.0','Accept':'application/json'}),timeout=20) as x:z=json.load(x)
+                print('POWO_SMOKE',name,'DETAIL',json.dumps(z,ensure_ascii=False)[:5500],flush=True)
+            except Exception as ex:print('POWO_SMOKE_FAIL',name,type(ex).__name__,str(ex)[:350],flush=True)
+            time.sleep(.4)
+          PY
