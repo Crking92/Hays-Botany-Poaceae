@@ -1,0 +1,652 @@
+{
+  "date": "2026-11-11",
+  "input_targets": 17,
+  "purpose": "Independent voucher leads for seven single-record access holds and ten stronger local grasses.",
+  "search_scope": "GBIF indexed PRESERVED_SPECIMEN country=US, county Hays/Hays County, exact candidate name and selected historical combinations. State Texas where supplied.",
+  "warnings": [
+    "GBIF counts are INDEX HITS only, not a curated voucher validation. Original herbarium labels and the determination must be checked.",
+    "GBIF may re-index duplicate specimen images/copies or omit county field; a missing hit does not show a species is absent.",
+    "Old scientific combinations can represent broader species concepts (for example, Tridens muticus var elongatus), so never treat a name-only match as current species proof.",
+    "County name fields may be wrong or the specimen itself may be cultivated or misidentified.",
+    "No specimen image bytes, precise coordinates or locality descriptions were copied, and no published species data was changed."
+  ],
+  "records": [
+    {
+      "candidate": "Alopecurus carolinianus",
+      "queried_names": [
+        "Alopecurus carolinianus"
+      ],
+      "county_queries": [
+        {
+          "name": "Alopecurus carolinianus",
+          "county": "Hays",
+          "total_index_hits": 3218,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Alopecurus+carolinianus&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Alopecurus carolinianus",
+          "county": "Hays County",
+          "total_index_hits": 3218,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Alopecurus+carolinianus&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Cenchrus setaceus",
+      "queried_names": [
+        "Cenchrus setaceus",
+        "Pennisetum setaceum"
+      ],
+      "county_queries": [
+        {
+          "name": "Cenchrus setaceus",
+          "county": "Hays",
+          "total_index_hits": 1207,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Cenchrus+setaceus&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Cenchrus setaceus",
+          "county": "Hays County",
+          "total_index_hits": 1207,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Cenchrus+setaceus&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Pennisetum setaceum",
+          "county": "Hays",
+          "total_index_hits": 1207,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pennisetum+setaceum&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Pennisetum setaceum",
+          "county": "Hays County",
+          "total_index_hits": 1207,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pennisetum+setaceum&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Digitaria californica",
+      "queried_names": [
+        "Digitaria californica",
+        "Trichachne californica"
+      ],
+      "county_queries": [
+        {
+          "name": "Digitaria californica",
+          "county": "Hays",
+          "total_index_hits": 1687,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Digitaria+californica&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Digitaria californica",
+          "county": "Hays County",
+          "total_index_hits": 1687,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Digitaria+californica&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Trichachne californica",
+          "county": "Hays",
+          "total_index_hits": 1687,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Trichachne+californica&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Trichachne californica",
+          "county": "Hays County",
+          "total_index_hits": 1687,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Trichachne+californica&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Elymus macgregorii",
+      "queried_names": [
+        "Elymus macgregorii"
+      ],
+      "county_queries": [
+        {
+          "name": "Elymus macgregorii",
+          "county": "Hays",
+          "total_index_hits": 820,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Elymus+macgregorii&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Elymus macgregorii",
+          "county": "Hays County",
+          "total_index_hits": 820,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Elymus+macgregorii&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Lolium × boucheanum",
+      "queried_names": [
+        "Lolium boucheanum"
+      ],
+      "county_queries": [
+        {
+          "name": "Lolium boucheanum",
+          "county": "Hays",
+          "total_index_hits": 13,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Lolium+boucheanum&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Lolium boucheanum",
+          "county": "Hays County",
+          "total_index_hits": 13,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Lolium+boucheanum&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Panicum dichotomiflorum",
+      "queried_names": [
+        "Panicum dichotomiflorum"
+      ],
+      "county_queries": [
+        {
+          "name": "Panicum dichotomiflorum",
+          "county": "Hays",
+          "total_index_hits": 8682,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Panicum+dichotomiflorum&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Panicum dichotomiflorum",
+          "county": "Hays County",
+          "total_index_hits": 8682,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Panicum+dichotomiflorum&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Sporobolus cryptandrus",
+      "queried_names": [
+        "Sporobolus cryptandrus"
+      ],
+      "county_queries": [
+        {
+          "name": "Sporobolus cryptandrus",
+          "county": "Hays",
+          "total_index_hits": 8906,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Sporobolus+cryptandrus&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Sporobolus cryptandrus",
+          "county": "Hays County",
+          "total_index_hits": 8906,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Sporobolus+cryptandrus&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Aegilops cylindrica",
+      "queried_names": [
+        "Aegilops cylindrica"
+      ],
+      "county_queries": [
+        {
+          "name": "Aegilops cylindrica",
+          "county": "Hays",
+          "total_index_hits": 2262,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Aegilops+cylindrica&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Aegilops cylindrica",
+          "county": "Hays County",
+          "total_index_hits": 2262,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Aegilops+cylindrica&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Tridentopsis elongata",
+      "queried_names": [
+        "Tridentopsis elongata",
+        "Tridens muticus var. elongatus"
+      ],
+      "county_queries": [
+        {
+          "name": "Tridentopsis elongata",
+          "county": "Hays",
+          "total_index_hits": 0,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Tridentopsis+elongata&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Tridentopsis elongata",
+          "county": "Hays County",
+          "total_index_hits": 0,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Tridentopsis+elongata&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Tridens muticus var. elongatus",
+          "county": "Hays",
+          "total_index_hits": 3440,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Tridens+muticus+var.+elongatus&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Tridens muticus var. elongatus",
+          "county": "Hays County",
+          "total_index_hits": 3440,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Tridens+muticus+var.+elongatus&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 2,
+      "potential_voucher_leads": [
+        {
+          "gbif_occurrence_key": "6415656302",
+          "record_url": "https://www.gbif.org/occurrence/6415656302",
+          "dataset_name": null,
+          "institution_code": "TEX",
+          "collection_code": "TEX",
+          "catalog_number": "TEX00618974",
+          "recorded_name": "Tridens muticus var. muticus",
+          "accepted_name": "Tridentopsis mutica (Torr.) P.M.Peterson",
+          "recorded_year": 2024,
+          "county": "Hays",
+          "state": "Texas",
+          "basis": "PRESERVED_SPECIMEN",
+          "has_coordinate": null,
+          "needs_original_specimen_label_verification": true,
+          "state_not_explicit": false
+        },
+        {
+          "gbif_occurrence_key": "6415633320",
+          "record_url": "https://www.gbif.org/occurrence/6415633320",
+          "dataset_name": null,
+          "institution_code": "TEX",
+          "collection_code": "TEX",
+          "catalog_number": "TEX00603370",
+          "recorded_name": "Tridens muticus var. muticus",
+          "accepted_name": "Tridentopsis mutica (Torr.) P.M.Peterson",
+          "recorded_year": 2024,
+          "county": "Hays",
+          "state": "Texas",
+          "basis": "PRESERVED_SPECIMEN",
+          "has_coordinate": null,
+          "needs_original_specimen_label_verification": true,
+          "state_not_explicit": false
+        }
+      ],
+      "query_errors": [],
+      "status": "POSSIBLE_INDEPENDENT_VOUCHER_LEADS",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Echinochloa walteri",
+      "queried_names": [
+        "Echinochloa walteri"
+      ],
+      "county_queries": [
+        {
+          "name": "Echinochloa walteri",
+          "county": "Hays",
+          "total_index_hits": 3126,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Echinochloa+walteri&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Echinochloa walteri",
+          "county": "Hays County",
+          "total_index_hits": 3126,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Echinochloa+walteri&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Sphenopholis obtusata",
+      "queried_names": [
+        "Sphenopholis obtusata"
+      ],
+      "county_queries": [
+        {
+          "name": "Sphenopholis obtusata",
+          "county": "Hays",
+          "total_index_hits": 7441,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Sphenopholis+obtusata&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Sphenopholis obtusata",
+          "county": "Hays County",
+          "total_index_hits": 7441,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Sphenopholis+obtusata&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Coelorachis cylindrica",
+      "queried_names": [
+        "Coelorachis cylindrica",
+        "Mnesithea cylindrica",
+        "Rottboellia campestris"
+      ],
+      "county_queries": [
+        {
+          "name": "Coelorachis cylindrica",
+          "county": "Hays",
+          "total_index_hits": 978,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Coelorachis+cylindrica&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Coelorachis cylindrica",
+          "county": "Hays County",
+          "total_index_hits": 978,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Coelorachis+cylindrica&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Mnesithea cylindrica",
+          "county": "Hays",
+          "total_index_hits": 978,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Mnesithea+cylindrica&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Mnesithea cylindrica",
+          "county": "Hays County",
+          "total_index_hits": 978,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Mnesithea+cylindrica&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Rottboellia campestris",
+          "county": "Hays",
+          "total_index_hits": 978,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Rottboellia+campestris&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Rottboellia campestris",
+          "county": "Hays County",
+          "total_index_hits": 978,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Rottboellia+campestris&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Paspalum langei",
+      "queried_names": [
+        "Paspalum langei"
+      ],
+      "county_queries": [
+        {
+          "name": "Paspalum langei",
+          "county": "Hays",
+          "total_index_hits": 565,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Paspalum+langei&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Paspalum langei",
+          "county": "Hays County",
+          "total_index_hits": 565,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Paspalum+langei&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 3,
+      "potential_voucher_leads": [
+        {
+          "gbif_occurrence_key": "3866879449",
+          "record_url": "https://www.gbif.org/occurrence/3866879449",
+          "dataset_name": null,
+          "institution_code": "TEX",
+          "collection_code": "TEX",
+          "catalog_number": "TEX00568499",
+          "recorded_name": "Paspalum langei (E.Fourn.) Nash",
+          "accepted_name": "Paspalum langei (E.Fourn.) Nash",
+          "recorded_year": 2021,
+          "county": "Hays",
+          "state": "Texas",
+          "basis": "PRESERVED_SPECIMEN",
+          "has_coordinate": null,
+          "needs_original_specimen_label_verification": true,
+          "state_not_explicit": false
+        },
+        {
+          "gbif_occurrence_key": "3866886419",
+          "record_url": "https://www.gbif.org/occurrence/3866886419",
+          "dataset_name": null,
+          "institution_code": "TEX",
+          "collection_code": "TEX",
+          "catalog_number": "TEX00568501",
+          "recorded_name": "Paspalum langei (E.Fourn.) Nash",
+          "accepted_name": "Paspalum langei (E.Fourn.) Nash",
+          "recorded_year": 2021,
+          "county": "Hays",
+          "state": "Texas",
+          "basis": "PRESERVED_SPECIMEN",
+          "has_coordinate": null,
+          "needs_original_specimen_label_verification": true,
+          "state_not_explicit": false
+        },
+        {
+          "gbif_occurrence_key": "5236506306",
+          "record_url": "https://www.gbif.org/occurrence/5236506306",
+          "dataset_name": null,
+          "institution_code": "TEX",
+          "collection_code": "TEX",
+          "catalog_number": "TEX00485588",
+          "recorded_name": "Paspalum langei (E.Fourn.) Nash",
+          "accepted_name": "Paspalum langei (E.Fourn.) Nash",
+          "recorded_year": 2019,
+          "county": "Hays",
+          "state": "Texas",
+          "basis": "PRESERVED_SPECIMEN",
+          "has_coordinate": null,
+          "needs_original_specimen_label_verification": true,
+          "state_not_explicit": false
+        }
+      ],
+      "query_errors": [],
+      "status": "POSSIBLE_INDEPENDENT_VOUCHER_LEADS",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Tridens congestus",
+      "queried_names": [
+        "Tridens congestus"
+      ],
+      "county_queries": [
+        {
+          "name": "Tridens congestus",
+          "county": "Hays",
+          "total_index_hits": 257,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Tridens+congestus&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Tridens congestus",
+          "county": "Hays County",
+          "total_index_hits": 257,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Tridens+congestus&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Pappophorum bicolor",
+      "queried_names": [
+        "Pappophorum bicolor"
+      ],
+      "county_queries": [
+        {
+          "name": "Pappophorum bicolor",
+          "county": "Hays",
+          "total_index_hits": 471,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pappophorum+bicolor&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Pappophorum bicolor",
+          "county": "Hays County",
+          "total_index_hits": 471,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pappophorum+bicolor&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Janochloa antidotalis",
+      "queried_names": [
+        "Janochloa antidotalis",
+        "Panicum antidotale"
+      ],
+      "county_queries": [
+        {
+          "name": "Janochloa antidotalis",
+          "county": "Hays",
+          "total_index_hits": 0,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Janochloa+antidotalis&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Janochloa antidotalis",
+          "county": "Hays County",
+          "total_index_hits": 0,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Janochloa+antidotalis&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Panicum antidotale",
+          "county": "Hays",
+          "total_index_hits": 449,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Panicum+antidotale&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Panicum antidotale",
+          "county": "Hays County",
+          "total_index_hits": 449,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Panicum+antidotale&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "candidate": "Stapfochloa canterae",
+      "queried_names": [
+        "Stapfochloa canterae",
+        "Chloris canterae"
+      ],
+      "county_queries": [
+        {
+          "name": "Stapfochloa canterae",
+          "county": "Hays",
+          "total_index_hits": 253,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Stapfochloa+canterae&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Stapfochloa canterae",
+          "county": "Hays County",
+          "total_index_hits": 253,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Stapfochloa+canterae&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Chloris canterae",
+          "county": "Hays",
+          "total_index_hits": 253,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Chloris+canterae&country=US&county=Hays&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        },
+        {
+          "name": "Chloris canterae",
+          "county": "Hays County",
+          "total_index_hits": 253,
+          "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Chloris+canterae&country=US&county=Hays+County&basisOfRecord=PRESERVED_SPECIMEN&limit=30"
+        }
+      ],
+      "possible_preserved_specimens": 0,
+      "potential_voucher_leads": [],
+      "query_errors": [],
+      "status": "NO_MATCHING_PRESERVED_SPECIMEN_INDEX_HIT_NOT_PROOF_ABSENT",
+      "specimen_image_or_label_independently_verified": false,
+      "species_identification_confirmed": false,
+      "merge_ready": false
+    }
+  ]
+}
