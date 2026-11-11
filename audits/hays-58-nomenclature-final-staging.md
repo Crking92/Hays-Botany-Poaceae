@@ -1,93 +1,109 @@
-# Hays County 58 grasses — nomenclature freeze, November 11, 2026
+# Hays County grass expansion — finalized name and synonym crosswalk
 
-**NAMES FINALIZED FOR STAGING; BOTANICAL IDENTIFICATION AND LIVE MERGE ARE NOT APPROVED.**
+**Name-standardization milestone: COMPLETE (2026-11-11). No Hays observation has been independently identified from specimen pixels, and no new grass was merged into the public ID Lab.**
 
-- **58** original Hays County iNaturalist names reviewed against the existing 112 species
-- **56** retain their scientific names
-- **1** canonical rename: *Coelorachis cylindrica* → *Rottboellia campestris*
-- **1** alias of an existing species: *Elymus glabriflorus* → *Elymus virginicus* (already in the 112)
-- **57** candidate taxa remain (56 species and 1 accepted hybrid)
+## Locked staging counts
 
-## All 58 preferred names with original names retained
+- **58** iNaturalist candidate names originally reported in Hays County
+- **56** retain the same accepted scientific name
+- **1** requires an accepted-name change: *Coelorachis cylindrica* → *Rottboellia campestris*
+- **1** is an already-covered taxon: *Elymus glabriflorus* → existing *Elymus virginicus*; no second card
+- **57 distinct candidate taxa** remain: **56 ordinary species and 1 accepted hybrid** (*Lolium × boucheanum*)
+- **57 POWO name-reference URLs and 1 WCVP / World Flora Online reference** are attached to the 58 records, plus a GBIF 58-versus-112 accepted-usage audit and local Flora cross-references
 
-| Original name | Preferred name | Decision | POWO / source | Flora PDF exact page(s) |
+**This is a finalized *naming* crosswalk only.** Neither a Hays County observation label nor a research-grade photo is independent botanical ID confirmation. The 57 are possible additions, not approved additions. Nativity and spontaneous establishment are separate questions.
+
+## Full accepted-name and historical-alias table
+
+| Original iNaturalist name | Preferred accepted / mapped name | Result | Synonyms and older combinations worth searching | Primary name-source |
 |---|---|---|---|---|
-| *Bromus catharticus* | *Bromus catharticus* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A37001-2) | 175, 176 |
-| *Melica nitens* | *Melica nitens* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A1034576-2) | 208, 209 |
-| *Eragrostis superba* | *Eragrostis superba* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A401614-1) | 196, 199 |
-| *Lolium perenne* | *Lolium perenne* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407493-1) | 206, 209 |
-| *Bothriochloa longipaniculata* | *Bothriochloa longipaniculata* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/295954-2) | 170 |
-| *Paspalum langei* | *Paspalum langei* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A184424-2) | 230, 231 |
-| *Bothriochloa bladhii* | *Bothriochloa bladhii* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/392701-1) | Not exact; check older combinations |
-| *Dichanthium aristatum* | *Dichanthium aristatum* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A398529-1) | Not exact; check older combinations |
-| *Phyllostachys aurea* | *Phyllostachys aurea* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Phyllostachys+aurea&family=Poaceae&verbose=true&strict=false) | 235, 237 |
-| *Lolium multiflorum* | *Lolium multiflorum* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/407486-1) | Not exact; check older combinations |
-| *Bromus brevis* | *Bromus brevis* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/36988-2) | Not exact; check older combinations |
-| *Coelorachis cylindrica* | *Rottboellia campestris* | CANONICAL_RENAME | [POWO](https://powo.science.kew.org/taxon/62724-2) | 181, 182 |
-| *Oplismenus hirtellus* | *Oplismenus hirtellus* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/1004002-1) | 213, 214 |
-| *Stenotaphrum secundatum* | *Stenotaphrum secundatum* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/423051-1) | 252, 255 |
-| *Triticum aestivum* | *Triticum aestivum* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Triticum+aestivum&family=Poaceae&verbose=true&strict=false) | 147, 204, 257, 258 |
-| *Echinochloa colona* | *Echinochloa colona* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A399655-1) | 190, 191 |
-| *Paspalum notatum* | *Paspalum notatum* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Paspalum+notatum&family=Poaceae&verbose=true&strict=false) | 230, 233 |
-| *Setaria viridis* | *Setaria viridis* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Setaria+viridis&family=Poaceae&verbose=true&strict=false) | 244, 247 |
-| *Cortaderia selloana* | *Cortaderia selloana* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Cortaderia+selloana&family=Poaceae&verbose=true&strict=false) | 147, 182, 185 |
-| *Echinochloa walteri* | *Echinochloa walteri* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Echinochloa+walteri&family=Poaceae&verbose=true&strict=false) | 190, 191 |
-| *Rostraria cristata* | *Rostraria cristata* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1) | Not exact; check older combinations |
-| *Panicum miliaceum* | *Panicum miliaceum* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Panicum+miliaceum&family=Poaceae&verbose=true&strict=false) | 224, 225 |
-| *Setaria leucopila* | *Setaria leucopila* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Setaria+leucopila&family=Poaceae&verbose=true&strict=false) | 243, 245 |
-| *Sphenopholis obtusata* | *Sphenopholis obtusata* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Sphenopholis+obtusata&family=Poaceae&verbose=true&strict=false) | 248, 249 |
-| *Steinchisma hians* | *Steinchisma hians* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A243676-2) | Not exact; check older combinations |
-| *Aegilops cylindrica* | *Aegilops cylindrica* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Aegilops+cylindrica&family=Poaceae&verbose=true&strict=false) | 159, 161 |
-| *Avena sativa* | *Avena sativa* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Avena+sativa&family=Poaceae&verbose=true&strict=false) | 168, 173 |
-| *Elymus glabriflorus* | *Elymus virginicus* | SYNONYM_OF_EXISTING_112 | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A90247-2) | Not exact; check older combinations |
-| *Megathyrsus maximus* | *Megathyrsus maximus* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2) | Not exact; check older combinations |
-| *Muhlenbergia capillaris* | *Muhlenbergia capillaris* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Muhlenbergia+capillaris&family=Poaceae&verbose=true&strict=false) | 211, 212 |
-| *Polypogon viridis* | *Polypogon viridis* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Polypogon+viridis&family=Poaceae&verbose=true&strict=false) | 238, 241 |
-| *Sphenopholis interrupta* | *Sphenopholis interrupta* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A296142-2) | Not exact; check older combinations |
-| *Tridentopsis elongata* | *Tridentopsis elongata* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1) | Not exact; check older combinations |
-| *Bromus tectorum* | *Bromus tectorum* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Bromus+tectorum&family=Poaceae&verbose=true&strict=false) | 177, 179 |
-| *Dactyloctenium aegyptium* | *Dactyloctenium aegyptium* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Dactyloctenium+aegyptium&family=Poaceae&verbose=true&strict=false) | 183, 185 |
-| *Dichanthelium acuminatum* | *Dichanthelium acuminatum* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A79328-2) | 219 |
-| *Eragrostis curtipedicellata* | *Eragrostis curtipedicellata* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1) | 194, 195 |
-| *Eragrostis minor* | *Eragrostis minor* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/401317-1) | Not exact; check older combinations |
-| *Hordeum murinum* | *Hordeum murinum* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Hordeum+murinum&family=Poaceae&verbose=true&strict=false) | 202, 203 |
-| *Melinis repens* | *Melinis repens* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A2945817-1) | Not exact; check older combinations |
-| *Nassella tenuissima* | *Nassella tenuissima* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A281184-2) | Not exact; check older combinations |
-| *Stapfochloa ciliata* | *Stapfochloa ciliata* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60469005-2) | Not exact; check older combinations |
-| *Tridens congestus* | *Tridens congestus* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/257762-2) | 254, 255 |
-| *Alopecurus carolinianus* | *Alopecurus carolinianus* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Alopecurus+carolinianus&family=Poaceae&verbose=true&strict=false) | 160, 161 |
-| *Briza minor* | *Briza minor* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Briza+minor&family=Poaceae&verbose=true&strict=false) | 174, 175 |
-| *Cenchrus ciliaris* | *Cenchrus ciliaris* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Cenchrus+ciliaris&family=Poaceae&verbose=true&strict=false) | 234 |
-| *Cenchrus setaceus* | *Cenchrus setaceus* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77106046-1) | Not exact; check older combinations |
-| *Digitaria californica* | *Digitaria californica* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Digitaria+californica&family=Poaceae&verbose=true&strict=false) | 187, 189 |
-| *Elymus macgregorii* | *Elymus macgregorii* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A20008015-1) | Not exact; check older combinations |
-| *Janochloa antidotalis* | *Janochloa antidotalis* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77319974-1) | Not exact; check older combinations |
-| *Lolium × boucheanum* | *Lolium × boucheanum* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407425-1) | Not exact; check older combinations |
-| *Miscanthus sinensis* | *Miscanthus sinensis* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Miscanthus+sinensis&family=Poaceae&verbose=true&strict=false) | 147, 208, 209 |
-| *Panicum dichotomiflorum* | *Panicum dichotomiflorum* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Panicum+dichotomiflorum&family=Poaceae&verbose=true&strict=false) | 220, 223 |
-| *Panicum repens* | *Panicum repens* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A412908-1) | Not exact; check older combinations |
-| *Pappophorum bicolor* | *Pappophorum bicolor* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A413618-1) | Not exact; check older combinations |
-| *Sclerochloa dura* | *Sclerochloa dura* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Sclerochloa+dura&family=Poaceae&verbose=true&strict=false) | 240, 245 |
-| *Sporobolus cryptandrus* | *Sporobolus cryptandrus* | KEEP_ACCEPTED_NAME | [GBIF](https://api.gbif.org/v1/species/match?name=Sporobolus+cryptandrus&family=Poaceae&verbose=true&strict=false) | 249, 251 |
-| *Stapfochloa canterae* | *Stapfochloa canterae* | KEEP_ACCEPTED_NAME | [POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60469004-2) | Not exact; check older combinations |
+| *Bromus catharticus* | *Bromus catharticus* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A37001-2) |
+| *Melica nitens* | *Melica nitens* | Accepted name retained | *Melica diffusa var. nitens*; *Melica scabra* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A1034576-2) |
+| *Eragrostis superba* | *Eragrostis superba* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A401614-1) |
+| *Lolium perenne* | *Lolium perenne* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407493-1) |
+| *Bothriochloa longipaniculata* | *Bothriochloa longipaniculata* | Accepted name retained | *Bothriochloa saccharoides var. longipaniculata*; *Andropogon saccharoides var. longipaniculatus* | [Kew POWO](https://powo.science.kew.org/taxon/295954-2) |
+| *Paspalum langei* | *Paspalum langei* | Accepted name retained | *Dimorphostachys langei*; *Paspalum ciliiferum*; *Paspalum abbreviatum*; *Dimorphostachys drummondii* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A184424-2) |
+| *Bothriochloa bladhii* | *Bothriochloa bladhii* | Accepted name retained | *Andropogon bladhii*; *Dichanthium bladhii* | [Kew POWO](https://powo.science.kew.org/taxon/392701-1) |
+| *Dichanthium aristatum* | *Dichanthium aristatum* | Accepted name retained | *Andropogon aristatus* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A398529-1) |
+| *Phyllostachys aurea* | *Phyllostachys aurea* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A415983-1) |
+| *Lolium multiflorum* | *Lolium multiflorum* | Accepted name retained | *Lolium perenne subsp. multiflorum*; *Lolium italicum* | [Kew POWO](https://powo.science.kew.org/taxon/407486-1) |
+| *Bromus brevis* | *Bromus brevis* | Accepted name retained | *Bromus unioloides var. brevis*; *Ceratochloa brevis*; *Bromus unioloides f. brevis* | [Kew POWO](https://powo.science.kew.org/taxon/36988-2) |
+| *Coelorachis cylindrica* | *Rottboellia campestris* | Renamed, alias retained | *Mnesithea cylindrica*; *Manisuris cylindrica* | [Kew POWO](https://powo.science.kew.org/taxon/62724-2) |
+| *Oplismenus hirtellus* | *Oplismenus hirtellus* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/1004002-1) |
+| *Stenotaphrum secundatum* | *Stenotaphrum secundatum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/423051-1) |
+| *Triticum aestivum* | *Triticum aestivum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/332110-2) |
+| *Echinochloa colona* | *Echinochloa colona* | Accepted name retained | *Panicum colonum* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A399655-1) |
+| *Paspalum notatum* | *Paspalum notatum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A414477-1) |
+| *Setaria viridis* | *Setaria viridis* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/1171009-2) |
+| *Cortaderia selloana* | *Cortaderia selloana* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/66317-2) |
+| *Echinochloa walteri* | *Echinochloa walteri* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A88109-2) |
+| *Rostraria cristata* | *Rostraria cristata* | Accepted name retained | *Lophochloa cristata*; *Festuca cristata* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1) |
+| *Panicum miliaceum* | *Panicum miliaceum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/412217-1) |
+| *Setaria leucopila* | *Setaria leucopila* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A235230-2) |
+| *Sphenopholis obtusata* | *Sphenopholis obtusata* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A242045-2) |
+| *Steinchisma hians* | *Steinchisma hians* | Accepted name retained | *Panicum hians* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A243676-2) |
+| *Aegilops cylindrica* | *Aegilops cylindrica* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A384583-1) |
+| *Avena sativa* | *Avena sativa* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A391732-1) |
+| *Elymus glabriflorus* | *Elymus virginicus* | Already in existing 112 | *Elymus virginicus var. glabriflorus* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A90247-2) |
+| *Megathyrsus maximus* | *Megathyrsus maximus* | Accepted name retained | *Panicum maximum*; *Urochloa maxima* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2) |
+| *Muhlenbergia capillaris* | *Muhlenbergia capillaris* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A408959-1) |
+| *Polypogon viridis* | *Polypogon viridis* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A418741-1) |
+| *Sphenopholis interrupta* | *Sphenopholis interrupta* | Accepted name retained | *Trisetum interruptum* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A296142-2) |
+| *Tridentopsis elongata* | *Tridentopsis elongata* | Accepted name retained | *Tridens elongatus*; *Tridens muticus var. elongatus* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1) |
+| *Bromus tectorum* | *Bromus tectorum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A394163-1) |
+| *Dactyloctenium aegyptium* | *Dactyloctenium aegyptium* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A397387-1) |
+| *Dichanthelium acuminatum* | *Dichanthelium acuminatum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A79328-2) |
+| *Eragrostis curtipedicellata* | *Eragrostis curtipedicellata* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1) |
+| *Eragrostis minor* | *Eragrostis minor* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/401317-1) |
+| *Hordeum murinum* | *Hordeum murinum* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A405301-1) |
+| *Melinis repens* | *Melinis repens* | Accepted name retained | *Rhynchelythrum repens*; *Tricholaena repens* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A2945817-1) |
+| *Nassella tenuissima* | *Nassella tenuissima* | Accepted name retained | *Stipa tenuissima*; *Jarava tenuissima* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A281184-2) |
+| *Stapfochloa ciliata* | *Stapfochloa ciliata* | Accepted name retained | *Chloris ciliata* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60469005-2) |
+| *Tridens congestus* | *Tridens congestus* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/257762-2) |
+| *Alopecurus carolinianus* | *Alopecurus carolinianus* | Accepted name retained | *Alopecurus macounii*; *Alopecurus ramosus* | [WCVP/WFO](https://www.worldfloraonline.org/taxon/wfo-0000845499) |
+| *Briza minor* | *Briza minor* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A393299-1) |
+| *Cenchrus ciliaris* | *Cenchrus ciliaris* | Accepted name retained | *Pennisetum ciliare* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A395214-1) |
+| *Cenchrus setaceus* | *Cenchrus setaceus* | Accepted name retained | *Pennisetum setaceum* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77106046-1) |
+| *Digitaria californica* | *Digitaria californica* | Accepted name retained | *Trichachne californica*; *Panicum californicum* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A80220-2) |
+| *Elymus macgregorii* | *Elymus macgregorii* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A20008015-1) |
+| *Janochloa antidotalis* | *Janochloa antidotalis* | Accepted name retained | *Panicum antidotale* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77319974-1) |
+| *Lolium × boucheanum* | *Lolium × boucheanum* | Accepted name retained | *Lolium perenne subsp. boucheanum*; *Lolium multiflorum var. boucheanum*; *Lolium italicum var. boucheanum* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407425-1) |
+| *Miscanthus sinensis* | *Miscanthus sinensis* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A408768-1) |
+| *Panicum dichotomiflorum* | *Panicum dichotomiflorum* | Accepted name retained | *Leptoloma dichotomiflorum* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A325362-2) |
+| *Panicum repens* | *Panicum repens* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A412908-1) |
+| *Pappophorum bicolor* | *Pappophorum bicolor* | Accepted name retained | — | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A413618-1) |
+| *Sclerochloa dura* | *Sclerochloa dura* | Accepted name retained | *Cynosurus durus*; *Poa dura* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A421086-1) |
+| *Sporobolus cryptandrus* | *Sporobolus cryptandrus* | Accepted name retained | *Agrostis cryptandra*; *Vilfa cryptandra* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A422687-1) |
+| *Stapfochloa canterae* | *Stapfochloa canterae* | Accepted name retained | *Chloris canterae* | [Kew POWO](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60469004-2) |
 
-## Critical taxonomic decisions
+## Decisions that matter for the ID Lab
 
-**Elymus glabriflorus:** POWO and GBIF synonymize with the existing *Elymus virginicus*. No new species card. Retain a searchable synonym record; FNA supports this treatment.
+**Already covered:** *Elymus glabriflorus* maps to *Elymus virginicus* (current `elymus-virginicus` card). Its historical variant name remains a synonym/search alias. Do not make a second card.
 
-**Coelorachis cylindrica:** POWO accepts *Rottboellia campestris*. Preserve *Coelorachis cylindrica* and *Mnesithea cylindrica* as searchable historical names, especially because the local Flora and FNA use the older genus.
+**Genus reclassification:** *Coelorachis cylindrica* maps to current Kew *Rottboellia campestris*. Continue accepting *Coelorachis cylindrica*, *Mnesithea cylindrica* and *Manisuris cylindrica* as search synonyms, because the regional Flora uses an older treatment.
 
-**Bothriochloa longipaniculata:** POWO, USDA GRIN and ITIS retain this as separate from existing *B. torreyana*. The older Flora includes it in a wider silver-bluestem complex. Use distinct accepted name for staging but flag flowerhead/glume species-concept comparison before approving a card.
+**Species concept conflict:** Kew accepts *Bothriochloa longipaniculata* separately from current *Bothriochloa torreyana* (silver bluestem), but the 1999 regional Flora includes longipaniculata within a broad *B. laguroides* subsp. *torreyana* concept. The **name record** remains distinct. Before a new card is merged, independently verify its Hays diagnostic photos/glumes against existing silver bluestem.
 
-**Tridentopsis elongata / Echinochloa colona / Janochloa antidotalis:** Reject incorrect or non-specific GBIF fuzzy/higher-rank results; current Kew treatment verifies the original names. For Tridentopsis, do not adopt unrelated *Trisetopsis elongata*.
+**Reject misleading automated matches:** GBIF's fuzzy hit *Trisetopsis elongata* is not the Hays grass *Tridentopsis elongata*. Retain Kew's accepted *Tridentopsis elongata*. Also retain *Echinochloa colona*, and *Janochloa antidotalis* (older *Panicum antidotale*); their GBIF fuzzy/higher-rank suggestions do not supersede Kew.
 
-**Lolium × boucheanum:** POWO treats as an accepted hybrid; never count as an ordinary species. Its Texas iNaturalist sighting and any established population require later review.
+**Hybrid:** *Lolium × boucheanum* is treated by Kew as an accepted hybrid (formula *Lolium perenne × Lolium rigidum*), not an ordinary wild species. Do not count it as one.
 
-**Bromus brevis:** Accepted species nomenclaturally, but its very limited published introduced range makes the Hays identification worth special checking. Do not declare a Texas-established grass from name acceptance alone.
+**Unusual Hays records:** *Bromus brevis* is a valid, accepted species name, but Kew's documented introduced distribution does not list Texas. Its Hays iNaturalist determination needs unusually careful specimen photo/voucher verification before ID Lab inclusion.
 
-## Merge policy
+**Regional Flora alignment:** 37 original candidate names appear literally in the supplied *Flora of North Central Texas* PDF; the other 21 may be under another combination, beyond that Flora's coverage, or newer. A literal mention can be a synonym, not the author's accepted concept.
 
-No source grass JSON, site index, photo, illustration, arrow or key code was changed. Each retained name can later map to a new species/taxon record ONLY after the linked Hays observations, botanical identification, establishment context and duplicate risk are verified. New cards must use the preferred name and all meaningful historical aliases for searches, with the local Flora's names as label cross-references.
+## Integrity, provenance, and remaining non-taxonomic work
 
-See adjacent JSON for review flags, GBIF keys and per-record source links. Page numbers refer to the **1-indexed pages within the user-supplied 276-page Flora PDF**, not printed page numbering.
+- All 58 rows have a linked independent current name-reference source, and a secondary full GBIF accepted-usage comparison against all 112 live species.
+- Historical aliases in this report are a **curated Texas-relevant subset**, not every synonym ever published worldwide. Keep both the original iNaturalist string and the preferred name searchable.
+- **No live main-branch Poaceae species files or site indexes were edited** by this naming audit.
+- Future accepted-name edits should be documented with exact source URLs and dates rather than silently overwriting the name registry.
+- Next stage, when authorized: check actual Hays iNaturalist observation pixels/identification histories and planting context. Only after that source photos/anatomy and tested merge should begin.
+
+## Audit files
+
+- `hays-58-nomenclature-final-staging.json` — authoritative staged naming crosswalk and source IDs
+- `hays-58-gbif-accepted-usage-crosswalk.json` — independent 58 names versus 112 live names collision check
+- `hays-58-independent-taxonomy-exceptions.json` — Kew name decisions for the five unusual GBIF matches
+- `hays-58-photo-evidence-review.json` — 58 external photo review queues; no third-party images were copied
 
