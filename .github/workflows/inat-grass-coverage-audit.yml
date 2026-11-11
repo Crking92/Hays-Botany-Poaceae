@@ -47,6 +47,11 @@ jobs:
                   results=get("/places/autocomplete",{"q":county+" County"}).get("results",[])
                   match=[p for p in results if p.get("name","").casefold().startswith((county+" county").casefold()) and ("TX" in p.get("display_name","") or "Texas" in p.get("display_name",""))]
               if not match:
+                  for query in [county, county+" County, TX", county+" County, US, TX"]:
+                      rr=get("/places/autocomplete",{"q":query}).get("results",[])
+                      match=[p for p in rr if p.get("name","").casefold().startswith(county.casefold()) and ("TX" in p.get("display_name","") or "Texas" in p.get("display_name",""))]
+                      if match:break
+              if not match:
                   print("UNRESOLVED_COUNTY",county,flush=True);return None
               return match[0]["id"]
           def normalize(name):
