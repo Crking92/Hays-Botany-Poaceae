@@ -1,0 +1,34 @@
+name: Hays 58 grass observations - photo ID evidence manifest
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-58-photo-evidence.yml'
+      - 'scripts/hays_58_photo_evidence_manifest.py'
+permissions:
+  contents: write
+jobs:
+  photo-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch photographed Hays observation evidence (no photo downloads)
+        run: python3 scripts/hays_58_photo_evidence_manifest.py
+      - name: Save review-only metadata in isolated branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits/hays-58-photo-evidence-review.json audits/hays-58-photo-evidence-review.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Save 58 Hays field-ID observation photo link queue"
+            git push origin HEAD:inat-coverage-audit-20261111
+          fi
+      - name: Preserve reports as build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-58-photo-id-evidence
+          path: |
+            audits/hays-58-photo-evidence-review.json
+            audits/hays-58-photo-evidence-review.md
+          if-no-files-found: error
