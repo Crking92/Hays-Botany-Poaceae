@@ -201,3 +201,13 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 8. Maintain per-taxon evidence and review status in the isolated Hays files; never overwrite accepted review decisions with new raw API results.
 
 **No automatic merge is authorized by this handoff.** The user wants all 58 worked on now and future merger by another chat when evidence is sufficient.
+
+## Hays expansion Phase 2 — packet 2 saved, November 11, 2026
+
+**Progress now: 16/57 candidate taxa with source-backed diagnostic packets; 81 literature-described characters (37 first packet + 44 second).** These are scientific reference descriptions and exact next specimen checks, NOT 16 botanically approved Hays specimens. **0 new photographs reviewed in this packet, 0 additional species signoffs, 0 public image approvals, 0 live species merges.**
+
+- [Eight new comparisons: goatgrass, gummy lovegrass, California cottontop, sand dropseed, St. Augustinegrass, jungle rice, blue panic, pink tridens](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-2-20261111.md)
+- [Structured packet 2 character descriptions, rights lanes and original Hays observation links](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-2-20261111.json)
+- [57 staged cards, with 16 packet cross-references and current counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+
+**Special holds:** Digitaria californica and Sporobolus cryptandrus have literature profiles but no source pixels viewed under rights-safe process. St. Augustinegrass photos are primarily turf rather than demonstrated escaped populations. Eragrostis curtipedicellata lacks the critical viscid axis image. No approved active trait states, no added website images and no changes to 112 original keyed species. **Next packet begins with remaining unprofiled taxa; leave the original 8 and second 8 untouched unless a source correction is required.**
