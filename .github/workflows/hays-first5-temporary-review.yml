@@ -1,0 +1,25 @@
+name: Hays first five grass IDs - temporary credited CC photo sheets
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-first5-temporary-review.yml'
+      - 'scripts/hays_first5_temporary_cc_contact_sheets.py'
+permissions: {contents: read}
+jobs:
+  contact-sheets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image tools
+        run: python3 -m pip -q install Pillow
+      - name: Select photo-level CC licensed source images and make contact sheets
+        run: python3 scripts/hays_first5_temporary_cc_contact_sheets.py
+      - name: Upload temporary contact sheets with credits (one-day retention)
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-first-five-cc-photo-visual-review
+          path: review_temporary/
+          if-no-files-found: error
+          retention-days: 1
