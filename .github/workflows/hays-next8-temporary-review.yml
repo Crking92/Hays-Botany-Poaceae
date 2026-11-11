@@ -1,0 +1,25 @@
+name: Hays next eight grass IDs - temporary credited CC photo sheets
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-next8-temporary-review.yml'
+      - 'scripts/hays_next8_temporary_cc_contact_sheets.py'
+permissions: {contents: read}
+jobs:
+  contact-sheets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install imaging dependencies
+        run: python3 -m pip -q install Pillow
+      - name: Assemble noncommercial CC-licensed Hays observation review sheets
+        run: python3 scripts/hays_next8_temporary_cc_contact_sheets.py
+      - name: Upload one-day review artifact with photo credits
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-next8-cc-photo-visual-review
+          path: review_temporary_batch2/
+          retention-days: 1
+          if-no-files-found: error
