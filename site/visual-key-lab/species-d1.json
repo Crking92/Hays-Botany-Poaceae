@@ -849,7 +849,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Chloris/chloris-andropogonoides/images/inat-open-266561630.jpg",
-        "label": "SAME FLOWERING SHOOT — seedhead, leaves and lower sheaths",
+        "label": "SLENDER WINDMILLGRASS — hand-held complete narrow flowering shoot with radiating fine racemes and lower leaves; roots hidden",
         "creator": "no rights reserved",
         "license": "CC0",
         "source_page": "https://www.inaturalist.org/photos/266561630",
@@ -858,7 +858,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/chloris-andropogonoides/gbif-2807254136.jpg",
-        "label": "General herbarium specimen — diagnostic label verification deferred",
+        "label": "SLENDER WINDMILLGRASS — historical Texas pressed specimen; older Chloris verticillata label later redetermined as C. andropogonoides; rights review required",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/2807254136",
@@ -867,7 +867,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/chloris-andropogonoides/gbif-2807319691.jpg",
-        "label": "General herbarium specimen — diagnostic label verification deferred",
+        "label": "SLENDER WINDMILLGRASS — historical Travis County herbarium specimen with fine radiating and dense racemes; exact-image rights review required",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/2807319691",
@@ -921,6 +921,92 @@
       "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS25_11_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "TWO_EXISTING_INSTITUTIONAL_IMAGES_RIGHTS_RECONCILIATION_HOLD_NO_NEW_APPROVAL",
+      "scope": "All 3 current Lab gallery references visually inspected from real GitHub-hosted image bytes; anatomy verified only to visible detail. Original photographer/rights and source-determined identity not independently revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Single narrow upright culm held by a hand, with a terminal star-like whorl of several very fine narrow radiating racemes, attached leaves and basal sheaths below"
+          ],
+          "cannot_verify": [
+            "Exposed actual ligule, microscopic spikelet parts, complete connected roots, original observation date"
+          ],
+          "pass": "PHASE4_PASS25_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Chloris/chloris-andropogonoides/images/inat-open-266561630.jpg",
+          "git_blob_sha": "0a084ae1c0e0db8201da6dd426b8ee953825d696",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS, REGIONAL VOUCHER AND DATE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Preserved pressed grass specimen with narrow leaves, visible root fibers and two flowering stems, label with later Chloris andropogonoides determination and an older handwritten Chloris verticillata name"
+          ],
+          "cannot_verify": [
+            "Which taxonomic determination is correct without examining voucher and current treatment, diagnostic floret organs, exact-image redistribution permission"
+          ],
+          "pass": "PHASE4_PASS25_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/chloris-andropogonoides/gbif-2807254136.jpg",
+          "git_blob_sha": "f884fc8c64181d0dd6b2ffe0c62006550d9bf21d",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS, REGIONAL VOUCHER AND DATE NOT REVALIDATED",
+          "rights_review": "HOLD_EXACT_IMAGE_LICENSE_CONFLICT; ON_SHEET_COPYRIGHT_RESERVED_VS_STORED_CC_BY_4_0",
+          "not_newly_approved_for_publication": true,
+          "determination_history": "1941 original label Chloris verticillata Nutt.; 1964 Dennis Anderson determination Chloris andropogonoides Fourn.; original Barton Springs, Austin, Texas. Interpret original vs later labels cautiously."
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Preserved grass tuft with many narrow leaves, several separated radiating flowering whorls or dense upright dry heads, and herbarium labels supporting Chloris andropogonoides"
+          ],
+          "cannot_verify": [
+            "Single individual spikelet anatomy from full-sheet scan, exact-image license in face of visible copyright-reserved banner, independently vouchered current taxonomy"
+          ],
+          "pass": "PHASE4_PASS25_11_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/chloris-andropogonoides/gbif-2807319691.jpg",
+          "git_blob_sha": "d489085ab6c9352ccd0277a641bd07ebe1d95496",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS, REGIONAL VOUCHER AND DATE NOT REVALIDATED",
+          "rights_review": "HOLD_EXACT_IMAGE_LICENSE_CONFLICT; ON_SHEET_COPYRIGHT_RESERVED_VS_STORED_CC_BY_4_0",
+          "not_newly_approved_for_publication": true,
+          "determination_history": "1949-05-21 Travis County Austin Texas specimen; labels Chloris andropogonoides, with 1964 Dennis Anderson and 2001 B. L. Turner determination labels."
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "Both institutional herbarium JPGs i=3/i=4 have on-sheet 'copyright reserved' banner vs stored CC BY 4.0; verify individual multimedia license/source authority before treating as cleared for future reuse",
+        "Keep i=3 older Chloris verticillata label and later 1964 Dennis Anderson redetermination; independent voucher check for accepted treatment pending",
+        "High-resolution dissected spikelet and inner ligule with scale, locally verified",
+        "November–February standing habit with original observation date, if master queue lacks one"
+      ],
+      "summary": "Three photos inspected. Hand-held flowering shoot shows slender radiating whorl and attached foliage. Two TEX herbarium sheets show pressed grass and determination labels, but require taxonomic-label and exact-image rights review; on-sheet banner says copyright reserved despite earlier stored CC BY 4.0 metadata.",
+      "seasonal_review": {
+        "observed": "Green and dry appearance visible; no exact November–February image dates established. Historical herbarium sheets show October 1941 and May 1949 collection dates, not winter Nov–Feb.",
+        "queue_action": "Use original master Photo Needs Queue for confirmed winter and anatomy gaps; no separate tracking spreadsheet."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image-appearance QA only; source flora and existing key filters remain unchanged. The 1941 historical Chloris verticillata label is preserved as determination history, not silently used to replace species identity.",
+      "rights_reconciliation_queue": [
+        {
+          "index": 3,
+          "reason": "TEX herbarium original image visibly bears copyright reserved; existing gallery source license string says CC BY 4.0",
+          "action": "Validate media-level license/rights-holder permission against exact GBIF occurrence and TEX; hold any further publication claims"
+        },
+        {
+          "index": 4,
+          "reason": "TEX herbarium original image visibly bears copyright reserved; existing gallery source license string says CC BY 4.0",
+          "action": "Validate media-level license/rights-holder permission against exact GBIF occurrence and TEX; hold any further publication claims"
+        }
+      ]
     }
   },
   {
