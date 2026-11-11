@@ -16,6 +16,16 @@
 
 **How far from completion?** Species framework **and the first complete source-coverage pass** are finished: **112/112** indexed and **112/112** with at least one externally supported morphological character. This is NOT 100% completion of the project. All **112** species now have first-pass Phase 3 source-linked diagnostic checklists (315 checks); no species remain for initial coverage. Remaining work: deeper morphology/character/source reconciliation, verifying photographs show the right parts and have exact-image rights (Phase 4), and real mobile/field acceptance (Phase 5). The key is still a prototype, not fully certified.
 
+## Batch preparation helper validated (2026-11-11)
+
+- Added [the reusable batch helper](../../scripts/GRASS_PHOTO_BATCH.md) and automated tests. It pins GitHub data, selects unreviewed photos, retrieves and hash-checks actual JPEGs, reuses valid cache files, and prepares a credited local HTML review sheet with full-size originals.
+- **12/12 automated tests passed**, covering stale data, altered images, changed credits, duplicate reviews, wrong target files, pending reviews, replay safeguards and protected-data preservation. Live snapshot retrieval independently reproduced **112 species / 53 genera / 514 photo references / 315 checks / 42 hosted reviews / 9 full Lab galleries**.
+- Replayed the **eight Pass 5 hosted JPEGs** using recorded observations and matching hashes: **zero new audit credit**. Replay cannot stage progress updates.
+- Prepared **15 pending photos** across Texas wintergrass, wild oat, hairy woodland brome, annual bluegrass, Texas bluegrass and lanceolate brome. Preparation is not visual QA: hosted progress remains **42/514**, and all 15 need full-size anatomy review.
+- The helper stages one proposal for existing species JSON and this single tracker, with an expected-main commit for safe saving and readback. It does not push commits, publish images, start workflows, clear licensing, alter nativity, or add photo-needs queues.
+- Owner's source preference reaffirmed: **Illustrated Flora of North Central Texas primary; GrassBase secondary, with deeper GrassBase work deferred**. The owner supplied a readable local PDF whose SHA-256 matches the recorded reference; no PDF or plates were uploaded to GitHub. Original morphology references remain unchanged until actually consulted for a new review.
+- Next: use the prepared winter-grass batch for direct photo-to-anatomy review, retain precise limitations and seasonal notes, validate the proposal, and save one checked batch commit. Local snapshots/review forms are working inputs, not duplicate trackers or spreadsheets.
+
 ## Phase 4 — Pass 5 hosted Silky/Kleberg follow-through (2026-11-11)
 
 - Completed the eight hosted JPEG inspections deferred by Pass 4: Silky indices **1, 2, 5, 7** and Kleberg **1, 3, 4, 5**. Retrieved actual repository bytes pinned to `4124597e2b2b8c2387b721d9b1528182b6752f70`; **8/8 computed Git blob hashes match the repository tree**. SHA-256, byte length, repository path and per-photo observations are recorded in the existing species JSON audit fields.
