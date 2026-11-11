@@ -1,0 +1,15 @@
+name: Hays GBIF county query correctness check
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-gbif-spatial-sanity.yml'
+      - 'scripts/hays_gbif_spatial_filter_sanity.py'
+permissions: {contents: read}
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/hays_gbif_spatial_filter_sanity.py
