@@ -1,0 +1,25 @@
+name: Hays next 18 low-record grass IDs - temporary credited photo sheets
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-next18-temporary-review.yml'
+      - 'scripts/hays_next18_temporary_cc_contact_sheets.py'
+permissions: {contents: read}
+jobs:
+  contact-sheets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip -q install Pillow
+      - name: Assemble Hays County photo observations using exact CC source licenses
+        run: python3 scripts/hays_next18_temporary_cc_contact_sheets.py
+      - name: Preserve credited temporary image contact sheets for one day only
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-next18-photo-visual-review
+          path: review_temporary_batch4/
+          retention-days: 1
+          if-no-files-found: error
