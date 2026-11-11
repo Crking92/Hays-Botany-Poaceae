@@ -918,7 +918,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-8937a6e4ead8.jpg",
-        "label": "Actual flowering tuft in habitat — roots not exposed",
+        "label": "GOOSEGRASS — leafy tuft in disturbed soil with several flattened fingerlike flowering racemes; roots not exposed",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -928,7 +928,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-1032fdbf120c.jpg",
-        "label": "Goosegrass — blade–sheath junction and long side hairs",
+        "label": "GOOSEGRASS — external blade–sheath collar and conspicuous long marginal hairs; true inner ligule not clearly opened",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -938,7 +938,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-b7cdd9a027b6.jpg",
-        "label": "4 · SAME SPECIES — pre-annotated mature spikelet",
+        "label": "GOOSEGRASS — opened overlapping spikelet bracts; original photographer labels glumes, lemmas and paleas",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1005,6 +1005,73 @@
       "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3 of 3 current Lab image references rendered and visually reviewed. Original rights, photographer, date, voucher ID and precise reproductive anatomy not independently recertified.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "large green tufted grass amid disturbed ground vegetation with several slender flattened fingerlike flowering branches spreading from culm tips"
+          ],
+          "cannot_verify": [
+            "actual underground roots, true inner ligule, independent specimen voucher or winter collection date"
+          ],
+          "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-8937a6e4ead8.jpg",
+          "git_blob_sha": "5c536e22990d0c9f5736947524cf7e527054d75c",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "bright green ribbed leaf blade meeting sheath and conspicuous long fine hairs at sheath/collar margins, an external V-shaped junction"
+          ],
+          "cannot_verify": [
+            "full inner ligule surface or unequivocal membrane/ligule anatomy; hair origin measured microscopically"
+          ],
+          "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-1032fdbf120c.jpg",
+          "git_blob_sha": "8608b6ef7ddcaf9f79a34d9c7b04b19814de2266",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "large opened green overlapping spikelet with multiple tapered floral bracts and printed photographer annotations: lower glume, upper glume, lemma 1/2 and palea 1/2"
+          ],
+          "cannot_verify": [
+            "independent morphological determination of each labelled bract or completeness of a full dissection beyond source labels"
+          ],
+          "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-b7cdd9a027b6.jpg",
+          "git_blob_sha": "c0200478b95a5be61ad1a78b57466cb8d6b4ef81",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "authenticated dissection and labelled lemma/palea/glume verification using a corroborated reference",
+        "exposed true inner ligule and root crown in same specimen",
+        "dated standing winter or dry-season goosegrass"
+      ],
+      "summary": "Three of three gallery images visually reviewed: whole tuft/fingerlike racemes direct; exterior hairy collar and source-labelled floral-part dissection marked partial to avoid anatomical over-certainty.",
+      "seasonal_review": {
+        "observed": "Green and some straw-tan tissue visible; photo dates not confirmed November–February.",
+        "queue_action": "Check existing dated winter/dormant archives before adding any needs to the one master Photo Needs Queue."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Only visible evidence/captions updated; regional key trait states, diagnostic checks and taxonomic framework unchanged."
     }
   },
   {
