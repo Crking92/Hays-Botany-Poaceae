@@ -1,0 +1,51 @@
+{
+  "review_date": "2026-11-11",
+  "scope": "Hays County GBIF preserved specimen candidate verification",
+  "issue": "Unsupported county= query parameter was used with GBIF occurrence/search (not a supported field in the API's searchable OccurrenceSearchParameter enumeration).",
+  "impact": "The prior scientificName/country/PRESERVED_SPECIMEN GBIF index returned national or broader result counts; client then scanned only first 30 records and postfiltered the displayed county. This creates false negative risks. Raw index totals in previous report must not be interpreted as Hays counts, and absence conclusions are invalid.",
+  "superseded_outputs": [
+    "audits/hays-grasses-independent-voucher-leads-20261111.json",
+    "audits/hays-grasses-independent-voucher-leads-20261111.md"
+  ],
+  "valid_individual_records_to_retain": [
+    {
+      "name": "Paspalum langei",
+      "gbif_id": 3866879449,
+      "catalog": "TEX00568499",
+      "verification": "Original TEX sheet and Hays label inspected"
+    },
+    {
+      "name": "Paspalum langei",
+      "gbif_id": 3866886419,
+      "catalog": "TEX00568501",
+      "verification": "Original TEX sheet and Hays label inspected"
+    },
+    {
+      "name": "Paspalum langei",
+      "gbif_id": 5236506306,
+      "catalog": "TEX00485588",
+      "verification": "Original TEX sheet and Hays label inspected"
+    }
+  ],
+  "excluded_mismatches": [
+    {
+      "query_name": "Tridentopsis elongata",
+      "gbif_id": 6415656302,
+      "recorded_name": "Tridens muticus var. muticus",
+      "status": "NOT_A_MATCH_TO_CANDIDATE"
+    },
+    {
+      "query_name": "Tridentopsis elongata",
+      "gbif_id": 6415633320,
+      "recorded_name": "Tridens muticus var. muticus",
+      "status": "NOT_A_MATCH_TO_CANDIDATE"
+    }
+  ],
+  "corrected_method_needed": "Use GBIF GADM level-2 county polygon identifier or verified geometry with proper page retrieval; for un-georeferenced specimens query Texas with pagination and filter original county metadata. Confirm individual taxon name exactly and original specimen/label before treating record as positive. Avoid inferring absence from no hit.",
+  "status": "PREVIOUS_NO_VOUCHER_FOUND_CLAIMS_WITHDRAWN",
+  "new_confirmed_recheck_count": 0,
+  "authoritative_doc_urls": [
+    "https://gbif.github.io/gbif-api/apidocs/org/gbif/api/model/occurrence/search/OccurrenceSearchParameter.html",
+    "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+  ]
+}
