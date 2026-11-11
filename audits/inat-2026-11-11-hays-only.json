@@ -285,7 +285,15 @@
         355601663
       ],
       "photo_visual_qa_file": "audits/hays-58-first-five-visual-qa-20261111.json",
-      "visual_diagnostic_anatomy_complete": false
+      "visual_diagnostic_anatomy_complete": false,
+      "independent_voucher_index_status": "THREE_NAME_ALIGNED_POTENTIAL_TEX_HAYS_SPECIMENS",
+      "independent_voucher_index_count": 3,
+      "independent_voucher_url_refs": [
+        "https://www.gbif.org/occurrence/3866879449",
+        "https://www.gbif.org/occurrence/3866886419",
+        "https://www.gbif.org/occurrence/5236506306"
+      ],
+      "independent_voucher_qa": "ORIGINAL_LABEL_AND_ANATOMY_NOT_MANUALLY_VERIFIED"
     },
     {
       "queue_id": "HAYS-007",
@@ -1412,7 +1420,10 @@
       ],
       "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
       "photo_visual_review_flags": [],
-      "visual_diagnostic_anatomy_complete": false
+      "visual_diagnostic_anatomy_complete": false,
+      "independent_voucher_index_status": "TWO_GBIF_FALSE_POSITIVES_REJECTED",
+      "independent_voucher_index_count": 0,
+      "independent_voucher_qa": "Two returned Hays TEX specimens were Tridens muticus var. muticus (Tridentopsis mutica), not elongata; do not use them as positive voucher evidence."
     },
     {
       "queue_id": "HAYS-034",
@@ -2424,6 +2435,11 @@
     "source_identification_histories_checked_for_all_7_holds": true,
     "source_id_history_path": "audits/hays-58-photo-access-holds-id-history-20261111.json",
     "diagnostic_gates_path": "audits/hays-7-flora-diagnostic-proof-gates-20261111.json",
-    "priority_diagnostic_checks_path": "audits/hays-10-priority-diagnostic-proof-gates-20261111.json"
+    "priority_diagnostic_checks_path": "audits/hays-10-priority-diagnostic-proof-gates-20261111.json",
+    "independent_voucher_search_count": 17,
+    "independent_voucher_curated_file": "audits/hays-grasses-curated-voucher-evidence-20261111.json",
+    "independent_voucher_direct_name_matches": 3,
+    "voucher_false_positive_index_hits_rejected": 2,
+    "independently_verified_herbarium_images": 0
   }
 }
