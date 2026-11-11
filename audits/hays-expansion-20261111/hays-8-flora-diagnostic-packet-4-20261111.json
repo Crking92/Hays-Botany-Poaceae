@@ -1,0 +1,714 @@
+{
+  "version": "2026-11-11-packet4",
+  "status": "LITERATURE_DIAGNOSTIC_PACKET_REVIEW_ONLY_NOT_SPECIMEN_ID",
+  "counts": {
+    "new_dossiers": 8,
+    "new_source_character_targets": 48,
+    "previous_dossiers": 24,
+    "cumulative_dossiers": 32,
+    "previous_character_targets": 123,
+    "cumulative_character_targets": 171,
+    "new_actual_photo_pixels_inspected": 0,
+    "new_species_id_signoffs": 0,
+    "new_website_photos": 0,
+    "new_public_species_merges": 0
+  },
+  "source_policy": "Regional 1999 Flora for its direct descriptions; Kew POWO/GrassBase for modern taxonomy and taxa not treated in the regional flora; 2015 Hill Country key for historical region-name context. Previously saved Hays source photo inspection is reused only. Unknown not absent.",
+  "deliberate_holds": [
+    "Paspalum notatum turf/pasture vs established roadside occurrence",
+    "Oplismenus hirtellus historical setarius species concept and uncertain groundcover establishment",
+    "Sphenopholis interrupta under historic Trisetum interruptum name",
+    "Hordeum murinum old leporinum subspecies treatment",
+    "Rostraria cristata no direct species treatment in regional Flora"
+  ],
+  "taxa": [
+    {
+      "accepted_name": "Paspalum notatum",
+      "card_id": "paspalum-notatum",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 230,
+        "printed_page": 1306,
+        "treatment_name": "Paspalum notatum (1999 Flora species account)",
+        "applicability": "1999 Flora species treatment and Kew POWO/GrassBase; old variety key conflicting with the broad species branch-count summary must not be promoted as diagnosis"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A414477-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Mat-forming rhizomatous perennial, with flowering culms typically about 20–75 cm in the regional Flora",
+          "source": "Flora 1999",
+          "required_photo_role": "rooted rhizomes",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "head",
+          "description": "Usually two nearly paired racemes at the summit, occasionally a third; each roughly 4–12(–15) cm in the Flora",
+          "source": "Flora 1999",
+          "required_photo_role": "complete scaled inflorescence",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Broadly ovate to obovate glabrous spikelets, usually 2.5–3.8 mm across modern treatments",
+          "source": "Flora 1999 and Kew POWO",
+          "required_photo_role": "isolated mature spikelet and ruler",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "rows",
+          "description": "Spikelets single and arranged in two rows along the raceme axis",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "raceme side and face",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "glume",
+          "description": "Lower glume typically absent or poorly developed, upper glume smooth and about as long as the spikelet",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "dissected glumes",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "collar",
+          "description": "Short ligule with hairs described in POWO accounts; examine exact collar rather than inferring from turf",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "inner leaf collar",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Clearly forked Y/V-shaped pair of spike-like racemes with small spikelets; smooth narrow leaves and mowed lawn/field context.",
+      "not_seen_hays_photo_features": "Paired racemes strongly support Bahia grass but microscopic broadly ovate glumes and seed size not confirmed; many records from lawns and could be introduced turf.",
+      "existing_visual_qa_reference": "audits/hays-58-pass3-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/379830371",
+        "https://www.inaturalist.org/observations/376894248",
+        "https://www.inaturalist.org/observations/192677193",
+        "https://www.inaturalist.org/observations/141259657"
+      ],
+      "earlier_source_photo_count": 8,
+      "comparator_species": "Paspalum distichum, P. dilatatum, P. pubiflorum, other paired-raceme Paspalum",
+      "next_same_specimen_proof": "Measure and dissect a mature isolated spikelet and verify rhizome/base, true ligule and branch orientation on the same Hays plant; separate mowed planted turf from naturalized colonies.",
+      "caution": "Several Hays observations are mowed lawns. Two forked racemes alone do not establish wild Hays occurrence. The regional Flora's infraspecific branch counts are inconsistent with its species-level generalization; do not use varietal thresholds without a modern key.",
+      "prior_photo_media_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Bromus tectorum",
+      "card_id": "bromus-tectorum",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 177,
+        "printed_page": 1253,
+        "treatment_name": "Bromus tectorum (1999 Flora)",
+        "applicability": "1999 Flora explicit species and brome couplet; Kew POWO modern detailed species morphology"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A394163-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Introduced cool-season annual with often soft-hairy lower sheaths",
+          "source": "Flora 1999",
+          "required_photo_role": "rooted plant and lower sheath",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "panicle",
+          "description": "Open or nodding panicle with drooping branches, not a unique species-level character",
+          "source": "Flora 1999",
+          "required_photo_role": "whole inflorescence",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "lemma_awn",
+          "description": "Old regional Bromus key gives about 12–18 mm awns, while broader Kew treatment gives 10–25 mm; use source-specific ranges",
+          "source": "Flora 1999 / Kew POWO",
+          "required_photo_role": "mature measured awns",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "lemma_teeth",
+          "description": "Very elongated thin transparent apical lemma teeth, about 2–5 mm under regional key",
+          "source": "Flora 1999",
+          "required_photo_role": "dissected mature lemma apex",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule approximately 2–5 mm, margin often torn",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "inner ligule and scale",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "lemma_surface",
+          "description": "Lemma may be hairy or nearly hairless under varieties described in the regional Flora",
+          "source": "Flora 1999",
+          "required_photo_role": "lemma pubescence macro",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Two observations display open, drooping, long-awned brome panicles.",
+      "not_seen_hays_photo_features": "Unmeasured lemma awns and sheaths do not distinguish cheatgrass reliably from other annual brome species; just 2 local records.",
+      "existing_visual_qa_reference": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/209232730",
+        "https://www.inaturalist.org/observations/3092228"
+      ],
+      "earlier_source_photo_count": 2,
+      "comparator_species": "Bromus japonicus, B. secalinus, B. hordeaceus, B. catharticus",
+      "next_same_specimen_proof": "Detach mature lemma and show long apical teeth plus distinct long awn and glume/lemma nervation with mm scale; verify basal sheath hairs on the same plant.",
+      "caution": "Only two previously reviewed Hays images and no measured lemma-apex teeth. Do not infer cheatgrass merely from drooping long-awned brome heads.",
+      "prior_photo_media_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Sphenopholis interrupta",
+      "card_id": "sphenopholis-interrupta",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 256,
+        "printed_page": 1332,
+        "treatment_name": "Trisetum interruptum (Flora 1999 historical placement)",
+        "applicability": "Direct 1999 Flora under Trisetum interruptum with explicit Sphenopholis interrupta alternate classification; POWO accepted Sphenopholis genus placement"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A296142-2",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Annual grass roughly 7–50(–60) cm tall, leaf sheaths pubescent",
+          "source": "Flora 1999",
+          "required_photo_role": "rooted base and sheath hairs",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "ligule",
+          "description": "Asymmetrical membranous ligule 1.5–2 mm with irregular ragged margin",
+          "source": "Flora 1999",
+          "required_photo_role": "inner ligule mm scale",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "panicle",
+          "description": "Narrow spike-like panicle, which can appear interrupted",
+          "source": "Flora 1999",
+          "required_photo_role": "scaled panicle",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Spikelets 2–3-flowered, around 4–6 mm excluding the awns",
+          "source": "Flora 1999",
+          "required_photo_role": "dissected spikelet count",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "lemma_apex",
+          "description": "Lemma with two slender apical teeth",
+          "source": "Flora 1999",
+          "required_photo_role": "isolated lemma face and tip",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "awn",
+          "description": "Awn arising on back near base of apical teeth, twisted and bent, about 5–8 mm",
+          "source": "Flora 1999",
+          "required_photo_role": "side-view lemma awn origin",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Slender interrupted-looking spikes with close-up overlapping green spikelets and sheath/stem junction views.",
+      "not_seen_hays_photo_features": "Second glume shape, ligule and floret details not decisively visible; compare existing Sphenopholis obtusata candidate.",
+      "existing_visual_qa_reference": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/359410608",
+        "https://www.inaturalist.org/observations/349892863",
+        "https://www.inaturalist.org/observations/157853430"
+      ],
+      "earlier_source_photo_count": 6,
+      "comparator_species": "Sphenopholis obtusata, Koeleria macrantha, Rostraria cristata",
+      "next_same_specimen_proof": "Separate mature spikelets to count florets, backlight the lemma's two teeth and precisely show the insertion of its twisted awn; obtain true ligule macro and compare with S. obtusata.",
+      "caution": "Interrupted-looking flowering heads are not species-specific; the old Trisetum genus label is a nomenclatural alias, not an extra candidate.",
+      "prior_photo_media_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Rostraria cristata",
+      "card_id": "rostraria-cristata",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": null,
+        "printed_page": null,
+        "treatment_name": "No direct named treatment in 1999 Flora",
+        "applicability": "Species-rank diagnosis comes from Kew POWO/GrassBase and Flora of Oman, not from 1999 Flora"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Small tufted annual, culms generally 5–45 cm in GrassBase",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "rooted whole plant",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule about 1 mm, lacking long hair fringe",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "inner ligule",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "panicle",
+          "description": "Narrow dense to interrupted spike-like panicle approximately 1.5–10 cm in GrassBase",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "measured panicle",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "florets",
+          "description": "Spikelets approximately 3–7 mm and typically 3–8 fertile florets",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "separated florets with ruler",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "glumes",
+          "description": "Lower glume often 1-veined and shorter, upper glume around 3-veined and broader",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "flattened glume nerves",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "awn",
+          "description": "Lemma awn may be apical/subapical and short, approximately 0–3 mm",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "lemma lateral view",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Short cylindrical green bristly panicle with densely overlapping awned or pointed spikelets; small tufted grass.",
+      "not_seen_hays_photo_features": "Actual glume and lemma awn origins, floret counts and ligule unclear; compact spikelike heads resemble other small pooid grasses.",
+      "existing_visual_qa_reference": "audits/hays-58-pass3-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/281345779",
+        "https://www.inaturalist.org/observations/276345150",
+        "https://www.inaturalist.org/observations/273467058",
+        "https://www.inaturalist.org/observations/74683342"
+      ],
+      "earlier_source_photo_count": 5,
+      "comparator_species": "Koeleria, Sphenopholis, Trisetum-like grasses",
+      "next_same_specimen_proof": "Isolate several ripe florets and both glumes with a 1-mm scale, photograph awn origin, floret count and true ligule; compare with similar dense-headed annual Pooideae.",
+      "caution": "Compact green bristly heads are not species proof. The 1999 regional Flora has no direct Rostraria cristata species treatment.",
+      "prior_photo_media_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Polypogon viridis",
+      "card_id": "polypogon-viridis",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 238,
+        "printed_page": 1314,
+        "treatment_name": "Polypogon viridis (Flora 1999; historical Agrostis semiverticillata alias)",
+        "applicability": "Direct Flora species treatment; Kew POWO/GrassBase modern confirmation. Glume-awn absence separates from bristly P. monspeliensis."
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A418741-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Glabrous grass with bent/decumbent stem base, often in wet creek and spring habitats; Flora culms about 15–45(–70) cm",
+          "source": "Flora 1999",
+          "required_photo_role": "whole base and habitat",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule approximately 2–7 mm in regional Flora (other treatments may give shorter values)",
+          "source": "Flora 1999",
+          "required_photo_role": "true inner ligule mm scale",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "head",
+          "description": "Condensed panicle roughly 4–12 cm long and 1–3 cm broad in regional Flora",
+          "source": "Flora 1999",
+          "required_photo_role": "scaled flowering head",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Small spikelets about 1.3–2(–2.5) mm in the Flora",
+          "source": "Flora 1999",
+          "required_photo_role": "dissected spikelet",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "awns",
+          "description": "Glumes and lemmas typically awnless; unlike rabbitfoot P. monspeliensis with long glume awns",
+          "source": "Flora 1999 / Kew POWO",
+          "required_photo_role": "isolated glume apex",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "glume_surface",
+          "description": "Glumes lightly roughened, one-veined, broad near apex in GrassBase account",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "flattened glumes",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Moist rock/creek-edge habitat and narrow, somewhat contracted flowering panicles.",
+      "not_seen_hays_photo_features": "Awnless spikelet structure and ligule length not distinguished from other bentgrasses.",
+      "existing_visual_qa_reference": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/156821533",
+        "https://www.inaturalist.org/observations/76750381",
+        "https://www.inaturalist.org/observations/44142099"
+      ],
+      "earlier_source_photo_count": 3,
+      "comparator_species": "Polypogon monspeliensis, Agrostis spp., other wet meadow bentgrasses",
+      "next_same_specimen_proof": "Photograph a complete creekside Hays specimen with measured ligule and detached awnless spikelets, then compare with bristle-awned P. monspeliensis.",
+      "caution": "Wetland setting and a narrow panicle alone cannot distinguish this taxon; old Agrostis combination should be kept searchable.",
+      "prior_photo_media_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Hordeum murinum",
+      "card_id": "hordeum-murinum",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 202,
+        "printed_page": 1278,
+        "treatment_name": "Hordeum murinum subsp. leporinum (Flora 1999)",
+        "applicability": "Flora 1999 treats subsp. leporinum; Kew accepts murinum species and several subspecies—do not assign subspecies from unmeasured Hays photos"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A405301-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Annual hare barley, generally 30–75 cm in older regional subsp. leporinum account",
+          "source": "Flora 1999",
+          "required_photo_role": "rooted flowering plant",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "spikelet_groups",
+          "description": "Barley-like spike of groups of three spikelets at successive joints, central fertile with lateral companions",
+          "source": "Kew POWO/GrassBase",
+          "required_photo_role": "intact triad and rachis",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "glume_hairs",
+          "description": "Glumes of central spikelet have hairs/ciliate margins in regional key",
+          "source": "Flora 1999",
+          "required_photo_role": "glume edge micro",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "auricles",
+          "description": "Leaf sheath auricles present; distinguish from H. pusillum lacking auricles in regional key",
+          "source": "Flora 1999",
+          "required_photo_role": "collar auricle view",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "awn",
+          "description": "Lemma awns in the leporinum account typically around 10–35 mm",
+          "source": "Flora 1999",
+          "required_photo_role": "mature awn with scale",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "lemma_width",
+          "description": "Regional group key mentions slender lemmas 1.3–1.9 mm wide and leaf blades 1–6 mm",
+          "source": "Flora 1999",
+          "required_photo_role": "flattened lemma and blade scale",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Short dense barley-like awned heads and annual bunches shown.",
+      "not_seen_hays_photo_features": "Glume/ciliate margins and hybrid/subspecies-level distinctions not observed; older Flora treats subsp. leporinum.",
+      "existing_visual_qa_reference": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/354336431",
+        "https://www.inaturalist.org/observations/113160838"
+      ],
+      "earlier_source_photo_count": 3,
+      "comparator_species": "Hordeum pusillum, H. vulgare and other wild barley grasses",
+      "next_same_specimen_proof": "Separate an intact three-spikelet group and photograph glume fringes, lateral pedicels and awn lengths with mm scale; record true auricles, basal habit and whether old leporinum subspecies applies.",
+      "caution": "A typical awned barley head supports the genus, not murinum subspecies; the Flora's leporinum treatment cannot automatically assign modern lower-rank taxon.",
+      "prior_photo_media_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Dactyloctenium aegyptium",
+      "card_id": "dactyloctenium-aegyptium",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 183,
+        "printed_page": 1259,
+        "treatment_name": "Dactyloctenium aegyptium (Flora 1999)",
+        "applicability": "Direct Flora species; corroborated by modern Kew descriptions"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A397387-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Spreading annual, often roots from lower stem nodes; flowering stems commonly 10–60 cm",
+          "source": "Flora 1999",
+          "required_photo_role": "rooted creeping base",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "ligule",
+          "description": "Short ciliate membrane usually 0.1–1 mm",
+          "source": "Flora 1999",
+          "required_photo_role": "inner leaf junction",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "head",
+          "description": "Two to seven or more radiating fingerlike branches, usually around 1.5–6 cm",
+          "source": "Flora 1999",
+          "required_photo_role": "complete digitate head",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "branch_tip",
+          "description": "Flattened flowering branch has a sterile narrow tip extending about 1–7 mm beyond last spikelet",
+          "source": "Flora 1999",
+          "required_photo_role": "terminal branch tip macro",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "spikelets",
+          "description": "Tightly packed sessile flattened spikelets in two rows along one side of branches; about 3–4 mm",
+          "source": "Flora 1999",
+          "required_photo_role": "branch side macro",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "florets",
+          "description": "Each spikelet typically contains 3–5 florets; upper glumes and lemmas often shortly awned",
+          "source": "Flora 1999",
+          "required_photo_role": "dissected spikelet",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Fingerlike branches radiating from culm apex, consistent with crowdfoot grass inflorescence.",
+      "not_seen_hays_photo_features": "Images not sufficiently close to confirm branch tips projecting beyond spikelets, floret details, or rooting nodes.",
+      "existing_visual_qa_reference": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/388784436",
+        "https://www.inaturalist.org/observations/379049304"
+      ],
+      "earlier_source_photo_count": 2,
+      "comparator_species": "Eleusine indica, Dactylis-like digitate grasses, Chloris species",
+      "next_same_specimen_proof": "Photograph sterile rachis projection beyond last mature spikelet with mm ruler, plus single detached flattened 3–5-flowered spikelet and rooted nodes.",
+      "caution": "Fingerlike heads alone misclassify several Hays grasses. Needs branch-end projection and floret dissection.",
+      "prior_photo_media_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Oplismenus hirtellus",
+      "card_id": "oplismenus-hirtellus",
+      "flora_source": {
+        "citation": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 214,
+        "printed_page": 1290,
+        "treatment_name": "Oplismenus hirtellus (Flora 1999; O. setarius historical split)",
+        "applicability": "Direct Flora species account plus Kew POWO/GrassBase for modern accepted name; former O. setarius lumping is a real species-concept caution"
+      },
+      "current_accepted_name_reference": "https://powo.science.kew.org/taxon/1004002-1",
+      "source_backed_character_targets": [
+        {
+          "character": "habit",
+          "description": "Sprawling perennial stems root at lower nodes and form groundcover in shaded places",
+          "source": "Flora 1999",
+          "required_photo_role": "rooted node and habitat",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "leaves",
+          "description": "Broad spreading blades about 1.5–7 cm by 5–15 mm in Flora account",
+          "source": "Flora 1999",
+          "required_photo_role": "measured blade",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "ligule",
+          "description": "Short ciliate membrane at inner collar",
+          "source": "Flora 1999",
+          "required_photo_role": "true leaf collar",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "racemes",
+          "description": "About 3–7 short widely separated unilateral flowering branches, roughly 1–6 mm in old regional description",
+          "source": "Flora 1999",
+          "required_photo_role": "whole inflorescence and branch scale",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "spikelets",
+          "description": "Spikelets in two ranks along one side; paired in modern GrassBase; two florets with fertile upper floret",
+          "source": "Flora 1999 / Kew POWO",
+          "required_photo_role": "paired spikelet macro",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        },
+        {
+          "character": "glume_awn",
+          "description": "Glumes awned; first glume awn typically around 5–10 mm and distinctly longer than second",
+          "source": "Flora 1999",
+          "required_photo_role": "isolated glumes and awn base",
+          "source_description_only": true,
+          "actual_hays_specimen_character_verified": false,
+          "enabled_in_lab_key": false
+        }
+      ],
+      "previously_seen_hays_photo_features": "Shaded groundcover with broad lanceolate leaf blades, sprawling stem habit and distinct long-bristled/hooked-looking spikelets in close-up.",
+      "not_seen_hays_photo_features": "The precise floret/awn base and bristle count distinguishing Oplismenus species not fully resolved; no plant establishment context vetted.",
+      "existing_visual_qa_reference": "audits/hays-58-next-eight-visual-qa-20261111.json",
+      "original_hays_observation_urls": [
+        "https://www.inaturalist.org/observations/353967258",
+        "https://www.inaturalist.org/observations/316622995",
+        "https://www.inaturalist.org/observations/283663950",
+        "https://www.inaturalist.org/observations/39802176"
+      ],
+      "earlier_source_photo_count": 6,
+      "comparator_species": "Oplismenus undulatifolius and other creeping shade grasses, including historic O. setarius concept",
+      "next_same_specimen_proof": "Same Hays plant: trace rooted creeping node, show ciliate ligule and paired awned spikelets at mm scale, inspect historical setarius distinction and site planting context.",
+      "caution": "Flora treats O. setarius broadly within hirtellus while other historical sources split it. A shaded leafy groundcover and hooked awns do not independently settle species concept or wild occurrence.",
+      "prior_photo_media_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "source_photo_license_rechecked_now": false,
+      "actual_source_pixels_newly_viewed_now": 0,
+      "specimen_species_id_signed_off": false,
+      "photo_publication_approved": false,
+      "live_merge_ready": false
+    }
+  ]
+}
