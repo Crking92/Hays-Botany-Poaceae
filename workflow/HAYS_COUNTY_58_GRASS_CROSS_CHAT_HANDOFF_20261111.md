@@ -221,3 +221,13 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 - [Updated 57 staging cards](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
 
 **High-risk exceptions:** modern B. longipaniculata needs key separating it from historical lumped torreyana; L. perenne / L. multiflorum / hybrid overlap requires true spikelet and auricle checks; Bromus brevis is accepted taxonomically but cannot be assumed to occur as a verified Hays species. Existing 112 live pages and photos untouched.
+
+## Hays expansion Phase 2 diagnostic packet 4 — November 11, 2026
+
+**32/57 diagnostic species packets prepared, 171 reference-backed character descriptions.** Latest eight: Paspalum notatum, Bromus tectorum, Sphenopholis interrupta, Rostraria cristata, Polypogon viridis, Hordeum murinum, Dactyloctenium aegyptium, Oplismenus hirtellus.
+
+- [Readable 8-taxon diagnostic report](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md)
+- [Source-linked packet 4 JSON](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.json)
+- [Current candidate cards and progress counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+
+**Scope caution:** Literature profiles only, not observed specimen IDs. 0 newly inspected image pixels, 0 final ID signoffs, 0 authorized published images, 0 live merges; original 112 species and site files untouched. Keep *Oplismenus hirtellus* historical *setarius* split, *Sphenopholis interrupta* old *Trisetum* classification, *Hordeum murinum* leporinum issue and mowed *Paspalum notatum* turf context as review holds. Remaining diagnostic packet taxa: 25.
