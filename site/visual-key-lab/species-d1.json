@@ -1698,6 +1698,75 @@
       "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/3 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pale diverging glume-like bases around enclosed spikelet parts"
+          ],
+          "cannot_verify": [
+            "measured glume width and exact origins"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/matt-lavin-virginia-glume-bases.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "47be8f6edaa9ed0ba0b9302b9fcbb0d4404e645b",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several compact upright awned mature spikes"
+          ],
+          "cannot_verify": [
+            "head length and auricles"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/01-elymus-virginicus-glumes.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "35733cd49f9096d94766d79daa855b7d41080fc5",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "leafy grass patch at shaded forest edge"
+          ],
+          "cannot_verify": [
+            "species identity from overview and anatomical structures"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Elymus/elymus-virginicus/images/02-elymus-virginicus-spike.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "b742f92ecff8c2fe7991228bd025296fc2ef17fe",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "measured glumes, true ligule and auricles",
+        "dormant rooted base"
+      ],
+      "summary": "2 directly show scoped features; 1 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   },
   {
