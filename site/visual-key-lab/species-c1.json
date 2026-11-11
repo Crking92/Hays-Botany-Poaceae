@@ -602,7 +602,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-barbinodis/images/john-rusk-cane-bluestem-paired-spikelets.jpg",
-        "label": "Cane bluestem — many branching silky racemes",
+        "label": "CANE BLUESTEM — several densely silky racemes; spikelet pair not isolated",
         "creator": "John Rusk",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -670,6 +670,44 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_1_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "1/2 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several densely silky pale racemes branching on head"
+          ],
+          "cannot_verify": [
+            "single attached sessile-pedicelled spikelet pair"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bothriochloa/bothriochloa-barbinodis/images/john-rusk-cane-bluestem-paired-spikelets.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "9919fa360c8f60346863d8f4fd2d4f57b5114563",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1
+      ],
+      "unmet_roles": [
+        "separated spikelet pair, rooted entire plant and winter habit"
+      ],
+      "summary": "1 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
@@ -683,7 +721,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/commons-bothriochloa-torreyana-a6ad1cb3d8b8.jpg",
-        "label": "Silver bluestem — silvery contracted narrow head",
+        "label": "SILVER BLUESTEM — bright silky silver racemes; paired spikelets not isolated",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -761,6 +799,45 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_1_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "1/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "elongated silvery-white hairy racemes clustered on stem"
+          ],
+          "cannot_verify": [
+            "paired spikelet attachment, true collar"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/commons-bothriochloa-torreyana-a6ad1cb3d8b8.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "b4d2e3f91bb96904a1c2271a7233fc279763b921",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1,
+        2
+      ],
+      "unmet_roles": [
+        "paired spikelets, opened true ligule and rooted clump"
+      ],
+      "summary": "1 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
