@@ -1634,7 +1634,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/harry-rose-spinifex-bur-side-cc-by2.jpg",
-        "label": "Common Sandbur — burs attached along one flowering axis",
+        "label": "COMMON SANDBUR — yellow-green burs with red-purple spines along flowering axis",
         "creator": "Harry Rose / Macleay Grass Man",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1644,7 +1644,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/harry-rose-spinifex-burs-close-cc-by2.jpg",
-        "label": "Common Sandbur — spines around the outside of the bur",
+        "label": "COMMON SANDBUR — sharp radiating red-purple spines around attached burs; inside not exposed",
         "creator": "Harry Rose / Macleay Grass Man",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -1703,6 +1703,58 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS15_9_HOSTED_REFS",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2 of 2 current Lab gallery entries inspected from actual hosted image bytes; inaccessible images excluded. Source rights, precise identifications and field dates not revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several yellow-green burs along a green flowering stem, fringed by numerous long reddish-purple sharp-pointed spines"
+          ],
+          "cannot_verify": [
+            "individual enclosed florets/spikelets and exact spine measurements"
+          ],
+          "pass": "PHASE4_PASS15_9_HOSTED_REFS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/harry-rose-spinifex-bur-side-cc-by2.jpg",
+          "git_blob_sha": "cdaf060f2ef1363aea49f775dff89942e881e6df",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "close multiple yellow-brown burs carrying prominent red-purple spines radiating outward"
+          ],
+          "cannot_verify": [
+            "inner caryopsis, enclosed spikelets or reliable winter date"
+          ],
+          "pass": "PHASE4_PASS15_9_HOSTED_REFS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Cenchrus/cenchrus-spinifex/images/harry-rose-spinifex-burs-close-cc-by2.jpg",
+          "git_blob_sha": "b8f890a9ab044a3ce71a0e22fca78cb54e6ee1b8",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "opened bur with separately visible inner spikelets",
+        "rooted vegetative habit and true ligule",
+        "dated winter dry burs"
+      ],
+      "summary": "Two photos directly prove sharply spined attached burs, but enclosed spikelets and seed cannot be distinguished.",
+      "seasonal_review": {
+        "observed": "Green and reddish burs, no verified winter photograph date.",
+        "queue_action": "Inspect dated existing winter photos/archives before asking for new seasonal images."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image-only evidence and caption QA, existing source-backed character states and key filters unchanged."
     }
   }
 ]
