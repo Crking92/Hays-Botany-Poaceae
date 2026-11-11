@@ -1,0 +1,34 @@
+name: Hays 58 grasses - GBIF accepted-usage synonym collision audit
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-58-gbif-accepted-usage.yml'
+      - 'scripts/hays_58_gbif_accepted_usage.py'
+permissions:
+  contents: write
+jobs:
+  taxonomy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare 58 candidate names to all 112 existing accepted usage keys
+        run: python3 scripts/hays_58_gbif_accepted_usage.py
+      - name: Save independent taxonomy crosswalk only to review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits/hays-58-gbif-accepted-usage-crosswalk.json audits/hays-58-gbif-accepted-usage-crosswalk.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Save Hays grass 58 versus 112 accepted-usage taxonomy crosswalk"
+            git push origin HEAD:inat-coverage-audit-20261111
+          fi
+      - name: Preserve crosswalk report
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-58-gbif-accepted-usage
+          path: |
+            audits/hays-58-gbif-accepted-usage-crosswalk.json
+            audits/hays-58-gbif-accepted-usage-crosswalk.md
+          if-no-files-found: error
