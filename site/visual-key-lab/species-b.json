@@ -519,7 +519,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/hilaria-belangeri/inat-182584875.jpeg",
-        "label": "General field grass photograph; additional habit or inflorescence view, detailed diagnostic anatomy deferred",
+        "label": "Fine kinked jointed grass axis held against fingertips — full flowering head and rooted stolon not demonstrated",
         "creator": "(c) Eric Knight, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/182584875",
@@ -576,11 +576,11 @@
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "scope": "4/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate. Pass43 additionally opened Hilaria belangeri hosted index 5 with exact file Git blob verified via a read-only GitHub Actions run. No new image installation, license approval, or individual specimen identity certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -646,23 +646,44 @@
           "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
           "git_blob_sha": "5303e57d0c0012670b3bcfb7e7a86149547fc683",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "very slender kinked and branched brown-green grass axis laid across two fingers",
+            "small joints and short projections along the axis"
+          ],
+          "cannot_verify": [
+            "whether this axis is a stolon versus a reproductive branch and which nodes are rooted",
+            "full curlymesquite flower head, true ligule and spikelet units"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/hilaria-belangeri/inat-182584875.jpeg",
+          "git_blob_sha": "f1f403ae9c900771b935bdb2273319c5769f4bd0",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         }
       ],
-      "unreviewed_hosted_indices": [
-        5
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "creeping stolon with rooted hairy nodes and true ligule",
         "one intact fascicle with exactly three distinct spikelets and scale"
       ],
-      "summary": "4 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "summary": "4 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments. Pass43 PARTIAL_VISIBLE: very slender kinked and branched brown-green grass axis laid across two fingers; small joints and short projections along the axis. Still unresolved: whether this axis is a stolon versus a reproductive branch and which nodes are rooted; full curlymesquite flower head, true ligule and spikelet units.",
       "seasonal_review": {
         "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
         "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
-    }
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP.",
+      "previous_pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "previous_scope": "4/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "previous_summary": "4 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original photo creator, license and source link preserved; independent exact-image source-page rights review remains separate."
+    },
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED"
   },
   {
     "id": "muhlenbergia-paniculata",
@@ -708,7 +729,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/muhlenbergia-paniculata/inat-281075496.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "Mixed dry grassland patch with fine tangled wiry stems — an individual tumblegrass head is not isolated",
         "creator": "(c) Eric Knight, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/281075496",
@@ -771,11 +792,11 @@
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_3",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_3_OF_3",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass43 additionally opened Muhlenbergia paniculata hosted index 3 with exact file Git blob verified via a read-only GitHub Actions run. No new image installation, license approval, or individual specimen identity certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -808,22 +829,43 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "79ce277cd29dd81e97b150bdd74be62d8ed6947b",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "dry brown wiry grass stems and sparse green leaves mixed over rocky thin soil",
+            "field context with many thin branching axes"
+          ],
+          "cannot_verify": [
+            "single connected tumblegrass flowering head and rooted base cannot be traced",
+            "no clean spikelet or blade collar close-up"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/muhlenbergia-paniculata/inat-281075496.jpg",
+          "git_blob_sha": "17e756b4016b6e4224c395314f32a9a5f7263f1a",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "detached tumblehead and one isolated spikelet at scale"
       ],
-      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed. Pass43 PARTIAL_VISIBLE: dry brown wiry grass stems and sparse green leaves mixed over rocky thin soil; field context with many thin branching axes. Still unresolved: single connected tumblegrass flowering head and rooted base cannot be traced; no clean spikelet or blade collar close-up.",
       "seasonal_review": {
         "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
-    }
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "previous_pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "previous_scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "previous_summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original photo creator, license and source link preserved; independent exact-image source-page rights review remains separate."
+    },
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED"
   },
   {
     "id": "nassella-leucotricha",
@@ -1026,7 +1068,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-hallii/images/patrick-alexander-hallii-glossy-fruits.jpg",
-        "label": "4 · HALL'S PANICGRASS — actual shiny mature fruiting units",
+        "label": "Detached shiny oval brown reproductive units on white background — original spikelet attachments not shown",
         "creator": "Patrick Alexander",
         "license": "CC0 1.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_hallii_-_Flickr_-_aspidoscelis.jpg",
@@ -1119,11 +1161,11 @@
       "note": "Published Panicum flowerhead and floral/collar anatomy; fine-scale and winter same-specimen photo roles, local identity, and field acceptance pending."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS15_9_HOSTED_REFS",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "7 of 8 current Lab gallery entries inspected from actual hosted image bytes; inaccessible images excluded. Source rights, precise identifications and field dates not revalidated.",
+      "scope": "7 of 8 current Lab gallery entries inspected from actual hosted image bytes; inaccessible images excluded. Source rights, precise identifications and field dates not revalidated. Pass43 additionally opened Panicum hallii hosted index 3 with exact file Git blob verified via a read-only GitHub Actions run. No new image installation, license approval, or individual specimen identity certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -1172,6 +1214,23 @@
           "visually_overlaps_gallery_index": 6,
           "independent_character_evidence": false,
           "provenance_review_note": "Near-matching crop/composition of i=6, listed creator and source differ; image identity and same-photo source/license must be reconciled."
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "multiple smooth shiny oval brown grain-like units individually separated on white background",
+            "variation in brown/olive coloration and curved oval outline"
+          ],
+          "cannot_verify": [
+            "source panicle, glume versus fruit identity and scale not independently shown",
+            "true ligule and plant habit absent"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-hallii/images/patrick-alexander-hallii-glossy-fruits.jpg",
+          "git_blob_sha": "bcd77c64b73af24032d58f5805c4819e16ae2b2a",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         },
         {
           "i": 4,
@@ -1237,23 +1296,27 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "large fruit image i=3 returned no renderable bytes",
         "isolated named glumes, lemma and palea with scale",
         "verified winter date and same-plant crown",
         "reconcile near-duplicate crops i=2/i=6 with credited creator and license source"
       ],
-      "summary": "Seven images show dry-country habit, curly dead leaf strips, a conspicuous hairy ligule and green spikelets. Scene i=2 and i=6 visually overlaps but does not provide independent anatomical confirmation.",
+      "summary": "Seven images show dry-country habit, curly dead leaf strips, a conspicuous hairy ligule and green spikelets. Scene i=2 and i=6 visually overlaps but does not provide independent anatomical confirmation. Pass43 DIRECT_VISIBLE: multiple smooth shiny oval brown grain-like units individually separated on white background; variation in brown/olive coloration and curved oval outline. Still unresolved: source panicle, glume versus fruit identity and scale not independently shown; true ligule and plant habit absent.",
       "seasonal_review": {
         "observed": "Green and tan curled foliage present; source dates not verified.",
         "queue_action": "Inspect dated existing winter photos/archives before asking for new seasonal images."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image-only evidence and caption QA, existing source-backed character states and key filters unchanged."
-    }
+      "morphology_reference_note": "Image-only evidence and caption QA, existing source-backed character states and key filters unchanged.",
+      "previous_pass": "PHASE4_PASS15_9_HOSTED_REFS",
+      "previous_scope": "7 of 8 current Lab gallery entries inspected from actual hosted image bytes; inaccessible images excluded. Source rights, precise identifications and field dates not revalidated.",
+      "previous_summary": "Seven images show dry-country habit, curly dead leaf strips, a conspicuous hairy ligule and green spikelets. Scene i=2 and i=6 visually overlaps but does not provide independent anatomical confirmation.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original photo creator, license and source link preserved; independent exact-image source-page rights review remains separate."
+    },
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED"
   },
   {
     "id": "setaria-parviflora",
@@ -1805,7 +1868,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Aristida/aristida-purpurea/images/curtis-clark-threeawn-fruits-awns.jpg",
-        "label": "PURPLE THREEAWN — fruits and spreading awns (Curtis Clark)",
+        "label": "Close field view of densely interlaced long pale diverging threeawn bristles — grains not isolated",
         "creator": "Curtis Clark",
         "license": "CC BY-SA 2.5",
         "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_fruits_with_awns_2003-07-03.jpg",
@@ -1855,11 +1918,11 @@
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "3/4 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "scope": "3/4 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate. Pass43 additionally opened Aristida purpurea hosted index 3 with exact file Git blob verified via a read-only GitHub Actions run. No new image installation, license approval, or individual specimen identity certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -1912,22 +1975,43 @@
           "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
           "git_blob_sha": "e3d03efbdf9ffbdbe2055af4506c5eba09a2d010",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "mass of very long fine silvery bristlelike awns extending from a grass flowering panicle",
+            "several purplish and tan spikelet regions within the web of awns"
+          ],
+          "cannot_verify": [
+            "cannot trace every three-awn attachment to an individually opened lemma",
+            "no exact mature fruit dimensions or basal crown"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/curtis-clark-threeawn-fruits-awns.jpg",
+          "git_blob_sha": "de0254a9c7d59c229130673ef0888e2701f02282",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "one mature spikelet with all three awns attached to one lemma",
         "scaled lower and upper glume veins and actual perennial crown"
       ],
-      "summary": "2 direct and 1 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "summary": "2 direct and 1 partial narrowly scoped observations; no inference of hidden structural attachments. Pass43 DIRECT_VISIBLE: mass of very long fine silvery bristlelike awns extending from a grass flowering panicle; several purplish and tan spikelet regions within the web of awns. Still unresolved: cannot trace every three-awn attachment to an individually opened lemma; no exact mature fruit dimensions or basal crown.",
       "seasonal_review": {
         "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
         "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
-    }
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP.",
+      "previous_pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "previous_scope": "3/4 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "previous_summary": "2 direct and 1 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original photo creator, license and source link preserved; independent exact-image source-page rights review remains separate."
+    },
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED"
   }
 ]
