@@ -2,6 +2,12 @@
 
 **Updated November 11, 2026, after final Hays 58 nomenclature crosswalk.** This is the stable discovery pointer on the Poaceae repo's default `main` branch. The active work is intentionally stored in [the isolated Hays audit branch](https://github.com/Crking92/Hays-Botany-Poaceae/tree/inat-coverage-audit-20261111).
 
+## Important correction: prior GBIF county filtering was incomplete (Nov 11)
+
+**Do not treat zero GBIF voucher counts as absence of a Hays County specimen.** The first GBIF preserved-specimen script used an unsupported `county=Hays` search parameter and scanned only the first 30 broad results. Its negative conclusions for 15 other taxa are **withdrawn pending a corrected GADM/paginated county check**. Exact original TEX *Paspalum langei* sheets and labels remain verified; the two false *Tridentopsis* matches remain excluded.
+
+Read [the technical correction before any herbarium inference](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-gbif-county-query-correction-20261111.md).
+
 ## Current nomenclature decision — final as of November 11, 2026
 
 **Stop using the raw 58-name list for merger decisions.** The authoritative reviewed name and synonym map is now:
