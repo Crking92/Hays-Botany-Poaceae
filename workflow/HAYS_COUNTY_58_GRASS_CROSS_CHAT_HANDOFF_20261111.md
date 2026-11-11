@@ -61,6 +61,20 @@
 - **Cumulative actual photo-ID checks:** 25 / 58 original names, **219 individual photos**, 33 remaining, zero species-final signoffs; Hays staging JSON contains individual QA states and photos inspected.
 - **Important flags:** possible photo-ID mismatch for *Cortaderia selloana* (some observations show narrow fountain-grass-like plumes) and *Panicum miliaceum* (uncharacteristically narrow grain-bearing heads). *Stenotaphrum secundatum* photos mostly cultivated turf, not spontaneous stand evidence. *Echinochloa walteri* has good awned panicles and hairy-sheath photographs. No species or photographs released to public site.
 
+## Hays County photo-ID sweep — November 11, 2026
+
+**Current true status: All 58 Hays iNaturalist candidate NAMES triaged; 51 names had actual source image pixels inspected across FIVE batches, total 317 individual photographs. Seven one-record names had no eligible photo in the temporary CC-licensed image review and remain NOT visually inspected. Zero botanist-grade species identity signoffs. No species added to the public 112-name index.**
+
+- [Pass 3 — 12 grasses, 79 actual photographs](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-pass3-visual-qa-20261111.md)
+- [Pass 4 — 18 sparse-record grasses, 70 actual photographs](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-pass4-visual-qa-20261111.md)
+- [Pass 5 — 8 additional visually checked names, 28 actual photographs; 7 legal photo-access holds](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-pass5-visual-qa-20261111.md)
+- [Seven explicit image-access holds with exact source observation links](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-photo-access-holds-20261111.md)
+- [Updated authoritative 58-original-name status queue](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/inat-2026-11-11-hays-only.json)
+
+**Important biological/QA flags from pixel review:** likely photo mislabel candidates *Cortaderia selloana* and *Panicum miliaceum* need expert/specimen follow-up; *Stenotaphrum secundatum*, *Nassella tenuissima*, *Muhlenbergia capillaris*, and *Miscanthus sinensis* have cultivation context concerns. Strong photo sets exist for *Echinochloa walteri*, *Tridentopsis elongata*, *Aegilops cylindrica*, *Stapfochloa ciliata*, *Stapfochloa canterae*, *Tridens congestus*, and *Janochloa antidotalis*, yet still require exact keyed floral characters. *Elymus glabriflorus* remains alias of existing *Elymus virginicus*; do NOT create second card.
+
+**Next phase (not photos already released):** find/inspect diagnostic floral parts against the user-provided Flora and newer taxonomic treatments, independently vet records with likely planted context or visual anomalies, obtain direct permissible viewing/observer permission or authentic voucher for seven image-access holds, and only then consider new card/media sourcing and small-tested merge. Photo contact sheets used CC-licensed single-source images for **one-day temporary review**. Original image bytes are not stored in GitHub; author credit and source photo IDs are preserved in QA JSON reports.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
