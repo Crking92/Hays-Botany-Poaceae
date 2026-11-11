@@ -75,6 +75,20 @@
 
 **Next phase (not photos already released):** find/inspect diagnostic floral parts against the user-provided Flora and newer taxonomic treatments, independently vet records with likely planted context or visual anomalies, obtain direct permissible viewing/observer permission or authentic voucher for seven image-access holds, and only then consider new card/media sourcing and small-tested merge. Photo contact sheets used CC-licensed single-source images for **one-day temporary review**. Original image bytes are not stored in GitHub; author credit and source photo IDs are preserved in QA JSON reports.
 
+## Next review phase — November 11, 2026: source ID histories and Flora diagnostic gates
+
+**The seven copyright-blocked observations were revisited through the original iNaturalist observation API (no image downloads):** each does have photographs, with one *Alopecurus carolinianus* CC BY-NC-ND photo and six observations whose photos are all-rights-reserved/unspecified. Each record's identification history, observed date, source photo rights and original observation ID were saved. Still **zero source pixels viewed for these seven**.
+
+- [All seven source observation ID histories, rights and dates](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-photo-access-holds-id-history-20261111.md)
+- [Seven precise ID character gates using regional Flora and current sources](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-7-flora-diagnostic-proof-gates-20261111.md)
+- [Ten strongest observed Hays photo sets — diagnostic proof checklist](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-10-priority-diagnostic-proof-gates-20261111.md)
+
+**Priority next comparisons:** *Elymus macgregorii* vs existing *E. virginicus* (glume awns, node count, auricles; 12 source photos under copyright, observer permission needed); *Tridentopsis elongata* vs existing *T. mutica* (second-glume veins/length); *Echinochloa walteri* (papilla-based sheath hairs and measured spikelets); *Janochloa antidotalis* (rhizomatous base and glumes); *Pappophorum bicolor* (11–15 lemma awns); *Aegilops cylindrica* (truly jointed spike with niches).
+
+**Caution:** *Cenchrus setaceus* history contains old identifications under synonym *Pennisetum setaceum*, not an independently established conflicting species determination. *Lolium × boucheanum* has a historical *L. perenne* identification, so keep the hybrid identification on expert-review hold. Do not count historical maverick flags as current species conflicts without examining the nomenclatural context.
+
+**Status unchanged:** 51/58 names visually inspected across 317 individual source photos; seven copyright-held source images still not visually inspected; zero species fully confirmed for publication and zero live species merges. The 58-name staging JSON points to all new audit files.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
