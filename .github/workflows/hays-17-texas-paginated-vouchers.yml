@@ -1,0 +1,33 @@
+name: Hays 17 grasses - corrected paginated Texas county-text voucher audit
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-17-texas-paginated-vouchers.yml'
+      - 'scripts/hays_17_texas_paginated_voucher_recheck.py'
+permissions:
+  contents: write
+jobs:
+  county-text:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Search complete Texas preserved specimen pages then filter Hays county
+        run: python3 scripts/hays_17_texas_paginated_voucher_recheck.py
+      - name: Commit corrected results on audit branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits/hays-17-texas-paginated-voucher-recheck-20261111.json audits/hays-17-texas-paginated-voucher-recheck-20261111.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Save corrected Hays label-based GBIF voucher results"
+            git push origin HEAD:inat-coverage-audit-20261111
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hays-17-corrected-paginated-herbarium-audit
+          path: |
+            audits/hays-17-texas-paginated-voucher-recheck-20261111.json
+            audits/hays-17-texas-paginated-voucher-recheck-20261111.md
+          if-no-files-found: error
