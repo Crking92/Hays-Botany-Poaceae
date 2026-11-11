@@ -47,6 +47,10 @@
 
 - [Batch 1 actual pixel inspection (5 grasses, 60 photographs)](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-first-five-visual-qa-20261111.md)
 - [Batch 1 machine-readable results with original observation and photo IDs](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-first-five-visual-qa-20261111.json)
+- [Batch 2 actual pixel inspection (8 grasses, 80 source photos)](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-next-eight-visual-qa-20261111.md)
+- [Batch 2 machine-readable outcomes and source photo IDs](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-next-eight-visual-qa-20261111.json)
+- **Cumulative actual image pixels reviewed: 13 of 58 candidate names, 140 actual images** (45 names not yet visually reviewed). No final species-ID signoffs; all 13 still require at least one definitive diagnostic character or other specimen evidence. *Bromus brevis* is specifically HIGH-RISK because the photo habits vary, Hays observation ID disagreement exists, and Texas occurrence is uncertain. 
+- The Hays queue JSON has been updated with `photo_visual_qa_actual_pixels_inspected`, reviewed photo counts, source observation IDs and permanent result file per each of 13 grasses. Other 45 candidate queue records unchanged.
 - The contact sheets were generated temporarily from exact image-level CC0, CC BY, CC BY-SA, CC BY-NC and CC BY-NC-SA photos, with creator credits and one-day artifact retention; NO third-party image bytes are in repo. The 60 photos were actually viewed. All five showed broadly compatible morphology, but fine diagnostically necessary structures were not conclusive; **zero species fully signed off**.
 - Don't promote a genus-level or compatible-habit appearance to a verified species ID. Follow the recorded next-anatomy-photo checklist.
 
