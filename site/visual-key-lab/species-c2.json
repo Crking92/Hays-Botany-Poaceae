@@ -1335,7 +1335,7 @@
       {
         "i": 9,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/echinochloa-crus-galli/gbif-2807653287-50bc36249048.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Pressed herbarium plant with leaves, flowering branch and ruler — fine ligule and spikelet features too small here",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1361,7 +1361,7 @@
     },
     "source_blob_sha": "08a1596cf2a92a32e954ae1dc1bd59d15316ed97",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_7_OF_8; TRUE_LIGULE_ABSENCE_AND_UT_RIGHTS_UNVERIFIED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "character_evidence": {
       "ligule": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 190",
@@ -1409,11 +1409,11 @@
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     },
     "review": {
-      "pass": "PHASE4_PASS40_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_LICENSE_STRINGS_PRESERVED; TWO_UT_HERBARIUM_SCANS_HAVE_COPYRIGHT_RESERVED_TEXT; EXACT_INSTITUTIONAL_RIGHTS_HOLD",
-      "scope": "7 of 8 hosted images rendered and visually inspected from actual GitHub image bytes; one UT institutional image remains metadata-only. The two viewable UT scans i=7,8 visibly say 'copyright reserved' on the embedded scale despite CC BY metadata; legal meaning/photograph-specific rights uncertain and held for new reuse, not overwritten.",
+      "scope": "7 of 8 hosted images rendered and visually inspected from actual GitHub image bytes; one UT institutional image remains metadata-only. The two viewable UT scans i=7,8 visibly say 'copyright reserved' on the embedded scale despite CC BY metadata; legal meaning/photograph-specific rights uncertain and held for new reuse, not overwritten. Pass43 checked actual JPG i=9 from git checkout and recomputed identical SHA; role-specific judgment only, not species identity, source license or phone certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -1535,18 +1535,27 @@
           "hosted_file": "site/media/echinochloa-crus-galli/gbif-2807342939-16aebc8f9a5f.jpg",
           "git_blob_sha": "0d7282cce81aa02c7d44b4fcc79e2c38d7b9e9be",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
-        }
-      ],
-      "unreviewed_hosted_indices": [
-        9
-      ],
-      "image_access_holds": [
+        },
         {
           "i": 9,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "mounted pressed grass specimen showing tall leaves, reproductive stalk, and several separated pieces",
+            "collection labels and scale ruler on herbarium sheet"
+          ],
+          "cannot_verify": [
+            "cannot read microscopic characters or verify hairy versus hairless blade junction in the overview",
+            "species ID, label text and specimen measurements require original sheet magnification"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/echinochloa-crus-galli/gbif-2807653287-50bc36249048.jpg",
           "git_blob_sha": "81d974e4c9a1d105363c950ffdb938a6d862beb6",
-          "reason": "GitHub read returned only blob metadata; defer image-access recovery, do not count."
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         }
       ],
+      "unreviewed_hosted_indices": [],
+      "image_access_holds": [],
       "rights_holds": [
         {
           "indices": [
@@ -1565,13 +1574,27 @@
         "same-scaled mature seedhead and dissected spikelets including sterile lower and fertile upper florets",
         "one metadata-only hosted herbarium image i=9"
       ],
-      "summary": "6 DIRECT_VISIBLE / 1 PARTIAL_VISIBLE scoped photo roles. Existing Australian source macro labels helpful; 'absent ligule' not fully photograph-certified. Two UT sheets held for exact-photo rights verification.",
+      "summary": "6 DIRECT_VISIBLE / 1 PARTIAL_VISIBLE scoped photo roles. Existing Australian source macro labels helpful; 'absent ligule' not fully photograph-certified. Two UT sheets held for exact-photo rights verification. Pass43 PARTIAL_VISIBLE: mounted pressed grass specimen showing tall leaves, reproductive stalk, and several separated pieces; collection labels and scale ruler on herbarium sheet. Remaining limitations: cannot read microscopic characters or verify hairy versus hairless blade junction in the overview; species ID, label text and specimen measurements require original sheet magnification.",
       "seasonal_review": {
         "observed": "Green live clumps and mature tan spikelets and dried herbarium parts; none certifies a specific winter field period.",
         "queue_action": "Use existing Photo Needs Queue for true collar/ligule no-flap macro and compare with other Echinochloa; no duplicate sheet."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Source morphology and current scientific identity treated as provisional on specimen photos; no new key state, taxon or nativity edits."
+      "morphology_reference_note": "Source morphology and current scientific identity treated as provisional on specimen photos; no new key state, taxon or nativity edits.",
+      "previous_pass": "PHASE4_PASS40_HOSTED_IMAGE_BATCH",
+      "previous_scope": "7 of 8 hosted images rendered and visually inspected from actual GitHub image bytes; one UT institutional image remains metadata-only. The two viewable UT scans i=7,8 visibly say 'copyright reserved' on the embedded scale despite CC BY metadata; legal meaning/photograph-specific rights uncertain and held for new reuse, not overwritten.",
+      "previous_summary": "6 DIRECT_VISIBLE / 1 PARTIAL_VISIBLE scoped photo roles. Existing Australian source macro labels helpful; 'absent ligule' not fully photograph-certified. Two UT sheets held for exact-photo rights verification.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original creator, license and source links untouched; exact-image original-page rights check remains separate.",
+      "resolved_image_access_holds": [
+        {
+          "i": 9,
+          "git_blob_sha": "81d974e4c9a1d105363c950ffdb938a6d862beb6",
+          "reason": "GitHub read returned only blob metadata; defer image-access recovery, do not count.",
+          "resolved_in": "PHASE4_PASS43",
+          "resolved_blob_sha": "81d974e4c9a1d105363c950ffdb938a6d862beb6"
+        }
+      ]
     }
   },
   {
@@ -2584,7 +2607,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/commons-8bd54577a9b2.jpg",
-        "label": "ARCHIVED little barley — individual spikelets and glumes",
+        "label": "Macro of densely packed tan barley spikelet clusters with many long hairlike awns",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "",
@@ -2649,7 +2672,7 @@
     },
     "source_blob_sha": "6276a793df3cd9ecf17dc63a21e822a5a60a0fd0",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -2693,12 +2716,29 @@
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "scope": "4/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification. Pass43 checked actual JPG i=0 from git checkout and recomputed identical SHA; role-specific judgment only, not species identity, source license or phone certification.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "many mature straw-colored barley reproductive units crowded together",
+            "long stiff awns projecting in numerous directions from clustered spikelets"
+          ],
+          "cannot_verify": [
+            "central versus lateral three-spikelet sets, glume nerves and precise lemma measurements not traced",
+            "no opened inner ligule or rooted field plant"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/commons-8bd54577a9b2.jpg",
+          "git_blob_sha": "052a0803160ab3be5033f4ae1176d4a9fbbd29df",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
+        },
         {
           "i": 1,
           "verdict": "DIRECT_VISIBLE",
@@ -2764,20 +2804,23 @@
           "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "one disassembled rachis node showing three spikelets",
         "ligule and rooted annual crown"
       ],
-      "summary": "4 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "summary": "4 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open. Pass43 DIRECT_VISIBLE: many mature straw-colored barley reproductive units crowded together; long stiff awns projecting in numerous directions from clustered spikelets. Remaining limitations: central versus lateral three-spikelet sets, glume nerves and precise lemma measurements not traced; no opened inner ligule or rooted field plant.",
       "seasonal_review": {
         "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
         "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only.",
+      "previous_pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "previous_scope": "4/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "previous_summary": "4 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original creator, license and source links untouched; exact-image original-page rights check remains separate."
     }
   }
 ]
