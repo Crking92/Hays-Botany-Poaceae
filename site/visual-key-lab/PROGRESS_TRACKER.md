@@ -4,6 +4,18 @@
 **Scope:** 112 Hays Botany Poaceae species, 53 genera. This is the single progress ledger for the key; do not create per-batch spreadsheets.
 **Important:** This tracker distinguishes coverage from verification. A species with one checked character is not a fully verified ID.
 
+## Visual selection batch — 47 placements reviewed (2026-11-10)
+
+- Started at bb2dc50; preserved concurrent anatomy redraw 35602a5 before saving.
+- Rendered and visually examined 38 unique choice diagrams, 5 group shortcuts and 4 tabs: **47 placements**. **0 additional original photos inspected**; photo-role coverage remains **34/514**.
+- Updated **6 unique drawings**: airy panicle now has secondary branches; short silky racemes, flat oats, dangling oats and tangled awns fit their frames; surface-runner right leaf tip fits its frame. Prior narrow upright and tall reed plume geometry preserved; comparison captions clarified. Concurrent anatomy redraw retained.
+- **26 flowerhead photo frames** now fit the complete source image instead of cropping to fill. Source images may themselves be partial crops. No photos, source URLs, credits, licenses, species profiles, trait coding or filtering logic changed.
+- Reusable check: `node scripts/test_visual_key.cjs`, with Playwright and optional BROWSER_EXECUTABLE. **47/47 bounds, 218/218 current coded-trait combinations across 112 species**, grouping, select/clear, tabs and detail dialog passed. Desktop 1366px and phone-sized 390/320px viewports passed overflow checks. Remote images blocked during automated tests: no photo-content, load, rights or field-ID certification implied.
+- Family preview build passed (112 species, 53 genera). Existing comprehensive gate still fails: **3 held public images and 2 source checksum mismatches**. Initial Windows text line-ending conversion inflated counts; exact committed source bytes restore the known 2. No underlying source content or media changed.
+- Flora metadata/prior notes consulted; original PDF unavailable here and not directly rechecked: FLORA_PRIOR_REFERENCE_NOT_RECHECKED. Supplemental illustration context: [USDA purple lovegrass](https://www.srs.fs.usda.gov/pubs/rp/rp_so210.pdf), [USU Indiangrass](https://extension.usu.edu/rangeplants/grasses-and-grasslikes/indiangrass). No new species-level diagnostic cutoff or county-nativity claim. Drawings explicitly not to scale.
+- Next: **40–60 actual existing photos**, starting with ten one-photo species and anatomy-critical two-photo species listed below, then remaining silky/Kleberg bluestem images. Assess relevant winter/dormant or green cool-season roles. Verify image identity and rights separately; only confirmed gaps enter the existing single master Photo Needs Queue. Today's placements do not increase photo-completion counts.
+- Verify Pages run and served HTML after commit before claiming live deployment.
+
 ## Phase dashboard
 
 | Phase | Status | Progress / evidence | Definition of complete |
