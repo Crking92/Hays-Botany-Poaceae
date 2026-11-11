@@ -471,6 +471,59 @@
       "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/2 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "prominent brown-purple culm node between green internodes"
+          ],
+          "cannot_verify": [
+            "ligule and spikelet anatomy"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Phalaris/phalaris-caroliniana/images/texas-cc0-phalaris-caroliniana-true-culm-node-643034634.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "72a287d81036f180f57c3a77adea52b8f084689b",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "translucent pale inner membrane at opened blade–sheath junction"
+          ],
+          "cannot_verify": [
+            "ligule length",
+            "sterile floret and glume anatomy"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Phalaris/phalaris-caroliniana/images/texas-cc0-phalaris-caroliniana-exposed-inner-collar-643034675.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "7cd93e19a67c394e81a06eed8528c4747b8298c0",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "dense mature panicle with sterile florets and winged glumes"
+      ],
+      "summary": "2 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   },
   {

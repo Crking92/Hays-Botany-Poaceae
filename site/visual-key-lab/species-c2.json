@@ -972,7 +972,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Elymus/elymus-canadensis/images/01-elymus-canadensis-spikelet.jpg",
-        "label": "CANADA — two paired spikelets and narrow glumes at a rachis node",
+        "label": "CANADA WILDRYE — awned close-up; attached spikelet pair not isolated",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "",
@@ -982,7 +982,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Elymus/elymus-canadensis/images/matt-lavin-canada-rachis-narrow-glumes-3738626381.jpg",
-        "label": "CANADA — TRUE NARROW GLUMES ON ATTACHED NODE · close original",
+        "label": "CANADA WILDRYE — narrow glumes on green head; pairing not fully resolved",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -1077,6 +1077,78 @@
       "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_3_OF_5",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long slender drooping green flowering spikes"
+          ],
+          "cannot_verify": [
+            "same-node paired glumes, ligule and auricles"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/02-elymus-canadensis-spike.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "aaa712b9efe7181d8603fea9f8fc2da9429821bd",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "overlapping narrow glume-like scales and long awns"
+          ],
+          "cannot_verify": [
+            "two separately traceable spikelets attached at one rachis node"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/01-elymus-canadensis-spikelet.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "b02c8e74db088cdb3baa2bfeee296be5bde6ed15",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "narrow glume-like parts adjoining flowering units on green head"
+          ],
+          "cannot_verify": [
+            "counted attached pair at exact rachis node"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Elymus/elymus-canadensis/images/matt-lavin-canada-rachis-narrow-glumes-3738626381.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "3bb22226b915dec36992fce71d13776187aab169",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        7,
+        9
+      ],
+      "unmet_roles": [
+        "paired same-node spikelets with clearly traced glume bases",
+        "collar, auricles and dormant base"
+      ],
+      "summary": "2 directly show scoped features; 1 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   },
   {
@@ -1572,6 +1644,93 @@
       "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "detached dry awned spikelet clusters"
+          ],
+          "cannot_verify": [
+            "original central versus lateral fertile positions on rachis"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/commons-hordeum-pusillum-aee575bc3313.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "323b8bbf011dd278c5af751f2f3e4680b1fe4263",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "small pale upright barley-like spikes in patch"
+          ],
+          "cannot_verify": [
+            "species diagnosis, triplet anatomy, winter date"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/commons-hordeum-pusillum-65adb4cf0f21.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "fc9f4c32750372624bb3b12c0f4de19b03307987",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "leaf blade and external sheath on stem"
+          ],
+          "cannot_verify": [
+            "inner true ligule"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/matt-lavin-little-barley-external-leaf-sheath-7495171452.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "e626f54f04fec61263f660c27b4e2a82dda322db",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "attached green dense spike with awned flowering units"
+          ],
+          "cannot_verify": [
+            "individual triplet and central-versus-lateral florets"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/matt-lavin-little-barley-attached-rachis-spike-7495172732.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "e5b742d3033e578e5e7fb74c8eee65a98873bb90",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0
+      ],
+      "unmet_roles": [
+        "one disassembled rachis node showing three spikelets",
+        "ligule and rooted annual crown"
+      ],
+      "summary": "4 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   }
 ]
