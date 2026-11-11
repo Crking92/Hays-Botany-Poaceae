@@ -1,0 +1,92 @@
+{
+  "review_date": "2026-11-11",
+  "phase": "Hays County Poaceae source-key differential verification",
+  "targets": 3,
+  "key_sources": {
+    "stapfochloa": "https://abm.ojs.inecol.mx/index.php/abm/article/download/1091/1273?inline=1",
+    "paspalum_langei": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20916",
+    "paspalum_pubiflorum": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20905",
+    "tridentopsis_kew": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1",
+    "tridentopsis_grin": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=478322",
+    "tridentopsis_fna": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8683&taxauthid=1&taxon=12504"
+  },
+  "records": [
+    {
+      "name": "Stapfochloa canterae",
+      "synonym": "Chloris canterae",
+      "observation_id": 137935400,
+      "reference_photo_ids": [
+        235666609,
+        235666602
+      ],
+      "proposed_life_form": "introduced perennial; ecology separate from ID",
+      "source_key": {
+        "character_1": "Number of spikelets along 1 cm of raceme",
+        "canterae": "fewer than 12 per cm",
+        "ciliata": "12–20 per cm",
+        "character_2": "sterile lemma awn length",
+        "canterae_awn_mm": "1.4–3.6",
+        "ciliata_awn_mm": "0.4–1.6",
+        "source": "Cerros-Tlatilpa and colleagues, 2015, El género Chloris en México, identification key under old genus Chloris"
+      },
+      "actual_pixel_review": {
+        "photo_235666609": "True millimeter/centimeter ruler next to several flowering branches. A roughly centered stretch seems relatively open with about 6–10 visually distinguishable spikelets over 1 cm; this is an approximate visual count and not a calibrated mechanical count. Perspective, curvature and overlapping florets produce uncertainty.",
+        "photo_235666602": "Several distinct mature florets and projecting sterile/other awns lie against millimeter tick marks. Approximate awn length seems a few millimeters; precise attachment and sterile lemma identity cannot be assigned without dissection.",
+        "macro_evidence_grade": "STRONGER_THAN_HABIT: supports Chloris canterae key over ciliata on apparent branch density; not decisive for all characters"
+      },
+      "next_decisive_action": "Count spikelets along 2–3 flat 1-cm rachis segments under a ruler and isolate the upper sterile lemma to measure its exact awn; compare verified S. ciliata at same scale.",
+      "decision": "MORPHOLOGICAL_DIFFERENTIAL_SUPPORT_UPGRADED_NOT_FINAL_SPECIES_ID",
+      "hays_wild_establishment_verified": false,
+      "merge_ready": false
+    },
+    {
+      "name": "Paspalum langei",
+      "original_hays_herbarium_catalogs": [
+        "TEX00568499",
+        "TEX00568501",
+        "TEX00485588"
+      ],
+      "source_key": {
+        "species": "Paspalum langei",
+        "lower_glume": "0.4–1.2(1.8) mm lower glume present; upper glume and lower lemma with papillose-based short pubescence; 2.1–3.3 mm spikelets",
+        "lookalike": "Paspalum pubiflorum",
+        "lookalike_lower_glume": "absent",
+        "lookalike_hairs": "glabrous or sparsely pubescent, hairs typically below 0.1 mm",
+        "lookalike_spikelets": "2.8–3.6 mm; overlapping size range"
+      },
+      "actual_source_review": "Three original Hays TEX sheets and labels actually inspected; two November 2021 natural-habitat collections include multiple plants and one explicitly records co-occurring P. pubiflorum. Full sheet scans and field photos lack microscope-level lower glume and papilla-hair demonstration.",
+      "next_decisive_action": "Isolate lower glumes and upper glume/lower lemma pubescence on TEX00568501 or a fresh verified same-specimen Hays collection; compare matched P. pubiflorum spikelet under 10–20×.",
+      "source_note": "2023 Hawaii treatment calls P. langei annual although GrassBase and FNA describe it as perennial. For local ID do NOT use annual-vs-perennial as the decisive character without resolving publication inconsistency.",
+      "decision": "STRONG_HAYS_HERBARIUM_OCCURRENCE_EVIDENCE_SPECIES_MICRO_GLU_ME_HOLD",
+      "hays_wild_establishment_verified": false,
+      "merge_ready": false
+    },
+    {
+      "name": "Tridentopsis elongata",
+      "synonyms": [
+        "Tridens muticus var. elongatus",
+        "Tridentopsis mutica var. elongata",
+        "Tridens elongatus"
+      ],
+      "taxon_concepts": {
+        "Kew_POWO_2026": "distinct accepted species Tridentopsis elongata",
+        "USDA_GRIN": "variety Tridentopsis mutica var. elongata",
+        "Flora_of_North_America": "FNA account under Tridentopsis mutica includes both varieties/concepts",
+        "local_1999_Flora": "Tridens muticus var. elongatus regional older combination"
+      },
+      "diagnostic": {
+        "elongata": "upper glumes generally around 5.5–10 mm, with 3–7 veins (variety-level key)",
+        "mutica": "upper glumes usually 4–6 mm, mostly single-veined; overlap in length",
+        "requirement": "Direct glume vein count on one isolated glume with mm scale, paired with verified current mutica."
+      },
+      "photos_checked": "Four high-resolution iNaturalist Hays photos show overlapping glumes, mature heads, and foliage, but none isolates an upper glume so nervation count is unambiguous.",
+      "id_conclusion": "RECOGNIZED_DISTINCT_TAXON_UNDER_KEW_BUT_SPECIES_BOUNDARY_SOURCE_DEPENDENT",
+      "record_false_positive_warning": "Two earlier Hays TEX specimens with Tridens muticus var. muticus are verified different-name taxa and must not be counted as elongata vouchers.",
+      "next_decisive_action": "Photo/dissection of complete second glume including base, upper half and 1-mm scale, count nerves under backlighting; cross-check flora source concept.",
+      "merge_ready": false
+    }
+  ],
+  "policy": "Regional Flora is key for Central Texas morphological characters; recent Kew taxon concepts may differ. This review identifies additional characters actually inspectable in source photos, without overwriting live 112 species.",
+  "published_images": 0,
+  "published_species": 0
+}
