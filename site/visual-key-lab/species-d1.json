@@ -122,7 +122,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-broomsedge-spikelet-pair-ccby2.jpg",
-        "label": "Broomsedge — detached awned spikelet with silky stalks",
+        "label": "BROOMSEDGE — detached awned unit with silky branches; exact homologies unresolved",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Andropogon_virginicus_spikelets10_(6966375226)_(2).jpg",
@@ -196,6 +196,92 @@
       "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4/5 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "silky flowering raceme extending out of tan spathe"
+          ],
+          "cannot_verify": [
+            "one isolated spikelet pair"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-virginicum-open-spathe-silky-raceme-ccby2.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "63aad30dd539355eae1684fef7d899e5d8aaf181",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "tiny mature dry floral unit with very long silky radiating hairs"
+          ],
+          "cannot_verify": [
+            "full hair origin and pedicelled pair status"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-virginicum-hairy-dispersal-unit-ccby2.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "6ac072ddbdc487c3e38ca328d9a77037b6675067",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "detached narrow brown spikelet-like unit with two silky sides"
+          ],
+          "cannot_verify": [
+            "fertile-pedicelled homology and callus"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-broomsedge-spikelet-pair-ccby2.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "fc0ad596f0cf3b5c5255a82146319611b8ad8cf2",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long silky raceme emerging from green-tan enclosing spathe"
+          ],
+          "cannot_verify": [
+            "ligule and individual flower parts"
+          ],
+          "pass": "PHASE4_PASS10",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-virginicum/images/harry-rose-broomsedge-spathe-emerging-raceme-ccby2.jpg",
+          "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
+          "git_blob_sha": "90a84987516a4cb01c26e1fb562e47f15db23e18",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        4
+      ],
+      "unmet_roles": [
+        "true spikelet-pair homology, winter basal crown and ligule"
+      ],
+      "summary": "4 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "seasonal_review": {
+        "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
+        "queue_action": "Check previously collected winter images before new requests."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
     }
   },
   {
