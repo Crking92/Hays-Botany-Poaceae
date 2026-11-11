@@ -1,0 +1,34 @@
+name: Hays County grasses - verify observation evidence
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/verify-hays-inat-observations.yml'
+      - 'scripts/check_hays_observations.py'
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query Hays County iNaturalist observation evidence
+        run: python3 scripts/check_hays_observations.py
+      - name: Save evidence ledger on review branch (never public main)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits/inat-2026-11-11-hays-observation-evidence.json audits/inat-2026-11-11-hays-observation-evidence.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Store Hays-only iNaturalist observation evidence"
+            git push origin HEAD:inat-coverage-audit-20261111
+          fi
+      - name: Preserve report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-plant-observation-evidence
+          path: |
+            audits/inat-2026-11-11-hays-observation-evidence.json
+            audits/inat-2026-11-11-hays-observation-evidence.md
+          if-no-files-found: error
