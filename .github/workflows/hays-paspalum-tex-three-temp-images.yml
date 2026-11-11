@@ -1,0 +1,25 @@
+name: Hays Paspalum three TEX specimen sheets - temporary credited images
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-paspalum-tex-three-temp-images.yml'
+      - 'scripts/hays_paspalum_tex_three_temp_images.py'
+permissions: {contents: read}
+jobs:
+  media:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip -q install Pillow
+      - name: Fetch licensed UT TEX specimen sheets for one-day visual analysis
+        run: python3 scripts/hays_paspalum_tex_three_temp_images.py
+      - name: Upload one-day original specimen review with source credits
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-paspalum-three-UT-TEX-specimen-review
+          path: review_paspalum_tex_3_temp/
+          retention-days: 1
+          if-no-files-found: error
