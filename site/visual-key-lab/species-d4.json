@@ -180,7 +180,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/sorghastrum-elliottii/inat-460787859.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "Thin tan flowering culms among dense dry scrub — slender Indiangrass head and awns not clearly isolated",
         "creator": "no rights reserved",
         "license": "CC0 1.0",
         "source_page": "https://www.inaturalist.org/photos/460787859",
@@ -206,7 +206,7 @@
     "source_blob_sha": "f051e9b9763ecf4f4e25586af4d3a9a76455a614",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -262,11 +262,11 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_3",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_3_OF_3",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass43 checked actual JPG i=6 from git checkout and recomputed identical SHA; role-specific judgment only, not species identity, source license or phone certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -299,21 +299,41 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "101a6e366f8078567ac1d6d124f9c22b69ca355c",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "several wiry pale tan stems with drooping ends in mixed dry vegetation",
+            "scrubby grassy site context"
+          ],
+          "cannot_verify": [
+            "individual golden spikelet, awn twist, true ligule and single connected plant cannot be traced",
+            "cannot certify November–February date from dry appearance"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/sorghastrum-elliottii/inat-460787859.jpg",
+          "git_blob_sha": "4f2616953c6e2dbe2309a47813a08a83da911f8a",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         }
       ],
-      "unreviewed_hosted_indices": [
-        6
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "inner ligule and isolated awned floret with scale"
       ],
-      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed. Pass43 PARTIAL_VISIBLE: several wiry pale tan stems with drooping ends in mixed dry vegetation; scrubby grassy site context. Remaining limitations: individual golden spikelet, awn twist, true ligule and single connected plant cannot be traced; cannot certify November–February date from dry appearance.",
       "seasonal_review": {
         "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "previous_pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "previous_scope": "2/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "previous_summary": "1 direct; 1 partial. Anatomy not visible remains unconfirmed.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original creator, license and source links untouched; exact-image original-page rights check remains separate."
     }
   },
   {
@@ -528,7 +548,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/sporobolus-vaginiflorus/inat-431806316.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "Dense radial tuft of thin green leaves on rocky bare soil — short sheathed flowering panicles not visible",
         "creator": "(c) Reid Hardin, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/431806316",
@@ -563,7 +583,7 @@
     "source_blob_sha": "67530fcb7f69257214fa56ea6533bf2374d003d7",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -606,11 +626,11 @@
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "scope": "4/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification. Pass43 checked actual JPG i=4 from git checkout and recomputed identical SHA; role-specific judgment only, not species identity, source license or phone certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -661,6 +681,23 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         },
         {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "fine dense green grass blades radiating from a tight central clump on coarse pale stony ground",
+            "field habit with long narrow spreading leaves"
+          ],
+          "cannot_verify": [
+            "axillary and terminal sheathed spikelets, annual rooted base, and tiny hair-fringe ligule unexposed",
+            "whole-head view does not confirm the species against other tufted dropseeds"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/sporobolus-vaginiflorus/inat-431806316.jpg",
+          "git_blob_sha": "131a907c6b36182bd318175f4572406fb9e84f35",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
+        },
+        {
           "i": 6,
           "verdict": "PARTIAL_VISIBLE",
           "shows": [
@@ -677,20 +714,23 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        4
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "panicle visibly hidden inside upper sheath, with opened sheath",
         "scaled rooted annual base"
       ],
-      "summary": "3 directly visible and 1 partially visible scoped parts; hidden microscopic anatomy not certified.",
+      "summary": "3 directly visible and 1 partially visible scoped parts; hidden microscopic anatomy not certified. Pass43 DIRECT_VISIBLE: fine dense green grass blades radiating from a tight central clump on coarse pale stony ground; field habit with long narrow spreading leaves. Remaining limitations: axillary and terminal sheathed spikelets, annual rooted base, and tiny hair-fringe ligule unexposed; whole-head view does not confirm the species against other tufted dropseeds.",
       "seasonal_review": {
         "observed": "Some autumn/dry-stage heads; calendar collection month or dormant winter condition not independently proven from appearance.",
         "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits.",
+      "previous_pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "previous_scope": "4/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "previous_summary": "3 directly visible and 1 partially visible scoped parts; hidden microscopic anatomy not certified.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original creator, license and source links untouched; exact-image original-page rights check remains separate."
     }
   },
   {
