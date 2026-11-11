@@ -43,6 +43,13 @@
 - [Five Kew taxonomy exception notes](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-independent-taxonomy-exceptions.md) — includes the **proposed Elymus glabriflorus = existing Elymus virginicus synonym** under Kew, and the GBIF false fuzzy match for Tridentopsis elongata. Read before adding new cards.
 - [Five taxonomy exceptions machine data](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-independent-taxonomy-exceptions.json).
 
+## Visual photo-ID QA began November 11, 2026
+
+- [Batch 1 actual pixel inspection (5 grasses, 60 photographs)](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-first-five-visual-qa-20261111.md)
+- [Batch 1 machine-readable results with original observation and photo IDs](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-first-five-visual-qa-20261111.json)
+- The contact sheets were generated temporarily from exact image-level CC0, CC BY, CC BY-SA, CC BY-NC and CC BY-NC-SA photos, with creator credits and one-day artifact retention; NO third-party image bytes are in repo. The 60 photos were actually viewed. All five showed broadly compatible morphology, but fine diagnostically necessary structures were not conclusive; **zero species fully signed off**.
+- Don't promote a genus-level or compatible-habit appearance to a verified species ID. Follow the recorded next-anatomy-photo checklist.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
