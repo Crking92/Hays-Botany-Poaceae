@@ -162,6 +162,21 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 - **Use order:** Kew POWO for accepted names/species concepts; Hagenbuch & Lemke for Hays/Hill Country vegetative traits and appendix specimen clues; the user's Flora of North Central Texas for flower/spikelet anatomy; Flora of North America for additional taxa and newer concepts. Keep review source and diagnostic certainty explicit.
 - This work is already **crosswalked against all 58 expansion candidates** in `audits/hays-58-texas-hill-country-2015-crosswalk.json`. The publication covers 160 Hill Country species. Inclusion does not itself prove Hays County collection, and a 2015 synonym is not necessarily a separate 2026 species.
 
+## Hays County 58-name expansion batch — draft cards assembled (November 11, 2026)
+
+**NEW CANONICAL STAGING HANDOFF.** User asked to finish the new grass batch. The *technical draft-card assembly is COMPLETE* in isolated branch `inat-coverage-audit-20261111`: 58 original research-grade iNaturalist Hays name labels → **57 candidate taxa** (56 species plus one recognized hybrid) + **one alias of an existing 112-species taxon**, `Elymus glabriflorus` → `Elymus virginicus`. This is **NOT a live merge or scientific species signoff**. Do not silently bulk-import into the public scored ID key.
+
+- [All 57 staging cards in machine-readable, source-linked, site-compatible format](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+- [Human-readable all-57 name, evidence and next-key-character review](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.md)
+- [Import readiness QA — zero duplicate existing names/IDs, zero invented morphological states or unlicensed image files](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-expansion-import-QA.md)
+- [Updated morphology source policy incorporating 2015 Hill Country grass key alongside regional 1999 Flora](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/site/visual-key-lab/MORPHOLOGY_SOURCE_POLICY.md)
+
+**Staging QA results:** 57 unique accepted-name IDs, 1 existing searchable alias, 50 new taxa with visually inspected source photo sets, 7 with copyright-based pixel access holds, 151 original observation links embedded, 7 taxa with regional paper Hays specimen citations, 1 taxon with three original TEX specimen sheets directly inspected; no name collisions with the 112 published species. The 2 photos of existing synonym *E. glabriflorus* are excluded from new-species photo totals; 317 distinct source photographs were inspected across all **58 original names**, including the alias.
+
+**Safety guard:** `photos=[]` and `traits.head/habit/ligule/awns=[]` on every staging draft by design. Do not interpret unknown structure as absence. Before a specific taxon goes live, verify species diagnostics, spontaneous-vs-planted context, image license and attribution, and later BONAP/NAPA nativity as a separate label. High-scrutiny examples include *Bromus brevis*, *Cortaderia selloana*, *Panicum miliaceum*, *Tridentopsis elongata*, *Bothriochloa longipaniculata* and the accepted hybrid *Lolium × boucheanum*.
+
+**End of first batch:** Name standardization, literature crosswalk, county-evidence manifest, source photo inventory/review and all 57 draft ID card objects are assembled. **Separate unreleased stage:** final verified diagnostic trait values, public photos and live keyed cards. Avoid a repetitive new general-photo sweep; close the targeted diagnostic/specimen gaps from the staged records instead.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
