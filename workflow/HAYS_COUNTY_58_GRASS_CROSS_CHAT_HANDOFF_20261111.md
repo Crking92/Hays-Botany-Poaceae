@@ -152,6 +152,16 @@ Priority follow-up: examine TEX *Paspalum langei* mature glumes and papilla hair
 
 **Lookalike safeguards:** The same 2015 Appendix B names Hays vouchers of *Paspalum pubiflorum* and *Tridens muticus* under broad historical concepts, but **do not** reassign them as *P. langei* or modern distinct *Tridentopsis elongata*. No new species signed off from this paper alone.
 
+## Shared Library source reference for ALL projects (November 11, 2026)
+
+The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Country: Vegetative Key and Descriptions_** as an ongoing common field-ID source across grass lessons, conservation crew training and other botanical projects.
+
+- **Persistent ChatGPT Library index:** `/Hays Botany ID/References/Hill_Country_Grasses_2015_REFERENCE_START_HERE.md` — contains full citation, publisher-hosted 93-page PDF URL, authority scope, image/copyright cautions, and links to the 58-name crosswalk. It is accessible to other chats via Library.
+- **Original publisher PDF:** https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf
+- **The physical PDF is NOT yet verified as saved inside Library** (direct download into model workspace blocked); don't tell user it is stored until an actual Library upload succeeds.
+- **Use order:** Kew POWO for accepted names/species concepts; Hagenbuch & Lemke for Hays/Hill Country vegetative traits and appendix specimen clues; the user's Flora of North Central Texas for flower/spikelet anatomy; Flora of North America for additional taxa and newer concepts. Keep review source and diagnostic certainty explicit.
+- This work is already **crosswalked against all 58 expansion candidates** in `audits/hays-58-texas-hill-country-2015-crosswalk.json`. The publication covers 160 Hill Country species. Inclusion does not itself prove Hays County collection, and a 2015 synonym is not necessarily a separate 2026 species.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
