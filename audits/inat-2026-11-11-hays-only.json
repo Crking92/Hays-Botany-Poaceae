@@ -306,7 +306,11 @@
       "highres_qa_result_code": "STRONG_LOCAL_SPECIMENS_AND_SPIKELET_VIEW_MICRO_HOLD",
       "highres_qa_file": "audits/hays-10-highres-anatomy-check-20261111.json",
       "highres_next_exact_anatomy": "Take 10×–20× photos of both spikelet faces from a verified Hays sample; isolate first glume and short papillose-based hairs; compare P. pubiflorum.",
-      "species_level_anatomical_signoff": false
+      "species_level_anatomical_signoff": false,
+      "morphological_species_differential_reviewed": true,
+      "species_differential_evidence_file": "audits/hays-three-species-level-differentials-20261111.json",
+      "morphological_differential_review_code": "THREE_ORIGINAL_TEX_VOUCHERS_AND_FIELD_SPIKELETS_SPECIES_MICRO_HOLD",
+      "morphological_differential_evidence_note": "Three original Hays TEX sheets/labels inspected; FNA P. langei lower glume 0.4–1.2(1.8) mm vs P. pubiflorum lower glume absent, despite overlapping spikelet lengths. Check hairs and actual lower glumes on verified specimen."
     },
     {
       "queue_id": "HAYS-007",
@@ -1466,7 +1470,11 @@
       "highres_qa_result_code": "STRONG_SPIKELET_CONTEXT_NO_GLUME_NERVATION_COUNT",
       "highres_qa_file": "audits/hays-10-highres-anatomy-check-20261111.json",
       "highres_next_exact_anatomy": "Flatten a mature second glume on contrasting background; illuminate the veins, measure to 0.5 mm, photograph blade width.",
-      "species_level_anatomical_signoff": false
+      "species_level_anatomical_signoff": false,
+      "morphological_species_differential_reviewed": true,
+      "species_differential_evidence_file": "audits/hays-three-species-level-differentials-20261111.json",
+      "morphological_differential_review_code": "KEW_DISTINCT_SPECIES_GRIN_VARIETY_FNA_BROAD_T_MUTICA_SPECIMEN_HOLD",
+      "morphological_differential_evidence_note": "Kew 2026 separates elongata; GRIN uses T. mutica var. elongata, FNA includes broad mutica. Need second glume 3–7 veins/longer vs single-veined shorter nominate; Hays photos don't resolve glume vein count."
     },
     {
       "queue_id": "HAYS-034",
@@ -2468,7 +2476,11 @@
       "highres_qa_result_code": "BEST_EXISTING_MEASUREMENT_PHOTOS_SPECIES_COMPARISON_HOLD",
       "highres_qa_file": "audits/hays-10-highres-anatomy-check-20261111.json",
       "highres_next_exact_anatomy": "Measure fertile and sterile florets on the shown loose spikelets, and compare to independently verified S. ciliata at identical scale.",
-      "species_level_anatomical_signoff": false
+      "species_level_anatomical_signoff": false,
+      "morphological_species_differential_reviewed": true,
+      "species_differential_evidence_file": "audits/hays-three-species-level-differentials-20261111.json",
+      "morphological_differential_review_code": "MORPHOLOGICAL_DIFFERENTIAL_SUPPORT_UPGRADED_NOT_FINAL_SPECIES_ID",
+      "morphological_differential_evidence_note": "2015 Mexican Chloris key gives <12 spikelets/cm and sterile lemma awn 1.4–3.6 mm versus ciliata 12–20/cm and 0.4–1.6 mm. Hays scaled photo 235666609 visually suggests ~6–10 apparent spikelets/cm (provisional); photo 235666602 includes dissected fragments with ruler; confirm by actual floret isolation and measured counts."
     }
   ],
   "observation_evidence_file": "audits/inat-2026-11-11-hays-observation-evidence.json",
@@ -2514,6 +2526,10 @@
     "highres_diagnostic_candidate_count": 10,
     "highres_photos_reinspected": 40,
     "highres_new_distinct_photos_added": 0,
-    "highres_detail_file": "audits/hays-10-highres-anatomy-check-20261111.json"
+    "highres_detail_file": "audits/hays-10-highres-anatomy-check-20261111.json",
+    "latest_species_differential_file": "audits/hays-three-species-level-differentials-20261111.json",
+    "source_methodology_correction": "audits/hays-gbif-county-query-correction-20261111.md",
+    "corrected_GBIF_voucher_recheck_status": "GITHUB_ACTION_QUEUED_NOT_VERIFIED_2026-11-11",
+    "corrected_GBIF_voucher_recheck_workflow_run_url": "https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/43097640595"
   }
 }
