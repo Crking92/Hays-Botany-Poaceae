@@ -1585,7 +1585,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/sorghum-bicolor-lavin-panicles-4055518651.jpg",
-        "label": "1 · GRAIN SORGHUM — real upright broad leaf flowering culms",
+        "label": "GRAIN SORGHUM — broad arching leaves and several upright branched flowering heads",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "",
@@ -1615,7 +1615,7 @@
       {
         "i": 8,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/sorghum-bicolor/inat-730926496.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "GRAIN SORGHUM — reddish clustered flowering head with broad leaves and drying lower foliage",
         "creator": "(c) Noland Martin, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1694,6 +1694,61 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2 of 4 current Lab gallery references checked from actual hosted image bytes. Inaccessible images excluded. Identity, original source license and dates not independently rechecked.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "multiple tall leafy culms with wide arching blades and branched upright pale yellow-green terminal panicles"
+          ],
+          "cannot_verify": [
+            "anatomical ligule, separate sessile/pedicelled spikelets or mature grains"
+          ],
+          "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/sorghum-bicolor-lavin-panicles-4055518651.jpg",
+          "git_blob_sha": "af1578e7228f7d82f0ca0567f3276c39f5370a2b",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 8,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "broad lanceolate green upper blades, reddish-purple compact drooping panicle and tan dry lower leaves"
+          ],
+          "cannot_verify": [
+            "caryopsis maturity, ligule type, taxon verified from a voucher, photograph season"
+          ],
+          "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/sorghum-bicolor/inat-730926496.jpg",
+          "git_blob_sha": "12cb2dc6e0e69e23e1d846af3da7b170876696fd",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1,
+        2
+      ],
+      "unmet_roles": [
+        "original ligule i=1 and flower i=2 hosted images return no renderable bytes",
+        "detached spikelet/awn and true ligule visualization",
+        "confirmed winter identification of residual grain-sorghum plant"
+      ],
+      "summary": "Two clear habit/inflorescence frames inspected; expected anatomy macro files return no bytes. Ripening-looking red panicle does not prove ripe grain or plant identification without additional evidence.",
+      "seasonal_review": {
+        "observed": "One picture includes naturally drying lower leaves and red panicle; no confirmed winter collection date.",
+        "queue_action": "Inspect any existing dated winter material before adding needs."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Visual evidence/caption QA only; source-backed diagnostic traits and key filters unchanged."
     }
   },
   {
@@ -1860,7 +1915,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-staminate-anthers-public-domain.jpg",
-        "label": "5 · MALE — exposed pollen anthers · UVALDE · PUBLIC DOMAIN",
+        "label": "EASTERN GAMAGRASS — pollen-bearing male florets with hanging reddish anthers",
         "creator": "Jim Conrad",
         "license": "Public domain — original photograph by Jim Conrad",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1870,7 +1925,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-pistillate-stigmas-public-domain.jpg",
-        "label": "6 · FEMALE — stigmas and immature green joints · UVALDE · PUBLIC DOMAIN",
+        "label": "EASTERN GAMAGRASS — projecting feathery brown female stigmas beside green segmented spike",
         "creator": "Jim Conrad",
         "license": "Public domain — original photograph by Jim Conrad",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1880,7 +1935,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-maturing-female-joints-public-domain.jpg",
-        "label": "7 · FRUIT — hardening bead-like female joints · UVALDE · PUBLIC DOMAIN",
+        "label": "EASTERN GAMAGRASS — tan segmented female fruiting joints; hardness not proven by photo",
         "creator": "Jim Conrad",
         "license": "Public domain — original photograph by Jim Conrad",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1890,7 +1945,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/tripsacum-dactyloides/inat-630454342.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "EASTERN GAMAGRASS — dry tan spike with repeated pointed scales; collection season unverified",
         "creator": "(c) W Rao, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1957,11 +2012,11 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+      "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_6",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_6_OF_6",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2 of 6 current Lab gallery references checked against actual GitHub-hosted bytes; metadata-only reads excluded; photo source identification, license rights and seasonal dates not revalidated.",
+      "scope": "6 of 6 current Lab gallery references checked from actual hosted image bytes. Inaccessible images excluded. Identity, original source license and dates not independently rechecked.",
       "photo_roles": [
         {
           "i": 0,
@@ -1992,25 +2047,81 @@
           "hosted_file": "content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-complete-flowering-spikes-public-domain.jpg",
           "git_blob_sha": "7744ce9675c9f4301d38e039af2eb9b081ffc244",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "opened pale floral bracts and slender reddish-orange pollen-bearing anthers projecting from several staminate florets"
+          ],
+          "cannot_verify": [
+            "pollen release timing, precise glume/lemma identity and floret measurements"
+          ],
+          "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-staminate-anthers-public-domain.jpg",
+          "git_blob_sha": "0df7badf6e5a73da04559202a58c063cad452d38",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several long branched fuzzy rust-brown stigma branches projecting from green bead-like pistillate flowering joints"
+          ],
+          "cannot_verify": [
+            "isolated ovary and precise stigma branch count under a dissecting scope"
+          ],
+          "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-pistillate-stigmas-public-domain.jpg",
+          "git_blob_sha": "01cc446522bbf3c7489463f6e136ffac497e61f7",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "two tan/golden spike segments consisting of repeated swollen bead-like units transitioning from green below to straw-colored above"
+          ],
+          "cannot_verify": [
+            "physical hardness, internal caryopsis development or fully ripe date"
+          ],
+          "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-maturing-female-joints-public-domain.jpg",
+          "git_blob_sha": "90933080d2fe84ee41ae7ee560eb046508cce277",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "single angled dry tan elongated spike-like reproductive structure with overlapping pointed outer bracts along axis"
+          ],
+          "cannot_verify": [
+            "verified winter month, mature fruit interior or roots"
+          ],
+          "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/tripsacum-dactyloides/inat-630454342.jpg",
+          "git_blob_sha": "5f6e60994d6cf474772070e748b8166728a5865b",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        2,
-        3,
-        4,
-        6
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
-        "clear male and female structure separations in remaining frames",
-        "verified winter or dormant whole clump"
+        "exposed ligule/collar on authenticated gamagrass foliage",
+        "same-plant root crown with confirmed rhizomes",
+        "dated winter standing habit"
       ],
-      "summary": "Broad waterside clump and three spikes visible, but photo cannot demonstrate underground roots, rhizomes, or detailed sex anatomy.",
+      "summary": "All six current Lab frames now visually reviewed. Distinct staminate anthers, female hairy stigmas and green-to-tan segmented female joints visible. The last frame shows a dry reproductive axis but cannot establish its collection month.",
       "seasonal_review": {
-        "observed": "Green leafy clump and reproductive spikes; no confirmed November–February field date.",
-        "queue_action": "Inspect existing dated archive and eligible pictures before adding any winter/dormant photo needs."
+        "observed": "Both green floral structures and a dry tan spike visible; source observation months were not checked.",
+        "queue_action": "Inspect any existing dated winter material before adding needs."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image-only evidence/caption checks. No new taxon or key-character states."
+      "morphology_reference_note": "Visual evidence/caption QA only; source-backed diagnostic traits and key filters unchanged."
     }
   },
   {
