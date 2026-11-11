@@ -303,9 +303,47 @@
         "reference": "Perennial rhizomatous reed, typically very tall.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "hair_placement": {
+        "source": "Invasive Plant Science and Management 2023, comparative Arundo donax biology",
+        "source_url": "https://www.cambridge.org/core/journals/invasive-plant-science-and-management/article/biology-of-invasive-plants-4-arundo-donax-l/76A7D0DA2A1B1F6E6A4C8EA814B6A6F4",
+        "reference": "Arundo lemma densely hairy on lower portion; rachilla between florets nearly glabrous, contrasting Phragmites lemmas mostly glabrous and rachilla densely hairy.",
+        "status": "PUBLISHED_COMPARATIVE_ANATOMY_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Compare a real hollow cane, wide blade base and flowering head",
+        "check": "Giant reed has thick cane-like culms often 3–10 m, broad leaves with a distinct tan/brown wedge or auricle-like lobe at their sheath junction, and upright plume panicles commonly 30–60 cm. These clues alone are NOT enough in a young nonflowering stand.",
+        "compare": "Common reed (*Phragmites*) often has thinner stems, blades narrowing more gradually at the base, and an often drooping head; both vary.",
+        "certainty": "FNA + current peer-reviewed field comparison; same-plant shoot and collar photo pending",
+        "source": "Flora of North America — Arundo donax",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=139&taxauthid=1&tid=237697"
+      },
+      {
+        "look": "Locate HAIRS on the LEMMA instead of the rachilla joint",
+        "check": "In mature Arundo spikelets (~10–15 mm, usually 2–5 florets), the rachilla segments BETWEEN florets are basically GLABROUS, whereas each LEMMA bears long ~4–9 mm silky hairs low on its back and two little teeth around a short terminal awn.",
+        "compare": "Phragmites reverses the major hair location: long silky RACHILLA INTERNODE hairs, while mature lemmas are mostly glabrous and long-tapered.",
+        "certainty": "Peer-reviewed 2023 comparison and UT Williamson County specimen; exact same-floret dissection pending",
+        "source": "Biology of Invasive Plants — Arundo versus Phragmites",
+        "url": "https://www.cambridge.org/core/journals/invasive-plant-science-and-management/article/biology-of-invasive-plants-4-arundo-donax-l/76A7D0DA2A1B1F6E6A4C8EA814B6A6F4"
+      },
+      {
+        "look": "Check ciliate membrane and true underground solid rhizome",
+        "check": "Arundo has a short thin membranous ligule (roughly 0.4–1.5 mm depending treatment), glumes usually long enough to nearly enclose florets, and heavy solid-scaled rhizomes below the canes. A rhizome cross-section, if ever legally sampled, differs from Phragmites' hollow-centered rhizome.",
+        "compare": "Phragmites also rhizomatous and ciliate-ligulate; don't recommend digging or cutting for ID in a managed protected riparian stand.",
+        "certainty": "Published source morphology; comparisons can use authorized archive vouchers, no new wild disturbance required",
+        "source": "Arundo field comparison — Invasive Plant Science and Management",
+        "url": "https://www.cambridge.org/core/journals/invasive-plant-science-and-management/article/biology-of-invasive-plants-4-arundo-donax-l/76A7D0DA2A1B1F6E6A4C8EA814B6A6F4"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS13_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
+    }
   },
   {
     "id": "avena-fatua",
