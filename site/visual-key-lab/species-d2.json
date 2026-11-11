@@ -711,6 +711,46 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_1_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "1/3 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "small leafy grassy clump in sandy ground with slender flowering heads"
+          ],
+          "cannot_verify": [
+            "exposed roots, annual status, floret count, true ligule"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Festuca/festuca-octoflora/images/sixweeks-matt-lavin-zion-6243564299-ccby-sa2.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "c034840f2eb35f56bc8486d2e83e55008f417a45",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1,
+        2
+      ],
+      "unmet_roles": [
+        "dissected multi-floret spikelet",
+        "minute inner ligule and root base"
+      ],
+      "summary": "1 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   },
   {
@@ -810,6 +850,91 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_4_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4/4 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "green basal tuft and culms entering soil together"
+          ],
+          "cannot_verify": [
+            "roots, age, rhizomes"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Festuca/festuca-versuta/images/festuca-versuta-inat-654445773-ccby.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "66294522d626326eeba3c28ab894f665822ff4fa",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "thin branched inflorescence with small flowering units and pale anthers against hand"
+          ],
+          "cannot_verify": [
+            "florets per spikelet and glume veins"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Festuca/festuca-versuta/images/festuca-versuta-inat-654445755-ccby.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "c380aef96c63b56198d95c2387f24c6beebd1d2d",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "ribbed blade with sheath junction near flowering stem"
+          ],
+          "cannot_verify": [
+            "true inside ligule and exact floret parts"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Festuca/festuca-versuta/images/festuca-versuta-inat-644650733-ccby.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "017b7958950e863b486d82d3ec768e73f8ce68b7",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "attached spikelet with multiple overlapping green flowering scales"
+          ],
+          "cannot_verify": [
+            "isolated floret count and lemma lengths"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS7",
+          "hosted_file": "content/taxa/Poaceae/Festuca/festuca-versuta/images/festuca-versuta-inat-367035946-ccby.jpg",
+          "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
+          "git_blob_sha": "1e2953a4590016615ee6c9a0186bd6a2d81350f9",
+          "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "opened ligule and measured isolated spikelet",
+        "dormant rooted overview"
+      ],
+      "summary": "4 directly show scoped features; 0 partially show assigned features. All unresolved diagnostic anatomy remains open.",
+      "seasonal_review": {
+        "observed": "Green and dry flowering photos and seasonal-looking field material; no calendar winter date inferred by appearance.",
+        "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
     }
   },
   {
