@@ -207,6 +207,85 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS1_ACTUAL_IMAGE_BYTE_VISUAL_REVIEW",
+      "review_date": "2026-11-10",
+      "status": "FIRST_VISUAL_PASS_COMPLETED_BUT_ANATOMY_GAPS",
+      "rights_status": "ATTRIBUTION_METADATA_RECORDED_NOT_EXTERNAL_LICENSE_REVALIDATED",
+      "scope": "Each existing hosted image file was opened and visually compared to source-linked anatomy checks. Source's taxon determination, license and exact rights provenance were not independently reverified. Whole-plant photos do not prove microanatomy.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL",
+          "shows": [
+            "radiating KR-like flowering racemes",
+            "short central axis and general flowering-head form"
+          ],
+          "cannot_verify": [
+            "full number and length of all rays owing to framing/soft focus",
+            "sessile/pedicelled spikelet anatomy",
+            "exact var. songarica diagnostic"
+          ]
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL",
+          "shows": [
+            "close sheath/collar area",
+            "scattered hairs near sheath edges"
+          ],
+          "cannot_verify": [
+            "papilla-based hair bases at adequate scale",
+            "true inner ligule membrane",
+            "node hairs versus sheath-throat hairs unambiguously"
+          ]
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "separated awned reproductive units beside 3-mm scale",
+            "long twisted/bent fine awns"
+          ],
+          "cannot_verify": [
+            "which units are sessile versus pedicelled on original intact rachis",
+            "paired spikelet attachment"
+          ]
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL",
+          "shows": [
+            "hairy blade and collar region",
+            "hairs on and close to lower blade"
+          ],
+          "cannot_verify": [
+            "true ligule membrane under hairs",
+            "measurement of papilla-based hairs",
+            "same-plant link to flowering head"
+          ]
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL",
+          "shows": [
+            "blade-sheath junction with hairs and 2-mm scale"
+          ],
+          "cannot_verify": [
+            "membranous true ligule uncovered",
+            "distinction between inner ligule and external collar tuft",
+            "paired sessile/pedicelled spikelet"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "opened inner collar showing true ligule membrane and cilia with scale",
+        "papilla-based lower-blade hair macro with obvious hair-base bumps",
+        "attached sessile fertile spikelet and pedicelled sterile spikelet side by side",
+        "whole inflorescence with complete central axis and all radiating branches in focus"
+      ],
+      "summary": "Five image files VISUALLY opened; excellent scaled awn evidence; whole panicle and collar pictures are partial for exact diagnostic positions. Do not interpret 2-mm white collar tuft as a verified membranous ligule."
     }
   },
   {
@@ -450,6 +529,48 @@
       "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS1_ACTUAL_IMAGE_BYTE_VISUAL_REVIEW",
+      "review_date": "2026-11-10",
+      "status": "FIRST_VISUAL_PASS_COMPLETED_BUT_ANATOMY_GAPS",
+      "rights_status": "ATTRIBUTION_METADATA_RECORDED_NOT_EXTERNAL_LICENSE_REVALIDATED",
+      "scope": "Each existing hosted image file was opened and visually compared to source-linked anatomy checks. Source's taxon determination, license and exact rights provenance were not independently reverified. Whole-plant photos do not prove microanatomy.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "orange anthers and feathery white stigmas in flowering spikelets",
+            "pendent one-sided branch detail"
+          ],
+          "cannot_verify": [
+            "true ligule",
+            "complete flowering axis count",
+            "full branch detachment scar"
+          ]
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "one-sided succession of hanging short branches down flowering axis",
+            "maturing inflorescence stage"
+          ],
+          "cannot_verify": [
+            "ligule membrane versus hairs",
+            "exact point of branch abscission",
+            "count of florets per detached branch"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "opened blade-sheath inner ligule with scale to resolve ciliate membrane",
+        "mature lateral branch attached at base plus post-abscission scar",
+        "one isolated short raceme with individual spikelets labeled",
+        "linked basal/rooted plant if needed for vegetative comparison"
+      ],
+      "summary": "Two image files VISUALLY opened; flowering structures and overall one-sided branch arrangement directly visible. Ligule, branch-abscission scar, and individual spikelet anatomy are not shown."
     }
   },
   {
@@ -496,7 +617,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bouteloua/bouteloua-dactyloides/images/jim-conrad-uvalde-hairy-ligule.jpg",
-        "label": "BUFFALOGRASS — real leaf collar hair fringe",
+        "label": "BUFFALOGRASS — collar hairs visible; membranous ligule base not resolved",
         "creator": "Jim Conrad",
         "license": "Public domain (author-original explicit release)",
         "source_page": "https://www.backyardnature.net/n/h/bufgrass.htm",
@@ -575,6 +696,83 @@
       "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS1_ACTUAL_IMAGE_BYTE_VISUAL_REVIEW",
+      "review_date": "2026-11-10",
+      "status": "FIRST_VISUAL_PASS_COMPLETED_BUT_ANATOMY_GAPS",
+      "rights_status": "ATTRIBUTION_METADATA_RECORDED_NOT_EXTERNAL_LICENSE_REVALIDATED",
+      "scope": "Each existing hosted image file was opened and visually compared to source-linked anatomy checks. Source's taxon determination, license and exact rights provenance were not independently reverified. Whole-plant photos do not prove microanatomy.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "male flowering culm with grass base",
+            "small terminal male head"
+          ],
+          "cannot_verify": [
+            "female seed cluster",
+            "stolon with connected rooted nodes",
+            "sex of all nearby plants"
+          ]
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "two male comb-like flowering branches",
+            "exposed orange stamens"
+          ],
+          "cannot_verify": [
+            "female sex structures",
+            "one-floret counts inside male spikelets"
+          ]
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL",
+          "shows": [
+            "inner blade-sheath junction with projecting hairs"
+          ],
+          "cannot_verify": [
+            "tiny membranous ligule base",
+            "ligule length with scale"
+          ]
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL",
+          "shows": [
+            "low densely mat-forming dry foliage",
+            "dry-season growth stage"
+          ],
+          "cannot_verify": [
+            "connected aboveground stolon and rooting node",
+            "sex of the plant"
+          ]
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL",
+          "shows": [
+            "multiple slender raised flowering culms and general male-like head shapes",
+            "low grass vegetation"
+          ],
+          "cannot_verify": [
+            "specific comb spikelet insertion or sex without close crop",
+            "female seed cluster",
+            "attached stolons"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "female nonspiny hardened seed cluster on authenticated female plant",
+        "opened female branch with 2–5 spikelets and mm scale",
+        "connected rooted stolon",
+        "membranous base beneath ciliate collar hairs"
+      ],
+      "summary": "Five image files VISUALLY opened; strong male head and floral-stage images. No identified female seed-cluster image; hairs in collar macro visible but true membrane tissue not resolved."
     }
   },
   {
