@@ -2499,7 +2499,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/commons-zizaniopsis-miliacea.jpg",
-        "label": "1 · Open flowering panicle — actual Florida source photo",
+        "label": "Florida — entire open branched panicle, but male/female floral organs unresolved",
         "creator": "Alex Abair",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizaniopsis_miliacea_264449068.jpg",
@@ -2508,7 +2508,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-habit-264449018.jpg",
-        "label": "2 · Wild wetland growth, broad arching blades",
+        "label": "Florida marsh — broad arching cutgrass-like foliage; buried rhizomes not visible",
         "creator": "Alex Abair",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizaniopsis_miliacea_264449018.jpg",
@@ -2517,7 +2517,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-sheath-264449037.jpg",
-        "label": "3 · Stem node and real leaf–sheath junction",
+        "label": "External green culm node and leaf–sheath junction; true inner ligule hidden",
         "creator": "Alex Abair",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizaniopsis_miliacea_264449037.jpg",
@@ -2535,7 +2535,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-review-264449079.jpg",
-        "label": "REAL REPRODUCTIVE MACRO · spikelet clusters and pale feathery floral parts",
+        "label": "Greenish narrow floral units with many pale feathery projections; sexes unconfirmed",
         "creator": "Alex Abair",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizaniopsis_miliacea_264449079.jpg",
@@ -2561,7 +2561,7 @@
     "source_blob_sha": "f34815a52db26f7e3cb45b154dd999baf5a02a78",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "PHASE4_PARTIAL_4_OF_5; TRUE_LIGULE_FEMALE_FLORET_MIXED_SEX_BRANCH_PENDING",
     "character_evidence": {
       "head": {
         "source": "Diggs et al. Illustrated Flora of North Central Texas, uploaded p.262",
@@ -2620,6 +2620,107 @@
       "stage": "PHASE3_PASS13_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS38_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "rights_status": "EXISTING_CREATOR_LICENSE_SOURCE_FIELDS_PRESERVED; EXACT_IMAGE_RIGHTS_NOT_REVALIDATED",
+      "scope": "Four of five existing GitHub-hosted Lab image references were rendered from image bytes and visually examined. The fifth returned only GitHub blob metadata. No independent exact-image licensing, botanical determination, Hays specimen or Pages/mobile acceptance.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long upright open branching panicle with narrow greenish reproductive units along numerous branches, held before a wetland boardwalk",
+            "some nearby broad flat grass blades without confirmed attached connection to held panicle"
+          ],
+          "cannot_verify": [
+            "male/female position or actual anthers versus stigmas from this whole-head image",
+            "whole rooted crown, blade-edge teeth, long ligule, actual dimension or Hays County origin"
+          ],
+          "pass": "PHASE4_PASS38",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/commons-zizaniopsis-miliacea.jpg",
+          "git_blob_sha": "afcea5640d84840ad5058daf90cf627106afceda",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "wetland/marsh landscape containing coarse tall green grass with broad arching leaves and straw-colored older blades",
+            "clumped emergent vegetation in mixed cover"
+          ],
+          "cannot_verify": [
+            "single-species continuity from all visible basal leaves to a flowering head",
+            "buried horizontal rhizome, root system, collar anatomy, particular species voucher"
+          ],
+          "pass": "PHASE4_PASS38",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-habit-264449018.jpg",
+          "git_blob_sha": "4cc53b41c778a5ca8fec38b29329e642826ff28c",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "prominent swollen green culm node above a large leaf-sheath attachment",
+            "exterior blade and sheath margins, glossy cane-like culm"
+          ],
+          "cannot_verify": [
+            "true long inner papery membranous ligule or its 6–20 mm dimension",
+            "serrulate blade-margin teeth at 10–20x, underground rhizome"
+          ],
+          "pass": "PHASE4_PASS38",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-sheath-264449037.jpg",
+          "git_blob_sha": "b5576de377814707888aeff97087ccad2cf9ae30",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "clusters of narrow pointed green-to-rose floral units alongside a green branch",
+            "many pale feathery exserted filamentous structures adjacent to individual units"
+          ],
+          "cannot_verify": [
+            "which visible structures belong to male versus female units, and stigma identity without pairing to a male-anther control",
+            "individual floret dissection, 2–3 mm female lemma awn, sex order on a continuously traced same branch"
+          ],
+          "pass": "PHASE4_PASS38",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-review-264449079.jpg",
+          "git_blob_sha": "2466e5d382398c560b8fc7568f0bc6913a4bfa07",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        3
+      ],
+      "image_access_holds": [
+        {
+          "i": 3,
+          "reason": "Whole-plant scale photo returned only GitHub metadata; defer to existing image-access workflow and exclude from photo inspection count.",
+          "git_blob_sha": "66937606d3bdc53132042b8093ce49cfd2b56eae"
+        }
+      ],
+      "unmet_roles": [
+        "measured exposed full inner ligule 6–20 mm at opened blade–sheath junction",
+        "same-branch male/female spikelets with individually confirmed anthers/stigmas and scale",
+        "measured mature female floret, lemma and short awn",
+        "separate true blade edge serrulation at hand-lens scale",
+        "connected rhizome/crown verified in same source plant"
+      ],
+      "summary": "2 DIRECT_VISIBLE / 2 PARTIAL_VISIBLE photographs for scoped visible external structure. Do not label unverified feathery reproductive structures as female stigmas; one separate full plant reference remains access held.",
+      "seasonal_review": {
+        "observed": "Mixed green and pale/straw leaves and flowering branches; no collection-date or November–February dormancy established by these pictures.",
+        "queue_action": "Use existing master Photo Needs Queue only; don't create a new spreadsheet or redownload general images."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Illustrated Flora of North Central Texas and existing GrassBase checks remain unchanged. No county nativity, trait-filter or branch-sex position change in this visual-only pass."
     }
   }
 ]
