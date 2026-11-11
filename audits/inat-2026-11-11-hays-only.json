@@ -1100,9 +1100,9 @@
       "regional_observations": 12,
       "regional_counties": 6,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1117,7 +1117,17 @@
         "https://www.inaturalist.org/observations/373694422",
         "https://www.inaturalist.org/observations/223212033",
         "https://www.inaturalist.org/observations/164689332"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 10,
+      "photo_visual_qa_status": "STRONG_GROUP_MORPHOLOGY_NOT_FINAL",
+      "photo_visual_qa_observation_ids": [
+        223212033,
+        373694422
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-027",
@@ -1128,9 +1138,9 @@
       "regional_observations": 14,
       "regional_counties": 7,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1147,7 +1157,20 @@
         "https://www.inaturalist.org/observations/82948317",
         "https://www.inaturalist.org/observations/82945689",
         "https://www.inaturalist.org/observations/21997658"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 3,
+      "photo_visual_qa_status": "CEREAL_HABIT_SPECIES_AND_CONTEXT_HOLD",
+      "photo_visual_qa_observation_ids": [
+        21997658,
+        82945689,
+        82948317
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "CROP_OR_TRANSIENT_ESCAPE"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-028",
@@ -1158,9 +1181,9 @@
       "regional_observations": 33,
       "regional_counties": 6,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1175,7 +1198,19 @@
         "https://www.inaturalist.org/observations/311264599",
         "https://www.inaturalist.org/observations/142332225",
         "https://www.inaturalist.org/observations/87437868"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 2,
+      "photo_visual_qa_status": "SYNONYM_OF_EXISTING_ELYMUS_VIRGINICUS_NO_NEW_CARD",
+      "photo_visual_qa_observation_ids": [
+        87437868,
+        311264599
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "EXISTING_SPECIES_SYNONYM"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-029",
@@ -1186,9 +1221,9 @@
       "regional_observations": 37,
       "regional_counties": 3,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1205,7 +1240,20 @@
         "https://www.inaturalist.org/observations/254054788",
         "https://www.inaturalist.org/observations/254055102",
         "https://www.inaturalist.org/observations/142221594"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 2,
+      "photo_visual_qa_status": "VERY_WEAK_SPECIES_PHOTO_SUPPORT",
+      "photo_visual_qa_observation_ids": [
+        142221594,
+        254055102
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "UNCERTAIN_CULTIVATION",
+        "NO_DIAGNOSTIC_CLOSEUP"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-030",
@@ -1216,9 +1264,9 @@
       "regional_observations": 10,
       "regional_counties": 3,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1235,7 +1283,19 @@
         "https://www.inaturalist.org/observations/65015271",
         "https://www.inaturalist.org/observations/36441935",
         "https://www.inaturalist.org/observations/17126784"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 1,
+      "photo_visual_qa_status": "SINGLE_IMAGE_LIKELY_ORNAMENTAL_HOLD",
+      "photo_visual_qa_observation_ids": [
+        17126784
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "POSSIBLY_ORNAMENTAL"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-031",
@@ -1246,9 +1306,9 @@
       "regional_observations": 16,
       "regional_counties": 6,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1263,7 +1323,17 @@
         "https://www.inaturalist.org/observations/156821533",
         "https://www.inaturalist.org/observations/76750381",
         "https://www.inaturalist.org/observations/44142099"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 3,
+      "photo_visual_qa_status": "WETLAND_POLYPOGON_LIKE_SPECIES_HOLD",
+      "photo_visual_qa_observation_ids": [
+        76750381,
+        156821533
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-032",
@@ -1274,9 +1344,9 @@
       "regional_observations": 23,
       "regional_counties": 9,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1291,7 +1361,17 @@
         "https://www.inaturalist.org/observations/359410608",
         "https://www.inaturalist.org/observations/349892863",
         "https://www.inaturalist.org/observations/157853430"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 6,
+      "photo_visual_qa_status": "SPHENOPHOLIS_INTERRUPTED_PANICLE_SUPPORT_HOLD",
+      "photo_visual_qa_observation_ids": [
+        157853430,
+        349892863
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-033",
@@ -1302,9 +1382,9 @@
       "regional_observations": 8,
       "regional_counties": 4,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1321,7 +1401,18 @@
         "https://www.inaturalist.org/observations/377001623",
         "https://www.inaturalist.org/observations/367070671",
         "https://www.inaturalist.org/observations/366639842"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 10,
+      "photo_visual_qa_status": "STRONG_TAXON_GROUP_PHOTO_SUPPORT_SPECIES_HOLD",
+      "photo_visual_qa_observation_ids": [
+        366639842,
+        367070671,
+        377001623
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-034",
@@ -1332,9 +1423,9 @@
       "regional_observations": 21,
       "regional_counties": 5,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1350,7 +1441,17 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/209232730",
         "https://www.inaturalist.org/observations/3092228"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 2,
+      "photo_visual_qa_status": "BROMUS_CHEATGRASS_LIKE_HOLD",
+      "photo_visual_qa_observation_ids": [
+        3092228,
+        209232730
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-035",
@@ -1361,9 +1462,9 @@
       "regional_observations": 33,
       "regional_counties": 5,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1377,7 +1478,17 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/388784436",
         "https://www.inaturalist.org/observations/379049304"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 2,
+      "photo_visual_qa_status": "DACTYLOCTENIUM_HEAD_COMPATIBLE_HOLD",
+      "photo_visual_qa_observation_ids": [
+        379049304,
+        388784436
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-036",
@@ -1388,9 +1499,9 @@
       "regional_observations": 7,
       "regional_counties": 4,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1404,7 +1515,19 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/206239171",
         "https://www.inaturalist.org/observations/203380293"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 1,
+      "photo_visual_qa_status": "NO_DIAGNOSTIC_PHOTO_SPECIES_UNCONFIRMED",
+      "photo_visual_qa_observation_ids": [
+        206239171
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "NO_DIAGNOSTIC_FLOWERS"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-037",
@@ -1415,9 +1538,9 @@
       "regional_observations": 41,
       "regional_counties": 8,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1431,7 +1554,19 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/82930092",
         "https://www.inaturalist.org/observations/62485653"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 1,
+      "photo_visual_qa_status": "VERY_SPARSE_ERAGROSTIS_ID_HOLD",
+      "photo_visual_qa_observation_ids": [
+        82930092
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "MISSING_VISCID_AXIS"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-038",
@@ -1442,9 +1577,9 @@
       "regional_observations": 4,
       "regional_counties": 2,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1458,7 +1593,18 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/368372291",
         "https://www.inaturalist.org/observations/32237529"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 2,
+      "photo_visual_qa_status": "VERY_SPARSE_LOVEGRASS_ID_HOLD",
+      "photo_visual_qa_observation_ids": [
+        32237529
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "SPARSE_PHOTO_EVIDENCE"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-039",
@@ -1469,9 +1615,9 @@
       "regional_observations": 73,
       "regional_counties": 8,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1485,7 +1631,17 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/354336431",
         "https://www.inaturalist.org/observations/113160838"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 3,
+      "photo_visual_qa_status": "HORDEUM_BARLEY_GROUP_COMPATIBLE_HOLD",
+      "photo_visual_qa_observation_ids": [
+        113160838,
+        354336431
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-040",
@@ -1496,9 +1652,9 @@
       "regional_observations": 12,
       "regional_counties": 7,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1514,7 +1670,17 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/62114751",
         "https://www.inaturalist.org/observations/34747879"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 5,
+      "photo_visual_qa_status": "MELINIS_REPENS_STRONG_PLUME_SUPPORT_ECOLOGY_HOLD",
+      "photo_visual_qa_observation_ids": [
+        34747879,
+        62114751
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-041",
@@ -1525,9 +1691,9 @@
       "regional_observations": 11,
       "regional_counties": 4,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1541,7 +1707,19 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/118195974",
         "https://www.inaturalist.org/observations/111091761"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 4,
+      "photo_visual_qa_status": "NASS_ELLA_FINE_PLUME_ORNAMENTAL_HOLD",
+      "photo_visual_qa_observation_ids": [
+        111091761,
+        118195974
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [
+        "POSSIBLY_ORNAMENTAL"
+      ],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-042",
@@ -1552,9 +1730,9 @@
       "regional_observations": 14,
       "regional_counties": 4,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1568,7 +1746,17 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/141035831",
         "https://www.inaturalist.org/observations/23580302"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 6,
+      "photo_visual_qa_status": "STRONG_STAPFOCHLOA_HEAD_SUPPORT_SPECIES_HOLD",
+      "photo_visual_qa_observation_ids": [
+        23580302,
+        141035831
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-043",
@@ -1579,9 +1767,9 @@
       "regional_observations": 21,
       "regional_counties": 3,
       "review_lane": "PRIORITY_2_1_TO_4",
-      "review_status": "RECORDS_DOCUMENTED_IDENTIFICATION_REVIEW_PENDING",
+      "review_status": "ACTUAL_PHOTO_QA_COMPLETED_DIAGNOSTIC_CHARACTERS_PENDING",
       "accepted_name_status": "UNVERIFIED",
-      "identification_evidence_status": "INAT_RESEARCH_GRADE_RECORDS_DOCUMENTED_BOTANICAL_QA_PENDING",
+      "identification_evidence_status": "ACTUAL_PHOTOS_EXAMINED_ONLY_SPECIES_ID_STILL_NOT_VERIFIED",
       "wild_establishment_status": "UNVERIFIED",
       "flora_reference_status": "PENDING",
       "native_status": "DEFERRED",
@@ -1595,7 +1783,17 @@
       "hays_record_evidence_links": [
         "https://www.inaturalist.org/observations/232038649",
         "https://www.inaturalist.org/observations/135964547"
-      ]
+      ],
+      "photo_visual_qa_actual_pixels_inspected": true,
+      "photo_visual_qa_images_examined": 7,
+      "photo_visual_qa_status": "STRONG_TRIDENS_HEAD_SUPPORT_SPECIES_HOLD",
+      "photo_visual_qa_observation_ids": [
+        135964547,
+        232038649
+      ],
+      "photo_visual_qa_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "photo_visual_review_flags": [],
+      "visual_diagnostic_anatomy_complete": false
     },
     {
       "queue_id": "HAYS-044",
@@ -2009,17 +2207,18 @@
   "photo_visual_qa_progress": {
     "as_of": "2026-11-11",
     "original_candidate_names": 58,
-    "photo_visual_reviewed": 25,
-    "photo_visual_unreviewed": 33,
-    "photos_actually_inspected": 219,
+    "photo_visual_reviewed": 43,
+    "photo_visual_unreviewed": 15,
+    "photos_actually_inspected": 289,
     "final_species_id_signoffs": 0,
     "live_species_merged": 0,
     "review_refs": [
       "audits/hays-58-first-five-visual-qa-20261111.json",
       "audits/hays-58-next-eight-visual-qa-20261111.json",
-      "audits/hays-58-pass3-visual-qa-20261111.json"
+      "audits/hays-58-pass3-visual-qa-20261111.json",
+      "audits/hays-58-pass4-visual-qa-20261111.json"
     ],
     "third_party_photos_published": 0,
-    "latest_review": "Pass 3, 12 grasses, 79 credited photos. Potential species misidentifications in Cortaderia selloana and Panicum miliaceum. Lawn/crop occurrence questions remain separate from visual ID."
+    "latest_review": "Pass 4: 18 further low-observation Hays records, 70 actual source images. Elymus glabriflorus must stay alias-only under existing Elymus virginicus. Stronger photo sets: Aegilops cylindrica, Tridentopsis elongata, Stapfochloa ciliata, Tridens congestus."
   }
 }
