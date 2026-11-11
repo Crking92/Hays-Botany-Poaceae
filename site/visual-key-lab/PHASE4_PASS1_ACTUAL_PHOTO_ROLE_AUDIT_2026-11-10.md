@@ -24,6 +24,16 @@
 
 **Still-needed anatomy:** Source-identified FEMALE nonspiny hardened seed cluster and opened female branch with visible spikelet arrangement, a genuinely connected rooted stolon, and a clear mm-scaled membrane-under-cilia image. **Do not replace the female cluster with a photo of spiny sandbur**.
 
+### Botanical-source reconciliation — buffalograss stolons, rhizomes and ligule (2026-11-10)
+
+A comparison with the Lady Bird Johnson Wildflower Center account raised two source nuances independent of the **five visual photo-role judgments above**. The images have **not been re-certified** by this additional research.
+
+- **Spreading stems:** Texas A&M, Kew GrassBase, NRCS and most grass guides emphasize numerous aboveground **stolons** rooting at nodes. [USDA Forest Service FEIS](https://research.fs.usda.gov/feis/species-reviews/boudac) explicitly says buffalograss **occasionally also produces rhizomes**; the Wildflower Center says it spreads by rhizomes, whereas [NC State TurfFiles](https://www.turffiles.ncsu.edu/grasses/buffalograss/) reports rhizomes absent. Thus the typical and high-confidence field growth structure is the **stolon**, but do **not** use a blanket claim that underground rhizomes never occur. In the broad question key, `mat` and `rhizome` now both retain buffalograss for further comparisons; rhizome is a source-reported exception, not proof of species ID.
+- **Ligule:** The user-supplied *Illustrated Flora of North Central Texas* describes a **~0.5 mm ciliate membrane** under historical *Buchloe*; [Kew GrassBase](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information) and NC State describe a tiny **fringe of hairs**. The currently audited Jim Conrad photo shows projecting collar hairs, **not a resolved membrane base**. Both `hairs` and `membrane` visual choices are accepted pending a sharper same-voucher collar dissection; do not assert two different ligule organs.
+- **Names:** The Wildflower Center screenshot lists *Buchloe dactyloides*, *Bulbilis dactyloides* and *Sesleria dactyloides* as synonyms; *Bouteloua dactyloides* remains the currently accepted name, not an extra species.
+- **Range:** USDA L48 (N) or Texas-level native statements do **not** establish Hays County nativity. The project continues to use BONAP NAPA separately, and Wildflower Center lawn cultivars should not be equated with documented wild local provenance.
+- Source research and key text corrections were saved in existing `species-a.json` (no photo bytes changed). A clear connected stolon remains a **missing photo role**, and any true underground rhizome should be assessed on an authenticated local specimen rather than inferred from the source text.
+
 ## Sideoats grama — *Bouteloua curtipendula* (2 actual images)
 
 | Image index | Visible role | Evidence | Not demonstrated |
