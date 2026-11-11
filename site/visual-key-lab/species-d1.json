@@ -282,6 +282,44 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS6_FOURTEEN_HOSTED_PHOTOS",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_1_OF_1",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "All 1 current Lab gallery photographs visually inspected from hosted GitHub bytes; no source specimen, licensing, measured dissection, or full archive certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dense elongated multifloret spikelets with prominent curved awns"
+          ],
+          "cannot_verify": [
+            "glume vein count",
+            "lemma lengths",
+            "annual base and ligule"
+          ],
+          "pass": "PHASE4_PASS6",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-lanceolatus/images/yves-bas-bromus-lanceolatus-dry.jpg",
+          "hosted_commit": "d6e1b652ad43aedc1b5fc858b9825f50f5055a4a",
+          "git_blob_sha": "a87d992c1371710ea1a4a89d460bbd0b77d7037b",
+          "byte_verification": "RETRIEVED_HOSTED_IMAGE_VIA_GITHUB_CONNECTOR; BLOB_SHA_FROM_API"
+        }
+      ],
+      "unmet_roles": [
+        "isolated scaled glumes for vein count",
+        "annual crown, inner ligule"
+      ],
+      "summary": "Photo role visibility reviewed; only clearly visible structures treated as demonstrated. Species diagnosis and microscopic details remain separate.",
+      "seasonal_review": {
+        "observed": "Seasonal state noted where visibly green or dry; calendar-specific winter/dormancy not established solely by images.",
+        "queue_action": "Do not create new photo-needs entries before reconciling existing archives."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new measurements or filter characters asserted; photo-role review only."
     }
   },
   {
