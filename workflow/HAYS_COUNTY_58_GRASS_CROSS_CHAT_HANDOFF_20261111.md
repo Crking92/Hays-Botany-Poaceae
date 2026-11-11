@@ -1,6 +1,20 @@
 # Hays County grasses — cross-chat review and future merge handoff
 
-**Updated November 11, 2026, after 58-species photo-evidence pass.** This is the stable discovery pointer on the Poaceae repo's default `main` branch. The active work is intentionally stored in [the isolated Hays audit branch](https://github.com/Crking92/Hays-Botany-Poaceae/tree/inat-coverage-audit-20261111).
+**Updated November 11, 2026, after final Hays 58 nomenclature crosswalk.** This is the stable discovery pointer on the Poaceae repo's default `main` branch. The active work is intentionally stored in [the isolated Hays audit branch](https://github.com/Crking92/Hays-Botany-Poaceae/tree/inat-coverage-audit-20261111).
+
+## Current nomenclature decision — final as of November 11, 2026
+
+**Stop using the raw 58-name list for merger decisions.** The authoritative reviewed name and synonym map is now:
+
+- [Human-readable finalized nomenclature crosswalk (all 58 names, historical aliases and primary taxon links)](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-nomenclature-final-staging.md)
+- [Structured naming crosswalk / official candidate target names](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-nomenclature-final-staging.json)
+- [Independent GBIF accepted-usage audit (58 candidates against existing 112)](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-gbif-accepted-usage-crosswalk.json)
+
+**Staging name outcome:** 58 iNaturalist names → 56 unchanged accepted names, 1 renamed *Coelorachis cylindrica* → *Rottboellia campestris*, and 1 already in the existing 112 (*Elymus glabriflorus* = *Elymus virginicus*). **57 candidate taxa remain (56 species + 1 accepted hybrid)**. These are not 57 confirmed Hays populations nor automatically approved website additions.
+
+**Major safeguards:** *Bothriochloa longipaniculata* is a distinct accepted name from *B. torreyana* under Kew, despite the broader 1999 regional Flora concept. Reject GBIF's unrelated fuzzy hit for *Tridentopsis elongata*. Keep *Echinochloa colona* and *Janochloa antidotalis*; do not replace their names with GBIF fuzzy/higher-rank guesses. *Lolium × boucheanum* is a hybrid. *Bromus brevis* is accepted nomenclaturally, but its photographed Hays occurrence needs high-scrutiny ID confirmation.
+
+**Research source:** Kew POWO/WCVP accepted names (57 direct POWO links; one WCVP/WFO supported), 1999 *Flora of North Central Texas*, and exact GBIF accepted-usage-key crosswalk. Curated synonyms are useful searchable aliases, **not an exhaustive global synonym index**. Never make a species card merely from a taxonomic name match. Next step is physical photo ID/establishment verification, followed later by media/license work and safe merge testing.
 
 ## What exists
 
