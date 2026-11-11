@@ -363,7 +363,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-capillare/images/harry-rose-witchgrass-foliage-sheath-reference-by2.jpg",
-        "label": "4 · Witchgrass — foliage and culm view",
+        "label": "WITCHGRASS — airy panicle with oval spikelets; foliage/sheath not in frame",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_capillare_(7185668229).jpg",
@@ -372,7 +372,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-hairy-sheath-collar-cc-by-sa2.jpg",
-        "label": "5 · HAIRY SHEATH/COLLAR REGION — actual witchgrass, ligule still unmeasured",
+        "label": "WITCHGRASS — hairy upper leaf sheath/collar; inner ligule not isolated",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_capillare_(3812306805).jpg",
@@ -381,7 +381,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-sheath-collar-ligule-region-by-sa2.jpg",
-        "label": "WITCHGRASS TRUE-SPECIES COLLAR VIEW — visible sheath and node hairs, ligule edge unverified",
+        "label": "WITCHGRASS — sheath-mouth hairs beside culm; not an exposed node or full ligule",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_capillare_(3812305589).jpg",
@@ -446,6 +446,78 @@
       "stage": "PHASE3_PASS9_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published Panicum flowerhead and floral/collar anatomy; fine-scale and winter same-specimen photo roles, local identity, and field acceptance pending."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_3_OF_5",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "photo_roles": [
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "branched airy panicle with small oval spikelets against blue background"
+          ],
+          "cannot_verify": [
+            "foliage, blade, sheath or true ligule"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-capillare/images/harry-rose-witchgrass-foliage-sheath-reference-by2.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "d70a783c475ccf9ab5687993e445a4d4de3c38f1",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "opened pale hairy upper sheath with long thin projecting hairs around collar region"
+          ],
+          "cannot_verify": [
+            "true membranous or hair ligule dimensions and swollen hair bases"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-hairy-sheath-collar-cc-by-sa2.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "cd26a14c79c7add4d0d385b318b2c3452229a884",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "many long thin sheath-edge hairs near green culm and leaf-junction region"
+          ],
+          "cannot_verify": [
+            "true inner ligule edge, hair-base swelling, actual stem node"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-sheath-collar-ligule-region-by-sa2.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "863ec4bbccce6cf9a4775beb147d4c1c0112d36b",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0,
+        1
+      ],
+      "unmet_roles": [
+        "true ligule separately from sheath hairs",
+        "dissected labelled spikelet and detached tumblehead view (currently inaccessible)"
+      ],
+      "summary": "2 directly visible and 1 partially visible scoped parts; hidden microscopic anatomy not certified.",
+      "seasonal_review": {
+        "observed": "Some autumn/dry-stage heads; calendar collection month or dormant winter condition not independently proven from appearance.",
+        "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
     }
   },
   {
