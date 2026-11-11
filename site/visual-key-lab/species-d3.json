@@ -1904,7 +1904,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-italica/images/commons-setaria-italica.jpg",
-        "label": "Foxtail millet — dense, nodding cultivated seedheads",
+        "label": "FOXTAIL MILLET — broad leafy cultivated stand with dense elongated greenish-yellow nodding flowering heads",
         "creator": "Dinesh Valke",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_italica_(4656997682).jpg",
@@ -1931,7 +1931,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/setaria-italica/inat-43423471.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "FOXTAIL MILLET — numerous long arched bristly green seedheads above dense foliage; ligule and spikelets not individually exposed",
         "creator": "no rights reserved",
         "license": "CC0 1.0",
         "source_page": "https://www.inaturalist.org/photos/43423471",
@@ -1993,6 +1993,61 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2 of 4 current Lab image references rendered and visually reviewed. Original rights, photographer, date, voucher ID and precise reproductive anatomy not independently recertified.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "multiple upright leafy culms with broad narrow-lanceolate green blades and dense cylindrical heads, several bent or nodding"
+          ],
+          "cannot_verify": [
+            "exact planted cultivar, internal spikelets, actual ligule, rooted crown or collection month"
+          ],
+          "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-italica/images/commons-setaria-italica.jpg",
+          "git_blob_sha": "33f4a2e7d2ca78d9e29dc785427e3f309a2a20d2",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dense stand of broad green grassy blades topped by numerous pale green fuzzy bristly cylindrical flowering heads arching downward"
+          ],
+          "cannot_verify": [
+            "separate glumes, true ligule, authenticated plant origin/voucher or winter date"
+          ],
+          "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/setaria-italica/inat-43423471.jpg",
+          "git_blob_sha": "4aef4bb68c51488a95c0a94c93b8892563d01ee5",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1,
+        2
+      ],
+      "unmet_roles": [
+        "ligule macro i=1 and source-annotated spikelet i=2 returned GitHub blob metadata but no renderable image bytes",
+        "dissected glume, fertile lemma, and bristle origin",
+        "dated dormant cultivated/escaped stand"
+      ],
+      "summary": "Two of four gallery images checked; both directly show cultivated foxtail millet habit and long drooping bristly seedheads; both anatomy images remain unviewable.",
+      "seasonal_review": {
+        "observed": "Green bristly inflorescences present; observation dates not checked for winter.",
+        "queue_action": "Check existing dated winter/dormant archives before adding any needs to the one master Photo Needs Queue."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Only visible evidence/captions updated; regional key trait states, diagnostic checks and taxonomic framework unchanged."
     }
   }
 ]
