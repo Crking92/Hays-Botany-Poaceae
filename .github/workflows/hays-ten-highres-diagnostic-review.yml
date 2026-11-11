@@ -1,0 +1,25 @@
+name: Hays 10 strongest grasses - temporary high-res diagnostic photo QA
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-ten-highres-diagnostic-review.yml'
+      - 'scripts/hays_ten_highres_diagnostic_review.py'
+permissions: {contents: read}
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip -q install Pillow
+      - name: Assemble high-resolution licensed Hays specimen photo QA sheets
+        run: python3 scripts/hays_ten_highres_diagnostic_review.py
+      - name: Upload temporary credited specimens for diagnostic visual examination
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-10-priority-highres-character-review
+          path: temporary_hays_ten_highres/
+          retention-days: 1
+          if-no-files-found: error
