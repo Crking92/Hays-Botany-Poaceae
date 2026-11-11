@@ -1,0 +1,34 @@
+name: Hays 17 grasses - independent preserved specimen index check
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-17-voucher-index.yml'
+      - 'scripts/hays_17_gbif_herbarium_voucher_check.py'
+permissions:
+  contents: write
+jobs:
+  specimens:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Search GBIF preserved specimens in Hays County for 17 target taxa
+        run: python3 scripts/hays_17_gbif_herbarium_voucher_check.py
+      - name: Commit only the voucher evidence index to review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audits/hays-grasses-independent-voucher-leads-20261111.json audits/hays-grasses-independent-voucher-leads-20261111.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Store independent Hays herbarium voucher leads for 17 grass candidates"
+            git push origin HEAD:inat-coverage-audit-20261111
+          fi
+      - name: Preserve audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-17-preserved-specimen-evidence-index
+          path: |
+            audits/hays-grasses-independent-voucher-leads-20261111.json
+            audits/hays-grasses-independent-voucher-leads-20261111.md
+          if-no-files-found: error
