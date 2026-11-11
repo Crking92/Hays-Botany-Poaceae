@@ -37,4 +37,4 @@ These are role needs for the **existing single master Photo Needs Queue**, not a
 - Phase 3 still stands at **112/112 initial checklists, 315** source-linked prompts. **0/112** species fully specimen+diagnostic-photo certified.
 - Phone/mobile actual-device acceptance is separate and remains to be tested.
 
-**Next two-file batch:** compare blue-gr uama true collar image i=2 versus hairy grama glume hairs i=3, keeping each verdict scoped only to features that the pixels genuinely resolve.
+**Next two-file batch:** compare blue grama true collar image i=2 versus hairy grama glume hairs i=3, keeping each verdict scoped only to features that the pixels genuinely resolve.
