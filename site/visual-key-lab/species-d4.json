@@ -1480,7 +1480,45 @@
         "reference": "Pistillate/female spikelets have slender awns 9–35 mm; male spikelets lack this feature, so observable awn state depends on sex and reproductive stage.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "protected_observation": {
+        "source": "Texas Parks and Wildlife official endangered species profile",
+        "source_url": "https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/listed-species/plants/texas_wild_rice.phtml",
+        "reference": "Only upper two miles San Marcos River, Hays County; federally/state endangered. Observe without touching, entering protected habitat, cutting or collecting. Lower dangling staminate branches vs upper upright pistillate branches.",
+        "status": "OFFICIAL_SOURCE_ENDANGERED_OBSERVATION_ONLY",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Observe ONLY: lower dangling MALE versus upper upright FEMALE branches",
+        "check": "Endangered Texas wild-rice has a 16–31 cm emergent flowering stalk with lower side branches of PENDULOUS male spikelets, and upper stiffly ASCENDING female spikelets. Females bear slender ~9–35 mm awns; males lack those long awns. Do not touch, enter habitat, or collect protected plants.",
+        "compare": "Giant cutgrass also has both sexes in its panicle but male and female are borne along the SAME branch, with the females nearer the tips.",
+        "certainty": "Texas Parks and Wildlife verified morphology; NO manipulation or collection is permitted for this key",
+        "source": "TPWD — Texas wild-rice",
+        "url": "https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/listed-species/plants/texas_wild_rice.phtml"
+      },
+      {
+        "look": "Identify an aquatic rooted ribbon-leaf habit from a lawful viewpoint",
+        "check": "In cool clear fast-flowing upper San Marcos River water, long ribbonlike blades STREAM WITH THE CURRENT and have a prominent central vein; flowering culms may emerge while rooted vegetative shoots stay submerged. This is a perennial by TPWD, though older global GrassBase calls it annual in one description.",
+        "compare": "Giant cutgrass usually has stout reedlike culms and leaves emergent ABOVE shallow swamp water, and a far larger airy head.",
+        "certainty": "TPWD and USFWS ecology and accepted range; no field access or habitat disturbance for data collection",
+        "source": "TPWD — Texas wild-rice (Hays County endemic)",
+        "url": "https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/listed-species/plants/texas_wild_rice.phtml"
+      },
+      {
+        "look": "Know the one-flowered GLUMELESS male/female spikelets",
+        "check": "Both sexes bear one-flowered spikelets with glumes ABSENT. Male units (often ~7–9 mm) are awnless with stamens; female (~6.5–12.5 mm) have a long awned lemma and develop slender cylindrical grains. The true ligule is a membrane 5–15 mm in GrassBase.",
+        "compare": "Giant cutgrass also has glumeless unisexual spikelets, but females' awns are much shorter (~2–3 mm) and floral sexes occur on the same flowering branches.",
+        "certainty": "FNA/Kew and TPWD; floral anatomy for training from legally sourced existing verified images, not collecting protected plants",
+        "source": "Kew POWO — Zizania texana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:271183-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS13_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     }
   },
   {
@@ -1575,7 +1613,46 @@
         "reference": "Prominent membranous ligule 6–20 mm.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "sex_branch": {
+        "source": "Kew GrassBase Zizaniopsis miliacea; TPWD Texas wild-rice comparison",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1030293-2/general-information",
+        "secondary_source_url": "https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/listed-species/plants/texas_wild_rice.phtml",
+        "reference": "Male and female spikelets share the SAME panicle branch, male basal and female more distal. This differs from Zizania texana lower all-male branches and upper all-female branches.",
+        "status": "TWO_SOURCES_MATCH_PHOTO_PENDING",
+        "review_date": "2026-11-10"
       }
+    },
+    "diagnostic_checks": [
+      {
+        "look": "Follow ONE branch to see both floral sexes",
+        "check": "Giant cutgrass is MONOECIOUS, with male and female single-flowered spikelets on the SAME main panicle BRANCHES; Kew describes male below female on each such mixed-sex branch. The open panicle is very large, ~30–60 cm.",
+        "compare": "Texas wild-rice separates sexes on different branches of the head: lower dangling male branches and higher upright female branches.",
+        "certainty": "Kew GrassBase and TPWD both document same-branch sex arrangement; branch-sex photo pending",
+        "source": "Kew GrassBase — Zizaniopsis miliacea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1030293-2/general-information"
+      },
+      {
+        "look": "Measure a blunt female floret and its very SHORT awn",
+        "check": "The glumes are both ABSENT/obscure. Male and female spikelets each carry one floret, around 6–8 mm in GrassBase; female lemma typically 7-veined with one SHORT (~2–3 mm) awn, male lemma awnless with anthers. Only the complete fertile floret confirms flower sex.",
+        "compare": "Texas wild-rice female units carry 9–35 mm awns while male branches hang below; both species can have large panicles and glumeless spikelets.",
+        "certainty": "Kew species source checked; same-flower scale and sex detail currently needs fine diagnostic photos",
+        "source": "Kew POWO — Zizaniopsis miliacea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1030293-2/general-information"
+      },
+      {
+        "look": "Check emergent rhizomatous canes, sawn blade edges and big ligule",
+        "check": "Giant cutgrass is an erect, perennial 2–3 m wetland cane from elongated rhizomes. Leaf margins are minutely SAW-TOOTHED (serrulate), and the true inner ligule is a large ECILIATE 6–20 mm MEMBRANE, much longer than Phragmites' tiny ciliate membrane.",
+        "compare": "Texas wild-rice has long current-streaming mostly submerged leaves and is restricted to the upper San Marcos; do not use broad wetland occurrence as endemic species evidence.",
+        "certainty": "Kew/GrassBase and TPWD contrast; connected rhizome, blade edge and 6–20 mm ligule actual photo pending",
+        "source": "Kew GrassBase — Zizaniopsis miliacea",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1030293-2/general-information"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS13_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     }
   }
 ]
