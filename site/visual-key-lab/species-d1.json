@@ -1977,7 +1977,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dinebra/dinebra-panicea-subsp-mucronata/images/jim-conrad-dinebra-mucronata-yucatan-mm-spikelets-190322ld.jpg",
-        "label": "TARGET MUCRONATA: actual spikelets beside real mm ruler — Jim Conrad, Yucatan (two arrows)",
+        "label": "MUCRONATE SPRANGLETOP source reference — tiny overlapping spikelets beside marked ruler; exact parts and subspecies not independently verified",
         "creator": "Jim Conrad",
         "license": "Public domain — Jim Conrad expressly dedicates his original Backyard Nature photographs",
         "source_page": "https://www.backyardnature.net/yucatan/sprangle.htm",
@@ -1986,7 +1986,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dinebra/dinebra-panicea-subsp-mucronata/images/jim-conrad-dinebra-mucronata-ligule-sheath-hairs-190322lg.jpg",
-        "label": "TRUE MUCRONATA LEAF COLLAR · jagged ligule vs separate white sheath hairs (two arrows)",
+        "label": "MUCRONATE SPRANGLETOP source reference — pale irregular collar edge with long white sheath hairs; inner ligule unconfirmed",
         "creator": "Jim Conrad",
         "license": "Public domain — Jim Conrad expressly dedicates his original Backyard Nature photographs",
         "source_page": "https://www.backyardnature.net/yucatan/sprangle.htm",
@@ -2099,6 +2099,65 @@
       "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS26_10_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_6",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "Visually inspected 2 of 6 current Lab gallery photo references using original GitHub image bytes. Photo-source identification, exact-image permission, and local collection dates independently unverified.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "Short green branch sections with multiple small, flattened, overlapping floreted spikelet-like units alongside the black graduations of a real marked ruler"
+          ],
+          "cannot_verify": [
+            "Exact millimeter values from a calibrated reference, 2–4 floret counts, taxon identity to subspecies or specific glume/lemma assignments"
+          ],
+          "pass": "PHASE4_PASS26_10_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Dinebra/dinebra-panicea-subsp-mucronata/images/jim-conrad-dinebra-mucronata-yucatan-mm-spikelets-190322ld.jpg",
+          "git_blob_sha": "bb9ea74afa8496b8c984c4d8fee64c94cacda14d",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT PHOTO RIGHTS, VOUCHER AND DATE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "Close-up of a green ribbed blade/sheath junction with a pale torn or irregular margin and numerous conspicuous white hairs projecting from sheath below"
+          ],
+          "cannot_verify": [
+            "Whether irregular pale piece is definitely the inner membranous ligule, its length and margin, or differential subspecies identification"
+          ],
+          "pass": "PHASE4_PASS26_10_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Dinebra/dinebra-panicea-subsp-mucronata/images/jim-conrad-dinebra-mucronata-ligule-sheath-hairs-190322lg.jpg",
+          "git_blob_sha": "34c8ae77a5f23f244e037f1adfec5e2cf1480ac0",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT PHOTO RIGHTS, VOUCHER AND DATE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "unmet_roles": [
+        "Four existing UT Austin historic herbarium media indices 4–7 not yet visually reviewed in this pass",
+        "Verified magnified opened inside ligule with calibrated scale and sheath-hair distinction",
+        "Regional voucher confirmation for subsp. mucronata, not just species-complex images from Yucatán",
+        "Individually separated mature spikelet, glume/lemma and floret count with precise mm scale",
+        "Original exact-image institutional source license check before additional use"
+      ],
+      "summary": "Two Jim Conrad Yucatán references opened. Several very small overlapping spikelets beside markings useful as an informal scale, but diagnostic separation to subsp. mucronata remains unproven. Exterior sheath hairs and pale irregular collar edge visible; inner ligule is uncertain. Four herbarium images remain for future QA.",
+      "seasonal_review": {
+        "observed": "Some green/old flowering structures shown; none independently dated November–February.",
+        "queue_action": "Reuse existing master Photo Needs Queue for additional anatomy and winter photo requests. No separate sheet."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Original flora-based diagnostic descriptions and key character filters retained. Observational photo roles do not certify local taxonomy or nativity."
     }
   },
   {
