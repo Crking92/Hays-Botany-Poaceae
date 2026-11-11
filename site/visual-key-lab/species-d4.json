@@ -2174,7 +2174,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-cd006c0bc5b0.jpg",
-        "label": "UROCHLOA REPTANS — additional archived source-labelled photo 1",
+        "label": "Creeping signalgrass — four short one-sided spikelet branches on a green flowering axis",
         "creator": "Dan Johnson",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_102647425.jpg",
@@ -2183,7 +2183,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-bebff5054ac5.jpg",
-        "label": "UROCHLOA REPTANS — additional archived source-labelled photo 2",
+        "label": "Creeping signalgrass — crowded green ribbed spikelets and fine hairs; undissected",
         "creator": "葉子",
         "license": "CC0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3AUrochloa_reptans_239077466.jpg",
@@ -2209,7 +2209,7 @@
     "source_blob_sha": "67cb627ac95b0166055f0bcacb33e99224a561d1",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "PHASE4_FULL_EXISTING_2_OF_2; SCALED_LOWER_GLUME_AND_TRUE_LIGULE_PENDING",
     "character_evidence": {
       "head": {
         "source": "Kew POWO GrassBase under Brachiaria reptans, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:426280-1/general-information",
@@ -2260,6 +2260,72 @@
       "stage": "PHASE3_PASS5_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS37_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED; COMMONS_SOURCE_PAGES_NOT_INDEPENDENTLY_OPENED",
+      "scope": "Both of two hosted image bytes visually inspected via GitHub, with corresponding Git blob hashes recorded. Exact source-image rights and taxonomy not independently verified; no specimen/voucher or Pages/mobile acceptance.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "four separate short one-sided flowering branches arising at spaced points on a slender central green axis",
+            "closely packed small green to yellow-green spikelets along those branches, with a thumb providing informal size context"
+          ],
+          "cannot_verify": [
+            "full rooted creeping plant or node rooting",
+            "actual branch lengths in centimeters or consistency across multiple plants",
+            "inner true ligule or isolated glume/lemma"
+          ],
+          "pass": "PHASE4_PASS37",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-cd006c0bc5b0.jpg",
+          "git_blob_sha": "2a8a4d279b87841c53d9eacae71d533075bc3c9f",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO INDEPENDENT LICENSE OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "closely crowded green oval compressed spikelets attached along the axis, with longitudinal ribbing and some paired or overlapping positions",
+            "fine threadlike hairs near spikelet attachments",
+            "dark reddish-brown curling structures protruding from several florets, organ identity not independently resolved"
+          ],
+          "cannot_verify": [
+            "actual hair source on pedicel versus axis or floral tissue",
+            "lower glume fraction of spikelet, vein count or its absence",
+            "measured lemma, fertile bracts, and exact spikelet size"
+          ],
+          "pass": "PHASE4_PASS37",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Urochloa/urochloa-reptans/images/commons-bebff5054ac5.jpg",
+          "git_blob_sha": "1575ee5f0a6c13aac919d13db5b969b459218778",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED HOSTED IMAGE AND RETURNED BLOB SHA; NO INDEPENDENT LICENSE OR SPECIMEN CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "connected trailing stem with nodes and roots from a confirmed specimen",
+        "true inner ligule and collar at a 1-mm scale",
+        "paired spikelets separated to isolate and measure the tiny lower glume, 1.5–2.2 mm units and upper lemma",
+        "matched-scale verified flowering head versus U. fusca with actual glume proportions"
+      ],
+      "look_alike_comparison": {
+        "with": "urochloa-fusca",
+        "status": "SOURCE_SUPPORTED_HEAD_DIFFERENCES_ONLY; SPECIES_PHOTO_DISSECTION_PENDING",
+        "field_cue": "Creeping signalgrass image i=0 shows compact closely crowded spikelets along four short branches. Brownseed signalgrass comparison imagery shows more variable irregular and sometimes secondarily branched unilateral racemes. Overlap is possible. Do not identify solely by number of branches, habit or close-up perspective.",
+        "confirm_next": "Check the intact mature lower glume of each side-by-side at the same magnification: source treats U. reptans as a tiny 1/8–1/4 length often veinless lower glume on ~1.5–2.2 mm spikelets; U. fusca typically has a larger 1/4–1/3 length often 5-veined lower glume on ~2.4–3 mm spikelets. Measurements remain text-source claims, not verified from the two reviewed reptans photos."
+      },
+      "summary": "2 DIRECT_VISIBLE / 0 PARTIAL_VISIBLE for their assigned external reproductive roles, but none shows internal critical glume/lemma or true ligule anatomy. Both photographs are source-labeled and original credit data preserved.",
+      "seasonal_review": {
+        "observed": "Green flowering structures shown; photograph date and November–February dormancy not independently checked.",
+        "queue_action": "Keep explicit missing parts in existing master Photo Needs Queue; no new spreadsheet or general download."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Existing regional Flora authority remains unchanged; this pass did not change taxon, county nativity, traits or key candidate filtering."
     }
   },
   {
