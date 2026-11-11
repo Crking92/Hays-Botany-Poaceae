@@ -379,7 +379,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-95106e2c32d1.jpg",
-        "label": "2 · TRUE LIGULE — translucent membrane at blade–sheath junction",
+        "label": "KNOTGRASS — pale translucent inner membranous ligule visible above opened sheath mouth",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -389,7 +389,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-610da1987dad.jpg",
-        "label": "3 · ATTACHED SPIKELETS — green ovals along one-sided raceme",
+        "label": "KNOTGRASS — green attached spikelets with projecting dark anthers and feathery stigmas",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -409,7 +409,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-577e63e6937f.jpg",
-        "label": "TRUE LIGULE, SECOND ANGLE — actual projecting translucent membrane",
+        "label": "KNOTGRASS — projecting pale inner ligule inside opened sheath with long marginal hairs",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -485,11 +485,11 @@
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS12_7_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_6",
+      "status": "PARTIAL_VISUAL_REVIEW_5_OF_6",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2 of 6 current Lab photo references inspected from actual hosted image bytes. Photos with metadata only are excluded. Source rights, specimen ID, season/date and calibrated anatomy not revalidated.",
+      "scope": "5 of 6 current Lab gallery references checked against actual GitHub-hosted bytes; metadata-only reads excluded; photo source identification, license rights and seasonal dates not revalidated.",
       "photo_roles": [
         {
           "i": 0,
@@ -520,27 +520,67 @@
           "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/commons-paspalum-distichum.jpg",
           "git_blob_sha": "07e9fd6a13e992ece99cbbc2dd1ad3b99b377159",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pale, uneven translucent membrane extending above a green opened leaf-sheath mouth"
+          ],
+          "cannot_verify": [
+            "natural unbroken ligule margin, exact membrane length in millimeters"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-95106e2c32d1.jpg",
+          "git_blob_sha": "94d24d067b19321f4e3b561d7f5ca31bf04b0265",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "overlapping green oval attached spikelets arranged along a flowering branch, dark purple anthers and brush-like purple stigmas"
+          ],
+          "cannot_verify": [
+            "separate glume or lemma anatomy and exact size"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-610da1987dad.jpg",
+          "git_blob_sha": "b7ba12e5e0bb3477be183b3826d6a87d3cb16603",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pale translucent ligule projecting above opened green sheath mouth and sparse long marginal leaf hairs"
+          ],
+          "cannot_verify": [
+            "fully measured ligule margin or isolated collar dissection"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-577e63e6937f.jpg",
+          "git_blob_sha": "627e534307692ee8890fa916cdb54e94dd8e79bc",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
       "unreviewed_hosted_indices": [
-        2,
-        3,
-        4,
-        6
+        4
       ],
       "unmet_roles": [
-        "true ligule at collar",
-        "close one-sided attached spikelet and fertile floret",
-        "stolon versus rhizome in situ under soil or water",
-        "dated dormant-season mat"
+        "wetland habitat i=4 returned Git metadata but no image bytes; retain as unreviewed",
+        "verified dated winter mat or rhizome in situ"
       ],
-      "summary": "Runner root masses are unmistakable, but underground rhizome status is not established by the removed stem; paired flowered racemes directly visible.",
+      "summary": "3 additional images verify true membranous inner ligule from two angles and flowered one-sided spikelets; wetland habit file remains inaccessible.",
       "seasonal_review": {
-        "observed": "Green growing stems and flowering racemes; no winter date established.",
-        "queue_action": "Inspect existing dated archive before adding any winter/dormant photo need."
+        "observed": "All inspected frames show green material; no photograph collection month confirmed.",
+        "queue_action": "Inspect existing dated archive and eligible pictures before adding any winter/dormant photo needs."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-only evidence and label QA; existing diagnostics, species taxonomy, morphology states and key filters unchanged."
+      "morphology_reference_note": "Image-only evidence/caption checks. No new taxon or key-character states."
     }
   },
   {
@@ -1115,7 +1155,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-f0f1c812bc84.jpg",
-        "label": "Scheele's bristlegrass — two flowering heads and broad leaf blades",
+        "label": "SCHEELE'S BRISTLEGRASS — rocky-site leafy clump with flowering heads; anatomy not isolated",
         "creator": "Gaiacoyote",
         "license": "CC0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -1135,7 +1175,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-scheelei/images/jim-conrad-dry-frio-whole-plant-habitat-2013.jpg",
-        "label": "UVALDE COUNTY · living plant in Dry Frio rocky gulley habitat",
+        "label": "SCHEELE'S BRISTLEGRASS — repeated whole-plant photo (identical image bytes to rocky-site clump)",
         "creator": "Jim Conrad",
         "license": "Public domain — photographer Jim Conrad's explicit own-image dedication",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1145,7 +1185,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-scheelei/images/jim-conrad-dry-frio-green-spikelets-long-bristles-2013.jpg",
-        "label": "UVALDE COUNTY · actual attached green spikelets and projecting bristles",
+        "label": "SCHEELE'S BRISTLEGRASS — green attached spikelets and long projecting bristles",
         "creator": "Jim Conrad",
         "license": "Public domain — photographer Jim Conrad's explicit own-image dedication",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1155,7 +1195,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-scheelei/images/jane-weeden-scheelei-external-blade-sheath-746135170.jpg",
-        "label": "Scheele’s Bristlegrass — where to look for the ligule",
+        "label": "SCHEELE'S BRISTLEGRASS — outside blade–sheath junction; inner ligule is hidden",
         "creator": "Jane Weeden",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1165,7 +1205,7 @@
       {
         "i": 8,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/setaria-scheelei/inat-684720772.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "SCHEELE'S BRISTLEGRASS — long green bristly flowering head held for scale",
         "creator": "no rights reserved",
         "license": "CC0 1.0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -1236,6 +1276,108 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_5_OF_6",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "5 of 6 current Lab gallery references checked against actual GitHub-hosted bytes; metadata-only reads excluded; photo source identification, license rights and seasonal dates not revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "leafy rooted-looking clump in rocky soil with narrow grass blades and at least two elevated narrow bristly flowering heads"
+          ],
+          "cannot_verify": [
+            "roots, leaf ligule or separated spikelets"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-f0f1c812bc84.jpg",
+          "git_blob_sha": "35fa05bcb348b4f1882435ee206df66200fac22e",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "same rocky-soil green clump and raised flowering heads as gallery i=0"
+          ],
+          "cannot_verify": [
+            "any independent species character not visible in duplicate i=0"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-scheelei/images/jim-conrad-dry-frio-whole-plant-habitat-2013.jpg",
+          "git_blob_sha": "35fa05bcb348b4f1882435ee206df66200fac22e",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED",
+          "duplicate_media_of_gallery_index": 0,
+          "duplicate_exact_bytes": true,
+          "distinct_photo_count_contribution": 0
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "tight pale green flowering head with overlapping green spikelets and many fine spreading bristles"
+          ],
+          "cannot_verify": [
+            "origin and anatomical attachment of every bristle to each spikelet, ligule"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-scheelei/images/jim-conrad-dry-frio-green-spikelets-long-bristles-2013.jpg",
+          "git_blob_sha": "d30d7da22a323776dcb5678f33cc5abad962d5db",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "outside view of long flat blade arising beside green culm with folded leaf-sheath junction"
+          ],
+          "cannot_verify": [
+            "inner ligule, its hair or membrane type; blade-side texture alone does not prove ligule"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-scheelei/images/jane-weeden-scheelei-external-blade-sheath-746135170.jpg",
+          "git_blob_sha": "79ff44b1854bd9d977928efdfd0ccce1703a1767",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 8,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "large densely bristly green flowering head held across a hand amid many similar flowering stems"
+          ],
+          "cannot_verify": [
+            "individual glumes, ligule, source taxon identification based on photo alone"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/setaria-scheelei/inat-684720772.jpg",
+          "git_blob_sha": "d6641f5bd2d6fdf3177f65f68af24ea752bda9bb",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1
+      ],
+      "unmet_roles": [
+        "second source i=1 image returns no renderable bytes",
+        "true inner ligule exposed in same-plant image",
+        "dry winter inflorescence with dated collection"
+      ],
+      "summary": "Five gallery references checked but only four distinct photos: i=0 and i=2 resolve to identical Git blob SHA despite different paths; i=4 does NOT show the inner ligule, and i=1 is unreviewed.",
+      "seasonal_review": {
+        "observed": "All inspected flowering and foliage frames are green; no verified winter collection month.",
+        "queue_action": "Inspect existing dated archive and eligible pictures before adding any winter/dormant photo needs."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image-only evidence/caption checks. No new taxon or key-character states."
     }
   },
   {
@@ -1698,7 +1840,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-rooted-clump-public-domain.jpg",
-        "label": "3 · UVALDE — whole living rooted clump · PUBLIC DOMAIN",
+        "label": "EASTERN GAMAGRASS — dense tall waterside leafy clump; roots not exposed",
         "creator": "Jim Conrad",
         "license": "Public domain — original photograph by Jim Conrad",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1708,7 +1850,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-complete-flowering-spikes-public-domain.jpg",
-        "label": "4 · UVALDE — whole flowering head with 3 spikes · PUBLIC DOMAIN",
+        "label": "EASTERN GAMAGRASS — three long flowering spikes; individual floral structures not dissected",
         "creator": "Jim Conrad",
         "license": "Public domain — original photograph by Jim Conrad",
         "license_url": "https://www.backyardnature.net/j/copyrite.htm",
@@ -1813,6 +1955,62 @@
       "stage": "PHASE3_PASS4_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_6",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2 of 6 current Lab gallery references checked against actual GitHub-hosted bytes; metadata-only reads excluded; photo source identification, license rights and seasonal dates not revalidated.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "tall robust leafy grass clump at the edge of standing water with many ascending blades"
+          ],
+          "cannot_verify": [
+            "actual roots, crowns below ground or identity of separate shoots"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-rooted-clump-public-domain.jpg",
+          "git_blob_sha": "955753fe3510f976088dc72f99b9bdd3a77715bf",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "three long, separate reddish-green spike-like flowering branches arising near one hand with protruding reproductive structures"
+          ],
+          "cannot_verify": [
+            "dissected male/female spikelets, exact sex placement or mature fruits"
+          ],
+          "pass": "PHASE4_PASS13_10_REFS_9_DISTINCT_IMAGE_BYTES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Tripsacum/tripsacum-dactyloides/images/jim-conrad-uvalde-2014-complete-flowering-spikes-public-domain.jpg",
+          "git_blob_sha": "7744ce9675c9f4301d38e039af2eb9b081ffc244",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "unmet_roles": [
+        "clear male and female structure separations in remaining frames",
+        "verified winter or dormant whole clump"
+      ],
+      "summary": "Broad waterside clump and three spikes visible, but photo cannot demonstrate underground roots, rhizomes, or detailed sex anatomy.",
+      "seasonal_review": {
+        "observed": "Green leafy clump and reproductive spikes; no confirmed November–February field date.",
+        "queue_action": "Inspect existing dated archive and eligible pictures before adding any winter/dormant photo needs."
+      },
+      "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Image-only evidence/caption checks. No new taxon or key-character states."
     }
   },
   {
