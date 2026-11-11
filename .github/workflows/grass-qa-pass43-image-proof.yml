@@ -1,0 +1,75 @@
+name: Grass QA temporary hosted image proof (read only)
+on:
+  push:
+    branches:
+      - grass-qa-pass43-readonly-image-probe-20261111
+    paths:
+      - .github/workflows/grass-qa-pass43-image-proof.yml
+permissions:
+  contents: read
+jobs:
+  view-hosted-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-d4a51a66c607.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-lindheimeri/images/lindheimeri-cody-stricker-ccby4.jpg
+            content/taxa/Poaceae/Bromus/bromus-lanceolatus/images/yves-bas-bromus-lanceolatus-dry.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/pine-muhly-patrick-alexander-cc0.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/ccby-wendy-mccrady-237946166-narrow-leaf.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-reverchonii/images/seep-muhly-maine-botanical-garden-cc0.jpg
+            content/taxa/Poaceae/Tridens/tridens-flavus/images/matt-lavin-4120267818-purpletop-real-spikelet-cc-by-sa-2.jpg
+            content/taxa/Poaceae/Sporobolus/sporobolus-compositus/images/inat-750208140-first-photo.jpg
+            content/taxa/Poaceae/Eragrostis/eragrostis-intermedia/images/cecelia-alexander-plains-lovegrass-habit.jpg
+            content/taxa/Poaceae/Tridentopsis/tridentopsis-mutica/images/inat-first-713829409.jpg
+            content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/turner-brockman-hairy-tridens-green-attached-spikelet-698633127.jpg
+            content/taxa/Poaceae/Munroa/munroa-pulchella/images/commons-79ab04a78c4f.jpg
+      - name: Render twelve existing images into two thumbnail proof sheets
+        shell: bash
+        run: |
+          python3 -m pip install --quiet Pillow
+          python3 - <<'PY'
+          import sys, json, os, io, hashlib, base64, textwrap
+          from PIL import Image, ImageOps, ImageDraw, ImageFont
+          items = json.loads("[[\"Bromus pubescens\",\"content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-d4a51a66c607.jpg\",\"ee7e7148d49c09400c0924dea7a99d09d5acecb7\"],[\"Muhlenbergia lindheimeri\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-lindheimeri/images/lindheimeri-cody-stricker-ccby4.jpg\",\"37a9421a07aca23a956cadc57518cfb910544937\"],[\"Bromus lanceolatus\",\"content/taxa/Poaceae/Bromus/bromus-lanceolatus/images/yves-bas-bromus-lanceolatus-dry.jpg\",\"a87d992c1371710ea1a4a89d460bbd0b77d7037b\"],[\"Muhlenbergia dubia i0\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/pine-muhly-patrick-alexander-cc0.jpg\",\"0639a1fa5cae3a1589358fd465b44a7564b78c51\"],[\"Muhlenbergia dubia i1\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-dubia/images/ccby-wendy-mccrady-237946166-narrow-leaf.jpg\",\"5ddf490f5cffebbbc6b8fbe361c70f5c37a92de0\"],[\"Muhlenbergia reverchonii\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-reverchonii/images/seep-muhly-maine-botanical-garden-cc0.jpg\",\"2b4a3dc10cbea3010717773e71c2bc8b84690258\"],[\"Tridens flavus\",\"content/taxa/Poaceae/Tridens/tridens-flavus/images/matt-lavin-4120267818-purpletop-real-spikelet-cc-by-sa-2.jpg\",\"08f0dde2d82cb10c80f3b560b57cedfd78b01754\"],[\"Sporobolus compositus\",\"content/taxa/Poaceae/Sporobolus/sporobolus-compositus/images/inat-750208140-first-photo.jpg\",\"aecf257a3768350402a67650ba57dc9a630bce6d\"],[\"Eragrostis intermedia\",\"content/taxa/Poaceae/Eragrostis/eragrostis-intermedia/images/cecelia-alexander-plains-lovegrass-habit.jpg\",\"487a6f44df94f3f797cb9e6fa50c8f529c5b83a4\"],[\"Tridentopsis mutica\",\"content/taxa/Poaceae/Tridentopsis/tridentopsis-mutica/images/inat-first-713829409.jpg\",\"9280913d00ed1e76b134267cdbfefc5606d09577\"],[\"Erioneuron pilosum\",\"content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/turner-brockman-hairy-tridens-green-attached-spikelet-698633127.jpg\",\"a15308b0ee895fc3521bbba71d558d45b133e988\"],[\"Munroa pulchella\",\"content/taxa/Poaceae/Munroa/munroa-pulchella/images/commons-79ab04a78c4f.jpg\",\"f86b0872ce8dc7adaeedb9ca35b201b9aae34314\"]]")
+          fontpath='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          font = ImageFont.truetype(fontpath, 17) if os.path.exists(fontpath) else ImageFont.load_default()
+          photos=[]
+          for n,(label,path,sha) in enumerate(items):
+              try:
+                  b=open(path,'rb').read()
+                  actual=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\x00'+b).hexdigest()
+                  if actual != sha: raise ValueError('blob SHA mismatch: '+actual)
+                  pic=Image.open(io.BytesIO(b))
+                  pic=ImageOps.exif_transpose(pic).convert('RGB')
+                  print(f'QAITEM_{n+1}:OK sha={actual} dims={pic.size} bytes={len(b)} name={label}', flush=True)
+                  photos.append((label,pic))
+              except Exception as e:
+                  print(f'QAITEM_{n+1}:FAILED name={label} error={e}', flush=True)
+                  photos.append((label,None))
+          for sheet_index in (0,1):
+              canvas=Image.new('RGB',(1650,1000),(244,245,245))
+              draw=ImageDraw.Draw(canvas)
+              for j,(label,pic) in enumerate(photos[sheet_index*6:(sheet_index+1)*6]):
+                  x=(j%3)*550; y=(j//3)*500
+                  draw.text((x+12,y+12),f'{sheet_index*6+j+1}. {label}', fill=(12,12,12),font=font)
+                  if pic:
+                      im=ImageOps.contain(pic,(520,450))
+                      ox=x+int((550-im.width)/2)
+                      oy=y+36+int((450-im.height)/2)
+                      canvas.paste(im,(ox,oy))
+                  else: draw.text((x+30,y+200),'IMAGE UNAVAILABLE',fill=(0,0,0),font=font)
+              buff=io.BytesIO()
+              canvas.save(buff,format='JPEG',quality=51,optimize=True)
+              b64=base64.b64encode(buff.getvalue()).decode('ascii')
+              print(f'QAPANEL_BEGIN:{sheet_index+1} size={len(buff.getvalue())} b64={len(b64)}',flush=True)
+              for c in textwrap.wrap(b64,500):
+                  print(f'QAPANEL_{sheet_index+1}:{c}', flush=True)
+              print(f'QAPANEL_END:{sheet_index+1}',flush=True)
+          
+          PY
