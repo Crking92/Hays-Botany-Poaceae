@@ -211,3 +211,13 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 - [57 staged cards, with 16 packet cross-references and current counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
 
 **Special holds:** Digitaria californica and Sporobolus cryptandrus have literature profiles but no source pixels viewed under rights-safe process. St. Augustinegrass photos are primarily turf rather than demonstrated escaped populations. Eragrostis curtipedicellata lacks the critical viscid axis image. No approved active trait states, no added website images and no changes to 112 original keyed species. **Next packet begins with remaining unprofiled taxa; leave the original 8 and second 8 untouched unless a source correction is required.**
+
+## Hays expansion Phase 2 packet 3 — November 11, 2026
+
+**24/57 candidate diagnostic profiles prepared, with 123 total literature-backed statements (newest batch 42).** New names: Bromus catharticus, Eragrostis superba, Lolium perenne, Bothriochloa longipaniculata, Bothriochloa bladhii, Dichanthium aristatum, Lolium multiflorum, Bromus brevis. **No specimen-level Hays ID signoffs; 0 additional source photographs inspected in this source-literature batch; no public photos or species merges.**
+
+- [Read eight new comparisons](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-3-20261111.md)
+- [Structured packet 3](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-3-20261111.json)
+- [Updated 57 staging cards](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+
+**High-risk exceptions:** modern B. longipaniculata needs key separating it from historical lumped torreyana; L. perenne / L. multiflorum / hybrid overlap requires true spikelet and auricle checks; Bromus brevis is accepted taxonomically but cannot be assumed to occur as a verified Hays species. Existing 112 live pages and photos untouched.
