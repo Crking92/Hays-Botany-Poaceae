@@ -356,7 +356,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-c2c6c211eefc25f6.jpg",
-        "label": "TRUE LIGULE — pale membrane at the collar · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "TRUE LIGULE — prominent pale membrane visible at blade–sheath junction",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -366,7 +366,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-e35de2abd4a510e6.jpg",
-        "label": "OPEN SPIKELET — outer glumes, inner florets, stout awn · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "OPEN SPIKELET — outer glumes and hairy florets visible; insertion details unresolved",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -376,7 +376,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-f82fef27e129a407.jpg",
-        "label": "HAIRY FLORET BASE — actual callus hairs and bent awn · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "HAIRY FLORET AND BENT AWN — callus attachment not fully resolved",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -442,6 +442,75 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS6_FOURTEEN_HOSTED_PHOTOS",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "All 3 current Lab gallery photographs visually inspected from hosted GitHub bytes; no source specimen, licensing, measured dissection, or full archive certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pale tall membranous ligule at opened blade-sheath junction"
+          ],
+          "cannot_verify": [
+            "exact length and local voucher species identity"
+          ],
+          "pass": "PHASE4_PASS6",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-c2c6c211eefc25f6.jpg",
+          "hosted_commit": "d6e1b652ad43aedc1b5fc858b9825f50f5055a4a",
+          "git_blob_sha": "46c92e848230ec9a488fbbba9a21b159d7ba5abc",
+          "byte_verification": "RETRIEVED_HOSTED_IMAGE_VIA_GITHUB_CONNECTOR; BLOB_SHA_FROM_API"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "opened spikelet with large outer glumes and hairy florets"
+          ],
+          "cannot_verify": [
+            "complete attached floret count",
+            "each awn insertion and lemma/glume homology"
+          ],
+          "pass": "PHASE4_PASS6",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-e35de2abd4a510e6.jpg",
+          "hosted_commit": "d6e1b652ad43aedc1b5fc858b9825f50f5055a4a",
+          "git_blob_sha": "93927e5f4a82a82391b62a3f35dd9a26d7d69d05",
+          "byte_verification": "RETRIEVED_HOSTED_IMAGE_VIA_GITHUB_CONNECTOR; BLOB_SHA_FROM_API"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "detached floret with long bent twisted dark awn and visible hairs"
+          ],
+          "cannot_verify": [
+            "exact awn insertion and callus hair origin"
+          ],
+          "pass": "PHASE4_PASS6",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-f82fef27e129a407.jpg",
+          "hosted_commit": "d6e1b652ad43aedc1b5fc858b9825f50f5055a4a",
+          "git_blob_sha": "3e79d3dea0e2107ded9e65c0f2d8c3e7398c8ed2",
+          "byte_verification": "RETRIEVED_HOSTED_IMAGE_VIA_GITHUB_CONNECTOR; BLOB_SHA_FROM_API"
+        }
+      ],
+      "unmet_roles": [
+        "attached fully-counted spikelet with scale",
+        "annotated dorsal awn insertion and floret-base callus"
+      ],
+      "summary": "Photo role visibility reviewed; only clearly visible structures treated as demonstrated. Species diagnosis and microscopic details remain separate.",
+      "seasonal_review": {
+        "observed": "Seasonal state noted where visibly green or dry; calendar-specific winter/dormancy not established solely by images.",
+        "queue_action": "Do not create new photo-needs entries before reconciling existing archives."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new measurements or filter characters asserted; photo-role review only."
     }
   },
   {
