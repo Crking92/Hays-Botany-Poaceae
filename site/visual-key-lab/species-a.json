@@ -371,7 +371,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-silky-bluestem-australian-flowering-tuft.jpg",
-        "label": "Silky habit",
+        "label": "Flowering bunch — roots hidden; Australian reference",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_plant4_(14359286201).jpg",
@@ -380,7 +380,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-84590d9fcff9.jpg",
-        "label": "Leaf blade and sheath — not the hairy stem node",
+        "label": "Leaf blade–sheath junctions — inner ligule not fully exposed",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_sericeum_leaf_sheath5_NWS_-_Flickr_-_Macleay_Grass_Man.jpg",
@@ -425,7 +425,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-dichanthium-sericeum-pedicelled-spikelet-scale.jpg",
-        "label": "Stalked spikelet example — detached beside a ruler",
+        "label": "Detached spikelet beside ruler divisions — attachment not shown",
         "creator": "Harry Rose (Macleay Grass Man)",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_spikelet_size_stalked1_(14362578995).jpg",
@@ -486,11 +486,11 @@
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS3_20_ADDITIONAL_ORIGINAL_GITHUB_IMAGE_BYTES",
-      "review_date": "2026-11-10",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_8_IMAGES",
+      "pass": "PHASE4_PASS5_EIGHT_HOSTED_JPEGS",
+      "review_date": "2026-11-11",
+      "status": "INITIAL_VISUAL_REVIEW_8_OF_8_IMAGES",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4 of 8 existing gallery photo records visually inspected at least once across Passes 1-3. No specimen identity or source licensing independently revalidated.",
+      "scope": "All 8 current Lab gallery references visually inspected across Passes 3 and 5. Pass 5 fetched four previously unopened hosted JPEGs at commit 4124597e2b2b8c2387b721d9b1528182b6752f70 and verified their Git blob hashes. Not a complete original-species archive, specimen-identity, arrow, or licensing audit.",
       "photo_roles": [
         {
           "i": 0,
@@ -501,6 +501,46 @@
           "cannot_verify": [
             "leaf blade-sheath ligule (node is not ligule)"
           ]
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "living leafy bunch with multiple erect flowering culms and narrow awned heads"
+          ],
+          "cannot_verify": [
+            "underground rhizomes or exposed rooted crown",
+            "inner ligule or attached spikelet-pair anatomy",
+            "Texas locality or subspecies"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS5",
+          "hosted_file": "content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-silky-bluestem-australian-flowering-tuft.jpg",
+          "hosted_commit": "4124597e2b2b8c2387b721d9b1528182b6752f70",
+          "git_blob_sha": "6bfe057ec6bbd708cf49c763ab3bc1fbb3e9fd49",
+          "sha256": "38c468c81ee423e30af364ff378cf627385884f4c9a7f1287b0225f226b22b8e",
+          "bytes": 1451785,
+          "byte_verification": "MATCHES_PINNED_GITHUB_BLOB"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "leaf blades joining sheaths around a culm",
+            "scattered long hairs near blade-sheath junctions"
+          ],
+          "cannot_verify": [
+            "fully exposed inner ligule membrane and its margin",
+            "ligule length or hair origin at this viewing angle"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS5",
+          "hosted_file": "content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-84590d9fcff9.jpg",
+          "hosted_commit": "4124597e2b2b8c2387b721d9b1528182b6752f70",
+          "git_blob_sha": "5c17b50f26184e363b27f7e6dc42c465863a2dbf",
+          "sha256": "4fb04fcf2a10c371dd77f63b606a8ed0ed1a4f7bcc489ccc6016a6ab10e797bf",
+          "bytes": 814986,
+          "byte_verification": "MATCHES_PINNED_GITHUB_BLOB"
         },
         {
           "i": 3,
@@ -523,6 +563,27 @@
           ]
         },
         {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "hairy elongated spikelet structure with a dark visibly twisted awn",
+            "long marginal hairs and longitudinal surface veins"
+          ],
+          "cannot_verify": [
+            "two separately traceable spikelets and their in-situ pedicel attachment",
+            "precise fertile-lemma insertion or complete awn length",
+            "lower-glume transverse fringe as a taxon-separating character"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS5",
+          "hosted_file": "content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-dichanthium-sericeum-real-spikelet-pair1.jpg",
+          "hosted_commit": "4124597e2b2b8c2387b721d9b1528182b6752f70",
+          "git_blob_sha": "e0ce3de59dd32db8ae7d43cf0d762048ae323c91",
+          "sha256": "827378809fff279f559c37f4febf1a2889ab757f562bb1cb268bfb44730eb75f",
+          "bytes": 575013,
+          "byte_verification": "MATCHES_PINNED_GITHUB_BLOB"
+        },
+        {
           "i": 6,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -531,14 +592,41 @@
           "cannot_verify": [
             "attachment as sessile when detached, paired companion in this single frame"
           ]
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "detached hairy spikelet with longitudinal veins beside ruler divisions"
+          ],
+          "cannot_verify": [
+            "original pedicel attachment in an intact pair",
+            "calibrated measurement without explicit scale-unit confirmation",
+            "same-voucher association with other gallery images"
+          ],
+          "review_date": "2026-11-11",
+          "pass": "PHASE4_PASS5",
+          "hosted_file": "content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-dichanthium-sericeum-pedicelled-spikelet-scale.jpg",
+          "hosted_commit": "4124597e2b2b8c2387b721d9b1528182b6752f70",
+          "git_blob_sha": "33ea1dcf7923a1798827212c16619fc729ffd0ca",
+          "sha256": "d8f066c6ae87e25fd7c0f66022731faecf1cffe8c379bbb719b193c2255c48e2",
+          "bytes": 765224,
+          "byte_verification": "MATCHES_PINNED_GITHUB_BLOB"
         }
       ],
       "unmet_roles": [
-        "inspect remaining existing gallery photos i=1,2,5,7",
         "source-check taxon/location of Australian images when using them for Hays County comparison",
         "scaled paired spikelets with clear pedicel attachment"
       ],
-      "summary": "Four of eight existing photos inspected; excellent node-hair ring, flowering racemes, actual membranous ligule and scaled isolated sessile spikelet. Four other photos remain unopened."
+      "summary": "Eight of eight Lab photos initially inspected: six DIRECT_VISIBLE and two PARTIAL_VISIBLE. New views show a flowering bunch, blade-sheath junctions, a hairy awned spikelet and a detached spikelet beside ruler divisions. Attached-pair, local-voucher and scale limitations remain.",
+      "previous_pass": "PHASE4_PASS3_20_ADDITIONAL_ORIGINAL_GITHUB_IMAGE_BYTES",
+      "seasonal_review": {
+        "scope": "Pass 5's four new hosted photos only; remaining archived seasonal views not audited in this pass",
+        "observed": "Green/flowering or detached reproductive material; no demonstrated rooted dormant winter tuft or frost-stage whole plant in these four views",
+        "queue_action": "No new seasonal gap added to the master Photo Needs Queue; inspect remaining existing archives before declaring a missing role"
+      },
+      "morphology_reference_status": "FLORA_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary. Its private PDF is not attached to this continuation; stored regional characters retained without new measurements or filter changes. GrassBase descriptions at the existing Kew URLs consulted for ligule/pair terminology only."
     },
     "source_preview_audit": {
       "pass": "PHASE4_SOURCE_PREVIEW_PASS4_2026-11-10",
@@ -595,12 +683,19 @@
           "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_spikelet_size_stalked1_(14362578995).jpg"
         }
       ],
-      "needs_hosted_original_check": [
-        1,
-        2,
-        5,
-        7
-      ]
+      "needs_hosted_original_check": [],
+      "hosted_followup": {
+        "pass": "PHASE4_PASS5",
+        "review_date": "2026-11-11",
+        "reviewed_indices": [
+          1,
+          2,
+          5,
+          7
+        ],
+        "status": "HOSTED_BYTES_VISUALLY_REVIEWED_AND_GITHUB_HASH_MATCHED",
+        "note": "Prior source-preview observations remain historical. Eight-preview count is separate, not eight additional unique photos. Original Wikimedia byte equality and exact-current source licenses were not revalidated."
+      }
     }
   },
   {
