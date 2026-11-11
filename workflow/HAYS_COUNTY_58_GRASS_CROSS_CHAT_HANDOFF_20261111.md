@@ -54,6 +54,13 @@
 - The contact sheets were generated temporarily from exact image-level CC0, CC BY, CC BY-SA, CC BY-NC and CC BY-NC-SA photos, with creator credits and one-day artifact retention; NO third-party image bytes are in repo. The 60 photos were actually viewed. All five showed broadly compatible morphology, but fine diagnostically necessary structures were not conclusive; **zero species fully signed off**.
 - Don't promote a genus-level or compatible-habit appearance to a verified species ID. Follow the recorded next-anatomy-photo checklist.
 
+## Photo-ID Pass 3 — November 11, 2026
+
+- [Photo review pass 3 report: 12 more species, 79 visually inspected photos](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-pass3-visual-qa-20261111.md)
+- [Pass 3 machine-readable source photo ID list and conclusions](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-58-pass3-visual-qa-20261111.json)
+- **Cumulative actual photo-ID checks:** 25 / 58 original names, **219 individual photos**, 33 remaining, zero species-final signoffs; Hays staging JSON contains individual QA states and photos inspected.
+- **Important flags:** possible photo-ID mismatch for *Cortaderia selloana* (some observations show narrow fountain-grass-like plumes) and *Panicum miliaceum* (uncharacteristically narrow grain-bearing heads). *Stenotaphrum secundatum* photos mostly cultivated turf, not spontaneous stand evidence. *Echinochloa walteri* has good awned panicles and hairy-sheath photographs. No species or photographs released to public site.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
