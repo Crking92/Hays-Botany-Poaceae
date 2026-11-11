@@ -508,84 +508,124 @@ function headIcon(key){
 /* Original explanatory SVGs for the other three questionnaire steps.
    Diagrams are deliberately schematic and never replace specimen photographs. */
 function characterIcon(category,key){
+ // Original schematic line drawings; emphasize attachment points and diagnostic structures.
+ // Symbols depict generalized shapes, not the exact morphology of the pictured species.
  const NS="http://www.w3.org/2000/svg",s=document.createElementNS(NS,"svg");
- s.setAttribute("viewBox","0 0 110 110");s.setAttribute("aria-hidden","true");s.setAttribute("focusable","false");s.classList.add("head-shape","character-shape");
- const d=[],g="#315d43",l="#6d956e",o="#e0ad4c",cream="#f4d78a",soil="#9c8669",water="#78b9c4";
- const p=(path,stroke=g,width=2)=>d.push('<path d="'+path+'" stroke="'+stroke+'" stroke-width="'+width+'" stroke-linecap="round" stroke-linejoin="round" fill="none"/>');
- const e=(x,y,rx=4,ry=7,angle=0,fill=cream)=>d.push('<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" transform="rotate('+angle+' '+x+' '+y+')" fill="'+fill+'" stroke="'+g+'" stroke-width="1.3"/>');
- const circ=(x,y,r=2,col=l)=>d.push('<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+col+'"/>');
+ s.setAttribute("viewBox","0 0 110 110");s.setAttribute("aria-hidden","true");
+ s.setAttribute("focusable","false");s.classList.add("head-shape","character-shape");
+ const d=[],g="#315b48",light="#66856f",warm="#b18b48",pale="#e5d6a4",ground="#9a8976",stream="#8baeb1";
+ const path=(p,col=g,w=1.7)=>d.push('<path d="'+p+'" fill="none" stroke="'+col+'" stroke-width="'+w+'" stroke-linecap="round" stroke-linejoin="round"/>');
+ const shape=(p,fill="none",col=g,w=1.4)=>d.push('<path d="'+p+'" fill="'+fill+'" stroke="'+col+'" stroke-width="'+w+'" stroke-linejoin="round"/>');
+ const oval=(x,y,rx=2.6,ry=5.2,angle=0,fill=pale)=>d.push('<ellipse cx="'+x+'" cy="'+y+'" rx="'+rx+'" ry="'+ry+'" transform="rotate('+angle+' '+x+' '+y+')" fill="'+fill+'" stroke="'+g+'" stroke-width="1.15"/>');
+ const node=(x,y,r=2)=>d.push('<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+g+'"/>');
  if(category==="habit"){
   if(key==="tuft"){
-   p("M11 91 Q55 87 99 91",soil,1.5);
-   for(let i=-5;i<=5;i++){
-    let x=55+i*7,top=19+Math.abs(i)*3;
-    p("M55 91 Q"+(55+i*2)+" 61 "+x+" "+top,g,2);
-    if(i%2===0){e(x,top-2,2.4,6,i*10,o);p("M"+(55+i*2)+" 69 Q"+(59+i*5)+" 62 "+(62+i*6)+" 47",l,1.5);}
+   // One crown with radiating culms: no creeping connections.
+   path("M10 87 Q53 85 100 87",ground,1.1);
+   shape("M44 85 Q55 79 66 85 L61 89 L48 89 Z","#a4b99a",g,1.2);
+   for(const [tipX,tipY] of [[12,34],[22,18],[34,11],[47,19],[55,7],[65,16],[77,11],[91,27],[101,39]]){
+    path("M55 85 Q"+(55+(tipX-55)*.31)+" 50 "+tipX+" "+tipY,g,1.8);
    }
-   p("M55 91 l-9 15 M55 91 l10 15",soil,1.2);
+   for(const [tipX,tipY] of [[9,72],[18,62],[30,53],[73,55],[91,62],[101,70]]){
+    path("M55 83 Q"+(55+(tipX-55)*.54)+" "+(tipY+8)+" "+tipX+" "+tipY,light,1.35);
+   }
+   for(const dx of [-12,-4,4,12])path("M"+(55+dx*.28)+" 88 Q"+(55+dx)+" 95 "+(55+dx*1.45)+" 106",ground,1.15);
   }else if(key==="mat"){
-   p("M6 87 Q54 84 104 87",soil,1.5);
-   p("M8 78 Q28 73 47 79 T99 78",g,3);
-   for(let i=0;i<4;i++){
-    let x=17+i*24,y=77;
-    circ(x,y,3,g);
-    p("M"+x+" "+y+" Q"+(x-10)+" 58 "+(x-8)+" 43 M"+x+" "+y+" Q"+(x+10)+" 58 "+(x+5)+" 34",l,2);
-    p("M"+x+" "+(y+1)+" l-4 12 M"+x+" "+(y+1)+" l5 15",soil,1.25);
+   // Stolons are ON the soil. Roots form at spaced surface nodes.
+   path("M5 89 Q54 86 106 89",ground,1.25);
+   path("M5 77 C31 73 42 77 58 75 S88 77 106 71",g,2.5);
+   for(const [x,y] of [[22,76],[47,76],[74,75],[97,73]]){
+    node(x,y,2.7);
+    path("M"+x+" "+y+" Q"+(x-5)+" "+(y-18)+" "+(x-12)+" "+(y-33),g,1.75);
+    path("M"+x+" "+y+" Q"+(x+5)+" "+(y-19)+" "+(x+13)+" "+(y-36),light,1.65);
+    path("M"+x+" "+(y+1)+" l-3 17 M"+x+" "+(y+1)+" l5 18",ground,1.2);
    }
   }else if(key==="rhizome"){
-   p("M6 62 Q52 59 104 62",soil,2);
-   for(let x of [23,57,87]){
-    p("M"+x+" 61 Q"+(x-8)+" 36 "+(x-5)+" 14 M"+x+" 61 Q"+(x+8)+" 41 "+(x+10)+" 24",g,2.3);
+   // Thick linked underground horizontal rhizome with upright shoots.
+   path("M3 61 Q55 58 107 61",ground,1.6);
+   for(const [x,tilt] of [[19,-7],[52,4],[84,9]]){
+    path("M"+x+" 85 Q"+(x+tilt)+" 63 "+(x+tilt*.6)+" 39 Q"+(x+tilt*.8)+" 24 "+(x+tilt+2)+" 8",g,2);
+    path("M"+(x+tilt*.6)+" 47 Q"+(x+tilt*.6-7)+" 34 "+(x+tilt*.6-11)+" 28",light,1.5);
+    path("M"+(x+tilt*.6)+" 42 Q"+(x+tilt*.6+9)+" 34 "+(x+tilt*.6+12)+" 21",light,1.4);
    }
-   p("M8 82 Q21 74 36 82 Q50 90 65 81 T102 82",g,4);
-   for(let x of [17,43,70,94]){circ(x,82,3,g);p("M"+x+" 84 l-7 15 M"+x+" 84 l6 17",soil,1.25);}
+   path("M8 84 Q28 80 43 85 T76 85 T104 84",g,4.1);
+   for(const x of [17,43,69,94]){
+    node(x,84,3.1);
+    path("M"+x+" 86 Q"+(x-5)+" 94 "+(x-10)+" 108 M"+x+" 86 Q"+(x+3)+" 96 "+(x+7)+" 107",ground,1.25);
+   }
   }else if(key==="aquatic_rooted"){
-   p("M5 43 Q18 36 30 43 T55 43 T80 43 T105 43",water,2.1);
-   p("M3 93 Q54 89 107 93",soil,2);
-   p("M38 91 L38 60",g,2.8);
-   for(let j=0;j<6;j++){let h=58-j*6;
-    p("M38 "+h+" Q58 "+(h-16)+" 104 "+(h-10),l,2);
+   // Submerged, attached at streambed, flowing downstream to the right.
+   path("M3 27 Q15 23 27 27 T51 27 T75 27 T107 27",stream,1.9);
+   path("M2 95 Q54 92 108 95",ground,1.65);
+   path("M21 94 L24 63",g,3.0);
+   for(const [by,reach,up] of [[77,95,-19],[71,99,-12],[65,103,-3],[61,97,7],[56,102,13]]){
+    path("M24 "+by+" Q51 "+(by+up*.4)+" "+reach+" "+(by+up),light,1.85);
    }
-   p("M38 91 l-11 17 M38 91 l7 17 M38 91 l17 15",soil,1.3);
+   for(const dx of [-10,-3,4,11])path("M22 94 Q"+(22+dx)+" 100 "+(22+dx*1.5)+" 109",ground,1.25);
+   path("M64 102 l10 0 M88 99 l9 0",stream,.7);
   }
  }else if(category==="ligule"){
-  // Same blade and split-sheath silhouette in all three views;
-  // only the ligule feature changes, making comparison meaningful.
-  p("M38 105 L39 57 Q42 43 33 9 M72 105 L71 57 Q67 43 78 9",g,3);
-  p("M39 57 Q55 62 71 57",l,2);
-  p("M47 103 L47 59 M63 103 L63 59",l,1.5);
-  p("M39 59 Q55 65 71 59",o,1.6);
+  // Consistent enlarged inner blade-sheath junction across all three diagrams.
+  // Only the true ligule changes. The collar outline is unchanged.
+  shape("M43 104 L43 65 Q43 57 47 49 L55 10 L63 49 Q67 57 67 65 L67 104","#f4f4e9",g,1.7);
+  path("M55 13 L55 53",light,1.05);
+  path("M43 65 Q55 71 67 65",g,1.55);
+  path("M48 101 L48 74 M62 101 L62 74",light,1.15);
   if(key==="hairs"){
-   for(let i=0;i<9;i++){let x=40+i*3.75,yy=59+(i===4?4:0);
-    p("M"+x+" "+yy+" Q"+(x+(i-4)*.5)+" "+(yy-10)+" "+(x+(i-4)*.65)+" "+(yy-16-(i%3)*3),o,1.6);}
+   // Hair ligule: bases arise at the INNER blade-sheath seam.
+   for(let j=0;j<10;j++){
+    const x=44+j*2.45,y=65+3*Math.sin(Math.PI*j/9);
+    path("M"+x.toFixed(1)+" "+y.toFixed(1)+" Q"+(x+(.5-j/9)).toFixed(1)+" "+(y-9)+" "+(x+(j%3-1)*1.3).toFixed(1)+" "+(y-16-(j%3)*2).toFixed(1),warm,1.35);
+   }
   }else if(key==="membrane"){
-   d.push('<path d="M40 59 Q46 42 55 32 Q66 44 70 59 Q55 64 40 59 Z" fill="'+cream+'" fill-opacity=".9" stroke="'+o+'" stroke-width="1.8" stroke-linejoin="round"/>');
-   p("M46 54 Q55 42 64 54",o,1);
+   // A transparent flap rises from the junction; no false node hairs.
+   shape("M44 65 Q46 52 49 47 Q52 42 55 42 Q62 43 66 65 Q55 70 44 65 Z","#ead7a3",warm,1.45);
+   path("M48 62 Q55 58 62 63",warm,.8);
   }else if(key==="absent"){
-   // No hair fringe or inner membrane drawn.
-   p("M43 61 Q55 64 67 61",g,1.2);
+   // No inner flap or ligular hairs; only the blade/sheath transition.
+   path("M46 65 Q55 68 64 65",light,.9);
   }
  }else if(category==="awns"){
-  const spike=(x=55,y=72)=>{e(x,y,11,21,-14,cream);p("M"+(x-4)+" "+(y+14)+" L"+(x+6)+" "+(y-14),l,1.7);p("M"+(x-2)+" "+(y-4)+" l-8 -3 M"+(x+2)+" "+(y-12)+" l8 -4",o,1.2);p("M"+x+" "+(y+19)+" l0 20",g,2.2);};
+  // All awn comparisons use the same enlarged fertile floret where appropriate.
+  const floret=(sx=55,sy=74)=>{
+   // Two basal glumes, central lemma, and palea ridge.
+   shape("M"+(sx-12)+" "+(sy+13)+" Q"+(sx-9)+" "+(sy-6)+" "+sx+" "+(sy-15)+" Q"+(sx+8)+" "+(sy-6)+" "+(sx+10)+" "+(sy+13)+" Q"+sx+" "+(sy+21)+" "+(sx-12)+" "+(sy+13)+" Z","#ece4bd",g,1.5);
+   path("M"+sx+" "+(sy+15)+" L"+sx+" "+(sy-12),light,1.1);
+   path("M"+(sx-12)+" "+(sy+13)+" Q"+(sx-19)+" "+(sy-5)+" "+(sx-14)+" "+(sy-9),light,1.2);
+   path("M"+(sx+10)+" "+(sy+13)+" Q"+(sx+17)+" "+(sy-5)+" "+(sx+15)+" "+(sy-12),light,1.2);
+   path("M"+sx+" "+(sy+21)+" L"+sx+" "+(sy+31),g,1.8);
+  };
   if(key==="three"){
-   spike();
-   p("M52 51 Q37 27 22 8 M55 51 Q56 24 54 4 M58 51 Q76 26 91 12",o,2);
+   // Aristida: three awns emerge from a SINGLE fertile lemma apex.
+   floret(55,75);
+   path("M55 58 Q46 35 18 11 M55 58 Q54 28 55 5 M55 58 Q66 34 92 10",warm,1.6);
+   node(55,58,1.5);
   }else if(key==="long"){
-   spike();
-   p("M57 51 Q83 27 67 5 Q53 -3 50 9",o,2.7);
+   // One long sharply bent (geniculate) lemma awn, distinct from grass bristles.
+   floret(55,75);
+   path("M55 58 Q52 44 58 31 L87 8",warm,1.95);
+   path("M56 51 l-2 5 M58 46 l-2 5",warm,.85);
+   node(58,31,1.65);
   }else if(key==="bristles"){
-   // Distinct bristles start below spikelet, not from its lemma tip.
-   spike(58,54);
-   p("M57 79 Q28 69 13 30 M59 78 Q39 53 37 11 M61 78 Q74 46 91 10 M59 78 Q83 72 105 37 M54 79 Q28 83 10 65",o,1.65);
-   circ(58,77,3.5,g);
+   // Setaria: bristles are modified sterile branchlets attached BENEATH spikelet.
+   floret(55,59);
+   path("M55 91 L55 107",g,2);
+   node(55,88,2.9);
+   for(const [tx,ty,dx] of [[11,29,-1],[33,9,-1],[80,6,1],[102,30,1],[14,61,-1],[98,64,1]]){
+    path("M55 88 Q"+(55+dx*16)+" 51 "+tx+" "+ty,warm,1.45);
+   }
   }else if(key==="none_obvious"){
-   spike();p("M44 94 Q55 98 65 94",g,1.3);
+   // Awnless-looking floret retains glume/lemma detail, minus prominent projections.
+   floret(55,65);
   }else if(key==="burs"){
-   p("M54 104 L54 78",g,2.6);
-   d.push('<path d="M30 76 Q22 59 31 40 Q47 24 63 30 Q85 38 83 60 Q76 79 54 87 Q39 85 30 76 Z" fill="'+cream+'" fill-opacity=".62" stroke="'+g+'" stroke-width="2"/>');
-   for(let i=0;i<3;i++)e(42+i*11,57+(i%2)*7,6,10,15,cream);
-   const spines=[[28,47,13,34],[38,32,31,12],[55,30,56,7],[72,36,85,17],[82,50,101,44],[83,66,103,74],[71,80,79,101],[45,84,32,104],[28,69,9,73]];
-   spines.forEach(([x,y,xx,yy])=>p("M"+x+" "+y+" L"+xx+" "+yy,o,1.8));
+   // Cenchrus: several actual spikelets lie INSIDE fused spiny bristle involucre.
+   path("M54 105 L54 89",g,2.3);
+   shape("M32 76 Q25 64 33 44 Q39 31 55 29 Q73 32 80 46 Q86 64 76 79 Q55 90 32 76 Z","#e6d9a9",g,1.5);
+   for(const [x,y,ang] of [[45,52,-18],[57,50,8],[66,59,22]])oval(x,y,4.1,11.2,ang,"#f7eecb");
+   for(const [x,y,xx,yy] of [[33,50,12,32],[39,36,25,13],[54,30,54,7],[70,36,84,15],[80,48,104,38],[81,68,104,76],[70,79,82,101],[49,82,40,107],[32,75,11,84]]){
+    path("M"+x+" "+y+" L"+xx+" "+yy,warm,1.45);
+   }
+   path("M38 78 Q55 90 74 77",light,1);
   }
  }
  s.innerHTML=d.join("");return s;
