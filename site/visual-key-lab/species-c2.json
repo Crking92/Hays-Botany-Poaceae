@@ -294,7 +294,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthelium/dichanthelium-oligosanthes/images/commons-dichanthelium-oligosanthes-choess.jpg",
-        "label": "Few-flowered panicgrass — verified original field photo",
+        "label": "FEW-FLOWERED PANICGRASS — open green panicle with separated spikelets; winter rosette not shown",
         "creator": "Choess",
         "license": "CC BY-SA 3.0",
         "license_url": "",
@@ -304,7 +304,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthelium/dichanthelium-oligosanthes/images/commons-oligosanthes-1.jpg",
-        "label": "FEW-FLOWERED PANICGRASS — real archived spikelet close-up",
+        "label": "FEW-FLOWERED PANICGRASS — attached oval spikelets; not a dissected close-up",
         "creator": "Jschnable",
         "license": "CC BY-SA 4.0",
         "license_url": "",
@@ -377,6 +377,62 @@
       "stage": "PHASE3_PASS9_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-backed flowering phase/ligule/spikelet checklists; no same-plant spring/fall/winter photo certification or confirmed Hays County voucher."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/2 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "widely spaced oval green spikelets borne on branching slender open panicle in field"
+          ],
+          "cannot_verify": [
+            "winter rosette, true hair ligule, late-season secondary short panicle",
+            "glume-base color"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Dichanthelium/dichanthelium-oligosanthes/images/commons-dichanthelium-oligosanthes-choess.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "72a465e391c6504cd28ad5ddbd21f517b32cb6a5",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "close view of spaced green oval spikelets attached to slim branch beside long leaf blade"
+          ],
+          "cannot_verify": [
+            "isolated dissected spikelet and upper glume base",
+            "true inner ligule"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Dichanthelium/dichanthelium-oligosanthes/images/commons-oligosanthes-1.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "91895d4bdc4e35b940fa886c4cd0154bf5b53d14",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "verified winter basal rosette with dated provenance",
+        "late-season reduced panicle compared with spring one",
+        "ligule and upper-glume base at high resolution"
+      ],
+      "summary": "2 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   },
   {

@@ -130,7 +130,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/aristida-oligantha/gbif-2807386999.jpg",
-        "label": "General herbarium specimen — diagnostic label verification deferred",
+        "label": "TEXAS PRESSED SPECIMEN — roots and slender awned flowering stems; anatomy not dissected",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -140,7 +140,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/aristida-oligantha/gbif-4849359811.jpg",
-        "label": "General herbarium specimen — diagnostic label verification deferred",
+        "label": "KEW PRESSED SPECIMEN — thin leafy flowering shoots; finer glume anatomy unresolved",
         "creator": "Royal Botanic Gardens, Kew",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -212,6 +212,84 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_3_OF_5",
+      "rights_status": "TWO_EMBEDDED_COPYRIGHT_RESERVED_MARKS_REQUIRE_EXACT_SOURCE_LICENSE_RECONCILIATION",
+      "scope": "3/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "thin dry flowering branches and straw-colored narrow blades with reddish culms"
+          ],
+          "cannot_verify": [
+            "glume veins",
+            "mature awn branch count from one floret",
+            "date of winter season"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Aristida/aristida-oligantha/images/commons-archive-b24cab066d158f95.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "afc008afb731492c9667af84396b6ef06224e022",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pressed Texas sheet with long slender leafy shoots, fine awned heads and exposed fibrous roots"
+          ],
+          "cannot_verify": [
+            "glume vein count and individual awn origins",
+            "current image reuse rights"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/aristida-oligantha/gbif-2807386999.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "d27763e2704957d3d3e77a5e7621f93ab5239a5a",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY",
+          "rights_attention": "EMBEDDED_COPYRIGHT_RESERVED_TEXT_CONFLICTS_WITH_STORED_CC_BY_LABEL; verify with original provider before clearing"
+        },
+        {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pressed grass specimen with thin leafy stems and airy awned heads against herbarium sheet"
+          ],
+          "cannot_verify": [
+            "glume/lemma anatomy or count",
+            "whether embedded copyright-reserved marking is superseded by source license"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/aristida-oligantha/gbif-4849359811.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "06084e0fcaa9cbfe6511f917a739ca1fc64ecc55",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY",
+          "rights_attention": "EMBEDDED_COPYRIGHT_RESERVED_TEXT_CONFLICTS_WITH_STORED_CC_BY_LABEL; verify with original provider before clearing"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0,
+        3
+      ],
+      "unmet_roles": [
+        "one isolated mature three-awn floret with lower glume vein details",
+        "regional basal rosette or dormant roots with date"
+      ],
+      "summary": "3 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   },
   {
@@ -812,7 +890,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/larry-allain-usgs-texas-grama-field-habit.jpg",
-        "label": "TEXAS GRAMA · USGS real HABIT — exact species, Larry Allain",
+        "label": "TEXAS GRAMA — reddish short bristly flowering branches; whole-plant habit not shown",
         "creator": "Larry Allain / U.S. Geological Survey",
         "license": "Public domain — Larry Allain / USGS",
         "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
@@ -822,7 +900,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/larry-allain-usgs-texas-grama-flower-head-1.jpg",
-        "label": "TEXAS GRAMA · USGS real FLOWERING DETAIL — exact species, Larry Allain",
+        "label": "TEXAS GRAMA — pale green bristly flowering branches (USGS source)",
         "creator": "Larry Allain / U.S. Geological Survey",
         "license": "Public domain — Larry Allain / USGS",
         "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
@@ -893,6 +971,79 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/3 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several short dark reddish awned branches along a narrow central flowering axis"
+          ],
+          "cannot_verify": [
+            "full rooted plant habit",
+            "true ligule",
+            "dissected fertile and sterile florets"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/larry-allain-usgs-texas-grama-field-habit.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "fe66c9e2fd88ace5ac0801abdf4bc915d6df4f43",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "pale green fan-like awned floral branches borne individually along thin central stem"
+          ],
+          "cannot_verify": [
+            "measured branch length",
+            "one mature floral unit isolated and dissected"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/larry-allain-usgs-texas-grama-flower-head-1.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "658d550e28a1ea4a9f418e0e3a6d241e20ebad01",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "short pale-green bristly flowering branches spaced along a thin axis"
+          ],
+          "cannot_verify": [
+            "number of florets and fertile lemma anatomy",
+            "crown and winter form"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/images/larry-allain-usgs-texas-grama-flower-head-2.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "7baa05de0aba1e0672a9a43f532523e14a359ed7",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "true entire rooted habit and leaf collar",
+        "scale and a completely dissected fertile/sterile floral unit"
+      ],
+      "summary": "3 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   },
   {
@@ -971,6 +1122,62 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/2 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "narrow reddish purple flowering branches along a delicate upright central axis against fingers"
+          ],
+          "cannot_verify": [
+            "exact fertile lemma and sterile awn structure",
+            "inner ligule",
+            "root crown"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review014-99e072d2647eeac.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "08e93d2fafb9805abeb77f272b5a5785a6e6a981",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "compact appressed narrow flowering branch in green and pale purple above fingers"
+          ],
+          "cannot_verify": [
+            "dissected floret count and inner collar ligule",
+            "season from dry surroundings"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bouteloua/bouteloua-trifida/images/library-review033-bb7d16fe9c3f170.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "ad01ddbdf45f713bda4fa19dfa84499eec15c78a",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "isolated fertile lemma plus sterile awn structures",
+        "rooted whole plant and opened ligule"
+      ],
+      "summary": "2 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   },
   {

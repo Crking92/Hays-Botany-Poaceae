@@ -390,6 +390,94 @@
       "stage": "PHASE3_PASS10_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Referenced morphological descriptions checked. Whole-plant specimen, exact diagnostic organ photos, license eligibility and county native range not yet verified."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "mature dry pale papery flowering groups attached along bending zigzag axis"
+          ],
+          "cannot_verify": [
+            "exact number of individual spikelets per fascicle or detached fruit anatomy"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hilaria/hilaria-belangeri/images/patrick-alexander-curlymesquite-mature-attached-head-cc0.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "7b617d2b63aa74896510459522e1df3601939929",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "two detached pale papery spiky flowering clusters resting on palm"
+          ],
+          "cannot_verify": [
+            "each of three spikelets and its fertility traced to one shared node"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hilaria/hilaria-belangeri/images/patrick-alexander-curlymesquite-detached-spikelet-clusters-cc0.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "f45c7b3751ec31765500bd35ad8caf143b69b7c2",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dark reddish-purple narrow spikelet clusters visibly attached along upright head axis"
+          ],
+          "cannot_verify": [
+            "each fascicle's spikelet count or ligule/stolons"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hilaria/hilaria-belangeri/images/patrick-alexander-curlymesquite-purple-attached-head-cc0.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "37b50e723d785afebc410686373be74f1ce25484",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "three green and purple intact upright flowering heads with stacked enclosed units"
+          ],
+          "cannot_verify": [
+            "hairy rooting stolon nodes or subterranean connections",
+            "internal fascicle dissection"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Hilaria/hilaria-belangeri/images/patrick-alexander-curlymesquite-three-green-intact-heads-cc0.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "5303e57d0c0012670b3bcfb7e7a86149547fc683",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        5
+      ],
+      "unmet_roles": [
+        "creeping stolon with rooted hairy nodes and true ligule",
+        "one intact fascicle with exactly three distinct spikelets and scale"
+      ],
+      "summary": "4 direct and 0 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   },
   {
@@ -1148,7 +1236,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Aristida/aristida-purpurea/images/cc0-purple-threeawn-triple-awn-mature-units-754606055.jpg",
-        "label": "MATURE THREEAWN · long spreading individual awns against a hand",
+        "label": "PURPLE THREEAWN — long spreading awns against hand; individual triple attachment not isolated",
         "creator": "iNaturalist CC0 photographer (source credit retained)",
         "license": "CC0 1.0",
         "source_page": "https://www.inaturalist.org/photos/754606055",
@@ -1157,7 +1245,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Aristida/aristida-purpurea/images/01-habit.jpg",
-        "label": "PURPLE THREEAWN — entire source-identified perennial-looking tuft",
+        "label": "PURPLE THREEAWN — leafy tuft with dry culms; root crown and perennial status not directly shown",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Aristida_purpurea_(3742173733).jpg",
@@ -1214,6 +1302,81 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_3_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/4 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "dry mature-looking florets with very long radiating bristle-like awns beside fingertip"
+          ],
+          "cannot_verify": [
+            "three awns arising from ONE lemma base",
+            "glume venation",
+            "local voucher"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/02-mature-florets-awns.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "77830542bd7aa7e53a57e563c1c7707f958eccf3",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "long spreading awns over hand and slender straw-colored flowering parts"
+          ],
+          "cannot_verify": [
+            "all three awns attached to one identified fertile lemma",
+            "precise sizes"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/cc0-purple-threeawn-triple-awn-mature-units-754606055.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "ce8897adef9e8221ed25a08bdf97e46af6fbfcff",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "large green leafy tuft with numerous tall dry flowering stalks in grassland"
+          ],
+          "cannot_verify": [
+            "underground perennial crown and roots",
+            "three-awn floral attachment"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Aristida/aristida-purpurea/images/01-habit.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "e3d03efbdf9ffbdbe2055af4506c5eba09a2d010",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        3
+      ],
+      "unmet_roles": [
+        "one mature spikelet with all three awns attached to one lemma",
+        "scaled lower and upper glume veins and actual perennial crown"
+      ],
+      "summary": "2 direct and 1 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   }
 ]
