@@ -1305,7 +1305,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Limnodea/limnodea-arkansana/images/inat-cc0-limnodea-671201197.jpg",
-        "label": "Ozarkgrass — flowering tufts emerging from one compact aboveground basal clump",
+        "label": "OZARKGRASS — basal leafy bunch and thin flowering stems; roots hidden",
         "creator": "iNaturalist CC0 photographer (record did not include creator name)",
         "license": "CC0 1.0",
         "source_page": "https://www.inaturalist.org/photos/671201197",
@@ -1314,7 +1314,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Limnodea/limnodea-arkansana/images/inat-cc0-limnodea-671201150.jpg",
-        "label": "Ozarkgrass — isolated awned flowering units against fingertip",
+        "label": "OZARKGRASS — attached tiny awned flowering units against fingers; not dissected",
         "creator": "iNaturalist CC0 photographer (record did not include creator name)",
         "license": "CC0 1.0",
         "source_page": "https://www.inaturalist.org/photos/671201150",
@@ -1404,6 +1404,94 @@
       "stage": "PHASE3_PASS11_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_4_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "4/4 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "compact leafy basal bunch with upright slender dry flowering culms in bare soil"
+          ],
+          "cannot_verify": [
+            "same rooted crown",
+            "basal root system, annual life cycle or exact inflorescence anatomy"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Limnodea/limnodea-arkansana/images/inat-cc0-limnodea-671201197.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "a37d05ab4f64631416c00aa20728ec5e6cd614ba",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "several small green flowering units and long thin awn-like projections held against fingertips"
+          ],
+          "cannot_verify": [
+            "isolated single floret and the actual point of bent awn insertion"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Limnodea/limnodea-arkansana/images/inat-cc0-limnodea-671201150.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "fb150ec6a4da59b30b4de7b9a59716a205ac0011",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "parted green leaf blade and sheath junction with small pale projecting/torn membrane-like tissue"
+          ],
+          "cannot_verify": [
+            "entire true ligule and its uninterrupted insertion",
+            "reliable membrane length"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Limnodea/limnodea-arkansana/images/chet-burrier-647543191-leaf-collar-macro.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "836658b7715e87db73a2074295fcab65254ddf14",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "green narrow flower-bearing branch with several attached elongated spikelets and projecting fine awns"
+          ],
+          "cannot_verify": [
+            "single isolated fertile lemma with two tiny teeth",
+            "glume vein count"
+          ],
+          "pass": "PHASE4_PASS8",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Limnodea/limnodea-arkansana/images/linda-jo-conn-655661278-green-awned-spikelets.jpg",
+          "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
+          "git_blob_sha": "3de2354db4aef45743eca4ed7d9a38c73cd0537b",
+          "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "unmet_roles": [
+        "isolated single-awn lemma with two teeth and glume veins",
+        "true uninterrupted inner ligule, enlarged"
+      ],
+      "summary": "2 direct and 2 partial narrowly scoped observations; no inference of hidden structural attachments.",
+      "seasonal_review": {
+        "observed": "Green, dry or senescent plant material visible in some images; a November–February or frost date was not established by visual appearance.",
+        "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
     }
   },
   {
