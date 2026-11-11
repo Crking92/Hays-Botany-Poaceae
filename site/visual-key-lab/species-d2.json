@@ -424,13 +424,35 @@
         "True inner ligule and dissected florets with scale, linked to a local Hays-provenance specimen",
         "Photo date-confirmed November–February dormancy and individual photo rights"
       ],
-      "summary": "Harry Rose i=0 provides connected rooted living tuft with leaves and delicate flowering panicles. Observer dryopteris2 i=2 illustrates sparse airy flowering with tiny spikelets, but its identification is already provisional and is not elevated by these photos. Existing i=1 and i=3 returned metadata-only when attempted. Remaining i=4–7 not opened in this pass.",
+      "summary": "Harry Rose i=0 provides connected rooted living tuft with leaves and delicate flowering panicles. Observer dryopteris2 i=2 illustrates sparse airy flowering with tiny spikelets, but its identification is already provisional and is not elevated by these photos. Existing i=1 and i=3 returned metadata-only when attempted. Remaining i=4–7 not opened in this pass. Pass 33 retried four remaining TEX gallery refs i=4–7: all returned blob metadata only and remain unreviewed; six of eight total remain unviewable in existing connector retrieval.",
       "seasonal_review": {
         "observed": "No exact November–February live photo capture dates independently verified.",
         "queue_action": "Use existing master Photo Needs Queue for seasonal and anatomical photo gaps. No new spreadsheet."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo appearance only; existing source-backed key values and plant identity records unchanged."
+      "morphology_reference_note": "Photo appearance only; existing source-backed key values and plant identity records unchanged.",
+      "image_access_history": [
+        {
+          "pass": "PHASE4_PASS33_8_HOSTED_IMAGES",
+          "date": "2026-11-11",
+          "indices_attempted": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "result": "All four GitHub fetch_file calls returned blob metadata but no renderable image bytes; no visual QA count, no new label conclusions; route to existing image-access recovery lane."
+        }
+      ],
+      "inaccessible_hosted_indices": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "image_access_next_action": "No repeat metadata-only retries in normal QA. Recover original viewable bytes through separate image-access workflow before labeling or counting."
     }
   },
   {
