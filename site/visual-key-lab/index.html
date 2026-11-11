@@ -238,9 +238,51 @@ function headIcon(key){
   }
   break;
  }
- case "fingers":path("M55 105 L55 72",2.8);for(let j=0;j<7;j++){const x=11+j*14.5,y=13+Math.abs(3-j)*13;branch(55,73,x,y,5,.65)}break;
- case "whorls":main();for(let y of [30,58,84])for(let d of [-1,1])for(let a of [0,20])branch(55,y,55+d*(31-a*.3),y-9-a*.6,3,.65);break;
- case "combs":main();for(let y of [32,53,74,92])comb(y,y%2?37:45,6,false);break;
+ case "fingers":{
+  // Digitate cluster: narrow racemes converge at nearly the same insertion point.
+  path("M55 105 L55 77",2.5);
+  const rays=[[-39,-39],[-24,-61],[-5,-67],[16,-64],[35,-48],[43,-30]];
+  for(const [dx,dy] of rays){
+    const ex=55+dx,ey=77+dy;
+    path("M55 77 L"+ex+" "+ey,1.9,green);
+    for(let j=1;j<=6;j++){
+      const t=j/7,x=55+dx*t,y=77+dy*t,offset=dx>=0?1:-1;
+      path("M"+x.toFixed(1)+" "+y.toFixed(1)+" l"+(offset*3)+" -"+(2.4+(j%3)),1.15,olive);
+      if(j%2===0)ellipse(x+offset*2,y-2.2,1.65,3.3,dx>0?30:-30,pale);
+    }
+  }
+  break;
+ }
+ case "whorls":{
+  // Chloris-like flowering branches arise in widely separated whorled tiers.
+  path("M55 105 L55 15",2.35);
+  for(const [y,extent] of [[27,24],[56,33],[85,27]]){
+    for(const [dir,tilt] of [[-1,-12],[1,-7],[-1,6],[1,10]]){
+      const endX=55+dir*(extent-(tilt>0?5:0)),endY=y+tilt;
+      path("M55 "+y+" L"+endX+" "+endY,1.65,green);
+      for(let j=1;j<=5;j++){
+        const t=j/6,x=55+(endX-55)*t,yy=y+(endY-y)*t;
+        path("M"+x.toFixed(1)+" "+yy.toFixed(1)+" l"+(dir*1.8)+" -3",.9,olive);
+      }
+    }
+  }
+  break;
+ }
+ case "combs":{
+  // Pectinate grama branches: a few curved 'eyebrows' with one-sided teeth.
+  path("M54 105 Q53 73 54 26",2.3);
+  for(const [y,dir,reach] of [[30,1,36],[52,-1,33],[78,1,29]]){
+    const ex=54+dir*reach,ey=y-4;
+    path("M54 "+y+" Q"+(54+dir*reach*.55)+" "+(y-11)+" "+ex+" "+ey,1.8,green);
+    for(let j=1;j<=8;j++){
+      const t=j/9,x=54+dir*reach*t,arcY=y-8*Math.sin(Math.PI*t)-4*t;
+      // Short adjacent spikelets project on one side of the comb-like rachis.
+      path("M"+x.toFixed(1)+" "+arcY.toFixed(1)+" l"+(dir*1.5)+" 6.4",1.3,olive);
+      ellipse(x+dir*1.5,arcY+7.2,2.0,3.45,dir*17,pale);
+    }
+  }
+  break;
+ }
  case "side_oats":
   // Sideoats habit: an elongated, slightly bowed rachis with pendent one-sided units.
   path("M55 105 Q52 67 43 12",2.3);
@@ -272,9 +314,51 @@ function headIcon(key){
     path("M"+endX+" "+endY+" l"+(dir*7)+" -5",1.05,gold);
   }
   break;
- case "short_racemes": main();for(let y of [30,50,70,90]){let dir=(y/10)%2?1:-1;branch(55,y,55+dir*26,y-13,3,.72)}break;
- case "one_sided":path("M56 105 Q44 59 66 12",2.4);for(let j=0;j<10;j++){let y=95-j*7.3,x=56-(95-y)*.13;bead(x+9,y-3,50,.75)}break;
- case "many_one_sided":main();for(let y of [30,49,68,87]){let dx=y%2?39:-39;branch(55,y,55+dx,y-21,5,.64)}break;
+ case "short_racemes":{
+  // Little bluestem: short, silky racemes emerge from separate leafy spathes,
+  // rather than forming one large, regularly branched panicle.
+  path("M49 105 Q51 63 47 15",2.35);
+  for(const [y,dir,reach] of [[83,-1,20],[65,1,24],[46,-1,21],[26,1,17]]){
+    const x=48+dir*reach,endY=y-15;
+    path("M49 "+y+" Q"+(49+dir*7)+" "+(y-10)+" "+x+" "+endY,1.5,green);
+    // Narrow spathe beneath the raceme.
+    path("M"+(49+dir*7)+" "+(y-11)+" Q"+(49+dir*15)+" "+(y-9)+" "+(49+dir*16)+" "+(y-21),1.15,olive);
+    for(let j=0;j<5;j++){
+      const t=j/5,sx=x+dir*(j*.55),sy=endY-3-j*3.2;
+      ellipse(sx,sy,1.45,3.4,dir*21,pale);
+      path("M"+(sx+dir*2)+" "+sy+" l"+(dir*4)+" -5",.72,gold);
+    }
+  }
+  break;
+ }
+ case "one_sided":{
+  // Open branches carry tiny spikelets primarily on a single side of each raceme.
+  path("M54 105 Q53 61 53 16",2.35);
+  for(const [y,dir,reach,up] of [[34,-1,38,11],[61,1,42,12],[88,-1,31,9]]){
+    const ex=54+dir*reach,ey=y-up;
+    path("M54 "+y+" Q"+(54+dir*reach*.52)+" "+(y-up*.55)+" "+ex+" "+ey,1.6,green);
+    for(let j=1;j<=7;j++){
+      const t=j/8,x=54+dir*reach*t,yy=y-up*t;
+      ellipse(x+dir*1.6,yy+4.2,1.7,3.0,dir*30,pale);
+    }
+  }
+  break;
+ }
+ case "many_one_sided":{
+  // Vaseygrass-like many ascending unilateral racemes, not just four thick branches.
+  path("M54 105 L54 15",2.35);
+  for(let j=0;j<8;j++){
+    const y=95-j*10.0,dir=j%3===0?-1:1,
+      reach=22+(j%3)*4,up=15+(j%3)*3;
+    const ex=54+dir*reach,ey=y-up;
+    path("M54 "+y+" L"+ex+" "+ey,1.4,green);
+    for(let k=1;k<=6;k++){
+      const t=k/7,x=54+dir*reach*t,yy=y-up*t;
+      ellipse(x+dir*1.2,yy+2.9,1.55,2.8,dir*22,pale);
+    }
+  }
+  break;
+ }
  case "paired_spikes":path("M55 104 L55 76 M55 76 L25 17 M55 76 L86 17",2.8);for(let d of [-1,1])for(let j=0;j<8;j++){let t=(j+1)/9,x=55+d*31*t,y=76-59*t;bead(x+d*5,y,48*d,.73)}break;
  case "spike":grainSpike(55,19,102,12,6);break;
  case "foxtail":
