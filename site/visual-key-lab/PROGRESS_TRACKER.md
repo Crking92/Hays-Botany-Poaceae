@@ -20,6 +20,18 @@
 
 The separate **Poaceae comprehensive migration gates (NO deployment)** workflow failed on a **pre-existing broader source/photo-release audit**, distinct from the 112-species visual key's 25/25 candidate-retention tests. [Failing workflow run](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/42915891685) reported **3 held image files in the PUBLIC repository** and **2 source checksum mismatches**; these were not modified, removed, or cleared in this morphology pass. They require exact-path source/photo rights and byte-identity investigation in the appropriate photo-quality workflow before any public release claim. Manual photo inspection and release rights cannot be inferred from a successful key metadata test.
 
+## Phase 4 — metadata-only triage / first photo QA priorities (2026-11-10)
+
+**This is only an inventory based on existing species photo-reference metadata, NOT an inspection of the original images, cropped anatomy, licenses or rights. Do not promote any photo to diagnostic-certified from these counts.**
+
+- **112 species / 514 total linked photo references**: **1 species with zero**, **10 species with one**, **15 species with two**, and **86 species with three or more**. Linked image quantity is not diagnostic anatomical image quality.
+- **No photo:** *Muhlenbergia ×involuta* (Canyon / Edwards Plateau muhly) — preserve current zero and source/rights gap; DO NOT substitute Lindheimer or seep muhly parent photos as a true hybrid.
+- **Only one linked photo:** *Bromus pubescens, Eragrostis intermedia, Muhlenbergia lindheimeri, Sporobolus compositus, Bromus lanceolatus, Chloris ×subdolichostachya, Erioneuron pilosum, Muhlenbergia reverchonii, Tridens flavus, Tridentopsis mutica*. These are first **visual inspection** candidates, not automatic re-download requests.
+- **Two linked photos (15 species):** among them high-value Kyle comparisons *Poa arachnifera, Dichanthelium oligosanthes, Sorghum halepense, Bouteloua curtipendula, Nassella leucotricha* and *Urochloa texana*. Exact ligules, glumes, lemma/palea or dormant stages may already be visible — check the current approved originals before declaring any gap.
+- Start photo role QA with **0/1-photo species**, then proceed to anatomy-critical **2-photo species**. Inspect image itself with correct-species provenance, rights/license and credit, whole plant/head/ligule/lemma/glumes/etc., and whether its existing crop/arrow actually points at the named structure. Reuse existing approved images where possible. Put **only actual missing roles** in the existing single master Photo Needs Queue, no new sheets.
+- The separate comprehensive release audit most recently still flagged **3 held image files publicly present** plus **2 source checksum mismatches**. These are unresolved hard blockers for full image clearance and need exact-path and metadata/byte identity checks; **no image file has been modified, deleted or newly published** by Phase 3 or this triage.
+- Phase 5 actual mobile tap/scroll/photo load and authenticated Hays County field specimens remain independently open. The final GitHub Pages build for 112/112 first-pass checklist page completed successfully, but that is NOT an approval of photo rights, image accuracy or field determinations.
+
 ## Phase 3 — completed first-checklist coverage (Passes 12–13, 2026-11-10)
 
 - **112/112 indexed species** now have first-pass source-backed anatomical comparison prompts, **315 checks total**. **0/112** are fully verified with same-plant diagnostic image/photo credits, dissection, and field acceptance. This is checklist coverage complete, NOT overall project complete.
