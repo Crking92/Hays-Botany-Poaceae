@@ -525,7 +525,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-8194cc1de3d1874.jpg",
-        "label": "1 · WINTER TUFT — actual green bunch among dry leaves",
+        "label": "GREEN LEAFY TUFT AMONG DRY LEAVES — collection season not verified",
         "creator": "John Thomlinson",
         "license": "CC BY (version not recorded)",
         "source_page": "https://www.gbif.org/occurrence/6147668649",
@@ -589,6 +589,62 @@
       "stage": "PHASE3_PASS3_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS6_FOURTEEN_HOSTED_PHOTOS",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_LAB_GALLERY_FIRST_PASS_2_OF_2",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "All 2 current Lab gallery photographs visually inspected from hosted GitHub bytes; no source specimen, licensing, measured dissection, or full archive certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "green narrow-bladed clump; dry surrounding leaves"
+          ],
+          "cannot_verify": [
+            "winter collection date",
+            "underground crown",
+            "ligule and floret callus"
+          ],
+          "pass": "PHASE4_PASS6",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-8194cc1de3d1874.jpg",
+          "hosted_commit": "d6e1b652ad43aedc1b5fc858b9825f50f5055a4a",
+          "git_blob_sha": "9441518fe7c42d1360295dd7e4b5fe279a53e142",
+          "byte_verification": "RETRIEVED_HOSTED_IMAGE_VIA_GITHUB_CONNECTOR; BLOB_SHA_FROM_API"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "narrow flowering branches; many projecting long awns"
+          ],
+          "cannot_verify": [
+            "one awn per fertile lemma",
+            "mature callus and crown",
+            "individual lengths"
+          ],
+          "pass": "PHASE4_PASS6",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Nassella/nassella-leucotricha/images/library-review014-f7b0de3365baf08.jpg",
+          "hosted_commit": "d6e1b652ad43aedc1b5fc858b9825f50f5055a4a",
+          "git_blob_sha": "951a41e800fda6f57f7fea605fdf5e603e6e63c8",
+          "byte_verification": "RETRIEVED_HOSTED_IMAGE_VIA_GITHUB_CONNECTOR; BLOB_SHA_FROM_API"
+        }
+      ],
+      "unmet_roles": [
+        "opened collar with true ligule and side hair tufts",
+        "one dissected mature floret with hairy callus, crown and scaled awn"
+      ],
+      "summary": "Photo role visibility reviewed; only clearly visible structures treated as demonstrated. Species diagnosis and microscopic details remain separate.",
+      "seasonal_review": {
+        "observed": "Seasonal state noted where visibly green or dry; calendar-specific winter/dormancy not established solely by images.",
+        "queue_action": "Do not create new photo-needs entries before reconciling existing archives."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "No new measurements or filter characters asserted; photo-role review only."
     }
   },
   {
