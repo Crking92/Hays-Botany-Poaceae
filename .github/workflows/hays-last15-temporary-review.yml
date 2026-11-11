@@ -1,0 +1,25 @@
+name: Hays final 15 one-record grass IDs - temporary credited photo sheets
+on:
+  push:
+    branches: [inat-coverage-audit-20261111]
+    paths:
+      - '.github/workflows/hays-last15-temporary-review.yml'
+      - 'scripts/hays_last15_temporary_cc_contact_sheets.py'
+permissions: {contents: read}
+jobs:
+  contact-sheets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: python3 -m pip -q install Pillow
+      - name: Select permitted photographs and build last 15 Hays review sheets
+        run: python3 scripts/hays_last15_temporary_cc_contact_sheets.py
+      - name: Upload credited noncommercial photo-review sheets for one day
+        uses: actions/upload-artifact@v4
+        with:
+          name: hays-last15-single-record-photo-visual-review
+          path: review_temporary_batch5/
+          retention-days: 1
+          if-no-files-found: error
