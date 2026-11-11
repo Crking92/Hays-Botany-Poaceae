@@ -1,0 +1,64 @@
+{
+  "verified_at": "2026-11-11",
+  "scope": "Five GBIF name-screen exceptions among 58 Hays candidates",
+  "review_authority": "Kew Plants of the World Online (WCVP-derived taxonomic treatment)",
+  "process": "Independent name cross-check only; no photo ID and no wild population confirmation",
+  "live_site_changed": false,
+  "records": [
+    {
+      "name": "Coelorachis cylindrica",
+      "inat_taxon_id": 160775,
+      "gbif_status": "SYNONYM",
+      "kew_name": "Rottboellia campestris",
+      "kew_treatment": "Coelorachis cylindrica is a synonym of Rottboellia campestris under current POWO; FNA 2003 historically used Coelorachis cylindrica.",
+      "kew_url": "https://powo.science.kew.org/taxon/62724-2",
+      "action": "Keep as Hays candidate; resolve accepted genus and Flora description before card creation.",
+      "possible_existing_card": null,
+      "provisional_taxonomic_decision": "SYNONYM_REQUIRES_NAME_NORMALIZATION"
+    },
+    {
+      "name": "Echinochloa colona",
+      "inat_taxon_id": 76755,
+      "gbif_status": "FUZZY",
+      "kew_name": "Echinochloa colona",
+      "kew_treatment": "Kew accepts Echinochloa colona; GBIF fuzzy matched Echinochloa colonum; this fuzzy match is not reason to discard the taxon.",
+      "kew_url": "https://powo.science.kew.org/taxon/399655-1",
+      "action": "Retain as distinct field-ID candidate; specimen/observation photos still need review.",
+      "possible_existing_card": null,
+      "provisional_taxonomic_decision": "KEW_ACCEPTED_NAME_MATCH"
+    },
+    {
+      "name": "Elymus glabriflorus",
+      "inat_taxon_id": 204310,
+      "gbif_status": "SYNONYM",
+      "kew_name": "Elymus virginicus",
+      "kew_treatment": "Kew POWO treats Elymus glabriflorus as a synonym of Elymus virginicus; the current 112 includes Elymus virginicus. Alternative taxonomy has sometimes accepted glabriflorus separately.",
+      "kew_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A90247-2",
+      "action": "PROPOSED_DUPLICATE: compare Flora treatment; preserve original iNaturalist IDs but do not build second card unless Flora-based taxon concept warrants it.",
+      "possible_existing_card": "elymus-virginicus",
+      "provisional_taxonomic_decision": "POSSIBLE_ALREADY_COVERED"
+    },
+    {
+      "name": "Tridentopsis elongata",
+      "inat_taxon_id": 1505965,
+      "gbif_status": "FUZZY",
+      "kew_name": "Tridentopsis elongata",
+      "kew_treatment": "Kew accepts Tridentopsis elongata as distinct from T. mutica and T. buckleyana; GBIF fuzzy matched an unrelated Trisetopsis elongata. Do not adopt that GBIF fuzzy genus.",
+      "kew_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1",
+      "action": "Retain as separate Hays candidate, pending identification and Flora verification.",
+      "possible_existing_card": null,
+      "provisional_taxonomic_decision": "KEW_ACCEPTED_NAME_GBIF_FALSE_FUZZY"
+    },
+    {
+      "name": "Janochloa antidotalis",
+      "inat_taxon_id": 1545945,
+      "gbif_status": "HIGHERRANK",
+      "kew_name": "Janochloa antidotalis",
+      "kew_treatment": "Kew accepts Janochloa antidotalis (formerly Panicum antidotale); GBIF only matched the family Poaceae and did not resolve this newer combination.",
+      "kew_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77319974-1",
+      "action": "Retain as one-record Hays candidate; especially scrutinize whether photographed individual is correctly identified and naturally established.",
+      "possible_existing_card": null,
+      "provisional_taxonomic_decision": "KEW_ACCEPTED_NAME_GBIF_INCOMPLETE"
+    }
+  ]
+}
