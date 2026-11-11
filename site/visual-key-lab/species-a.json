@@ -868,9 +868,9 @@
     "genus": "Bouteloua",
     "character_evidence": {
       "head": {
-        "source": "Illustrated Flora of North Central Texas pp.171–172",
-        "reference": "Usually 1–3 curved pectinate comb branches; unlike B. hirsuta, branch axis does not extend beyond spikelets.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Bouteloua key, printed pp. 1247–1248; user-uploaded PDF pp. 171–172",
+        "reference": "1–3(4) curved 1.5–6 cm pectinate branches, usually at least one longer than 3 cm; flowering branch ends in normal or reduced spikelet, without long NAKED continuation. Species account states axis not extending past spikelets and apical rudimentary spikelets absent. Do not call the terminal awn a rachis projection.",
+        "status": "DIRECT_PRIMARY_FLORA_TEXT_CHECKED_PHOTO_ROLE_PARTIAL",
         "review_date": "2026-11-10"
       },
       "ligule": {
@@ -884,11 +884,11 @@
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_checks": [
       {
-        "look": "Study the comb tip",
-        "check": "Usually 1–3(4) curved comb branches. The tip tends to end with a rudimentary spikelet rather than a long bare needle extending beyond the fertile spikelets.",
-        "compare": "hairy grama's 5–10 mm naked rachis tip",
-        "certainty": "Published comparison; photo verification pending",
-        "source": "Utah Valley University, blue/hairy grama identification",
+        "look": "Follow the actual flowering-branch AXIS to its terminal spikelet",
+        "check": "Usually 1–3(4) curved pectinate comb branches. The branch axis does NOT continue as a conspicuous long naked needle beyond the last spikelet. The regional flora says apical rudimentary spikelets are absent; small terminal AWNS are floret parts, not a naked rachis extension.",
+        "compare": "Hairy grama has a conspicuous elongated, rough NAKED rachis-tip extension beyond the normal spikelets; examine several entire comb tips.",
+        "certainty": "Directly checked against Illustrated Flora of North Central Texas (printed pp. 1247–1248); one existing full-comb photo supports this visible character, not a dissected apical unit",
+        "source": "Illustrated Flora of North Central Texas (primary PDF, pp. 171–172); UVU supplemental visual comparison",
         "url": "https://www.uvu.edu/crfs/native-plants/bouteoua-gracilis.html"
       },
       {
@@ -904,6 +904,36 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS2_TWO_ACTUAL_IMAGE_FILES_FLORA_REFERENCE",
+      "review_date": "2026-11-10",
+      "status": "PARTIAL_VISUAL_REVIEW_1_OF_6_IMAGES",
+      "rights_status": "SOURCE_CREDIT_IN_RECORD_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
+      "scope": "ONE of six existing gallery images opened as actual image bytes and compared to primary regional flora. Do not count the five unopened images as visually inspected.",
+      "photo_roles": [
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "multiple naturally curved pectinate blue grama branches",
+            "spikelets and awns continuing to near branch tip with NO conspicuous long naked rachis extension"
+          ],
+          "cannot_verify": [
+            "a microscopic apical rudimentary spikelet state solely from this photo",
+            "inner ligule or long basal/root structures",
+            "separated fertile/sterile florets and glumes",
+            "entire image-based specimen name attribution and source rights"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "individually examine other five existing gallery images before comprehensive photo grade",
+        "true hair-fringe ligule at opened inner collar with mm scale",
+        "one mature dissected normal and any terminal spikelet showing rachis ending",
+        "same-scale side-by-side comparison with hairy grama and optional pectinata"
+      ],
+      "summary": "Only photo i=3 opened: good DIRECT evidence of curved comb and no conspicuous bare continuing axis. Regional flora separately states absent apical rudimentary spikelets, NOT proven photographically."
     }
   },
   {
@@ -977,9 +1007,9 @@
     "genus": "Bouteloua",
     "character_evidence": {
       "head": {
-        "source": "Illustrated Flora of North Central Texas pp.171–172",
-        "reference": "1–4 straight or curved pectinate branches with a conspicuous rough extension of branch axis beyond the true spikelets, unlike B. gracilis.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Bouteloua key and species account, printed pp. 1247–1248; user-uploaded PDF pp. 171–172",
+        "reference": "Typically 1–4 comb-like branches, about 2.3–4 cm long including the bare axis tip; rough (scabrous) inflorescence-branch rachis continues beyond last normal spikelet as an elongated naked, sharp point. Unlike B. pectinata, absence of a tuft of hairs at base of lowermost rudimentary floret is a key-level distinction.",
+        "status": "DIRECT_PRIMARY_FLORA_TEXT_CHECKED_PHOTO_ROLE_PARTIAL",
         "review_date": "2026-11-10"
       },
       "ligule": {
@@ -993,11 +1023,11 @@
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_checks": [
       {
-        "look": "Inspect the naked projecting comb tip",
-        "check": "The raceme axis commonly continues about 5–10 mm past the last spikelet. This is rachis extension, not a lemma awn.",
-        "compare": "blue grama's generally spikelet-terminated or much less naked tip",
-        "certainty": "FNA-supported; photo verification pending",
-        "source": "Flora of North America, Bouteloua hirsuta",
+        "look": "Trace the bare tip of the comb RACHIS—not a lemma awn",
+        "check": "The 1–4 straight or curved pectinate branches generally terminate in an elongated, bare, sharp, often roughened branch-axis extension beyond the last normal spikelet. This is a RACHIS extension, distinct from the many slender AWNS attached to florets.",
+        "compare": "Blue grama's curved comb axis ends at the spikelet region without the conspicuous naked continuation. Tall grama B. pectinata can also project, but has a tuft of hairs at the lowermost rudimentary floret base per the regional key.",
+        "certainty": "Directly checked against Illustrated Flora of North Central Texas (printed pp. 1247–1248); hosted macro photo shows the apparent naked extension, but exact length and separate glume anatomy are not resolved",
+        "source": "Illustrated Flora of North Central Texas, regional Bouteloua key (primary PDF, pp. 171–172); FNA supplemental",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427"
       },
       {
@@ -1013,6 +1043,37 @@
       "stage": "PHASE3_PASS1_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS2_TWO_ACTUAL_IMAGE_FILES_FLORA_REFERENCE",
+      "review_date": "2026-11-10",
+      "status": "PARTIAL_VISUAL_REVIEW_1_OF_5_IMAGES",
+      "rights_status": "SOURCE_CREDIT_IN_RECORD_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
+      "scope": "ONE of five gallery images opened as original bytes; other four remain unreviewed in this pass.",
+      "photo_roles": [
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "mature hairy grama comb branch photographed close enough to see a dark projecting bare axis tip beyond the last full spikelet",
+            "fine awnlike projecting parts attached farther back along the branch"
+          ],
+          "cannot_verify": [
+            "exact projected-axis length without scale",
+            "true ligule type and membrane versus hairs",
+            "glume or lemma dissection and hair-tuft character distinguishing tall grama",
+            "full panicle branch count and associated rooted individual"
+          ]
+        }
+      ],
+      "unmet_roles": [
+        "individually inspect four other existing gallery images",
+        "paired comb terminal macro with mm ruler and annotated naked RACHIS tip versus lemma awns",
+        "inner true ligule with high magnification",
+        "tuft of hairs absent at base of lowermost rudimentary floret: check B. pectinata comparison",
+        "separated mature glume and lemma on correct species voucher"
+      ],
+      "summary": "Only photo i=1 opened: clearly shows projecting dark bare branch continuation consistent with flora's rachis character; floral organs and precise length not certified."
     }
   },
   {
