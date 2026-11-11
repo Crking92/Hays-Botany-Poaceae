@@ -1,0 +1,103 @@
+name: iNaturalist grass coverage audit - read only
+on:
+  push:
+    branches:
+      - inat-coverage-audit-20261111
+    paths:
+      - .github/workflows/inat-grass-coverage-audit.yml
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Query live iNaturalist and compare with 112 published grasses
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, urllib.request, urllib.parse, time, re, collections, csv
+          API = "https://api.inaturalist.org/v1"
+          species = json.loads(pathlib.Path("site/data/poaceae-index.json").read_text())
+          existing = {row["scientific"].casefold():row["scientific"] for row in species}
+          existing_bino = { " ".join(row["scientific"].casefold().split()[:2]) for row in species }
+          assert len(species)==112
+          def get(path, params=None):
+              url=API+path+("?" + urllib.parse.urlencode(params) if params else "")
+              for attempt in range(4):
+                  try:
+                      req=urllib.request.Request(url,headers={"User-Agent":"HaysBotanyCoverageAudit/1.0 (https://github.com/Crking92/Hays-Botany-Poaceae)","Accept":"application/json"})
+                      with urllib.request.urlopen(req,timeout=40) as r:
+                          return json.load(r)
+                  except Exception as e:
+                      print("RETRY",attempt,str(e)[:180],flush=True)
+                      if attempt==3:raise
+                      time.sleep(2**attempt)
+          def resolve_place(county):
+              if county=="Hays":
+                  p=get("/places/326")
+                  q=(p["results"][0] if isinstance(p,dict) and p.get("results") else p)
+                  print("CHECK_HAYS",json.dumps({"id":q.get("id"),"name":q.get("name"),"display_name":q.get("display_name")}),flush=True)
+                  assert "Hays" in str(q.get("name")), "Place ID 326 was not Hays County"
+                  return 326
+              results=get("/places/autocomplete",{"q":county+" County, Texas"}).get("results",[])
+              match=[p for p in results if p.get("name","").casefold().startswith((county+" county").casefold()) and ("TX" in p.get("display_name","") or "Texas" in p.get("display_name","") or p.get("admin_level")=="County")]
+              if not match:
+                  results=get("/places/autocomplete",{"q":county+" County"}).get("results",[])
+                  match=[p for p in results if p.get("name","").casefold().startswith((county+" county").casefold()) and ("TX" in p.get("display_name","") or "Texas" in p.get("display_name",""))]
+              if not match:
+                  print("UNRESOLVED_COUNTY",county,flush=True);return None
+              return match[0]["id"]
+          def normalize(name):
+              return re.sub(r"\\s+"," ",str(name or "").casefold().strip())
+          def fetch_species(pid):
+              all_rows=[]
+              for page in range(1,5):
+                  data=get("/observations/species_counts",{"place_id":pid,"taxon_id":47434,"quality_grade":"research","per_page":500,"page":page})
+                  rows=data.get("results",[])
+                  all_rows.extend(rows)
+                  if len(all_rows)>=data.get("total_results",0) or not rows:break
+                  time.sleep(0.8)
+              return [{"name":r["taxon"]["name"],"rank":r["taxon"].get("rank"),"taxon_id":r["taxon"].get("id"),"common":r["taxon"].get("preferred_common_name"),"observations":r.get("count",0)} for r in all_rows if r.get("taxon")]
+          counties=["Hays","Blanco","Comal","Caldwell","Guadalupe","Travis","Kendall","Gillespie","Burnet","Llano","Williamson","Bastrop"]
+          bycounty={}
+          for county in counties:
+              pid=resolve_place(county)
+              if pid is None:continue
+              rows=fetch_species(pid)
+              bycounty[county]={"place_id":pid,"n_taxa":len(rows),"taxa":rows}
+              print("COUNTY_RESULT",json.dumps({"county":county,"place_id":pid,"species_count":len(rows)}),flush=True)
+              time.sleep(1.0)
+          merged={}
+          for county,data in bycounty.items():
+              for row in data["taxa"]:
+                  key=row["taxon_id"]
+                  if key not in merged:
+                      merged[key]={**row,"counties":{}}
+                  merged[key]["counties"][county]=row["observations"]
+          candidates=[]
+          for rec in merged.values():
+              name=normalize(rec["name"]); binom=" ".join(name.split()[:2])
+              if name in existing or binom in existing_bino:continue
+              hays=rec["counties"].get("Hays",0)
+              county_n=len(rec["counties"])
+              count=sum(rec["counties"].values())
+              level=("HAYS_5PLUS" if hays>=5 else "HAYS_1_4" if hays else "REGIONAL_2COUNTIES" if county_n>=2 else "REGIONAL_ONLY")
+              candidates.append({**rec,"hays_count":hays,"region_count":count,"county_count":county_n,"tier":level})
+          priority={"HAYS_5PLUS":0,"HAYS_1_4":1,"REGIONAL_2COUNTIES":2,"REGIONAL_ONLY":3}
+          candidates.sort(key=lambda r:(priority[r["tier"]],-r["hays_count"],-r["county_count"],-r["region_count"],r["name"]))
+          matched_taxa=[rec for rec in merged.values() if normalize(rec["name"]) in existing or " ".join(normalize(rec["name"]).split()[:2]) in existing_bino]
+          totals=collections.Counter(c["tier"] for c in candidates)
+          summary={"local_species_count":len(species),"total_observed_taxa":len(merged),"matched_taxa":len(matched_taxa),"county_count":len(bycounty),"counties":{c:{"place_id":d["place_id"],"reported_taxa":d["n_taxa"]} for c,d in bycounty.items()},"candidate_counts":dict(totals),"candidates":candidates,"note":"Research-grade iNaturalist observation records only. All unmatched taxa are leads until taxonomic synonym and record review."}
+          pathlib.Path("inat-grass-coverage-summary.json").write_text(json.dumps(summary,indent=2))
+          print("AUDIT_JSON_BEGIN",flush=True)
+          print(json.dumps({"total_observed_taxa":len(merged),"matched_taxa":len(matched_taxa),"county_count":len(bycounty),"candidate_counts":dict(totals),"hays_candidates":[c for c in candidates if c["hays_count"]],"regional_top":[c for c in candidates if c["tier"]=="REGIONAL_2COUNTIES"][:80],"unresolved_counties":[x for x in counties if x not in bycounty]},separators=(",",":")),flush=True)
+          print("AUDIT_JSON_END",flush=True)
+          PY
+      - name: Store the complete CSV-ready JSON audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: inat-grass-coverage-audit
+          path: inat-grass-coverage-summary.json
+          if-no-files-found: error
