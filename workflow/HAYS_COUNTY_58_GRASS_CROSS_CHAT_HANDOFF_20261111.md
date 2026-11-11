@@ -114,6 +114,17 @@ Three **original UT Austin TEX herbarium sheet images and their readable labels 
 
 **Species confidence:** Pressed plants support the general *P. langei* habit, several narrow racemes and closely arranged spikelets, but the definitive lower glumes and papillose-based hairs cannot be independently checked at full sheet image scale. Species-level anatomical signoff remains PENDING; no live merge.
 
+## High-resolution diagnostic photo reinspection — November 11, 2026
+
+The strongest **10 Hays candidate taxa** had **40 previously reviewed iNaturalist photos revisited at their source's 1024-pixel size**, selected for glumes, awns, spikelets, nodes, ligules and grass-head architecture. **These are NOT 40 newly unique images**—the existing cumulative unique photo review remains **317** (51 of 58 names; 7 copyright-held records). Photos and license/attributions were used only in 1-day source-credit artifacts; no image bytes or new species cards were published.
+
+- [Actual ten-taxon enlarged photo character findings and exact remaining proof](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-10-highres-anatomy-check-20261111.md)
+- [Machine-readable ten-taxon photo IDs, visible traits, and missing species characters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-10-highres-anatomy-check-20261111.json)
+
+The enlarged photos confirm strong *group-level* inflorescence traits for *Aegilops cylindrica*, *Tridentopsis elongata*, *Echinochloa walteri*, *Sphenopholis obtusata*, *Coelorachis cylindrica* (= *Rottboellia campestris*), *Paspalum langei*, *Tridens congestus*, *Pappophorum bicolor*, *Janochloa antidotalis* and *Stapfochloa canterae*. They do NOT yet prove required microscopic keys (e.g. second-glume veins, lower-glume presence, papilla hair bases, deeply cleft lemma apex, actual appendix counts or fertile/sterile floret differences). **ZERO new species-level ID signoffs.**
+
+Priority follow-up: examine TEX *Paspalum langei* mature glumes and papilla hairs under microscope, with comparison to sympatric *P. pubiflorum*; then controlled scale-matched *Stapfochloa canterae* vs *S. ciliata* dissections, and *Tridentopsis elongata* second glume vein count against *T. mutica*.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
