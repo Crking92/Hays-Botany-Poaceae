@@ -1036,9 +1036,48 @@
         "reference": "Typically thick nodding or oblique rye spike 8–21 cm; not sufficient alone to separate E. virginicus.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "glume_base": {
+        "source": "Texas A&M Plants of Texas Rangelands, citing Frank Gould; FNA Elymus canadensis",
+        "source_url": "https://rangeplants.tamu.edu/plant/canada-wildrye/",
+        "secondary_source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Elymus+canadensis",
+        "reference": "Sharp V-like glume pair base and often nodding long-awned spike versus bowed U of typical Virginia wildrye; hybrids and variable erect/nodding phenotypes prevent a rigid one-criterion decision.",
+        "status": "REGIONAL_COMPARISON_SOURCE_CHECKED_HYBRIDS_PENDING",
+        "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Inspect attached glume BASES at two or more rachis nodes",
+        "check": "Canada wildrye has TWO (sometimes more) spikelets per rachis node. The pair of narrow glume bases commonly diverges sharply in a V, while Virginia wildrye's bases tend to bow into a U. View glume insertion on mature still-attached spikelets, not loose awns.",
+        "compare": "Virginia wildrye also has spikelets in pairs but more bowed, less diverging glume bases; hybrids can blur this difference.",
+        "certainty": "Texas A&M comparison rooted in Gould; single-plant voucher and multiple node macros pending",
+        "source": "Texas A&M — Canada versus Virginia wildrye",
+        "url": "https://rangeplants.tamu.edu/plant/canada-wildrye/"
+      },
+      {
+        "look": "Follow the mature nodding or drooping SPIKE and outward-curved awns",
+        "check": "FNA allows Canada wildrye spikes about 6–30 cm, usually nodding but sometimes almost erect. Most nodes bear 2(3) spikelets, each with commonly 3–5 fertile florets and long ~15–40(50) mm outward-curving LEMMA awns; don't reject a young erect head.",
+        "compare": "Virginia wildrye spikes usually remain stiffer and erect or partly held within the flag sheath, with often shorter/straighter awns. Head direction alone is not decisive.",
+        "certainty": "FNA account, ripe and immature head photo comparison still pending",
+        "source": "Flora of North America — Elymus canadensis",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Elymus+canadensis"
+      },
+      {
+        "look": "Identify TRUE membranous ligule and clasping auricles",
+        "check": "The inner ligule is a short ciliolate membrane usually under 1(2) mm, and 1.5–4 mm auricles can clasp the culm. These are NOT the awned glumes, which arise from the flowering spike; use the basal perennial crown too.",
+        "compare": "Virginia wildrye has falcate auricles and a short membrane; vegetative characters overlap strongly, so preserve Elymus sp. for hybrids.",
+        "certainty": "FNA; no same-specimen paired collar/glume examination yet",
+        "source": "Flora of North America — Elymus canadensis",
+        "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Elymus+canadensis"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    }
   },
   {
     "id": "eragrostis-intermedia",
@@ -1502,6 +1541,37 @@
         "review_date": "2026-11-10"
       }
     },
-    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK"
+    "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
+    "diagnostic_checks": [
+      {
+        "look": "Count THREE ONE-FLORET spikelets at each rachis node",
+        "check": "Little barley has a CENTRAL normally fertile spikelet with two LATERAL spikelets, usually reduced/sterile, all grouped at one rachis node. Awn-like glumes surround the node; don't mistake the three spikelets for three lemma awns on one floret.",
+        "compare": "Cereal rye generally has ONE spikelet per spike node, typically with 2(3) florets; Elymus generally has paired MULTIFLORET spikelets.",
+        "certainty": "FNA and UT Williamson County anatomy; magnified attached triplet/photo pending",
+        "source": "Flora of North America — Hordeum pusillum",
+        "url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Hordeum+pusillum"
+      },
+      {
+        "look": "Inspect the annual crown, little erect barley head and ligule",
+        "check": "A small usually annual and non-rosetted tuft with an erect, sometimes flag-sheath-embraced 2–9 cm head. True ligule is a 0.2–0.8 mm MEMBRANE, not a beard of awns. Winter green annual basal leaves may exist before spring heads.",
+        "compare": "Foxtail barley species are often larger/perennial and carry more divergent, feathery glume awns; little barley glumes usually straight or little divergent.",
+        "certainty": "FNA and regional Williamson County source; real winter stage/connected root still photo pending",
+        "source": "UT Austin — Hordeum pusillum",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Hordeum%20pusillum"
+      },
+      {
+        "look": "Separate central from reduced lateral FLORETS",
+        "check": "FNA central spikelet glumes are flattened at the base, and its lemma is about 5–8.5 mm with often 3.5–9.5 mm awn. Lateral spikelets have reduced florets, frequently shorter than the central. Count florets INSIDE each member of triplet, not at the entire node.",
+        "compare": "Cereal rye has generally two functional florets in one spikelet; cultivated barley can bear seed in all three spikelets of a node and must not be assumed H. pusillum.",
+        "certainty": "Published ranges and lateral reduction vary; same-mature-node dissection pending",
+        "source": "Flora of North America — Hordeum pusillum",
+        "url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Hordeum+pusillum"
+      }
+    ],
+    "diagnostic_review": {
+      "stage": "PHASE3_PASS12_SOURCE_BACKED_PHOTOS_PENDING",
+      "review_date": "2026-11-10",
+      "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
+    }
   }
 ]
