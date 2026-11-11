@@ -140,7 +140,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/anatherum-virginicum/inat-626921610.jpg",
-        "label": "General field recognition photograph — detailed grass anatomy not certified",
+        "label": "Hand holding dry tawny flowering grass shoots beside a winter-looking mixed stand — individual racemes not resolved",
         "creator": "(c) Linda Jo Conn, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/626921610",
@@ -165,7 +165,7 @@
     "source_blob_sha": "33ea180145ba3b8ea6a40b52f926ff0fda9f23d2",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "character_evidence": {
       "head": {
         "source": "Illustrated Flora of North Central Texas pp.162–163 under Andropogon virginicus",
@@ -198,11 +198,11 @@
       "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4/5 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "4/5 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass43 checked actual JPG i=4 from git checkout and recomputed identical SHA; role-specific judgment only, not species identity, source license or phone certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -267,21 +267,41 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "90a84987516a4cb01c26e1fb562e47f15db23e18",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "bundle of dry thin tan stems held with a hand before taller dry grasses",
+            "several pale feathery tips and bent branches in dry field setting"
+          ],
+          "cannot_verify": [
+            "exact paired raceme sheath, spikelets, and crown not resolved",
+            "field appearance alone does not establish collection month or discriminate all Anatherum lookalikes"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/anatherum-virginicum/inat-626921610.jpg",
+          "git_blob_sha": "d183c0a19b681492d80394d189a17b33bc54938d",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
         }
       ],
-      "unreviewed_hosted_indices": [
-        4
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "true spikelet-pair homology, winter basal crown and ligule"
       ],
-      "summary": "4 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "summary": "4 direct; 0 partial. Anatomy not visible remains unconfirmed. Pass43 PARTIAL_VISIBLE: bundle of dry thin tan stems held with a hand before taller dry grasses; several pale feathery tips and bent branches in dry field setting. Remaining limitations: exact paired raceme sheath, spikelets, and crown not resolved; field appearance alone does not establish collection month or discriminate all Anatherum lookalikes.",
       "seasonal_review": {
         "observed": "Dry heads, green flowerheads or standing straw may be visible; actual date and winter dormancy not established.",
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "previous_pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "previous_scope": "4/5 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "previous_summary": "4 direct; 0 partial. Anatomy not visible remains unconfirmed.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original creator, license and source links untouched; exact-image original-page rights check remains separate."
     }
   },
   {
