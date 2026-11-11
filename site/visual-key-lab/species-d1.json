@@ -1369,7 +1369,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737830.jpg",
-        "label": "Fall witchgrass — isolated oval spikelets on threadlike stalks",
+        "label": "FALL WITCHGRASS — attached oval spikelets on fine reddish branching stalks",
         "creator": "Shaun Pogacnik",
         "license": "CC0 1.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Digitaria_cognata_iNat-99737830.jpg",
@@ -1378,7 +1378,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737795.jpg",
-        "label": "Fall witchgrass — physically archived terminal spikelets and hair-fine reddish branches",
+        "label": "FALL WITCHGRASS — airy reddish flowering branches with attached spikelets",
         "creator": "Shaun Pogacnik",
         "license": "CC0 1.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Digitaria_cognata_iNat-99737795.jpg",
@@ -1458,6 +1458,62 @@
       "stage": "PHASE3_PASS6_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "2/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "photo_roles": [
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "oval straw-colored spikelets on very fine red-purple branched stalks"
+          ],
+          "cannot_verify": [
+            "individual isolated spikelet or lower glume"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737830.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "3c0ed76c66f87263f6c2cf7f9758614ab65703ce",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "many threadlike reddish flowering branches with scattered small oval spikelets"
+          ],
+          "cannot_verify": [
+            "isolated lemma, lower glume and basal crown"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737795.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "0a0e4f51e64f584de7e3b4075331326f57e49902",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        0,
+        9
+      ],
+      "unmet_roles": [
+        "intact rooted plant with basal crown and complete flowering architecture",
+        "one dissected lower glume and inner ligule"
+      ],
+      "summary": "2 directly visible and 0 partially visible scoped parts; hidden microscopic anatomy not certified.",
+      "seasonal_review": {
+        "observed": "Some autumn/dry-stage heads; calendar collection month or dormant winter condition not independently proven from appearance.",
+        "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
     }
   },
   {
@@ -1872,6 +1928,77 @@
       "stage": "PHASE3_PASS7_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Published source morphology; photos, local vouchers, individual organ measurements and county nativity not certified. Conflicting/variety-level traits explicitly provisional."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "review_date": "2026-11-11",
+      "status": "PARTIAL_VISUAL_REVIEW_3_OF_4",
+      "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
+      "scope": "3/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "straw-colored elongated many-flowered spikelets on branched stems"
+          ],
+          "cannot_verify": [
+            "precise floret count, crater-like gland positions, ligule"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/harry-rose-spikelets1.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "a282c4183b6511fca47fe55138ec055bc8bba450",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "four scaled photographs of the outer blade–sheath junction and sparse collar fringe hairs"
+          ],
+          "cannot_verify": [
+            "complete true inner ligule from every angle or gland location"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/stefan-cilianensis-blade-sheath-overview-10mm-sl1.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "5bf0013e49978a15e49ea08c9fcc8deadcb07e71",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "short pale hair-fringe ligule at the opened blade–sheath junction with a printed scale"
+          ],
+          "cannot_verify": [
+            "rooted annual base and full ligule length without pixel-calibrated measurement"
+          ],
+          "pass": "PHASE4_PASS9",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/stefan-cilianensis-true-ligule-3mm-sl4.jpg",
+          "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
+          "git_blob_sha": "dee46a401848c186b3bc43b2bfccdafa0859e7a7",
+          "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        }
+      ],
+      "unreviewed_hosted_indices": [
+        1
+      ],
+      "unmet_roles": [
+        "clearly exposed stem/lemma crater glands and floret count",
+        "actual rooted annual crown"
+      ],
+      "summary": "2 directly visible and 1 partially visible scoped parts; hidden microscopic anatomy not certified.",
+      "seasonal_review": {
+        "observed": "Some autumn/dry-stage heads; calendar collection month or dormant winter condition not independently proven from appearance.",
+        "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
+      },
+      "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
     }
   }
 ]
