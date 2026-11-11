@@ -164,15 +164,68 @@ function headIcon(key){
  case "fingers":path("M55 105 L55 72",2.8);for(let j=0;j<7;j++){const x=11+j*14.5,y=13+Math.abs(3-j)*13;branch(55,73,x,y,5,.65)}break;
  case "whorls":main();for(let y of [30,58,84])for(let d of [-1,1])for(let a of [0,20])branch(55,y,55+d*(31-a*.3),y-9-a*.6,3,.65);break;
  case "combs":main();for(let y of [32,53,74,92])comb(y,y%2?37:45,6,false);break;
- case "side_oats":path("M55 105 Q52 57 31 9",2.4);for(let j=0;j<7;j++){const y=22+j*11,x=34+j*3;path('M'+x+' '+y+' Q'+(x+20)+' '+(y+4)+' '+(x+22)+' '+(y+12),1.4);ellipse(x+22,y+14,4.7,7.7,13,pale)}break;
- case "short_side_racemes":main();for(let y of [29,47,65,83])branch(55,y,55+(y%2?31:-31),y-9,4,.6);break;
+ case "side_oats":
+  // Sideoats habit: an elongated, slightly bowed rachis with pendent one-sided units.
+  path("M55 105 Q52 67 43 12",2.3);
+  for(const row of [
+    [43,23,17,11],[44,33,20,12],[46,44,22,13],
+    [49,55,24,14],[51,66,24,14],[53,77,21,13],[54,87,18,12]
+  ]){
+    const [x,y,reach,drop]=row,xx=x+reach,yy=y+drop;
+    path("M"+x+" "+y+" Q"+(x+reach*.53)+" "+(y+1)+" "+xx+" "+yy,1.45);
+    // Flattened spikelet shows a pointed tip and a visible midrib, not a round bead.
+    path("M"+(xx-3)+" "+(yy-3)+" Q"+(xx+3)+" "+(yy-6)+" "+(xx+5)+" "+(yy+1)+" L"+(xx+6)+" "+(yy+9)+" Q"+(xx+1)+" "+(yy+7)+" "+(xx-3)+" "+(yy-3),1.35,olive);
+    path("M"+(xx+1)+" "+(yy-2)+" L"+(xx+5)+" "+(yy+8),.9,gold);
+  }
+  break;
+ case "short_side_racemes":
+  // Few lateral racemes of bristly grama: distinguish separate branches from combs.
+  main();
+  for(const row of [
+    [28,1,23,-8],[46,-1,22,-7],[64,1,25,-9],[82,-1,21,-8]
+  ]){
+    const [y,dir,len,dy]=row,endX=55+dir*len,endY=y+dy;
+    path("M55 "+y+" L"+endX+" "+endY,1.7);
+    for(let j=1;j<=4;j++){
+      const t=j/5,bx=55+dir*len*t,by=y+dy*t;
+      // Tiny aligned spikelets and their fine awns rather than fuzzy hairs.
+      path("M"+bx.toFixed(1)+" "+by.toFixed(1)+" l"+(dir*4)+" "+(j%2?3:2),1.25,olive);
+      path("M"+(bx+dir*4).toFixed(1)+" "+(by+(j%2?3:2)).toFixed(1)+" l"+(dir*3)+" -"+(j%2?7:5),.9,gold);
+    }
+    path("M"+endX+" "+endY+" l"+(dir*7)+" -5",1.05,gold);
+  }
+  break;
  case "short_racemes": main();for(let y of [30,50,70,90]){let dir=(y/10)%2?1:-1;branch(55,y,55+dir*26,y-13,3,.72)}break;
  case "one_sided":path("M56 105 Q44 59 66 12",2.4);for(let j=0;j<10;j++){let y=95-j*7.3,x=56-(95-y)*.13;bead(x+9,y-3,50,.75)}break;
  case "many_one_sided":main();for(let y of [30,49,68,87]){let dx=y%2?39:-39;branch(55,y,55+dx,y-21,5,.64)}break;
  case "paired_spikes":path("M55 104 L55 76 M55 76 L25 17 M55 76 L86 17",2.8);for(let d of [-1,1])for(let j=0;j<8;j++){let t=(j+1)/9,x=55+d*31*t,y=76-59*t;bead(x+d*5,y,48*d,.73)}break;
  case "spike":grainSpike(55,19,102,12,6);break;
- case "foxtail":path("M55 105 L55 29",2.6);ellipse(55,50,13,34,-10,pale);for(let j=0;j<36;j++){const y=20+(j%18)*3.2,side=j<18?-1:1,x=55+side*(9+Math.sin((y-20)/60*Math.PI)*5),xx=x+side*(7+(j%3)*2);path('M'+x.toFixed(1)+' '+y.toFixed(1)+' L'+xx.toFixed(1)+' '+(y-5).toFixed(1),.95,gold)}break;
- case "sparse_bristles":main();for(let y of [29,46,64,84]){let dir=y%2?1:-1;bead(55+dir*6,y,-dir*30,.9);path('M'+(55+dir*8)+' '+y+' l'+(dir*21)+' -21',1.25,gold)}break;
+ case "foxtail":
+  // Compact Setaria-style spike-like panicle: fine, numerous outward bristles.
+  path("M55 105 L55 20",2.4);
+  for(let j=0;j<26;j++){
+    const y=20+j*2.55, taper=Math.sin(Math.PI*(j+.5)/26),
+      half=4.2+6.1*taper;
+    for(const dir of [-1,1]){
+      const x=55+dir*half;
+      path("M"+(55+dir*2).toFixed(1)+" "+y.toFixed(1)+" L"+x.toFixed(1)+" "+(y-1.2).toFixed(1),1.15,olive);
+      path("M"+x.toFixed(1)+" "+(y-1.2).toFixed(1)+" L"+(x+dir*(6+4*taper)).toFixed(1)+" "+(y-4).toFixed(1),.8,gold);
+    }
+  }
+  // Central axis remains visible: the head is not a solid fuzzy oval.
+  break;
+ case "sparse_bristles":
+  // Interrupted Setaria inflorescence: isolated spikelets and occasional bristles.
+  path("M55 105 L55 14",2.5);
+  for(const item of [
+    [27,-1,9],[39,1,0],[56,1,14],[75,-1,10],[91,1,0]
+  ]){
+    const [y,dir,awn]=item;
+    ellipse(55+dir*5,y,2.8,5.2,dir*28,pale);
+    path("M55 "+y+" l"+(dir*5)+" -1",1.25,olive);
+    if(awn)path("M"+(55+dir*6)+" "+(y+2)+" Q"+(55+dir*(awn*.6))+" "+(y-5)+" "+(55+dir*(awn+8))+" "+(y-15),.95,gold);
+  }
+  break;
  case "burrs":main();for(let j=0;j<4;j++){let y=26+j*23,x=55+(j%2?21:-21);path('M55 '+(y+5)+' L'+x+' '+y,1.6);ellipse(x,y,12,12,0,olive);for(let k=0;k<12;k++){let a=k*Math.PI/6;path('M'+(x+10*Math.cos(a)).toFixed(1)+' '+(y+10*Math.sin(a)).toFixed(1)+' L'+(x+17*Math.cos(a)).toFixed(1)+' '+(y+17*Math.sin(a)).toFixed(1),1.4,olive)}}break;
  case "tangled_awns":main();for(let j=0;j<5;j++){let y=29+j*16,dir=j%2?1:-1;bead(55+dir*5,y,dir*40,1);for(let k=0;k<3;k++){let sx=55+dir*6,ex=sx+dir*(15+k*9);path('M'+sx+' '+y+' Q'+(ex-dir*14)+' '+(y-35-k*4)+' '+ex+' '+(y-40+k*4),1.35,gold)}}break;
  case "mixed_gender":main();for(let y of [28,42,56]){path('M55 '+y+' L'+(y%2?80:29)+' '+(y-7),1.5);for(let j=0;j<4;j++){let x=(y%2?80:29)+j*2;path('M'+x+' '+(y-7)+' l0 7',1.2,gold);ellipse(x,y+1,2.7,4,0,gold)}}for(let y of [72,86,98]){ellipse(55,y,8,6,0,olive);bead(47,y-2,65,.65);bead(63,y-2,-65,.65)}break;
