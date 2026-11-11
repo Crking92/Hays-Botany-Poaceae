@@ -155,12 +155,66 @@ function headIcon(key){
   main();for(let j=0;j<4;j++){let y=25+j*21,dir=j%2?1:-1, endX=55+dir*(28+j%2*9);path('M55 '+y+' Q'+(55+dir*18)+' '+(y-4)+' '+endX+' '+(y+5),1.7);for(let k=0;k<3;k++){let xx=endX+dir*(k-1)*8,yy=y+9+k*6;path('M'+xx+' '+(y+4)+' L'+xx+' '+(yy-1),1);ellipse(xx,yy, key==="flat_oats"?4.2:3.5,key==="flat_oats"?7.5:6,dir*15,pale)}}break;
  }
  case "reed_plume":case "golden_plume":{
-  main();const count=key==="reed_plume"?11:8,spread=key==="reed_plume"?40:24;
-  for(let j=0;j<count;j++){const t=j/(count-1),x=55+(t-.5)*spread*2,y=17+Math.abs(t-.5)*22;path('M55 93 Q'+(55+(t-.5)*18)+' 42 '+x+' '+y,1.4,olive);for(let k=0;k<8;k++){const h=85-k*7,px=55+(x-55)*((85-h)/70),off=2+(k%3)*1.3;path('M'+px.toFixed(1)+' '+h+' l'+(t<.5?-off:off)+' -5',1.1,gold)}}break;
+  // Indiangrass-like flowering plume: ascending fine branches create a soft tapered outline.
+  path("M55 105 L55 18",2.1);
+  const stems=[
+    [88,-15,8],[81,17,13],[75,-19,17],[69,19,21],
+    [62,-17,22],[55,17,24],[48,-16,23],[41,13,19],
+    [34,-11,16],[27,9,13],[21,-5,10]
+  ];
+  for(const [y,dir,spread] of stems){
+    const bx=55+Math.sign(dir)*spread,by=y-Math.max(12,spread*.93);
+    path("M55 "+y+" Q"+(55+dir*.42)+" "+(y-10)+" "+bx+" "+by,1.2,olive);
+    for(let k=1;k<=5;k++){
+      const t=k/6,xx=55+(bx-55)*t,yy=y+(by-y)*t;
+      path("M"+xx.toFixed(1)+" "+yy.toFixed(1)+" l"+(Math.sign(dir)*(1.2+3*t)).toFixed(1)+" -"+(2.5+2*t).toFixed(1),.85,gold);
+    }
+  }
+  break;
  }
- case "long_narrow_panicle": main();for(let j=0;j<11;j++){let yy=92-j*7,dx=(j%2?11:-11)*(j>8?.6:1);branch(55,yy,55+dx,yy-10,1,.78)}break;
- case "compact":main();for(let j=0;j<12;j++){const y=92-j*6,dx=j%2?13:-13;branch(55,y,55+dx,y-12,2,.85)}break;
- case "bushy":main();for(let j=0;j<14;j++){const y=96-j*5.5,dx=(j%2?-1:1)*(16+(j%3)*6);branch(55,y,55+dx,y-14,3,.65)}break;
+ case "long_narrow_panicle":{
+  // Tall columnar contracted panicle; branches kept very close to the rachis.
+  path("M55 105 L55 11",2.25);
+  for(let j=0;j<13;j++){
+    const y=91-j*5.8,dir=j%2?1:-1;
+    const spread= j>9?3.8:5.9;
+    const x=55+dir*spread;
+    path("M55 "+y.toFixed(1)+" L"+x.toFixed(1)+" "+(y-7).toFixed(1),1.25,olive);
+    ellipse(x,y-8,1.65,3.45,dir*13,pale);
+  }
+  break;
+ }
+ case "compact":{
+  // A short club-like contracted head, intentionally unlike long narrow panicles.
+  path("M55 105 L55 45",2.45);
+  for(let j=0;j<8;j++){
+    const y=80-j*5.3,dir=j%2?1:-1,side=j>5?8.1:11.5;
+    path("M55 "+y.toFixed(1)+" L"+(55+dir*side).toFixed(1)+" "+(y-5).toFixed(1),1.6,olive);
+    ellipse(55+dir*side,y-7,3.75,6.2,dir*25,pale);
+    if(j<6)ellipse(55-dir*(side-1.8),y-8,3.2,5.2,-dir*22,pale);
+  }
+  // Exposed stem makes shortness of head unmistakable.
+  break;
+ }
+ case "bushy":{
+  // Several separate, spreading silky racemes, not a compact spike.
+  path("M55 105 L55 58",2.3);
+  for(const row of [
+    [71,-1,27,36],[78,1,29,45],[65,1,33,22],
+    [61,-1,29,20],[55,1,20,16],[53,-1,19,17],
+    [47,1,11,13],[45,-1,12,14]
+  ]){
+    const [y,dir,reach,rise]=row,endX=55+dir*reach,endY=y-rise;
+    path("M55 "+y+" Q"+(55+dir*reach*.45)+" "+(y-rise*.7)+" "+endX+" "+endY,1.45,olive);
+    for(let k=1;k<=6;k++){
+      const t=k/7,x=55+dir*reach*t,yy=y-rise*(.7*t+.3*t*t);
+      // Short paired spikelets and fine silky hairs delineate each raceme.
+      path("M"+x.toFixed(1)+" "+yy.toFixed(1)+" l"+(dir*3.3).toFixed(1)+" -"+(2.2+(k%3)).toFixed(1),.85,gold);
+      if(k%2===0)path("M"+x.toFixed(1)+" "+yy.toFixed(1)+" l"+(dir*4.8).toFixed(1)+" -"+(4.1+(k%2)).toFixed(1),.45,olive);
+    }
+  }
+  break;
+ }
  case "fingers":path("M55 105 L55 72",2.8);for(let j=0;j<7;j++){const x=11+j*14.5,y=13+Math.abs(3-j)*13;branch(55,73,x,y,5,.65)}break;
  case "whorls":main();for(let y of [30,58,84])for(let d of [-1,1])for(let a of [0,20])branch(55,y,55+d*(31-a*.3),y-9-a*.6,3,.65);break;
  case "combs":main();for(let y of [32,53,74,92])comb(y,y%2?37:45,6,false);break;
