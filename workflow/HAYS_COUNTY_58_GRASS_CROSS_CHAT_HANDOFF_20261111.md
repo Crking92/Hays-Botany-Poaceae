@@ -177,6 +177,18 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 
 **End of first batch:** Name standardization, literature crosswalk, county-evidence manifest, source photo inventory/review and all 57 draft ID card objects are assembled. **Separate unreleased stage:** final verified diagnostic trait values, public photos and live keyed cards. Avoid a repetitive new general-photo sweep; close the targeted diagnostic/specimen gaps from the staged records instead.
 
+## Hays expansion Phase 2 — photo rights and eight Flora diagnostic packets (November 11, 2026)
+
+**New completed Phase 2 work (review branch `inat-coverage-audit-20261111`):**
+
+- [Photo-rights preflight for all 57 staged taxa, with source/photo IDs, current recorded licenses and credits](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-photo-rights-preflight.md). Across **534 sampled image metadata records**, **11 taxa** have at least one CC0/CC BY/CC BY-SA photo candidate; **39** have only CC BY-NC/NC-SA candidates (requires project-specific actual noncommercial-use determination); **7** have no eligible CC candidates in the saved sample. NONE are site-rights-approved yet. Source individual licenses, photographer credits, adaptation/ShareAlike conditions, role and image quality must be rechecked before use. No image bytes copied.
+- [Eight-species Flora-based morphology versus actual Hays-photo evidence](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md): **37 source-backed diagnostic character statements** across *Melica nitens*, *Rottboellia campestris* (old *Coelorachis cylindrica*), *Paspalum langei*, *Setaria viridis*, *Setaria leucopila*, *Echinochloa walteri*, *Sphenopholis obtusata*, and *Tridentopsis elongata*. Every expectation cites exact PDF page/treatment, states what Hays photos show, and identifies the **unverified** decisive characters. The statements are **NOT yet approved active key traits**.
+- [Updated structured 57 candidate drafts](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json) now link the appropriate photo-rights summary for all 57 and actual regional diagnostic packet for the first eight. Existing `photos:[]`, `traits` arrays empty as **unknown**, `merge_ready:false` and all 112 live species untouched.
+
+**Current workstream boundary:** "Continue Grass QA" separately reviews already-hosted image roles among the live 112 species (Phase 4); this Hays expansion stage covers only *new potential taxa*, source morphology and photo rights. The 317 original iNaturalist source photographs previously viewed and 514 original hosted Lab photo references are disjoint accounting systems; do not add their progress totals. Review only the expansion branch, and allow the other team to keep reviewing `main` hosted photos.
+
+**Next actionable items:** same-specimen microphotography/verified voucher characters (first glume/pubescence of *P. langei*, true jointed spikelet niche in *R. campestris*, glume vein counts in *T. elongata*, fertile lemma wrinkles in *Setaria*, papilla-based sheath hairs in *E. walteri*) and photo license/attribution updates before any candidate gets a positive release flag. No species final signoffs, and no change to the 112 live cards.
+
 ## Directions for a new chat/agent
 
 1. Read this pointer, then fetch the branch **inat-coverage-audit-20261111** and the current reviewed JSON records. Do **not** work from raw iNaturalist count alone.
