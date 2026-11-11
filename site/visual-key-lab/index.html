@@ -178,20 +178,22 @@ function headIcon(key){
   break;
  }
  case "golden_plume":{
-  // Indiangrass-like flowering plume: ascending fine branches create a soft tapered outline.
-  path("M55 105 L55 18",2.1);
-  const stems=[
-    [88,-15,8],[81,17,13],[75,-19,17],[69,19,21],
-    [62,-17,22],[55,17,24],[48,-16,23],[41,13,19],
-    [34,-11,16],[27,9,13],[21,-5,10]
+  // Narrow upright plume: visibly shorter and stouter than tall reed's broad,
+  // tall, highly branched panicle; fine crowded, ascending golden branchlets.
+  path("M55 105 L55 38",2.45);
+  const outline=[
+    [81,-1,6,9],[78,1,9,11],[73,-1,13,14],[70,1,17,17],
+    [64,-1,19,19],[60,1,19,20],[55,-1,18,20],[51,1,17,21],
+    [46,-1,14,19],[42,1,11,16],[38,-1,7,12]
   ];
-  for(const [y,dir,spread] of stems){
-    const bx=55+Math.sign(dir)*spread,by=y-Math.max(12,spread*.93);
-    path("M55 "+y+" Q"+(55+dir*.42)+" "+(y-10)+" "+bx+" "+by,1.2,olive);
-    for(let k=1;k<=5;k++){
-      const t=k/6,xx=55+(bx-55)*t,yy=y+(by-y)*t;
-      path("M"+xx.toFixed(1)+" "+yy.toFixed(1)+" l"+(Math.sign(dir)*(1.2+3*t)).toFixed(1)+" -"+(2.5+2*t).toFixed(1),.85,gold);
+  for(const [y,dir,reach,rise] of outline){
+    const x=55+dir*reach,ey=y-rise;
+    path("M55 "+y+" Q"+(55+dir*reach*.46)+" "+(y-rise*.68)+" "+x+" "+ey,1.32,olive);
+    for(let j=1;j<=6;j++){
+      const t=j/7,xx=55+dir*reach*t,yy=y-rise*(.68*t+.32*t*t);
+      path("M"+xx.toFixed(1)+" "+yy.toFixed(1)+" l"+(dir*(2.3+1.3*t)).toFixed(1)+" -"+(2.3+1.1*t).toFixed(1),.79,gold);
     }
+    ellipse(x,ey,1.35,3.0,dir*22,pale);
   }
   break;
  }
