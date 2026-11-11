@@ -103,9 +103,14 @@ jobs:
           print(json.dumps(candidates,separators=(",",":")),flush=True)
           print("AUDIT_ALL_END",flush=True)
           PY
-      - name: Store the complete CSV-ready JSON audit
+      - name: Normalize candidate names against all 112 curated source files
+        run: python3 scripts/clean_inat_grass_candidates.py
+      - name: Store full original and cleaned review reports
         uses: actions/upload-artifact@v4
         with:
-          name: inat-grass-coverage-audit
-          path: inat-grass-coverage-summary.json
+          name: inat-grass-coverage-and-cleanup
+          path: |
+            inat-grass-coverage-summary.json
+            audits/inat-2026-11-11-cleaned.json
+            audits/inat-2026-11-11-cleaned.md
           if-no-files-found: error
