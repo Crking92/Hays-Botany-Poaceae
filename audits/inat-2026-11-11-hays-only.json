@@ -286,14 +286,21 @@
       ],
       "photo_visual_qa_file": "audits/hays-58-first-five-visual-qa-20261111.json",
       "visual_diagnostic_anatomy_complete": false,
-      "independent_voucher_index_status": "THREE_NAME_ALIGNED_POTENTIAL_TEX_HAYS_SPECIMENS",
+      "independent_voucher_index_status": "THREE_HAYS_TEX_ORIGINAL_SPECIMEN_SHEETS_AND_LABELS_EXAMINED",
       "independent_voucher_index_count": 3,
       "independent_voucher_url_refs": [
         "https://www.gbif.org/occurrence/3866879449",
         "https://www.gbif.org/occurrence/3866886419",
         "https://www.gbif.org/occurrence/5236506306"
       ],
-      "independent_voucher_qa": "ORIGINAL_LABEL_AND_ANATOMY_NOT_MANUALLY_VERIFIED"
+      "independent_voucher_qa": "Three source specimen sheets and readable labels inspected: two 2021 conservation/upland collections and one 2019 yard collection; all show narrow racemose flowering branches. Species-level first-glume and papillose hair details not resolved.",
+      "original_herbarium_images_visually_examined": true,
+      "herbarium_specimen_image_count": 3,
+      "herbarium_sheet_label_count_checked": 3,
+      "herbarium_sheet_inspection_file": "audits/hays-paspalum-langei-3-sheets-visual-inspection-20261111.json",
+      "herbarium_collector_metadata_discrepancy": "2019 label Thomas J. Watson; 2021 labels Thomas L. Watson; GBIF records all under Thomas J. Watson.",
+      "species_level_glume_diagnostic_verified": false,
+      "cultivated_establishment_review": "2019 yard ambiguous; 2021 slope 'many plants' and Onion Creek floodplain 'five plants' support naturally growing Hays populations but establishment needs confirmation."
     },
     {
       "queue_id": "HAYS-007",
@@ -2440,6 +2447,9 @@
     "independent_voucher_curated_file": "audits/hays-grasses-curated-voucher-evidence-20261111.json",
     "independent_voucher_direct_name_matches": 3,
     "voucher_false_positive_index_hits_rejected": 2,
-    "independently_verified_herbarium_images": 0
+    "independently_verified_herbarium_images": 0,
+    "herbarium_specimen_sheets_visually_inspected": 3,
+    "herbarium_specimen_taxa_with_sheets_examined": 1,
+    "herbarium_specimen_inspection_file": "audits/hays-paspalum-langei-3-sheets-visual-inspection-20261111.json"
   }
 }
