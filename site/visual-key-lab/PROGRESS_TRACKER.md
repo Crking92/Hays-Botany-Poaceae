@@ -16,6 +16,13 @@
 
 **How far from completion?** Species framework **and the first complete source-coverage pass** are finished: **112/112** indexed and **112/112** with at least one externally supported morphological character. This is NOT 100% completion of the project. All **112** species now have first-pass Phase 3 source-linked diagnostic checklists (315 checks); no species remain for initial coverage. Remaining work: deeper morphology/character/source reconciliation, verifying photographs show the right parts and have exact-image rights (Phase 4), and real mobile/field acceptance (Phase 5). The key is still a prototype, not fully certified.
 
+## Phase 4 — Pass 4 Wikimedia source-preview anatomy audit (2026-11-10)
+
+- **Eight linked original source-page image previews** inspected for *Dichanthium sericeum* (four) and *D. annulatum* (four): **five directly illustrate a specifically scoped visible structure; three are partial evidence**. This is a **separate source-preview audit**, not a retrieval of the GitHub-hosted bytes. **Hosted originals remain 34/514 (6.6%) and 7/112 species with full hosted gallery reviews**.
+- Added `source_preview_audit` observations to the two species JSON records (with per-photo i, direct/partial verdict, and details that **cannot** be verified). Clarified eight source-preview photo labels in all (two earlier “LOCAL” wording fixes plus six new visibility/attachment corrections), while keeping existing image URLs and credits.
+- **Anatomy correction:** detached paired-looking spikelets cannot, by themselves, prove sessile-versus-pedicelled attachment. A visible pale sheath lip with the blade absent does not conclusively show a complete true ligule junction. Australian-source reference photos are **not local Hays vouchers**.
+- [Detailed Pass 4 source-preview notes](PHASE4_PASS4_SOURCE_PREVIEW_SILKY_KLEBERG_2026-11-10.md). The eight actual hosted JPEGs still need byte-level image-role/rights reconciliation; the existing three held public photos and two checksum discrepancies remain separate unresolved release gates. No photos downloaded or published.
+
 ## Phase 4 — larger original-photo QA and diagram separation, Pass 3 (2026-11-10)
 
 - **20 new original GitHub photo bytes opened and examined**, across **six species**: blue grama (5 new), hairy grama (4), tall grama (2), little bluestem (3), silky bluestem (4) and Kleberg bluestem (2). The two previously reviewed Pass 2 images were kept, not double-counted.
