@@ -5,7 +5,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const lab=path.resolve(__dirname,'../site/visual-key-lab');
 const read=f=>fs.readFileSync(path.join(lab,f),'utf8');
-const sourceLicensePattern=/^(?:CC0|CC BY(?:-SA)?)(?=$|\\s)/i;
+const sourceLicensePattern=/^(?:CC0|CC BY(?:-SA)?)(?=$|\s)/i;
 for(const valid of ['CC0 1.0','CC BY 2.0','CC BY 3.0 US','CC BY-SA 4.0'])
  assert(sourceLicensePattern.test(valid),'Valid reusable license rejected: '+valid);
 for(const invalid of ['CC BY-NC 4.0','CC BY-ND 4.0','All rights reserved'])
