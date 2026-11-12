@@ -1314,7 +1314,10 @@
       "ligule": [
         "hairs"
       ],
-      "awns": []
+      "awns": [
+        "three_short",
+        "none_obvious"
+      ]
     },
     "source_blob_sha": "92457419f3bc22f266bd9c99ed539d43e9b89b04",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
@@ -1327,10 +1330,12 @@
         "review_date": "2026-11-10"
       },
       "awns": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "pp.171–172 (printed 1247–48): Texas grama 6–8(–10) SHORT NON-PECTINATE branches; 3-awned florets documented but generic Aristida three-long-awn photo unsuitable; awn state deferred",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae pp.1247–1248; Kew GrassBase species description",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35641-2/general-information",
+        "reference": "Fertile lemma bears three SHORT awns: principal about 1.5–2 mm and lateral awns about 1 mm. Sterile florets can instead have 5–10 mm awns. The new choice refers specifically to the fertile floret. At normal distance, individual tips may not be obvious.",
+        "status": "LITERATURE_SUPPORTED_SHORT_THREE_AWNS_FIELD_SILHOUETTE_BROAD_LOCAL_FLORET_NOT_SIGNED_OFF",
+        "review_date": "2026-11-11",
+        "audit_note": "Both short-three-awn (under hand lens) and no conspicuous LONG awns (whole plant view) are eligible. Not equivalent to fully awnless."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1349,6 +1354,14 @@
         "compare": "Aristida threeawns and red grama sterile floret awns",
         "certainty": "GrassBase-backed; deliberately unscored on broad awn axis",
         "source": "Kew POWO / GrassBase, Bouteloua rigidiseta",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35641-2/general-information"
+      },
+      {
+        "look": "Examine one fertile lemma for short three-awn tips",
+        "check": "Do not infer every bristle seen on a complete Texas grama branch is a fertile-lemma awn; check one attached, mature spikelet with a millimeter scale.",
+        "compare": "Purple threeawn (Aristida) bears much longer, obvious three awns; separate awns of fertile from sterile florets in Bouteloua.",
+        "certainty": "Published floral morphology; current source gallery does not certify a same-specimen dissection",
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae pp.1247–1248; Kew GrassBase species description",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35641-2/general-information"
       }
     ],
@@ -1471,7 +1484,10 @@
       "ligule": [
         "hairs"
       ],
-      "awns": []
+      "awns": [
+        "three_short",
+        "none_obvious"
+      ]
     },
     "source_blob_sha": "31fb5338ff49dc65f9870e4bfb10c1b504e799e9",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
@@ -1482,6 +1498,14 @@
         "reference": "Three to eight SHORT (<2.5 cm) PECTINATE combs held close to main stem; not the nonpectinate very short racemes of Texas grama (B. rigidiseta).",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Kew GrassBase, Bouteloua trifida; UT Austin Plant Resources Center floral description",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35652-2/general-information",
+        "reference": "Fertile lemma has three short awns, roughly 3–4 mm each; a three-awned sterile upper floret may also be present. These are short floral projections rather than Aristida-style long spreading awns.",
+        "status": "LITERATURE_SUPPORTED_SHORT_THREE_AWNS_FIELD_SILHOUETTE_BROAD_LOCAL_FLORET_NOT_SIGNED_OFF",
+        "review_date": "2026-11-11",
+        "audit_note": "Both short-three-awn (under hand lens) and no conspicuous LONG awns (whole plant view) are eligible. Not equivalent to fully awnless."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1500,6 +1524,14 @@
         "compare": "Texas grama's shorter fertile lemma awns; not Aristida-style threeawns",
         "certainty": "GrassBase-backed; broad 'three long awns' remains unscored",
         "source": "Kew POWO / GrassBase under Chondrosum trifidum",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35652-2/general-information"
+      },
+      {
+        "look": "Examine one fertile lemma for short three-awn tips",
+        "check": "Do not confuse a whole narrow appressed flowering branch with a single three-awned floret. Need a detached fertile lemma and mm scale.",
+        "compare": "Purple threeawn (Aristida) bears much longer, obvious three awns; separate awns of fertile from sterile florets in Bouteloua.",
+        "certainty": "Published floral morphology; current source gallery does not certify a same-specimen dissection",
+        "source": "Kew GrassBase, Bouteloua trifida; UT Austin Plant Resources Center floral description",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35652-2/general-information"
       }
     ],
