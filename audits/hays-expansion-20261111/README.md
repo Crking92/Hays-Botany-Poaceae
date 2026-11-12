@@ -7,8 +7,8 @@
 
 - Existing public Grass ID Lab: **112** species, **514/514** hosted photographs audited in first pass; original photo QA data preserved.
 - Hays candidate register: **58 original names → 57 proposed new taxa** (56 species + 1 hybrid) and one existing name alias.
-- Phase 2 morphology literature dossiers: **48/57 prepared**, **267 source-described characters** across six packets.
-- **9 dossiers left:** *Phyllostachys aurea*, *Cortaderia selloana*, *Panicum miliaceum*, *Muhlenbergia capillaris*, *Melinis repens*, *Nassella tenuissima*, *Cenchrus setaceus*, *Lolium × boucheanum*, *Miscanthus sinensis*.
+- Phase 2 morphology literature dossiers: **57/57 prepared**, **322 source-described character targets** across seven packets. Literature-writing phase complete; Hays specimen ID/rights gates remain open.
+- **0 literature dossiers left.** The final nine cover *Phyllostachys aurea*, *Cortaderia selloana*, *Panicum miliaceum*, *Muhlenbergia capillaris*, *Melinis repens*, *Nassella tenuissima*, *Cenchrus setaceus*, *Lolium × boucheanum*, and *Miscanthus sinensis*. These still require appropriate specimen-level diagnosis before public release.
 - **0** of the 57 proposed new taxa is signed off for a public species-card merge. Literature descriptions are not independent verification of a Hays specimen. Rights approvals remain separate.
 
 ## Read these files
@@ -21,10 +21,11 @@
    - [Packet 4](hays-8-flora-diagnostic-packet-4-20261111.md)
    - [Packet 5](hays-8-flora-diagnostic-packet-5-20261111.md)
    - [Packet 6](hays-8-flora-diagnostic-packet-6-20261111.md)
-3. [Initial import QA / explicit hard stops](hays-expansion-import-QA.md)
-4. [Rights assessment records](hays-57-photo-rights-preflight.md) and its [machine-readable version](hays-57-photo-rights-preflight.json)
-5. [Accepted names/synonyms crosswalk](../hays-58-nomenclature-final-staging.md)
-6. [Seven photo-access/diagnostic holds](../hays-7-flora-diagnostic-proof-gates-20261111.md)
+3. [Final nine species — packet 7](hays-9-flora-diagnostic-packet-7-20261111.md) and [machine-readable character targets](hays-9-flora-diagnostic-packet-7-20261111.json), including the conflicting Lolium hybrid-parentage accounts
+4. [Initial import QA / explicit hard stops](hays-expansion-import-QA.md)
+5. [Rights assessment records](hays-57-photo-rights-preflight.md) and its [machine-readable version](hays-57-photo-rights-preflight.json)
+6. [Accepted names/synonyms crosswalk](../hays-58-nomenclature-final-staging.md)
+7. [Seven photo-access/diagnostic holds](../hays-7-flora-diagnostic-proof-gates-20261111.md)
 
 Other raw observation audits, temporary research tools, and GitHub Actions remain on the original diagnostic development branch `inat-coverage-audit-20261111`; **do not merge that entire branch** into `main`, because the development histories have diverged.
 
@@ -41,7 +42,7 @@ Other raw observation audits, temporary research tools, and GitHub Actions remai
 
 ## Next work from this shared starting point
 
-1. Complete literature descriptions for the nine species listed above, especially the ornamentals whose Hays records may represent landscaping or escape.
+1. **Literature profiles complete (57/57).** Next, validate critical same-specimen traits, plant origin context and the unresolved Lolium hybrid parentage before field-key release.
 2. Map each checked character to the existing Lab's specific trait vocabulary with explicit provenance and certainty.
 3. Produce side-by-side field comparisons using already-audited photographs; only promote evidence-backed characters.
 4. Run release/Pages QA on each bounded improvement and verify mobile behavior before counting a live deployment.
