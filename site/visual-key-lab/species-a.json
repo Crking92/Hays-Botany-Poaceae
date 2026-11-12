@@ -954,9 +954,14 @@
         "source_url": "https://research.fs.usda.gov/feis/species-reviews/boudac",
         "secondary_source_url": "https://rangeplants.tamu.edu/plant/buffalograss/",
         "contrast_url": "https://www.turffiles.ncsu.edu/grasses/buffalograss/",
-        "reference": "Usually strongly stoloniferous with aboveground stolons rooted at leafy nodes. USFS FEIS states it OCCASIONALLY forms rhizomes; NC State turf guide records rhizomes absent. Wildflower Center also describes spreading by rhizomes. This discrepancy is not resolved for a local voucher: preserve mat/stolon as the usual field habit and permit rhizome as an occasional source-reported visual state, never an automatic species proof.",
-        "status": "SOURCE_RECONCILED_STOLONS_TYPICAL_RHIZOMES_OCCASIONAL_CONFLICT",
-        "review_date": "2026-11-10"
+        "reference": "Usually strongly stoloniferous with aboveground stolons rooted at leafy nodes. USFS FEIS states it OCCASIONALLY forms rhizomes; NC State turf guide records rhizomes absent. Wildflower Center also describes spreading by rhizomes. This discrepancy is not resolved for a local voucher: preserve mat/stolon as the usual field habit and permit rhizome as an occasional source-reported visual state, never an automatic species proof. Important primary regional contrast: Hagenbuch & Lemke (2015), printed p. 40 (under Buchloë dactyloides), describes mat-forming plants with stolons and states rhizomes absent. This contrasts with the USFS FEIS 'occasional rhizomes' account already cited. Do not equate a buried stolon or root with a rhizome; retain the existing occasional-rhizome broad filter solely as a flagged source disagreement pending a connected Hays-region voucher.",
+        "status": "PRIMARY_REGIONAL_NO_RHIZOMES_VS_SECONDARY_OCCASIONAL_RHIZOMES_UNRESOLVED",
+        "review_date": "2026-11-12",
+        "regional_vegetative_source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 40, under Buchloë dactyloides",
+        "reported_conflict": [
+          "Hagenbuch & Lemke (2015), p. 40: rhizomes absent, aboveground stolons present",
+          "USDA Forest Service FEIS: occasional rhizomes reported; specimen and taxon scope unresolved"
+        ]
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -984,6 +989,14 @@
         "certainty": "USFS FEIS reports usual stolons and occasional rhizomes; Kew/NC State ligule fringe versus regional ciliate-membrane terminology remains unverified on real collar photo",
         "source": "USFS FEIS + regional Texas flora + Kew/NC State comparative morphology",
         "url": "https://research.fs.usda.gov/feis/species-reviews/boudac"
+      },
+      {
+        "look": "Resolve whether an underground stem is truly a rhizome",
+        "check": "Primary Hill Country specimens were described as stoloniferous with rhizomes absent, yet USFS reports occasional rhizomes. A thin buried structure could be a root or covered stolon. Trace actual stem nodes, scale leaves and the shoot connection before calling it a rhizome.",
+        "compare": "Bermudagrass commonly has both extensive stolons and rhizomes; female buffalograss bur-like heads provide a different reproductive comparison.",
+        "certainty": "Published-source conflict documented; no new voucher and no scoring-state removal",
+        "source": "Hagenbuch & Lemke (2015), p. 40; USDA Forest Service FEIS (occasional rhizomes)",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=40"
       }
     ],
     "diagnostic_review": {
