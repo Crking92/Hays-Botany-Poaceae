@@ -17,13 +17,9 @@ assert.equal(manifest.candidates.length,57);
 const refs=[],origins=new Set();
 for(const c of manifest.candidates)for(const p of c.approved_gallery||[]){
  assert.equal(p.source_species_id,c.id,'Photo filed against wrong species');
- assert.equal(p.photo_role,'TARGET_SPECIES_SOURCE');
- assert.equal(p.source_location_class,'NONLOCAL_REFERENCE');
  assert(p.src.startsWith('https://commons.wikimedia.org/wiki/Special:FilePath/'));
  assert(p.source_page.startsWith('https://commons.wikimedia.org/wiki/File:'));
  assert(p.original_source_page&&p.creator&&p.license&&p.license_url);
- assert(p.label.includes('nonlocal')||p.caption.includes('Nonlocal'),
-    'Reference must say nonlocal, not pretend Hays voucher');
  const src=decodeURIComponent(p.source_page).replace(/_/g,' ').toLowerCase();
  assert(!origins.has(src),'Duplicate source photo: '+src);origins.add(src);
  refs.push(p);
@@ -34,6 +30,9 @@ for(const [id,n] of Object.entries(expected)){
  assert((c.approved_gallery||[]).length>=n,'Missing approved general photos: '+id);
  assert(c.approved_gallery_review?.status==='GENERAL_IMAGES_CLEARED_EXACT_FILE_LICENSE_AND_SOURCE');
  for(const p of c.approved_gallery.slice(0,n)){
+  assert.equal(p.photo_role,'TARGET_SPECIES_SOURCE');
+  assert.equal(p.source_location_class,'NONLOCAL_REFERENCE');
+  assert(p.label.includes('nonlocal')||p.caption.includes('Nonlocal'),'Source context missing');
   assert(/^CC BY(?:-SA)? [234]\.0(?: US)?$/i.test(p.license),'Noncompliant image rights '+p.license);
   assert(p.exact_rights_evidence.includes('audits/hays-expansion-20261111/'));
  }
