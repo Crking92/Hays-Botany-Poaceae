@@ -1698,7 +1698,7 @@
     "common": "Johnsongrass",
     "scientific": "Sorghum halepense",
     "range": "INTRODUCED_NOT_NATIVE",
-    "field_rule": "The physically photographed creeping segmented rhizome is the strongest Johnsongrass-versus-grain-sorghum cue; complete attached spikelet pairs and true ligule measurements remain absent.",
+    "field_rule": "The physically photographed creeping segmented rhizome is the strongest Johnsongrass-versus-grain-sorghum cue; complete attached spikelet pairs and true ligule measurements remain absent. A mature Johnsongrass can be a very obvious large TUFT even when its long, scaly underground rhizomes are hidden; choose the clump or rhizome observation without excluding it.",
     "hero_i": 0,
     "traits": {
       "head": [
@@ -1706,7 +1706,8 @@
         "long_narrow_panicle"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -1758,10 +1759,17 @@
         "review_date": "2026-11-10"
       },
       "habit": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF page 246",
-        "reference": "Extensive rhizomes distinguish perennial Johnsongrass from annual S. bicolor.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 63; Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1324; FNA comparative sources retained in diagnostic checks",
+        "reference": "The Hill Country vegetative account explicitly gives a cespitose perennial with elongated scaly underground rhizomes and NO stolons, with outer clump culms sometimes lying down. The primary reproductive Flora independently recognizes a coarse rhizomatous perennial with loose-to-contracted panicles. Accept both tuft and rhizome; do not infer an aboveground stolon merely from decumbent outer culms.",
+        "role": "vegetative",
+        "states_accepted": [
+          "tuft",
+          "rhizome"
+        ],
+        "conflicting_states": "None for true stolon absence in the Hill Country treatment; an unverified photographed rhizome does not certify a whole plant.",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "Existing referenced rhizome image is retained; its attachment and field identification were not reverified in this batch."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1789,6 +1797,14 @@
         "certainty": "FNA regional contrast with older North Central Texas short-awn claim: retain both options",
         "source": "Flora of North America — Sorghum halepense",
         "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Sorghum+halepense"
+      },
+      {
+        "look": "Trace the base of a tuft, without demanding an exposed rhizome",
+        "check": "Johnsongrass often has a large bunchlike crown with several culms and deeply buried scaly rhizomes. A visible tuft is compatible even before digging. Do not label a decumbent basal culm a stolon without evidence of a horizontal rooting shoot.",
+        "compare": "Annual grain sorghum lacks Johnsongrass's persistent underground rhizome network, but can be tuftlike; use flowering parts and the true inner membrane as follow-ups.",
+        "certainty": "Direct Hagenbuch & Lemke vegetative source; local connected crown-to-rhizome specimen pending",
+        "source": "Hagenbuch & Lemke (2015), p. 63; Diggs et al. (1999), p. 1324",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63"
       }
     ],
     "diagnostic_review": {
