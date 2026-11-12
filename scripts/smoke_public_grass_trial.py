@@ -51,7 +51,21 @@ def http_check():
     assert all(x["trial"] is True and
                x["admission_status"] == "RESEARCH_TRIAL_NOT_ADMITTED" and
                x["range"] == "UNVERIFIED" for x in groups), "Trial data silently admitted/certified"
-    assert sum(len(x["photos"]) for x in groups) == 38, "Trial source-photo refs changed"
+    # The publisher can legitimately add licensed photos. Keep the trial image
+    # list an exact mirror of the corresponding candidate gallery, rather than
+    # freezing a historical source-photo count of 38 forever.
+    candidates = json.loads((LAB / "hays-candidates.json").read_text())["candidates"]
+    by_id = {c["id"]: c for c in candidates}
+    for trial in groups:
+        ref = by_id[trial["id"]]["approved_gallery"]
+        assert len(trial["photos"]) == len(ref), (
+            f"{trial['id']}: source gallery / trial photo count mismatch")
+        for i, photo in enumerate(trial["photos"]):
+            assert photo["i"] == i, f"{trial['id']}: photo index mismatch"
+            copied = {k: v for k, v in photo.items() if k != "i"}
+            assert copied == ref[i], f"{trial['id']}: credits/source metadata diverged"
+    assert sum(len(x["photos"]) for x in groups) >= 38, (
+        "Original research-trial image coverage was unexpectedly removed")
     return groups
 
 
@@ -107,7 +121,7 @@ def check():
         "total_learner_species": 169,
         "provisional_still_research_only": 39,
         "verified_specimen_admissions": 0,
-        "trial_source_photo_refs": 38,
+        "trial_source_photo_refs": sum(len(x["photos"]) for x in groups),
         "research_trial_cards_and_details_checked": len(visited),
         "species_checked": visited,
         "browser_photo_pixels_verified": False,
