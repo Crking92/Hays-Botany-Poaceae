@@ -50,7 +50,9 @@ const newlyValid=[
  ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['sorghum-halepense',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'}],
  ['sorghum-halepense',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
- ['bothriochloa-barbinodis',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'long'}]
+ ['bothriochloa-barbinodis',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'long'}],
+ ['bothriochloa-torreyana',{head:'bushy',habit:'rhizome',ligule:'membrane',awns:'long'}],
+ ['bothriochloa-torreyana',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -61,7 +63,8 @@ const incompatible=[
  ['arundo-donax',{awns:'long'}],
  ['sorghum-halepense',{habit:'mat'}],
  ['bouteloua-curtipendula',{head:'side_oats',awns:'three_short'}],
- ['bothriochloa-barbinodis',{head:'whorls'}]
+ ['bothriochloa-barbinodis',{head:'whorls'}],
+ ['bothriochloa-torreyana',{head:'fingers'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -72,6 +75,7 @@ const retainedDisputed=[
 ];
 for(const [id,picks] of retainedDisputed) assert(results(picks).includes(id),'disputed/sex-specific path dropped: '+id);
 assert(specimenMap.get('bouteloua-dactyloides').character_evidence.growth_stems.reported_conflict?.length===2,'regional buffalo rhizome conflict must stay explicit');
+assert(specimenMap.get('bothriochloa-torreyana').character_evidence.habit.reported_states?.length===2,'silver bluestem primary/regional specimen disagreement must remain explicit');
 const unknown={id:'unknown',common:'Unknown',scientific:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(results({head:'flat_oats',ligule:'hairs'},[unknown]),['unknown'],'missing states must not become negative evidence');
 const expectedAdditions={
@@ -81,7 +85,8 @@ const expectedAdditions={
  'aristida-oligantha':{ligule:['membrane']},
  'arundo-donax':{habit:['tuft'],ligule:['hairs']},
  'sorghum-halepense':{habit:['tuft']},
- 'bothriochloa-barbinodis':{head:['fingers']}
+ 'bothriochloa-barbinodis':{head:['fingers']},
+ 'bothriochloa-torreyana':{habit:['rhizome']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -131,7 +136,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:9,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:10,
  regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
