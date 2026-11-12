@@ -10,6 +10,7 @@ on:
       - 'scripts/test_grass_field_rules.cjs'
       - 'scripts/test_grass_score_deltas.cjs'
       - 'scripts/test_grass_sprint_lane_b.cjs'
+      - 'scripts/test_grass_sprint_lane_b_batch*.cjs'
       - 'scripts/test_scoring_lane_a.cjs'
       - 'scripts/test_lane_c_batch*.cjs'
       - '.github/workflows/grass-key-integration.yml'
@@ -22,6 +23,7 @@ on:
       - 'scripts/test_grass_field_rules.cjs'
       - 'scripts/test_grass_score_deltas.cjs'
       - 'scripts/test_grass_sprint_lane_b.cjs'
+      - 'scripts/test_grass_sprint_lane_b_batch*.cjs'
       - 'scripts/test_scoring_lane_a.cjs'
       - 'scripts/test_lane_c_batch*.cjs'
       - '.github/workflows/grass-key-integration.yml'
@@ -51,6 +53,8 @@ jobs:
         run: node scripts/test_grass_sprint_lane_b_batch6.cjs
       - name: Execute Lane B Batch 11 solitary tanglehead raceme source tests
         run: node scripts/test_grass_sprint_lane_b_batch11.cjs
+      - name: Execute Lane B Batch 12 rooted annual-bluegrass true filter paths
+        run: node scripts/test_grass_sprint_lane_b_batch12.cjs
       - name: Execute Lane B Batch 10 plains lovegrass and knotgrass actual filter tests
         run: node scripts/test_grass_sprint_lane_b_batch10.cjs
       - name: Execute Lane A Batch 12 bushy bluestem actual filter test
