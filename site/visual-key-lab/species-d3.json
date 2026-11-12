@@ -1378,10 +1378,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Florida paspalum tends to have big coarse basal clumps with relatively few long racemes and large often rounded spikelets. Dallisgrass generally has conspicuous long silky hairs fringing its large spikelets; vaseygrass often has much more numerous finer racemes with smaller spikelets. P. pubiflorum commonly has smaller 2.7–3.2 mm spikelets, and pubescence needs careful comparison.",
+    "field_rule": "Florida paspalum tends to have big coarse basal clumps with relatively few long racemes and large often rounded spikelets. Dallisgrass generally has conspicuous long silky hairs fringing its large spikelets; vaseygrass often has much more numerous finer racemes with smaller spikelets. P. pubiflorum commonly has smaller 2.7–3.2 mm spikelets, and pubescence needs careful comparison.\n\nField ID Lab: Florida paspalum often bears several separated one-sided racemes, but a two-branched head can also appear paired near the tip and match the V choice. Look for its broad glabrous paired spikelets and robust rhizomatous crown; branch number or a V silhouette by itself cannot separate it from other Paspalum.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "paired_spikes"
       ],
       "habit": [
         "tuft",
@@ -1410,6 +1411,20 @@
         "reference": "Tall rhizomatous perennial with erect culms.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "head_paired_racemes_kew_synonym_20261112": {
+        "source": "Kew GrassBase, Paspalum floridanum and its P. difforme synonym treatment; UT Austin Williamson County P. floridanum account",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325363-2/general-information",
+        "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20floridanum",
+        "category": "reproductive",
+        "reported_states": [
+          "accepted species-level treatment: 2–5 unilateral racemes borne along 1–4 cm central axis",
+          "synonym P. difforme treatment: (1–)2–3(–4) racemes paired or along central axis",
+          "some individuals may present two near-terminal diverging branches"
+        ],
+        "reference": "Two paired or near-terminal racemes can look like the UI's two spreading branches/V; keep Florida paspalum as an observational candidate. This does not mean all P. floridanum have digitate racemes: generally 2–5 may be spaced along an axis. Confirm unusually broad glabrous paired spikelets, basal crown, and the branch insertion before separating from thin paspalum or knotgrass.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [

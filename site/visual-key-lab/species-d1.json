@@ -1244,17 +1244,20 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Compared with feather fingergrass, the existing slimspike photo shows relatively hair-thin, less obviously feathery rays. Tumble windmillgrass is particularly suggested by multiple vertically separated raceme tiers, not simply a large wheel. Species-level certainty requires mature spikelet and lemma details that this one source photo does not provide.",
+    "field_rule": "Compared with feather fingergrass, the existing slimspike photo shows relatively hair-thin, less obviously feathery rays. Tumble windmillgrass is particularly suggested by multiple vertically separated raceme tiers, not simply a large wheel. Species-level certainty requires mature spikelet and lemma details that this one source photo does not provide.\n\nField ID Lab: slimspike windmillgrass has fingerlike rays, but the spikelets line one side of each ray. In plants showing seven or more such rays, either the general one-sided or the seven-plus unilateral answer is a valid first observation. The inner ligule is a tiny membrane, occasionally edged with sparse cilia that can look hairy under a lens. These choices do not distinguish intermediate Chloris hybrids without mature floret anatomy.\n\nRootstock hold: Hill Country specimens lacked rhizomes, while a Mexican treatment describes rhizomatous plants. Do not score a Hays County rhizome from that extra-regional wording without an attached, locally verified specimen.",
     "traits": {
       "head": [
-        "fingers"
+        "fingers",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
         "mat"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": []
     },
@@ -1282,6 +1285,58 @@
         "certainty": "DIRECT_REGIONAL_SOURCE_CONDITIONAL_SURFACE_RUNNER_HAYS_BASE_PHOTO_PENDING",
         "status": "SOURCE_SUPPORTED_VARIABLE_SURFACE_HABIT",
         "review_date": "2026-11-11"
+      },
+      "head_unilateral_regional_20261112": {
+        "source": "FNA Chloris genus diagnosis, plus García & coauthors, El género Chloris (Poaceae: Chloridoideae) en México (Acta Botánica Mexicana)",
+        "source_url": "https://abm.ojs.inecol.mx/index.php/abm/article/download/1091/1273?inline=1",
+        "secondary_source_url": "https://swbiodiversity.org/seinet/taxa/index.php?clid=3321&pid=&taxauthid=1&tid=4209",
+        "category": "reproductive",
+        "reported_states": [
+          "7–12 divaricate spikelike branches in a single whorl under a studied Mexican species concept",
+          "Chloris branch spikelets borne unilaterally, in two rows on one side"
+        ],
+        "reference": "Spikelike digitate rays of C. andropogonoides are structurally unilateral racemes; an observer who follows the spikelet rows along the rays may choose one_sided as a broad observation. A windmillhead with unilateral spikelets is not a species determination, especially in introgressed central Texas Chloris populations.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
+      },
+      "head_seven_unilateral_regional_20261112": {
+        "source": "García & coauthors, El género Chloris (Poaceae: Chloridoideae) en México, C. andropogonoides account; FNA Chloris genus",
+        "source_url": "https://abm.ojs.inecol.mx/index.php/abm/article/download/1091/1273?inline=1",
+        "secondary_source_url": "https://swbiodiversity.org/seinet/taxa/index.php?clid=3321&pid=&taxauthid=1&tid=4209",
+        "category": "reproductive",
+        "reported_states": [
+          "7–12 divaricate unilateral flowering rays in the studied treatment",
+          "some single-whorl heads contain seven or more unilateral rays"
+        ],
+        "reference": "The Lab's many_one_sided means at least seven unilateral branches, not seven whorls. When all seven or more are actually attached, retain C. andropogonoides even though the overall wheel is first viewed as fingers. Counts and intermediate hybrid heads are not proof of a clean species-level identification.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
+      },
+      "ligule_sparse_cilia_hill_country_20261112": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 41, Chloris andropogonoides",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+        "category": "vegetative",
+        "reported_states": [
+          "true ligule membranous, truncate, to 1 mm long",
+          "margins erose and occasionally sparsely ciliate"
+        ],
+        "reference": "The ligule remains anatomically membranous, but genuine sparse marginal cilia may be seen as a hair-fringe at the true blade–sheath junction. Keep both membrane and hairs as broad field appearances only, not a claim of a hair-only ligule or a verified macro photo.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
+      },
+      "habit_regional_vs_mexican_conflict_20261112": {
+        "source": "Hagenbuch & Lemke (2015), Hays/central Texas Hill Country Chloris andropogonoides, p. 41",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+        "secondary_source": "El género Chloris en México, species treatment, C. andropogonoides",
+        "secondary_source_url": "https://abm.ojs.inecol.mx/index.php/abm/article/download/1091/1273?inline=1",
+        "category": "vegetative",
+        "reported_states": [
+          "Hill Country study: cespitose, rhizomes absent, stolons short or absent",
+          "Mexican taxonomic treatment: rhizomatous to stoloniferous"
+        ],
+        "reference": "Regional and Mexican descriptions differ on underground growth. Existing tuft/mat scores remain, no rhizome state added. No same-plant Hays County rhizome/attached flowering voucher has been verified; the extra-regional claim should not determine local scoring.",
+        "status": "SOURCE_CONFLICT_LOCAL_RHIZOME_NOT_SCORED",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -1420,18 +1475,21 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Confirmed hybrid concept in Kew/USDA does not establish photo-level hybrid diagnosis: separately measure BOTH lemma bodies and BOTH awns, show reproductive insertion and field voucher; a windmill head alone is Chloris sp.",
+    "field_rule": "Confirmed hybrid concept in Kew/USDA does not establish photo-level hybrid diagnosis: separately measure BOTH lemma bodies and BOTH awns, show reproductive insertion and field voucher; a windmill head alone is Chloris sp.\n\nField ID Lab: the documented Chloris × subdolichostachya hybrid can show 5–16 digitate, one-sided rays, and a 2 mm ciliate membranous true ligule. Those observations may match fingers, one-sided, or seven-plus one-sided rays, and either membrane or its hair fringe at the blade–sheath junction. They are broad eligibility choices only: no species-level hybrid ID without connected floret and parent-comparison evidence.",
     "traits": {
       "head": [
         "fingers",
-        "whorls"
+        "whorls",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "mat",
         "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": []
     },
@@ -1460,6 +1518,41 @@
         "certainty": "CONSERVATIVE_FILTER_NONEXCLUSION_NOT_A_SPECIMEN_OR_HYBRID_VERIFICATION",
         "status": "PARENT_DERIVED_PROVISIONAL_TUFT_OPTION_UNVERIFIED_HYBRID",
         "review_date": "2026-11-11"
+      },
+      "head_hybrid_unilateral_kew_20261112": {
+        "source": "Kew POWO GrassBase, Chloris × subdolichostachya species-level hybrid account",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "5–16 racemes digitate",
+          "rays unilateral, spikelets packed broadside to rachis"
+        ],
+        "reference": "This named hybrid's flowerhead has one-sided spikelet rows along digitate branches; the generic one-sided choice is legitimate. But the accepted hybrid formula C. cucullata × C. verticillata does not establish the ID of any individual photo or mixed population.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
+      },
+      "head_hybrid_7plus_unilateral_kew_20261112": {
+        "source": "Kew POWO GrassBase, Chloris × subdolichostachya",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "5–16 one-sided digitate racemes",
+          "seven or more valid under known 5–16 range"
+        ],
+        "reference": "When an intact head has seven or more one-sided racemes, the Lab's seven-plus answer must not exclude this hybrid candidate. Do not claim this many-raceme trait identifies a hybrid: parental Chloris species and backcrosses overlap.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
+      },
+      "ligule_hybrid_ciliate_membrane_kew_20261112": {
+        "source": "Kew POWO GrassBase, Chloris × subdolichostachya, leaf account",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information",
+        "category": "vegetative",
+        "reported_states": [
+          "true ligule ciliate membrane 2 mm long"
+        ],
+        "reference": "Ciliate membrane can present visually as fringe or tiny papery flap. Do not code anatomically hair-only, and do not count unrelated hair on collar/sheath. Parent-varying and hybrid diagnosis remains on hold.",
+        "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
