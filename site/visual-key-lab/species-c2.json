@@ -2397,7 +2397,7 @@
       {
         "i": 12,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/heteropogon-contortus/inat-27411269.jpeg",
-        "label": "General field grass photograph; additional habit or inflorescence view, detailed diagnostic anatomy deferred",
+        "label": "Tanglehead: narrow green-and-brown flowering axes held beside fingers — long twisted awns not fully traced",
         "creator": "(c) Sam Kieschnick, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -2424,7 +2424,7 @@
     },
     "source_blob_sha": "a643bf792176d5c60afe4c19984f55e0a637a567",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -2476,11 +2476,11 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS24_9_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "7 of 8 current Lab gallery references actually viewed using GitHub-hosted image bytes. Original photo-specific rights, regional voucher identity and capture dates were not independently verified.",
+      "scope": "7 of 8 current Lab gallery references actually viewed using GitHub-hosted image bytes. Original photo-specific rights, regional voucher identity and capture dates were not independently verified. Pass45: additional currently-hosted JPG i=12 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -2586,11 +2586,26 @@
           "hosted_file": "content/taxa/Poaceae/Heteropogon/heteropogon-contortus/images/harry-rose-8232551199-spikelets6.jpg",
           "git_blob_sha": "2bc050a81e0bcd06c97c870a74b68e3353b548b9",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS AND COLLECTION DATE NOT REVALIDATED"
+        },
+        {
+          "i": 12,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "several long thin green/brown grass reproductive axes held across a hand",
+            "fine narrow mature tan elongated segments visible at arm's-length field scale"
+          ],
+          "cannot_verify": [
+            "complete corkscrew awn origin and pair structure not unambiguously visible",
+            "basal plant connection, inner ligule and individual florets not exposed"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/heteropogon-contortus/inat-27411269.jpeg",
+          "git_blob_sha": "10eb5e42eb4e647529de9c0549506e4a7e1217b1",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        12
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Exact i=12 Sam Kieschnick iNaturalist field photo returned blob metadata but no viewable bytes; do not count",
         "Separate sessile and pedicelled spikelets with visible glumes, fertile lemma and attached twisted awn, scaled",
@@ -2603,7 +2618,20 @@
         "queue_action": "Use existing master Photo Needs Queue for specific missing seasonal and anatomy views; do not launch general re-downloads."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-caption QA only; preserved prior source-backed anatomy and key choices, no local nativity claims."
+      "morphology_reference_note": "Photo-caption QA only; preserved prior source-backed anatomy and key choices, no local nativity claims.",
+      "previous_pass": "PHASE4_PASS24_9_HOSTED_IMAGES",
+      "previous_scope": "7 of 8 current Lab gallery references actually viewed using GitHub-hosted image bytes. Original photo-specific rights, regional voucher identity and capture dates were not independently verified.",
+      "pass45_note": [
+        {
+          "i": 12,
+          "verdict": "PARTIAL_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "complete corkscrew awn origin and pair structure not unambiguously visible",
+            "basal plant connection, inner ligule and individual florets not exposed"
+          ]
+        }
+      ]
     }
   },
   {
