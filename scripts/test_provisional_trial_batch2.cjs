@@ -41,7 +41,7 @@ for(const t of more){
    assert.equal(photoIndex,i);
    assert.deepEqual(actual,candidate.approved_gallery[i],'Original exact image/license/source metadata changed: '+t.id);
    assert(actual.creator&&actual.license&&actual.source_page?.startsWith('https://'));
-   assert(/^CC (?:BY(?:-SA)?|0)(?:\b|$)/i.test(actual.license));
+   assert(/^(?:CC0|CC BY(?:-SA)?)(?:\b|$)/i.test(actual.license),'Unexpected source license: '+actual.license);
    sourceImages++;
  }
  for(const check of t.diagnostic_checks){
