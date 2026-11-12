@@ -1,0 +1,474 @@
+{
+  "schema": "hays-provisional-exact-photo-specimen-gates-20261112-v1",
+  "date": "2026-11-12",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "repository": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-sprint-provisional-specimen-gates-20261112",
+  "scope": "Priority actual-photo evidence cross-check and exact Hays same-specimen diagnostic requirements; nonpublishing, no key admission.",
+  "previous_contact_sheet_visual_review": "All 317 reduced-resolution Hays source photo tiles were visually reviewed in batches completed by PR #120, which was still open when this source triage began.",
+  "audit_scope": {
+    "priority_taxa": 10,
+    "source_observation_ids_across_whole_archive": 146,
+    "source_photo_ids_across_whole_archive": 317,
+    "no_cross_label_or_duplicate_in_archive": true,
+    "full_resolution_iNaturalist_source_pixels_newly_retrieved": 0,
+    "genuine_new_local_Hays_specimen_gate_signoffs": 0,
+    "provisional_total": 57,
+    "scored_key": 112,
+    "all_configured": 169,
+    "configured_reference_images_across_provisional": 54,
+    "reference_imaged_provisional_taxa": 32,
+    "public_site_verified_new_images": 0
+  },
+  "archive_integrity": {
+    "date": "2026-11-12",
+    "file_sha_verified_previous_round": true,
+    "archive_total_image_files": 317,
+    "distinct_source_photo_ids": 317,
+    "distinct_source_observation_ids": 146,
+    "duplicate_photo_ids": 0,
+    "source_observation_assigned_to_multiple_candidate_labels": 0,
+    "original_hays_observations_are_consensus_not_independent_voucher": true
+  },
+  "source_limitations": [
+    "Historical source licenses from private attributions.json, mostly CC BY-NC; exact live photo source remains blocked and publication under CC BY-NC requires noncommercial-rights and photo ID check.",
+    "Archive contact-sheet actual pixels support only explicitly described visible traits, NOT 1-mm floral measurements, same-rootstock proof or formal herbarium accession authentication.",
+    "Species and source-photo labels represent iNaturalist Hays research-grade records; that is evidence of an observation, not settled taxonomic occurrence nor county nativity under BONAP.",
+    "Full-resolution iNaturalist source URLs and direct AWS image download were tried; browser rejects exact observation/photo links and container network DNS unavailable.",
+    "Generic diagnostic microscope key drawn from regional-independent published literature; published Florida/Hawaii/Australian accounts are supplementary, not overriding Diggs/Hagenbuch for Texas character interpretation.",
+    "Specimen source rights, public gallery photo rights and scoring admission are kept separate. No publishing rights approved, no scored shard/UI/manifest changed."
+  ],
+  "specimen_gate_records": [
+    {
+      "id": "aegilops-cylindrica",
+      "name": "Aegilops cylindrica",
+      "priority": "A",
+      "source_observation_ids": [
+        373694422,
+        223212033
+      ],
+      "source_photo_ids": [
+        682960212,
+        682960258,
+        395469501
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Jointed slender cylindrical flowering spike, with separated mature spike-axis pieces photographed against a person's palm.",
+        "Separate photo set shows basal leafy tuft and leaf collar."
+      ],
+      "not_observable": [
+        "Internal number of fertile florets inside a specific detached joint; thick asymmetrical ribbed glumes and their awns at 1-mm scale.",
+        "Exact 2015/1999/FNA floret-unit terminology reconciliation, independent Hays voucher and nonplanted habitat status."
+      ],
+      "diagnostic_references": [
+        "Diggs et al. (1999), p.1235: sessile, 2–5-flowered spikelets on jointed axis; awned glumes.",
+        "UT PRC Williamson County Aegilops cylindrica: rachis joint with closely fitted one spikelet, asymmetrical awned glumes with 5–7 ribs, terminal spikelet often different.",
+        "FNA via Burke: 3–5 florets, 2–3 fertile; source ranges and counting scopes should not be treated as contradictions without dissecting.",
+        "Avoid false comparison with awnless Rottboellia/Mnesithea jointtails and wheat."
+      ],
+      "urls": [
+        "https://w3.biosci.utexas.edu/prc/K12/pages/Aegilops%20cylindrica.html",
+        "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Aegilops+cylindrica"
+      ],
+      "next_action": "Re-access high-resolution original IDs 682960212 and 682960258; dissect a ripe segmented spikelet in millimeter photo under expert review and verify Hays site identity.",
+      "anatomy_gate": "MATURE_JOINTED_SPIKELET_GLU­ME_AND_FLORETS",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 1,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "bothriochloa-bladhii",
+      "name": "Bothriochloa bladhii",
+      "priority": "A",
+      "source_observation_ids": [
+        196764282,
+        410398752
+      ],
+      "source_photo_ids": [
+        346379767,
+        346379784,
+        346379799
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Dark purple slender flowering racemes held against fingers, and distinct long-hairy culm node ring.",
+        "Sheath-collar is present in source images."
+      ],
+      "not_observable": [
+        "Translucent median channel along torn-apart rachis internode and pedicel; requires high magnification.",
+        "Glume pit varies and can be absent in some sessile spikelets; neither pit presence nor absence should be a single strict species filter.",
+        "Distinguishing same Hays planted/wild stand from Dichanthium aristatum."
+      ],
+      "diagnostic_references": [
+        "Hawaii key Faccenda (2023, printed p.99): groove on dried pedicel usually requires ~20–40×; could be violet/purple not truly clear.",
+        "POWO GrassBase Bothriochloa bladhii: flattened pedicels with medial translucent line; pitted lower glumes may be absent.",
+        "Regional source hierarchy remains Hagenbuch/Lemke vegetative when treated and Diggs reproductive when treated, FNA/GrassBase secondary."
+      ],
+      "urls": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:392701-1/general-information",
+        "https://hbs.bpbmwebdata.org/PUBS-ONLINE/pdf/op155p83-156.pdf"
+      ],
+      "next_action": "Collect a single dried Hays inflorescence, separate a pedicellate spikelet by its base and use 20–40× scope to image BOTH faces of the median groove plus a paired spikelet.",
+      "anatomy_gate": "MICROSCOPE_PEDICEL_MEDIAN_CHANNEL",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "name": "Dichanthium aristatum",
+      "priority": "A",
+      "source_observation_ids": [
+        250706832,
+        196764344
+      ],
+      "source_photo_ids": [
+        448440612,
+        346379890,
+        346379907
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Red-purple digitate racemes with individual spikelet-like units, and a bright leaf junction/collar view.",
+        "Some hand-held closeups likely have enough original image pixels for detailed spikelet-pair outline."
+      ],
+      "not_observable": [
+        "Reliable *absence* of a translucent pedicel and rachis medial line must be established by examination, not by lack of visible line in a thumbnail.",
+        "Glume/rachis and lower florets to differentiate other local Dichanthium and Bothriochloa.",
+        "Hays site planting-origin status."
+      ],
+      "diagnostic_references": [
+        "AusGrass Dichanthium aristatum: pedicels lack translucent medial line.",
+        "Faccenda (2023) hawaiian combined genus key recommends microscopic torn pedicel inspection, and warns line may be difficult to see in full-color fresh photos."
+      ],
+      "urls": [
+        "https://keys.lucidcentral.org/keys/v3/AusGrass/key/AusGrass/Media/Html/DICHANTH/DICARI.HTML",
+        "https://hbs.bpbmwebdata.org/PUBS-ONLINE/pdf/op155p83-156.pdf"
+      ],
+      "next_action": "From a dried Hays specimen, microdissect pedicel and rachis at 20–40×, show absence of median groove on BOTH sides while independently confirming species spikelet/glume structure.",
+      "anatomy_gate": "MICROSCOPE_PEDICEL_CHANNEL_ABSENCE_WITH_POSITIVE_COMPARATOR",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "stapfochloa-ciliata",
+      "name": "Stapfochloa ciliata",
+      "priority": "A",
+      "source_observation_ids": [
+        141035831,
+        23580302
+      ],
+      "source_photo_ids": [
+        241518939,
+        241518952,
+        36512489
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Curving, sometimes looped, one-sided radiating racemes are present.",
+        "One original photograph includes a ruler adjacent to a flowering branch and another shows culm/collar."
+      ],
+      "not_observable": [
+        "One fertile plus two sterile florets in isolated spikelet with fertile lemma ciliate midvein and margins.",
+        "Exact ~1.8–2.8-mm fertile lemma and 0.9–2.7-mm principal awn lengths and comparator differences against S. canterae.",
+        "Hays BONAP county nativity on actual source map and a Hays local voucher."
+      ],
+      "diagnostic_references": [
+        "POWO GrassBase under Chloris ciliata, now accepted Stapfochloa ciliata: 1 fertile floret, 2 sterile; fertile lemma 1.8–2.8 mm; lemma margins and midvein ciliate.",
+        "Faccenda/other southern flora generic key, only corroborating regions."
+      ],
+      "urls": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469005-2/general-information",
+        "https://keys.lucidcentral.org/keys/v3/AusGrass/key/AusGrass/Media/Html/CHLORIS/CHLCIL.HTML"
+      ],
+      "next_action": "Dissect a mature attached spikelet into one fertile and two sterile florets; measure each lemma and awn and record under 10–40×, compare with voucher-verified S. canterae.",
+      "anatomy_gate": "MICROSCOPE_FERTILE_AND_STERILE_FLORET_STACK",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "name": "Stapfochloa canterae",
+      "priority": "A",
+      "source_observation_ids": [
+        137935400
+      ],
+      "source_photo_ids": [
+        235666602,
+        235666609,
+        235666615
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Bent curved one-sided racemes against measuring tape, a detailed hairy culm node/collar, and isolated spikelets on a ruler.",
+        "The separate pieces appear adequate as a starting source for microscope retake requests."
+      ],
+      "not_observable": [
+        "Species-specific sterile floret length/shape and awn differences against S. ciliata, with published diagnostic key for canterae.",
+        "Exact identity of the original Minnette Marr specimen independent of original iNaturalist label.",
+        "Introduced planted/escaped status; current NC license check."
+      ],
+      "diagnostic_references": [
+        "Kew accepts Stapfochloa canterae and records Texas introduced; older Chloris canterae synonym.",
+        "Published modern key directly contrasting canterae with ciliata and original Hays microscope verification still missing."
+      ],
+      "urls": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469004-2"
+      ],
+      "next_action": "Use existing Hays specimen from observation 137935400 if available: remove one mature spikelet, measure fertile/sterile floret stack and lemma ciliation next to a voucher S. ciliata spikelet, have grass specialist sign off.",
+      "anatomy_gate": "SPECIES_LEVEL_COMPARATOR_AND_EXPERT_ID",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "tridens-congestus",
+      "name": "Tridens congestus",
+      "priority": "A",
+      "source_observation_ids": [
+        135964547,
+        232038649
+      ],
+      "source_photo_ids": [
+        231979634,
+        231979686,
+        412193093
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Dense pinkish or pale tan spikelet-bearing head and multiple individual flower-bearing spikelets seen beside a hand.",
+        "Bunchgrass-like vegetative base and overall culm context."
+      ],
+      "not_observable": [
+        "A single isolated 3-veined mature lemma showing shallow notch, tiny midvein extension and characteristic hairs under backlight.",
+        "Basal short node-compressed rhizome linked to flowering stem; distinguish from other Tridens.",
+        "Published deep-cleft vs short-notch terminology reconciled by specimen."
+      ],
+      "diagnostic_references": [
+        "Diggs et al. 1999 p.1330 species treatment calls a cleft lemma tip.",
+        "UT PRC Williamson County Tridens congestus has mature lemma notch up to ~0.2 mm and central vein projection 0.3–0.5 mm, with very short crowded-noded rhizomes.",
+        "Kew GrassBase reports rhizomes and ciliate membrane; actual rhizome visibility is not a filter requirement."
+      ],
+      "urls": [
+        "https://w3.biosci.utexas.edu/prc/K12/pdf/Tridens%20congestus",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:257762-2/general-information"
+      ],
+      "next_action": "Dissect one mature lemma, backlight the notch and mucro under 20× with scale, show basal rhizome from the exact same Hays individual.",
+      "anatomy_gate": "MICROSCOPE_LEMMA_TIP_NOTCH_MUCRO",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "pappophorum-bicolor",
+      "name": "Pappophorum bicolor",
+      "priority": "B",
+      "source_observation_ids": [
+        136755826
+      ],
+      "source_photo_ids": [
+        233448911,
+        233448926,
+        233448964
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Feathery flowering panicles and tufted dry-grassland habit are present; photographed individual flowering units show many awns."
+      ],
+      "not_observable": [
+        "11–15 lemma appendages from ONE lemma and actual lemma body length separated from spikelet.",
+        "P. mucronulatum also has 11–15 awns per lemma; cannot hard-code awn number as bicolor-exclusive.",
+        "No independent Hays voucher or original pixel closeup of 3–4 mm lemma vs 2–3 mm of comparator."
+      ],
+      "diagnostic_references": [
+        "Kew GrassBase accounts for P. bicolor and P. mucronulatum share 11–15 awns, sometimes overlapping lemma lengths; assess multiple characters."
+      ],
+      "urls": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413618-1/general-information",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413653-1/general-information"
+      ],
+      "next_action": "Photograph a separated mature fertile lemma body with 0.1-mm scale and all appendages, compare side-by-side with voucher P. mucronulatum, and document same plant's whole panicle.",
+      "anatomy_gate": "LEMM­A_BODY_MEASUREMENT_COMPARATOR_NOT_JUST_AWN_COUNT",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "echinochloa-walteri",
+      "name": "Echinochloa walteri",
+      "priority": "A",
+      "source_observation_ids": [
+        313351555,
+        304955914
+      ],
+      "source_photo_ids": [
+        565860695,
+        565860769,
+        565860803
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Awned branched flowering heads and distinctly papilla-based sheath hairs are visibly documented in the Hays source set.",
+        "Several different original observations contribute wet-habitat context."
+      ],
+      "not_observable": [
+        "Attached mature spikelet body length, lemma apex and specific awn insertion distinguishing E. crus-galli/E. muricata.",
+        "Hair presence is typical but rare less hairy E. walteri can occur, so hard presence or visible awn threshold excludes legitimate examples.",
+        "No botanically expert Hays photo signoff or public-source rights clearance."
+      ],
+      "diagnostic_references": [
+        "FNA and Go Botany Echinochloa accounts: papillose sheath hairs useful but not individually exclusive; awn and mature lemma structure varies."
+      ],
+      "urls": [
+        "https://gobotany.nativeplanttrust.org/dkey/echinochloa/",
+        "https://biogator.org/taxa/index.php?tid=3557"
+      ],
+      "next_action": "Use original photos of actual Hays source to measure two ripe spikelets and their lower lemmas plus papilla-based sheath hairs at same-specimen scale.",
+      "anatomy_gate": "SAME_PLANT_SHEATH_HAIR_AND_RIPE_SPIKELET",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "melica-nitens",
+      "name": "Melica nitens",
+      "priority": "A",
+      "source_observation_ids": [
+        282514813,
+        350867217
+      ],
+      "source_photo_ids": [
+        507574347,
+        640232947,
+        640232995
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Several Hays source views clearly depict nodding oatlike spikelets, foliage and flowering clumps.",
+        "Historical 2015 Hill Country Appendix B cites Dingee 89 (SWT) from Hays County."
+      ],
+      "not_observable": [
+        "Original published voucher sheet for Dingee 89 has not been examined; separate photograph panels may represent different individual plants.",
+        "Fully mature basal crown growth (source calls hard subrhizomatous base rather than true long rhizomes), opened ligule and sterile terminal floret.",
+        "Photographic identity of this year's local observation is not established by 2015 voucher alone."
+      ],
+      "diagnostic_references": [
+        "Hagenbuch & Lemke 2015 Hill Country vegetative key and Appendix B Dingee 89 (SWT) Hays gathering.",
+        "Diggs 1999 regional Melica nitens flowering morphology; older rhizomatous vs subrhizomatous descriptions require nonexclusive wording."
+      ],
+      "urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      ],
+      "next_action": "Find image/data of Dingee 89 SWT in TORCH or university herbarium; compare its ripe spikelet, short basal growth and actual Hays iNaturalist source ID 282514813.",
+      "anatomy_gate": "PUBLISHED_HAYS_VOUCHER_SHEET_PLUS_SPIKELET",
+      "historical_photo_license": "CC_BY_NC_ONLY",
+      "published_hays_vouchers": [
+        {
+          "collector": "Dingee",
+          "number": "89",
+          "herbarium": "SWT",
+          "original_sheet_verified": false
+        }
+      ],
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    },
+    {
+      "id": "rottboellia-campestris",
+      "name": "Rottboellia campestris",
+      "priority": "A",
+      "source_observation_ids": [
+        232106369,
+        224007596,
+        374594336
+      ],
+      "source_photo_ids": [
+        412317183,
+        396965912,
+        684707043
+      ],
+      "confirmed_at_contact_sheet_resolution": [
+        "Very slender jointed, nearly awnless cylindrical seedheads; one photographed against a hand and one field-grown clump.",
+        "2015 Hays County Appendix B has two published historic gatherings: Carr 10681, Sanders 4100 (TEX-LL).",
+        "Hays photo ID 684707043 is historically marked CC0, with observed source link and archived attribution metadata."
+      ],
+      "not_observable": [
+        "Actual original Carr/Sanders TEX-LL herbarium sheet features/pitted glume not independently measured.",
+        "Embedded sessile fertile and pedicelled sterile spikelets, pitted lower glume and rachis niche are not visible on current contact-sheet size.",
+        "Exact CC0 license and source/photo species label have not been reverified live; image not yet approved for site."
+      ],
+      "diagnostic_references": [
+        "Diggs et al. 1999 printed p.1258 under Coelorachis cylindrica: slender disarticulating rachis with pitted fertile sessile glume and companion reduced pedicelled spikelet.",
+        "Hagenbuch & Lemke 2015 Appendix B: two published Hays vouchers; modern Kew preferred Rottboellia campestris and ITIS alternative Mnesithea cylindrica.",
+        "USDA GRIN synonyms Coelorachis and Mnesithea."
+      ],
+      "urls": [
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=418940"
+      ],
+      "next_action": "Ask photo owner to verify exact CC0 status and label for Hays photo 684707043 as general photo, and target original TEX-LL sheets Carr 10681 and Sanders 4100 for pitted glume/rachis dissection and expert ID.",
+      "anatomy_gate": "HAYS_VOUCHER_ORIGINAL_GLU­ME_PIT_AND_NICHE",
+      "historical_photo_license": "MIXED_HISTORICAL_CC0_AND_NC",
+      "published_hays_vouchers": [
+        {
+          "collector": "Carr",
+          "number": "10681",
+          "herbarium": "TEX-LL",
+          "original_sheet_verified": false
+        },
+        {
+          "collector": "Sanders",
+          "number": "4100",
+          "herbarium": "TEX-LL",
+          "original_sheet_verified": false
+        }
+      ],
+      "configured_published_gallery_refs": 0,
+      "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
+      "source_photo_pages_license_rechecked_now": false,
+      "specimen_species_identity_independently_verified": false,
+      "admit_to_scored_key": false,
+      "public_website_photo_display_verified": false,
+      "source_photo_credits_preserved_in_private_archive": true
+    }
+  ]
+}
