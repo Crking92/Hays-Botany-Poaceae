@@ -1061,14 +1061,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1246) — Trace the axis of the silvery head. In the Flora key it usually extends farther than the individual branches.\n\nStart with Matt Lavin's genuine silvery panicle (panel 0), then see Austin flowering habitat (panel 7). Trace the MANY SHORT crowded hairy flowering branches along a central axis, not just their white hairs. Compare introduced KR (panel 4): several longer finger-like terminal racemes. A detached fuzzy head alone is insufficient.",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1246) — Trace the axis of the silvery head. In the Flora key it usually extends farther than the individual branches.\n\nStart with Matt Lavin's genuine silvery panicle (panel 0), then see Austin flowering habitat (panel 7). Trace the MANY SHORT crowded hairy flowering branches along a central axis, not just their white hairs. Compare introduced KR (panel 4): several longer finger-like terminal racemes. A detached fuzzy head alone is insufficient. The UT Austin Plant Resources Center's Williamson County treatment under Bothriochloa laguroides subsp. torreyana describes short horizontal RHIZOMES as well as a cespitose crown. This conflicts with Hagenbuch & Lemke's nonrhizomatous B. laguroides account. A real connected underground stem therefore must not automatically eliminate silver bluestem, but a fluffy panicle alone is not species proof.",
     "traits": {
       "head": [
         "bushy",
         "long_narrow_panicle"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "membrane"
@@ -1086,6 +1087,21 @@
         "reference": "pp.170–171 (printed 1246–47): silver bluestem (B. laguroides subsp. torreyana) in silvery contracted rather than terminal digitate group",
         "status": "PARTIAL_REGIONAL_FLORA_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 37, Bothriochloa laguroides; A. C. Gibson, University of Texas Plant Resources Center, Vascular Plants of Williamson County, Bothriochloa laguroides subsp. torreyana, p. 1",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=37",
+        "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Bothriochloa%20laguroides%20torreyana",
+        "reference": "The Hill Country vegetative account treats B. laguroides as cespitose and explicitly lacks rhizomes/stolons. The Williamson County subspecies account explicitly describes a cespitose plant with short horizontal rhizomes to 4 mm thick and short internodes. Possible taxon-scope or specimen variation is unresolved. Preserve tuft; additionally allow rhizome for a verified underground stem. Never infer a rhizome from fibrous roots or claim that all B. torreyana specimens have rhizomes.",
+        "role": "vegetative",
+        "taxon_concept": "Site display name Bothriochloa torreyana; Diggs 1999 and UT PRC under Bothriochloa laguroides subsp. torreyana; H&L 2015 under B. laguroides",
+        "reported_states": [
+          "cespitose, rhizomes absent (Hagenbuch & Lemke, p. 37)",
+          "cespitose with short horizontal rhizomes (UT PRC, Williamson County, p. 1)"
+        ],
+        "status": "SOURCE_CONFLICT_PRIMARY_HL_VS_UT_LOCAL_RHIZOME_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new connected stem/rootstock on a locally identified plant verified; historical gallery photographs and their credits are untouched."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1105,6 +1121,14 @@
         "certainty": "Provisional comparative field rule",
         "source": "Existing Hays Botany silver/cane lessons and regional flora",
         "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      },
+      {
+        "look": "Examine a true short horizontal underground stem before eliminating silver bluestem",
+        "check": "A UT Williamson County specimen treatment reports a short, node-bearing rhizome even though the Hill Country regional account describes rhizomes as absent. Trace the underground nodes and new shoots rather than confusing a root with a rhizome. Keep the longer central silvery raceme axis and mature paired spikelet characters for confirmation.",
+        "compare": "Cane bluestem has a strongly bearded culm node and generally larger sessile spikelets; KR bluestem has a shorter finger-like flowering cluster. Rhizome presence alone is not decisive.",
+        "certainty": "Direct local UT specimen description conflicts with primary regional H&L treatment; specimen-specific reconciliation and synonym review outstanding",
+        "source": "Hagenbuch & Lemke (2015), p. 37, B. laguroides; A.C. Gibson / UT PRC, Williamson County B. laguroides subsp. torreyana, p. 1",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Bothriochloa%20laguroides%20torreyana"
       }
     ],
     "diagnostic_review": {
