@@ -4,6 +4,22 @@
 **Scope:** one unified **169-grass** working collection: 112 legacy species scored in the Lab and 57 research-only additional grass taxa now searchable in the same Learner. The 112-only table below documents the completed original baseline and MUST NOT be mistaken for 169 verified diagnostic profiles. This is still the single progress ledger; do not create per-batch spreadsheets.
 **Important:** This tracker distinguishes coverage from verification. A species with one checked character is not a fully verified ID.
 
+## Expansion photo rollout — second source-cleared batch (2026-11-11)
+
+**Unified inventory stays 169 / 169.** Added **10 source-credited general photo links** across **5 additional candidate taxa**. Together with the first batch, the configured total is **17 photo references across 8 of the 57 expansion taxa**; **49 expansion taxa still have no source-cleared gallery images**. These counts mean committed, display-configured links, **not independently verified image pixels on the public GitHub Pages website**. The source files are not rehosted. The 112/169 active scored-key inventory is unchanged.
+
+| Species | New references | General photo roles | Exact source/rights |
+| --- | ---: | --- | --- |
+| *Paspalum langei* | **1** | One-sided flowering raceme | Larry Allain / USGS official Louisiana guide, USGS-authored public-domain photo source with individual credit; Louisiana, nonlocal |
+| *Lolium multiflorum* | **2** | Spike and spikelet context | Matt Lavin, Wikimedia Commons file pages CC BY-SA 2.0, original Flickr records |
+| *Stenotaphrum secundatum* | **2** | Flowering units and general habit | Forest & Kim Starr, individual Commons CC BY 3.0 photos; Hawaii/Midway nonlocal |
+| *Paspalum notatum* | **3** | Growth habit, flowering branches, basal stems | Harry Rose, individual Commons CC BY 2.0; original Flickr records, Australia nonlocal; one Commons file was previously cropped |
+| *Setaria viridis* | **2** | Bristled flowering head and general reference | Matt Lavin CC BY-SA 2.0 and Sun Jiao CC BY 4.0, individual Commons files; nonlocal |
+
+**Held / no fabricated clearance:** *Melica nitens* is still photo-pending because attractive live-plant imagery at MissouriPlants does not state demonstrably eligible per-image reuse rights in the available source; an existing Smithsonian public-domain herbarium sheet is not an equivalent live-plant general photo. Its source links are research leads, not publication approval. Do not copy it or label it cleared until the particular image/rights match.
+
+Every new image record includes named creator, individual source location or Commons file page, permission evidence, terms, photo role and explicit nonlocal-reference warning. **All 57 expansion taxa remain provisional for specimen-level identification and scored-key release**; photo permissions do not approve taxonomy. No new spreadsheet, no anatomy-arrows gate, no legacy hub write. The five read-only QA jobs should compare source-configured references with actual rendered public site photos before counting visible-media success.
+
 ## Expansion general-photo publication — first release batch (2026-11-11)
 
 Seven specifically license-checked, externally hosted **general photographs have been linked into the unified Learner and research browser** for **3/57** expansion taxa (rescue brome, perennial ryegrass, Wilman lovegrass). Original media bytes are retained at Commons/source; the Poaceae repo only stores the source/photographer/license references and delivery links. No bulk downloads, noncommercial permissions, or third-party images without rights evidence were used.
