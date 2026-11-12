@@ -1,0 +1,505 @@
+{
+  "id": "hays-grass-visual-pass-4-20261111",
+  "review_date": "2026-11-11",
+  "scope": "Hays County Texas Poaceae candidates",
+  "baseline_live_species": 112,
+  "prior_reviewed": 25,
+  "prior_actual_photos": 219,
+  "batch_names": 18,
+  "batch_actual_photos": 70,
+  "cumulative_names": 43,
+  "cumulative_actual_photos": 289,
+  "unreviewed_name_count": 15,
+  "taxa_eligible_for_immediate_live_merge": 0,
+  "source": "Temporary photo-level licensed Hays iNaturalist contact sheets, GitHub Actions run 43083530225 artifact 13885871643; one-day retention. Original photo IDs/obs IDs saved. No photo media committed to repo.",
+  "limits": [
+    "Medium-size contact sheet visual review, not full-scale specimen anatomical measurement.",
+    "Photo ID community consensus and location flags are not independent field or herbarium confirmation.",
+    "One observed name Elymus glabriflorus is synonym of existing Elymus virginicus under Kew/GBIF; never create a separate card.",
+    "No source image licensed for public website use by this report alone."
+  ],
+  "records": [
+    {
+      "scientific_name": "Aegilops cylindrica",
+      "source_observation_ids": [
+        223212033,
+        373694422
+      ],
+      "source_photo_ids": [
+        395469443,
+        395469501,
+        395469509,
+        395469521,
+        395469694,
+        395469693,
+        682960087,
+        682960160,
+        682960212,
+        682960258
+      ],
+      "actual_photos_inspected": 10,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/223212033",
+        "https://www.inaturalist.org/observations/373694422"
+      ],
+      "visible_evidence": "Good views of slender jointed cylindrical spike; detached spike segments/units and auricle-area photos visible.",
+      "features_not_verified": "Glume arrangement, exact joint/awn dimensions and competing Aegilops species not measured.",
+      "visual_QA_result": "STRONG_GROUP_MORPHOLOGY_NOT_FINAL",
+      "next_diagnostic_photo_target": "Close mature joint and glumes with mm scale; check dispersal units and auricles; confirm wild roadside occurrence.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Avena sativa",
+      "source_observation_ids": [
+        21997658,
+        82945689,
+        82948317
+      ],
+      "source_photo_ids": [
+        136186586,
+        136181447,
+        34097209
+      ],
+      "actual_photos_inspected": 3,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/21997658",
+        "https://www.inaturalist.org/observations/82945689",
+        "https://www.inaturalist.org/observations/82948317"
+      ],
+      "visible_evidence": "Pendulous oat-like spikelets and grass basal leaves; some field habitat.",
+      "features_not_verified": "Cultivated oats versus wild oats/forage mixtures and naturally established populations not determined.",
+      "visual_QA_result": "CEREAL_HABIT_SPECIES_AND_CONTEXT_HOLD",
+      "next_diagnostic_photo_target": "Mature spikelets, lemma awn insertion, florets, and cultivated versus volunteer roadside context.",
+      "review_flags": [
+        "CROP_OR_TRANSIENT_ESCAPE"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Elymus glabriflorus",
+      "source_observation_ids": [
+        87437868,
+        311264599
+      ],
+      "source_photo_ids": [
+        144161304,
+        561876751
+      ],
+      "actual_photos_inspected": 2,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/87437868",
+        "https://www.inaturalist.org/observations/311264599"
+      ],
+      "visible_evidence": "Awned Elymus-like spikes in field hand scale.",
+      "features_not_verified": "Photographs do not support a separate species or verified variant distinct from Elymus virginicus.",
+      "visual_QA_result": "SYNONYM_OF_EXISTING_ELYMUS_VIRGINICUS_NO_NEW_CARD",
+      "next_diagnostic_photo_target": "Map names to existing E. virginicus and crosslink photos if correctly identified and appropriately licensed.",
+      "review_flags": [
+        "EXISTING_SPECIES_SYNONYM"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Megathyrsus maximus",
+      "source_observation_ids": [
+        142221594,
+        254055102
+      ],
+      "source_photo_ids": [
+        243797993,
+        454981528
+      ],
+      "actual_photos_inspected": 2,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/142221594",
+        "https://www.inaturalist.org/observations/254055102"
+      ],
+      "visible_evidence": "Bunch of tall green grass and diffuse panicle visible only from a distance.",
+      "features_not_verified": "Images lack spikelet close-ups, ligule/collar, and any convincing wild establishment evidence; one is nighttime landscaping.",
+      "visual_QA_result": "VERY_WEAK_SPECIES_PHOTO_SUPPORT",
+      "next_diagnostic_photo_target": "Clear flowering branch and spikelet macro, base/ligule, evidence of self-sustaining stand.",
+      "review_flags": [
+        "UNCERTAIN_CULTIVATION",
+        "NO_DIAGNOSTIC_CLOSEUP"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Muhlenbergia capillaris",
+      "source_observation_ids": [
+        17126784
+      ],
+      "source_photo_ids": [
+        25940877
+      ],
+      "actual_photos_inspected": 1,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/17126784"
+      ],
+      "visible_evidence": "One airy purple-pink muhly plume over dense basal tuft.",
+      "features_not_verified": "Single image consistent with ornamental pink muhly, not species confirmation or wild population.",
+      "visual_QA_result": "SINGLE_IMAGE_LIKELY_ORNAMENTAL_HOLD",
+      "next_diagnostic_photo_target": "Flowering spikelets, glumes/lemmas and ligule with measurements; exact site planting context.",
+      "review_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "POSSIBLY_ORNAMENTAL"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Polypogon viridis",
+      "source_observation_ids": [
+        76750381,
+        156821533
+      ],
+      "source_photo_ids": [
+        125525458,
+        125526028,
+        271205441
+      ],
+      "actual_photos_inspected": 3,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/76750381",
+        "https://www.inaturalist.org/observations/156821533"
+      ],
+      "visible_evidence": "Moist rock/creek-edge habitat and narrow, somewhat contracted flowering panicles.",
+      "features_not_verified": "Awnless spikelet structure and ligule length not distinguished from other bentgrasses.",
+      "visual_QA_result": "WETLAND_POLYPOGON_LIKE_SPECIES_HOLD",
+      "next_diagnostic_photo_target": "Scaled head plus detached mature spikelets showing short or absent awns and 2–7 mm ligule.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Sphenopholis interrupta",
+      "source_observation_ids": [
+        157853430,
+        349892863
+      ],
+      "source_photo_ids": [
+        638332006,
+        638332036,
+        638332063,
+        638332146,
+        272899886,
+        272899950
+      ],
+      "actual_photos_inspected": 6,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/157853430",
+        "https://www.inaturalist.org/observations/349892863"
+      ],
+      "visible_evidence": "Slender interrupted-looking spikes with close-up overlapping green spikelets and sheath/stem junction views.",
+      "features_not_verified": "Second glume shape, ligule and floret details not decisively visible; compare existing Sphenopholis obtusata candidate.",
+      "visual_QA_result": "SPHENOPHOLIS_INTERRUPTED_PANICLE_SUPPORT_HOLD",
+      "next_diagnostic_photo_target": "Dissect spikelets and compare with S. obtusata to ensure two distinct reliably identifiable ID cards.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Tridentopsis elongata",
+      "source_observation_ids": [
+        366639842,
+        367070671,
+        377001623
+      ],
+      "source_photo_ids": [
+        670314012,
+        670314061,
+        670314131,
+        670314177,
+        669491309,
+        669491341,
+        669491320,
+        689363680,
+        689363761,
+        689363853
+      ],
+      "actual_photos_inspected": 10,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/366639842",
+        "https://www.inaturalist.org/observations/367070671",
+        "https://www.inaturalist.org/observations/377001623"
+      ],
+      "visible_evidence": "Exceptionally useful Hays photos: small tuft, long narrow panicles, scaly overlapping spikelets, partial collar/ligule, mature branches in hand.",
+      "features_not_verified": "Species boundary versus Tridentopsis mutica and T. buckleyana depends on lemma/callus, florets, ligule and anther dimensions not all reliably measured.",
+      "visual_QA_result": "STRONG_TAXON_GROUP_PHOTO_SUPPORT_SPECIES_HOLD",
+      "next_diagnostic_photo_target": "Document dissected lemma apex/floret and mm-scaled ligule, compare the regional Flora's older Tridens muticus var. elongatus.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Bromus tectorum",
+      "source_observation_ids": [
+        3092228,
+        209232730
+      ],
+      "source_photo_ids": [
+        3565901,
+        370270635
+      ],
+      "actual_photos_inspected": 2,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/3092228",
+        "https://www.inaturalist.org/observations/209232730"
+      ],
+      "visible_evidence": "Two observations display open, drooping, long-awned brome panicles.",
+      "features_not_verified": "Unmeasured lemma awns and sheaths do not distinguish cheatgrass reliably from other annual brome species; just 2 local records.",
+      "visual_QA_result": "BROMUS_CHEATGRASS_LIKE_HOLD",
+      "next_diagnostic_photo_target": "Awn length, lemma teeth, pubescent lower sheath, plants at multiple independent sites.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Dactyloctenium aegyptium",
+      "source_observation_ids": [
+        379049304,
+        388784436
+      ],
+      "source_photo_ids": [
+        712093755,
+        693320913
+      ],
+      "actual_photos_inspected": 2,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/379049304",
+        "https://www.inaturalist.org/observations/388784436"
+      ],
+      "visible_evidence": "Fingerlike branches radiating from culm apex, consistent with crowdfoot grass inflorescence.",
+      "features_not_verified": "Images not sufficiently close to confirm branch tips projecting beyond spikelets, floret details, or rooting nodes.",
+      "visual_QA_result": "DACTYLOCTENIUM_HEAD_COMPATIBLE_HOLD",
+      "next_diagnostic_photo_target": "Scaled full digitate inflorescence and branch tip, flattened winged rachis and rooting base.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Dichanthelium acuminatum",
+      "source_observation_ids": [
+        206239171
+      ],
+      "source_photo_ids": [
+        364754466
+      ],
+      "actual_photos_inspected": 1,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/206239171"
+      ],
+      "visible_evidence": "Single leafy groundcover patch with narrow lanceolate leaves in shaded/rocky context.",
+      "features_not_verified": "No discernible flowering panicle, spikelets, stem/leaf pubescence, winter rosette or sheath details; complex D. acuminatum taxon concept.",
+      "visual_QA_result": "NO_DIAGNOSTIC_PHOTO_SPECIES_UNCONFIRMED",
+      "next_diagnostic_photo_target": "Multi-season habit and rosette, ligule, sheath hairs and flowering spikelets; herbarium voucher if possible.",
+      "review_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "NO_DIAGNOSTIC_FLOWERS"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Eragrostis curtipedicellata",
+      "source_observation_ids": [
+        82930092
+      ],
+      "source_photo_ids": [
+        136182147
+      ],
+      "actual_photos_inspected": 1,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/82930092"
+      ],
+      "visible_evidence": "Single open and diffuse lovegrass-like panicle image.",
+      "features_not_verified": "Crucial viscid/gummy panicle axis cannot be demonstrated; mature spikelet dimensions not visible.",
+      "visual_QA_result": "VERY_SPARSE_ERAGROSTIS_ID_HOLD",
+      "next_diagnostic_photo_target": "Close-up of sticky/viscid mature panicle axis, spikelets and sheaths with scale.",
+      "review_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "MISSING_VISCID_AXIS"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Eragrostis minor",
+      "source_observation_ids": [
+        32237529
+      ],
+      "source_photo_ids": [
+        50544612,
+        50544653
+      ],
+      "actual_photos_inspected": 2,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/32237529"
+      ],
+      "visible_evidence": "Small weedy grass with open branched seedhead in disturbed bare ground.",
+      "features_not_verified": "Species identification requires mature glumes and lemmas, leaf glands/hairs, and precise spikelet measurement, not shown.",
+      "visual_QA_result": "VERY_SPARSE_LOVEGRASS_ID_HOLD",
+      "next_diagnostic_photo_target": "Ripe spikelet under scale plus floral-part morphology; distinguish other Eragrostis.",
+      "review_flags": [
+        "SPARSE_PHOTO_EVIDENCE"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Hordeum murinum",
+      "source_observation_ids": [
+        113160838,
+        354336431
+      ],
+      "source_photo_ids": [
+        646415666,
+        646415634,
+        191197166
+      ],
+      "actual_photos_inspected": 3,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/113160838",
+        "https://www.inaturalist.org/observations/354336431"
+      ],
+      "visible_evidence": "Short dense barley-like awned heads and annual bunches shown.",
+      "features_not_verified": "Glume/ciliate margins and hybrid/subspecies-level distinctions not observed; older Flora treats subsp. leporinum.",
+      "visual_QA_result": "HORDEUM_BARLEY_GROUP_COMPATIBLE_HOLD",
+      "next_diagnostic_photo_target": "Mature awned triad, ciliate glume margins, lemma awns with scale, possible H. murinum subsp. leporinum name.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Melinis repens",
+      "source_observation_ids": [
+        34747879,
+        62114751
+      ],
+      "source_photo_ids": [
+        99480173,
+        99480091,
+        99480131,
+        54724491,
+        54724503
+      ],
+      "actual_photos_inspected": 5,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/34747879",
+        "https://www.inaturalist.org/observations/62114751"
+      ],
+      "visible_evidence": "Characteristic pink fuzzy open plume-like seedheads and clumped foliage visible; strong general photo evidence.",
+      "features_not_verified": "Scenes resemble ornamental or managed bunches; ligule and florets not resolved and independent wild established stand not shown.",
+      "visual_QA_result": "MELINIS_REPENS_STRONG_PLUME_SUPPORT_ECOLOGY_HOLD",
+      "next_diagnostic_photo_target": "Floret and ligule macro; independent roadside naturalized occurrence versus planting.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Nassella tenuissima",
+      "source_observation_ids": [
+        111091761,
+        118195974
+      ],
+      "source_photo_ids": [
+        199671362,
+        199671393,
+        187495565,
+        187495578
+      ],
+      "actual_photos_inspected": 4,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/111091761",
+        "https://www.inaturalist.org/observations/118195974"
+      ],
+      "visible_evidence": "Fine threadlike foliage and flowing pale feathery seedheads above tufted base; compatible with Mexican feathergrass.",
+      "features_not_verified": "Could reflect planted ornamental Mexican feathergrass, and awns/lemma microcharacters are invisible.",
+      "visual_QA_result": "NASS_ELLA_FINE_PLUME_ORNAMENTAL_HOLD",
+      "next_diagnostic_photo_target": "Awned lemma close-up and bulbous basal crown, native versus ornamental installation context.",
+      "review_flags": [
+        "POSSIBLY_ORNAMENTAL"
+      ],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Stapfochloa ciliata",
+      "source_observation_ids": [
+        23580302,
+        141035831
+      ],
+      "source_photo_ids": [
+        241518939,
+        241518952,
+        241519865,
+        241519879,
+        36512489,
+        36512501
+      ],
+      "actual_photos_inspected": 6,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/23580302",
+        "https://www.inaturalist.org/observations/141035831"
+      ],
+      "visible_evidence": "Clear several digitate/fingerlike and strongly curved flowering branches, plus scaled rachis and collar region; good diagnostic imagery.",
+      "features_not_verified": "Exact hairy structures along rachis, sterile/terminal florets and ligule details still need close confirmation; other Chloris/Stapfochloa types occur locally.",
+      "visual_QA_result": "STRONG_STAPFOCHLOA_HEAD_SUPPORT_SPECIES_HOLD",
+      "next_diagnostic_photo_target": "Spikelet macro, ciliation along rachis, lemma/stamen differences, ligule under mm scale.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    },
+    {
+      "scientific_name": "Tridens congestus",
+      "source_observation_ids": [
+        135964547,
+        232038649
+      ],
+      "source_photo_ids": [
+        231979560,
+        231979600,
+        231979634,
+        231979686,
+        412193093,
+        412193145,
+        412316786
+      ],
+      "actual_photos_inspected": 7,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/135964547",
+        "https://www.inaturalist.org/observations/232038649"
+      ],
+      "visible_evidence": "Dense pale tan to slightly pink compressed flowering panicles, green stems and tufted field habit across separate observations.",
+      "features_not_verified": "Thin papery pink-tinged glumes and the deeply cleft lemma apex needed to separate pink tridens not resolved.",
+      "visual_QA_result": "STRONG_TRIDENS_HEAD_SUPPORT_SPECIES_HOLD",
+      "next_diagnostic_photo_target": "Open individual spikelet and lemma tip showing deep cleft, papery glumes with mm scale; compare other Tridens.",
+      "review_flags": [],
+      "visual_pixels_inspected": true,
+      "botanical_species_id_independently_confirmed": false,
+      "merge_ready": false
+    }
+  ]
+}

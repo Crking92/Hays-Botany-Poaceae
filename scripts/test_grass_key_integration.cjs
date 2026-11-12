@@ -227,7 +227,9 @@ const negatives = [
   [{head:'whorls'},'bouteloua-gracilis'],
   [{awns:'burs'},'bouteloua-gracilis'],
   // This branched Paniceae grass must not be confused with true spikes or bristles.
-  [{head:'many_one_sided'},'eleusine-indica'],
+  // Goosegrass has 1–10(-17) unilateral racemes (Kew GrassBase), so not a valid negative.
+  // Carolina canarygrass retains a true compact panicle rather than seven unilateral branches.
+  [{head:'many_one_sided'},'phalaris-caroliniana'],
   [{head:'many_one_sided'},'elymus-canadensis'],
   [{head:'many_one_sided',awns:'bristles'},'echinochloa-crus-galli'],
   // Lane A/C — don't turn conditional morphology into every growth form.
