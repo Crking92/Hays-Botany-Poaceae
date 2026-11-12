@@ -1,0 +1,30 @@
+name: Poaceae six empty galleries — exact source and attribution regression
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_first_six_zero_gallery_publication.cjs'
+      - '.github/workflows/poaceae-empty-gallery-publish-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_first_six_zero_gallery_publication.cjs'
+      - '.github/workflows/poaceae-empty-gallery-publish-qa.yml'
+permissions: {contents: read}
+jobs:
+  exact-sources-and-scoring:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check unique photo source URLs, attribution, license and no scored changes
+        run: node scripts/test_first_six_zero_gallery_publication.cjs
+      - name: Check original 112 scored and 18 unverified trial profiles
+        run: |
+          node scripts/test_grass_key_integration.cjs
+          node scripts/test_provisional_trial_batch1.cjs
+          node scripts/test_provisional_trial_batch2.cjs
+          node scripts/test_provisional_trial_batch3.cjs
