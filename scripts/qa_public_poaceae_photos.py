@@ -9,6 +9,7 @@ import json
 import os
 import time
 import urllib.request
+from urllib.parse import unquote
 from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
@@ -74,7 +75,7 @@ def audit():
                         source=phot.get("source_page", "")
                         credit_ok=bool(creator and license_name and creator in caption
                                        and license_name in caption)
-                        source_ok=bool(source and source in links)
+                        source_ok=bool(source and any(unquote(link)==unquote(source) for link in links))
                         image=fig.locator("img")
                         pixel_ok=False
                         src_ok=False
@@ -102,6 +103,9 @@ def audit():
                 except Exception as ex:
                     record["error"]=str(ex)[:500]
                 data.append(record)
+                for failure in record['photos']:
+                    if not failure['visible_and_credited']:
+                        print('PHOTO_QA_FAILURE '+c['scientific']+' '+json.dumps(failure,ensure_ascii=False),flush=True)
                 print(f"{index}/{len(expected)} {c['scientific']}: {record['visible_with_credit']}/{len(photos)} visible & credited", flush=True)
         finally:
             browser.close()
