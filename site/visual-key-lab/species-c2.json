@@ -1805,7 +1805,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/elymus-canadensis/inat-72405973.jpg",
-        "label": "General field grass photograph; additional habit or inflorescence view, detailed diagnostic anatomy deferred",
+        "label": "Canada wildrye curved mature flowering spike with many long radiating awns — no individual glume detail",
         "creator": "(c) Tyler Cannon, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1815,7 +1815,7 @@
       {
         "i": 9,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/elymus-canadensis/gbif-3866885510-d9374a0680b9.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "UT herbarium pressed Canada wildrye shoot with narrow leaves and awned spike — fine anatomy illegible at card scale",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -1840,7 +1840,7 @@
     },
     "source_blob_sha": "6816202f49611b842435d92195eba189e17aef2d",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -1892,11 +1892,11 @@
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "3/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "scope": "3/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification. Pass46: exact hosted JPG index 7 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance. Pass46: exact hosted JPG index 9 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
         {
           "i": 0,
@@ -1945,12 +1945,43 @@
           "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
           "git_blob_sha": "3bb22226b915dec36992fce71d13776187aab169",
           "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "thick slightly arching green-gray spike densely fringed with long thin pale awns",
+            "elongated flowering head against leafy wild background"
+          ],
+          "cannot_verify": [
+            "individual paired spikelets, glumes and lemma awn insertions are too overlapped to count",
+            "roots and collar not visible"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/elymus-canadensis/inat-72405973.jpg",
+          "git_blob_sha": "46c2db5f7e0c719dad1971bbd9fd61814f1e9b1b",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 9,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "pressed tall loose specimen with several greenish narrow leaves and single awned flowering spike",
+            "collection sheet/ruler visible in original source overview"
+          ],
+          "cannot_verify": [
+            "glume traits, inner ligule and source voucher label not legible without larger full-resolution examination",
+            "institutional exact-photo reuse rights remain unresolved independently of visual review"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/elymus-canadensis/gbif-3866885510-d9374a0680b9.jpg",
+          "git_blob_sha": "d9260e436f11a6e64de670c55e26cb4fa5e07216",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        7,
-        9
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "paired same-node spikelets with clearly traced glume bases",
         "collar, auricles and dormant base"
@@ -1961,7 +1992,27 @@
         "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only.",
+      "previous_pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "3/5 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification. Pass46: exact hosted JPG index 7 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
+      "pass46_photo_findings": [
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "individual paired spikelets, glumes and lemma awn insertions are too overlapped to count",
+            "roots and collar not visible"
+          ]
+        },
+        {
+          "i": 9,
+          "verdict": "PARTIAL_VISIBLE",
+          "unverified": [
+            "glume traits, inner ligule and source voucher label not legible without larger full-resolution examination",
+            "institutional exact-photo reuse rights remain unresolved independently of visual review"
+          ]
+        }
+      ]
     }
   },
   {
