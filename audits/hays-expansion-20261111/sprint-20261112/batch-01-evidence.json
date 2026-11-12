@@ -1,0 +1,554 @@
+{
+  "schema": "hays-57-provisional-admission-batch-v1",
+  "run_date": "2026-11-12",
+  "audit_scope": "Historical evidence, direct 2015 Hill Country vegetative PDF pages, staging Diggs reproductive dossiers, modern nomenclature and supplemental public sources. No new Hays source photo pixels opened.",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "issue": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "branch": "codex/grass-sprint-provisional",
+  "baseline": {
+    "configured": 169,
+    "existing_scored": 112,
+    "provisional": 57,
+    "literature_targets": 322,
+    "specimen_verified_provisional_before": 0,
+    "specimen_verified_provisional_after": 0
+  },
+  "batch": {
+    "records_reviewed": 8,
+    "provisional_admissions_recommended": 0,
+    "new_hays_photo_pixels_inspected": 0,
+    "distinct_new_reconciliations": 4,
+    "high_priority_records": 6
+  },
+  "method_limits": [
+    "Eight stored source observation sets and earlier photo QA were read; earlier reviewed-photo counts are NOT new visual inspections.",
+    "Direct attempt to open specific iNaturalist photo and observation pages did not return pixels in this run. No photo can be signed off from page metadata or iNaturalist research grade.",
+    "Public comparison photographs from other places cannot identify specific Hays individuals.",
+    "The regional-flora reproductive details in prepared packets were reviewed, not re-opened against the private source PDF in this batch.",
+    "Hagenbuch & Lemke (2015) printed p.54 and p.67 were visually checked on the original public PDF using page screenshots.",
+    "Photo-license fields are historical preflight data, not currently approved rights. No image published, no manifests/key states changed."
+  ],
+  "records": [
+    {
+      "id": "melica-nitens",
+      "taxon": "Melica nitens",
+      "priority": "HIGH",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+      "source_observation_count_saved": 125,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/379835068",
+        "https://www.inaturalist.org/observations/363172021",
+        "https://www.inaturalist.org/observations/361851494",
+        "https://www.inaturalist.org/observations/282514813"
+      ],
+      "previous_photo_review_count": 12,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Loose panicle branches with pendulous pale spikelets, leaf blades and tussock context; some hand-scaled flowering heads.",
+      "previous_source_photo_unresolved_notes": "Fertile-floret count and sterile-rudiment shape not resolved; glume inequality and inner ligule dimensions not measurable.",
+      "previous_specimen_proof": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Dingee",
+            "number": "89",
+            "herbarium": "SWT"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Hagenbuch & Lemke 2015 p.54, verified directly: perennial cespitose; rhizomes and stolons absent, though hard subrhizomatous base; sheaths almost closed; decurrent membranous ligule 3–6 mm.",
+        "Diggs et al. 1999 printed p.1284 (packet 1): terminal sterile rudiments and floret number distinguish Melica mutica."
+      ],
+      "additional_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      ],
+      "new_evidence_reconciliation": "CONFLICT: packet 1 says rhizomatous perennial; 2015 primary vegetative account explicitly says rhizomes and stolons absent. Do not equate a subrhizomatous hard base with demonstrated true rhizomes.",
+      "exact_remaining_specimen_evidence": "From one Hays collected or documented plant: rooted basal crown, entire sheath-throat/ligule with millimeter scale, one mature dissected spikelet exposing 2–3 fertile florets and terminal sterile rudiments. Compare M. mutica.",
+      "local_context_blocker": "Dingee 89 (SWT), explicitly listed under Hays County in 2015 appendix; this verifies prior local occurrence reference, not the current iNaturalist species ID.",
+      "rights_blocker": "No directly permissive photo among saved iNaturalist sample; NC-only preflight.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "rottboellia-campestris",
+      "taxon": "Rottboellia campestris",
+      "priority": "HIGH",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+      "source_observation_count_saved": 10,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/374594336",
+        "https://www.inaturalist.org/observations/279943509",
+        "https://www.inaturalist.org/observations/232106369",
+        "https://www.inaturalist.org/observations/224007596"
+      ],
+      "previous_photo_review_count": 12,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [
+        {
+          "photo_id": 684707043,
+          "observation_id": 374594336,
+          "license_preflight": "cc0",
+          "creator_preflight": "no rights reserved",
+          "current_license_checked": false
+        }
+      ],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Very narrow pencil-like cylindrical inflorescence with obvious successive nodes/segment pattern and hand scale; erect to arching culms and natural grassy habitat in several independent observations.",
+      "previous_source_photo_unresolved_notes": "Sessile spikelet rachis-niche architecture, pitted glume and exact membrane ligule cannot be resolved in photographs; confirm with dissection before final species-ID signoff.",
+      "previous_specimen_proof": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Carr",
+            "number": "10681",
+            "herbarium": "TEX-LL"
+          },
+          {
+            "collector": "Sanders",
+            "number": "4100",
+            "herbarium": "TEX-LL"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Diggs et al. 1999 printed p.1258 under Coelorachis cylindrica (packet 1): jointed slender cylindrical raceme with rachis niches and pitted sessile glume.",
+        "POWO 2026 currently accepts Rottboellia campestris and lists Coelorachis cylindrica as heterotypic synonym; GrassBase/FNA had other genus usage."
+      ],
+      "additional_source_urls": [
+        "https://powo.science.kew.org/taxon/419621-1",
+        "https://powo.science.kew.org/taxon/62724-2"
+      ],
+      "new_evidence_reconciliation": "NAME-LINK: staged candidate taxonomy_url points to POWO Coelorachis cylindrica synonym landing page (62724-2), not accepted Rottboellia campestris page (419621-1). Keep historical synonym for search; do not substitute Coelorachis traits from unrelated taxa.",
+      "exact_remaining_specimen_evidence": "Same Hays source plant: sharply focused 1-mm-scale rachis joint in which sessile spikelet sits in its niche, pitted outer glume, disarticulated joint and basal ligule. Compare other jointed Andropogoneae.",
+      "local_context_blocker": "Published Hays collections Carr 10681 and Sanders 4100 (TEX-LL) cited in staging; original sheet micromorphology not rechecked.",
+      "rights_blocker": "One historic CC0 source-photo metadata candidate, photo 684707043; current photo license/access and same-specimen detail not rechecked.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "paspalum-langei",
+      "taxon": "Paspalum langei",
+      "priority": "HIGH",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "ORIGINAL_TEX_SHEETS_INSPECTED",
+      "source_observation_count_saved": 23,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/393289733",
+        "https://www.inaturalist.org/observations/374141829",
+        "https://www.inaturalist.org/observations/355601663",
+        "https://www.inaturalist.org/observations/323535066"
+      ],
+      "previous_photo_review_count": 12,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [
+        {
+          "photo_id": 683823449,
+          "observation_id": 374141829,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Noland Martin, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 391733453,
+          "observation_id": 221211304,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Noland Martin, some rights reserved (CC BY)",
+          "current_license_checked": false
+        }
+      ],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Several slender racemes on branched flowering stalks, paired rows of spikelets in macro view, strap-like basal leaves, wooded/rocky ground context in some observations.",
+      "previous_source_photo_unresolved_notes": "First-glume presence and dark brown glandular blotches on second glume/sterile lemma cannot be verified at this review scale; species identification unproven.",
+      "previous_specimen_proof": {
+        "status": "ORIGINAL_TEX_SHEETS_INSPECTED",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [
+          "TEX00568499",
+          "TEX00568501",
+          "TEX00485588"
+        ],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Diggs et al. 1999 printed p.1306, packet 1: paired spikelets and variable first/lower glume; critical glandular/pubescent details.",
+        "POWO/GrassBase current treatment says tufted perennial with 2–5 racemes; Faccenda 2023 Bishop Museum paper describes annual habit and usually 1–3 racemes in Hawaiian plants."
+      ],
+      "additional_source_urls": [
+        "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A184424-2/general-information",
+        "https://hbs.bpbmwebdata.org/PUBS-ONLINE/pdf/op155p83-156.pdf"
+      ],
+      "new_evidence_reconciliation": "SOURCE-CONFLICT: the 2023 Paspalum langei account (Hawaiian records) differs from POWO/GrassBase on life history and typical raceme count. Do not make annual/perennial or 2 vs. 3 racemes a hard filter without taxon-concept/regional reconciliation.",
+      "exact_remaining_specimen_evidence": "Revisit original Hays TEX00568499, TEX00568501 and TEX00485588 at 1-mm scale, resolve first glume on each paired spikelet, glume glandular spots and hairs; match a current Hays source plant. Check the possible planted 2019 yard specimen separately.",
+      "local_context_blocker": "Three original TEX sheets previously inspected but microscopic determinations not independently confirmed; 23 Hays iNat observations are not verified specimens.",
+      "rights_blocker": "Two CC BY historical iNaturalist photo metadata candidates by Noland Martin; license and pixel/diagnostic roles need current verification.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "setaria-viridis",
+      "taxon": "Setaria viridis",
+      "priority": "HIGH",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+      "source_observation_count_saved": 7,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/326920046",
+        "https://www.inaturalist.org/observations/273230417",
+        "https://www.inaturalist.org/observations/272725049",
+        "https://www.inaturalist.org/observations/252033465"
+      ],
+      "previous_photo_review_count": 11,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [
+        {
+          "photo_id": 592178855,
+          "observation_id": 326920046,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) colincolincol, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 592178866,
+          "observation_id": 326920046,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) colincolincol, some rights reserved (CC BY)",
+          "current_license_checked": false
+        }
+      ],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Bottlebrush-like narrow fuzzy panicles, often green but some tan, and visible radiating bristles, clumped annual-looking plants.",
+      "previous_source_photo_unresolved_notes": "Short-burst bristle arrangement and finely rugose fertile lemma are not resolved against Setaria pumila, S. parviflora and other foxtails; many closeup images of head but no spikelet dissections.",
+      "previous_specimen_proof": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Liang",
+            "number": "50",
+            "herbarium": "SWT"
+          },
+          {
+            "collector": "Osborn",
+            "number": "35",
+            "herbarium": "SWT"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Hagenbuch & Lemke 2015: annual; ligule fringe of hairs, base/sheath traits in staging crosswalk.",
+        "Diggs et al. 1999 printed p.1320 (packet 1): flowering spikelets and finely rugose mature fertile lemma.",
+        "FNA Setaria account and idtools comparative key: S. viridis has relatively few subtending bristles (often 1–3), while S. pumila often 4–12; overlap and photo framing require actual spikelet views."
+      ],
+      "additional_source_urls": [
+        "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8679&taxauthid=1&tid=16726",
+        "https://idtools.org/id/weed-tool/key/GrapeGrassKey/Media/Html/fact_sheets/Setaria.html"
+      ],
+      "new_evidence_reconciliation": "The green fuzzy head is genus-level support only. Add mandatory leaf-collar / basal rooting / mature fertile lemma / bristle-group evidence before this is a species endpoint; avoid using just green bristle color.",
+      "exact_remaining_specimen_evidence": "One mature Hays plant photographed from rooted annual base through collar to inflorescence, with separated spikelet, counted bristles and finely wrinkled fertile lemma at scale; compare S. pumila and S. parviflora.",
+      "local_context_blocker": "Published Hays SWT gatherings Liang 50, Osborn 35 referenced; distinct from unapproved iNaturalist image specimens.",
+      "rights_blocker": "Two CC BY iNaturalist photo metadata candidates; current licenses not independently rechecked.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "echinochloa-colona",
+      "taxon": "Echinochloa colona",
+      "priority": "MEDIUM",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+      "source_observation_count_saved": 7,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/373733962",
+        "https://www.inaturalist.org/observations/368040343",
+        "https://www.inaturalist.org/observations/354850191"
+      ],
+      "previous_photo_review_count": 7,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Small tufted/stolonlike grass and short branched, sometimes crowded panicle with small spikelets; one wet-soil observation.",
+      "previous_source_photo_unresolved_notes": "Panicle architecture and glume/lemma hair/awn details do not conclusively separate E. colona from other Echinochloa and lookalike Paniceae.",
+      "previous_specimen_proof": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Breckenridge",
+            "number": "441",
+            "herbarium": "SWT"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Hagenbuch & Lemke 2015 leaf-collar context (staging crosswalk): no ligule; purple bands can vary.",
+        "Diggs et al. 1999 printed p.1266 packet 2: mature spikelet/glume/lemma separation from other Echinochloa."
+      ],
+      "additional_source_urls": [],
+      "new_evidence_reconciliation": "Hays historical photos show probable Echinochloa architecture, not a species-level exclusion of E. walteri or E. crus-galli. Purple leaf V's are not reliable alone. Keep GBIF false-fuzzy Echinochloa colonum alias rejected.",
+      "exact_remaining_specimen_evidence": "Same rooted Hays individual: leaf collar proving ligule absence plus multiple mature spikelets viewed dorsally and in profile at mm scale; document awn and sterile lemma surface, compare E. walteri and E. crus-galli.",
+      "local_context_blocker": "Breckenridge 441 (SWT) historic Hays voucher citation, but no specimen correspondence to current photos.",
+      "rights_blocker": "Hays historical iNaturalist samples NC-only; comparative Commons galleries elsewhere do not validate Hays specimen.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "tridentopsis-elongata",
+      "taxon": "Tridentopsis elongata",
+      "priority": "HIGH",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "INAT_RECORD_ONLY",
+      "source_observation_count_saved": 3,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/377001623",
+        "https://www.inaturalist.org/observations/367070671",
+        "https://www.inaturalist.org/observations/366639842"
+      ],
+      "previous_photo_review_count": 10,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [
+        {
+          "photo_id": 689363680,
+          "observation_id": 377001623,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 689363761,
+          "observation_id": 377001623,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 689363853,
+          "observation_id": 377001623,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 670314012,
+          "observation_id": 367070671,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 670314061,
+          "observation_id": 367070671,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        }
+      ],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Exceptionally useful Hays photos: small tuft, long narrow panicles, scaly overlapping spikelets, partial collar/ligule, mature branches in hand.",
+      "previous_source_photo_unresolved_notes": "Species boundary versus Tridentopsis mutica and T. buckleyana depends on lemma/callus, florets, ligule and anther dimensions not all reliably measured.",
+      "previous_specimen_proof": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Diggs et al. 1999 printed p.1330 under Tridens muticus var. elongatus, packet 1: typically broader blade and more-veined second glume relative to var. muticus.",
+        "POWO 2026 accepts Tridentopsis elongata as a distinct species and lists Tridens muticus var. elongatus as synonym."
+      ],
+      "additional_source_urls": [
+        "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1"
+      ],
+      "new_evidence_reconciliation": "Name currently resolved, but old broad muticus taxon labels cannot be used as independent species proof. GBIF Trisetopsis elongata is a false fuzzy match and must not be adopted.",
+      "exact_remaining_specimen_evidence": "From single Hays plant: measure blade width, photograph one flattened illuminated upper glume to count 3–7 nerves and verify size, with other spikelets, lemma/callus traits and a 1-mm ruler; compare T. mutica and T. buckleyana.",
+      "local_context_blocker": "Three Hays photo observations, only two historical observers; no cited Hays physical voucher.",
+      "rights_blocker": "Five CC BY saved photo metadata candidates by Eric Knight; no fresh source-photo pixel/license reinspection.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "sphenopholis-interrupta",
+      "taxon": "Sphenopholis interrupta",
+      "priority": "HIGH",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "INAT_RECORD_ONLY",
+      "source_observation_count_saved": 3,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/359410608",
+        "https://www.inaturalist.org/observations/349892863",
+        "https://www.inaturalist.org/observations/157853430"
+      ],
+      "previous_photo_review_count": 6,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [
+        {
+          "photo_id": 638332006,
+          "observation_id": 349892863,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 638332036,
+          "observation_id": 349892863,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 638332063,
+          "observation_id": 349892863,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 638332146,
+          "observation_id": 349892863,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Eric Knight, some rights reserved (CC BY)",
+          "current_license_checked": false
+        }
+      ],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Slender interrupted-looking spikes with close-up overlapping green spikelets and sheath/stem junction views.",
+      "previous_source_photo_unresolved_notes": "Second glume shape, ligule and floret details not decisively visible; compare existing Sphenopholis obtusata candidate.",
+      "previous_specimen_proof": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Hagenbuch & Lemke 2015 p.67 describes this under synonym Trisetum interruptum: annual cespitose, no rhizomes/stolons; hairy leaf sheaths; 1–2 mm membranous ligule; narrow leaves.",
+        "ITIS currently links Trisetum interruptum Buckley as synonym of Sphenopholis interrupta.",
+        "Earlier staging requests glume, floret and ligule dissection against S. obtusata; no direct new Hays specimen measurements."
+      ],
+      "additional_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41305"
+      ],
+      "new_evidence_reconciliation": "PRIMARY-SOURCE CROSSWALK: 2015 Hill Country vegetative account is present as Trisetum interruptum; it should be linked to the Sphenopholis interrupta dossier instead of appearing as unavailable. The vegetative character set does NOT by itself establish the species in source photographs.",
+      "exact_remaining_specimen_evidence": "One Hays flowering individual: 1–2 mm ligule, hispid sheath, mature spikelet showing upper glume shape, awn and floret details; matched comparison against S. obtusata, not head outline alone.",
+      "local_context_blocker": "Three historical Hays observations; no independently examined Hays voucher.",
+      "rights_blocker": "Four CC BY saved source-photo metadata candidates by Eric Knight, still need current rights and pixel inspection.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    },
+    {
+      "id": "phyllostachys-aurea",
+      "taxon": "Phyllostachys aurea",
+      "priority": "MEDIUM",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "species_id_approved": false,
+      "admit_to_scored_key": false,
+      "local_occurrence_class": "INAT_RECORD_ONLY",
+      "source_observation_count_saved": 12,
+      "source_observation_urls": [
+        "https://www.inaturalist.org/observations/355471088",
+        "https://www.inaturalist.org/observations/337005807",
+        "https://www.inaturalist.org/observations/337005707",
+        "https://www.inaturalist.org/observations/329633572"
+      ],
+      "previous_photo_review_count": 7,
+      "source_photo_pixels_newly_inspected_in_this_batch": 0,
+      "historical_photo_source_ids": [
+        {
+          "photo_id": 410823248,
+          "observation_id": 231317598,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Joseph Aubert, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 410823251,
+          "observation_id": 231317598,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Joseph Aubert, some rights reserved (CC BY)",
+          "current_license_checked": false
+        },
+        {
+          "photo_id": 410823256,
+          "observation_id": 231317598,
+          "license_preflight": "cc-by",
+          "creator_preflight": "(c) Joseph Aubert, some rights reserved (CC BY)",
+          "current_license_checked": false
+        }
+      ],
+      "current_image_rights_approved": false,
+      "previous_source_photo_visible_notes": "Woody running bamboo thicket, narrow lanceolate leaves and node branching, multiple culms; compatible with Phyllostachys.",
+      "previous_source_photo_unresolved_notes": "Basal culm internode crowding/compression characteristic of fishpole bamboo, grooved internodes and branch node details not demonstrated; planting or escaped-colony provenance not established.",
+      "previous_specimen_proof": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "regional_and_external_sources": [
+        "Diggs et al. 1999 printed p.1311 (packet 7): species-specific basal culm and branching characters; flowering rare and must not be required."
+      ],
+      "additional_source_urls": [],
+      "new_evidence_reconciliation": "Woody bamboo colony and foliage only support Phyllostachys; establish characteristic congested basal internodes and asymmetric node branches to support P. aurea, and distinguish planting or escape.",
+      "exact_remaining_specimen_evidence": "Photograph measured lower culm internodes, nodal groove/flattening, unequal branches, sheath tip bristles from the same patch; obtain location/management or historical record proving planted, escaped or naturally reproducing.",
+      "local_context_blocker": "Twelve Hays observations; probable planted/spreading colonies, no established wild-population proof.",
+      "rights_blocker": "Three historic CC BY source-photo metadata candidates by Joseph Aubert; verification and site-license assessment pending.",
+      "release_gates": {
+        "accepted_name_check": "REVIEWED_WITH_CAVEATS",
+        "same_Hays_specimen_diagnosis": "HOLD",
+        "local_occurrence_or_planting_context": "REVIEWED_NOT_RESOLVED_AS_CURRENT_SPECIMEN",
+        "photo_rights": "HOLD"
+      }
+    }
+  ]
+}
