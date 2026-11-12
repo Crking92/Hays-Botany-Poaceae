@@ -2069,16 +2069,18 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "The actual spine-bearing dispersal unit is a cupule of fused bristles enclosing true spikelets. Identify regional sandbur to species from mature measured bristle/base characters, dissected florets, and a confirmed specimen—not photographs of prickles alone.",
+    "field_rule": "Common sandbur: inspect the fused bristle cup enclosing true spikelets. Look beneath the short ligule hairs for a minute membrane. Low culms may root at nodes without being stolons. Annual-versus-perennial descriptions differ; use mature bur anatomy rather than life cycle alone.",
     "traits": {
       "head": [
         "burrs"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "burs"
@@ -2095,6 +2097,30 @@
         "reference": "Spiny bur has retrorsely barbed spines; distinguish fused bristle cupule from separate persistent Setaria bristles.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41",
+        "reference": "Membrane below 0.5 mm, with 0.5–1 mm marginal hairs. Retain hairs and add membrane as visible parts of a ciliate ligule, not two separate organs.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41",
+        "reference": "Lower nodes can root on decumbent culms; no stolons or rhizomes reported. Add the surface-sprawling choice, which explicitly includes rooted decumbent culms, while retaining tuft.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
+      },
+      "life_history": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1254",
+        "reference": "Annual in H&L; perennial flowering in its first year in Diggs. Keep the disagreement explicit. No life-cycle filter exists and none is introduced.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2108,12 +2134,20 @@
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395325-1/general-information"
       },
       {
-        "look": "Check the collar and break-off scar",
-        "check": "The ligule is a fringe of hairs (~0.5–1.5 mm); burr clusters break away along the axis, leaving scars. Count the actual spikelets inside a burr with magnification, and retain species-level caution if the burr is immature.",
-        "compare": "Other sandbur species can also have fused spiny involucres; species requires correctly measured mature burr",
-        "certainty": "Kew GrassBase-backed; species-level macro pending",
-        "source": "Kew POWO / GrassBase — Cenchrus spinifex",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395325-1/general-information"
+        "look": "Separate the membrane from its marginal hairs",
+        "check": "Open the inner leaf junction and inspect the tissue beneath the hairs; a hair-only distant view does not prove a membrane is absent. Continue checking mature bur attachment and enclosed spikelets.",
+        "compare": "Other sandburs share fused spiny involucres; this collar observation alone cannot identify the species.",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+        "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
+      },
+      {
+        "look": "Keep longevity separate from species identification",
+        "check": "The two regional sources disagree on annual versus perennial life history. Do not reject a candidate solely because an old crown persists or a plant flowers in its first year.",
+        "compare": "Compare mature bur structure with other sandburs; rooted lower culms do not establish perennial longevity.",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1254",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
       }
     ],
     "diagnostic_review": {

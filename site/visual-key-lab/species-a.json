@@ -4,14 +4,15 @@
     "common": "Little Bluestem",
     "scientific": "Schizachyrium scoparium",
     "range": "PASS",
-    "field_rule": "CREW READY: a distinctive narrow perennial bunch with many upper separate SHORT racemes, fuzzy mature paired spikelets and flattened keeled sheath. For specimen-level positive ID, verify ligule and pair and compare actual KR terminal branching.",
+    "field_rule": "Little bluestem: trace separate short racemes to their leafy flowering branches and inspect paired spikelets and flattened sheaths. Usually bunch-forming; a short underground stem does not rule it out. Compare connected flowering structures with KR bluestem before naming the plant.",
     "hero_i": 3,
     "traits": {
       "head": [
         "short_racemes"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "membrane"
@@ -62,6 +63,14 @@
         "reference": "Firm membranous ligule 1–3 mm.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 60; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1316",
+        "reference": "H&L allows absent or short rhizomes; Diggs calls the species non-rhizomatous. Preserve tuft and admit the existing short-or-long rhizome choice for the short condition. This does not imply extensive underground spread.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -81,6 +90,14 @@
         "certainty": "Regional-flora-supported; photo verification pending",
         "source": "Illustrated Flora of North Central Texas, Schizachyrium account",
         "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      },
+      {
+        "look": "Trace short underground stems back to a crown",
+        "check": "A short rhizome is compatible with the primary vegetative account; the regional Flora differs. Do not mistake roots for stems or infer underground connections from a tuft photo.",
+        "compare": "KR can also show spreading stems under management; use connected raceme architecture, not this choice alone.",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 60; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1316",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+        "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
       }
     ],
     "diagnostic_review": {
@@ -213,15 +230,19 @@
       "awns": {
         "source": "Flora of North America, Bothriochloa ischaemum",
         "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483",
-        "reference": "True sessile-spikelet lemma awns 9–17 mm, twisted and geniculate. Previous 1–1.5 mm claim was erroneous; field silhouette may still obscure the awn. Both long and none_obvious are kept in broad visual filtering until photo QA.",
-        "status": "EXTERNAL_SOURCE_CHECKED_FIELD_VISIBILITY_PROVISIONAL",
-        "review_date": "2026-11-10"
+        "reference": "The directly read Flora var. songarica account prints 1–1.5 mm. The prior FNA-backed record gives 9–17 mm. These conflict; do not call the Flora value a proven typo or silently convert units. Existing long/none_obvious visual choices remain, with no numeric threshold.",
+        "status": "REGIONAL_FLORA_VS_PRIOR_FNA_RANGE_UNRESOLVED",
+        "review_date": "2026-11-12",
+        "regional_source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1246",
+        "photo_voucher_support": "No measured local sessile spikelet; FNA range inherited from earlier review, not newly certified here."
       },
       "habit": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.170 (printed 1246): awn 1–1.5mm, and stolons/rhizomes can develop under mowing/grazing",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 37; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1246",
+        "reference": "H&L reports no rhizomes/stolons; the Flora var. songarica account allows them after mowing/grazing. Retain tuft, mat and rhizome with that management and taxon qualification.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -235,12 +256,12 @@
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483"
       },
       {
-        "look": "Check the true awn on one sessile spikelet",
-        "check": "Awns are about 9–17 mm, often twisted and bent. They may be difficult to resolve in an ordinary whole-head photograph; do not assume awnless.",
-        "compare": "silky, Kleberg, and native Bothriochloa by measured spikelet parts—not only awn visibility",
-        "certainty": "FNA-supported; source-unit correction",
-        "source": "Flora of North America, Bothriochloa ischaemum",
-        "url": "https://openherbarium.org/portal/taxa/index.php?clid=29&taxauthid=1&taxon=237483"
+        "look": "Measure the awn on an attached sessile spikelet",
+        "check": "The Flora prints 1–1.5 mm for var. songarica; an earlier FNA-based review recorded 9–17 mm. Preserve this discrepancy until checked against the original treatments and a measured specimen. Photograph the awn and lemma body separately.",
+        "compare": "Do not choose KR, Kleberg or a native bluestem from awn length alone. A whole-head photo can conceal awns.",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1246; earlier FNA evidence retained",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
       },
       {
         "look": "Inspect hairs right above the leaf collar",
