@@ -141,6 +141,9 @@ def main():
     print(json.dumps(minimal,indent=2),flush=True)
     if summary.get("status")=="BLOCKED_NO_VISIBLE_COUNTS":
         raise SystemExit(2)
+    if summary.get("not_visible_or_credit_failed",0) > 0:
+        raise SystemExit("Public gallery has "+str(summary["not_visible_or_credit_failed"])+
+                         " missing image pixels or required source/credit metadata; inspect QA artifact")
 
 if __name__=="__main__":
     main()
