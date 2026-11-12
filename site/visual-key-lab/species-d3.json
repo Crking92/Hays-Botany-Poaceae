@@ -2497,16 +2497,18 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Species first; lineage second. Three Texas lineages may look alike. These teaching photographs do NOT establish Hays County lineage or justify control.",
+    "field_rule": "Species first; lineage second. Three Texas lineages may look alike. These teaching photographs do NOT establish Hays County lineage or justify control.\n\nField ID Lab tip: common reed may rise as a large-looking tuft even where thick rhizomes are buried. Its true ligule is a tiny ciliate membrane, so a close view can suggest either membrane or hair fringe. Neither character reveals native versus introduced lineage.",
     "traits": {
       "head": [
         "reed_plume"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -2535,6 +2537,34 @@
         "reference": "Native americanus / introduced australis / Gulf Coast berlandieri may look similar. Do NOT mark local Texas stands invasive or prescribe removal from morphology alone; exact lineage is unverified until suitable voucher/genetic work.",
         "status": "LINEAGE_UNKNOWN_DO_NOT_USE_SPECIES_ONLY_FOR_CONTROL",
         "review_date": "2026-11-10"
+      },
+      "habit_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 59, Phragmites australis",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+        "category": "vegetative",
+        "reported_states": [
+          "solitary or forming large clumps",
+          "thick rhizomes",
+          "stolons absent"
+        ],
+        "reference": "A visible aboveground concentrated clump can belong to rhizomatous common reed; rhizomes hidden beneath mud need not be visible in ordinary field views. Tuft is a broad user-facing choice, not a claim that the species lacks rhizomes.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_BROAD_UI_NO_LINEAGE_AUTHENTICATION",
+        "status": "SOURCE_BACKED_NONEXCLUSION",
+        "review_date": "2026-11-12"
+      },
+      "ligule_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 59, Phragmites australis",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+        "category": "vegetative",
+        "reported_states": [
+          "ligule to about 0.5 mm",
+          "ciliate margin",
+          "minute membranous base"
+        ],
+        "reference": "True collar is a short ciliate membrane; a beginner may notice its hair fringe first. Keep both membrane and hairs in the broad field-choice filter; don't misidentify hairs along a node as ligule hairs.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_SHORT_CILIATE_MEMBRANE_NOT_PHOTO_CERTIFIED",
+        "status": "SOURCE_BACKED_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
