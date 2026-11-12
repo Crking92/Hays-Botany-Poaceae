@@ -251,3 +251,15 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 - [57 candidate draft ID cards with cross-links and up-to-date counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
 
 **Critical holds:** *Elymus macgregorii* was not recognized in old 1999 Flora; northeastern keys need Texas vouchers for reliable split against E. virginicus. A. carolinianus and E. macgregorii have zero original source pixels reviewed in staged sample; no rights-safe photo rehosting. Avena sativa and T. aestivum may be planted/volunteer cereal plants, not wild-established grasses. No specimen species signoffs or site changes, no new photo pixels, no photo rights release. 112 live species untouched; 9 unprofiled taxa remain.
+
+## Hays grass expansion Phase 2 source-dossier CLOSEOUT — November 11, 2026
+
+**Done: 57/57 distinct staged taxon source descriptions, 313 reference-backed morphology/taxonomy statements across seven isolated audit packets.** Final nine: Phyllostachys aurea, Cortaderia selloana, Panicum miliaceum, Muhlenbergia capillaris, Melinis repens, Nassella tenuissima, Cenchrus setaceus, Lolium × boucheanum, Miscanthus sinensis. All 57 staged cards now have packet provenance links. No duplicate accepted candidate taxon names. 58 initial observation names included one existing alias.
+
+- [Phase 2 completion report and Phase 3 priority holds](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-phase2-source-profile-completion-20261111.md)
+- [Final nine readable profiles](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-9-final-flora-diagnostic-packet-7-20261111.md)
+- [All 57 staging cards](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+
+IMPORTANT: Completion is LITERATURE COVERAGE ONLY, not specimen ID confirmation. **0** new species signoffs, **0** exact images approved for public site, **0** site merges, no changes to original 112 public species. No new original source pixels reviewed during this packet. 57 includes named hybrid Lolium × boucheanum and taxonomy conflict Kew versus EPPO/USDA GRIN; it must remain blocked from active key. Planted/escaped/seed-spill contexts, actual specimen anatomy and per-image licenses remain unverified.
+
+Next step is Phase 3: prioritize source photo access, critical lookalike anatomy, taxon concept/voucher proof, rights and Hays naturalized/wild versus planting origin rather than generating more literature packets.
