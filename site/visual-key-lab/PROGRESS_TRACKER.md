@@ -4,6 +4,20 @@
 **Scope:** one unified **169-grass** working collection: 112 legacy species scored in the Lab and 57 research-only additional grass taxa now searchable in the same Learner. The 112-only table below documents the completed original baseline and MUST NOT be mistaken for 169 verified diagnostic profiles. This is still the single progress ledger; do not create per-batch spreadsheets.
 **Important:** This tracker distinguishes coverage from verification. A species with one checked character is not a fully verified ID.
 
+## Expansion general-photo publication — first release batch (2026-11-11)
+
+Seven specifically license-checked, externally hosted **general photographs have been linked into the unified Learner and research browser** for **3/57** expansion taxa (rescue brome, perennial ryegrass, Wilman lovegrass). Original media bytes are retained at Commons/source; the Poaceae repo only stores the source/photographer/license references and delivery links. No bulk downloads, noncommercial permissions, or third-party images without rights evidence were used.
+
+| Grass | Configured general photo references | License | Photo evidence |
+| --- | ---: | --- | --- |
+| *Bromus catharticus* | **3** | CC BY 2.0 | Harry Rose: plant habit and leaves; John Tann: flowering panicle; Australian nonlocal reference |
+| *Lolium perenne* | **3** | CC0 1.0 | Patrick Alexander: New Mexico; Quentin Groom: Germany; Stephen James McWilliam: UK; source-labeled, nonlocal |
+| *Eragrostis superba* | **1** | CC BY-SA 2.0 | Bernard Dupont: spikelet macro, South Africa |
+
+The exact Commons file pages, original source URLs, named creators, license links and source locality statements are stored with every image in `site/visual-key-lab/hays-candidates.json`. Identity remains **SOURCE-LABELED, NOT A VERIFIED HAYS SPECIMEN**. A named Commons photo does not certify a local occurrence or all anatomical captions. All three profile identities remain provisional; zero of the 57 new taxa were admitted into the scored key by this photo batch.
+
+**Accounting is separate:** 169 Learner profiles; 112 active scored species; 7 new source-cleared external photo references configured on 3 new species; **public Pages image rendering must still be independently verified** before counting any of these seven as actually live/visible. The other 54 expansion species still lack independently cleared new general photos in this source dataset. Existing 514 first-pass original gallery reference audits and the one original zero-photo hybrid retain their original denominators. No new sheets or duplicate queues.
+
 ## Current 169-grass integration milestone — November 11, 2026
 
 | Project stage | Current truth |
