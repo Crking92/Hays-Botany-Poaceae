@@ -1,0 +1,27 @@
+name: Verify live Grass ID key matches main
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/smoke_public_grass_key.py'
+      - '.github/workflows/grass-key-public-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-key-parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          filter: blob:none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Confirm public Pages HTML and all scored/provisional JSON match current main
+        run: python scripts/smoke_public_grass_key.py
