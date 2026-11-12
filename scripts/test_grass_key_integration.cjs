@@ -194,6 +194,10 @@ const positives = [
   ['plains lovegrass rhizome true short membrane',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['eragrostis-intermedia']],
   ['knotgrass occasional near-terminal fingers mat',{head:'fingers',habit:'mat',ligule:'membrane',awns:'none_obvious'},['paspalum-distichum']],
   ['knotgrass occasional near-terminal fingers rhizome',{head:'fingers',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-distichum']],
+  // Lane B #132 — solitary unilateral tanglehead raceme before awns twist.
+  ['tanglehead one-sided raceme with membrane',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['heteropogon-contortus']],
+  ['tanglehead one-sided raceme with cilia',{head:'one_sided',habit:'tuft',ligule:'hairs',awns:'long'},['heteropogon-contortus']],
+  ['tanglehead one-sided head with collar unanswered',{head:'one_sided'},['heteropogon-contortus']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -294,6 +298,10 @@ const negatives = [
   [{head:'fingers'},'eragrostis-intermedia'],
   [{head:'whorls'},'paspalum-distichum'],
   [{awns:'long'},'paspalum-distichum'],
+  // Reject distinct branched-raceme and bristle states for tanglehead.
+  [{head:'many_one_sided'},'heteropogon-contortus'],
+  [{head:'fingers'},'heteropogon-contortus'],
+  [{awns:'bristles'},'heteropogon-contortus'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
