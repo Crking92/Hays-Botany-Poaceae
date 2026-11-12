@@ -2293,7 +2293,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Compare the actual blade and collar before using the open panicle: the Hill Country account describes plains lovegrass with flat 2–3 mm blades and hairy collars, versus mourning lovegrass with inward-rolled 1–2 mm blades. Width overlaps, so this is a comparison clue, not a determination. Rhizome reports conflict; keep a connected rootstock and mature spikelets for confirmation.",
+    "field_rule": "Compare the actual blade and collar before using the open panicle: the Hill Country account describes plains lovegrass with flat 2–3 mm blades and hairy collars, versus mourning lovegrass with inward-rolled 1–2 mm blades. Width overlaps, so this is a comparison clue, not a determination. Rhizome reports conflict; keep a connected rootstock and mature spikelets for confirmation. On a MAGNIFIED true inner collar the 0.2–0.55 mm ligule may look like a tiny CILIATE membrane under the hair fringe; retain both broad 'hairs' and conditional 'membrane' answers. Hagenbuch & Lemke identify the prevailing field view as hairs, while Go Botany explicitly supports a short membrane with fine hairs; neither option means the collar is wholly hairless. Aboveground tuft and belowground rhizome claims are genuinely disputed between the Hill Country key and a Williamson County account—retain both observations provisionally and do not diagnose an underground connection from a tuft alone.",
     "traits": {
       "head": [
         "airy"
@@ -2303,7 +2303,8 @@
         "rhizome"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -2333,6 +2334,21 @@
         "reference": "Vegetative primary: flat blades 2–3 mm wide, hairy collar, ligule hair fringe under 0.5 mm. Reproductive primary: Diggs describes an open panicle and 5–11-flowered spikelets; retain the earlier UT 2–9-floret report as variation requiring specimen comparison, not a numerical exclusion. Diggs notes that many specimens assigned here were previously placed in E. lugens; that is a historical determination warning, not synonymy or permission to rename records.",
         "status": "REGIONAL_COMPARISON_REVIEWED_RHIZOME_AND_SPECIMEN_LIMITS_OPEN",
         "review_date": "2026-11-12"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 48 (vegetative primary); Go Botany species-level Eragrostis intermedia ligule states; UT Austin Williamson County Eragrostis intermedia specimen description",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "secondary_source_url": "https://gobotany.nativeplanttrust.org/species/eragrostis/intermedia/",
+        "texas_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Eragrostis%20intermedia",
+        "role": "vegetative",
+        "reference": "The primary H&L key (p. 48) says true ligules less than 0.5 mm, a fringe of hairs. Go Botany's species account explicitly lists both a ligule 'in the form of a membrane with fine hairs' and one 'in the form of fine hairs', around 0.2–0.4 mm. Gibson's Williamson County species account describes a densely CILIATE 0.3–0.55 mm ligule on authentic TX material. Therefore preserve the dominant `hairs` view and conditionally accept `membrane` only where the minute membranous tissue beneath the cilia is actually visible. This is NOT a hairless plain papery ligule, and not a species-only diagnostic. Keep UT vs Hill Country RHIZOME conflict in the independent `habit` evidence unresolved.",
+        "reported_states": [
+          "short hair-fringe ligule, usually what is visible",
+          "minute ciliate membrane potentially visible under hairs with magnification"
+        ],
+        "status": "SPECIES_LEVEL_FIELD_APPEARANCE_TWO_STATES_FROM_HILL_COUNTRY_AND_GOBOTANY_CONNECTED_COLLAR_PHOTO_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly inspected same-plant Hays macro proving membranous tissue; actual inner blade-sheath junction and crown required."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2360,6 +2376,14 @@
         "certainty": "REGIONAL GROWTH-CONCEPT CONFLICT; rhizome status and tiny membrane under cilia require actual field specimen",
         "source": "UT Austin PRC — Eragrostis intermedia; contrasting Arizona Extension",
         "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Eragrostis%20intermedia"
+      },
+      {
+        "look": "Look BELOW the plains lovegrass hair fringe for a minute ligule base",
+        "check": "H&L reports a <0.5 mm ligule as a hair fringe. Go Botany separately permits a very short membrane with fine hairs (roughly 0.2–0.4 mm), while Williamson County plants have a densely ciliate ligule 0.3–0.55 mm. A close real leaf-junction photo may justify either broad visual choice; it must not invent a conspicuous smooth membrane. Check the same plant's delicate open panicle and tiny spikelets.",
+        "compare": "The true membrane or cilia lie INSIDE the blade-sheath junction; long outward collar hairs are a different structure. Distinguish mourning lovegrass with other leaf and panicle characters, not simply hairs.",
+        "certainty": "Primary Hill Country and independent species-level published text reviewed; exact Hays ligule tissue and separate rhizome source contradiction remain unresolved.",
+        "source": "Hagenbuch & Lemke 2015, p. 48; Go Botany, Eragrostis intermedia; UT Austin Williamson County specimen",
+        "url": "https://gobotany.nativeplanttrust.org/species/eragrostis/intermedia/"
       }
     ],
     "diagnostic_review": {
