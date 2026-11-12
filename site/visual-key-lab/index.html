@@ -105,8 +105,9 @@ const qs=[
 ["membrane","A thin membrane","A small papery flap rises at the inner blade–sheath junction.","dichanthium-sericeum",4],
 ["absent","No true ligule apparent","No membrane or hair fringe at the inner blade–sheath junction.","echinochloa-crus-galli",1]
 ]},
-{id:"awns",short:"Awns / bristles",title:"What projections surround the spikelet?",hint:"Awns are projections of the lemma or glume. Foxtail (Setaria) bristles are separate sterile branchlets; sandbur (Cenchrus) bristles fuse into a prickly cup. Long hairs and feathery stigmas are neither. A hand lens helps.",options:[
+{id:"awns",short:"Awns / bristles",title:"What projections surround the spikelet?",hint:"Awns arise from the lemma or glume. Three SHORT grama awns are not the three LONG awns of Aristida. Setaria bristles are separate sterile branchlets; Cenchrus bur spines are fused bristles. Long hairs and feathery stigmas are neither. A hand lens and a detached floret help.",options:[
 ["three","Three long awns","Three threadlike awns extend from one fertile floret.","aristida-purpurea",1],
+["three_short","Three short awn tips (hand lens)","Three small awns can arise from a fertile lemma; in some gramas they are only 1–4 mm. Check an actual floret, not the whole comb. The photo is a general spikelet example; the drawing marks the tiny awns.","bouteloua-hirsuta",3],
 ["long","Long, obvious awns","Long straight, bent, or twisted projections extend from the reproductive units.","bothriochloa-ischaemum",2],
 ["bristles","Separate bristles under spikelets","Setaria bristles are sterile branchlets below the spikelet. Count them and compare attachment; these are NOT lemma awns.","setaria-parviflora",3],
 ["none_obvious","No conspicuous long awns","The spikelets do not show obvious long awns in a general field view.","bouteloua-curtipendula",1],
@@ -601,6 +602,12 @@ function characterIcon(category,key){
    floret(55,75);
    path("M55 58 Q46 35 18 11 M55 58 Q54 28 55 5 M55 58 Q66 34 92 10",warm,1.6);
    node(55,58,1.5);
+  }else if(key==="three_short"){
+   // Three SMALL lemma awns on one fertile floret, deliberately shorter than Aristida awns.
+   // Diagram is schematic and not a verified depiction of every gallery example.
+   floret(55,68);
+   path("M55 51 L44 38 M55 51 L55 34 M55 51 L67 38",warm,1.8);
+   node(55,51,1.5);
   }else if(key==="long"){
    // One long sharply bent (geniculate) lemma awn, distinct from grass bristles.
    floret(55,75);
