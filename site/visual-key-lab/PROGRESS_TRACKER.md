@@ -4,6 +4,21 @@
 **Scope:** one unified **169-grass** working collection: 112 legacy species scored in the Lab and 57 research-only additional grass taxa now searchable in the same Learner. The 112-only table below documents the completed original baseline and MUST NOT be mistaken for 169 verified diagnostic profiles. This is still the single progress ledger; do not create per-batch spreadsheets.
 **Important:** This tracker distinguishes coverage from verification. A species with one checked character is not a fully verified ID.
 
+## Expansion photo rollout — third source-cleared batch (2026-11-11)
+
+The unified Learner remains **169 / 169 species**, with the original **112 / 169** scored species unchanged. Eight further **exact-image Creative Commons licensed** general photo URLs were configured for four expansion grasses. Cumulative expansion media references are **25 on 12 / 57 species**, leaving **45** with no cleared external gallery photo references. These are **source-file and GitHub-data counts, not independently verified public Pages image pixels**. The publishing-site/photo-loading acceptance gate is still outstanding: do not report 25 photos live until the exact images appear in the public gallery with credits.
+
+| Taxon | New | Source-specific photo coverage | Individual license and credit |
+|---|---:|---|---|
+| *Bromus tectorum* (cheatgrass) | **3** | Flowering habit (Maui, Forest & Kim Starr), spikelet/awn detail (Montana, Matt Lavin), plant reference (Czech Republic, Petr Filippov) | Commons CC BY 3.0, CC BY-SA 2.0 and CC BY-SA 3.0 |
+| *Echinochloa colona* (jungle rice) | **3** | Live whole plant and seedhead context (Maui, Forest & Kim Starr); independent New Mexico reference (Alex Abair) | Commons CC BY 3.0 and CC BY 4.0 |
+| *Setaria leucopila* (plains bristlegrass) | **1** | Source-labeled New Mexico general image (Alex Abair) | Commons CC BY 4.0, original iNaturalist photo link and verified license notice |
+| *Sphenopholis obtusata* (prairie wedgegrass) | **1** | Source-labeled Florida general image (Alex Abair) | Commons CC BY 4.0, original iNaturalist photo link and verified license notice |
+
+Each file record retains the exact filename, Commons file page and remote image link, named creator, license link, individual original-source URL, location disclaimer and source-label rather than a claim of local specimen or anatomical proof. Commons file descriptions provide the species name; fine-scale taxonomic and anatomical confidence remains provisional.
+
+**No new species were added to the scored 112-profile filter**, no original 112 photos or credit files were changed, and no new photos were downloaded/rehosted. For the next photo batch, prioritize the 45 still-empty expansion taxa from the existing master needs queue and, separately, validate this and previous batches' real public-site image pixels. If the public Pages site is inaccessible to the checker, report that limitation instead of claiming publication.
+
 ## Expansion photo rollout — second source-cleared batch (2026-11-11)
 
 **Unified inventory stays 169 / 169.** Added **10 source-credited general photo links** across **5 additional candidate taxa**. Together with the first batch, the configured total is **17 photo references across 8 of the 57 expansion taxa**; **49 expansion taxa still have no source-cleared gallery images**. These counts mean committed, display-configured links, **not independently verified image pixels on the public GitHub Pages website**. The source files are not rehosted. The 112/169 active scored-key inventory is unchanged.
