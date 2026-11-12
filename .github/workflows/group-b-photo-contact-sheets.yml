@@ -1,4 +1,4 @@
-name: Group B - 12 photo original pixel contact sheets (review-only)
+name: Group B - last 3 species original photo contact sheets (review-only)
 
 on:
   pull_request:
@@ -27,6 +27,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: group-b-three-grass-license-visual-source-review
-          path: qa-report/group-b-contact-sheet/
+          name: group-b-last-three-photo-visual-source-review
+          path: qa-report/group-b-final-three-contact-sheet/
           if-no-files-found: warn
