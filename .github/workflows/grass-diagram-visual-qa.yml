@@ -1,0 +1,30 @@
+name: Grass Lab diagrams — browser geometry and whole-photo fit
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/test_visual_key.cjs'
+      - '.github/workflows/grass-diagram-visual-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/test_visual_key.cjs'
+      - '.github/workflows/grass-diagram-visual-qa.yml'
+permissions:
+  contents: read
+jobs:
+  visual-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install headless browser and Playwright test runner
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Verify flowerhead bounds, complete photos, old scored paths and mobile viewports
+        run: node scripts/test_visual_key.cjs
