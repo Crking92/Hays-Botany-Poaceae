@@ -1414,14 +1414,15 @@
     "common": "Marsh bristlegrass / knotroot foxtail",
     "scientific": "Setaria parviflora",
     "range": "UNRESOLVED",
-    "field_rule": "Avoid native/introduced calls or true species ID solely from bristle silhouette. Count several attached mature spikelets and study rootstock on the same plant.",
+    "field_rule": "Knotroot bristlegrass can appear as a tuft even when its short knotty rhizomes are hidden. Follow a shoot to its base when possible, then compare several mature spikelets and attached bristles. A foxtail silhouette alone does not establish species identity.",
     "hero_i": 0,
     "traits": {
       "head": [
         "foxtail"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
         "hairs"
@@ -1495,10 +1496,12 @@
         "review_date": "2026-11-10"
       },
       "habit": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF page 243",
-        "reference": "Knotty rhizomes distinguish it from fibrous-rooted annual foxtails.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 61; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1319",
+        "reference": "H&L describes a tufted perennial with short knotty rhizomes; Diggs also reports knotty rhizomes. Permit tuft when the underground connection is not exposed, retaining rhizome. No surface stolons are implied.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new photograph or local specimen certified."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1512,12 +1515,12 @@
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=16593"
       },
       {
-        "look": "Find the living knotty rhizome",
-        "check": "Perennial plants have short, knotty underground rhizomes and a dense uniform foxtail head about 3–8(10) cm. Show the real connection under the soil, not a detached swollen stem base.",
-        "compare": "Annual foxtail millet lacks this connected perennial rhizome",
-        "certainty": "FNA-backed; existing gallery root photo not certified",
-        "source": "Flora of North America — Setaria parviflora",
-        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=16593"
+        "look": "Check the tuft and connected underground base",
+        "check": "A visible bunch is compatible with this rhizomatous perennial. Hidden underground stems must not be treated as absent; document the connection when exposed.",
+        "compare": "Annual foxtail millet can also be tufted. Use mature spikelets and actual perennial rootstock, not tuft shape alone.",
+        "certainty": "Primary regional vegetative text checked; local connected rootstock still pending",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 61; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1319",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61"
       },
       {
         "look": "Open a spikelet and the INNER collar",

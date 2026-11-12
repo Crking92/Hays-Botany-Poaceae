@@ -44,7 +44,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Sparse interrupted flowering axis + fewer bristles, sometimes absent at terminal upper spikelets; verify BRISTLE INSERTION on branchlet and perennial knotty base, not a guessed hair arrow.",
+    "field_rule": "Reverchon bristlegrass has a sparse, interrupted head. Search terminal spikelets for short bristles; a distant or incomplete view may show none clearly. Inspect the inner hair-fringed membrane and perennial base. Do not identify it from apparent bristle absence.",
     "traits": {
       "head": [
         "sparse_bristles"
@@ -54,10 +54,12 @@
         "rhizome"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
-        "bristles"
+        "bristles",
+        "none_obvious"
       ]
     },
     "source_blob_sha": "b13c256d97ec509d660549d220b9a91c3251b289",
@@ -66,10 +68,12 @@
     "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas (1999), uploaded p.242–244",
-        "reference": "Sparse, interrupted panicle resembling a Panicum; short bristles usually near terminal spikelets only, not a dense foxtail cylinder.",
-        "status": "REFERENCE_CHECKED_PARTIAL",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+        "reference": "Sparse bristles are concentrated at terminal spikelets; the plant can resemble a Panicum. Keep the sparse_bristles architecture choice. An incomplete or distant view cannot establish anatomical absence.",
+        "role": "reproductive",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new photograph or local specimen certified."
       },
       "habit": {
         "source": "Flora of North America, Setaria reverchonii",
@@ -77,16 +81,32 @@
         "reference": "FNA explicitly describes perennial with short sometimes knotty rhizomes, while tufted habit is also visible; use both broad visual choices, rooted connection not yet photo-verified.",
         "status": "SOURCE_CHECKED_DUAL_VISIBLE_HABIT",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, pp. 61; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1318, 1320",
+        "reference": "H&L describes a roughly 0.5 mm membrane fringed by 1–2 mm hairs. Keep hairs and membrane as observations of one ciliate ligule; measure basal tissue separately from projecting hairs.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new photograph or local specimen certified."
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+        "reference": "The key places short bristles mainly below terminal spikelets, sometimes a few others. Permit none_obvious for a field view in which these sparse bristles are unresolved; retain bristles for a confirmed attachment. This is not a claim that an entire mature panicle lacks bristles.",
+        "role": "reproductive",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new photograph or local specimen certified."
       }
     },
     "diagnostic_checks": [
       {
-        "look": "Look for interruptions rather than a dense foxtail",
-        "check": "A narrow upright 5–20 cm panicle has spikelets scattered irregularly along its branches, with bristles about 2–8 mm; some upper branchlets may look unbristled. Do not require a uniform bottlebrush.",
-        "compare": "Setaria parviflora makes a much denser, more regular foxtail",
-        "certainty": "FNA-backed; reproductive photo QA pending",
-        "source": "Flora of North America — Setaria reverchonii",
-        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004"
+        "look": "Inspect terminal spikelets for sparse bristle attachments",
+        "check": "The regional key locates bristles mainly at terminal spikelets, occasionally at a few others. Examine several complete branches under magnification; do not demand a uniform foxtail or infer true absence from a distant head.",
+        "compare": "Knotroot bristlegrass has a dense bristly head; Panicum can resemble a sparse Setaria until bristle attachment is resolved.",
+        "certainty": "Regional reproductive key directly reviewed; whole-head photographic and specimen confirmation pending",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1318",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       },
       {
         "look": "Inspect the rooted base before selecting growth form",
@@ -97,10 +117,18 @@
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004"
       },
       {
-        "look": "Measure the spikelet and count lower glume veins",
-        "check": "FNA describes spikelets about 2.1–4.5 mm, scattered along the branching axis, with a lower glume often 5–7-veined and an upper glume around 7–9-veined. Hair-fringe true ligule around 1–2 mm.",
+        "look": "Open the inner collar and inspect beneath the hair tips",
+        "check": "Look for the minute membrane underlying the cilia. A hair-fringe appearance alone does not show that basal tissue is absent. Distinguish collar and node hairs from the true inner ligule.",
+        "compare": "Southwestern bristlegrass also has a ciliate membrane; its long, abundant bristles differ from the sparse terminal-bristle arrangement.",
+        "certainty": "Primary vegetative text directly checked; tissue measurements on local plants pending",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, pp. 61",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61"
+      },
+      {
+        "look": "Retain the earlier mature spikelet comparison",
+        "check": "FNA describes spikelets about 2.1–4.5 mm, scattered along the branching axis, with a lower glume often 5–7-veined and an upper glume around 7–9-veined.",
         "compare": "Setaria parviflora typically lower glume three-veined and tightly clustered in a denser head",
-        "certainty": "FNA-backed; magnified same-plant glume photo pending",
+        "certainty": "Earlier FNA-derived reproductive evidence retained; not independently reverified in this vegetative/sparse-bristle batch.",
         "source": "Flora of North America — Setaria reverchonii",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20004"
       }
