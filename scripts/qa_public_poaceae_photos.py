@@ -86,7 +86,7 @@ def audit():
                                 image.first.scroll_into_view_if_needed(timeout=7000)
                                 handle=image.first.element_handle(timeout=4000)
                                 page.wait_for_function(
-                                    "(el) => el && el.isConnected && el.complete && el.naturalWidth > 0 && el.naturalHeight > 0",
+                                    "(el) => el && el.isConnected && el.complete && el.naturalWidth > 40 && el.naturalHeight > 40",
                                     arg=handle, timeout=11000)
                                 pixel_ok=bool(image.first.is_visible())
                             except (PWTimeout, Exception) as ex:
