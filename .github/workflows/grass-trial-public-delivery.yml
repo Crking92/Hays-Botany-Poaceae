@@ -1,0 +1,25 @@
+name: Grass trial public delivery — verify six actual Pages data files
+on:
+  pull_request:
+    paths:
+      - 'scripts/smoke_public_grass_trial.py'
+      - '.github/workflows/grass-trial-public-delivery.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-profiles.json'
+      - 'scripts/smoke_public_grass_trial.py'
+      - '.github/workflows/grass-trial-public-delivery.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  verify-public-trial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Confirm public Pages serves exact six-grass trial data and labels
+        run: python scripts/smoke_public_grass_trial.py
