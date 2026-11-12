@@ -73,15 +73,15 @@ if LEAD_FILE.exists():
         new_rows.append((record,pixels))
     sheet=Image.new("RGB",(1200,430),(250,249,243))
     d=ImageDraw.Draw(sheet)
-    for i,(meta,img) in enumerate(new_rows):
+    for i,(entry,img) in enumerate(new_rows):
         left=i*400
         d.rectangle((left,0,left+399,429),outline=(120,132,123),width=2)
         if img is not None:
             img.thumbnail((380,318))
             sheet.paste(img,(left+(400-img.width)//2,(318-img.height)//2+8))
         for k,line in enumerate([
-            meta["species_id"],meta.get("role",""),meta["creator"],
-            meta["status"],meta.get("filename","")]):
+            entry["species_id"],entry.get("role",""),entry["creator"],
+            entry["status"],entry.get("filename","")]):
             d.text((left+8,326+k*20),line[:49],fill=(21,46,32))
     sheet.save(OUTPUT/"new-photo-leads.jpg",quality=84)
     lead_report={"source_leads_tested":len(new_rows),
