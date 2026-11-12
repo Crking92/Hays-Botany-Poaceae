@@ -137,6 +137,19 @@ const positives = [
   ['barnyardgrass seven unilateral branches long awns',{head:'many_one_sided',habit:'tuft',ligule:'absent',awns:'long'},['echinochloa-crus-galli']],
   ['barnyardgrass seven unilateral branches no obvious awn',{head:'many_one_sided',habit:'tuft',ligule:'absent',awns:'none_obvious'},['echinochloa-crus-galli']],
   ['barnyardgrass seven unilateral branches unmeasured crown',{head:'many_one_sided',ligule:'absent'},['echinochloa-crus-galli']],
+  // Lane A #96 — narrow panicle and genuinely short condensed rhizomes.
+  ['Texas wintergrass narrow panicle tuft absent ligule',{head:'long_narrow_panicle',habit:'tuft',ligule:'absent',awns:'long'},['nassella-leucotricha']],
+  ['Texas wintergrass narrow panicle tuft membrane',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['nassella-leucotricha']],
+  ['Texas wintergrass open panicle short rhizome absent ligule',{head:'airy',habit:'rhizome',ligule:'absent',awns:'long'},['nassella-leucotricha']],
+  ['Texas wintergrass open panicle short rhizome membrane',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'long'},['nassella-leucotricha']],
+  ['Texas wintergrass narrow panicle rhizome membrane',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'},['nassella-leucotricha']],
+  // Lane C #99 — reproductive stage and genuine crown/ligule variation.
+  ['Mediterranean brome immature compact panicle',{head:'compact',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-lanceolatus']],
+  ['white tridens rhizome ciliate ligule',{head:'compact',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['tridens-albescens']],
+  ['white tridens rhizome inner membrane',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['tridens-albescens']],
+  ['white tridens tuft inner membrane',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['tridens-albescens']],
+  ['purpletop rhizome membranous collar',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['tridens-flavus']],
+  ['purpletop rhizome ciliate ligule',{head:'airy',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['tridens-flavus']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -187,6 +200,15 @@ const negatives = [
   [{head:'many_one_sided'},'eleusine-indica'],
   [{head:'many_one_sided'},'elymus-canadensis'],
   [{head:'many_one_sided',awns:'bristles'},'echinochloa-crus-galli'],
+  // Lane A/C — don't turn conditional morphology into every growth form.
+  [{head:'foxtail'},'nassella-leucotricha'],
+  [{awns:'three'},'nassella-leucotricha'],
+  [{habit:'mat'},'nassella-leucotricha'],
+  [{head:'foxtail'},'bromus-lanceolatus'],
+  [{habit:'mat'},'tridens-albescens'],
+  [{ligule:'absent'},'tridens-albescens'],
+  [{habit:'mat'},'tridens-flavus'],
+  [{head:'long_narrow_panicle',habit:'mat'},'tridentopsis-mutica'],
   [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
