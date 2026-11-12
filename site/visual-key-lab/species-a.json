@@ -1278,7 +1278,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "three_short",
@@ -1341,11 +1342,19 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Flora of North America, Bouteloua hirsuta",
-        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427",
-        "reference": "Ligule a hair fringe 0.2–0.5 mm; separate from leaf sheath/base hairs.",
-        "status": "EXTERNAL_SOURCE_CHECKED",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p. 38; Flora of North America (B. hirsuta), existing Hays source record",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+        "secondary_source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427",
+        "reference": "Hill Country p. 38 describes a 0.5–1 mm membranous truncate ligule with ciliate margins. FNA describes a shorter 0.2–0.5 mm ligule as a fringe of hairs. These may reflect terminology, minute cilia/membrane emphasis, or variation; neither description should eliminate a plausible hairy grama during broad visual filtering. Open the inner blade–sheath junction with magnification to distinguish a tiny membrane base from collar hairs.",
+        "category": "vegetative",
+        "reported_states": [
+          "membranous, truncate, ciliate (Hagenbuch & Lemke 2015 p.38)",
+          "hair fringe 0.2–0.5 mm (FNA, pre-existing source record)"
+        ],
+        "local_photo_evidence": "EXACT_INNER_LIGULE_PHOTO_NOT_CERTIFIED",
+        "confidence": "SOURCE_DISAGREEMENT_UNRESOLVED_BROAD_MATCH_BOTH",
+        "status": "TWO_AUTHORITIES_DIFFER_DO_NOT_CLAIM_SPECIMEN_LEVEL_LIGULE_VERIFICATION",
+        "review_date": "2026-11-11"
       },
       "awns": {
         "source": "Flora of North America, Bouteloua hirsuta (J.K. Wipff), via Open Herbarium",
@@ -1381,6 +1390,14 @@
         "certainty": "Flora/GrassBase morphological range; current photo does not independently certify this exact floret",
         "source": "Flora of North America, Bouteloua hirsuta (J.K. Wipff), via Open Herbarium",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427"
+      },
+      {
+        "look": "Distinguish the inner ligule from collar hairs",
+        "check": "Hagenbuch & Lemke (2015, p. 38) describe a tiny ciliate membrane about 0.5–1 mm, while the existing Flora of North America check describes a 0.2–0.5 mm hair fringe. Both visual choices stay possible until an individual plant's inner junction is examined with a hand lens. Hairs elsewhere on the sheath are not proof.",
+        "compare": "Blue grama and other short-combed Bouteloua; use head architecture and rachis-tip evidence instead of this disputed collar state alone",
+        "certainty": "Vegetative source disagreement: not resolved by existing photo review",
+        "source": "Hagenbuch & Lemke 2015 p.38; Flora of North America",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38"
       }
     ],
     "diagnostic_review": {
