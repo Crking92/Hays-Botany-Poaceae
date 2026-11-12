@@ -1,0 +1,27 @@
+name: Group C six source originals and credits (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - scripts/group_c_six_source_file_gate_20261112.py
+      - .github/workflows/group-c-six-photo-originals-20261112.yml
+permissions:
+  contents: read
+jobs:
+  original-source-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow
+      - name: Read exact external image originals and photographer/license metadata, no site changes
+        run: python scripts/group_c_six_source_file_gate_20261112.py
+      - name: Keep only metadata report, never images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-c-six-originals-source-qa
+          path: group-c-six-source-qa.json
+          if-no-files-found: warn
