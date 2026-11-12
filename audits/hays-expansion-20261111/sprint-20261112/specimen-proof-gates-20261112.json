@@ -28,7 +28,11 @@
     "distinct_source_observation_ids": 146,
     "duplicate_photo_ids": 0,
     "source_observation_assigned_to_multiple_candidate_labels": 0,
-    "original_hays_observations_are_consensus_not_independent_voucher": true
+    "original_hays_observations_are_consensus_not_independent_voucher": true,
+    "priority_photo_id_matches_exact_archived_attributions": 30,
+    "priority_photo_ids_checked": 30,
+    "priority_photo_ids_not_found_or_name_mismatched": 0,
+    "tested_using": "Local private recovery archive attributions.json across five GitHub Actions ZIP artifacts. 30 of 30 target original-photo IDs found with matching historical Hays taxon label (Rottboellia staged from Coelorachis cylindrica). These labels are not independently taxonomic confirmations."
   },
   "source_limitations": [
     "Historical source licenses from private attributions.json, mostly CC BY-NC; exact live photo source remains blocked and publication under CC BY-NC requires noncommercial-rights and photo ID check.",
@@ -71,7 +75,7 @@
         "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Aegilops+cylindrica"
       ],
       "next_action": "Re-access high-resolution original IDs 682960212 and 682960258; dissect a ripe segmented spikelet in millimeter photo under expert review and verify Hays site identity.",
-      "anatomy_gate": "MATURE_JOINTED_SPIKELET_GLU­ME_AND_FLORETS",
+      "anatomy_gate": "MATURE_JOINTED_SPIKELET_GLUME_AND_FLORETS",
       "historical_photo_license": "CC_BY_NC_ONLY",
       "configured_published_gallery_refs": 1,
       "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
@@ -314,7 +318,7 @@
         "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413653-1/general-information"
       ],
       "next_action": "Photograph a separated mature fertile lemma body with 0.1-mm scale and all appendages, compare side-by-side with voucher P. mucronulatum, and document same plant's whole panicle.",
-      "anatomy_gate": "LEMM­A_BODY_MEASUREMENT_COMPARATOR_NOT_JUST_AWN_COUNT",
+      "anatomy_gate": "LEMMA_BODY_MEASUREMENT_COMPARATOR_NOT_JUST_AWN_COUNT",
       "historical_photo_license": "CC_BY_NC_ONLY",
       "configured_published_gallery_refs": 0,
       "actual_original_Hays_photo_pixels_reopened_full_resolution": false,
@@ -446,7 +450,7 @@
         "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=418940"
       ],
       "next_action": "Ask photo owner to verify exact CC0 status and label for Hays photo 684707043 as general photo, and target original TEX-LL sheets Carr 10681 and Sanders 4100 for pitted glume/rachis dissection and expert ID.",
-      "anatomy_gate": "HAYS_VOUCHER_ORIGINAL_GLU­ME_PIT_AND_NICHE",
+      "anatomy_gate": "HAYS_VOUCHER_ORIGINAL_GLUME_PIT_AND_NICHE",
       "historical_photo_license": "MIXED_HISTORICAL_CC0_AND_NC",
       "published_hays_vouchers": [
         {
