@@ -60,6 +60,10 @@ jobs:
               visible+=1
           assert report["visible_teaching_panels"]==visible
           assert len(list((root/"data/species").glob("*.json")))==112
+          research=json.loads((root/"visual-key-lab/hays-candidates.json").read_text())
+          assert len(research["candidates"])==57
+          assert len({x["id"] for x in research["candidates"]})==57
+          assert len({x["id"] for x in research["candidates"]}.intersection(x["id"] for x in json.loads((root/"data/poaceae-index.json").read_text())))==0
           assert report["size_bytes"]<850000000
           print("FAMILY_STAGED_QA_PASSED",json.dumps({k:v for k,v in report.items()
             if k not in ("species_with_no_safe_local_panels",)}))
