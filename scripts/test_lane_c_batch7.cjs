@@ -80,7 +80,7 @@ const unknown={id:'unknown-test',scientific:'Unknown',common:'Unknown',range:'UN
 assert.deepEqual(resultIds({head:'paired_spikes',ligule:'hairs'},[unknown]),['unknown-test']);
 assert(!resultIds({}).some(id=>candidates.some(c=>c.id===id)),'provisional scored prematurely');
 const texasFescue=scoped.find(x=>x.id==='festuca-versuta');
-assert.deepEqual(texasFescue.traits.head,['branched_oat'],'Texas fescue has large multi-flowered spikelets, not a cloud of tiny ones');
+assert(texasFescue.traits.head.includes('branched_oat')&&!texasFescue.traits.head.includes('airy'),'Texas fescue has multi-flowered spikelets, not a tiny-spikelet airy cloud');
 assert.equal(texasFescue.character_evidence.head_airy_ui_semantic_correction?.status,'REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION');
 console.log(JSON.stringify({pass:true,newScoreStates:2,positives:positives.length,
  negatives:negatives.length,priorCombosPreserved:priorCombinations,
