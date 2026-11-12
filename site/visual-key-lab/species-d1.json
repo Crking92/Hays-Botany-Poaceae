@@ -10,7 +10,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg",
-        "label": "HISTORICAL var. pumilus — Kew places this name under A. tenuispatheum",
+        "label": "Historical Starr var. pumilus photograph: leafy bunch with arching blades and tall dry flowering stalks — not a Hays voucher",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0 us",
         "source_page": "https://commons.wikimedia.org/wiki/File%3AStarr-150330-0402-Andropogon_glomeratus_var_pumilus-habit-Parade_Field_Sand_Island-Midway_Atoll_%2840428508425%29.jpg",
@@ -19,7 +19,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg",
-        "label": "Historical var. pumilus — open-license habit",
+        "label": "Duplicate of first historical Starr var. pumilus habit image — identical JPG, NOT independent botanical evidence",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0 us",
         "source_page": "https://commons.wikimedia.org/wiki/File%3AStarr-150330-0402-Andropogon_glomeratus_var_pumilus-habit-Parade_Field_Sand_Island-Midway_Atoll_%2840428508425%29.jpg",
@@ -28,7 +28,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-080604-6308-historic-pumilus-ccby3.jpg",
-        "label": "Starr historical var. pumilus — source habit",
+        "label": "Historical Starr dry feathery flowering grass; source filename says Andropogon virginicus — A. tenuispatheum ID unresolved",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Starr_080604-6308_Andropogon_virginicus.jpg",
@@ -52,7 +52,7 @@
     "source_blob_sha": "1c70775a561bc0ac1048612563d0e25f2433b24c",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_PASS_COMPLETE; HISTORICAL_SOURCE_IDENTITY_AND_SPATHE_ANATOMY_HOLD",
     "character_evidence": {
       "head": {
         "source": "NameThatPlant under Anatherum tenuispatheum, https://namethatplant.net/plantdetail.shtml?plant=2472; notes attributed to Hitchcock & Chase (1950)",
@@ -91,6 +91,89 @@
       "stage": "PHASE3_PASS2_SOURCE_BACKED_PHOTOS_PENDING",
       "review_date": "2026-11-10",
       "note": "Measurements are published source descriptions, not verified dimensions on local photographed specimens; do not certify a field ID using head outline alone."
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS44_GIT_HASH_VERIFIED_HOSTED_JPGS",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_3_OF_3",
+      "rights_status": "EXISTING_CREATOR_LICENSE_AND_SOURCE_FIELDS_PRESERVED; EXACT_IMAGE_RIGHTS_NOT_NEWLY_REVALIDATED",
+      "scope": "All current gallery JPG references inspected by rendering exact GitHub-hosted binary files using read-only sparse checkout, recomputing SHA1 Git blob hashes and viewing labeled contact sheets. This is a first visual role audit, not a confirmed botanical specimen/voucher, measured anatomy or source-rights clearance.",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "large green leafy grass bunch with many long drooping blades in an open sunlit site",
+            "tall tan culms projecting above leaf mass"
+          ],
+          "cannot_verify": [
+            "does not show spathe width, inner ligule, individual sessile spikelet, or attached diagnostic florets",
+            "historical var. pumilus source name alone does not authenticate a current A. tenuispatheum Hays determination"
+          ],
+          "pass": "PHASE4_PASS44_GIT_HASH_VERIFIED_HOSTED_JPGS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg",
+          "git_blob_sha": "c53d1b07ba6a5b2c47d27bd30ca5b1313f2b1869",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; EXACT_GIT_BLOB_SHA1_MATCH; ORIGINAL_FILE_RENDERED_IN_CONTACT_SHEET; NO_NEW_RIGHTS_CLEARANCE"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "same leafy bunch and dry flowering stalks as gallery i=0",
+            "exact identical Git blob SHA as i=0, not an independent photograph"
+          ],
+          "cannot_verify": [
+            "no extra anatomical information compared with photo i=0",
+            "independent current taxon identity and local voucher still not established"
+          ],
+          "pass": "PHASE4_PASS44_GIT_HASH_VERIFIED_HOSTED_JPGS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg",
+          "git_blob_sha": "c53d1b07ba6a5b2c47d27bd30ca5b1313f2b1869",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; EXACT_GIT_BLOB_SHA1_MATCH; ORIGINAL_FILE_RENDERED_IN_CONTACT_SHEET; NO_NEW_RIGHTS_CLEARANCE"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "dense arching tan feathery flowering stems bending to one side",
+            "fine green narrow leaves below mature pale inflorescences"
+          ],
+          "cannot_verify": [
+            "Commons source file is named Starr_080604-6308_Andropogon_virginicus.jpg; this does not by itself establish A. tenuispatheum",
+            "individual spikelets, raceme spathes, ligule and local voucher not confirmed"
+          ],
+          "pass": "PHASE4_PASS44_GIT_HASH_VERIFIED_HOSTED_JPGS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-080604-6308-historic-pumilus-ccby3.jpg",
+          "git_blob_sha": "0b4e73d1a13bda1771b99d26bf04efe2627cde04",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; EXACT_GIT_BLOB_SHA1_MATCH; ORIGINAL_FILE_RENDERED_IN_CONTACT_SHEET; NO_NEW_RIGHTS_CLEARANCE"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "duplicate_photo_references": [
+        {
+          "i": 1,
+          "sha": "c53d1b07ba6a5b2c47d27bd30ca5b1313f2b1869",
+          "duplicate_of": 0
+        }
+      ],
+      "unmet_roles": [
+        "authentication of current accepted species concept for historical Starr var. pumilus photographs",
+        "the photo i=2 source filename says Andropogon virginicus — do not teach as a confirmed A. tenuispatheum voucher",
+        "true opened ligule, measured spathe width and sessile spikelet anatomy"
+      ],
+      "identity_hold": {
+        "status": "SPECIES_IDENTIFICATION_UNRESOLVED_FOR_HISTORICAL_SOURCE_IMAGES",
+        "note": "Two identical Forest and Kim Starr i0/i1 historic var. pumilus habit refs; image i2 original Commons filename contains Andropogon virginicus, not A. tenuispatheum. Historical name crosswalk and a local voucher must be checked before treating these as diagnostic accepted-species evidence."
+      },
+      "summary": "1 direct / 2 partial photo-role views. 1 duplicate gallery reference (one identical hosted JPG) is not an independent view. No new files installed and exact photo rights remain separate.",
+      "seasonal_review": {
+        "observed": "No authentic November–February collection month established solely from dry/green appearance.",
+        "queue_action": "Use existing master Photo Needs Queue; only targeted diagnostic anatomy is still needed."
+      },
+      "morphology_reference_status": "FLORA_OF_NORTH_CENTRAL_TEXAS_PRIOR_CHECKLIST_PRESERVED_NOT_RECHECKED"
     }
   },
   {
