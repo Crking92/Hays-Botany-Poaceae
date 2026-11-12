@@ -49,6 +49,10 @@ jobs:
         run: node scripts/test_grass_sprint_lane_b_batch3.cjs
       - name: Execute Lane B Batch 6 hooded-windmillgrass production-filter test
         run: node scripts/test_grass_sprint_lane_b_batch6.cjs
+      - name: Execute Lane B Batch 10 plains lovegrass and knotgrass actual filter tests
+        run: node scripts/test_grass_sprint_lane_b_batch10.cjs
+      - name: Execute Lane A Batch 12 bushy bluestem actual filter test
+        run: node scripts/test_scoring_lane_a_batch12.cjs
       - name: Execute Lane B Batch 5 branching/whorl production-filter test
         run: node scripts/test_grass_sprint_lane_b_batch5.cjs
       - name: Execute Lane B Batch 4 barnyardgrass production-filter test
