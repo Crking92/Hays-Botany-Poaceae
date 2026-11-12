@@ -290,11 +290,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "A long bent awn and arching seedhead can suggest *Sorghastrum elliottii*, but they do not individually prove a Hays County occurrence. Confirm with exposed rootstock, true membrane ligule and attached mature spikelet/glumes at scale and a reliable specimen identity.",
+    "field_rule": "A long bent awn and arching seedhead can suggest *Sorghastrum elliottii*, but they do not individually prove a Hays County occurrence. Confirm with exposed rootstock, true membrane ligule and attached mature spikelet/glumes at scale and a reliable specimen identity.\n\nField ID Lab: slender Indiangrass can carry an open, loosely arching head, unlike the tighter golden plume commonly seen in S. nutans. Airy, long-narrow and plume are broad first impressions; verify twice-bent long awns and a real nonrhizomatous bunch before species-level confidence.",
     "traits": {
       "head": [
         "golden_plume",
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "airy"
       ],
       "habit": [
         "tuft"
@@ -331,6 +332,21 @@
         "reference": "Ciliolate membrane 2–4 mm; ligule not a pure hair fringe and should not be left unknown in broad key.",
         "status": "EXTERNAL_SOURCE_CHECKED_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "head_open_arching_flora": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas p. 1322; Kew GrassBase Sorghastrum elliottii; UGA native grasses guide",
+        "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:240815-2/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "15–30 cm narrow but looser and sparsely flowered panicles in regional Flora",
+          "Kew GrassBase describes an open, often nodding 10–25 cm panicle",
+          "attached mature awns often twice bent and longer than typical Indiangrass"
+        ],
+        "reference": "A mature slender Indiangrass head can be both elongated/narrow and open/arching. Add the general airy field silhouette while keeping golden-plume and long-narrow established responses; distinguish S. elliottii from S. nutans by real panicle openness, spikelet/awn anatomy, and tuft vs rhizomatous base. The head alone cannot prove a local Hays specimen.",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "certainty": "REGIONAL_REPRODUCTIVE_SOURCE_WITH_GRASSBASE_CORROBORATION_SPECIMEN_UNVERIFIED",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -475,7 +491,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Field recognition may proceed with narrow paniculate habit, anthers and spikelets; to separate troublesome S. clandestinus and S. compositus use mature authenticated material, actual lemma/prickle characters and fresh-grain observations when necessary. Never identify a different taxon using a single common name 'rough dropseed'.",
+    "field_rule": "Field recognition may proceed with narrow paniculate habit, anthers and spikelets; to separate troublesome S. clandestinus and S. compositus use mature authenticated material, actual lemma/prickle characters and fresh-grain observations when necessary. Never identify a different taxon using a single common name 'rough dropseed'.\n\nField ID Lab: at the inner blade–sheath junction, hidden dropseed has a very short hair-fringed ligule with a minute membrane beneath the cilia. Choosing either the visible hair fringe or its papery base should keep it in the results; nearby collar hairs are not the ligule.\n\nRootstock hold: Hagenbuch & Lemke report no rhizomes for hidden dropseed in the Hill Country, whereas Flora of North America notes that rhizomes sometimes occur. The current tuft scoring is retained; do not claim a buried rhizome without an exposed, documented Hays-region same-plant specimen.",
     "traits": {
       "head": [
         "long_narrow_panicle",
@@ -485,7 +501,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -509,6 +526,36 @@
         "reference": "Hair-fringe ligule only 0.2–0.3 mm.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule_minute_ciliate_base_hill_country": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 63, Sporobolus clandestinus; Kew GrassBase alternate visual description",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:242956-2/general-information",
+        "category": "vegetative",
+        "reported_states": [
+          "ligule under 0.5 mm, ciliate with a minute membranous base in Hill Country account",
+          "Kew GrassBase emphasizes 0.2–0.3 mm hair fringe",
+          "both broad membrane and hairs appearances possible at true inner ligule"
+        ],
+        "reference": "The Hill Country specimen account explicitly describes a tiny ciliate membrane. A lens showing the basal membrane should not exclude hidden dropseed, even if an alternative source emphasizes hair tips. Retain both visual-choice states but do not infer membrane from unrelated collar hairs or claim gallery photos prove the collar.",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "certainty": "DIRECT_REGIONAL_VEGETATIVE_DESCRIPTION_PHOTO_COLLAR_MACRO_PENDING",
+        "review_date": "2026-11-12"
+      },
+      "habit_hill_country_vs_fna_20261112": {
+        "source": "Hagenbuch & Lemke (2015), Hill Country, printed p. 63, Sporobolus clandestinus",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+        "secondary_source": "FNA Sporobolus clandestinus species account (Peterson, Hatch & Weakley), reproduced by NEON Biorepository",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=59779",
+        "category": "vegetative",
+        "reported_states": [
+          "Hagenbuch & Lemke: solitary or small clusters; rhizomes and stolons absent",
+          "FNA: perennial cespitose, occasionally rhizomatous"
+        ],
+        "reference": "Regionally studied material was described without rhizomes, but FNA covers occasional true rhizomes in the broader species concept. Keep existing tuft score; do not admit rhizome solely from general FNA range without a documented same-plant Hays County crown and flowering voucher. This is a source conflict and locality/photo evidence hold.",
+        "status": "SOURCE_CONFLICT_NEEDS_HAYS_SPECIMEN_NOT_SCORED",
+        "certainty": "DIRECT_REGIONAL_SOURCE_CONFLICT_WITH_FNA_RHIZOME_CLAIM",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
