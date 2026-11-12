@@ -35,7 +35,18 @@ def audit():
     assert len(candidates) == 57, "Configured 57 provisional records changed"
     expected = [c for c in candidates if c.get("approved_gallery")]
     expected_photos = sum(len(c["approved_gallery"]) for c in expected)
-    public = json_public("visual-key-lab/hays-candidates.json")
+    # GitHub Pages commonly lags a merged manifest; retry *only* exact data parity
+    # before opening any photo cards. Never convert stale Pages into a success.
+    for attempt in range(1, 13):
+        public = json_public("visual-key-lab/hays-candidates.json")
+        if public == local:
+            break
+        if attempt < 12:
+            actual_public = public.get("candidates", [])
+            n_public = sum(len(c.get("approved_gallery") or []) for c in actual_public)
+            print(f"Pages parity pending ({attempt}/12): public {n_public} photo refs vs "
+                  f"main {expected_photos}; retrying exact data", flush=True)
+            time.sleep(5)
     if public != local:
         actual_public=public.get("candidates",[])
         published_refs=sum(len(c.get("approved_gallery") or []) for c in actual_public)
