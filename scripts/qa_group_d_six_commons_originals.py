@@ -97,7 +97,20 @@ def main():
             if any(s in license_url.lower() for s in ("/by-nc/","/by-nd/","/by-nc-sa/")):
                 problems.append("RESTRICTED_LICENSE")
             try:
-                b=get(session,ii["url"]).content
+                # Some Wikimedia CDN endpoints transiently deny an original URL.
+                # Retry one alternate query spelling, but never treat a thumbnail
+                # or an unverified derivative as an original-byte hash.
+                original_urls=[ii["url"], ii["url"]+("?download=1" if "?" not in ii["url"] else "&download=1")]
+                last_download_error=None
+                for original_url in original_urls:
+                    try:
+                        b=get(session, original_url).content
+                        row["original_fetch_url_used"]=original_url
+                        break
+                    except Exception as problem:
+                        last_download_error=problem
+                else:
+                    raise last_download_error
                 row["computed_original_sha1"]=hashlib.sha1(b).hexdigest()
                 row["computed_original_sha256"]=hashlib.sha256(b).hexdigest()
                 row["downloaded_original_bytes"]=len(b)
@@ -119,7 +132,8 @@ def main():
         if problems:failed=True
         rows.append(row)
         print("GROUP_D_ORIGINAL",json.dumps({"filename":name,"status":row["result"],
-                   "holds":problems,"sha256":row.get("computed_original_sha256"),
+                   "holds":problems,"download_error":row.get("download_error"),
+                   "sha256":row.get("computed_original_sha256"),
                    "dimensions":row.get("decoded_original_px")}),flush=True)
     sha=[row.get("computed_original_sha256") for row in rows if row.get("computed_original_sha256")]
     if len(set(sha))!=len(sha):
