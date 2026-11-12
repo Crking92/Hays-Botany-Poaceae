@@ -241,3 +241,13 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 - [57 staging card index / counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
 
 **Critical holds:** D. acuminatum old Panicum-variety concepts; S. hians historical name P. hians; S. canterae-versus-S. ciliata true microscopic discriminant not yet confirmed; Panicum dichotomiflorum remains zero source pixels viewed; P. repens missing sharp-tipped rhizome; M. maximus may only be planted. **Zero new source images inspected in this pass, zero botanical species signoffs, zero rights-approved new photos, zero live merges.** Original 112 live key and galleries untouched. **17 candidates remain for Phase 2 reference dossier preparation.**
+
+## Hays expansion Phase 2 diagnostic packet 6 — November 11, 2026
+
+**48/57 candidate reference profiles prepared, 267 source-described character/photo targets**. The new eight are Triticum aestivum, Avena sativa, Eragrostis minor, Alopecurus carolinianus, Briza minor, Cenchrus ciliaris, Sclerochloa dura and Elymus macgregorii. Reconciled **8 missing original packet-1 references** in the 57 draft cards without changing packet content or cumulative count.
+
+- [Readable packet 6 morphology](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md)
+- [Structured packet 6](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.json)
+- [57 candidate draft ID cards with cross-links and up-to-date counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+
+**Critical holds:** Eliymus macgregorii [sic: spelling in accepted dataset is *Elymus macgregorii*] was not recognized in old 1999 Flora; northeastern keys need Texas vouchers for reliable split against E. virginicus. A. carolinianus and E. macgregorii have zero original source pixels reviewed in staged sample; no rights-safe photo rehosting. Avena sativa and T. aestivum may be planted/volunteer cereal plants, not wild-established grasses. No specimen species signoffs or site changes, no new photo pixels, no photo rights release. 112 live species untouched; 9 unprofiled taxa remain.
