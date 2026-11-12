@@ -255,10 +255,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Switchgrass: compare the complete panicle, mature spikelets, collar and connected scaly rhizomes. Inspect blade-base hairs separately from the inner ligule. Regional sources differ on ligule terminology and node hairs; neither a hair-fringe appearance nor a hairy node alone rules it out.",
+    "field_rule": "Switchgrass: compare the complete panicle, mature spikelets, collar and connected scaly rhizomes. Inspect blade-base hairs separately from the inner ligule. Regional sources differ on ligule terminology and node hairs; neither a hair-fringe appearance nor a hairy node alone rules it out. Usually the panicle is an open airy cloud, but an older USDA regional key explicitly includes contracted examples. Retain a genuinely long contracted panicle as a provisional switchgrass possibility, NOT proof: compare attached rhizomes, collar and spikelets and do not generalize the shape to all populations.",
     "traits": {
       "head": [
-        "airy"
+        "airy",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft",
@@ -278,9 +279,16 @@
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 226",
-        "reference": "Flora confirms large rhizomatous perennial, both open panicle and clumped versus rhizomatous upland forms, fringed membranous ligule. Existing multistates retained.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "reference": "Diggs (1999), printed p. 1302: panicles large, usually 15–55 cm. Kew GrassBase primarily describes open panicles. Grelen & Duvall (1966), USDA Forest Service Research Paper SO-23, printed p. 14, explicitly keys P. virgatum with an open OR contracted, large, well-branched panicle. To prevent a documented contracted example from disappearing, retain airy and conditionally add long_narrow_panicle. This does NOT imply every closed immature leaf-borne panicle can be diagnosed, or that a single panicle shape proves species.",
+        "status": "REGIONAL_FLORA_LARGE_PANICLE_SECONDARY_CONTRACTED_VARIANT_RETAIN_OPEN_AS_TYPICAL",
+        "review_date": "2026-11-12",
+        "role": "reproductive",
+        "primary_source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1302",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "supplementary_source": "Grelen & Duvall (1966), USDA Forest Service Research Paper SO-23, p. 14",
+        "supplementary_source_url": "https://www.srs.fs.usda.gov/pubs/rp/rp_so023.pdf",
+        "conflicting_source": "GrassBase/Kew typical open panicle; contracted is a documented less-typical visual state, not a different reproductive structural class.",
+        "photo_voucher_support": "No personally measured/local contracted switchgrass panicle verified this batch."
       },
       "habit": {
         "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 226",
@@ -330,6 +338,14 @@
         "certainty": "Species-wide source measurement range differs; no universal spikelet cutoff or exact local specimen proof",
         "source": "Flora of North America — Panicum virgatum",
         "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Panicum+virgatum"
+      },
+      {
+        "look": "Do not exclude a contracted, long switchgrass head automatically",
+        "check": "The usual mature head is open; a historical USDA Forest Service key also allows contracted large branching heads. If the field observation looks unusually narrow, compare whole panicle branch attachment, the actual blade-base membrane and hairs, and connected scaly rhizomes before ruling switchgrass out.",
+        "compare": "A long-narrow silhouette also matches Indiangrass and some Muhlenbergia species; don't use it to distinguish these without collar or floret evidence.",
+        "certainty": "Published regional source variation; site-specific contracted head and age-graded photographs pending.",
+        "source": "Diggs et al. (1999), p. 1302; Grelen & Duvall, USDA FS 1966, p. 14 (supplementary)",
+        "url": "https://www.srs.fs.usda.gov/pubs/rp/rp_so023.pdf"
       }
     ],
     "diagnostic_review": {
@@ -1636,10 +1652,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "RIFLE-SIGHT MEMBRANE + SINGLE GOLDEN BRANCHED HEAD + AWNED SPIKELET/BARE PEDICEL.",
+    "field_rule": "RIFLE-SIGHT MEMBRANE + SINGLE GOLDEN BRANCHED HEAD + AWNED SPIKELET/BARE PEDICEL. The mature golden plume is also a relatively long, narrow/loosely contracted panicle. A user choosing the generic long-narrow panicle icon should retain Indiangrass, but that shape alone is not a species ID; verify the rifle-sight collar and awned fertile spikelet with reduced companion pedicel.",
     "traits": {
       "head": [
-        "golden_plume"
+        "golden_plume",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft",
@@ -1659,10 +1676,19 @@
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
       "head": {
-        "source": "Illustrated Flora of North Central Texas p.246",
-        "reference": "Up to 30 cm golden loosely contracted panicle; short scaly rhizomes and stiff membrane (rifle-sight ligule).",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1322, Sorghastrum nutans; FNA and USDA FS supplemental",
+        "reference": "Diggs printed p. 1322 explicitly describes the yellow panicle as loosely contracted to 30 cm. The golden_plume choice remains the distinctive appearance; the existing long_narrow_panicle choice is also a valid overall shape. This does NOT equate S. nutans with the narrower, sparser S. elliottii, nor imply a spike instead of a branched panicle.",
+        "status": "DIRECT_REGIONAL_FLORA_VERIFIED_TWO_VISUAL_STATES_LOCAL_HEAD_PENDING",
+        "review_date": "2026-11-12",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reported_states": [
+          "golden-plume appearance",
+          "long loosely contracted panicle"
+        ],
+        "photo_voucher_support": "No new attached local whole-head photograph checked in this score-only batch.",
+        "secondary_reference": "Grelen & Duvall 1966 USDA Forest Service Research Paper SO-23 p. 28: narrow exserted panicle; Kew GrassBase variable oblong dense panicle",
+        "secondary_source_url": "https://www.srs.fs.usda.gov/pubs/rp/rp_so023.pdf"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1690,6 +1716,14 @@
         "certainty": "FNA-backed; length overlaps and cannot stand alone",
         "source": "Flora of North America — Sorghastrum nutans",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8700&taxauthid=1&taxon=12234"
+      },
+      {
+        "look": "Recognize both the golden plume and its overall narrow contracted shape",
+        "check": "The Flora describes Indiangrass flowering heads as yellow and loosely contracted, up to about 30 cm. The long-narrow choice is legitimate even when a head is not yet golden. Verify the firm collar with pointed auricles and awned sessile spikelet; avoid confusing the dense head with a true unbranched spike.",
+        "compare": "Slender Indiangrass (S. elliottii) in the regional Flora is even looser and relatively sparsely flowered; plume silhouette cannot decide between the species alone.",
+        "certainty": "Direct printed regional Flora text read; matching connected local head and spikelet photo pending.",
+        "source": "Diggs et al. (1999), Illustrated Flora of North Central Texas, printed p. 1322",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       }
     ],
     "diagnostic_review": {
