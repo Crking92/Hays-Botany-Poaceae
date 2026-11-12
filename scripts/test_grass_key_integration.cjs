@@ -123,6 +123,16 @@ const positives = [
   ['vine mesquite narrow one-sided branches mat',{head:'one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['hopia-obtusa']],
   ['vine mesquite narrow one-sided branches rhizome',{head:'one_sided',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['hopia-obtusa']],
   ['rabbitfoot long cylindrical flowering panicle',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['polypogon-monspeliensis']],
+  // Lane B #92 — contracted panicles should not hide these established grasses.
+  ['Indiangrass narrow plume tuft',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-nutans']],
+  ['Indiangrass narrow plume rhizome',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'},['sorghastrum-nutans']],
+  ['switchgrass contracted large panicle rhizome',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['panicum-virgatum']],
+  ['switchgrass contracted large panicle tuft',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['panicum-virgatum']],
+  // Lane A #93 — rooted low forms and short rhizomes in blue grama.
+  ['blue grama visible short rhizome short awn',{head:'combs',habit:'rhizome',ligule:'hairs',awns:'three_short'},['bouteloua-gracilis']],
+  ['blue grama visible short rhizome no awn',{head:'combs',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['bouteloua-gracilis']],
+  ['blue grama low rooted sod short awn',{head:'combs',habit:'mat',ligule:'hairs',awns:'three_short'},['bouteloua-gracilis']],
+  ['blue grama low rooted sod no awn',{head:'combs',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-gracilis']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -162,6 +172,13 @@ const negatives = [
   [{head:'spike'},'hopia-obtusa'],
   [{head:'spike'},'polypogon-monspeliensis'],
   [{awns:'bristles'},'polypogon-monspeliensis'],
+  // Lane B / Lane A — no false spike, bristle, or habitat-shape inference.
+  [{head:'long_narrow_panicle',awns:'long'},'panicum-virgatum'],
+  [{awns:'bristles'},'sorghastrum-nutans'],
+  [{head:'long_narrow_panicle'},'poa-annua'],
+  [{head:'long_narrow_panicle'},'dichanthelium-oligosanthes'],
+  [{head:'whorls'},'bouteloua-gracilis'],
+  [{awns:'burs'},'bouteloua-gracilis'],
   [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
