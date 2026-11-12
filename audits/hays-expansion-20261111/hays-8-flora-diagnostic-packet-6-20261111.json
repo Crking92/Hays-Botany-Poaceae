@@ -1,0 +1,708 @@
+{
+  "created": "2026-11-11",
+  "phase": "Hays grass expansion Phase 2, diagnostic packet 6",
+  "status": "LITERATURE_PREPARATION_ONLY_NOT_SPECIMEN_VERIFICATION",
+  "counts": {
+    "new_species_profiles": 8,
+    "new_reference_character_targets": 48,
+    "cumulative_profiles": 48,
+    "cumulative_character_targets": 267,
+    "remaining_candidates": 9,
+    "new_source_pixels_inspected": 0,
+    "new_species_confirmed": 0,
+    "photo_rights_cleared": 0,
+    "live_species_merged": 0
+  },
+  "scope_and_limitations": [
+    "First five packets cover 40 unique names from all 57 staged candidates, confirmed before preparation.",
+    "Original Hays observations and review counts inherited; this pass verifies primary literature not photo pixels.",
+    "1999 Flora supplied directly observed descriptions when it actually treated the taxon; modern accepted splits and omitted taxa are not described as direct historical accounts.",
+    "Elymus macgregorii requires expert attention to transitional Texas specimens; northeastern key is comparative.",
+    "Avena sativa may be planted or casual cereal volunteer, not necessarily locally established."
+  ],
+  "taxa": [
+    {
+      "accepted_name": "Triticum aestivum",
+      "staging_card_id": "triticum-aestivum",
+      "regional_flora": {
+        "treated_name": "Triticum aestivum",
+        "pdf_page": 258,
+        "printed_page": 1334,
+        "direct_modern_species_account": true
+      },
+      "sources": [
+        "Illustrated Flora of North Central Texas 1999, Poaceae p.1334 (library PDF page 258)",
+        "Hagenbuch & Lemke 2015 Texas Hill Country grass study p.68"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Annual cereal grass about 40–100 cm tall in the regional Flora; crop or transient escaped volunteer is possible",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "whole rooted plant with habitat",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "auricle",
+          "description": "Two narrow pointed leaf auricles are present but may wither early",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "blade–sheath junction showing auricles",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule about 2–3 mm in regional treatment",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "inner ligule with mm scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spike",
+          "description": "Stiff, unbranched, two-sided terminal spike with sessile spikelets at opposite sides of a zigzag rachis",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "complete spike and rachis joints",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "florets",
+          "description": "Spikelets typically 2–5-flowered, with lower two or three florets fertile",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "dissected spikelet",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "glumes",
+          "description": "Broad asymmetric glumes at least around 3.6 mm wide, usually 3 or more veined, potentially awned or awnless",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "flattened glume with veins and ruler",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "Distinct stiff, terminal wheatlike cereal spikes; some mature awned and some green heads, with full plant bases.",
+      "prior_Hays_photo_gaps": "Wheat versus other Triticum, Hordeum or cereal cultivar forms cannot be established with certainty at this scale; observations may be crop or seed spill escapes rather than wild populations.",
+      "historical_photo_QA_file": "audits/hays-58-pass3-visual-qa-20261111.json",
+      "previously_viewed_Hays_source_photos": 4,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/278500939",
+        "https://www.inaturalist.org/observations/274743485",
+        "https://www.inaturalist.org/observations/275283904"
+      ],
+      "comparators": "Hordeum vulgare, Secale cereale, Aegilops cylindrica and mixed seeded cereal grasses",
+      "next_same_specimen_evidence": "Pair mature wheat spikelet and glume measurements with leaf collar and independently verify cultivated field/roadside spill versus reproducing wild Hays population.",
+      "risk_note": "The old regional reference explicitly notes transient escape; authentic Hays occurrence is not equivalent to a naturally established population.",
+      "preliminary_image_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Avena sativa",
+      "staging_card_id": "avena-sativa",
+      "regional_flora": {
+        "treated_name": "Avena sativa",
+        "pdf_page": 168,
+        "printed_page": 1244,
+        "direct_modern_species_account": true
+      },
+      "sources": [
+        "Illustrated Flora of North Central Texas 1999, Avena genus (PDF 168)",
+        "Flora of North America, Avena sativa (republished Burke Herbarium https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Avena+sativa)",
+        "USDA identification guide https://idtools.org/id/weed-tool/key/GrapeGrassKey/Media/Html/fact_sheets/Ave-sat.html"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Cultivated or volunteer annual, often growing by roadside seed spill and erosion-control seedings",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "whole plant and land-use context",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "head",
+          "description": "Open often drooping panicle with large pendulous oat spikelets",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "whole flowering panicle",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spikelets",
+          "description": "Usually 1–2 fertile florets in hulled oats, but substantially more in some naked-oat types; normal spikelets commonly 25–32 mm long",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "mature spikelet beside ruler",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "disarticulation",
+          "description": "In cultivated oats, ripe florets generally stay attached to one another instead of easily breaking below each floret",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "mature rachilla/break-off demonstration",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "callus",
+          "description": "Floret calluses generally glabrous or with very short hairs, unlike conspicuously bearded wild oat calluses",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "detached floret callus macro",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "awns",
+          "description": "Lemmas typically awnless but sometimes carry weakly bent awns; absence of awns alone is not a species proof",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "mature floret dorsum",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "Pendulous oat-like spikelets and grass basal leaves; some field habitat.",
+      "prior_Hays_photo_gaps": "Cultivated oats versus wild oats/forage mixtures and naturally established populations not determined.",
+      "historical_photo_QA_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "previously_viewed_Hays_source_photos": 3,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/82948317",
+        "https://www.inaturalist.org/observations/82945689",
+        "https://www.inaturalist.org/observations/21997658"
+      ],
+      "comparators": "Avena fatua, Avena sterilis, Avena strigosa; also cereal crop/forage mixtures",
+      "next_same_specimen_evidence": "Examine mature spikelets and document whether florets stay attached to rachilla, the floret callus hairs, the glume lengths and awn structure; confirm whether plants were deliberately seeded.",
+      "risk_note": "Cultivated and wild oats overlap; awn/no-awn is insufficient. The original reviewed Hays views provide only broad oat habit.",
+      "preliminary_image_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Eragrostis minor",
+      "staging_card_id": "eragrostis-minor",
+      "regional_flora": {
+        "treated_name": "Not treated under this name in 1999 Flora",
+        "pdf_page": null,
+        "printed_page": null,
+        "direct_modern_species_account": false
+      },
+      "sources": [
+        "Flora of North America, Eragrostis minor (via Burke Herbarium https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor)",
+        "Kew POWO Eragrostis minor https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:401317-1/general-information"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Usually low tufted annual grass, about 10–45 cm tall in FNA",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "rooted whole plant",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "collar",
+          "description": "Ligule short and ciliate, around 0.2–0.5 mm",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "true inner ligule and fringe",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "glands",
+          "description": "Crater-shaped glands can appear on leaf margins, panicle pedicels and below culm nodes",
+          "source": "FNA via Burke Herbarium / Kew POWO",
+          "required_same_specimen_photo": "pedicel, node and leaf-edge macro",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "panicle",
+          "description": "Open to somewhat contracted panicle about 4–20 cm long with stiff divergent branches",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "complete measured panicle",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Many-flowered compressed spikelets often around 4–7 mm long, generally about 7–12 florets in FNA sample; wider ranges occur",
+          "source": "FNA via Burke Herbarium",
+          "required_same_specimen_photo": "detached spikelet and floret count",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "lemma_palea",
+          "description": "Small approximately 1.4–1.8 mm lemmas may carry glandular keel; paleas persist as lemmas detach upward along rachilla",
+          "source": "FNA via Burke Herbarium / Kew POWO",
+          "required_same_specimen_photo": "floret separation under magnification",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "Small weedy grass with open branched seedhead in disturbed bare ground.",
+      "prior_Hays_photo_gaps": "Species identification requires mature glumes and lemmas, leaf glands/hairs, and precise spikelet measurement, not shown.",
+      "historical_photo_QA_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "previously_viewed_Hays_source_photos": 2,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/368372291",
+        "https://www.inaturalist.org/observations/32237529"
+      ],
+      "comparators": "Eragrostis cilianensis, E. barrelieri, E. pilosa and other small lovegrasses",
+      "next_same_specimen_evidence": "Show crateriform glands at pedicel/leaf margin with microscope macro, a measured ripe spikelet and retained paleas, plus the true ligule.",
+      "risk_note": "Crateriform glands can be absent on individual structures; verify multiple characters. Old Hays photographs do not show these details.",
+      "preliminary_image_rights_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Alopecurus carolinianus",
+      "staging_card_id": "alopecurus-carolinianus",
+      "regional_flora": {
+        "treated_name": "Alopecurus carolinianus",
+        "pdf_page": 160,
+        "printed_page": 1236,
+        "direct_modern_species_account": true
+      },
+      "sources": [
+        "Illustrated Flora of North Central Texas 1999, Poaceae p.1236 (PDF p.160)"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Small annual often glabrous and blue-green, roughly 7–35 cm tall",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "whole rooted plant",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "ligule",
+          "description": "Long membranous ligule about 3.5–7 mm",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "inside collar with mm scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "panicle",
+          "description": "Dense slender cylindrical flowering head about 2–6 cm by 4–6 mm, technically a contracted panicle",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "head with ruler",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Spikelets flattened from the side and single-flowered",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "isolated spikelet",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "glumes",
+          "description": "Pair of conspicuously silky-haired glumes",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "macro of glume faces and margins",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "awn",
+          "description": "Lemma awn roughly 3–5 mm arises from back near base and is bent near its middle",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "isolated lemma to locate awn origin",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "NO_PREVIOUS_ACCESSIBLE_PIXELS",
+      "prior_Hays_photo_gaps": "NO_ACCESSIBLE_PRIOR_SPECIMEN_PHOTOGRAPHS",
+      "historical_photo_QA_file": "audits/hays-58-photo-access-holds-20261111.json",
+      "previously_viewed_Hays_source_photos": 0,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/5938511"
+      ],
+      "comparators": "Phleum pratense, Polypogon spp., other foxtail-looking narrow grass heads",
+      "next_same_specimen_evidence": "No original photo was accessible in the saved Hays sample; secure permissioned Hays specimen images documenting 1-flowered spikelet, silky glumes, bent dorsal awn, and 3.5–7 mm ligule.",
+      "risk_note": "Zero accessible source photos; species-level Hays identification must not be implied from field-head resemblance or literature alone.",
+      "preliminary_image_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Briza minor",
+      "staging_card_id": "briza-minor",
+      "regional_flora": {
+        "treated_name": "Briza minor",
+        "pdf_page": 174,
+        "printed_page": 1250,
+        "direct_modern_species_account": true
+      },
+      "sources": [
+        "Illustrated Flora of North Central Texas 1999, Poaceae p.1250 (PDF p.174)"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Mostly hairless annual up to about 50 cm tall",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "whole rooted plant",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "ligule",
+          "description": "Relatively prominent ligule approximately 5–10 mm long",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "blade–sheath junction and scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "head",
+          "description": "Open panicle with distinct individually dangling spikelets on fine, often kinked stalks",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "full flowering panicle",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Usually triangular or tapered toward tip, roughly as broad as long, about 2–6 mm across",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "measured mature spikelet face",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "florets",
+          "description": "Roughly 3–8 florets per spikelet",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "separated florets with scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "size_comparison",
+          "description": "Smaller and more triangular than broad, longer-than-wide spikelets of Briza maxima",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "side-by-side B. minor and B. maxima",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "Small nearly triangular pendulous spikelets on fine pedicels and low annual grassy plant, compatible with little quaking grass.",
+      "prior_Hays_photo_gaps": "No scaled multi-floret dissection or ligule measurements; only one Hays record.",
+      "historical_photo_QA_file": "audits/hays-58-pass5-visual-qa-20261111.json",
+      "previously_viewed_Hays_source_photos": 3,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/346027854"
+      ],
+      "comparators": "Briza maxima, Briza media, and immature pendulous Melica spikelets",
+      "next_same_specimen_evidence": "Count actual florets and capture a millimeter-scale profile of the triangular head and 5–10 mm ligule; independently confirm the single Hays observation.",
+      "risk_note": "Only one Hays observation with three prior images; photo shape is suggestive, but no scaled dissection was performed.",
+      "preliminary_image_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Cenchrus ciliaris",
+      "staging_card_id": "cenchrus-ciliaris",
+      "regional_flora": {
+        "treated_name": "Pennisetum ciliare (with Cenchrus ciliaris synonym)",
+        "pdf_page": 234,
+        "printed_page": 1310,
+        "direct_modern_species_account": true
+      },
+      "sources": [
+        "Illustrated Flora of North Central Texas 1999, historical Pennisetum ciliare account, printed p.1310 (PDF p.234)"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Tufted or spreading perennial forage grass introduced from Old World tropics",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "rooted plant and dense colony",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "head",
+          "description": "Dense cylindrical bristly inflorescence; looks like Setaria from a distance",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "full seedhead on mm scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "bristles",
+          "description": "Bristles roughly 4–10 mm long, basally fused into a small bur/involucre",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "detached entire bur and basal bristle union",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "disarticulation",
+          "description": "Mature bristles fall together with the spikelet as a unit",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "involucre with ripe spikelet",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "setaria_difference",
+          "description": "Unlike Cenchrus, Setaria typically drops spikelets separately above persistent bristles",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "paired disarticulation photos",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "synonym",
+          "description": "Modern candidate accepted name Cenchrus ciliaris; old regional flora printed Pennisetum ciliare",
+          "source": "Taxonomic crosswalk; regional Flora 1999",
+          "required_same_specimen_photo": "record provenance",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "Dense cylindrical buffelgrass-like head with long bristles, collar and habitat views.",
+      "prior_Hays_photo_gaps": "Fused bristle bases forming detachable bur, and comparison to Setaria are not conclusive.",
+      "historical_photo_QA_file": "audits/hays-58-pass5-visual-qa-20261111.json",
+      "previously_viewed_Hays_source_photos": 5,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/135456536"
+      ],
+      "comparators": "Setaria parviflora, Setaria pumila, Pennisetum villosum and Cenchrus setaceus",
+      "next_same_specimen_evidence": "On a collected mature specimen show the basal union of bristles and detachment as one bur, plus ligule and spikelet, contrasting Setaria.",
+      "risk_note": "A cylindrical bristly head by itself proves no species. Invasive/introduced status is descriptive background, not a native-plant recommendation.",
+      "preliminary_image_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Sclerochloa dura",
+      "staging_card_id": "sclerochloa-dura",
+      "regional_flora": {
+        "treated_name": "Sclerochloa dura",
+        "pdf_page": 240,
+        "printed_page": 1316,
+        "direct_modern_species_account": true
+      },
+      "sources": [
+        "Illustrated Flora of North Central Texas 1999, Sclerochloa dura treatment, printed p.1316 (PDF p.240)"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "habit",
+          "description": "Very small prostrate to erect annual, typically 3–10 cm, sometimes 18 cm, mostly hairless",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "whole plant with ruler",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule about 1–2 mm",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "inner collar with scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "panicle",
+          "description": "Compact dense often unilateral spike-like head around 1–3 cm, rarely 4.5 cm",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "complete flowering head",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Ripe spikelets about 6–11 mm with about 3–4 florets",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "isolated spikelet with ruler",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "glumes_lemmas",
+          "description": "Blunt-ended thick glumes and lemmas showing prominent nerves",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "backlit glume and lemma veins",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "ecology",
+          "description": "Typically roadside/disturbed hard-ground early-season annual",
+          "source": "Regional Flora 1999",
+          "required_same_specimen_photo": "rooted habit with pavement/soil context",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "Small low grass with short dense one-sided green inflorescence spikes in disturbed ground.",
+      "prior_Hays_photo_gaps": "No scale for multi-flowered spikelets, ligule or glume/lemma nerve count.",
+      "historical_photo_QA_file": "audits/hays-58-pass5-visual-qa-20261111.json",
+      "previously_viewed_Hays_source_photos": 2,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/148348772"
+      ],
+      "comparators": "Poa annua, Catapodium rigidum, Puccinellia-like grasses and other small disturbed-ground annuals",
+      "next_same_specimen_evidence": "Photograph one whole 3–10 cm plant with mm scale, true ligule, and a mature dissected spikelet showing 3–4 florets, stout glumes and strong nerves.",
+      "risk_note": "Only two prior Hays images. Compact seedheads alone do not verify this uncommon local candidate.",
+      "preliminary_image_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    },
+    {
+      "accepted_name": "Elymus macgregorii",
+      "staging_card_id": "elymus-macgregorii",
+      "regional_flora": {
+        "treated_name": "Not recognized as separate named species in older 1999 Flora; compare historical Elymus virginicus",
+        "pdf_page": 192,
+        "printed_page": 1268,
+        "direct_modern_species_account": false
+      },
+      "sources": [
+        "Kew POWO Elymus macgregorii https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20008015-1",
+        "Native Plant Trust Go Botany Elymus key https://gobotany.nativeplanttrust.org/dkey/elymus/",
+        "Illustrated Flora of North Central Texas 1999 Elymus virginicus concept comparison only (PDF p.192)"
+      ],
+      "diagnostic_character_targets": [
+        {
+          "character": "taxonomy",
+          "description": "Modern Kew accepts a separate species from Elymus virginicus; names cannot be inferred from old regional Elymus virginicus account",
+          "source": "Kew POWO",
+          "required_same_specimen_photo": "voucher name provenance",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "spike",
+          "description": "In a published key E. macgregorii has mostly erect spikes with often 15–30 rachis nodes",
+          "source": "Native Plant Trust Go Botany",
+          "required_same_specimen_photo": "entire spike with numbered rachis nodes",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "glumes",
+          "description": "E. macgregorii has broader flattened glumes (generally 0.7–2.3 mm), contrasting narrow bristle-like Elymus villosus glumes",
+          "source": "Native Plant Trust Go Botany",
+          "required_same_specimen_photo": "flattened glumes at mm scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "comparison_nodes",
+          "description": "E. virginicus in northeastern key commonly has 9–18 spike nodes, versus more nodes in E. macgregorii; geographic overlap warrants caution",
+          "source": "Native Plant Trust Go Botany",
+          "required_same_specimen_photo": "paired full-spike comparison",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "auricles",
+          "description": "E. macgregorii often has shorter auricles (0–2 mm) than E. virginicus (2–3 mm) in cited key",
+          "source": "Native Plant Trust Go Botany",
+          "required_same_specimen_photo": "leaf auricle and collar on scale",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        },
+        {
+          "character": "hairiness",
+          "description": "Glumes and lemmas may be pubescent in E. macgregorii versus often glabrous or subtly rough in E. virginicus",
+          "source": "Native Plant Trust Go Botany",
+          "required_same_specimen_photo": "lemma/glume macro",
+          "reference_description_only": true,
+          "hays_photo_verified": false,
+          "active_lab_key_trait": false
+        }
+      ],
+      "prior_Hays_photo_summary": "NO_PREVIOUS_ACCESSIBLE_PIXELS",
+      "prior_Hays_photo_gaps": "NO_ACCESSIBLE_PRIOR_SPECIMEN_PHOTOGRAPHS",
+      "historical_photo_QA_file": "audits/hays-58-photo-access-holds-20261111.json",
+      "previously_viewed_Hays_source_photos": 0,
+      "original_Hays_observation_links": [
+        "https://www.inaturalist.org/observations/314369187"
+      ],
+      "comparators": "Elymus virginicus, E. villosus and E. curvatus, with particular concern for transitional Texas material",
+      "next_same_specimen_evidence": "CRITICAL ZERO PHOTO SOURCE: locate a verified Hays voucher or an authorized high-resolution collection of an entire spike, rachis nodes, auricles and measured glumes; only then consider separating the key state.",
+      "risk_note": "Kew accepts species and Texas nativity but this does NOT verify the lone Hays iNaturalist record. Northeastern key may be imperfect for transitional Texas populations; expert herbarium determination needed.",
+      "preliminary_image_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "new_photo_pixels_inspected_this_pass": 0,
+      "photo_rights_approved": false,
+      "species_ID_signoff": false,
+      "site_merge_authorized": false
+    }
+  ]
+}
