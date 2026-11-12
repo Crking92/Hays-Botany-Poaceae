@@ -2173,10 +2173,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "In the actual Uvalde plant, pair the visible inner white hair-fringe LIGULE with one-sided ovoid attached spikelets; then confirm a mature measured glume/lemma before final species diagnosis. A photo of another Urochloa species is only a comparison.\n\nField ID Lab collar tip: the hair fringe has a tiny membranous base. If the papery base is what you can see with a lens, the grass should stay in your results.",
+    "field_rule": "In the actual Uvalde plant, pair the visible inner white hair-fringe LIGULE with one-sided ovoid attached spikelets; then confirm a mature measured glume/lemma before final species diagnosis. A photo of another Urochloa species is only a comparison.\n\nField ID Lab collar tip: the hair fringe has a tiny membranous base. If the papery base is what you can see with a lens, the grass should stay in your results.\n\nFlowerhead choice: counting seven or more one-sided branches still fits browntop signalgrass; Kew's published range extends to about twenty. Check the paired spikelets and lower glume instead of relying on the count.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -2224,6 +2225,20 @@
         "reference": "A visible membrane under short cilia is authentic for browntop signalgrass. Keep hairs and membrane broad selections; don't count outer throat hairs or reddish nodes as the inner ligule.",
         "certainty": "DIRECT_REGIONAL_SOURCE_CILIATE_MEMBRANE_NO_SPECIMEN_MACRO_CERTIFICATION",
         "status": "SOURCE_BACKED_NONEXCLUSION",
+        "review_date": "2026-11-12"
+      },
+      "head_many_unilateral": {
+        "source": "Kew POWO / GrassBase under Brachiaria fasciculata (Urochloa fusca)",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1156554-2/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "3–20 unilateral racemes along a central axis",
+          "seven or more racemes possible",
+          "sometimes secondary branches"
+        ],
+        "reference": "A complete flowering head can have at least seven one-sided racemes, so the UI 'seven or more' choice must retain browntop signalgrass. Keep original generic one-sided choice; branch number and secondary branching overlap other signalgrasses.",
+        "certainty": "DIRECT_SPECIES_GRASSBASE_REPRODUCTIVE_DESCRIPTION_NOT_LIVE_MACRO_CERTIFIED",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
         "review_date": "2026-11-12"
       }
     },
@@ -2455,10 +2470,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Rank photos by what they truly show: flowering branch/shape first, followed by mature spikelet length and lower glume measured under 10–20×. Do not treat unmeasured photogenic heads as proof of native versus introduced species.",
+    "field_rule": "Rank photos by what they truly show: flowering branch/shape first, followed by mature spikelet length and lower glume measured under 10–20×. Do not treat unmeasured photogenic heads as proof of native versus introduced species.\n\nFlowerhead choice: both one-sided branches and seven-or-more branches can describe creeping signalgrass. The short crowded paired spikelets and very small lower glume are stronger follow-up characters.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -2493,6 +2509,20 @@
         "reference": "Hair-fringe ligule, not an obvious free papery flap.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "head_many_unilateral": {
+        "source": "Kew POWO / GrassBase under Brachiaria reptans (Urochloa reptans)",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:426280-1/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "5–15 unilateral racemes along a central axis",
+          "seven or more racemes possible",
+          "usually closely spaced short racemes"
+        ],
+        "reference": "A complete mature head can carry seven or more short unilateral branches. The ID Lab must retain creeping signalgrass under the explicit high-raceme-count selection, but this alone cannot separate it from U. fusca.",
+        "certainty": "DIRECT_SPECIES_GRASSBASE_REPRODUCTIVE_DESCRIPTION_NOT_PHOTO_CERTIFIED",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
