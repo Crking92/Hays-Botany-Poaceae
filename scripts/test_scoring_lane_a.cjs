@@ -1,5 +1,6 @@
 'use strict';
 // Lane A botanical scoring regressions; run: node scripts/test_scoring_lane_a.cjs [baseline-ref]
+// Additional controls preserve disputed buffalograss rhizomes without admitting any 57 provisional taxa.
 // With full Git history, pass fdc05ad1f5dfd37dc78c27c7de4f876e27533b8c for before/after and metadata checks.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -48,7 +49,8 @@ const newlyValid=[
  ['arundo-donax',{head:'reed_plume',habit:'rhizome',ligule:'hairs',awns:'none_obvious'}],
  ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['sorghum-halepense',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'}],
- ['sorghum-halepense',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'}]
+ ['sorghum-halepense',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
+ ['bothriochloa-barbinodis',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'long'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -58,7 +60,8 @@ const incompatible=[
  ['arundo-donax',{habit:'mat'}],
  ['arundo-donax',{awns:'long'}],
  ['sorghum-halepense',{habit:'mat'}],
- ['bouteloua-curtipendula',{head:'side_oats',awns:'three_short'}]
+ ['bouteloua-curtipendula',{head:'side_oats',awns:'three_short'}],
+ ['bothriochloa-barbinodis',{head:'whorls'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -77,7 +80,8 @@ const expectedAdditions={
  'hilaria-belangeri':{habit:['tuft']},
  'aristida-oligantha':{ligule:['membrane']},
  'arundo-donax':{habit:['tuft'],ligule:['hairs']},
- 'sorghum-halepense':{habit:['tuft']}
+ 'sorghum-halepense':{habit:['tuft']},
+ 'bothriochloa-barbinodis':{head:['fingers']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -119,7 +123,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:8,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:9,
  regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
