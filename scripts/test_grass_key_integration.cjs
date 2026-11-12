@@ -189,6 +189,11 @@ const positives = [
   ['slender Indiangrass narrow sparse long awned head',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
   ['hidden dropseed ciliate membrane compact',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
   ['hidden dropseed ciliate membrane narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
+  // Lane B #126 — short ciliate inner ligule and rare 3–4 knotgrass racemes.
+  ['plains lovegrass tuft true short membrane',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eragrostis-intermedia']],
+  ['plains lovegrass rhizome true short membrane',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['eragrostis-intermedia']],
+  ['knotgrass occasional near-terminal fingers mat',{head:'fingers',habit:'mat',ligule:'membrane',awns:'none_obvious'},['paspalum-distichum']],
+  ['knotgrass occasional near-terminal fingers rhizome',{head:'fingers',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-distichum']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -284,6 +289,11 @@ const negatives = [
   [{head:'spike'},'bromus-texensis'],
   [{head:'foxtail'},'sorghastrum-elliottii'],
   [{awns:'long'},'sporobolus-clandestinus'],
+  // Don't misinterpret a short membrane as no ligule or occasional fingers as whorls.
+  [{ligule:'absent'},'eragrostis-intermedia'],
+  [{head:'fingers'},'eragrostis-intermedia'],
+  [{head:'whorls'},'paspalum-distichum'],
+  [{awns:'long'},'paspalum-distichum'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
