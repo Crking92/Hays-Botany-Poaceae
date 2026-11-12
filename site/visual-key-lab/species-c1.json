@@ -38,7 +38,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1239) — Under the Flora name Andropogon glomeratus, look for many short flowering branches crowded into a broom-shaped cluster. The Flora gives branch lengths of 1.5–3 cm.\n\nBushy bluestem is a tufted perennial with erect culms often about 75–150 cm in Kew GrassBase. Numerous crowded short flowering units make a broad, cottony terminal brush, unlike broomsedge's more separated spathe-held units. Texas Uvalde whole-clump and USGS flowering photographs show this gross architecture; a white head alone is not definitive.",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1239) — Under the Flora name Andropogon glomeratus, look for many short flowering branches crowded into a broom-shaped cluster. The Flora gives branch lengths of 1.5–3 cm.\n\nBushy bluestem is a tufted perennial with erect culms often about 75–150 cm in Kew GrassBase. Numerous crowded short flowering units make a broad, cottony terminal brush, unlike broomsedge's more separated spathe-held units. Texas Uvalde whole-clump and USGS flowering photographs show this gross architecture; a white head alone is not definitive.\n\nTrue ligule: although the ligule is a 1–2 mm papery membrane, its margin is ciliate and can carry long fine hairs. Choose a visible hair fringe only when the hairs arise from the actual inner membrane; never confuse the long hairs on sheath margins, nearby spathes or flowering spikelets with a hair-only ligule. The broomlike flowering arrangement and paired florets remain more diagnostic.",
     "traits": {
       "head": [
         "bushy"
@@ -47,7 +47,8 @@
         "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long"
@@ -62,6 +63,23 @@
         "reference": "Crowded many-branched broom-like inflorescences clustered near culm tip; short 1.5–3 cm branches. Current head is source-checked, though accepted Anatherum taxonomy is newer.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 34, Andropogon glomeratus; Christopher S. Campbell, Flora of North America Andropogon glomeratus; Kew GrassBase under the synonym Andropogon glomeratus; A.C. Gibson, UT PRC Williamson County Andropogon glomeratus",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+        "fna_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8679&taxauthid=1&tid=3088",
+        "grassbase_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77339188-1/general-information",
+        "ut_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Andropogon%20glomeratus",
+        "reference": "The primary Hill Country vegetative description under Andropogon glomeratus says a 1–2 mm membranous truncate ligule, with a CILIATE margin and occasional long fine hairs. FNA reports ligules sometimes ciliate, Kew GrassBase calls this a ciliolate membrane, and UT Williamson County explicitly calls it a conspicuously ciliate membrane with marginal hairs. Both 'membrane' and a visible fringe of ligule-margin 'hairs' should retain this species. Do NOT claim a pure hair-only organ or confuse sheath/flowerhead pubescence with the inner blade–sheath ligule.",
+        "role": "vegetative",
+        "taxon_concept": "Site accepted display name Anatherum glomeratum; primary regional and FNA species accounts under Andropogon glomeratus, explicitly linked as synonym by Kew",
+        "reported_states": [
+          "membranous ligule, true papery base (Hagenbuch & Lemke; Kew GrassBase)",
+          "ciliate membrane with occasional long marginal hairs (Hagenbuch & Lemke; UT; FNA)"
+        ],
+        "status": "PRIMARY_HILL_COUNTRY_CILIATE_MEMBRANE_LOCAL_COLLAR_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No same-culm local diagnostic inner-ligule photo reverified; existing website photo identity/credit and all rights are untouched."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -81,6 +99,14 @@
         "certainty": "Regionally sourced; not sufficient alone",
         "source": "Hagenbuch & Lemke 2015, p.34",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      },
+      {
+        "look": "Find the fine ciliate margin of bushy bluestem's actual ligule",
+        "check": "The inner blade–sheath junction holds a truncate membrane 1–2 mm tall with fine hairs along its margin. A visible fringe is a legitimate field choice. Keep the membranous base anatomically distinct from long surrounding leaf and sheath hairs.",
+        "compare": "Broomsedge bluestem also has a ciliate membrane; use its more separated flowering units versus bushy bluestem's densely clustered short racemes to distinguish.",
+        "certainty": "Hagenbuch & Lemke primary regional vegetative account plus UT/FNA/Kew, but no reverified local photographed attached collar",
+        "source": "Hagenbuch & Lemke (2015) p.34; UT PRC and FNA Andropogon glomeratus; Kew Anatherum glomeratum",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34"
       }
     ],
     "diagnostic_review": {
