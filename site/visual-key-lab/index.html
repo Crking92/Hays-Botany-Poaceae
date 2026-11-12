@@ -36,10 +36,37 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 .step[aria-current=true] .head-shape{background:#f8fbf4;border-radius:50%}
 .whole-head img{object-fit:contain;background:#eef2e9}
 @media(max-width:480px){.step .head-shape{width:25px;height:25px;flex:0 0 25px}.step{gap:5px}}
+/* Optional visitor preview: hides explanations, never photo credits or research tags. */
+.sitebar{flex-wrap:wrap}
+.sitebar-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
+.preview-toggle{padding:7px 11px;border:1px solid #bad8c4;border-radius:9px;background:#e9f4e9;color:#1b4931;font-size:.82rem;font-weight:750}
+.preview-toggle:hover{background:#fff}
+html.guest-preview main > .notice,
+html.guest-preview .hero .eyebrow,
+html.guest-preview .hero p,
+html.guest-preview .hero-stamp,
+html.guest-preview .panel-head .sub,
+html.guest-preview .question > .help,
+html.guest-preview .answer-note,
+html.guest-preview .head-group-help,
+html.guest-preview .head-illustration-note,
+html.guest-preview #results-note,
+html.guest-preview .results-footer,
+html.guest-preview .footer,
+html.guest-preview .detail-botany,
+html.guest-preview .detail-copy > h3,
+html.guest-preview .detail-copy > p,
+html.guest-preview .result .smallmuted,
+html.guest-preview .progress-label > span:last-child,
+html.guest-preview .pending {display:none}
+html.guest-preview .hero{padding:24px 0 18px}
+html.guest-preview .hero h1{margin:0}
+html.guest-preview .answer-body{padding-top:10px}
+html.guest-preview .question{padding-top:15px}
 </style>
 </head>
 <body>
-<header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><a href="../">↖ Back to existing Grass Learner</a></header>
+<header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">↖ Back to existing Grass Learner</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Hide explanations</button></div></header>
 <main class="wrap">
   <section class="hero"><div><p class="eyebrow">Picture-first identification · 169 in Learner · 112 scored + 6 trial matches</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small id="coded-subtitle">scored profiles; trial matches load separately</small></div></section>
   <p class="notice" style="background:#e9f2e6;border-color:#cce0cc;color:#295c3e"><strong>Field ID lessons:</strong> <a href="johnsongrass.html" style="font-weight:800">Six-step Johnsongrass photo lesson</a> · <a href="compare-bluestems.html" style="font-weight:800">King Ranch vs. little bluestem</a> · <a href="compare-gramas-paspalums.html" style="font-weight:800">NEW: 12 grama and paspalum look-alikes</a>. Lessons reuse existing credited photographs.</p>
@@ -64,6 +91,7 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 <script>
 (function(){
 "use strict";
+if(new URLSearchParams(location.search).get("demo")==="1")document.documentElement.classList.add("guest-preview");
 const BASE="https://crking92.github.io/Hays-Botany-Poaceae/site/";
 const qs=[
 {id:"head",short:"Flowerhead",title:"What does the flowering head look like?",hint:"Begin with its overall architecture: an open panicle, contracted plume, distinct racemes, or spike. Use the categories below to compare whole heads; skip if yours is not flowering.",options:[
@@ -121,6 +149,10 @@ const selectedPhotoOverrides={
 };
 const $=id=>document.getElementById(id);
 const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[]};
+const previewToggle=$("preview-toggle");
+function syncPreviewToggle(){const simple=document.documentElement.classList.contains("guest-preview");previewToggle.textContent=simple?"Show explanations":"Hide explanations";previewToggle.setAttribute("aria-pressed",String(simple))}
+previewToggle.addEventListener("click",()=>{const simple=document.documentElement.classList.toggle("guest-preview");const url=new URL(location.href);if(simple)url.searchParams.set("demo","1");else url.searchParams.delete("demo");history.replaceState(null,"",url.toString());syncPreviewToggle()});
+syncPreviewToggle();
 function node(tag,cl,txt){const e=document.createElement(tag);if(cl)e.className=cl;if(txt!==undefined)e.textContent=txt;return e}
 function image(p,alt){const f=node("div","photo-frame");if(!p){f.append(node("div","photo-bad","Photograph pending verification"));return f}const img=document.createElement("img");img.loading="lazy";img.decoding="async";img.alt=alt||p.label||"Grass reference";img.src=p.src;img.addEventListener("error",()=>f.replaceChildren(node("div","photo-bad","Image unavailable — check original gallery")));f.append(img);return f}
 function pic(spec,i){return spec&&spec.photos.find(p=>p.i===i)||spec&&spec.photos.find(p=>p.i===spec.hero_i)||spec&&spec.photos[0]||null}
@@ -724,7 +756,7 @@ $("pending-summary").textContent=pending.length?pending.length+" additional gras
 const box=$("pending-items");box.replaceChildren();
 for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";box.append(a)}
 }
-function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=s.trial?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","notice","RESEARCH TRIAL — Not admitted to the officially scored 112. Example photos are credited and often nonlocal; none certifies a Hays specimen ID. Examine mature spikelets, true leaf collar and local voucher evidence before naming the plant."));copy.append(node("p","",st+" — regional classification follows the existing Hays Botany record; this pilot does not independently certify county nativity."));copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
+function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=s.trial?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","notice","RESEARCH TRIAL — Not admitted to the officially scored 112. Example photos are credited and often nonlocal; none certifies a Hays specimen ID. Examine mature spikelets, true leaf collar and local voucher evidence before naming the plant."));copy.append(node("p","",st+" — regional classification follows the existing Hays Botany record; this pilot does not independently certify county nativity."));copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
 if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
   const panel=node("section","detail-botany");
   panel.append(node("h3","","Look here next — diagnostic checks"),node("p","smallmuted","Source-backed structures to examine on the same plant. The example photos above are not yet individually certified to show each character."));
