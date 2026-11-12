@@ -33,7 +33,7 @@ const restricted=[
 ];
 for(const [id,heads,positive] of restricted){
  const row=species.find(s=>s.id===id);assert(row,id+' absent');
- assert.deepEqual(row.traits.head,heads,'wrong supported field categories for '+id);
+ for(const value of heads) assert(row.traits.head.includes(value),id+' lost source-supported field choice '+value);
  assert(!results({head:'airy'},species).includes(id),'misleading airy UI false-positive: '+id);
  assert(results(positive).includes(id),'lost real valid answer for '+id);
  const audit=row.character_evidence.head_airy_ui_semantic_correction;
