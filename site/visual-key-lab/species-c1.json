@@ -167,7 +167,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Aristida/aristida-oligantha/images/commons-archive-0932f5b62b86b1a5.jpg",
-        "label": "WHOLE-PLANT RECOGNITION AND FLOWERING HABIT",
+        "label": "Dense dry wirelike threeawn shoots tangled in field vegetation — three awns not traceable individually",
         "creator": "Thomas Koffel",
         "license": "CC BY 4.0",
         "license_url": "",
@@ -187,7 +187,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/aristida-oligantha/g3-gbif-5101132408-photo_3.jpg",
-        "label": "Guadalupe County pressed specimen: slender stems, narrow leaves and open inflorescences with fine awns. Ligule and floret details require closer views.",
+        "label": "Guadalupe County pressed threeawn specimen with sparse long stems and fine flowering branches",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -232,7 +232,7 @@
     },
     "source_blob_sha": "ce723c05347ba6863d05db29e726f5938666fcd8",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -281,12 +281,27 @@
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS8_HOSTED_IMAGES_PREVIEW_FALLBACK_TRIAL",
+      "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "TWO_EMBEDDED_COPYRIGHT_RESERVED_MARKS_REQUIRE_EXACT_SOURCE_LICENSE_RECONCILIATION",
-      "scope": "3/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate.",
+      "scope": "3/5 existing hosted Lab image bytes actually rendered and inspected from pinned GitHub files. Unrenderable images not counted. Not a botanical, source-license, or whole-archive certificate. Pass47: photo i=0 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=3 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "thin tan stems and many narrow dry linear leaves against rocky soil"
+          ],
+          "cannot_verify": [
+            "awn attachments, plant base and individual diagnostic flowers not isolated"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Aristida/aristida-oligantha/images/commons-archive-0932f5b62b86b1a5.jpg",
+          "git_blob_sha": "2b4c876bc87a12e3c36a390ff7859bef233c36a6",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 1,
           "verdict": "DIRECT_VISIBLE",
@@ -304,6 +319,21 @@
           "hosted_commit": "dd569130012cb76b6035e07e7cda201fc43f6ef9",
           "git_blob_sha": "afc008afb731492c9667af84396b6ef06224e022",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_IMAGE_BYTES_AND_BLOB_SHA; NOT_UPSTREAM_LICENSE_IDENTITY"
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "fine branching pressed flowering stems across herbarium sheet"
+          ],
+          "cannot_verify": [
+            "individual awn count, membranous ligule and specimen identity not determined from overview"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/aristida-oligantha/g3-gbif-5101132408-photo_3.jpg",
+          "git_blob_sha": "ad59c166e1ae9c4b8bdf73a6a5dbbebab1282255",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 4,
@@ -342,10 +372,7 @@
           "rights_attention": "EMBEDDED_COPYRIGHT_RESERVED_TEXT_CONFLICTS_WITH_STORED_CC_BY_LABEL; verify with original provider before clearing"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "one isolated mature three-awn floret with lower glume vein details",
         "regional basal rosette or dormant roots with date"
@@ -356,7 +383,26 @@
         "queue_action": "Do not add seasonal gaps until reviewed against existing archived photos."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP."
+      "morphology_reference_note": "Photo-role only. Illustrated Flora of North Central Texas remains primary for separate morphology checks; no changes to numeric source characters, filters, taxonomy or BONAP.",
+      "previous_pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass47_image_notes": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "awn attachments, plant base and individual diagnostic flowers not isolated"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "individual awn count, membranous ligule and specimen identity not determined from overview"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        }
+      ]
     }
   },
   {
