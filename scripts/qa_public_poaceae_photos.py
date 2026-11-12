@@ -130,6 +130,8 @@ def audit():
         "configured_taxa_with_photos":len(expected),
         "actual_public_visible_and_credited_photos":visible,
         "actual_public_species_with_visible_credited_photo":species,
+        "additional_live_photos_since_2026_11_12_baseline_54":visible-54,
+        "additional_photographed_species_since_baseline_32":species-32,
         "zero_configured_gallery_taxa":57-len(expected),
         "not_visible_or_credit_failed":expected_photos-visible,
         "note":"Rendering only. Does not verify species identity, Hays specimen origin, diagnosis, copyright permission or field accuracy.",
