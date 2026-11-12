@@ -5,6 +5,11 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const lab=path.resolve(__dirname,'../site/visual-key-lab');
 const read=f=>fs.readFileSync(path.join(lab,f),'utf8');
+const sourceLicensePattern=/^(?:CC0|CC BY(?:-SA)?)(?=$|\\s)/i;
+for(const valid of ['CC0 1.0','CC BY 2.0','CC BY 3.0 US','CC BY-SA 4.0'])
+ assert(sourceLicensePattern.test(valid),'Valid reusable license rejected: '+valid);
+for(const invalid of ['CC BY-NC 4.0','CC BY-ND 4.0','All rights reserved'])
+ assert(!sourceLicensePattern.test(invalid),'Restricted license incorrectly accepted: '+invalid);
 const scored=['a','b','c1','c2','c3','d1','d2','d3','d4'].flatMap(x=>JSON.parse(read('species-'+x+'.json')));
 const candidates=JSON.parse(read('hays-candidates.json')).candidates;
 const trials=JSON.parse(read('provisional-trial-profiles.json')).profiles;
@@ -36,7 +41,7 @@ for(const t of trials){
   assert.deepEqual(original,src.approved_gallery[i],'Source photo/credit/license metadata changed');
   assert(original.src?.startsWith('https://')&&original.source_page?.startsWith('https://'),'Source URL absent');
   assert(original.creator&&original.license,'Exact creator/license required');
-  assert(/^(?:CC0|CC BY(?:-SA)?)(?:\b|$)/i.test(original.license),'Unexpected source license: '+original.license);
+  assert(sourceLicensePattern.test(original.license),'Unexpected source license: '+original.license);
   photos++;
  }
  assert(t.diagnostic_checks?.length,'Diagnostic checks not supplied');
