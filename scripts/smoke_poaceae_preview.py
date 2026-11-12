@@ -23,8 +23,14 @@ def run():
             page.on("pageerror",lambda error:js.append(str(error)))
             response=page.goto(URL,wait_until="domcontentloaded",timeout=60000)
             assert response and response.status==200,(name,response.status if response else None)
-            page.wait_for_function("document.querySelector('#count')?.textContent?.includes('112')",timeout=45000)
-            assert page.locator("#species-list button").count()==112
+            page.wait_for_function("document.querySelector('#count')?.textContent?.includes('169 of 169')",timeout=45000)
+            assert page.locator("#species-list button").count()==169
+            # Confirm a provisional profile is discoverable but not falsely scored.
+            page.locator("#search").fill("Bromus catharticus")
+            page.wait_for_function("document.querySelectorAll('#species-list button').length===1",timeout=12000)
+            assert "Research profile" in page.locator("#species-list button").first.inner_text()
+            page.locator("#species-list button").first.click()
+            page.locator("#species-detail").get_by_text("Provisional taxon identification",exact=False).first.wait_for()
             page.locator("#search").fill("Sorghastrum nutans")
             page.wait_for_function("document.querySelectorAll('#species-list button').length===1",timeout=12000)
             page.locator("#species-list button").first.click()
