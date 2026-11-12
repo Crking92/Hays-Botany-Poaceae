@@ -30,6 +30,20 @@ assert.equal(current.length,112,'unexpected scored inventory size');
 assert.equal(previous.length,112,'historical inventory boundary must be reconciled explicitly');
 assert.equal(new Set(current.map(x=>x.id)).size,112,'duplicate scored species');
 const allowedChanges=new Set(['traits','field_rule','character_evidence','diagnostic_checks']);
+/**
+ * Three specifically reviewed corrections to the UI's airy option, whose
+ * description says "an open cloud of tiny spikelets." A botanically open
+ * panicle with large conspicuous spikelets does not satisfy that field answer.
+ * Only these exact head=airy removals are accepted, each with contemporaneous
+ * source/measurement evidence and a still-supported head alternative.
+ */
+const reviewedAiryCorrections={
+  'bromus-texensis': ['branched_oat'],
+  'festuca-versuta': ['branched_oat'],
+  'sorghastrum-elliottii': ['golden_plume','long_narrow_panicle']
+};
+const reviewedRemovals=[];
+
 const changes=[];
 let newStates=0,priorStatesRetained=0,photoRefs=0;
 for(const shard of shards){
@@ -52,8 +66,22 @@ for(const shard of shards){
       const newValues=nextTraits[trait];
       assert(Array.isArray(newValues),old.id+': removed trait '+trait);
       for(const value of oldValues){
-        assert(newValues.includes(value),old.id+': removed allowed path '+trait+'='+value);
-        priorStatesRetained++;
+        if(newValues.includes(value)){priorStatesRetained++;continue;}
+        const alternatives=reviewedAiryCorrections[old.id];
+        assert(trait==='head' && value==='airy' && alternatives,
+          old.id+': removed allowed path without explicit botanical/UI review '+trait+'='+value);
+        const e=now.character_evidence?.head_airy_ui_semantic_correction;
+        assert(e?.status==='REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION' &&
+          e.category==='reproductive' &&
+          e.ui_description==='Many thin branches form an open cloud of tiny spikelets.' &&
+          typeof e.source_url==='string' && e.source_url.startsWith('https://') &&
+          typeof e.measurement==='string' && e.measurement.length>5 &&
+          e.review_date==='2026-11-12',
+          old.id+': missing exact documented morphology and field-choice evidence for removal');
+        for(const alt of alternatives)assert(newValues.includes(alt),
+          old.id+': overbroad airy removal lost the valid alternative '+alt);
+        reviewedRemovals.push({species:old.id,trait,value,
+          reason:'Source-verified spikelet size conflicts with tiny-spikelet UI choice'});
       }
     }
     for(const [trait,values] of Object.entries(nextTraits)){
@@ -74,5 +102,6 @@ assert.equal(candidates.length,57,'candidate inventory count change must be revi
 assert.equal(new Set([...current,...candidates].map(x=>x.id)).size,169);
 console.log(JSON.stringify({pass:true,baselineRef,changedRecords:changes.length,
   additions:newStates,priorSupportedChoicesKept:priorStatesRetained,
+  exactEvidenceBackedUiStateCorrections:reviewedRemovals,
   scoredPhotoReferencesPreserved:photoRefs,scored:112,provisional:57,
   revisions:changes},null,2));
