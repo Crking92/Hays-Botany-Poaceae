@@ -557,11 +557,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Knotgrass combines wet-ground creeping stolons with usually paired (rarely three) unilateral flowering racemes. Bahia grass can produce two racemes but differs in low turf/rhizome architecture and spikelet structure. Thin paspalum may form just one or a few flowering branches but has different leafy habit and varietal hair traits; Florida paspalum forms robust upright bunches and bigger oval spikelets.",
+    "field_rule": "Knotgrass combines wet-ground creeping stolons with usually paired (rarely three) unilateral flowering racemes. Bahia grass can produce two racemes but differs in low turf/rhizome architecture and spikelet structure. Thin paspalum may form just one or a few flowering branches but has different leafy habit and varietal hair traits; Florida paspalum forms robust upright bunches and bigger oval spikelets. In the less-common 3–4-raceme form described by the regional Flora, a knotgrass head may also satisfy the broad 'fingers clustered near the tip' button. Keep `paired_spikes` for the usual two, and `one_sided` for the arrangement of spikelets along each flattened raceme. Only permit `fingers` when three or four actual terminal racemes are seen, not when a pair merely looks forked. Confirm creeping rooted culms and mostly solitary spikelets against Bahia grass and other Paspalum species.",
     "traits": {
       "head": [
         "paired_spikes",
-        "one_sided"
+        "one_sided",
+        "fingers"
       ],
       "habit": [
         "mat",
@@ -579,17 +580,29 @@
     "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "character_evidence": {
       "head": {
-        "source": "Flora of North America, Paspalum distichum",
-        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900",
-        "reference": "Usually two near-digitate branches, sometimes a third below; allow paired_spikes and general one_sided in broad visual selection until detailed head photo QA.",
-        "status": "FNA_SOURCE_CHECKED_VARIABLE_BRANCH_NUMBER",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1306; FNA Paspalum distichum and UT Austin Williamson County species account",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "reference": "The regional Diggs flora says 2 terminal one-sided branches, OCCASIONALLY 3–4, 2–6 cm long. UT Austin describes (1–)2(–3) spikelike branches paired or short-staggered near the end of the culm. Kew GrassBase typically gives 2(–3) paired unilateral racemes. The UI generic `fingers` means several narrow branches arising together NEAR the tip, so its 3–4-raceme variant is a legitimate conditional visual state. This does not imply most heads have 3–4 or that any 2-branch V is to be counted as 'several'. Preserve precise paired-Spikes and broad one-sided states.",
+        "status": "PRIMARY_REGIONAL_DIGGS_RARE_BRANCH_COUNT_VERIFIED_UT_FNA_CROSSCHECKED_LOCAL_3_4_HEAD_PENDING",
+        "review_date": "2026-11-12",
+        "fna_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900",
+        "texas_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20distichum",
+        "role": "reproductive",
+        "reported_states": [
+          "two near-tip racemes usually",
+          "one-sided spikelet-bearing racemes",
+          "uncommon 3–4 closely grouped terminal racemes, fingerlike outline"
+        ],
+        "photo_voucher_support": "No original Hays same-plant 3–4-raceme image newly inspected; requires attached fully visible terminal head."
       },
       "habit": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 230",
-        "reference": "Long trailing culms rooting at nodes in wet areas; mat-forming appearance may be observed.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), printed p. 58 (rhizomes present, stolons absent) versus Diggs et al. (1999), p. 1306 (long trailing rooted culms), Kew GrassBase/UT Austin (creeping stolons)",
+        "reference": "The current broad `mat` and `rhizome` options already cover surface-runner mats and belowground rhizomes, regardless of source terminology. However, H&L explicitly labels stolons ABSENT while other Texas/widespread treatments describe creeping rooting stolons. Distinguish a genuine surface stem from an underground scale-leaved rhizome on a connected plant; retain both existing broad choices. This source discrepancy is not resolved by one gallery photo or by changing the scoring vocabulary.",
+        "status": "GROWTH_STEM_TERMINOLOGY_CONFLICT_NOT_HARD_FILTER",
+        "review_date": "2026-11-12",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184275-2/general-information",
+        "texas_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20distichum"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -617,6 +630,14 @@
         "certainty": "FNA account plus regional field observations; connected photo needed",
         "source": "FNA — Paspalum distichum",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20900"
+      },
+      {
+        "look": "Count all separate knotgrass terminal flowering branches, not just the V",
+        "check": "Diggs says two are typical, but three or four occur. If THREE or FOUR short unilateral racemes originate close to the upper culm, the many-finger-looking near-tip cluster is a valid broad choice even though the usual plant presents a paired V. Count branches at their base: do not count the two rows of spikelets as extra fingers.",
+        "compare": "Bahia grass also often has two racemes; Florida paspalum has other robust upright/clump growth and distinct spikelets. Use the true membranous ligule, creeping rooting stems, 2.5–3.3 mm mostly solitary spikelets and lower glume to identify.",
+        "certainty": "Primary Texas Flora count plus Williamson County species description; actual same-plant three/four-raceme photo pending.",
+        "source": "Diggs et al. (1999), Paspalum distichum p. 1306; UT Austin PRC",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20distichum"
       }
     ],
     "diagnostic_review": {
