@@ -164,7 +164,7 @@ const positives = [
   ['Texas signalgrass seven unilateral hair fringe',{head:'many_one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['urochloa-texana']],
   ['Texas signalgrass seven unilateral ciliate membrane',{head:'many_one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['urochloa-texana']],
   // Lane C #104 — paired Paspalum racemes and legitimate collar/head appearances.
-  ['Texas fescue spreading open head',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['festuca-versuta']],
+  ['Texas fescue large-spikelet open brome-style head',{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['festuca-versuta']],
   ['nimblewill mat with ciliate inner ligule',{head:'long_narrow_panicle',habit:'mat',ligule:'hairs',awns:'none_obvious'},['muhlenbergia-schreberi']],
   ['nimblewill rooted tuft with ciliate inner ligule',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'long'},['muhlenbergia-schreberi']],
   ['thin paspalum paired racemes tuft',{head:'paired_spikes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
@@ -185,10 +185,15 @@ const positives = [
   ['goosegrass one-sided rows',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
   ['goosegrass 7-plus branches',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
   // Lane C #111 - distinct open panicle/inner ligule visual choices.
-  ['Texas brome open spreading panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-texensis']],
-  ['slender Indiangrass open arching panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
+  ['Texas brome few large multiflowered spikelets',{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-texensis']],
+  ['slender Indiangrass narrow sparse long awned head',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
   ['hidden dropseed ciliate membrane compact',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
   ['hidden dropseed ciliate membrane narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
+  // Lane B #126 — short ciliate inner ligule and rare 3–4 knotgrass racemes.
+  ['plains lovegrass tuft true short membrane',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eragrostis-intermedia']],
+  ['plains lovegrass rhizome true short membrane',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['eragrostis-intermedia']],
+  ['knotgrass occasional near-terminal fingers mat',{head:'fingers',habit:'mat',ligule:'membrane',awns:'none_obvious'},['paspalum-distichum']],
+  ['knotgrass occasional near-terminal fingers rhizome',{head:'fingers',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-distichum']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -284,6 +289,11 @@ const negatives = [
   [{head:'spike'},'bromus-texensis'],
   [{head:'foxtail'},'sorghastrum-elliottii'],
   [{awns:'long'},'sporobolus-clandestinus'],
+  // Don't misinterpret a short membrane as no ligule or occasional fingers as whorls.
+  [{ligule:'absent'},'eragrostis-intermedia'],
+  [{head:'fingers'},'eragrostis-intermedia'],
+  [{head:'whorls'},'paspalum-distichum'],
+  [{awns:'long'},'paspalum-distichum'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
