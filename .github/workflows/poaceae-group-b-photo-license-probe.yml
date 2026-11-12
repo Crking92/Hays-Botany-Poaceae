@@ -1,0 +1,23 @@
+name: Poaceae Group B - inspect original photo licenses (read-only)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/probe_poaceae_group_b_photo_licenses.cjs'
+      - '.github/workflows/poaceae-group-b-photo-license-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-source-photo-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Inspect five original iNaturalist observation photos and exact license fields
+        run: node scripts/probe_poaceae_group_b_photo_licenses.cjs
