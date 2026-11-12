@@ -15,6 +15,10 @@ O=[
  ("Sphenopholis obtusata","3a5f30cee308c1fb6428feccfc48a23b.jpg","Utah State Intermountain Herbarium","CC0", "pressed whole plant","https://yavapaiplants.extension.arizona.edu/sites/default/files/Grasses/Images/3a5f30cee308c1fb6428feccfc48a23b.jpg","https://yavapaiplants.extension.arizona.edu/sites/default/files/styles/az_natural/public/Grasses/Images/3a5f30cee308c1fb6428feccfc48a23b.jpg.webp?itok=yzHGsNVk"),
  ("Muhlenbergia capillaris","Management_ParksProtectedAreas_BotanicalGardensZoosEtc_00042.jpg","Elizabeth A. Sellers / USGS","PD","whole flowering tuft","https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/Management_ParksProtectedAreas_BotanicalGardensZoosEtc_00042.jpg",None)
 ]
+import os
+if os.environ.get("GROUP_C_ONLY_CENCHRUS")=="1":
+  C[:]=[x for x in C if x[0]=="Cenchrus setaceus"]
+  O[:]=[]
 def get(url):
   last=None
   for attempt in range(3):
