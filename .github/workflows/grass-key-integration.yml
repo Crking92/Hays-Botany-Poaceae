@@ -7,6 +7,7 @@ on:
       - 'site/visual-key-lab/hays-candidates.json'
       - 'site/visual-key-lab/index.html'
       - 'scripts/test_grass_key_integration.cjs'
+      - 'scripts/test_grass_field_rules.cjs'
       - 'scripts/test_grass_sprint_lane_b.cjs'
       - 'scripts/test_scoring_lane_a.cjs'
       - 'scripts/test_lane_c_batch*.cjs'
@@ -17,6 +18,7 @@ on:
       - 'site/visual-key-lab/hays-candidates.json'
       - 'site/visual-key-lab/index.html'
       - 'scripts/test_grass_key_integration.cjs'
+      - 'scripts/test_grass_field_rules.cjs'
       - 'scripts/test_grass_sprint_lane_b.cjs'
       - 'scripts/test_scoring_lane_a.cjs'
       - 'scripts/test_lane_c_batch*.cjs'
@@ -35,5 +37,7 @@ jobs:
         run: node scripts/test_grass_sprint_lane_b.cjs
       - name: Execute Lane A paths if Lane A has landed
         run: if [ -f scripts/test_scoring_lane_a.cjs ]; then node scripts/test_scoring_lane_a.cjs; fi
+      - name: Guard crew field instructions against newly broken joins and truncations
+        run: node scripts/test_grass_field_rules.cjs
       - name: Validate Lane C regression script syntax (baseline histories checked separately)
-        run: node --check scripts/test_lane_c_batch1.cjs && node --check scripts/test_lane_c_batch2.cjs
+        run: node --check scripts/test_lane_c_batch1.cjs && node --check scripts/test_lane_c_batch2.cjs && node --check scripts/test_lane_c_batch3.cjs
