@@ -1330,14 +1330,16 @@
     "common": "Hairy grama",
     "scientific": "Bouteloua hirsuta",
     "range": "PASS",
-    "field_rule": "Compared with blue grama, hairy grama has more conspicuously hairy reproductive parts and a naked projecting rachis tip; blue comb spikelets continue toward the tip. Taller B. pectinata often has longer, straighter and more numerous combs, but their features overlap enough to require mature units and provenance. Texas grama bears several very short highly awned/fuzzy branches rather than a few longer solid combs.",
+    "field_rule": "Compared with blue grama, hairy grama has more conspicuously hairy reproductive parts and a naked projecting rachis tip; blue comb spikelets continue toward the tip. Taller B. pectinata often has longer, straighter and more numerous combs, but their features overlap enough to require mature units and provenance. Texas grama bears several very short highly awned/fuzzy branches rather than a few longer solid combs.\n\nA few hairy grama plants form short surface stolons or a low, rooting patch, even though the primary Hill Country treatment describes the species as tufted and without stolons. FNA also allows the usually pectinate branches to arise digitately at the tip. The 'mat' and 'fingers' answers are conditional visual observations; neither alone distinguishes hairy grama from blue grama or KR bluestem. Verify the naked projecting rachis tip, papillose-based hairs and attached mature spikelets.",
     "hero_i": 1,
     "traits": {
       "head": [
-        "combs"
+        "combs",
+        "fingers"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "hairs",
@@ -1398,10 +1400,19 @@
     "genus": "Bouteloua",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Bouteloua key and species account, printed pp. 1247–1248; user-uploaded PDF pp. 171–172",
-        "reference": "Typically 1–4 comb-like branches, about 2.3–4 cm long including the bare axis tip; rough (scabrous) inflorescence-branch rachis continues beyond last normal spikelet as an elongated naked, sharp point. Unlike B. pectinata, absence of a tuft of hairs at base of lowermost rudimentary floret is a key-level distinction.",
-        "status": "DIRECT_PRIMARY_FLORA_TEXT_CHECKED_PHOTO_ROLE_PARTIAL",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1248, Bouteloua hirsuta; J.K. Wipff, Flora of North America, Bouteloua hirsuta",
+        "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "fna_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427",
+        "reference": "Diggs reports 1–4 comb branches on one terminal axis and emphasizes the long bare sharp rachis continuation. FNA reports 1–6 branches, occasionally digitate. Preserve the standard 'combs' state while allowing the UI's 'fingers near the tip' option if multiple genuinely digitately inserted combs are visible. This does not imply silky paired Bothriochloa spikelets or make every broad fan hairy grama.",
+        "role": "reproductive",
+        "reported_states": [
+          "pectinate combs along short rachis (Diggs primary)",
+          "branches sometimes digitate (FNA secondary)"
+        ],
+        "prior_reference": "Typically 1–4 comb-like branches, about 2.3–4 cm long including the bare axis tip; rough (scabrous) inflorescence-branch rachis continues beyond last normal spikelet as an elongated naked, sharp point. Unlike B. pectinata, absence of a tuft of hairs at base of lowermost rudimentary floret is a key-level distinction.",
+        "status": "DIGGS_PECTINATE_VS_FNA_CONDITIONAL_DIGITATE_SOURCE_CHECKED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new same-plant whole-panicle image showing genuine digitately inserted combs signed off."
       },
       "ligule": {
         "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p. 38; Flora of North America (B. hirsuta), existing Hays source record",
@@ -1425,6 +1436,22 @@
         "status": "LITERATURE_SUPPORTED_POSSIBLE_SHORT_THREE_AWNS_BUT_NOT_ALL_SPECIMENS_OR_VISUALS",
         "review_date": "2026-11-11",
         "audit_note": "Short three-awn appearance requires an actual mature floret; at field scale 'no conspicuous long awns' may still be chosen. Local exact-floret proof outstanding."
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 38, Bouteloua hirsuta; J.K. Wipff, Flora of North America, Bouteloua hirsuta; Texas A&M Plants of Texas Rangelands, Hairy Grama",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+        "fna_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427",
+        "secondary_url": "https://rangeplants.tamu.edu/plant/hairy-grama/",
+        "reference": "The primary Hill Country vegetative description says cespitose with rhizomes and stolons absent. FNA specifically states 'occasionally stoloniferous', also permitting low decumbent stems; Texas A&M observes sodlike appearances especially farther north. Retain the typical tuft and admit the broad 'mat' choice only when a true surface runner or lower-node-rooting patch is visible. This neither asserts underground rhizomes nor makes sod the usual local growth form.",
+        "role": "vegetative",
+        "reported_states": [
+          "Hagenbuch & Lemke 2015 p.38: tuft, no rhizomes or stolons",
+          "FNA: occasionally stoloniferous, lower culms can be decumbent",
+          "Texas A&M: northern populations may form sod"
+        ],
+        "status": "PRIMARY_REGIONAL_VS_FNA_OCCASIONAL_STOLONS_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new linked stolon-to-identified reproductive shoot or Hays voucher certified."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1459,6 +1486,22 @@
         "compare": "Blue grama and other short-combed Bouteloua; use head architecture and rachis-tip evidence instead of this disputed collar state alone",
         "certainty": "Vegetative source disagreement: not resolved by existing photo review",
         "source": "Hagenbuch & Lemke 2015 p.38; Flora of North America",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38"
+      },
+      {
+        "look": "Follow actual hairy-grama branch insertions before picking fingers",
+        "check": "A few individual plants have their short comb branches clustered closely or digitately near the culm tip. Their spikelets still form combs; the visible elongated bare rachis tip separates hairy grama from blue grama more reliably than how closely the branches emerge.",
+        "compare": "KR bluestem has paired hairy Andropogoneae spikelets along long slender fingers rather than regularly pectinate Bouteloua combs.",
+        "certainty": "FNA secondary reproductive variation checked; no newly verified attached local source photo",
+        "source": "Diggs et al. (1999) p.1248; FNA Bouteloua hirsuta (Wipff)",
+        "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607427"
+      },
+      {
+        "look": "Trace a surface-running hairy-grama shoot to rooting nodes",
+        "check": "FNA permits occasional stolons but Hagenbuch & Lemke's regional plants lack them. A root-connected low patch can be compatible; an inclined culm or fibrous root alone is not a proven stolon.",
+        "compare": "Blue grama may make open sod while red grama can have short underground rhizomes; the growth form alone cannot resolve the species.",
+        "certainty": "Primary Hill Country versus FNA difference retained; no connected local stolon specimen certified",
+        "source": "Hagenbuch & Lemke (2015) p.38; FNA Bouteloua hirsuta",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38"
       }
     ],
@@ -1543,7 +1586,7 @@
     "common": "Tumble windmillgrass",
     "scientific": "Chloris verticillata",
     "range": "UNRESOLVED",
-    "field_rule": "Tumble windmillgrass tends to have separated tiers of longer (~5–15 cm) racemes and long awns. C. cucullata tends to have crowded shorter whorls and a swollen short-awned sterile hood. C. virgata often has one terminal feathery fan and a different fertile-lemma hair crown. The hybrid between cucullata and verticillata is a real confounder: never certify hybrid status from tier spacing.",
+    "field_rule": "Tumble windmillgrass tends to have separated tiers of longer (~5–15 cm) racemes and long awns. C. cucullata tends to have crowded shorter whorls and a swollen short-awned sterile hood. C. virgata often has one terminal feathery fan and a different fertile-lemma hair crown. The hybrid between cucullata and verticillata is a real confounder: never certify hybrid status from tier spacing.\n\nTrue ligule: Its ciliate membrane may show a short hair fringe, particularly at the edges. The actual inner membrane is still present even when hairs dominate the field of view. Do not mistake long sheath-mouth hairs for the ligule.",
     "hero_i": 2,
     "traits": {
       "head": [
@@ -1554,7 +1597,8 @@
         "mat"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long"
@@ -1637,10 +1681,18 @@
     "genus": "Chloris",
     "character_evidence": {
       "ligule": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.180 (printed 1256): Chloris ligules are ciliate membranes",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 42, Chloris verticillata; Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Chloris generic ligule description; Flora of North America, Chloris verticillata",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+        "fna_url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=17600",
+        "reference": "H&L reports a 1–2 mm membranous truncate ligule with ciliate margins and occasional longer hairs at the edges; FNA reports a shortly ciliate 0.7–1.3 mm ligule. Keep membrane as the actual tissue, and accept hairs as a dominant visible fringe observation, not a claimed hair-only ligule.",
+        "role": "vegetative",
+        "reported_states": [
+          "membrane with ciliate margin (Hagenbuch & Lemke)",
+          "hairs visible at edge of true inner ligule (FNA and/or Williamson County regional account)"
+        ],
+        "status": "CILIATE_MEMBRANE_VISIBLE_HAIR_FRINGE_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No previously hosted inner ligule image has been reexamined or reauthenticated for this change."
       },
       "habit": {
         "source": "Flora of North America, Chloris verticillata; Kew POWO / GrassBase; Hagenbuch & Lemke 2015 Hill Country vegetative key",
@@ -1677,6 +1729,14 @@
         "certainty": "Regional source plus FNA; growth observations vary",
         "source": "Hagenbuch & Lemke 2015, p.42",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      },
+      {
+        "look": "Locate the true ciliate membrane rather than adjacent leaf hairs",
+        "check": "The tiny inner ligule has a membranous base with projecting hairs; both membrane and a hair-fringe view are eligible. Inspect the actual blade–sheath junction, not the external collar, before interpreting the selection.",
+        "compare": "Widely separated raceme whorls help identify tumble windmillgrass; feather fingergrass has a mostly apical digitate cluster.",
+        "certainty": "Primary regional vegetative ligule text and FNA checked, no direct new voucher/photo",
+        "source": "Hagenbuch & Lemke (2015), p.42; FNA Chloris verticillata",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=17600"
       }
     ],
     "diagnostic_review": {
@@ -1832,7 +1892,7 @@
     "common": "Feather fingergrass",
     "scientific": "Chloris virgata",
     "range": "UNRESOLVED",
-    "field_rule": "C. virgata often has a single terminal digitate fan of feathery racemes, while verticillata has well-separated tiers and may form a tumbling mature head. C. cucullata has shorter crowded whorls and the strongly inflated sterile hood. Fertile-lemma apical hair crown, awn and annual crown are needed for confident C. virgata.",
+    "field_rule": "C. virgata often has a single terminal digitate fan of feathery racemes, while verticillata has well-separated tiers and may form a tumbling mature head. C. cucullata has shorter crowded whorls and the strongly inflated sterile hood. Fertile-lemma apical hair crown, awn and annual crown are needed for confident C. virgata.\n\nTrue ligule: Its tiny membranous ligule is ciliate; when the cilia are more obvious than the membrane, the key's 'fringe of hairs' choice must not eliminate feather fingergrass. Separate true inner ligule hairs from the much longer blade-base hairs.",
     "hero_i": 0,
     "traits": {
       "head": [
@@ -1843,7 +1903,8 @@
         "mat"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long"
@@ -1926,10 +1987,18 @@
     "genus": "Chloris",
     "character_evidence": {
       "ligule": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.180 (printed 1256): Chloris ligules are ciliate membranes",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 42, Chloris virgata; Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Chloris generic ligule description; Flora of North America, Chloris virgata",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+        "fna_url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=136000",
+        "reference": "H&L reports a 0.5–1 mm membranous truncate ligule with ciliate margins; UT Williamson County documents the marginal hairs in C. virgata. Keep membrane and admit visible hair fringe, not an absent membrane or long isolated sheath/leaf hairs.",
+        "role": "vegetative",
+        "reported_states": [
+          "membrane with ciliate margin (Hagenbuch & Lemke)",
+          "hairs visible at edge of true inner ligule (FNA and/or Williamson County regional account)"
+        ],
+        "status": "CILIATE_MEMBRANE_VISIBLE_HAIR_FRINGE_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No previously hosted inner ligule image has been reexamined or reauthenticated for this change."
       },
       "habit": {
         "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 42, Chloris virgata",
@@ -1971,6 +2040,14 @@
         "certainty": "Regional source supports variable surface runners; no Hays same-specimen base photo certified",
         "source": "Hagenbuch & Lemke 2015, p. 42",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42"
+      },
+      {
+        "look": "Locate the true ciliate membrane rather than adjacent leaf hairs",
+        "check": "The tiny inner ligule has a membranous base with projecting hairs; both membrane and a hair-fringe view are eligible. Inspect the actual blade–sheath junction, not the external collar, before interpreting the selection.",
+        "compare": "Feather fingergrass has a near-tip digitate fan and often more visibly feathery lemmas; tumble windmillgrass bears well-separated tiers.",
+        "certainty": "Primary regional vegetative ligule text and FNA checked, no direct new voucher/photo",
+        "source": "Hagenbuch & Lemke (2015), p.42; FNA Chloris virgata",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=136000"
       }
     ],
     "diagnostic_review": {
