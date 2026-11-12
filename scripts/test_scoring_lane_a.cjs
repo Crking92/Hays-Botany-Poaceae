@@ -214,3 +214,8 @@ console.log(JSON.stringify({
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
 },null,2));
+
+// Run source-gated Lane A Batch 11 and 13 true-filter tests in the combined CI suite.
+// Batch 12 already runs as its own explicit workflow step.
+require('./test_scoring_lane_a_batch11.cjs');
+require('./test_scoring_lane_a_batch13.cjs');
