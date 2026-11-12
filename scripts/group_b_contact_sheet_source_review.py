@@ -16,21 +16,21 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 TARGETS = [
-  ("Stapfochloa ciliata", 205834944, 364000073),
-  ("Stapfochloa ciliata", 397795965, 729639565),
-  ("Stapfochloa ciliata", 397795965, 729639648),
-  ("Stapfochloa ciliata", 144608484, 248229079),
-  ("Tridens congestus", 363072901, 662722415),
-  ("Tridens congestus", 355629216, 648545557),
-  ("Tridens congestus", 276708779, 496879955),
-  ("Tridens congestus", 145108130, 249203340),
-  ("Pappophorum bicolor", 325903814, 590153581),
-  ("Pappophorum bicolor", 321509957, 581468317),
-  ("Pappophorum bicolor", 354955046, 647470833),
-  ("Pappophorum bicolor", 345524024, 629700491),
+  ("Tridentopsis elongata", 377001623, 689363680),
+  ("Tridentopsis elongata", 377001623, 689363761),
+  ("Tridentopsis elongata", 377001623, 689363853),
+  ("Tridentopsis elongata", 403412171, 740687416),
+  ("Eragrostis curtipedicellata", 409703200, 753366028),
+  ("Eragrostis curtipedicellata", 409703200, 753366084),
+  ("Eragrostis curtipedicellata", 401575636, 737076545),
+  ("Eragrostis curtipedicellata", 401575636, 737076623),
+  ("Elymus macgregorii", 401708293, 737334737),
+  ("Elymus macgregorii", 401708293, 737334689),
+  ("Elymus macgregorii", 368549870, 673153394),
+  ("Elymus macgregorii", 379861752, 694889625),
 ]
 ALLOW = {"cc0", "cc-by", "cc-by-sa"}
-OUT = Path("qa-report/group-b-contact-sheet")
+OUT = Path("qa-report/group-b-final-three-contact-sheet")
 OUT.mkdir(parents=True, exist_ok=True)
 AGENT = "HaysBotanyPoaceaeContactSheet/1.0 (source rights and actual pixel QA, GitHub Crking92/Hays-Botany-Poaceae)"
 
@@ -59,8 +59,8 @@ def quote(s, limit):
 def draw_card(rec, cell_w=425, cell_h=390):
     card = Image.new("RGB", (cell_w, cell_h), "#f6f6f4")
     d = ImageDraw.Draw(card)
-    band = {"Stapfochloa ciliata":"#1b6976", "Tridens congestus":"#a15c50",
-            "Pappophorum bicolor":"#72579d"}.get(rec["expected_species"], "#5a6470")
+    band = {"Tridentopsis elongata":"#1b6976", "Eragrostis curtipedicellata":"#a15c50",
+            "Elymus macgregorii":"#72579d"}.get(rec["expected_species"], "#5a6470")
     d.rectangle((0,0,cell_w,39), fill=band)
     d.text((14,11),rec["expected_species"],fill="#ffffff")
     if rec.get("preview_file"):
@@ -138,7 +138,7 @@ def main():
         sheet.save(OUT/name,quality=87,optimize=True)
         sheets.append(name)
     summary={
-      "scope":"12 original photo IDs for 3 zero-photo Group B grasses",
+      "scope":"12 original photo IDs for last 3 nonhybrid zero-photo Group B grasses",
       "origin":"iNaturalist per-photo public API; image previews for QA ONLY",
       "license_eligible_records":sum(x.get("license") in ALLOW for x in results),
       "visual_previews_downloaded":sum("preview_file" in x for x in results),
