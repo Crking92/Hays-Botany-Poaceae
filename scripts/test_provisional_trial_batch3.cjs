@@ -33,7 +33,7 @@ for(const t of third){
    photos++;
  }
 }
-assert.equal(photos,12,'Expected 12 already source-credited photo references');
+assert(photos>=12,'Original 12 source-credited photo references must be retained; further approved additions are permitted only by the exact gallery equality checks above');
 assert.deepEqual(third.find(x=>x.id==='triticum-aestivum').traits.awns,[],'Uncertain wheat awns are not hard-scored');
 assert.deepEqual(third.find(x=>x.id==='dactyloctenium-aegyptium').traits.habit,[],'Unobserved root/base form must remain unknown');
 assert.deepEqual(third.find(x=>x.id==='cenchrus-ciliaris').traits.habit,[],'Tuft vs spreading must remain unresolved');
