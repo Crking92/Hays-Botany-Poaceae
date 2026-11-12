@@ -1572,11 +1572,10 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Actual living source-identified tuft photo (panel 1), flowering panicle (panel 2), leaf with flowering culm (panel 3), and preserved BRIT root+panicle voucher (panel 5). Look for perennial rooted bunch, open drooping flowering head and attached spikelets. The living in-ground photograph hides the actual fibrous root crown; do not certify exposed roots, and do not treat the historical specimen as fresh Hays material.\n\nField ID Lab: Texas fescue has a fairly open, pyramidal flowering panicle, so an overall airy head can be a valid first impression. Check its distinctly large multi-flowered oat-like spikelets, short membranous ligule and perennial tuft to narrow the identification.",
+    "field_rule": "Actual living source-identified tuft photo (panel 1), flowering panicle (panel 2), leaf with flowering culm (panel 3), and preserved BRIT root+panicle voucher (panel 5). Look for perennial rooted bunch, open drooping flowering head and attached spikelets. The living in-ground photograph hides the actual fibrous root crown; do not certify exposed roots, and do not treat the historical specimen as fresh Hays material.\n\nField ID Lab: Texas fescue can have an open, pyramidal panicle, but its multi-flowered oat-like spikelets (roughly 8–11 mm in Silveus's account) do not fit the 'airy' picture's cloud of tiny spikelets. Use branched-oat instead; then inspect the true membranous ligule, perennial crown and mature spikelets.",
     "traits": {
       "head": [
-        "branched_oat",
-        "airy"
+        "branched_oat"
       ],
       "habit": [
         "tuft"
@@ -1612,7 +1611,19 @@
         ],
         "reference": "Species-specific Silveus account describes the mature Texas fescue panicle as large, open, pyramidal and only slightly nodding. A field observer seeing the entire loose flowering head (without resolving the multi-flowered oat-like spikelets) may legitimately select the generic open/airy panicle drawing. Preserve the more diagnostic branched_oat option; this broad category is not a standalone species ID.",
         "certainty": "SPECIES_SPECIFIC_HISTORIC_TEXAS_REPRODUCTIVE_DESCRIPTION; modern specimen photo still unverified",
-        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "status": "SOURCE_VERIFIED_OPEN_PANICLE_BUT_REJECTED_FOR_TINY_SPIKELET_AIRY_UI",
+        "review_date": "2026-11-12",
+        "review_note": "An open panicle does not automatically match UI head:airy, which says a cloud of tiny spikelets. The source remains valid; previous broad code was withdrawn."
+      },
+      "head_airy_ui_semantic_correction": {
+        "source": "W.A. Silveus, Texas Grasses (1933), Festuca versuta treatment; 8–11 mm spikelets",
+        "source_url": "https://www.edwardsaquifer.org/wp-content/uploads/2019/02/1933_Silveus_TexasGrasses1.pdf",
+        "category": "reproductive",
+        "ui_label": "An open, airy branching panicle",
+        "ui_description": "Many thin branches form an open cloud of tiny spikelets.",
+        "measurement": "8–11 mm, multi-flowered spikelets",
+        "reference": "This grass's panicle can be open, but attached spikelets are much larger or differently arranged than the tiny-spikelet cloud shown by the actual ID Lab choice. Remove head=airy while preserving its botanically appropriate existing head states; do not erase morphology or rights history.",
+        "status": "REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION",
         "review_date": "2026-11-12"
       }
     },
