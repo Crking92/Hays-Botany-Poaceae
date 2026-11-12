@@ -1,0 +1,31 @@
+name: Group C - six Commons photo originals metadata and gallery dedup (read-only)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/check_group_c_six_commons_sources.cjs'
+      - '.github/workflows/group-c-six-commons-originals.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  photo-source-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact six Commons original metadata, source licenses and scored/provisional duplicate links
+        run: node scripts/check_group_c_six_commons_sources.cjs
+      - name: Save source metadata audit (no image bytes)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-c-six-source-metadata
+          path: qa-report/group-c-six-source-metadata.json
+          if-no-files-found: warn
+          retention-days: 14
