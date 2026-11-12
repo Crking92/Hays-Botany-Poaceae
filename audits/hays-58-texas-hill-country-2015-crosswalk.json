@@ -1,0 +1,877 @@
+{
+  "created_date": "2026-11-11",
+  "authority": "Hagenbuch, K.W. and D.E. Lemke. 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4:1-93.",
+  "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+  "methods": "Compared 58 staged Hays iNaturalist names to Appendix A (160 Hill Country species and older synonyms), selected published key/description characters, and manually checked Hays specimen citations in Appendix B for seven names. Absence of citation in this file is not a claim that 2015 source or local herbaria lack a specimen.",
+  "taxonomy_rule": "2015 treatment follows 2007 Flora of North America names and older species concepts; modern preferred Kew names in hays-58-nomenclature-final-staging.json remain authoritative for staging.",
+  "totals": {
+    "candidate_names": 58,
+    "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY": 23,
+    "BROADER_CONCEPT_ONLY_NOT_SPECIES_RANK_EVIDENCE": 2,
+    "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A": 29,
+    "ENTRY_UNDER_HISTORICAL_NAME_OR_EXISTING_SPECIES_CONCEPT": 4,
+    "with_verified_published_hays_collection_citations": 7,
+    "cited_hays_specimen_gatherings": 10
+  },
+  "comparison_vouchers_not_new_candidate": [
+    {
+      "historical_name": "Paspalum pubiflorum",
+      "role": "lookalike of P. langei",
+      "county_citations": [
+        {
+          "collector": "Litchfield",
+          "number": "s.n.",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Tharp",
+          "number": "s.n.",
+          "herbarium": "SWT"
+        }
+      ],
+      "warning": "These are P. pubiflorum lookalike vouchers, NOT new P. langei evidence."
+    },
+    {
+      "historical_name": "Tridens muticus",
+      "role": "broader local Tridentopsis mutica concept versus modern T. elongata",
+      "county_citations": [
+        {
+          "collector": "Lemke",
+          "number": "669",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Lyday",
+          "number": "300",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Staton",
+          "number": "20",
+          "herbarium": "SWT"
+        }
+      ],
+      "warning": "Published Hays T. muticus broad-concept vouchers do not determine the modern T. elongata split."
+    }
+  ],
+  "constraints": [
+    "The 2015 regional study covers Hill Country including Hays, but Appendix A inclusion does not prove Hays county collection.",
+    "Seven positive Hays citations are literature-level, not manually opened original herbarium specimens.",
+    "The seven entries named in county evidence all remain pending species-level diagnostic QA; published collection citation is independent occurrence evidence, not proof of current iNaturalist taxon.",
+    "No third-party PDF text reproduced wholesale; vegetation characters paraphrased as concise field-photo targets.",
+    "No live cards, photos or key files edited."
+  ],
+  "records": [
+    {
+      "hays_candidate_name": "Bromus catharticus",
+      "accepted_stage_name": "Bromus catharticus",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Bromus catharticus",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Melica nitens",
+      "accepted_stage_name": "Melica nitens",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Melica nitens",
+      "vegetative_summary_paraphrase": "Closed leaf sheaths nearly to throat; relatively long 3–6 mm membranous ligule with decurrent margins; new diagnostic collar/sheath target distinct from spikelet-only photo.",
+      "printed_species_description_page": 54,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Dingee",
+          "number": "89",
+          "herbarium": "SWT"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Eragrostis superba",
+      "accepted_stage_name": "Eragrostis superba",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Eragrostis superba",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Lolium perenne",
+      "accepted_stage_name": "Lolium perenne",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Lolium perenne",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Bothriochloa longipaniculata",
+      "accepted_stage_name": "Bothriochloa longipaniculata",
+      "published_2015_treatment": "BROADER_CONCEPT_ONLY_NOT_SPECIES_RANK_EVIDENCE",
+      "entry_as_printed": "Bothriochloa laguroides",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Paspalum langei",
+      "accepted_stage_name": "Paspalum langei",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Bothriochloa bladhii",
+      "accepted_stage_name": "Bothriochloa bladhii",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Dichanthium aristatum",
+      "accepted_stage_name": "Dichanthium aristatum",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Phyllostachys aurea",
+      "accepted_stage_name": "Phyllostachys aurea",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Lolium multiflorum",
+      "accepted_stage_name": "Lolium multiflorum",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Bromus brevis",
+      "accepted_stage_name": "Bromus brevis",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Coelorachis cylindrica",
+      "accepted_stage_name": "Rottboellia campestris",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Coelorachis cylindrica",
+      "vegetative_summary_paraphrase": "Short knotty rhizomes; short 0.5–1 mm truncate membranous ligule; slender vegetative leaf blades. Distinguish current Kew Rottboellia campestris alias.",
+      "printed_species_description_page": 42,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Carr",
+          "number": "10681",
+          "herbarium": "TEX-LL"
+        },
+        {
+          "collector": "Sanders",
+          "number": "4100",
+          "herbarium": "TEX-LL"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Oplismenus hirtellus",
+      "accepted_stage_name": "Oplismenus hirtellus",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Stenotaphrum secundatum",
+      "accepted_stage_name": "Stenotaphrum secundatum",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Stenotaphrum secundatum",
+      "vegetative_summary_paraphrase": "Distichous leaves, short stolons, compressed sheaths and folded vernation. Vegetative features useful but cultivated turf is not proof of wild population.",
+      "printed_species_description_page": 66,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Litchfield",
+          "number": "s.n.",
+          "herbarium": "SWT"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Triticum aestivum",
+      "accepted_stage_name": "Triticum aestivum",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Triticum aestivum",
+      "vegetative_summary_paraphrase": "Cereal characters must be measured and cultivated field/volunteer escape context documented.",
+      "printed_species_description_page": 68,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Ruiseco",
+          "number": "128",
+          "herbarium": "SWT"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Echinochloa colona",
+      "accepted_stage_name": "Echinochloa colona",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Echinochloa colona",
+      "vegetative_summary_paraphrase": "Ligule absent; green blades often marked purple bands/V-shapes; compare ligule-free barnyardgrass relatives with spikelets.",
+      "printed_species_description_page": 46,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Breckenridge",
+          "number": "441",
+          "herbarium": "SWT"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Paspalum notatum",
+      "accepted_stage_name": "Paspalum notatum",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Setaria viridis",
+      "accepted_stage_name": "Setaria viridis",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Setaria viridis",
+      "vegetative_summary_paraphrase": "Annual; 1–2 mm ligule formed by fringe of hairs; leaf sheath often keeled, basal nodes sometimes hirsute.",
+      "printed_species_description_page": 62,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Liang",
+          "number": "50",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Osborn",
+          "number": "35",
+          "herbarium": "SWT"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Cortaderia selloana",
+      "accepted_stage_name": "Cortaderia selloana",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Echinochloa walteri",
+      "accepted_stage_name": "Echinochloa walteri",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Rostraria cristata",
+      "accepted_stage_name": "Rostraria cristata",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Panicum miliaceum",
+      "accepted_stage_name": "Panicum miliaceum",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Setaria leucopila",
+      "accepted_stage_name": "Setaria leucopila",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Setaria leucopila",
+      "vegetative_summary_paraphrase": "Perennial, culm sheath margins villous at throat; ciliate ligule with about 1–2 mm hairs; blades often pale/glaucous.",
+      "printed_species_description_page": 61,
+      "independently_published_hays_appx_b_collection_citations": [
+        {
+          "collector": "Breckenridge",
+          "number": "490",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Tabler",
+          "number": "s.n.",
+          "herbarium": "SWT"
+        }
+      ],
+      "voucher_source_evidence_tier": "PUBLISHED_HAYS_COLLECTION_CITATION_SHEET_NOT_REEXAMINED",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Sphenopholis obtusata",
+      "accepted_stage_name": "Sphenopholis obtusata",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Sphenopholis obtusata",
+      "vegetative_summary_paraphrase": "Annual with divided often oblique collar; membranous 1.5–3 mm ligule, often lacerate.",
+      "printed_species_description_page": 64,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Steinchisma hians",
+      "accepted_stage_name": "Steinchisma hians",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Steinchisma hians",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Aegilops cylindrica",
+      "accepted_stage_name": "Aegilops cylindrica",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Aegilops cylindrica",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Avena sativa",
+      "accepted_stage_name": "Avena sativa",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Avena sativa",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Elymus glabriflorus",
+      "accepted_stage_name": "Elymus virginicus",
+      "published_2015_treatment": "ENTRY_UNDER_HISTORICAL_NAME_OR_EXISTING_SPECIES_CONCEPT",
+      "entry_as_printed": "Elymus virginicus",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": "Maps to existing Elymus virginicus; do not create duplicate card.",
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Megathyrsus maximus",
+      "accepted_stage_name": "Megathyrsus maximus",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Muhlenbergia capillaris",
+      "accepted_stage_name": "Muhlenbergia capillaris",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Polypogon viridis",
+      "accepted_stage_name": "Polypogon viridis",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Polypogon viridis",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Sphenopholis interrupta",
+      "accepted_stage_name": "Sphenopholis interrupta",
+      "published_2015_treatment": "ENTRY_UNDER_HISTORICAL_NAME_OR_EXISTING_SPECIES_CONCEPT",
+      "entry_as_printed": "Trisetum interruptum",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Tridentopsis elongata",
+      "accepted_stage_name": "Tridentopsis elongata",
+      "published_2015_treatment": "BROADER_CONCEPT_ONLY_NOT_SPECIES_RANK_EVIDENCE",
+      "entry_as_printed": "Tridens muticus",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": 66,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": "Tridens muticus in this 2015 source is broad and cannot prove modern elongata from county entries.",
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Bromus tectorum",
+      "accepted_stage_name": "Bromus tectorum",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Bromus tectorum",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Dactyloctenium aegyptium",
+      "accepted_stage_name": "Dactyloctenium aegyptium",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Dactyloctenium aegyptium",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Dichanthelium acuminatum",
+      "accepted_stage_name": "Dichanthelium acuminatum",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Dichanthelium acuminatum",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Eragrostis curtipedicellata",
+      "accepted_stage_name": "Eragrostis curtipedicellata",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Eragrostis curtipedicellata",
+      "vegetative_summary_paraphrase": "Viscid culms and sheaths, narrow leaves often sharply bent outward around 90 degrees, tiny hair-fringe ligule.",
+      "printed_species_description_page": 48,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Eragrostis minor",
+      "accepted_stage_name": "Eragrostis minor",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Hordeum murinum",
+      "accepted_stage_name": "Hordeum murinum",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Hordeum murinum",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Melinis repens",
+      "accepted_stage_name": "Melinis repens",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Nassella tenuissima",
+      "accepted_stage_name": "Nassella tenuissima",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Stapfochloa ciliata",
+      "accepted_stage_name": "Stapfochloa ciliata",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Tridens congestus",
+      "accepted_stage_name": "Tridens congestus",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Alopecurus carolinianus",
+      "accepted_stage_name": "Alopecurus carolinianus",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Briza minor",
+      "accepted_stage_name": "Briza minor",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Cenchrus ciliaris",
+      "accepted_stage_name": "Cenchrus ciliaris",
+      "published_2015_treatment": "ENTRY_UNDER_HISTORICAL_NAME_OR_EXISTING_SPECIES_CONCEPT",
+      "entry_as_printed": "Pennisetum ciliare",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Cenchrus setaceus",
+      "accepted_stage_name": "Cenchrus setaceus",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Digitaria californica",
+      "accepted_stage_name": "Digitaria californica",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Digitaria californica",
+      "vegetative_summary_paraphrase": "Perennial with hard knotty base, rounded lower sheaths villous, 1–3 mm truncate membranous ligule; publication explicitly warns vegetation alone cannot reliably distinguish it from D. insularis and D. patens.",
+      "printed_species_description_page": 44,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Elymus macgregorii",
+      "accepted_stage_name": "Elymus macgregorii",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Janochloa antidotalis",
+      "accepted_stage_name": "Janochloa antidotalis",
+      "published_2015_treatment": "ENTRY_UNDER_HISTORICAL_NAME_OR_EXISTING_SPECIES_CONCEPT",
+      "entry_as_printed": "Panicum antidotale",
+      "vegetative_summary_paraphrase": "Under old Panicum antidotale: short rhizomes, hard knotty base, prominent swollen antrorsely pubescent nodes, and 0.5–1 mm ciliate ligule.",
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Lolium × boucheanum",
+      "accepted_stage_name": "Lolium × boucheanum",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Miscanthus sinensis",
+      "accepted_stage_name": "Miscanthus sinensis",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Panicum dichotomiflorum",
+      "accepted_stage_name": "Panicum dichotomiflorum",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Panicum repens",
+      "accepted_stage_name": "Panicum repens",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Pappophorum bicolor",
+      "accepted_stage_name": "Pappophorum bicolor",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Pappophorum bicolor",
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Sclerochloa dura",
+      "accepted_stage_name": "Sclerochloa dura",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Sporobolus cryptandrus",
+      "accepted_stage_name": "Sporobolus cryptandrus",
+      "published_2015_treatment": "DIRECT_ENTRY_IN_2015_HILL_COUNTRY_KEY",
+      "entry_as_printed": "Sporobolus cryptandrus",
+      "vegetative_summary_paraphrase": "Perennial tuft, ligule hair fringe about 0.5–1 mm, overlapping sheaths, pilose collar margins; lower sheaths may conceal flowers.",
+      "printed_species_description_page": 64,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    },
+    {
+      "hays_candidate_name": "Stapfochloa canterae",
+      "accepted_stage_name": "Stapfochloa canterae",
+      "published_2015_treatment": "NOT_TREATED_AS_NAMED_SPECIES_IN_2015_APPENDIX_A",
+      "entry_as_printed": null,
+      "vegetative_summary_paraphrase": null,
+      "printed_species_description_page": null,
+      "independently_published_hays_appx_b_collection_citations": [],
+      "voucher_source_evidence_tier": "NO_EXACT_HAYS_COLLECTION_CITATION_ENTERED_IN_THIS_PASS",
+      "note": null,
+      "botanically_authenticated_from_original_2015_cited_sheet": false,
+      "merge_ready": false
+    }
+  ]
+}
