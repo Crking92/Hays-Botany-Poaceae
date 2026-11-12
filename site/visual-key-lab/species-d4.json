@@ -10,7 +10,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg",
-        "label": "2 · REAL SPIKELETS: separated along the narrow flowering axis",
+        "label": "Reverchon bristlegrass: spaced oval green floral units attached along a very narrow flowering axis",
         "creator": "Patrick Alexander from Las Cruces, NM",
         "license": "CC0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_reverchonii_-_Flickr_-_aspidoscelis_%281%29.jpg",
@@ -19,7 +19,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg",
-        "label": "3 · LEAF AND HAIRY JUNCTION: ligule still unproven",
+        "label": "Reverchon bristlegrass blade–sheath junction with small pale hair tuft — inner ligule origin unresolved",
         "creator": "Patrick Alexander from Las Cruces, NM",
         "license": "CC0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_reverchonii_-_Flickr_-_aspidoscelis_%282%29.jpg",
@@ -37,7 +37,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-attached-spikelets-681610423.jpg",
-        "label": "DUVAL COUNTY · matched flowering head showing widely separated green spikelets",
+        "label": "Field Reverchon bristlegrass flowering axis with widely spaced rounded green spikelet groups",
         "creator": "Clifton Ladd, C.W.B.",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/681610423",
@@ -63,7 +63,7 @@
     "source_blob_sha": "b13c256d97ec509d660549d220b9a91c3251b289",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs et al. Illustrated Flora of North Central Texas (1999), uploaded p.242–244",
@@ -111,12 +111,46 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_1_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "1/4 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "1/4 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass46: exact hosted JPG index 0 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance. Pass46: exact hosted JPG index 1 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance. Pass46: exact hosted JPG index 3 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "short thin erect yellow-green axis with separated overlapping oval green reproductive units",
+            "visible spacing between consecutive reproductive units"
+          ],
+          "cannot_verify": [
+            "true basal sterile bristles and mature lemma details not individually isolated",
+            "does not demonstrate rooted plant or inner ligule"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg",
+          "git_blob_sha": "4a21f76d297c1c1f32c330caa103200849708dbe",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "narrow green blade arising obliquely from ribbed upright sheath",
+            "tiny pale hairlike tufts immediately beside junction"
+          ],
+          "cannot_verify": [
+            "free membranous portion versus a hair-only ligule not clearly demonstrated",
+            "no ruler, spikelets or whole plant context"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg",
+          "git_blob_sha": "8a0925d9aa88d1f8b1a4541e54236b3486dbd6dd",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 2,
           "verdict": "DIRECT_VISIBLE",
@@ -132,13 +166,26 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "289dfd3fdeeb7006aa09af4d3f389f5a27fd76e1",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "slender upright green panicle axis bearing multiple widely separated oval pale-green reproductive groups",
+            "narrow grass blades around a mixed field clump"
+          ],
+          "cannot_verify": [
+            "bristle bases and distinct floral organs not independently counted",
+            "a single crop does not authenticate local population or root connection"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-attached-spikelets-681610423.jpg",
+          "git_blob_sha": "bd2afb85f7d2c334af2956d29ef65490db422c2f",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        1,
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "inner hair ligule, isolated bristle/spikelet and dry habit"
       ],
@@ -148,7 +195,35 @@
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "previous_pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "1/4 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass46: exact hosted JPG index 0 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance. Pass46: exact hosted JPG index 1 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
+      "pass46_photo_findings": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "true basal sterile bristles and mature lemma details not individually isolated",
+            "does not demonstrate rooted plant or inner ligule"
+          ]
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "unverified": [
+            "free membranous portion versus a hair-only ligule not clearly demonstrated",
+            "no ruler, spikelets or whole plant context"
+          ]
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "bristle bases and distinct floral organs not independently counted",
+            "a single crop does not authenticate local population or root connection"
+          ]
+        }
+      ]
     }
   },
   {
@@ -2036,7 +2111,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Urochloa/urochloa-fusca/images/james-schnable-vegetative-urochloa-fusca.jpg",
-        "label": "BROWNSEED SIGNALGRASS — greenhouse vegetative comparison",
+        "label": "Greenhouse potted brownseed signalgrass: broad arching leaves and erect green culms — no flowering or local provenance",
         "creator": "James Schnable",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Vegetative_Urochloa_fusca.JPG",
@@ -2089,7 +2164,7 @@
     "source_blob_sha": "192e6d6094c0804e3ddcb4e27ecb61f3e0910aba",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_6_OF_7; TRUE_LIGULE_AND_SCALED_GLUMES_PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Kew POWO GrassBase under Brachiaria fasciculata, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1156554-2/general-information",
@@ -2142,11 +2217,11 @@
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS36_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_6_OF_7",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_7_OF_7",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED; NO_NEW_RELEASE_APPROVAL",
-      "scope": "6 of 7 current Lab images rendered from actual GitHub-hosted image bytes; i=3 James Schnable greenhouse photo returned only metadata and is not counted. Photo-role check does not independently establish exact-image rights, determinations, or public Pages deployment.",
+      "scope": "6 of 7 current Lab images rendered from actual GitHub-hosted image bytes; i=3 James Schnable greenhouse photo returned only metadata and is not counted. Photo-role check does not independently establish exact-image rights, determinations, or public Pages deployment. Pass46: exact hosted JPG index 3 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
         {
           "i": 0,
@@ -2198,6 +2273,23 @@
           "hosted_file": "content/taxa/Poaceae/Urochloa/urochloa-fusca/images/jim-conrad-urochloa-fusca-attached-spikelet-macro-public-domain.jpg",
           "git_blob_sha": "686bd3e32166249cc0b8e14cf755703adc0c5df2",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND RETURNED BLOB SHA; NO INDEPENDENT LICENSE OR SPECIMEN VERIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "single small pot with several bright green shoots and broad thin leaves",
+            "some long arching and recurved blades contrasted with black background"
+          ],
+          "cannot_verify": [
+            "no basal rachis, flowering spikelets, ligule or true wild rooted growth pattern visible",
+            "greenhouse stock photo is not a Hays County wild specimen"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Urochloa/urochloa-fusca/images/james-schnable-vegetative-urochloa-fusca.jpg",
+          "git_blob_sha": "beb3706ee5ca28bac62e2d1cf6f5eb849e7d8b08",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 4,
@@ -2252,16 +2344,8 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND RETURNED BLOB SHA; NO INDEPENDENT LICENSE OR SPECIMEN VERIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3
-      ],
-      "image_access_holds": [
-        {
-          "i": 3,
-          "reason": "Existing James Schnable greenhouse vegetation JPEG yielded GitHub blob metadata only; defer to separate image-access workflow rather than repeat normal QA.",
-          "git_blob_sha": "beb3706ee5ca28bac62e2d1cf6f5eb849e7d8b08"
-        }
-      ],
+      "unreviewed_hosted_indices": [],
+      "image_access_holds": [],
       "identity_cautions": [
         "Yucatán Jim Conrad photos i=4 and i=5 are provisionally assigned Urochloa cf. fusca and must not be used as confirmed species anatomy for Uvalde or Hays plants.",
         "Broad local classification remains UNRESOLVED and this pass must not infer county-level nativity."
@@ -2278,7 +2362,28 @@
         "queue_action": "Use existing master Photo Needs Queue; seek missing scaled glume/lemma and opened inner ligule, and do not duplicate general-photo download."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for Hays-key character matrix; this is visual role QA, not taxonomy, species-range or trait filter modification."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for Hays-key character matrix; this is visual role QA, not taxonomy, species-range or trait filter modification.",
+      "previous_pass": "PHASE4_PASS36_HOSTED_IMAGE_BATCH",
+      "previous_scope": "6 of 7 current Lab images rendered from actual GitHub-hosted image bytes; i=3 James Schnable greenhouse photo returned only metadata and is not counted. Photo-role check does not independently establish exact-image rights, determinations, or public Pages deployment.",
+      "pass46_photo_findings": [
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "no basal rachis, flowering spikelets, ligule or true wild rooted growth pattern visible",
+            "greenhouse stock photo is not a Hays County wild specimen"
+          ]
+        }
+      ],
+      "resolved_image_access_holds": [
+        {
+          "i": 3,
+          "reason": "Existing James Schnable greenhouse vegetation JPEG yielded GitHub blob metadata only; defer to separate image-access workflow rather than repeat normal QA.",
+          "git_blob_sha": "beb3706ee5ca28bac62e2d1cf6f5eb849e7d8b08",
+          "resolved_in": "PHASE4_PASS46",
+          "resolved_blob_sha": "beb3706ee5ca28bac62e2d1cf6f5eb849e7d8b08"
+        }
+      ]
     }
   },
   {
