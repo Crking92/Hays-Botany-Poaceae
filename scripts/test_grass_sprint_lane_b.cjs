@@ -1,7 +1,7 @@
 // Lane B regression suite. Run: node scripts/test_grass_sprint_lane_b.cjs
 // These assertions intentionally expose two false exclusions on pre-fix main.
 // Source: Hagenbuch & Lemke (2015), pp. 59 and 64 (printed), species accounts
-// for Poa arachnifera and Sporobolus compositus.
+// for Poa arachnifera, Sporobolus compositus, and Elymus canadensis (p. 47).
 // Do not merge with failing assertions. See Issue #70 for shard ownership.
 'use strict';
 const assert = require('node:assert/strict');
@@ -45,6 +45,10 @@ const mustKeep = [
   {head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},'sporobolus-compositus'],
  ['Composite dropseed: solitary or small clump',
   {head:'compact',habit:'tuft',ligule:'hairs',awns:'none_obvious'},'sporobolus-compositus'],
+ ['Canada wildrye: tufted usual form',
+  {head:'spike',habit:'tuft',ligule:'membrane',awns:'long'},'elymus-canadensis'],
+ ['Canada wildrye: occasional short underground rhizomes',
+  {head:'spike',habit:'rhizome',ligule:'membrane',awns:'long'},'elymus-canadensis'],
  ['Two Poa species overlap in tufted compact flowering form',
   {head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},'poa-annua'],
 ];
@@ -55,6 +59,10 @@ assert(!results({habit:'rhizome'}).includes('poa-annua'),
  'Annual bluegrass must not be inferred rhizomatous from its tuft');
 assert(!results({habit:'rhizome'}).includes('phalaris-caroliniana'),
  'Annual Carolina canarygrass is not rhizomatous');
+assert(!results({habit:'rhizome'}).includes('elymus-virginicus'),
+ 'Virginia wildrye must not be given Canada wildrye optional rhizomes');
+assert(!results({habit:'rhizome'}).includes('hordeum-pusillum'),
+ 'Little barley is an annual tuft, not rhizomatous');
 assert(!results({awns:'three'}).includes('sporobolus-compositus'),
  'Dropseed lacks the three long awns of Aristida');
 assert(!results({head:'burrs'}).includes('poa-arachnifera'),
@@ -69,4 +77,4 @@ assert(byId('poa-arachnifera').character_evidence,'Retain bluegrass evidence');
 assert(byId('sporobolus-compositus').character_evidence || byId('sporobolus-compositus').broad_group_screened,
  'Retain dropseed evidence');
 console.log(JSON.stringify({pass:true,scored:112,inventory:169,provisional:57,
- positivePaths:mustKeep.length,negativePaths:4,unknownRetention:true},null,2));
+ positivePaths:mustKeep.length,negativePaths:6,unknownRetention:true},null,2));
