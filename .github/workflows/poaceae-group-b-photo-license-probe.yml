@@ -19,5 +19,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Inspect five original iNaturalist observation photos and exact license fields
+      - name: Inspect original Group B photos and exact image license fields
         run: node scripts/probe_poaceae_group_b_photo_licenses.cjs

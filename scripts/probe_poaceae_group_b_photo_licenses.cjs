@@ -8,7 +8,14 @@ const observations = [
   {species:'Tridens congestus', id:232038649},
   {species:'Tridens congestus', id:135964547},
   {species:'Stapfochloa ciliata', id:141035831},
-  {species:'Stapfochloa ciliata', id:23580302}
+  {species:'Stapfochloa ciliata', id:23580302},
+  {species:'Tridentopsis elongata', id:377001623},
+  {species:'Tridentopsis elongata', id:367070671},
+  {species:'Tridentopsis elongata', id:366639842},
+  {species:'Eragrostis curtipedicellata', id:82930092},
+  {species:'Eragrostis curtipedicellata', id:62485653},
+  {species:'Elymus macgregorii', id:314369187},
+  {species:'Lolium × boucheanum', id:45834760}
 ];
 const unrestricted = new Set(['cc0','cc-by','cc-by-sa']);
 const acceptedOnlyIfGenuinelyNoncommercial = new Set(['cc-by-nc','cc-by-nc-sa']);
@@ -80,7 +87,7 @@ async function main() {
     }
   }
   console.log('TOTAL '+JSON.stringify(total));
-  for(const s of ['Pappophorum bicolor','Tridens congestus','Stapfochloa ciliata']) await discoverPermissiveReferencePhotos(s);
+  for(const s of ['Pappophorum bicolor','Tridens congestus','Stapfochloa ciliata','Tridentopsis elongata','Tridens muticus var. elongatus','Eragrostis curtipedicellata','Elymus macgregorii','Lolium × boucheanum','Lolium boucheanum']) await discoverPermissiveReferencePhotos(s);
   if(total.failedObservations===observations.length)process.exitCode=1;
 }
 
