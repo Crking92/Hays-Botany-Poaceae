@@ -1,0 +1,136 @@
+{
+  "project": "Hays Botany Poaceae Group C — Gallery Publication QA + Gap Closer",
+  "issue": 70,
+  "date": "2026-11-12",
+  "scope": "Only first three Group C species; evidence-only. Chat 2 sole photo publisher; Chat 1 CI/site release. No shared manifest, scoring, UI or image asset edits.",
+  "source_batch_ref": "audits/hays-expansion-20261111/group-c-gallery/group-c-batch1-first-three-20261112.json",
+  "issue70_baseline": {
+    "learner_records": 169,
+    "official_scored": 112,
+    "provisional": 57,
+    "current_photo_refs_in_assigned_first_three": 3,
+    "baseline_public_provisional_rendered_and_credited": "54/54 per latest Issue #70 live-browser check, not independently retested here"
+  },
+  "check_results": {
+    "assigned_reviewed": 3,
+    "new_source_files_whose_exact_pixels_rechecked": 6,
+    "publication_candidates_with_source_license_and_complementary_visible_role": 4,
+    "no_gallery_updates_by_chat4": 0,
+    "new_visible_published_photos_from_this_batch": 0,
+    "binary_hash_dedupe_against_repo_pending": true,
+    "publisher_final_acceptance_pending": true
+  },
+  "publication_priority": [
+    {
+      "species_id": "eragrostis-superba",
+      "file_name": "Starr 040723-9007 Eragrostis superba.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Starr_040723-9007_Eragrostis_superba.jpg",
+      "direct_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_040723-9007_Eragrostis_superba.jpg",
+      "photographer": "Forest & Kim Starr",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "commons_sha1": "52b22dab4b4848936e3ac4d4cae56f97e1cb5266",
+      "exact_pixels_visually_inspected": true,
+      "observed_role": "Complete uprooted grass specimen laid against gray-white background; crown, rooted basal growth, long narrow leaf blades and some hanging brown flowering/spikelet branches visible. NOT in-situ field habit.",
+      "complementary_to_existing": "Existing Bernard Dupont source shows a spikelet macro and no root/crown.",
+      "identity_certainty": "Commons and Starr source-labeled Eragrostis superba, Hawaii, nonlocal, not certified local specimen.",
+      "proposed_caption": "Wilman lovegrass — uprooted plant showing rooted crown, basal leaves and a few flowering branches (Hawaii reference).",
+      "publisher_status": "SOURCE_LICENSE_AND_VISIBLE_ROLE_CLEARED__PENDING_BINARY_DEDUPE_AND_SITE_CREDIT",
+      "evidence": "Exact Commons file credits and license, visual thumbnail directly opened; no manipulations",
+      "original_source": "https://starrenvironmental.com/images/search/?q=Eragrostis+superba"
+    },
+    {
+      "species_id": "phyllostachys-aurea",
+      "file_name": "Phyllostachys aurea1.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea1.jpg",
+      "direct_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea1.jpg",
+      "photographer": "KENPEI",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exact_pixels_visually_inspected": true,
+      "observed_role": "Close view of attached lanceolate bamboo leaf blades and one leafy branch, some leaves with brown speckling; no ligule, branch node or flowering units.",
+      "complementary_to_existing": "One current Gary Rogers image is source-recorded general growth habit.",
+      "identity_certainty": "KENPEI's named Phyllostachys aurea, Osaka cultivated/nonlocal photo, no local identity proof.",
+      "proposed_caption": "Golden bamboo — lanceolate foliage on a leafy branch (Japan cultivated reference).",
+      "publisher_status": "SOURCE_LICENSE_AND_VISIBLE_ROLE_CLEARED__PENDING_BINARY_DEDUPE_AND_SITE_CREDIT"
+    },
+    {
+      "species_id": "phyllostachys-aurea",
+      "file_name": "Phyllostachys aurea2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea2.jpg",
+      "direct_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea2.jpg",
+      "photographer": "KENPEI",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exact_pixels_visually_inspected": true,
+      "observed_role": "Close view of a smooth golden-green culm, dark node ring and two nearby branches growing from one stem junction; shows ONE normal node area, not the diagnostic compressed short basal internodes.",
+      "complementary_to_existing": "Shows branch/culm attachment detail absent from general bamboo habit and separate leaf photos.",
+      "identity_certainty": "Named species source, Osaka Japan cultivated/nonlocal.",
+      "proposed_caption": "Golden bamboo — culm node ring and attached branches (Japan cultivated reference); not a compressed-internode example.",
+      "publisher_status": "SOURCE_LICENSE_AND_VISIBLE_ROLE_CLEARED__PENDING_BINARY_DEDUPE_AND_SITE_CREDIT"
+    },
+    {
+      "species_id": "phyllostachys-aurea",
+      "file_name": "Phyllostachys-écaille-tortue.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys-%C3%A9caille-tortue.JPG",
+      "direct_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys-%C3%A9caille-tortue.JPG",
+      "photographer": "Abrahami",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "commons_sha1": "fa6829e49b4936ef47c8b46b5f320780fc31f33a",
+      "exact_pixels_visually_inspected": true,
+      "observed_role": "Multiple upright culms at ground level; rightmost green culm visibly has closely stacked enlarged node rings/short internodes near its basal section compared with more normally spaced nodes on left culms.",
+      "complementary_to_existing": "Unique diagnostic shorter compressed lower-culm internodes, missing from old single reference and the KENPEI grove file.",
+      "identity_certainty": "Source file specifically states Phyllostachys aurea; cultivated/nonlocal France, no corroborating voucher; photographed characteristic compatible with name.",
+      "proposed_caption": "Golden bamboo — crowded lower culm nodes ('tortoiseshell' internodes), contrasted with nearby regular culms (France garden reference).",
+      "publisher_status": "SOURCE_LICENSE_AND_VISIBLE_ROLE_CLEARED__PENDING_BINARY_DEDUPE_AND_SITE_CREDIT"
+    }
+  ],
+  "explicit_holds": [
+    {
+      "species_id": "phyllostachys-aurea",
+      "file_name": "Phyllostachys aurea3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea3.jpg",
+      "reason": "IMPORTANT CORRECTION: Actual image is a broad leafy bamboo grove/stand, NOT diagnostic compressed basal nodes as previous Batch1 note speculated. Similar to pre-existing general-habit role; do not prioritize as an anatomy photo.",
+      "status": "HOLD_REDUNDANT_GENERAL_VIEW"
+    },
+    {
+      "species_id": "phyllostachys-aurea",
+      "file_name": "Phyllostachys aurea - Kew Gardens, London - DSC03662.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea_-_Kew_Gardens,_London_-_DSC03662.jpg",
+      "reason": "Actual photo = entire dense leafy cultivated stand. CC0 rights are fine but overlaps existing generic habit and KENPEI3; use only when current gallery lacks a broad plantation view, not for anatomy.",
+      "status": "HOLD_OPTIONAL_REDUNDANT_HABIT"
+    },
+    {
+      "species_id": "phyllostachys-aurea",
+      "file_name": "Golden Bamboo (Phyllostachys Aureosulcata) Compressed Internodes.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Golden_Bamboo_(Phyllostachys_Aureosulcata)_Compressed_Internodes.jpg",
+      "reason": "Although descriptive text calls it aurea, filename explicitly names different species aureosulcata. Identity conflict; DO NOT install as aurea without source resolution.",
+      "status": "HOLD_TAXON_ID_CONFLICT"
+    },
+    {
+      "species_id": "eragrostis-superba",
+      "file_name": "Eragrostis superba, blompakkies, Dingaanstat, a.jpg",
+      "reason": "Same close-up spikelet role as current Bernard Dupont image. Actual pixel not reviewed here; do not prioritize over real whole-plant Starr image.",
+      "status": "HOLD_LOW_PRIORITY_ROLE_DUPLICATE"
+    }
+  ],
+  "unresolved_paspalum_langei": {
+    "current_photo": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Paspalum+Langei_infl+3.JPG&id=3514",
+    "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3514",
+    "current_source_status": "One exact Larry Allain/USGS flowering-raceme photo already configured; website gives four other source-credited photographs without accessible per-image filename links in available text output.",
+    "result": "No new exact verified USGS filename or image pixels recovered. DO NOT guess GivenFile names or call 4 additional files cleared.",
+    "promising_unapproved_alternative": {
+      "source_page": "https://wildflowersearch.org/search?tsn=41025",
+      "original_observation": "https://www.inaturalist.org/observations/31311178",
+      "creator": "Sophia K",
+      "reported_license": "CC BY (WildflowerSearch third-party listing)",
+      "locality": "Georgetown, Texas, August 22 2019",
+      "status": "HOLD_ORIGINAL_EXACT_PHOTO_LICENSE_AND_IMAGE_PIXELS_UNCHECKED",
+      "reason": "Original iNaturalist observation loaded without accessible photo/license metadata in web text output; source site's thumbnail and license statement alone do not establish final exact image."
+    },
+    "other_holds": "WildflowerSearch also displays Kathy McAleese images licensed CC BY-NC-ND; do NOT use these on public gallery."
+  },
+  "next_step_for_chat2": "Prioritize the four exact rights-cleared complementary Commons photos from two taxa; dedupe by original hash/url/bytes, install via sole-writer shared manifest; run public mobile/desktop gallery pixel+creator/license/source verification with Chat1. Leave Paspalum and all holds untouched pending exact source photo rights and actual pixels.",
+  "next_step_for_chat4": "After Chat2 publication, verify actually rendered source-specific role diversity and attribution for these first three species, report broken photos and mismatched credits with exact URLs. Then inspect previously gathered Batch2 candidates, not broad audit."
+}
