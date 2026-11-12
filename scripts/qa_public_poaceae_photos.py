@@ -76,6 +76,8 @@ def audit():
                         credit_ok=bool(creator and license_name and creator in caption
                                        and license_name in caption)
                         source_ok=bool(source and any(unquote(link)==unquote(source) for link in links))
+                        license_terms=phot.get("license_url","")
+                        license_link_ok=bool(license_terms and any(unquote(link)==unquote(license_terms) for link in links))
                         image=fig.locator("img")
                         pixel_ok=False
                         src_ok=False
@@ -93,12 +95,13 @@ def audit():
                                 reason=f"Image did not render: {type(ex).__name__}"
                         else:
                             reason="Missing image element / public gallery fallback"
-                        passed=bool(pixel_ok and credit_ok and source_ok and src_ok)
+                        passed=bool(pixel_ok and credit_ok and source_ok and src_ok and license_link_ok)
                         record["visible_with_credit"] += int(passed)
                         record["photos"].append({
                             "label":phot.get("label"),"visible_and_credited":passed,
                             "pixels":pixel_ok,"creator_license":credit_ok,
                             "exact_source_link":source_ok,"exact_asset_link":src_ok,
+                            "exact_license_terms_link":license_link_ok,
                             "failure":reason if not passed else ""})
                 except Exception as ex:
                     record["error"]=str(ex)[:500]
