@@ -82,7 +82,31 @@ const positives = [
   ['Reverchon unresolved bristles tuft',{head:'sparse_bristles',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['setaria-reverchonii']],
   ['plains lovegrass tuft',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['eragrostis-intermedia']],
   ['plains lovegrass rhizome',{head:'airy',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['eragrostis-intermedia']],
-  ['mourning lovegrass',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['eragrostis-lugens']]
+  ['mourning lovegrass',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['eragrostis-lugens']],
+  // Lane B — #71: previously excluded regional growth forms.
+  ['Texas bluegrass rhizomes hidden',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['poa-arachnifera']],
+  ['Texas bluegrass rhizome exposed',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane'},['poa-arachnifera']],
+  ['composite dropseed true rhizome',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['sporobolus-compositus']],
+  ['composite dropseed tuft',{head:'compact',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['sporobolus-compositus']],
+  ['Canada wildrye usual tuft',{head:'spike',habit:'tuft',ligule:'membrane',awns:'long'},['elymus-canadensis']],
+  ['Canada wildrye occasional short rhizome',{head:'spike',habit:'rhizome',ligule:'membrane',awns:'long'},['elymus-canadensis']],
+  ['two Poa species overlapping',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['poa-annua']],
+  // Lane C — #75: long-lived false-exclusion regression controls.
+  ['fall witchgrass rhizome wiry',{head:'wiry',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['digitaria-cognata']],
+  ['fall witchgrass rhizome airy',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['digitaria-cognata']],
+  ['broomsedge true ciliate ligule',{head:'short_racemes',habit:'tuft',ligule:'hairs',awns:'long'},['anatherum-virginicum']],
+  ['cedar panicgrass minute membrane',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['dichanthelium-pedicellatum']],
+  ['rice cutgrass aboveground tuft',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['leersia-oryzoides']],
+  ['common reed dense tuft membrane',{head:'reed_plume',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['phragmites-australis']],
+  ['common reed true rhizome hair fringe',{head:'reed_plume',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['phragmites-australis']],
+  ['common reed tuft hair fringe',{head:'reed_plume',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['phragmites-australis']],
+  ['southern wildrice wetland clump',{head:'aquatic_mixed',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['zizaniopsis-miliacea']],
+  ['southern wildrice airy clump',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['zizaniopsis-miliacea']],
+  ['brownseed signalgrass ciliate membrane tuft',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['urochloa-fusca']],
+  ['brownseed signalgrass ciliate membrane mat',{head:'one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['urochloa-fusca']],
+  // Source conflict — neither historic Hopia growth-form path may be silently erased.
+  ['Hopia aboveground stolon pathway',{habit:'mat',head:'long_narrow_panicle'},['hopia-obtusa']],
+  ['Hopia historical rhizome pathway',{habit:'rhizome',head:'long_narrow_panicle'},['hopia-obtusa']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -98,7 +122,19 @@ const negatives = [
   [{awns:'burs'},'setaria-scheelei'],
   [{awns:'burs'},'setaria-reverchonii'],
   [{awns:'long'},'eragrostis-lugens'],
-  [{head:'foxtail'},'eragrostis-intermedia']
+  [{head:'foxtail'},'eragrostis-intermedia'],
+  // Lane B/C — protect the rejected alternatives as well as permitted paths.
+  [{habit:'rhizome'},'poa-annua'],
+  [{habit:'rhizome'},'phalaris-caroliniana'],
+  [{habit:'rhizome'},'elymus-virginicus'],
+  [{habit:'rhizome'},'hordeum-pusillum'],
+  [{awns:'three'},'sporobolus-compositus'],
+  [{head:'burrs'},'poa-arachnifera'],
+  [{habit:'mat',head:'wiry'},'digitaria-cognata'],
+  [{awns:'bristles',head:'short_racemes'},'anatherum-virginicum'],
+  [{head:'reed_plume',ligule:'absent'},'phragmites-australis'],
+  [{head:'one_sided',ligule:'absent'},'urochloa-fusca'],
+  [{head:'aquatic_mixed',awns:'long'},'zizaniopsis-miliacea'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
