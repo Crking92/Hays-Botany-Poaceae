@@ -231,3 +231,13 @@ The user has chosen **Hagenbuch & Lemke (2015), _Grasses of the Texas Hill Count
 - [Current candidate cards and progress counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
 
 **Scope caution:** Literature profiles only, not observed specimen IDs. 0 newly inspected image pixels, 0 final ID signoffs, 0 authorized published images, 0 live merges; original 112 species and site files untouched. Keep *Oplismenus hirtellus* historical *setarius* split, *Sphenopholis interrupta* old *Trisetum* classification, *Hordeum murinum* leporinum issue and mowed *Paspalum notatum* turf context as review holds. Remaining diagnostic packet taxa: 25.
+
+## Hays expansion Phase 2 diagnostic packet 5 — November 11, 2026
+
+**40/57 research-only source diagnostic profiles complete with 219 reference statements**. Latest eight: Steinchisma hians, Dichanthelium acuminatum, Panicum dichotomiflorum, Panicum repens, Pappophorum bicolor, Stapfochloa ciliata, Stapfochloa canterae, Megathyrsus maximus.
+
+- [Packet 5 readable report](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md)
+- [Packet 5 data](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.json)
+- [57 staging card index / counters](https://github.com/Crking92/Hays-Botany-Poaceae/blob/inat-coverage-audit-20261111/audits/hays-expansion-20261111/hays-57-draft-id-cards.json)
+
+**Critical holds:** D. acuminatum old Panicum-variety concepts; S. hians historical name P. hians; S. canterae-versus-S. ciliata true microscopic discriminant not yet confirmed; Panicum dichotomiflorum remains zero source pixels viewed; P. repens missing sharp-tipped rhizome; M. maximus may only be planted. **Zero new source images inspected in this pass, zero botanical species signoffs, zero rights-approved new photos, zero live merges.** Original 112 live key and galleries untouched. **17 candidates remain for Phase 2 reference dossier preparation.**
