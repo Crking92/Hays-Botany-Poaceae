@@ -1087,14 +1087,16 @@
     "common": "Blue grama",
     "scientific": "Bouteloua gracilis",
     "range": "PASS",
-    "field_rule": "Blue grama usually bears 1–3 long curved terminal eyebrow combs whose spikelets extend nearly to the end. Hairy grama often has dense long hairs and a conspicuously bare terminal rachis projection. Pectinata is generally taller with longer and often more numerous combs but overlaps hairy. Texas grama has several much shorter bristly clustered branches. Sideoats has many short side branches all the way down a long stem.",
+    "field_rule": "Blue grama usually bears 1–3 long curved terminal eyebrow combs whose spikelets extend nearly to the end. Hairy grama often has dense long hairs and a conspicuously bare terminal rachis projection. Pectinata is generally taller with longer and often more numerous combs but overlaps hairy. Texas grama has several much shorter bristly clustered branches. Sideoats has many short side branches all the way down a long stem. Blue grama can also have SHORT STOUT RHIZOMES or form an open low sod; some low culms bend and root at nodes. A rooted decumbent culm is not automatically a true stolon. Retain tuft, verify an underground stem before selecting rhizome, and use attached curved combs plus mature spikelets for the actual identification.",
     "hero_i": 3,
     "traits": {
       "head": [
         "combs"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome",
+        "mat"
       ],
       "ligule": [
         "hairs"
@@ -1182,6 +1184,24 @@
         "status": "LITERATURE_SUPPORTED_POSSIBLE_SHORT_THREE_AWNS_BUT_NOT_ALL_SPECIMENS_OR_VISUALS",
         "review_date": "2026-11-11",
         "audit_note": "Short three-awn appearance requires an actual mature floret; at field scale 'no conspicuous long awns' may still be chosen. Local exact-floret proof outstanding."
+      },
+      "habit": {
+        "source": "Flora of North America, J.K. Wipff, Bouteloua gracilis account; USDA Forest Service Fire Effects Information System (FEIS), Michelle Anderson (2003), Blue grama species review; Utah State University Range Plants, Blue Grama",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=607426",
+        "secondary_source_url": "https://research.fs.usda.gov/feis/species-reviews/bougra",
+        "tertiary_source_url": "https://extension.usu.edu/rangeplants/grasses-and-grasslikes/blue-grama",
+        "source_hierarchy_exception": "Hagenbuch & Lemke (2015) has no B. gracilis species description. Diggs et al. (1999) remains primary for its reproductive comb architecture; FNA and USFS supply the missing vegetative range.",
+        "reference": "FNA reports usually dense tufts, often short stout rhizomes, and culms that can be decumbent and rooted at lower nodes. USFS notes growth from a bunch to open sod or mat-like turf under some conditions; it also documents disagreement about rhizome development. Under this key, mat means low surface-rooting/sprawling growth, NOT a claim that all B. gracilis have aboveground stolons. Keep tuft and add conditional rhizome and mat visual options; no Hays specimen or linked local rhizome photograph newly authenticated.",
+        "role": "vegetative",
+        "reported_states": [
+          "tuft (typical)",
+          "short stout rhizomes (FNA; disputed in some secondary studies)",
+          "open sod or rooted low decumbent culms (FNA/USFS; not proven stolons)"
+        ],
+        "reported_conflict": "USFS FEIS records disagreement among studies about rhizome formation and stoloniferous ecotypes, especially by region and grazing management.",
+        "status": "SUPPLEMENTAL_FNA_USFS_HL_TREATMENT_ABSENT_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "Existing whole-plant and comb photographs unchanged; no new same-specimen Hays-region underground stem, rooted culm, or voucher verified."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1209,6 +1229,14 @@
         "certainty": "Flora/GrassBase morphological range; current photo does not independently certify this exact floret",
         "source": "Kew GrassBase Bouteloua gracilis; Utah Valley University flora description",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1026047-2/general-information"
+      },
+      {
+        "look": "Follow blue grama's low spreading shoots and check for real short rhizomes",
+        "check": "Blue grama is usually a tuft, but some plants have short stout buried stems or a low sod-like patch. A rooted decumbent flowering culm can look mat-forming without being a stolon. Confirm a true stem, with nodes and scale leaves, before calling it a rhizome.",
+        "compare": "Hairy grama shares comb-like branches but more often has a sharp naked axis tip; the shape of a clump or a mat alone cannot identify blue grama.",
+        "certainty": "FNA and USFS corroborate additional visual possibilities; literature disputes regional frequency of rhizomes and no Hays attached rootstock was certified",
+        "source": "Flora of North America — Bouteloua gracilis; USDA FEIS Blue grama (2003)",
+        "url": "https://research.fs.usda.gov/feis/species-reviews/bougra"
       }
     ],
     "diagnostic_review": {
