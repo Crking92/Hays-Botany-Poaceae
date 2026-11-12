@@ -318,12 +318,18 @@ function renderModeHeader(root){
 function renderResearchCandidate(d,root){
  const intro=txt("section","","learning-intro");
  intro.append(txt("p","Provisional species record — published descriptions, not a verified Hays specimen or approved image.","photo-hold"));
- intro.append(txt("p","No photograph has been approved for this new Learner card. Original observation links below are research sources, not licenses to republish those photographs."));
+ const approved=Array.isArray(d.approved_gallery)?d.approved_gallery:[];
+ if(approved.length)intro.append(txt("p",approved.length+" source-credited general photograph"+(approved.length===1?"":"s")+" cleared for this reference card. These are nonlocal visual examples, not certified Hays voucher specimens. Each image retains its creator, license and original-source link.","source-flag"));
+ else intro.append(txt("p","No general photograph has yet cleared exact-image rights and source checks for this species. Original observation links below are research sources, not licenses to republish images."));
  if(d.local_report_count)intro.append(txt("p","Research packet links "+d.local_report_count+" local observation reports; individual identities and native status remain to be verified.","muted"));
  if(d.aliases?.length)intro.append(txt("p","Other recorded names: "+d.aliases.join("; "),"muted"));
  if(d.risky_context)intro.append(txt("p","Check planted, cultivated or escaped occurrence context before accepting the local record.","photo-hold"));
  if(typeof d.unresolved==="string"&&d.unresolved)intro.append(txt("p","Pending evidence: "+d.unresolved,"muted"));
  root.append(intro);
+ if(approved.length){
+  root.append(txt("p","General photo gallery first: browse these rights-checked reference views. They are NOT proof of fine diagnostic structures; anatomy and specimen identification remain separate.","muted"));
+  photoGallery({scientific:d.scientific,panels:approved,unavailable_references:[]},root);
+ }
  const chars=Array.isArray(d.details)?d.details:[];
  if(state.mode==="terms"){
   root.append(txt("h3","Botanical vocabulary for this species"));
@@ -392,7 +398,7 @@ function renderSelected(){
  const root=$("species-detail");root.replaceChildren();
  root.append(txt("p","POACEAE · "+(d.genus||d.scientific.split(" ")[0]),"eyebrow"),txt("h2",d.common||d.scientific),txt("p",d.scientific,"subtitle"));
  if(state.research.has(d.id)){
-   root.append(txt("p","Provisional record in the 169-grass Learner. Species ID, photo rights and local occurrence have not passed release checks; this taxon is not scored in the ID Lab.","notice-stage"));
+   root.append(txt("p","Provisional taxon identity in the 169-grass Learner. Any cleared example photographs show their own individual reuse permissions below. Local occurrence and scored-key identification are not yet approved.","notice-stage"));
    renderModeHeader(root);
    renderResearchCandidate(d,root);
    return;
