@@ -1194,7 +1194,8 @@
         "fingers"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "membrane"
@@ -1211,6 +1212,20 @@
         "reference": "p.180 (printed 1256): Chloris generic ciliate membrane, also supported by existing Hays species card; detailed form unverified",
         "status": "PARTIAL_REGIONAL_FLORA_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41, Chloris andropogonoides",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+        "category": "vegetative",
+        "reference": "Perennial, cespitose; RHIZOMES ABSENT, stolons SHORT OR ABSENT, culms sometimes geniculate. Source-supported tuft plus optional short surface-runner visual option; low runner does not certify widespread matting or hybrid identity.",
+        "reported_states": [
+          "cespitose perennial",
+          "stolons short or absent",
+          "rhizomes absent"
+        ],
+        "certainty": "DIRECT_REGIONAL_SOURCE_CONDITIONAL_SURFACE_RUNNER_HAYS_BASE_PHOTO_PENDING",
+        "status": "SOURCE_SUPPORTED_VARIABLE_SURFACE_HABIT",
+        "review_date": "2026-11-11"
       }
     },
     "diagnostic_checks": [
@@ -1229,6 +1244,14 @@
         "certainty": "Regional hybridization warning; detailed floral discriminants still needed",
         "source": "Hagenbuch & Lemke 2015, p.41",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf"
+      },
+      {
+        "look": "Do not reject slimspike windmillgrass solely for short surface stolons",
+        "check": "Hill Country authors (2015, p. 41) describe a perennial tuft with stolons short or absent, never verified rhizomes in this account. A surface-rooting plant can still match C. andropogonoides. Confirm the weakly keeled sheath, blunt or mucronate blade tip, and reproductive characters; hybrids are possible in mixed populations.",
+        "compare": "C. cucullata and C. verticillata; hybrids/introgressants can share vegetative characters",
+        "certainty": "Direct local-regional literature; actual individual-stolon field image not yet certified",
+        "source": "Hagenbuch & Lemke 2015, p. 41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41"
       }
     ],
     "diagnostic_review": {
@@ -1348,7 +1371,8 @@
         "whorls"
       ],
       "habit": [
-        "mat"
+        "mat",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -1366,6 +1390,20 @@
         "reference": "Accepted hybrid of C. cucullata × C. verticillata; digitate or closely whorled heads and intermediate sterile-floret anatomy. Both broad states permitted; hybrid identification from appearance not verified.",
         "status": "HYBRID_INTERMEDIATE_PROVISIONAL",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), p. 41, parental Chloris mixed populations / introgression; Kew POWO existing confirmed Chloris × subdolichostachya hybrid concept",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+        "category": "vegetative",
+        "reference": "REGIONAL AUTHORS DO NOT PROVIDE A SEPARATE HYBRID VEGETATIVE DESCRIPTION. The parental C. cucullata and C. verticillata are described as cespitose, and the regional authors warn that hybrid/introgressed populations combine parental traits. A visible tuft should not automatically eliminate a possible intermediate; retain the previously allowed surface-spreading choice as well, but neither state constitutes verified hybrid-specific morphology.",
+        "reported_states": [
+          "hybrid-specific habit unresolved",
+          "tuft possible from regional parental morphology, NOT verified as a diagnostic hybrid trait",
+          "mat previous provisional state retained"
+        ],
+        "certainty": "CONSERVATIVE_FILTER_NONEXCLUSION_NOT_A_SPECIMEN_OR_HYBRID_VERIFICATION",
+        "status": "PARENT_DERIVED_PROVISIONAL_TUFT_OPTION_UNVERIFIED_HYBRID",
+        "review_date": "2026-11-11"
       }
     },
     "diagnostic_checks": [
@@ -1384,6 +1422,14 @@
         "certainty": "Research/photo worklist; this check is a caution not a confirmed diagnosis",
         "source": "Kew POWO hybrid concept; Hagenbuch & Lemke p.41",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information"
+      },
+      {
+        "look": "Hybrid warning: a tuft or low runner cannot prove parentage",
+        "check": "Hagenbuch & Lemke (2015, p. 41) document mixed populations with intermediates among three local Chloris species. They do not provide a separate growth-habit diagnosis of this hybrid. The key permits both tuft and low surface spread to prevent false exclusion; neither is evidence of the hybrid. Obtain mature fertile and sterile florets plus population documentation.",
+        "compare": "C. cucullata, C. verticillata and C. andropogonoides; broad hybrid possibilities remain provisional",
+        "certainty": "Conservative nonexclusion only, source account has no independent hybrid growth-form verification",
+        "source": "Hagenbuch & Lemke 2015, p. 41; Kew POWO taxonomic concept",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41"
       }
     ],
     "diagnostic_review": {

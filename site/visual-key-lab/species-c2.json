@@ -65,7 +65,8 @@
         "whorls"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "membrane"
@@ -90,6 +91,20 @@
         "reference": "p.180 (printed 1256): one terminal whorl of short 2–5cm branches, not several spaced tiers; ciliate membranous ligule",
         "status": "PARTIAL_REGIONAL_FLORA_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41, Chloris cucullata",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+        "category": "vegetative",
+        "reference": "Perennial, cespitose with rhizomes absent and short stolons present OR absent. Tuft is usual; optional low surface runners merit a second inclusive 'mat' visual selection. The latter does not mean all plants form dense turf.",
+        "reported_states": [
+          "perennial tufted crown",
+          "rhizomes absent",
+          "stolons short or absent"
+        ],
+        "certainty": "DIRECT_REGIONAL_SOURCE_CONDITIONAL_STOLONS_LOCAL_BASE_PHOTO_PENDING",
+        "status": "SOURCE_SUPPORTED_VARIABLE_SURFACE_HABIT",
+        "review_date": "2026-11-11"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -117,6 +132,14 @@
         "certainty": "Different floras describe 1 vs closely spaced whorls; broad key must tolerate both",
         "source": "Kew GrassBase + Texas Hill Country regional descriptions",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information"
+      },
+      {
+        "look": "Follow the base for occasional short surface stolons",
+        "check": "The Hill Country account (2015, p. 41) explicitly permits short stolons although the plant is predominantly tufted. A stolon-bearing plant should remain a hooded-windmillgrass possibility; to identify it, examine the short crowded flowering branches and the inflated upper sterile lemma.",
+        "compare": "Slimspike and feather windmillgrass may also have short stolons; tumble windmillgrass is often tufted and may show low rooting culms",
+        "certainty": "Source-backed optional growth form; source photo does not prove an individual plant has stolons",
+        "source": "Hagenbuch & Lemke 2015, p. 41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41"
       }
     ],
     "diagnostic_review": {
@@ -2308,7 +2331,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Use size/architecture to find the candidate; do not finalize without collar anatomy and mature spikelets.",
+    "field_rule": "Use size/architecture to find the candidate; do not finalize without collar anatomy and mature spikelets. Vegetative caution: Hagenbuch & Lemke (2015, pp. 49–50) found no dependable leaf/base characters separating sand lovegrass from red lovegrass (E. secundiflora); wait for mature flowering structures.",
     "traits": {
       "head": [
         "airy"
@@ -2359,6 +2382,14 @@
         "certainty": "Regional sources agree broadly; membrane base and precise hair boundary await macro photo",
         "source": "Texas A&M Plants of Texas Rangelands — Sand Lovegrass",
         "url": "https://rangeplants.tamu.edu/plant/sand-lovegrass/"
+      },
+      {
+        "look": "Without mature spikelets, leave red and sand lovegrass unresolved",
+        "check": "Hagenbuch & Lemke (2015, pp. 49–50) explicitly report no reliable vegetative character separating E. trichodes from E. secundiflora. Both may be tufted with a very short hair-fringe ligule. Do not identify sand lovegrass from leaf width, collar hairs, or tuft form alone; collect a connected mature panicle and compare floral measurements.",
+        "compare": "Eragrostis secundiflora (red lovegrass); source describes overlapping vegetative structures, while reproductive characters are needed for separation",
+        "certainty": "Direct Hill Country vegetative limitation; exact specimen-level reproductive confirmation pending",
+        "source": "Hagenbuch & Lemke 2015, pp. 49–50",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50"
       }
     ],
     "diagnostic_review": {

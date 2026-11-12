@@ -733,7 +733,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Physical species-recognition evidence: reddish compressed many-flowered spikelets + real leaf sheath/collar, with oxylepis qualification on the Goldman macro references; do not substitute appearance for same-specimen microscopy.",
+    "field_rule": "Physical species-recognition evidence: reddish compressed many-flowered spikelets + real leaf sheath/collar, with oxylepis qualification on the Goldman macro references; do not substitute appearance for same-specimen microscopy. Vegetative caution: red lovegrass and sand lovegrass (E. trichodes) cannot be reliably separated by leaves and crown alone in the 2015 Hill Country treatment; compare mature spikelets instead.",
     "traits": {
       "head": [
         "airy",
@@ -794,6 +794,14 @@
         "certainty": "Taxon concept and photo microscopy unresolved; do not label all red-flowered Eragrostis subsp. oxylepis without voucher",
         "source": "Kew GrassBase — Eragrostis secundiflora; FNA regional taxon concept",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:322572-2/general-information"
+      },
+      {
+        "look": "Do not certify red lovegrass from vegetative traits alone",
+        "check": "Hagenbuch & Lemke (2015, p. 49) found no reliable vegetative characters separating E. secundiflora and E. trichodes. Both can have tufted crowns and a very short hair-fringe ligule. The alternate microscopic membrane-base interpretation in some E. secundiflora records is a source nuance, NOT verified standalone proof that a similar vegetative plant cannot be sand lovegrass.",
+        "compare": "E. trichodes (sand lovegrass); compare mature spikelet width, florets, glumes and lemma dimensions on an attached plant",
+        "certainty": "Direct Hill Country vegetative limitation; floral identification requires separate reproductive-source review",
+        "source": "Hagenbuch & Lemke 2015, p. 49",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49"
       }
     ],
     "diagnostic_review": {
@@ -2758,6 +2766,14 @@
         "certainty": "Kew GrassBase; need actual glume/lemma separation with scale, not head color",
         "source": "Kew GrassBase — Muhlenbergia reverchonii",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164871-2/general-information"
+      },
+      {
+        "look": "Compare the source-measured blades and ligule against Lindheimer muhly",
+        "check": "Hagenbuch & Lemke (2015, p. 55) describe seep muhly's thin arcuate, involute blades about 1–2 mm wide and a firm-based membranous ligule 2–9 mm, with a delicate tuft. Lindheimer muhly generally has broader (2–3, occasionally 5 mm) folded blades and a longer 8–15 mm membrane. These ranges overlap; blade width or size alone is not a determination.",
+        "compare": "Muhlenbergia lindheimeri (Lindheimer muhly); verify intact collar + basal tuft and then panicle architecture",
+        "certainty": "Regional directly read vegetative characters; broad ligule remains membrane, no scoring alteration or individual plant certification",
+        "source": "Hagenbuch & Lemke 2015, pp. 54–55",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55"
       }
     ],
     "diagnostic_review": {
