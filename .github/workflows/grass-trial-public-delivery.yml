@@ -1,5 +1,9 @@
 name: Grass trial public delivery — verify eighteen normal-key cards and credit links
 on:
+  pull_request:
+    paths:
+      - 'scripts/smoke_public_grass_trial.py'
+      - '.github/workflows/grass-trial-public-delivery.yml'
   push:
     branches: [main]
     paths:
