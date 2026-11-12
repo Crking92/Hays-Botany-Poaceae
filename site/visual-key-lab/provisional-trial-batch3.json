@@ -1,0 +1,1016 @@
+{
+  "schema": "hays-botany-grass-provisional-trial-batch3",
+  "date": "2026-11-12",
+  "status": "NONADMITTED_FIELD_TRIAL_ONLY",
+  "original_scored": 112,
+  "provisional_inventory": 57,
+  "existing_trial_profiles": 12,
+  "new_trial_profiles": 6,
+  "source_manifest": "hays-candidates.json",
+  "source_manifest_sha": "bf84851689d6e887dc9f2e6519418f2469076281",
+  "notes": "Photos are unchanged exact source/credit references, not newly installed files or local vouchers; no native county classification. Six additional broad research hypotheses in the existing key.",
+  "profiles": [
+    {
+      "id": "triticum-aestivum",
+      "scientific": "Triticum aestivum",
+      "common": "Bread Wheat",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 6,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+      "local_report_count": 8,
+      "warning_flags": [
+        "CHECK_PLANTED_OR_ESCAPED",
+        "CROP_OR_TRANSIENT_ESCAPE"
+      ],
+      "field_rule": "Research trial: look for an unbranched cereal spike with alternating sessile spikelets, an inner membranous ligule and (when visible) leaf auricles. Wheat cultivars and other cereal grasses overlap; lemma awns and tufting are deliberately left unknown. Never infer a wild Hays population from crop imagery.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Triticum aestivum 201303535.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Triticum_aestivum_201303535.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Triticum_aestivum_201303535.jpg",
+          "original_source_page": "https://www.inaturalist.org/photos/201303535",
+          "creator": "John Abrams",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Bread wheat: U.S. plant photo",
+          "caption": "Kentucky source-labeled bread-wheat reference; cereal cultivar, flowering/spikelet diagnosis and wild-versus-crop status remain provisional.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "triticum-aestivum",
+          "role": "General reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Wikimedia Commons individual file page checked for named creator and photo-specific Creative Commons license; original source linked",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original image; only responsive display sizing"
+        },
+        {
+          "i": 1,
+          "image_filename": "Triticum aestivum 103131273.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Triticum_aestivum_103131273.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Triticum_aestivum_103131273.jpg",
+          "original_source_page": "https://www.inaturalist.org/photos/103131273",
+          "creator": "Patrick Hacker",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Bread wheat: European plant photo",
+          "caption": "Austria source-labeled bread-wheat reference; no inference of a spontaneous Hays County occurrence.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "triticum-aestivum",
+          "role": "General reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Wikimedia Commons individual file page checked for named creator and photo-specific Creative Commons license; original source linked",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original image; only responsive display sizing"
+        }
+      ],
+      "genus": "Triticum",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+          "reviewed_for_admission": false,
+          "notes": "Original source claims map to broad four-question hypotheses; missing/ambiguous states intentionally left empty. No Hays specimen verification, photographic anatomy certification or county BONAP approval."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_ONLY",
+          "source_details": {
+            "head": [
+              {
+                "part": "spike",
+                "source": "Regional Flora 1999",
+                "description": "Stiff, unbranched, two-sided terminal spike with sessile spikelets at opposite sides of a zigzag rachis"
+              }
+            ],
+            "habit": [],
+            "ligule": [
+              {
+                "part": "ligule",
+                "source": "Regional Flora 1999",
+                "description": "Membranous ligule about 2–3 mm in regional treatment"
+              }
+            ],
+            "awns": []
+          },
+          "source_packet": 6,
+          "nonexclusive_states": "Dactyloctenium and Cenchrus habit withheld where source describes overlapping spreading/tuft forms."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Annual cereal grass about 40–100 cm tall in the regional Flora; crop or transient escaped volunteer is possible",
+          "needed_view": "whole rooted plant with habitat",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "auricle",
+          "check": "Two narrow pointed leaf auricles are present but may wither early",
+          "needed_view": "blade–sheath junction showing auricles",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Membranous ligule about 2–3 mm in regional treatment",
+          "needed_view": "inner ligule with mm scale",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spike",
+          "check": "Stiff, unbranched, two-sided terminal spike with sessile spikelets at opposite sides of a zigzag rachis",
+          "needed_view": "complete spike and rachis joints",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "florets",
+          "check": "Spikelets typically 2–5-flowered, with lower two or three florets fertile",
+          "needed_view": "dissected spikelet",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glumes",
+          "check": "Broad asymmetric glumes at least around 3.6 mm wide, usually 3 or more veined, potentially awned or awnless",
+          "needed_view": "flattened glume with veins and ruler",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH3_PENDING_LOCAL_ID",
+        "unresolved": "Wheat versus other Triticum, Hordeum or cereal cultivar forms cannot be established with certainty at this scale; observations may be crop or seed spill escapes rather than wild populations."
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true
+      },
+      "source_notes": {
+        "unresolved": "Wheat versus other Triticum, Hordeum or cereal cultivar forms cannot be established with certainty at this scale; observations may be crop or seed spill escapes rather than wild populations.",
+        "risky_context": true,
+        "field_view": "Distinct stiff, terminal wheatlike cereal spikes; some mature awned and some green heads, with full plant bases.",
+        "source_taxonomic_aliases": []
+      }
+    },
+    {
+      "id": "polypogon-viridis",
+      "scientific": "Polypogon viridis",
+      "common": "water beard grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 4,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md",
+      "local_report_count": 3,
+      "warning_flags": [],
+      "field_rule": "Research trial: inspect the narrow to compact panicle of very small usually awnless spikelets and a true membranous ligule, especially in moist habitats. Compare Polypogon monspeliensis and other bentgrasses by measured glumes; no specimen ID is verified.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Polypogon viridis (dkrb)-1.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Polypogon_viridis_(dkrb)-1.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Polypogon_viridis_(dkrb)-1.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Polypogon_viridis_(dkrb)-1.jpg",
+          "creator": "Drahkrub — https://de.wikipedia.org/wiki/Benutzer:Drahkrub",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Water bent: living grass near pond (Germany)",
+          "caption": "German wet-habitat, source-labeled Polypogon viridis; not Hays evidence. The photographer specifically requests the linked user-page URL with credit.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "polypogon-viridis",
+          "role": "General habit",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Commons file description directly checked for stated scientific name, specific photographer, and CC license; original link retained; source image identity not a Hays specimen determination",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No alteration to source image; responsive display size only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Polypogon viridis (dkrb)-2.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Polypogon_viridis_(dkrb)-2.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Polypogon_viridis_(dkrb)-2.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Polypogon_viridis_(dkrb)-2.jpg",
+          "creator": "Drahkrub — https://de.wikipedia.org/wiki/Benutzer:Drahkrub",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Water bent: second source view (Germany)",
+          "caption": "Additional image from the same German locality; does not independently establish local provenance or diagnostic spikelets. Attribution includes photographer's requested profile URL.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "polypogon-viridis",
+          "role": "Habit context",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Commons file description directly checked for stated scientific name, specific photographer, and CC license; original link retained; source image identity not a Hays specimen determination",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No alteration to source image; responsive display size only"
+        }
+      ],
+      "genus": "Polypogon",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md",
+          "reviewed_for_admission": false,
+          "notes": "Original source claims map to broad four-question hypotheses; missing/ambiguous states intentionally left empty. No Hays specimen verification, photographic anatomy certification or county BONAP approval."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_ONLY",
+          "source_details": {
+            "head": [
+              {
+                "part": "head",
+                "source": "Flora 1999",
+                "description": "Condensed panicle roughly 4–12 cm long and 1–3 cm broad in regional Flora"
+              }
+            ],
+            "habit": [],
+            "ligule": [
+              {
+                "part": "ligule",
+                "source": "Flora 1999",
+                "description": "Membranous ligule approximately 2–7 mm in regional Flora (other treatments may give shorter values)"
+              }
+            ],
+            "awns": [
+              {
+                "part": "awns",
+                "source": "Flora 1999 / Kew POWO",
+                "description": "Glumes and lemmas typically awnless; unlike rabbitfoot P. monspeliensis with long glume awns"
+              }
+            ]
+          },
+          "source_packet": 4,
+          "nonexclusive_states": "Dactyloctenium and Cenchrus habit withheld where source describes overlapping spreading/tuft forms."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Glabrous grass with bent/decumbent stem base, often in wet creek and spring habitats; Flora culms about 15–45(–70) cm",
+          "needed_view": "whole base and habitat",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Membranous ligule approximately 2–7 mm in regional Flora (other treatments may give shorter values)",
+          "needed_view": "true inner ligule mm scale",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "head",
+          "check": "Condensed panicle roughly 4–12 cm long and 1–3 cm broad in regional Flora",
+          "needed_view": "scaled flowering head",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Small spikelets about 1.3–2(–2.5) mm in the Flora",
+          "needed_view": "dissected spikelet",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awns",
+          "check": "Glumes and lemmas typically awnless; unlike rabbitfoot P. monspeliensis with long glume awns",
+          "needed_view": "isolated glume apex",
+          "source": "Flora 1999 / Kew POWO",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glume_surface",
+          "check": "Glumes lightly roughened, one-veined, broad near apex in GrassBase account",
+          "needed_view": "flattened glumes",
+          "source": "Kew POWO/GrassBase",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH3_PENDING_LOCAL_ID",
+        "unresolved": "Awnless spikelet structure and ligule length not distinguished from other bentgrasses."
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true
+      },
+      "source_notes": {
+        "unresolved": "Awnless spikelet structure and ligule length not distinguished from other bentgrasses.",
+        "risky_context": "",
+        "field_view": "Moist rock/creek-edge habitat and narrow, somewhat contracted flowering panicles.",
+        "source_taxonomic_aliases": []
+      }
+    },
+    {
+      "id": "dactyloctenium-aegyptium",
+      "scientific": "Dactyloctenium aegyptium",
+      "common": "Durban Crowfoot",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 4,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md",
+      "local_report_count": 2,
+      "warning_flags": [],
+      "field_rule": "Research trial: check the radiating fingerlike seedhead, flattened one-sided two-row spikelets and a short ciliate membranous inner ligule. The rooted spreading base is source-described but deliberately not used as an exclusive habit filter until photographed; verify projecting branch tips before naming.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Dactyloctenium aegyptium plant.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Dactyloctenium_aegyptium_plant.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Dactyloctenium_aegyptium_plant.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Dactyloctenium_aegyptium_plant.jpg",
+          "creator": "Kiruthikapalani",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Egyptian crowfootgrass: whole plant source photo",
+          "caption": "Source-labeled general plant reference. Exact flowering branch-tip projections, ligule and root/node characters not verified; locality unspecified and not Hays County.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "dactyloctenium-aegyptium",
+          "role": "General habit",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Wikimedia Commons individual file page checked for named creator and photo-specific Creative Commons license; original source linked",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original image; only responsive display sizing"
+        },
+        {
+          "i": 1,
+          "image_filename": "Dactyloctenium aegyptium.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Dactyloctenium_aegyptium.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Dactyloctenium_aegyptium.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Dactyloctenium_aegyptium.jpg",
+          "creator": "Vimalananth V",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Egyptian crowfootgrass: general plant reference",
+          "caption": "Separate source-labeled plant photo. Does not independently validate Hays specimen identity or the structure of an individual spikelet.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "dactyloctenium-aegyptium",
+          "role": "Plant reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Wikimedia Commons individual file page checked for named creator and photo-specific Creative Commons license; original source linked",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original image; only responsive display sizing"
+        }
+      ],
+      "genus": "Dactyloctenium",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md",
+          "reviewed_for_admission": false,
+          "notes": "Original source claims map to broad four-question hypotheses; missing/ambiguous states intentionally left empty. No Hays specimen verification, photographic anatomy certification or county BONAP approval."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_ONLY",
+          "source_details": {
+            "head": [
+              {
+                "part": "head",
+                "source": "Flora 1999",
+                "description": "Two to seven or more radiating fingerlike branches, usually around 1.5–6 cm"
+              }
+            ],
+            "habit": [
+              {
+                "part": "habit",
+                "source": "Flora 1999",
+                "description": "Spreading annual, often roots from lower stem nodes; flowering stems commonly 10–60 cm"
+              }
+            ],
+            "ligule": [
+              {
+                "part": "ligule",
+                "source": "Flora 1999",
+                "description": "Short ciliate membrane usually 0.1–1 mm"
+              }
+            ],
+            "awns": []
+          },
+          "source_packet": 4,
+          "nonexclusive_states": "Dactyloctenium and Cenchrus habit withheld where source describes overlapping spreading/tuft forms."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Spreading annual, often roots from lower stem nodes; flowering stems commonly 10–60 cm",
+          "needed_view": "rooted creeping base",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Short ciliate membrane usually 0.1–1 mm",
+          "needed_view": "inner leaf junction",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "head",
+          "check": "Two to seven or more radiating fingerlike branches, usually around 1.5–6 cm",
+          "needed_view": "complete digitate head",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "branch_tip",
+          "check": "Flattened flowering branch has a sterile narrow tip extending about 1–7 mm beyond last spikelet",
+          "needed_view": "terminal branch tip macro",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelets",
+          "check": "Tightly packed sessile flattened spikelets in two rows along one side of branches; about 3–4 mm",
+          "needed_view": "branch side macro",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "florets",
+          "check": "Each spikelet typically contains 3–5 florets; upper glumes and lemmas often shortly awned",
+          "needed_view": "dissected spikelet",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH3_PENDING_LOCAL_ID",
+        "unresolved": "Images not sufficiently close to confirm branch tips projecting beyond spikelets, floret details, or rooting nodes."
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true
+      },
+      "source_notes": {
+        "unresolved": "Images not sufficiently close to confirm branch tips projecting beyond spikelets, floret details, or rooting nodes.",
+        "risky_context": "",
+        "field_view": "Fingerlike branches radiating from culm apex, consistent with crowdfoot grass inflorescence.",
+        "source_taxonomic_aliases": []
+      }
+    },
+    {
+      "id": "hordeum-murinum",
+      "scientific": "Hordeum murinum",
+      "common": "wall barley",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 4,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md",
+      "local_report_count": 2,
+      "warning_flags": [],
+      "field_rule": "Research trial: look for a barley-type central spike with triplets of spikelets at rachis joints and long slender awns. Leaf auricles and glume cilia require a close photo; H. pusillum, H. leporinum treatment and hybrids need comparison.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "long"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Hordeum murinum plant.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hordeum_murinum_plant.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Hordeum_murinum_plant.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Hordeum_murinum_plant.jpg",
+          "creator": "InterstellarGamer12321",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Wall barley: wild plant (Wales)",
+          "caption": "Source-labeled wild specimen from Wales; do not treat as Hays County taxon voucher or a measured spikelet comparison.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "hordeum-murinum",
+          "role": "Whole plant",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Wikimedia Commons individual source-image page reviewed; named photographer and exact file CC license recorded",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original file unmodified; responsive display request only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Hordeum murinum 149195384.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hordeum_murinum_149195384.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Hordeum_murinum_149195384.jpg",
+          "original_source_page": "https://www.inaturalist.org/photos/149195384",
+          "creator": "Tristan Haab",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Wall barley: Austria source photo",
+          "caption": "Austria iNaturalist photo linked through Commons; precise awn and glume discrimination requires separate verified views.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "hordeum-murinum",
+          "role": "General plant reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Wikimedia Commons individual source-image page reviewed; named photographer and exact file CC license recorded",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original file unmodified; responsive display request only"
+        }
+      ],
+      "genus": "Hordeum",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-4-20261111.md",
+          "reviewed_for_admission": false,
+          "notes": "Original source claims map to broad four-question hypotheses; missing/ambiguous states intentionally left empty. No Hays specimen verification, photographic anatomy certification or county BONAP approval."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_ONLY",
+          "source_details": {
+            "head": [
+              {
+                "part": "spikelet_groups",
+                "source": "Kew POWO/GrassBase",
+                "description": "Barley-like spike of groups of three spikelets at successive joints, central fertile with lateral companions"
+              }
+            ],
+            "habit": [],
+            "ligule": [],
+            "awns": [
+              {
+                "part": "awn",
+                "source": "Flora 1999",
+                "description": "Lemma awns in the leporinum account typically around 10–35 mm"
+              }
+            ]
+          },
+          "source_packet": 4,
+          "nonexclusive_states": "Dactyloctenium and Cenchrus habit withheld where source describes overlapping spreading/tuft forms."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Annual hare barley, generally 30–75 cm in older regional subsp. leporinum account",
+          "needed_view": "rooted flowering plant",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet_groups",
+          "check": "Barley-like spike of groups of three spikelets at successive joints, central fertile with lateral companions",
+          "needed_view": "intact triad and rachis",
+          "source": "Kew POWO/GrassBase",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glume_hairs",
+          "check": "Glumes of central spikelet have hairs/ciliate margins in regional key",
+          "needed_view": "glume edge micro",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "auricles",
+          "check": "Leaf sheath auricles present; distinguish from H. pusillum lacking auricles in regional key",
+          "needed_view": "collar auricle view",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awn",
+          "check": "Lemma awns in the leporinum account typically around 10–35 mm",
+          "needed_view": "mature awn with scale",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "lemma_width",
+          "check": "Regional group key mentions slender lemmas 1.3–1.9 mm wide and leaf blades 1–6 mm",
+          "needed_view": "flattened lemma and blade scale",
+          "source": "Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH3_PENDING_LOCAL_ID",
+        "unresolved": "Glume/ciliate margins and hybrid/subspecies-level distinctions not observed; older Flora treats subsp. leporinum."
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true
+      },
+      "source_notes": {
+        "unresolved": "Glume/ciliate margins and hybrid/subspecies-level distinctions not observed; older Flora treats subsp. leporinum.",
+        "risky_context": "",
+        "field_view": "Short dense barley-like awned heads and annual bunches shown.",
+        "source_taxonomic_aliases": []
+      }
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "scientific": "Cenchrus ciliaris",
+      "common": "buffelgrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 6,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "field_rule": "Research trial: a bristly cylindrical inflorescence can resemble a foxtail, but check whether bristles fuse at the base and fall with spikelets as a bur-like unit. Rooted colony form and inner ligule are not safe exclusive scores; this introduced forage species is not assumed locally naturalized.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "foxtail"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "bristles"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Cenchrus ciliaris.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Cenchrus_ciliaris.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Cenchrus_ciliaris.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Cenchrus_ciliaris.jpg",
+          "creator": "Mark Marathon",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "label": "Buffelgrass: general source photo",
+          "caption": "Exact Commons source identifies Cenchrus ciliaris. Not a Hays voucher; fused bur bristles and fine spikelet details remain unverified.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "cenchrus-ciliaris",
+          "role": "General plant reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Wikimedia Commons individual source-image page reviewed; named photographer and exact file CC license recorded",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original file unmodified; responsive display request only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Starr 020117-9001 Cenchrus ciliaris.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_020117-9001_Cenchrus_ciliaris.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_020117-9001_Cenchrus_ciliaris.jpg",
+          "original_source_page": "http://www.starrenvironmental.com/plants/images/image/?q=020117-9001",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "label": "Buffelgrass: Hawaiian plant habit",
+          "caption": "Maui source-labeled general plant reference; not evidence for local origin, establishment, or diagnosed bristle-fusion morphology.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "cenchrus-ciliaris",
+          "role": "Whole plant",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Wikimedia Commons individual source-image page reviewed; named photographer and exact file CC license recorded",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original file unmodified; responsive display request only"
+        }
+      ],
+      "genus": "Cenchrus",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+          "reviewed_for_admission": false,
+          "notes": "Original source claims map to broad four-question hypotheses; missing/ambiguous states intentionally left empty. No Hays specimen verification, photographic anatomy certification or county BONAP approval."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_ONLY",
+          "source_details": {
+            "head": [
+              {
+                "part": "head",
+                "source": "Regional Flora 1999",
+                "description": "Dense cylindrical bristly inflorescence; looks like Setaria from a distance"
+              }
+            ],
+            "habit": [
+              {
+                "part": "habit",
+                "source": "Regional Flora 1999",
+                "description": "Tufted or spreading perennial forage grass introduced from Old World tropics"
+              }
+            ],
+            "ligule": [],
+            "awns": [
+              {
+                "part": "bristles",
+                "source": "Regional Flora 1999",
+                "description": "Bristles roughly 4–10 mm long, basally fused into a small bur/involucre"
+              }
+            ]
+          },
+          "source_packet": 6,
+          "nonexclusive_states": "Dactyloctenium and Cenchrus habit withheld where source describes overlapping spreading/tuft forms."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Tufted or spreading perennial forage grass introduced from Old World tropics",
+          "needed_view": "rooted plant and dense colony",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "head",
+          "check": "Dense cylindrical bristly inflorescence; looks like Setaria from a distance",
+          "needed_view": "full seedhead on mm scale",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "bristles",
+          "check": "Bristles roughly 4–10 mm long, basally fused into a small bur/involucre",
+          "needed_view": "detached entire bur and basal bristle union",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "disarticulation",
+          "check": "Mature bristles fall together with the spikelet as a unit",
+          "needed_view": "involucre with ripe spikelet",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "setaria_difference",
+          "check": "Unlike Cenchrus, Setaria typically drops spikelets separately above persistent bristles",
+          "needed_view": "paired disarticulation photos",
+          "source": "Regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "synonym",
+          "check": "Modern candidate accepted name Cenchrus ciliaris; old regional flora printed Pennisetum ciliare",
+          "needed_view": "record provenance",
+          "source": "Taxonomic crosswalk; regional Flora 1999",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH3_PENDING_LOCAL_ID",
+        "unresolved": "Fused bristle bases forming detachable bur, and comparison to Setaria are not conclusive."
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true
+      },
+      "source_notes": {
+        "unresolved": "Fused bristle bases forming detachable bur, and comparison to Setaria are not conclusive.",
+        "risky_context": "",
+        "field_view": "Dense cylindrical buffelgrass-like head with long bristles, collar and habitat views.",
+        "source_taxonomic_aliases": [
+          "Pennisetum ciliare"
+        ]
+      }
+    },
+    {
+      "id": "panicum-repens",
+      "scientific": "Panicum repens",
+      "common": "Torpedo grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 5,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [
+        "CHECK_INTRODUCED_STATUS"
+      ],
+      "field_rule": "Research trial: look for a loose panicle, unawned spikelets and genuine underground running rhizomes often with pointed tips. A short ciliate membranous ligule may appear hairlike; confirm dug plant base, not just aerial branches. Images are nonlocal reference examples.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Starr 050902-4330 Panicum repens.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_050902-4330_Panicum_repens.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_050902-4330_Panicum_repens.jpg",
+          "original_source_page": "http://www.hear.org/starr/plants/images/image/?q=050902-4330",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "label": "Torpedograss: vegetative habit (Hawaii)",
+          "caption": "Hawaii source-labeled vegetative habit. Underground rhizomes and Hays County specimen identification still need direct evidence.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "panicum-repens",
+          "role": "Growth habit",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Wikimedia Commons individual file page checked for named creator and photo-specific Creative Commons license; original source linked",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original image; only responsive display sizing"
+        },
+        {
+          "i": 1,
+          "image_filename": "Starr 070123-3651 Panicum repens.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_070123-3651_Panicum_repens.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_070123-3651_Panicum_repens.jpg",
+          "original_source_page": "http://www.hear.org/starr/plants/images/image/?q=070123-3651",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "label": "Torpedograss: flowering head (Hawaii)",
+          "caption": "Hawaii source labels inflorescence; does not verify individual spikelet details or local occurrence.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "panicum-repens",
+          "role": "Inflorescence",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Exact Wikimedia Commons individual file page checked for named creator and photo-specific Creative Commons license; original source linked",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original image; only responsive display sizing"
+        }
+      ],
+      "genus": "Panicum",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+          "reviewed_for_admission": false,
+          "notes": "Original source claims map to broad four-question hypotheses; missing/ambiguous states intentionally left empty. No Hays specimen verification, photographic anatomy certification or county BONAP approval."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_ONLY",
+          "source_details": {
+            "head": [
+              {
+                "part": "panicle",
+                "source": "USFS FEIS",
+                "description": "Open terminal panicle with ascending branches, often roughly 7–22 cm long"
+              }
+            ],
+            "habit": [
+              {
+                "part": "rhizomes",
+                "source": "University of Florida IFAS / USFS FEIS",
+                "description": "Tough creeping underground stems often end in sharply pointed growing tips—the torpedo feature"
+              }
+            ],
+            "ligule": [
+              {
+                "part": "ligule",
+                "source": "University of Florida IFAS",
+                "description": "Short ciliate membrane generally around 0.5–1 mm"
+              }
+            ],
+            "awns": [
+              {
+                "part": "spikelet",
+                "source": "USFS FEIS",
+                "description": "Small ovate, unawned spikelets approximately 2–3 mm long"
+              }
+            ]
+          },
+          "source_packet": 5,
+          "nonexclusive_states": "Dactyloctenium and Cenchrus habit withheld where source describes overlapping spreading/tuft forms."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Perennial spreads by long branching rhizomes in wet or disturbed ground; forms dense colonies",
+          "needed_view": "dug rooted colony",
+          "source": "University of Florida IFAS / USFS FEIS",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "rhizomes",
+          "check": "Tough creeping underground stems often end in sharply pointed growing tips—the torpedo feature",
+          "needed_view": "intact rhizome terminal bud",
+          "source": "University of Florida IFAS / USFS FEIS",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "foliage",
+          "check": "Flat to folded narrow blue-green leaves, sometimes waxy or pale",
+          "needed_view": "leaf blade underside",
+          "source": "USFS FEIS",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Short ciliate membrane generally around 0.5–1 mm",
+          "needed_view": "inner collar",
+          "source": "University of Florida IFAS",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "panicle",
+          "check": "Open terminal panicle with ascending branches, often roughly 7–22 cm long",
+          "needed_view": "whole panicle",
+          "source": "USFS FEIS",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Small ovate, unawned spikelets approximately 2–3 mm long",
+          "needed_view": "mature spikelet with mm scale",
+          "source": "USFS FEIS",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH3_PENDING_LOCAL_ID",
+        "unresolved": "Rhizome/stolon structures and diagnostic spikelets absent; one image cannot resolve torpedograss."
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true
+      },
+      "source_notes": {
+        "unresolved": "Rhizome/stolon structures and diagnostic spikelets absent; one image cannot resolve torpedograss.",
+        "risky_context": "",
+        "field_view": "Dense green grassy mat with some thin flowering branches visible only at distance.",
+        "source_taxonomic_aliases": []
+      }
+    }
+  ]
+}
