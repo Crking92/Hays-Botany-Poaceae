@@ -1,0 +1,20 @@
+name: Group B - Two complementary CC0 source originals (read only)
+on:
+  pull_request:
+    paths:
+      - 'scripts/group_b_two_complement_source_gate_20261112.py'
+      - '.github/workflows/group-b-two-complement-source-gate.yml'
+permissions:
+  contents: read
+jobs:
+  source-original-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Check original creator CC0 taxon bytes hashes and gallery duplicates
+        run: python scripts/group_b_two_complement_source_gate_20261112.py
