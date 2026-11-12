@@ -13,15 +13,17 @@
     "baseline_species_with_configured_photos": 32,
     "baseline_zero_photo_species": 25,
     "baseline_one_photo_species": 15,
-    "source_photo_leads": 10,
-    "source_photo_leads_unique_species": 4,
+    "source_photo_leads": 9,
+    "source_photo_leads_unique_species": 3,
     "zero_gallery_species_targeted": 3,
-    "one_gallery_species_targeted": 1,
+    "one_gallery_species_targeted": 0,
     "photo_rights_documented_at_exact_commons_page": 10,
     "source_images_downloaded_in_this_lane": 0,
     "source_images_physically_inspected_by_photo_pixels_in_this_lane": 0,
     "new_images_installed_in_live_learner": 0,
-    "public_pages_visible_photos_verified_this_lane": 0
+    "public_pages_visible_photos_verified_this_lane": 0,
+    "source_photo_pages_checked": 10,
+    "existing_duplicate_sources_skipped": 1
   },
   "methods": [
     "Checked current GitHub main hays-candidates.json to avoid duplicate candidate gallery refs for this exact batch; 3 species have no configured ref and Carolina foxtail has one.",
@@ -279,34 +281,6 @@
       "proposed_remote_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum%20miliaceum.JPG?width=900",
       "do_not_claim_local_hays_specimen": true,
       "do_not_admit_to_scored_key": true
-    },
-    {
-      "id": "alopecurus-carolinianus",
-      "scientific": "Alopecurus carolinianus",
-      "file": "Alopecurus carolinianus (7461954724).jpg",
-      "creator": "Matt Lavin",
-      "license": "CC BY-SA 2.0",
-      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "source_country": "United States, Montana",
-      "photo_intent": "Distinct close flowering-head and protruding awn/anther characters, as described by the photographer; compare to existing one photo",
-      "caption_draft": "Carolina foxtail flowering head. The narrow cylinder and protruding lemma awns/anthers are useful field characters; source is Montana, not Hays County.",
-      "source_page": "https://commons.wikimedia.org/wiki/File:Alopecurus_carolinianus_(7461954724).jpg",
-      "original_source": "https://www.flickr.com/photos/plant_diversity/7461954724/",
-      "rights_basis": "Exact Commons individual file page named creator Matt Lavin, license CC BY-SA 2.0 and descriptive flowering-head note.",
-      "starting_gallery_refs": 1,
-      "media_type": "photograph",
-      "commons_file_page_checked_2026_11_12": true,
-      "source_license_checked_on_exact_commons_file_page": true,
-      "source_botanical_taxon_labeled": true,
-      "original_full_size_pixels_newly_inspected": false,
-      "high_resolution_identity_review_required": true,
-      "same_photo_hash_duplicate_check_required": true,
-      "publication_status": "SOURCE_RIGHTS_DOCUMENTED_BOTANICAL_PIXEL_REVIEW_REQUIRED",
-      "photographer_credit_to_preserve": "Matt Lavin",
-      "source_file_delivery": "WIKIMEDIA_COMMONS_FILEPATH_ORIGINAL_NOT_DOWNLOADED",
-      "proposed_remote_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alopecurus%20carolinianus%20(7461954724).jpg?width=900",
-      "do_not_claim_local_hays_specimen": true,
-      "do_not_admit_to_scored_key": true
     }
   ],
   "supplementary_anatomy_illustrations_not_counted_as_photos": [
@@ -331,5 +305,15 @@
       "photo_count_increment": 0
     }
   ],
-  "next_batch_guidance": "Photo owner should make short first-photo commits for Echinochloa walteri, Rostraria cristata, Panicum miliaceum, then add Alopecurus flowering detail; verify public website and exact credits. Chat 5 should continue more source leads only if assigned after five-chat scope separation."
+  "next_batch_guidance": "Photo owner should target first-photo commits for Echinochloa walteri, Rostraria cristata and Panicum miliaceum. Carolina foxtail Matt Lavin 7461954724 is already configured; no duplicate install. Check actual pixels, rights and public Pages photos after install. Chat 5 continue source research only under separated ownership.",
+  "existing_exact_duplicate_detected": [
+    {
+      "candidate_id": "alopecurus-carolinianus",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Alopecurus_carolinianus_(7461954724).jpg",
+      "image_filename": "Alopecurus carolinianus (7461954724).jpg",
+      "existing_role": "Flowering head",
+      "finding": "Exact same Commons File page and filename already configured on this species card; do not re-install or claim a new diagnostic photo.",
+      "action": "SKIP_DUPLICATE_EXISTING_CONFIGURED_REFERENCE"
+    }
+  ]
 }
