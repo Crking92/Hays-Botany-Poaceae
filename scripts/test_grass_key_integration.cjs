@@ -169,6 +169,17 @@ const positives = [
   ['nimblewill rooted tuft with ciliate inner ligule',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'long'},['muhlenbergia-schreberi']],
   ['thin paspalum paired racemes tuft',{head:'paired_spikes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
   ['thin paspalum paired racemes rhizome',{head:'paired_spikes',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
+  // Lane A #107 — hairy grama low-rooting form, Chloris ciliate membranes.
+  ['hairy grama digitate tuft',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'three_short'},['bouteloua-hirsuta']],
+  ['hairy grama comb rooting mat',{head:'combs',habit:'mat',ligule:'membrane',awns:'none_obvious'},['bouteloua-hirsuta']],
+  ['hairy grama digitate rooting mat',{head:'fingers',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-hirsuta']],
+  ['tumble windmillgrass ciliate ligule tuft',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'long'},['chloris-verticillata']],
+  ['feather fingergrass ciliate ligule tuft',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'long'},['chloris-virgata']],
+  // Lane B #106 — hooded windmillgrass has unilateral rays and cilia.
+  ['hooded windmillgrass unilateral ray',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['chloris-cucullata']],
+  ['hooded windmillgrass 7-plus rays',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['chloris-cucullata']],
+  ['hooded windmillgrass 7-plus with cilia',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['chloris-cucullata']],
+  ['hooded windmillgrass whorls with cilia',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['chloris-cucullata']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -245,6 +256,15 @@ const negatives = [
   [{habit:'rhizome'},'muhlenbergia-schreberi'],
   [{head:'spike'},'paspalum-setaceum'],
   [{head:'many_one_sided'},'paspalum-setaceum'],
+  // Hairy grama and Chloris do not acquire unrelated floral architecture.
+  [{head:'whorls'},'bouteloua-hirsuta'],
+  [{habit:'rhizome'},'bouteloua-hirsuta'],
+  [{head:'fingers'},'chloris-verticillata'],
+  [{head:'whorls'},'chloris-virgata'],
+  [{head:'foxtail'},'chloris-cucullata'],
+  [{head:'spike'},'chloris-cucullata'],
+  [{ligule:'absent'},'chloris-cucullata'],
+  [{awns:'bristles'},'chloris-cucullata'],
   [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
