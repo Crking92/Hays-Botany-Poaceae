@@ -66,8 +66,12 @@ def audit():
     held_paths = {row["path"] for row in held
                   if row["disposition"] == "IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY"}
     urls = set()
+    held_urls = set()
+    held_species = set()
     panels = 0
+    held_panels = 0
     panel_species = 0
+    nonheld_panel_species = 0
     for sid in sorted(expected_ids):
         card = get_json("data/species/" + sid + ".json")
         assert card["id"] == sid
@@ -75,6 +79,7 @@ def audit():
         assert len(parts) == gallery["entries"][sid]["count"]
         if parts:
             panel_species += 1
+        species_safe_panels = 0
         for panel in parts:
             assert panel.get("creator") and panel.get("license") and panel.get("source_page"), (
                 f"{sid}: a photo lacks visible attribution metadata")
@@ -83,26 +88,40 @@ def audit():
                 f"{sid}: unexpected external source path")
             url = urllib.parse.urljoin(BASE, src)
             parsed = urllib.parse.urlparse(url)
-            for held_path in held_paths:
-                assert not parsed.path.endswith("/" + held_path), (
-                    f"Rights-held source published in gallery: {held_path}")
+            is_held = any(parsed.path.endswith("/" + held_path)
+                          for held_path in held_paths)
+            if is_held:
+                held_urls.add(url)
+                held_species.add(sid)
+                held_panels += 1
+            else:
+                species_safe_panels += 1
             urls.add(url)
             panels += 1
+        if species_safe_panels:
+            nonheld_panel_species += 1
     assert panel_species == 112
     assert panels == release["photo_panels_visible"] == gallery["photo_panels"]
     assert len(urls) == release["photo_files_referenced_on_public_site"] == gallery["photo_files"]
+    eligible_urls = sorted(urls - held_urls)
     failures = []
     with ThreadPoolExecutor(max_workers=12) as pool:
-        for url, error in pool.map(check_photo, sorted(urls)):
+        for url, error in pool.map(check_photo, eligible_urls):
             if error:
                 failures.append({"url":url, "error":error})
-    assert not failures, "Public image HEAD failures: " + json.dumps(failures[:10])
     return {
-        "pass":True,
-        "public_gallery_species":panel_species,
-        "actual_public_photo_heads_ok":len(urls),
-        "published_photo_panels":panels,
-        "held_photo_references_in_gallery":0,
+        "pass":not held_urls and not failures,
+        "public_gallery_species_configured":panel_species,
+        "species_with_nonheld_photo_panels":nonheld_panel_species,
+        "nonheld_photo_urls_probed":len(eligible_urls),
+        "nonheld_photo_heads_ok":len(eligible_urls)-len(failures),
+        "nonheld_photo_transport_failures":failures[:10],
+        "public_photo_files_configured":len(urls),
+        "public_panels_configured":panels,
+        "nonheld_photo_panels":panels-held_panels,
+        "held_photo_panels":held_panels,
+        "rights_held_photo_urls_in_public_gallery":sorted(held_urls),
+        "species_with_rights_held_photo_panels":sorted(held_species),
         "release_index_and_cards_parity":True,
         "method":"PUBLIC_JSON_AND_HTTP_HEAD_NO_MEDIA_BODY_DOWNLOAD",
         "not_verified":["photo pixels","anatomical labels","species identification","current exact photo licenses"]
@@ -110,4 +129,7 @@ def audit():
 
 
 if __name__ == "__main__":
-    print(json.dumps(audit(), indent=2))
+    result = audit()
+    print(json.dumps(result, indent=2), flush=True)
+    if not result["pass"]:
+        raise SystemExit("Public gallery delivery/rights-hold QA failed; see complete structured report above")
