@@ -60,11 +60,11 @@ function card(item){
  const chips=el("div","chips");chips.append(el("span","chip","Literature profile · "+item.details.length+" characters"));
  chips.append(el("span","chip","Hays observation reports: "+item.local_report_count));
  if(item.approved_gallery?.length)chips.append(el("span","chip",item.approved_gallery.length+" rights-cleared example photos"));
- if(item.photo_status==="PHOTO_PIXEL_ACCESS_PENDING")chips.append(el("span","chip hold","Original photos inaccessible"));
- else chips.append(el("span","chip","Original photo review previously recorded"));
+ if(item.photo_status==="PHOTO_PIXEL_ACCESS_PENDING")chips.append(el("span","chip hold",item.approved_gallery?.length ? "Original observation photos need review · credited reference photos below" : "Original observation photos need review"));
+ else chips.append(el("span","chip","Earlier observation-photo review recorded"));
  summary.append(chips);box.append(summary);
  if(item.aliases?.length)body.append(paragraph("Other names:",item.aliases.join("; ")));
- if(item.field_view)body.append(paragraph("Earlier photo review:",item.field_view));
+ if(item.field_view)body.append(paragraph("Earlier research-photo observations (some views may not be in the published gallery):",item.field_view));
  if(item.unresolved)body.append(paragraph("What remains unproven:",item.unresolved));
  if(item.risky_context)body.append(paragraph("Occurrence caution:","Review planted, cultivated or escaped-site context; observation does not establish naturalization.","context"));
  if(item.warning_flags?.length)body.append(paragraph("Additional checks:",item.warning_flags.map(s=>s.replaceAll("_"," ").toLowerCase()).join(", "),"context"));
