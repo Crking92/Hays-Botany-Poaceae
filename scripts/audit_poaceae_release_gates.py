@@ -10,6 +10,7 @@ from collections import Counter,defaultdict
 from hashlib import sha1
 from pathlib import Path
 from PIL import Image,UnidentifiedImageError
+from poaceae_source_delta_integrity import reconcile_source_deltas
 import json,re,sys,argparse
 
 IMG_EXT={".jpg",".jpeg",".png",".webp",".gif",".tif",".tiff"}
@@ -44,12 +45,29 @@ def audit(root:Path, site:Path):
     assert len(copied)+len(held)==1402
     problems=defaultdict(list);review=defaultdict(list);summary=Counter()
     bypath={i["path"]:i for i in ledger}
+    # Keep the 2026-10-28 source ledger immutable. Two later edits are accepted
+    # as source-data history ONLY after exact original/current blob validation.
+    # This is NOT a permission to publish photos; held image checks remain hard.
+    try:
+        reconciled_source_data=reconcile_source_deltas(root,ledger)
+    except (ValueError,OSError,KeyError,TypeError) as exc:
+        problems["invalid_post_import_source_delta_reconciliation"].append(str(exc))
+        reconciled_source_data={}
     for i in copied:
         f=root/i["path"]
         if not f.is_file():problems["missing_copied_file"].append(i["path"]);continue
         h,size=blob_hash(f)
         if h!=i["git_blob_sha"] or size!=i["bytes"]:
-            problems["source_checksum_mismatch"].append(i["path"])
+            delta=reconciled_source_data.get(i["path"])
+            if delta and h==delta["documented_current_git_blob_sha"] and size==delta["documented_current_bytes"]:
+                summary["documented_post_import_source_data_edits"]+=1
+                review["documented_source_data_edit_since_import"].append({
+                    "path":i["path"],"import_git_blob_sha":i["git_blob_sha"],
+                    "current_git_blob_sha":h,"change_commit":delta["change_commit"],
+                    "note":"Source-data history only; original import unchanged; no photo-rights authorization."
+                })
+            else:
+                problems["source_checksum_mismatch"].append(i["path"])
     for i in held:
         if (root/i["path"]).exists():problems["held_image_in_public_repository"].append(i["path"])
         if (site/i["path"]).exists():problems["held_image_in_preview_site"].append(i["path"])

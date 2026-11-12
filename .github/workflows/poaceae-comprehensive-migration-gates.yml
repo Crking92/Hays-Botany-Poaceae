@@ -5,6 +5,8 @@ on:
     paths:
       - ".github/workflows/poaceae-comprehensive-migration-gates.yml"
       - "scripts/audit_poaceae_release_gates.py"
+      - "scripts/poaceae_source_delta_integrity.py"
+      - "migration/documented-post-import-source-deltas-20261112.json"
       - "scripts/build_poaceae_site_preview.py"
       - "scripts/enrich_poaceae_lessons.py"
       - "site/**"

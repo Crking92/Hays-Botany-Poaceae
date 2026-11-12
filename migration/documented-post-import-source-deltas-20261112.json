@@ -1,0 +1,33 @@
+{
+  "schema": "hays-poaceae-documented-post-import-source-deltas-v1",
+  "purpose": "Exact-blob reconciliation of later source-data edits; original 2026-10-28 ledger remains immutable. NOT a photo-rights approval, specimen signoff, or permission to release held images.",
+  "reviewed_date": "2026-11-12",
+  "records": [
+    {
+      "path": "content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/species.json",
+      "disposition": "SOURCE_DATA_COPIED",
+      "source_import_git_blob_sha": "03049464c4d0fbe4c8538e47626d7782726bc1d4",
+      "source_import_bytes": 129443,
+      "documented_current_git_blob_sha": "17c8499a5ea986d25b0a3c3402a95de50c6fb3a9",
+      "documented_current_bytes": 133680,
+      "change_commit": "410f070a765743ec0f41cbe465fcb94eb0120818",
+      "change_parent": "3e7877fe5f62cba60893a8607bd7960edf42727d",
+      "change_summary": "Added three specifically permitted Bob Harms North Hays KR bluestem anatomy photos with credits and revised spikelet-pair guidance; permission scope recorded separately in migration/ut-prc-bob-harms-kr-permission-20261102.json.",
+      "evidence_kind": "COMMIT_PARENT_SHA_AND_PATCH_CHECKED",
+      "rights_scope": "Specific three UT PRC-authorized images only; no blanket permission and no status change for held imagery."
+    },
+    {
+      "path": "content/taxa/Poaceae/Dichanthelium/dichanthelium-lindheimeri/image-sources.csv",
+      "disposition": "SOURCE_DATA_COPIED",
+      "source_import_git_blob_sha": "d7ccc0915bcb2bb2271f0c2b3660bfc39ce2d2d1",
+      "source_import_bytes": 4646,
+      "documented_current_git_blob_sha": "dc747de47ee6b81b5973a585c177647f2b46811a",
+      "documented_current_bytes": 4664,
+      "change_commit": "f4be8681a1cd82ca6568204ad0c0b7c1e4e981a5",
+      "change_parent": "104752150a2fc8d44debc24daa59d40fcc8daf73",
+      "change_summary": "Corrected existing photo 272799727 character label from measured spikelet to blade–sheath junction; photographer, source link, CC BY and image bytes not changed by this source-data commit.",
+      "evidence_kind": "COMMIT_PARENT_SHA_AND_PATCH_CHECKED",
+      "rights_scope": "No new image or rights approval; label correction only."
+    }
+  ]
+}
