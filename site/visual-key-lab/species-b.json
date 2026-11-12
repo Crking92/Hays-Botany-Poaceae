@@ -1476,7 +1476,7 @@
     "common": "Marsh bristlegrass / knotroot foxtail",
     "scientific": "Setaria parviflora",
     "range": "UNRESOLVED",
-    "field_rule": "Knotroot bristlegrass can appear as a tuft even when its short knotty rhizomes are hidden. Follow a shoot to its base when possible, then compare several mature spikelets and attached bristles. A foxtail silhouette alone does not establish species identity.",
+    "field_rule": "Knotroot bristlegrass can appear as a tuft even when its short knotty rhizomes are hidden. Follow a shoot to its base when possible, then compare several mature spikelets and attached bristles. A foxtail silhouette alone does not establish species identity.\n\nInner ligule check: Hagenbuch & Lemke describes a short fringe of hairs, while UT Austin's Williamson County description measures a membranous basal portion topped with cilia. Accept either a hair fringe or a visible membrane in the multi-access key. Do not interpret the hair-fringed margin as a hair-only organ or assume the present close-up proves the membrane's thickness.",
     "hero_i": 0,
     "traits": {
       "head": [
@@ -1487,7 +1487,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "bristles"
@@ -1564,6 +1565,21 @@
         "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No new photograph or local specimen certified."
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 61, Setaria parviflora; A.C. Gibson, UT Austin Plant Resources Center, Vascular Plants of Williamson County, Setaria parviflora; FNA Setaria genus treatment",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+        "ut_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Setaria%20parviflora",
+        "fna_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&pid=&taxauthid=1&tid=69058",
+        "reference": "The primary Hill Country vegetative account reports a ca. 1 mm hair fringe. UT Austin's direct local species anatomy describes a 0.5–1.3 mm ligule with a membranous base occupying about one-half to two-thirds and a densely hair-fringed margin. FNA's Setaria genus treatment permits membranous/ciliate as well as hair-fringe ligules. Accept hairs and membrane as views of the same ciliate structure; do not imply a purely eciliate membrane.",
+        "role": "vegetative",
+        "reported_states": [
+          "short hair fringe (Hagenbuch & Lemke)",
+          "membranous lower portion with ciliate margin (UT Williamson County)"
+        ],
+        "status": "REGIONAL_HAIR_FRINGE_VS_UT_MEMBRANOUS_CILIATE_BASE_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "The Stefan.lefnaer hosted inner-collar image is preserved but not remeasured or reauthenticated in this scoring pass."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1591,6 +1607,14 @@
         "certainty": "FNA-backed; scale and same-plant macro pending",
         "source": "Flora of North America — Setaria parviflora",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=16593"
+      },
+      {
+        "look": "Lift knotroot bristlegrass's true inner-collar fringe",
+        "check": "The actual ligule can include both a tiny basal membrane and projecting hairs. A hair-only glance and a papery basal-membrane observation are both compatible; do not mistake long isolated blade hairs for the ligule. Use perennial knotty rhizomes and attached bristle-bearing spikelets for identification.",
+        "compare": "Annual foxtails can also have fringed ligules, but their rootstocks and bristle arrangements differ; the ligule is not species proof alone.",
+        "certainty": "Hagenbuch & Lemke p.61 compared with UT Williamson County species account; local photo membrane not independently measured",
+        "source": "Hagenbuch & Lemke (2015) p.61; A.C. Gibson, UT PRC Setaria parviflora",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Setaria%20parviflora"
       }
     ],
     "diagnostic_review": {

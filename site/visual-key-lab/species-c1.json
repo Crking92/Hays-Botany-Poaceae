@@ -1384,16 +1384,18 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "B. rigidiseta typically has several (often about 5–9) SHORT bristly/awned units near the top. Blue grama has only about 1–3 long curved combs. Sideoats grama carries many short pendant oats down a much longer axis. Red grama has narrower, more appressed, often purplish branches and awned spikelets; color alone is not sufficient. If an entire culm/branch cannot be resolved, keep Bouteloua sp.",
+    "field_rule": "B. rigidiseta typically has several (often about 5–9) SHORT bristly/awned units near the top. Blue grama has only about 1–3 long curved combs. Sideoats grama carries many short pendant oats down a much longer axis. Red grama has narrower, more appressed, often purplish branches and awned spikelets; color alone is not sufficient. If an entire culm/branch cannot be resolved, keep Bouteloua sp.\n\nRootstock and collar caveat: the Hill Country description calls Texas grama a tufted non-rhizomatous perennial with a hair-fringe ligule, and Flora of North America agrees on the missing rhizomes but instead describes a tiny ciliate membrane. The UT Austin Williamson County account documents very short, shallow rhizomes and a membranous-ciliate ligule. A verified node-bearing underground stem or a visible membranous ligule base should therefore keep this candidate in the key, but neither observation alone confirms its identification. The present gallery lacks a rootstock or ligule view.",
     "traits": {
       "head": [
         "short_side_racemes"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "three_short",
@@ -1417,6 +1419,36 @@
         "status": "LITERATURE_SUPPORTED_SHORT_THREE_AWNS_FIELD_SILHOUETTE_BROAD_LOCAL_FLORET_NOT_SIGNED_OFF",
         "review_date": "2026-11-11",
         "audit_note": "Both short-three-awn (under hand lens) and no conspicuous LONG awns (whole plant view) are eligible. Not equivalent to fully awnless."
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 38, Bouteloua rigidiseta; J.K. Wipff, Flora of North America, Bouteloua rigidiseta; A.C. Gibson, UT Austin Plant Resources Center, Vascular Plants of Williamson County, Bouteloua rigidiseta",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+        "fna_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=8325",
+        "ut_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Bouteloua%20rigidiseta",
+        "reference": "Hagenbuch & Lemke explicitly reports a cespitose Texas grama without rhizomes or stolons, and FNA likewise denies rhizomes. UT Austin's Williamson County account describes a cespitose plant with a shallow, sometimes creeping rhizome with extremely short internodes. This is a real same-name source conflict; retain tuft as usual and admit rhizome only when an intact node-bearing short underground stem is actually seen. Do not infer widespread rhizomatous sod, or claim a local voucher was reauthenticated here.",
+        "role": "vegetative",
+        "reported_states": [
+          "tuft; rhizomes and stolons absent (Hagenbuch & Lemke 2015 p.38; FNA)",
+          "tuft with sometimes shallow short-internode rhizome (UT Austin Williamson County taxon account)"
+        ],
+        "status": "REGIONAL_HL_FNA_VS_UT_COUNTY_RHIZOME_CONFLICT_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "The existing three USGS images show flowering branches, not an intact crown/rhizome. No new photo or license approval."
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 38; J.K. Wipff, Flora of North America, Bouteloua rigidiseta; A.C. Gibson, UT Austin Plant Resources Center, Williamson County, Bouteloua rigidiseta",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+        "fna_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=8325",
+        "ut_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Bouteloua%20rigidiseta",
+        "reference": "The Hill Country treatment calls the under-0.5-mm true ligule a hair fringe; FNA specifies a 0.2–0.3 mm membranous-ciliate ligule, while UT documents a dense-haired, ca. 0.3 mm membranous-ciliate base. Both 'hairs' and 'membrane' are legitimate observation choices for this minute compound structure. Do not confuse conspicuous collar-side hairs with a true exposed inner membrane.",
+        "role": "vegetative",
+        "reported_states": [
+          "hair fringe under 0.5 mm (Hagenbuch & Lemke)",
+          "ciliate membrane about 0.2–0.3 mm (FNA and UT Austin)"
+        ],
+        "status": "SOURCE_TERMINOLOGY_DIFFERENCE_LOCAL_PHOTO_AND_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No existing hosted image isolates the actual inner blade-sheath junction."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1444,6 +1476,22 @@
         "certainty": "Published floral morphology; current source gallery does not certify a same-specimen dissection",
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Poaceae pp.1247–1248; Kew GrassBase species description",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35641-2/general-information"
+      },
+      {
+        "look": "Compare true Texas grama ligule with collar-side hairs",
+        "check": "A tiny ciliate membrane may look like hairs from above; lift the blade at its sheath and locate the actual inner ligule. FNA and a Williamson County treatment confirm a membranous base where the Hill Country text emphasizes a hair fringe. The external collar hairs are not the ligule.",
+        "compare": "Red grama and hairy grama also have minute ligules; attached short Texas grama branches and mature fertile/sterile florets remain necessary for species-level ID.",
+        "certainty": "Directly reviewed opposing source descriptions; no newly certified local inner-collar photograph",
+        "source": "Hagenbuch & Lemke (2015) p.38; FNA Bouteloua rigidiseta; UT Austin PRC B. rigidiseta",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=8325"
+      },
+      {
+        "look": "Determine whether an apparent buried runner is a true rhizome",
+        "check": "Hagenbuch & Lemke and FNA describe Texas grama as nonrhizomatous; UT Austin documents extremely short shallow underground stem internodes. A short attached stem with nodes and new shoots is compatible in the broad key, but a fibrous root, buried decumbent culm or isolated fragment cannot settle this discrepancy.",
+        "compare": "Blue and red grama can also present as tufts with short underground stems; compare their full reproductive architectures.",
+        "certainty": "Anatomical terminology and taxon-wide variation unresolved until an intact local identified specimen is examined",
+        "source": "Hagenbuch & Lemke (2015) p.38; FNA; A.C. Gibson / UT PRC Williamson County B. rigidiseta",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Bouteloua%20rigidiseta"
       }
     ],
     "diagnostic_review": {
