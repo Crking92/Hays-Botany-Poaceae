@@ -1,0 +1,33 @@
+name: Group D six Commons originals source checks (READ ONLY)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/qa_group_d_six_commons_originals.py'
+      - '.github/workflows/group-d-six-commons-source-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-original-six:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact-original image metadata validation dependencies
+        run: python -m pip install requests pillow
+      - name: Validate six original Commons photo files, rights, image pixels and hashes
+        run: python scripts/qa_group_d_six_commons_originals.py
+      - name: Keep only rights/hash metadata report (not copies of photographs)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-d-six-original-source-report
+          path: qa-report/group-d-six-original-file-gate.json
+          retention-days: 14
+          if-no-files-found: warn
