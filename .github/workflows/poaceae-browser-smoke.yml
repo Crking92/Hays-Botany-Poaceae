@@ -5,6 +5,16 @@ on:
     paths:
       - ".github/workflows/poaceae-browser-smoke.yml"
       - "scripts/smoke_poaceae_preview.py"
+      - "site/visual-key-lab/species-*.json"
+      - "site/visual-key-lab/hays-candidates.json"
+      - "site/visual-key-lab/index.html"
+  pull_request:
+    paths:
+      - ".github/workflows/poaceae-browser-smoke.yml"
+      - "scripts/smoke_poaceae_preview.py"
+      - "site/visual-key-lab/species-*.json"
+      - "site/visual-key-lab/hays-candidates.json"
+      - "site/visual-key-lab/index.html"
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
