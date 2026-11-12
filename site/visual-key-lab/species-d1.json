@@ -668,10 +668,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.",
+    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome's flowering head can look open and airy because only a few spikelets sit on spreading branches. Keep it among results for either an airy or branched-oat first look, but verify its large multi-flowered spikelets, 1-veined lower glume and 3-veined upper glume.",
     "traits": {
       "head": [
-        "branched_oat"
+        "branched_oat",
+        "airy"
       ],
       "habit": [
         "tuft"
@@ -701,6 +702,21 @@
         "reference": "Membranous true ligule; culm sheaths can be hairy externally.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "head_open_panicle_regional": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Bromus texensis; Kew GrassBase species morphology",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37176-2/general-information",
+        "secondary_source_url": "https://www.worldfloraonline.org/taxon/wfo-0000856685",
+        "category": "reproductive",
+        "reported_states": [
+          "panicle open and lanceolate, about 10–15 cm long with few spikelets",
+          "primary branches ascending or spreading",
+          "the spikelets are multi-flowered and large"
+        ],
+        "reference": "Texas brome has a sparse open panicle, so choosing a generic airy/open flowering-head silhouette must not exclude the grass. Retain the specific branched-oat category because floret count and glume venation are essential for positive ID; the broad airy match is not proof of Hays County occurrence or exact photo identity.",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "certainty": "SPECIES_LEVEL_FLORAL_DESCRIPTION_NOT_SAME_PLANT_MACRO_CERTIFIED",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
