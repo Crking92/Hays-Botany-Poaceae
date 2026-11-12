@@ -147,6 +147,15 @@ def main():
     dump(out/"data/poaceae-index.json",manifest)
     for name in ("index.html","styles.css","app.js"):
         shutil.copy2(root/"site"/name,out/name)
+    # The live Learner now combines 112 original cards with 57 provisional
+    # literature profiles. Its app.js fetches this research manifest at boot;
+    # copying only app.js produces an empty/broken preview, not a rights test.
+    research_source=root/"site/visual-key-lab/hays-candidates.json"
+    research=json.loads(research_source.read_text(encoding="utf-8"))
+    assert len(research.get("candidates",[]))==57
+    research_target=out/"visual-key-lab/hays-candidates.json"
+    research_target.parent.mkdir(parents=True,exist_ok=True)
+    shutil.copy2(research_source,research_target)
     # Rebuild from source photos with unchanged bytes, only copied approved media.
     for rel in sorted(allowed):
         src=root/rel
