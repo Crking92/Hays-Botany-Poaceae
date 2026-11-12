@@ -42,12 +42,19 @@ const newlyValid=[
  ['chasmanthium-latifolium',{head:'flat_oats',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['andropogon-gerardi',{head:'fingers',habit:'rhizome',ligule:'membrane',awns:'long'}],
  ['andropogon-gerardi',{head:'fingers',habit:'rhizome',ligule:'membrane',awns:'none_obvious'}],
- ['hilaria-belangeri',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'}]
+ ['hilaria-belangeri',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
+ ['aristida-oligantha',{head:'airy',habit:'tuft',ligule:'membrane',awns:'three'}],
+ ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'hairs',awns:'none_obvious'}],
+ ['arundo-donax',{head:'reed_plume',habit:'rhizome',ligule:'hairs',awns:'none_obvious'}],
+ ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'membrane',awns:'none_obvious'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
  ['andropogon-gerardi',{head:'burrs'}],
- ['hilaria-belangeri',{habit:'rhizome'}]
+ ['hilaria-belangeri',{habit:'rhizome'}],
+ ['aristida-oligantha',{head:'foxtail'}],
+ ['arundo-donax',{habit:'mat'}],
+ ['arundo-donax',{awns:'long'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -56,13 +63,17 @@ assert.deepEqual(results({head:'flat_oats',ligule:'hairs'},[unknown]),['unknown'
 const expectedAdditions={
  'chasmanthium-latifolium':{habit:['tuft'],ligule:['hairs']},
  'andropogon-gerardi':{habit:['rhizome']},
- 'hilaria-belangeri':{habit:['tuft']}
+ 'hilaria-belangeri':{habit:['tuft']},
+ 'aristida-oligantha':{ligule:['membrane']},
+ 'arundo-donax':{habit:['tuft'],ligule:['hairs']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
  assert(s,id+' absent');
- assert(s.character_evidence.habit?.source.includes('Hagenbuch & Lemke'));
- assert(s.character_evidence.habit?.status.includes('SPECIMEN_PENDING'));
+ for(const key of Object.keys(expected)){
+  assert(s.character_evidence[key]?.source.includes('Hagenbuch & Lemke'),id+': missing authority for '+key);
+  assert(s.character_evidence[key]?.status.includes('SPECIMEN_PENDING'),id+': uncertainty not retained for '+key);
+ }
  for(const [key,states] of Object.entries(expected)) for(const state of states) assert(s.traits[key].includes(state));
 }
 let historicalCombinations=0, photoReferencesPreserved=null, baselineChecked=false;
@@ -96,7 +107,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:4,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:7,
  regressions: newlyValid.length,negativeControls:incompatible.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
