@@ -30,7 +30,7 @@ const positive=[
 ];
 for(const p of positive)assert(hits(p).has(id),'barnyardgrass falsely excluded: '+JSON.stringify(p));
 const negative=[
- [{head:'many_one_sided'},'eleusine-indica'],
+ [{head:'many_one_sided'},'phalaris-caroliniana'],
  [{head:'many_one_sided'},'elymus-canadensis'],
  [{head:'many_one_sided'},'dichanthelium-oligosanthes'],
  [{head:'many_one_sided',awns:'bristles'},id]
