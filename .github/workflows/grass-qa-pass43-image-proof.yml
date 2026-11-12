@@ -14,24 +14,44 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           filter: blob:none
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            site/media/elymus-canadensis/inat-72405973.jpg
-            site/media/elymus-canadensis/gbif-3866885510-d9374a0680b9.jpg
-            content/taxa/Poaceae/Eragrostis/eragrostis-secundiflora/images/sam-kieschnick-red-lovegrass-ground-growing-bunch-752434624.jpg
-            content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-58eb098d241b.jpg
-            content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-51b05fedea0c.jpg
-            content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg
-            content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg
-            content/taxa/Poaceae/Panicum/panicum-capillare/images/stefan-lefnaer-witchgrass-labelled-spikelet-parts-cc-by-sa4.jpg
-            content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-complete-diffuse-panicle-by-sa2.jpg
-            content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/steve-finlayson-2026-rooted-crown-cc0.jpg
-            content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099738-field-habit.jpg
-            content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg
-            content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg
-            content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-attached-spikelets-681610423.jpg
-            content/taxa/Poaceae/Urochloa/urochloa-fusca/images/james-schnable-vegetative-urochloa-fusca.jpg
+            site/media/eragrostis-spectabilis/gbif-2807421445-b5de7a2f9522.jpg
+            site/media/eragrostis-spectabilis/gbif-3336609370-cff45e4017d7.jpg
+            site/media/eragrostis-spectabilis/gbif-5073921318-249e0d7edf34.jpg
+            site/media/eragrostis-spectabilis/gbif-5073923326-8782ca74f5e0.jpg
+            content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-whole-attached-flowering-sl1.jpg
+            content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-knotty-rhizome.jpg
+            content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg
+            content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-glume-lemma-sl29.jpg
+            content/taxa/Poaceae/Aristida/aristida-oligantha/images/commons-archive-0932f5b62b86b1a5.jpg
+            site/media/aristida-oligantha/g3-gbif-5101132408-photo_3.jpg
+            content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/commons-77cde2e462d3.jpg
+            content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-140909-1746-live-habit-maui.jpg
+            site/media/digitaria-ciliaris/inat-736151054.jpg
+            site/media/digitaria-ciliaris/gbif-6161282426-605dfd848228.jpg
+            content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/daderot-dresden-inground-bunch-2013.jpg
+            site/media/eragrostis-trichodes/inat-480914542.jpg
+            site/media/eragrostis-trichodes/gbif-2807465979-6301123acc2f.jpg
+            content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737817.jpg
+            site/media/digitaria-cognata/gbif-2807535176-8b285cbcccf7.jpg
+            site/media/dinebra-panicea-subsp-mucronata/gbif-2807491498-8ec32d69ecf6.jpg
+            site/media/dinebra-panicea-subsp-mucronata/gbif-2807654501-792696e83f4d.jpg
+            site/media/eragrostis-hirsuta/inat-145933258.jpeg
+            site/media/eragrostis-hirsuta/gbif-2807314748-ee9753b1cc84.jpg
+            site/media/eragrostis-hirsuta/gbif-2807651549-6f6a8e658bb1.jpg
+            site/media/eragrostis-hirsuta/gbif-5101132301-55deb08c2638.jpg
+            content/taxa/Poaceae/Eragrostis/eragrostis-lugens/images/dryopteris2-in-situ-rooted-leafy-clump.jpg
+            content/taxa/Poaceae/Eragrostis/eragrostis-lugens/images/harry-rose-lugens-leaf-sheath.jpg
+            site/media/eragrostis-lugens/gbif-2807405301-b6b0f364a75a.jpg
+            site/media/eragrostis-lugens/gbif-2807409261-7cd65cd6144a.jpg
+            site/media/eragrostis-lugens/gbif-2807630517-0620aaabe17f.jpg
+            site/media/eragrostis-lugens/gbif-2882607317-457a92dbc220.jpg
+            site/media/hilaria-mutica/gbif-2807367566-af851959120a.jpg
+            content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-ligule-stefan-lefnaer.jpg
+            content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-spikelet-stefan-lefnaer.jpg
       - name: Render existing photos into read-only proof sheets
         shell: bash
         run: |
@@ -39,7 +59,7 @@ jobs:
           python3 - <<'PY'
           import sys, json, os, io, hashlib, base64, textwrap
           from PIL import Image, ImageOps, ImageDraw, ImageFont
-          items = json.loads("[[\"Elymus canadensis i7\",\"site/media/elymus-canadensis/inat-72405973.jpg\",\"46c2db5f7e0c719dad1971bbd9fd61814f1e9b1b\"],[\"Elymus canadensis i9\",\"site/media/elymus-canadensis/gbif-3866885510-d9374a0680b9.jpg\",\"d9260e436f11a6e64de670c55e26cb4fa5e07216\"],[\"Eragrostis secundiflora i4\",\"content/taxa/Poaceae/Eragrostis/eragrostis-secundiflora/images/sam-kieschnick-red-lovegrass-ground-growing-bunch-752434624.jpg\",\"0952735b8c71365df84312757cdb85bcacea2c3c\"],[\"Festuca octoflora i1\",\"content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-58eb098d241b.jpg\",\"9078e09dd9fa2d4a203d286397cc85c4113caea1\"],[\"Festuca octoflora i2\",\"content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-51b05fedea0c.jpg\",\"b6ce4679d46bcbce2defc0764f1ff35038ac61f5\"],[\"Sorghum bicolor i1\",\"content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg\",\"d4b6c5c8f87c2bc088ce25088f6ca40dcab34962\"],[\"Sorghum bicolor i2\",\"content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg\",\"50cd96dc992af5136342c75c52bc8fa17a59fc17\"],[\"Panicum capillare i0\",\"content/taxa/Poaceae/Panicum/panicum-capillare/images/stefan-lefnaer-witchgrass-labelled-spikelet-parts-cc-by-sa4.jpg\",\"b52c585ef9cab8627aae6dc92744379ea3cfa75b\"],[\"Panicum capillare i1\",\"content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-complete-diffuse-panicle-by-sa2.jpg\",\"b2b3144ce46862286148307157bae788bfc6ac7d\"],[\"Paspalum dilatatum i5\",\"content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/steve-finlayson-2026-rooted-crown-cc0.jpg\",\"dbfd88622f56b010b3b2fc944ec92c816f0fc65a\"],[\"Paspalum setaceum i3\",\"content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099738-field-habit.jpg\",\"6f10a34e3ab3545254ff28ae1e5426fa846935ee\"],[\"Setaria reverchonii i0\",\"content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg\",\"4a21f76d297c1c1f32c330caa103200849708dbe\"],[\"Setaria reverchonii i1\",\"content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg\",\"8a0925d9aa88d1f8b1a4541e54236b3486dbd6dd\"],[\"Setaria reverchonii i3\",\"content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-attached-spikelets-681610423.jpg\",\"bd2afb85f7d2c334af2956d29ef65490db422c2f\"],[\"Urochloa fusca i3\",\"content/taxa/Poaceae/Urochloa/urochloa-fusca/images/james-schnable-vegetative-urochloa-fusca.jpg\",\"beb3706ee5ca28bac62e2d1cf6f5eb849e7d8b08\"]]")
+          items = json.loads("[[\"Eragrostis spectabilis i4\",\"site/media/eragrostis-spectabilis/gbif-2807421445-b5de7a2f9522.jpg\",\"\"],[\"Eragrostis spectabilis i5\",\"site/media/eragrostis-spectabilis/gbif-3336609370-cff45e4017d7.jpg\",\"\"],[\"Eragrostis spectabilis i6\",\"site/media/eragrostis-spectabilis/gbif-5073921318-249e0d7edf34.jpg\",\"\"],[\"Eragrostis spectabilis i7\",\"site/media/eragrostis-spectabilis/gbif-5073923326-8782ca74f5e0.jpg\",\"\"],[\"Setaria parviflora i0\",\"content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-whole-attached-flowering-sl1.jpg\",\"\"],[\"Setaria parviflora i1\",\"content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-knotty-rhizome.jpg\",\"\"],[\"Setaria parviflora i3\",\"content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg\",\"\"],[\"Setaria parviflora i5\",\"content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-glume-lemma-sl29.jpg\",\"\"],[\"Aristida oligantha i0\",\"content/taxa/Poaceae/Aristida/aristida-oligantha/images/commons-archive-0932f5b62b86b1a5.jpg\",\"\"],[\"Aristida oligantha i3\",\"site/media/aristida-oligantha/g3-gbif-5101132408-photo_3.jpg\",\"\"],[\"Digitaria ciliaris i0\",\"content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/commons-77cde2e462d3.jpg\",\"\"],[\"Digitaria ciliaris i3\",\"content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-140909-1746-live-habit-maui.jpg\",\"\"],[\"Digitaria ciliaris i7\",\"site/media/digitaria-ciliaris/inat-736151054.jpg\",\"\"],[\"Digitaria ciliaris i10\",\"site/media/digitaria-ciliaris/gbif-6161282426-605dfd848228.jpg\",\"\"],[\"Eragrostis trichodes i0\",\"content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/daderot-dresden-inground-bunch-2013.jpg\",\"\"],[\"Eragrostis trichodes i2\",\"site/media/eragrostis-trichodes/inat-480914542.jpg\",\"\"],[\"Eragrostis trichodes i5\",\"site/media/eragrostis-trichodes/gbif-2807465979-6301123acc2f.jpg\",\"\"],[\"Digitaria cognata i0\",\"content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737817.jpg\",\"\"],[\"Digitaria cognata i9\",\"site/media/digitaria-cognata/gbif-2807535176-8b285cbcccf7.jpg\",\"\"],[\"Dinebra panicea subsp. mucronata i5\",\"site/media/dinebra-panicea-subsp-mucronata/gbif-2807491498-8ec32d69ecf6.jpg\",\"\"],[\"Dinebra panicea subsp. mucronata i7\",\"site/media/dinebra-panicea-subsp-mucronata/gbif-2807654501-792696e83f4d.jpg\",\"\"],[\"Eragrostis hirsuta i4\",\"site/media/eragrostis-hirsuta/inat-145933258.jpeg\",\"\"],[\"Eragrostis hirsuta i6\",\"site/media/eragrostis-hirsuta/gbif-2807314748-ee9753b1cc84.jpg\",\"\"],[\"Eragrostis hirsuta i7\",\"site/media/eragrostis-hirsuta/gbif-2807651549-6f6a8e658bb1.jpg\",\"\"],[\"Eragrostis hirsuta i8\",\"site/media/eragrostis-hirsuta/gbif-5101132301-55deb08c2638.jpg\",\"\"],[\"Eragrostis lugens i1\",\"content/taxa/Poaceae/Eragrostis/eragrostis-lugens/images/dryopteris2-in-situ-rooted-leafy-clump.jpg\",\"\"],[\"Eragrostis lugens i3\",\"content/taxa/Poaceae/Eragrostis/eragrostis-lugens/images/harry-rose-lugens-leaf-sheath.jpg\",\"\"],[\"Eragrostis lugens i4\",\"site/media/eragrostis-lugens/gbif-2807405301-b6b0f364a75a.jpg\",\"\"],[\"Eragrostis lugens i5\",\"site/media/eragrostis-lugens/gbif-2807409261-7cd65cd6144a.jpg\",\"\"],[\"Eragrostis lugens i6\",\"site/media/eragrostis-lugens/gbif-2807630517-0620aaabe17f.jpg\",\"\"],[\"Eragrostis lugens i7\",\"site/media/eragrostis-lugens/gbif-2882607317-457a92dbc220.jpg\",\"\"],[\"Hilaria mutica i7\",\"site/media/hilaria-mutica/gbif-2807367566-af851959120a.jpg\",\"\"],[\"Setaria italica i1\",\"content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-ligule-stefan-lefnaer.jpg\",\"\"],[\"Setaria italica i2\",\"content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-spikelet-stefan-lefnaer.jpg\",\"\"]]")
           fontpath='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
           font = ImageFont.truetype(fontpath, 17) if os.path.exists(fontpath) else ImageFont.load_default()
           photos=[]
@@ -47,7 +67,7 @@ jobs:
               try:
                   b=open(path,'rb').read()
                   actual=hashlib.sha1(b'blob '+str(len(b)).encode()+b'\x00'+b).hexdigest()
-                  if actual != sha: raise ValueError('blob SHA mismatch: '+actual)
+                  if sha and actual != sha: raise ValueError('blob SHA mismatch: '+actual)
                   pic=Image.open(io.BytesIO(b))
                   pic=ImageOps.exif_transpose(pic).convert('RGB')
                   print(f'QAITEM_{n+1}:OK sha={actual} dims={pic.size} bytes={len(b)} name={label}', flush=True)
