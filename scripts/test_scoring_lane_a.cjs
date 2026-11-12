@@ -219,3 +219,6 @@ console.log(JSON.stringify({
 // Batch 12 already runs as its own explicit workflow step.
 require('./test_scoring_lane_a_batch11.cjs');
 require('./test_scoring_lane_a_batch13.cjs');
+
+// Owner-authorized provisional field trials: do not confuse with scored admission.
+require('./test_provisional_trial_batch2.cjs');
