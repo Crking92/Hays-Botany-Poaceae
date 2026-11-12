@@ -27,7 +27,7 @@ const root=path.resolve(__dirname,'..');
   const placements=[...options,...flowerheadSections.map(g=>({kind:'head',key:g.icon})),...qs.map(q=>({kind:q.id,key:({head:'airy',habit:'tuft',ligule:'membrane',awns:'three'})[q.id]}))];
   const out=[];for(const item of placements){const svg=item.kind==='head'?headIcon(item.key):characterIcon(item.kind,item.key);document.body.append(svg);const b=svg.getBBox();if(!b.width||!b.height||b.x<1||b.y<1||b.x+b.width>109||b.y+b.height>109)out.push({...item,box:[b.x,b.y,b.width,b.height]});svg.remove();}
   const official=state.species.filter(s=>!s.trial);if(official.length!==112)throw Error('Original scored population changed');
-  const provisional=state.species.filter(s=>s.trial);if(provisional.length!==6)throw Error('Six research trials missing or silently admitted');
+  const provisional=state.species.filter(s=>s.trial);if(provisional.length<6||provisional.some(s=>s.admission_status!=='RESEARCH_TRIAL_NOT_ADMITTED'))throw Error('Existing unverified research trials missing or silently admitted');
   let paths=0;for(const s of official){let combinations=[{}];for(const q of qs){const vals=s.traits[q.id]?.length?s.traits[q.id]:[null];combinations=combinations.flatMap(c=>vals.map(v=>({...c,[q.id]:v})));}for(const c of combinations){state.selected=c;if(!currentResults().some(r=>r.s.id===s.id))throw Error('False exclusion: '+s.id+JSON.stringify(c));paths++;}}
   state.selected={head:null,habit:null,ligule:null,awns:null};
   const grouped=flowerheadSections.flatMap(g=>g.keys);return {placements:placements.length,options:options.length,groupCount:flowerheadSections.length,out,paths,grouped,heads:qs[0].options.map(o=>o[0])};
