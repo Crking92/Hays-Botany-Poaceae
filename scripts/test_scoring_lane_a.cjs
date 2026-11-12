@@ -67,7 +67,14 @@ const newlyValid=[
  ['bouteloua-rigidiseta',{head:'short_side_racemes',habit:'tuft',ligule:'membrane',awns:'three_short'}],
  ['bouteloua-rigidiseta',{head:'short_side_racemes',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['setaria-parviflora',{head:'foxtail',habit:'rhizome',ligule:'membrane',awns:'bristles'}],
- ['setaria-parviflora',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'}]
+ ['setaria-parviflora',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'}],
+ ['bouteloua-hirsuta',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'three_short'}],
+ ['bouteloua-hirsuta',{head:'combs',habit:'mat',ligule:'membrane',awns:'none_obvious'}],
+ ['bouteloua-hirsuta',{head:'fingers',habit:'mat',ligule:'hairs',awns:'none_obvious'}],
+ ['chloris-verticillata',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'long'}],
+ ['chloris-verticillata',{head:'whorls',habit:'mat',ligule:'hairs',awns:'long'}],
+ ['chloris-virgata',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'long'}],
+ ['chloris-virgata',{head:'fingers',habit:'mat',ligule:'hairs',awns:'long'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -88,7 +95,13 @@ const incompatible=[
  ['bouteloua-rigidiseta',{head:'combs'}],
  ['bouteloua-rigidiseta',{habit:'mat'}],
  ['setaria-parviflora',{head:'burrs'}],
- ['setaria-parviflora',{awns:'burs'}]
+ ['setaria-parviflora',{awns:'burs'}],
+ ['bouteloua-hirsuta',{head:'whorls'}],
+ ['bouteloua-hirsuta',{habit:'rhizome'}],
+ ['chloris-verticillata',{head:'fingers'}],
+ ['chloris-virgata',{head:'whorls'}],
+ ['chloris-verticillata',{awns:'burs'}],
+ ['chloris-virgata',{awns:'burs'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -105,6 +118,9 @@ assert(specimenMap.get('nassella-leucotricha').character_evidence.head.reported_
 assert(specimenMap.get('bouteloua-rigidiseta').character_evidence.habit.reported_states?.length===2,'Texas grama no-rhizome versus UT short-rhizome conflict must be preserved');
 assert(specimenMap.get('bouteloua-rigidiseta').character_evidence.ligule.reported_states?.length===2,'Texas grama hair fringe versus ciliate membrane disagreement must be preserved');
 assert(specimenMap.get('setaria-parviflora').character_evidence.ligule.reported_states?.length===2,'Knotroot bristlegrass ligule tissue observations must be retained');
+assert(specimenMap.get('bouteloua-hirsuta').character_evidence.habit.reported_states?.length===3,'Hairy grama H&L versus FNA surface-stem conflict must remain explicit');
+assert(specimenMap.get('bouteloua-hirsuta').character_evidence.head.reported_states?.length===2,'Hairy grama Diggs versus FNA digitate variation must remain visible');
+for(const id of ['chloris-verticillata','chloris-virgata'])assert(specimenMap.get(id).character_evidence.ligule.reported_states?.length===2,id+': ciliate membrane source observations absent');
 const unknown={id:'unknown',common:'Unknown',scientific:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(results({head:'flat_oats',ligule:'hairs'},[unknown]),['unknown'],'missing states must not become negative evidence');
 const expectedAdditions={
@@ -119,7 +135,10 @@ const expectedAdditions={
  'bouteloua-gracilis':{habit:['rhizome','mat']},
  'nassella-leucotricha':{head:['long_narrow_panicle'],habit:['rhizome']},
  'bouteloua-rigidiseta':{habit:['rhizome'],ligule:['membrane']},
- 'setaria-parviflora':{ligule:['membrane']}
+ 'setaria-parviflora':{ligule:['membrane']},
+ 'bouteloua-hirsuta':{head:['fingers'],habit:['mat']},
+ 'chloris-verticillata':{ligule:['hairs']},
+ 'chloris-virgata':{ligule:['hairs']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -128,8 +147,9 @@ for(const [id,expected] of Object.entries(expectedAdditions)){
   const evidence=s.character_evidence[key];
   assert(evidence,id+': missing evidence for '+key);
   if(key==='head'){
-   // Reproductive evidence belongs to Diggs first; GrassBase supplies extra panicle variants.
-   assert(evidence.source.includes('Diggs') && evidence.source.includes('GrassBase'),id+': missing regional reproductive and supplemental authority');
+   // Reproductive evidence belongs to Diggs first; species-level FNA or GrassBase supplies permitted alternatives.
+   const supplemental=id==='bouteloua-hirsuta' ? 'Flora of North America' : 'GrassBase';
+   assert(evidence.source.includes('Diggs') && evidence.source.includes(supplemental),id+': missing regional reproductive and supplemental authority');
   }else if(id==='bouteloua-gracilis' && key==='habit'){
    // No B. gracilis treatment in Hagenbuch & Lemke; use FNA and USDA for vegetative range.
    assert(evidence.source.includes('Flora of North America') && evidence.source.includes('USDA Forest Service'),id+': missing FNA/USFS fallback evidence');
@@ -173,7 +193,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:17,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:21,
  regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
