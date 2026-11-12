@@ -31,7 +31,7 @@ button[aria-pressed=true]{background:var(--forest);color:white;border-color:var(
 .card-body{border-top:1px solid var(--line);padding:15px 17px 20px}.card-body p{margin:8px 0;font-size:.9rem;color:#495c4d}
 .card-body h3{margin:20px 0 7px;font-size:1rem}
 .trait{padding:10px 0;border-top:1px solid #e5ece3}.trait strong{display:block;color:#264d38;text-transform:capitalize}.trait p{margin:3px 0 5px}.trait small{color:#64796e;display:block}
-.links{display:flex;gap:8px;flex-wrap:wrap}.links a{font-size:.8rem;padding:5px 8px;background:#edf4ed;border-radius:8px}
+.links{display:flex;gap:8px;flex-wrap:wrap}.checked-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.checked-gallery figure{margin:0;min-width:0}.checked-gallery img{display:block;max-width:100%;width:100%;aspect-ratio:4/3;object-fit:contain;background:#e6ece3;border-radius:7px}.checked-gallery figcaption{font-size:.74rem;color:#566857;line-height:1.4}.checked-gallery a{display:block;font-size:.74rem}.links a{font-size:.8rem;padding:5px 8px;background:#edf4ed;border-radius:8px}
 .context{color:#695633!important;font-size:.83rem!important}
 footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);font-size:.85rem}
 @media(max-width:750px){.list{grid-template-columns:1fr}.controls{align-items:stretch}.controls label{width:100%}.controls input{min-width:0;width:100%;flex-basis:100%}.stat{flex:1;min-width:100px}.card summary{padding:14px}header a{font-size:.8rem}}
@@ -41,7 +41,7 @@ footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);f
 <header><div class="wrap"><strong>HAYS BOTANY / GRASS ID LAB</strong><nav><a href="./">← Photo identification key</a> · <a href="../">Grass Learner</a></nav></div></header>
 <main class="wrap">
 <section class="hero"><div class="eyebrow">Hays County expansion · reference library</div><h1>Additional grasses under review</h1><p>Explore the new Hays County candidate grasses and the actual structures our botanical references recommend examining. Each reference description is paired with a specific field-photo target. These are educational reference cards, not confirmed local species IDs.</p></section>
-<p class="notice"><strong>Important:</strong> These 57 candidate records are <strong>not yet in the scored 112-species identification key</strong> or approved as verified Hays County taxa. Source observation labels are not independent identifications. All photographs remain at their original source; none is reproduced on this review page without a separate rights check. An unrecorded trait means unknown, not absent.</p>
+<p class="notice"><strong>Important:</strong> These 57 candidate records are <strong>not yet in the scored 112-species identification key</strong> or approved as verified Hays County taxa. Source observation labels are not independent identifications. Seven individually licensed, source-credited general photos have now been linked for three expansion taxa. The other records stay photo-pending; displaying source images does not prove Hays specimen identity. An unrecorded trait means unknown, not absent.</p>
 <div class="summary" aria-label="Current project counts"><div class="stat"><b id="total">57</b><span>Research candidate taxa</span></div><div class="stat"><b id="characters">322</b><span>Literature character targets</span></div><div class="stat"><b id="holds">7</b><span>Photo-access holds</span></div></div>
 <div class="controls"><label for="search">Find a grass</label><input id="search" type="search" placeholder="Scientific name, common name, synonym…" autocomplete="off"><button type="button" data-view="all" aria-pressed="true">All 57</button><button type="button" data-view="reviewed" aria-pressed="false">Photos reviewed</button><button type="button" data-view="holds" aria-pressed="false">Access holds</button></div>
 <p id="count" role="status">Loading research candidates…</p>
@@ -59,6 +59,7 @@ function card(item){
  summary.append(el("h2","",item.common),el("span","latin",item.scientific));
  const chips=el("div","chips");chips.append(el("span","chip","Literature profile · "+item.details.length+" characters"));
  chips.append(el("span","chip","Hays observation reports: "+item.local_report_count));
+ if(item.approved_gallery?.length)chips.append(el("span","chip",item.approved_gallery.length+" rights-cleared example photos"));
  if(item.photo_status==="PHOTO_PIXEL_ACCESS_PENDING")chips.append(el("span","chip hold","Original photos inaccessible"));
  else chips.append(el("span","chip","Original photo review previously recorded"));
  summary.append(chips);box.append(summary);
@@ -67,6 +68,20 @@ function card(item){
  if(item.unresolved)body.append(paragraph("What remains unproven:",item.unresolved));
  if(item.risky_context)body.append(paragraph("Occurrence caution:","Review planted, cultivated or escaped-site context; observation does not establish naturalization.","context"));
  if(item.warning_flags?.length)body.append(paragraph("Additional checks:",item.warning_flags.map(s=>s.replaceAll("_"," ").toLowerCase()).join(", "),"context"));
+ if(item.approved_gallery?.length){
+  body.append(el("h3","","Credited general photos — not specimen verification"));
+  body.append(el("p","These images have checked file-specific reuse terms, but were photographed outside Hays County. They do not certify the fine anatomical claims below."));
+  const gallery=el("div","checked-gallery");
+  for(const p of item.approved_gallery){
+   const fig=el("figure"),img=el("img");img.src=p.src;img.loading="lazy";img.decoding="async";img.alt=p.label;
+   img.addEventListener("error",()=>{img.replaceWith(el("span","","Photo temporarily unavailable — see original source."))});
+   fig.append(img);
+   const cap=el("figcaption");cap.append(el("strong","",p.label),el("span","",p.creator+" · "+p.license));
+   const source=link("Original photo source",p.source_page),rights=link("License",p.license_url);
+   if(source)cap.append(source);if(rights)cap.append(rights);fig.append(cap);gallery.append(fig);
+  }
+  body.append(gallery);
+ }
  body.append(el("h3","","Characters described in references — verify on the same plant"));
  for(const c of item.details){
   const div=el("div","trait");div.append(el("strong","",c.part.replaceAll("_"," ")),el("p","",c.description),el("small","","Inspect: "+c.needed_view),el("small","","Source: "+c.source));body.append(div);
@@ -78,7 +93,7 @@ function card(item){
  const path=item.source_location.replace(/^\.\.\/\.\.\//,"");
  const source=link("Original diagnostic packet","https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/"+path);
  if(source)l.append(source);
- body.append(l,paragraph("Publication status:","Review-only. Specimen identification, photo license, and local occurrence have not passed release checks.","context"));
+ body.append(l,paragraph("Publication status:","Research profile only. The gallery above, where present, has individual source/rights checks; specimen ID, local occurrence and scored-key admission remain pending.","context"));
  box.append(body);return box;
 }
 function refresh(){
