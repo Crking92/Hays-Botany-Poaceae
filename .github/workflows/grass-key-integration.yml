@@ -51,5 +51,7 @@ jobs:
         run: node scripts/test_grass_sprint_lane_b_batch4.cjs
       - name: Execute Lane C Batch 5 self-contained real-filter regressions
         run: node scripts/test_lane_c_batch5.cjs
+      - name: Execute Lane C Batch 6 morphology and source-hold regressions
+        run: node scripts/test_lane_c_batch6.cjs
       - name: Validate Lane C regression script syntax (baseline histories checked separately)
-        run: node --check scripts/test_lane_c_batch1.cjs && node --check scripts/test_lane_c_batch2.cjs && node --check scripts/test_lane_c_batch3.cjs && node --check scripts/test_lane_c_batch5.cjs
+        run: node --check scripts/test_lane_c_batch1.cjs && node --check scripts/test_lane_c_batch2.cjs && node --check scripts/test_lane_c_batch3.cjs && node --check scripts/test_lane_c_batch5.cjs && node --check scripts/test_lane_c_batch6.cjs
