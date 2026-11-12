@@ -133,6 +133,10 @@ const positives = [
   ['blue grama visible short rhizome no awn',{head:'combs',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['bouteloua-gracilis']],
   ['blue grama low rooted sod short awn',{head:'combs',habit:'mat',ligule:'hairs',awns:'three_short'},['bouteloua-gracilis']],
   ['blue grama low rooted sod no awn',{head:'combs',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-gracilis']],
+  // Lane B #95 — seven-or-more unilateral branches can be barnyardgrass.
+  ['barnyardgrass seven unilateral branches long awns',{head:'many_one_sided',habit:'tuft',ligule:'absent',awns:'long'},['echinochloa-crus-galli']],
+  ['barnyardgrass seven unilateral branches no obvious awn',{head:'many_one_sided',habit:'tuft',ligule:'absent',awns:'none_obvious'},['echinochloa-crus-galli']],
+  ['barnyardgrass seven unilateral branches unmeasured crown',{head:'many_one_sided',ligule:'absent'},['echinochloa-crus-galli']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -179,6 +183,10 @@ const negatives = [
   [{head:'long_narrow_panicle'},'dichanthelium-oligosanthes'],
   [{head:'whorls'},'bouteloua-gracilis'],
   [{awns:'burs'},'bouteloua-gracilis'],
+  // This branched Paniceae grass must not be confused with true spikes or bristles.
+  [{head:'many_one_sided'},'eleusine-indica'],
+  [{head:'many_one_sided'},'elymus-canadensis'],
+  [{head:'many_one_sided',awns:'bristles'},'echinochloa-crus-galli'],
   [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
