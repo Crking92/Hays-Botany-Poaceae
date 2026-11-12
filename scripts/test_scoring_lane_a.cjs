@@ -87,8 +87,16 @@ for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
  assert(s,id+' absent');
  for(const key of Object.keys(expected)){
-  assert(s.character_evidence[key]?.source.includes('Hagenbuch & Lemke'),id+': missing authority for '+key);
-  assert(s.character_evidence[key]?.status.includes('SPECIMEN_PENDING'),id+': uncertainty not retained for '+key);
+  const evidence=s.character_evidence[key];
+  assert(evidence,id+': missing evidence for '+key);
+  if(key==='head'){
+   // Reproductive evidence belongs to Diggs first; GrassBase supplies extra panicle variants.
+   assert(evidence.source.includes('Diggs') && evidence.source.includes('GrassBase'),id+': missing regional reproductive and supplemental authority');
+  }else{
+   // Ligules and growth-form states must have the primary Hill Country vegetative account.
+   assert(evidence.source.includes('Hagenbuch & Lemke'),id+': missing regional vegetative authority for '+key);
+  }
+  assert(evidence.status.includes('SPECIMEN_PENDING'),id+': uncertainty not retained for '+key);
  }
  for(const [key,states] of Object.entries(expected)) for(const state of states) assert(s.traits[key].includes(state));
 }
