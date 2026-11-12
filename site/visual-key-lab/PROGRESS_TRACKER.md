@@ -1,8 +1,23 @@
 # Hays Botany — Visual Grass Multi-Access Key Progress
 
 **Updated:** 2026-11-11  
-**Scope:** 112 Hays Botany Poaceae species, 53 genera. This is the single progress ledger for the key; do not create per-batch spreadsheets.
+**Scope:** one unified **169-grass** working collection: 112 legacy species scored in the Lab and 57 research-only additional grass taxa now searchable in the same Learner. The 112-only table below documents the completed original baseline and MUST NOT be mistaken for 169 verified diagnostic profiles. This is still the single progress ledger; do not create per-batch spreadsheets.
 **Important:** This tracker distinguishes coverage from verification. A species with one checked character is not a fully verified ID.
+
+## Current 169-grass integration milestone — November 11, 2026
+
+| Project stage | Current truth |
+| --- | --- |
+| Full working inventory | **169 / 169** source profiles, 112 original + 57 expansion; no duplicate scientific names or IDs |
+| Searchable in unified Learner | **169 / 169** after the integration commit reaches the public Pages deployment; confirmation of live Pages must be checked separately |
+| Reference-character descriptions prepared | **322** newly staged descriptions for the 57 expansion records; original 112 had **315** first-pass diagnostic checks. Different datasets and evidence levels: do not represent as 637 verified structures |
+| Active four-character scored key | **112 / 169**. The 57 provisional additions are NOT scored and should not appear as falsely certain ID results |
+| Existing Lab photo QA baseline | **514 / 514 original gallery references** reviewed across the original 112, 352 direct / 162 partial, including one zero-gallery-photo hybrid. No inference that the 57 new species have published pictures |
+| Expansion general-photo publication | **Not verified yet**. Candidate observation URLs are research-only; source-specific license, photographer and taxon identification checks are required before adding images |
+| Source hierarchy | Hagenbuch & Lemke 2015 for vegetative; Diggs et al. 1999 for reproductive; GrassBase/FNA/POWO/local vouchers as specialized supplements |
+| QA automations | Five hourly read-only Poaceae checkers, reporting deltas only. Do not change GitHub, Google Drive, photo rights, or legacy hub |
+
+All future manual batches should report progress against **169 total**, distinguishing Learner listing, visible own-species photos, scored key admission, verified characters, and actual Pages deployment. See [UNIFIED_169_WORKING_RULES.md](UNIFIED_169_WORKING_RULES.md) for cross-chat handoff. No extra Field Test Mode; owner sends screenshots and descriptions of normal website use.
 
 ## Phase dashboard
 
