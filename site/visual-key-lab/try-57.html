@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b2e">
+<title>Grass ID Lab · Experimental 57 field test</title>
+<style>
+:root{--green:#173b2e;--green2:#246347;--sage:#e6efe7;--paper:#f4f6f0;--ink:#19352a;--muted:#53665b;--line:#d7e1d7;--gold:#73520e}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}a{color:var(--green2)}button,select,input{font:inherit}button,select,input{min-height:44px}button{cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #d39939;outline-offset:2px}
+header{background:var(--green);color:white;padding:19px max(16px,calc((100vw - 1130px)/2))}header a{color:#dcf1dd}main{width:min(1130px,calc(100% - 30px));margin:23px auto 60px}.hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}.hero h1{font:700 clamp(1.9rem,5vw,2.8rem)/1.1 Georgia,serif;margin:8px 0}.hero p{max-width:780px;margin:8px 0}.tag{font-size:.73rem;padding:4px 9px;border-radius:50px;display:inline-block;font-weight:700;background:#f9e7ba;color:#67460d}.notice{background:#fff8df;border-left:4px solid #c3973e;padding:14px 16px;margin:20px 0;border-radius:4px}.notice strong{display:block}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:17px;box-shadow:0 4px 16px #1a362610}.panel h2{font-size:1.14rem;margin:0 0 12px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-weight:650;font-size:.94rem}.field select,.field input{width:100%;background:#fff;border:1px solid #b7c9bb;border-radius:7px;padding:7px 9px;color:var(--ink)}.hint{font-size:.8rem;color:var(--muted);line-height:1.4}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.button{background:var(--green2);border:1px solid var(--green2);color:white;border-radius:7px;padding:9px 13px;font-weight:650}.button.alt{background:white;color:var(--green2)}.button:disabled{opacity:.5;cursor:default}.results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin:22px 0 12px}.results-head h2{margin:0;font-size:1.35rem}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.card-main{display:flex;gap:12px;padding:11px;align-items:flex-start}.thumb{width:128px;height:115px;flex:none;border-radius:7px;object-fit:cover;background:#e9eee8}.no-photo{width:128px;min-height:115px;display:grid;place-items:center;text-align:center;background:#e9eee8;color:var(--muted);font-size:.77rem;padding:8px;border-radius:7px;flex:none}.name{font-weight:750}.latin{font-style:italic;font-size:.85rem;color:var(--muted)}.flag{display:inline-block;color:#654a0e;background:#faedcb;border-radius:4px;padding:2px 6px;font-size:.7rem;font-weight:750;margin-top:6px}.flag.scored{background:#e0f0e4;color:#225f36}.status{font-size:.78rem;margin-top:7px}.card details{border-top:1px solid var(--line);padding:8px 12px 10px;font-size:.87rem}.card summary{cursor:pointer;font-weight:700;color:var(--green2);padding:3px 0}.card p{margin:7px 0}.card ul{margin:5px 0 6px;padding-left:19px}.mini{font-size:.78rem;color:var(--muted)}.empty{padding:15px;background:white;border:1px solid var(--line);border-radius:7px}.below{display:flex;justify-content:center;margin:17px auto}.counts{font-size:.84rem;color:var(--muted)}.risk{font-size:.78rem;color:#7b4b18}.status-line{min-height:24px;color:var(--muted);margin:5px 0}
+@media(max-width:760px){.controls,.grid{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.thumb,.no-photo{width:104px;height:101px}.card-main{gap:10px}main{margin-top:14px}.panel{padding:14px}}
+</style>
+</head>
+<body>
+<header><strong>HAYS BOTANY · POACEAE</strong><div><a href="./">Return to the original 112-grass ID key</a></div></header>
+<main>
+<div class="hero"><div><span class="tag">OPT-IN BETA · NOT A SPECIES VERIFICATION</span><h1>Try the additional 57 grasses</h1><p>Run the same four field choices against 112 established scoring profiles plus 57 experimental literature profiles. Compare what stays possible, what gets excluded, and where the source data is still missing.</p></div></div>
+<div class="notice"><strong>Test predictions, not confirmed identifications.</strong> All 57 additions remain provisional: none has passed the specimen-level admission gate. A matching experimental profile is a lead to check, not proof of species, local nativity, or planting status. Unknown characters remain possible rather than becoming false exclusions. Photos show credited source references where available, not necessarily Hays specimens.</div>
+<div id="loading" role="status" class="status-line">Loading the current key and candidate dossiers…</div>
+<div class="controls">
+<section class="panel"><h2>1 · Choose what to test</h2>
+<div class="field"><label for="mode">Comparison group</label><select id="mode"><option value="all">All 169 · 112 existing + 57 trial</option><option value="trial">57 experimental grasses only</option><option value="scored">112 existing scored grasses only</option></select></div>
+<div class="field" style="margin-top:12px"><label for="example">Try a particular candidate</label><select id="example"><option value="">Select one of the 57 (optional)</option></select><span class="hint">Click “Load source-described observations” to try the currently mapped traits. A field specimen may differ.</span></div>
+<div class="actions"><button id="use-example" type="button" class="button">Load source-described observations</button><button id="clear" type="button" class="button alt">Clear observations</button></div>
+<p class="hint" id="example-note"></p>
+</section>
+<section class="panel"><h2>2 · Record what you actually see</h2>
+<div class="fields"><div class="field"><label for="head">Flowerhead</label><select id="head"></select><span class="hint">No flowers? Leave blank.</span></div>
+<div class="field"><label for="habit">Growth form</label><select id="habit"></select><span class="hint">Identify a connected crown, stolon or rhizome.</span></div>
+<div class="field"><label for="ligule">True leaf ligule</label><select id="ligule"></select><span class="hint">Look inside the blade–sheath junction.</span></div>
+<div class="field"><label for="awns">Awns and bristles</label><select id="awns"></select><span class="hint">Use a hand lens for tiny lemma structures.</span></div></div>
+<div class="actions"><button id="copy" type="button" class="button alt">Copy test results for review</button></div>
+</section>
+</div>
+<div class="results-head"><div><h2>Possible matches</h2><div class="counts" id="summary"></div></div>
+<div class="field"><label for="search">Filter names</label><input type="search" id="search" placeholder="e.g., lovegrass, ryegrass"></div></div>
+<div id="results" class="grid" aria-live="polite"></div>
+<div class="below"><button id="more" class="button alt" hidden type="button">Show 25 more</button></div>
+<details class="panel"><summary>How to interpret an experimental result</summary><p>One observed character cannot identify a grass. A candidate with unscored characters survives more selections because those fields are unknown, not because the grass matches every choice. Check the candidate’s source-described characters, species comparisons, flowering season, original photo credits and local origin before calling the identification.</p><p>Use the official <a href="./">Grass ID Lab</a> for the current scored set. This trial does not alter the official key.</p></details>
+</main>
+<script>
+'use strict';
+(()=> {
+const $=id=>document.getElementById(id);
+const groups={
+head:[['short_racemes','Separate short silky racemes'],['fingers','Fingers clustered near tip'],['side_oats','Many little hanging side oats'],['short_side_racemes','Short bristly non-comb racemes'],['combs','Eyebrow-shaped combs'],['whorls','Windmill spokes in tiers'],['flat_oats','Flat dangling oat-like spikelets'],['airy','Open airy panicle'],['foxtail','Dense foxtail-like cylinder'],['sparse_bristles','Sparse interrupted bristlegrass'],['wiry','Very long spreading wiry rays'],['compact','Compact crowded head'],['bushy','Bushy short silky racemes'],['reed_plume','Tall reed-like flowering plume'],['branched_oat','Large dangling oat-like spikelets'],['burrs','Spiny burs or hard seed clusters'],['one_sided','Spikelets on one side of branches'],['many_one_sided','Seven or more one-sided racemes'],['spike','Single upright/nodding spike'],['tangled_awns','Long dark tangled awns'],['long_narrow_panicle','Long narrow panicle'],['golden_plume','Upright golden/bronze plume'],['paired_spikes','Two V-shaped racemes'],['mixed_gender','Upper male / lower female'],['aquatic_gender','Lower male / upper female'],['aquatic_mixed','Aquatic male and female intermixed']],
+habit:[['tuft','Tufted clump'],['mat','Ground-spreading, nodes rooted'],['rhizome','Underground stem / rhizome'],['aquatic_rooted','Rooted in running water']],
+ligule:[['hairs','Hair fringe'],['membrane','Membranous flap (possibly ciliate)'],['absent','Truly absent']],
+awns:[['three','Three long awns from one floret'],['three_short','Three short awn tips (lens)'],['long','Conspicuous long awns'],['bristles','Separate spikelet bristles'],['none_obvious','No conspicuous long awns'],['burs','Sandbur-like spiny involucre']]
+};
+const axes=['head','habit','ligule','awns'];
+const state={scored:[],trial:[],manifest:new Map(),mode:'all',search:'',selected:{head:'',habit:'',ligule:'',awns:''},max:25,rows:[]};
+const elem=(tag,cl,txt)=>{const n=document.createElement(tag);if(cl)n.className=cl;if(txt!==undefined)n.textContent=txt;return n};
+function selected(){return Object.entries(state.selected).filter(([,v])=>v)}
+function updateUrl(){const u=new URL(location.href);u.searchParams.set('mode',state.mode);for(const k of axes){if(state.selected[k])u.searchParams.set(k,state.selected[k]);else u.searchParams.delete(k)}history.replaceState(null,'',u.toString())}
+function dataRows(){let pool=state.mode==='scored'?state.scored:state.mode==='trial'?state.trial:[...state.scored,...state.trial];return pool.map(s=>{let unknown=0,agree=0,conflict=[];for(const [key,val] of selected()){const allowed=s.traits?.[key]||[];if(!allowed.length)unknown++;else if(allowed.includes(val))agree++;else conflict.push(key)}return{s,unknown,agree,conflict}}).filter(x=>!x.conflict.length).filter(x=>(x.s.common+' '+x.s.scientific).toLowerCase().includes(state.search)).sort((a,b)=>a.unknown-b.unknown||b.agree-a.agree||(a.s.experimental?1:0)-(b.s.experimental?1:0)||a.s.common.localeCompare(b.s.common))}
+function setSelect(k){const input=$(k);input.replaceChildren(new Option('Unknown / not examined',''));for(const [value,label] of groups[k])input.add(new Option(label,value));input.addEventListener('change',()=>{state.selected[k]=input.value;state.max=25;updateUrl();render()})}
+function photoFor(s){if(s.experimental){const m=state.manifest.get(s.id);const photo=m?.approved_gallery?.[0];return photo?{src:photo.src,alt:photo.label,credit:photo.creator+' · '+photo.license,source:photo.source_page}:null}const p=s.photos?.find(x=>x.i===s.hero_i)||s.photos?.[0];return p?{src:p.src,alt:p.label,credit:[p.creator,p.license].filter(Boolean).join(' · '),source:p.source_page}:null}
+function card(x){const s=x.s;const card=elem('article','card');const main=elem('div','card-main'),pic=photoFor(s);
+if(pic){const im=elem('img','thumb');im.loading='lazy';im.decoding='async';im.src=pic.src;im.alt=pic.alt||s.common;im.addEventListener('error',()=>im.replaceWith(elem('div','no-photo','Image unavailable · source link below')));main.append(im)}else main.append(elem('div','no-photo','No verified general photograph yet'));
+const words=elem('div');words.append(elem('div','name',s.common),elem('div','latin',s.scientific),elem('div','flag '+(s.experimental?'':'scored'),s.experimental?'UNVERIFIED TRIAL':'EXISTING SCORE'));words.append(elem('div','status',x.agree+' observed matches · '+x.unknown+' unscored observations'));
+if(x.unknown)words.append(elem('div','mini','Unknown traits keep this possible; they do not count as matches.'));main.append(words);card.append(main);
+const d=elem('details');const summary=elem('summary',null,'Review evidence and source');d.append(summary);
+if(s.experimental){const m=state.manifest.get(s.id);d.append(elem('p',null,'Status: research candidate only. '+(m?.unresolved||'Species-level specimen identity has not been confirmed.')));
+if(m?.warning_flags?.length)d.append(elem('p','risk','Further checks: '+m.warning_flags.join(' · ')));
+for(const k of axes){const vals=s.traits[k];if(!vals?.length)continue;const sections=s.source_details[k]||[];d.append(elem('p',null,k.toUpperCase()+': '+vals.map(v=>groups[k].find(y=>y[0]===v)?.[1]||v).join(' / ')));for(const part of sections){d.append(elem('p','mini',part.part+': '+part.description+' · '+part.source))}}
+const link=m?.source_location;if(link)d.append(elem('p','mini','Full research dossier reference: '+link.replace('../../','')));if(m?.taxonomy_url){const a=elem('a',null,'Taxonomy and name reference');a.href=m.taxonomy_url;a.target='_blank';a.rel='noopener noreferrer';d.append(a)}
+}else{d.append(elem('p',null,s.field_rule||'See full scored species record.'));const a=elem('a',null,'Open original scored key');a.href='./';d.append(a)}
+if(pic){d.append(elem('p','mini','Reference image: '+pic.credit));if(pic.source){const a=elem('a',null,'Photo source and attribution');a.href=pic.source;a.target='_blank';a.rel='noopener noreferrer';d.append(a)}}card.append(d);return card}
+function render(){state.rows=dataRows();const n=selected().length;const all=state.mode==='all'?'169-grass trial':state.mode==='trial'?'57-candidate trial':'112 established';const rows=state.rows;const exact=rows.filter(x=>x.unknown===0).length;
+$('summary').textContent=rows.length+' compatible profiles in '+all+' · '+n+' character'+(n===1?'':'s')+' selected · '+exact+' fully coded for these choices (not species certainty)';
+const box=$('results');box.replaceChildren();if(!rows.length)box.append(elem('p','empty','No compatible coded profiles. Recheck uncertain observations or clear a choice; this is experimental scoring.'));
+for(const x of rows.slice(0,state.max))box.append(card(x));$('more').hidden=state.max>=rows.length;$('more').textContent='Show 25 more ('+(rows.length-state.max)+' remaining)';
+}
+function copyTest(){const lines=['Hays Grass ID Lab — EXPERIMENTAL field-test (not confirmed ID)','Mode: '+state.mode,'Observed: '+selected().map(([k,v])=>k+'='+v).join(', '),'Compatible profiles: '+state.rows.length,'First 30:'];for(const x of state.rows.slice(0,30))lines.push((x.s.experimental?'[PROVISIONAL] ':'[EXISTING] ')+x.s.scientific+' · matched='+x.agree+' unknown='+x.unknown);
+const message=lines.join('\n');if(navigator.clipboard?.writeText){navigator.clipboard.writeText(message).then(()=>$('copy').textContent='Copied test results').catch(()=>window.prompt('Copy these results:',message))}else window.prompt('Copy these results:',message)}
+async function boot(){try{for(const k of axes)setSelect(k);
+const files=['species-a.json','species-b.json','species-c1.json','species-c2.json','species-c3.json','species-d1.json','species-d2.json','species-d3.json','species-d4.json','hays-candidates.json','experimental-57-profiles.json'];
+const response=await Promise.all(files.map(f=>fetch(f,{cache:'no-store'})));if(response.some(r=>!r.ok))throw Error('Some scoring data is not available yet.');const data=await Promise.all(response.map(r=>r.json()));
+state.scored=data.slice(0,9).flat().map(x=>({...x,experimental:false}));const manifest=data[9].candidates, experiment=data[10].profiles;
+if(state.scored.length!==112||manifest.length!==57||experiment.length!==57)throw Error('Expected the 112+57 records; please check repository release.');
+state.manifest=new Map(manifest.map(x=>[x.id,x]));
+const ids=new Set(state.scored.map(x=>x.id));state.trial=experiment.map(x=>{const m=state.manifest.get(x.id);if(!m||ids.has(x.id)||x.reviewed_for_admission!==false)throw Error('Provisional inventory gate failed: '+x.id);ids.add(x.id);return {...x,scientific:m.scientific,common:m.common||m.scientific,experimental:true}});
+if(ids.size!==169)throw Error('Duplicate or missing species profile.');
+for(const s of manifest){const opt=new Option((s.common||s.scientific)+' · '+s.scientific,s.id);$('example').add(opt)}
+const u=new URL(location.href);state.mode=['all','trial','scored'].includes(u.searchParams.get('mode'))?u.searchParams.get('mode'):'all';$('mode').value=state.mode;
+for(const k of axes){const p=u.searchParams.get(k);if(groups[k].some(x=>x[0]===p)){state.selected[k]=p;$(k).value=p}}
+$('mode').addEventListener('change',()=>{state.mode=$('mode').value;state.max=25;updateUrl();render()});
+$('search').addEventListener('input',()=>{state.search=$('search').value.toLowerCase().trim();state.max=25;render()});
+$('use-example').addEventListener('click',()=>{const id=$('example').value;if(!id)return;$('mode').value='all';state.mode='all';const s=state.trial.find(x=>x.id===id);for(const k of axes){state.selected[k]=s.traits[k]?.[0]||'';$(k).value=state.selected[k]}state.max=25;state.search='';$('search').value='';const known=Object.values(state.selected).filter(Boolean).length;$('example-note').textContent=known?('Loaded '+known+' of 4 literature-described categories; now compare to your actual plant.'):('No reliable values in these four broad categories yet; see this candidate by name in the trial list.');if(!known){state.search=s.scientific.toLowerCase();$('search').value=s.scientific}updateUrl();render()});
+$('clear').addEventListener('click',()=>{for(const k of axes){state.selected[k]='';$(k).value=''}state.search='';$('search').value='';state.max=25;$('example-note').textContent='';updateUrl();render()});
+$('copy').addEventListener('click',copyTest);$('more').addEventListener('click',()=>{state.max+=25;render()});
+$('loading').textContent='Loaded 112 current scored grasses + 57 experimental literature profiles. None of the 57 has passed species admission.';render();
+}catch(e){$('loading').textContent='Could not start experimental testing: '+e.message;}}
+boot();
+})();
+</script>
+</body>
+</html>
