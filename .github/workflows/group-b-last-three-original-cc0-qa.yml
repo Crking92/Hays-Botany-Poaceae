@@ -1,0 +1,21 @@
+name: Group B - final three source originals and Tridentopsis CC0 scout (read only)
+on:
+  pull_request:
+    paths:
+      - 'scripts/group_b_three_originals_cc0_qa.py'
+      - '.github/workflows/group-b-last-three-original-cc0-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-original-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Verify three exact source originals and find any Tridentopsis CC0 photo leads
+        run: python scripts/group_b_three_originals_cc0_qa.py
