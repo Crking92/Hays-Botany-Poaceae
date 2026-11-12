@@ -1,0 +1,22 @@
+name: B17 CC0 original seasonal and panicle source gate
+on:
+  pull_request:
+    paths:
+      - 'scripts/poaceae_b17_original_gate.py'
+      - '.github/workflows/poaceae-b17-original-gate.yml'
+jobs:
+  source-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/poaceae_b17_original_gate.py
+          sparse-checkout-cone-mode: false
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -q pillow
+      - run: python scripts/poaceae_b17_original_gate.py
