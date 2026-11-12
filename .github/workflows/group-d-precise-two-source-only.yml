@@ -1,0 +1,23 @@
+name: Group D precise macro originals (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - 'scripts/check_group_d_precise_two.py'
+      - '.github/workflows/group-d-precise-two-source-only.yml'
+permissions: {contents: read}
+jobs:
+  exact-original-two:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install requests pillow
+      - run: python scripts/check_group_d_precise_two.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-d-two-original-source-evidence
+          path: qa-report/group-d-precise-macro-sources.json
+          retention-days: 14
