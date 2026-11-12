@@ -36,7 +36,7 @@ for item in rows:
   license_url=html.unescape(str(m.get("LicenseUrl",{}).get("value","")))
   item["commons_creator"]=artist[:180];item["commons_license_url"]=license_url;item["commons_original_sha1"]=v.get("sha1");item["commons_bytes"]=v.get("size")
   if item["creator"].lower() not in artist.lower():errors.append("AUTHOR_NOT_MATCHED")
-  if item["license_path"] not in license_url:errors.append("FILE_LICENSE_VERSION_MISMATCH")
+  if not license_url.rstrip("/").lower().endswith(item["license_path"].rstrip("/").lower()):errors.append("FILE_LICENSE_VERSION_MISMATCH")
   if any(x in license_url for x in ("/by-nc/","/by-nd/","/by-nc-sa/")):errors.append("RESTRICTED_LICENSE")
   for suffix in ("", "?download=1"):
    try:
@@ -56,7 +56,7 @@ for item in rows:
  item["status"]="SOURCE_RIGHTS_AND_ORIGINAL_OK" if not errors else "HOLD"
  item["errors"]=errors
  if errors:failed=True
- print("GROUP_D_PRECISE_MACRO",json.dumps({k:item.get(k) for k in ("file","status","errors","original_dimensions","original_sha256_computed")}),flush=True)
+ print("GROUP_D_PRECISE_MACRO",json.dumps({k:item.get(k) for k in ("file","status","errors","commons_license_url","original_dimensions","original_sha256_computed")}),flush=True)
 if len(hashes)!=len(set(hashes)):failed=True
 out={"source_file_count":len(rows),"verified":sum(x["status"]=="SOURCE_RIGHTS_AND_ORIGINAL_OK" for x in rows),"holds":sum(x["status"]=="HOLD" for x in rows),
  "unique_original_SHA256":len(set(hashes)),"historical_archive_byte_dedup_not_claimed":True,"local_specimen_identity_not_certified":True,"photos_published_by_this_probe":0,"rows":rows}
