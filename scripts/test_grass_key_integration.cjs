@@ -169,15 +169,26 @@ const positives = [
   ['nimblewill rooted tuft with ciliate inner ligule',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'long'},['muhlenbergia-schreberi']],
   ['thin paspalum paired racemes tuft',{head:'paired_spikes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
   ['thin paspalum paired racemes rhizome',{head:'paired_spikes',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
-  // Lane B #110: an actual 7+ unilateral raceme head must retain goosegrass.
-  ['goosegrass classic digitate fingers',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
-  ['goosegrass one-sided pressed spikelet rows',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
-  ['goosegrass seven or more unilateral branches',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
-  // Lane C #111: a field-shape selection is provisional, not species proof.
-  ['Texas brome spreading open panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-texensis']],
-  ['slender Indiangrass open long-awned panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
-  ['hidden dropseed very short inner ciliate membrane compact',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
-  ['hidden dropseed very short inner ciliate membrane narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
+  // Lane A #107 — hairy grama low-rooting form, Chloris ciliate membranes.
+  ['hairy grama digitate tuft',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'three_short'},['bouteloua-hirsuta']],
+  ['hairy grama comb rooting mat',{head:'combs',habit:'mat',ligule:'membrane',awns:'none_obvious'},['bouteloua-hirsuta']],
+  ['hairy grama digitate rooting mat',{head:'fingers',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-hirsuta']],
+  ['tumble windmillgrass ciliate ligule tuft',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'long'},['chloris-verticillata']],
+  ['feather fingergrass ciliate ligule tuft',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'long'},['chloris-virgata']],
+  // Lane B #106 — hooded windmillgrass has unilateral rays and cilia.
+  ['hooded windmillgrass unilateral ray',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['chloris-cucullata']],
+  ['hooded windmillgrass 7-plus rays',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['chloris-cucullata']],
+  ['hooded windmillgrass 7-plus with cilia',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['chloris-cucullata']],
+  ['hooded windmillgrass whorls with cilia',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['chloris-cucullata']],
+  // Lane B #110 - valid goosegrass branch-count and flattened unilateral racemes.
+  ['goosegrass classic fingers',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  ['goosegrass one-sided rows',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  ['goosegrass 7-plus branches',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  // Lane C #111 - distinct open panicle/inner ligule visual choices.
+  ['Texas brome open spreading panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-texensis']],
+  ['slender Indiangrass open arching panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
+  ['hidden dropseed ciliate membrane compact',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
+  ['hidden dropseed ciliate membrane narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -225,7 +236,8 @@ const negatives = [
   [{head:'whorls'},'bouteloua-gracilis'],
   [{awns:'burs'},'bouteloua-gracilis'],
   // This branched Paniceae grass must not be confused with true spikes or bristles.
-  // Kew GrassBase confirms goosegrass can have seven-plus unilateral racemes.
+  // Goosegrass has 1–10(-17) unilateral racemes (Kew GrassBase), so not a valid negative.
+  // Carolina canarygrass retains a true compact panicle rather than seven unilateral branches.
   [{head:'many_one_sided'},'phalaris-caroliniana'],
   [{head:'many_one_sided'},'elymus-canadensis'],
   [{head:'many_one_sided',awns:'bristles'},'echinochloa-crus-galli'],
@@ -255,8 +267,17 @@ const negatives = [
   [{habit:'rhizome'},'muhlenbergia-schreberi'],
   [{head:'spike'},'paspalum-setaceum'],
   [{head:'many_one_sided'},'paspalum-setaceum'],
+  // Hairy grama and Chloris do not acquire unrelated floral architecture.
+  [{head:'whorls'},'bouteloua-hirsuta'],
+  [{habit:'rhizome'},'bouteloua-hirsuta'],
+  [{head:'fingers'},'chloris-verticillata'],
+  [{head:'whorls'},'chloris-virgata'],
+  [{head:'foxtail'},'chloris-cucullata'],
+  [{head:'spike'},'chloris-cucullata'],
+  [{ligule:'absent'},'chloris-cucullata'],
+  [{awns:'bristles'},'chloris-cucullata'],
   [{habit:'mat'},'paspalum-urvillei'],
-  // Incompatible choices remain excluded even after legitimate trait expansion.
+  // Retain incompatible alternatives without mistaking valid 7+ goosegrass for false.
   [{head:'foxtail'},'eleusine-indica'],
   [{awns:'bristles'},'eleusine-indica'],
   [{ligule:'absent'},'eleusine-indica'],
