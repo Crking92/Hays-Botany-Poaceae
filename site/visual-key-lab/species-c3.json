@@ -18,7 +18,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "First check SCALE and the BASAL BUNCH: Lindheimer muhly forms a large coarse, densely tufted fountain often around 0.8–1.5 m tall, with tall relatively contracted, densely flowered panicles. At the leaf collar a LONG MEMBRANOUS ligule is the high-value confirmation; photograph it with a ruler rather than inferring it from plant size.",
+    "field_rule": "First check SCALE and the BASAL BUNCH: Lindheimer muhly forms a large coarse, densely tufted fountain often around 0.8–1.5 m tall, with tall relatively contracted, densely flowered panicles. At the leaf collar a LONG MEMBRANOUS ligule is the high-value confirmation; photograph it with a ruler rather than inferring it from plant size. Mature lemmas may be awnless or have a fine awn up to 3–4 mm; a visible single awn does not rule out Lindheimer muhly.",
     "traits": {
       "head": [
         "long_narrow_panicle",
@@ -31,7 +31,8 @@
         "membrane"
       ],
       "awns": [
-        "none_obvious"
+        "none_obvious",
+        "long"
       ]
     },
     "source_blob_sha": "72276a3421245d5f9a28ef848674e879b039d6ac",
@@ -44,7 +45,26 @@
         "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Muhlenbergia%20lindheimeri",
         "reference": "Young contracted head may appear long_narrow_panicle, older opened/loosely feathery head may appear airy; photo-first both allowed. This is variation within species and different descriptions, NOT proof of hybrid.",
         "status": "SOURCE_AND_STAGE_VARIATION_TWO_VISUAL_STATES",
-        "review_date": "2026-11-10"
+        "review_date": "2026-11-10",
+        "regional_primary": {
+          "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1286, 1288",
+          "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+          "role": "reproductive",
+          "reference": "Tightly or loosely contracted, densely flowered panicles; branches flowered nearly to base. Keep existing long_narrow_panicle and airy allowances from the earlier Texas stage-variation evidence; do not erase those states from one description.",
+          "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+          "review_date": "2026-11-11",
+          "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch."
+        }
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1288",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reference": "Lemmas may be awnless or infrequently bear an awn up to 3(–4) mm. Retain none_obvious and permit long when a single awn is visible in close view. This visual state does not assert that all awns are long.",
+        "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-11",
+        "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch.",
+        "qualifier": "Mature lemma; awn visibility depends on magnification and specimen. Same broad visual treatment already used for seep muhly."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -66,12 +86,12 @@
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
       },
       {
-        "look": "Measure glumes, floret and short awn on the SAME spikelet",
-        "check": "A mature spikelet has ONE fertile floret, usually ~2–3.5 mm; paired glumes are each generally ~2–3.5 mm, roughly floret length, one-veined. Lemma three-veined, may be awnless or carry a fine 0–4 mm awn. Record a whole attached mature spikelet and mm ruler.",
-        "compare": "Seep muhly glumes tend to be much shorter (1–2.5 mm versus 3.5–5 mm spikelet). Canyon hybrid glumes ~2–2.5 and spikelet ~3–4 mm: strong overlap.",
-        "certainty": "Kew GrassBase plus Texas local specimen; overlapping sizes cannot alone certify a hybrid or parent",
-        "source": "Kew GrassBase — Muhlenbergia lindheimeri",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
+        "look": "Check the lemma for an awn, even on a narrow Lindheimer head",
+        "check": "The Flora gives lemmas about 2–4 mm long, awnless or infrequently with an awn up to 3(–4) mm. A visible single awn therefore must not eliminate Lindheimer muhly. Measure the lemma body separately from its awn.",
+        "compare": "Seep muhly has overlapping awns, 0.5–4(–7) mm; compare branch architecture, ligule and blades as well. Awn presence alone does not distinguish the parents or Canyon hybrid.",
+        "certainty": "Primary regional reproductive text directly re-read; local specimen confirmation pending",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1288",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       },
       {
         "look": "Confirm the unusually long membranous ligule on an intact Lindheimer leaf",
