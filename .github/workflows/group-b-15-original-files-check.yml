@@ -1,0 +1,23 @@
+name: Group B - 15 Commons originals hash/dedup gate (read-only)
+
+on:
+  pull_request:
+    paths:
+      - scripts/check_group_b_commons_originals.cjs
+      - .github/workflows/group-b-15-original-files-check.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-group-b-originals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify 15 exact Commons source originals, bytes, hashes and current-gallery collisions
+        run: node scripts/check_group_b_commons_originals.cjs
