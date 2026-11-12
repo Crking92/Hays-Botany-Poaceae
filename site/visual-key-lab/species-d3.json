@@ -1050,7 +1050,8 @@
     "field_rule": "Dallisgrass usually 3–7 racemes with larger silky-margined spikelets, while vaseygrass commonly 10–20 racemes and smaller roughly 2–3 mm spikelets; counts overlap. Florida paspalum generally has fewer long branches and broad large oval spikelets. Bahia grass generally has two terminal racemes and lacks the distinct long marginal silky fringe characteristic of dallisgrass.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -1070,9 +1071,9 @@
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt pp.229–230",
-        "reference": "Dallisgrass 2–8 one-sided racemes; long marginal hairs on spikelets and somewhat broad spikelets separate it from P. urvillei despite overlapping raceme counts.",
-        "status": "REFERENCE_CHECKED_PARTIAL",
-        "review_date": "2026-11-10"
+        "reference": "Dallisgrass 2–8 one-sided racemes; long marginal hairs on spikelets and somewhat broad spikelets separate it from P. urvillei despite overlapping raceme counts. A seven-or-more unilateral-raceme field option overlaps the upper branch-count range of this taxon (up to 8). Preserve the general one-sided option as well, and check actual paired spikelets, glume/lemma hair and number of veins to distinguish from Vaseygrass. The new field choice is a broad observational state, not species confirmation.",
+        "status": "LITERATURE_BACKED_RACEME_COUNT_OVERLAP_PROVISIONAL_NOT_SPECIMEN_SIGNOFF",
+        "review_date": "2026-11-11"
       }
     },
     "diagnostic_checks": [
@@ -1098,6 +1099,14 @@
         "compare": "Knotgrass has long spreading surface stolons; Vaseygrass also has a knotty base but tends to carry many more racemes.",
         "certainty": "FNA source checked; field habit alone not decisive",
         "source": "FNA — Paspalum dilatatum",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20914"
+      },
+      {
+        "look": "Count flowering branches before choosing a many-raceme group",
+        "check": "The upper source range can overlap the seven-or-more one-sided raceme option. Record exact number, then compare spikelet size, hair margins and glume/lemma veins. Do not identify Vaseygrass solely because there are seven or eight branches.",
+        "compare": "Paspalum urvillei (often far more branches); Paspalum floridanum and P. setaceum tend to have fewer",
+        "certainty": "Regional/FNA reference-supported overlap; individual specimen not measured",
+        "source": "Flora of North America, Paspalum dilatatum; Illustrated Flora of North Central Texas; existing Hays species review",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20914"
       }
     ],
@@ -1609,7 +1618,8 @@
     "field_rule": "P. pubiflorum in accepted treatments commonly has 2–5(-7) unilateral racemes, small to medium 2.7–3.2 mm spikelets with glumes glabrous or minutely pubescent. Florida paspalum usually carries larger rounder spikelets; dallisgrass has conspicuous silky marginal hairs on larger spikelets; thin paspalum's varieties can differ dramatically in foliage hairs and smaller spikelets. Without a true scale, don't force it.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -1629,9 +1639,9 @@
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.232",
-        "reference": "Usually 2–5(–7) racemes; spikelets in paired/partly aborted rows with variation in pubescence.",
-        "status": "REFERENCE_CHECKED_PARTIAL",
-        "review_date": "2026-11-10"
+        "reference": "Usually 2–5(–7) racemes; spikelets in paired/partly aborted rows with variation in pubescence. A seven-or-more unilateral-raceme field option overlaps the upper branch-count range of this taxon (up to 7). Preserve the general one-sided option as well, and check actual paired spikelets, glume/lemma hair and number of veins to distinguish from Vaseygrass. The new field choice is a broad observational state, not species confirmation.",
+        "status": "LITERATURE_BACKED_RACEME_COUNT_OVERLAP_PROVISIONAL_NOT_SPECIMEN_SIGNOFF",
+        "review_date": "2026-11-11"
       },
       "habit": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.232",
@@ -1663,6 +1673,14 @@
         "compare": "Signalgrasses (Urochloa) have a developed short lower glume and an indurate, cross-rugose fertile lemma.",
         "certainty": "FNA genus anatomy with species-specific branch characters; dissection pending",
         "source": "FNA — Paspalum pubiflorum",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20905"
+      },
+      {
+        "look": "Count flowering branches before choosing a many-raceme group",
+        "check": "The upper source range can overlap the seven-or-more one-sided raceme option. Record exact number, then compare spikelet size, hair margins and glume/lemma veins. Do not identify Vaseygrass solely because there are seven or eight branches.",
+        "compare": "Paspalum urvillei (often far more branches); Paspalum floridanum and P. setaceum tend to have fewer",
+        "certainty": "Regional/FNA reference-supported overlap; individual specimen not measured",
+        "source": "Flora of North America, Paspalum pubiflorum; existing Hays species review",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8707&taxauthid=1&tid=20905"
       }
     ],
