@@ -62,6 +62,37 @@ for sp in IDS:
         for k,line in enumerate(caption):
             draw.text((left+8,top+284+22*k),line,fill=(20,40,29))
     canvas.save(pr/(sp+".jpg"),quality=80,optimize=True)
+# Additional exact-source CC BY photo leads, separate from existing 39 gallery references.
+LEAD_FILE=ROOT/"audits/hays-expansion-20261111/sprint-20261112/group-d-b1-photo-source-leads.json"
+if LEAD_FILE.exists():
+    leads=json.loads(LEAD_FILE.read_text())["source_records"]
+    new_rows=[]
+    for i,lead in enumerate(leads):
+        img_info={**lead,"image_filename":lead["filename"],"role":lead["role_to_verify"]}
+        record,pixels=fetch((lead["species_id"],i,img_info))
+        new_rows.append((record,pixels))
+    sheet=Image.new("RGB",(1200,430),(250,249,243))
+    d=ImageDraw.Draw(sheet)
+    for i,(meta,img) in enumerate(new_rows):
+        left=i*400
+        d.rectangle((left,0,left+399,429),outline=(120,132,123),width=2)
+        if img is not None:
+            img.thumbnail((380,318))
+            sheet.paste(img,(left+(400-img.width)//2,(318-img.height)//2+8))
+        for k,line in enumerate([
+            meta["species_id"],meta.get("role",""),meta["creator"],
+            meta["status"],meta.get("filename","")]):
+            d.text((left+8,326+k*20),line[:49],fill=(21,46,32))
+    sheet.save(OUTPUT/"new-photo-leads.jpg",quality=84)
+    lead_report={"source_leads_tested":len(new_rows),
+                 "image_pixels_loaded":sum(x["status"]=="IMAGE_PIXELS_LOADED" for x,_ in new_rows),
+                 "source_rights_metadata_externally_checked":len(new_rows),
+                 "botanical_identification_pending_visual_review":True,
+                 "gallery_or_website_modified":False,
+                 "sources":[x for x,_ in new_rows]}
+    (OUTPUT/"new-photo-leads-probe.json").write_text(json.dumps(lead_report,indent=2)+"\n")
+    print("GROUP_D_NEW_SOURCE_PHOTOS "+json.dumps({k:v for k,v in lead_report.items() if k!="sources"}))
+
 def shaRows(d):
     return [x["sha256"] for x in d if x.get("sha256")]
 allsha=shaRows(meta)
