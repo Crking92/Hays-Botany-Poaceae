@@ -126,6 +126,84 @@ def run():
                      "missing_credit_count":0,
                      "page_errors":page_errors,"species":tested}
                 page.close()
+            # Check the SIX original research-trial grasses inside the normal
+            # production identifier as well as the separate research galleries.
+            first_six=[
+                "setaria-viridis","setaria-leucopila","bromus-tectorum",
+                "bromus-catharticus","lolium-multiflorum","echinochloa-colona"]
+            trial_rows=json.loads((LAB/"provisional-trial-profiles.json").read_text())["profiles"]
+            trials_by={x["id"]:x for x in trial_rows}
+            assert all(x in trials_by for x in first_six)
+            main=browser.new_page(viewport={"width":390,"height":844})
+            main.goto(BASE,wait_until="domcontentloaded",timeout=60000)
+            main.wait_for_function(
+                "() => document.querySelectorAll('#results .result').length >= 130",
+                timeout=50000)
+            trial_report=[]
+            for taxon in first_six:
+                t=trials_by[taxon]
+                main.locator("#species-search").fill(t["scientific"])
+                matching=main.locator("#results button.result")
+                exact=[el for el in matching.all()
+                       if el.locator(".latin").inner_text().strip()==t["scientific"]]
+                assert len(exact)==1, f"{taxon}: expected one exact trial result"
+                row=exact[0]
+                assert "Research trial" in row.inner_text(),f"{taxon}: unverified result flag missing"
+                row.click()
+                dlg=main.locator("#detail-dialog")
+                assert dlg.evaluate("(el)=>el.open"), f"{taxon}: production dialog did not open"
+                assert "Not admitted to the officially scored 112" in dlg.inner_text(), (
+                    f"{taxon}: species admitted without voucher signoff")
+                figures=dlg.locator(".detail-grid > div")
+                assert figures.count()==len(t["photos"]),(
+                    f"{taxon}: {figures.count()} displayed vs {len(t['photos'])} trial reference images")
+                checked=[]
+                for ref in t["photos"]:
+                    chosen=None
+                    for fig in figures.all():
+                        urls=fig.locator("a[href]").evaluate_all("(nodes)=>nodes.map(n=>n.href)")
+                        if ref["source_page"] in urls:
+                            chosen=fig
+                            break
+                    assert chosen is not None, (
+                        f"{taxon}: original credited trial source page not rendered")
+                    assert ref["creator"] in chosen.inner_text() and ref["license"] in chosen.inner_text(), (
+                        f"{taxon}: exact credit missing on real trial result")
+                    img=chosen.locator("img")
+                    if img.count():
+                        try:
+                            img.scroll_into_view_if_needed(timeout=5000)
+                            img.evaluate("(el)=>{el.loading='eager';el.decode().catch(()=>{})}")
+                            handle=img.element_handle()
+                            main.wait_for_function("(el)=>el.complete",arg=handle,timeout=7500)
+                        except Exception:
+                            pass
+                    if chosen.locator("img").count():
+                        pix=chosen.locator("img").first.evaluate(
+                            "(el)=>({decoded:el.complete && el.naturalWidth>40 && el.naturalHeight>40,width:el.naturalWidth})")
+                    else:
+                        pix={"decoded":False,"width":0}
+                    checked.append({"filename":ref["image_filename"],
+                        "source":ref["source_page"],"photo_visible":bool(pix["decoded"]),
+                        "natural_width":pix["width"],
+                        "credit_and_source_link_visible":True})
+                trial_report.append({"id":taxon,"trial_photos_configured":len(checked),
+                    "trial_photos_actually_visible":sum(x["photo_visible"] for x in checked),
+                    "photos":checked})
+                try:
+                    dlg.screenshot(path=str(OUT/("normal-key-"+taxon+".png")),
+                                   timeout=9000,animations="disabled")
+                except Exception:
+                    pass
+                main.get_by_role("button",name="Close species detail").click()
+                main.wait_for_timeout(200)
+            browser_report["normal_production_key_six_trials"]={
+                "taxa_tested":6,
+                "photo_refs":sum(x["trial_photos_configured"] for x in trial_report),
+                "photo_pixels_visible":sum(x["trial_photos_actually_visible"] for x in trial_report),
+                "unverified_status_shown_all":True,
+                "species":trial_report}
+            main.close()
         finally:
             browser.close()
     mobile=browser_report["mobile"]
@@ -146,6 +224,9 @@ def run():
           ("lolium-multiflorum","Lolium multiflorum spikelets1 (6919358915).jpg"),
           ("echinochloa-colona","Echinochloa colona ligule1 (7119935605).jpg")]),
       "site_images_species_id_verification":False,
+      "normal_key_six_trial_photo_pixels_visible":browser_report["normal_production_key_six_trials"]["photo_pixels_visible"],
+      "normal_key_six_trial_photo_refs_checked":browser_report["normal_production_key_six_trials"]["photo_refs"],
+      "normal_key_six_trials_unverified_flag_verified":True,
       "browser_report":browser_report}
     (OUT/"public-photo-browser-results.json").write_text(json.dumps(report,indent=2)+"\n")
     print("GROUP_D_PUBLIC_GALLERY_QA "+json.dumps({k:v for k,v in report.items() if k!="browser_report"}),flush=True)
