@@ -1256,7 +1256,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tridentopsis/tridentopsis-buckleyana/images/buckley-tridens-inat-173616239-cc-by-original.jpg",
-        "label": "1 · IN SITU TUFT — photographed grass base, roots not excavated",
+        "label": "Low in-situ tuft of Buckley's fluffgrass on a stony hillside — no roots or individual spikelet details",
         "creator": "Sam Kieschnick",
         "license": "CC BY 4.0",
         "source_page": "https://www.inaturalist.org/photos/173616239",
@@ -1336,7 +1336,7 @@
     "source_blob_sha": "5cb709d88eee5f2063787048f418ade22cd3e35f",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_6_OF_7; SCALED_ORGANS_AND_TRUE_LIGULE_PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -1385,12 +1385,29 @@
       "note": "Botanical source comparisons checked, not yet verified against same-plant local dissections, exact gallery photo role, or BONAP NAPA county nativity."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS34_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_6_OF_7",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_7_OF_7",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "6/7 actual GitHub-hosted image bytes rendered and inspected; i=0 returned only blob metadata and is uncounted. No independent specimen, exact-image source-license or site deployment verification.",
+      "scope": "6/7 actual GitHub-hosted image bytes rendered and inspected; i=0 returned only blob metadata and is uncounted. No independent specimen, exact-image source-license or site deployment verification. Pass45: additional currently-hosted JPG i=0 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "tight green-and-tan thin-leaved grassy tuft in rocky open ground",
+            "numerous narrow basal leaves splaying from an apparent central crown"
+          ],
+          "cannot_verify": [
+            "roots are not excavated or exposed",
+            "panicle branch structure and spikelet floret number cannot be recognized"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Tridentopsis/tridentopsis-buckleyana/images/buckley-tridens-inat-173616239-cc-by-original.jpg",
+          "git_blob_sha": "558d0d3e65601479e1b4616187a3c48c161319f7",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 1,
           "verdict": "PARTIAL_VISIBLE",
@@ -1494,16 +1511,8 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0
-      ],
-      "image_access_holds": [
-        {
-          "i": 0,
-          "reason": "GitHub image read returned blob metadata only; defer to existing separate image-access workflow; do not retry in routine visual QA.",
-          "git_blob_sha": "558d0d3e65601479e1b4616187a3c48c161319f7"
-        }
-      ],
+      "unreviewed_hosted_indices": [],
+      "image_access_holds": [],
       "unmet_roles": [
         "whole rooted tuft i=0 not newly visible",
         "full intact open panicle for overall mature width comparison",
@@ -1516,7 +1525,29 @@
         "queue_action": "No duplicate photo queue; retained precise anatomical gap targets for the existing master Photo Needs Queue."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for key characters. This pass did not alter taxonomy, nativity or selectable key states."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for key characters. This pass did not alter taxonomy, nativity or selectable key states.",
+      "previous_pass": "PHASE4_PASS34_HOSTED_IMAGE_BATCH",
+      "previous_scope": "6/7 actual GitHub-hosted image bytes rendered and inspected; i=0 returned only blob metadata and is uncounted. No independent specimen, exact-image source-license or site deployment verification.",
+      "pass45_note": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "roots are not excavated or exposed",
+            "panicle branch structure and spikelet floret number cannot be recognized"
+          ]
+        }
+      ],
+      "resolved_image_access_holds": [
+        {
+          "i": 0,
+          "reason": "GitHub image read returned blob metadata only; defer to existing separate image-access workflow; do not retry in routine visual QA.",
+          "git_blob_sha": "558d0d3e65601479e1b4616187a3c48c161319f7",
+          "resolved_in": "PHASE4_PASS45",
+          "resolved_blob_sha": "558d0d3e65601479e1b4616187a3c48c161319f7"
+        }
+      ]
     }
   },
   {
@@ -2453,7 +2484,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20539.jpg",
-        "label": "Texas wild-rice — USFWS 20539: wide river habitat (not anatomical macro)",
+        "label": "Texas wild-rice river habitat: long submerged green ribbons following the current, wide upstream view",
         "creator": "Ryan Hagerty / U.S. Fish and Wildlife Service",
         "license": "Public domain — work of U.S. federal government",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizania_texana_(Texas_wild_rice)_FWS_20539.jpg",
@@ -2462,7 +2493,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20540.jpg",
-        "label": "Texas wild-rice — USFWS 20540: tall river panorama, ribbons in current",
+        "label": "Closer vertical river view: submerged Texas wild-rice leaf ribbons visible under flowing clear water",
         "creator": "Ryan Hagerty / U.S. Fish and Wildlife Service",
         "license": "Public domain — work of U.S. federal government",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizania_texana_(Texas_wild_rice)_FWS_20540.jpg",
@@ -2515,7 +2546,7 @@
     "source_blob_sha": "1ea0c620dd0ca5d3beb1bc73afa69cca507112b6",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_6_OF_8; REPRODUCTIVE_SEX_DETAIL_TRUE_LIGULE_PENDING; PROTECTED_OBSERVATION_ONLY",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Texas Parks and Wildlife Dept., https://tpwd.texas.gov/huntwild/wild/wildlife_diversity/nongame/listed-species/plants/texas_wild_rice.phtml",
@@ -2575,11 +2606,11 @@
       "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS39_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_6_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_USFWS_PHOTOGRAPHER_PUBLIC_DOMAIN_METADATA_RETAINED; EXACT_IMAGE_RIGHTS_NOT_REVALIDATED",
-      "scope": "Six of eight existing Lab photo references rendered and visually inspected from GitHub-hosted bytes. Photo refs i=3 and i=4 returned blob metadata only and were not counted. Scene overlap (0≈5, 1≈6) preserved without treating as independent specimen proof. This does not independently verify licensing, voucher ID, anatomy or real phone/Pages acceptance.",
+      "scope": "Six of eight existing Lab photo references rendered and visually inspected from GitHub-hosted bytes. Photo refs i=3 and i=4 returned blob metadata only and were not counted. Scene overlap (0≈5, 1≈6) preserved without treating as independent specimen proof. This does not independently verify licensing, voucher ID, anatomy or real phone/Pages acceptance. Pass45: additional currently-hosted JPG i=3 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent. Pass45: additional currently-hosted JPG i=4 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -2634,6 +2665,40 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NO NEW LICENSE OR SPECIMEN CERTIFICATION"
         },
         {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "broad clear river channel with numerous long streaming green aquatic leaf ribbons",
+            "submerged grassbeds and wooded riparian banks"
+          ],
+          "cannot_verify": [
+            "cannot certify an individual flowering Zizania specimen or a local genetic lineage",
+            "no inflorescence, female spikelet or leaf collar can be inspected"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20539.jpg",
+          "git_blob_sha": "cb0885a7e1f783caa2faa8d67a18500f90835e12",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "long overlapping underwater green ribbonlike grass leaves aligned with water current",
+            "riverbed visible through clear water beneath tree-framed banks"
+          ],
+          "cannot_verify": [
+            "individual leaf width, flowering parts and attachment to crowns not independently measured",
+            "overlaps previous river habitat image; not additional organ-level proof"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20540.jpg",
+          "git_blob_sha": "73a84371696dbc2f2d654b8ad901bf4ff06de5b0",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 5,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -2686,22 +2751,8 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NO NEW LICENSE OR SPECIMEN CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3,
-        4
-      ],
-      "image_access_holds": [
-        {
-          "i": 3,
-          "reason": "Wide USFWS 20539 river habitat JPEG returned blob metadata without viewable bytes; image-access workflow only, uncounted.",
-          "git_blob_sha": "cb0885a7e1f783caa2faa8d67a18500f90835e12"
-        },
-        {
-          "i": 4,
-          "reason": "USFWS 20540 panorama JPEG returned blob metadata without viewable bytes; image-access workflow only, uncounted.",
-          "git_blob_sha": "73a84371696dbc2f2d654b8ad901bf4ff06de5b0"
-        }
-      ],
+      "unreviewed_hosted_indices": [],
+      "image_access_holds": [],
       "overlap_notes": [
         "i=0 and i=5 show the same overall flowering scene at different scale/framing; do not treat as independent plant specimens.",
         "i=1 and i=6 show the same black-background flowering composition, i=6 giving a larger detailed crop; no independent second plant claimed.",
@@ -2729,7 +2780,45 @@
         "queue_action": "Use only existing master Photo Needs Queue, and seek legally archived/authorized material for microscopic floral traits without field handling of protected plants."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Regional Flora, TPWD and USFWS source-backed taxon/character matrix preserved. No nativity classification, trait filtering or source-level morphological value changed."
+      "morphology_reference_note": "Regional Flora, TPWD and USFWS source-backed taxon/character matrix preserved. No nativity classification, trait filtering or source-level morphological value changed.",
+      "previous_pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "Six of eight existing Lab photo references rendered and visually inspected from GitHub-hosted bytes. Photo refs i=3 and i=4 returned blob metadata only and were not counted. Scene overlap (0≈5, 1≈6) preserved without treating as independent specimen proof. This does not independently verify licensing, voucher ID, anatomy or real phone/Pages acceptance. Pass45: additional currently-hosted JPG i=3 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
+      "pass45_note": [
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "cannot certify an individual flowering Zizania specimen or a local genetic lineage",
+            "no inflorescence, female spikelet or leaf collar can be inspected"
+          ]
+        },
+        {
+          "i": 4,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "individual leaf width, flowering parts and attachment to crowns not independently measured",
+            "overlaps previous river habitat image; not additional organ-level proof"
+          ]
+        }
+      ],
+      "resolved_image_access_holds": [
+        {
+          "i": 3,
+          "reason": "Wide USFWS 20539 river habitat JPEG returned blob metadata without viewable bytes; image-access workflow only, uncounted.",
+          "git_blob_sha": "cb0885a7e1f783caa2faa8d67a18500f90835e12",
+          "resolved_in": "PHASE4_PASS45",
+          "resolved_blob_sha": "cb0885a7e1f783caa2faa8d67a18500f90835e12"
+        },
+        {
+          "i": 4,
+          "reason": "USFWS 20540 panorama JPEG returned blob metadata without viewable bytes; image-access workflow only, uncounted.",
+          "git_blob_sha": "73a84371696dbc2f2d654b8ad901bf4ff06de5b0",
+          "resolved_in": "PHASE4_PASS45",
+          "resolved_blob_sha": "73a84371696dbc2f2d654b8ad901bf4ff06de5b0"
+        }
+      ]
     }
   },
   {
@@ -2770,7 +2859,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-review-264449047.jpg",
-        "label": "WHOLE PLANT · wetland flowering growth next to a standing person for scale",
+        "label": "Giant cutgrass growing tall beside person for rough scale, green leaves and flowering plume — collar not shown",
         "creator": "Alex Abair",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Zizaniopsis_miliacea_264449047.jpg",
@@ -2805,7 +2894,7 @@
     "source_blob_sha": "f34815a52db26f7e3cb45b154dd999baf5a02a78",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_4_OF_5; TRUE_LIGULE_FEMALE_FLORET_MIXED_SEX_BRANCH_PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs et al. Illustrated Flora of North Central Texas, uploaded p.262",
@@ -2866,11 +2955,11 @@
       "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS38_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREATOR_LICENSE_SOURCE_FIELDS_PRESERVED; EXACT_IMAGE_RIGHTS_NOT_REVALIDATED",
-      "scope": "Four of five existing GitHub-hosted Lab image references were rendered from image bytes and visually examined. The fifth returned only GitHub blob metadata. No independent exact-image licensing, botanical determination, Hays specimen or Pages/mobile acceptance.",
+      "scope": "Four of five existing GitHub-hosted Lab image references were rendered from image bytes and visually examined. The fifth returned only GitHub blob metadata. No independent exact-image licensing, botanical determination, Hays specimen or Pages/mobile acceptance. Pass45: additional currently-hosted JPG i=3 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -2924,6 +3013,23 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         },
         {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "very tall erect reedlike grass clump and narrow upper flowering plume beside standing person",
+            "long arching green blades and wetland-edge vegetation"
+          ],
+          "cannot_verify": [
+            "size is informal without a metric scale; no ligule or blade edge teeth identified",
+            "mature floral parts and rooted crown not separately verified"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-review-264449047.jpg",
+          "git_blob_sha": "66937606d3bdc53132042b8093ce49cfd2b56eae",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 4,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -2941,16 +3047,8 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_JPEG_BYTES_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3
-      ],
-      "image_access_holds": [
-        {
-          "i": 3,
-          "reason": "Whole-plant scale photo returned only GitHub metadata; defer to existing image-access workflow and exclude from photo inspection count.",
-          "git_blob_sha": "66937606d3bdc53132042b8093ce49cfd2b56eae"
-        }
-      ],
+      "unreviewed_hosted_indices": [],
+      "image_access_holds": [],
       "unmet_roles": [
         "measured exposed full inner ligule 6–20 mm at opened blade–sheath junction",
         "same-branch male/female spikelets with individually confirmed anthers/stigmas and scale",
@@ -2964,7 +3062,29 @@
         "queue_action": "Use existing master Photo Needs Queue only; don't create a new spreadsheet or redownload general images."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas and existing GrassBase checks remain unchanged. No county nativity, trait-filter or branch-sex position change in this visual-only pass."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas and existing GrassBase checks remain unchanged. No county nativity, trait-filter or branch-sex position change in this visual-only pass.",
+      "previous_pass": "PHASE4_PASS38_HOSTED_IMAGE_BATCH",
+      "previous_scope": "Four of five existing GitHub-hosted Lab image references were rendered from image bytes and visually examined. The fifth returned only GitHub blob metadata. No independent exact-image licensing, botanical determination, Hays specimen or Pages/mobile acceptance.",
+      "pass45_note": [
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "size is informal without a metric scale; no ligule or blade edge teeth identified",
+            "mature floral parts and rooted crown not separately verified"
+          ]
+        }
+      ],
+      "resolved_image_access_holds": [
+        {
+          "i": 3,
+          "reason": "Whole-plant scale photo returned only GitHub metadata; defer to existing image-access workflow and exclude from photo inspection count.",
+          "git_blob_sha": "66937606d3bdc53132042b8093ce49cfd2b56eae",
+          "resolved_in": "PHASE4_PASS45",
+          "resolved_blob_sha": "66937606d3bdc53132042b8093ce49cfd2b56eae"
+        }
+      ]
     }
   }
 ]
