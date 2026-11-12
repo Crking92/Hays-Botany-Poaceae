@@ -1902,7 +1902,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Connected rooted runner plus diagnostic slender flowering branches with blunt spikelets; confirm collar from same plant.",
+    "field_rule": "Connected rooted runner plus diagnostic slender flowering branches with blunt spikelets; confirm collar from same plant.\n\nSource disagreement: Hagenbuch & Lemke (2015, p. 51) describe long stolons but no rhizomes, while the recorded Diggs account mentions a rhizomatous crown. Trace a real underground stem before choosing rhizome; neither source has been silently discarded.",
     "traits": {
       "head": [
         "long_narrow_panicle"
@@ -1934,6 +1934,19 @@
         "reference": "Narrow spike-like head; not truly a simple unbranched spike.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "habit_regional_conflict": {
+        "source": "Hagenbuch & Lemke (2015), p. 51, Hopia obtusa; compare existing Diggs et al. (1999) historic Panicum obtusum treatment noted in this record",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+        "category": "vegetative",
+        "reported_states": [
+          "Hagenbuch & Lemke: rhizomes absent, elongate wiry stolons",
+          "Existing Diggs-based record: knotty rhizomatous crown and long stolons"
+        ],
+        "reference": "The two regional treatments disagree on whether true underground rhizomes are present. Preserve existing mat and rhizome score paths until specimens/taxon scope are checked; do not casually equate a hard knotty base with a true scaly rhizome.",
+        "certainty": "UNRESOLVED_TWO_SOURCE_CONFLICT_NO_SCORE_REMOVAL",
+        "status": "SOURCE_CONFLICT_REQUIRES_SPECIMEN",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -2101,13 +2114,14 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Leaf-edge retrorse prickles + mature open panicle + typically 2+ branches at basal PANICLE nodes + narrow measured 4.2–6.5 mm spikelets strongly support L. oryzoides; no single one proves the species.",
+    "field_rule": "Leaf-edge retrorse prickles + mature open panicle + typically 2+ branches at basal PANICLE nodes + narrow measured 4.2–6.5 mm spikelets strongly support L. oryzoides; no single one proves the species.\n\nField ID Lab growth-form tip: an aboveground tuft does not rule out rice cutgrass. Its slender rhizomes can be buried and invisible until the crown is examined; backward-pointing blade-edge prickles are a better first field clue.",
     "traits": {
       "head": [
         "airy"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -2132,6 +2146,20 @@
         "reference": "Rhizomatous wetland grass; foliage and cutting leaf edges can help confirmation.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "habit_regional_cespitose": {
+        "source": "Hagenbuch & Lemke (2015), p. 52, Leersia oryzoides",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+        "category": "vegetative",
+        "reported_states": [
+          "perennial cespitose",
+          "slender elongate rhizomes",
+          "stolons absent"
+        ],
+        "reference": "It can look like an ordinary tuft when the underground rhizome is hidden. Keep both tuft and rhizome choices; a clump does not prove stolons.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_BROAD_FIELD_HABIT_NO_LOCAL_CROWN_CERTIFICATION",
+        "status": "SOURCE_BACKED_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
