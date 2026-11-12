@@ -1,0 +1,38 @@
+name: Grass B7 and C8 acceptance — coordinator
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/species-*.json'
+      - 'scripts/test_grass_key_integration.cjs'
+      - 'scripts/test_grass_sprint_lane_b_batch7.cjs'
+      - 'scripts/test_lane_c_batch8.cjs'
+      - '.github/workflows/grass-b7-c8-acceptance.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/test_grass_key_integration.cjs'
+      - 'scripts/test_grass_sprint_lane_b_batch7.cjs'
+      - 'scripts/test_lane_c_batch8.cjs'
+      - '.github/workflows/grass-b7-c8-acceptance.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  b7-c8-production-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute all combined production filter regressions
+        run: node scripts/test_grass_key_integration.cjs
+      - name: Execute goosegrass Lane B Batch 7 source-positive and exclusion checks
+        run: node scripts/test_grass_sprint_lane_b_batch7.cjs
+      - name: Execute brome/Indiangrass/dropseed Lane C Batch 8 checks
+        run: node scripts/test_lane_c_batch8.cjs
+      - name: Verify immutable scored inventory and additive state preservation
+        run: node scripts/test_grass_score_deltas.cjs
+      - name: Verify no malformed crew-facing instructions
+        run: node scripts/test_grass_field_rules.cjs

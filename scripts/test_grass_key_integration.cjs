@@ -180,6 +180,15 @@ const positives = [
   ['hooded windmillgrass 7-plus rays',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['chloris-cucullata']],
   ['hooded windmillgrass 7-plus with cilia',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['chloris-cucullata']],
   ['hooded windmillgrass whorls with cilia',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['chloris-cucullata']],
+  // Lane B #110 - valid goosegrass branch-count and flattened unilateral racemes.
+  ['goosegrass classic fingers',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  ['goosegrass one-sided rows',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  ['goosegrass 7-plus branches',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  // Lane C #111 - distinct open panicle/inner ligule visual choices.
+  ['Texas brome open spreading panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-texensis']],
+  ['slender Indiangrass open arching panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
+  ['hidden dropseed ciliate membrane compact',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
+  ['hidden dropseed ciliate membrane narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -268,6 +277,13 @@ const negatives = [
   [{ligule:'absent'},'chloris-cucullata'],
   [{awns:'bristles'},'chloris-cucullata'],
   [{habit:'mat'},'paspalum-urvillei'],
+  // Retain incompatible alternatives without mistaking valid 7+ goosegrass for false.
+  [{head:'foxtail'},'eleusine-indica'],
+  [{awns:'bristles'},'eleusine-indica'],
+  [{ligule:'absent'},'eleusine-indica'],
+  [{head:'spike'},'bromus-texensis'],
+  [{head:'foxtail'},'sorghastrum-elliottii'],
+  [{awns:'long'},'sporobolus-clandestinus'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
