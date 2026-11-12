@@ -4,7 +4,7 @@
 const $=id=>document.getElementById(id);
 const hub="https://crking92.github.io/Hays-County-Botany/";
 const esc=(s)=>String(s??"");
-const state={index:[],active:null,mode:"field",glossary:null,cache:new Map()};
+const state={index:[],active:null,mode:"field",glossary:null,cache:new Map(),research:new Map()};
 const make=(tag,props={})=>{const n=document.createElement(tag);for(const [k,v] of Object.entries(props)){if(k==="className")n.className=v;else n.setAttribute(k,v)}return n;};
 const txt=(tag,value,cls)=>{const n=make(tag);if(cls)n.className=cls;n.textContent=esc(value);return n;};
 const text=(node,value)=>node.append(document.createTextNode(esc(value)));
@@ -38,11 +38,12 @@ function glossaryButton(word){
 function list(q=""){
  const root=$("species-list");root.replaceChildren();
  const search=q.trim().toLowerCase();
- const entries=state.index.filter(x=>[x.id,x.scientific,x.common,x.genus].join(" ").toLowerCase().includes(search));
+ const entries=state.index.filter(x=>[x.id,x.scientific,x.common,x.genus,...(x.aliases||[])].join(" ").toLowerCase().includes(search));
  $("count").textContent=entries.length+" of "+state.index.length+" grass species";
  for(const x of entries){
    const b=make("button",{type:"button","aria-current":String(state.active===x.id)});
    b.append(txt("strong",x.common||x.scientific),txt("em",x.scientific));
+   if(state.research.has(x.id))b.append(txt("small","Research profile · photo and ID review pending","comparison-count"));
    if(x.local_panel_count>0 && x.target_species_source_panels===0 && x.comparison_source_panels>0)
       b.append(txt("small","Comparison photos only — target species photo pending","comparison-count"));
    b.addEventListener("click",()=>select(x.id));
@@ -311,14 +312,74 @@ function renderModeHeader(root){
  }
  root.append(bar);
 }
+
+/* The 169-grass Learner displays source-based expansion records without asserting
+   local identification, verified anatomy or third-party photo reuse rights. */
+function renderResearchCandidate(d,root){
+ const intro=txt("section","","learning-intro");
+ intro.append(txt("p","Provisional species record — published descriptions, not a verified Hays specimen or approved image.","photo-hold"));
+ intro.append(txt("p","No photograph has been approved for this new Learner card. Original observation links below are research sources, not licenses to republish those photographs."));
+ if(d.local_report_count)intro.append(txt("p","Research packet links "+d.local_report_count+" local observation reports; individual identities and native status remain to be verified.","muted"));
+ if(d.aliases?.length)intro.append(txt("p","Other recorded names: "+d.aliases.join("; "),"muted"));
+ if(d.risky_context)intro.append(txt("p","Check planted, cultivated or escaped occurrence context before accepting the local record.","photo-hold"));
+ if(typeof d.unresolved==="string"&&d.unresolved)intro.append(txt("p","Pending evidence: "+d.unresolved,"muted"));
+ root.append(intro);
+ const chars=Array.isArray(d.details)?d.details:[];
+ if(state.mode==="terms"){
+  root.append(txt("h3","Botanical vocabulary for this species"));
+  const combined=chars.map(x=>x.part+" "+x.description).join(" ").toLowerCase();
+  const terms=["ligule","collar","sheath","culm","rhizome","stolon","spikelet","glume","lemma","palea","awn","panicle","raceme","rachis","node","floret"].filter(x=>combined.includes(x)&&state.glossary?.terms?.[x]);
+  appendTerms(root,terms.length?terms:state.glossary?.family_profile?.key_terms||[]);
+  root.append(txt("p","Vocabulary definitions do not confirm a species identity or a photographed character.","muted"));
+ }else if(state.mode==="field"){
+  root.append(txt("h3","Field ID — source-described characters to inspect"));
+  for(const [i,c] of chars.entries()){
+   const section=make("details",{className:"field-tile"});if(i===0)section.open=true;
+   const summary=make("summary");summary.append(txt("strong",String(c.part||"structure").replaceAll("_"," ")));section.append(summary);
+   appendParagraph(section,c.description);
+   appendParagraph(section,"Photo still needed: "+(c.needed_view||"Same-specimen structure"),"photo-hold");
+   appendParagraph(section,"Literature: "+(c.source||"See regional research packet"),"source-flag");
+   root.append(section);
+  }
+ }else{
+  root.append(txt("h3","Learner — structures described in the references"));
+  const steps=make("ol",{className:"learner-steps"});
+  for(const c of chars){
+   const li=make("li",{className:"learner-step"}),copy=make("div",{className:"step-copy"});
+   copy.append(txt("h4",String(c.part||"structure").replaceAll("_"," ")));
+   appendParagraph(copy,c.description);
+   appendParagraph(copy,"Next photograph: "+(c.needed_view||"Same-specimen evidence"),"muted");
+   appendParagraph(copy,"Reference: "+(c.source||"Regional research packet"),"source-flag");
+   li.append(copy);steps.append(li);
+  }
+  root.append(steps);
+ }
+ root.append(txt("h3","Research observations and original evidence"));
+ root.append(txt("p","These external observation links are leads, not photo-use permission or final verification of the reported identification.","photo-hold"));
+ const links=make("div",{className:"route-footer"});
+ for(const [i,url] of (d.observation_urls||[]).slice(0,5).entries()){
+  if(typeof url!=="string"||!url.startsWith("https://"))continue;
+  const a=make("a",{href:url,target:"_blank",rel:"noopener noreferrer"});a.textContent="Original observation "+(i+1);links.append(a);
+ }
+ if(d.source_location?.startsWith("../../audits/")){
+  const a=make("a",{href:"https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/"+d.source_location.slice(6),target:"_blank",rel:"noopener noreferrer"});
+  a.textContent="Diagnostic source packet";links.append(a);
+ }
+ const a=make("a",{href:"visual-key-lab/hays-candidates.html"});a.textContent="All expansion research records";links.append(a);
+ root.append(links);
+}
+
 async function select(id){
  const record=state.index.find(x=>x.id===id);if(!record)return;
  state.active=id;list($("search").value);
  try{
    if(!state.cache.has(id)){
-     const response=await fetch("data/species/"+encodeURIComponent(id)+".json");
-     if(!response.ok)throw new Error("species summary unavailable");
-     state.cache.set(id,await response.json());
+     if(state.research.has(id))state.cache.set(id,state.research.get(id));
+     else {
+      const response=await fetch("data/species/"+encodeURIComponent(id)+".json");
+      if(!response.ok)throw new Error("species summary unavailable");
+      state.cache.set(id,await response.json());
+     }
    }
    renderSelected();
    history.replaceState(null,"","?species="+encodeURIComponent(id));
@@ -329,7 +390,13 @@ async function select(id){
 function renderSelected(){
  const d=state.cache.get(state.active);if(!d)return;
  const root=$("species-detail");root.replaceChildren();
- root.append(txt("p","POACEAE · "+d.genus,"eyebrow"),txt("h2",d.common||d.scientific),txt("p",d.scientific,"subtitle"));
+ root.append(txt("p","POACEAE · "+(d.genus||d.scientific.split(" ")[0]),"eyebrow"),txt("h2",d.common||d.scientific),txt("p",d.scientific,"subtitle"));
+ if(state.research.has(d.id)){
+   root.append(txt("p","Provisional record in the 169-grass Learner. Species ID, photo rights and local occurrence have not passed release checks; this taxon is not scored in the ID Lab.","notice-stage"));
+   renderModeHeader(root);
+   renderResearchCandidate(d,root);
+   return;
+ }
  root.append(txt("p",metadataWarning,"notice-stage"));
  if(d.source_sync_status==="AUTO_IMPORTED_SOURCE_RECORD_REVIEW_WELCOME")
    root.append(txt("p","Automatically imported grass source record — confirm identification, county nativity and anatomy before field use.","photo-hold"));
@@ -349,11 +416,16 @@ function renderSelected(){
 }
 async function boot(){
  try{
-  const [indexResponse,glossaryResponse]=await Promise.all([
-    fetch("data/poaceae-index.json"),fetch("data/grass-terms.json")
+  const [indexResponse,researchResponse,glossaryResponse]=await Promise.all([
+    fetch("data/poaceae-index.json"),fetch("visual-key-lab/hays-candidates.json"),fetch("data/grass-terms.json")
   ]);
-  if(!indexResponse.ok||!glossaryResponse.ok)throw new Error("Unable to load learner index or botanical glossary");
-  state.index=await indexResponse.json();
+  if(!indexResponse.ok||!researchResponse.ok||!glossaryResponse.ok)throw new Error("Unable to load the full grass inventory or glossary");
+  const base=await indexResponse.json(),manifest=await researchResponse.json();
+  if(!Array.isArray(base)||base.length!==112||!Array.isArray(manifest.candidates)||manifest.candidates.length!==57)throw new Error("The 169-species Learner inventory is incomplete");
+  state.research=new Map(manifest.candidates.map(x=>[x.id,x]));
+  const additions=manifest.candidates.map(x=>({id:x.id,scientific:x.scientific,common:x.common,genus:x.scientific.split(" ")[0],aliases:x.aliases||[]}));
+  state.index=[...base,...additions];
+  if(new Set(state.index.map(x=>x.id)).size!==169||new Set(state.index.map(x=>x.scientific.toLowerCase())).size!==169)throw new Error("Duplicate species in the unified Learner");
   state.glossary=await glossaryResponse.json();
   state.index.sort((a,b)=>(a.common||a.scientific).localeCompare(b.common||b.scientific));
   $("search").addEventListener("input",e=>list(e.target.value));
