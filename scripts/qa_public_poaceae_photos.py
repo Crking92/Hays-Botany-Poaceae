@@ -37,7 +37,13 @@ def audit():
     expected_photos = sum(len(c["approved_gallery"]) for c in expected)
     public = json_public("visual-key-lab/hays-candidates.json")
     if public != local:
-        raise RuntimeError("Public candidates manifest differs from current branch; no photo-pixel counts can be trusted")
+        actual_public=public.get("candidates",[])
+        published_refs=sum(len(c.get("approved_gallery") or []) for c in actual_public)
+        public_species=sum(bool(c.get("approved_gallery")) for c in actual_public)
+        raise RuntimeError("Public candidates manifest differs from current branch; "
+                           f"Pages serves {published_refs} refs/{public_species} species, "
+                           f"branch has {expected_photos} refs/{len(expected)} species. "
+                           "No public pixel counts can be trusted until exact parity.")
 
     data = []
     with sync_playwright() as p:
