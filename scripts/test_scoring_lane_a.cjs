@@ -52,7 +52,11 @@ const newlyValid=[
  ['sorghum-halepense',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['bothriochloa-barbinodis',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'long'}],
  ['bothriochloa-torreyana',{head:'bushy',habit:'rhizome',ligule:'membrane',awns:'long'}],
- ['bothriochloa-torreyana',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'}]
+ ['bothriochloa-torreyana',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'}],
+ ['bouteloua-gracilis',{head:'combs',habit:'rhizome',ligule:'hairs',awns:'three_short'}],
+ ['bouteloua-gracilis',{head:'combs',habit:'rhizome',ligule:'hairs',awns:'none_obvious'}],
+ ['bouteloua-gracilis',{head:'combs',habit:'mat',ligule:'hairs',awns:'three_short'}],
+ ['bouteloua-gracilis',{head:'combs',habit:'mat',ligule:'hairs',awns:'none_obvious'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -64,7 +68,9 @@ const incompatible=[
  ['sorghum-halepense',{habit:'mat'}],
  ['bouteloua-curtipendula',{head:'side_oats',awns:'three_short'}],
  ['bothriochloa-barbinodis',{head:'whorls'}],
- ['bothriochloa-torreyana',{head:'fingers'}]
+ ['bothriochloa-torreyana',{head:'fingers'}],
+ ['bouteloua-gracilis',{head:'whorls'}],
+ ['bouteloua-gracilis',{awns:'burs'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -86,7 +92,8 @@ const expectedAdditions={
  'arundo-donax':{habit:['tuft'],ligule:['hairs']},
  'sorghum-halepense':{habit:['tuft']},
  'bothriochloa-barbinodis':{head:['fingers']},
- 'bothriochloa-torreyana':{habit:['rhizome']}
+ 'bothriochloa-torreyana':{habit:['rhizome']},
+ 'bouteloua-gracilis':{habit:['rhizome','mat']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -97,8 +104,12 @@ for(const [id,expected] of Object.entries(expectedAdditions)){
   if(key==='head'){
    // Reproductive evidence belongs to Diggs first; GrassBase supplies extra panicle variants.
    assert(evidence.source.includes('Diggs') && evidence.source.includes('GrassBase'),id+': missing regional reproductive and supplemental authority');
+  }else if(id==='bouteloua-gracilis' && key==='habit'){
+   // No B. gracilis treatment in Hagenbuch & Lemke; use FNA and USDA for vegetative range.
+   assert(evidence.source.includes('Flora of North America') && evidence.source.includes('USDA Forest Service'),id+': missing FNA/USFS fallback evidence');
+   assert(evidence.source_hierarchy_exception?.includes('Hagenbuch & Lemke'),id+': missing explicit regional-treatment gap');
   }else{
-   // Ligules and growth-form states must have the primary Hill Country vegetative account.
+   // Ligules and growth-form states covered by the Hill Country vegetative account.
    assert(evidence.source.includes('Hagenbuch & Lemke'),id+': missing regional vegetative authority for '+key);
   }
   assert(evidence.status.includes('SPECIMEN_PENDING'),id+': uncertainty not retained for '+key);
@@ -136,7 +147,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:10,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:12,
  regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
