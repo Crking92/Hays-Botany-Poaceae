@@ -26,10 +26,29 @@ def download(name):
     with urllib.request.urlopen(request,timeout=30) as response:
         if response.status!=200:raise AssertionError(f"{name}: HTTP {response.status}")
         return response.read()
+def _manifest_totals(manifest):
+    records=manifest.get("candidates",[])
+    return (sum(len(c.get("approved_gallery",[])) for c in records),
+            sum(bool(c.get("approved_gallery")) for c in records))
+
+def wait_for_public_manifest(expected, attempts=12, delay=5):
+    """Retry transient GitHub Pages deploy lag, but never accept stale or altered gallery data."""
+    expected_totals=_manifest_totals(expected)
+    observed_totals=None
+    for attempt in range(1, attempts+1):
+        live=json.loads(download("hays-candidates.json"))
+        observed_totals=_manifest_totals(live)
+        if live==expected:
+            print(f"GROUP_D_PUBLIC_MANIFEST_PARITY_OK refs/species={observed_totals} after_attempt={attempt}",flush=True)
+            return live
+        print(f"GROUP_D_PUBLIC_MANIFEST_STALE attempt={attempt}/{attempts} expected_refs_species={expected_totals} live_refs_species={observed_totals}",flush=True)
+        if attempt<attempts:
+            time.sleep(delay)
+    raise AssertionError(f"Public candidate manifest differs from checked-out main after {attempts} bounded attempts; expected refs/species={expected_totals}, live={observed_totals}")
+
 def run():
     local=json.loads((LAB/"hays-candidates.json").read_text())
-    live=json.loads(download("hays-candidates.json"))
-    assert live==local, "Public candidate manifest differs from checked-out main; deployment lag"
+    live=wait_for_public_manifest(local)
     local_by={x["id"]:x for x in local["candidates"]}
     assert len(local_by)==57
     assert all(s in local_by for s in SPECIES)
