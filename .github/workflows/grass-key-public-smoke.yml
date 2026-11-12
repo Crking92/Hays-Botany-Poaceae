@@ -8,11 +8,22 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'scripts/smoke_public_grass_key.py'
       - '.github/workflows/grass-key-public-smoke.yml'
+  pull_request:
+    paths:
+      - 'scripts/smoke_public_grass_key.py'
+      - '.github/workflows/grass-key-public-smoke.yml'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Python smoke-test syntax before publication
+        run: python3 -m py_compile scripts/smoke_public_grass_key.py
   public-key-parity:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
