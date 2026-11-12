@@ -1,11 +1,17 @@
-# Primary Morphology Reference — Illustrated Flora of North Central Texas
+# Grass ID Lab — Primary Morphology References by Character Type
 
 **Project:** Hays Grass ID Lab / active Hays-Botany-Poaceae family repo  
 **Established:** 2026-11-10, reconfirmed with uploaded PDF in conversation on 2026-11-10  
-**Priority:** **Highest regional reference for morphology, illustrated identification keys, diagnostic structures, and comparison terminology** where the source treats that taxon.  
+**Priority (updated 2026-11-11):** **Hagenbuch & Lemke (2015) is first for Hill Country vegetative grass identification; this Flora is first for reproductive/spikelet identification.** Neither source silently overrides the other outside its main specialty. See the [active governing policy](MORPHOLOGY_SOURCE_POLICY.md).  
 **Outside scope:** Taxonomy may have changed since publication; BONAP NAPA and appropriate vouchers determine target-county nativity independently.
 
-## Canonical source
+## Primary vegetative source — Hagenbuch & Lemke (2015)
+
+- *Grasses of the Texas Hill Country: Vegetative Key and Descriptions*, Phytoneuron 2015-4, pages 1–93. Hays-inclusive Hill Country focus; 160 species and 66 genera. Verify source page for collars, ligules, sheaths, blades, hairs, culms, growth form, rhizomes and stolons.
+- Official full PDF: https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf
+- A Google Drive link/reference record exists, **not the raw PDF bytes**. Do not call this a saved PDF.
+
+## Primary reproductive source — Flora of North Central Texas
 
 - **Book:** Diggs, G. M., Jr., B. L. Lipscomb, and R. J. O’Kennon. 1999. *Shinners & Mahler's Illustrated Flora of North Central Texas.*
 - **User-provided file:** `Flora of North Central Texas-monocots-Acor-Zanni.pdf`.
@@ -15,21 +21,18 @@
 - **Example checked directly:** Buffalograss under older name *Buchloe dactyloides* at **PDF page 177**, printed page **1253**: regional flora characterizes it as a sod-forming stoloniferous perennial with a ~0.5 mm ciliate membranous ligule, sexual dimorphism, and different male and female heads. Do not replace source-specific diagnosis silently with another flora's terminology.
 - **Copyright and access:** This is an uploaded reference copy, **NOT licensed for public redistribution here**. Do **not** commit, mirror or host the PDF or its illustrated plates in the public GitHub repository or GitHub Pages. Small original paraphrases and appropriate source page citations only.
 
-## Preserving source authority
+## Applying the two authorities
 
-1. Resolve each existing species name to the **name concept used by Diggs et al.**, including older combinations (e.g. buffalograss as *Buchloe dactyloides*).
-2. Record the author's distinguishing **morphological structure** and source page; keep its measurements in the proper species/variety scope. Do not substitute a whole flowerhead silhouette for a microscopic character.
-3. Compare FNA and Kew/GrassBase *after* the regional account, using these to clarify range variation, missing species and modern taxonomy. Mark conflicting details explicitly, not as Flora errors or invented fixed categories.
-4. Validate each photo separately: it must depict the actual character and correct plant/sex/season. Do not republish the book's copyrighted illustrations as gallery art.
-5. BONAP NAPA governs county nativity; a North Central Texas flora listing is **not** evidence of native occurrence in Hays County.
-6. Keep first-pass **112/112 checklist coverage** distinct from physical photo-voucher validation (**not yet complete**).
+1. Use Hagenbuch & Lemke first for vegetative grass diagnosis; use the Flora first for flowering/fruiting and spikelet anatomy. Source-specific exceptions, measurements and taxon concepts must be cited, not flattened into fixed universal values.
+2. Use GrassBase / Kew PolyClave-type character data third for additional ranges and gaps, FNA as broader comparison, authenticated local specimens for applicability, and POWO for modern names. Keep BONAP NAPA and county status for the later distribution review.
+3. Preserve old names with modern crosswalks (e.g., buffalograss as *Buchloe dactyloides* in the 1999 Flora). Unknown is not absent. Separate seasonal/male/female characters when needed. Do not upgrade provisional data or source notes to photo-verified/scored without a specific review.
+4. Do not republish the Flora's copyrighted illustrations or the Hagenbuch-Lemke PDF in the public GitHub/site. Original paraphrases and citations only.
 
-## Storage status — important
+## Storage status — verified 2026-11-11
 
-- The uploaded **full PDF is available in the original ChatGPT conversation** for current inspection.
-- On 2026-11-10, an attempt to archive the PDF in `/Hays Botany ID/References/` in the ChatGPT Library **failed because Library storage was full**. The folder exists but **the PDF was not uploaded**.
-- A separate private/reference folder was created in Google Drive at `Hays Botany ID Builder Data/Reference Floras/`, but the attempt to upload through the mounted Drive path **failed due to insufficient write permissions**. Therefore **do not claim the PDF is backed up in Drive or Library**.
-- The **source policy and this metadata/reference index are committed in the active Poaceae GitHub repository**, which persists the instructions, pagination and fingerprint without redistributing the book. For long-term direct PDF availability across chats, upload privately in a writable Drive folder manually or free storage in ChatGPT Library, then record a verified private file reference here.
-- Future assistants must not assume the original PDF is attached in every conversation: check it is accessible before stating that a morphological character was reverified directly.
+- The 275-page Flora monocots excerpt is confirmed in ChatGPT Library `/Hays Botany ID/References/` and Google Drive. Prior references to failed 2026-11-10 backup attempts are historical.
+- The Hagenbuch & Lemke paper is **linked in Google Drive reference records**, with no raw PDF found there. Its publisher PDF is linked above.
+- Both references are **private/source-only evidence**, not permission to republish scanned pages, source illustrations, or automatically certify every existing Hays grass identification.
+- Other chats and workers must follow [MORPHOLOGY_SOURCE_POLICY.md](MORPHOLOGY_SOURCE_POLICY.md), and fetch current GitHub records rather than relying on older saved notes.
 
 See [MORPHOLOGY_SOURCE_POLICY.md](MORPHOLOGY_SOURCE_POLICY.md) for policy and [PROGRESS_TRACKER.md](PROGRESS_TRACKER.md) for audit status.
