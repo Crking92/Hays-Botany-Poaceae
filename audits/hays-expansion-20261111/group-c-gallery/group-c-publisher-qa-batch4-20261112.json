@@ -1,0 +1,218 @@
+{
+  "workflow": "Chat 4 — Group C Gallery Publication QA and Gap-Closer",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "issue": 70,
+  "branch": "codex/grass-group-c-publisher-qa-batch4-20261112",
+  "strict_scope": "Evidence-only Group C files. Chat2 sole photo publisher; Chat1 CI/deployment/pixel+credit release. No shared manifests, source assets, scoring shards or UI edits.",
+  "previous_source_batch": "audits/hays-expansion-20261111/group-c-gallery/group-c-batch4-last-six-part1-20261112.json",
+  "new_QA_species_this_batch": [
+    "melinis-repens",
+    "alopecurus-carolinianus",
+    "briza-minor"
+  ],
+  "new_QA_species_covered_cumulative": 12,
+  "assigned_species": 15,
+  "initial_source_audit_covered": 15,
+  "shared_photo_manifest_snapshot": {
+    "total_provisional_approved_gallery_refs": 76,
+    "melinis_repens": 1,
+    "alopecurus_carolinianus": 1,
+    "briza_minor": 1,
+    "unique_filename_url_collisions_with_seven_candidates": 0,
+    "hash_comparison": "NOT_DONE; publisher must binary dedupe against all archives and original 112 scored gallery photos"
+  },
+  "publishing_candidates": [
+    {
+      "species_id": "melinis-repens",
+      "priority": "P1",
+      "file_name": "Melinis repens head4 (7185571587).jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Melinis_repens_head4_(7185571587).jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melinis_repens_head4_(7185571587).jpg",
+      "photographer": "Harry Rose / Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "actual_pixel_role_prior_review": "Loose silver-white fluffy flowering/reproductive panicle with green leaf blades behind; not a rooted whole plant",
+      "suggested_honest_caption": "Natal grass — fluffy pale flowering panicle and leaves (Australian source reference).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "flickr_source": "https://www.flickr.com/photos/73840284@N04/7185571587",
+      "source_location": "Australia",
+      "photographer_source_review": "Commons exact file page accessed 2026-11-12; Flickr2Commons Flickr review confirms CC BY 2.0; visual role documented in Group C first pass",
+      "original_sha1": null
+    },
+    {
+      "species_id": "melinis-repens",
+      "priority": "P1",
+      "file_name": "Melinis repens habit1 (7185576681).jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Melinis_repens_habit1_(7185576681).jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Melinis_repens_habit1_(7185576681).jpg",
+      "photographer": "Harry Rose / Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "actual_pixel_role_prior_review": "Source-labeled general loosely tufted plant/habit reference. Exact current pixel usefulness relative to existing collar should be finally reviewed by publisher; not roots or ID signed off.",
+      "suggested_honest_caption": "Natal grass — overall growth habit of source-labeled plant (Australian reference).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "flickr_source": "https://www.flickr.com/photos/73840284@N04/7185576681",
+      "source_location": "Australia",
+      "photographer_source_review": "Original Commons file specifically describes growth habit and exact CC BY 2.0 Flickr-approved terms; unlike previous cluttered Mark Marathon whole-plant lead",
+      "actual_pixel_recheck_current_batch": "SOURCE_PAGE_CONFIRMED__EXACT_FULL_PIXELS_NOT_INDEPENDENTLY_REOPENED",
+      "original_sha1": null
+    },
+    {
+      "species_id": "alopecurus-carolinianus",
+      "priority": "P1",
+      "file_name": "Alopecurus carolinianus seeds.jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Alopecurus_carolinianus_seeds.jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alopecurus_carolinianus_seeds.jpg",
+      "photographer": "Steve Hurst / USDA-NRCS PLANTS Database",
+      "license": "US federal public domain",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Alopecurus_carolinianus_seeds.jpg",
+      "actual_pixel_role_prior_review": "Four individual golden seed/reproductive units on plain blue background with 1-mm scale bar, one apparently awned. Anatomy names must stay neutral until specimen review.",
+      "suggested_honest_caption": "Carolina foxtail — separated reproductive units photographed with a 1-mm scale (USDA-NRCS source).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "source_location": "Peoria Heights, Illinois, USA",
+      "original_source": "http://plants.usda.gov/java/profile?symbol=ALCA4&photoID=alca4_003_ahp.tif",
+      "source_rights": "Exact Commons original marked federal USDA employee work as public domain, with Steve Hurst credit; exact file Commons SHA-1 53db1cb9ed6efa1fbb0580a3197757e361b26859",
+      "original_sha1": "53db1cb9ed6efa1fbb0580a3197757e361b26859",
+      "role_safety": "Do not label individual glumes/lemmas just from image or imply a Hays ID voucher."
+    },
+    {
+      "species_id": "briza-minor",
+      "priority": "P1",
+      "file_name": "Briza minor ligule1 (6975160643) (2).jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_ligule1_(6975160643)_(2).jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_ligule1_(6975160643)_(2).jpg",
+      "photographer": "Harry Rose / Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "actual_pixel_role_prior_review": "Opened leaf blade-sheath junction showing a translucent membranous ligule, hands separating grass tissue",
+      "suggested_honest_caption": "Little quakinggrass — membranous ligule at the opened inner leaf junction (Australian source reference).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "flickr_source": "https://www.flickr.com/photos/73840284@N04/6975160643",
+      "original_sha1": "661b2dd0989e905b3952d463fc18d0d40ff4e50e",
+      "source_location": "New South Wales, Australia",
+      "photographer_source_review": "Exact Commons page from category click says author Harry Rose, original Flickr CC BY 2.0 confirmed by FlickreviewR 2015, and original SHA-1 published."
+    },
+    {
+      "species_id": "briza-minor",
+      "priority": "P1",
+      "file_name": "Briza minor plant1 (6829036782) (2).jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_plant1_(6829036782)_(2).jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_plant1_(6829036782)_(2).jpg",
+      "photographer": "Harry Rose / Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "actual_pixel_role_prior_review": "Small whole leafy annual with upright flowering shoot and open many-branched quakinggrass inflorescence held against sky; rooted base obscured by hand",
+      "suggested_honest_caption": "Little quakinggrass — whole flowering plant with dangling spikelets (Australia; hand obscures roots).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "flickr_source": "https://www.flickr.com/photos/73840284@N04/6829036782",
+      "original_sha1": "4fa481addf1c1ae1eca6a820d103723dea24cebd",
+      "source_location": "New South Wales, Australia",
+      "photographer_source_review": "Exact individual file CC BY 2.0 Flickr review verified and SHA-1 published on Commons."
+    },
+    {
+      "species_id": "briza-minor",
+      "priority": "P1",
+      "file_name": "Briza minor spikelet1 (6975159719) (2).jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_spikelet1_(6975159719)_(2).jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_spikelet1_(6975159719)_(2).jpg",
+      "photographer": "Harry Rose / Macleay Grass Man",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "actual_pixel_role_prior_review": "Close green nearly triangular overlapping multiflowered spikelets held near fingers; no formal ruler in image",
+      "suggested_honest_caption": "Little quakinggrass — close view of layered triangular spikelets beside fingers for rough scale (Australia).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "flickr_source": "https://www.flickr.com/photos/73840284@N04/6975159719",
+      "original_sha1": "ca3b28ff9b19cdf0f4a16dd828df895b6f82dd50",
+      "source_location": "New South Wales, Australia",
+      "photographer_source_review": "Individual Commons page/FlickreviewR confirmed exact CC BY 2.0 and original SHA-1. The source reports small flower counts, but captions should not infer measurements from photograph alone."
+    },
+    {
+      "species_id": "melinis-repens",
+      "priority": "P2_OPTIONAL",
+      "file_name": "Starr-111103-1161-Melinis repens-red flower tassles-Kula-Maui (24489262064).jpg",
+      "commons_file_page": "https://commons.wikimedia.org/wiki/File:Starr-111103-1161-Melinis_repens-red_flower_tassles-Kula-Maui_(24489262064).jpg",
+      "original_unmodified_media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-111103-1161-Melinis_repens-red_flower_tassles-Kula-Maui_(24489262064).jpg",
+      "photographer": "Forest & Kim Starr",
+      "license": "CC BY 3.0 US",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/us/",
+      "actual_pixel_role_prior_review": "Red/pink flowering stage; differs in color/maturity from silver-white Harry Rose head photograph",
+      "suggested_honest_caption": "Natal grass — red flowering tassels photographed at Kula, Maui, Hawaii (nonlocal seasonal color reference).",
+      "identification_evidence": "Exact source names species; a source-labeled nonlocal image is not confirmed local voucher or diagnostic identity signoff.",
+      "publication_gate": "Chat2: confirm binary hash against originals/archives, source identity, correct credit and license/version, then install; Chat1 checks public rendered image+credit",
+      "original_source": "https://flickr.com/photos/97499887@N06/24489262064",
+      "source_location": "Kula, Maui, Hawaii",
+      "original_sha1": null,
+      "license_caveat": "Commons individual file says CC BY 3.0 US, whereas Commons FlickreviewR records original Flickr photo reviewed under CC BY 2.0. Both are CC BY, but publisher should retain exact current file statement and source license provenance rather than falsely treating this as a single unambiguous version.",
+      "role_value": "Optional after head4 for seasonal/color diversity; do not duplicate similar red plume assets."
+    }
+  ],
+  "candidates_priority_P1": 6,
+  "candidates_optional": 1,
+  "holds": [
+    {
+      "species": "melinis-repens",
+      "file": "A mature Melinis repens plant.jpg",
+      "reason": "Previously inspected as visually cluttered, subject crown and architecture indistinct. Does not beat Harry Rose habit view.",
+      "action": "HOLD_LOW_FIELD_ID_VALUE"
+    },
+    {
+      "species": "melinis-repens",
+      "file": "Starr 051122-5390 Melinis repens.jpg",
+      "reason": "Scenery-wide photograph lacking a recognizable individual plant.",
+      "action": "HOLD_NON_DIAGNOSTIC"
+    },
+    {
+      "species": "alopecurus-carolinianus",
+      "file": "Alopecurus carolinianus top.jpg",
+      "reason": "Valid USDA PD, but green flowering-head composition mostly duplicates the existing Matt Lavin photographed heads.",
+      "action": "HOLD_REDUNDANCY"
+    },
+    {
+      "species": "briza-minor",
+      "file": "Additional generic quakinggrass panicles",
+      "reason": "Existing single image has panicles and new clear whole/ligule/spikelet views better cover field-ID roles.",
+      "action": "LOW_PRIORITY"
+    }
+  ],
+  "important_existing_gallery_role_bug": {
+    "species_id": "melinis-repens",
+    "current_file": "Melinis repens 326217730.jpg",
+    "creator": "Alex Abair",
+    "manifest_field_view": "Characteristic pink fuzzy open plume-like seedheads and clumped foliage visible; strong general photo evidence.",
+    "actual_image_role": "Opened leaf collar/ligule photo, not a Natal-grass pink flower plume. This correction was established by previous Group C direct pixel check and current manifest STILL contains stale field_view.",
+    "handoff": "Chat2 should correct shared field_view / original role / caption only if confidently revalidated from source pixels, without changing botanical scored facts."
+  },
+  "remaining_roles_to_find_after_publication": {
+    "melinis_repens": [
+      "clear local field individual clump/rooted basal habit",
+      "mature pink and silver-white panicle comparisons (optional)",
+      "true seed/lemma macro"
+    ],
+    "alopecurus_carolinianus": [
+      "rooted whole annual tuft",
+      "ligule/sheath close-up",
+      "winter leaf-base/rosette and late dry head"
+    ],
+    "briza_minor": [
+      "whole growing plant in situ, not hand-held",
+      "dormant/winter stage",
+      "precise scale if anatomy lesson later"
+    ]
+  },
+  "completion_honesty": {
+    "candidate_source_records_reverified": 7,
+    "rights_image_and_role_supported_P1": 6,
+    "optional_rights_recheck": 1,
+    "Group_C_new_photos_installed_by_chat4": 0,
+    "Group_C_new_live_pixels_with_credits_verified_by_chat4": 0,
+    "published_baseline": "Latest manifest has 1 configured photo reference for each of 3 assigned species. Issue70 earlier reports original 54/54 provisional photos rendered and credited but this batch did not run an independent browser; 76 current refs require fresh live QA by Chat1."
+  },
+  "release_handoff": "Chat2 finalize original image bytes/hash, exact license+ID, install six P1 complementary photos promptly with all creator/license/source fields; optional red-flowered Natal grass if it improves seasonal visual diversity. Chat1 verify actual live HTML/photo pixels/credits. Chat4 handle last three species in next batch."
+}
