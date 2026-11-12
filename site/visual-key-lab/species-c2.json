@@ -58,18 +58,21 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Hooded windmillgrass generally has crowded shorter racemes (~2–5 cm) and a conspicuous rounded sterile hood with short awns. Tumble windmillgrass typically has longer (~5–15 cm) racemes in separated tiers and longer awns. Feather fingergrass commonly has a feathery terminal fan with long apical fertile-lemma hairs. The hybrid may be intermediate.",
+    "field_rule": "Hooded windmillgrass generally has crowded shorter racemes (~2–5 cm) and a conspicuous rounded sterile hood with short awns. Tumble windmillgrass typically has longer (~5–15 cm) racemes in separated tiers and longer awns. Feather fingergrass commonly has a feathery terminal fan with long apical fertile-lemma hairs. The hybrid may be intermediate. A complete hooded-windmillgrass head can have 10–20 UNILATERAL racemes, so the generic one-sided and seven-plus one-sided choices must not eliminate it merely because the rays are fingerlike/whorled. Its TRUE ligule is a very short membranous flap with a ciliate rim; allow a beginner's hair-fringe appearance only when the marginal cilia are visible, without claiming the membrane is absent. Check the inflated sterile hood and beware introgressed windmillgrasses.",
     "traits": {
       "head": [
         "fingers",
-        "whorls"
+        "whorls",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
         "mat"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -80,17 +83,33 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Kew GrassBase; Texas Hill Country 2015; Illustrated Flora of North Central Texas",
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Chloris generic treatment, printed p. 1256; Kew GrassBase / POWO, Chloris cucullata",
         "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information",
-        "reference": "10–20 short (2–5 cm) racemes close together at apex; treatments describe one whorl or 1–3 closely spaced whorls. Broad visual coding allows both digitate and whorled; do not equate with C. verticillata's well-separated tiers.",
-        "status": "SOURCE_VARIATION_KEEP_MULTIPLE_STATES",
-        "review_date": "2026-11-10"
+        "reference": "Diggs defines Chloris branch spikelets as one-sided, digitately/subdigitately or whorled. Kew GrassBase *C. cucullata* explicitly describes racemes 10–20; DIGITATE, in several WHORLS, UNILATERAL, densely packed. Thus existing `fingers` and `whorls` are correct but also `one_sided` and `many_one_sided` (7+ unilateral) are legitimate field observations. Retain uncertain hybrid/introgression cautions; high branch count alone is not species evidence.",
+        "status": "REGIONAL_GENUS_AND_SPECIES_KEW_BRANCH_STATES_VERIFIED_HYBRID_LOCAL_PHOTO_PENDING",
+        "review_date": "2026-11-12",
+        "regional_source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reported_states": [
+          "10–20 unilateral racemes",
+          "digitate close terminal fingers",
+          "one to several close whorls"
+        ],
+        "photo_voucher_support": "No newly checked original Hays image with countable unilateral branch/spikelet sides. Existing photos and rights unmodified."
       },
       "ligule": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.180 (printed 1256): one terminal whorl of short 2–5cm branches, not several spaced tiers; ciliate membranous ligule",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country: Vegetative Key and Descriptions, printed p. 41; Kew GrassBase *Chloris cucullata*",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information",
+        "role": "vegetative",
+        "reference": "H&L p.41 explicitly describe the inner 0.5–1 mm ligule as MEMBRANOUS and TRUNCATE, margins CILIATE; Kew independently says ciliolate membrane. Preserve `membrane` as anatomically definitive. Add conditional `hairs` only as a broad unaided visual answer to very small marginal cilia, NOT as a claim the tissue is a purely hair ligule, and NEVER treat mere nearby sheath hairs as confirmation. Need same-leaf true inner collar macro.",
+        "reported_states": [
+          "0.5–1 mm membranous ligule",
+          "ciliate or ciliolate membranous margin (potential hair-fringe visual)"
+        ],
+        "status": "DIRECT_HILL_COUNTRY_VEGETATIVE_TEXT_VERIFIED_BROAD_VISUAL_HAIR_OPTION_LOCAL_MACRO_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "Original same-plant leaf-junction macro not newly verified; margin-cilia visibility needs field lens."
       },
       "habit": {
         "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41, Chloris cucullata",
@@ -139,6 +158,22 @@
         "compare": "Slimspike and feather windmillgrass may also have short stolons; tumble windmillgrass is often tufted and may show low rooting culms",
         "certainty": "Source-backed optional growth form; source photo does not prove an individual plant has stolons",
         "source": "Hagenbuch & Lemke 2015, p. 41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41"
+      },
+      {
+        "look": "Count the unilateral rays in a hooded windmillgrass head",
+        "check": "Kew describes 10–20 closely arranged one-sided short rays, digitate or whorled. If seven or more rays are visible, the key's many-one-sided option is literally correct even though the rays also look like fingers. Expose a genuine fertile/sterile spikelet, confirm the inflated sterile hood, and use several flowering units because windmillgrass hybrids may be intermediate.",
+        "compare": "Tumble windmillgrass usually has more widely separated tiers and longer racemes/awns; feather fingergrass differs in sterile-floret details. Raceme count alone is shared.",
+        "certainty": "Diggs regional genus plus Kew species account checked; no local individually licensed head image newly approved.",
+        "source": "Diggs et al. (1999), Chloris; Kew GrassBase — Chloris cucullata",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:395849-1/general-information"
+      },
+      {
+        "look": "Distinguish a hairy-edged membrane from a pure hair ligule",
+        "check": "Hagenbuch & Lemke (2015, p.41) describe a 0.5–1 mm truncate MEMBRANE with ciliate edges. A quick field view might register only fine rim hairs, so the key retains both broad choices, but the tissue beneath the hairs should be present; open and photograph the inner blade–sheath junction at magnification.",
+        "compare": "Do not confuse hairs on the outside of the sheath or collar with the true inner ligule. This is an optional visual allowance, not an alternative botanical organ.",
+        "certainty": "Regionally described vegetative structure; Hays photograph and direct lens proof of hair visibility pending.",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 41",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41"
       }
     ],
