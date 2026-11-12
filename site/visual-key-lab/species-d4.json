@@ -863,17 +863,19 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Species-level Tridens confidence requires panicle architecture PLUS mature spikelet/glume/lemma anatomy; do not identify from pigmentation alone.",
+    "field_rule": "Species-level Tridens confidence requires panicle architecture PLUS mature spikelet/glume/lemma anatomy; do not identify from pigmentation alone.\n\nField ID Lab: white tridens grows as a bunch but may also show short, knotty underground rhizomes at the crown. Both tuft and rhizome are valid growth-form choices; check an actual dug base before asserting rhizomes in a particular photograph.\n\nCollar check: the true white tridens ligule can look hairy, but a tiny papery membrane sits beneath its cilia. Either visual answer can be legitimate if observed at the inner blade–sheath junction.",
     "traits": {
       "head": [
         "compact",
         "long_narrow_panicle"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -891,6 +893,34 @@
         "reference": "Panicles 6–30 cm with purplish or banded spikelets; head outline varies, pigmentation alone not species diagnostic.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit_short_knotted_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 65, species 145, Tridens albescens",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=65",
+        "category": "vegetative",
+        "reported_states": [
+          "cespitose perennial",
+          "short knotty rhizomes",
+          "stolons absent"
+        ],
+        "reference": "White tridens has a visible bunch and short underground knotty rhizomes. Exposing short true rhizomes must retain it as a candidate. Do not infer aboveground stolons or assume every general photo shows its buried base.",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "certainty": "DIRECT_HILL_COUNTRY_REGIONAL_SOURCE_NO_SAME_PLANT_ROOTSTOCK_PHOTO",
+        "review_date": "2026-11-12"
+      },
+      "ligule_ciliate_minute_membrane_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 65, species 145, Tridens albescens",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=65",
+        "category": "vegetative",
+        "reported_states": [
+          "tiny ligule under 0.5 mm",
+          "ciliate fringe",
+          "minute membranous base"
+        ],
+        "reference": "The true inner ligule is a tiny ciliate membrane, not an anatomically pure hair fringe. A close-up may resolve the papery base, so membrane and hair-fringe selections should both retain white tridens. Do not count unrelated throat/leaf hairs.",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "certainty": "DIRECT_HILL_COUNTRY_REGIONAL_SOURCE_PHOTO_MACRO_UNVERIFIED",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -996,13 +1026,14 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Species-level Tridens confidence requires panicle architecture PLUS mature spikelet/glume/lemma anatomy; do not identify from pigmentation alone.",
+    "field_rule": "Species-level Tridens confidence requires panicle architecture PLUS mature spikelet/glume/lemma anatomy; do not identify from pigmentation alone.\n\nField ID Lab: purpletop can appear as a bunch even when its crown contains short knotty rhizomes. Both tuft and rhizome are valid; look for the broad, drooping mature head and real spikelets.",
     "traits": {
       "head": [
         "airy"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "hairs",
@@ -1031,6 +1062,20 @@
         "reference": "A ciliate membrane (not just a pure hair ring) may be visually interpreted as fringe of hairs in a photo; allow both broad visual answers pending actual leaf-junction macro.",
         "status": "SOURCE_BACKED_TINY_CILIATE_MEMBRANE_VISUAL_DUALSTATE_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "habit_short_knotted_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 66, species 148, Tridens flavus",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=66",
+        "category": "vegetative",
+        "reported_states": [
+          "cespitose perennial",
+          "short knotty rhizomes",
+          "stolons absent"
+        ],
+        "reference": "Purpletop is a tufted perennial with short knotty underground rhizomes in the Hill Country regional description. A user who exposes a true rhizome must not lose purpletop; surface runners remain unsupported.",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "certainty": "DIRECT_HILL_COUNTRY_REGIONAL_SOURCE_NO_SAME_PLANT_RHIZOME_PHOTO",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -1671,7 +1716,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Do not finalize at species if whole-panicle context is absent or floret count sits in overlapping range; dissect true ripe spikelet with scale.",
+    "field_rule": "Do not finalize at species if whole-panicle context is absent or floret count sits in overlapping range; dissect true ripe spikelet with scale.\n\nSource hold: Hagenbuch & Lemke report rhizomes absent in Hill Country slim tridens, whereas the FNA treatment describes a short knotty rhizomatous base. An exposed Hays-region specimen is needed before deciding whether to allow the rhizome choice for this species; a swollen crown alone is not diagnostic.",
     "traits": {
       "head": [
         "long_narrow_panicle"
@@ -1706,6 +1751,21 @@
         "reference": "A ciliate membrane (not just a pure hair ring) may be visually interpreted as fringe of hairs in a photo; allow both broad visual answers pending actual leaf-junction macro.",
         "status": "SOURCE_BACKED_TINY_CILIATE_MEMBRANE_VISUAL_DUALSTATE_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "habit_source_conflict_20261112": {
+        "source": "Hagenbuch & Lemke (2015), p. 66, Tridens muticus",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=66",
+        "secondary_source": "Flora of North America, Valdés-Reyna, Tridentopsis mutica / Tridens muticus",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=12504",
+        "category": "vegetative",
+        "reported_states": [
+          "H&L Hill Country: cespitose, rhizomes and stolons absent",
+          "FNA taxon account: cespitose with knotty shortly rhizomatous bases"
+        ],
+        "reference": "Two authoritative descriptions genuinely differ on whether slim tridens has short rhizomes. H&L local-specimen descriptions deny rhizomes; FNA describes short knotty rhizomatous bases. Do not treat an exposed thick crown as proof of a true underground stem. Keep the existing tuft score only pending Hays-region voucher and same-plant dug-rootstock verification; this is unresolved source conflict, not an identity or scoring admission.",
+        "status": "SOURCE_CONFLICT_NEEDS_HAYS_SPECIMEN_NOT_SCORED",
+        "certainty": "VERIFIED_TEXT_CONFLICT_NO_SAME_PLANT_ROOTSTOCK_RESOLUTION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
