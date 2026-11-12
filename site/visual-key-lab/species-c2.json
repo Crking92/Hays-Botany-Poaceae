@@ -1816,10 +1816,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Bob Harms's source-identified dried uprooted specimen (panel 10) shows true fibrous roots and attached flattened culms, while Harry Rose's in-situ photo (panel 1) shows field growth but hides the root crown. Goosegrass is an annual bunchgrass with notably compressed pale/whitish basal sheaths in life, NOT a network of rooting perennial runners. Neither photograph proves the LIVE milky-white crown at diagnostic close range. Next photograph: fresh uprooted living crown, fibrous roots, emerging tillers and cm scale.",
+    "field_rule": "Bob Harms's source-identified dried uprooted specimen (panel 10) shows true fibrous roots and attached flattened culms, while Harry Rose's in-situ photo (panel 1) shows field growth but hides the root crown. Goosegrass is an annual bunchgrass with notably compressed pale/whitish basal sheaths in life, NOT a network of rooting perennial runners. Neither photograph proves the LIVE milky-white crown at diagnostic close range. Next photograph: fresh uprooted living crown, fibrous roots, emerging tillers and cm scale. Goosegrass's flattened digitate branches carry spikelets in two rows on ONE SIDE. Kew GrassBase documents 1–10(17) unilateral branches, so exceptionally well-developed heads also legitimately match the seven-or-more one-sided-branches choice. Ordinary few-finger heads remain eligible under fingers and one-sided. Check the flattened leafy crown, membranous ligule and MULTIFLORED spikelets; branch count alone does not identify goosegrass.",
     "traits": {
       "head": [
-        "fingers"
+        "fingers",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft"
@@ -1838,10 +1840,19 @@
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
       "head": {
-        "source": "Illustrated Flora of North Central Texas p.192",
-        "reference": "Flattened digitate branches at culm tip, sometimes one or two inserted lower; overlapping awnless spikelets in two rows.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268, Eleusine indica; Kew GrassBase / POWO, Eleusine indica species account",
+        "reference": "Diggs (printed p.1268) describes goosegrass's crowded digitate or subdigitate flowering branches, sometimes 1–2 borne lower, and spikelets packed in TWO ROWS along flattened branches. Kew GrassBase explicitly describes 1–10(17) DIGITATE, UNILATERAL racemes; hence a mature head can genuinely satisfy the generic `one_sided` and conditional `many_one_sided` (seven-plus unilateral) visual UI options. Heads of fewer branches still use `fingers`; one-sided packing is shared and not diagnostic alone.",
+        "status": "REGIONAL_DIGGS_REPRODUCTIVE_ACCOUNT_AND_SPECIES_KEW_RANGE_VERIFIED_LOCAL_HEAD_PENDING",
+        "review_date": "2026-11-12",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:74675-3/general-information",
+        "regional_source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reported_states": [
+          "crowded terminal flattened fingers",
+          "unilateral spikelet-bearing primary branches",
+          "7–10(17) unilateral branches on unusually well-developed heads"
+        ],
+        "photo_voucher_support": "No newly observed Hays original whole head with countable unilateral racemes and attached mature spikelet dissection."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1869,6 +1880,14 @@
         "certainty": "FNA leaf-collar anatomy supported; fresh macro pending",
         "source": "Flora of North America — Eleusine indica",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=141&taxauthid=1&tid=239829"
+      },
+      {
+        "look": "Count the actual unilateral goosegrass fingers and check their flat axes",
+        "check": "Kew GrassBase records one to ten, occasionally seventeen, unilateral branches. A branch itself bears flattened two-ranked, MULTIFLOWERED spikelets along one face; if seven or more branches occur, this still belongs in the seven-plus one-sided choice. Continue accepting the common 2–6 finger arrangement and verify the inner true membranous ligule.",
+        "compare": "Windmillgrasses have different sterile-floret structures; southern crabgrass has paired spikelets with two florets each; big robust finger counts overlap across all three groups.",
+        "certainty": "Exact Diggs regional account and Kew species range checked; Hays count/photo/voucher still pending.",
+        "source": "Diggs et al. (1999), Eleusine indica, p. 1268; Kew GrassBase, Eleusine indica",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:74675-3/general-information"
       }
     ],
     "diagnostic_review": {
