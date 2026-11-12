@@ -1,0 +1,34 @@
+name: Group D — real production grass trial regressions
+on:
+  push:
+    branches:
+      - codex/group-d-real-key-trial-regressions-b1
+    paths:
+      - 'scripts/test_group_d_production_trials_b1.cjs'
+      - '.github/workflows/group-d-production-trial-regressions.yml'
+  pull_request:
+    paths:
+      - 'scripts/test_group_d_production_trials_b1.cjs'
+      - '.github/workflows/group-d-production-trial-regressions.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  real-production-filter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run Group D realistic paths through production currentResults
+        run: |
+          mkdir -p group-d-results
+          node scripts/test_group_d_production_trials_b1.cjs | tee group-d-results/group-d-results.log
+      - name: Retain actual test output and conflict ranks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-d-production-filter-results
+          path: group-d-results/
+          retention-days: 3
