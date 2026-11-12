@@ -1,0 +1,31 @@
+name: Group C — next six photo source metadata and duplicate gate (one-shot read-only)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/check_group_c_next_six_sources.cjs'
+      - '.github/workflows/group-c-next-six-source-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  group-c-next-six-metadata:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check six exact Commons source records, rights labels, SHA and scored/provisional collisions
+        run: node scripts/check_group_c_next_six_sources.cjs
+      - name: Retain compact source metadata report without downloading photo bytes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-c-next-six-source-check
+          path: qa-report/group-c-next-six-source-metadata.json
+          if-no-files-found: warn
+          retention-days: 14
