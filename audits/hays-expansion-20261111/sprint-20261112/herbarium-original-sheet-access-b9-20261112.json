@@ -1,0 +1,156 @@
+{
+  "schema": "hays-grass-herbarium-scan-access-b9",
+  "date": "2026-11-12",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "branch": "codex/provisional-herbarium-access-b9-20261112",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "scope": "Exact three published high-priority Hays voucher sheets, university-verified contact routes and image-versus-data licensing status. Two curator requests prepared as UNSENT Gmail drafts; no contact made.",
+  "count_truth": {
+    "historical_hays_provisional_taxa_with_citations": 7,
+    "all_hays_published_gatherings_source_checked": 10,
+    "high_priority_specimen_sheets_pursued_this_batch": 3,
+    "recipient_institutions": 2,
+    "unsent_email_drafts_prepared": 2,
+    "external_curator_messages_sent": 0,
+    "original_exact_sheet_scans_retrieved": 0,
+    "barcode_ids_recovered": 0,
+    "high_resolution_source_photographs_newly_inspected": 0,
+    "provisional_species_cleared_to_scoring": 0,
+    "scored_species": 112,
+    "configured_learner": 169,
+    "provisional": 57,
+    "first_pass_species_audits": 57,
+    "contact_sheet_source_photos_reviewed": 317,
+    "new_public_photo_galleries_verified": 0
+  },
+  "sources_and_access": [
+    {
+      "source": "Hagenbuch and Lemke 2015 direct printed publication",
+      "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "evidence": "Printed pages 85 and 78 screenshot reviewed this turn. Supports specified taxon/collector/year/county/herbarium citation, NOT any full-resolution individual sheet."
+    },
+    {
+      "source": "UT Austin Plant Resources Center",
+      "url": "https://biodiversity.utexas.edu/collections/plants-collection/about-plants-collection",
+      "evidence": "Official curator and email verified, TEX/LL collection; ask for scan, source barcode and determination history."
+    },
+    {
+      "source": "Texas State University Biology faculty",
+      "url": "https://www.bio.txst.edu/faculty-staff/david-lemke.html",
+      "evidence": "Current page verifies coauthor David Lemke's contact email. Separate historical herbarium list previously identified SWT curator."
+    },
+    {
+      "source": "TORCH Symbiota public portal",
+      "url": "https://portal.torcherbaria.org/portal/index.php",
+      "evidence": "Specimen data service exists, but direct search redirects anonymous browser to verify-human/login and exact record search could not be completed."
+    },
+    {
+      "source": "UT Austin Plant Resources Center IPT",
+      "url": "https://ipt.tacc.utexas.edu/resource?r=prc",
+      "evidence": "Version Image1.154 published October 6, 2026; ~573k records with CC0 occurrence dataset statement. DOES NOT establish a CC0 license for individual specimen images."
+    },
+    {
+      "source": "UT Austin PRC image policy",
+      "url": "https://biodiversity.utexas.edu/collections/plants-collection/explore-plants-collection",
+      "evidence": "Some UT image collections say noncommercial reproduction with conditions and permission for large-scale or commercial use. Must request exact image rights; no assumption all images available as CC0."
+    }
+  ],
+  "records": [
+    {
+      "scientific": "Melica nitens",
+      "candidate_id": "melica-nitens",
+      "published_name": "Melica nitens",
+      "collector": "Dingee",
+      "record_number": "89",
+      "institution_code": "SWT",
+      "institution": "Texas State University Herbarium",
+      "herbarium_recipient": "Dr. David E. Lemke",
+      "official_email": "david.lemke@txstate.edu",
+      "verified_recipient_source": "https://www.bio.txst.edu/faculty-staff/david-lemke.html",
+      "publication_page": 85,
+      "record_type": "Hays County gathering cited in Hagenbuch and Lemke 2015 Appendix B",
+      "specific_review": "Opened screenshot of 2015 p.85; exact same collector and collection number verified. Prior Hays photos show drooping spikelets and crown; original specimen image not obtained.",
+      "high_priority_diagnostics": [
+        "Mature spikelet with rudimentary terminal floret and lemma anatomy",
+        "Ligule true membrane, erose/lacerate margin, 3–6 mm",
+        "Tightly clumped hard subrhizomatous base (no true elongated rhizomes)"
+      ],
+      "request_kind": "EXISTING_SCAN_OR_BARCODE_AND_DETERMINATION_HISTORY",
+      "one_to_one_current_specimen_confirmed": false,
+      "original_sheet_barcode": null,
+      "scan_url": null
+    },
+    {
+      "scientific": "Rottboellia campestris",
+      "candidate_id": "rottboellia-campestris",
+      "published_name": "Coelorachis cylindrica",
+      "collector": "Carr",
+      "record_number": "10681",
+      "institution_code": "TEX-LL",
+      "institution": "UT Austin Plant Resources Center",
+      "herbarium_recipient": "Dr. George Yatskievych",
+      "official_email": "george.yatskievych@austin.utexas.edu",
+      "verified_recipient_source": "https://biodiversity.utexas.edu/collections/plants-collection/about-plants-collection",
+      "publication_page": 78,
+      "record_type": "Hays County gathering under Coelorachis cylindrica, a Rottboellia/Mnesithea genus-treatment alias",
+      "specific_review": "Opened screenshot of 2015 p.78; exact Carr 10681 match. No barcoded UT sheet scan located, original pitted glume and sessile/pedicelled pair unexamined.",
+      "high_priority_diagnostics": [
+        "Rachis joints disarticulating at spikelet-bearing nodes",
+        "Recessed sessile fertile spikelet and reduced pedicelled spikelet",
+        "Pitted lower glume on original collection and short knotty rhizomes"
+      ],
+      "request_kind": "EXISTING_SCAN_OR_BARCODE_AND_DETERMINATION_HISTORY",
+      "one_to_one_current_specimen_confirmed": false,
+      "original_sheet_barcode": null,
+      "scan_url": null
+    },
+    {
+      "scientific": "Rottboellia campestris",
+      "candidate_id": "rottboellia-campestris",
+      "published_name": "Coelorachis cylindrica",
+      "collector": "Sanders",
+      "record_number": "4100",
+      "institution_code": "TEX-LL",
+      "institution": "UT Austin Plant Resources Center",
+      "herbarium_recipient": "Dr. George Yatskievych",
+      "official_email": "george.yatskievych@austin.utexas.edu",
+      "verified_recipient_source": "https://biodiversity.utexas.edu/collections/plants-collection/about-plants-collection",
+      "publication_page": 78,
+      "record_type": "Hays County gathering under Coelorachis cylindrica, a Rottboellia/Mnesithea genus-treatment alias",
+      "specific_review": "Opened screenshot of 2015 p.78; Sanders 4100 correctly cited. Still no original specimen pixels or barcode.",
+      "high_priority_diagnostics": [
+        "Rachis groove and disarticulating joints",
+        "Spikelet glume pitting and exact sessile/pedicelled pair",
+        "Source locality/date plus any later annotations"
+      ],
+      "request_kind": "EXISTING_SCAN_OR_BARCODE_AND_DETERMINATION_HISTORY",
+      "one_to_one_current_specimen_confirmed": false,
+      "original_sheet_barcode": null,
+      "scan_url": null
+    }
+  ],
+  "requests": {
+    "texas_state": {
+      "recipient": "david.lemke@txstate.edu",
+      "subject": "Request for Hays County Melica nitens herbarium voucher — Dingee 89 (SWT)",
+      "created_as_unsent_gmail_draft": true,
+      "was_sent": false,
+      "requested": "High-resolution existing scan or catalog barcode, collection label/date/locality and determination history, reproduction permission independent of access."
+    },
+    "university_texas": {
+      "recipient": "george.yatskievych@austin.utexas.edu",
+      "subject": "Hays County TEX/LL specimen scans — Carr 10681 and Sanders 4100 (Coelorachis cylindrica)",
+      "created_as_unsent_gmail_draft": true,
+      "was_sent": false,
+      "requested": "Existing digital scans or specimen barcodes for both TEX–LL Hays collections, label and determination history, separate image reuse authorization."
+    }
+  },
+  "other_notes": [
+    "No additional public specimen sheet, barcode or current image license was obtained; absence of search results does NOT imply the physical voucher is missing.",
+    "Historical locality from one curated citation and currently photographed Hays iNaturalist sample are not proof of same biological individual.",
+    "No new taxonomic decisions or false-exclusion score values should be added solely from this accession search.",
+    "This audit is public repo-safe: it contains only publicly listed curatorial contacts and reference metadata; no user's Gmail account identity, draft identifiers or private image bytes.",
+    "Next gate depends on actual original sheet media or expert look at a ripe same-local plant, not another generic photo; Chat 1 handles score admission.",
+    "Original photo rights, county-specific BONAP native map, cultivated versus established conditions and public-gallery pixel verification remain separate."
+  ]
+}
