@@ -1,0 +1,736 @@
+{
+  "created": "2026-11-11",
+  "scope": "Hays expansion source description packet 5",
+  "stage": "REFERENCE_MORPHOLOGY_PREPARED_NOT_SPECIMEN_VERIFIED",
+  "counts": {
+    "new_taxa": 8,
+    "new_character_statements": 48,
+    "cumulative_taxa": 40,
+    "cumulative_character_statements": 219,
+    "remaining_unprofiled_taxa": 17,
+    "source_pixels_inspected_this_pass": 0,
+    "botanical_species_signoffs": 0,
+    "photos_rights_approved_this_pass": 0,
+    "site_species_merged": 0
+  },
+  "reference_logic": "Prefer exact regional Flora direct account under 1999 printed names, modern Kew accepted names and GrassBase for other taxa; additional USGS, Texas A&M, UF IFAS, USDA and peer-reviewed genus study. Reuse old iNat visual notes without pretending new image inspection.",
+  "taxonomy_ambiguities": [
+    "Dichanthelium acuminatum historical Panicum acuminatum varieties have contested current delimitation; seasonally variable",
+    "Steinchisma hians under Panicum hians in 1999 printed Flora",
+    "Stapfochloa species are formerly Chloris and canterae-versus-ciliata differential is not yet fully keyed",
+    "Panicum dichotomiflorum has no prior accessible rights-suitable Hays image in sample",
+    "Panicum repens and Megathyrsus maximus have no verified Hays established population"
+  ],
+  "safety_guards": [
+    "Never write live cards or key characteristic arrays",
+    "Never treat descriptions as Hays-specimen evidence",
+    "Never publish sources with unverified photo rights",
+    "Never count previous photo inspection as new"
+  ],
+  "taxa": [
+    {
+      "accepted_name": "Steinchisma hians",
+      "card_id": "steinchisma-hians",
+      "regional_flora": {
+        "historic_treatment": "Panicum hians Elliott (older name; Steinchisma subgenus)",
+        "pdf_page": 222,
+        "printed_page": 1298,
+        "authority_status": "DIRECT_OR_HISTORIC_TREATMENT"
+      },
+      "bibliography": [
+        "Flora of North Central Texas, p. 222 (file page), printed p. 1298",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:243676-2/general-information"
+      ],
+      "character_evidence": [
+        {
+          "kind": "habit",
+          "description": "Perennial with upright or decumbent bases; typical flowering stems about 20–75 cm",
+          "source": "1999 regional Flora / Kew GrassBase",
+          "needed_photo": "rooted base",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "ligule",
+          "description": "Very short membranous ligule near 0.5 mm, its rim glabrous to finely ciliolate depending on source",
+          "source": "1999 regional Flora / Kew GrassBase",
+          "needed_photo": "inner ligule at mm scale",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "panicle",
+          "description": "Open or partially contracted panicle about 6–20 cm; lowest 1–3 cm of some branches lacks spikelets",
+          "source": "1999 regional Flora",
+          "needed_photo": "complete panicle with branch bases",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "spikelet",
+          "description": "Glabrous, approximately 1.8–2.6 mm, at maturity its tip characteristically gapes",
+          "source": "1999 regional Flora",
+          "needed_photo": "mature spikelet side view",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "lower_glume",
+          "description": "Both glumes present; the lower generally about one-third to half the spikelet length",
+          "source": "1999 regional Flora",
+          "needed_photo": "isolated unequal glumes",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "neuter_palea",
+          "description": "Inflated broadly obovate palea of lower sterile floret may protrude above its lemma; major gaping diagnostic",
+          "source": "1999 regional Flora",
+          "needed_photo": "lower-floret palea dissection",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass3-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 3,
+      "previous_visible_photo_features": "Loose branched panicle with small drooping florets over lanceolate leaf blades, some contextual rocky ground photographs.",
+      "previous_absent_photo_features": "Only three images and no spikelet closeup, lemma/membrane characters or base; no independent confirmation versus related Panicum/Steinchisma.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/387883882",
+        "https://www.inaturalist.org/observations/82946399",
+        "https://www.inaturalist.org/observations/82930069"
+      ],
+      "lookalikes": "Other Steinchisma/Panicum: Panicum dichotomiflorum and Panicum repens; don't confuse gaping palea with glume margins",
+      "next_required_specimen_proof": "Get a same-plant ripe spikelet dissection that clearly shows inflated lower-floret palea, lower glume ratio and truly gaping apex, along with collar and base.",
+      "hold": "Original 3 Hays source photos lack close spikelets; species ranking remains unverified.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Dichanthelium acuminatum",
+      "card_id": "dichanthelium-acuminatum",
+      "regional_flora": {
+        "historic_treatment": "Panicum acuminatum Sw. (historic broader concept with three varieties)",
+        "pdf_page": 219,
+        "printed_page": 1295,
+        "authority_status": "DIRECT_OR_HISTORIC_TREATMENT"
+      },
+      "bibliography": [
+        "Flora of North Central Texas PDF p. 219 printed p.1295",
+        "https://research.fs.usda.gov/feis/species-reviews/dicacu",
+        "https://auth1.dpr.ncparks.gov/flora/species_account.php?id=3763"
+      ],
+      "character_evidence": [
+        {
+          "kind": "seasonal_rosette",
+          "description": "Perennial develops a leafy basal winter rosette, spring flowering culms and smaller crowded autumn branches",
+          "source": "USFS FEIS Dichanthelium acuminatum",
+          "needed_photo": "winter rosette and spring flowering stem",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "early_inflorescence",
+          "description": "Spring culms tend to be less branched, bearing a more open terminal panicle",
+          "source": "USFS FEIS",
+          "needed_photo": "spring whole plant",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "late_inflorescence",
+          "description": "Later in season stems branch repeatedly into shorter leaves and reduced or partly sheathed panicles",
+          "source": "USFS FEIS",
+          "needed_photo": "autumn branching",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "blade_width",
+          "description": "Old broad Panicum acuminatum concept records blades mostly 3–12 mm wide",
+          "source": "1999 regional Flora",
+          "needed_photo": "blade width with scale",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "sheath_hairs",
+          "description": "1999 broad-key var. acuminatum has spreading hairs about 2.5–4 mm; historic var. lindheimeri may have fewer and more ascending hairs",
+          "source": "1999 regional Flora (variety-conditional)",
+          "needed_photo": "sheath and node close-up",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "spikelet_variation",
+          "description": "Historic Flora concept groups spikelets about 1–2.7 mm depending on variety; single measurement cannot prove modern species boundary",
+          "source": "1999 regional Flora (broad concept)",
+          "needed_photo": "several vernal mature spikelets",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 1,
+      "previous_visible_photo_features": "Single leafy groundcover patch with narrow lanceolate leaves in shaded/rocky context.",
+      "previous_absent_photo_features": "No discernible flowering panicle, spikelets, stem/leaf pubescence, winter rosette or sheath details; complex D. acuminatum taxon concept.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/206239171",
+        "https://www.inaturalist.org/observations/203380293"
+      ],
+      "lookalikes": "Dichanthelium lindheimeri/villosissimum and other members of the acuminatum complex",
+      "next_required_specimen_proof": "Find a same-location winter rosette, vernal flowering specimen and hairs on sheath/node with mm scale; use a current species/variety concept and mature vernal spikelet measures.",
+      "hold": "Historic var. villosum and lindheimeri combinations may have modern separate placements; do not auto-transfer their traits to a narrowly defined acuminatum. Single Hays photo is vegetative and does not resolve species.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Panicum dichotomiflorum",
+      "card_id": "panicum-dichotomiflorum",
+      "regional_flora": {
+        "historic_treatment": "Panicum dichotomiflorum Michx.",
+        "pdf_page": 220,
+        "printed_page": 1296,
+        "authority_status": "DIRECT_OR_HISTORIC_TREATMENT"
+      },
+      "bibliography": [
+        "Flora of North Central Texas PDF p.220 printed p.1296",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325362-2/general-information",
+        "https://cals.cornell.edu/weed-science/weed-profiles/fall-panicum"
+      ],
+      "character_evidence": [
+        {
+          "kind": "annual_base",
+          "description": "Coarse summer annual, stems up to roughly 1–2 m, often bent or trailing near ground",
+          "source": "1999 regional Flora",
+          "needed_photo": "fibrous basal root system and bent nodes",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "ligule",
+          "description": "Membrane about 0.5–1 mm and capped with hairs about 2 mm; longer combined ciliate lip described in some sources",
+          "source": "1999 regional Flora",
+          "needed_photo": "collar with scale",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "leaf",
+          "description": "Blade relatively broad and often smooth on older plants; younger leaves may be hairy",
+          "source": "1999 regional Flora / Cornell",
+          "needed_photo": "leaf both sides",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "panicle",
+          "description": "Large airy branched panicle, often 12–40 cm under Kew/GrassBase treatment",
+          "source": "Kew GrassBase",
+          "needed_photo": "whole panicle",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "spikelet",
+          "description": "Ovate dorsally compressed spikelet around 2.4–3 mm; falls whole",
+          "source": "Kew GrassBase",
+          "needed_photo": "spikelet on ruler",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "glume",
+          "description": "Lower glume short, around one-quarter spikelet length; upper nearly full length and several-veined",
+          "source": "Kew GrassBase",
+          "needed_photo": "isolated upper and lower glumes",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-photo-access-holds-20261111.json",
+      "previous_original_Hays_photo_count": 0,
+      "previous_visible_photo_features": null,
+      "previous_absent_photo_features": null,
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/61315171"
+      ],
+      "lookalikes": "Panicum repens, Panicum miliaceum, Urochloa spp., and tall broad-bladed annual grass seedlings",
+      "next_required_specimen_proof": "HIGH SOURCE ACCESS PRIORITY: obtain a rights-eligible, true Hays observation photo of a mature panicle plus same-plant root and collar; measure lower-glume length.",
+      "hold": "No original source-photo pixels were previously viewable in the saved Hays sample. This dossier cannot be used as field photo verification.",
+      "rights_metadata_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Panicum repens",
+      "card_id": "panicum-repens",
+      "regional_flora": {
+        "historic_treatment": "Not treated as named species in 1999 regional Flora",
+        "pdf_page": null,
+        "printed_page": null,
+        "authority_status": "NOT_DIRECTLY_TREATED_USE_MODERN_SOURCES"
+      },
+      "bibliography": [
+        "https://plant-directory.ifas.ufl.edu/plant-directory/panicum-repens/",
+        "https://research.fs.usda.gov/feis/species-reviews/panrep"
+      ],
+      "character_evidence": [
+        {
+          "kind": "habit",
+          "description": "Perennial spreads by long branching rhizomes in wet or disturbed ground; forms dense colonies",
+          "source": "University of Florida IFAS / USFS FEIS",
+          "needed_photo": "dug rooted colony",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "rhizomes",
+          "description": "Tough creeping underground stems often end in sharply pointed growing tips—the torpedo feature",
+          "source": "University of Florida IFAS / USFS FEIS",
+          "needed_photo": "intact rhizome terminal bud",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "foliage",
+          "description": "Flat to folded narrow blue-green leaves, sometimes waxy or pale",
+          "source": "USFS FEIS",
+          "needed_photo": "leaf blade underside",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "ligule",
+          "description": "Short ciliate membrane generally around 0.5–1 mm",
+          "source": "University of Florida IFAS",
+          "needed_photo": "inner collar",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "panicle",
+          "description": "Open terminal panicle with ascending branches, often roughly 7–22 cm long",
+          "source": "USFS FEIS",
+          "needed_photo": "whole panicle",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "spikelet",
+          "description": "Small ovate, unawned spikelets approximately 2–3 mm long",
+          "source": "USFS FEIS",
+          "needed_photo": "mature spikelet with mm scale",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass5-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 1,
+      "previous_visible_photo_features": "Dense green grassy mat with some thin flowering branches visible only at distance.",
+      "previous_absent_photo_features": "Rhizome/stolon structures and diagnostic spikelets absent; one image cannot resolve torpedograss.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/136945230"
+      ],
+      "lookalikes": "Panicum dichotomiflorum, Panicum virgatum, other rhizomatous wetland grasses",
+      "next_required_specimen_proof": "Critical target: excavate an intact sharp-pointed scaly rhizome connected to flowering stem and document spikelet size and ligule; distinguish from shallow turf runners.",
+      "hold": "Single distant Hays grass photo does not reveal rhizomes, collar, or diagnostic mature spikelets. No regional Flora account for direct local comparison.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Pappophorum bicolor",
+      "card_id": "pappophorum-bicolor",
+      "regional_flora": {
+        "historic_treatment": "Not covered as a named species in 1999 regional Flora",
+        "pdf_page": null,
+        "printed_page": null,
+        "authority_status": "NOT_DIRECTLY_TREATED_USE_MODERN_SOURCES"
+      },
+      "bibliography": [
+        "https://rangeplants.tamu.edu/plant/pink-pappusgrass/",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413618-1/general-information"
+      ],
+      "character_evidence": [
+        {
+          "kind": "habit",
+          "description": "Warm-season perennial tufted bunchgrass; flowering stems commonly 30–100 cm in source treatments",
+          "source": "Texas A&M Texas Rangelands / Kew GrassBase",
+          "needed_photo": "rooted tussock",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "panicle",
+          "description": "Usually narrow pink to purplish flowering panicle, but head color is not diagnostic alone",
+          "source": "Texas A&M / Kew GrassBase",
+          "needed_photo": "flower head",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "spikelet",
+          "description": "Spikelet has about 3–5 florets, generally lower 2–3 bisexual and upper florets reduced",
+          "source": "Texas A&M / Flora of North America",
+          "needed_photo": "dissected spikelet count",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "awn_crown",
+          "description": "Each mature lemma terminates in approximately 11–15 separate awns, often unequal in length",
+          "source": "Kew GrassBase / Texas A&M",
+          "needed_photo": "isolated lemma awn count",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "lemma",
+          "description": "Lemma body about 3–4 mm with hairy lower margins and midvein; spikelets attached by slender pedicels",
+          "source": "Kew GrassBase",
+          "needed_photo": "lemma both faces at scale",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "collar",
+          "description": "Ligule a short ring or tuft of hairs rather than a prominent membrane",
+          "source": "Texas A&M Texas Rangelands",
+          "needed_photo": "true collar",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass5-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 4,
+      "previous_visible_photo_features": "Dry grassland tuft with long hairy feathered flowering heads and good separate head details.",
+      "previous_absent_photo_features": "Individual lemma appendage number and attachment details not counted.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/136755826"
+      ],
+      "lookalikes": "Pappophorum mucronulatum and other pappusgrasses; generic fuzzy seedheads do not prove bicolor",
+      "next_required_specimen_proof": "Photograph one ripe detached lemma at microscope scale and count each awn, then count fertile florets and compare panicle branch density against Pappophorum mucronulatum.",
+      "hold": "Source Hays photos show feathery pink heads but not 11–15 awns counted from one lemma. Taxon name is candidate until dissection.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Stapfochloa ciliata",
+      "card_id": "stapfochloa-ciliata",
+      "regional_flora": {
+        "historic_treatment": "Not directly treated as named species in 1999 Flora; historical Chloris ciliata",
+        "pdf_page": null,
+        "printed_page": null,
+        "authority_status": "NOT_DIRECTLY_TREATED_USE_MODERN_SOURCES"
+      },
+      "bibliography": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469005-2/general-information",
+        "https://www.scielo.br/j/hoehnea/a/BXMjT64QCNdhBB4bXn6WLsy/?lang=pt"
+      ],
+      "character_evidence": [
+        {
+          "kind": "habit",
+          "description": "Tufted perennial, typically roughly 25–60 cm tall",
+          "source": "Kew POWO GrassBase (Chloris ciliata)",
+          "needed_photo": "rooted base",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "ligule",
+          "description": "Fringe of hairs or almost absent, not long solid membranous flap",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "leaf collar",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "racemes",
+          "description": "Several digitate or spreading one-sided racemes, normally 3–5(–7), roughly 3.5–6(–8) cm long",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "whole head and raceme count",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "spikelet",
+          "description": "Strongly laterally compressed spikelet 1.8–2.8 mm long; one fertile basal floret with two upper sterile florets",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "isolated spikelet",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "lemma_hairs",
+          "description": "Fertile lemma has conspicuous hairs along middle nerve and margins, around 0.5–1.5 mm",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "fertile lemma face and edge",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "awns",
+          "description": "Fertile lemma has short subapical awn about 0.9–2.7 mm; first sterile lemma often also awned",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "fertile and sterile lemmas side-by-side",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 6,
+      "previous_visible_photo_features": "Clear several digitate/fingerlike and strongly curved flowering branches, plus scaled rachis and collar region; good diagnostic imagery.",
+      "previous_absent_photo_features": "Exact hairy structures along rachis, sterile/terminal florets and ligule details still need close confirmation; other Chloris/Stapfochloa types occur locally.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/141035831",
+        "https://www.inaturalist.org/observations/23580302"
+      ],
+      "lookalikes": "Stapfochloa canterae, Stapfochloa elata, Chloris verticillata and related fingergrasses",
+      "next_required_specimen_proof": "Dissect a single spikelet to expose one fertile plus two sterile florets, measure lemma hairs and awns, and pair with scale of branch count and hairy collar; compare directly against canterae.",
+      "hold": "Genus-level windmill arrangement is shared by several local species. Most critically, modern Stapfochloa differs from some Chloris by fully ciliate lemma margins; exact species characters require formal matched comparison.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Stapfochloa canterae",
+      "card_id": "stapfochloa-canterae",
+      "regional_flora": {
+        "historic_treatment": "Not directly treated as named species in 1999 Flora; historical Chloris canterae",
+        "pdf_page": null,
+        "printed_page": null,
+        "authority_status": "NOT_DIRECTLY_TREATED_USE_MODERN_SOURCES"
+      },
+      "bibliography": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469004-2",
+        "https://www.scielo.br/j/hoehnea/a/BXMjT64QCNdhBB4bXn6WLsy/?lang=pt",
+        "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=10246"
+      ],
+      "character_evidence": [
+        {
+          "kind": "taxonomy",
+          "description": "Kew accepts Stapfochloa canterae, formerly Chloris canterae, as a distinct species",
+          "source": "Kew POWO",
+          "needed_photo": "taxonomy provenance",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "perennial",
+          "description": "Perennial tufted grass originally native to southeastern South America, introduced to Texas",
+          "source": "Kew POWO",
+          "needed_photo": "rooted adult plant",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "head_shape",
+          "description": "Racemes commonly digitately or subdigitately clustered, sometimes somewhat pendent or curved",
+          "source": "Kew POWO / field guide of Chaco (habit level)",
+          "needed_photo": "whole flowering head",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "genus_floral_structure",
+          "description": "Stapfochloa generally has one fertile basal floret and two to three reduced sterile florets above it",
+          "source": "Sousa and Santos 2022 genus concept, not species-exclusive",
+          "needed_photo": "dissected floret stack",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "genus_hairy_lemmas",
+          "description": "Stapfochloa fertile lemmas have densely ciliate longitudinal margins, unlike many Chloris species",
+          "source": "Sousa and Santos 2022 genus concept, not species-exclusive",
+          "needed_photo": "flattened lemma edge",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "species_differential_status",
+          "description": "Verified published modern key with exact canterae-versus-ciliata sterile floret and awn measurements NOT YET VERIFIED in this packet",
+          "source": "Evidence gap – no asserted numeric diagnosis",
+          "needed_photo": "paired matched microscope comparison",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass5-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 4,
+      "previous_visible_photo_features": "Very useful image set: ciliate racemes, culm node/ligule, detached spikelets and metric ruler in frame.",
+      "previous_absent_photo_features": "Precise fertile/sterile floret/awn comparison against Stapfochloa ciliata needs formal measurement.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/137935400"
+      ],
+      "lookalikes": "Stapfochloa ciliata, Stapfochloa elata, Chloris verticillata",
+      "next_required_specimen_proof": "Use already saved Hays mm-ruler photo to measure 1 fertile + sterile floret stack and awn insertion; find modern FNA or treatment explicitly contrasting canterae and ciliata before publishing separate key states.",
+      "hold": "Kew accepted species status and Texas introduction do NOT constitute a verified Hays observation or a differential key. The reported canterae Hays photo is strong but no source-photo pixels reexamined now.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    },
+    {
+      "accepted_name": "Megathyrsus maximus",
+      "card_id": "megathyrsus-maximus",
+      "regional_flora": {
+        "historic_treatment": "Not directly treated by 1999 regional Flora; historical Panicum maximum",
+        "pdf_page": null,
+        "printed_page": null,
+        "authority_status": "NOT_DIRECTLY_TREATED_USE_MODERN_SOURCES"
+      },
+      "bibliography": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60426565-2/general-information"
+      ],
+      "character_evidence": [
+        {
+          "kind": "habit",
+          "description": "Generally robust tufted perennial, sometimes short-rhizomatous, often 75–200 cm or taller",
+          "source": "Kew POWO GrassBase (under Panicum maximum)",
+          "needed_photo": "whole rooted crown",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "ligule",
+          "description": "Ciliate membrane at the blade–sheath junction",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "inner collar macro",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "leaf",
+          "description": "Broad linear to lanceolate blades, often 12–40 cm long, about 4–35 mm wide across variable forms",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "leaf with ruler",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "panicle",
+          "description": "Large open oblong or pyramidal panicle roughly 12–45 cm, lower primary branches sometimes whorled",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "complete panicle with scale",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "sheath",
+          "description": "Basal sheaths can be pubescent, culm nodes may be glabrous or bearded depending on form",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "basal sheath and node",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        },
+        {
+          "kind": "reproduction",
+          "description": "Panicle has individual pedicelled spikelets, not a dense solitary finger-shaped flowering branch",
+          "source": "Kew POWO GrassBase",
+          "needed_photo": "isolated spikelets and rachis",
+          "evidence_level": "LITERATURE_TREATMENT_ONLY",
+          "same_Hays_specimen_verified": false,
+          "live_trait_enabled": false
+        }
+      ],
+      "previous_visual_QA_file": "audits/hays-58-pass4-visual-qa-20261111.json",
+      "previous_original_Hays_photo_count": 2,
+      "previous_visible_photo_features": "Bunch of tall green grass and diffuse panicle visible only from a distance.",
+      "previous_absent_photo_features": "Images lack spikelet close-ups, ligule/collar, and any convincing wild establishment evidence; one is nighttime landscaping.",
+      "original_Hays_observations": [
+        "https://www.inaturalist.org/observations/254054788",
+        "https://www.inaturalist.org/observations/254055102",
+        "https://www.inaturalist.org/observations/142221594"
+      ],
+      "lookalikes": "Urochloa maxima historical labels, Sorghum halepense, Panicum virgatum and similar tall introduced pasture grasses",
+      "next_required_specimen_proof": "Verify actual same-plant species from a ripe spikelet and inner collar, then establish whether Hays plants are landscape-planted or producing a self-sustaining population.",
+      "hold": "Previous imagery is only tall landscape grass and distant open panicles, including nighttime lawn context; species ID and wild status unproven.",
+      "rights_metadata_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "exact_photo_license_rechecked_this_pass": false,
+      "photo_pixels_viewed_this_pass": 0,
+      "species_id_final_signoff": false,
+      "rights_approved": false,
+      "published": false,
+      "live_merge_ready": false
+    }
+  ]
+}

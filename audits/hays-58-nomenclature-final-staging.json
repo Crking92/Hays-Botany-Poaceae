@@ -1,0 +1,1655 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-11-11",
+  "scope": "Hays County Poaceae – 58 iNaturalist candidate names",
+  "status": "NOMENCLATURE_FROZEN_FOR_STAGING_NOT_IDENTIFICATION_OR_MERGE_APPROVED",
+  "baseline_112_count": 112,
+  "original_candidate_count": 58,
+  "source_name_dispositions": {
+    "KEEP_ACCEPTED_NAME": 56,
+    "CANONICAL_RENAME": 1,
+    "SYNONYM_OF_EXISTING_112": 1
+  },
+  "distinct_candidate_taxa_after_deduplication": 57,
+  "distinct_regular_species_candidates": 56,
+  "distinct_hybrid_candidates": 1,
+  "existing_species_aliases": 1,
+  "criteria": "Existing 112 preserved; POWO preferred for current taxonomy; GBIF exact species usage keys and user-provided 1999 Flora for independent cross-check; no fuzzy GBIF names adopted.",
+  "limits": [
+    "This adjudicates names/species concepts for staging only; any Hays iNaturalist ID can be wrong or planted.",
+    "Some GBIF exact accepted names have not had an independent Kew species detail page inspected; such rows include GBIF + Flora references and no false Kew URL.",
+    "Selected historical aliases are relevant search/display names, not an exhaustive synonym catalog.",
+    "The 1999 Flora is a regional key and its broader species concepts can disagree with POWO, especially Bothriochloa longipaniculata.",
+    "No species, photos, indexes or IDs are written to the public ID Lab.",
+    "Nativity/BONAP NAPA and visual ID checks remain separate."
+  ],
+  "records": [
+    {
+      "queue_id": "HAYS-001",
+      "original_inat_name": "Bromus catharticus",
+      "inat_taxon_id": 60276,
+      "preferred_project_accepted_name": "Bromus catharticus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A37001-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Bromus+catharticus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2703723,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          175,
+          176
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-002",
+      "original_inat_name": "Melica nitens",
+      "inat_taxon_id": 165237,
+      "preferred_project_accepted_name": "Melica nitens",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Melica diffusa var. nitens",
+        "Melica scabra"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A1034576-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Melica+nitens&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2703105,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          208,
+          209
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-003",
+      "original_inat_name": "Eragrostis superba",
+      "inat_taxon_id": 162412,
+      "preferred_project_accepted_name": "Eragrostis superba",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A401614-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Eragrostis+superba&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705445,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          196,
+          199
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-004",
+      "original_inat_name": "Lolium perenne",
+      "inat_taxon_id": 52801,
+      "preferred_project_accepted_name": "Lolium perenne",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407493-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Lolium+perenne&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2706241,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          206,
+          209
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-005",
+      "original_inat_name": "Bothriochloa longipaniculata",
+      "inat_taxon_id": 159321,
+      "preferred_project_accepted_name": "Bothriochloa longipaniculata",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Bothriochloa saccharoides var. longipaniculata",
+        "Andropogon saccharoides var. longipaniculatus"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/295954-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Bothriochloa+longipaniculata&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2704113,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          170
+        ],
+        "flora_pdf_coverage_note": "Mentioned as synonym under broader silver bluestem concept; not accepted standalone in regional flora."
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "SPECIES_CONCEPT_OLDER_FLORA_LUMPED_WITH_B_TORREYANA_CURRENT_POWO_GRIN_SEPARATE"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-006",
+      "original_inat_name": "Paspalum langei",
+      "inat_taxon_id": 166181,
+      "preferred_project_accepted_name": "Paspalum langei",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Dimorphostachys langei",
+        "Paspalum ciliiferum",
+        "Paspalum abbreviatum",
+        "Dimorphostachys drummondii"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A184424-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Paspalum+langei&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705573,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          230,
+          231
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-007",
+      "original_inat_name": "Bothriochloa bladhii",
+      "inat_taxon_id": 159317,
+      "preferred_project_accepted_name": "Bothriochloa bladhii",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Andropogon bladhii",
+        "Dichanthium bladhii"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/392701-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Bothriochloa+bladhii&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2704093,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-008",
+      "original_inat_name": "Dichanthium aristatum",
+      "inat_taxon_id": 161812,
+      "preferred_project_accepted_name": "Dichanthium aristatum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Andropogon aristatus"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A398529-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Dichanthium+aristatum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2702445,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-009",
+      "original_inat_name": "Phyllostachys aurea",
+      "inat_taxon_id": 78563,
+      "preferred_project_accepted_name": "Phyllostachys aurea",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A415983-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Phyllostachys+aurea&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5290167,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          235,
+          237
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-010",
+      "original_inat_name": "Lolium multiflorum",
+      "inat_taxon_id": 68479,
+      "preferred_project_accepted_name": "Lolium multiflorum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Lolium perenne subsp. multiflorum",
+        "Lolium italicum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/407486-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Lolium+multiflorum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 4129708,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-011",
+      "original_inat_name": "Bromus brevis",
+      "inat_taxon_id": 407432,
+      "preferred_project_accepted_name": "Bromus brevis",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Bromus unioloides var. brevis",
+        "Ceratochloa brevis",
+        "Bromus unioloides f. brevis"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/36988-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Bromus+brevis&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2703731,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "ACCEPTED_SPECIES_BUT_TEXAS_HAYS_OCCURRENCE_MUST_BE_REVIEWED"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-012",
+      "original_inat_name": "Coelorachis cylindrica",
+      "inat_taxon_id": 160775,
+      "preferred_project_accepted_name": "Rottboellia campestris",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "CANONICAL_RENAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Mnesithea cylindrica",
+        "Manisuris cylindrica"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/62724-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Coelorachis+cylindrica&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 4123347,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          181,
+          182
+        ],
+        "flora_pdf_coverage_note": "Older genus used as a full Flora description.",
+        "accepted_powo_url": "https://powo.science.kew.org/taxon/419621-1"
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "REGIONAL_FLORA_AND_FNA_PREFER_OLDER_GENUS_COELORACHIS"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-013",
+      "original_inat_name": "Oplismenus hirtellus",
+      "inat_taxon_id": 165865,
+      "preferred_project_accepted_name": "Oplismenus hirtellus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/1004002-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Oplismenus+hirtellus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705737,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          213,
+          214
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-014",
+      "original_inat_name": "Stenotaphrum secundatum",
+      "inat_taxon_id": 79210,
+      "preferred_project_accepted_name": "Stenotaphrum secundatum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/423051-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Stenotaphrum+secundatum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2702870,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          252,
+          255
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-015",
+      "original_inat_name": "Triticum aestivum",
+      "inat_taxon_id": 64161,
+      "preferred_project_accepted_name": "Triticum aestivum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/332110-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Triticum+aestivum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 7795888,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          147,
+          204,
+          257,
+          258
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-016",
+      "original_inat_name": "Echinochloa colona",
+      "inat_taxon_id": 76755,
+      "preferred_project_accepted_name": "Echinochloa colona",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Panicum colonum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A399655-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Echinochloa+colona&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "FUZZY",
+        "gbif_accepted_usage_key": null,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          190,
+          191
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "REJECT_GBIF_FALSE_FUZZY_MATCH_TO_ECHINOCHLOA_COLONUM"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-017",
+      "original_inat_name": "Paspalum notatum",
+      "inat_taxon_id": 166188,
+      "preferred_project_accepted_name": "Paspalum notatum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A414477-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Paspalum+notatum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705621,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          230,
+          233
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-018",
+      "original_inat_name": "Setaria viridis",
+      "inat_taxon_id": 79070,
+      "preferred_project_accepted_name": "Setaria viridis",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/1171009-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Setaria+viridis&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289684,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          244,
+          247
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-019",
+      "original_inat_name": "Cortaderia selloana",
+      "inat_taxon_id": 64240,
+      "preferred_project_accepted_name": "Cortaderia selloana",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/66317-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Cortaderia+selloana&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2704523,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          147,
+          182,
+          185
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-020",
+      "original_inat_name": "Echinochloa walteri",
+      "inat_taxon_id": 162195,
+      "preferred_project_accepted_name": "Echinochloa walteri",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A88109-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Echinochloa+walteri&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 8152867,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          190,
+          191
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-021",
+      "original_inat_name": "Rostraria cristata",
+      "inat_taxon_id": 167999,
+      "preferred_project_accepted_name": "Rostraria cristata",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Lophochloa cristata",
+        "Festuca cristata"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Rostraria+cristata&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289906,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-022",
+      "original_inat_name": "Panicum miliaceum",
+      "inat_taxon_id": 78340,
+      "preferred_project_accepted_name": "Panicum miliaceum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/412217-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Panicum+miliaceum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705090,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          224,
+          225
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-023",
+      "original_inat_name": "Setaria leucopila",
+      "inat_taxon_id": 122606,
+      "preferred_project_accepted_name": "Setaria leucopila",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A235230-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Setaria+leucopila&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289682,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          243,
+          245
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-024",
+      "original_inat_name": "Sphenopholis obtusata",
+      "inat_taxon_id": 79182,
+      "preferred_project_accepted_name": "Sphenopholis obtusata",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A242045-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Sphenopholis+obtusata&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2703349,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          248,
+          249
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-025",
+      "original_inat_name": "Steinchisma hians",
+      "inat_taxon_id": 156003,
+      "preferred_project_accepted_name": "Steinchisma hians",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Panicum hians"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A243676-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Steinchisma+hians&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2702930,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-026",
+      "original_inat_name": "Aegilops cylindrica",
+      "inat_taxon_id": 75290,
+      "preferred_project_accepted_name": "Aegilops cylindrica",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A384583-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Aegilops+cylindrica&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289783,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          159,
+          161
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-027",
+      "original_inat_name": "Avena sativa",
+      "inat_taxon_id": 57156,
+      "preferred_project_accepted_name": "Avena sativa",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A391732-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Avena+sativa&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705290,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          168,
+          173
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-028",
+      "original_inat_name": "Elymus glabriflorus",
+      "inat_taxon_id": 204310,
+      "preferred_project_accepted_name": "Elymus virginicus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "SYNONYM_OF_EXISTING_112",
+      "matched_existing_id": "elymus-virginicus",
+      "known_historical_aliases": [
+        "Elymus virginicus var. glabriflorus"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A90247-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Elymus+glabriflorus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5290318,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null,
+        "accepted_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A90247-2"
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "COMPETING_SPECIES_CONCEPTS_EXIST_BUT_KEW_FNA_SYNONYMIZE"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-029",
+      "original_inat_name": "Megathyrsus maximus",
+      "inat_taxon_id": 1064938,
+      "preferred_project_accepted_name": "Megathyrsus maximus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Panicum maximum",
+        "Urochloa maxima"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Megathyrsus+maximus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 4108550,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-030",
+      "original_inat_name": "Muhlenbergia capillaris",
+      "inat_taxon_id": 165543,
+      "preferred_project_accepted_name": "Muhlenbergia capillaris",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A408959-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Muhlenbergia+capillaris&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2704016,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          211,
+          212
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-031",
+      "original_inat_name": "Polypogon viridis",
+      "inat_taxon_id": 64144,
+      "preferred_project_accepted_name": "Polypogon viridis",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A418741-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Polypogon+viridis&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289919,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          238,
+          241
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-032",
+      "original_inat_name": "Sphenopholis interrupta",
+      "inat_taxon_id": 281636,
+      "preferred_project_accepted_name": "Sphenopholis interrupta",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Trisetum interruptum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A296142-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Sphenopholis+interrupta&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 4153486,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-033",
+      "original_inat_name": "Tridentopsis elongata",
+      "inat_taxon_id": 1505965,
+      "preferred_project_accepted_name": "Tridentopsis elongata",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Tridens elongatus",
+        "Tridens muticus var. elongatus"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Tridentopsis+elongata&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "FUZZY",
+        "gbif_accepted_usage_key": null,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "REJECT_GBIF_FALSE_FUZZY_MATCH_TO_TRISETOPSIS_ELONGATA"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-034",
+      "original_inat_name": "Bromus tectorum",
+      "inat_taxon_id": 58369,
+      "preferred_project_accepted_name": "Bromus tectorum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A394163-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Bromus+tectorum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2703746,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          177,
+          179
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-035",
+      "original_inat_name": "Dactyloctenium aegyptium",
+      "inat_taxon_id": 76599,
+      "preferred_project_accepted_name": "Dactyloctenium aegyptium",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A397387-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Dactyloctenium+aegyptium&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2706188,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          183,
+          185
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-036",
+      "original_inat_name": "Dichanthelium acuminatum",
+      "inat_taxon_id": 128949,
+      "preferred_project_accepted_name": "Dichanthelium acuminatum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A79328-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Dichanthelium+acuminatum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2702678,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          219
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-037",
+      "original_inat_name": "Eragrostis curtipedicellata",
+      "inat_taxon_id": 162383,
+      "preferred_project_accepted_name": "Eragrostis curtipedicellata",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Eragrostis+curtipedicellata&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705331,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          194,
+          195
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-038",
+      "original_inat_name": "Eragrostis minor",
+      "inat_taxon_id": 76855,
+      "preferred_project_accepted_name": "Eragrostis minor",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/401317-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Eragrostis+minor&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705449,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-039",
+      "original_inat_name": "Hordeum murinum",
+      "inat_taxon_id": 52796,
+      "preferred_project_accepted_name": "Hordeum murinum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A405301-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Hordeum+murinum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 7886346,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          202,
+          203
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-040",
+      "original_inat_name": "Melinis repens",
+      "inat_taxon_id": 77987,
+      "preferred_project_accepted_name": "Melinis repens",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Rhynchelythrum repens",
+        "Tricholaena repens"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A2945817-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Melinis+repens&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2702504,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-041",
+      "original_inat_name": "Nassella tenuissima",
+      "inat_taxon_id": 165660,
+      "preferred_project_accepted_name": "Nassella tenuissima",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Stipa tenuissima",
+        "Jarava tenuissima"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A281184-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Nassella+tenuissima&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289833,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-042",
+      "original_inat_name": "Stapfochloa ciliata",
+      "inat_taxon_id": 969790,
+      "preferred_project_accepted_name": "Stapfochloa ciliata",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Chloris ciliata"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60469005-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Stapfochloa+ciliata&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 9300357,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-043",
+      "original_inat_name": "Tridens congestus",
+      "inat_taxon_id": 169949,
+      "preferred_project_accepted_name": "Tridens congestus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/257762-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Tridens+congestus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289659,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          254,
+          255
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-044",
+      "original_inat_name": "Alopecurus carolinianus",
+      "inat_taxon_id": 75382,
+      "preferred_project_accepted_name": "Alopecurus carolinianus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Alopecurus macounii",
+        "Alopecurus ramosus"
+      ],
+      "name_evidence": {
+        "kew_powo_url": null,
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Alopecurus+carolinianus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5290094,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          160,
+          161
+        ],
+        "flora_pdf_coverage_note": null,
+        "independent_wcvp_wfo_url": "https://www.worldfloraonline.org/taxon/wfo-0000845499",
+        "additional_taxonomy_urls": [
+          "https://www.itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=40440&source=to_print",
+          "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=316544"
+        ]
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-045",
+      "original_inat_name": "Briza minor",
+      "inat_taxon_id": 57162,
+      "preferred_project_accepted_name": "Briza minor",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A393299-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Briza+minor&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2702793,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          174,
+          175
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-046",
+      "original_inat_name": "Cenchrus ciliaris",
+      "inat_taxon_id": 199408,
+      "preferred_project_accepted_name": "Cenchrus ciliaris",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Pennisetum ciliare"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A395214-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Cenchrus+ciliaris&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 4109540,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          234
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-047",
+      "original_inat_name": "Cenchrus setaceus",
+      "inat_taxon_id": 430581,
+      "preferred_project_accepted_name": "Cenchrus setaceus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Pennisetum setaceum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77106046-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Cenchrus+setaceus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5828232,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-048",
+      "original_inat_name": "Digitaria californica",
+      "inat_taxon_id": 76656,
+      "preferred_project_accepted_name": "Digitaria californica",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Trichachne californica",
+        "Panicum californicum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A80220-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Digitaria+californica&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5289937,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          187,
+          189
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-049",
+      "original_inat_name": "Elymus macgregorii",
+      "inat_taxon_id": 162284,
+      "preferred_project_accepted_name": "Elymus macgregorii",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A20008015-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Elymus+macgregorii&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 5672390,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-050",
+      "original_inat_name": "Janochloa antidotalis",
+      "inat_taxon_id": 1545945,
+      "preferred_project_accepted_name": "Janochloa antidotalis",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Panicum antidotale"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77319974-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Janochloa+antidotalis&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "HIGHERRANK",
+        "gbif_accepted_usage_key": null,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "GBIF_HIGHERRANK_DO_NOT_REPLACE_NAME"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-051",
+      "original_inat_name": "Lolium × boucheanum",
+      "inat_taxon_id": 1199528,
+      "preferred_project_accepted_name": "Lolium × boucheanum",
+      "record_type": "ACCEPTED_HYBRID",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Lolium perenne subsp. boucheanum",
+        "Lolium multiflorum var. boucheanum",
+        "Lolium italicum var. boucheanum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407425-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Lolium+%C3%97+boucheanum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 4133390,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [
+        "ACCEPTED_HYBRID_NOT_ORDINARY_SPECIES",
+        "WILD_HAYS_HYBRID_OCCURRENCE_UNCONFIRMED"
+      ],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-052",
+      "original_inat_name": "Miscanthus sinensis",
+      "inat_taxon_id": 165474,
+      "preferred_project_accepted_name": "Miscanthus sinensis",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A408768-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Miscanthus+sinensis&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2706026,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          147,
+          208,
+          209
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-053",
+      "original_inat_name": "Panicum dichotomiflorum",
+      "inat_taxon_id": 78338,
+      "preferred_project_accepted_name": "Panicum dichotomiflorum",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Leptoloma dichotomiflorum"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A325362-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Panicum+dichotomiflorum&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705144,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          220,
+          223
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-054",
+      "original_inat_name": "Panicum repens",
+      "inat_taxon_id": 166096,
+      "preferred_project_accepted_name": "Panicum repens",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A412908-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Panicum+repens&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705093,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-055",
+      "original_inat_name": "Pappophorum bicolor",
+      "inat_taxon_id": 166119,
+      "preferred_project_accepted_name": "Pappophorum bicolor",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A413618-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Pappophorum+bicolor&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2705178,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-056",
+      "original_inat_name": "Sclerochloa dura",
+      "inat_taxon_id": 79006,
+      "preferred_project_accepted_name": "Sclerochloa dura",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Cynosurus durus",
+        "Poa dura"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A421086-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Sclerochloa+dura&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2704841,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          240,
+          245
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-057",
+      "original_inat_name": "Sporobolus cryptandrus",
+      "inat_taxon_id": 79185,
+      "preferred_project_accepted_name": "Sporobolus cryptandrus",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Agrostis cryptandra",
+        "Vilfa cryptandra"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A422687-1",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Sporobolus+cryptandrus&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 2704769,
+        "flora_pdf_exact_name_present": true,
+        "flora_pdf_pages_1_indexed": [
+          249,
+          251
+        ],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    },
+    {
+      "queue_id": "HAYS-058",
+      "original_inat_name": "Stapfochloa canterae",
+      "inat_taxon_id": 969791,
+      "preferred_project_accepted_name": "Stapfochloa canterae",
+      "record_type": "SPECIES",
+      "nomenclature_disposition": "KEEP_ACCEPTED_NAME",
+      "matched_existing_id": null,
+      "known_historical_aliases": [
+        "Chloris canterae"
+      ],
+      "name_evidence": {
+        "kew_powo_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60469004-2",
+        "gbif_species_match_url": "https://api.gbif.org/v1/species/match?name=Stapfochloa+canterae&family=Poaceae&verbose=true&strict=false",
+        "gbif_match_type": "EXACT",
+        "gbif_accepted_usage_key": 9322877,
+        "flora_pdf_exact_name_present": false,
+        "flora_pdf_pages_1_indexed": [],
+        "flora_pdf_coverage_note": null
+      },
+      "name_review_status": "NAMING_STANDARDIZED_2026_11_11",
+      "occurrence_identity_status": "PHOTOGRAPHS_NOT_BOTANICALLY_ADJUDICATED",
+      "live_merge_status": "NOT_MERGED",
+      "flags": [],
+      "taxonomy_policy": "POWO accepted-name treatment where checked, GBIF exact accepted name plus regional Flora for remaining; preserve source name and spelling for search"
+    }
+  ],
+  "citation_audit": {
+    "powo_source_links": 57,
+    "wcvp_wfo_independent_names": 1,
+    "gbif_secondary_match_count": 55,
+    "note": "POWO pages are sources for Kew accepted names where available; Alopecurus carolinianus independently supported by WCVP World Flora Online, USDA GRIN and ITIS."
+  },
+  "synonymy_scope": "Curated searchable historical aliases / commonly used combinations relevant to Texas Floras; not exhaustive global homotypic/heterotypic synonymy.",
+  "name_review_framework": {
+    "preferred": "Kew POWO/WCVP current taxonomic treatment",
+    "historical": "Flora of North Central Texas (1999), exact names and explicitly documented combinations",
+    "secondary": "GBIF acceptedUsageKey (full 58 versus 112 audit), USDA GRIN/ITIS/World Flora Online for exceptions",
+    "recheck_trigger": "New relevant taxonomic publication, newer POWO change, or identification evidence contradicting the current species concept."
+  },
+  "verified_structural_check": {
+    "original_candidates": 58,
+    "unchanged": 56,
+    "canonical_renamed": 1,
+    "already_existing": 1,
+    "distinct_names": 57,
+    "all_have_source": true,
+    "no_live_merges": true
+  }
+}

@@ -1,0 +1,725 @@
+{
+  "created": "2026-11-11",
+  "scope": "Phase 2 first eight Hays candidate diagnostic source verification cohort",
+  "decision": "EIGHT_SOURCE_BACKED_MORPHOLOGY_PROFILES_STAGED_NOT_EIGHT_BOTANICALLY_VERIFIED_SPECIES",
+  "counts": {
+    "species": 8,
+    "source_backed_character_statements": 37,
+    "species_approved": 0,
+    "new_site_photos": 0,
+    "live_species_added": 0
+  },
+  "primary_regional_flora": "Flora of North Central Texas (user Library file; actual Flora pages read this pass)",
+  "complementary_regional_flora": "Hagenbuch & Lemke (2015) Vegetative Key to Grasses of Texas Hill Country",
+  "historical_nomenclature_rule": "If regional Flora uses historical Coelorachis/Tridens names preserve original treatment, but stage Kew accepted name; not evidence that broad old taxon is identical to modern split.",
+  "difference_between_states": "source_supported_morphology describes expected characters in species, whereas actually_visible_in_hays_photo_review records observation-level evidence. If not directly visible and authenticated, the Lab key state remains unapproved.",
+  "photo_license_rule": "Potential eligible licenses need current exact-photo reconfirmation and intended website-rights assessment; no source images were downloaded in this pass.",
+  "taxa": [
+    {
+      "accepted_name": "Melica nitens",
+      "hays_source_name": "Melica nitens",
+      "species_draft_id": "melica-nitens",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 208,
+        "printed_page": 1284,
+        "treatment_name": "Melica nitens"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A1034576-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Rhizomatous perennial, typically 50–120 cm tall",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "inflorescence",
+          "description": "Branched flowering panicle with elongated spikelets; published length '10–26 mm' appears inconsistent with habit and is not used as a field threshold",
+          "verification_image_role": "PANICLE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Spikelets about 8–15 mm with usually 2–3 fertile florets",
+          "verification_image_role": "SPIKELET_MEASURE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "rudiments",
+          "description": "Terminal sterile florets/rudiments are narrow and not divergent from the rachilla; contrast M. mutica spreading, broadly obovate rudiments",
+          "verification_image_role": "DISSECTION",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule 3–6 mm, sheath nearly closed to throat (regional 2015 vegetative key)",
+          "verification_image_role": "COLLAR_MACRO",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Loose panicle branches with pendulous pale spikelets, leaf blades and tussock context; some hand-scaled flowering heads.",
+      "not_demonstrated_in_hays_photo_review": "Fertile-floret count and sterile-rudiment shape not resolved; glume inequality and inner ligule dimensions not measurable.",
+      "source_image_ids_reviewed": [
+        507574288,
+        507574347,
+        507574391,
+        507574447,
+        640232947,
+        640232995,
+        640232986,
+        521685341,
+        521685321,
+        521685319,
+        660118082,
+        660118186
+      ],
+      "source_observations_reviewed": [
+        282514813,
+        350867217,
+        290019815,
+        361695388
+      ],
+      "prioritized_next_evidence": "Show one complete spikelet with fertile floret count and terminal rudiments, and a separate 1-mm-scaled ligule photo.",
+      "lookalikes": "Melica mutica",
+      "published_hays_2015_gatherings": [
+        {
+          "collector": "Dingee",
+          "number": "89",
+          "herbarium": "SWT"
+        }
+      ],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "preliminary_direct_cc_photo_links": [],
+      "caveat": "Possible typo in 1999 Flora panicle length; do not encode the reported 'mm' panicle value without independent confirmation.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Rottboellia campestris",
+      "hays_source_name": "Coelorachis cylindrica",
+      "species_draft_id": "rottboellia-campestris",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 182,
+        "printed_page": 1258,
+        "treatment_name": "Coelorachis cylindrica"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/62724-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Perennial with hard base, short knotty rhizomes, erect or arching culms 25–100 cm",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "ligule",
+          "description": "Short membranous ligule about 0.5–1 mm",
+          "verification_image_role": "COLLAR_MACRO",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "inflorescence",
+          "description": "Very slender cylindrical spike-like raceme about 3 mm in diameter; axis breaks apart at joints",
+          "verification_image_role": "SEEDHEAD",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet_position",
+          "description": "Rachis joints have niches in which spikelets fit tightly",
+          "verification_image_role": "RACHIS_CLOSEUP",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Pairs include sessile fertile spikelet with pitted glume and pedicelled sterile spikelet",
+          "verification_image_role": "PAIRED_SPIKELET_DISSECTION",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Very narrow pencil-like cylindrical inflorescence with obvious successive nodes/segment pattern and hand scale; erect to arching culms and natural grassy habitat in several independent observations.",
+      "not_demonstrated_in_hays_photo_review": "Sessile spikelet rachis-niche architecture, pitted glume and exact membrane ligule cannot be resolved in photographs; confirm with dissection before final species-ID signoff.",
+      "source_image_ids_reviewed": [
+        412317136,
+        412317183,
+        412317218,
+        412361700,
+        396965912,
+        396965979,
+        396966034,
+        511652259,
+        511652294,
+        87288617,
+        684707043,
+        289240178
+      ],
+      "source_observations_reviewed": [
+        232106369,
+        224007596,
+        279943509,
+        54843842,
+        374594336,
+        166995826
+      ],
+      "prioritized_next_evidence": "Isolate one rachis segment showing its niche and sessile/pedicelled spikelet pair with a scale.",
+      "lookalikes": "Other jointed spike grasses",
+      "published_hays_2015_gatherings": [
+        {
+          "collector": "Carr",
+          "number": "10681",
+          "herbarium": "TEX-LL"
+        },
+        {
+          "collector": "Sanders",
+          "number": "4100",
+          "herbarium": "TEX-LL"
+        }
+      ],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "preliminary_direct_cc_photo_links": [
+        {
+          "photo": "https://www.inaturalist.org/photos/684707043",
+          "attribution": "no rights reserved",
+          "license": "cc0"
+        }
+      ],
+      "caveat": "Current Kew accepted genus differs from 1999 Flora; preserve Coelorachis/Mnesithea historical names.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Paspalum langei",
+      "hays_source_name": "Paspalum langei",
+      "species_draft_id": "paspalum-langei",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 230,
+        "printed_page": 1306,
+        "treatment_name": "Paspalum langei"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A184424-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Tufted perennial approximately 30–100 cm tall; leaf blades about 7–18 mm broad",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "inflorescence",
+          "description": "Usually 2–5 spike-like branches 4–8 cm long",
+          "verification_image_role": "SEEDHEAD",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Paired/closely arranged spikelets 2.2–2.6 mm in regional Flora (FNA reports broader variation)",
+          "verification_image_role": "SPIKELET_MEASURE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "lower_glume",
+          "description": "First/lower glume present on some or all spikelets",
+          "verification_image_role": "DISSECTION",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "pubescence",
+          "description": "Second/upper glume and sterile lemma pubescent, including papillose-based hairs in FNA account",
+          "verification_image_role": "MICROSCOPY",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Several slender racemes on branched flowering stalks, paired rows of spikelets in macro view, strap-like basal leaves, wooded/rocky ground context in some observations.",
+      "not_demonstrated_in_hays_photo_review": "First-glume presence and dark brown glandular blotches on second glume/sterile lemma cannot be verified at this review scale; species identification unproven.",
+      "source_image_ids_reviewed": [
+        720854977,
+        720856976,
+        720857001,
+        720857008,
+        585430203,
+        585430238,
+        585430262,
+        585430288,
+        392446509,
+        392446618,
+        683823449,
+        648497994
+      ],
+      "source_observations_reviewed": [
+        393289733,
+        323535066,
+        221600231,
+        374141829,
+        355601663
+      ],
+      "prioritized_next_evidence": "Examine original TEX00568501 spikelets at 10×–20× for the lower glume and pubescence, comparing co-collected P. pubiflorum.",
+      "lookalikes": "Paspalum pubiflorum (lower glume absent), P. distichum",
+      "published_hays_2015_gatherings": [],
+      "source_herbarium_sheets_reviewed": [
+        "TEX00568499",
+        "TEX00568501",
+        "TEX00485588"
+      ],
+      "preliminary_photo_rights": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "preliminary_direct_cc_photo_links": [
+        {
+          "photo": "https://www.inaturalist.org/photos/683823449",
+          "attribution": "(c) Noland Martin, some rights reserved (CC BY)",
+          "license": "cc-by"
+        },
+        {
+          "photo": "https://www.inaturalist.org/photos/391733453",
+          "attribution": "(c) Noland Martin, some rights reserved (CC BY)",
+          "license": "cc-by"
+        }
+      ],
+      "caveat": "Three original TEX Hays sheets inspected but minute hairs and lower glume not independently resolved; 2019 yard specimen has cultivation uncertainty.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Setaria viridis",
+      "hays_source_name": "Setaria viridis",
+      "species_draft_id": "setaria-viridis",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 244,
+        "printed_page": 1320,
+        "treatment_name": "Setaria viridis"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/1171009-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Annual up to about 100 cm, leaf blades generally 3–10 mm wide",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "sheath",
+          "description": "Leaf sheaths somewhat compressed",
+          "verification_image_role": "SHEATH",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "inflorescence",
+          "description": "Soft, flexible flowering head with usually green bristles",
+          "verification_image_role": "SEEDHEAD",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Spikelets about 1.8–2.6 mm",
+          "verification_image_role": "SPIKELET_MEASURE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "lemma",
+          "description": "Fertile lemma very finely wrinkled/rugose",
+          "verification_image_role": "MICROSCOPY",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Bottlebrush-like narrow fuzzy panicles, often green but some tan, and visible radiating bristles, clumped annual-looking plants.",
+      "not_demonstrated_in_hays_photo_review": "Short-burst bristle arrangement and finely rugose fertile lemma are not resolved against Setaria pumila, S. parviflora and other foxtails; many closeup images of head but no spikelet dissections.",
+      "source_image_ids_reviewed": [
+        451087402,
+        451087454,
+        451087503,
+        369454175,
+        369454194,
+        369454215,
+        592178855,
+        592178866,
+        454886492,
+        491459729,
+        490661253
+      ],
+      "source_observations_reviewed": [
+        252033465,
+        208777994,
+        326920046,
+        254005512,
+        273230417,
+        272725049
+      ],
+      "prioritized_next_evidence": "Verify mature fertile lemma surface, 1–2 mm hair-fringe ligule, and an annual fibrous root system on same plant.",
+      "lookalikes": "Setaria leucopila (perennial), S. pumila, S. parviflora",
+      "published_hays_2015_gatherings": [
+        {
+          "collector": "Liang",
+          "number": "50",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Osborn",
+          "number": "35",
+          "herbarium": "SWT"
+        }
+      ],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "preliminary_direct_cc_photo_links": [
+        {
+          "photo": "https://www.inaturalist.org/photos/592178855",
+          "attribution": "(c) colincolincol, some rights reserved (CC BY)",
+          "license": "cc-by"
+        },
+        {
+          "photo": "https://www.inaturalist.org/photos/592178866",
+          "attribution": "(c) colincolincol, some rights reserved (CC BY)",
+          "license": "cc-by"
+        }
+      ],
+      "caveat": "Introduced Eurasian grass in Flora, appropriate to identify but not a native restoration planting recommendation.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Setaria leucopila",
+      "hays_source_name": "Setaria leucopila",
+      "species_draft_id": "setaria-leucopila",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 243,
+        "printed_page": 1319,
+        "treatment_name": "Setaria leucopila"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A235230-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Tufted perennial, about 20–100 cm tall",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "inflorescence",
+          "description": "Bristles typically about 4–15 mm long",
+          "verification_image_role": "SEEDHEAD",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "lemma",
+          "description": "Fertile lemma finely rugose with transverse wrinkles",
+          "verification_image_role": "MICROSCOPY",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "sheath",
+          "description": "Vegetative key notes hairiness around sheath throat and hair-fringe ligule",
+          "verification_image_role": "COLLAR_MACRO",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Very narrow cylindrical green flowering heads with short bristles, basal leafy tussocks and flowering culms with hand scale.",
+      "not_demonstrated_in_hays_photo_review": "Bristle length only approximate, maturity and perennial rhizomatous/tufted base uncertain; fertile lemma fine rugosity/wrinkles unresolvable.",
+      "source_image_ids_reviewed": [
+        244463717,
+        244463728,
+        244463737,
+        98931283,
+        98931318,
+        645527095
+      ],
+      "source_observations_reviewed": [
+        142578061,
+        61797989,
+        61798023,
+        353823803
+      ],
+      "prioritized_next_evidence": "Document perennial crown, short sheaths/ligule hairs, actual bristle lengths, and fertile lemma wrinkles.",
+      "lookalikes": "Setaria viridis (annual), S. parviflora",
+      "published_hays_2015_gatherings": [
+        {
+          "collector": "Breckenridge",
+          "number": "490",
+          "herbarium": "SWT"
+        },
+        {
+          "collector": "Tabler",
+          "number": "s.n.",
+          "herbarium": "SWT"
+        }
+      ],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "preliminary_direct_cc_photo_links": [],
+      "caveat": "Setaria vegetative differences can be subtle; measure same-specimen morphology rather than inferring species solely from head.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Echinochloa walteri",
+      "hays_source_name": "Echinochloa walteri",
+      "species_draft_id": "echinochloa-walteri",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 190,
+        "printed_page": 1266,
+        "treatment_name": "Echinochloa walteri"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A88109-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Coarse grass typically 1–2 m tall, often in low moist habitat",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "sheath",
+          "description": "Sheaths typically with rough/hispid papilla-based hairs, especially toward summit",
+          "verification_image_role": "SHEATH_HAIR_MACRO",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Spikelets about 3–5 mm excluding awn, with or without papilla-based hairs",
+          "verification_image_role": "SPIKELET_MEASURE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "awn",
+          "description": "Lower floret lemma awn often 1.5–6 cm long; occasionally shortened or absent",
+          "verification_image_role": "LEMMA_DISSECTION",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Well-displayed branched awned inflorescences, broad leaf blades, markedly hairy/papillose sheaths in closeups, and wetland edge habitat; multiple independent observations.",
+      "not_demonstrated_in_hays_photo_review": "Awn and papilla-based sheath hairs strongly favor Walter's barnyardgrass, but the critical lower floret lemma/awn origin, glume size and comparison with E. crus-galli are not fully measured.",
+      "source_image_ids_reviewed": [
+        565860695,
+        565860733,
+        565860769,
+        565860803,
+        565860835,
+        565860887,
+        549802141,
+        549802254,
+        433212669,
+        318193650,
+        228938194
+      ],
+      "source_observations_reviewed": [
+        313351555,
+        304955914,
+        242978468,
+        182490335,
+        134323843
+      ],
+      "prioritized_next_evidence": "Photograph mature spikelet with awn origin and adjacent sheath hairs showing papilla-like raised hair bases.",
+      "lookalikes": "Echinochloa crus-galli, E. muricata, other barnyardgrasses",
+      "published_hays_2015_gatherings": [],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "preliminary_direct_cc_photo_links": [],
+      "caveat": "Not every E. walteri has long awns; absence of long awn cannot automatically exclude.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Sphenopholis obtusata",
+      "hays_source_name": "Sphenopholis obtusata",
+      "species_draft_id": "sphenopholis-obtusata",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 248,
+        "printed_page": 1324,
+        "treatment_name": "Sphenopholis obtusata"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A242045-2",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Annual with single or tufted culms about 15–100(120) cm",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "ligule",
+          "description": "Membranous ligule around 1.5–3 mm long",
+          "verification_image_role": "COLLAR_MACRO",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "inflorescence",
+          "description": "Narrow dense spike-like flowering panicle",
+          "verification_image_role": "SEEDHEAD",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "spikelet",
+          "description": "Shiny, usually 2–3-flowered spikelets about 1.5–5 mm long",
+          "verification_image_role": "SPIKELET_MEASURE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "upper_glume",
+          "description": "Second/upper glume broadly obovate, blunt at apex (unlike Koeleria)",
+          "verification_image_role": "GLUME_DISSECTION",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Narrow erect densely flowered spikes/panicles, tan maturing flowers, green panicle heads, a close sheath/leaf junction and multiple independent field scenes.",
+      "not_demonstrated_in_hays_photo_review": "Second glume wide obovate blunt apex, floret arrangement and distinction from Koeleria or other wedgescales cannot be proven from contact-size images.",
+      "source_image_ids_reviewed": [
+        200097163,
+        200097280,
+        200097255,
+        200097207,
+        194839021,
+        194839039,
+        200001937,
+        200001581,
+        495505229
+      ],
+      "source_observations_reviewed": [
+        118433196,
+        115453422,
+        118412090,
+        275820080
+      ],
+      "prioritized_next_evidence": "Isolate and photograph second glume broad blunt face, plus floret count and measured true inner ligule.",
+      "lookalikes": "Sphenopholis interrupta, Koeleria",
+      "published_hays_2015_gatherings": [],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "preliminary_direct_cc_photo_links": [],
+      "caveat": "Gross dense panicle does not establish correct Sphenopholis species.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    },
+    {
+      "accepted_name": "Tridentopsis elongata",
+      "hays_source_name": "Tridentopsis elongata",
+      "species_draft_id": "tridentopsis-elongata",
+      "source_key": {
+        "reference": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+        "pdf_page": 254,
+        "printed_page": 1330,
+        "treatment_name": "Tridens muticus var. elongatus"
+      },
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1",
+      "source_supported_morphology": [
+        {
+          "character": "habit",
+          "description": "Roughly 20–80 cm in the broad Tridens muticus account, narrow elongated 7–20(25) cm panicle",
+          "verification_image_role": "GENERAL_HABIT",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "upper_glume",
+          "description": "Var. elongatus: second glume usually 3–7 nerved and about 6–8 mm long",
+          "verification_image_role": "GLUME_DISSECTION",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "leaf_blade",
+          "description": "Leaves usually 3–4 mm wide in elongatus concept",
+          "verification_image_role": "BLADE_MEASURE",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        },
+        {
+          "character": "comparison",
+          "description": "Var. muticus: usually single-veined second glume around 5 mm or shorter, blades typically 1–2 mm wide",
+          "verification_image_role": "LOOKALIKE_COMPARISON",
+          "evidence_status": "REGIONAL_FLORA_DESCRIBED_NOT_YET_APPROVED_AS_SPECIMEN_CHARACTER",
+          "field_key_trait_enabled": false
+        }
+      ],
+      "actually_visible_in_hays_photo_review": "Exceptionally useful Hays photos: small tuft, long narrow panicles, scaly overlapping spikelets, partial collar/ligule, mature branches in hand.",
+      "not_demonstrated_in_hays_photo_review": "Species boundary versus Tridentopsis mutica and T. buckleyana depends on lemma/callus, florets, ligule and anther dimensions not all reliably measured.",
+      "source_image_ids_reviewed": [
+        670314012,
+        670314061,
+        670314131,
+        670314177,
+        669491309,
+        669491341,
+        669491320,
+        689363680,
+        689363761,
+        689363853
+      ],
+      "source_observations_reviewed": [
+        366639842,
+        367070671,
+        377001623
+      ],
+      "prioritized_next_evidence": "Backlight one isolated upper glume, count all nerves and measure length, then compare against verified T. mutica.",
+      "lookalikes": "Existing Tridentopsis mutica, Tridentopsis buckleyana",
+      "published_hays_2015_gatherings": [],
+      "source_herbarium_sheets_reviewed": [],
+      "preliminary_photo_rights": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "preliminary_direct_cc_photo_links": [
+        {
+          "photo": "https://www.inaturalist.org/photos/689363680",
+          "attribution": "(c) Eric Knight, some rights reserved (CC BY)",
+          "license": "cc-by"
+        },
+        {
+          "photo": "https://www.inaturalist.org/photos/689363761",
+          "attribution": "(c) Eric Knight, some rights reserved (CC BY)",
+          "license": "cc-by"
+        },
+        {
+          "photo": "https://www.inaturalist.org/photos/689363853",
+          "attribution": "(c) Eric Knight, some rights reserved (CC BY)",
+          "license": "cc-by"
+        }
+      ],
+      "caveat": "Kew currently recognizes distinct species; Flora and FNA older taxon concept includes variety. Do not count broad muticus herbarium labels as elongata.",
+      "decision": "PREPARED_FOR_SAME_SPECIMEN_DIAGNOSTIC_COMPARISON",
+      "species_level_ID_approved": false,
+      "release_to_live_key": false
+    }
+  ]
+}
