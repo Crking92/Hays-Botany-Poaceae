@@ -1,0 +1,108 @@
+{
+  "schema": "HAYS_POACEAE_GROUP_A_PHOTO_HANDOFF_V1",
+  "batch": 1,
+  "date": "2026-11-12",
+  "manifest_baseline_sha": "bf84851689d6e887dc9f2e6519418f2469076281",
+  "species": [
+    "melica-nitens",
+    "bothriochloa-longipaniculata",
+    "bothriochloa-bladhii"
+  ],
+  "source_cleared": [
+    {
+      "species_id": "bothriochloa-longipaniculata",
+      "role": "Mature white silky narrow head",
+      "image_filename": "Bothriochloa longipaniculata_0001.JPG",
+      "creator": "Larry Allain / USGS",
+      "license": "US public domain",
+      "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3284",
+      "src": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Bothriochloa+longipaniculata_0001.JPG&id=3284&size=w",
+      "visual_id_note": "USGS species page identifies photographer and image; USGS copyright policy governs USGS-authored work. B. torreyana complex still unclear from head alone.",
+      "original_source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3284",
+      "license_evidence": "Source explicitly credited Larry Allain, USGS; USGS work generally public domain, no third-party credit evident",
+      "source_location": "Louisiana, USA",
+      "publication_status": "SOURCE_CLEARED_NOT_PUBLISHED",
+      "live_image_pixel_verified": false
+    },
+    {
+      "species_id": "bothriochloa-bladhii",
+      "role": "Rooted tuft and flowering shoots",
+      "image_filename": "Bothriochloa bladhii plant1 (7757454232).jpg",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_bladhii_plant1_(7757454232).jpg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bothriochloa_bladhii_plant1_%287757454232%29.jpg?width=900",
+      "visual_id_note": "500px actual photo inspected: full clump and flowering culms. Australian species-labeled nonlocal teaching reference.",
+      "original_source_page": "https://www.flickr.com/photos/73840284@N04/7757454232",
+      "license_evidence": "Exact Wikimedia file page: Harry Rose and CC BY 2.0, Flickr review 2015",
+      "source_location": "South West Rocks, Australia",
+      "publication_status": "SOURCE_CLEARED_NOT_PUBLISHED",
+      "live_image_pixel_verified": false
+    },
+    {
+      "species_id": "bothriochloa-bladhii",
+      "role": "Flowering raceme branches and hand scale",
+      "image_filename": "Bothriochloa bladhii flowerhead2 (7757458970).jpg",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_bladhii_flowerhead2_(7757458970).jpg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bothriochloa_bladhii_flowerhead2_%287757458970%29.jpg?width=900",
+      "visual_id_note": "500px actual preview inspected: branching purple-brown racemes against hand. Australian specimen; no micro-character certainty.",
+      "original_source_page": "https://www.flickr.com/photos/73840284@N04/7757458970",
+      "license_evidence": "Exact Wikimedia file page: Harry Rose and CC BY 2.0, Flickr review 2015",
+      "source_location": "South West Rocks, Australia",
+      "publication_status": "SOURCE_CLEARED_NOT_PUBLISHED",
+      "live_image_pixel_verified": false
+    },
+    {
+      "species_id": "bothriochloa-bladhii",
+      "role": "Membranous inner ligule and collar",
+      "image_filename": "Bothriochloa bladhii ligule1 (7757455282).jpg",
+      "creator": "Harry Rose",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_bladhii_ligule1_(7757455282).jpg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bothriochloa_bladhii_ligule1_%287757455282%29.jpg?width=900",
+      "visual_id_note": "960px actual photo inspected: tiny membrane inside split collar; source labels 1–2 mm. Not Hays voucher.",
+      "original_source_page": "https://www.flickr.com/photos/73840284@N04/7757455282",
+      "license_evidence": "Exact Wikimedia file page: Harry Rose and CC BY 2.0, Flickr review 2015",
+      "source_location": "South West Rocks, Australia",
+      "publication_status": "SOURCE_CLEARED_NOT_PUBLISHED",
+      "live_image_pixel_verified": false
+    }
+  ],
+  "holds": [
+    {
+      "species_id": "melica-nitens",
+      "reason": "MissouriPlants S.R. Turner and Wisconsin DNR photos show suitable living plant parts but no exact-photo reusable license established; no source media taken.",
+      "links": [
+        "https://www.missouriplants.com/Melica_nitens_page.html",
+        "https://apps.dnr.wi.gov/biodiversity/Home/detail/plants/9019"
+      ],
+      "nongeneral_alternative": "Smithsonian public-domain herbarium image https://www.si.edu/object/melica-nitens-nutt-ex-scribn-nom-nud:nmnhbotany_14069477 is legally accessible, but not a live plant general photo."
+    },
+    {
+      "species_id": "bothriochloa-longipaniculata",
+      "reason": "B. torreyana glume differentiation unresolved from this species-labeled single general head. Do not infer Hays voucher."
+    }
+  ],
+  "summary": {
+    "reviewed_this_batch": 3,
+    "reviewed_cumulative": 3,
+    "source_cleared_exact_images": 4,
+    "species_with_at_least_one_source_candidate": 2,
+    "installed_by_this_lane": 0,
+    "site_visible_new_images_verified": 0
+  },
+  "publication_handoff": "Sole publisher checks Commons/USGS source, actual image, duplicates by URL/hash against archive, exact rights and credits, then installs without waiting for anatomy; verify credited pixels on public site.",
+  "do_not_change": [
+    "hays-candidates.json",
+    "photo assets",
+    "UI",
+    "scored shards"
+  ],
+  "note": "No candidate is a validated local voucher; county BONAP research deferred."
+}
