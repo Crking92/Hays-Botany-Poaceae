@@ -46,7 +46,9 @@ const newlyValid=[
  ['aristida-oligantha',{head:'airy',habit:'tuft',ligule:'membrane',awns:'three'}],
  ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'hairs',awns:'none_obvious'}],
  ['arundo-donax',{head:'reed_plume',habit:'rhizome',ligule:'hairs',awns:'none_obvious'}],
- ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'membrane',awns:'none_obvious'}]
+ ['arundo-donax',{head:'reed_plume',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
+ ['sorghum-halepense',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'}],
+ ['sorghum-halepense',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -54,10 +56,19 @@ const incompatible=[
  ['hilaria-belangeri',{habit:'rhizome'}],
  ['aristida-oligantha',{head:'foxtail'}],
  ['arundo-donax',{habit:'mat'}],
- ['arundo-donax',{awns:'long'}]
+ ['arundo-donax',{awns:'long'}],
+ ['sorghum-halepense',{habit:'mat'}],
+ ['bouteloua-curtipendula',{head:'side_oats',awns:'three_short'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
+// Contradictory sources must not cause unverified rhizome states or correctly represented sex-specific heads to vanish.
+const retainedDisputed=[
+ ['bouteloua-dactyloides',{head:'burrs',habit:'rhizome',ligule:'hairs',awns:'none_obvious'}],
+ ['bouteloua-dactyloides',{head:'combs',habit:'mat',ligule:'membrane',awns:'none_obvious'}]
+];
+for(const [id,picks] of retainedDisputed) assert(results(picks).includes(id),'disputed/sex-specific path dropped: '+id);
+assert(specimenMap.get('bouteloua-dactyloides').character_evidence.growth_stems.reported_conflict?.length===2,'regional buffalo rhizome conflict must stay explicit');
 const unknown={id:'unknown',common:'Unknown',scientific:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(results({head:'flat_oats',ligule:'hairs'},[unknown]),['unknown'],'missing states must not become negative evidence');
 const expectedAdditions={
@@ -65,7 +76,8 @@ const expectedAdditions={
  'andropogon-gerardi':{habit:['rhizome']},
  'hilaria-belangeri':{habit:['tuft']},
  'aristida-oligantha':{ligule:['membrane']},
- 'arundo-donax':{habit:['tuft'],ligule:['hairs']}
+ 'arundo-donax':{habit:['tuft'],ligule:['hairs']},
+ 'sorghum-halepense':{habit:['tuft']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -107,8 +119,8 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:7,
- regressions: newlyValid.length,negativeControls:incompatible.length,unknownRetained:true,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:8,
+ regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
 },null,2));
