@@ -1,0 +1,33 @@
+name: Grass provisional Batch 1 — first six normal-key trial matches
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-profiles.json'
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_provisional_trial_batch1.cjs'
+      - '.github/workflows/grass-provisional-batch1.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-profiles.json'
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_provisional_trial_batch1.cjs'
+      - '.github/workflows/grass-provisional-batch1.yml'
+permissions:
+  contents: read
+jobs:
+  provisional-field-trials:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Real identifier filter, six trial candidates, source credits, 112 scored invariants
+        run: node scripts/test_provisional_trial_batch1.cjs
+      - name: Check original 112-species key integration is unchanged
+        run: node scripts/test_grass_key_integration.cjs
