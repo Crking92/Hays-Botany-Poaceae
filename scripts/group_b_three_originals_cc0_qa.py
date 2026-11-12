@@ -133,7 +133,54 @@ def gbif_media():
       except Exception as e:
         show({"observation_id":obs,"lookup":identifier,"error":str(e)},
              "GBIF_LICENSE_SEARCH_FAILED")
+def tridentopsis_originals():
+  obs_id=377001623
+  taxon="Tridentopsis elongata"
+  photos=(689363680,689363761)
+  o=api("observations/"+str(obs_id))["results"][0]
+  assert (o.get("taxon") or {}).get("name")==taxon, "Taxon mismatch"
+  original_occurrence="https://www.inaturalist.org/observations/"+str(obs_id)
+  uri="https://api.gbif.org/v1/occurrence/search?"+urllib.parse.urlencode(
+     {"occurrenceId":original_occurrence,"limit":10})
+  gbif=json.loads(read(uri,6*1024*1024))
+  matching=[x for x in gbif.get("results",[]) if x.get("occurrenceID")==original_occurrence]
+  if len(matching)!=1:raise RuntimeError("GBIF exact occurrence source missing/ambiguous")
+  item=matching[0]
+  collected=[]
+  for pid in photos:
+    p=next((p for p in o.get("photos",[]) if p.get("id")==pid),None)
+    if not p or p.get("license_code")!="cc-by":
+      raise RuntimeError("Original exact photo CC BY code/source mismatch "+str(pid))
+    med=next((m for m in item.get("media",[]) if "/photos/"+str(pid)+"/" in m.get("identifier","")),None)
+    if not med or med.get("license")!="http://creativecommons.org/licenses/by/4.0/" or med.get("creator")!="Eric Knight":
+      raise RuntimeError("Exact original GBIF photo media/creator/CC BY 4.0 mismatch "+str(pid))
+    imgurl=med["identifier"]
+    blob=read(imgurl)
+    img=Image.open(io.BytesIO(blob)); img.verify()
+    img=Image.open(io.BytesIO(blob))
+    x={"species":taxon,"photo_id":pid,"observation_id":obs_id,
+       "creator":"Eric Knight","license":"CC BY 4.0",
+       "license_url":"https://creativecommons.org/licenses/by/4.0/",
+       "per_photo_api_license":"cc-by",
+       "GBIF_photo_license":med["license"],
+       "GBIF_occurrence_key":item.get("key"),
+       "GBIF_occurrence_url":"https://www.gbif.org/occurrence/"+str(item.get("key")),
+       "observation_license":item.get("license"),
+       "original_url":imgurl,"photo_page":"https://www.inaturalist.org/photos/"+str(pid),
+       "sha256_original":hashlib.sha256(blob).hexdigest(),
+       "original_bytes":len(blob),"width":img.width,"height":img.height,
+       "status":"ORIGINAL_SOURCE_AND_VERSION_VERIFIED_BOTANICAL_ID_AND_ARCHIVE_DUP_REVIEW_PENDING"}
+    collected.append(x)
+    show(x,"TRIDENTOPSIS_ORIGINAL_PASS")
+    time.sleep(0.4)
+  if len({x["sha256_original"] for x in collected})!=len(collected):
+    raise RuntimeError("Duplicate Tridentopsis original images")
+  show({"originals":len(collected),"distinct_full_original_sha256":len(collected),
+       "rights":"Individual photo CC BY 4.0 externally confirmed, separate from CC BY-NC observation",
+       "installed":0},"TRIDENTOPSIS_ORIGINAL_SUMMARY")
+
 if __name__=="__main__":
   originals()
   cc0_search()
   gbif_media()
+  tridentopsis_originals()
