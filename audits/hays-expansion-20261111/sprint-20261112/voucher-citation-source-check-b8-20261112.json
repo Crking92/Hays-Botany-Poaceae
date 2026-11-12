@@ -1,0 +1,260 @@
+{
+  "schema": "hays-grass-voucher-citation-primary-source-audit-b8-v1",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-sprint-provisional-voucher-evidence-b8",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "source_pdf": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+  "summary": {
+    "provisional_taxa": 57,
+    "source_voucher_tiers_verified_from_original_paper": 7,
+    "total_original_hays_collection_citations": 10,
+    "source_citation_errors_or_mismatches": 0,
+    "source_paper_pdf_pages_checked": 7,
+    "source_paper_vegetative_treatments_directly_checked": 2,
+    "original_herbarium_sheets_opened": 0,
+    "individual_sheet_barcode_ids_recovered": 0,
+    "actual_Hays_specimen_identification_signoffs": 0,
+    "provisional_species_admitted_to_key": 0,
+    "current_scored_key": 112,
+    "current_learner_inventory": 169,
+    "configured_candidate_reference_photos": 54,
+    "website_image_pixels_checked_this_batch": 0
+  },
+  "method": [
+    "Re-read 2015 publicly hosted original Phytoneuron PDF, used page screenshots for each Appendix B citation (not only staged crosswalk JSON). All seven species' source records and collector numbers matched the saved provisional cards in GitHub.",
+    "Directly read original printed vegetative species accounts for Melica nitens and historical Coelorachis cylindrica and confirmed absent true rhizomes for Melica versus short knotty rhizomes for Coelorachis, with membranous ciliate ligule as source-defined.",
+    "Attempted exact voucher search in public web sources and TORCH; no individual barcodes/digitized sheet scans were recovered. Indexed search misses and portal/remote connection failures are not evidence the specimens are lost.",
+    "TORCH is an official digitized collection portal for SWT, TEX and LL; available database count and usage rights do not establish any license for a specific sheet unless the exact specimen media record is read.",
+    "All source-locality checks are independent of current iNaturalist user labels. They document prior collected specimens, not the correctness of any recent Hays photo and not wild/established status in horticultural species.",
+    "County BONAP native atlas is a separate gate not tested this batch; state Texas-native in Kew is not sufficient.",
+    "No existing audit/score/gallery/credit/learner files altered; add new evidence memo for coordinator."
+  ],
+  "records": [
+    {
+      "id": "melica-nitens",
+      "published_name": "Melica nitens",
+      "modern": "Melica nitens",
+      "pdf_page_index": 84,
+      "printed_page": 85,
+      "collections": [
+        [
+          "Dingee",
+          "89",
+          "SWT"
+        ]
+      ],
+      "notes": "Source pp.54 and 85 confirms hard, subrhizomatous but not truly rhizomatous crown, 3–6 mm membranous decurrent ligule and a printed Hays gathering. Nodding florets in archive are suggestive; original local sheet never examined.",
+      "proof": "Request image/barcode/complete sheet-label data for Dingee 89 at Texas State (SWT); compare terminal floret, ligule, crown and present-day Hays image.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 125,
+      "historical_hays_source_photos_previously_reviewed": 12
+    },
+    {
+      "id": "rottboellia-campestris",
+      "published_name": "Coelorachis cylindrica",
+      "modern": "Rottboellia campestris",
+      "pdf_page_index": 77,
+      "printed_page": 78,
+      "collections": [
+        [
+          "Carr",
+          "10681",
+          "TEX-LL"
+        ],
+        [
+          "Sanders",
+          "4100",
+          "TEX-LL"
+        ]
+      ],
+      "notes": "Source pp.42 and 78 names a short knotty rhizome, small ciliate membranous ligule and two Hays TEX-LL sheets under old Coelorachis. Kew regards old name as synonym of Rottboellia campestris; USDA GRIN instead uses Mnesithea cylindrica. Taxonomic concepts remain documented, not merged as extra learner profiles.",
+      "proof": "Locate the two individual Carr/Sanders TEX-LL sheet barcodes or original high-resolution scans via TORCH/PRC; verify grooved/niched flowering axis and pitted sessile fertile glume, then compare archived Hays 684707043.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 10,
+      "historical_hays_source_photos_previously_reviewed": 12
+    },
+    {
+      "id": "stenotaphrum-secundatum",
+      "published_name": "Stenotaphrum secundatum",
+      "modern": "Stenotaphrum secundatum",
+      "pdf_page_index": 90,
+      "printed_page": 91,
+      "collections": [
+        [
+          "Litchfield",
+          "s.n.",
+          "SWT"
+        ]
+      ],
+      "notes": "Published Hays collection independent of current lawn iNaturalist label; planted St. Augustine turf is not evidence for an established wild Hays population or local nativity.",
+      "proof": "Request collector/date/barcode for Litchfield unnumbered SWT sheet; inspect flattened fertile spike rachis, stolon rooting and inflorescence; separately record cultivated vs naturalized site status.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 9,
+      "historical_hays_source_photos_previously_reviewed": 4
+    },
+    {
+      "id": "triticum-aestivum",
+      "published_name": "Triticum aestivum",
+      "modern": "Triticum aestivum",
+      "pdf_page_index": 92,
+      "printed_page": 93,
+      "collections": [
+        [
+          "Ruiseco",
+          "128",
+          "SWT"
+        ]
+      ],
+      "notes": "Published Hays wheat specimen is credible documentary occurrence but a crop plant/volunteer, never evidence of county native status or spontaneous persistence.",
+      "proof": "Request original Ruiseco 128 SWT sheet/catalog metadata to inspect glumes/awn and field collection context; do not treat species as native restoration target.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 8,
+      "historical_hays_source_photos_previously_reviewed": 4
+    },
+    {
+      "id": "echinochloa-colona",
+      "published_name": "Echinochloa colona",
+      "modern": "Echinochloa colona",
+      "pdf_page_index": 79,
+      "printed_page": 80,
+      "collections": [
+        [
+          "Breckenridge",
+          "441",
+          "SWT"
+        ]
+      ],
+      "notes": "Original paper confirms one deposited Hays collection; staged historical photographs from later observations still require independent verification of short mature racemes, ligule absence and ripe lemma. Literature describes variable banding.",
+      "proof": "Find Breckenridge 441 SWT sheet; inspect mature spikelet anatomy, sheath/collar and associated iNaturalist source photos against Echinochloa crus-galli/muricata.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 7,
+      "historical_hays_source_photos_previously_reviewed": 7
+    },
+    {
+      "id": "setaria-viridis",
+      "published_name": "Setaria viridis",
+      "modern": "Setaria viridis",
+      "pdf_page_index": 89,
+      "printed_page": 90,
+      "collections": [
+        [
+          "Liang",
+          "50",
+          "SWT"
+        ],
+        [
+          "Osborn",
+          "35",
+          "SWT"
+        ]
+      ],
+      "notes": "Two source-listed Hays collections. Source p.62 states annual with hair-fringe ligule and ciliate outer sheath margin; use mature lemma texture and crown to separate other Setaria. Historical populations may include introduced or disturbed-area vegetation.",
+      "proof": "Locate both Liang 50 and Osborn 35 SWT sheets with barcodes; confirm species anatomy and Hays labels; separate current photographed observations from historical verified collections.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 7,
+      "historical_hays_source_photos_previously_reviewed": 11
+    },
+    {
+      "id": "setaria-leucopila",
+      "published_name": "Setaria leucopila",
+      "modern": "Setaria leucopila",
+      "pdf_page_index": 88,
+      "printed_page": 89,
+      "collections": [
+        [
+          "Breckenridge",
+          "490",
+          "SWT"
+        ],
+        [
+          "Tabler",
+          "s.n.",
+          "SWT"
+        ]
+      ],
+      "notes": "Two Hays collection citations. Source p.61 records perennial crown without rhizomes and long hairs just beneath leaf collar, with tiny ciliate membranous ligule; a hair-fringe-only hard filter would be a false exclusion.",
+      "proof": "Locate Breckenridge 490 and Tabler unnumbered SWT sheets; check ciliate membrane, crown, glume/lemma differentiation, and compare local other Setaria.",
+      "original_pdf_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "publication": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country: Vegetative key and descriptions. Phytoneuron 2015-4: 1–93",
+      "original_source_pdf_page_screenshot_checked": true,
+      "actual_herbarium_sheet_seen": false,
+      "original_sheet_microcharacters_confirmed": false,
+      "exact_original_sheet_barcode_recovered": false,
+      "hays_collector_citation_verified": true,
+      "county_native_BONAP_verified": false,
+      "source_photograph_reuse_rights_newly_verified": false,
+      "source_observation_same_as_published_voucher": false,
+      "score_admission_recommended": false,
+      "classification": "PUBLISHED_HAYS_COLLECTION_CITATION_VERIFIED_BUT_SPECIMEN_GATE_HELD",
+      "source_iNaturalist_record_count": 4,
+      "historical_hays_source_photos_previously_reviewed": 6
+    }
+  ]
+}
