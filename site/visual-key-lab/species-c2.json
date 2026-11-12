@@ -2832,11 +2832,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Walk up from erect tuft to narrow raceme; verify actual short membranous fringed ligule; then true reproductive pattern: basal similar paired spikelets and upper unlike paired members, awned sessile fertile plus unawned pedicellate neighbor; mature long dark contorted awns and pungent brown bearded callus. Fine pair/callus requires attached scaled specimen. Photos from Australia are illustrative, not Texas occurrences.",
+    "field_rule": "Walk up from erect tuft to narrow raceme; verify actual short membranous fringed ligule; then true reproductive pattern: basal similar paired spikelets and upper unlike paired members, awned sessile fertile plus unawned pedicellate neighbor; mature long dark contorted awns and pungent brown bearded callus. Fine pair/callus requires attached scaled specimen. Photos from Australia are illustrative, not Texas occurrences. A true tanglehead raceme carries spikelet pairs aligned primarily on ONE SIDE, even before its long awns twist together. The field-choice 'one-sided' is therefore valid on a single raceme (it does NOT require many branches); keep 'spike' for the overall unbranched-looking outline and 'tangled_awns' for maturity. Check the basal unawned pairs, higher awned sessile fertile members, and sharp bearded callus before species confirmation.",
     "traits": {
       "head": [
         "spike",
-        "tangled_awns"
+        "tangled_awns",
+        "one_sided"
       ],
       "habit": [
         "tuft"
@@ -2856,10 +2857,20 @@
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
       "head": {
-        "source": "Kew GrassBase Heteropogon contortus and Texas A&M rangeplants.tamu.edu/plant/tanglehead",
-        "reference": "Single or few terminal racemes bearing conspicuous long dark awns that twist together into a tangled spire.",
-        "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Kew GrassBase — Heteropogon contortus reproductive morphology; U.S. government grass identification guide; Texas A&M Plants of Texas Rangelands",
+        "reference": "The accepted Kew GrassBase species description explicitly reports 1 solitary, erect, UNILATERAL raceme 3–10 cm long. A US-government grass guide describes a single, ONE-SIDED tanglehead raceme 1.5–3 inches long whose dark awns become tangled at maturity. A single secund raceme can therefore match the UI's broad one-sided spikelet-arrangement choice while the existing 'spike' captures its linear outline and 'tangled_awns' its characteristic maturity; do NOT claim multiple finger branches or treat unilateral arrangement alone as a species ID. Diggs et al. 1999 Flora of North Central Texas does not appear to include Heteropogon, so Kew/federal descriptions are used rather than invented regional reproduction evidence.",
+        "status": "EXPLICIT_KEW_AND_FEDERAL_UNILATERAL_RACEME_EVIDENCE_FIELD_PATH_FIX_LOCAL_VOUCHER_OPEN",
+        "review_date": "2026-11-12",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:404772-1/general-information",
+        "federal_source_url": "https://www.govinfo.gov/content/pkg/GOVPUB-A-PURL-gpo24344/pdf/GOVPUB-A-PURL-gpo24344.pdf",
+        "texas_source_url": "https://rangeplants.tamu.edu/plant/tanglehead/",
+        "role": "reproductive",
+        "reported_states": [
+          "one solitary unilateral raceme bearing paired spikelets",
+          "narrow linear spike-like raceme",
+          "mature long dark tangled awns"
+        ],
+        "photo_voucher_support": "No new actual Hays source-original immature and mature raceme photo pair reviewed; no photographer, license or specimen approval implied."
       },
       "ligule": {
         "source": "Smithsonian Hawaiian Flora (ciliate membrane), Kew GrassBase (hair fringe)",
@@ -2895,6 +2906,14 @@
         "certainty": "Cross-source terminology variation, photo check pending",
         "source": "Smithsonian Hawaiian Flora — Heteropogon contortus",
         "url": "https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Heteropogon&species=contortus"
+      },
+      {
+        "look": "Find the single one-sided tanglehead raceme before its awns tangle",
+        "check": "Trace the flowering axis; spikelet pairs are mainly confined to one side of the solitary narrow raceme, which can look like a simple spike before the dark awns mature and twist. The one-sided field answer is therefore valid even if there is only ONE raceme. Examine lower similar unawned spikelet pairs, upper fertile sessile spikelets, and their reddish sharp 2–3 mm bearded calluses before deciding the species.",
+        "compare": "Do not confuse a one-sided raceme with a branched Paspalum or Chloris head: tanglehead's Andropogoneae pairs, awned sessile florets above unawned basal pairs, and sharp calluses are different structures.",
+        "certainty": "Kew species-level and published US federal guide agree; no connected local pre-tangle head and collar photo verified in this scoring-only round.",
+        "source": "Kew GrassBase Heteropogon contortus; U.S. government grass identification guide (tanglehead)",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:404772-1/general-information"
       }
     ],
     "diagnostic_review": {
