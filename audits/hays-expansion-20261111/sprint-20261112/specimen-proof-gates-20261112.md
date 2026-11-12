@@ -40,6 +40,8 @@ Also, **glume pits in *Bothriochloa bladhii* can be absent from some spikelets**
 
 **Published Hays collection citations** (Melica, jointtail) are better locality corroboration than only iNaturalist labels, but the cited actual herbarium sheets have NOT been accessed or reidentified. We do not confuse collection citation with the exact pictured Hays individual.
 
+**Additional targeted archive regression check:** all **30 of 30 selected original Hays photo IDs** for the ten priority grasses were found in the five recovered `attributions.json` files with the correct historical taxon folder. There were **zero incorrect photo-ID-to-name assignments** in this set; the historical *Coelorachis cylindrica* folder is intentionally mapped to modern-staged *Rottboellia campestris*. This is file/source consistency, **not** independently confirmed botanical identification.
+
 ## New photo-source integrity QA and limited photo opportunity
 
 The private five-ZIP recovery archive was re-parsed rather than merely trusting the old species-count notes:
