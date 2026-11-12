@@ -2469,10 +2469,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Rank photos by what they truly show: flowering branch/shape first, followed by mature spikelet length and lower glume measured under 10–20×. Do not treat unmeasured photogenic heads as proof of native versus introduced species.",
+    "field_rule": "Rank photos by what they truly show: flowering branch/shape first, followed by mature spikelet length and lower glume measured under 10–20×. Do not treat unmeasured photogenic heads as proof of native versus introduced species. Mature Texas signalgrass heads can have seven or more closely appressed unilateral racemes along a central axis; selecting the seven-plus one-sided option must retain it. The count is conditional, not universal (Kew describes 3–10). Confirm the long 5–6 mm spikelets and strongly veined lower glume with a lens before final identification.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -2491,10 +2492,18 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 259",
-        "reference": "Compact panicle of erect-appressed one-sided spikelet-bearing branches.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Urochloa texana account; Kew GrassBase / POWO, Urochloa texana",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information",
+        "regional_source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reference": "Diggs describes a compact terminal panicle of erect-appressed branches. Kew GrassBase specifies 3–10 unilateral racemes borne along 7–18 cm central axis. Thus a mature head with >=7 unilateral branches legitimately qualifies for the seven-plus one-sided UI choice. Preserve original general one_sided option for heads with fewer branches. Do not mistake a robust count for species-level confirmation; use lower glume (~2/3 length; 5–7 nerves) and measured spikelets.",
+        "reported_states": [
+          "appressed unilateral flowering racemes",
+          "7–10 unilateral branches occasionally on mature heads"
+        ],
+        "status": "REGIONAL_FLORA_GENERAL_SHAPE_AND_KEW_SPECIES_BRANCH_COUNT_CROSSCHECKED",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No Hays connected original whole head with reliably counted racemes and same-plant spikelet dissection newly validated."
       },
       "habit": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 259",
@@ -2534,6 +2543,14 @@
         "compare": "Other Urochloa species also have wrinkled fertile lemmas: combine with the large spikelet and lower glume.",
         "certainty": "Kew GrassBase checked; local specimen and photo pending",
         "source": "Kew GrassBase — Urochloa texana",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information"
+      },
+      {
+        "look": "Count the ascending one-sided Texas signalgrass branches",
+        "check": "Kew GrassBase documents 3–10 branches along the upper axis. Seven or more is a real but not required species state; preserve the broad one-sided option for 3–6-branch heads. Do not confuse the branches themselves with spikelets, which sit in pairs along their axes.",
+        "compare": "Brownseed signalgrass and other Urochloa species may share the head. Measure the larger 5–6 mm spikelets and strongly 5–7-veined, roughly two-thirds-length lower glume.",
+        "certainty": "Diggs and Kew morphology reviewed; no new specimen/image/licensing signoff.",
+        "source": "Diggs et al. (1999), Urochloa texana; Kew GrassBase — Urochloa texana",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:943745-1/general-information"
       }
     ],
