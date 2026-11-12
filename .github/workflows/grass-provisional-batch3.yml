@@ -1,0 +1,38 @@
+name: Grass provisional Batch 3 — six photo-backed source-scoped trials
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-batch3.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_provisional_trial_batch3.cjs'
+      - '.github/workflows/grass-provisional-batch3.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-batch3.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_provisional_trial_batch3.cjs'
+      - '.github/workflows/grass-provisional-batch3.yml'
+permissions: {contents: read}
+jobs:
+  provisional-trial3:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test actual field-key paths for six uncertain photo-backed trial grasses
+        run: node scripts/test_provisional_trial_batch3.cjs
+      - name: Check original 112 species and prior twelve trials remain intact
+        run: |
+          node scripts/test_grass_key_integration.cjs
+          node scripts/test_provisional_trial_batch1.cjs
+          node scripts/test_provisional_trial_batch2.cjs
+      - name: Syntax-check post-merge public browser parity script
+        run: python -m py_compile scripts/smoke_public_grass_trial.py
