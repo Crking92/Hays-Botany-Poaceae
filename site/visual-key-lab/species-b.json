@@ -974,14 +974,16 @@
     "common": "Texas wintergrass",
     "scientific": "Nassella leucotricha",
     "range": "PASS",
-    "field_rule": "Visible gross photos: winter-active bunch -> attached often loose spring flowering head. ID requires one mature floret with ONE long bent/twisted awn and an elongated sharp callus; one-awed Mexican feathergrass remains a lookalike. Threeawns have THREE limbs on ONE lemma, not three nearby separated florets.",
+    "field_rule": "Visible gross photos: winter-active bunch -> attached often loose spring flowering head. ID requires one mature floret with ONE long bent/twisted awn and an elongated sharp callus; one-awned Mexican feathergrass remains a lookalike. Threeawns have THREE limbs on ONE lemma, not three nearby separated florets. The terminal panicle can be an OPEN spray or a relatively NARROW CONTRACTED head; do not reject a mature narrow form. Usually tufted and described as nonrhizomatous, but a Williamson County anatomical account reports extremely short, condensed horizontal underground stems. A confirmed short node-bearing stem is compatible; loose roots are not rhizomes.",
     "hero_i": 1,
     "traits": {
       "head": [
-        "airy"
+        "airy",
+        "long_narrow_panicle"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "absent",
@@ -1026,6 +1028,39 @@
         "reference": "A single 4.5–10 cm geniculate awn arises from one floret; threeawn has 3 awns on the same lemma.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Nassella leucotricha account (printed p. 1290); Flora of North America, M.E. Barkworth, Nassella leucotricha; Kew POWO/GrassBase Nassella leucotricha",
+        "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "secondary_source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630064",
+        "third_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:948400-1/general-information",
+        "reference": "The primary Diggs account confirms terminal panicles and diagnostic long single bent awn but does not impose a single panicle silhouette. FNA describes OPEN 5–55 cm panicles. Kew GrassBase describes a CONTRACTED approximately 15 × 1–3 cm panicle. The current key's airy and long_narrow_panicle options must therefore remain valid as broad head observations; this is not an assertion of photo-verified developmental timing or identical specimen treatments.",
+        "role": "reproductive",
+        "reported_states": [
+          "open terminal panicle (FNA)",
+          "relatively contracted, elongated panicle (GrassBase)"
+        ],
+        "reported_conflict": "FNA and GrassBase emphasize different panicle breadths. This could reflect variation, phenology or taxon scope; exact local photographed specimen remains unverified.",
+        "status": "DIGGS_PRIMARY_FNA_VS_GRASSBASE_HEAD_VARIATION_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No additional whole-panicle field photograph certified; existing gallery and credits remain untouched."
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 56; Flora of North America, Nassella leucotricha; A.C. Gibson, UT Austin Plant Resources Center, Vascular Plants of Williamson County, Stipa leucotricha (= Nassella leucotricha), p. 1",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=56",
+        "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Stipa%20leucotricha",
+        "tertiary_source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630064",
+        "reference": "H&L's primary vegetative account and the FNA treatment both describe this tufted perennial as nonrhizomatous. The UT Williamson County dissection under its synonym Stipa leucotricha instead describes condensed shallow horizontal rhizomes up to roughly 20 mm long with node-bearing shoots, simultaneously acknowledging the conventional 'not rhizomatous' description. Retain tuft and allow rhizome only for directly observed, very short node-bearing underground stems, not for ordinary fibrous roots or as a general claim of running sod.",
+        "role": "vegetative",
+        "taxon_concept": "Site and primary texts: Nassella leucotricha; UT Williamson specimen account under Stipa leucotricha, explicitly noted there as synonym",
+        "reported_states": [
+          "cespitose, rhizomes absent (H&L 2015 p. 56; FNA)",
+          "cespitose with condensed ca. 20 mm horizontal underground stems (UT PRC Stipa leucotricha)"
+        ],
+        "reported_conflict": "Species-scale conventional absence versus condensed rhizome terminology and specimen anatomy; no authenticated Hays-region attached rootstock measured in this pass.",
+        "status": "PRIMARY_HL_FNA_VS_LOCAL_UT_SHORT_RHIZOME_CONFLICT_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No same-plant local rootstock and reproductive spikelet link verified; no new photo or licensing approval."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1053,6 +1088,22 @@
         "certainty": "Sources differ on visibility; no collar photo certified",
         "source": "Flora of North America — Nassella leucotricha",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630064"
+      },
+      {
+        "look": "Distinguish open versus contracted panicle breadth",
+        "check": "The terminal flowering spray may be visibly open, but a contracted narrow head is also recorded in GrassBase for this exact species. Trace the long terminal axis and inspect a single sharply pointed fruit with one long, twisted and bent awn before deciding wintergrass.",
+        "compare": "Panicums and other narrow-plumed grasses differ in attached spikelet anatomy; the one-awned, sharp-callused floret is more diagnostic than panicle width.",
+        "certainty": "FNA open versus GrassBase contracted source treatments; no new local mature head verified",
+        "source": "Diggs et al. (1999), printed p. 1290; FNA (Barkworth), Nassella leucotricha; Kew GrassBase, Nassella leucotricha",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:948400-1/general-information"
+      },
+      {
+        "look": "If present, trace a truly short underground stem to a crown",
+        "check": "The Hill Country flora says rhizomes absent; UT Williamson County specimens show very short condensed, shallow horizontal stem segments with nodes. A real segment can be chosen as rhizome in this broad key without claiming the species usually creeps. Roots and old basal sheaths alone are not enough.",
+        "compare": "Do not confuse old crown material with a long runner such as Johnsongrass rhizomes.",
+        "certainty": "Primary vegetative source conflicts with anatomically detailed UT county account; specimen-level interpretation unresolved",
+        "source": "Hagenbuch & Lemke (2015), p. 56; A. C. Gibson / UT PRC, Williamson County Stipa leucotricha, p. 1",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Stipa%20leucotricha"
       }
     ],
     "diagnostic_review": {
