@@ -8,6 +8,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'scripts/test_grass_key_integration.cjs'
       - 'scripts/test_grass_field_rules.cjs'
+      - 'scripts/test_grass_score_deltas.cjs'
       - 'scripts/test_grass_sprint_lane_b.cjs'
       - 'scripts/test_scoring_lane_a.cjs'
       - 'scripts/test_lane_c_batch*.cjs'
@@ -19,6 +20,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'scripts/test_grass_key_integration.cjs'
       - 'scripts/test_grass_field_rules.cjs'
+      - 'scripts/test_grass_score_deltas.cjs'
       - 'scripts/test_grass_sprint_lane_b.cjs'
       - 'scripts/test_scoring_lane_a.cjs'
       - 'scripts/test_lane_c_batch*.cjs'
@@ -28,6 +30,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -37,6 +41,8 @@ jobs:
         run: node scripts/test_grass_sprint_lane_b.cjs
       - name: Execute Lane A paths if Lane A has landed
         run: if [ -f scripts/test_scoring_lane_a.cjs ]; then node scripts/test_scoring_lane_a.cjs; fi
+      - name: Reject lost valid scoring states and protected photo/credit changes
+        run: node scripts/test_grass_score_deltas.cjs
       - name: Guard crew field instructions against newly broken joins and truncations
         run: node scripts/test_grass_field_rules.cjs
       - name: Validate Lane C regression script syntax (baseline histories checked separately)
