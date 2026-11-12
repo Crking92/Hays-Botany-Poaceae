@@ -1,0 +1,785 @@
+{
+  "schema": "hays-provisional-archived-photo-qa-pass2-v1",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-sprint-provisional-photo-pixels-pass2",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "source_recovery_PR": "https://github.com/Crking92/Hays-Botany-Poaceae/pull/112",
+  "source_audit": "audits/hays-expansion-20261111/sprint-20261112/photo-archive-recovery-20261112.json",
+  "count_truth": {
+    "total_archived_contact_sheets": 51,
+    "total_historical_original_photo_tiles": 317,
+    "previous_round_rechecked_contact_sheets": 23,
+    "previous_round_rechecked_photo_tiles": 143,
+    "this_round_freshly_reviewed_contact_sheets": 28,
+    "this_round_freshly_reviewed_photo_tiles": 174,
+    "cumulative_freshly_reviewed_contact_sheets": 51,
+    "cumulative_freshly_reviewed_photo_tiles": 317,
+    "unique_provisional_taxa_covered": 50,
+    "extra_historical_Elymus_glabriflorus_alias_sheets": 1,
+    "seven_no_license_eligible_photo_source_candidates_unchanged": 7,
+    "new_local_specimen_final_identification_signoffs": 0,
+    "new_photos_installed_or_live_verified": 0,
+    "existing_scored": 112,
+    "provisional": 57,
+    "configured": 169
+  },
+  "notes": [
+    "All 28 listed sheets were opened, some through 2×2 private temporary comparison boards, and their actual photo thumbnails observed. The individual source attribution metadata and original contact image files remain in private recovered five-ZIP archive, not the public repo.",
+    "One of 28 is historical Coelorachis cylindrica, currently staged as Rottboellia campestris under Kew. ITIS accepts the alternative combination Mnesithea cylindrica. This is one source sheet for the same existing provisional candidate.",
+    "One of 28 is Elymus glabriflorus historically identified, collapsed to existing Elymus virginicus by current Kew policy. It MUST NOT be treated as proof for a separate Elymus macgregorii candidate or added to count.",
+    "Scientific names and characters derive from existing Hays staged literature packets; observations below are visually seen features, not inferred botanical species identity.",
+    "No original high-resolution photographs were downloaded or publicly rehosted. CC BY-NC distribution restricted to private botany review; current exact photo licenses not reverified.",
+    "The full 317 tiles are now examined at contact-sheet level, not the 317 original full-resolution specimen files. Fine-scale glume, lemma, floret and ligule microscopy remains incomplete, so zero admissions."
+  ],
+  "new_photo_inspections": [
+    {
+      "sheet_slug": "bromus-catharticus",
+      "modern_candidate_id": "bromus-catharticus",
+      "modern_candidate_scientific": "Bromus catharticus",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_first_five_review",
+      "original_GitHub_Actions_artifact_id": 13883578226,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        694186553,
+        694186570
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/379499753",
+        "https://www.inaturalist.org/observations/366862129",
+        "https://www.inaturalist.org/observations/366673949",
+        "https://www.inaturalist.org/observations/358472027"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Inflorescences range from straw-colored small brome heads to green emerging spikelets; several photographs include tufted rooted plants and grass among established vegetation.",
+      "unresolved_species_morphology_and_context": "No same-plant lemma keel, awn-base, apex teeth or exact fertile-floret count. Multiple observations vary in development; do not claim one species from the mixed collection.",
+      "exact_highest_value_next_photo_or_voucher": "Obtain mature flattened spikelet side view and isolated lemma with millimeter ruler, opened ligule and basal sheath on same Hays plant.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "coelorachis-cylindrica",
+      "modern_candidate_id": "rottboellia-campestris",
+      "modern_candidate_scientific": "Rottboellia campestris",
+      "source_reconciliation_is_alias": true,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_first_five_review",
+      "original_GitHub_Actions_artifact_id": 13883578226,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        412317136,
+        412317183
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/374594336",
+        "https://www.inaturalist.org/observations/279943509",
+        "https://www.inaturalist.org/observations/232106369",
+        "https://www.inaturalist.org/observations/224007596"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Multiple very slender cylindric jointed-looking flowering axes with repeated segments and hand/finger scale; one source shows rooted basal foliage.",
+      "unresolved_species_morphology_and_context": "Cannot see exact recessed spikelet/rachis articulation, pitted glume, or mature reduced companion spikelet; historical name is not a second species.",
+      "exact_highest_value_next_photo_or_voucher": "Measure a ripe two-spikelet segment and pitted lower glume, photograph intact detachable joint and compare with Rottboellia campestris accepted concept.",
+      "preflight_photo_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "bothriochloa-bladhii",
+      "modern_candidate_id": "bothriochloa-bladhii",
+      "modern_candidate_scientific": "Bothriochloa bladhii",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        346379753,
+        346379767
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/410398752",
+        "https://www.inaturalist.org/observations/331046168",
+        "https://www.inaturalist.org/observations/331046186",
+        "https://www.inaturalist.org/observations/196764282"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "A prominent hand-held red-purple fingerlike branched head, clear pubescent culm-node ring, leaf sheath junction and a few individual racemes.",
+      "unresolved_species_morphology_and_context": "No unambiguous median translucent pedicel line or glume anatomy to distinguish Bothriochloa from Dichanthium aristatum and B. ischaemum.",
+      "exact_highest_value_next_photo_or_voucher": "Same-source macro of sessile/pedicelled pairs, rachis-pedicel median line and node-hair ring, all scaled.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "bromus-brevis",
+      "modern_candidate_id": "bromus-brevis",
+      "modern_candidate_scientific": "Bromus brevis",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 7,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        194304467,
+        194304566
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/353987691",
+        "https://www.inaturalist.org/observations/387710543",
+        "https://www.inaturalist.org/observations/359066167",
+        "https://www.inaturalist.org/observations/115104343"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Several dissimilar green and pale flowering heads shown in grassy turf/bare-soil situations, with tuft context; no dissected florets.",
+      "unresolved_species_morphology_and_context": "Images are morphologically heterogeneous at head-outline level and do not prove rare extra-regional B. brevis in Texas or distinguish B. catharticus.",
+      "exact_highest_value_next_photo_or_voucher": "Identify original observation individually and seek expert Hays voucher plus mature glume/lemma/awn comparison against B. catharticus.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "dichanthium-aristatum",
+      "modern_candidate_id": "dichanthium-aristatum",
+      "modern_candidate_scientific": "Dichanthium aristatum",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        448440612,
+        448440299
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/374898786",
+        "https://www.inaturalist.org/observations/359421744",
+        "https://www.inaturalist.org/observations/326368914",
+        "https://www.inaturalist.org/observations/250706832"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Red/purple raceme clusters, several sharp hand-held inflorescence views, an opened leaf junction and hairy stems; some single spikelet pairs appear at thumbnail resolution.",
+      "unresolved_species_morphology_and_context": "No definitive median line absence, glume/pedicel anatomy or separate canterae-like lookalike checks; imported planted contexts cannot be dismissed.",
+      "exact_highest_value_next_photo_or_voucher": "Inspect original source hand-held paired spikelet macro at original resolution and photograph 1-mm rachis/pedicel median groove diagnostic.",
+      "preflight_photo_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "echinochloa-colona",
+      "modern_candidate_id": "echinochloa-colona",
+      "modern_candidate_scientific": "Echinochloa colona",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 7,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        672173669,
+        672173658
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/373733962",
+        "https://www.inaturalist.org/observations/368040343",
+        "https://www.inaturalist.org/observations/354850191"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Small short-branched grass heads, some stems visible against hand in urban or disturbed habitats.",
+      "unresolved_species_morphology_and_context": "No isolated ripe 2–3-mm spikelet, ligule absent confirmation, lemma tip or purple transverse bands when present; colors vary.",
+      "exact_highest_value_next_photo_or_voucher": "Photograph one Hays source's entire plant and ligule-free junction plus separated mature spikelets beside E. crus-galli/muricata.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "eragrostis-superba",
+      "modern_candidate_id": "eragrostis-superba",
+      "modern_candidate_scientific": "Eragrostis superba",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        723648971,
+        723648967
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/396903239",
+        "https://www.inaturalist.org/observations/394713386",
+        "https://www.inaturalist.org/observations/359405762",
+        "https://www.inaturalist.org/observations/354818424"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Several dry open bunchgrass-like seedhead views and some hand-held broadly compressed multi-flowered spikelets in green or maturing condition.",
+      "unresolved_species_morphology_and_context": "No same-plant measurement of broad flat spikelet width, keeled fertile lemmas, glands/ligule and seeded-versus-escaped context.",
+      "exact_highest_value_next_photo_or_voucher": "Use a millimeter scale to measure mature 3–10-mm flattened spikelet, separated lemma/palea and crown on matching plant.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "lolium-multiflorum",
+      "modern_candidate_id": "lolium-multiflorum",
+      "modern_candidate_scientific": "Lolium multiflorum",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        70503041,
+        70503040
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/352048437",
+        "https://www.inaturalist.org/observations/275049650",
+        "https://www.inaturalist.org/observations/274652755",
+        "https://www.inaturalist.org/observations/44466836"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Many upright ryegrass spikes and some recognizably awned spikelets, with whole tufts and roadside/pasture context.",
+      "unresolved_species_morphology_and_context": "No matched auricle/collar measurements or fully mature florets; awn variability and ryegrass hybrids prevent purely photo-outline diagnosis.",
+      "exact_highest_value_next_photo_or_voucher": "Measure several spikelet awns, florets, pointed auricles and ligule from same rooted population; confirm parent/hybrid naming.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "lolium-perenne",
+      "modern_candidate_id": "lolium-perenne",
+      "modern_candidate_scientific": "Lolium perenne",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 12,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        647148419,
+        647148388
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/365063951",
+        "https://www.inaturalist.org/observations/360912372",
+        "https://www.inaturalist.org/observations/354912942",
+        "https://www.inaturalist.org/observations/354772388"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Several upright apparently shorter-awned or awnless ryegrass spikes, dense grassy tufts and a few close head images.",
+      "unresolved_species_morphology_and_context": "Undeveloped awns and worn auricles can mimic other Lolium; no site seed-mix or hybrid ancestry.",
+      "exact_highest_value_next_photo_or_voucher": "Target mature spikelet/auricle series from same plant and explicit L. multiflorum, L. rigidum and hybrids comparison.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "oplismenus-hirtellus",
+      "modern_candidate_id": "oplismenus-hirtellus",
+      "modern_candidate_scientific": "Oplismenus hirtellus",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 6,
+      "temporary_review_folder": "hays_next_eight_review",
+      "original_GitHub_Actions_artifact_id": 13883274516,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        63184991,
+        63185187
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/353967258",
+        "https://www.inaturalist.org/observations/316622995",
+        "https://www.inaturalist.org/observations/283663950",
+        "https://www.inaturalist.org/observations/39802176"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Some backlit one-sided flowering branches visibly bearing long, curved awn-like appendages and leafy sprawling shade groundcover.",
+      "unresolved_species_morphology_and_context": "Branch-length scale, awn pubescence and underside sheath hairs cannot be judged sufficiently; unresolved historic hirtellus/setarius/compositus name concepts.",
+      "exact_highest_value_next_photo_or_voucher": "Measure lowest flowering branch, paired spikelets and awn surface, and connect flowering stem to rooted shade-growth nodes.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "aegilops-cylindrica",
+      "modern_candidate_id": "aegilops-cylindrica",
+      "modern_candidate_scientific": "Aegilops cylindrica",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 10,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        682960212,
+        682960258
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/373694422",
+        "https://www.inaturalist.org/observations/223212033",
+        "https://www.inaturalist.org/observations/164689332"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Excellent narrow jointed fertile spikes and clearly isolated elongated rachis joints/spikelet pieces in one source's palm, with rooted annual tuft in another record.",
+      "unresolved_species_morphology_and_context": "Jointed architecture strongly supports Aegilops-type identification, but exact 2–5 florets and glume articulation vs wheat remain unmeasured; no source rights reapproval.",
+      "exact_highest_value_next_photo_or_voucher": "Prioritize original photo IDs 682960212 and 682960258 to count florets on separated joint and see glume/rachis margins with mm scale.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "avena-sativa",
+      "modern_candidate_id": "avena-sativa",
+      "modern_candidate_scientific": "Avena sativa",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 3,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        136186586,
+        136181447
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/82948317",
+        "https://www.inaturalist.org/observations/82945689",
+        "https://www.inaturalist.org/observations/21997658"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Three general oatlike drooping panicles in urban roadside-like green vegetation, including a distant whole-plant context.",
+      "unresolved_species_morphology_and_context": "Lack of detached ripe florets, callus hairs or disarticulation means could be wild Avena relative; planted or seed spill unresolved.",
+      "exact_highest_value_next_photo_or_voucher": "Compare detached ripe rachilla/floret attachment and callus hairs with Avena fatua, document crop/waif provenance.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "bromus-tectorum",
+      "modern_candidate_id": "bromus-tectorum",
+      "modern_candidate_scientific": "Bromus tectorum",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 2,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        3565901,
+        370270635
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/209232730",
+        "https://www.inaturalist.org/observations/3092228"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Two dried brown long-awned Bromus-like seedhead photos, one in palm for relative scale.",
+      "unresolved_species_morphology_and_context": "No translucent lemma apex teeth, glume nerves or sheath hair shown; other Bromus species may produce similar heads.",
+      "exact_highest_value_next_photo_or_voucher": "1-mm-scaled lemma-apex view including characteristic 2–5-mm teeth and leaf sheath hair from one rooted specimen.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "dactyloctenium-aegyptium",
+      "modern_candidate_id": "dactyloctenium-aegyptium",
+      "modern_candidate_scientific": "Dactyloctenium aegyptium",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 2,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        712093755,
+        693320913
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/388784436",
+        "https://www.inaturalist.org/observations/379049304"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Two field views show low grass with fingerlike radiating flowering branches near ground.",
+      "unresolved_species_morphology_and_context": "The distinctive bare distal rachis projection beyond spikelets, fertile floret count and minute ciliate membrane are not discernible.",
+      "exact_highest_value_next_photo_or_voucher": "Macro of flowering branch tip with a 1-mm ruler and one spread 2–5-flowered spikelet, root/node included.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "dichanthelium-acuminatum",
+      "modern_candidate_id": "dichanthelium-acuminatum",
+      "modern_candidate_scientific": "Dichanthelium acuminatum",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 1,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        364754466
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/206239171",
+        "https://www.inaturalist.org/observations/203380293"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Only a broad patch of fresh green narrow-leaved vegetation in shade; individual culms are not isolated.",
+      "unresolved_species_morphology_and_context": "No identifiable seasonal winter rosette, pubescence, spring/late reproductive panicle, or spikelet diagnosis. Cannot confirm even narrow taxonomic concept.",
+      "exact_highest_value_next_photo_or_voucher": "Get a same-patch winter rosette, spring flowering stem and mature spikelet with sheath/node hairs and narrow accepted concept.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "elymus-glabriflorus",
+      "modern_candidate_id": null,
+      "modern_candidate_scientific": "Elymus virginicus alias per current Kew staging; alternative separate E. glabriflorus taxonomic treatment at ITIS",
+      "source_reconciliation_is_alias": true,
+      "historical_photo_count": 2,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        144161304,
+        561876751
+      ],
+      "original_Hays_observation_urls": [],
+      "image_features_freshly_checked_in_contact_sheet": "Two historical Elymus flowering-spike source views, one held against hand and one more distant dried head.",
+      "unresolved_species_morphology_and_context": "No count of nodes, glume dimensions, auricles or expert verification; present name is alternative taxon treatment/alias of existing Elymus virginicus under Kew, NOT independent scored provisional candidate.",
+      "exact_highest_value_next_photo_or_voucher": "Obtain expert-vouchered spike nodes/glumes and maintain ITIS/Kew disagreement separately from Elymus macgregorii; no additional Learner slot.",
+      "preflight_photo_license_lane": "HISTORICAL_ELYMUS_ALIAS_NOT_A_PROVISIONAL_SPECIES_RIGHTS_LANE",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "eragrostis-curtipedicellata",
+      "modern_candidate_id": "eragrostis-curtipedicellata",
+      "modern_candidate_scientific": "Eragrostis curtipedicellata",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 1,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        136182147
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/82930092",
+        "https://www.inaturalist.org/observations/62485653"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "One delicate open panicle held against hand, broadly compatible with lovegrass genus.",
+      "unresolved_species_morphology_and_context": "The diagnostic sticky/viscid axis is not visible and source provides no mature floret measurements.",
+      "exact_highest_value_next_photo_or_voucher": "Inspect exact same-plant panicle-axis exudate at macro scale, true ligule and mature spikelet, with site provenance.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "eragrostis-minor",
+      "modern_candidate_id": "eragrostis-minor",
+      "modern_candidate_scientific": "Eragrostis minor",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 2,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        50544612,
+        50544653
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/368372291",
+        "https://www.inaturalist.org/observations/32237529"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Two small sparse annual-like lovegrasses, one hand-held and one on dry disturbed soil.",
+      "unresolved_species_morphology_and_context": "No clear crateriform glands on leaf/pedicel margins, glume/lemma lengths or persistent palea; two historical CC BY IDs do not confer fresh licensing approval.",
+      "exact_highest_value_next_photo_or_voucher": "Reopen historical Sam Kieschnick photos for current credit, acquire 1-mm gland and ripe-floret detail on same specimen.",
+      "preflight_photo_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "hordeum-murinum",
+      "modern_candidate_id": "hordeum-murinum",
+      "modern_candidate_scientific": "Hordeum murinum",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 3,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        646415666,
+        646415634
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/354336431",
+        "https://www.inaturalist.org/observations/113160838"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Bristly erect barley-like flowerheads, some against hand, and green roadside annual tuft.",
+      "unresolved_species_morphology_and_context": "No separated triad of spikelets at rachis node, glume hairs, ligule/auricle or modern leporinum subspecies determination.",
+      "exact_highest_value_next_photo_or_voucher": "Dissect one mature three-spikelet node, test ciliate central glumes and auricles against H. pusillum, H. vulgare.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "megathyrsus-maximus",
+      "modern_candidate_id": "megathyrsus-maximus",
+      "modern_candidate_scientific": "Megathyrsus maximus",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 2,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        243797993,
+        454981528
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/254054788",
+        "https://www.inaturalist.org/observations/254055102",
+        "https://www.inaturalist.org/observations/142221594"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Two distant leafy grass scenes including an illuminated residential nighttime or yard plant.",
+      "unresolved_species_morphology_and_context": "No in-focus mature open inflorescence or spikelets, collar, rhizome or spontaneous establishment evidence.",
+      "exact_highest_value_next_photo_or_voucher": "First obtain naturally illuminated original inflorescence/mature spikelet, collar and planting provenance; do not use this sheet for scoring.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "melinis-repens",
+      "modern_candidate_id": "melinis-repens",
+      "modern_candidate_scientific": "Melinis repens",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 5,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        99480173,
+        99480091
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/62114751",
+        "https://www.inaturalist.org/observations/34747879"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Clear soft pink-branched flowering tufts in one or more apparently landscaped patches, plus a pink feathery inflorescence in hand.",
+      "unresolved_species_morphology_and_context": "Spikelet silky-hair origin and 0.7–2.2-mm ligule fringe cannot be distinguished; deliberate planting versus wild population unclear.",
+      "exact_highest_value_next_photo_or_voucher": "Detailed same-plant floret macro identifying silky hairs and ligule; document planted landscape and any self-sown stand.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "muhlenbergia-capillaris",
+      "modern_candidate_id": "muhlenbergia-capillaris",
+      "modern_candidate_scientific": "Muhlenbergia capillaris",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 1,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        25940877
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/65015271",
+        "https://www.inaturalist.org/observations/36441935",
+        "https://www.inaturalist.org/observations/17126784"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Single pink-purple airy head on a basal tuft in possible planted garden context.",
+      "unresolved_species_morphology_and_context": "No measured fertile lemmas or awns and no seep muhly comparator, so color only is non-diagnostic.",
+      "exact_highest_value_next_photo_or_voucher": "Collect at least 3 ripe attached spikelets with measured lemma/awn, compare M. reverchonii, note planted provenance.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "nassella-tenuissima",
+      "modern_candidate_id": "nassella-tenuissima",
+      "modern_candidate_scientific": "Nassella tenuissima",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 4,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        199671362,
+        199671393
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/118195974",
+        "https://www.inaturalist.org/observations/111091761"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Hair-fine rolled blades and flowing silky tufts, one photographed in a hand, highly suggestive of ornamental feathergrass habit.",
+      "unresolved_species_morphology_and_context": "No long bent awn still connected to crowned fertile lemma, ligule shape or wild-origin proof.",
+      "exact_highest_value_next_photo_or_voucher": "Same source long twice-bent lemma awn, fertile lemma crown, collar and exact source of ornamental nursery planting.",
+      "preflight_photo_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "polypogon-viridis",
+      "modern_candidate_id": "polypogon-viridis",
+      "modern_candidate_scientific": "Polypogon viridis",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 3,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        125525458,
+        125526028
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/156821533",
+        "https://www.inaturalist.org/observations/76750381",
+        "https://www.inaturalist.org/observations/44142099"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Small compact green seedheads along damp rocky stream edge; one isolated head on pale background helps structure recognition.",
+      "unresolved_species_morphology_and_context": "Glume awnlessness is only inferred from limited tiles and is not measured; no 2–7 mm ligule or individual spikelet length.",
+      "exact_highest_value_next_photo_or_voucher": "Macro of detached glume and lemma to verify lack of long awns and measured ligule versus P. monspeliensis.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "sphenopholis-interrupta",
+      "modern_candidate_id": "sphenopholis-interrupta",
+      "modern_candidate_scientific": "Sphenopholis interrupta",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 6,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        638332006,
+        638332036
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/359410608",
+        "https://www.inaturalist.org/observations/349892863",
+        "https://www.inaturalist.org/observations/157853430"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Several fine interrupted narrow flowering heads held against fingers and one culm in a white paper background.",
+      "unresolved_species_morphology_and_context": "Without a dissected glume and mature floret, images cannot separate S. interrupta from S. obtusata; head gaps change with maturity.",
+      "exact_highest_value_next_photo_or_voucher": "Compare upper glume in frontal/profile views and floret number, plus inner ligule on same source plant.",
+      "preflight_photo_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "stapfochloa-ciliata",
+      "modern_candidate_id": "stapfochloa-ciliata",
+      "modern_candidate_scientific": "Stapfochloa ciliata",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 6,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        241518939,
+        241518952
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/141035831",
+        "https://www.inaturalist.org/observations/23580302"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Curved/looped one-sided racemes and two sharply photographed finger-scale/ruler inflorescences, with habit in gravel.",
+      "unresolved_species_morphology_and_context": "Exact hairy fertile-lemma midvein and margins, one fertile plus two sterile florets, and small awn lengths are not verifiable on reduced sheet.",
+      "exact_highest_value_next_photo_or_voucher": "Measure single 1.8–2.8-mm fertile lemma and upper sterile floret stack beside historical S. canterae spikelet at same scale.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "tridens-congestus",
+      "modern_candidate_id": "tridens-congestus",
+      "modern_candidate_scientific": "Tridens congestus",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 7,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        231979560,
+        231979600
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/232038649",
+        "https://www.inaturalist.org/observations/135964547"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Very conspicuous compact pale/pinkish cylindrical panicles and multiple enlarged hand-held ripe spikelet views, plus rooted tussock.",
+      "unresolved_species_morphology_and_context": "No directly imaged ripe lemma tip notch/mucro or short underground rhizome; pink color and tight panicle alone may overlap other Tridens.",
+      "exact_highest_value_next_photo_or_voucher": "Detach and backlight ripe lemma tip showing notch and mucro against 1-mm ruler; photograph rootstock and compare T. flavus, T. muticus.",
+      "preflight_photo_license_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    },
+    {
+      "sheet_slug": "tridentopsis-elongata",
+      "modern_candidate_id": "tridentopsis-elongata",
+      "modern_candidate_scientific": "Tridentopsis elongata",
+      "source_reconciliation_is_alias": false,
+      "historical_photo_count": 10,
+      "temporary_review_folder": "hays_pass_four_review",
+      "original_GitHub_Actions_artifact_id": 13885871643,
+      "full_attribution_record": "Each photo ID, observation ID, photographer and historic license preserved in the private recovered artifact's attributions.json, not published in this audit.",
+      "priority_original_photo_ids_for_next_review": [
+        670314012,
+        670314061
+      ],
+      "original_Hays_observation_urls": [
+        "https://www.inaturalist.org/observations/377001623",
+        "https://www.inaturalist.org/observations/367070671",
+        "https://www.inaturalist.org/observations/366639842"
+      ],
+      "image_features_freshly_checked_in_contact_sheet": "Several clear green purplish compressed flowering panicles, hairy stem bases and multiple hand-held closeups of glumes.",
+      "unresolved_species_morphology_and_context": "No precise upper glume nerve count and lower lemma lengths to resolve modern Tridentopsis elongata vs old Tridens muticus variety concept.",
+      "exact_highest_value_next_photo_or_voucher": "1-mm macro of upper glume lateral veins, second glume and fertile lemma apex on local plant, document accepted-name treatment.",
+      "preflight_photo_license_lane": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "new_exact_photo_license_approval": false,
+      "local_Hays_individual_species_identity_fully_proven": false,
+      "approved_for_scored_key": false,
+      "review_method": "Fresh inspection of historical reduced-size contact sheet from exact GitHub Actions artifact, November 12 2026; no full-resolution original photo, no current page/license check."
+    }
+  ]
+}
