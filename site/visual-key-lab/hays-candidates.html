@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b2e">
+<meta name="description" content="Search 57 Hays County grass research candidates and the literature-backed structures still awaiting specimen verification.">
+<title>Hays Grass ID Lab — Research candidates</title>
+<style>
+:root{--ink:#20372c;--forest:#153e30;--paper:#f5f6f0;--muted:#64796e;--line:#d9e5d9;--white:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:#216246;overflow-wrap:anywhere}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #d6a13b;outline-offset:3px}
+header{background:var(--forest);color:white}header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 0}
+header strong{font-size:.8rem;letter-spacing:.12em}header a{color:#e0f2df;font-size:.87rem}.wrap{width:min(1100px,calc(100% - 32px));margin:auto}
+h1,h2{font-family:Georgia,serif}h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;margin:15px 0 12px}
+.hero{padding:25px 0 10px}.hero p{max-width:870px;color:#485f51}.eyebrow{font-size:.77rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:#45785a}
+.notice{background:#f0eddc;border:1px solid #dbd4b4;border-radius:12px;padding:14px 16px;color:#66532c;margin:13px 0 22px;font-size:.91rem}
+.summary{display:flex;flex-wrap:wrap;gap:12px;margin:15px 0}.stat{border:1px solid var(--line);border-radius:12px;background:white;padding:13px 17px;min-width:145px}.stat b{font-family:Georgia,serif;font-size:1.8rem;display:block;color:var(--forest)}.stat span{color:var(--muted);font-size:.8rem}
+.controls{background:white;border:1px solid var(--line);border-radius:13px;padding:17px;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;align-items:center}
+label{font-weight:750;font-size:.9rem}input[type=search]{padding:11px 13px;border:1px solid #bacfbd;border-radius:9px;min-width:220px;flex:1}
+button{border:1px solid #bdcebe;background:#f8faf6;color:#32513b;border-radius:9px;cursor:pointer;min-height:42px;padding:9px 12px;font-weight:700}
+button[aria-pressed=true]{background:var(--forest);color:white;border-color:var(--forest)}
+#count{font-size:.87rem;color:var(--muted);margin:12px 2px}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-bottom:40px}
+.card{background:white;border:1px solid var(--line);border-radius:15px;overflow:hidden;min-width:0}
+.card summary{cursor:pointer;padding:16px;list-style:none}.card summary::-webkit-details-marker{display:none}
+.card summary:after{content:"View diagnostic notes";display:block;font-size:.81rem;color:#246547;font-weight:750;margin-top:12px}
+.card[open] summary:after{content:"Close diagnostic notes"}
+.card h2{font-size:1.28rem;margin:0 0 3px}.latin{display:block;color:#566d5d;font-style:italic;font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{border-radius:100px;background:#edf2ed;color:#506454;font-size:.7rem;font-weight:750;padding:4px 9px}.chip.hold{background:#fbebde;color:#8d512b}
+.card-body{border-top:1px solid var(--line);padding:15px 17px 20px}.card-body p{margin:8px 0;font-size:.9rem;color:#495c4d}
+.card-body h3{margin:20px 0 7px;font-size:1rem}
+.trait{padding:10px 0;border-top:1px solid #e5ece3}.trait strong{display:block;color:#264d38;text-transform:capitalize}.trait p{margin:3px 0 5px}.trait small{color:#64796e;display:block}
+.links{display:flex;gap:8px;flex-wrap:wrap}.links a{font-size:.8rem;padding:5px 8px;background:#edf4ed;border-radius:8px}
+.context{color:#695633!important;font-size:.83rem!important}
+footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);font-size:.85rem}
+@media(max-width:750px){.list{grid-template-columns:1fr}.controls{align-items:stretch}.controls label{width:100%}.controls input{min-width:0;width:100%;flex-basis:100%}.stat{flex:1;min-width:100px}.card summary{padding:14px}header a{font-size:.8rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><strong>HAYS BOTANY / GRASS ID LAB</strong><nav><a href="./">← Photo identification key</a> · <a href="../">Grass Learner</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">Hays County expansion · reference library</div><h1>Additional grasses under review</h1><p>Explore the new Hays County candidate grasses and the actual structures our botanical references recommend examining. Each reference description is paired with a specific field-photo target. These are educational reference cards, not confirmed local species IDs.</p></section>
+<p class="notice"><strong>Important:</strong> These 57 candidate records are <strong>not yet in the scored 112-species identification key</strong> or approved as verified Hays County taxa. Source observation labels are not independent identifications. All photographs remain at their original source; none is reproduced on this review page without a separate rights check. An unrecorded trait means unknown, not absent.</p>
+<div class="summary" aria-label="Current project counts"><div class="stat"><b id="total">57</b><span>Research candidate taxa</span></div><div class="stat"><b id="characters">322</b><span>Literature character targets</span></div><div class="stat"><b id="holds">7</b><span>Photo-access holds</span></div></div>
+<div class="controls"><label for="search">Find a grass</label><input id="search" type="search" placeholder="Scientific name, common name, synonym…" autocomplete="off"><button type="button" data-view="all" aria-pressed="true">All 57</button><button type="button" data-view="reviewed" aria-pressed="false">Photos reviewed</button><button type="button" data-view="holds" aria-pressed="false">Access holds</button></div>
+<p id="count" role="status">Loading research candidates…</p>
+<section class="list" id="list" aria-label="Research candidate profiles"></section>
+<footer>Source morphology: <em>Illustrated Flora of North Central Texas</em> (1999), <em>Grasses of the Texas Hill Country</em> (2015), and cited supplemental references. Diagnostic characters are literature expectations, not proof from a particular Hays specimen. <a href="https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/audits/hays-expansion-20261111/README.md">See the full methodology and release checks</a>.</footer>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id),el=(tag,className,content)=>{const n=document.createElement(tag);if(className)n.className=className;if(content!==undefined)n.textContent=content;return n};
+let candidates=[],view="all";
+function link(label,url){if(typeof url!=="string"||!url.startsWith("https://"))return null;const a=el("a","",label);a.href=url;a.target="_blank";a.rel="noopener noreferrer";return a}
+function paragraph(label,value,cls){const p=el("p",cls||"");p.append(el("strong","",label+" "));p.append(document.createTextNode(value||"Not yet established"));return p}
+function card(item){
+ const box=el("details","card"),summary=el("summary"),body=el("div","card-body");
+ summary.append(el("h2","",item.common),el("span","latin",item.scientific));
+ const chips=el("div","chips");chips.append(el("span","chip","Literature profile · "+item.details.length+" characters"));
+ chips.append(el("span","chip","Hays observation reports: "+item.local_report_count));
+ if(item.photo_status==="PHOTO_PIXEL_ACCESS_PENDING")chips.append(el("span","chip hold","Original photos inaccessible"));
+ else chips.append(el("span","chip","Original photo review previously recorded"));
+ summary.append(chips);box.append(summary);
+ if(item.aliases?.length)body.append(paragraph("Other names:",item.aliases.join("; ")));
+ if(item.field_view)body.append(paragraph("Earlier photo review:",item.field_view));
+ if(item.unresolved)body.append(paragraph("What remains unproven:",item.unresolved));
+ if(item.risky_context)body.append(paragraph("Occurrence caution:","Review planted, cultivated or escaped-site context; observation does not establish naturalization.","context"));
+ if(item.warning_flags?.length)body.append(paragraph("Additional checks:",item.warning_flags.map(s=>s.replaceAll("_"," ").toLowerCase()).join(", "),"context"));
+ body.append(el("h3","","Characters described in references — verify on the same plant"));
+ for(const c of item.details){
+  const div=el("div","trait");div.append(el("strong","",c.part.replaceAll("_"," ")),el("p","",c.description),el("small","","Inspect: "+c.needed_view),el("small","","Source: "+c.source));body.append(div);
+ }
+ body.append(el("h3","","Original observation and source records"));
+ const l=el("div","links");
+ for(const [i,url] of item.observation_urls.entries()){const a=link("Hays observation "+(i+1),url);if(a)l.append(a)}
+ if(item.taxonomy_url){const a=link("Taxonomy reference",item.taxonomy_url);if(a)l.append(a)}
+ const path=item.source_location.replace(/^\.\.\/\.\.\//,"");
+ const source=link("Original diagnostic packet","https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/"+path);
+ if(source)l.append(source);
+ body.append(l,paragraph("Publication status:","Review-only. Specimen identification, photo license, and local occurrence have not passed release checks.","context"));
+ box.append(body);return box;
+}
+function refresh(){
+ const q=$("search").value.toLocaleLowerCase().trim();
+ const matches=candidates.filter(c=>(view==="all"||(view==="holds"?c.photo_status==="PHOTO_PIXEL_ACCESS_PENDING":c.photo_status!=="PHOTO_PIXEL_ACCESS_PENDING"))&&[c.common,c.scientific,...c.aliases].join(" ").toLocaleLowerCase().includes(q));
+ $("count").textContent=matches.length+" of 57 research candidates shown";
+ const list=$("list");list.replaceChildren();for(const c of matches)list.append(card(c));
+ if(!matches.length)list.append(el("p","","No matching candidates. Try a different name or clear the filter."));
+}
+async function init(){
+ try{
+  const res=await fetch("hays-candidates.json",{cache:"no-store"});
+  if(!res.ok)throw Error("Candidate reference file unavailable ("+res.status+")");
+  const d=await res.json();
+  if(d.candidate_count!==57||d.character_target_count!==322||d.existing_public_key_count!==112||!Array.isArray(d.candidates)||d.candidates.length!==57)throw Error("Reference count validation failed");
+  candidates=d.candidates;const count=candidates.reduce((n,c)=>n+c.details.length,0);
+  if(count!==322||new Set(candidates.map(c=>c.id)).size!==57)throw Error("Candidate records incomplete");
+  $("total").textContent=candidates.length;$("characters").textContent=count;$("holds").textContent=candidates.filter(c=>c.photo_status==="PHOTO_PIXEL_ACCESS_PENDING").length;
+  $("search").addEventListener("input",refresh);
+  document.querySelectorAll("[data-view]").forEach(button=>button.addEventListener("click",()=>{view=button.dataset.view;document.querySelectorAll("[data-view]").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));refresh()}));
+  refresh();
+ }catch(err){$("count").textContent="Unable to load candidate records: "+err.message}
+}
+init();
+</script>
+</body>
+</html>
