@@ -230,7 +230,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1239) — Under Andropogon virginicus, the Flora describes usually straw-colored sheathing bracts around flowering branches 2–3 cm long. Follow several branches to see how they are spaced.\n\nFollow one attached upper culm, not its winter color. Broomsedge is a warm-season tufted perennial; its narrow flowering units are commonly 2–5 short rames per spathe, mostly 1–3 cm long. Panel 1 shows gross flowering hairs, but cannot prove the number or attachment of individual rames.",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1239) — Under Andropogon virginicus, the Flora describes usually straw-colored sheathing bracts around flowering branches 2–3 cm long. Follow several branches to see how they are spaced.\n\nFollow one attached upper culm, not its winter color. Broomsedge is a warm-season tufted perennial; its narrow flowering units are commonly 2–5 short rames per spathe, mostly 1–3 cm long. Panel 1 shows gross flowering hairs, but cannot prove the number or attachment of individual rames.\n\nField ID Lab collar tip: open the inside blade–sheath junction. A tiny membranous ligule has both short and long edging hairs, so either visible detail may guide a beginner; don't count separate sheath hairs as the ligule.",
     "traits": {
       "head": [
         "short_racemes"
@@ -239,7 +239,8 @@
         "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long"
@@ -255,6 +256,19 @@
         "reference": "Numerous slender flowering branches along upper culm, NOT bunched into dense terminal broom as in A. glomeratus; straw-colored sheathing bracts.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), p. 34, Andropogon virginicus (historical combination for Anatherum virginicum)",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+        "category": "vegetative",
+        "reported_states": [
+          "1–2 mm membranous, truncate ligule",
+          "ciliate edge with both long and short hairs"
+        ],
+        "reference": "The true ligule is a small membrane edged with conspicuous cilia. Both broad ID Lab answers—membrane seen and hair fringe most noticeable—should retain this grass; projecting collar/sheath hairs alone are not proof of a hair-only ligule.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_CILIATE_MEMBRANE_BROAD_FIELD_UI",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -1821,7 +1835,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "There is a crucial difference between a documented attached fibrous root system and a documented swollen subterranean corm; and between exterior collar hairs and the TRUE inner 0.25–0.5mm ligule. Verify with real scale.",
+    "field_rule": "There is a crucial difference between a documented attached fibrous root system and a documented swollen subterranean corm; and between exterior collar hairs and the TRUE inner 0.25–0.5mm ligule. Verify with real scale.\n\nField ID Lab collar tip: the tiny true ligule is primarily a hair fringe but has a minute membrane at its base; either visible part keeps the species possible, while a separate hairy blade edge is not the ligule.",
     "traits": {
       "head": [
         "airy"
@@ -1830,7 +1844,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -1842,10 +1857,17 @@
     "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
     "character_evidence": {
       "ligule": {
-        "source": "Illustrated Flora of North Central Texas (1999), monocots excerpt pp.224 and 226, historical name Panicum pedicellatum",
-        "reference": "Ligule hair fringe usually 0.3–1 mm, distinct from outer blade-edge hairs. Flowering may recur late summer and fall.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), p. 43, Dichanthelium pedicellatum (compared with source under historical Panicum pedicellatum)",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=43",
+        "category": "vegetative",
+        "reported_states": [
+          "ciliate ligule up to 1 mm",
+          "minute membranous base beneath cilia"
+        ],
+        "reference": "The field hair fringe is attached to a minute membranous base, so an opened collar showing the tiny base must not exclude cedar panicgrass through the broad 'membrane' choice. Retain the hair-fringe state. This does not claim a long hairless membrane.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_MICRO_MEMBRANE_BROAD_FIELD_UI",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       },
       "rootstock": {
         "source": "UT Plant Resources Center, A.C. Gibson — Dichanthelium pedicellatum, Williamson County",
@@ -2347,14 +2369,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "First find the true extremely OPEN branching panicle (unlike Digitaria ciliaris fingerlike racemes), verify an actually connected rooted base and flowering culm, then inspect the INNER ~0.5-mm erose membranous ligule. The pictured split OUTER sheath edge is not enough.",
+    "field_rule": "First find the true extremely OPEN branching panicle (unlike Digitaria ciliaris fingerlike racemes), verify an actually connected rooted base and flowering culm, then inspect the INNER ~0.5-mm erose membranous ligule. The pictured split OUTER sheath edge is not enough.\n\nField ID Lab habit tip: a small clump is common, but short underground rhizomes can occur. If you actually see a rhizome, keep fall witchgrass among the candidates; do not assume a surface stolon from its wiry base.",
     "traits": {
       "head": [
         "airy",
         "wiry"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "membrane"
@@ -2379,6 +2402,20 @@
         "reference": "Flora states the ligule is a membrane; Hays source notes a short erose membrane that remains unverified photographically.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 45, Digitaria cognata (broad D. cognata including D. pubiflora)",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=45",
+        "category": "vegetative",
+        "reported_states": [
+          "solitary or small clumps",
+          "rhizomes present or absent",
+          "stolons absent"
+        ],
+        "reference": "Hard knotty subrhizomatous base; short underground rhizomes may occur but some plants lack them. Retain both tuft and rhizome broad ID Lab choices. Do not equate horizontal stems or detached mature panicle with stolons or a surface-rooting mat. Subspecies concepts vary.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_CONDITIONAL_RHIZOME_NOT_VOUCHER_CONFIRMED",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
