@@ -219,3 +219,6 @@ console.log(JSON.stringify({
 // Batch 12 already runs as its own explicit workflow step.
 require('./test_scoring_lane_a_batch11.cjs');
 require('./test_scoring_lane_a_batch13.cjs');
+
+// Opt-in 57-candidate field trial is tested but never score-admitted by this runner.
+require('./test_grass_experimental_57.cjs');
