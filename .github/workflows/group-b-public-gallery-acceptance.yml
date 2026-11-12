@@ -1,0 +1,71 @@
+name: Group B - live learner photos and credits acceptance
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/group-b-public-gallery-acceptance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-group-b-published-pixels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout current photo manifest and existing public QA script
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install headless Chromium for genuine public-site rendering
+        run: |
+          python -m pip install --disable-pip-version-check playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Audit public Pages photo pixels and linked image credits
+        shell: bash
+        run: |
+          set +e
+          python scripts/qa_public_poaceae_photos.py
+          result=$?
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          f=Path('qa-report/public-provisional-photo-pixels.json')
+          if not f.exists():
+              print('GROUP_B_QA_FAILED: report missing')
+              raise SystemExit(1)
+          obj=json.loads(f.read_text())
+          target={
+            'tridentopsis-elongata','dichanthelium-acuminatum',
+            'eragrostis-curtipedicellata','nassella-tenuissima',
+            'stapfochloa-ciliata','tridens-congestus',
+            'digitaria-californica','elymus-macgregorii',
+            'janochloa-antidotalis','lolium-x-boucheanum',
+            'pappophorum-bicolor','stapfochloa-canterae'
+          }
+          rows=[x for x in obj.get('results',[]) if x.get('id') in target]
+          summary={
+            'status':obj.get('status','COMPLETE_IF_EXIT_SUCCESS'),
+            'public_manifest_error':obj.get('error'),
+            'groupB_with_configured_galleries':sum(bool(x.get('configured')) for x in rows),
+            'groupB_configured_photos':sum(x.get('configured',0) for x in rows),
+            'groupB_public_visible_and_credited':sum(x.get('visible_with_credit',0) for x in rows),
+            'groupB_gallery_details':[
+              {'name':x.get('scientific'),'configured':x.get('configured'),
+               'actual_pixels_and_credits':x.get('visible_with_credit'),
+               'error':x.get('error')} for x in rows
+            ]
+          }
+          print('GROUP_B_PUBLIC_QA '+json.dumps(summary,ensure_ascii=False))
+          PY
+          exit "$result"
+      - name: Preserve source/credit/pixel audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-b-and-provisional-public-photo-pixel-report
+          path: qa-report/public-provisional-photo-pixels.json
+          if-no-files-found: warn
