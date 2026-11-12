@@ -668,11 +668,10 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome's flowering head can look open and airy because only a few spikelets sit on spreading branches. Keep it among results for either an airy or branched-oat first look, but verify its large multi-flowered spikelets, 1-veined lower glume and 3-veined upper glume.",
+    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome can have an open, sparsely branched panicle, but its 20 mm multi-flowered spikelets are NOT the tiny-spikelet cloud shown in the 'airy' question. Choose the branched-oat field option and compare glume veins and attached florets.",
     "traits": {
       "head": [
-        "branched_oat",
-        "airy"
+        "branched_oat"
       ],
       "habit": [
         "tuft"
@@ -714,8 +713,20 @@
           "the spikelets are multi-flowered and large"
         ],
         "reference": "Texas brome has a sparse open panicle, so choosing a generic airy/open flowering-head silhouette must not exclude the grass. Retain the specific branched-oat category because floret count and glume venation are essential for positive ID; the broad airy match is not proof of Hays County occurrence or exact photo identity.",
-        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "status": "SOURCE_VERIFIED_OPEN_PANICLE_BUT_REJECTED_FOR_TINY_SPIKELET_AIRY_UI",
         "certainty": "SPECIES_LEVEL_FLORAL_DESCRIPTION_NOT_SAME_PLANT_MACRO_CERTIFIED",
+        "review_date": "2026-11-12",
+        "review_note": "An open panicle does not automatically match UI head:airy, which says a cloud of tiny spikelets. The source remains valid; previous broad code was withdrawn."
+      },
+      "head_airy_ui_semantic_correction": {
+        "source": "Kew GrassBase Bromus texensis, 20 mm spikelets with 6–8 florets",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37176-2/general-information",
+        "category": "reproductive",
+        "ui_label": "An open, airy branching panicle",
+        "ui_description": "Many thin branches form an open cloud of tiny spikelets.",
+        "measurement": "20 mm spikelets, 6–8 fertile florets",
+        "reference": "This grass's panicle can be open, but attached spikelets are much larger or differently arranged than the tiny-spikelet cloud shown by the actual ID Lab choice. Remove head=airy while preserving its botanically appropriate existing head states; do not erase morphology or rights history.",
+        "status": "REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION",
         "review_date": "2026-11-12"
       }
     },

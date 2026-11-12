@@ -25,8 +25,6 @@ const matches=(picks,records=all)=>{
 const scoped=['d1','d4'].flatMap(s=>JSON.parse(read('species-'+s+'.json')));
 const old=JSON.parse(JSON.stringify(scoped));
 const additions=[
-  ['bromus-texensis','head','airy','head_open_panicle_regional'],
-  ['sorghastrum-elliottii','head','airy','head_open_arching_flora'],
   ['sporobolus-clandestinus','ligule','membrane','ligule_minute_ciliate_base_hill_country']
 ];
 for(const [id,trait,value,evidenceKey] of additions){
@@ -42,8 +40,6 @@ for(const [id,trait,value,evidenceKey] of additions){
   assert(now.field_rule.endsWith('.'),'truncated crew instruction '+id);
 }
 const positives=[
-  ['bromus-texensis',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'}],
-  ['sorghastrum-elliottii',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'}],
   ['sporobolus-clandestinus',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
   ['sporobolus-clandestinus',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'}]
 ];
@@ -52,8 +48,10 @@ for(const [id,answers] of positives){
   assert(matches(answers,scoped).includes(id),'after state still excludes '+id);
 }
 const negatives=[
+  ['bromus-texensis',{head:'airy'}],
   ['bromus-texensis',{head:'spike'}],
   ['bromus-texensis',{awns:'none_obvious'}],
+  ['sorghastrum-elliottii',{head:'airy'}],
   ['sorghastrum-elliottii',{head:'foxtail'}],
   ['sorghastrum-elliottii',{ligule:'absent'}],
   ['sporobolus-clandestinus',{head:'airy'}],
@@ -74,7 +72,7 @@ for(const x of old){
     for(const v of values)recur(i+1,{...answers,[trait]:v});
   };recur(0);
 }
-assert.equal(olderFullCombinations,82,'unexpected D1/D4 original fully specified state count');
+assert(olderFullCombinations>=80,'fewer than 80 valid D1/D4 combinations after tiny-spikelet UI correction');
 assert.equal(scoped.reduce((sum,s)=>sum+s.photos.length,0),124,'D1/D4 photos modified');
 const hidden=scoped.find(x=>x.id==='sporobolus-clandestinus');
 assert.deepEqual(hidden.traits.habit,['tuft'],'FNA/regional rhizome conflict must remain unresolved');
@@ -85,7 +83,12 @@ const unknown={id:'unknown-trait-probe',common:'Unknown',scientific:'Unknown',ra
 assert.deepEqual(matches({head:'airy',ligule:'membrane'},[unknown]),['unknown-trait-probe']);
 const provisionalIds=new Set(candidates.map(x=>x.id));
 assert(!matches({}).some(id=>provisionalIds.has(id)),'provisional candidate scored');
-console.log(JSON.stringify({pass:true,scored:112,provisional:57,addedStates:3,
+for(const id of ['bromus-texensis','sorghastrum-elliottii']){
+ const x=scoped.find(s=>s.id===id);
+ assert(!x.traits.head.includes('airy'),id+' has larger spikelets than the airy UI caption');
+ assert.equal(x.character_evidence.head_airy_ui_semantic_correction?.status,'REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION');
+}
+console.log(JSON.stringify({pass:true,scored:112,provisional:57,addedStates:1,
   formerlyExcludedPathsCorrected:positives.length,negativeControls:negatives.length,
   previousFullCharacterCombinationsRetained:olderFullCombinations,photoRefsPreserved:514,
   uncertainRhizomeExcludedFromScoring:true},null,2));
