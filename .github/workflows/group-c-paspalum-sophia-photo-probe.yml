@@ -1,0 +1,29 @@
+name: Group C Paspalum langei Sophia K photo-specific original check (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - scripts/group_c_paspalum_sophia_photo_probe.py
+      - .github/workflows/group-c-paspalum-sophia-photo-probe.yml
+permissions:
+  contents: read
+jobs:
+  observation-photo-rights:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install Pillow
+      - name: Inspect source observation, each exact image's rights and pixels
+        run: python scripts/group_c_paspalum_sophia_photo_probe.py
+      - name: Retain source report and temporary review contact sheet, no public asset changes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paspalum-sophia-original-image-review
+          path: |
+            paspalum-sophia-source.json
+            paspalum-sophia-source-contact.jpg
+          if-no-files-found: warn
