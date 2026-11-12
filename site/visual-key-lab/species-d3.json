@@ -1923,10 +1923,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "P. setaceum often has one to few narrow racemes with relatively small spikelets and highly variable varieties differing in blade hairiness. Creeping wet-ground P. distichum typically has two terminal racemes and obvious stolons, while P. pubiflorum often has several racemes and larger spikelets. A single closeup of spikelets is not enough to prove variety.",
+    "field_rule": "P. setaceum often has one to few narrow racemes with relatively small spikelets and highly variable varieties differing in blade hairiness. Creeping wet-ground P. distichum typically has two terminal racemes and obvious stolons, while P. pubiflorum often has several racemes and larger spikelets. A single closeup of spikelets is not enough to prove variety.\n\nField ID Lab: thin paspalum often shows two ascending near-terminal racemes that can form a loose V. The paired-spikes picture is only a first shape match; confirm small paired spikelets and the plant's rhizomatous base instead of assuming it is knotgrass.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "paired_spikes"
       ],
       "habit": [
         "tuft",
@@ -1949,6 +1950,21 @@
         "reference": "1–5 racemes, often long relative to plant; small spikelets and strong pubescence variation. Some prior rhizomatous coding requires further field confirmation.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "head_paired_racemes_williamson": {
+        "source": "A.C. Gibson, Vascular Plants of Williamson County, Paspalum setaceum; Kew GrassBase Paspalum setaceum; Texas A&M AgriLife Texas Rangelands Thin Paspalum",
+        "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20setaceum",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325365-2/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "in regional specimens normally two straight ascending near-terminal racemelike branches",
+          "Kew states one or two, sometimes up to five, unilateral racemes",
+          "Texas A&M account says inflorescence usually has two racemes"
+        ],
+        "reference": "A two-branched thin paspalum is a legitimate visual selection for the UI's V-pair field picture and must not disappear on selecting it. Species key remains distinguished from P. distichum by intact crown and actual small paired spikelets; both have one-sided spikelets, but the branches are racemes, not unbranched true spikes.",
+        "certainty": "DIRECT_WILLIAMSON_COUNTY_SPECIMEN_MORPHOLOGY_NOT_EXACT_GALLERY_IMAGE_VERIFIED",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [

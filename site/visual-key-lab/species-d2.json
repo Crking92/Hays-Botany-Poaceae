@@ -1540,10 +1540,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Actual living source-identified tuft photo (panel 1), flowering panicle (panel 2), leaf with flowering culm (panel 3), and preserved BRIT root+panicle voucher (panel 5). Look for perennial rooted bunch, open drooping flowering head and attached spikelets. The living in-ground photograph hides the actual fibrous root crown; do not certify exposed roots, and do not treat the historical specimen as fresh Hays material.",
+    "field_rule": "Actual living source-identified tuft photo (panel 1), flowering panicle (panel 2), leaf with flowering culm (panel 3), and preserved BRIT root+panicle voucher (panel 5). Look for perennial rooted bunch, open drooping flowering head and attached spikelets. The living in-ground photograph hides the actual fibrous root crown; do not certify exposed roots, and do not treat the historical specimen as fresh Hays material.\n\nField ID Lab: Texas fescue has a fairly open, pyramidal flowering panicle, so an overall airy head can be a valid first impression. Check its distinctly large multi-flowered oat-like spikelets, short membranous ligule and perennial tuft to narrow the identification.",
     "traits": {
       "head": [
-        "branched_oat"
+        "branched_oat",
+        "airy"
       ],
       "habit": [
         "tuft"
@@ -1568,6 +1569,19 @@
         "reference": "Texas fescue: perennial tuft-forming grass, no stolons or rhizomes, membrane ligule 0.5–1 mm and 2–5 mm blades. Vegetative source checked; panicle remains independently photo-provisional.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "head_open_mature_fescue": {
+        "source": "W.A. Silveus (1933), Texas Grasses, species account Festuca versuta (also Festuca texana in older works)",
+        "source_url": "https://www.edwardsaquifer.org/wp-content/uploads/2019/02/1933_Silveus_TexasGrasses1.pdf",
+        "category": "reproductive",
+        "reported_states": [
+          "mature panicle openly branched and pyramidal, somewhat nodding",
+          "several widely spaced ascending to spreading branches"
+        ],
+        "reference": "Species-specific Silveus account describes the mature Texas fescue panicle as large, open, pyramidal and only slightly nodding. A field observer seeing the entire loose flowering head (without resolving the multi-flowered oat-like spikelets) may legitimately select the generic open/airy panicle drawing. Preserve the more diagnostic branched_oat option; this broad category is not a standalone species ID.",
+        "certainty": "SPECIES_SPECIFIC_HISTORIC_TEXAS_REPRODUCTIVE_DESCRIPTION; modern specimen photo still unverified",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -2996,7 +3010,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Nimblewill may occur as a small cluster or spread by low stems rooting at nodes. Check the very short membranous ligule, contracted panicle and tiny glumes. Trace an attached rooted stem; a surface mat is not compulsory in every observed plant.",
+    "field_rule": "Nimblewill may occur as a small cluster or spread by low stems rooting at nodes. Check the very short membranous ligule, contracted panicle and tiny glumes. Trace an attached rooted stem; a surface mat is not compulsory in every observed plant.\n\nField ID Lab: nimblewill's true inner ligule is a tiny membranous rim with fine marginal cilia; depending on magnification you may notice the little fringe before the membrane itself. Don't count the longer hairs elsewhere at the sheath mouth.",
     "traits": {
       "head": [
         "long_narrow_panicle"
@@ -3006,7 +3020,8 @@
         "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious",
@@ -3033,6 +3048,21 @@
         "review_date": "2026-11-11",
         "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch.",
         "qualifier": "Broad field-choice mapping of small clusters/clumps; not a claim of an invariably dense bunch or a locally authenticated specimen."
+      },
+      "ligule_ciliate_membrane_visual_choice": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p.55, Muhlenbergia schreberi; Penn State Department of Plant Science nimblewill diagnostic table",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+        "secondary_source_url": "https://plantscience.psu.edu/outreach/plant-id/grasses/nimblewill",
+        "category": "vegetative",
+        "reported_states": [
+          "ligule is an erose or lacerate membrane under 0.5 mm",
+          "membrane margin ciliolate/ciliate",
+          "visible inner junction can appear membranous and hairy"
+        ],
+        "reference": "A true tiny membranous nimblewill ligule is edged by cilia and can look like a short hair fringe from a field lens. Add hairs only as a BROAD appearance answer when those cilia actually arise from the true inner ligule. The membrane remains the botanical structure; exterior collar/throat hairs are insufficient and should not be mistaken for the ligule.",
+        "certainty": "DIRECT_REGIONAL_SPECIES_SOURCE_AND_LIGULE_VISUAL_TERM; exact macro photo unverified",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
