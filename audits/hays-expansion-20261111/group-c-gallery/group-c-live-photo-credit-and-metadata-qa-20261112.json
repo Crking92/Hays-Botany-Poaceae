@@ -1,0 +1,249 @@
+{
+  "report_name": "Chat 4 Group C — 15 one-photo public Learner visual/attribution acceptance and exact metadata defect handoff",
+  "report_date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-group-c-live-gallery-metadata-qa-20261112",
+  "source_main_commit": "1130b52f96f7348fa47caa9f5397c984c2a1d2f2",
+  "issue": 70,
+  "role_ownership": "Chat4 evidence only; Chat2 sole shared photo/manifest editor; Chat1 release and public browser QA. Do not edit scoring, galleries or UI in this PR.",
+  "live_evidence": {
+    "run_id": 43313702014,
+    "job_id": 131516085245,
+    "link": "https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/43313702014",
+    "tool": "GitHub Actions headless Chromium public Poaceae Learner photo-pixel+credit test",
+    "overall_provisional_photo_refs": 79,
+    "overall_provisional_taxa_photographed": 40,
+    "overall_photos_rendered_and_credited": 79,
+    "group_c_species_checked": 15,
+    "group_c_species_with_at_least_one_rendered_and_credited_photo": 15,
+    "group_c_rendered_photo_refs": 15,
+    "group_c_species_with_multi_photo_gallery": 0,
+    "verification_scope": "All 15 exact scientific names found in workflow logs with '1/1 visible & credited'. Validates displayed image and creator/license/source in public browser at that point in run, NOT species diagnosis, native range or lawful original rights beyond metadata."
+  },
+  "species_results": [
+    {
+      "id": "eragrostis-superba",
+      "scientific": "Eragrostis superba",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "2/40 Eragrostis superba: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Saw-tooth_Love_Grass_(Eragrostis_superba)_(13927871661).jpg",
+      "creator": "Bernard Dupont",
+      "license": "CC BY-SA 2.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "paspalum-langei",
+      "scientific": "Paspalum langei",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "4/40 Paspalum langei: 1/1 visible & credited",
+      "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3514",
+      "creator": "Larry Allain / U.S. Geological Survey",
+      "license": "U.S. public domain (USGS-authored)",
+      "photo_status": "ORIGINAL_HERBARIUM_SHEETS_SEEN_MICRO_ID_PENDING"
+    },
+    {
+      "id": "phyllostachys-aurea",
+      "scientific": "Phyllostachys aurea",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "7/40 Phyllostachys aurea: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea_157349870.jpg",
+      "creator": "Gary Rogers",
+      "license": "CC BY 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "setaria-leucopila",
+      "scientific": "Setaria leucopila",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "20/40 Setaria leucopila: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_leucopila_12572850.jpg",
+      "creator": "Alex Abair",
+      "license": "CC BY 4.0",
+      "photo_status": "PUBLISHED_COUNTY_SPECIMEN_AND_PHOTO_SUPPORT_SPECIES_MICRO_PENDING"
+    },
+    {
+      "id": "sphenopholis-obtusata",
+      "scientific": "Sphenopholis obtusata",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "21/40 Sphenopholis obtusata: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Sphenopholis_obtusata_269432617.jpg",
+      "creator": "Alex Abair",
+      "license": "CC BY 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "aegilops-cylindrica",
+      "scientific": "Aegilops cylindrica",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "22/40 Aegilops cylindrica: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aegilops_cylindrica_(GBIF_6236229182).jpg",
+      "creator": "Sam Kieschnick",
+      "license": "CC BY 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "avena-sativa",
+      "scientific": "Avena sativa",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "23/40 Avena sativa: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Овес_04.jpg",
+      "creator": "Иоанна Чернова (Ioanna Chernova)",
+      "license": "CC BY 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "muhlenbergia-capillaris",
+      "scientific": "Muhlenbergia capillaris",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "25/40 Muhlenbergia capillaris: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_capillaris_0zz.jpg",
+      "creator": "David J. Stang",
+      "license": "CC BY-SA 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "eragrostis-minor",
+      "scientific": "Eragrostis minor",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "29/40 Eragrostis minor: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_1ziarnek.jpg",
+      "creator": "Krzysztof Ziarnek (Kenraiz)",
+      "license": "CC BY-SA 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "melinis-repens",
+      "scientific": "Melinis repens",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "31/40 Melinis repens: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Melinis_repens_326217730.jpg",
+      "creator": "Alex Abair",
+      "license": "CC BY 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "alopecurus-carolinianus",
+      "scientific": "Alopecurus carolinianus",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "32/40 Alopecurus carolinianus: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Alopecurus_carolinianus_(7461954724).jpg",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "photo_status": "PHOTO_PIXEL_ACCESS_PENDING"
+    },
+    {
+      "id": "briza-minor",
+      "scientific": "Briza minor",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "33/40 Briza minor: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_(GBIF_6130824499).jpg",
+      "creator": "kiwialli",
+      "license": "CC BY 4.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "cenchrus-setaceus",
+      "scientific": "Cenchrus setaceus",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "35/40 Cenchrus setaceus: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cenchrus_setaceus_kz04.jpg",
+      "creator": "Krzysztof Ziarnek (Kenraiz)",
+      "license": "CC BY-SA 4.0",
+      "photo_status": "PHOTO_PIXEL_ACCESS_PENDING"
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "scientific": "Miscanthus sinensis",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "36/40 Miscanthus sinensis: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miscanthus_sinensis.JPG",
+      "creator": "Piotrus",
+      "license": "CC BY-SA 3.0",
+      "photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING"
+    },
+    {
+      "id": "panicum-dichotomiflorum",
+      "scientific": "Panicum dichotomiflorum",
+      "configured_photo_refs": 1,
+      "public_browser_verified_photo_refs": 1,
+      "public_browser_log": "37/40 Panicum dichotomiflorum: 1/1 visible & credited",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_sl37.jpg",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "photo_status": "PHOTO_PIXEL_ACCESS_PENDING"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "HIGH",
+      "species_id": "melinis-repens",
+      "issue_type": "VISIBLE_RESEARCH_DESCRIPTION_CONTRADICTS_CURRENT_GALLERY_IMAGE",
+      "current_field_view": "Characteristic pink fuzzy open plume-like seedheads and clumped foliage visible; strong general photo evidence.",
+      "existing_photo_filename": "Melinis repens 326217730.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Melinis_repens_326217730.jpg",
+      "actual_prior_pixel_inspection": "Existing Alex Abair source image depicts a leaf blade/sheath junction with inner collar/short ligule area (hand/finger scale); not a pink flowering plume or whole clump.",
+      "user_facing_location": "site/visual-key-lab/hays-candidates.html, 'Earlier photo review:' field plus credited gallery below",
+      "proposed_safe_gallery_label": "Natal grass — blade–sheath junction / leaf collar (Florida source-labeled reference)",
+      "proposed_safe_gallery_role": "Leaf blade–sheath junction",
+      "proposed_safe_gallery_caption": "Close-up of the leaf blade and sheath junction; does not show the pink flowering plume, crown or verified local occurrence.",
+      "proposed_field_view_change": "Current credited photograph shows the leaf–sheath junction. Pink plumes and whole-plant habit occur in separate historical research observations, not in this single published image.",
+      "fix_owner": "Chat 2 source/manifest publisher",
+      "evidence_status": "HIGH_CONFIDENCE_PRIOR_DIRECT_IMAGE_INSPECTION__RECONFIRM_EXACT_SOURCE_PIXELS_BEFORE_PRODUCTION_CAPTION_CHANGE",
+      "preservation": "Retain prior historic source observations/evidence in original project archive; do not erase data supporting field_view from other observation sets."
+    },
+    {
+      "severity": "MEDIUM",
+      "species_ids": [
+        "alopecurus-carolinianus",
+        "cenchrus-setaceus",
+        "panicum-dichotomiflorum"
+      ],
+      "issue_type": "RESEARCH_CARD_INACCESSIBLE_ORIGINAL_IMAGES_WARNING_COEXISTS_WITH_VISIBLE_CREDITED_REFERENCE",
+      "technical_condition": "site/visual-key-lab/hays-candidates.html adds 'Original photos inaccessible' when photo_status === 'PHOTO_PIXEL_ACCESS_PENDING', regardless of approved_gallery.length; all three have one credited ref and all three passed 1/1 live rendered browser test.",
+      "note": "PHOTO_PIXEL_ACCESS_PENDING may truthfully describe other unavailable original observation images. Do not blindly mark all old observation images accessible; instead differentiate historical inaccessible observations from the now-visible approved Commons reference.",
+      "proposed_safe_UI_text": "Original observation photos still need separate review; the credited reference photo below is available.",
+      "fix_owner": "Chat 1 for UI wording or Chat 2 after confirming historic photo_status evidence",
+      "related_outside_group_c": "Sporobolus cryptandrus also has PHOTO_PIXEL_ACCESS_PENDING plus 2 approved gallery refs; forward to Chat 5/Chat 1 without editing here.",
+      "preservation": "Retain original evidence/source status; do not treat successful rendering of substitute Commons photo as proof historic observation pixels became accessible."
+    },
+    {
+      "severity": "MEDIUM",
+      "species_ids": [
+        "eragrostis-superba",
+        "paspalum-langei",
+        "setaria-leucopila",
+        "sphenopholis-obtusata",
+        "aegilops-cylindrica",
+        "avena-sativa",
+        "muhlenbergia-capillaris",
+        "miscanthus-sinensis"
+      ],
+      "issue_type": "RESEARCH_FIELD_VIEW_CAN_DESCRIBE_BROADER_SOURCE_PACKET_THAN_PUBLISHED_ONE_PHOTO",
+      "evidence": "'Earlier photo review:' directly renders field_view, while gallery below has only a single reference. Examples: Aegilops field_view says detached spike segments + auricle photos, though the published source is only a green slender spike photographed beside fingers; Miscanthus field_view omits that published image is a brown dormant cultivated clump; Setaria mentions green leafy tussocks/hand scale when published image is a tight dry spikelet view; Sphenopholis mentions collar and multiple scenes but current approved image is flowering branches.",
+      "proposed_fix": "Safest global label clarifier for Chat1: 'Earlier research-photo observations (some views are not in the published gallery)' rather than implying all described views are displayed. If Chat2 changes any individual field_view, preserve originals and only alter assertions disproven by exact pixel inspection.",
+      "preserve_data": true,
+      "fix_owner": "Chat1 label clarification, Chat2 individual role/caption metadata"
+    }
+  ],
+  "safety_notes": [
+    "No edits to shared hays-candidates.json or UI; do not replace preserved source/research descriptions without review.",
+    "Do not claim a newly photographed Group C species from this pass: all 15 were already visibly credited with one photo before this pass.",
+    "Count Group C photo expansion only after Chat2 installs a second distinct licensed photograph and Chat1 confirms its pixels and attribution publicly.",
+    "No BONAP county mapping, scoring shard edits, arrow creation or new separate spreadsheets."
+  ],
+  "next_owner_work": "Chat2 apply high-confidence Melinis caption/role fix and publish Group C handoffs #167/#174/#177/#182/#186; Chat1 integrate #182 and #186 and differentiate original-observation access warning, then run public 15-species visual+credit regression; Chat4 after publication inspect actual new panels for distinct roles and new metadata gaps."
+}
