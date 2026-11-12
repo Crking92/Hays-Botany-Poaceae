@@ -1,0 +1,570 @@
+{
+  "schema": "hays-grass-provisional-admission-batch-v1",
+  "date": "2026-11-12",
+  "sprint": "Batch 2",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-sprint-provisional",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "source_inventory_reference": "audits/hays-expansion-20261111/hays-57-draft-id-cards.json",
+  "counts": {
+    "configured_records": 169,
+    "scored_species_before": 112,
+    "scored_species_after": 112,
+    "provisional_species": 57,
+    "literature_target_count": 322,
+    "previously_reviewed_candidates": 8,
+    "new_candidates_reviewed": 10,
+    "cumulative_unique_candidates_reconciled": 18,
+    "admissions_genuinely_cleared_total": 0,
+    "new_admissions_recommended_this_batch": 0,
+    "new_original_Hays_specimen_pixels_viewed": 0,
+    "reference_species_photographs_from_non_Hays_sources_viewed": 2
+  },
+  "method": [
+    "Hagenbuch & Lemke 2015 printed pages 39, 49, 53, 61, 65, 67 checked from public PDF text plus page screenshots where needed; direct PDF screenshot for printed page 67 not made because relevant text on nearby page was checked in text extraction.",
+    "Diggs et al. 1999 direct public Flora PDF text was searched and read for species pages, but its 18.4-MB PDF screenshots were attempted and failed due image-fetch size limit; prepared taxon packets were cross-checked.",
+    "USDA NRCS Bothriochloa longipaniculata 2019 Plant Guide page 1 directly screenshot inspected.",
+    "Original Hays iNaturalist observation/photo pages do not return inspectable image pixels in this tool environment. Previously observed visible features are historical QA summaries, not new evidence.",
+    "Non-Hays public comparison photographs (USGS longipaniculata, Setaria leucopila from iNaturalist species imagery) inspected for general anatomy only; do not validate any Hays observation, source license or admission.",
+    "County-specific BONAP plant atlas maps were not inspected to determine species status; Hays herbarium citations establish historical local collection, not native ranges or future site location.",
+    "No source images downloaded, copied, rehosted, or approved; no scored data or photo manifest edits."
+  ],
+  "records": [
+    {
+      "id": "stenotaphrum-secundatum",
+      "scientific_name": "Stenotaphrum secundatum",
+      "queue_id": "HAYS-014",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 9,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/257665322",
+        "https://www.inaturalist.org/observations/76952094",
+        "https://www.inaturalist.org/observations/51176200",
+        "https://www.inaturalist.org/observations/40030898"
+      ],
+      "voucher_evidence": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Litchfield",
+            "number": "s.n.",
+            "herbarium": "SWT"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 4,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Broad-bladed mowed sod/turf habit, compatible with commonly planted St Augustine grass.",
+      "previous_hays_unresolved_notes": "Turf scenes do not expose stolon joints, keeled compressed sheath, hair-ring ligule, or unique sunken florets on a corky rachis; research-grade wild tag does not establish spontaneous Hays occurrence.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "B — documented Hays voucher / active specimen pixels missing",
+      "regional_references": [
+        "Hagenbuch & Lemke 2015 printed p.65 (PDF p.65, direct screenshot): stolons present, rhizomes absent, 2-ranked foliage, flattened sheaths, tiny membranous ligule ciliate with stiff hairs.",
+        "Diggs et al. 1999 printed p.1328 via repository packet 2: flattened corky inflorescence axis, spikelets impressed into one side; photos on source observations show turf only.",
+        "FNA genus description mirrored at SEINet: ligule approximately 0.5 mm, membranous/ciliate."
+      ],
+      "external_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=65",
+        "https://swbiodiversity.org/seinet/taxa/index.php?taxon=Stenotaphrum+secundatum"
+      ],
+      "new_source_reconciliation": "The packet's simplified 'very short ring/fringe of hairs' can miscode an observable tiny membrane; H&L and FNA both describe a ciliate membranous ligule. Do not encode a pure hairs-only hard exclusion. Hays photograph labels are primarily maintained turf; voucher is historical, not wild Hays specimen proof.",
+      "field_key_false_exclusion_risk": "Ryegrass-style annual tuft vs mat-forming stolons; tiny membrane and hairs must allow overlap; absence of inflorescence on mowing photos does not mean grass lacks reproductive axis.",
+      "exact_same_specimen_proof_required": "Photograph the same Hays patch's rooting stolon nodes, compressed keeled sheath, inner ligule and a fertile flattened spike with embedded spikelets; annotate maintained lawn versus freely established colony with parcel/habitat context.",
+      "county_planting_establishment_and_nativeness_hold": "Litchfield s.n. (SWT), Hays, published Hagenbuch & Lemke appendix; Hays photos mostly cultivated turf; not proved self-established.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "triticum-aestivum",
+      "scientific_name": "Triticum aestivum",
+      "queue_id": "HAYS-015",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 8,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/278500939",
+        "https://www.inaturalist.org/observations/274743485",
+        "https://www.inaturalist.org/observations/275283904"
+      ],
+      "voucher_evidence": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Ruiseco",
+            "number": "128",
+            "herbarium": "SWT"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 4,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Distinct stiff, terminal wheatlike cereal spikes; some mature awned and some green heads, with full plant bases.",
+      "previous_hays_unresolved_notes": "Wheat versus other Triticum, Hordeum or cereal cultivar forms cannot be established with certainty at this scale; observations may be crop or seed spill escapes rather than wild populations.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "B — documented Hays voucher / seed spill likely",
+      "regional_references": [
+        "Hagenbuch & Lemke 2015 printed p.67 (PDF page 67), directly read PDF text; basal lower sheaths pubescent, narrow pointed auricles, erose 1–3 mm membranous ligule; cultivated and occasional roadside waif.",
+        "Diggs et al. 1999 printed p.1334 via Fort Worth Botanic Garden 1999 Flora PDF text (screenshot unavailable due >18MB): sessile 2–5-flowered spikelets alternating on a two-sided zigzag rachis, asymmetrical broad glumes."
+      ],
+      "external_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      ],
+      "new_source_reconciliation": "Hays voucher supports prior occurrence but does NOT establish a self-sustaining native/escaped population. User's ecological goals require wheat marked crop/waif, not an unmanaged native meadow species; very long awns are cultivar-variable and not a species requirement.",
+      "field_key_false_exclusion_risk": "Mature wheat can be awned or awnless; never hard-exclude one. Auricles may wither; a missing auricle in old photograph means unknown.",
+      "exact_same_specimen_proof_required": "Hays same-plant images of two-sided spike rachis, broadly asymmetrical glumes with millimeter ruler, 2–5 florets, fresh basal auricles and sheath/ligule; separately note crop plot, birdseed/seed spill, transitory roadside volunteer.",
+      "county_planting_establishment_and_nativeness_hold": "Ruiseco 128 (SWT), Hays, published H&L appendix; cultivated/waif, not established native status.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "setaria-leucopila",
+      "scientific_name": "Setaria leucopila",
+      "queue_id": "HAYS-023",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 4,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/353823803",
+        "https://www.inaturalist.org/observations/142578061",
+        "https://www.inaturalist.org/observations/61797989"
+      ],
+      "voucher_evidence": {
+        "status": "REGIONAL_PUBLICATION_HAYS_VOUCHER_CITATIONS",
+        "published_hays_gatherings": [
+          {
+            "collector": "Breckenridge",
+            "number": "490",
+            "herbarium": "SWT"
+          },
+          {
+            "collector": "Tabler",
+            "number": "s.n.",
+            "herbarium": "SWT"
+          }
+        ],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 6,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Very narrow cylindrical green flowering heads with short bristles, basal leafy tussocks and flowering culms with hand scale.",
+      "previous_hays_unresolved_notes": "Bristle length only approximate, maturity and perennial rhizomatous/tufted base uncertain; fertile lemma fine rugosity/wrinkles unresolvable.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "A — Hays vouchers, well-supported vegetative reference, species photo microscope pending",
+      "regional_references": [
+        "Hagenbuch & Lemke 2015 printed p.61 (PDF p.60, direct screenshot): perennial cespitose, no rhizomes/stolons, ciliate 0.5 mm membranous ligule plus 1–2 mm hairs, villous sheath throat, 2–5 mm leaves.",
+        "Diggs et al. 1999 printed p.1319 via staging packet 1 and public Flora PDF: bristles usually 4–15 mm and fertile lemma finely transversely rugose.",
+        "Hays voucher appendix H&L printed p.90: Breckenridge 490 and Tabler s.n. at SWT."
+      ],
+      "external_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+        "https://bonap.net/Napa/TaxonMaps/Genus/County/Setaria",
+        "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A235230-2"
+      ],
+      "new_source_reconciliation": "Vegetative description proves ligule is not exclusively 'hair fringe': a minute membrane is present under cilia, which warrants both membrane and hair visual choices when scored. The analogous 2015 S. parviflora account has short knotty rhizomes; a single tuft photograph cannot establish rhizome absence.",
+      "field_key_false_exclusion_risk": "Species-level lookalikes S. parviflora, S. viridis and S. pumila. Tiny membrane under projecting cilia should preserve either visual choice; one bristle per spikelet and color alone are not proof.",
+      "exact_same_specimen_proof_required": "Same rooted Hays plant: open inner collar with 0.5-mm membrane + 1–2-mm cilia and hairy sheath throat, rooted basal crown showing no knotty rhizomes, ripened 4–15-mm bristles and fertile lemma fine transverse wrinkles under macro with scale.",
+      "county_planting_establishment_and_nativeness_hold": "Published Hays vouchers Breckenridge 490 and Tabler s.n. (SWT); Kew states native to Texas but BONAP county-map cell was not verified this batch; published vouchers establish local presence independently.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "bromus-catharticus",
+      "scientific_name": "Bromus catharticus",
+      "queue_id": "HAYS-001",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 171,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/379499753",
+        "https://www.inaturalist.org/observations/366862129",
+        "https://www.inaturalist.org/observations/366673949",
+        "https://www.inaturalist.org/observations/358472027"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Open to somewhat loose grass panicle with flattened-looking elongated hanging spikelets; green grassy stand and culm close-ups visible.",
+      "previous_hays_unresolved_notes": "Sharp keel, exact awn lengths, lemma teeth/veins and collar/ligule not resolved; cannot rule out lookalike Bromus from gross view alone.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "A for frequent Hays observations, specimen gate still blocked",
+      "regional_references": [
+        "Hagenbuch & Lemke 2015 printed p.39 (direct PDF screenshot): perennial cespitose, glabrous nodes, sheaths almost closed, 2–5-mm membranous ligule.",
+        "Diggs et al. 1999 printed p.1252 via Fort Worth Botanic Garden PDF text and repository packet 3: winter annual, keeled flattened spikelets, short or absent awns and tiny lemma-apex teeth.",
+        "POWO current growth-form summary states annual/biennial, but embedded GrassBase taxon description states perennial."
+      ],
+      "external_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39",
+        "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A37001-2/general-information",
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      ],
+      "new_source_reconciliation": "THREE-WAY LIFE HISTORY CONFLICT: 2015 perennial vs Diggs 1999 winter annual vs modern POWO annual/biennial (while embedded GrassBase says perennial). No annual/perennial categorical exclusion until reconciled; correct earlier packet note to mark source conflict, not simply assign winter annual as fact.",
+      "field_key_false_exclusion_risk": "Long brome spikelets, leaf sheath hair and ligule alone may overlap B. secalinus, B. japonicus and B. hordeaceus. Strong keel, lemma width and awn/teeth shape require measured same-plant macro.",
+      "exact_same_specimen_proof_required": "Hays specimen: one fully mature spikelet in profile with 1-mm ruler, glume and lemma keels, lemma width 2.5–3.2 mm from keel to margin, apical teeth and 0–3 mm awn, a sheath/ligule closeup and documented base/season; compare native and exotic bromes.",
+      "county_planting_establishment_and_nativeness_hold": "171 Hays iNaturalist source observations but no cited Hays sheet from the H&L appendix; introduced plant. Reproductive morphology still needed from local individual.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "eragrostis-superba",
+      "scientific_name": "Eragrostis superba",
+      "queue_id": "HAYS-003",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 59,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/396903239",
+        "https://www.inaturalist.org/observations/394713386",
+        "https://www.inaturalist.org/observations/359405762",
+        "https://www.inaturalist.org/observations/354818424"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Tufted dry to green bunchgrass; rather large flattened light tan spikelets on branched stems, with some hand-scaled seedhead views.",
+      "previous_hays_unresolved_notes": "Detached florets, glume and lemma veins/hair characters not resolved; introduced planting versus established escape not confirmed.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "B — 59 Hays observations, introduced/potentially seeded grass",
+      "regional_references": [
+        "Hagenbuch & Lemke 2015 printed p.49 (direct screenshot): tufted perennial without rhizomes or stolons, glabrous leaf sheaths with pilose margins, ≤1 mm hairy ligule.",
+        "Diggs et al. 1999 printed pp.1272–1274 public Flora PDF text and updated PR #68 packet 3: broad flattened spikelets about 3–10 mm wide, keeled lemmas; planted, persists and escapes.",
+        "FNA/GrassBase in packet 3 add palea keel and mature detached-floret targets as secondary literature."
+      ],
+      "external_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      ],
+      "new_source_reconciliation": "The H&L appendix lists BASTROP, BRAZOS, LLANO, MASON and MENARD samples but not Hays for this taxon; don't transform broader regional appendix occurrences into specific Hays historical vouchers. 59 Hays iNaturalist reports are not same as an expert dissected Hays specimen.",
+      "field_key_false_exclusion_risk": "A big flat many-flowered spikelet is not identical to a dangling-oat grass; need multi-floret microcharacters, sheaths, crown, separate planting status.",
+      "exact_same_specimen_proof_required": "One rooted Hays plant: 1-mm-scaled mature compressed 3–10-mm-wide spikelet with clearly keeled lemma, detached glumes/florets and palea keels, opened ligule plus crown/sheath hairs; document seeding vs spontaneous spread.",
+      "county_planting_establishment_and_nativeness_hold": "2015 regional specimen appendix lists nearby/central Texas counties but not Hays for this species; introduced/seeded according to 1999 Flora.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "lolium-perenne",
+      "scientific_name": "Lolium perenne",
+      "queue_id": "HAYS-004",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 53,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/365063951",
+        "https://www.inaturalist.org/observations/360912372",
+        "https://www.inaturalist.org/observations/354912942",
+        "https://www.inaturalist.org/observations/354772388"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Unbranched ryegrass-like flowering spikes with spikelets edge-on along central rachis; a basal bunch and habitat views.",
+      "previous_hays_unresolved_notes": "Awn presence/absence, floret and glume dimensions and discrimination from L. multiflorum or their hybrid not confidently resolved.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "B — common urban Hays reports, ryegrass complex unresolved",
+      "regional_references": [
+        "Hagenbuch & Lemke 2015 printed p.53 (direct screenshot): annual/short-lived perennial, rounded short leaf auricles (to 5 mm overall), 0.5–1.5 mm membranous ligule, folded vernation, roadside escape.",
+        "Diggs et al. 1999 printed p.1282 via public Flora PDF text and staging packet 3: perenne and multiflorum as subspecies, with intergradation; usually unawned perenne versus mostly awned multiflorum.",
+        "Kew POWO 2026 treats L. perenne and L. multiflorum as separate species; hybrid taxon names require reconciliation."
+      ],
+      "external_source_urls": [
+        "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "https://powo.science.kew.org/taxon/407493-1"
+      ],
+      "new_source_reconciliation": "Source warns 'awned and unawned individuals can be found together' in old broad ryegrass concept. L. perenne cannot be excluded merely because mature spikelet appears awned without checking subsp/species/hybrid provenance. Later hard filters must be overlap-aware.",
+      "field_key_false_exclusion_risk": "Worn auricles and awn polymorphism; same-specimen photos and interbreeding can obscure field endpoint. A single wild-tagged turf observation insufficient.",
+      "exact_same_specimen_proof_required": "Hays matched plants with sharp spikelet glume and lemma awn lengths, fertile floret count, short rounded vs long pointed auricles, 1-mm ligule, scabrous vs smooth rachis and any cultivation/seed mix provenance; compare L. multiflorum and Lolium hybrid.",
+      "county_planting_establishment_and_nativeness_hold": "53 historical Hays iNaturalist source observations; likely turf/roadside introduction, local self-sustaining ecology unresolved.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "scientific_name": "Bothriochloa longipaniculata",
+      "queue_id": "HAYS-005",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 25,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/392143264",
+        "https://www.inaturalist.org/observations/377598342",
+        "https://www.inaturalist.org/observations/364866470",
+        "https://www.inaturalist.org/observations/353902207"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Silvery narrow feathery panicle and upright grass culms; basal grassy tuft shown. Multiple close flowering head views are present.",
+      "previous_hays_unresolved_notes": "No glume macro adequate to check narrow shiny green vs broad dull glumes; reliable panicle-length measurement unavailable; can't separate from B. torreyana on these views.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "A for targeted comparison, no species-level Hays spikelet proof",
+      "regional_references": [
+        "Diggs et al. 1999 printed p.1246 via public Flora PDF: the older B. laguroides subsp. torreyana LUMPS B. longipaniculata; its shared morphology is not a modern species-exclusive diagnosis.",
+        "USDA NRCS 2019 longspike beardgrass guide p.1 (direct PDF screenshot): 10–17 cm contracted panicle, 1.8–2.4 mm membranous ligule, sessile spikelet about 4.3–4.4 mm, bent lemma awn about 10–18 mm.",
+        "USGS Louisiana Plants field comparison: shiny slender green lower glumes and long heads vs broad dull glumes of torreyana; numbers/phrasing to corroborate with fresh reference."
+      ],
+      "external_source_urls": [
+        "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+        "https://warcapps.usgs.gov/PlantID/Species/Details/3284",
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      ],
+      "new_source_reconciliation": "Added directly inspected USDA NRCS species-level diagnosis missing from older lumped regional Flora. Long panicle (>10 cm) and glume sheen can prioritize photos but MUST NOT be standalone species proof. The USGS comparison appears to contain a possible cm/mm ligule-unit error for torreyana; do not encode that value.",
+      "field_key_false_exclusion_risk": "All silver-beardgrass congeners share shiny/silvery feathery heads. The old regional Flora's torreyana key must not be promoted as a unique modern longipaniculata filter.",
+      "exact_same_specimen_proof_required": "At least one Hays individual: entire panicle measured in centimeters with central axis and branch lengths, sessile first glume in same plane with mm ruler and reflective vs dull surface, 4.3–4.4 mm sessile spikelet, mature lemma awn, ligule 1.8–2.4 mm; matched B. torreyana control.",
+      "county_planting_establishment_and_nativeness_hold": "25 Hays iNaturalist photos sampled; regional native range includes south Texas according to USDA, but no corroborated Hays voucher or BONAP county status verified.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "bothriochloa-bladhii",
+      "scientific_name": "Bothriochloa bladhii",
+      "queue_id": "HAYS-007",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 18,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/410398752",
+        "https://www.inaturalist.org/observations/331046168",
+        "https://www.inaturalist.org/observations/331046186",
+        "https://www.inaturalist.org/observations/196764282"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Several fingerlike burgundy-purple racemes and paired spikelets/awn-like projections; strong magnification at hand scale and an exposed collar area in one observation.",
+      "previous_hays_unresolved_notes": "Distinctive paired-spikelet glumes, exact lemma awns, node collar anatomy and distinction from Dichanthium or KR bluestem unresolved.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "B — candidate with 18 observations but unresolved exotic pairing",
+      "regional_references": [
+        "Hays packet 3 uses Kew POWO/FTEA species treatment rather than independent 1999 regional Flora; numerous short 2–5 cm racemes with median line on pedicels.",
+        "POWO accepted species taxon 392701-1, native Old World/Australia, introduced in Texas.",
+        "H&L 2015 does not separately treat B. bladhii in source species descriptions."
+      ],
+      "external_source_urls": [
+        "https://powo.science.kew.org/taxon/392701-1",
+        "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A392701-1/general-information"
+      ],
+      "new_source_reconciliation": "Do not infer this species' 2015 vegetative traits from B. ischaemum or B. laguroides accounts. Kew lists Texas under introduced, not native. The photographed fingerlike racemes do not diagnose pedicel translucent median groove.",
+      "field_key_false_exclusion_risk": "B. bladhii vs D. aristatum vs B. ischaemum; test transparent line on pedicels, paired spikelet size, pitted lower glume, node-hair ring, awn position; node color alone meaningless.",
+      "exact_same_specimen_proof_required": "One Hays accession with mm-scaled sessile/pedicelled spikelet pairs, glume grooves/pits, intact rachis/pedicel median translucent line, node-hair ring and opened ligule; same-scale B. ischaemum/D. aristatum comparison.",
+      "county_planting_establishment_and_nativeness_hold": "18 historical Hays wild-tagged observations but no known voucher in staging; POWO Texas introduced; planting and self-sustaining context unknown.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "scientific_name": "Dichanthium aristatum",
+      "queue_id": "HAYS-008",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 15,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/374898786",
+        "https://www.inaturalist.org/observations/359421744",
+        "https://www.inaturalist.org/observations/326368914",
+        "https://www.inaturalist.org/observations/250706832"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Two to several reddish spreading racemes with awns, some extremely close flowering axis views, a ligule/collar view and bunchgrass basal shoots.",
+      "previous_hays_unresolved_notes": "The distinguishing pair of sessile and pedicellate spikelets, nerve and awn anatomy versus B. bladhii not measured; species confirmation pending.",
+      "source_photo_license_metadata_status": "DIRECT_CC_LICENSE_CANDIDATE_PHOTOS",
+      "cc_photo_id_preflight": [
+        {
+          "photo_id": 444804916,
+          "source_url": "https://www.inaturalist.org/photos/444804916",
+          "photographer_credit_preflight": "(c) Craig Hensley, some rights reserved (CC BY)",
+          "license_code_preflight": "cc-by",
+          "license_currently_reverified": false
+        },
+        {
+          "photo_id": 444804929,
+          "source_url": "https://www.inaturalist.org/photos/444804929",
+          "photographer_credit_preflight": "(c) Craig Hensley, some rights reserved (CC BY)",
+          "license_code_preflight": "cc-by",
+          "license_currently_reverified": false
+        },
+        {
+          "photo_id": 444804943,
+          "source_url": "https://www.inaturalist.org/photos/444804943",
+          "photographer_credit_preflight": "(c) Craig Hensley, some rights reserved (CC BY)",
+          "license_code_preflight": "cc-by",
+          "license_currently_reverified": false
+        }
+      ],
+      "photo_publication_approved": false,
+      "priority": "B — three potentially CC BY Hays photos, no species-level determination",
+      "regional_references": [
+        "Kew POWO accepted D. aristatum taxon 398529-1; Old World native, Texas introduced.",
+        "Packet 3 reproductive comparison draws on Kew/FTEA and PlantNET; 1999 regional Flora treats D. annulatum, not D. aristatum; never transfer congener measurements.",
+        "Prior Hays QA noted hand-scaled red racemes and base, but no tested paired spikelet/median-line closeup."
+      ],
+      "external_source_urls": [
+        "https://powo.science.kew.org/taxon/398529-1",
+        "https://www.inaturalist.org/observations/248888163"
+      ],
+      "new_source_reconciliation": "3 saved CC BY photo metadata entries by Craig Hensley from observation 248888163 are promising for future visual inspection but were not re-opened here. Absent a species-diagnostic rachis/pedicel view, red near-digitate racemes can equally resemble Bothriochloa relatives.",
+      "field_key_false_exclusion_risk": "Dichanthium can have bare or hairy raceme bases; relative hairiness alone does not separate Bothriochloa. Compare median translucent line in pedicel / rachis, glumes and awns.",
+      "exact_same_specimen_proof_required": "Hays individual with opposite-side macro of pedicel/rachis showing absence of Bothriochloa-style median translucent line, counted 1–6 racemes, isolated sessile/pedicelled spikelet pairs and mm-scaled lower glume/awn; planting site and reproduction record.",
+      "county_planting_establishment_and_nativeness_hold": "15 historical Hays iNat reports, no known confirmed physical voucher, Texas introduced (POWO).",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    },
+    {
+      "id": "lolium-multiflorum",
+      "scientific_name": "Lolium multiflorum",
+      "queue_id": "HAYS-010",
+      "decision": "HOLD_NOT_SPECIMEN_VERIFIED",
+      "candidate_to_scored_key": false,
+      "local_source_observation_count": 11,
+      "local_observation_urls": [
+        "https://www.inaturalist.org/observations/352048437",
+        "https://www.inaturalist.org/observations/275049650",
+        "https://www.inaturalist.org/observations/274652755",
+        "https://www.inaturalist.org/observations/44466836"
+      ],
+      "voucher_evidence": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "previous_original_hays_photo_review_count": 12,
+      "new_original_hays_photo_pixels_inspected_this_batch": 0,
+      "previous_hays_photo_morphology_notes": "Flattened spikelets alternating along an unbranched ryegrass rachis, some clearly awned in close-up; roadside or grassy habitats.",
+      "previous_hays_unresolved_notes": "Not all specimens' awns, glume characters or hybrid status clear; L. perenne / L. × boucheanum lookalikes possible.",
+      "source_photo_license_metadata_status": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "cc_photo_id_preflight": [],
+      "photo_publication_approved": false,
+      "priority": "B — introduced ryegrass complex, Hays source evidence incomplete",
+      "regional_references": [
+        "Diggs et al. 1999 printed p.1282 (public Flora PDF text and staging packet 3) calls this L. perenne subsp. multiflorum, with typically pointed long auricles and many awned lemmas, not always all.",
+        "POWO 2026 accepts Lolium multiflorum as distinct species; global growth form includes biennial or perennial, so an annual-only gate would be unsafe.",
+        "Hagenbuch & Lemke 2015 gives L. perenne broad species account but not separate L. multiflorum vegetative species key."
+      ],
+      "external_source_urls": [
+        "https://powo.science.kew.org/taxon/407486-1",
+        "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+      ],
+      "new_source_reconciliation": "Name is current distinct species at Kew, but regional 1999 concepts intergrade; cannot infer a definitive hybrid exclusion from head awns. Protect both rare awnless multiflorum and atypical awned perenne possibilities.",
+      "field_key_false_exclusion_risk": "L. perenne, L. multiflorum and putative interspecific hybrid are overlapping; no definitive endpoint from head silhouette alone.",
+      "exact_same_specimen_proof_required": "One Hays rooted flowering plant with paired near-duplicate macros of leaf auricles (long slender pointed), fully ripe multi-floret spikelets and measured awn lengths across several spikelets, rachis roughness, recorded seed mix/cultivation and possible hybrid provenance.",
+      "county_planting_establishment_and_nativeness_hold": "11 historical Hays records; Kew lists Texas introduced; no same-specimen Hays expert signoff or voucher.",
+      "verification_gate": {
+        "accepted_name_and_taxon_concept": "REVIEWED_WITH_CAVEATS",
+        "reproductive_diagnosis_same_Hays_specimen": "HOLD",
+        "vegetative_diagnosis_same_Hays_specimen": "HOLD",
+        "local_planting_occurrence_status": "HOLD_OR_NOT_VERIFIED_TO_CURRENT_SPECIMEN",
+        "photo_license_current": "HOLD",
+        "scored_key_admission": "HOLD"
+      }
+    }
+  ]
+}
