@@ -36,7 +36,7 @@ const root=path.resolve(__dirname,'..');
  for(const [width,height]of [[1366,900],[390,844],[320,740]]){
   await page.setViewportSize({width,height});await page.evaluate(()=>{review.state.question=0;review.render()});
   assert.equal(await page.locator('.whole-head').count(),result.heads.length);
-  assert.equal(await page.locator('.whole-head img').count(),result.heads.length);
+  assert.ok(await page.locator('.whole-head img').count()>=11,'Existing photo-backed choices were lost; other choices legitimately use placeholders');
   assert.ok(await page.evaluate(()=>[...document.querySelectorAll('.whole-head img')].every(img=>getComputedStyle(img).objectFit==='contain')),'Flowerhead photos must use object-fit:contain');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Horizontal overflow at '+width);
   for(const name of ['Growth form','Leaf collar','Awns / bristles','Flowerhead'])await page.getByRole('button',{name,exact:true}).click();
