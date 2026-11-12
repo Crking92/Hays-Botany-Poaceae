@@ -25,7 +25,6 @@ const resultIds=(picks,rows=species)=>{
 const scoped=['d2','d3'].flatMap(s=>JSON.parse(read('species-'+s+'.json')));
 const prior=JSON.parse(JSON.stringify(scoped));
 const corrections=[
- ['festuca-versuta','head','airy','branched_oat','head_open_mature_fescue'],
  ['muhlenbergia-schreberi','ligule','hairs','membrane','ligule_ciliate_membrane_visual_choice'],
  ['paspalum-setaceum','head','paired_spikes','one_sided','head_paired_racemes_williamson']
 ];
@@ -41,7 +40,6 @@ for(const [id,trait,added,retained,evidence] of corrections){
  assert(row.field_rule.trim().endsWith('.'),id+' incomplete crew field instruction');
 }
 const positives=[
- ['festuca-versuta',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['muhlenbergia-schreberi',{head:'long_narrow_panicle',habit:'mat',ligule:'hairs',awns:'none_obvious'}],
  ['muhlenbergia-schreberi',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'long'}],
  ['paspalum-setaceum',{head:'paired_spikes',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
@@ -52,6 +50,7 @@ for(const [id,picks] of positives){
  assert(resultIds(picks,scoped).includes(id),'still falsely excludes '+id);
 }
 const negatives=[
+ ['festuca-versuta',{head:'airy'}],
  ['festuca-versuta',{head:'foxtail'}],
  ['festuca-versuta',{awns:'long'}],
  ['muhlenbergia-schreberi',{ligule:'absent'}],
@@ -75,11 +74,14 @@ for(const row of prior){
 }
 // Other valid Lane C states may be added in later batches. Check every current
 // pre-Batch7 combination above; retain the original verified minimum, not a frozen total.
-assert(priorCombinations>=67,'fewer than 67 previously validated D2–D3 character paths');
+assert(priorCombinations>=66,'fewer than 66 valid D2–D3 character paths after tiny-spikelet UI correction');
 assert.equal(scoped.reduce((n,x)=>n+x.photos.length,0),137,'photo count modified');
 const unknown={id:'unknown-test',scientific:'Unknown',common:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(resultIds({head:'paired_spikes',ligule:'hairs'},[unknown]),['unknown-test']);
 assert(!resultIds({}).some(id=>candidates.some(c=>c.id===id)),'provisional scored prematurely');
-console.log(JSON.stringify({pass:true,newScoreStates:3,positives:positives.length,
+const texasFescue=scoped.find(x=>x.id==='festuca-versuta');
+assert.deepEqual(texasFescue.traits.head,['branched_oat'],'Texas fescue has large multi-flowered spikelets, not a cloud of tiny ones');
+assert.equal(texasFescue.character_evidence.head_airy_ui_semantic_correction?.status,'REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION');
+console.log(JSON.stringify({pass:true,newScoreStates:2,positives:positives.length,
  negatives:negatives.length,priorCombosPreserved:priorCombinations,
  D2D3PhotosPreserved:137,allScoredPhotos:514,scored:112,provisional:57},null,2));
