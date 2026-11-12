@@ -268,7 +268,8 @@
         "direct_modern_species_account": true
       },
       "sources": [
-        "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, excerpt PDF p.212 (printed p.1288)"
+        "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, excerpt PDF p.212 (printed p.1288)",
+        "2026-11-12 reproductive comparison directly rechecked: Diggs et al. (1999), printed p. 1288, M. capillaris and M. reverchonii. H&L (2015) named-account/appendix check did not locate M. capillaris; do not transfer another muhly species account to it. Vegetative coverage remains limited."
       ],
       "diagnostic_character_targets": [
         {
@@ -282,7 +283,7 @@
         },
         {
           "character": "panicle_shape",
-          "description": "Open, diffuse spreading panicle to roughly 35–40 cm long and 8–20 cm across",
+          "description": "Diffuse panicle reaching 35(–40) cm long and 8–17(–20) cm wide; these upper limits are not a minimum size or a narrow 35–40 cm acceptance interval",
           "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.212",
           "required_same_specimen_photo": "whole flowering head at maturity",
           "reference_description_only": true,
@@ -318,9 +319,9 @@
         },
         {
           "character": "awn_length",
-          "description": "Lemma awn length varies, roughly 2–15 mm in the regional account",
-          "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.212",
-          "required_same_specimen_photo": "several mature awned lemmas from one head with scale",
+          "description": "Regional awn range (2–)5–15 mm: usually 5–15 mm, occasionally as short as 2 mm. Seep muhly in the same Flora account has 0.5–4(–7) mm awns, so the ranges overlap; a single short awn is not an exclusion.",
+          "source": "Diggs et al. (1999), printed p. 1288, M. capillaris and M. reverchonii",
+          "required_same_specimen_photo": "several mature lemmas with awn attachment and scale; compare lemma bodies, surfaces and whole-head branching from that same plant",
           "reference_description_only": true,
           "hays_photo_verified": false,
           "active_lab_key_trait": false
@@ -331,7 +332,7 @@
       "historical_Hays_photo_status": "PHOTO_GROUP_SUPPORT_SPECIES_DIAGNOSIS_PENDING",
       "historical_staging_reference": "audits/hays-expansion-20261111/hays-57-draft-id-cards.json#muhlenbergia-capillaris",
       "comparators": "Muhlenbergia reverchonii; Muhlenbergia lindheimeri; cultivated muhly forms",
-      "risk_note": "An airy pink plume on a Hays ornamental is not sufficient for species ID or local nativity; compare scaled florets.",
+      "risk_note": "Rechecked 2026-11-12: pink color, open head and awn length overlap with seep muhly. Lemma-body ranges also overlap (hairawn 3.5–4.5(–5) mm; seep 3.5–5 mm, Diggs p. 1288). Compare multiple attached mature florets and the entire plant; do not manufacture a numerical species cutoff. An airy-head or tuft mapping is a broad literature possibility, not admission proof. Ligule remains unassigned here; no capillaris vegetative account was located in the H&L named-account/appendix check. Existing ornamental/local-occurrence hold and all specimen/photo release flags remain unchanged.",
       "new_photo_pixels_inspected_this_pass": 0,
       "photo_rights_approved": false,
       "species_ID_signoff": false,
