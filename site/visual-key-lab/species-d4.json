@@ -2173,7 +2173,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "In the actual Uvalde plant, pair the visible inner white hair-fringe LIGULE with one-sided ovoid attached spikelets; then confirm a mature measured glume/lemma before final species diagnosis. A photo of another Urochloa species is only a comparison.",
+    "field_rule": "In the actual Uvalde plant, pair the visible inner white hair-fringe LIGULE with one-sided ovoid attached spikelets; then confirm a mature measured glume/lemma before final species diagnosis. A photo of another Urochloa species is only a comparison.\n\nField ID Lab collar tip: the hair fringe has a tiny membranous base. If the papery base is what you can see with a lens, the grass should stay in your results.",
     "traits": {
       "head": [
         "one_sided"
@@ -2183,7 +2183,8 @@
         "mat"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -2211,6 +2212,19 @@
         "reference": "Hair-fringe ligule ~1 mm.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "ligule_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 68, Urochloa fusca",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=68",
+        "category": "vegetative",
+        "reported_states": [
+          "0.5–1.5 mm ligule",
+          "ciliate with a minute membranous base"
+        ],
+        "reference": "A visible membrane under short cilia is authentic for browntop signalgrass. Keep hairs and membrane broad selections; don't count outer throat hairs or reddish nodes as the inner ligule.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_CILIATE_MEMBRANE_NO_SPECIMEN_MACRO_CERTIFICATION",
+        "status": "SOURCE_BACKED_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -3008,14 +3022,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "6–20 mm true membranous ligule + saw-edged wide blades + very large open wetland panicle + documented unisexual spikelets; genital position needs voucher-paired photos due historical-treatment discrepancy.",
+    "field_rule": "6–20 mm true membranous ligule + saw-edged wide blades + very large open wetland panicle + documented unisexual spikelets; genital position needs voucher-paired photos due historical-treatment discrepancy.\n\nField ID Lab growth-form tip: a big emergent clump can still be southern wildrice; long rhizomes may be underwater or buried. Compare floral sex positions and the conspicuous ligule before deciding.",
     "traits": {
       "head": [
         "aquatic_mixed",
         "airy"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -3054,6 +3069,20 @@
         "reference": "Male and female spikelets share the SAME panicle branch, male basal and female more distal. This differs from Zizania texana lower all-male branches and upper all-female branches.",
         "status": "TWO_SOURCES_MATCH_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "habit_regional": {
+        "source": "Hagenbuch & Lemke (2015), p. 68, Zizaniopsis miliacea",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=68",
+        "category": "vegetative",
+        "reported_states": [
+          "perennial forming large clumps",
+          "elongate rhizomes",
+          "stolons absent"
+        ],
+        "reference": "Large emerging clumps are compatible with buried rhizomes; visible bunch or tuft selection must not eliminate southern wildrice. Retain rhizome state and distinguish from truly aquatic streaming-leaf Zizania texana.",
+        "certainty": "DIRECT_REGIONAL_SOURCE_BROAD_FIELD_HABIT",
+        "status": "SOURCE_BACKED_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
