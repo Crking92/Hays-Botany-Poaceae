@@ -17,26 +17,27 @@ jobs:
           filter: blob:none
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            site/media/hilaria-belangeri/inat-182584875.jpeg
-            site/media/muhlenbergia-paniculata/inat-281075496.jpg
-            content/taxa/Poaceae/Panicum/panicum-hallii/images/patrick-alexander-hallii-glossy-fruits.jpg
-            content/taxa/Poaceae/Aristida/aristida-purpurea/images/curtis-clark-threeawn-fruits-awns.jpg
-            site/media/echinochloa-crus-galli/gbif-2807653287-50bc36249048.jpg
-            content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/commons-8bd54577a9b2.jpg
-            content/taxa/Poaceae/Panicum/panicum-virgatum/images/stefan-lefnaer-switchgrass-glume-lemma-palea-dissection-cc-by-sa4.jpg
-            content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-knotgrass-wetland-habit5.jpg
-            content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-bd07b9665c3b.jpg
-            site/media/anatherum-virginicum/inat-626921610.jpg
-            site/media/sorghastrum-elliottii/inat-460787859.jpg
-            site/media/sporobolus-vaginiflorus/inat-431806316.jpg
-      - name: Render twelve existing images into two thumbnail proof sheets
+            content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg
+            content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-080604-6308-historic-pumilus-ccby3.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577667.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-260420284.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577686.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577695.jpg
+            content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577679.jpg
+            site/media/muhlenbergia-utilis/inat-14855736.jpg
+            content/taxa/Poaceae/Secale/secale-cereale/images/rasbak-rye-attached-flowering-ear-anthers-awns-cc-by-sa3.jpg
+            content/taxa/Poaceae/Secale/secale-cereale/images/stefan-lefnaer-rye-four-collar-views-10mm-scale-by-sa4.jpg
+            content/taxa/Poaceae/Secale/secale-cereale/images/stefan-lefnaer-rye-true-membranous-ligule-3mm-scale-by-sa4.jpg
+            content/taxa/Poaceae/Secale/secale-cereale/images/matt-lavin-74e7e5ea8e.jpg
+            content/taxa/Poaceae/Secale/secale-cereale/images/matt-lavin-55df7d2222.jpg
+      - name: Render existing photos into read-only proof sheets
         shell: bash
         run: |
           python3 -m pip install --quiet Pillow
           python3 - <<'PY'
           import sys, json, os, io, hashlib, base64, textwrap
           from PIL import Image, ImageOps, ImageDraw, ImageFont
-          items = json.loads("[[\"Hilaria belangeri i5\",\"site/media/hilaria-belangeri/inat-182584875.jpeg\",\"f1f403ae9c900771b935bdb2273319c5769f4bd0\"],[\"Muhlenbergia paniculata i3\",\"site/media/muhlenbergia-paniculata/inat-281075496.jpg\",\"17e756b4016b6e4224c395314f32a9a5f7263f1a\"],[\"Panicum hallii i3\",\"content/taxa/Poaceae/Panicum/panicum-hallii/images/patrick-alexander-hallii-glossy-fruits.jpg\",\"bcd77c64b73af24032d58f5805c4819e16ae2b2a\"],[\"Aristida purpurea i3\",\"content/taxa/Poaceae/Aristida/aristida-purpurea/images/curtis-clark-threeawn-fruits-awns.jpg\",\"de0254a9c7d59c229130673ef0888e2701f02282\"],[\"Echinochloa crus-galli i9\",\"site/media/echinochloa-crus-galli/gbif-2807653287-50bc36249048.jpg\",\"81d974e4c9a1d105363c950ffdb938a6d862beb6\"],[\"Hordeum pusillum i0\",\"content/taxa/Poaceae/Hordeum/hordeum-pusillum/images/commons-8bd54577a9b2.jpg\",\"052a0803160ab3be5033f4ae1176d4a9fbbd29df\"],[\"Panicum virgatum i4\",\"content/taxa/Poaceae/Panicum/panicum-virgatum/images/stefan-lefnaer-switchgrass-glume-lemma-palea-dissection-cc-by-sa4.jpg\",\"adb55ecc4d15097d5db66a348562648854328010\"],[\"Paspalum distichum i4\",\"content/taxa/Poaceae/Paspalum/paspalum-distichum/images/harry-rose-knotgrass-wetland-habit5.jpg\",\"35d25ef4b57ac89dc32930813de2eac81de8840e\"],[\"Setaria scheelei i1\",\"content/taxa/Poaceae/Setaria/setaria-scheelei/images/commons-bd07b9665c3b.jpg\",\"57db040223a091dbdcc3368a4c57a7535dfc051c\"],[\"Anatherum virginicum i4\",\"site/media/anatherum-virginicum/inat-626921610.jpg\",\"d183c0a19b681492d80394d189a17b33bc54938d\"],[\"Sorghastrum elliottii i6\",\"site/media/sorghastrum-elliottii/inat-460787859.jpg\",\"4f2616953c6e2dbe2309a47813a08a83da911f8a\"],[\"Sporobolus vaginiflorus i4\",\"site/media/sporobolus-vaginiflorus/inat-431806316.jpg\",\"131a907c6b36182bd318175f4572406fb9e84f35\"]]")
+          items = json.loads("[[\"Anatherum tenuispatheum i0\",\"content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg\",\"c53d1b07ba6a5b2c47d27bd30ca5b1313f2b1869\"],[\"Anatherum tenuispatheum i1\",\"content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-var-pumilus-habit-ccby3.jpg\",\"c53d1b07ba6a5b2c47d27bd30ca5b1313f2b1869\"],[\"Anatherum tenuispatheum i2\",\"content/taxa/Poaceae/Anatherum/anatherum-tenuispatheum/images/starr-080604-6308-historic-pumilus-ccby3.jpg\",\"0b4e73d1a13bda1771b99d26bf04efe2627cde04\"],[\"Muhlenbergia utilis i0\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577667.jpg\",\"e60142979f896a7a2f857eba969f071fc32a623e\"],[\"Muhlenbergia utilis i1\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-260420284.jpg\",\"322c9f2c2b130f970903352491032eecd721daf9\"],[\"Muhlenbergia utilis i2\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577686.jpg\",\"079c8027450b7930b37fe18f4db8519b1dbf09c8\"],[\"Muhlenbergia utilis i3\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577695.jpg\",\"4b46ea5429edee52111b96eed15f77dce4510627\"],[\"Muhlenbergia utilis i4\",\"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-utilis/images/aparejo-cc0-inat-410577679.jpg\",\"3efeddb74c20aa1120e59184a2eea932579d06d6\"],[\"Muhlenbergia utilis i5\",\"site/media/muhlenbergia-utilis/inat-14855736.jpg\",\"2dd7a4e11450df54c3a04ffef40c87cd5c26cc09\"],[\"Secale cereale i0\",\"content/taxa/Poaceae/Secale/secale-cereale/images/rasbak-rye-attached-flowering-ear-anthers-awns-cc-by-sa3.jpg\",\"fe8827ce8762d975a3d3ac7e872aae9463d1ca53\"],[\"Secale cereale i1\",\"content/taxa/Poaceae/Secale/secale-cereale/images/stefan-lefnaer-rye-four-collar-views-10mm-scale-by-sa4.jpg\",\"ec9ffc2b1cf347d03dc3a434a1380725d365605b\"],[\"Secale cereale i2\",\"content/taxa/Poaceae/Secale/secale-cereale/images/stefan-lefnaer-rye-true-membranous-ligule-3mm-scale-by-sa4.jpg\",\"9e549d06ca4d2ea5611829537c6a40b3ff3378cc\"],[\"Secale cereale i3\",\"content/taxa/Poaceae/Secale/secale-cereale/images/matt-lavin-74e7e5ea8e.jpg\",\"0ad779b1b75312d175f6f7c763667e9a0b9a0614\"],[\"Secale cereale i4\",\"content/taxa/Poaceae/Secale/secale-cereale/images/matt-lavin-55df7d2222.jpg\",\"b9e010c15281d1487da296b3e7e8dc5b89ae691a\"]]")
           fontpath='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
           font = ImageFont.truetype(fontpath, 17) if os.path.exists(fontpath) else ImageFont.load_default()
           photos=[]
@@ -52,7 +53,7 @@ jobs:
               except Exception as e:
                   print(f'QAITEM_{n+1}:FAILED name={label} error={e}', flush=True)
                   photos.append((label,None))
-          for sheet_index in (0,1):
+          for sheet_index in range((len(photos)+5)//6):
               canvas=Image.new('RGB',(1650,1000),(244,245,245))
               draw=ImageDraw.Draw(canvas)
               for j,(label,pic) in enumerate(photos[sheet_index*6:(sheet_index+1)*6]):
