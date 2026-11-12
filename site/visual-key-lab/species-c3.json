@@ -1007,14 +1007,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Document same-plant base and reproductive sex; do not identify species from boat-shaped leaf apex alone.",
+    "field_rule": "Document same-plant base and reproductive sex; do not identify species from boat-shaped leaf apex alone. If the same annual bluegrass crown has low outer culms rooting at basal nodes, the Lab's 'sprawling/mat-forming' choice also fits; that does not by itself prove a true stolon. Hill Country plants are typically cespitose without stolons, but FNA reports occasional stolons and a Williamson County treatment documents decumbent rooting. A rooted culm or spreading tuft alone is not diagnostic: inspect the membrane ligule and mature 3–5 mm multiflowered spikelets.",
     "traits": {
       "head": [
         "airy",
         "compact"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "membrane"
@@ -1031,7 +1032,9 @@
         "source": "Diggs, Lipscomb & O'Kennon, Illustrated Flora of North Central Texas, 1999 (user-provided monocots excerpt)",
         "reference": "Illustrated Flora of North Central Texas, Poa annua, printed p.1313 (uploaded PDF p.236): flowering panicles small, compact and erect. Retaining prior open/airy state pending photo-stage QA avoids excluding possible age-dependent branches.",
         "status": "REGIONAL_FLORA_CHECKED",
-        "review_date": "2026-11-10"
+        "review_date": "2026-11-10",
+        "secondary_texas_source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Poa%20annua.html",
+        "secondary_texas_reference": "UT Austin Williamson County actual species treatment describes terminal open branching panicles with 3–5 mm spikelets, confirming that retained head:airy may describe an opened inflorescence; the regional Diggs compact typical state still stands. Both visual head states are conditional, not standalone species diagnoses."
       },
       "sexual_system": {
         "source": "Flora of North America Poa annua",
@@ -1039,6 +1042,26 @@
         "reference": "Usually annual, not rhizomatous; gynomonoecious reproductive system, not separate dioecious male/female plants as P. arachnifera.",
         "status": "SOURCE_CHECKED",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 59, Poa annua",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "role": "vegetative",
+        "reference": "Regional Hill Country description: annual cespitose, rhizomes and stolons absent, outermost culms of the tuft decumbent. Keep the normal 'tuft' state. FNA (Soreng) describes P. annua as densely tufted, SOMETIMES stoloniferous; UT Austin's Williamson County species account describes decumbent/spreading branches often rooting at the base with adventitious roots at basal nodes. The Lab 'mat' answer explicitly accepts rooted low decumbent culms OR true surface stolons. Add 'mat' as a CONDITIONAL visual state; it does not imply all regional plants have stolons and does not diagnose P. annua alone. Avoid 'rhizome'.",
+        "secondary_source": "Flora of North America, Poa annua, R. J. Soreng",
+        "secondary_source_url": "https://openherbarium.org/portal/taxa/index.php?clid=28&taxauthid=1&tid=236928",
+        "texas_local_source": "A. C. Gibson & B. A. Prigge, Vascular Plants of Williamson County, Poa annua",
+        "texas_local_source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Poa%20annua.html",
+        "reported_states": [
+          "typically tufted Hill Country crown",
+          "outer decumbent culms",
+          "some stems root at basal nodes",
+          "occasional stoloniferous plants outside the regional sample",
+          "rhizomes absent"
+        ],
+        "status": "REGIONAL_TYPICAL_TUFT_VERSUS_OCCASIONAL_ROOTED_SURFACE_GROWTH_EXPLICITLY_PRESERVED",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new same-crown Hays County rooted-culm or true stolon photograph certified; scored option is conditional, not specimen admission."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
