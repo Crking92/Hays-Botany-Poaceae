@@ -80,6 +80,58 @@ async function main() {
     }
   }
   console.log('TOTAL '+JSON.stringify(total));
+  for(const s of ['Pappophorum bicolor','Tridens congestus','Stapfochloa ciliata']) await discoverPermissiveReferencePhotos(s);
   if(total.failedObservations===observations.length)process.exitCode=1;
 }
+
+async function discoverPermissiveReferencePhotos(species) {
+  const endpoint='https://api.inaturalist.org/v1/observations';
+  const params=new URLSearchParams({
+    taxon_name:species,photos:'true',quality_grade:'research',
+    per_page:'100',photo_license:'cc0,cc-by,cc-by-sa'
+  });
+  let data;
+  try {
+    const response=await fetch(endpoint+'?'+params,{headers:{Accept:'application/json'},signal:AbortSignal.timeout(25000)});
+    if(!response.ok) throw new Error('HTTP '+response.status);
+    data=await response.json();
+  } catch(err) {
+    console.log('DISCOVERY_FAILED '+JSON.stringify({species,error:String(err.message||err)}));
+    return;
+  }
+  const rows=Array.isArray(data.results)?data.results:[];
+  let matchedObservations=0,seenEligible=0,reported=0;
+  const seenPeople=new Set();
+  for(const o of rows) {
+    if(o.taxon?.name?.toLowerCase()!==species.toLowerCase()) continue;
+    matchedObservations++;
+    for(const p of o.photos||[]) {
+      const code=(p.license_code||'none').toLowerCase();
+      if(!unrestricted.has(code)) continue;
+      seenEligible++;
+      const person=p.user?.name||p.user?.login||o.user?.name||o.user?.login||null;
+      const key=String(person||'')+'|'+code;
+      // Prefer different creators and observation IDs to find varied field views.
+      if(reported>=15 || (seenPeople.has(key)&&reported>=8)) continue;
+      seenPeople.add(key);
+      reported++;
+      console.log('OPEN_PHOTO '+JSON.stringify({
+        expected:species,observed_taxon:o.taxon?.name,
+        observation_id:o.id,observation_url:'https://www.inaturalist.org/observations/'+o.id,
+        observation_quality:o.quality_grade,observed_on:o.observed_on,
+        photo_id:p.id,photo_page:'https://www.inaturalist.org/photos/'+p.id,
+        api_photo_url:p.url||null,photo_creator:person,photo_attribution:p.attribution||null,
+        photo_license_code:code,
+        status:'RIGHTS_POSSIBLE_ONLY; human actual-pixel ID, original photo license version and archive SHA still required'
+      }));
+    }
+  }
+  console.log('DISCOVERY_SUMMARY '+JSON.stringify({
+    species,total_available_observations:data.total_results,
+    returned_rows:rows.length,exact_species_rows:matchedObservations,
+    eligible_cc0_by_sa_photo_count_in_page:seenEligible,source_leads_logged:reported,
+    warning:'Searching does not clear any image or change website photo count'
+  }));
+}
+
 main().catch(e=>{console.error('Fatal photo probe:',e);process.exitCode=1});
