@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only deployed 112+18 normal-key trial audit; no specimen or rights certification."""
 import json
+import os
 import time
 import urllib.error
 import urllib.request
@@ -130,6 +131,35 @@ def check():
 
 
 if __name__ == "__main__":
+    if os.environ.get("GITHUB_EVENT_NAME") == "pull_request":
+        # An unpublished PR cannot match the live Pages JSON yet.
+        # Validate the exact local 18-trial/gallery photo copy here;
+        # after merging, the main-push workflow performs the real public HTTP/browser check.
+        groups = []
+        for filename in FILES[1:]:
+            section = json.loads((LAB / filename).read_text())["profiles"]
+            assert len(section) == 6, f"{filename}: expected six trials"
+            groups.extend(section)
+        assert len(groups) == 18 and len({x["id"] for x in groups}) == 18
+        candidates = {
+            c["id"]: c for c in json.loads((LAB / "hays-candidates.json").read_text())["candidates"]
+        }
+        for trial in groups:
+            assert trial["trial"] is True and trial["admission_status"] == "RESEARCH_TRIAL_NOT_ADMITTED"
+            assert trial["range"] == "UNVERIFIED"
+            original = candidates[trial["id"]]["approved_gallery"]
+            assert len(trial["photos"]) == len(original), f"{trial['id']}: gallery trial count mismatch"
+            for i, photo in enumerate(trial["photos"]):
+                assert photo["i"] == i
+                assert {k: v for k, v in photo.items() if k != "i"} == original[i], (
+                    f"{trial['id']}: copied source, credit or license differs")
+        assert sum(len(x["photos"]) for x in groups) >= 38
+        print(json.dumps({"status": "PREMERGE_LOCAL_TRIAL_PHOTO_PARITY",
+                          "trials": len(groups),
+                          "configured_photo_refs": sum(len(x["photos"]) for x in groups),
+                          "specimen_approvals": 0,
+                          "live_pages_check": "RUN_ON_MAIN_AFTER_DEPLOYMENT"}, indent=2))
+        raise SystemExit(0)
     error = None
     for attempt in range(1, ATTEMPTS + 1):
         try:
