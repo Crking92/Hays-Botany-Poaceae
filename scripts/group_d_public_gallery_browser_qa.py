@@ -236,7 +236,9 @@ def run():
       "group_d_images_decoded_mobile":mobile["visible_photo_pixels"],
       "group_d_species_with_public_visible_pixels":mobile["species_with_at_least_one_visible_photo"],
       "mobile_credits_verified":True,
-      "new_group_d_photo_sources_installed":sum(
+      # This is a retention check for the first historical three-photo release,
+      # NOT the total number of photos published in Group D.
+      "first_three_historical_group_d_photo_refs_still_present":sum(
          any(x["image_filename"]==f for x in local_by[s]["approved_gallery"])
          for s,f in [
           ("oplismenus-hirtellus","Oplismenus hirtellus-flowers.jpg"),
