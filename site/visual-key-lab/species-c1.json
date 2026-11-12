@@ -1818,7 +1818,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.",
+    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nTrue ligule: A Japanese brome ligule is a membrane, but some plants have a short ciliate margin. A visible fringe of hairs at the TRUE inner blade–sheath junction should not exclude this species; also retain the smooth or erose membrane choice.",
     "traits": {
       "head": [
         "branched_oat"
@@ -1827,7 +1827,8 @@
         "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long"
@@ -1844,6 +1845,20 @@
         "reference": "Annual with somewhat dense panicle and drooping branches; lemma awns straight or bending outward with age.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 39, Bromus japonicus; Flora of North America species account, Pavlick & Anderton",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39",
+        "supplemental_source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236949",
+        "role": "vegetative",
+        "reference": "Hagenbuch & Lemke (2015), Texas Hill Country grasses, printed p. 39, explicitly describes the B. japonicus ligule as a 0.5–1.5 mm membrane with an erose OR CILIATE margin. The Flora of North America species account further reports short pilose ligule tissue. Therefore a beginner who sees a hair fringe on the actual inner ligule should retain Japanese brome, while an erose membranous margin must also retain it. Cilia are not long independent node/collar hairs and do not make the organ anatomically hair-only.",
+        "reported_states": [
+          "membrane with erose margin (most plants)",
+          "membrane with ciliate margin (documented condition)"
+        ],
+        "status": "PRIMARY_REGIONAL_ER0SE_OR_CILIATE_MARGIN_SOURCE_BACKED_LOCAL_COLLAR_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No exact inner blade–sheath collar in a connected Hays-region specimen was independently verified in this audit."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1871,6 +1886,14 @@
         "certainty": "FNA source checked; habit alone insufficient",
         "source": "Flora of North America — Bromus japonicus",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=236949"
+      },
+      {
+        "look": "Inspect the actual ciliate membrane at the inner leaf junction",
+        "check": "A thin inner ligule with an erose or ciliate edge is compatible. Choose hairs only when fine marginal ligule cilia are genuinely present; avoid mistaking leaf-sheath hairs or pubescence on nodes for a true fringe.",
+        "compare": "Both Japanese brome and hairy woodland brome can show fine marginal cilia. Compare annual versus perennial root crowns, glume-vein counts, lemma pubescence and mature awn positions rather than relying on ligule hairs alone.",
+        "certainty": "Direct Hill Country p. 39 account; occasional cilia for B. pubescens; no new photographed same-plant collar certified",
+        "source": "Hagenbuch & Lemke (2015), p.39; Flora of North America Bromus japonicus",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39"
       }
     ],
     "diagnostic_review": {
@@ -2040,7 +2063,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "WOODED PERENNIAL BROME: confirm durable crown and true hairs on mature lemmas; match a measured spikelet and sheath/collar photo before separating native pubescens from annual bromes.",
+    "field_rule": "WOODED PERENNIAL BROME: confirm durable crown and true hairs on mature lemmas; match a measured spikelet and sheath/collar photo before separating native pubescens from annual bromes.\n\nTrue ligule: Hairy woodland brome typically shows an erose membranous ligule. The Hill Country flora reports that its membrane margin can occasionally carry sparse cilia; an observer who sees those fine hairs at the true inner junction can still select a hair fringe without excluding it. Verify the perennial crown and hairy mature lemmas.",
     "traits": {
       "head": [
         "branched_oat"
@@ -2049,7 +2072,8 @@
         "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long"
@@ -2066,6 +2090,20 @@
         "reference": "Perennial woodland brome with drooping spikelets and usually densely pubescent lemmas; branching habit alone cannot separate it from annual bromes.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 39, Bromus pubescens; Flora of North America species account, Pavlick & Anderton",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39",
+        "supplemental_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8700&taxauthid=1&taxon=8885",
+        "role": "vegetative",
+        "reference": "Hagenbuch & Lemke (2015), Texas Hill Country grasses, printed p. 39, describes a 0.5–2 mm membranous B. pubescens ligule whose edge is erose, OCCASIONALLY SPARSELY CILIATE. Flora of North America describes a glabrous, erose membrane as typical, so this is a conditional fringe, not the normal whole-species state. A confirmed sparse marginal hair fringe at the true inner collar must not force exclusion; other leaf surface hairs or the pubescent culm nodes do not count.",
+        "reported_states": [
+          "membrane with erose margin (most plants)",
+          "membrane with ciliate margin (documented condition)"
+        ],
+        "status": "PRIMARY_HILL_COUNTRY_OCCASIONAL_CILIA_FNA_GLABROUS_TYPICAL_LOCAL_COLLAR_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No exact inner blade–sheath collar in a connected Hays-region specimen was independently verified in this audit."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2093,6 +2131,14 @@
         "certainty": "Texas PRC regional source; not species-separating alone",
         "source": "UT Austin Plant Resources Center, Vascular Plants of Williamson County — Bromus pubescens",
         "url": "https://www.minnesotawildflowers.info/grass-sedge-rush/hairy-woodland-brome"
+      },
+      {
+        "look": "Inspect the actual ciliate membrane at the inner leaf junction",
+        "check": "A thin inner ligule with an erose or ciliate edge is compatible. Choose hairs only when fine marginal ligule cilia are genuinely present; avoid mistaking leaf-sheath hairs or pubescence on nodes for a true fringe.",
+        "compare": "Both Japanese brome and hairy woodland brome can show fine marginal cilia. Compare annual versus perennial root crowns, glume-vein counts, lemma pubescence and mature awn positions rather than relying on ligule hairs alone.",
+        "certainty": "Direct Hill Country p. 39 account; occasional cilia for B. pubescens; no new photographed same-plant collar certified",
+        "source": "Hagenbuch & Lemke (2015), p.39; Flora of North America Bromus pubescens",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39"
       }
     ],
     "diagnostic_review": {
