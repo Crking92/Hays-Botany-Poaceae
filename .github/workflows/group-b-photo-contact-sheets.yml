@@ -1,0 +1,32 @@
+name: Group B - 12 photo original pixel contact sheets (review-only)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/group_b_contact_sheet_source_review.py'
+      - '.github/workflows/group-b-photo-contact-sheets.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-licensed-photo-contact-sheets:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image preview assembly support
+        run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Fetch exact per-photo source metadata, verify CC code, prepare visual review sheets
+        run: python scripts/group_b_contact_sheet_source_review.py
+      - name: Save exact source records and visual contact sheets for publisher QA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-b-three-grass-license-visual-source-review
+          path: qa-report/group-b-contact-sheet/
+          if-no-files-found: warn
