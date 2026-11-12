@@ -1,0 +1,269 @@
+{
+  "schema": "hays-provisional-photo-archive-recovery-v1",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-sprint-provisional-original-photo-recovery",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "archived_original_git_branch": "inat-coverage-audit-20261111",
+  "archive_branch_git_tree_sha": "3a84adba5fc7fc684d7e922ef5692850973c271d",
+  "summary": {
+    "photo_records": 317,
+    "distinct_historical_names": 51,
+    "reviewed_names_this_turn": 23,
+    "reviewed_photo_tiles_this_turn": 143,
+    "photos_in_recovered_archives_but_not_reinspected_this_turn": 174,
+    "distinct_provisional_species_represented": 50,
+    "additional_old_name_elymus_glabriflorus": 1,
+    "photos_not_previously_available_under_rights_filter": 7,
+    "all_provisional_profiles": 57,
+    "full_Hays_specimen_species_identification_signoffs": 0,
+    "scored_profiles": 112,
+    "configured_profiles": 169,
+    "site_photo_files_newly_published": 0,
+    "photo_license_directly_rechecked_from_live_iNaturalist": 0
+  },
+  "archive_recovered": [
+    {
+      "batch": "first-five",
+      "artifact_id": 13883578226,
+      "archive_zip": "hays-first-five-original-photo-review.zip",
+      "sha256": "a07c128a10661cd7369ac14d8e4727c9520c2974032c37b81be68a2c006b1dd4",
+      "photos": 60,
+      "contact_sheets": 5,
+      "license_mix": {
+        "cc-by-nc": 58,
+        "cc-by": 1,
+        "cc0": 1
+      },
+      "visual_qa_source": "audits/hays-58-first-five-visual-qa-20261111.json"
+    },
+    {
+      "batch": "next-eight",
+      "artifact_id": 13883274516,
+      "archive_zip": "hays-next-eight-original-photo-review.zip",
+      "sha256": "305c1528b04dd463c80d2cc177901fe564818f8c04953c565140402f576e2c60",
+      "photos": 80,
+      "contact_sheets": 8,
+      "license_mix": {
+        "cc-by-nc": 80
+      },
+      "visual_qa_source": "audits/hays-58-next-eight-visual-qa-20261111.json"
+    },
+    {
+      "batch": "pass-three",
+      "artifact_id": 13883764250,
+      "archive_zip": "hays-next12-original-photo-review.zip",
+      "sha256": "4be20a8e86c853c92b380cf59afae154183ed1611e12a58dd18b4c4d2e97e1a4",
+      "photos": 79,
+      "contact_sheets": 12,
+      "license_mix": {
+        "cc-by-nc": 69,
+        "cc-by": 8,
+        "cc0": 2
+      },
+      "visual_qa_source": "audits/hays-58-pass3-visual-qa-20261111.json"
+    },
+    {
+      "batch": "pass-four",
+      "artifact_id": 13885871643,
+      "archive_zip": "hays-pass-four-original-photo-review.zip",
+      "sha256": "217f8ffa34701781e99804f68c635ff46aca0cff20f71602b6eacd89cdf72754",
+      "photos": 70,
+      "contact_sheets": 18,
+      "license_mix": {
+        "cc-by-nc": 54,
+        "cc-by": 15,
+        "cc-by-nc-sa": 1
+      },
+      "visual_qa_source": "audits/hays-58-pass4-visual-qa-20261111.json"
+    },
+    {
+      "batch": "pass-five",
+      "artifact_id": 13886200836,
+      "archive_zip": "hays-final8-original-photo-review.zip",
+      "sha256": "2542bb2f9981d63ce3510786f86ad9a86c8ba94438bdedd3f65e31ff311f4023",
+      "photos": 28,
+      "contact_sheets": 8,
+      "license_mix": {
+        "cc-by-nc": 28
+      },
+      "visual_qa_source": "audits/hays-58-pass5-visual-qa-20261111.json"
+    }
+  ],
+  "photo_attribution_metadata_located_in_archives": true,
+  "source_photo_pixels_are_temporary_reduced_resolution_contact_sheets": true,
+  "source_photo_originals_not_downloaded": true,
+  "source_license_summary_preflight_only": {
+    "cc-by-nc": 289,
+    "cc-by": 24,
+    "cc0": 3,
+    "cc-by-nc-sa": 1
+  },
+  "source_branch_paths_missing_on_main": [
+    "audits/hays-58-first-five-visual-qa-20261111.json",
+    "audits/hays-58-next-eight-visual-qa-20261111.json",
+    "audits/hays-58-pass3-visual-qa-20261111.json",
+    "audits/hays-58-pass4-visual-qa-20261111.json",
+    "audits/hays-58-pass5-visual-qa-20261111.json",
+    "audits/hays-58-texas-hill-country-2015-crosswalk.json",
+    "audits/inat-2026-11-11-hays-only.json",
+    "audits/hays-58-photo-access-holds-20261111.json"
+  ],
+  "verification_method": [
+    "All five one-day-retention GitHub Actions artifacts were downloaded via connected GitHub, unpacked and SHA256 checksums computed. Each archive contains a source observation/photo attribution JSON and reduced-resolution labeled photographic contact sheets.",
+    "23 of the 51 contact sheets covering 143 photo thumbnails were opened in this turn for actual visual inspection. 28 other sheets (174 tiles) were recovered but not visually inspected this turn; previous historical QA is preserved in source branch.",
+    "Hays-local provenance reflects the historical iNaturalist Hays county query, not independent revalidation of every geoprivacy setting or herbarium voucher.",
+    "Current photo source pages still inaccessible, so all license labels are **archived** metadata. No source license was newly verified and nothing was approved or rehosted.",
+    "Full-resolution morphological dissection, expert Hays voucher/local native status, current photo rights and public website pixel verification remain unpassed.",
+    "Do not merge source branch wholesale: it contains workflow and historical files, and other chats own the modern scoring/gallery paths. Coordinator may cherry-pick missing archived original QA text files, retaining their provenance."
+  ],
+  "new_actual_photo_pixels_reviewed_in_this_turn": [
+    {
+      "id": "stapfochloa-canterae",
+      "tiles": 4,
+      "source_observation_id": 137935400,
+      "visible": "One-sided curved racemes, a flowering branch held next to a ruler, hairy node/collar, detached flower/spikelet units set beside ruler.",
+      "holds": "Contact sheet does not reliably show exact fertile-versus-sterile floret counts, lemma hair placement or consistent millimeter awn lengths; compare S. ciliata at original resolution.",
+      "access": "HIGH_YIELD_APPROVED_FOR_INTERNAL_REVIEW_ONLY"
+    },
+    {
+      "id": "pappophorum-bicolor",
+      "tiles": 4,
+      "source_observation_id": 136755826,
+      "visible": "Whole dry grassland tuft, feathery panicle, finger closeups of flowering units.",
+      "holds": "Cannot count lemma-specific 11–15 awns or distinguish P. mucronulatum by mature 3–4-mm lemma body on medium sheet."
+    },
+    {
+      "id": "briza-minor",
+      "tiles": 3,
+      "source_observation_id": 346027854,
+      "visible": "Minute distinct triangular pendant spikelets suspended on fine pedicels, hand-for-scale and full small grass.",
+      "holds": "Actual floret counts and 5–10-mm ligule unmeasured; single Hays source record."
+    },
+    {
+      "id": "sclerochloa-dura",
+      "tiles": 2,
+      "source_observation_id": 148348772,
+      "visible": "Short stiff, flattened nearly one-sided head on a small low annual in disturbed ground.",
+      "holds": "Blunt strongly nerved glumes and ripe floret count unresolved; may resemble miniature Poa/Catapodium."
+    },
+    {
+      "id": "janochloa-antidotalis",
+      "tiles": 8,
+      "source_observation_id": 331384094,
+      "visible": "Clearly swollen culm nodes, a leaf junction, dense branches of a mature panicle, and whole flowering culms, all on same source observation.",
+      "holds": "No visible attached belowground rhizome, opened ligule measurement or dissected separate fertile/sterile florets."
+    },
+    {
+      "id": "echinochloa-walteri",
+      "tiles": 11,
+      "source_observation_id": 313351555,
+      "visible": "Multiple awned barnyardgrass inflorescences plus clear papilla-based sheath hairs and collar/leaf detail in same lead observation; other wet-site records.",
+      "holds": "Glume-body length, lemma awn insertion and E. crus-galli/E. muricata comparisons still need measured dissection."
+    },
+    {
+      "id": "rostraria-cristata",
+      "tiles": 5,
+      "source_observation_id": 74683342,
+      "visible": "Compact, narrow, green bristly spikelike heads on Hays plants. The three top photos from observation 74683342 carry historical Craig? NO: Chris Hughes CC BY credits.",
+      "holds": "Glume nerves, floret count, lemma awn origin, true ligule unresolved; three CC BY historical licenses not currently rechecked."
+    },
+    {
+      "id": "setaria-leucopila",
+      "tiles": 6,
+      "visible": "Narrow cylindrical bristle-containing flowering heads and leafy bases with hand scale in multiple observations.",
+      "holds": "Ligule membrane with cilia, true crown/no rhizome, and fertile lemma wrinkles unavailable at sheet scale."
+    },
+    {
+      "id": "sphenopholis-obtusata",
+      "tiles": 9,
+      "visible": "Narrow green/tan contracted flowering panicles and at least one leaf-sheath junction photo.",
+      "holds": "Upper glume broad obtuse apex and fertile floret arrangement unproven; S. interrupta lookalike remains."
+    },
+    {
+      "id": "cortaderia-selloana",
+      "tiles": 7,
+      "source_observation_id": 62141431,
+      "visible": "Source observation 62141431 shows multiple short, cylindrical bottlebrush-like plumes that do not resemble the typical large wide-branched Cortaderia panicle; other observations have single taller fluffy plumes and planted habit.",
+      "holds": "SPECIES-MISID-RISK: hold 62141431 for expert reidentification, possibly fountain-grass type; never publish under C. selloana based on these images alone."
+    },
+    {
+      "id": "paspalum-notatum",
+      "tiles": 8,
+      "visible": "Two-raceme forked flowering heads in lawn-like short turf, a number with scale hand, consistent with Bahia grass morphology.",
+      "holds": "Measured glumes and underground rhizomes absent, turf planting vs self-establishment open."
+    },
+    {
+      "id": "setaria-viridis",
+      "tiles": 11,
+      "visible": "Green and straw-colored dense bristly heads, both habit and hand-scales.",
+      "holds": "Mature fertile lemma wrinkling, persistent bristle arrangement and annual crown vs other Setaria not proved from these medium tiles."
+    },
+    {
+      "id": "phyllostachys-aurea",
+      "tiles": 7,
+      "visible": "Dense bamboo grove and narrow branch leaves, stem branching shown.",
+      "holds": "Distinct shortened/compressed basal internode series not clearly demonstrated; probably planted bamboo, origin undocumented."
+    },
+    {
+      "id": "steinchisma-hians",
+      "tiles": 3,
+      "visible": "Loose panicles and leaf blades shown in wet-looking vegetation.",
+      "holds": "Gape/protruding inflated lower-floret palea not visible at this scale."
+    },
+    {
+      "id": "stenotaphrum-secundatum",
+      "tiles": 4,
+      "visible": "Broad-bladed turf and creeping grass in mowed lawn contexts.",
+      "holds": "No corky flattened fertile rachis, rooting stolon joints or ciliate membrane detail; planted lawn likely."
+    },
+    {
+      "id": "triticum-aestivum",
+      "tiles": 4,
+      "visible": "Wheatlike two-rowed stiff flowering spikes, some awned cereal heads beside hand/background sheet.",
+      "holds": "Precise broad asymmetric glumes, florets and cultivated-vs-spilled-plant provenance unresolved."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "tiles": 4,
+      "visible": "Coarse grass with papilla-like sheath texture and unusually tight green heads plus a roadside individual.",
+      "holds": "No ripe proso-millet grain diagnosis; head may be immature or a different taxon; don't release."
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "tiles": 5,
+      "visible": "Dense bristly flowering heads, finely hairy collar and roadside/urban habitat.",
+      "holds": "No isolated fused bristle involucre or its detached dispersal unit; Setaria comparator remains."
+    },
+    {
+      "id": "panicum-repens",
+      "tiles": 1,
+      "visible": "Only dense green grassy mat with indistinct distant flowering branches.",
+      "holds": "Pointed underground rhizome and measured spikelets absent; cannot confirm torpedograss."
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "tiles": 1,
+      "visible": "Single large arching ornamental grassy clump, with no visible panicle.",
+      "holds": "Vegetative photo alone cannot separate Miscanthus from lookalikes or document escaped population."
+    },
+    {
+      "id": "melica-nitens",
+      "tiles": 12,
+      "visible": "Several sources with distinctive nodding oatlike florets, some close hand-spikelet views, clumps at base.",
+      "holds": "Ripe terminal rudimentary floret/lemma margin, ligule and crown growth form not documented at scale."
+    },
+    {
+      "id": "paspalum-langei",
+      "tiles": 12,
+      "visible": "Long spreading clustered racemes, multiple spikelet detail photos and tuft/crown contexts.",
+      "holds": "Glume tissue/seed width measurements and perennial crown require same-specimen confirmation; compare other Paspalum."
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "tiles": 12,
+      "visible": "Silvery narrow panicles and grass bases on white paper/hand scale across multiple observations.",
+      "holds": "Reliable 4.3–4.4-mm sessile spikelet, exact glume width/sheen and torreyana comparator missing."
+    }
+  ]
+}
