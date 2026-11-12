@@ -996,12 +996,22 @@
         "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits.",
+      "pass43_hosted_rechecks": [
+        {
+          "i": 0,
+          "pass": "PHASE4_PASS43_NO_NEW_COUNT",
+          "date": "2026-11-11",
+          "blob_sha": "08f0dde2d82cb10c80f3b560b57cedfd78b01754",
+          "result": "Existing previously counted hosted image re-rendered and verified against exact Git SHA; not new first audit. Caption corrected if needed.",
+          "rights_note": "Original metadata retained; rights not newly cleared"
+        }
+      ]
     },
     "review": {
       "pass": "PHASE4_PASS42_EXACT_SOURCE_PREVIEW",
       "review_date": "2026-11-11",
-      "status": "SOURCE_PREVIEW_ONLY_NOT_HOSTED_AUDITED",
+      "status": "SOURCE_PREVIEW_RECONCILED_WITH_PREEXISTING_HOSTED_QA",
       "scope": "The Commons original-file image was visually rendered through its source page. GitHub-hosted photo bytes could not be viewed or image-matched this pass; this source inspection does NOT increase 421/514 hosted-photo QA count.",
       "rights_status": "COMMONS_SOURCE_PAGE_CREATOR_AND_LICENSE_MATCH_ORIGINAL_RECORD; NOT_A_NEW_CLEARANCE_FOR_EXACT_HOSTED_FILE",
       "photo_roles": [
@@ -1022,9 +1032,7 @@
           "hosted_photo_status": "PENDING_ACTUAL_HOSTED_VISUAL_QA"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "vein count, exact individual bract identity, floret dimensions, and panicle branching not independently determined",
         "no entire rooted plant or collar"
@@ -1034,7 +1042,8 @@
       "seasonal_review": {
         "observed": "No independently established Hays County November–February date",
         "queue_action": "Existing master Photo Needs Queue only; seek diagnostic anatomy rather than duplicate general plant shots"
-      }
+      },
+      "hosted_photo_recheck": "PHASE4_PASS43_NO_NEW_COUNT"
     }
   },
   {
