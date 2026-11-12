@@ -1,4 +1,4 @@
-name: Group B - 15 Commons originals hash/dedup gate (read-only)
+name: Group B - 15 Commons originals metadata/dedup gate (read-only)
 
 on:
   pull_request:
@@ -19,5 +19,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify 15 exact Commons source originals, bytes, hashes and current-gallery collisions
+      - name: Verify 15 Commons source original metadata and current-gallery filename/hash collisions
         run: node scripts/check_group_b_commons_originals.cjs
