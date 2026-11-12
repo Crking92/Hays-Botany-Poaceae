@@ -554,7 +554,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-capillare/images/stefan-lefnaer-witchgrass-labelled-spikelet-parts-cc-by-sa4.jpg",
-        "label": "2 · REAL DISSECTED SPIKELET — author-labelled glumes, sterile/fertile lemmas and palea",
+        "label": "Source-annotated multi-panel witchgrass spikelet dissection — 10,000-pixel-wide strip too small to read at card size",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_capillare_sl24.jpg",
@@ -563,7 +563,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-complete-diffuse-panicle-by-sa2.jpg",
-        "label": "3 · Witchgrass — huge airy panicle",
+        "label": "Large loose delicate witchgrass panicle on thin branching stalks, spreading against a pale wall",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_capillare_(3813114550).jpg",
@@ -616,7 +616,7 @@
     "source_blob_sha": "e8fc800ba87d48a78a2c14e7da8279b5b2ff263a",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "ligule": {
         "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 220",
@@ -657,12 +657,46 @@
       "note": "Published Panicum flowerhead and floral/collar anatomy; fine-scale and winter same-specimen photo roles, local identity, and field acceptance pending."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "3/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "scope": "3/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification. Pass46: exact hosted JPG index 0 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance. Pass46: exact hosted JPG index 1 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "several green opened spikelet macro panels showing pointed bracts in alternate views",
+            "source arrows or labels and an original millimeter scale strip"
+          ],
+          "cannot_verify": [
+            "organ labels and fine bract identities cannot be reliably read when the eight-panel strip is reduced on phone",
+            "requires zoom or individual crop panels with original attribution retained"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-capillare/images/stefan-lefnaer-witchgrass-labelled-spikelet-parts-cc-by-sa4.jpg",
+          "git_blob_sha": "b52c585ef9cab8627aae6dc92744379ea3cfa75b",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "very open many-branched panicle with extremely thin arching divergent branches",
+            "small distant terminal spikelets scattered across airy outline"
+          ],
+          "cannot_verify": [
+            "actual spikelet dimensions and opened ligule not resolvable from a whole-head view",
+            "rooted basal plant not traced"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-complete-diffuse-panicle-by-sa2.jpg",
+          "git_blob_sha": "b2b3144ce46862286148307157bae788bfc6ac7d",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 2,
           "verdict": "DIRECT_VISIBLE",
@@ -712,10 +746,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        1
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "true ligule separately from sheath hairs",
         "dissected labelled spikelet and detached tumblehead view (currently inaccessible)"
@@ -726,7 +757,27 @@
         "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits.",
+      "previous_pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "3/5 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification. Pass46: exact hosted JPG index 0 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
+      "pass46_photo_findings": [
+        {
+          "i": 0,
+          "verdict": "PARTIAL_VISIBLE",
+          "unverified": [
+            "organ labels and fine bract identities cannot be reliably read when the eight-panel strip is reduced on phone",
+            "requires zoom or individual crop panels with original attribution retained"
+          ]
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "actual spikelet dimensions and opened ligule not resolvable from a whole-head view",
+            "rooted basal plant not traced"
+          ]
+        }
+      ]
     }
   },
   {
@@ -980,7 +1031,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/steve-finlayson-2026-rooted-crown-cc0.jpg",
-        "label": "CONNECTED ROOTED CROWN — Dallisgrass dug from the ground",
+        "label": "Excavated Dallisgrass basal crown held by hand with dense fibrous roots — rhizome identity not established",
         "creator": "Steve Finlayson",
         "license": "CC0 1.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_dilatatum-rhizome-SEQueensland-SouthernDowns.jpg",
@@ -1015,7 +1066,7 @@
     "source_blob_sha": "900e4966fbccbe6d1795995222b2568c90e5780a",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt pp.229–230",
@@ -1056,11 +1107,11 @@
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS28_10_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_6_OF_7",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_7_OF_7",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "6 of 7 current Lab gallery references inspected from actual GitHub-hosted image bytes. Exact individual rights/license, voucher identity and original date not independently certified.",
+      "scope": "6 of 7 current Lab gallery references inspected from actual GitHub-hosted image bytes. Exact individual rights/license, voucher identity and original date not independently certified. Pass46: exact hosted JPG index 5 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
         {
           "i": 0,
@@ -1138,6 +1189,23 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT PHOTO RIGHTS, VOUCHER AND CAPTURE DATE NOT REVALIDATED"
         },
         {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "hand holding clumped basal sheaths and numerous branching tan fibrous roots",
+            "short thick basal material and dried sheath remains in extracted crown"
+          ],
+          "cannot_verify": [
+            "rhizomes, if any, are not unambiguously differentiated from roots by this photograph alone",
+            "flowering racemes, spikelets and collar not shown"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/steve-finlayson-2026-rooted-crown-cc0.jpg",
+          "git_blob_sha": "dbfd88622f56b010b3b2fc944ec92c816f0fc65a",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 10,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -1153,9 +1221,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT PHOTO RIGHTS, VOUCHER AND CAPTURE DATE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        5
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Rooted crown photo i=5 returned GitHub blob metadata only; recover viewable bytes through separate image access process before counting",
         "Independent original exact-image rights/source verification and any needed Hays County voucher confirmation",
@@ -1168,7 +1234,19 @@
         "queue_action": "Reuse existing master Photo Needs Queue for missing roots, ligule, glume/lemma and dated winter features; no separate spreadsheets."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Source-backed species morphology and existing key states unchanged. Photographic evidence limited to features clearly visible."
+      "morphology_reference_note": "Source-backed species morphology and existing key states unchanged. Photographic evidence limited to features clearly visible.",
+      "previous_pass": "PHASE4_PASS28_10_HOSTED_IMAGES",
+      "previous_scope": "6 of 7 current Lab gallery references inspected from actual GitHub-hosted image bytes. Exact individual rights/license, voucher identity and original date not independently certified.",
+      "pass46_photo_findings": [
+        {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "rhizomes, if any, are not unambiguously differentiated from roots by this photograph alone",
+            "flowering racemes, spikelets and collar not shown"
+          ]
+        }
+      ]
     }
   },
   {
@@ -1745,7 +1823,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099738-field-habit.jpg",
-        "label": "LIVE FIELD HABIT — thin paspalum flowering shoot with green basal leaves (exact species source)",
+        "label": "Thin paspalum leafy flowering shoot within mixed groundcover — basal attachment and spikelet details indistinct",
         "creator": "Alex Abair",
         "license": "CC BY 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_setaceum_49099738.jpg",
@@ -1807,7 +1885,7 @@
     "source_blob_sha": "2d8f0a7cd1dc72924085371b3934ffc11cede269",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.232",
@@ -1848,11 +1926,11 @@
       "note": "Published morphology and measured descriptions, NOT field-measured local specimens, verified exact-source photo roles, or BONAP county nativity."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "7 of 8 hosted Lab photo references visually reviewed from actual GitHub image bytes; one P. setaceum reference remains inaccessible. No independent exact rights, botanical voucher or original collection dates confirmed.",
+      "scope": "7 of 8 hosted Lab photo references visually reviewed from actual GitHub image bytes; one P. setaceum reference remains inaccessible. No independent exact rights, botanical voucher or original collection dates confirmed. Pass46: exact hosted JPG index 3 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
         {
           "i": 0,
@@ -1898,6 +1976,23 @@
           "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099728.jpg",
           "git_blob_sha": "22567ee88ac49ccb1e60cad43f812be7e1c6467a",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT PHOTO SOURCE RIGHTS, OBSERVATION ID AND CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "slender green flowering shoot rising in sparse grassy groundcover",
+            "elongated leaf blades and faint branching reproductive region"
+          ],
+          "cannot_verify": [
+            "individual paired spikelets not distinguishable at this field distance",
+            "true inner ligule, crown and exact connected flowering stem not clearly demonstrated"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099738-field-habit.jpg",
+          "git_blob_sha": "6f10a34e3ab3545254ff28ae1e5426fa846935ee",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 4,
@@ -1960,9 +2055,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE RIGHTS, VOUCHER ID, FLORA DISSECTION LABELS AND CAPTURE DATE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Existing field-habit i=3 has GitHub blob metadata but no viewable image bytes; recover only in separate image-access process",
         "Open true inner ligule with measured blade–sheath interface; brown membranous-looking tissue in i=6 not fully verified",
@@ -1979,7 +2072,19 @@
         "queue_action": "Retain remaining seasonal and anatomy gaps in existing master Photo Needs Queue; no separate spreadsheet."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo appearance review only. Source labels in photographer's annotated i=1 image treated as source annotation and not independently re-certified; prior morphology/key unchanged."
+      "morphology_reference_note": "Photo appearance review only. Source labels in photographer's annotated i=1 image treated as source annotation and not independently re-certified; prior morphology/key unchanged.",
+      "previous_pass": "PHASE4_PASS30_9_HOSTED_IMAGES",
+      "previous_scope": "7 of 8 hosted Lab photo references visually reviewed from actual GitHub image bytes; one P. setaceum reference remains inaccessible. No independent exact rights, botanical voucher or original collection dates confirmed.",
+      "pass46_photo_findings": [
+        {
+          "i": 3,
+          "verdict": "PARTIAL_VISIBLE",
+          "unverified": [
+            "individual paired spikelets not distinguishable at this field distance",
+            "true inner ligule, crown and exact connected flowering stem not clearly demonstrated"
+          ]
+        }
+      ]
     }
   },
   {
