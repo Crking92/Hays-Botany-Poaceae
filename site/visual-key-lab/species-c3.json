@@ -1723,7 +1723,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg",
-        "label": "SORGHUM — real blade/sheath LIGULE photograph",
+        "label": "Sorghum blade–sheath junction shows pale hairy collar rim — free membranous ligule not completely unfolded",
         "creator": "Rasbak",
         "license": "CC BY-SA 3.0",
         "license_url": "",
@@ -1733,7 +1733,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg",
-        "label": "SORGHUM — real flowering branch close-up",
+        "label": "Sorghum flowering cluster with yellow dangling anthers and reddish-purple floral parts",
         "creator": "Rasbak",
         "license": "CC BY-SA 3.0",
         "license_url": "",
@@ -1770,7 +1770,7 @@
     },
     "source_blob_sha": "70af51b2bda254a71476c05ac1d971f2c49e73e4",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 246",
@@ -1824,11 +1824,11 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS14_6_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2 of 4 current Lab gallery references checked from actual hosted image bytes. Inaccessible images excluded. Identity, original source license and dates not independently rechecked.",
+      "scope": "2 of 4 current Lab gallery references checked from actual hosted image bytes. Inaccessible images excluded. Identity, original source license and dates not independently rechecked. Pass46: exact hosted JPG index 1 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance. Pass46: exact hosted JPG index 2 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
       "photo_roles": [
         {
           "i": 0,
@@ -1846,6 +1846,40 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         },
         {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "green broad leaf blade emerging from pale sheath rim on upright culm",
+            "dark and white hairlike structures along blade-sheath junction"
+          ],
+          "cannot_verify": [
+            "cannot unequivocally expose entire inner membranous ligule or assign every visible hair to it",
+            "no calibrated measure or flowering panicle"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg",
+          "git_blob_sha": "d4b6c5c8f87c2bc088ce25088f6ca40dcab34962",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "many large pale yellow exserted anthers grouped on a flowering panicle branch",
+            "rounded greenish and purplish-red floral units around anthers"
+          ],
+          "cannot_verify": [
+            "individual mature grains, glumes and full panicle attachment not separated",
+            "microscopic floral sex and species traits require closer view"
+          ],
+          "pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg",
+          "git_blob_sha": "50cd96dc992af5136342c75c52bc8fa17a59fc17",
+          "byte_verification": "GITHUB_ACTIONS_SPARSE_READ_ONLY_JPEG_RENDER; VERIFIED_EXACT_GIT_BLOB_SHA1; NO_EXACT_IMAGE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 8,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -1861,10 +1895,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        1,
-        2
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "original ligule i=1 and flower i=2 hosted images return no renderable bytes",
         "detached spikelet/awn and true ligule visualization",
@@ -1876,7 +1907,27 @@
         "queue_action": "Inspect any existing dated winter material before adding needs."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Visual evidence/caption QA only; source-backed diagnostic traits and key filters unchanged."
+      "morphology_reference_note": "Visual evidence/caption QA only; source-backed diagnostic traits and key filters unchanged.",
+      "previous_pass": "PHASE4_PASS46_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "2 of 4 current Lab gallery references checked from actual hosted image bytes. Inaccessible images excluded. Identity, original source license and dates not independently rechecked. Pass46: exact hosted JPG index 1 rendered from SHA verified read-only Git repository. No new image, identity voucher, or original-source license clearance.",
+      "pass46_photo_findings": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "unverified": [
+            "cannot unequivocally expose entire inner membranous ligule or assign every visible hair to it",
+            "no calibrated measure or flowering panicle"
+          ]
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "unverified": [
+            "individual mature grains, glumes and full panicle attachment not separated",
+            "microscopic floral sex and species traits require closer view"
+          ]
+        }
+      ]
     }
   },
   {
