@@ -28,8 +28,17 @@ def download(name):
         return response.read()
 def run():
     local=json.loads((LAB/"hays-candidates.json").read_text())
-    live=json.loads(download("hays-candidates.json"))
-    assert live==local, "Public candidate manifest differs from checked-out main; deployment lag"
+    # A newer main commit may need a minute to reach GitHub Pages. Retry only
+    # the exact manifest-parity gate, never an image/credit/identity failure.
+    live=None
+    for attempt in range(12):
+        live=json.loads(download("hays-candidates.json"))
+        if live==local:
+            break
+        if attempt<11:
+            print(f"Group D Pages parity pending ({attempt+1}/12); retrying exact manifest",flush=True)
+            time.sleep(5)
+    assert live==local, "Public candidate manifest differs from checked-out main after bounded Pages parity retries"
     local_by={x["id"]:x for x in local["candidates"]}
     assert len(local_by)==57
     assert all(s in local_by for s in SPECIES)
