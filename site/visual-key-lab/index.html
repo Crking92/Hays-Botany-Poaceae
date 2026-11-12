@@ -64,7 +64,6 @@ html.guest-preview .hero h1{margin:0}
 html.guest-preview .answer-body{padding-top:10px}
 html.guest-preview .question{padding-top:15px}
 </style>
-<script>if(new URLSearchParams(location.search).get('demo')==='1')document.documentElement.classList.add('guest-preview');</script>
 </head>
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">↖ Back to existing Grass Learner</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Hide explanations</button></div></header>
@@ -92,6 +91,7 @@ html.guest-preview .question{padding-top:15px}
 <script>
 (function(){
 "use strict";
+if(new URLSearchParams(location.search).get("demo")==="1")document.documentElement.classList.add("guest-preview");
 const BASE="https://crking92.github.io/Hays-Botany-Poaceae/site/";
 const qs=[
 {id:"head",short:"Flowerhead",title:"What does the flowering head look like?",hint:"Begin with its overall architecture: an open panicle, contracted plume, distinct racemes, or spike. Use the categories below to compare whole heads; skip if yours is not flowering.",options:[
