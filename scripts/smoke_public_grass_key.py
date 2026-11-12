@@ -5,6 +5,7 @@ This is a byte/data-delivery check, NOT independent plant ID, photo rights, or s
 """
 import hashlib
 import json
+import os
 import time
 import urllib.error
 import urllib.request
@@ -13,13 +14,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "site" / "visual-key-lab"
 BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
+RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json", "index.html"]
 
 
 def read_public(name):
     req = urllib.request.Request(
-        BASE + name + "?grass_key_release_check=20261112",
+        BASE + name + "?grass_key_release_check=" + RELEASE_REF,
         headers={"User-Agent": "Hays-Grass-Lab-Public-Key-QA/1.0", "Cache-Control": "no-cache"},
     )
     with urllib.request.urlopen(req, timeout=20) as response:
