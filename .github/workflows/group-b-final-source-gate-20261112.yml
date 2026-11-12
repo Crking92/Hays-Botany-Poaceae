@@ -1,0 +1,20 @@
+name: Group B - Final Elymus and Stapfochloa original/photo rights gate (read-only)
+on:
+  pull_request:
+    paths:
+      - 'scripts/group_b_final_elymus_stapfochloa_source_gate.py'
+      - '.github/workflows/group-b-final-source-gate-20261112.yml'
+permissions:
+  contents: read
+jobs:
+  source-original-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Exact photo creator version rights original bytes SHA duplicate check
+        run: python scripts/group_b_final_elymus_stapfochloa_source_gate.py
