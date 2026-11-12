@@ -17,20 +17,21 @@ jobs:
           filter: blob:none
           sparse-checkout-cone-mode: false
           sparse-checkout: |
-            site/media/arundo-donax/g3-gbif-6195810483-photo_1.jpg
-            content/taxa/Poaceae/Bothriochloa/bothriochloa-barbinodis/images/commons-archive-2b98f73ec716071b.jpg
-            content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/commons-bothriochloa-torreyana-6297402fc283.jpg
-            content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/smallcurio-austin-silver-bluestem-2017.jpg
-            content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-true-hairy-stem-nodes-sl20.jpg
-            content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-real-glumes-at-spikelet-base-sl24.jpg
-            content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/commons-catapodium-ligule-1.jpg
-            content/taxa/Poaceae/Phragmites/phragmites-australis/images/nonenmacher-rhizomes-sca-00129.jpg
-            site/media/heteropogon-contortus/inat-27411269.jpeg
-            content/taxa/Poaceae/Tridentopsis/tridentopsis-buckleyana/images/buckley-tridens-inat-173616239-cc-by-original.jpg
-            content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-review-264449047.jpg
-            content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20539.jpg
-            content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20540.jpg
-            content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/harry-rose-collar-ligule.jpg
+            site/media/elymus-canadensis/inat-72405973.jpg
+            site/media/elymus-canadensis/gbif-3866885510-d9374a0680b9.jpg
+            content/taxa/Poaceae/Eragrostis/eragrostis-secundiflora/images/sam-kieschnick-red-lovegrass-ground-growing-bunch-752434624.jpg
+            content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-58eb098d241b.jpg
+            content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-51b05fedea0c.jpg
+            content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg
+            content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg
+            content/taxa/Poaceae/Panicum/panicum-capillare/images/stefan-lefnaer-witchgrass-labelled-spikelet-parts-cc-by-sa4.jpg
+            content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-complete-diffuse-panicle-by-sa2.jpg
+            content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/steve-finlayson-2026-rooted-crown-cc0.jpg
+            content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099738-field-habit.jpg
+            content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg
+            content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg
+            content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-attached-spikelets-681610423.jpg
+            content/taxa/Poaceae/Urochloa/urochloa-fusca/images/james-schnable-vegetative-urochloa-fusca.jpg
       - name: Render existing photos into read-only proof sheets
         shell: bash
         run: |
@@ -38,7 +39,7 @@ jobs:
           python3 - <<'PY'
           import sys, json, os, io, hashlib, base64, textwrap
           from PIL import Image, ImageOps, ImageDraw, ImageFont
-          items = json.loads("[[\"Arundo donax i6\",\"site/media/arundo-donax/g3-gbif-6195810483-photo_1.jpg\",\"7e3015a0b369c5cd8c2181c3f9b9a5d1320a0e8f\"],[\"Bothriochloa barbinodis i1\",\"content/taxa/Poaceae/Bothriochloa/bothriochloa-barbinodis/images/commons-archive-2b98f73ec716071b.jpg\",\"79175d001fae6036eed96a7c8239de7f5d1a2d3d\"],[\"Bothriochloa torreyana i1\",\"content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/commons-bothriochloa-torreyana-6297402fc283.jpg\",\"d8498a6a4ecbc4f03fef0ac286caaf739b6e0f96\"],[\"Bothriochloa torreyana i2\",\"content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/smallcurio-austin-silver-bluestem-2017.jpg\",\"f3f37efe9e6cdec230abab9af5d9503c99ce34a6\"],[\"Bromus japonicus i3\",\"content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-true-hairy-stem-nodes-sl20.jpg\",\"681f44c17f8324b0f3862f59e7225f7b9638b029\"],[\"Bromus japonicus i5\",\"content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-real-glumes-at-spikelet-base-sl24.jpg\",\"779ed8d50ca4ee59a0128f579edd8442bf62ecb8\"],[\"Catapodium rigidum i1\",\"content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/commons-catapodium-ligule-1.jpg\",\"ee96fa066ece807c60524056bf5509b1ef32092e\"],[\"Phragmites australis i6\",\"content/taxa/Poaceae/Phragmites/phragmites-australis/images/nonenmacher-rhizomes-sca-00129.jpg\",\"9558f9e04b99ab831f88d4c8955010846e5247c4\"],[\"Heteropogon contortus i12\",\"site/media/heteropogon-contortus/inat-27411269.jpeg\",\"10eb5e42eb4e647529de9c0549506e4a7e1217b1\"],[\"Tridentopsis buckleyana i0\",\"content/taxa/Poaceae/Tridentopsis/tridentopsis-buckleyana/images/buckley-tridens-inat-173616239-cc-by-original.jpg\",\"558d0d3e65601479e1b4616187a3c48c161319f7\"],[\"Zizaniopsis miliacea i3\",\"content/taxa/Poaceae/Zizaniopsis/zizaniopsis-miliacea/images/giant-cutgrass-alex-abair-review-264449047.jpg\",\"66937606d3bdc53132042b8093ce49cfd2b56eae\"],[\"Zizania texana i3\",\"content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20539.jpg\",\"cb0885a7e1f783caa2faa8d67a18500f90835e12\"],[\"Zizania texana i4\",\"content/taxa/Poaceae/Zizania/zizania-texana/images/usfws-hagerty-20540.jpg\",\"73a84371696dbc2f2d654b8ad901bf4ff06de5b0\"],[\"Eragrostis cilianensis i1\",\"content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/harry-rose-collar-ligule.jpg\",\"3b944b64348a8c1763e91372fafa15dfc3497abc\"]]")
+          items = json.loads("[[\"Elymus canadensis i7\",\"site/media/elymus-canadensis/inat-72405973.jpg\",\"46c2db5f7e0c719dad1971bbd9fd61814f1e9b1b\"],[\"Elymus canadensis i9\",\"site/media/elymus-canadensis/gbif-3866885510-d9374a0680b9.jpg\",\"d9260e436f11a6e64de670c55e26cb4fa5e07216\"],[\"Eragrostis secundiflora i4\",\"content/taxa/Poaceae/Eragrostis/eragrostis-secundiflora/images/sam-kieschnick-red-lovegrass-ground-growing-bunch-752434624.jpg\",\"0952735b8c71365df84312757cdb85bcacea2c3c\"],[\"Festuca octoflora i1\",\"content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-58eb098d241b.jpg\",\"9078e09dd9fa2d4a203d286397cc85c4113caea1\"],[\"Festuca octoflora i2\",\"content/taxa/Poaceae/Festuca/festuca-octoflora/images/commons-51b05fedea0c.jpg\",\"b6ce4679d46bcbce2defc0764f1ff35038ac61f5\"],[\"Sorghum bicolor i1\",\"content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-ligule-03.jpg\",\"d4b6c5c8f87c2bc088ce25088f6ca40dcab34962\"],[\"Sorghum bicolor i2\",\"content/taxa/Poaceae/Sorghum/sorghum-bicolor/images/rasbak-sorghum-flower-03.jpg\",\"50cd96dc992af5136342c75c52bc8fa17a59fc17\"],[\"Panicum capillare i0\",\"content/taxa/Poaceae/Panicum/panicum-capillare/images/stefan-lefnaer-witchgrass-labelled-spikelet-parts-cc-by-sa4.jpg\",\"b52c585ef9cab8627aae6dc92744379ea3cfa75b\"],[\"Panicum capillare i1\",\"content/taxa/Poaceae/Panicum/panicum-capillare/images/matt-lavin-witchgrass-complete-diffuse-panicle-by-sa2.jpg\",\"b2b3144ce46862286148307157bae788bfc6ac7d\"],[\"Paspalum dilatatum i5\",\"content/taxa/Poaceae/Paspalum/paspalum-dilatatum/images/steve-finlayson-2026-rooted-crown-cc0.jpg\",\"dbfd88622f56b010b3b2fc944ec92c816f0fc65a\"],[\"Paspalum setaceum i3\",\"content/taxa/Poaceae/Paspalum/paspalum-setaceum/images/alex-abair-49099738-field-habit.jpg\",\"6f10a34e3ab3545254ff28ae1e5426fa846935ee\"],[\"Setaria reverchonii i0\",\"content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-7f11c328fb10.jpg\",\"4a21f76d297c1c1f32c330caa103200849708dbe\"],[\"Setaria reverchonii i1\",\"content/taxa/Poaceae/Setaria/setaria-reverchonii/images/commons-d45564aecca8.jpg\",\"8a0925d9aa88d1f8b1a4541e54236b3486dbd6dd\"],[\"Setaria reverchonii i3\",\"content/taxa/Poaceae/Setaria/setaria-reverchonii/images/clifton-ladd-duval-attached-spikelets-681610423.jpg\",\"bd2afb85f7d2c334af2956d29ef65490db422c2f\"],[\"Urochloa fusca i3\",\"content/taxa/Poaceae/Urochloa/urochloa-fusca/images/james-schnable-vegetative-urochloa-fusca.jpg\",\"beb3706ee5ca28bac62e2d1cf6f5eb849e7d8b08\"]]")
           fontpath='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
           font = ImageFont.truetype(fontpath, 17) if os.path.exists(fontpath) else ImageFont.load_default()
           photos=[]
