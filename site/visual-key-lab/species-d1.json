@@ -868,7 +868,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/commons-catapodium-ligule-1.jpg",
-        "label": "ARCHIVED FERN GRASS — source-labelled ligule/collar 1",
+        "label": "Four scaled fern-grass blade–sheath junction views with pale projecting tissue — free inner ligule not fully isolated",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ACatapodium_rigidum_sl15.jpg",
@@ -939,7 +939,7 @@
     "source_blob_sha": "3f4f3636dad96c93a7dd4306ffe96cdb7675e780",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_6_OF_7; TRUE_LIGULE_ORIGIN_AND_FLORET_DETAILS_PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -988,11 +988,11 @@
       "note": "FNA/Kew/Texas botanical traits sourced; diagnostic photo crop, same-specimen measurement and county nativity require independent verification."
     },
     "review": {
-      "pass": "PHASE4_PASS41_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_6_OF_7",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_7_OF_7",
       "rights_status": "EXISTING_PHOTOGRAPHER_CREATOR_SOURCE_LICENSE_FIELDS_PRESERVED; EXACT_IMAGE_SOURCE_RIGHTS_NOT_REVALIDATED",
-      "scope": "Six of seven hosted JPGs rendered from GitHub and visually inspected; source-labelled collar i=1 returned metadata only. This is role-specific visual inspection, not an independent botanical voucher or author/licensing review.",
+      "scope": "Six of seven hosted JPGs rendered from GitHub and visually inspected; source-labelled collar i=1 returned metadata only. This is role-specific visual inspection, not an independent botanical voucher or author/licensing review. Pass45: additional currently-hosted JPG i=1 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -1010,6 +1010,23 @@
           "hosted_file": "content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/catapodium-rigidum-dave-richardson.jpg",
           "git_blob_sha": "b009031544f880c1d22cfdeb6b0437c0520b0e4e",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_PHOTO_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "four side-on macro views of thin bright-green blades attached at sheath junction",
+            "small pale projecting membranes or leaf edges close to each collar and 5-mm original scale"
+          ],
+          "cannot_verify": [
+            "free inner ligule edge and its point of origin not unambiguously exposed in every view",
+            "do not treat pale projecting sheath edge as exact measured ligule length"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Catapodium/catapodium-rigidum/images/commons-catapodium-ligule-1.jpg",
+          "git_blob_sha": "ee96fa066ece807c60524056bf5509b1ef32092e",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 2,
@@ -1096,16 +1113,8 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_PHOTO_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        1
-      ],
-      "image_access_holds": [
-        {
-          "i": 1,
-          "git_blob_sha": "ee96fa066ece807c60524056bf5509b1ef32092e",
-          "reason": "GitHub read returned image metadata only, no viewable bytes; defer to image-access workflow, do not count or reattempt in routine QA."
-        }
-      ],
+      "unreviewed_hosted_indices": [],
+      "image_access_holds": [],
       "unmet_roles": [
         "unambiguously free true inner ligule photographed at scale with sheath fully opened",
         "rigid branch three-angled cross section at magnification",
@@ -1118,7 +1127,29 @@
         "queue_action": "Existing master Photo Needs Queue only; focus true ligule, measured palea/lemma and connected crown, not duplicate head photos."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas older Desmazeria name and accepted Kew name crosswalk are preserved, but photo QA did not recheck independent species taxonomy or county range."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas older Desmazeria name and accepted Kew name crosswalk are preserved, but photo QA did not recheck independent species taxonomy or county range.",
+      "previous_pass": "PHASE4_PASS41_HOSTED_IMAGE_BATCH",
+      "previous_scope": "Six of seven hosted JPGs rendered from GitHub and visually inspected; source-labelled collar i=1 returned metadata only. This is role-specific visual inspection, not an independent botanical voucher or author/licensing review.",
+      "pass45_note": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "free inner ligule edge and its point of origin not unambiguously exposed in every view",
+            "do not treat pale projecting sheath edge as exact measured ligule length"
+          ]
+        }
+      ],
+      "resolved_image_access_holds": [
+        {
+          "i": 1,
+          "git_blob_sha": "ee96fa066ece807c60524056bf5509b1ef32092e",
+          "reason": "GitHub read returned image metadata only, no viewable bytes; defer to image-access workflow, do not count or reattempt in routine QA.",
+          "resolved_in": "PHASE4_PASS45",
+          "resolved_blob_sha": "ee96fa066ece807c60524056bf5509b1ef32092e"
+        }
+      ]
     }
   },
   {
@@ -2827,7 +2858,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/harry-rose-collar-ligule.jpg",
-        "label": "Stinkgrass — true collar source photograph",
+        "label": "Stinkgrass leaf–sheath junction with tufted pale hairs and a flowering branch above — inner ligule not isolated",
         "creator": "Harry Rose",
         "license": "CC BY 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_cilianensis_collar1_NWS_-_Flickr_-_Macleay_Grass_Man.jpg",
@@ -2871,7 +2902,7 @@
     "source_blob_sha": "81baf36a39ff23857b621d6d8c594b67377b5a54",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "habit": {
         "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 194",
@@ -2912,11 +2943,11 @@
       "note": "Published source morphology; photos, local vouchers, individual organ measurements and county nativity not certified. Conflicting/variety-level traits explicitly provisional."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "3/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "scope": "3/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification. Pass45: additional currently-hosted JPG i=1 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -2933,6 +2964,23 @@
           "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
           "git_blob_sha": "a282c4183b6511fca47fe55138ec055bc8bba450",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "green culm and blade junction with pale tuft of thin hairs at collar",
+            "short flowering spikelets above junction against blue sky"
+          ],
+          "cannot_verify": [
+            "true free inner ligule anatomy and membranous edge not independently exposed",
+            "hair tuft alone is not enough to certify full Eragrostis ligule structure"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-cilianensis/images/harry-rose-collar-ligule.jpg",
+          "git_blob_sha": "3b944b64348a8c1763e91372fafa15dfc3497abc",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 2,
@@ -2967,9 +3015,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        1
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "clearly exposed stem/lemma crater glands and floret count",
         "actual rooted annual crown"
@@ -2980,7 +3026,20 @@
         "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits.",
+      "previous_pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "previous_scope": "3/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "pass45_note": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "true free inner ligule anatomy and membranous edge not independently exposed",
+            "hair tuft alone is not enough to certify full Eragrostis ligule structure"
+          ]
+        }
+      ]
     }
   }
 ]

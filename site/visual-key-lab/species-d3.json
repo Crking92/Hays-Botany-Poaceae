@@ -2334,7 +2334,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Phragmites/phragmites-australis/images/nonenmacher-rhizomes-sca-00129.jpg",
-        "label": "Excavated rhizomes after tarp removal — common reed",
+        "label": "Common-reed control site: cut dry reed material piled beside black tarps — individual excavated rhizomes NOT visible",
         "creator": "R.A.Nonenmacher",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3APhragmites_australis_SCA-00129.jpg",
@@ -2368,7 +2368,7 @@
     "source_blob_sha": "c6e0e9672794d405a13d0de45e10f10b95d3dae7",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.235",
@@ -2422,11 +2422,11 @@
       "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_7_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_CREDITS_PRESERVED_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
-      "scope": "7 of 8 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification.",
+      "scope": "7 of 8 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification. Pass45: additional currently-hosted JPG i=6 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -2519,6 +2519,23 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
         },
         {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "broad pile of cut tan stems and leaves next to black tarpaulin in a cleared area",
+            "standing green reed vegetation in the background"
+          ],
+          "cannot_verify": [
+            "individual underground rhizomes, nodes or new buds are not identifiable in this wide scene",
+            "cannot teach Phragmites-versus-Arundo root anatomy or elimination success using this image"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Phragmites/phragmites-australis/images/nonenmacher-rhizomes-sca-00129.jpg",
+          "git_blob_sha": "9558f9e04b99ab831f88d4c8955010846e5247c4",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 7,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -2534,9 +2551,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        6
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Rhizome photo i=6 returned only GitHub metadata without viewable image bytes; preserve it for separate image-access recovery and do not count",
         "Matched true dissected spikelets with silk hair origin explicitly traced to rachilla internodes, lemma surface separately documented against Arundo, with scale and expert voucher",
@@ -2550,7 +2565,20 @@
         "queue_action": "Use existing master Photo Needs Queue for targeted missing anatomy, winter dates and inaccessible originals. No separate sheet."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-structure QA only. Original key, lineage/source caveats and FNA-backed diagnostic checks unchanged; annotated source labels not independently recertified."
+      "morphology_reference_note": "Photo-structure QA only. Original key, lineage/source caveats and FNA-backed diagnostic checks unchanged; annotated source labels not independently recertified.",
+      "previous_pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+      "previous_scope": "7 of 8 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification.",
+      "pass45_note": [
+        {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "individual underground rhizomes, nodes or new buds are not identifiable in this wide scene",
+            "cannot teach Phragmites-versus-Arundo root anatomy or elimination success using this image"
+          ]
+        }
+      ]
     }
   },
   {

@@ -410,7 +410,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/arundo-donax/g3-gbif-6195810483-photo_1.jpg",
-        "label": "Cane nodes and internodes with persistent dry sheaths and emerging leafy lateral shoots; original sideways orientation preserved.",
+        "label": "Giant reed cane joints with dry persistent sheaths and leafy side shoots — no scale or underground rhizome",
         "creator": "Chris Hughes",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -435,7 +435,7 @@
     },
     "source_blob_sha": "4efff8452701e10af072fbb45deb6c34eaf45739",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 167",
@@ -490,11 +490,11 @@
       "note": "Source-linked botanical comparisons complete for first checklist pass only; photo parts, exact lineage where relevant and Hays field specimens not certified. Endangered Zizania strictly observe without disturbance."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_5",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_5_OF_5",
       "rights_status": "EXISTING_CREDITS_PRESERVED_EXACT_IMAGE_LICENSE_NOT_REVALIDATED",
-      "scope": "4 of 5 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification.",
+      "scope": "4 of 5 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification. Pass45: additional currently-hosted JPG i=6 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -555,11 +555,26 @@
           "hosted_file": "content/taxa/Poaceae/Arundo/arundo-donax/images/harry-rose-spikelets-6804285202.jpg",
           "git_blob_sha": "d652fe8f70ea6a643a81e8d685c49a02509455cf",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; EXACT IMAGE LICENSE, TAXON VOUCHER AND PHOTO CAPTURE DATE NOT REVALIDATED"
+        },
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "horizontal thick green-tan segmented cane with multiple obvious nodes",
+            "papery sheath remnants and thin green lateral shoots at some nodes"
+          ],
+          "cannot_verify": [
+            "rhizome connectivity and underground anatomy are not visible",
+            "cane diameter, inner ligule, and diagnostic reed spikelets cannot be independently measured"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/arundo-donax/g3-gbif-6195810483-photo_1.jpg",
+          "git_blob_sha": "7e3015a0b369c5cd8c2181c3f9b9a5d1320a0e8f",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        6
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Original i=6 cane-node photograph returned blob metadata only and remains uncounted; route to existing image-access work rather than repeated QA",
         "A matched dissection of one Arundo spikelet with long silky hairs confirmed on the basal lemma and glabrous rachilla internode, including glumes, awn and scale, compared with Phragmites",
@@ -573,7 +588,20 @@
         "queue_action": "Use existing master Photo Needs Queue for targeted missing anatomy, winter dates and inaccessible originals. No separate sheet."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-structure QA only. Original key, lineage/source caveats and FNA-backed diagnostic checks unchanged; annotated source labels not independently recertified."
+      "morphology_reference_note": "Photo-structure QA only. Original key, lineage/source caveats and FNA-backed diagnostic checks unchanged; annotated source labels not independently recertified.",
+      "previous_pass": "PHASE4_PASS31_11_HOSTED_IMAGES",
+      "previous_scope": "4 of 5 existing hosted Lab references inspected using actual rendered GitHub image bytes. No independent photo-level license or voucher certification.",
+      "pass45_note": [
+        {
+          "i": 6,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "rhizome connectivity and underground anatomy are not visible",
+            "cane diameter, inner ligule, and diagnostic reed spikelets cannot be independently measured"
+          ]
+        }
+      ]
     }
   },
   {
@@ -765,7 +793,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-barbinodis/images/commons-archive-2b98f73ec716071b.jpg",
-        "label": "Cane bluestem — full flowering habit reference",
+        "label": "Dry roadside stand with many upright pale fuzzy flowering tips — individual cane-bluestem spikelets not resolved",
         "creator": "Michel Chauvet",
         "license": "CC BY-SA 4.0",
         "license_url": "",
@@ -791,7 +819,7 @@
     },
     "source_blob_sha": "ffdea16d5a1cc7bff0e98aefc9468fe977cfdc55",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
@@ -825,11 +853,11 @@
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_1_OF_2",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_2_OF_2",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "1/2 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "1/2 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass45: additional currently-hosted JPG i=1 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -846,11 +874,26 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "9919fa360c8f60346863d8f4fd2d4f57b5114563",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "many straw-colored slender flowering grasses forming roadside stand",
+            "several narrow pale silky flowering clusters rising above vegetation"
+          ],
+          "cannot_verify": [
+            "no one flowering head traceable to an individual root crown",
+            "pedicelled versus sessile spikelets and hairy stem nodes are too small to confirm"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bothriochloa/bothriochloa-barbinodis/images/commons-archive-2b98f73ec716071b.jpg",
+          "git_blob_sha": "79175d001fae6036eed96a7c8239de7f5d1a2d3d",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        1
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "separated spikelet pair, rooted entire plant and winter habit"
       ],
@@ -860,7 +903,20 @@
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "previous_pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "previous_scope": "1/2 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "pass45_note": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "no one flowering head traceable to an individual root crown",
+            "pedicelled versus sessile spikelets and hairy stem nodes are too small to confirm"
+          ]
+        }
+      ]
     }
   },
   {
@@ -884,7 +940,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/commons-bothriochloa-torreyana-6297402fc283.jpg",
-        "label": "Silver bluestem — general roadside population",
+        "label": "Wide dry roadside silver-beardgrass stand with scattered white fuzzy heads — spikelets not isolated",
         "creator": "Matt Lavin",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
@@ -894,7 +950,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/smallcurio-austin-silver-bluestem-2017.jpg",
-        "label": "Austin silver bluestem — smallcurio CC BY",
+        "label": "Closer mature silver bluestem stand with numerous fluffy silver-white heads — paired spikelets not resolved",
         "creator": "smallcurio",
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0/",
@@ -920,7 +976,7 @@
     },
     "source_blob_sha": "2da860c6b5aa608a4fbab2bde0de115b73a043de",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
@@ -954,11 +1010,11 @@
       "note": "Source-supported targeted anatomical checks. Not a verified specimen, completed dissection, or photo-level QA."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS10_FALL_GRASS_HOSTED_PHOTO_REVIEW",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_1_OF_3",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_3_OF_3",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "1/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification.",
+      "scope": "1/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass45: additional currently-hosted JPG i=1 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent. Pass45: additional currently-hosted JPG i=2 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -975,12 +1031,43 @@
           "hosted_commit": "08087736e28f2ca56733a0bb2b3beea6777cbb9f",
           "git_blob_sha": "b4d2e3f91bb96904a1c2271a7233fc279763b921",
           "byte_verification": "GITHUB_CONNECTOR_RETURNED_RENDERABLE_HOSTED_IMAGE_AND_BLOB_SHA; NO_SOURCE_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "dry roadside bunchgrass population and scattered pale silvery tufts",
+            "habitat context on open roadside slope"
+          ],
+          "cannot_verify": [
+            "individual sessile/pedicelled spikelet pairs, glume hairs and rachis joints not distinguishable",
+            "cannot independently document leaf collar or single rooted plant"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/commons-bothriochloa-torreyana-6297402fc283.jpg",
+          "git_blob_sha": "d8498a6a4ecbc4f03fef0ac286caaf739b6e0f96",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "multiple small silvery-white cottony flowering clusters amid many upright straw-brown stems",
+            "dry field-season habit and fine inflorescence silhouette"
+          ],
+          "cannot_verify": [
+            "not enough magnification to trace an individual sessile and pedicelled spikelet pair",
+            "no confirmed stem-base ligule or measured floret details"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bothriochloa/bothriochloa-torreyana/images/smallcurio-austin-silver-bluestem-2017.jpg",
+          "git_blob_sha": "f3f37efe9e6cdec230abab9af5d9503c99ce34a6",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        1,
-        2
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "paired spikelets, opened true ligule and rooted clump"
       ],
@@ -990,7 +1077,29 @@
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "previous_pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "1/3 hosted images visually reviewed from renderable GitHub bytes; other photos unviewable, not counted. This is photo-role evidence, not source identity or release certification. Pass45: additional currently-hosted JPG i=1 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
+      "pass45_note": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "individual sessile/pedicelled spikelet pairs, glume hairs and rachis joints not distinguishable",
+            "cannot independently document leaf collar or single rooted plant"
+          ]
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "not enough magnification to trace an individual sessile and pedicelled spikelet pair",
+            "no confirmed stem-base ligule or measured floret details"
+          ]
+        }
+      ]
     }
   },
   {
@@ -1451,7 +1560,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-true-hairy-stem-nodes-sl20.jpg",
-        "label": "REAL CULM NODES — reddish joints and hairy external sheaths with source scale",
+        "label": "Four scaled side views of Japanese brome culm nodes, reddish joints and fine stem/sheath hairs — roots absent",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -1471,7 +1580,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-real-glumes-at-spikelet-base-sl24.jpg",
-        "label": "ACTUAL SPIKELET BASE + PAIR OF GLUMES — true reproductive macro",
+        "label": "Eight side views of green brome spikelet bases with overlapping pointed bracts, original 5-mm scale",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -1496,7 +1605,7 @@
     },
     "source_blob_sha": "e83ba9b6485b8f5fdc39b9573b48a9a0c0c6ed6e",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -1540,11 +1649,11 @@
       "note": "Regional or FNA/GrassBase measurements; not measured on authenticated Hays County specimens or verified in current key photos."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS7_BATCHED_HOSTED_IMAGE_REVIEW",
+      "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_6",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_6_OF_6",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4/6 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification.",
+      "scope": "4/6 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification. Pass45: additional currently-hosted JPG i=3 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent. Pass45: additional currently-hosted JPG i=5 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
       "photo_roles": [
         {
           "i": 0,
@@ -1596,6 +1705,23 @@
           "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
         },
         {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "four macro strips of grass stem nodes, each with reddish or brown node and adjacent sheath",
+            "fine surface hairs visible beside original 5-mm scale"
+          ],
+          "cannot_verify": [
+            "no mature spikelets or lemma awns shown",
+            "the image does not independently prove a full rooting crown or annual life cycle"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-true-hairy-stem-nodes-sl20.jpg",
+          "git_blob_sha": "681f44c17f8324b0f3862f59e7225f7b9638b029",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 4,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -1610,12 +1736,26 @@
           "hosted_commit": "babbd3e20bd8bb78b9dca24294c1b8399a20a224",
           "git_blob_sha": "a80a0f00cd7f918245aae864e8a829f3e18f7342",
           "byte_verification": "GITHUB_CONNECTOR_IMAGE_RENDERED_AND_BLOB_SHA_RETURNED; NOT_UPSTREAM_AUTHENTICATED"
+        },
+        {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "eight macro panels of pointed green to purple-tinged bracts at spikelet base",
+            "overlapping paired basal structures beside source 5-mm scale"
+          ],
+          "cannot_verify": [
+            "individual glume vein counts are not certifiable at reduced display scale",
+            "exact organ placement must follow original author's documented specimen anatomy"
+          ],
+          "pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-real-glumes-at-spikelet-base-sl24.jpg",
+          "git_blob_sha": "779ed8d50ca4ee59a0128f579edd8442bf62ecb8",
+          "byte_verification": "READ_ONLY_GITHUB_ACTIONS_IMAGE_RENDER; EXACT_GIT_BLOB_SHA1_MATCH; PHOTO_ROLE_QA_ONLY_NOT_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        3,
-        5
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "separated lower/upper glumes with vein counts",
         "true inner ligule"
@@ -1626,7 +1766,29 @@
         "queue_action": "Inspect existing archived views before declaring a new seasonal photo need."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only."
+      "morphology_reference_note": "No new morphology, taxonomy or source measurements asserted; photo evidence only.",
+      "previous_pass": "PHASE4_PASS45_EXACT_GIT_HOSTED_PHOTOS",
+      "previous_scope": "4/6 hosted Lab photos visually inspected as actual GitHub images. Unavailable originals uncounted. No source-rights or specimen certification. Pass45: additional currently-hosted JPG i=3 independently rendered and matched with exact Git blob hash via read-only branch; caption revised for visible structures. Rights and identification independent.",
+      "pass45_note": [
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "no mature spikelets or lemma awns shown",
+            "the image does not independently prove a full rooting crown or annual life cycle"
+          ]
+        },
+        {
+          "i": 5,
+          "verdict": "DIRECT_VISIBLE",
+          "priority": "field recognition and photo role evidence; no newly licensed or published photo",
+          "limits": [
+            "individual glume vein counts are not certifiable at reduced display scale",
+            "exact organ placement must follow original author's documented specimen anatomy"
+          ]
+        }
+      ]
     }
   },
   {
