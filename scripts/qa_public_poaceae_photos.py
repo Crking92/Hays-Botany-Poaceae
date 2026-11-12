@@ -95,12 +95,18 @@ def audit():
                         source_ok=bool(source and any(unquote(link)==unquote(source) for link in links))
                         license_terms=phot.get("license_url","")
                         license_link_ok=bool(license_terms and any(unquote(link)==unquote(license_terms) for link in links))
+                        # Do not let a gallery show the correct photo under the wrong species/role caption.
+                        expected_label=phot.get("label", "")
+                        label_ok=bool(expected_label and fig.locator("figcaption strong").count() and
+                                      fig.locator("figcaption strong").first.evaluate("(el) => el.textContent")==expected_label)
                         image=fig.locator("img")
                         pixel_ok=False
                         src_ok=False
+                        alt_ok=False
                         reason=""
                         if image.count():
                             src_ok=image.first.get_attribute("src")==phot.get("src")
+                            alt_ok=image.first.get_attribute("alt")==expected_label
                             try:
                                 image.first.scroll_into_view_if_needed(timeout=7000)
                                 handle=image.first.element_handle(timeout=4000)
@@ -112,13 +118,14 @@ def audit():
                                 reason=f"Image did not render: {type(ex).__name__}"
                         else:
                             reason="Missing image element / public gallery fallback"
-                        passed=bool(pixel_ok and credit_ok and source_ok and src_ok and license_link_ok)
+                        passed=bool(pixel_ok and credit_ok and source_ok and src_ok and license_link_ok and label_ok and alt_ok)
                         record["visible_with_credit"] += int(passed)
                         record["photos"].append({
                             "label":phot.get("label"),"visible_and_credited":passed,
                             "pixels":pixel_ok,"creator_license":credit_ok,
                             "exact_source_link":source_ok,"exact_asset_link":src_ok,
                             "exact_license_terms_link":license_link_ok,
+                            "exact_role_caption_label":label_ok,"exact_image_alt_label":alt_ok,
                             "failure":reason if not passed else ""})
                 except Exception as ex:
                     record["error"]=str(ex)[:500]
