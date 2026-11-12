@@ -1,0 +1,178 @@
+{
+  "workflow": "Chat 4 - Gallery Publication QA and Gap Closer",
+  "date": "2026-11-12",
+  "issue": 70,
+  "repository": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-group-c-publisher-qa-batch2-20261112",
+  "phase": "SOURCE_PIXEL_LICENSE_RECHECK_AND_PUBLISHER_HANDOFF_ONLY",
+  "source_prior": "audits/hays-expansion-20261111/group-c-gallery/group-c-batch2-next-three-20261112.json",
+  "publisher_owner": "Chat 2 only",
+  "release_owner": "Chat 1",
+  "source_review_species_total": 15,
+  "qa_reviewed_species_total": 6,
+  "qa_reviewed_this_batch": 3,
+  "scope": [
+    "setaria-leucopila",
+    "sphenopholis-obtusata",
+    "aegilops-cylindrica"
+  ],
+  "original_ref_counts_each": 1,
+  "current_ref_counts_each": 1,
+  "candidate_total": 6,
+  "first_priority_candidates": 5,
+  "optional_candidates": 1,
+  "rights_held_extra": 1,
+  "group_c_new_photos_installed": 0,
+  "group_c_new_live_photo_pixels_verified": 0,
+  "manifest_exact_url_filename_collision_scan": "Seven Batch2 source candidate filenames were compared across 70 configured provisional photo references on latest main; 0 exact filename matches. This does NOT replace binary hash scan or historical archive deduplication. Current assigned three still 1 ref each.",
+  "last_published_credit_check": "Issue #70 reports original provisional 54/54 publicly rendered with credit earlier today. Not independently rerun on current main by this Chat4 turn; no new Group C assets have been published.",
+  "approved_for_final_publisher_review": [
+    {
+      "species_id": "setaria-leucopila",
+      "priority": "P1",
+      "filename": "Setaria leucopila - Flickr - aspidoscelis (1).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_leucopila_-_Flickr_-_aspidoscelis_(1).jpg",
+      "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_leucopila_-_Flickr_-_aspidoscelis_(1).jpg",
+      "creator": "Patrick Alexander",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_identity": "SOURCE_SPECIES_LABELED_NONLOCAL_REFERENCE__NOT_VERIFIED_HAYS_SPECIMEN",
+      "photo_role_checked_in_previous_batch": true,
+      "observed_role": "Several golden dry flowering tufts in rocky southwestern shrubland habitat; older seasonal whole plants and bristled heads, roots not visible",
+      "caption_suggestion": "Plains bristlegrass: dry mature bunches and flowering stems in New Mexico",
+      "publication_gate": "CHAT2_FINAL_ORIGINAL_BINARY_HASH_DUPLICATE_AND_RENDERED_CREDIT_CHECK",
+      "original_source_note": "Named CC0 file from photographer's Flickr gallery; exact source image file exists in the 10-file Setaria leucopila Commons category."
+    },
+    {
+      "species_id": "setaria-leucopila",
+      "priority": "P1",
+      "filename": "Setaria leucopila - Flickr - aspidoscelis (5).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_leucopila_-_Flickr_-_aspidoscelis_(5).jpg",
+      "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_leucopila_-_Flickr_-_aspidoscelis_(5).jpg",
+      "creator": "Patrick Alexander",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_identity": "SOURCE_SPECIES_LABELED_NONLOCAL_REFERENCE__NOT_VERIFIED_HAYS_SPECIMEN",
+      "photo_role_checked_in_previous_batch": true,
+      "observed_role": "Fresh green clump with numerous narrow blades and long slender flowering shoots, crowded context, rooted base partly obscured",
+      "caption_suggestion": "Plains bristlegrass: green growing-season tuft and flowering shoots in New Mexico",
+      "publication_gate": "CHAT2_FINAL_ORIGINAL_BINARY_HASH_DUPLICATE_AND_RENDERED_CREDIT_CHECK"
+    },
+    {
+      "species_id": "sphenopholis-obtusata",
+      "priority": "P1",
+      "filename": "3a5f30cee308c1fb6428feccfc48a23b.jpg (University of Arizona preview)",
+      "source_page": "https://yavapaiplants.extension.arizona.edu/sphenopholis-obtusata",
+      "media_url": "https://yavapaiplants.extension.arizona.edu/sites/default/files/styles/yp_card_image/public/Grasses/Images/3a5f30cee308c1fb6428feccfc48a23b.jpg.webp?itok=YhUWIsCl",
+      "creator": "Intermountain Herbarium, Utah State University",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_identity": "EXTENSION_SPECIES_NAME_AND_INTERMOUNTAIN_HERBARIUM_CREDIT__NONLOCAL_REFERENCE_NOT_HAYS_SPECIMEN_ID",
+      "photo_role_checked_in_previous_batch": true,
+      "observed_role": "Complete dried mounted herbarium specimen with many slender flowering stems, some greenish/tan leaves and mature tan panicles on white background; photograph of herbarium specimen, not field habit",
+      "caption_suggestion": "Prairie wedgegrass: whole dried/pressed specimen with flowering stems and mature panicles (Intermountain Herbarium photo; nonlocal reference)",
+      "rights_evidence": "University of Arizona Extension source names exact plant photo, creator Intermountain Herbarium (Utah State University), Public Domain CC0 1.0; direct source image opened as transformed preview in current pass",
+      "publication_gate": "CHAT2_MUST_RETRIEVE_ORIGINAL_UNTRANSFORMED_IMAGE_AND_CHECK_CREATOR_LICENSE_AND_BINARY_DEDUPLICATION_BEFORE_PUBLISHING"
+    },
+    {
+      "species_id": "aegilops-cylindrica",
+      "priority": "P1",
+      "filename": "Aegilops cylindrica (3874100137).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aegilops_cylindrica_(3874100137).jpg",
+      "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aegilops_cylindrica_(3874100137).jpg",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source_identity": "SOURCE_SPECIES_LABELED_NONLOCAL_REFERENCE__NOT_VERIFIED_HAYS_SPECIMEN",
+      "photo_role_checked_in_previous_batch": true,
+      "observed_role": "Several mature brown cylindrical segmented heads held against fingers and dry grass field; visual evidence of disarticulating rachis at ripeness",
+      "caption_suggestion": "Jointed goatgrass: brown mature jointed spikes and shattering seed-bearing segments (Idaho reference)",
+      "publication_gate": "CHAT2_FINAL_ORIGINAL_BINARY_HASH_DUPLICATE_AND_RENDERED_CREDIT_CHECK",
+      "commons_original_sha1": "443f6e1fd98b7cbc19ac510812a54511b1880a70",
+      "original_source_page": "https://www.flickr.com/photos/plant_diversity/3874100137/",
+      "license_review": "Wikimedia Commons original Flickr reviewed 2013; license version and original-file SHA1 rechecked."
+    },
+    {
+      "species_id": "aegilops-cylindrica",
+      "priority": "P1",
+      "filename": "Aegilops cylindrica (3951083255).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aegilops_cylindrica_(3951083255).jpg",
+      "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aegilops_cylindrica_(3951083255).jpg",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "source_identity": "SOURCE_SPECIES_LABELED_NONLOCAL_REFERENCE__NOT_VERIFIED_HAYS_SPECIMEN",
+      "photo_role_checked_in_previous_batch": true,
+      "observed_role": "Extreme close-up on yellow glumes/spikelet and attachment to narrow rachis part; use neutral labeling without measuring/assigning hidden anatomy",
+      "caption_suggestion": "Jointed goatgrass: close view of spikelet and rachis junction (Idaho reference)",
+      "publication_gate": "CHAT2_FINAL_ORIGINAL_BINARY_HASH_DUPLICATE_AND_RENDERED_CREDIT_CHECK",
+      "commons_original_sha1": "29719a6df9c8adbd9ee8110b7aa29ed0e44f8cdd",
+      "original_source_page": "https://www.flickr.com/photos/plant_diversity/3951083255/",
+      "license_review": "Wikimedia Commons original Flickr reviewed 2013; license version and original-file SHA1 rechecked."
+    },
+    {
+      "species_id": "aegilops-cylindrica",
+      "priority": "P2_OPTIONAL",
+      "filename": "Aegilops cylindrica sl10.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Aegilops_cylindrica_sl10.jpg",
+      "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aegilops_cylindrica_sl10.jpg",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_identity": "SOURCE_SPECIES_LABELED_NONLOCAL_REFERENCE__NOT_VERIFIED_HAYS_SPECIMEN",
+      "photo_role_checked_in_previous_batch": true,
+      "observed_role": "Attached slender green multiple spikeheads bearing awns in roadside vegetation, differs from existing one spike with fingertip but overlaps green head role",
+      "caption_suggestion": "Jointed goatgrass: several attached green flowering spikes in field vegetation (Austria reference)",
+      "publication_gate": "CHAT2_FINAL_ORIGINAL_BINARY_HASH_DUPLICATE_AND_RENDERED_CREDIT_CHECK",
+      "commons_original_sha1": "cf9681534bebe37208530f0c5d6c85d8f38abc54",
+      "role_utility": "SECONDARY_GREEN_HEAD_CONTEXT; publish after the two reproductive-stage complements if still improves gallery",
+      "license_review": "Exact image Commons self-licensed CC BY-SA 4.0; source original sha1 rechecked."
+    }
+  ],
+  "remains_on_hold": [
+    {
+      "species_id": "sphenopholis-obtusata",
+      "file": "Sphenopholis_obtusata_infl_pic.jpg.webp",
+      "source": "https://yavapaiplants.extension.arizona.edu/sphenopholis-obtusata",
+      "creator": "Liz Makings",
+      "reason": "Source credits CC BY-SA but no license version specified, nor exact upstream image metadata verified; although macro directly opened and valuable, NO publication until photo-specific rights/version and original asset are reconciled. University of Arizona article itself not a blanket image license.",
+      "hold": "REUSABILITY_LICENSE_VERSION_OR_ORIGINAL_LINK_UNRESOLVED"
+    },
+    {
+      "species_id": "sphenopholis-obtusata",
+      "file": "Sue Carnahan Sphenopholis close images",
+      "source": "https://yavapaiplants.extension.arizona.edu/sphenopholis-obtusata",
+      "reason": "Explicit CC BY-NC; publisher may use only with proven noncommercial hosting/conditions, not assumed.",
+      "hold": "CONDITIONAL_NONCOMMERCIAL_LICENSE_NOT_CLEARED"
+    },
+    {
+      "species_id": "setaria-leucopila",
+      "file": "Setaria leucopila 12692884.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Setaria_leucopila_12692884.jpg",
+      "reason": "Same creator and another isolated dried bristlehead; adds little beyond existing close dry spikelet photo compared to green/dry whole clumps.",
+      "hold": "REDUNDANT_ROLE"
+    },
+    {
+      "species_id": "aegilops-cylindrica",
+      "file": "Leaf collar/auricle",
+      "reason": "No separately verified photo; neither Matt Lavin image should be captioned as an auricle or opened ligule.",
+      "hold": "NOT_YET_PHOTOGRAPHED"
+    }
+  ],
+  "remaining_photo_roles": {
+    "setaria_leucopila": [
+      "opened inner collar/ligule",
+      "fertile lemma rugosity at ruler scale"
+    ],
+    "sphenopholis_obtusata": [
+      "growing field stand with visible base",
+      "exact upper second glume at scale",
+      "opened leaf collar"
+    ],
+    "aegilops_cylindrica": [
+      "whole rooted tiller",
+      "auricles and ligule at blade-sheath junction"
+    ]
+  },
+  "handoff": "Chat2: finalize exact binary/hash original-source rights check and promptly install five P1 candidates, with one P2 optional after role dedupe; source/caption/creator/license links above. Chat1 verify actually rendered pixels + credits on public gallery before progress count. Chat4 re-check after merge, then QA next three."
+}
