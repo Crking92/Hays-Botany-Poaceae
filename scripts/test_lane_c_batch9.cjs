@@ -81,7 +81,7 @@ for(const row of before){
 }
 // Later evidence-backed scores will increase this number; the traversal above
 // must preserve EVERY currently supported pre-Batch9 combination.
-assert(oldCombinations>=37,'fewer than 37 previously validated D2 character paths');
+assert(oldCombinations>=36,'fewer than 36 validated D2 paths after correction of the former Texas fescue airy false inclusion');
 assert.equal(d2.reduce((n,x)=>n+x.photos.length,0),58,'D2 photo reference count changed');
 const unknown={id:'unknown-state-test',scientific:'?',common:'?',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(ids({head:'long_narrow_panicle'},[unknown]),['unknown-state-test']);
