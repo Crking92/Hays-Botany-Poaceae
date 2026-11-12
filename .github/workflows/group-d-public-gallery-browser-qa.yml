@@ -1,0 +1,38 @@
+name: Group D — public photo pixels and credits in real browser
+on:
+  pull_request:
+    paths:
+      - 'scripts/group_d_public_gallery_browser_qa.py'
+      - '.github/workflows/group-d-public-gallery-browser-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/hays-candidates.html'
+      - 'scripts/group_d_public_gallery_browser_qa.py'
+      - '.github/workflows/group-d-public-gallery-browser-qa.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  real-website-images:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install headless browser
+        run: |
+          python -m pip install 'playwright>=1.55,<2'
+          python -m playwright install --with-deps chromium
+      - name: Open published 17 Group D species and verify actual images and attribution
+        run: python scripts/group_d_public_gallery_browser_qa.py
+      - name: Save verified public mobile photo screenshots and exact failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-d-public-gallery-proof
+          path: group-d-live-evidence/
+          retention-days: 4
+          if-no-files-found: warn
