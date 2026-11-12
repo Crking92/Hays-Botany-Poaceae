@@ -1329,7 +1329,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "LONG conspicuous projecting mostly solitary bristles + relatively loose tapered foxtail panicle + hairy broad leaves; confirm the SINGLE bristle attachment and tiny hair-fringed ligule.",
+    "field_rule": "Southwestern bristlegrass: compare its long projecting bristles, tapering panicle and leafy perennial bunch. Open the true inner collar to look beneath the hairs for a tiny membrane. Bristles attach below spikelets; they are not lemma awns.",
     "traits": {
       "head": [
         "foxtail"
@@ -1338,7 +1338,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "bristles"
@@ -1359,6 +1360,14 @@
         "reference": "Usually 1–2 elongated sterile-branch bristles, not lemma awns.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, pp. 61–62; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1318, 1320",
+        "reference": "H&L describes a roughly 0.5 mm membrane fringed by 1–2 mm hairs. Keep hairs and membrane as observations of one ciliate ligule; measure basal tissue separately from projecting hairs.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new photograph or local specimen certified."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1380,10 +1389,18 @@
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381"
       },
       {
-        "look": "Inspect the hair ligule and a mature spikelet",
-        "check": "The inner ligule is composed of stiff hairs roughly 1–2 mm; fertile spikelets are about 2.2–2.5 mm. Do not mistake the node hairs for a ligule or read bristle length from an unscaled head.",
-        "compare": "Marsh bristlegrass has a usually shorter hair ligule and often 4–12 bristles per spikelet",
-        "certainty": "FNA-backed; species macro still needed",
+        "look": "Open the inner collar and inspect beneath the hair tips",
+        "check": "Look for the minute membrane underlying the cilia. A hair-fringe appearance alone does not show that basal tissue is absent. Distinguish collar and node hairs from the true inner ligule.",
+        "compare": "Knotroot bristlegrass also has a hairy ligule; combine mature spikelets, bristle attachment and connected habit.",
+        "certainty": "Primary vegetative text directly checked; tissue measurements on local plants pending",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, pp. 61–62",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62"
+      },
+      {
+        "look": "Retain the earlier mature spikelet comparison",
+        "check": "Earlier FNA-backed spikelet range: about 2.2–2.5 mm. Do not read bristle length from an unscaled head.",
+        "compare": "Knotroot bristlegrass often has 4–12 bristles per spikelet; distinguish attachment and mature floral parts.",
+        "certainty": "Earlier FNA-derived reproductive evidence retained; not independently reverified in this vegetative/sparse-bristle batch.",
         "source": "Flora of North America — Setaria scheelei",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381"
       }
