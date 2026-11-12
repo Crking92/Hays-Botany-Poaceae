@@ -107,6 +107,17 @@ const positives = [
   // Source conflict — neither historic Hopia growth-form path may be silently erased.
   ['Hopia aboveground stolon pathway',{habit:'mat',head:'long_narrow_panicle'},['hopia-obtusa']],
   ['Hopia historical rhizome pathway',{habit:'rhizome',head:'long_narrow_panicle'},['hopia-obtusa']],
+  // Lane C #83 — alternate Hill Country growth forms and unilateral branch counts.
+  ['tobosa true visible tuft',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['hilaria-mutica']],
+  ['kleingrass hair fringe tuft',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['panicum-coloratum']],
+  ['kleingrass hair fringe rhizome',{head:'airy',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['panicum-coloratum']],
+  ['vaseygrass exposed rhizome many side branches',{head:'many_one_sided',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-urvillei']],
+  ['vaseygrass exposed rhizome fewer side branches',{head:'one_sided',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-urvillei']],
+  ['Dinebra numerous unilateral branches',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['dinebra-panicea-subsp-mucronata']],
+  ['browntop signalgrass numerous one-sided tuft',{head:'many_one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['urochloa-fusca']],
+  ['browntop signalgrass numerous one-sided mat',{head:'many_one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['urochloa-fusca']],
+  ['creeping signalgrass numerous one-sided tuft',{head:'many_one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['urochloa-reptans']],
+  ['creeping signalgrass numerous one-sided mat',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['urochloa-reptans']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -135,6 +146,12 @@ const negatives = [
   [{head:'reed_plume',ligule:'absent'},'phragmites-australis'],
   [{head:'one_sided',ligule:'absent'},'urochloa-fusca'],
   [{head:'aquatic_mixed',awns:'long'},'zizaniopsis-miliacea'],
+  // Lane C #83 — no generalized over-admission from expanded head/habit choices.
+  [{habit:'mat'},'hilaria-mutica'],
+  [{ligule:'absent'},'panicum-coloratum'],
+  [{head:'fingers'},'urochloa-reptans'],
+  [{head:'foxtail'},'dinebra-panicea-subsp-mucronata'],
+  [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
