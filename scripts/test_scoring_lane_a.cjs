@@ -61,7 +61,13 @@ const newlyValid=[
  ['nassella-leucotricha',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'}],
  ['nassella-leucotricha',{head:'airy',habit:'rhizome',ligule:'absent',awns:'long'}],
  ['nassella-leucotricha',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'long'}],
- ['nassella-leucotricha',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'}]
+ ['nassella-leucotricha',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane',awns:'long'}],
+ ['bouteloua-rigidiseta',{head:'short_side_racemes',habit:'rhizome',ligule:'membrane',awns:'three_short'}],
+ ['bouteloua-rigidiseta',{head:'short_side_racemes',habit:'rhizome',ligule:'hairs',awns:'none_obvious'}],
+ ['bouteloua-rigidiseta',{head:'short_side_racemes',habit:'tuft',ligule:'membrane',awns:'three_short'}],
+ ['bouteloua-rigidiseta',{head:'short_side_racemes',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
+ ['setaria-parviflora',{head:'foxtail',habit:'rhizome',ligule:'membrane',awns:'bristles'}],
+ ['setaria-parviflora',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -78,7 +84,11 @@ const incompatible=[
  ['bouteloua-gracilis',{awns:'burs'}],
  ['nassella-leucotricha',{head:'foxtail'}],
  ['nassella-leucotricha',{awns:'three'}],
- ['nassella-leucotricha',{habit:'mat'}]
+ ['nassella-leucotricha',{habit:'mat'}],
+ ['bouteloua-rigidiseta',{head:'combs'}],
+ ['bouteloua-rigidiseta',{habit:'mat'}],
+ ['setaria-parviflora',{head:'burrs'}],
+ ['setaria-parviflora',{awns:'burs'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -92,6 +102,9 @@ assert(specimenMap.get('bouteloua-dactyloides').character_evidence.growth_stems.
 assert(specimenMap.get('bothriochloa-torreyana').character_evidence.habit.reported_states?.length===2,'silver bluestem primary/regional specimen disagreement must remain explicit');
 assert(specimenMap.get('nassella-leucotricha').character_evidence.habit.reported_states?.length===2,'wintergrass H&L/FNA versus UT condensed rhizome conflict must remain visible');
 assert(specimenMap.get('nassella-leucotricha').character_evidence.head.reported_states?.length===2,'wintergrass FNA versus GrassBase head breadth variation must remain visible');
+assert(specimenMap.get('bouteloua-rigidiseta').character_evidence.habit.reported_states?.length===2,'Texas grama no-rhizome versus UT short-rhizome conflict must be preserved');
+assert(specimenMap.get('bouteloua-rigidiseta').character_evidence.ligule.reported_states?.length===2,'Texas grama hair fringe versus ciliate membrane disagreement must be preserved');
+assert(specimenMap.get('setaria-parviflora').character_evidence.ligule.reported_states?.length===2,'Knotroot bristlegrass ligule tissue observations must be retained');
 const unknown={id:'unknown',common:'Unknown',scientific:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(results({head:'flat_oats',ligule:'hairs'},[unknown]),['unknown'],'missing states must not become negative evidence');
 const expectedAdditions={
@@ -104,7 +117,9 @@ const expectedAdditions={
  'bothriochloa-barbinodis':{head:['fingers']},
  'bothriochloa-torreyana':{habit:['rhizome']},
  'bouteloua-gracilis':{habit:['rhizome','mat']},
- 'nassella-leucotricha':{head:['long_narrow_panicle'],habit:['rhizome']}
+ 'nassella-leucotricha':{head:['long_narrow_panicle'],habit:['rhizome']},
+ 'bouteloua-rigidiseta':{habit:['rhizome'],ligule:['membrane']},
+ 'setaria-parviflora':{ligule:['membrane']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -158,7 +173,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:14,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:17,
  regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
