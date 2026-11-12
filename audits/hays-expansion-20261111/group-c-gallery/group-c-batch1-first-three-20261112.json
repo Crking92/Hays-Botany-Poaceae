@@ -1,0 +1,185 @@
+{
+  "project": "Hays Botany Poaceae Group C photo-first one-photo expansion",
+  "batch": 1,
+  "date": "2026-11-12",
+  "github_issue": 70,
+  "repository": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-group-c-gallery-batch1-20261112",
+  "reviewed_species": 3,
+  "assigned_species": 15,
+  "initial_configured_photo_refs": 3,
+  "additional_source_license_verified_image_records": 5,
+  "roles_prelim_not_pixel_certified": true,
+  "photo_references_installed_by_this_group": 0,
+  "public_new_pixels_verified": 0,
+  "official_scored": 112,
+  "provisional": 57,
+  "main_policy": "No edits to shared hays-candidates.json, scoring, UI or other lanes; publisher checks exact image pixel/role and duplicates before installation.",
+  "species": [
+    {
+      "id": "eragrostis-superba",
+      "scientific": "Eragrostis superba",
+      "existing": {
+        "count": 1,
+        "roles": [
+          "green to pale flattened many-flowered spikelets, tight macro"
+        ],
+        "creator": "Bernard Dupont",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Saw-tooth_Love_Grass_(Eragrostis_superba)_(13927871661).jpg",
+        "visual_evidence": "Exact existing image rendered in web image search; close, overlapping pale-green spikelets on slender reproductive branches; plant crown, foliage and collar are absent from frame."
+      },
+      "missing_roles": [
+        "whole rooted bunch/plant habit",
+        "leaf blade and true inner ligule",
+        "mature tan seedhead at scale",
+        "winter/dry basal tuft"
+      ],
+      "candidates": [
+        {
+          "id": "gc-b1-ersu-starr0407239007",
+          "file_name": "Starr 040723-9007 Eragrostis superba.jpg",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Starr_040723-9007_Eragrostis_superba.jpg",
+          "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_040723-9007_Eragrostis_superba.jpg",
+          "original_source_page": "https://www.starrenvironmental.com/images/search/?q=Eragrostis+superba",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "role": "whole plant (source describes plant; exact pixel role remains to check)",
+          "geo": "Waimea, Hawaii; nonlocal",
+          "rights": "VERIFIED_INDIVIDUAL_COMMONS_FILE",
+          "identity": "SOURCE_IDENTIFIED_SPECIES_NONLOCAL",
+          "exact_pixel_checked": false,
+          "publication_gate": "REVIEW_IMAGE_PIXELS_BEFORE_PUBLISHING",
+          "new_role_value": "Unlike existing single spikelet macro, original source calls this a plant/habit photograph.",
+          "source_evidence": "Individual Commons file page gives plant, Waimea, 2004-07-23, original Starr #040723-9007, exact CC BY 3.0 by Forest & Kim Starr."
+        },
+        {
+          "id": "gc-b1-ersu-jmk-a",
+          "file_name": "Eragrostis superba, blompakkies, Dingaanstat, a.jpg",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_superba,_blompakkies,_Dingaanstat,_a.jpg",
+          "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eragrostis_superba%2C_blompakkies%2C_Dingaanstat%2C_a.jpg",
+          "creator": "JMK",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "role": "spikelet details; likely similar to existing macro",
+          "geo": "KwaZulu-Natal South Africa",
+          "rights": "VERIFIED_INDIVIDUAL_COMMONS_FILE",
+          "identity": "SOURCE_IDENTIFIED_SPECIES_NONLOCAL",
+          "exact_pixel_checked": false,
+          "publication_gate": "HOLD_DUPLICATE_ROLE_PENDING_DIFFERENT_STAGE_PIXEL_COMPARISON",
+          "new_role_value": "Potential seasonal/angle complement only; do not count as a new role until visible image shows something different.",
+          "source_evidence": "Individual Commons page states own work, 2014-06-07, spikelets, JMK, CC BY-SA 3.0."
+        }
+      ]
+    },
+    {
+      "id": "paspalum-langei",
+      "scientific": "Paspalum langei",
+      "existing": {
+        "count": 1,
+        "roles": [
+          "one-sided row of mature/rust-colored spikelets close-up"
+        ],
+        "creator": "Larry Allain / USGS",
+        "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3514",
+        "visual_evidence": "Existing exact USGS image displayed in web image results: single narrow flowering branch with a dense unilateral row of spikelets, soft-focus background."
+      },
+      "missing_roles": [
+        "whole clump and rooting base",
+        "multiple racemes on same flowering culm",
+        "blade/sheath collar and ligule",
+        "paired spikelets with scale / glume detail",
+        "winter basal foliage"
+      ],
+      "candidates": [],
+      "source_leads": [
+        {
+          "url": "https://warcapps.usgs.gov/PlantID/Species/Details/3514",
+          "assessment": "The USGS Plants of Louisiana page lists five photographs credited Larry Allain, U.S. Geological Survey, including the existing one. Other four exact file URLs/individual roles were not extracted, so zero additional files cleared. Do not construct unknown GivenFile filenames or assume all five are distinct anatomy roles.",
+          "priority": "HIGH: existing photographer/source, good chance of complementing first photo."
+        }
+      ],
+      "holds": [
+        "Five images credited on source page, but exact other filenames and pixel role/duplication not verified",
+        "No additional exact-source file passed release gate this batch"
+      ]
+    },
+    {
+      "id": "phyllostachys-aurea",
+      "scientific": "Phyllostachys aurea",
+      "existing": {
+        "count": 1,
+        "roles": [
+          "San Antonio-area source-identified general bamboo habit, exact anatomical content not independently verified"
+        ],
+        "creator": "Gary Rogers",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea_157349870.jpg",
+        "visual_evidence": "Commons source page identifies a San Antonio-area image. Previous project metadata calls it growth habit; new image-pixel detail not established by source page alone."
+      },
+      "missing_roles": [
+        "compressed lower culm internodes and nodes",
+        "leafy branch and lanceolate foliage",
+        "young shoots/sheaths at base",
+        "culm groove and branch insertion",
+        "seasonal/dry material (flowering uncommon)"
+      ],
+      "candidates": [
+        {
+          "id": "gc-b1-phau-kenpei1",
+          "file_name": "Phyllostachys aurea1.jpg",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea1.jpg",
+          "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea1.jpg",
+          "creator": "KENPEI",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "role": "leaves/leafy branches",
+          "geo": "Osaka, Japan; cultivation context",
+          "rights": "VERIFIED_INDIVIDUAL_COMMONS_FILE",
+          "identity": "SOURCE_IDENTIFIED_SPECIES_NONLOCAL",
+          "exact_pixel_checked": false,
+          "publication_gate": "REVIEW_IMAGE_PIXELS_BEFORE_PUBLISHING",
+          "new_role_value": "Species-named photo separately categorized under Phyllostachys leaves; adds foliage to existing general habit.",
+          "source_evidence": "Commons file individual page: own photo by KENPEI, 2007-10-06 Osaka, CC BY-SA 3.0 license option; Commons category Phyllostachys leaves."
+        },
+        {
+          "id": "gc-b1-phau-kenpei3",
+          "file_name": "Phyllostachys aurea3.jpg",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea3.jpg",
+          "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea3.jpg",
+          "creator": "KENPEI",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "role": "lower culm/nodes (secondary photo description; inspect exact pixels)",
+          "geo": "Osaka, Japan",
+          "rights": "VERIFIED_INDIVIDUAL_COMMONS_FILE",
+          "identity": "SOURCE_IDENTIFIED_SPECIES_NONLOCAL",
+          "exact_pixel_checked": false,
+          "publication_gate": "REVIEW_IMAGE_PIXELS_BEFORE_PUBLISHING",
+          "new_role_value": "Potential compressed lower internodes, a species-level field clue not documented in existing general image.",
+          "source_evidence": "Commons individual file named species, by KENPEI, 2007-10-06, reusable CC BY-SA 3.0. Independent plant photo description refers to characteristic shortened lower nodes; publisher must verify exact image before diagnostic caption."
+        },
+        {
+          "id": "gc-b1-phau-daderot-kew",
+          "file_name": "Phyllostachys aurea - Kew Gardens, London - DSC03662.jpg",
+          "file_page": "https://commons.wikimedia.org/wiki/File:Phyllostachys_aurea_-_Kew_Gardens,_London_-_DSC03662.jpg",
+          "media_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea_-_Kew_Gardens%2C_London_-_DSC03662.jpg",
+          "creator": "Daderot",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "role": "Kew-labeled established garden specimen / possible complete stand",
+          "geo": "Kew Gardens, London; cultivated",
+          "rights": "VERIFIED_INDIVIDUAL_COMMONS_FILE",
+          "identity": "GARDEN_LABEL_SOURCE_IDENTIFICATION",
+          "exact_pixel_checked": false,
+          "publication_gate": "HOLD_DUPLICATE_GENERAL_HABIT_UNTIL_PIXEL_REVIEW",
+          "new_role_value": "Not necessarily additive to existing general habit. Publish only if a broader stand/culm view than the Gary Rogers reference.",
+          "source_evidence": "Daderot own work 2024-05-24, named Kew specimen, CC0 on exact Commons page."
+        }
+      ],
+      "holds": [
+        "Commons file titled Golden Bamboo (Phyllostachys Aureosulcata) Compressed Internodes.jpg mentions Phyllostachys aurea in description; because filename contradicts species description, exclude pending taxonomic resolution despite eligible CC BY-SA 3.0.",
+        "Avoid treating horticultural culm colors/cultivar features or garden presence as a wild Hays species ID."
+      ]
+    }
+  ]
+}
