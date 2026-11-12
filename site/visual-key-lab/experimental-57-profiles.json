@@ -1,0 +1,2124 @@
+{
+  "schema": "HAYS_GRASS_57_EXPERIMENTAL_FIELD_TRIAL_V1",
+  "updated": "2026-11-12",
+  "purpose": "Opt-in field testing only; not a verified species admission, not published production scoring.",
+  "source_manifest": "hays-candidates.json",
+  "source_policy": "MORPHOLOGY_SOURCE_POLICY.md",
+  "baseline_scored": 112,
+  "provisional_count": 57,
+  "character_values": {
+    "head": [
+      "short_racemes",
+      "fingers",
+      "side_oats",
+      "short_side_racemes",
+      "combs",
+      "whorls",
+      "flat_oats",
+      "airy",
+      "foxtail",
+      "sparse_bristles",
+      "wiry",
+      "compact",
+      "bushy",
+      "reed_plume",
+      "branched_oat",
+      "burrs",
+      "one_sided",
+      "many_one_sided",
+      "spike",
+      "tangled_awns",
+      "long_narrow_panicle",
+      "golden_plume",
+      "paired_spikes",
+      "mixed_gender",
+      "aquatic_gender",
+      "aquatic_mixed"
+    ],
+    "habit": [
+      "tuft",
+      "mat",
+      "rhizome",
+      "aquatic_rooted"
+    ],
+    "ligule": [
+      "hairs",
+      "membrane",
+      "absent"
+    ],
+    "awns": [
+      "three",
+      "three_short",
+      "long",
+      "bristles",
+      "none_obvious",
+      "burs"
+    ]
+  },
+  "counts": {
+    "profiles": 57,
+    "with_head": 49,
+    "with_habit": 26,
+    "with_ligule": 33,
+    "with_awns": 24,
+    "zero_profiles": [
+      "bothriochloa-longipaniculata",
+      "bromus-brevis"
+    ],
+    "states": 154
+  },
+  "profiles": [
+    {
+      "id": "bromus-catharticus",
+      "traits": {
+        "head": [
+          "branched_oat"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "spikelet",
+            "source": "Flora 1999",
+            "description": "Strongly flattened spikelet; glumes and lemmas sharply keeled"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Flora 1999",
+            "description": "Lemmas awnless or with short awn about 1–3 mm"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "melica-nitens",
+      "traits": {
+        "head": [
+          "branched_oat"
+        ],
+        "habit": [
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Branched flowering panicle with elongated spikelets; published length '10–26 mm' appears inconsistent with habit and is not used as a field threshold"
+          },
+          {
+            "part": "spikelet",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Spikelets about 8–15 mm with usually 2–3 fertile florets"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Rhizomatous perennial, typically 50–120 cm tall"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Membranous ligule 3–6 mm, sheath nearly closed to throat (regional 2015 vegetative key)"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "eragrostis-superba",
+      "traits": {
+        "head": [],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora 1999",
+            "description": "Tufted perennial; can be planted for range improvement"
+          }
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "lolium-perenne",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora 1999 / Kew POWO",
+            "description": "Single upright two-ranked axis bearing solitary edge-on spikelets"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Flora 1999 / Kew POWO",
+            "description": "Typical L. perenne lemma awnless; hybrids and rare variants complicate simple splits"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "traits": {
+        "head": [],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "paspalum-langei",
+      "traits": {
+        "head": [
+          "one_sided"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Usually 2–5 spike-like branches 4–8 cm long"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Tufted perennial approximately 30–100 cm tall; leaf blades about 7–18 mm broad"
+          }
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "bothriochloa-bladhii",
+      "traits": {
+        "head": [
+          "bushy"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Kew POWO/FTEA",
+            "description": "Numerous short racemes, around 2–5 cm, on a central branching axis"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Kew POWO/FTEA",
+            "description": "Tufted or shortly rhizomatous perennial with erect stems"
+          }
+        ],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Kew POWO/FTEA",
+            "description": "Geniculate awn often 10–25 mm across Kew source treatments"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "racemes",
+            "source": "Kew POWO/FTEA",
+            "description": "One to six near-digitate racemes, mostly about 2–8 cm"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Kew POWO/GrassBase",
+            "description": "Fertile lemma often carries twisted/bent awn roughly 10–20 mm"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "phyllostachys-aurea",
+      "traits": {
+        "head": [],
+        "habit": [
+          "rhizome"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.235",
+            "description": "Woody rhizomatous perennial forming spreading colonies with culms approximately 2–8 m tall"
+          }
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "lolium-multiflorum",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora 1999 / Kew POWO",
+            "description": "Single two-ranked ryegrass spike with alternating spikelets"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Kew POWO/GrassBase",
+            "description": "Membranous ligule commonly around 1–2 mm"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Flora 1999 / Kew POWO",
+            "description": "Typically awned lemmas, often about 5–10 mm, though exceptions occur"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "bromus-brevis",
+      "traits": {
+        "head": [],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "rottboellia-campestris",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Very slender cylindrical spike-like raceme about 3 mm in diameter; axis breaks apart at joints"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Perennial with hard base, short knotty rhizomes, erect or arching culms 25–100 cm"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Short membranous ligule about 0.5–1 mm"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "oplismenus-hirtellus",
+      "traits": {
+        "head": [
+          "one_sided"
+        ],
+        "habit": [
+          "mat"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "racemes",
+            "source": "Flora 1999",
+            "description": "About 3–7 short widely separated unilateral flowering branches, roughly 1–6 mm in old regional description"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora 1999",
+            "description": "Sprawling perennial stems root at lower nodes and form groundcover in shaded places"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora 1999",
+            "description": "Short ciliate membrane at inner collar"
+          }
+        ],
+        "awns": [
+          {
+            "part": "glume_awn",
+            "source": "Flora 1999",
+            "description": "Glumes awned; first glume awn typically around 5–10 mm and distinctly longer than second"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "stenotaphrum-secundatum",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "mat"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence_axis",
+            "source": "Flora",
+            "description": "Flowering head has a broad flattened corky axis with spikelets impressed into one side"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora",
+            "description": "Low stolon-forming, sod-forming perennial, to roughly 30 cm"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora",
+            "description": "Very short ring/fringe of hairs"
+          }
+        ],
+        "awns": [
+          {
+            "part": "spikelet",
+            "source": "Flora",
+            "description": "Spikelets 4–5 mm long, awnless, two-flowered with lower floret sterile/staminate and upper fertile"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "triticum-aestivum",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "spike",
+            "source": "Regional Flora 1999",
+            "description": "Stiff, unbranched, two-sided terminal spike with sessile spikelets at opposite sides of a zigzag rachis"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Regional Flora 1999",
+            "description": "Membranous ligule about 2–3 mm in regional treatment"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "echinochloa-colona",
+      "traits": {
+        "head": [],
+        "habit": [],
+        "ligule": [
+          "absent"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Hill Country 2015",
+            "description": "Ligule absent at the collar (not a membranous flap or tuft of long hairs)"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "paspalum-notatum",
+      "traits": {
+        "head": [
+          "paired_spikes"
+        ],
+        "habit": [
+          "mat",
+          "rhizome"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora 1999",
+            "description": "Usually two nearly paired racemes at the summit, occasionally a third; each roughly 4–12(–15) cm in the Flora"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora 1999",
+            "description": "Mat-forming rhizomatous perennial, with flowering culms typically about 20–75 cm in the regional Flora"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "collar",
+            "source": "Kew POWO/GrassBase",
+            "description": "Short ligule with hairs described in POWO accounts; examine exact collar rather than inferring from turf"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "setaria-viridis",
+      "traits": {
+        "head": [
+          "foxtail"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "bristles"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Soft, flexible flowering head with usually green bristles"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Soft, flexible flowering head with usually green bristles"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "cortaderia-selloana",
+      "traits": {
+        "head": [
+          "reed_plume"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.182",
+            "description": "Broad conspicuous silvery, feathery panicle about 25–100 cm long"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.182",
+            "description": "Large dense perennial tuft to about 3 m tall and at least 1 m wide"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.182",
+            "description": "Ligule consists of dense hairs approximately 3–5 mm long"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "echinochloa-walteri",
+      "traits": {
+        "head": [],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "long",
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Lower floret lemma awn often 1.5–6 cm long; occasionally shortened or absent"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "rostraria-cristata",
+      "traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Kew POWO/GrassBase",
+            "description": "Narrow dense to interrupted spike-like panicle approximately 1.5–10 cm in GrassBase"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Kew POWO/GrassBase",
+            "description": "Small tufted annual, culms generally 5–45 cm in GrassBase"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Kew POWO/GrassBase",
+            "description": "Membranous ligule about 1 mm, lacking long hair fringe"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Kew POWO/GrassBase",
+            "description": "Lemma awn may be apical/subapical and short, approximately 0–3 mm"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "panicum-miliaceum",
+      "traits": {
+        "head": [],
+        "habit": [],
+        "ligule": [
+          "hairs",
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.224",
+            "description": "Blade–sheath junction bears a fringed membrane about 1–3 mm long including hairs"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "setaria-leucopila",
+      "traits": {
+        "head": [
+          "foxtail"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "bristles"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Bristles typically about 4–15 mm long"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Tufted perennial, about 20–100 cm tall"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "sheath",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Vegetative key notes hairiness around sheath throat and hair-fringe ligule"
+          }
+        ],
+        "awns": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Bristles typically about 4–15 mm long"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "sphenopholis-obtusata",
+      "traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Narrow dense spike-like flowering panicle"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Annual with single or tufted culms about 15–100(120) cm"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Membranous ligule around 1.5–3 mm long"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "steinchisma-hians",
+      "traits": {
+        "head": [
+          "airy",
+          "long_narrow_panicle"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "1999 regional Flora",
+            "description": "Open or partially contracted panicle about 6–20 cm; lowest 1–3 cm of some branches lacks spikelets"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "1999 regional Flora / Kew GrassBase",
+            "description": "Very short membranous ligule near 0.5 mm, its rim glabrous to finely ciliolate depending on source"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "aegilops-cylindrica",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "spike_axis",
+            "source": "Flora",
+            "description": "Slender cylindrical spike with spikelets fitting niches along an unbranched flattened, bilaterally organized axis"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora",
+            "description": "Membranous, shorter than 1 mm"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awns",
+            "source": "Flora",
+            "description": "Glumes and lemmas of upper spikelets bear long awns, approximately 3–8 cm"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "avena-sativa",
+      "traits": {
+        "head": [
+          "branched_oat"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "FNA via Burke Herbarium",
+            "description": "Open often drooping panicle with large pendulous oat spikelets"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awns",
+            "source": "FNA via Burke Herbarium",
+            "description": "Lemmas typically awnless but sometimes carry weakly bent awns; absence of awns alone is not a species proof"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Kew POWO GrassBase",
+            "description": "Large open oblong or pyramidal panicle roughly 12–45 cm, lower primary branches sometimes whorled"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Kew POWO GrassBase (under Panicum maximum)",
+            "description": "Generally robust tufted perennial, sometimes short-rhizomatous, often 75–200 cm or taller"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Kew POWO GrassBase",
+            "description": "Ciliate membrane at the blade–sheath junction"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "muhlenbergia-capillaris",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": [
+          "long",
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle_shape",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.212",
+            "description": "Open, diffuse spreading panicle to roughly 35–40 cm long and 8–20 cm across"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.212",
+            "description": "Tightly clumped perennial with upright flowering culms typically 60–100 cm tall"
+          }
+        ],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn_length",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.212",
+            "description": "Lemma awn length varies, roughly 2–15 mm in the regional account"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "polypogon-viridis",
+      "traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora 1999",
+            "description": "Condensed panicle roughly 4–12 cm long and 1–3 cm broad in regional Flora"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora 1999",
+            "description": "Membranous ligule approximately 2–7 mm in regional Flora (other treatments may give shorter values)"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awns",
+            "source": "Flora 1999 / Kew POWO",
+            "description": "Glumes and lemmas typically awnless; unlike rabbitfoot P. monspeliensis with long glume awns"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "sphenopholis-interrupta",
+      "traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Flora 1999",
+            "description": "Narrow spike-like panicle, which can appear interrupted"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora 1999",
+            "description": "Asymmetrical membranous ligule 1.5–2 mm with irregular ragged margin"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Flora 1999",
+            "description": "Awn arising on back near base of apical teeth, twisted and bent, about 5–8 mm"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "tridentopsis-elongata",
+      "traits": {
+        "head": [
+          "long_narrow_panicle"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+            "description": "Roughly 20–80 cm in the broad Tridens muticus account, narrow elongated 7–20(25) cm panicle"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "bromus-tectorum",
+      "traits": {
+        "head": [
+          "branched_oat"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Flora 1999",
+            "description": "Open or nodding panicle with drooping branches, not a unique species-level character"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Kew POWO/GrassBase",
+            "description": "Membranous ligule approximately 2–5 mm, margin often torn"
+          }
+        ],
+        "awns": [
+          {
+            "part": "lemma_awn",
+            "source": "Flora 1999 / Kew POWO",
+            "description": "Old regional Bromus key gives about 12–18 mm awns, while broader Kew treatment gives 10–25 mm; use source-specific ranges"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "dactyloctenium-aegyptium",
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [
+          "mat"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora 1999",
+            "description": "Two to seven or more radiating fingerlike branches, usually around 1.5–6 cm"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora 1999",
+            "description": "Spreading annual, often roots from lower stem nodes; flowering stems commonly 10–60 cm"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora 1999",
+            "description": "Short ciliate membrane usually 0.1–1 mm"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "dichanthelium-acuminatum",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "early_inflorescence",
+            "source": "USFS FEIS",
+            "description": "Spring culms tend to be less branched, bearing a more open terminal panicle"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "eragrostis-curtipedicellata",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Flora",
+            "description": "Open panicle with visibly sticky/viscid axis, often detaching with age"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora",
+            "description": "Tufted, hard-based perennial, usually 15–75 cm tall"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Hill Country 2015",
+            "description": "Very short fringe of hairs rather than a prominent long membrane"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "eragrostis-minor",
+      "traits": {
+        "head": [
+          "airy",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "FNA via Burke Herbarium",
+            "description": "Open to somewhat contracted panicle about 4–20 cm long with stiff divergent branches"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "FNA via Burke Herbarium",
+            "description": "Usually low tufted annual grass, about 10–45 cm tall in FNA"
+          }
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "hordeum-murinum",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "spikelet_groups",
+            "source": "Kew POWO/GrassBase",
+            "description": "Barley-like spike of groups of three spikelets at successive joints, central fertile with lateral companions"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Flora 1999",
+            "description": "Lemma awns in the leporinum account typically around 10–35 mm"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "melinis-repens",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora of North America (J.K. Wipff), Melinis repens via Open Herbarium https://openherbarium.org/portal/taxa/index.php?tid=239884",
+            "description": "Open soft-looking often pink or silvery-pink to purple panicle; appearance varies with maturity"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora of North America (J.K. Wipff), Melinis repens via Open Herbarium https://openherbarium.org/portal/taxa/index.php?tid=239884",
+            "description": "Ligule is a fringe of hairs, approximately 0.7–2.2 mm in the FNA account"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "nassella-tenuissima",
+      "traits": {
+        "head": [
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Flora of North America (M.E. Barkworth), Nassella tenuissima via Open Herbarium https://openherbarium.org/portal/taxa/index.php?tid=630068",
+            "description": "Narrow to somewhat loose panicles 8–50 cm long, sometimes partially enclosed at maturity"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora of North America (M.E. Barkworth), Nassella tenuissima via Open Herbarium https://openherbarium.org/portal/taxa/index.php?tid=630068",
+            "description": "Dense tuft-forming perennial, not rhizomatous"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora of North America (M.E. Barkworth), Nassella tenuissima via Open Herbarium https://openherbarium.org/portal/taxa/index.php?tid=630068",
+            "description": "Small smooth membranous ligule about 1–5 mm; FNA calls tip acute while GrassBase describes obtuse, so avoid binary tip-state scoring"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awn",
+            "source": "Flora of North America (M.E. Barkworth), Nassella tenuissima via Open Herbarium https://openherbarium.org/portal/taxa/index.php?tid=630068",
+            "description": "One very long slender lemma awn about 45–100 mm, often bent twice"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "stapfochloa-ciliata",
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "racemes",
+            "source": "Kew POWO GrassBase",
+            "description": "Several digitate or spreading one-sided racemes, normally 3–5(–7), roughly 3.5–6(–8) cm long"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Kew POWO GrassBase (Chloris ciliata)",
+            "description": "Tufted perennial, typically roughly 25–60 cm tall"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Kew POWO GrassBase",
+            "description": "Fringe of hairs or almost absent, not long solid membranous flap"
+          }
+        ],
+        "awns": [
+          {
+            "part": "awns",
+            "source": "Kew POWO GrassBase",
+            "description": "Fertile lemma has short subapical awn about 0.9–2.7 mm; first sterile lemma often also awned"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "tridens-congestus",
+      "traits": {
+        "head": [
+          "compact"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Flora",
+            "description": "Compact flowering panicles generally 5–10 cm long"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora",
+            "description": "Usually glabrous tufted perennial, approximately 30–75 cm tall"
+          }
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "alopecurus-carolinianus",
+      "traits": {
+        "head": [
+          "compact"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Regional Flora 1999",
+            "description": "Dense slender cylindrical flowering head about 2–6 cm by 4–6 mm, technically a contracted panicle"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Regional Flora 1999",
+            "description": "Long membranous ligule about 3.5–7 mm"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "briza-minor",
+      "traits": {
+        "head": [
+          "flat_oats"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Regional Flora 1999",
+            "description": "Open panicle with distinct individually dangling spikelets on fine, often kinked stalks"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Regional Flora 1999",
+            "description": "Relatively prominent ligule approximately 5–10 mm long"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "traits": {
+        "head": [
+          "foxtail"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": [
+          "bristles"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Regional Flora 1999",
+            "description": "Dense cylindrical bristly inflorescence; looks like Setaria from a distance"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Regional Flora 1999",
+            "description": "Tufted or spreading perennial forage grass introduced from Old World tropics"
+          }
+        ],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "bristles",
+            "source": "Regional Flora 1999",
+            "description": "Bristles roughly 4–10 mm long, basally fused into a small bur/involucre"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "cenchrus-setaceus",
+      "traits": {
+        "head": [
+          "foxtail"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "bristles"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head",
+            "source": "Flora of North America, Pennisetum setaceum via Burke Herbarium https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Pennisetum+setaceum",
+            "description": "Dense cylindrical brushlike flowering panicle, commonly pink to burgundy, around 8–32 cm in FNA description"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Flora of North America, Pennisetum setaceum via Burke Herbarium https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Pennisetum+setaceum",
+            "description": "Densely tufted perennial with erect stems approximately 40–150 cm tall in FNA description"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Flora of North America, Pennisetum setaceum via Burke Herbarium https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Pennisetum+setaceum",
+            "description": "Short hair-fringe ligule roughly 0.5–1.1 mm under historical Pennisetum concept"
+          }
+        ],
+        "awns": [
+          {
+            "part": "bristles",
+            "source": "Flora of North America, Pennisetum setaceum via Burke Herbarium https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Pennisetum+setaceum",
+            "description": "Spikelets grouped in fascicles with many sterile involucral bristles, some conspicuously longer and feathery; bristles are NOT lemma awns"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "digitaria-californica",
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "inflorescence",
+            "source": "Flora",
+            "description": "Fingerlike or nearly digitate branches, generally close to the axis and densely flowered"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "elymus-macgregorii",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "spike",
+            "source": "Native Plant Trust Go Botany",
+            "description": "In a published key E. macgregorii has mostly erect spikes with often 15–30 rachis nodes"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "janochloa-antidotalis",
+      "traits": {
+        "head": [],
+        "habit": [],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Hill Country 2015",
+            "description": "Short ciliate ligule around 0.5–1 mm"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "lolium-x-boucheanum",
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          "long",
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "generic_spike",
+            "source": "Kew POWO Lolium × boucheanum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
+            "description": "Compare a mature Lolium terminal spike with lateral multileaved spikelets; this is genus-level context, not proof of hybrid"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": [
+          {
+            "part": "lemma_awns",
+            "source": "Kew POWO Lolium × boucheanum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
+            "description": "Awn expression can vary from unawned to awned among the relevant Lolium parent taxa and hybrids; do not force one state for this named hybrid"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "traits": {
+        "head": [
+          "reed_plume"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.208",
+            "description": "Dense terminal panicle about 10–35 cm long; branches ascending"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.208",
+            "description": "Dense clump-forming perennial 1–3 m or taller with arching to upright stems"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, PDF p.208",
+            "description": "Ciliate membrane about 1.5–3 mm long"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "panicum-dichotomiflorum",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Kew GrassBase",
+            "description": "Large airy branched panicle, often 12–40 cm under Kew/GrassBase treatment"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "1999 regional Flora",
+            "description": "Membrane about 0.5–1 mm and capped with hairs about 2 mm; longer combined ciliate lip described in some sources"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "panicum-repens",
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "USFS FEIS",
+            "description": "Open terminal panicle with ascending branches, often roughly 7–22 cm long"
+          }
+        ],
+        "habit": [
+          {
+            "part": "rhizomes",
+            "source": "University of Florida IFAS / USFS FEIS",
+            "description": "Tough creeping underground stems often end in sharply pointed growing tips—the torpedo feature"
+          }
+        ],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "University of Florida IFAS",
+            "description": "Short ciliate membrane generally around 0.5–1 mm"
+          }
+        ],
+        "awns": [
+          {
+            "part": "spikelet",
+            "source": "USFS FEIS",
+            "description": "Small ovate, unawned spikelets approximately 2–3 mm long"
+          }
+        ]
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "pappophorum-bicolor",
+      "traits": {
+        "head": [
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Texas A&M / Kew GrassBase",
+            "description": "Usually narrow pink to purplish flowering panicle, but head color is not diagnostic alone"
+          }
+        ],
+        "habit": [
+          {
+            "part": "habit",
+            "source": "Texas A&M Texas Rangelands / Kew GrassBase",
+            "description": "Warm-season perennial tufted bunchgrass; flowering stems commonly 30–100 cm in source treatments"
+          }
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "sclerochloa-dura",
+      "traits": {
+        "head": [
+          "compact"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Regional Flora 1999",
+            "description": "Compact dense often unilateral spike-like head around 1–3 cm, rarely 4.5 cm"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Regional Flora 1999",
+            "description": "Membranous ligule about 1–2 mm"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "sporobolus-cryptandrus",
+      "traits": {
+        "head": [
+          "airy",
+          "long_narrow_panicle"
+        ],
+        "habit": [],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "panicle",
+            "source": "Flora",
+            "description": "Panicle about 15–30(–40) cm long and 2–12 cm wide when opened"
+          }
+        ],
+        "habit": [],
+        "ligule": [
+          {
+            "part": "ligule",
+            "source": "Hill Country 2015",
+            "description": "Hair-fringe ligule roughly 0.5–1 mm with pilose collar margins"
+          }
+        ],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "source_details": {
+        "head": [
+          {
+            "part": "head_shape",
+            "source": "Kew POWO / field guide of Chaco (habit level)",
+            "description": "Racemes commonly digitately or subdigitately clustered, sometimes somewhat pendent or curved"
+          }
+        ],
+        "habit": [],
+        "ligule": [],
+        "awns": []
+      },
+      "status": "UNVERIFIED_EXPERIMENTAL_LITERATURE_MAPPING",
+      "reviewed_for_admission": false
+    }
+  ]
+}
