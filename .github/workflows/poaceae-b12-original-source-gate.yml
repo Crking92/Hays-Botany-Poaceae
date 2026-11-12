@@ -1,0 +1,23 @@
+name: Poaceae B12 exact CC0 original photo source gate
+on:
+  pull_request:
+    paths:
+      - 'scripts/poaceae_b12_original_source_gate.py'
+      - '.github/workflows/poaceae-b12-original-source-gate.yml'
+  workflow_dispatch:
+jobs:
+  original-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/poaceae_b12_original_source_gate.py
+          sparse-checkout-cone-mode: false
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -q pillow
+      - run: python scripts/poaceae_b12_original_source_gate.py
