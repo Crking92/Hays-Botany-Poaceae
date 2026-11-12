@@ -317,7 +317,7 @@ function renderModeHeader(root){
    local identification, verified anatomy or third-party photo reuse rights. */
 function renderResearchCandidate(d,root){
  const intro=txt("section","","learning-intro");
- intro.append(txt("p","Provisional species record — published descriptions, not a verified Hays specimen or approved image.","photo-hold"));
+ intro.append(txt("p","Provisional taxon identification — published descriptions and any credited reference photos are not proof of a verified Hays specimen.","photo-hold"));
  const approved=Array.isArray(d.approved_gallery)?d.approved_gallery:[];
  if(approved.length)intro.append(txt("p",approved.length+" source-credited general photograph"+(approved.length===1?"":"s")+" cleared for this reference card. These are nonlocal visual examples, not certified Hays voucher specimens. Each image retains its creator, license and original-source link.","source-flag"));
  else intro.append(txt("p","No general photograph has yet cleared exact-image rights and source checks for this species. Original observation links below are research sources, not licenses to republish images."));
