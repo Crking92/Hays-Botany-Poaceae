@@ -148,11 +148,11 @@ const selectedPhotoOverrides={
 "awns:bristles":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"}
 };
 const $=id=>document.getElementById(id);
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[]};
 const previewToggle=$("preview-toggle");
 function syncPreviewToggle(){const simple=document.documentElement.classList.contains("guest-preview");previewToggle.textContent=simple?"Show explanations":"Hide explanations";previewToggle.setAttribute("aria-pressed",String(simple))}
 previewToggle.addEventListener("click",()=>{const simple=document.documentElement.classList.toggle("guest-preview");const url=new URL(location.href);if(simple)url.searchParams.set("demo","1");else url.searchParams.delete("demo");history.replaceState(null,"",url.toString());syncPreviewToggle()});
 syncPreviewToggle();
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[]};
 function node(tag,cl,txt){const e=document.createElement(tag);if(cl)e.className=cl;if(txt!==undefined)e.textContent=txt;return e}
 function image(p,alt){const f=node("div","photo-frame");if(!p){f.append(node("div","photo-bad","Photograph pending verification"));return f}const img=document.createElement("img");img.loading="lazy";img.decoding="async";img.alt=alt||p.label||"Grass reference";img.src=p.src;img.addEventListener("error",()=>f.replaceChildren(node("div","photo-bad","Image unavailable — check original gallery")));f.append(img);return f}
 function pic(spec,i){return spec&&spec.photos.find(p=>p.i===i)||spec&&spec.photos.find(p=>p.i===spec.hero_i)||spec&&spec.photos[0]||null}
