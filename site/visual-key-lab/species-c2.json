@@ -1456,10 +1456,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "A species-name image from Commons is a taxon-labelled reference, not independent anatomical verification; use microscope for close E. crus-galli / E. muricata calls.",
+    "field_rule": "A species-name image from Commons is a taxon-labelled reference, not independent anatomical verification; use microscope for close E. crus-galli / E. muricata calls. A mature plant can carry seven or more unilateral branches (the multi-branch icon); do not exclude barnyardgrass for choosing that option instead of the general one-sided-raceme icon. Confirm actual branches from the central axis and absence of a true ligule; this shape alone cannot separate E. crus-galli from E. muricata.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft"
@@ -1487,6 +1488,20 @@
         "reference": "Lower lemma can be awnless or awned to over 5 cm, so preserve both broad states.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "head": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1265–1267 (genus head arrangement); Kew GrassBase / Plants of the World Online species account",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:399660-1/general-information",
+        "role": "reproductive",
+        "reference": "Diggs states Echinochloa florets are crowded on one side of dense panicle branches. Kew GrassBase specifies E. crus-galli racemes 5–15, ascending, unilateral, along a central axis. When seven or more are present, the UI's 'many_one_sided' answer is literally satisfied; retain general 'one_sided' for fewer/uncounted racemes. FNA independently confirms variable primary branches 1.5–10 cm. Neither branch count nor one-sided packing proves E. crus-galli versus E. muricata.",
+        "reported_states": [
+          "one-sided spikelet-bearing racemes",
+          "seven-or-more unilateral racemes in well-developed heads"
+        ],
+        "status": "DIRECT_REGIONAL_GENUS_DESCRIPTION_AND_SPECIES_GRASSBASE_CHECKED",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new source-original pixels or attached local counted flowering panicle reviewed in this scoring-only batch."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1514,6 +1529,14 @@
         "certainty": "FNA source checked; fresh local specimen and proper mature stage still needed",
         "source": "Flora of North America — Echinochloa crus-galli",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=140&taxauthid=1&tid=628984"
+      },
+      {
+        "look": "Count one-sided branches along the entire barnyardgrass head",
+        "check": "Kew GrassBase describes 5–15 unilateral racemes borne along a central axis. If seven or more are present, both the general one-sided and seven-plus one-sided-branch choices apply. A small or immature head with fewer branches stays a possibility. Open the collar to confirm the genuine absence of a ligule.",
+        "compare": "Echinochloa muricata can share a comparable head; examine spikelet papilla-based hairs and fertile lemma tip with appropriate magnification. Do not identify by branch count alone.",
+        "certainty": "Regional genus and species-level GrassBase descriptions verified; local counted-panicle photo and dissection pending.",
+        "source": "Diggs et al. (1999), Illustrated Flora of North Central Texas, pp. 1265–1267; Kew GrassBase Echinochloa crus-galli",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:399660-1/general-information"
       }
     ],
     "diagnostic_review": {
