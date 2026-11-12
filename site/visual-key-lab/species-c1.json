@@ -215,7 +215,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Three awns alone = genus. Species requires matched lower/upper glume ratio, lower vein count and rooted-life-cycle evidence.",
+    "field_rule": "Three awns alone = genus. Species requires matched lower/upper glume ratio, lower vein count and rooted-life-cycle evidence. The true ligule is ciliate with a very small membranous base; under magnification a membrane is compatible and should not rule this annual threeawn out.",
     "traits": {
       "head": [
         "airy"
@@ -224,7 +224,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "three"
@@ -254,6 +255,14 @@
         "reference": "Lower glume 18–25 mm, 3–7 veined, versus A. purpurea typical 6–8 mm and one-veined; population/variety differences require caution.",
         "status": "SOURCE_CHECKED",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 35",
+        "reference": "Aristida oligantha ligule under 0.5 mm, ciliate with a minute membranous base. Both a hair-fringe view and a visibly membranous microcollar fit; a casual naked-eye non-detection is not proof of absence. Diggs et al. (1999), printed p. 1242, separately identifies annual reproduction with open panicle and long tripartite awns.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly certified dissected ligule on an identified local specimen."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -273,6 +282,14 @@
         "certainty": "Kew and Smithsonian sources; field rooting not authenticated",
         "source": "Kew POWO / GrassBase — Aristida oligantha",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325343-2/general-information"
+      },
+      {
+        "look": "Open the inner collar and separate hairs from membrane",
+        "check": "At magnification a very small membrane supports a hair-fringed ligule. It is not equivalent to a hair-only margin or the loose long hairs at the sheath sides. Confirm the annual life cycle, long glumes and three long awns for species-level ID.",
+        "compare": "Purple threeawn has a hair-fringe ligule without the same cited membrane and is a perennial; flowerless threeawns may overlap.",
+        "certainty": "Hill Country regional vegetative description directly checked; actual local ligule image pending",
+        "source": "Hagenbuch & Lemke (2015), p. 35; Diggs et al. (1999), p. 1242",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=35"
       }
     ],
     "diagnostic_review": {
@@ -464,16 +481,18 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1243) — Compare the main cane and its full flowering head. The Flora describes usually unbranched canes 2–6 m tall and panicles 30–60 cm long.\n\nThe locally archived Forest & Kim Starr Maui stand (panel 0) and Duarte Frade roadside stand (panel 1) show actual tall cane-like culms and long broad clasping leaves. Harry Rose's true attached flowering panicle (panel 4) shows the complete many-branched head. Recognize the large rhizomatous reed, but do not claim any ONE photo proves root-to-head linkage or Texas provenance. A permitted disturbed Texas specimen with roots/canes/head in on",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1243) — Compare the main cane and its full flowering head. The Flora describes usually unbranched canes 2–6 m tall and panicles 30–60 cm long.\n\nThe locally archived Forest & Kim Starr Maui stand (panel 0) and Duarte Frade roadside stand (panel 1) show actual tall cane-like culms and long broad clasping leaves. Harry Rose's true attached flowering panicle (panel 4) shows the complete many-branched head. Recognize the large rhizomatous reed, but do not claim any ONE photo proves root-to-head linkage or Texas provenance. A permitted disturbed Texas specimen with roots/canes/head in on A giant cane stand may show several towering culms arising as a large CLUMP even if thick rhizomes are not exposed. Its tiny ciliate-membranous ligule may look like a hair fringe; verify its true leaf collar under magnification.",
     "traits": {
       "head": [
         "reed_plume"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -490,10 +509,12 @@
         "review_date": "2026-11-10"
       },
       "habit": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 167",
-        "reference": "Perennial rhizomatous reed, typically very tall.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 35; Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1243",
+        "reference": "The regional vegetative treatment calls giant reed clump-forming with short thick knotty rhizomes and no stolons. Keep rhizome and accept tuft only as the broad UI's visual clump category; tall reed-like stands are not small grass crowns. Diggs confirms perennial rhizomatous growth and large canes.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "Published gallery general views do not establish rhizome-to-cane specimen continuity."
       },
       "hair_placement": {
         "source": "Invasive Plant Science and Management 2023, comparative Arundo donax biology",
@@ -501,6 +522,14 @@
         "reference": "Arundo lemma densely hairy on lower portion; rachilla between florets nearly glabrous, contrasting Phragmites lemmas mostly glabrous and rachilla densely hairy.",
         "status": "PUBLISHED_COMPARATIVE_ANATOMY_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 35",
+        "reference": "Ligule up to 1 mm long, ciliate with a minute membranous base. Keep membrane and allow the obvious hair-fringed visual choice when the minute base is not resolved; do not code a truly hair-only ligule.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly certified opened inner leaf junction on the photographed giant reed."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -528,6 +557,14 @@
         "certainty": "Published source morphology; comparisons can use authorized archive vouchers, no new wild disturbance required",
         "source": "Arundo field comparison — Invasive Plant Science and Management",
         "url": "https://www.cambridge.org/core/journals/invasive-plant-science-and-management/article/biology-of-invasive-plants-4-arundo-donax-l/76A7D0DA2A1B1F6E6A4C8EA814B6A6F4"
+      },
+      {
+        "look": "Check giant cane clump and ciliate ligule separately",
+        "check": "An Arundo stand can look like a large tuft of tall culms even with short thick rhizomes hidden belowground. A tiny ciliate membrane may appear hairy at the blade–sheath junction. Use reed-like giant canes, broad distichous leaves and the lemma-hair vs rachilla-hair distinction to avoid confusing with Phragmites.",
+        "compare": "Phragmites may also grow in dense stands and has different lemma versus rachilla hairs; a clump or hair fringe alone is not diagnostic.",
+        "certainty": "Primary Hill Country vegetative account and Flora reproductive anatomy checked; connected rooted specimen still pending",
+        "source": "Hagenbuch & Lemke (2015), p. 35; Diggs et al. (1999), p. 1243",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=35"
       }
     ],
     "diagnostic_review": {
