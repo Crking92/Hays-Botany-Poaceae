@@ -37,6 +37,10 @@ def run():
             page.wait_for_function("window.location.search.includes('sorghastrum-nutans')",timeout=25000)
             page.wait_for_function("document.querySelector('#species-detail h2')?.textContent.length>0",timeout=15000)
             heading=page.locator("#species-detail h2").inner_text()
+            # The normal site opens in Field ID mode; explicitly select the
+            # Learner tab before asserting Learner-only structures.
+            page.locator(".view-switch button").filter(has_text="Learner").click()
+            page.locator("#species-detail .learner-step").first.wait_for(state="visible")
             assert page.locator("#species-detail .learner-step").count()>=6
             assert page.locator(".view-switch button").count()==3
             page.locator(".view-switch button").filter(has_text="Learn terms").click()
