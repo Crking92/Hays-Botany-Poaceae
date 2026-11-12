@@ -1,40 +1,73 @@
 #!/usr/bin/env node
 'use strict';
-// Read-only ONE-SHOT attempt to recover EXACT USGS-hosted Paspalum langei
-// image filenames from official Plants of Louisiana HTML. No installation.
-// Do not guess file names or grant reuse rights from species-level photo captions.
-const fs=require('node:fs');
-const target='https://warcapps.usgs.gov/PlantID/Species/Details/3514';
-const decode=s=>{try{return decodeURIComponent(String(s).replace(/&amp;/g,'&'))}catch{return String(s).replace(/&amp;/g,'&')}};
-const uniques=a=>[...new Set(a.filter(Boolean))];
-async function main(){
- const response=await fetch(target,{headers:{'User-Agent':'HaysBotanyPoaceaeSourceProbe/1.0 (Crking92/Hays-Botany-Poaceae)','Accept':'text/html'},signal:AbortSignal.timeout(35000)});
- if(!response.ok)throw Error('Official USGS site returned HTTP '+response.status);
- const html=await response.text(),linkedAssets=[];
- for(const m of html.matchAll(/(?:src|href|data-src|data-original|data-full|data-image|ng-src)\s*=\s*(['"])(.*?)\1/gi)){
-  const value=decode(m[2]);if(/image|photo|paspalum|carousel|gallery|3514/i.test(value))linkedAssets.push(value);
+// One-shot READ-ONLY official USGS Plants of Louisiana source proof.
+// Exact photo filenames and per-file author/affiliation come from embedded
+// var files = [...] JSON in its Paspalum langei species page HTML.
+// Retrieve full media only into temporary memory to compute original SHA1.
+// NO photo assets or shared galleries are modified or committed.
+const fs=require('node:fs'),crypto=require('node:crypto');
+const speciesUrl='https://warcapps.usgs.gov/PlantID/Species/Details/3514';
+const base='https://warcapps.usgs.gov';
+const pause=ms=>new Promise(r=>setTimeout(r,ms));
+async function fetchResource(u,accept){
+ let last;
+ for(let attempt=1;attempt<=2;attempt++){
+  if(attempt>1)await pause(3000);
+  try{
+   const resp=await fetch(u,{headers:{'User-Agent':'HaysBotany-USGS-SpeciesPhotoEvidence/1.0 (Crking92/Hays-Botany-Poaceae)','Accept':accept},signal:AbortSignal.timeout(35000)});
+   if(!resp.ok)throw Error('HTTP '+resp.status);
+   return resp;
+  }catch(e){last=e}
  }
- const fileParams=uniques([...html.matchAll(/(?:file\s*=\s*|file%3[dD])([^&"'\s<>]+)/gi)].map(m=>decode(m[1].replaceAll('+',' '))));
- const imageURLs=uniques([...html.matchAll(/(?:\/PlantID\/)?Image\/(?:GivenFile|[A-Za-z]+)[^"'\s<>]*/gi)].map(m=>decode(m[0])));
- const filenames=uniques([
-  ...fileParams,
-  ...linkedAssets.map(v=>{const m=v.match(/[?&]file=([^&]+)/i);return m?decode(m[1].replaceAll('+',' ')):null}),
-  ...imageURLs.map(v=>{const m=v.match(/[?&]file=([^&]+)/i);return m?decode(m[1].replaceAll('+',' ')):null})
- ]).filter(v=>/langei/i.test(v));
- const creditMatches=[...html.matchAll(/photo\s+credit\s*:?[^<]{0,240}/gi)].map(x=>x[0].slice(0,230));
- const contextHits=[...html.matchAll(/.{0,200}(?:Paspalum\s*[+_]?\s*Langei|GivenFile|photo credit|Image\/)[^\n]{0,300}/gi)].map(x=>x[0].slice(0,500));
- const result={source:target,html_response_status:response.status,html_length:html.length,
-  found_official_site_photo_credit_count:creditMatches.length,credit_snippets:creditMatches.slice(0,12),
-  extracted_exact_langei_filenames:filenames,linked_image_asset_urls:linkedAssets.slice(0,45),
-  image_endpoint_urls:imageURLs.slice(0,40),file_parameters:fileParams.slice(0,50),
-  relevant_html_context:contextHits.slice(0,24),
-  expected_existing_one_ref:'Paspalum Langei_infl 3.JPG',
-  rights_verification:'Only photos visibly credited to Larry Allain/USGS can be considered USGS-authored; third-party and ambiguous images remain held. Exact image identity/rights/pixels needed before gallery publication.',
-  authorizations:'READ_ONLY: this does not install images or certify grass identification, county status or independent copyrights'};
+ throw Error('Official source request failed after bounded attempts: '+String(last?.message||last));
+}
+async function main(){
+ const response=await fetchResource(speciesUrl,'text/html'),html=await response.text();
+ const match=html.match(/\bvar\s+files\s*=\s*(\[[\s\S]*?\]);/i);
+ if(!match)throw Error('Official species HTML no longer exposes var files JSON. HOLD other image files; never guess.');
+ const files=JSON.parse(match[1]);
+ if(!Array.isArray(files)||files.length<2)throw Error('Official source file array missing/empty; hold additional references.');
+ const records=[];let mediaVerified=0;
+ for(const f of files){
+  const file=String(f.ImagePath||f.Filename||'');
+  const filename=String(f.Filename||f.ImagePath||'');
+  const person=String(f.Photographer||'');
+  const affiliation=String(f.Affiliation||'');
+  const correctNames=file===filename;
+  const officialCredit=person==='Larry Allain' && affiliation==='U.S. Geological Survey';
+  const url=new URL('/PlantID/Image/GivenFile',base);
+  url.searchParams.set('file',file);
+  url.searchParams.set('id','3514');
+  const datum={file,filename,photographer:person,affiliation,official_same_filename_and_imagepath:correctNames,
+   official_USGS_authored_credit:officialCredit,official_media_url:url.href,status:null,mime:null,source_original_bytes:null,
+   independently_computed_sha1:null,usable_original_media:false,role_from_name:/_infl\b/i.test(file)?'inflorescence candidate':/_leaf\b/i.test(file)?'leaf / sheath candidate':'unclassified'};
+  try{
+   const img=await fetchResource(url.href,'image/jpeg,image/*;q=0.9');
+   const mime=img.headers.get('content-type')||'';
+   const bytes=Buffer.from(await img.arrayBuffer());
+   datum.status=img.status;datum.mime=mime;datum.source_original_bytes=bytes.byteLength;
+   datum.independently_computed_sha1=crypto.createHash('sha1').update(bytes).digest('hex');
+   datum.usable_original_media=mime.toLowerCase().includes('image/')&&bytes.byteLength>1000;
+   if(datum.usable_original_media)mediaVerified++;
+  }catch(e){datum.source_access_hold=String(e.message||e)}
+  records.push(datum);
+  console.log('USGS_IMAGE',JSON.stringify(datum));
+ }
+ const expected=['Paspalum Langei_infl 1.JPG','Paspalum Langei_infl 2.JPG','Paspalum Langei_infl 3.JPG','Paspalum Langei_leaf 2.JPG','Paspalum Langei_leaf 5.JPG'];
+ const present=expected.every(n=>records.some(x=>x.file===n));
+ const distinctSHA=new Set(records.filter(x=>x.independently_computed_sha1).map(x=>x.independently_computed_sha1)).size;
+ const summary={source:speciesUrl,source_http:200,exact_source_file_records:records.length,
+  expected_all_five_exact_names_in_official_html:present,
+  names:records.map(x=>x.file),individual_USGS_artist_credit_records:records.filter(x=>x.official_USGS_authored_credit).length,
+  original_image_http_verified:mediaVerified,source_original_shas_unique:distinctSHA===mediaVerified,
+  independently_hashed_original_images:mediaVerified,
+  previously_published_photo:'Paspalum Langei_infl 3.JPG',
+  image_pixels_botanically_inspected_by_human:false,
+  rights_caveat:'USGS-authored federal work is generally public domain, but each image must be individually checked for explicit third-party restrictions. This JSON has individual Larry Allain/USGS labels from source. No species ID approval.',
+  action:'Chat2 visually inspect exact five images and source credit/PD evidence, dedupe against entire historical library by computed SHA, install distinct new roles, Chat1 verify live pixels and credits.'};
  fs.mkdirSync('qa-report',{recursive:true});
- fs.writeFileSync('qa-report/paspalum-langei-usgs-source.json',JSON.stringify(result,null,2)+'\n');
- console.log('USGS_SOURCE_SUMMARY',JSON.stringify({response:response.status,html_chars:html.length,linked_images:linkedAssets.length,exact_langei_filenames:filenames,credits:creditMatches.length,contexts:contextHits.length}));
- console.log('USGS_SOURCE_ASSETS',JSON.stringify(linkedAssets.slice(0,26)));
- console.log('USGS_SOURCE_IMAGE_CONTEXT',JSON.stringify(contextHits.slice(0,9)));
+ fs.writeFileSync('qa-report/paspalum-langei-usgs-source.json',JSON.stringify({summary,images:records},null,2)+'\n');
+ console.log('USGS_PROVENANCE_SUMMARY',JSON.stringify(summary));
+ if(!present||mediaVerified!==records.length||!summary.source_original_shas_unique||!records.every(x=>x.official_USGS_authored_credit))process.exitCode=1;
 }
 main().catch(e=>{console.error('USGS_SOURCE_ACCESS_HOLD',String(e.message||e));process.exitCode=1});
