@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Single-observation read-only photo rights/visual inspection. No gallery writes."""
-import hashlib,io,json,re,sys,time
+import hashlib,io,json,re,sys,time,os
+from urllib.parse import urlencode
 from urllib.request import Request,urlopen
 from PIL import Image,ImageDraw,ImageOps
 OBS=31311178
@@ -11,6 +12,34 @@ def request(url):
       with urlopen(Request(url,headers={"User-Agent":"HaysBotanyGroupCPhotoQA/1.0","Accept":"application/json,image/*,*/*"}),timeout=40) as f:return f.read(16000000)
     except Exception as e:last=e;time.sleep(i+1)
   raise last
+
+def verify_license_versions():
+  ids=[48994265,48994287,48994274]; output={"observation":OBS,"photographs":[],"gbif_queries":[]}
+  for pid in ids:
+    item={"photo_id":pid}
+    for endpoint in [f"https://api.inaturalist.org/v1/photos/{pid}",f"https://www.inaturalist.org/photos/{pid}.json"]:
+      try:
+        r=json.loads(request(endpoint))
+        obj=(r.get("results") or [r])[0] if isinstance(r,dict) else r
+        item["source_api"]=endpoint
+        for field in ["id","license_code","license_url","attribution","user_id","native_page_url"]:
+          if field in obj:item[field]=obj[field]
+        if item.get("license_url"):break
+      except Exception as e:item["last_access_error"]=str(e)[:130]
+    output["photographs"].append(item)
+  for key in ["31311178","https://www.inaturalist.org/observations/31311178"]:
+    endpoint="https://api.gbif.org/v1/occurrence/search?"+urlencode({"occurrenceId":key,"limit":20})
+    item={"query":key}
+    try:
+      r=json.loads(request(endpoint))
+      item["count"]=r.get("count");item["matches"]=[]
+      for x in r.get("results",[])[:10]:
+        item["matches"].append({"key":x.get("key"),"occurrenceID":x.get("occurrenceID"),"scientificName":x.get("scientificName"),"media":[{"identifier":v.get("identifier"),"license":v.get("license"),"rightsHolder":v.get("rightsHolder")} for v in x.get("media",[])]})
+    except Exception as e:item["error"]=str(e)[:150]
+    output["gbif_queries"].append(item)
+  with open("paspalum-sophia-exact-licenses.json","w") as fh:json.dump(output,fh,indent=2)
+  print(json.dumps(output,indent=2))
+
 def main():
   data=json.loads(request("https://api.inaturalist.org/v1/observations/"+str(OBS)))["results"][0]
   taxon=(data.get("taxon") or {}).get("name","")
@@ -49,4 +78,6 @@ def main():
   with open("paspalum-sophia-source.json","w") as f:json.dump(report,f,indent=2)
   print(json.dumps(report,indent=2))
   if issues:sys.exit(1)
-if __name__=="__main__":main()
+if __name__=="__main__":
+  if os.environ.get("PASPALUM_LICENSE_ONLY")=="1":verify_license_versions()
+  else:main()
