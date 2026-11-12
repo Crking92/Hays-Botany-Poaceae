@@ -772,10 +772,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Actual archived Bob Harms whole flowering-specimen panel 1 shows several attached leafy shoots and panicles; panel 2 displays the entire dense short-branched seedhead; panel 3 magnifies overlapping glumes. A contracted ovoid to cylindrical head is a first clue (FNA 0.5–8 cm long, often 0.8–2 cm wide), but several introduced Phalaris look similar. The one- vs two-STERILE-LEMMA difference cannot be determined from head silhouette alone.",
+    "field_rule": "Actual archived Bob Harms whole flowering-specimen panel 1 shows several attached leafy shoots and panicles; panel 2 displays the entire dense short-branched seedhead; panel 3 magnifies overlapping glumes. A contracted ovoid to cylindrical head is a first clue (FNA 0.5–8 cm long, often 0.8–2 cm wide), but several introduced Phalaris look similar. The one- vs two-STERILE-LEMMA difference cannot be determined from head silhouette alone. Keep a LONG, NARROW contracted flowering head as a conditional Carolina canarygrass possibility: the 1999 regional Flora explicitly documents some individuals with elongated cylindrical heads to 12 cm. Most heads are shorter, compact oval cylinders. Confirm the true branched panicle and inspect lateral glume-vein spicules (usually 5 or fewer) and glume/spikelet dimensions before deciding between Carolina and narrow canarygrass; do NOT relabel the panicle a true unbranched spike.",
     "traits": {
       "head": [
-        "compact"
+        "compact",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft"
@@ -792,10 +793,20 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 234",
-        "reference": "Compact, narrow cylindrical SPICELIKE PANICLE, not a true simple grass spike.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1310; Flora of North America Phalaris caroliniana; Kew GrassBase",
+        "reference": "Diggs (printed p.1310) describes the usual short cylindrical/narrowly elliptic spike-like PANICLE to 6 cm, rarely 12 cm; a cited Dallas County voucher (Whitehouse 15711, BRIT/SMU) specifically showed an elongated head resembling P. angusta. FNA gives ordinary 0.5–8(8.5) cm ovoid-to-subcylindrical panicles; Kew 1–7 cm spiciform/ovate. Preserve `compact` for the typical plant; conditionally add `long_narrow_panicle` for the documented uncommon elongate silhouette, not a true unbranched `spike`, not proof of an especially narrow Phalaris angusta identification.",
+        "status": "REGIONAL_PRIMARY_FLORA_DOCUMENTED_RARE_ELONGATE_SPECIMEN_FNA_KEW_TYPICAL_DISAGREEMENT_RETAIN",
+        "review_date": "2026-11-12",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "fna_source_url": "https://swbiodiversity.org/seinet/taxa/index.php?taxon=760",
+        "kew_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415591-1/general-information",
+        "ut_source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Phalaris%20caroliniana.html",
+        "role": "reproductive",
+        "reported_states": [
+          "compact short oval/cylindrical panicle usually",
+          "elongate narrow contracted panicle occasionally up to 12 cm (documented Dallas County specimen)"
+        ],
+        "photo_voucher_support": "Exact Dallas County long-panicle herbarium image, glume side-view macro and local Hays matched specimen not newly visualized; no photo permission signoff."
       },
       "ligule": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 234",
@@ -837,6 +848,14 @@
         "certainty": "Kew / UT local specimen measurements; close detached glume and inner collar image pending",
         "source": "Kew GrassBase — Phalaris caroliniana",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415591-1/general-information"
+      },
+      {
+        "look": "Check whether Carolina canarygrass has a short egg-shaped head or an uncommon narrow elongated one",
+        "check": "Most Carolina canarygrass has a compact ovoid to short cylindrical panicle, but Diggs reports a Dallas County voucher with a narrow one up to 12 cm long. The same plant still has a heavily condensed BRANCHED panicle, not an anatomical spike. If the long-narrow icon was chosen, retain the candidate provisionally and compare mature, measured spikelets and glume nerves.",
+        "compare": "Narrow canarygrass (*Phalaris angusta*) tends to have narrow longer inflorescences; regional Diggs reports P. angusta glume lateral nerves with 9 or more spicules versus often 5 or fewer in P. caroliniana. Use lens and avoid treating one head photo as sufficient.",
+        "certainty": "One explicitly documented regional specimen, but uncommon form; local Hays connected voucher and exact photo pending.",
+        "source": "Diggs et al. (1999), Illustrated Flora of North Central Texas, printed p. 1310; FNA; Kew",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       }
     ],
     "diagnostic_review": {
@@ -1399,10 +1418,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Southwestern bristlegrass: compare its long projecting bristles, tapering panicle and leafy perennial bunch. Open the true inner collar to look beneath the hairs for a tiny membrane. Bristles attach below spikelets; they are not lemma awns.",
+    "field_rule": "Southwestern bristlegrass: compare its long projecting bristles, tapering panicle and leafy perennial bunch. Open the true inner collar to look beneath the hairs for a tiny membrane. Bristles attach below spikelets; they are not lemma awns. Southwestern bristlegrass also forms a LONG, TAPERED, relatively narrow lanceolate panicle (15–25 cm in FNA/Kew). A crew member may recognize that silhouette before noticing the projecting bristles, so the broad long-narrow-panicle choice must not eliminate it. Confirm several single long bristles arising BELOW separate spikelets, not lemma awns; do not use a generic narrow head to diagnose Setaria.",
     "traits": {
       "head": [
-        "foxtail"
+        "foxtail",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft"
@@ -1420,10 +1440,19 @@
     "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 243",
-        "reference": "Broad-leaved, strongly tapered, relatively loose foxtail panicle (7–35 cm) with very long bristles.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Setaria species key, printed p. 1319; Flora of North America Setaria scheelei; Kew GrassBase",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "fna_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381",
+        "kew_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:235267-2/general-information",
+        "role": "reproductive",
+        "reference": "Diggs regional Setaria key distinguishes S. scheelei by a strongly TAPERED 11–35 cm panicle (vs usually cylindrical S. leucopila). FNA gives 15–25 cm open tapering panicles, lower branches to 3 cm; Kew describes spiciform, lanceolate, loose, 15–25 cm long. `foxtail` remains bristle-rich appearance, while `long_narrow_panicle` matches the elongated tapered outline, often noticed from a distance. This does not license an airy-wide panicle choice or claim all panicles stay narrow at every stage.",
+        "reported_states": [
+          "bristled foxtail-like overall silhouette",
+          "elongated narrow lanceolate/tapered panicle"
+        ],
+        "status": "DIGGS_REGIONAL_KEY_FNA_AND_KEW_REPRODUCTIVE_HEAD_SHAPE_MATCH",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new same-plant mature narrow head with counted bristle bases inspected in Hays photo assets."
       },
       "awns": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 243",
@@ -1472,6 +1501,14 @@
         "compare": "Knotroot bristlegrass often has 4–12 bristles per spikelet; distinguish attachment and mature floral parts.",
         "certainty": "Earlier FNA-derived reproductive evidence retained; not independently reverified in this vegetative/sparse-bristle batch.",
         "source": "Flora of North America — Setaria scheelei",
+        "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381"
+      },
+      {
+        "look": "Distinguish the tapered long head from a short cylinder",
+        "check": "Look for a roughly 15–25 cm lanceolate head with a broad base tapering toward a thin top, unlike the usually more cylindrical, shorter streambed bristlegrass panicle. If bristles are hidden or not yet obvious, long-narrow-panicle is a valid broad view. On close view confirm 10–35 mm bristles and measure actual spikelets around 2.1–2.6 mm.",
+        "compare": "Muhlenbergia and Sorghastrum can show equally narrow panicles but do not carry Setaria's sterile bristles attached below the spikelets. Streambed bristlegrass generally has a more cylindrical, shorter foxtail.",
+        "certainty": "Diggs regional key plus FNA/Kew shape descriptions confirmed; Hays corresponding shape/photo association pending.",
+        "source": "Diggs et al. (1999), Setaria key p. 1319; FNA; Kew GrassBase",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381"
       }
     ],
@@ -2269,10 +2306,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Tripsacum genus clue = thick SAME spike with male region ABOVE and enlarged female beadlike lower joints BELOW. For exact species, verify a mature specimen; lookalike silhouettes and leaf width alone do not prove it.",
+    "field_rule": "Tripsacum genus clue = thick SAME spike with male region ABOVE and enlarged female beadlike lower joints BELOW. For exact species, verify a mature specimen; lookalike silhouettes and leaf width alone do not prove it. The same reproductive organ can also satisfy the broader 'long upright spike' picture when a single unbranched spike-like rame is present, or the 'fingers near the tip' choice when two or more thick terminal rames arise together. Regional descriptions report solitary and 2–3-branched heads, including Texas single-spike plants; confirm male-over-female sections before final ID.",
     "traits": {
       "head": [
-        "mixed_gender"
+        "mixed_gender",
+        "spike",
+        "fingers"
       ],
       "habit": [
         "tuft",
@@ -2291,10 +2330,20 @@
     "diagnostic_photo_status": "SOURCE-REFERRED",
     "character_evidence": {
       "head": {
-        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 256",
-        "reference": "Single spike-like axis has separate upper male and hardened lower female segments.",
-        "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1332; UT Austin PRC Tripsacum dactyloides; Kew GrassBase",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "regional_texas_source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Tripsacum%20dactyloides.html",
+        "supplemental_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:424990-1/general-information",
+        "role": "reproductive",
+        "reference": "Diggs describes lower pistillate rachis and unbranched or 2–3 branched upper staminate region. UT Austin locally describes terminal spikes as solitary or two-branched in its Texas range. Kew GrassBase describes 1–10 single, paired, or digitate racemes (12–25 cm). In the broad visual filter, an individual thick single axis is `spike`; clustered 2–3 digitately arranged terminal branches meet `fingers`. Keep `mixed_gender` as the uniquely diagnostic appearance (hard lower female bead joints + upper male spikelets). Heads can be damaged or partly abscised; no choice alone proves species.",
+        "reported_states": [
+          "mixed male/female segments on one branch",
+          "single dense spike-like axis",
+          "two to several near-terminal digitate branches"
+        ],
+        "status": "REGIONAL_FLORA_AND_TEXAS_UT_SOURCE_VERIFIED_WITH_GRASSBASE_CONDITIONAL_STATES",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly authenticated exact local single/paired whole inflorescence or sex-zone closeup; source-approved photo identity and rights remain independent."
       },
       "ligule": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 256",
@@ -2320,6 +2369,14 @@
         "certainty": "Kew GrassBase-backed; species-level comparison still pending",
         "source": "Kew POWO / GrassBase — Tripsacum dactyloides",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:424990-1/general-information"
+      },
+      {
+        "look": "Count the distinct spike-like axes in eastern gamagrass",
+        "check": "Look for a single thick terminal spike-like branch OR a cluster of 2–3 (sometimes more) palmately arranged branches. The former matches the generic spike icon; the latter can resemble short stout fingers near the tip. On either form, identify the female hard lower beads and paired male upper spikelets before treating it as gamagrass.",
+        "compare": "Generic spike and fingers icons are shared with other grasses. Do not use either alone to separate Tripsacum from Elymus, Eleusine or Chloris; species-level female rachis and male-spikelet structure are decisive.",
+        "certainty": "Diggs, UT Austin species morphology and Kew GrassBase agree on variable branch count; connected Hays sex-zone photo and voucher pending.",
+        "source": "Diggs et al. (1999), Tripsacum dactyloides; UT Austin PRC; Kew GrassBase",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pages/Tripsacum%20dactyloides.html"
       }
     ],
     "diagnostic_review": {

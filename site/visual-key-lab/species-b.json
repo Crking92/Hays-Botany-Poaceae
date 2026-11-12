@@ -1948,7 +1948,7 @@
     "common": "Big Bluestem / Turkeyfoot",
     "scientific": "Andropogon gerardi",
     "range": "PASS",
-    "field_rule": "Trace the complete terminal flowering branches, corroborate with a real membranous collar/ligule and attached paired flowering units; do not certify by height, turkey-foot silhouette, or sheath color alone. A short underground RHIZOME is compatible with an otherwise bunch-forming big bluestem; do not reject a plant for a connected short stem alone.",
+    "field_rule": "Trace the complete terminal flowering branches, corroborate with a real membranous collar/ligule and attached paired flowering units; do not certify by height, turkey-foot silhouette, or sheath color alone. A short underground RHIZOME is compatible with an otherwise bunch-forming big bluestem; do not reject a plant for a connected short stem alone. The TRUE ligule has a papery membrane, but the tip is sometimes sparsely ciliate; a field observer seeing fine hairs actually attached to that membrane must not exclude big bluestem. Do not count the much longer hairs on the nearby blade base or collar as the ligule itself.",
     "hero_i": 0,
     "traits": {
       "head": [
@@ -1959,7 +1959,8 @@
         "rhizome"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "long",
@@ -2010,6 +2011,21 @@
         "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No new local connected rootstock or specimen inspected."
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 34, Andropogon gerardii; Kew POWO/GrassBase, Andropogon gerardi; Oklahoma Native Plant Record (Harris), The Identification of Some of the More Common Native Oklahoma Grasses by Vegetative Characters",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+        "grassbase_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30435428-2/general-information",
+        "supplemental_url": "https://ojs.library.okstate.edu/osu/index.php/ONPR/article/download/8199/7538",
+        "role": "vegetative",
+        "reference": "The Hill Country vegetative account (under its spelling Andropogon gerardii) gives a 1–2.5 mm membranous, truncate ligule, with usually erose but OCCASIONALLY SPARSELY CILIATE margins. Kew's accepted-name treatment A. gerardi describes a ciliolate membrane, and Harris describes a ciliate-to-lacerate 1–2 mm membranous ligule. Thus retain 'membrane' as true anatomy and allow 'hairs' only when minute cilia of the actual ligule margin are visible. Do not mistake long upper blade, sheath or outer collar hairs for the ligule or imply a hair-only ligule. Accepted display name and synonym review are unchanged.",
+        "reported_states": [
+          "membranous truncate margin, erose usually (H&L 2015)",
+          "occasionally sparsely ciliate membrane (H&L 2015; Kew GrassBase)"
+        ],
+        "status": "HILL_COUNTRY_OCCASIONAL_CILIATE_MEMBRANE_LOCAL_COLLAR_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No connected Hays field specimen, scaled true inner ligule macro or new photo-rights evidence verified in this scoring batch."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2045,6 +2061,14 @@
         "certainty": "Hagenbuch & Lemke p. 34 and Diggs p. 1239 support the short-or-absent wording; specimen pending",
         "source": "Hagenbuch & Lemke (2015), p. 34; Diggs et al. (1999), p. 1239",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34"
+      },
+      {
+        "look": "Separate the true big-bluestem ligule margin from adjacent blade hairs",
+        "check": "At the inner blade–sheath junction, look for a papery 1–2.5 mm membrane. The margin is often irregular but sometimes has sparse short cilia, so either a thin membrane or a fringe of real marginal hairs is compatible. Do not use the much longer hairs rising from the upper blade, adjacent collar or sheath as evidence of a hair-fringe ligule.",
+        "compare": "Sorghastrum nutans has a hair fringe and beard at the leaf junction rather than big bluestem's primarily membranous ligule; use true inflorescence and spikelet structures for final identification.",
+        "certainty": "Primary regional H&L account and Kew GrassBase species account; local attached ligule photograph unverified",
+        "source": "Hagenbuch & Lemke 2015 p.34; Kew GrassBase Andropogon gerardi",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30435428-2/general-information"
       }
     ],
     "diagnostic_review": {
