@@ -27,7 +27,7 @@
 | *Setaria viridis* | Liang **50**; Osborn **35** (SWT) | 90 | Two named Hays collections; species morphology and local observations remain individually gated |
 | *Setaria leucopila* | Breckenridge **490**; Tabler **s.n.** (SWT) | 89 | Two named Hays collections; still need small ciliate membrane/crown and spikelet checks on actual source specimens |
 
-**Source:** [Hagenbuch & Lemke (2015), *Grasses of the Texas Hill Country*, Appendix B and species descriptions](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf). Original PDF pages 78, 80, 85, 89–91 and 93 and relevant original vegetative description pages **42** and **54** were opened and visually verified with page screenshots, not inferred from the existing GitHub crosswalk.
+**Source:** [Hagenbuch & Lemke (2015), *Grasses of the Texas Hill Country*, Appendix B and species descriptions](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf). Original PDF pages 78, 80, 85, 89–91 and 93 and relevant original vegetative description pages **42**, **54** and **61** were opened and visually verified with page screenshots, not inferred from the existing GitHub crosswalk.
 
 **Reconciliation result:** **10 of 10** published Hays collection citations already saved in `hays-57-draft-id-cards.json` match the original publication's collector, number, herbarium and county. No mismatched citations or duplicate taxon entries were found.
 
@@ -35,7 +35,7 @@
 
 - *Melica nitens*: 2015 Hill Country vegetative description calls it a hard, **subrhizomatous** base while explicitly saying **true rhizomes and stolons absent**. The membrane ligule is approximately **3–6 mm**, extending down the sheath edges; the sheath is essentially closed. We must not describe this as a grass with obvious long rhizomes. A clump image alone cannot settle the basal character.
 - Carolina jointtail: the same source, under *Coelorachis cylindrica*, does describe **short knotty rhizomes**, a narrow folded/flat blade with scabrous prominent midrib and a tiny approximately **0.5–1-mm membranous ciliate ligule**. The 1999 Flora's reproductive key points to a narrow jointed flowerhead and **sessile fertile spikelet recessed into a rachis niche with a pitted glume**, with reduced pedicelled partner. No retrieved Hays contact-sheet preview resolves all these structures; no scored admission.
-- These two have different basal growth forms and both a ciliate **membranous** ligule, not a hair-only ligule. Keep age/wear and lack of visible rootstock as **unknown**, not a negative exclusion.
+- These two have different basal growth forms. **Both have membranous ligules, but the margins differ**: *Melica nitens* has erose/lacerate margins rather than a specifically ciliate margin, while Carolina jointtail has an erose, ciliate margin. Neither should be coded as hair-fringe-only. Keep age/wear and lack of visible rootstock as **unknown**, not a negative exclusion.
 - *Setaria leucopila*: Hill Country vegetative description reports a perennial, **no rhizomes** and long hairs near the collar plus a tiny **ciliate-membrane ligule**. A choice 'hair ligule' versus 'membrane ligule' needs to preserve the membranous base. This is source evidence, not a scored change by Chat 5.
 
 ### Search outcome and blockers
