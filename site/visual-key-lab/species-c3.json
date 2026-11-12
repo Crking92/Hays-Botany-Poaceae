@@ -235,7 +235,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "SWITCHGRASS = HAIRY TRIANGLE at blade base + AIRY PANICLE + AWNLESS single spikelets.",
+    "field_rule": "Switchgrass: compare the complete panicle, mature spikelets, collar and connected scaly rhizomes. Inspect blade-base hairs separately from the inner ligule. Regional sources differ on ligule terminology and node hairs; neither a hair-fringe appearance nor a hairy node alone rules it out.",
     "traits": {
       "head": [
         "airy"
@@ -269,23 +269,31 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Kew GrassBase Panicum virgatum + FNA/UMass field descriptions",
-        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information",
-        "secondary_source_url": "https://www.umass.edu/agriculture-food-environment/landscape/publications-resources/weed-identification/switchgrass--panicum-virgatum",
-        "reference": "True ligule is a ciliate MEMBRANE; after it abrades it may LOOK like dense white hair fringe. Hair triangle on upper blade is a SEPARATE structure. Both visual collar options permitted to avoid false exclusion.",
-        "status": "SOURCE_CHECKED_WORN_LIGULE_APPEARANCE_PHOTO_PENDING",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 57; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1302",
+        "reference": "H&L: roughly 1 mm hair fringe, with longer 3–5 mm hairs; Diggs: fringed membrane 1.5–3 mm. Keep hairs and membrane. Measure tissue and longest hairs separately; abrasion alone is not an established explanation.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
+      },
+      "node_hairs": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 57; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1302",
+        "reference": "H&L permits glabrous or pubescent nodes; Diggs describes glabrous nodes. Do not use node hair alone as an exclusion; this character remains unscored.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_checks": [
       {
-        "look": "Inspect the hair TRIANGLE and true ligule separately",
-        "check": "Switchgrass commonly shows a wedge/triangle of hairs on the UPPER blade surface immediately above the collar. Its anatomical ligule is a CILIATE MEMBRANE; some descriptions note it wears away leaving a prominent ring of white hairs. The hair patch is NOT the ligule.",
-        "compare": "Indiangrass has the conspicuous rifle-sight pointed auricles on either side of a membranous ligule; Hall's panicgrass lacks the robust switchgrass collar and rhizome combination.",
-        "certainty": "Kew/FNA/UMass sources; same-plant opened collar photo pending, two broad visual appearances accepted",
-        "source": "Kew GrassBase — Panicum virgatum; field collar description",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information"
+        "look": "Inspect the inner ligule separately from blade-base hairs",
+        "check": "The regional references use different ligule categories and measurement scopes. Record any membrane and the longest hairs separately. Do not explain every hair-fringe appearance as a worn membrane without examining the tissue.",
+        "compare": "Blade-base hairs are distinct from the true ligule. Combine the collar, connected rhizomes and mature spikelets; one hair patch is insufficient.",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 57; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1302",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
       },
       {
         "look": "Expose the long, scaly rhizomes under a mature flowering culm",
