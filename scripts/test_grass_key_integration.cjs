@@ -169,6 +169,15 @@ const positives = [
   ['nimblewill rooted tuft with ciliate inner ligule',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'long'},['muhlenbergia-schreberi']],
   ['thin paspalum paired racemes tuft',{head:'paired_spikes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
   ['thin paspalum paired racemes rhizome',{head:'paired_spikes',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
+  // Lane B #110: an actual 7+ unilateral raceme head must retain goosegrass.
+  ['goosegrass classic digitate fingers',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  ['goosegrass one-sided pressed spikelet rows',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  ['goosegrass seven or more unilateral branches',{head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eleusine-indica']],
+  // Lane C #111: a field-shape selection is provisional, not species proof.
+  ['Texas brome spreading open panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['bromus-texensis']],
+  ['slender Indiangrass open long-awned panicle',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['sorghastrum-elliottii']],
+  ['hidden dropseed very short inner ciliate membrane compact',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
+  ['hidden dropseed very short inner ciliate membrane narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['sporobolus-clandestinus']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -216,7 +225,8 @@ const negatives = [
   [{head:'whorls'},'bouteloua-gracilis'],
   [{awns:'burs'},'bouteloua-gracilis'],
   // This branched Paniceae grass must not be confused with true spikes or bristles.
-  [{head:'many_one_sided'},'eleusine-indica'],
+  // Kew GrassBase confirms goosegrass can have seven-plus unilateral racemes.
+  [{head:'many_one_sided'},'phalaris-caroliniana'],
   [{head:'many_one_sided'},'elymus-canadensis'],
   [{head:'many_one_sided',awns:'bristles'},'echinochloa-crus-galli'],
   // Lane A/C — don't turn conditional morphology into every growth form.
@@ -246,6 +256,13 @@ const negatives = [
   [{head:'spike'},'paspalum-setaceum'],
   [{head:'many_one_sided'},'paspalum-setaceum'],
   [{habit:'mat'},'paspalum-urvillei'],
+  // Incompatible choices remain excluded even after legitimate trait expansion.
+  [{head:'foxtail'},'eleusine-indica'],
+  [{awns:'bristles'},'eleusine-indica'],
+  [{ligule:'absent'},'eleusine-indica'],
+  [{head:'spike'},'bromus-texensis'],
+  [{head:'foxtail'},'sorghastrum-elliottii'],
+  [{awns:'long'},'sporobolus-clandestinus'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
 const unknown={id:'unknown-test-fixture',common:'Unknown',scientific:'Unknown',traits:{},range:'UNRESOLVED'};
