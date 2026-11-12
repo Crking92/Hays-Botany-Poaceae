@@ -994,11 +994,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Texas cupgrass: separate hair-FRINGE true LIGULE from hairy culm nodes; inspect the little CUP/RING just under a fallen spikelet (reduced lower glume fused to callus); check 4–10 upright fuzzy one-sided racemes and attached paired 3.6–4.2 mm spikelets. Do not certify from a fuzzy flowering head alone.",
+    "field_rule": "Texas cupgrass: separate hair-FRINGE true LIGULE from hairy culm nodes; inspect the little CUP/RING just under a fallen spikelet (reduced lower glume fused to callus); check 4–10 upright fuzzy one-sided racemes and attached paired 3.6–4.2 mm spikelets. Do not certify from a fuzzy flowering head alone.\n\nField ID Lab: Texas cupgrass can have four to ten erect one-sided flowering branches, including seven or more. Use the hairy rachis and tiny cup/ring beneath an actual mature spikelet to distinguish it; branch count alone is not proof.",
     "traits": {
       "head": [
         "one_sided",
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "many_one_sided"
       ],
       "habit": [
         "tuft"
@@ -1030,6 +1031,20 @@
         "reference": "Dense ring/fringe of straight hairs at inner blade/sheath junction; this is a true hair ligule, not a ciliate papery membrane, independently attested.",
         "status": "TWO_SOURCES_MATCH_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "head_many_unilateral_regional": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1274, Eriochloa species key; Kew GrassBase Eriochloa sericea",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:402055-1/general-information",
+        "supplemental_source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "category": "reproductive",
+        "reported_states": [
+          "four to ten unilateral racemes in published species treatment",
+          "slender erect spike-like racemes along central axis"
+        ],
+        "reference": "Regional Flora distinguishes silky cupgrass from prairie cupgrass by long pedicel hairs and mostly nonoverlapping racemes; Kew reports 4–10 one-sided racemes. The learner's seven-or-more unilateral-branch choice must keep Texas cupgrass eligible when 7–10 are counted. Preserve general one-sided and long narrow panicle pathways; counts overlap other species and do not certify a photograph.",
+        "certainty": "REGIONAL_GENUS_KEY_PLUS_SPECIES_LEVEL_GRASSBASE_RANGE_NOT_VOUCHER_VERIFIED",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -1917,10 +1932,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Connected rooted runner plus diagnostic slender flowering branches with blunt spikelets; confirm collar from same plant.\n\nSource disagreement: Hagenbuch & Lemke (2015, p. 51) describe long stolons but no rhizomes, while the recorded Diggs account mentions a rhizomatous crown. Trace a real underground stem before choosing rhizome; neither source has been silently discarded.",
+    "field_rule": "Connected rooted runner plus diagnostic slender flowering branches with blunt spikelets; confirm collar from same plant.\n\nSource disagreement: Hagenbuch & Lemke (2015, p. 51) describe long stolons but no rhizomes, while the recorded Diggs account mentions a rhizomatous crown. Trace a real underground stem before choosing rhizome; neither source has been silently discarded.\n\nField ID Lab: inspect vine mesquite up close. Its narrow spike-like head contains one to four short branches with spikelets on one side, so either long narrow panicle or one-sided branches can be a valid visual answer; these branches are usually held close to the axis, not a spreading finger fan.",
     "traits": {
       "head": [
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "one_sided"
       ],
       "habit": [
         "mat",
@@ -1961,6 +1977,21 @@
         "reference": "The two regional treatments disagree on whether true underground rhizomes are present. Preserve existing mat and rhizome score paths until specimens/taxon scope are checked; do not casually equate a hard knotty base with a true scaly rhizome.",
         "certainty": "UNRESOLVED_TWO_SOURCE_CONFLICT_NO_SCORE_REMOVAL",
         "status": "SOURCE_CONFLICT_REQUIRES_SPECIMEN",
+        "review_date": "2026-11-12"
+      },
+      "head_unilateral_branches": {
+        "source": "Kew GrassBase Hopia obtusa; FNA-derived NEON Biorepository taxon treatment (historical Panicum obtusum)",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77077132-1/general-information",
+        "supplemental_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=20232",
+        "category": "reproductive",
+        "reported_states": [
+          "one to four short unilateral racemes",
+          "racemes appressed and 1–2 cm long",
+          "3–10(14) cm central panicle axis"
+        ],
+        "reference": "Vine mesquite is correctly scored as a contracted long narrow head, but attached small one-sided racemes are also a legitimate broad field view. Include one-sided when their unilateral spikelet insertion is seen. Appressed branches do NOT imply a widely spreading finger fan; do not add fingers, and do not resolve the outstanding rhizome-versus-stolon source conflict by changing head morphology.",
+        "certainty": "DIRECT_GRASSBASE_INFLORESCENCE_SPECIES_DESCRIPTION_FIELD_CHOICE_SCOPE",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
         "review_date": "2026-11-12"
       }
     },
