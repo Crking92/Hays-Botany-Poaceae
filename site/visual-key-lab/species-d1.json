@@ -2615,10 +2615,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Many slender ascending branches + tiny multi-flowered spikelets + actual jagged membranous ligule and separate sheath hairs support the Dinebra complex; only verified mature glume/caryopsis characters and voucher context can confirm subsp. mucronata.",
+    "field_rule": "Many slender ascending branches + tiny multi-flowered spikelets + actual jagged membranous ligule and separate sheath hairs support the Dinebra complex; only verified mature glume/caryopsis characters and voucher context can confirm subsp. mucronata.\n\nField choice: an intact head with seven or more one-sided branches still fits the broader Dinebra panicea complex. That branch count does NOT establish subsp. mucronata; look for mature glumes and caryopsis on a documented local plant.",
     "traits": {
       "head": [
-        "one_sided"
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft"
@@ -2653,6 +2654,19 @@
         "reference": "Species-level panicea complex morphology can be applied to broad comparison but does not authenticate ssp. mucronata; needs local voucher and diagnostic subspecies treatment.",
         "status": "SUBSPECIES_ID_UNVERIFIED",
         "review_date": "2026-11-10"
+      },
+      "head_many_unilateral": {
+        "source": "Kew GrassBase under Leptochloa panicea, broader Dinebra panicea complex; species-level treatment, not certified subspecies diagnosis",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "numerous one-sided narrow racemes along one axis",
+          "more than seven racemes possible"
+        ],
+        "reference": "A mature Dinebra panicea-type head has many separate ascending unilateral branches. The field UI's seven-or-more unilateral-branch option should not exclude the existing subspecies card. This is a conservative gross-head state only; glume/caryopsis evidence and local subspecies verification remain pending.",
+        "certainty": "SUPPLEMENTAL_SPECIES_LEVEL_EXTERNAL_SOURCE_NOT_SUBSPECIES_SIGNOFF",
+        "status": "SOURCE_BACKED_PROVISIONAL_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [

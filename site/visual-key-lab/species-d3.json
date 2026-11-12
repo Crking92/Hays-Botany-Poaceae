@@ -849,7 +849,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "The gallery now shows broad habit, an ACTUAL rooted Australian var. makarikariense crown, real collar/ligule-region hairs and attached spikelets. Confirm a Texas plant using a matched rooted flowering voucher with measured true inner ligule and mature spikelet anatomy; do not infer local variety or native status from Australian reference photographs.",
+    "field_rule": "The gallery now shows broad habit, an ACTUAL rooted Australian var. makarikariense crown, real collar/ligule-region hairs and attached spikelets. Confirm a Texas plant using a matched rooted flowering voucher with measured true inner ligule and mature spikelet anatomy; do not infer local variety or native status from Australian reference photographs.\n\nField choice: open the inner blade–sheath junction. Kleingrass has short hairs attached to a tiny membranous ligule, so a visible fringe or its papery base can both be reasonable choices. Do not count outside sheath hairs.",
     "traits": {
       "head": [
         "airy"
@@ -859,7 +859,8 @@
         "rhizome"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -883,6 +884,20 @@
         "reference": "Lower floret staminate with developed palea (2–3 mm), paired with fertile hardened upper floret, versus lower sterile floret in many panicoid grasses.",
         "status": "TWO_SOURCE_TREATMENTS_MATCH_FLOWERING_PHOTO_PENDING",
         "review_date": "2026-11-10"
+      },
+      "ligule_hill_country_ciliate_base": {
+        "source": "Hagenbuch & Lemke (2015), p. 56, Panicum coloratum (kleingrass)",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=56",
+        "category": "vegetative",
+        "reported_states": [
+          "0.5–2 mm ciliate ligule",
+          "minute membrane at base",
+          "tufted perennial with short knotty rhizomes"
+        ],
+        "reference": "The inner ligule is a tiny ciliate membrane. A beginner seeing its hairs first should retain kleingrass even if the tiny basal membrane is hidden; external sheath hairs are not themselves ligule proof. Preserve membrane state.",
+        "certainty": "DIRECT_REGIONAL_VEGETATIVE_SOURCE_NOT_LOCAL_PHOTO_CERTIFIED",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
@@ -2210,14 +2225,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Use whole plant+flowering stalk+authentic rooted fibrous crown, paired mature spikelets and REAL glume parts; only call the ligule visible when it is the opened inner blade-sheath membrane, not basal sheath hairs or a hairy node.",
+    "field_rule": "Use whole plant+flowering stalk+authentic rooted fibrous crown, paired mature spikelets and REAL glume parts; only call the ligule visible when it is the opened inner blade-sheath membrane, not basal sheath hairs or a hairy node.\n\nField choice: vaseygrass forms a conspicuous bunch, but its short knotty underground rhizomes also count if exposed. Compare flowering-raceme number and spikelets to Dallisgrass and Florida paspalum.",
     "traits": {
       "head": [
         "one_sided",
         "many_one_sided"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "membrane"
@@ -2236,6 +2252,20 @@
         "reference": "Vaseygrass produces approximately 7–36 erect one-sided racemes, often conspicuously more than Dallisgrass's 2–8; counts overlap at 7–8 so secondary spikelet measurements needed.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "habit_hill_country_short_rhizomes": {
+        "source": "Hagenbuch & Lemke (2015), p. 58, Paspalum urvillei (vaseygrass)",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+        "category": "vegetative",
+        "reported_states": [
+          "cespitose perennial",
+          "short knotty rhizomes",
+          "stolons absent"
+        ],
+        "reference": "Despite a tall dense visible tuft, vaseygrass may have short true underground rhizomes. Permit rhizome in addition to tuft; this does not imply long spreading rhizomes or aboveground stolons.",
+        "certainty": "DIRECT_REGIONAL_VEGETATIVE_SOURCE_WITHOUT_SAME_PLANT_RHIZOME_PHOTO",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
