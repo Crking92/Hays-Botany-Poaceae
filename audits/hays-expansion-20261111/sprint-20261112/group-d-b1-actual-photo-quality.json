@@ -1,0 +1,701 @@
+{
+  "schema": "hays-group-d-existing-photo-pixel-quality-b1-v1",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/group-d-real-key-trial-regressions-b1",
+  "source": "actual exact configured image bytes retrieved and rendered by GitHub Actions run 43296916592 artifact 13978404548; 17 contact sheets opened by Chat 5 for visual QA",
+  "status": {
+    "assigned_taxa": 17,
+    "with_configured_gallery_photos": 17,
+    "existing_gallery_refs": 39,
+    "source_images_loaded": 36,
+    "source_images_failed_current_probe": 3,
+    "source_request_failures_http_429": 3,
+    "source_images_without_byte_hash_duplicates_among_loaded": 36,
+    "public_gallery_rendered_image_verification": false,
+    "new_approved_gallery_photos": 0,
+    "source_license_live_rechecked_all_39": false,
+    "identification_specimen_signoff_new": 0
+  },
+  "important_boundaries": [
+    "The 36 pixels are Commons image fetches and contact-sheet visual review, NOT public Pages/gallery rendered or source-identity independent expert specimen signoff.",
+    "Photo roles are based on visible structures and should correct overclaimed metadata labels; actual source identities remain published creator/species claims pending individual verification.",
+    "HTTP 429 from Commons is throttling on concurrent access and is NOT definitive evidence permanent broken image URL or lack of live browser rendering.",
+    "Use exact source URL/photographer/CC terms already saved in hays-candidates.json; separate new photo leads file contains newly checked exact Commons file licenses. No existing photo/credits/files modified.",
+    "All 17 still have at least two configured images. Better diagnostic role coverage, not raw volume, is the next goal.",
+    "Group D may inspect/hand off source photo needs, but only the gallery publisher changes shared hays-candidates.json, gallery assets or public UI."
+  ],
+  "records": [
+    {
+      "id": "lolium-multiflorum",
+      "scientific": "Lolium multiflorum",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Lolium multiflorum (3880473941).jpg",
+          "role_as_configured": "Flowering head",
+          "photographer_as_configured": "Matt Lavin",
+          "license_as_configured": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Lolium_multiflorum_(3880473941).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Lolium multiflorum (3881258764).jpg",
+          "role_as_configured": "Spikelets",
+          "photographer_as_configured": "Matt Lavin",
+          "license_as_configured": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Lolium_multiflorum_(3881258764).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "Both photographs are roadside mixed-vegetation scenes; individual ryegrass spikes are small. The second image is labeled 'Spikelets' but does not present useful close spikelet anatomy.",
+      "unmet_identification_photo_roles": "Clear lateral spike and a detached 10–20-flowered spikelet with awns, plus collar/auricles and whole rooted tuft.",
+      "quality_flags": [
+        "MISLEADING_ROLE_SPIKELETS",
+        "SOURCE_SCENE_COMPLEX"
+      ],
+      "publisher_next_action": "Replace/augment with Harry Rose close spikelets; preserve existing credible habit photo.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "oplismenus-hirtellus",
+      "scientific": "Oplismenus hirtellus",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Starr 020925-0137 Oplismenus hirtellus.jpg",
+          "role_as_configured": "Spreading habit",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_020925-0137_Oplismenus_hirtellus.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Starr 050415-0054 Oplismenus hirtellus.jpg",
+          "role_as_configured": "Plant context",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_050415-0054_Oplismenus_hirtellus.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "Both images clearly show green spreading basketgrass leaves in shady groundcover; neither shows flowering racemes or awns.",
+      "unmet_identification_photo_roles": "Mature one-sided flowering branches with awned spikelets, rooted nodes and collar.",
+      "quality_flags": [
+        "NO_REPRODUCTIVE_PHOTO",
+        "BOTH_PHOTOS_FOLIAGE_ONLY"
+      ],
+      "publisher_next_action": "Add Forest & Kim Starr 2014 flowering reference after exact pixel/ID check.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "stenotaphrum-secundatum",
+      "scientific": "Stenotaphrum secundatum",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Starr 080602-5469 Stenotaphrum secundatum.jpg",
+          "role_as_configured": "Flowering units",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_080602-5469_Stenotaphrum_secundatum.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Starr 080531-4841 Stenotaphrum secundatum.jpg",
+          "role_as_configured": "Growth habit",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_080531-4841_Stenotaphrum_secundatum.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "MEDIUM",
+      "actual_visual_read": "One image shows a flowering stem with thick compressed spike-like units; the second shows a broad-leaved low grassy patch.",
+      "unmet_identification_photo_roles": "Macro showing spikelets embedded in flattened corky rachis and rooting surface stolon/collar.",
+      "quality_flags": [
+        "NEEDS_SPIKE_MACRO",
+        "NEEDS_ROOTING_STOLON"
+      ],
+      "publisher_next_action": "Close side-view fertile rachis and stolon with visible rooted nodes.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "triticum-aestivum",
+      "scientific": "Triticum aestivum",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Triticum aestivum 201303535.jpg",
+          "role_as_configured": "General reference",
+          "photographer_as_configured": "John Abrams",
+          "license_as_configured": "CC BY 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Triticum_aestivum_201303535.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Triticum aestivum 103131273.jpg",
+          "role_as_configured": "General reference",
+          "photographer_as_configured": "Patrick Hacker",
+          "license_as_configured": "CC BY 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Triticum_aestivum_103131273.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "LOW",
+      "actual_visual_read": "First image contains a hand-scaled developing wheat spike; second is a sharp mature close wheat head with glumes and awns.",
+      "unmet_identification_photo_roles": "Whole cultivated stand and leaf collar/auricles and discriminating glume apex.",
+      "quality_flags": [
+        "GENERIC_ROLE_LABELS"
+      ],
+      "publisher_next_action": "Relabel stage roles as green spike vs ripe glumes; add whole plant or ligule if available.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "setaria-viridis",
+      "scientific": "Setaria viridis",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Setaria viridis (3813241041).jpg",
+          "role_as_configured": "Flowering head",
+          "photographer_as_configured": "Matt Lavin",
+          "license_as_configured": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_viridis_(3813241041).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Setaria viridis-IMG 20180531 164622.jpg",
+          "role_as_configured": "General plant",
+          "photographer_as_configured": "Sun Jiao",
+          "license_as_configured": "CC BY 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_viridis-IMG_20180531_164622.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "Photo 1 labeled 'Flowering head' shows a whole tuft with multiple heads; photo 2 labeled 'General plant' is actually a clear isolated green foxtail head.",
+      "unmet_identification_photo_roles": "True ligule/hair fringe, mature fertile lemma rugosity and attached bristles with scale.",
+      "quality_flags": [
+        "PHOTO_ROLES_REVERSED",
+        "NO_COLLAR_LIGULE_MACRO"
+      ],
+      "publisher_next_action": "Swap descriptive roles (not filenames) through photo publisher; add true collar and detached mature spikelet.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "polypogon-viridis",
+      "scientific": "Polypogon viridis",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Polypogon viridis (dkrb)-1.jpg",
+          "role_as_configured": "General habit",
+          "photographer_as_configured": "Drahkrub — https://de.wikipedia.org/wiki/Benutzer:Drahkrub",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Polypogon_viridis_(dkrb)-1.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Polypogon viridis (dkrb)-2.jpg",
+          "role_as_configured": "Habit context",
+          "photographer_as_configured": "Drahkrub — https://de.wikipedia.org/wiki/Benutzer:Drahkrub",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Polypogon_viridis_(dkrb)-2.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "Two photographs from same photographer show near-matching flowering patches beside water; there is very little new anatomic information between them.",
+      "unmet_identification_photo_roles": "Ligule measurement and awnless glume/spikelet macro to distinguish Polypogon monspeliensis.",
+      "quality_flags": [
+        "REDUNDANT_HABIT_VIEWS",
+        "MISSING_INFLORESCENCE_MACRO"
+      ],
+      "publisher_next_action": "Add measured green flowering head and isolated glume/ligule, rather than another waterside patch.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "dactyloctenium-aegyptium",
+      "scientific": "Dactyloctenium aegyptium",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Dactyloctenium aegyptium plant.jpg",
+          "role_as_configured": "General habit",
+          "photographer_as_configured": "Kiruthikapalani",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Dactyloctenium_aegyptium_plant.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Dactyloctenium aegyptium.jpg",
+          "role_as_configured": "Plant reference",
+          "photographer_as_configured": "Vimalananth V",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Dactyloctenium_aegyptium.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "Both show finger-like radially spreading spike-shaped branches from above; essentially the same floral role.",
+      "unmet_identification_photo_roles": "Rooted full plant, sterile rachis tip protruding beyond spikelets, ligule and mature florets.",
+      "quality_flags": [
+        "DUPLICATIVE_FINGERHEAD_ROLE",
+        "NO_PLANT_HABIT"
+      ],
+      "publisher_next_action": "Add one rooted habit and one detailed raceme-tip photo showing naked projection.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "hordeum-murinum",
+      "scientific": "Hordeum murinum",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Hordeum murinum plant.jpg",
+          "role_as_configured": "Whole plant",
+          "photographer_as_configured": "InterstellarGamer12321",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Hordeum_murinum_plant.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Hordeum murinum 149195384.jpg",
+          "role_as_configured": "General plant reference",
+          "photographer_as_configured": "Tristan Haab",
+          "license_as_configured": "CC BY 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Hordeum_murinum_149195384.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "MEDIUM",
+      "actual_visual_read": "Two images show dry bristly barley heads in grass patches, with similar whole-head scale and overlapping role.",
+      "unmet_identification_photo_roles": "Three spikelets attached at a single rachis node and leaf sheath/collar with auricles.",
+      "quality_flags": [
+        "TWO_SIMILAR_GENERAL_PHOTOS",
+        "NO_TRIAD_MACRO"
+      ],
+      "publisher_next_action": "Find a separated spikelet-triad macro and ligule/auricle photo.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "scientific": "Cenchrus ciliaris",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Cenchrus ciliaris.jpg",
+          "role_as_configured": "General plant reference",
+          "photographer_as_configured": "Mark Marathon",
+          "license_as_configured": "CC BY-SA 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Cenchrus_ciliaris.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Starr 020117-9001 Cenchrus ciliaris.jpg",
+          "role_as_configured": "Whole plant",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_020117-9001_Cenchrus_ciliaris.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "MEDIUM",
+      "actual_visual_read": "One image shows a dense green bunch of plants; another has a flowering head with stems against pale background.",
+      "unmet_identification_photo_roles": "Detached joined bristle-bur unit and leaf ligule versus similar Setaria heads.",
+      "quality_flags": [
+        "NO_BRISTLE_INVOLUCRE_MACRO"
+      ],
+      "publisher_next_action": "Add scale-backed single bristled dispersal unit and collar.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "panicum-repens",
+      "scientific": "Panicum repens",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Starr 050902-4330 Panicum repens.jpg",
+          "role_as_configured": "Growth habit",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_050902-4330_Panicum_repens.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Starr 070123-3651 Panicum repens.jpg",
+          "role_as_configured": "Inflorescence",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_070123-3651_Panicum_repens.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "First photo is a grassy clump by pavement. Second is a grassy patch with a thin barely visible panicle; image role 'Inflorescence' overstates close diagnostic coverage.",
+      "unmet_identification_photo_roles": "Connected sharp-pointed underground rhizomes, clear entire panicle, individual spikelet, true ligule.",
+      "quality_flags": [
+        "INFLORESCENCE_TOO_SMALL",
+        "NO_TORPEDO_RHIZOME"
+      ],
+      "publisher_next_action": "Prioritize photo of sharp-tipped scaly rhizome on same plant and clear flowering head.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 2,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "sclerochloa-dura",
+      "scientific": "Sclerochloa dura",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Sclerochloa dura sl31.jpg",
+          "role_as_configured": "Whole plant habit",
+          "photographer_as_configured": "Stefan.lefnaer",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl31.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Sclerochloa dura sl30.jpg",
+          "role_as_configured": "Whole plant context",
+          "photographer_as_configured": "Stefan.lefnaer",
+          "license_as_configured": "CC BY-SA 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl30.jpg",
+          "source_pixel_status": "HTTP_429_RATE_LIMIT_ON_PROBE"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "First source photograph shows a flattened patch of dry straw-colored tiny grasses; second original Commons image returned HTTP 429 on this probe, so no fresh pixels inspected for it.",
+      "unmet_identification_photo_roles": "Distinct green mature unilateral raceme, blunt-nerved glumes, 3–4 florets and 1–2 mm membranous ligule.",
+      "quality_flags": [
+        "ONLY_ONE_SOURCE_LOADED",
+        "DRY_DENSE_LOW_DIAGNOSTIC_VALUE"
+      ],
+      "publisher_next_action": "Retry second URL after rate limit or find independent licensable green flowering macro.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 1,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "sporobolus-cryptandrus",
+      "scientific": "Sporobolus cryptandrus",
+      "starting_gallery_refs": 2,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Sporobolus cryptandrus (3796727047).jpg",
+          "role_as_configured": "Collar and ligule",
+          "photographer_as_configured": "Matt Lavin",
+          "license_as_configured": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sporobolus_cryptandrus_(3796727047).jpg",
+          "source_pixel_status": "HTTP_429_RATE_LIMIT_ON_PROBE"
+        },
+        {
+          "index": 1,
+          "filename": "Sporobolus cryptandrus (3912187032).jpg",
+          "role_as_configured": "Panicle in sheath",
+          "photographer_as_configured": "Matt Lavin",
+          "license_as_configured": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sporobolus_cryptandrus_(3912187032).jpg",
+          "source_pixel_status": "HTTP_429_RATE_LIMIT_ON_PROBE"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "Both Matt Lavin source photo URLs returned HTTP 429 in this rate-limited run; historical metadata says collar/ligule and panicle emerging from sheath, but no fresh pixel confirmation here.",
+      "unmet_identification_photo_roles": "First verify both images can load to actual public gallery and inspect them; then add whole-plant/ripe open panicle and white sheath-mouth hair tufts.",
+      "quality_flags": [
+        "BOTH_SOURCE_PHOTOS_RATE_LIMITED",
+        "NO_CURRENT_PIXEL_REVIEW"
+      ],
+      "publisher_next_action": "Recheck via Commons file page or slower sequential requests, not automatically declare links permanently broken.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 0,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "bromus-catharticus",
+      "scientific": "Bromus catharticus",
+      "starting_gallery_refs": 3,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Bromus catharticus plant1 (7020236591).jpg",
+          "role_as_configured": "Flowering plant habit",
+          "photographer_as_configured": "Harry Rose",
+          "license_as_configured": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_plant1_(7020236591).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Bromus catharticus (3152894542).jpg",
+          "role_as_configured": "Flowering head",
+          "photographer_as_configured": "John Tann",
+          "license_as_configured": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_(3152894542).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 2,
+          "filename": "Bromus catharticus leaves (7020235605).jpg",
+          "role_as_configured": "Foliage",
+          "photographer_as_configured": "Harry Rose",
+          "license_as_configured": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_catharticus_leaves_(7020235605).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "MEDIUM",
+      "actual_visual_read": "Three source photos show flowering habit, good close view of overlapping broad spikelets, and a distant clump of leafy grass; the foliage photo is not useful ligule anatomy.",
+      "unmet_identification_photo_roles": "Inner papery ligule, basal sheath hairs and one detached lemma showing short/absent awn differences versus cheatgrass.",
+      "quality_flags": [
+        "FOLIAGE_IMAGE_NOT_DIAGNOSTIC"
+      ],
+      "publisher_next_action": "Add close collar and dissected spikelet; avoid treating a distant clump as diagnostic foliage.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 3,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "lolium-perenne",
+      "scientific": "Lolium perenne",
+      "starting_gallery_refs": 3,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Lolium perenne - Flickr - aspidoscelis.jpg",
+          "role_as_configured": "Plant reference",
+          "photographer_as_configured": "Patrick Alexander",
+          "license_as_configured": "CC0 1.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Lolium_perenne_-_Flickr_-_aspidoscelis.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Lolium perenne 294395914.jpg",
+          "role_as_configured": "Plant reference",
+          "photographer_as_configured": "Quentin Groom",
+          "license_as_configured": "CC0 1.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Lolium_perenne_294395914.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 2,
+          "filename": "Lolium perenne 302706446.jpg",
+          "role_as_configured": "Plant reference",
+          "photographer_as_configured": "Stephen James McWilliam",
+          "license_as_configured": "CC0 1.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Lolium_perenne_302706446.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "MEDIUM",
+      "actual_visual_read": "Three photos show near-macro anthers and spikelets plus a wider flowering-stand view, all currently labeled generically 'Plant reference'.",
+      "unmet_identification_photo_roles": "Opened auricles and membranous ligule, lower glume/awn variation compared with Lolium multiflorum.",
+      "quality_flags": [
+        "GENERIC_ROLE_LABELS",
+        "NO_AURICLE_MACRO"
+      ],
+      "publisher_next_action": "Assign accurate spikelet/flowering-habit roles and add auricle/collar macro.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 3,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "echinochloa-colona",
+      "scientific": "Echinochloa colona",
+      "starting_gallery_refs": 3,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Starr 030808-0015 Echinochloa colona.jpg",
+          "role_as_configured": "Whole plant habit",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_030808-0015_Echinochloa_colona.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Starr 030808-0002 Echinochloa colona.jpg",
+          "role_as_configured": "Seed and flowering-unit context",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_030808-0002_Echinochloa_colona.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 2,
+          "filename": "Echinochloa colona 25040953.jpg",
+          "role_as_configured": "Independent plant reference",
+          "photographer_as_configured": "Alex Abair",
+          "license_as_configured": "CC BY 4.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Echinochloa_colona_25040953.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "HIGH",
+      "actual_visual_read": "First image is a useful isolated rooted plant, second is a tiny detached spikelet against a large featureless backdrop and is poor teaching material despite 'Seed and flowering-unit context' label, third is a sharp green flowering-unit detail.",
+      "unmet_identification_photo_roles": "True absence of a ligule at the inner blade-sheath junction, rooted decumbent nodes, mature florets.",
+      "quality_flags": [
+        "TINY_ISOLATED_SPIKELET_LOW_VALUE",
+        "MISLEADING_PHOTO_ROLE",
+        "NO_LIGULE_ABSENCE_PHOTO"
+      ],
+      "publisher_next_action": "Add Harry Rose exact licensed ligule-absent closeup; replace or deprioritize tiny isolate.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 3,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "paspalum-notatum",
+      "scientific": "Paspalum notatum",
+      "starting_gallery_refs": 3,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Paspalum notatum habit2 (7391321826).jpg",
+          "role_as_configured": "Whole plant",
+          "photographer_as_configured": "Harry Rose",
+          "license_as_configured": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_notatum_habit2_(7391321826).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Paspalum notatum flowerhead1 (7391329520).jpg",
+          "role_as_configured": "Flowering head",
+          "photographer_as_configured": "Harry Rose",
+          "license_as_configured": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_notatum_flowerhead1_(7391329520).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 2,
+          "filename": "Paspalum notatum stem base2 (7391312176).jpg",
+          "role_as_configured": "Basal stems",
+          "photographer_as_configured": "Harry Rose",
+          "license_as_configured": "CC BY 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Paspalum_notatum_stem_base2_(7391312176).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "LOW",
+      "actual_visual_read": "Three genuinely complementary photos: low lawn-like habit, racemes with usually two but here three spreading branches, and clear rooted basal sheath/rhizome base.",
+      "unmet_identification_photo_roles": "1–2-mm spikelets and inner membranous ligule detail for fine comparison with Paspalum distichum/notatum.",
+      "quality_flags": [
+        "COMPLEMENTARY_EXISTING_ROLES"
+      ],
+      "publisher_next_action": "Optional measured spikelet/ligule closeup, lower priority than missing whole-role cards.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 3,
+      "new_website_image_pixels_approved": 0
+    },
+    {
+      "id": "bromus-tectorum",
+      "scientific": "Bromus tectorum",
+      "starting_gallery_refs": 3,
+      "existing_images": [
+        {
+          "index": 0,
+          "filename": "Starr 071005-9588 Bromus tectorum.jpg",
+          "role_as_configured": "Whole plant habit",
+          "photographer_as_configured": "Forest & Kim Starr",
+          "license_as_configured": "CC BY 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_071005-9588_Bromus_tectorum.jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 1,
+          "filename": "Bromus tectorum (3860522837).jpg",
+          "role_as_configured": "Flowering spikelet detail",
+          "photographer_as_configured": "Matt Lavin",
+          "license_as_configured": "CC BY-SA 2.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_tectorum_(3860522837).jpg",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        },
+        {
+          "index": 2,
+          "filename": "Bromus tectorum.JPG",
+          "role_as_configured": "Flowering plant reference",
+          "photographer_as_configured": "Petr Filippov",
+          "license_as_configured": "CC BY-SA 3.0",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Bromus_tectorum.JPG",
+          "source_pixel_status": "IMAGE_PIXELS_DOWNLOADED_AND_VISUALLY_INSPECTED"
+        }
+      ],
+      "urgency": "MEDIUM",
+      "actual_visual_read": "Three photos show whole dried tuft, graceful drooping green awned seedheads and a flowering plant. The image labeled 'Flowering spikelet detail' is a whole panicle, not an isolated floret.",
+      "unmet_identification_photo_roles": "Macro of fertile lemma with two apical teeth and long awn, plus broken-awn form and papery ligule.",
+      "quality_flags": [
+        "SPIKELET_DETAIL_ROLE_OVERCLAIMED",
+        "BROKEN_AWN_VARIATION_NOT_SHOWN"
+      ],
+      "publisher_next_action": "Obtain exact mature lemma/awn intact and broken macro to support source-backed four-choice test defect.",
+      "original_exact_source_license_independently_rechecked_this_run": false,
+      "botanical_species_identity_from_photo_approved": false,
+      "photo_source_pixel_inspected_count": 3,
+      "new_website_image_pixels_approved": 0
+    }
+  ]
+}
