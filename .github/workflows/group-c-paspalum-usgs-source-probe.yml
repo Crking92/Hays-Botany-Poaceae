@@ -1,0 +1,31 @@
+name: Group C — Paspalum langei exact USGS source image filenames (one-shot)
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/probe_group_c_paspalum_usgs_filenames.cjs'
+      - '.github/workflows/group-c-paspalum-usgs-source-probe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-official-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Fetch official Paspalum langei page and record its exact image filenames
+        run: node scripts/probe_group_c_paspalum_usgs_filenames.cjs
+      - name: Save small source evidence JSON only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: group-c-paspalum-usgs-source
+          path: qa-report/paspalum-langei-usgs-source.json
+          if-no-files-found: warn
+          retention-days: 14
