@@ -163,6 +163,12 @@ const positives = [
   ['southern crabgrass stacked whorls',{head:'whorls',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['digitaria-ciliaris']],
   ['Texas signalgrass seven unilateral hair fringe',{head:'many_one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['urochloa-texana']],
   ['Texas signalgrass seven unilateral ciliate membrane',{head:'many_one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['urochloa-texana']],
+  // Lane C #104 — paired Paspalum racemes and legitimate collar/head appearances.
+  ['Texas fescue spreading open head',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['festuca-versuta']],
+  ['nimblewill mat with ciliate inner ligule',{head:'long_narrow_panicle',habit:'mat',ligule:'hairs',awns:'none_obvious'},['muhlenbergia-schreberi']],
+  ['nimblewill rooted tuft with ciliate inner ligule',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'long'},['muhlenbergia-schreberi']],
+  ['thin paspalum paired racemes tuft',{head:'paired_spikes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
+  ['thin paspalum paired racemes rhizome',{head:'paired_spikes',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-setaceum']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -232,6 +238,13 @@ const negatives = [
   [{head:'fingers',awns:'bristles'},'disakisperma-dubium'],
   [{head:'many_one_sided'},'hordeum-pusillum'],
   [{head:'whorls'},'elymus-canadensis'],
+  // Lane C #104 — conditional broad choices are not exclusive diagnostics.
+  [{head:'foxtail'},'festuca-versuta'],
+  [{awns:'long'},'festuca-versuta'],
+  [{ligule:'absent'},'muhlenbergia-schreberi'],
+  [{habit:'rhizome'},'muhlenbergia-schreberi'],
+  [{head:'spike'},'paspalum-setaceum'],
+  [{head:'many_one_sided'},'paspalum-setaceum'],
   [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);
