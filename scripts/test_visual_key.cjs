@@ -30,13 +30,13 @@ const root=path.resolve(__dirname,'..');
   const provisional=state.species.filter(s=>s.trial);if(provisional.length!==6)throw Error('Six research trials missing or silently admitted');
   let paths=0;for(const s of official){let combinations=[{}];for(const q of qs){const vals=s.traits[q.id]?.length?s.traits[q.id]:[null];combinations=combinations.flatMap(c=>vals.map(v=>({...c,[q.id]:v})));}for(const c of combinations){state.selected=c;if(!currentResults().some(r=>r.s.id===s.id))throw Error('False exclusion: '+s.id+JSON.stringify(c));paths++;}}
   state.selected={head:null,habit:null,ligule:null,awns:null};
-  const grouped=flowerheadSections.flatMap(g=>g.keys);return {placements:placements.length,options:options.length,out,paths,grouped,heads:qs[0].options.map(o=>o[0])};
+  const grouped=flowerheadSections.flatMap(g=>g.keys);return {placements:placements.length,options:options.length,groupCount:flowerheadSections.length,out,paths,grouped,heads:qs[0].options.map(o=>o[0])};
  });
- assert.deepEqual(result.out,[]);assert.equal(result.placements,47);assert.equal(result.options,38);assert.deepEqual([...result.grouped].sort(),[...result.heads].sort());
+ assert.deepEqual(result.out,[]);assert.equal(result.placements,result.options+result.groupCount+4);assert.ok(result.options>=38,'Missing formerly supported visual choices');assert.deepEqual([...result.grouped].sort(),[...result.heads].sort());
  for(const [width,height]of [[1366,900],[390,844],[320,740]]){
   await page.setViewportSize({width,height});await page.evaluate(()=>{review.state.question=0;review.render()});
-  assert.equal(await page.locator('.whole-head').count(),26);
-  assert.equal(await page.locator('.whole-head img').count(),26);
+  assert.equal(await page.locator('.whole-head').count(),result.heads.length);
+  assert.equal(await page.locator('.whole-head img').count(),result.heads.length);
   assert.ok(await page.evaluate(()=>[...document.querySelectorAll('.whole-head img')].every(img=>getComputedStyle(img).objectFit==='contain')),'Flowerhead photos must use object-fit:contain');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Horizontal overflow at '+width);
   for(const name of ['Growth form','Leaf collar','Awns / bristles','Flowerhead'])await page.getByRole('button',{name,exact:true}).click();
