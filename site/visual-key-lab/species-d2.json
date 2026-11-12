@@ -1709,13 +1709,14 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Recognize the compact repeated flowering units and stiff perennial habit first; confirm actual inner lacerate ligule and the three-spikelet fascicle before making an anatomical ID claim. Buried scaly rhizomes are a valuable later tiebreaker versus curlymesquite's surface stolons.",
+    "field_rule": "Recognize the compact repeated flowering units and stiff perennial habit first; confirm actual inner lacerate ligule and the three-spikelet fascicle before making an anatomical ID claim. Buried scaly rhizomes are a valuable later tiebreaker versus curlymesquite's surface stolons.\n\nField choice: an aboveground tobosa bunch does not mean short underground rhizomes are absent. Keep either tuft or rhizome, and verify the clustered spikelet triads before final identification.",
     "traits": {
       "head": [
         "compact"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -1748,6 +1749,20 @@
         "reference": "Glume projections usually only 1–2 mm; 'no conspicuous long awns' does not mean strictly awnless.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit_hill_country_cespitose": {
+        "source": "Hagenbuch & Lemke (2015), p. 51, Hilaria mutica (tobosagrass)",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+        "category": "vegetative",
+        "reported_states": [
+          "perennial cespitose",
+          "short thick scaly rhizomes",
+          "stolons absent"
+        ],
+        "reference": "Tobosagrass makes an aboveground bunch even with short buried rhizomes. Permit the field choice 'tuft' alongside 'rhizome'; do not infer surface stolons or use tuft as sufficient species identification.",
+        "certainty": "DIRECT_REGIONAL_VEGETATIVE_SOURCE_WITHOUT_LOCAL_PHOTO_CONFIRMATION",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
