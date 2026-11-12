@@ -2267,7 +2267,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737817.jpg",
-        "label": "Fall witchgrass — basal tuft and upright wirelike culms",
+        "label": "Fall witchgrass: a low wiry tan-green bunch with very fine upright flowering shoots on dry soil",
         "creator": "Shaun Pogacnik",
         "license": "CC0 1.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Digitaria_cognata_iNat-99737817.jpg",
@@ -2294,7 +2294,7 @@
       {
         "i": 9,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/digitaria-cognata/gbif-2807535176-8b285cbcccf7.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Herbarium fall witchgrass with dense drooping fine panicles and fibrous-looking basal tuft",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/2807535176",
@@ -2320,7 +2320,7 @@
     "source_blob_sha": "3d6366f2e4949a8b952e89698701d4e2832676b0",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.187",
@@ -2367,12 +2367,27 @@
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS9_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification.",
+      "scope": "2/4 hosted images visually inspected from actual GitHub image bytes. Remaining inaccessible images uncounted. No source license, specimen or whole-archive certification. Pass48 reviewed real main-branch image i=0 using SHA-1 proof; statement limited to visible parts, legal rights and source specimen identity remain separate. Pass48 reviewed real main-branch image i=9 using SHA-1 proof; statement limited to visible parts, legal rights and source specimen identity remain separate.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "thin upright/wiry culms and narrow green basal blades in a dry clump"
+          ],
+          "cannot_verify": [
+            "fine spikelets, true leaf ligule and rooting morphology not isolated"
+          ],
+          "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-cognata/images/shaun-pogacnik-99737817.jpg",
+          "git_blob_sha": "465106fb7dcc1363583098b8908bc3cb129462d8",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 1,
           "verdict": "DIRECT_VISIBLE",
@@ -2404,12 +2419,24 @@
           "hosted_commit": "32f17888faa7917970d0f89bd2963321715607d1",
           "git_blob_sha": "0a0e4f51e64f584de7e3b4075331326f57e49902",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NOT_LICENSE_OR_SPECIMEN_CERTIFICATION"
+        },
+        {
+          "i": 9,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "pressed straw-colored grass tuft with fine outward-branched flowering stems"
+          ],
+          "cannot_verify": [
+            "tiny spikelets and actual leaf-junction ligule unreadable from sheet overview"
+          ],
+          "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/digitaria-cognata/gbif-2807535176-8b285cbcccf7.jpg",
+          "git_blob_sha": "a28d243ac07134c5cc56389034fb42075ae34987",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        9
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "intact rooted plant with basal crown and complete flowering architecture",
         "one dissected lower glume and inner ligule"
@@ -2420,7 +2447,26 @@
         "queue_action": "No new photo request pending reconciliation with existing archives and recovery queue."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas remains primary for character matrices; this is picture-role review, not new measurements, filters, native-range or taxon edits.",
+      "previous_pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass48_image_notes": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "fine spikelets, true leaf ligule and rooting morphology not isolated"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 9,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "tiny spikelets and actual leaf-junction ligule unreadable from sheet overview"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        }
+      ]
     }
   },
   {
@@ -2461,7 +2507,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/dinebra-panicea-subsp-mucronata/gbif-2807491498-8ec32d69ecf6.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Pressed mucronate sprangletop: dense fine leaves at rooted base and narrow flowering stems",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/2807491498",
@@ -2479,7 +2525,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/dinebra-panicea-subsp-mucronata/gbif-2807654501-792696e83f4d.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Pressed mucronate sprangletop with long narrow leaves and terminal spreading fingerlike flowering branches",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/2807654501",
@@ -2504,7 +2550,7 @@
     "source_blob_sha": "5b2060852e2aacfacffe8368395ea7c6bbf42b4d",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Kew POWO GrassBase under Leptochloa panicea, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458620-2/general-information",
@@ -2558,11 +2604,11 @@
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS27_10_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_6",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_6_OF_6",
       "rights_status": "TWO_EXISTING_TEX_PHOTOS_EXACT_IMAGE_LICENSE_CONFLICT_UNRESOLVED_NO_NEW_APPROVAL",
-      "scope": "Four of six current Lab references visually opened, two from Pass 26 and two TEX sheets from Pass 27; i=5 and i=7 returned image metadata without renderable bytes and remain unreviewed. Current gallery/source rights and determination unresolved.",
+      "scope": "Four of six current Lab references visually opened, two from Pass 26 and two TEX sheets from Pass 27; i=5 and i=7 returned image metadata without renderable bytes and remain unreviewed. Current gallery/source rights and determination unresolved. Pass48 reviewed real main-branch image i=5 using SHA-1 proof; statement limited to visible parts, legal rights and source specimen identity remain separate. Pass48 reviewed real main-branch image i=7 using SHA-1 proof; statement limited to visible parts, legal rights and source specimen identity remain separate.",
       "photo_roles": [
         {
           "i": 0,
@@ -2612,6 +2658,21 @@
           "not_newly_approved_for_publication": true
         },
         {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "herbarium sheet with many slender basal stems and root clump"
+          ],
+          "cannot_verify": [
+            "individual flowerhead branches, ligule and voucher detail not legible at card size"
+          ],
+          "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/dinebra-panicea-subsp-mucronata/gbif-2807491498-8ec32d69ecf6.jpg",
+          "git_blob_sha": "4e7dcfbed744462c59d9ec104fce4d22d0b36793",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 6,
           "verdict": "PARTIAL_VISIBLE",
           "shows": [
@@ -2627,12 +2688,24 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL PHOTO RIGHTS, VOUCHER AND DATE NOT REVALIDATED",
           "rights_review": "HOLD_EXACT_IMAGE_LICENSE_CONFLICT; SHEET_SAYS_COPYRIGHT_RESERVED_VS_STORED_CC_BY_4_0",
           "not_newly_approved_for_publication": true
+        },
+        {
+          "i": 7,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "several erect straw-colored leafy stems and delicate raceme branches"
+          ],
+          "cannot_verify": [
+            "individual glumes, lemmas and ciliate ligule cannot be verified"
+          ],
+          "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/dinebra-panicea-subsp-mucronata/gbif-2807654501-792696e83f4d.jpg",
+          "git_blob_sha": "8f835020bd38eeaac47b70dab2f2919b6cc2c4b6",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        5,
-        7
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Recover exact viewable bytes for TEX herbarium references i=5 and i=7 in separate image-access process; do not count or repeatedly retry during normal QA",
         "Independently reconcile original historic Leptochloa filiformis determinations with later L. mucronata and accepted Dinebra panicea subsp. mucronata concept",
@@ -2660,6 +2733,25 @@
           "i": 6,
           "issue": "Image contains TEX copyright reserved banner while current catalog says CC BY 4.0; check exact GBIF media license and rights holder",
           "status": "HOLD_NO_NEW_APPROVAL"
+        }
+      ],
+      "previous_pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass48_image_notes": [
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "individual flowerhead branches, ligule and voucher detail not legible at card size"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        },
+        {
+          "i": 7,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "individual glumes, lemmas and ciliate ligule cannot be verified"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
         }
       ]
     }

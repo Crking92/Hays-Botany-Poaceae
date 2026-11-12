@@ -3213,7 +3213,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-ligule-stefan-lefnaer.jpg",
-        "label": "2 · Actual ligule and blade–sheath close-up",
+        "label": "Four photographed foxtail millet leaf–sheath junction angles with pale collar projections and 10-mm scale",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_italica_subsp._italica_sl21.jpg",
@@ -3222,7 +3222,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-spikelet-stefan-lefnaer.jpg",
-        "label": "3 · Actual source-annotated spikelet anatomy",
+        "label": "Four macro views of foxtail millet floral units, original 3-mm scale and author-labeled glume, lemma, palea",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ASetaria_italica_subsp._italica_sl48.jpg",
@@ -3256,7 +3256,7 @@
     "source_blob_sha": "98b06b7b350c923b052f91120f1c9cfb709531ad",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt p.243",
@@ -3295,11 +3295,11 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS20_8_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2 of 4 current Lab image references rendered and visually reviewed. Original rights, photographer, date, voucher ID and precise reproductive anatomy not independently recertified.",
+      "scope": "2 of 4 current Lab image references rendered and visually reviewed. Original rights, photographer, date, voucher ID and precise reproductive anatomy not independently recertified. Pass48 reviewed real main-branch image i=1 using SHA-1 proof; statement limited to visible parts, legal rights and source specimen identity remain separate. Pass48 reviewed real main-branch image i=2 using SHA-1 proof; statement limited to visible parts, legal rights and source specimen identity remain separate.",
       "photo_roles": [
         {
           "i": 0,
@@ -3317,6 +3317,36 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
         },
         {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "green ribbed culms, inserted leaf blades, pale sheath-junction edges in four side views"
+          ],
+          "cannot_verify": [
+            "free inner ligule origin and length not unequivocally isolated across panels"
+          ],
+          "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-ligule-stefan-lefnaer.jpg",
+          "git_blob_sha": "d31c079bb11d5d090f47cc5c0ca26907433dafda",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "golden oval spikelet parts in four orientations with original labels and calibrated scale"
+          ],
+          "cannot_verify": [
+            "overlapping organ boundaries cannot all be checked by phone-card thumbnail alone"
+          ],
+          "pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-italica/images/setaria-italica-spikelet-stefan-lefnaer.jpg",
+          "git_blob_sha": "6afda13817f99679b77e4b750a2af7db42c45953",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 4,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -3332,10 +3362,7 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE ID AND LICENSE NOT INDEPENDENTLY REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        1,
-        2
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "ligule macro i=1 and source-annotated spikelet i=2 returned GitHub blob metadata but no renderable image bytes",
         "dissected glume, fertile lemma, and bristle origin",
@@ -3347,7 +3374,26 @@
         "queue_action": "Check existing dated winter/dormant archives before adding any needs to the one master Photo Needs Queue."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Only visible evidence/captions updated; regional key trait states, diagnostic checks and taxonomic framework unchanged."
+      "morphology_reference_note": "Only visible evidence/captions updated; regional key trait states, diagnostic checks and taxonomic framework unchanged.",
+      "previous_pass": "PHASE4_PASS48_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass48_image_notes": [
+        {
+          "i": 1,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "free inner ligule origin and length not unequivocally isolated across panels"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 2,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "overlapping organ boundaries cannot all be checked by phone-card thumbnail alone"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        }
+      ]
     }
   }
 ]

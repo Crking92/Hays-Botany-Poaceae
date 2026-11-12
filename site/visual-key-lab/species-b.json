@@ -287,7 +287,7 @@
       {
         "i": 4,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-spectabilis/gbif-2807421445-b5de7a2f9522.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Pressed purple-lovegrass specimen with broad airy flowering branches — fine spikelet details not legible",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/2807421445",
@@ -296,7 +296,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-spectabilis/gbif-3336609370-cff45e4017d7.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Pressed purple-lovegrass specimen with long drooping wispy flowering stems — fine anatomy unresolved",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/3336609370",
@@ -305,7 +305,7 @@
       {
         "i": 6,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-spectabilis/gbif-5073921318-249e0d7edf34.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Herbarium purple lovegrass: thin basal shoots and an airy panicle — specimen-level traits not isolated",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/5073921318",
@@ -314,7 +314,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-spectabilis/gbif-5073923326-8782ca74f5e0.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Herbarium purple lovegrass: sparse narrow leaves and fragile long stems — reproductive anatomy unresolved",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "source_page": "https://www.gbif.org/occurrence/5073923326",
@@ -371,11 +371,11 @@
       "note": "Published source morphology; photos, local vouchers, individual organ measurements and county nativity not certified. Conflicting/variety-level traits explicitly provisional."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS19_11_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "4 of 8 existing hosted gallery photos inspected from actual GitHub image bytes; not a specimen-ID, exact-license or seasonal-date audit.",
+      "scope": "4 of 8 existing hosted gallery photos inspected from actual GitHub image bytes; not a specimen-ID, exact-license or seasonal-date audit. Pass47: photo i=4 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=5 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=6 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=7 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification.",
       "photo_roles": [
         {
           "i": 0,
@@ -436,14 +436,69 @@
           "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-spectabilis/images/david-stang-grounded-basal-tuft-6zz.jpg",
           "git_blob_sha": "75516d0122fdf51831b4344255c517b937ab8f70",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL SOURCE ID AND RIGHTS NOT REVALIDATED"
+        },
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "spread dry panicle and pressed stems"
+          ],
+          "cannot_verify": [
+            "ligule and tiny florets unreadable at sheet scale"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-spectabilis/gbif-2807421445-b5de7a2f9522.jpg",
+          "git_blob_sha": "30b5631970392b41a94544d62091298eb551744a",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "long dry arching panicle branches and attached leaves"
+          ],
+          "cannot_verify": [
+            "individual lemma and glume characters not distinguishable"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-spectabilis/gbif-3336609370-cff45e4017d7.jpg",
+          "git_blob_sha": "1ada9653428ac04cd18dc7c989bc69027ab9c970",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "stalks and light open panicle on a sheet"
+          ],
+          "cannot_verify": [
+            "cannot see opened collar or determine exact florets"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-spectabilis/gbif-5073921318-249e0d7edf34.jpg",
+          "git_blob_sha": "4ff8538938d5d373ddb348979f8f7f52b9f9d2d8",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 7,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "straw-colored delicate stems and plant base on sheet"
+          ],
+          "cannot_verify": [
+            "flowering anatomy and original specimen determination need full-resolution check"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-spectabilis/gbif-5073923326-8782ca74f5e0.jpg",
+          "git_blob_sha": "be88186aefc32cec4dc484489eeffb1bc31d8082",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        4,
-        5,
-        6,
-        7
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "four remaining hosted herbarium scan images not yet examined; source-specific rights are not cleared in this pass",
         "dissected mature spikelets and source-verified ligule",
@@ -455,8 +510,44 @@
         "queue_action": "Use dated winter photo archives before any new additions to the one master Photo Needs Queue."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Only visual appearance/caption evidence assessed. No change to source-backed taxonomy, morphology, key state filters or diagnostic checks."
-    }
+      "morphology_reference_note": "Only visual appearance/caption evidence assessed. No change to source-backed taxonomy, morphology, key state filters or diagnostic checks.",
+      "previous_pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass47_image_notes": [
+        {
+          "i": 4,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "ligule and tiny florets unreadable at sheet scale"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "individual lemma and glume characters not distinguishable"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        },
+        {
+          "i": 6,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "cannot see opened collar or determine exact florets"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        },
+        {
+          "i": 7,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "flowering anatomy and original specimen determination need full-resolution check"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        }
+      ]
+    },
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN"
   },
   {
     "id": "hilaria-belangeri",
@@ -1343,7 +1434,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-whole-attached-flowering-sl1.jpg",
-        "label": "FULL LIVE PLANT · intact tapered foxtail heads above leafy basal clump",
+        "label": "Living knotroot bristlegrass bunch with several pale narrow foxtail heads — roots not exposed",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl1.jpg",
@@ -1352,7 +1443,7 @@
       {
         "i": 1,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-knotty-rhizome.jpg",
-        "label": "KNOTROOT — actual hard knotty rhizome and pointed bud · PROVISIONAL — USER PHOTO REVIEW PENDING",
+        "label": "Excavated knotroot bristlegrass base with swollen pale knobby structures and pointed buds, 10-mm source scale",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl13.jpg",
@@ -1370,7 +1461,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg",
-        "label": "BRISTLE ANATOMY · persistent basal bristle vs purple stigmas · measured original",
+        "label": "Two green foxtail reproductive units with pink-purple feathery stigmas and long slender bristles, 3-mm scale",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg",
@@ -1388,7 +1479,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-glume-lemma-sl29.jpg",
-        "label": "GLUME AND LEMMA DETAILS · photographer-labelled two glumes and two lemmas",
+        "label": "Eight author-labeled foxtail spikelet macro views with glume, lemma and palea annotations — phone zoom required",
         "creator": "Stefan.lefnaer",
         "license": "CC BY-SA 4.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl29.jpg",
@@ -1443,12 +1534,42 @@
       "note": "Field questions and source-published measurements; no photographed anatomy, exact local specimen identity, or county nativity certified."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS19_11_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_2_OF_6",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_6_OF_6",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "2 of 6 existing hosted gallery photos inspected from actual GitHub image bytes; not a specimen-ID, exact-license or seasonal-date audit.",
+      "scope": "2 of 6 existing hosted gallery photos inspected from actual GitHub image bytes; not a specimen-ID, exact-license or seasonal-date audit. Pass47: photo i=0 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=1 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=3 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=5 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "bright green bunch and many upright narrow cylindrical flowering heads"
+          ],
+          "cannot_verify": [
+            "true underground knotty structures and bristle attachment not visible"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-whole-attached-flowering-sl1.jpg",
+          "git_blob_sha": "d25bdd895a908ac13edb78a4704cc94623bc24c8",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "cluster of pale bulbous basal structures, brown fibrous roots and pointed outgrowths"
+          ],
+          "cannot_verify": [
+            "connections through entire underground rhizome system not established"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-knotty-rhizome.jpg",
+          "git_blob_sha": "0fdb055dcb2c9df01115b7e72cd64fdebcbcfbb5",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 2,
           "verdict": "DIRECT_VISIBLE",
@@ -1465,6 +1586,21 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL SOURCE ID AND RIGHTS NOT REVALIDATED"
         },
         {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "paired oval green flowering units, magenta feathery stigmas and straight fine bristles"
+          ],
+          "cannot_verify": [
+            "bristle insertion into each individual floral part not fully dissected"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg",
+          "git_blob_sha": "5b9ea93a00414bcb6b91899813a1d3b589ce256a",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
           "i": 4,
           "verdict": "DIRECT_VISIBLE",
           "shows": [
@@ -1478,14 +1614,24 @@
           "hosted_file": "content/taxa/Poaceae/Setaria/setaria-parviflora/images/commons-setaria-parviflora-stefan-lefnaer.jpg",
           "git_blob_sha": "7cc25977a4235f7cc48dfff0c45ef88de809e42a",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL SOURCE ID AND RIGHTS NOT REVALIDATED"
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "sequence of eight green reproductive units and source 3-mm bar"
+          ],
+          "cannot_verify": [
+            "labels and every organ boundary too small in the standard card preview"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-glume-lemma-sl29.jpg",
+          "git_blob_sha": "221e72555de3ed3aef0e4f02e8c777662adbffcf",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        1,
-        3,
-        5
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "four other original images (whole plant, knotlike rhizome, bristle base, annotated glume/lemma) returned metadata but not renderable image bytes",
         "verify true persistent bristle attached below spikelet separately from purple feathery stigma",
@@ -1497,8 +1643,44 @@
         "queue_action": "Use dated winter photo archives before any new additions to the one master Photo Needs Queue."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Only visual appearance/caption evidence assessed. No change to source-backed taxonomy, morphology, key state filters or diagnostic checks."
-    }
+      "morphology_reference_note": "Only visual appearance/caption evidence assessed. No change to source-backed taxonomy, morphology, key state filters or diagnostic checks.",
+      "previous_pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass47_image_notes": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "true underground knotty structures and bristle attachment not visible"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 1,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "connections through entire underground rhizome system not established"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "bristle insertion into each individual floral part not fully dissected"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "labels and every organ boundary too small in the standard card preview"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        }
+      ]
+    },
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN"
   },
   {
     "id": "sorghum-halepense",

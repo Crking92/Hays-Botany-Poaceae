@@ -687,7 +687,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/commons-77cde2e462d3.jpg",
-        "label": "Southern crabgrass — fingerlike flowering racemes",
+        "label": "Southern crabgrass arching fingerlike clustered racemes with small closely spaced spikelets",
         "creator": "Osahiro Nishihata",
         "license": "CC0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -717,7 +717,7 @@
       {
         "i": 3,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-140909-1746-live-habit-maui.jpg",
-        "label": "LIVE SPRAWLING GROWTH — Southern crabgrass across bare rock",
+        "label": "Southern crabgrass green sprawling leafy stems growing across bare rock; inflorescence not shown",
         "creator": "Forest & Kim Starr",
         "license": "CC BY 3.0 US",
         "license_url": "https://creativecommons.org/licenses/by/3.0/us/",
@@ -727,7 +727,7 @@
       {
         "i": 7,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/digitaria-ciliaris/inat-736151054.jpg",
-        "label": "General field grass photograph; additional habit or inflorescence view, detailed diagnostic anatomy deferred",
+        "label": "Thin southern crabgrass flowering racemes held beside fingers, with small spaced reproductive units",
         "creator": "(c) Julien, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -757,7 +757,7 @@
       {
         "i": 10,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/digitaria-ciliaris/gbif-6161282426-605dfd848228.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Pressed southern crabgrass showing leaves and several slender fingerlike heads; fine floral traits unresolved",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -783,7 +783,7 @@
     },
     "source_blob_sha": "b81a0da09c8b467a4d7869a32bcbe44057df13fd",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "PHASE4_PARTIAL_4_OF_8; ANATOMY_AND_UT_RIGHTS_UNVERIFIED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, uploaded monocots excerpt, PDF p. 187",
@@ -838,12 +838,27 @@
       "note": "Taxon-source anatomical prompts, not confirmed local specimen dissection or verified exact diagnostic photograph."
     },
     "review": {
-      "pass": "PHASE4_PASS40_HOSTED_IMAGE_BATCH",
+      "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_4_OF_8",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_8_OF_8",
       "rights_status": "EXISTING_LICENSE_STRINGS_PRESERVED; TWO_UT_HERBARIUM_SCANS_HAVE_COPYRIGHT_RESERVED_TEXT; EXACT_INSTITUTIONAL_RIGHTS_HOLD",
-      "scope": "4 of 8 original hosted images rendered and visually inspected. Original images/credits retained. The two UT scanned sheets i=8,9 visibly say 'copyright reserved' on their rulers despite the existing CC BY metadata; exact permission must be verified before any new reuse. Older D. sanguinalis handwritten/printed label on i=8 coexists with later D. ciliaris determination; specimen-level taxonomy not newly certified.",
+      "scope": "4 of 8 original hosted images rendered and visually inspected. Original images/credits retained. The two UT scanned sheets i=8,9 visibly say 'copyright reserved' on their rulers despite the existing CC BY metadata; exact permission must be verified before any new reuse. Older D. sanguinalis handwritten/printed label on i=8 coexists with later D. ciliaris determination; specimen-level taxonomy not newly certified. Pass47: photo i=0 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=3 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=7 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=10 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several parallel narrow racemes held together at end of the flowering stalk"
+          ],
+          "cannot_verify": [
+            "individual spikelet hair pattern and sheath collar not shown"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/commons-77cde2e462d3.jpg",
+          "git_blob_sha": "a1a8fc616f34f620a0bae12af111c5e9e2f4e490",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 1,
           "verdict": "DIRECT_VISIBLE",
@@ -877,6 +892,36 @@
           "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-090121-1189-second-base-view.jpg",
           "git_blob_sha": "328a76716eec77f617828b1b8ac92639a5bd95c0",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "low green spreading grass with long narrow blades beside rocks"
+          ],
+          "cannot_verify": [
+            "leaf ligule, true rooting nodes and spikelet details not exposed"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Digitaria/digitaria-ciliaris/images/starr-140909-1746-live-habit-maui.jpg",
+          "git_blob_sha": "d15fe04a92d8e1648c92ed19d18f9c459b38b59f",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "open thin branching flowering axes and hand for size"
+          ],
+          "cannot_verify": [
+            "paired reproductive units and membranous ligule not resolvable"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/digitaria-ciliaris/inat-736151054.jpg",
+          "git_blob_sha": "515e10fa51f02be857b66c4342b76ba4cc849622",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 8,
@@ -914,14 +959,24 @@
           "hosted_file": "site/media/digitaria-ciliaris/gbif-2807502768-63f05f123abc.jpg",
           "git_blob_sha": "07958b1a3e2061ad958470fd0618e5846b1ce09b",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_HOSTED_IMAGE_AND_RETURNED_BLOB_SHA; NO RIGHTS OR SPECIMEN CERTIFICATION"
+        },
+        {
+          "i": 10,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "branching slender green shoots and flowering head on herbarium sheet"
+          ],
+          "cannot_verify": [
+            "specimen-scale microscopic cilia, leaf collars and glume detail cannot be confirmed"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/digitaria-ciliaris/gbif-6161282426-605dfd848228.jpg",
+          "git_blob_sha": "3344ec6492dd9a9d9b15992915d07670fecbda0d",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        3,
-        7,
-        10
-      ],
+      "unreviewed_hosted_indices": [],
       "image_access_holds": [
         {
           "i": 0,
@@ -968,7 +1023,42 @@
         "queue_action": "Existing master Photo Needs Queue only, no new spreadsheet or duplicate general-photo downloads."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Illustrated Flora of North Central Texas retained as primary; no taxonomy, range or filter-state edits."
+      "morphology_reference_note": "Illustrated Flora of North Central Texas retained as primary; no taxonomy, range or filter-state edits.",
+      "previous_pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass47_image_notes": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "individual spikelet hair pattern and sheath collar not shown"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 3,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "leaf ligule, true rooting nodes and spikelet details not exposed"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 7,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "paired reproductive units and membranous ligule not resolvable"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 10,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "specimen-scale microscopic cilia, leaf collars and glume detail cannot be confirmed"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
+        }
+      ]
     }
   },
   {
@@ -2160,7 +2250,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/daderot-dresden-inground-bunch-2013.jpg",
-        "label": "Sand Lovegrass — arching blades of a whole bunch",
+        "label": "Cultivated sand lovegrass with large arching pale-green tuft and narrow blades",
         "creator": "Daderot",
         "license": "CC0 1.0",
         "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -2180,7 +2270,7 @@
       {
         "i": 2,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-trichodes/inat-480914542.jpg",
-        "label": "General field grass photograph; additional habit or inflorescence view, detailed diagnostic anatomy deferred",
+        "label": "Fine sand-lovegrass flowering strands held over woodland leaf litter for scale",
         "creator": "(c) Cody Stricker, some rights reserved (CC BY)",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -2200,7 +2290,7 @@
       {
         "i": 5,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/site/media/eragrostis-trichodes/gbif-2807465979-6301123acc2f.jpg",
-        "label": "General grass herbarium specimen; detailed diagnostic annotations deferred",
+        "label": "Herbarium sand lovegrass rooted bunch with several sweeping airy panicle branches",
         "creator": "The University of Texas at Austin",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0/",
@@ -2235,7 +2325,7 @@
     },
     "source_blob_sha": "fd7ed365d50362b1d1b0861399ffd64f4aaf81bf",
     "trait_provenance": "Existing Hays Botany Poaceae species card morphology; preliminary multi-access character states; needs field QA",
-    "diagnostic_photo_status": "SOURCE-REFERRED",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "habit": {
         "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 198",
@@ -2277,12 +2367,27 @@
       "note": "Published source morphology; photos, local vouchers, individual organ measurements and county nativity not certified. Conflicting/variety-level traits explicitly provisional."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS32_9_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_6",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_6_OF_6",
       "rights_status": "TWO_VISIBLE_TEX_SCANS_RIGHTS_CONFLICT_HOLD; ORIGINAL_SOURCE_FIELDS_UNCHANGED",
-      "scope": "3 of 6 existing Lab gallery photo references actually opened and inspected from GitHub image bytes; missing assets uncounted, no independent photo-specific source rights or taxon vouchers certified.",
+      "scope": "3 of 6 existing Lab gallery photo references actually opened and inspected from GitHub image bytes; missing assets uncounted, no independent photo-specific source rights or taxon vouchers certified. Pass47: photo i=0 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=2 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification. Pass47: photo i=5 viewed and Git SHA-1 computed from actual hosted JPG; visible-structure role only, without new image rights or species identification certification.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "broad mounded bunch with long drooping leaves"
+          ],
+          "cannot_verify": [
+            "no isolated spikelets, ligule or field occurrence provenance"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/daderot-dresden-inground-bunch-2013.jpg",
+          "git_blob_sha": "4a6439b119918e5364dc60e3c5fe6d5018bbe0a4",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
+        },
         {
           "i": 1,
           "verdict": "PARTIAL_VISIBLE",
@@ -2297,6 +2402,21 @@
           "hosted_file": "content/taxa/Poaceae/Eragrostis/eragrostis-trichodes/images/sam-kieschnick-sheath-and-blades-746040999.jpg",
           "git_blob_sha": "044662cb6ade8244d19af7bd27f4eaf97d8b4bb8",
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE LICENSE, ORIGINAL OBSERVATION/VOUCHER IDENTITY AND PHOTO DATE NOT INDEPENDENTLY REVALIDATED"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "long thin nearly threadlike branches over a hand and dry leaves"
+          ],
+          "cannot_verify": [
+            "individual spikelets and attachment to source crown not traceable"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-trichodes/inat-480914542.jpg",
+          "git_blob_sha": "ad695e6b3c39d7a64d103b75e8c02d8b20f85e58",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 4,
@@ -2314,6 +2434,21 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; ORIGINAL EXACT IMAGE LICENSE, ORIGINAL OBSERVATION/VOUCHER IDENTITY AND PHOTO DATE NOT INDEPENDENTLY REVALIDATED",
           "rights_review": "HOLD_EXACT_MEDIA_LICENSE_CONFLICT; TEX COPYRIGHT_RESERVED_BANNER_VS_STORED_CC_BY_4_0",
           "not_newly_approved_for_publication": true
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "shows": [
+            "pressed basal clump and long arching open flowering heads"
+          ],
+          "cannot_verify": [
+            "lemma measurements and true inner ligule invisible at this magnification"
+          ],
+          "pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+          "review_date": "2026-11-11",
+          "hosted_file": "site/media/eragrostis-trichodes/gbif-2807465979-6301123acc2f.jpg",
+          "git_blob_sha": "2d43d7dc313df2120644e89dc605e8ce2757d645",
+          "byte_verification": "READ_ONLY_ACTIONS_CHECKOUT_OF_MAIN; EXACT_GIT_BLOB_SHA1_COMPUTED; FULL_FILE_VIEWED_IN_CONTACT_SHEET; NO_SOURCE_RIGHTS_CERTIFICATION"
         },
         {
           "i": 6,
@@ -2334,11 +2469,7 @@
           "locality_note": "Hays County TEX 2021-12-30, sandy imported soil commercially seeded area; Hays occurrence, not proof of natural county nativity"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0,
-        2,
-        5
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Existing i=0, i=2, and i=5 returned blob metadata without image bytes and remain uncounted; recovery belongs to separate image-access lane",
         "Exact-image rights hold for TEX i=4 and i=6: both scans visibly mark copyright reserved despite stored CC BY 4.0 metadata; reconcile individual media license with institution before new authorization",
@@ -2363,6 +2494,33 @@
           "i": 6,
           "reason": "TEX photo visible copyright reserved banner vs existing CC BY 4.0 stored license; Hays County December 2021, imported sandy soil at commercially seeded site",
           "status": "HOLD_NO_NEW_APPROVAL"
+        }
+      ],
+      "previous_pass": "PHASE4_PASS47_HASH_VERIFIED_HOSTED_IMAGES",
+      "pass47_image_notes": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "limitations": [
+            "no isolated spikelets, ligule or field occurrence provenance"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 2,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "individual spikelets and attachment to source crown not traceable"
+          ],
+          "rights_hold": "EXACT_IMAGE_RIGHTS_NOT_RECHECKED"
+        },
+        {
+          "i": 5,
+          "verdict": "PARTIAL_VISIBLE",
+          "limitations": [
+            "lemma measurements and true inner ligule invisible at this magnification"
+          ],
+          "rights_hold": "INSTITUTIONAL_SCAN_RIGHTS_REQUIRE_EXACT_SOURCE_CHECK"
         }
       ]
     }
