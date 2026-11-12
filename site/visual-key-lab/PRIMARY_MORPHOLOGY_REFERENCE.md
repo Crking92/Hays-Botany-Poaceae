@@ -21,6 +21,11 @@
 - **Example checked directly:** Buffalograss under older name *Buchloe dactyloides* at **PDF page 177**, printed page **1253**: regional flora characterizes it as a sod-forming stoloniferous perennial with a ~0.5 mm ciliate membranous ligule, sexual dimorphism, and different male and female heads. Do not replace source-specific diagnosis silently with another flora's terminology.
 - **Copyright and access:** This is an uploaded reference copy, **NOT licensed for public redistribution here**. Do **not** commit, mirror or host the PDF or its illustrated plates in the public GitHub repository or GitHub Pages. Small original paraphrases and appropriate source page citations only.
 
+## Cross-reference: regional two-book findings
+
+- **Read the [2026-11-11 H&L-versus-Flora comparison and discrepancy handoff](REGIONAL_GRASS_REFERENCE_COMPARISON_HANDOFF_2026-11-11.md)** before altering uncertain ligules, stolons/rhizomes, annual/perennial labels, windmillgrass hybrids, or vegetatively inseparable lovegrasses. The 126/160 exact-name overlap is preliminary and must not be treated as confirmed taxonomic equivalence.
+- Research handoff is mirrored in the user's Google Drive **Hays Botany ID Builder Data / Reference Floras** folder as [Two-Book Comparison and Discrepancy Handoff](https://docs.google.com/document/d/1hgbbC4FWI9zxPlfzFKJEpeJjW17MCxuXn_FwOCkV8oE/edit). It is not a photo-approval or character-scoring release.
+
 ## Applying the two authorities
 
 1. Use Hagenbuch & Lemke first for vegetative grass diagnosis; use the Flora first for flowering/fruiting and spikelet anatomy. Source-specific exceptions, measurements and taxon concepts must be cited, not flattened into fixed universal values.
