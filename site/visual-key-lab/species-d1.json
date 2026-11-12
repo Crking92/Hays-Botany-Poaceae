@@ -419,11 +419,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.",
+    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: a young Bromus lanceolatus panicle may be tightly contracted before its branches spread. The compact choice is an immature growth-stage possibility, not proof of this species; recheck 7–20-flowered spikelets and glume veins after flowering.",
     "traits": {
       "head": [
         "branched_oat",
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "compact"
       ],
       "habit": [
         "tuft"
@@ -453,6 +454,20 @@
         "reference": "Eciliate membrane, not a hair-only fringe.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "head_immature_contracted_fna": {
+        "source": "Flora of North America, Pavlick and Anderton, Bromus lanceolatus (FNA online synopsis)",
+        "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=236952",
+        "category": "reproductive",
+        "reported_states": [
+          "panicle 5–15 cm long, 2–9 cm wide",
+          "densely contracted when immature",
+          "more open with age"
+        ],
+        "reference": "Immature Bromus lanceolatus heads can be visibly contracted and compact despite an eventual open branched-oat panicle. Permit the compact visual category for attached developing heads, retain branched_oat and long_narrow_panicle, and do not identify species from silhouette without checking the developed spikelets and glume vein counts.",
+        "status": "SOURCE_BACKED_DEVELOPMENTAL_NONEXCLUSION",
+        "certainty": "FNA_REGIONAL_SUPPLEMENT_SEASONAL_STAGE_NOT_A_SPECIMEN_PHOTO_SIGNOFF",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
