@@ -954,9 +954,14 @@
         "source_url": "https://research.fs.usda.gov/feis/species-reviews/boudac",
         "secondary_source_url": "https://rangeplants.tamu.edu/plant/buffalograss/",
         "contrast_url": "https://www.turffiles.ncsu.edu/grasses/buffalograss/",
-        "reference": "Usually strongly stoloniferous with aboveground stolons rooted at leafy nodes. USFS FEIS states it OCCASIONALLY forms rhizomes; NC State turf guide records rhizomes absent. Wildflower Center also describes spreading by rhizomes. This discrepancy is not resolved for a local voucher: preserve mat/stolon as the usual field habit and permit rhizome as an occasional source-reported visual state, never an automatic species proof.",
-        "status": "SOURCE_RECONCILED_STOLONS_TYPICAL_RHIZOMES_OCCASIONAL_CONFLICT",
-        "review_date": "2026-11-10"
+        "reference": "Usually strongly stoloniferous with aboveground stolons rooted at leafy nodes. USFS FEIS states it OCCASIONALLY forms rhizomes; NC State turf guide records rhizomes absent. Wildflower Center also describes spreading by rhizomes. This discrepancy is not resolved for a local voucher: preserve mat/stolon as the usual field habit and permit rhizome as an occasional source-reported visual state, never an automatic species proof. Important primary regional contrast: Hagenbuch & Lemke (2015), printed p. 40 (under Buchloë dactyloides), describes mat-forming plants with stolons and states rhizomes absent. This contrasts with the USFS FEIS 'occasional rhizomes' account already cited. Do not equate a buried stolon or root with a rhizome; retain the existing occasional-rhizome broad filter solely as a flagged source disagreement pending a connected Hays-region voucher.",
+        "status": "PRIMARY_REGIONAL_NO_RHIZOMES_VS_SECONDARY_OCCASIONAL_RHIZOMES_UNRESOLVED",
+        "review_date": "2026-11-12",
+        "regional_vegetative_source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 40, under Buchloë dactyloides",
+        "reported_conflict": [
+          "Hagenbuch & Lemke (2015), p. 40: rhizomes absent, aboveground stolons present",
+          "USDA Forest Service FEIS: occasional rhizomes reported; specimen and taxon scope unresolved"
+        ]
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -984,6 +989,14 @@
         "certainty": "USFS FEIS reports usual stolons and occasional rhizomes; Kew/NC State ligule fringe versus regional ciliate-membrane terminology remains unverified on real collar photo",
         "source": "USFS FEIS + regional Texas flora + Kew/NC State comparative morphology",
         "url": "https://research.fs.usda.gov/feis/species-reviews/boudac"
+      },
+      {
+        "look": "Resolve whether an underground stem is truly a rhizome",
+        "check": "Primary Hill Country specimens were described as stoloniferous with rhizomes absent, yet USFS reports occasional rhizomes. A thin buried structure could be a root or covered stolon. Trace actual stem nodes, scale leaves and the shoot connection before calling it a rhizome.",
+        "compare": "Bermudagrass commonly has both extensive stolons and rhizomes; female buffalograss bur-like heads provide a different reproductive comparison.",
+        "certainty": "Published-source conflict documented; no new voucher and no scoring-state removal",
+        "source": "Hagenbuch & Lemke (2015), p. 40; USDA Forest Service FEIS (occasional rhizomes)",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=40"
       }
     ],
     "diagnostic_review": {
@@ -2086,17 +2099,19 @@
     "common": "Inland sea oats",
     "scientific": "Chasmanthium latifolium",
     "range": "UNRESOLVED",
-    "field_rule": "INLAND SEA OATS — look for large fish-shaped HANGING SPIKELETS on long thin pedicels under broad bamboo-like leaves. Follow the genuine live panicle in Bob Harms CHLA5-I; CHLA5-J isolates ONE actual many-flowered flattened green SPIKELET. Each overlapping pointed shield is a FLORET LEMMA, not one loose grass seed. CHLA5-j1 shows the dry hanging stage, CHLA5-J2 an actual yellowish pollen-bearing ANTHER in an opened floret, CHLA5-9 separates enclosing floral scales and TRUE DARK CARYOPSIS, and CHLA5-8 reveals actual scaly shallow rhizome and attached root crowns. Examine CHLA5-L for the attached",
+    "field_rule": "INLAND SEA OATS — look for large fish-shaped HANGING SPIKELETS on long thin pedicels under broad bamboo-like leaves. Follow the genuine live panicle in Bob Harms CHLA5-I; CHLA5-J isolates ONE actual many-flowered flattened green SPIKELET. Each overlapping pointed shield is a FLORET LEMMA, not one loose grass seed. CHLA5-j1 shows the dry hanging stage, CHLA5-J2 an actual yellowish pollen-bearing ANTHER in an opened floret, CHLA5-9 separates enclosing floral scales and TRUE DARK CARYOPSIS, and CHLA5-8 reveals actual scaly shallow rhizome and attached root crowns. The available images do not independently establish the inner ligule. A rooted tuft is also valid: Hill Country plants are cespitose with short knotty rhizomes. The ciliate ligule has a minute membranous base; a hair-fringed view must not falsely exclude it.",
     "hero_i": 0,
     "traits": {
       "head": [
         "flat_oats"
       ],
       "habit": [
-        "rhizome"
+        "rhizome",
+        "tuft"
       ],
       "ligule": [
-        "membrane"
+        "membrane",
+        "hairs"
       ],
       "awns": [
         "none_obvious"
@@ -2176,6 +2191,22 @@
         "reference": "Large conspicuously flattened 6–20 mm multi-flowered spikelets droop from an open panicle; short-rhizomatous perennial.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 41; Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Chasmanthium latifolium account",
+        "reference": "Primary vegetative account says perennial, cespitose, with short hard knotty rhizomes; both tuft and short-rhizome observations are valid. Flora independently notes short rhizomes.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "Existing gallery unchanged; no connected rhizome/crown specimen newly certified."
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 41",
+        "reference": "Ciliate 0.5–1 mm ligule with a minute membranous base. Accept a visible hair fringe as well as membrane, without calling the ligule hair-only; fresh opened collar required to resolve the base.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly certified microscopic true-collar image."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2203,6 +2234,14 @@
         "certainty": "Source and ecology-backed; full connected rhizome plus inner collar photo role pending",
         "source": "Missouri DNR — River oats",
         "url": "https://mdc.mo.gov/discover-nature/field-guide/river-oats"
+      },
+      {
+        "look": "Differentiate the crown, rhizome and true ligule",
+        "check": "A clump of leafy shoots and a short, knotty connected rhizome can both belong to inland sea oats. The ciliate ligule includes both a tiny membranous base and projecting hairs. Confirm identity with wide leaves and real drooping many-flowered flat spikelets, not tuft shape alone.",
+        "compare": "Other tufted grasses have ciliate ligules; identify the reproductive structures when available.",
+        "certainty": "Hagenbuch & Lemke p. 41 reviewed; exact local crown and ligule close-up not certified",
+        "source": "Hagenbuch & Lemke (2015), p. 41",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41"
       }
     ],
     "diagnostic_review": {
