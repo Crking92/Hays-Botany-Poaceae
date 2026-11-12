@@ -2147,7 +2147,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Open panicle alone does not separate E. intermedia from E. trichodes.",
+    "field_rule": "Compare the actual blade and collar before using the open panicle: the Hill Country account describes plains lovegrass with flat 2–3 mm blades and hairy collars, versus mourning lovegrass with inward-rolled 1–2 mm blades. Width overlaps, so this is a comparison clue, not a determination. Rhizome reports conflict; keep a connected rootstock and mature spikelets for confirmation.",
     "traits": {
       "head": [
         "airy"
@@ -2174,12 +2174,19 @@
         "review_date": "2026-11-10"
       },
       "habit": {
-        "source": "UT Austin Williamson County plant account (short knotty rhizomes) vs Arizona Extension Yavapai guide (no rhizomes)",
+        "source": "UT Austin Williamson County plant account (short knotty rhizomes) vs Arizona Extension Yavapai guide (no rhizomes); Hagenbuch & Lemke (2015), p. 48",
         "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Eragrostis%20intermedia",
         "secondary_source_url": "https://yavapaiplants.extension.arizona.edu/eragrostis-intermedia",
-        "reference": "Some Texas source specimens described densely tufted rhizomatous base, whereas another regional account says no rhizomes. Keep broad tuft/rhizome answers eligible but do not infer rhizome from tuft photo. Verify connected belowground stem on authenticated Texas material.",
+        "reference": "Some Texas source specimens described densely tufted rhizomatous base, whereas another regional account says no rhizomes. Keep broad tuft/rhizome answers eligible but do not infer rhizome from tuft photo. Verify connected belowground stem on authenticated Texas material. Newly checked primary vegetative source Hagenbuch & Lemke (2015), p. 48, explicitly describes tufted plants without rhizomes or stolons. This strengthens the documented contrast with the earlier UT account; it does not resolve that local specimen report. Existing tuft/rhizome selections remain unchanged.",
         "status": "REGIONAL_GROWTH_CONFLICT_PROVISIONAL",
-        "review_date": "2026-11-10"
+        "review_date": "2026-11-12"
+      },
+      "regional_comparison": {
+        "source": "Hagenbuch & Lemke (2015), p. 48; Diggs et al. (1999), printed pp. 1270, 1272",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+        "reference": "Vegetative primary: flat blades 2–3 mm wide, hairy collar, ligule hair fringe under 0.5 mm. Reproductive primary: Diggs describes an open panicle and 5–11-flowered spikelets; retain the earlier UT 2–9-floret report as variation requiring specimen comparison, not a numerical exclusion. Diggs notes that many specimens assigned here were previously placed in E. lugens; that is a historical determination warning, not synonymy or permission to rename records.",
+        "status": "REGIONAL_COMPARISON_REVIEWED_RHIZOME_AND_SPECIMEN_LIMITS_OPEN",
+        "review_date": "2026-11-12"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2194,15 +2201,15 @@
       },
       {
         "look": "Dissect one mature spikelet, lemma and palea",
-        "check": "Williamson County material describes spikelets 4–7 by 1.5–1.7 mm, roughly 2–9 florets, and a 1.8–2.2 mm, three-veined lemma with inconspicuous side veins. Palea has TWO short-ciliate keels. Floret counts overlap other treatments (Texas A&M often 5–11).",
+        "check": "Williamson County material describes spikelets 4–7 by 1.5–1.7 mm, roughly 2–9 florets, and a 1.8–2.2 mm, three-veined lemma with inconspicuous side veins. Palea has TWO short-ciliate keels. Floret counts overlap other treatments (Texas A&M often 5–11). Diggs et al. (1999), printed p. 1270, independently gives 5–11 florets. Preserve the UT count alongside it rather than treating either as an absolute cutoff.",
         "compare": "Sand lovegrass has a generally larger, 2.4–3.4 mm lemma and more conspicuous terminal clusters of spikelets; use several mature spikelets.",
         "certainty": "Local UT specimen treatment and Texas A&M floret ranges differ; do not use a single exact floret count as cutoff",
-        "source": "UT Austin PRC — Eragrostis intermedia",
+        "source": "UT Austin PRC — Eragrostis intermedia; Diggs et al. (1999), p. 1270",
         "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Eragrostis%20intermedia"
       },
       {
         "look": "Check the fine ciliate ligule and actual underground stem",
-        "check": "UT's Williamson County specimen description gives 0.3–0.55 mm ciliate ligule with 4 mm collar hairs and mentions short knotty RHIZOMES. An Arizona field guide says non-rhizomatous. Record a connected rootstock before deciding. Pedicel/ultimate branch terminology also varies across the sources.",
+        "check": "UT's Williamson County specimen description gives 0.3–0.55 mm ciliate ligule with 4 mm collar hairs and mentions short knotty RHIZOMES. An Arizona field guide says non-rhizomatous. Record a connected rootstock before deciding. Pedicel/ultimate branch terminology also varies across the sources. The primary Hill Country account (Hagenbuch & Lemke, p. 48) also says rhizomes and stolons absent; the earlier UT report remains an explicit unresolved regional contrast.",
         "compare": "Purple lovegrass can have short knotty rhizomes, so shoot age and panicle dissection still matter; hair at collar does not alone identify plains lovegrass.",
         "certainty": "REGIONAL GROWTH-CONCEPT CONFLICT; rhizome status and tiny membrane under cilia require actual field specimen",
         "source": "UT Austin PRC — Eragrostis intermedia; contrasting Arizona Extension",
@@ -2355,25 +2362,35 @@
         "reference": "Flora reports tufted perennial habit; source distinguishes hairy sheath throat and sometimes villous margins. Airy head retained provisionally.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "reproductive_comparison": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1269, 1272–1274",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reference": "Bare panicle-branch bases, spreading pedicellate spikelets, keeled lemmas with evident lateral nerves, lemma 2.4–3.8 mm. Existing airy choice retained. Size overlaps red lovegrass; no new numeric exclusion.",
+        "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-11",
+        "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch.",
+        "taxon_concept": "E. trichodes; Flora includes var. pilifera without recognizing consistent differences."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_checks": [
       {
-        "look": "Follow the long, fine spikelet pedicels through the airy panicle",
-        "check": "Kew gives an open 35–55 cm panicle, with narrow sinuous primary branches and threadlike 5–15 mm spikelet pedicels. Texas A&M describes a broad open head often 0.3–0.6 m with terminally clustered 6–10-flowered spikelets.",
-        "compare": "Plains lovegrass also has diffuse branches; use full head plus blade/sheath and exact spikelet dimensions.",
-        "certainty": "Kew/GrassBase plus Texas A&M; fine stalks can be cropped out in whole-head photos",
-        "source": "Kew GrassBase — Eragrostis trichodes",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:401659-1/general-information"
+        "look": "Trace the bare bases of mature panicle branches",
+        "check": "In the Flora key, sand lovegrass has panicle branches bare near their bases, spreading spikelets, and pedicels longer than the spikelets. Inspect a whole connected mature head, not a cropped cluster.",
+        "compare": "Red lovegrass keys through branches bearing crowded spikelets nearly to their bases and usually compact heads; an occasional long branch does not by itself prove sand lovegrass.",
+        "certainty": "Primary regional reproductive text directly re-read; local specimen confirmation pending",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1269, 1272–1274",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       },
       {
-        "look": "Compare the floral parts with plains lovegrass at the same scale",
-        "check": "Kew's typical mature spikelets are 4–10 mm, with 4–18 florets; fertile lemma about 2.4–3.4 mm, one-veined glumes. UT's local plant had ~5 mm spikelets with 4–6 florets. These ranges partly overlap E. intermedia, but lemma size and branch/pedicel architecture help.",
-        "compare": "Plains lovegrass typically has 4–7 mm spikelets and 1.8–2.2 mm lemmas in the Williamson County account. Do not exclude overlapping specimens by size alone.",
-        "certainty": "Published range is broad; local voucher and multiple mature florets needed",
-        "source": "Kew GrassBase — Eragrostis trichodes",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:401659-1/general-information"
+        "look": "Compare lemma shape and length on several mature spikelets",
+        "check": "The Flora key gives keeled lemmas with evident lateral nerves, 2.4–3.8 mm long, and lanceolate to ovate spikelets for sand lovegrass. The previous secondary range 2.4–3.4 mm is narrower; use the regional range here without a hard size filter.",
+        "compare": "Plains lovegrass follows rounded-backed lemmas with inconspicuous lateral nerves. Red lovegrass lemma lengths overlap; combine branch attachment, spikelet compression and mature anatomy.",
+        "certainty": "Primary regional reproductive text directly re-read; local specimen confirmation pending",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1269; species account p. 1274",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       },
       {
         "look": "Inspect both sheath THROAT hairs and the ligule",

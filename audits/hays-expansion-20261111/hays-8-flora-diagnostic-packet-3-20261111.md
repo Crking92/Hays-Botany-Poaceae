@@ -39,12 +39,12 @@
 
 ## *Eragrostis superba*
 
-**Source applicability:** Direct 1999 Flora species; FNA/Kew additional reproductive traits.
+**Source applicability (rechecked 2026-11-12):** Hagenbuch & Lemke (2015), p. 49, leads vegetative characters; Diggs et al. (1999), printed pp. 1272, 1274, leads reproductive characters. Earlier FNA/Kew details remain supplementary and were not newly reverified. No new specimen or image review.
 
 **Description targets from references (not yet verified on the Hays observation specimen):**
-- **habit:** Tufted perennial; can be planted for range improvement. *Flora 1999*. Photo: rooted base.
-- **spikelet:** Broad, strongly compressed and showy, around 3–10 mm wide. *Flora 1999*. Photo: spikelet profile.
-- **lemma:** Lemma has conspicuous keel. *Flora 1999*. Photo: lemma macro.
+- **habit and collar:** Tufted perennial without rhizomes or stolons in the Hill Country account; hair-fringe ligule to 1 mm, smooth sheath surfaces with hairy margins, flat or inward-rolled blades. [Hagenbuch & Lemke, p. 49](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49). Inspect connected crown and opened collar at scale. Range planting is a separate Flora observation, not species proof.
+- **spikelet:** Broad, strongly compressed and showy, around 3–10 mm wide. *Diggs et al., printed p. 1272; account continues p. 1274*. Photo: spikelet profile.
+- **lemma:** Lemma has conspicuous keel. *Diggs et al., printed p. 1272*. Photo: lemma macro.
 - **florets:** Multiflowered spikelet, roughly 4–22 florets in FNA. *FNA via NEON species treatment*. Photo: floret count.
 - **disarticulation:** Mature spikelet may detach whole below the glumes. *Kew POWO/GrassBase*. Photo: ripe spikelet.
 - **palea:** Palea keels broadly winged, a crucial tiny structural character. *FNA via NEON species treatment*. Photo: palea dissection.
@@ -54,6 +54,8 @@
 **Unresolved:** Detached florets, glume and lemma veins/hair characters not resolved; introduced planting versus established escape not confirmed.
 
 **Look-alikes:** Eragrostis intermedia, E. spectabilis, E. curvula. **Exact follow-up:** Ripe flattened spikelet on mm scale, isolated lemma and winged palea, true ligule, basal crown and evidence of unplanted reproduction.
+
+**Admission mapping hold:** `habit=tuft` and `ligule=hairs` are literature-supported possibilities, not enabled states or a species diagnosis. Do not assign `head=flat_oats` merely because a spikelet is flattened: that option requires dangling oat-like attachment, which the short regional account does not establish. All six existing targets remain unverified on a specimen; no scoring or photo permission changes.
 
 **Original observations:** [iNat](https://www.inaturalist.org/observations/396903239) · [iNat](https://www.inaturalist.org/observations/394713386) · [iNat](https://www.inaturalist.org/observations/359405762) · [iNat](https://www.inaturalist.org/observations/354818424)
 

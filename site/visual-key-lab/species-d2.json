@@ -398,7 +398,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "MOURNING LOVEGRASS = unusually thin leaves and airy but finer panicle. Confirm inward-rolled blade with live cross section.",
+    "field_rule": "Compare mourning lovegrass’s inward-rolled 1–2 mm blades with the usually flat 2–3 mm blades reported for plains lovegrass in the Hill Country treatment. Width overlaps; check the collar and mature flowering specimen together. Historical determinations have confused the two. Do not decide from an airy panicle or sheath-margin hair alone.",
     "traits": {
       "head": [
         "airy"
@@ -429,16 +429,23 @@
         "reference": "Ligule a true hair fringe; upper sheath oral hairs may also be visible.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "regional_comparison": {
+        "source": "Hagenbuch & Lemke (2015), pp. 32, 48; Diggs et al. (1999), printed pp. 1270, 1272",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+        "reference": "Hagenbuch & Lemke p. 48 supports inward-rolled 1–2 mm blades, hairy collar margins and an approximately 1 mm hair-fringe ligule. Its p. 32 key calls the outer sheath margin ciliate, while the p. 48 description calls sheath margins entire: preserve this internal source discrepancy and do not force a hair-based exclusion. Diggs discusses E. lugens under E. intermedia and warns of reassigned specimens; that passage is not a separate reproductive description of mourning lovegrass. Existing secondary reproductive measurements remain supplementary and were not newly verified here.",
+        "status": "REGIONAL_VEGETATIVE_REVIEWED_SHEATH_MARGIN_CONFLICT_REPRODUCTIVE_GAP",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
       {
         "look": "Inspect the extraordinarily fine, often INROLLED blade",
-        "check": "GrassBase describes narrow often involute blades about 1–2 mm wide, with a generally smooth sheath surface but some hair at its mouth. A large hairy sheath surface should make you compare with E. hirsuta.",
-        "compare": "Bigtop lovegrass has much broader 4–8 mm blades and hairy sheaths; sand lovegrass also has narrow blades but different floral details.",
-        "certainty": "Kew GrassBase; leaf cross-section and sheath close-up still needed",
-        "source": "Kew GrassBase — Eragrostis lugens",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:93132-2/general-information"
+        "check": "Hagenbuch & Lemke (2015), p. 48, describes inward-rolled blades 1–2 mm wide, smooth sheath surfaces, hairy collar margins and a hair-fringe ligule about 1 mm long. Its key on p. 32 calls the outer sheath margin ciliate, but the species description calls the margins entire. Do not turn that unresolved wording difference into an absence/presence test.",
+        "compare": "Plains lovegrass has flat 2–3 mm blades and hairy collars in the same regional account; widths overlap at 2 mm. Bigtop lovegrass remains a broader-bladed, hairy-sheath comparison in the earlier secondary evidence.",
+        "certainty": "Primary regional vegetative account directly checked; internal sheath-margin discrepancy and actual specimen verification remain open",
+        "source": "Hagenbuch & Lemke (2015), pp. 32, 48",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48"
       },
       {
         "look": "Trace the fine flexuous branches in the diffuse panicle",
@@ -733,7 +740,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Physical species-recognition evidence: reddish compressed many-flowered spikelets + real leaf sheath/collar, with oxylepis qualification on the Goldman macro references; do not substitute appearance for same-specimen microscopy. Vegetative caution: red lovegrass and sand lovegrass (E. trichodes) cannot be reliably separated by leaves and crown alone in the 2015 Hill Country treatment; compare mature spikelets instead.",
+    "field_rule": "Red lovegrass: examine the entire mature panicle and strongly flattened spikelets. Regional subsp. oxylepis usually has a small compact head, sometimes with long branches; check spikelets crowded toward branch bases and very acute lemmas. Red color or vegetative foliage alone does not distinguish it from sand lovegrass. Source/concept differences remain unresolved; do not impose a single lemma-length cutoff.",
     "traits": {
       "head": [
         "airy",
@@ -768,6 +775,26 @@
         "reference": "Whole-species GrassBase account 10–24 florets; FNA description for US subsp. oxylepis 10–45; use no absolute floret-count filter without regionally resolved taxon concept.",
         "status": "REGIONAL_SUBSPECIES_RANGE_DIFFERS",
         "review_date": "2026-11-10"
+      },
+      "lemma": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1269, 1272",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reference": "Regional key: lemma 2–5 mm, very acute; spikelet strongly flattened, 3–5 mm wide. Species account is E. secundiflora subsp. oxylepis.",
+        "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-11",
+        "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch.",
+        "taxon_concept": "Display remains E. secundiflora; Flora account specifically subsp. oxylepis.",
+        "disagreement": "Prior secondary GrassBase-derived lemma 1.6–2.4 mm is retained here as an unresolved source/concept contrast, not scored."
+      },
+      "head": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1269, 1272",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reference": "Usually small compact panicles, sometimes with one or two long branches; branch bases bear closely crowded spikelets. Retain compact and the existing permissive airy option; an open-looking branch is not sufficient to exclude the regional taxon.",
+        "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-11",
+        "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch."
       }
     },
     "diagnostic_checks": [
@@ -780,12 +807,12 @@
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:322572-2/general-information"
       },
       {
-        "look": "Open a spikelet to measure glumes and the red lemma",
-        "check": "Typical GrassBase lower glume 2.5–3 mm (one-veined), upper glume 3–4 mm; fertile lemma 1.6–2.4 mm, often red and three-veined with distinct lateral veins. Count florets and measure one mature spikelet from several heads.",
-        "compare": "Stinkgrass is usually glandular and annual, while red lovegrass is generally eglandular and perennial; both can have dense many-flowered spikelets.",
-        "certainty": "GrassBase-backed floral characters; photo and exact taxon concept needed",
-        "source": "Kew GrassBase — Eragrostis secundiflora",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:322572-2/general-information"
+        "look": "Measure mature lemmas under the regional oxylepis concept",
+        "check": "The Flora key gives very acute lemmas 2–5 mm long and strongly flattened spikelets 3–5 mm wide. Its species account treats subsp. oxylepis. The prior GrassBase-derived 1.6–2.4 mm lemma range is a source/concept discrepancy, not a safe regional cutoff. Measure several mature lemmas and preserve the specimen’s subspecies uncertainty.",
+        "compare": "Sand lovegrass follows the branch of the Flora key with bare branch bases, spreading spikelets and pedicels longer than spikelets. Lemma lengths overlap; do not identify either grass from length or red color alone.",
+        "certainty": "Primary regional reproductive text directly re-read; local specimen confirmation pending",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1269, 1272",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       },
       {
         "look": "Check true ligule against nearby long throat hairs",
@@ -2895,13 +2922,14 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Use the photographed growth-form details only to choose a candidate. Confirm with the missing rooting/rhizome/ligule reproductive details.",
+    "field_rule": "Nimblewill may occur as a small cluster or spread by low stems rooting at nodes. Check the very short membranous ligule, contracted panicle and tiny glumes. Trace an attached rooted stem; a surface mat is not compulsory in every observed plant.",
     "traits": {
       "head": [
         "long_narrow_panicle"
       ],
       "habit": [
-        "mat"
+        "mat",
+        "tuft"
       ],
       "ligule": [
         "membrane"
@@ -2921,6 +2949,16 @@
         "reference": "Short/narrow contracted panicle; decumbent stems ROOT AT LOWER NODES; lemma awn 1.5–5 mm (visible at closer range, often not conspicuous in distant whole-head photo). Surface mat recorded without asserting verified root nodes in photos.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 55",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+        "role": "vegetative",
+        "reference": "Solitary plants or small clusters; short stolons often present, decumbent culms often root at lower nodes. Retain the spreading state and allow tuft for an observed small cluster; do not require a runner or excavated rhizome to be visible before keeping a candidate.",
+        "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-11",
+        "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch.",
+        "qualifier": "Broad field-choice mapping of small clusters/clumps; not a claim of an invariably dense bunch or a locally authenticated specimen."
       }
     },
     "diagnostic_checks": [
@@ -2947,6 +2985,14 @@
         "certainty": "Ohio State and Go Botany measurements; exact same-spikelet glume view pending",
         "source": "Ohio State — Muhlenbergia schreberi",
         "url": "https://u.osu.edu/osuweeds/weed-id/grasses/nimblewill/"
+      },
+      {
+        "look": "Follow one shoot to its actual base",
+        "check": "Solitary plants or small clusters; short stolons often present, decumbent culms often root at lower nodes.",
+        "compare": "Aparejo has scaly underground rhizomes; distinguish a rooted surface culm from an underground stem.",
+        "certainty": "Primary vegetative account directly re-read; broad field-state mapping, local root connection still unverified",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 55",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55"
       }
     ],
     "diagnostic_review": {

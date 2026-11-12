@@ -76,18 +76,20 @@
 
 **References:** Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, user-supplied monocots excerpt, excerpt PDF p.212 (printed p.1288).
 
+**Rechecked 2026-11-12:** Reproductive comparison directly checked against *M. reverchonii* on printed p. 1288. A named-account/appendix check in H&L did not locate *M. capillaris*; do not borrow another muhly's vegetative description. No new specimen or image review.
+
 **Reference traits to investigate on one Hays plant:**
 
 - **habit:** Tightly clumped perennial with upright flowering culms typically 60–100 cm tall. **Needed:** whole rooted basal tuft and flowering culm.
-- **panicle shape:** Open, diffuse spreading panicle to roughly 35–40 cm long and 8–20 cm across. **Needed:** whole flowering head at maturity.
+- **panicle shape:** Diffuse panicle reaching 35(–40) cm long and 8–17(–20) cm wide. These upper limits are not a minimum size or a narrow 35–40 cm acceptance interval. **Needed:** whole flowering head at maturity.
 - **pedicels:** Fine hairlike branches and pedicels spread broadly at maturity. **Needed:** branch node and pedicel close-up.
 - **lemma length:** Lemmas mostly 3.5–4.5 mm long, sometimes approaching 5 mm. **Needed:** detached mature lemma beside ruler.
 - **lemma surface:** Lemma slightly roughened and with sparse hairs near base. **Needed:** lemma base under hand lens or macro.
-- **awn length:** Lemma awn length varies, roughly 2–15 mm in the regional account. **Needed:** several mature awned lemmas from one head with scale.
+- **awn length:** Regional range (2–)5–15 mm: usually 5–15 mm, occasionally as short as 2 mm. Seep muhly has 0.5–4(–7) mm awns in the same account, so the ranges overlap. **Needed:** several mature lemmas showing awn attachment with scale, plus lemma bodies, surfaces and whole-head branching from the same plant.
 
 **Comparison group:** Muhlenbergia reverchonii; Muhlenbergia lindheimeri; cultivated muhly forms.
 
-**Hold:** An airy pink plume on a Hays ornamental is not sufficient for species ID or local nativity; compare scaled florets..
+**Hold:** Pink color, an open head, awn length and lemma-body length overlap with seep muhly (hairawn lemma 3.5–4.5(–5) mm; seep 3.5–5 mm, Diggs p. 1288). Do not manufacture a numerical species cutoff. An airy-head or tuft mapping remains a broad literature possibility, not admission proof; ligule stays unassigned here. Compare attached mature florets and the entire plant, and preserve the separate ornamental/local-occurrence hold. All six targets and all specimen/photo release flags remain provisional.
 
 **Previous Hays review:** One airy purple-pink muhly plume over dense basal tuft..
 

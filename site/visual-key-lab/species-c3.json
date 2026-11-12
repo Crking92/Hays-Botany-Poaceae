@@ -18,7 +18,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "First check SCALE and the BASAL BUNCH: Lindheimer muhly forms a large coarse, densely tufted fountain often around 0.8–1.5 m tall, with tall relatively contracted, densely flowered panicles. At the leaf collar a LONG MEMBRANOUS ligule is the high-value confirmation; photograph it with a ruler rather than inferring it from plant size.",
+    "field_rule": "First check SCALE and the BASAL BUNCH: Lindheimer muhly forms a large coarse, densely tufted fountain often around 0.8–1.5 m tall, with tall relatively contracted, densely flowered panicles. At the leaf collar a LONG MEMBRANOUS ligule is the high-value confirmation; photograph it with a ruler rather than inferring it from plant size. Mature lemmas may be awnless or have a fine awn up to 3–4 mm; a visible single awn does not rule out Lindheimer muhly.",
     "traits": {
       "head": [
         "long_narrow_panicle",
@@ -31,7 +31,8 @@
         "membrane"
       ],
       "awns": [
-        "none_obvious"
+        "none_obvious",
+        "long"
       ]
     },
     "source_blob_sha": "72276a3421245d5f9a28ef848674e879b039d6ac",
@@ -44,7 +45,26 @@
         "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Muhlenbergia%20lindheimeri",
         "reference": "Young contracted head may appear long_narrow_panicle, older opened/loosely feathery head may appear airy; photo-first both allowed. This is variation within species and different descriptions, NOT proof of hybrid.",
         "status": "SOURCE_AND_STAGE_VARIATION_TWO_VISUAL_STATES",
-        "review_date": "2026-11-10"
+        "review_date": "2026-11-10",
+        "regional_primary": {
+          "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1286, 1288",
+          "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+          "role": "reproductive",
+          "reference": "Tightly or loosely contracted, densely flowered panicles; branches flowered nearly to base. Keep existing long_narrow_panicle and airy allowances from the earlier Texas stage-variation evidence; do not erase those states from one description.",
+          "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+          "review_date": "2026-11-11",
+          "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch."
+        }
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1288",
+        "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "role": "reproductive",
+        "reference": "Lemmas may be awnless or infrequently bear an awn up to 3(–4) mm. Retain none_obvious and permit long when a single awn is visible in close view. This visual state does not assert that all awns are long.",
+        "status": "DIRECT_SOURCE_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-11",
+        "photo_voucher_support": "No new specimen, photograph, or microscopic measurement verified in this batch.",
+        "qualifier": "Mature lemma; awn visibility depends on magnification and specimen. Same broad visual treatment already used for seep muhly."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -66,12 +86,12 @@
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
       },
       {
-        "look": "Measure glumes, floret and short awn on the SAME spikelet",
-        "check": "A mature spikelet has ONE fertile floret, usually ~2–3.5 mm; paired glumes are each generally ~2–3.5 mm, roughly floret length, one-veined. Lemma three-veined, may be awnless or carry a fine 0–4 mm awn. Record a whole attached mature spikelet and mm ruler.",
-        "compare": "Seep muhly glumes tend to be much shorter (1–2.5 mm versus 3.5–5 mm spikelet). Canyon hybrid glumes ~2–2.5 and spikelet ~3–4 mm: strong overlap.",
-        "certainty": "Kew GrassBase plus Texas local specimen; overlapping sizes cannot alone certify a hybrid or parent",
-        "source": "Kew GrassBase — Muhlenbergia lindheimeri",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164816-2/general-information"
+        "look": "Check the lemma for an awn, even on a narrow Lindheimer head",
+        "check": "The Flora gives lemmas about 2–4 mm long, awnless or infrequently with an awn up to 3(–4) mm. A visible single awn therefore must not eliminate Lindheimer muhly. Measure the lemma body separately from its awn.",
+        "compare": "Seep muhly has overlapping awns, 0.5–4(–7) mm; compare branch architecture, ligule and blades as well. Awn presence alone does not distinguish the parents or Canyon hybrid.",
+        "certainty": "Primary regional reproductive text directly re-read; local specimen confirmation pending",
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1288",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view"
       },
       {
         "look": "Confirm the unusually long membranous ligule on an intact Lindheimer leaf",
@@ -235,7 +255,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "SWITCHGRASS = HAIRY TRIANGLE at blade base + AIRY PANICLE + AWNLESS single spikelets.",
+    "field_rule": "Switchgrass: compare the complete panicle, mature spikelets, collar and connected scaly rhizomes. Inspect blade-base hairs separately from the inner ligule. Regional sources differ on ligule terminology and node hairs; neither a hair-fringe appearance nor a hairy node alone rules it out.",
     "traits": {
       "head": [
         "airy"
@@ -269,23 +289,31 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Kew GrassBase Panicum virgatum + FNA/UMass field descriptions",
-        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information",
-        "secondary_source_url": "https://www.umass.edu/agriculture-food-environment/landscape/publications-resources/weed-identification/switchgrass--panicum-virgatum",
-        "reference": "True ligule is a ciliate MEMBRANE; after it abrades it may LOOK like dense white hair fringe. Hair triangle on upper blade is a SEPARATE structure. Both visual collar options permitted to avoid false exclusion.",
-        "status": "SOURCE_CHECKED_WORN_LIGULE_APPEARANCE_PHOTO_PENDING",
-        "review_date": "2026-11-10"
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 57; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1302",
+        "reference": "H&L: roughly 1 mm hair fringe, with longer 3–5 mm hairs; Diggs: fringed membrane 1.5–3 mm. Keep hairs and membrane. Measure tissue and longest hairs separately; abrasion alone is not an established explanation.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
+      },
+      "node_hairs": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 57; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1302",
+        "reference": "H&L permits glabrous or pubescent nodes; Diggs describes glabrous nodes. Do not use node hair alone as an exclusion; this character remains unscored.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new specimen, photo or microscopic verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
     "diagnostic_checks": [
       {
-        "look": "Inspect the hair TRIANGLE and true ligule separately",
-        "check": "Switchgrass commonly shows a wedge/triangle of hairs on the UPPER blade surface immediately above the collar. Its anatomical ligule is a CILIATE MEMBRANE; some descriptions note it wears away leaving a prominent ring of white hairs. The hair patch is NOT the ligule.",
-        "compare": "Indiangrass has the conspicuous rifle-sight pointed auricles on either side of a membranous ligule; Hall's panicgrass lacks the robust switchgrass collar and rhizome combination.",
-        "certainty": "Kew/FNA/UMass sources; same-plant opened collar photo pending, two broad visual appearances accepted",
-        "source": "Kew GrassBase — Panicum virgatum; field collar description",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information"
+        "look": "Inspect the inner ligule separately from blade-base hairs",
+        "check": "The regional references use different ligule categories and measurement scopes. Record any membrane and the longest hairs separately. Do not explain every hair-fringe appearance as a worn membrane without examining the tissue.",
+        "compare": "Blade-base hairs are distinct from the true ligule. Combine the collar, connected rhizomes and mature spikelets; one hair patch is insufficient.",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 57; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1302",
+        "url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+        "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
       },
       {
         "look": "Expose the long, scaly rhizomes under a mature flowering culm",
@@ -1329,7 +1357,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "LONG conspicuous projecting mostly solitary bristles + relatively loose tapered foxtail panicle + hairy broad leaves; confirm the SINGLE bristle attachment and tiny hair-fringed ligule.",
+    "field_rule": "Southwestern bristlegrass: compare its long projecting bristles, tapering panicle and leafy perennial bunch. Open the true inner collar to look beneath the hairs for a tiny membrane. Bristles attach below spikelets; they are not lemma awns.",
     "traits": {
       "head": [
         "foxtail"
@@ -1338,7 +1366,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "bristles"
@@ -1359,6 +1388,14 @@
         "reference": "Usually 1–2 elongated sterile-branch bristles, not lemma awns.",
         "status": "REGIONAL_FLORA_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, pp. 61–62; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1318, 1320",
+        "reference": "H&L describes a roughly 0.5 mm membrane fringed by 1–2 mm hairs. Keep hairs and membrane as observations of one ciliate ligule; measure basal tissue separately from projecting hairs.",
+        "role": "vegetative",
+        "status": "DIRECT_REGIONAL_TEXT_REVIEWED_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new photograph or local specimen certified."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1380,10 +1417,18 @@
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381"
       },
       {
-        "look": "Inspect the hair ligule and a mature spikelet",
-        "check": "The inner ligule is composed of stiff hairs roughly 1–2 mm; fertile spikelets are about 2.2–2.5 mm. Do not mistake the node hairs for a ligule or read bristle length from an unscaled head.",
-        "compare": "Marsh bristlegrass has a usually shorter hair ligule and often 4–12 bristles per spikelet",
-        "certainty": "FNA-backed; species macro still needed",
+        "look": "Open the inner collar and inspect beneath the hair tips",
+        "check": "Look for the minute membrane underlying the cilia. A hair-fringe appearance alone does not show that basal tissue is absent. Distinguish collar and node hairs from the true inner ligule.",
+        "compare": "Knotroot bristlegrass also has a hairy ligule; combine mature spikelets, bristle attachment and connected habit.",
+        "certainty": "Primary vegetative text directly checked; tissue measurements on local plants pending",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, pp. 61–62",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62"
+      },
+      {
+        "look": "Retain the earlier mature spikelet comparison",
+        "check": "Earlier FNA-backed spikelet range: about 2.2–2.5 mm. Do not read bristle length from an unscaled head.",
+        "compare": "Knotroot bristlegrass often has 4–12 bristles per spikelet; distinguish attachment and mature floral parts.",
+        "certainty": "Earlier FNA-derived reproductive evidence retained; not independently reverified in this vegetative/sparse-bristle batch.",
         "source": "Flora of North America — Setaria scheelei",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381"
       }
