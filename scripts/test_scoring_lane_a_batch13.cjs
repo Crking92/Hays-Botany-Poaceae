@@ -27,12 +27,12 @@ assert(target.character_evidence.awns.status.includes('DISSECTION_PENDING'));
 assert.equal(target.character_evidence.awns.reported_states.length,2);
 assert(target.field_rule.includes('NOT truly awnless'));
 const html=read(dir+'index.html');
-const script=html.match(/<script>([\\s\\S]*?)<\\/script>/);
+const script=html.match(/<script>([\s\S]*?)<\/script>/);
 assert(script);
 new vm.Script(script[1]);
 const scope={state:{species,selected:{},range:'all',query:''}};
 vm.createContext(scope);
-vm.runInContext(script[1].slice(script[1].indexOf('function currentResults()'),script[1].indexOf('\\nfunction renderTabs')),scope);
+vm.runInContext(script[1].slice(script[1].indexOf('function currentResults()'),script[1].indexOf('\nfunction renderTabs')),scope);
 assert.equal(typeof scope.currentResults,'function');
 function matches(picks,rows=species){
   scope.state.selected=picks;scope.state.species=rows;
