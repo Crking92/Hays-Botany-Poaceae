@@ -1,0 +1,235 @@
+{
+  "title": "Chat 4 Group C - final gallery publication QA batch 5 and 15-of-15 source-handoff closeout",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "issue": 70,
+  "branch": "codex/grass-group-c-publisher-qa-batch5-20261112",
+  "ownership": {
+    "evidence_owner": "Chat 4",
+    "sole_photo_gallery_manifest_and_media_writer": "Chat 2",
+    "deployment_and_browser_release_qa": "Chat 1"
+  },
+  "source_references": [
+    "audits/hays-expansion-20261111/group-c-gallery/group-c-batch5-final-three-20261112.json",
+    "audits/hays-expansion-20261111/group-c-gallery/group-c-publisher-qa-batch1-revised-20261112.json",
+    "audits/hays-expansion-20261111/group-c-gallery/group-c-publisher-qa-batch2-20261112.json",
+    "audits/hays-expansion-20261111/group-c-gallery/group-c-publisher-qa-batch3-20261112.json",
+    "audits/hays-expansion-20261111/group-c-gallery/group-c-publisher-qa-batch4-20261112.json"
+  ],
+  "rechecked_species": [
+    "cenchrus-setaceus",
+    "miscanthus-sinensis",
+    "panicum-dichotomiflorum"
+  ],
+  "qa_species_cumulative": 15,
+  "qa_assigned_total": 15,
+  "initial_ref_roles": {
+    "cenchrus-setaceus": "Previously inspected Kenraiz kz04: living whole tussock, green/dry leaves, purple fountain heads. No need more whole-clump photos.",
+    "miscanthus-sinensis": "Previously inspected Piotrus Commons original: dry dormancy-stage cultivated ornamental clump with spent flower stems and garden label. Misleading generic 'arch leaves' field_view; protect valid dormant role.",
+    "panicum-dichotomiflorum": "Previously inspected Stefan.lefnaer sl37: broad open branching green panicle against blue sky; lacks whole rooted base and true collar."
+  },
+  "manifest_recheck": {
+    "original_group_C_species": 15,
+    "group_C_species_with_1_configured_ref": 15,
+    "group_C_species_with_2_or_more_configured_refs": 0,
+    "provisional_all_species_approved_gallery_ref_total": 76,
+    "additional_source_filename_or_URL_collisions_in_current_provisional_manifest": 0,
+    "archive_original_112_hash_dedupe": "NOT_PERFORMED; must be done by publisher against full existing asset archives"
+  },
+  "candidate_total": 7,
+  "high_priority": 6,
+  "optional": 1,
+  "candidates": [
+    {
+      "species_id": "cenchrus-setaceus",
+      "priority": "P1",
+      "file_name": "Fountain Grass seed on stem (8661935077).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Fountain_Grass_seed_on_stem_(8661935077).jpg",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_Grass_seed_on_stem_(8661935077).jpg",
+      "creator": "John Tann",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "close attached bristly mature reproductive tuft(s) on the head axis; not a measured seed dissection",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Fountain grass — close bristly reproductive clusters on an inflorescence (Australia).",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "original_source_url": "https://www.flickr.com/photos/31031835@N08/8661935077",
+      "original_commons_sha1": "3332faba277b838041d1b81e94c4602785b5a773",
+      "current_source_taxon_label": "Pennisetum setaceum; check synonym crosswalk to Cenchrus setaceus; DO NOT imply separate species",
+      "location": "Como NSW Australia",
+      "flickr_cc_review": "FlickreviewR confirmed CC BY 2.0 February 2015"
+    },
+    {
+      "species_id": "cenchrus-setaceus",
+      "priority": "P1",
+      "file_name": "Fountain Grass ligule (8663031220).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Fountain_Grass_ligule_(8663031220).jpg",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fountain_Grass_ligule_(8663031220).jpg",
+      "creator": "John Tann",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "leaf blade/sheath outer junction with surface hairs; image does NOT open inner true ligule enough to identify specific ligule structure",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Fountain grass — leaf and sheath junction (Australia); detailed inner ligule not shown.",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "original_source_url": "https://www.flickr.com/photos/31031835@N08/8663031220",
+      "original_commons_sha1": "9d60b9e99ba5d9819e091eb0dc3255417e3671b9",
+      "current_source_taxon_label": "Pennisetum setaceum; source historical genus, reconcile with Cenchrus setaceus",
+      "location": "Como NSW Australia",
+      "special_caption_hold": "DO NOT annotate ligule hairs/shape on the strength of filename alone",
+      "flickr_cc_review": "FlickreviewR confirmed CC BY 2.0 February 2015"
+    },
+    {
+      "species_id": "miscanthus-sinensis",
+      "priority": "P1",
+      "file_name": "Bloeiwijze van Miscanthus sinensis. Locatie, De Kruidhof Buitenpost.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bloeiwijze_van_Miscanthus_sinensis._Locatie,_De_Kruidhof_Buitenpost.jpg",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloeiwijze_van_Miscanthus_sinensis._Locatie,_De_Kruidhof_Buitenpost.jpg",
+      "creator": "Dominicus Johannes Bergsma",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "fresh purple-pink arching flowering panicle with slender branches and some attached green leaves, season distinct from current dormant clump",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Chinese silvergrass — fresh flowering panicle with green leaves at De Kruidhof botanical garden, Netherlands.",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "original_commons_sha1": "bfd7ecc22c2262e99c96b049b714e359a5d8155d",
+      "original_date": "2015-10-10",
+      "location": "Netherlands botanical garden",
+      "identity_caution": "Cultivated garden material, cultivar and straight-species genotype not authenticated; do not imply wild native form."
+    },
+    {
+      "species_id": "miscanthus-sinensis",
+      "priority": "P1",
+      "file_name": "Miscanthus sinensis (6315803036).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miscanthus_sinensis_(6315803036).jpg",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miscanthus_sinensis_(6315803036).jpg",
+      "creator": "Matt Lavin",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "close mature fluffy silvery flowering units, small tan spikelet structures at finer scale than whole fresh panicle",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Chinese silvergrass — mature silky reproductive structures (Montana cultivated/source-labeled plant).",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "original_source_url": "https://www.flickr.com/photos/plant_diversity/6315803036",
+      "original_commons_sha1": "603f6bdbc00b0f26f9bbf2da3bf61acc27eb2bcd",
+      "source_identity_caution": "Flickr source explicitly describes this species as occasionally cultivated in Montana; no local specimen or cultivar proof.",
+      "flickr_cc_review": "Commons Flickr reviewer confirmed CC BY-SA 2.0 in 2012"
+    },
+    {
+      "species_id": "miscanthus-sinensis",
+      "priority": "P2_OPTIONAL",
+      "file_name": "Miscanthus sinensis Japan.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Miscanthus_sinensis_Japan.JPG",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miscanthus_sinensis_Japan.JPG",
+      "creator": "Kakidai",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "wider tan late-season arching flowering panicle in early March, contrasting a fresh lilac bloom and a tight silky macro",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Chinese silvergrass — late-season dry flowering panicle in Tokyo, March 2012.",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "date": "2012-03-06",
+      "location": "Tokyo Japan",
+      "source_view_diversity": "Wider late-season panicle vs close Matt Lavin mature macro; add only if not visually duplicative of other newly published panels",
+      "original_commons_sha1": null
+    },
+    {
+      "species_id": "panicum-dichotomiflorum",
+      "priority": "P1",
+      "file_name": "Panicum dichotomiflorum sl16.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_sl16.jpg",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum_dichotomiflorum_sl16.jpg",
+      "creator": "Stefan.lefnaer",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "magnified leaf blade-sheath junction with white hair fringe and 5-mm scale graphic; unlike current full flowering panicle photo",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Fall panicgrass — leaf-sheath and collar close-up showing fringe at junction and 5-mm graphic scale (Austria roadside specimen).",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "date": "2020-10-09",
+      "location": "Lower Austria roadside",
+      "source_description": "Original Commons individual page says 'Blattscheide mit Wimpernkranz', translated leaf sheath with ligule. Avoid claiming species uniquely diagnosed from collar alone.",
+      "original_commons_sha1": null
+    },
+    {
+      "species_id": "panicum-dichotomiflorum",
+      "priority": "P1",
+      "file_name": "Panicum dichotomiflorum plant (12).jpeg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_plant_(12).jpeg",
+      "original_image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum_dichotomiflorum_plant_(12).jpeg",
+      "creator": "stephen (iNaturalist username schizoform)",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "exact_image_rights": "VERIFIED_COMMONS_INDIVIDUAL_FILE_ON_2026_11_12",
+      "role_from_prior_direct_visual_review": "living sprawling leafy culms and diffuse flowering heads in moist streamside habitat, flowering role plus vegetative habit; root crown obscured",
+      "source_role_recheck": "Prior Group C Batch5 image visual inspection, rechecked individual Commons page license/author/specific work 2026-11-12; do not upgrade to voucher-verified ID.",
+      "proposed_caption": "Fall panicgrass — green sprawling shoots and airy flowering heads in a moist Virginia habitat (nonlocal reference).",
+      "geographic_status": "SOURCE_LABELED_NONLOCAL_REFERENCE__HAYS_OCCURRENCE_NOT_INFERRED",
+      "publisher_gate": "CHAT2_FINAL_IMAGE_PIXEL_ID_SOURCE_AND_ARCHIVE_BINARY_HASH_DEDUPE__PUBLISH_WITH_FULL_CC_CREDITS",
+      "original_source_url": "https://www.inaturalist.org/photos/52802982",
+      "original_commons_sha1": "d85aeafec92d7e802e776e407ba63d03d9603f4f",
+      "location": "Virginia USA",
+      "flickr_cc_review": "iNaturalistReviewBot verified original photo CC BY 4.0 2020-09-21"
+    }
+  ],
+  "holds": [
+    {
+      "species_id": "panicum-dichotomiflorum",
+      "file_name": "Panicum dichotomiflorum inflorescence (27).jpeg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_inflorescence_(27).jpeg",
+      "creator": "Yoan MARTIN",
+      "apparent_license": "CC BY-SA 4.0 (Commons display)",
+      "reason": "Individual Commons file page still explicitly flagged License review needed for external-source photograph on 2026-11-12. Do not infer effective license from an unreviewed statement, keep held until independent origin evidence is verified.",
+      "publisher_status": "HOLD_EXACT_RIGHTS_PROVENANCE"
+    },
+    {
+      "species_id": "cenchrus-setaceus",
+      "file_name": "Fountain Grass ligule (8663031220).jpg",
+      "reason": "License valid, but image does not prove true internal ligule shape. Good neutral junction/leaf collar photo only, no labeled microscopic anatomical arrow.",
+      "publisher_status": "PASS_GENERAL_PHOTO_ONLY_HOLD_ANATOMICAL_CAPTION"
+    },
+    {
+      "species_id": "miscanthus-sinensis",
+      "file_name": "all garden Miscanthus sources",
+      "reason": "No wild/cultivar identity proof; explicitly label garden/cultivated material and do not treat source images as wild straight-species genotype certification.",
+      "publisher_status": "PASS_SOURCE_LABELED_GENERAL_REFERENCE_WITH_CULTIVATION_CAUTION"
+    }
+  ],
+  "next_missing_role_targets": {
+    "cenchrus-setaceus": [
+      "split true ligule with measurement",
+      "dormant crown close photo",
+      "mature spikelets/glumes without an invented structure label"
+    ],
+    "miscanthus-sinensis": [
+      "true blade-sheath collar",
+      "naturally occurring wild/unselected origin / provenance",
+      "rooted green whole-plant growth"
+    ],
+    "panicum-dichotomiflorum": [
+      "rooting node and basal habit",
+      "mature seed/floret with scale",
+      "late-season/winter plant stage"
+    ]
+  },
+  "publication_release_claims": {
+    "Group_C_new_approved_gallery_refs_added_by_chat_4": 0,
+    "Group_C_new_photos_verified_publicly_rendering_with_credits_by_chat_4": 0,
+    "existing_provisional_original_public_rendering": "Issue70 previously verified 54/54 original remote photo refs, but new 76 current refs and all Group C additions NOT independently browser-accepted in this turn",
+    "QA_source_handoff_completion": "15/15 completed",
+    "published_photo_coverage_completion": "0/15 newly multi-photo galleries from Group C candidate handoffs; current manifest has one reference per Group C species"
+  },
+  "handoff": "Chat 2 publish six source/role/license-cleared P1 photos after original binary hash/source ID verification; one P2 seasonal panicle only if not redundant. Credit each individual creator, file source, current exact CC BY/CC BY-SA link and any modifications; retain genus synonym and garden notes. Leave unreviewed-license file held. Chat 1 deploy and prove rendered image pixels plus exact credit links on public page; Chat 4 then runs role/credit regression QA and only fills genuine remaining roles."
+}
