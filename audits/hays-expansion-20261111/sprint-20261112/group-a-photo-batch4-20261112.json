@@ -1,0 +1,100 @@
+{
+  "schema": "HAYS_POACEAE_GROUP_A_PHOTO_HANDOFF_V1",
+  "batch": 4,
+  "date": "2026-11-12",
+  "reviewed": [
+    "panicum-miliaceum",
+    "steinchisma-hians"
+  ],
+  "source_cleared": [
+    {
+      "species_id": "panicum-miliaceum",
+      "image_filename": "Panicum miliaceum kz01.jpg",
+      "role": "Seedlings and early seasonal growth",
+      "creator": "Krzysztof Ziarnek / Kenraiz",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_miliaceum_kz01.jpg",
+      "original_source_page": "https://commons.wikimedia.org/wiki/File:Panicum_miliaceum_kz01.jpg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum%20miliaceum%20kz01.jpg?width=900",
+      "verification": "The exact Commons uploader's own-work grant. 960px image inspected: separated young leaves and basal seedlings on bare soil, Romania, no mature traits.",
+      "source_origin": "OFFSITE_NONLOCAL_CULTIVATED_OR_BOTANICAL_GARDEN",
+      "identity_scope": "Species-labeled source image, not a wild Hays Panicum ID or cultivar authentication.",
+      "dedup_hash_pending": true,
+      "source_status": "CLEAR_EXACT_FILE_LICENSE_IMAGE_INSPECTED",
+      "published_by_lane": false,
+      "live_credited_image_checked": false
+    },
+    {
+      "species_id": "panicum-miliaceum",
+      "image_filename": "Panicum miliaceum 01.jpg",
+      "role": "Green flowering head and blade arrangement",
+      "creator": "FreCha",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_miliaceum_01.jpg",
+      "original_source_page": "https://commons.wikimedia.org/wiki/File:Panicum_miliaceum_01.jpg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum%20miliaceum%2001.jpg?width=900",
+      "verification": "The exact Commons own-work uploader grants CC BY-SA 4.0. Actual 500px image shows narrow green immature panicle and foliage, Paris planted setting.",
+      "source_origin": "OFFSITE_NONLOCAL_CULTIVATED_OR_BOTANICAL_GARDEN",
+      "identity_scope": "Species-labeled source image, not a wild Hays Panicum ID or cultivar authentication.",
+      "dedup_hash_pending": true,
+      "source_status": "CLEAR_EXACT_FILE_LICENSE_IMAGE_INSPECTED",
+      "published_by_lane": false,
+      "live_credited_image_checked": false
+    },
+    {
+      "species_id": "panicum-miliaceum",
+      "image_filename": "Mature Proso Millet Panicles.jpg",
+      "role": "Mature ripe golden panicles and grain heads",
+      "creator": "Jschnable",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Mature_Proso_Millet_Panicles.jpg",
+      "original_source_page": "https://commons.wikimedia.org/wiki/File:Mature_Proso_Millet_Panicles.jpg",
+      "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Mature%20Proso%20Millet%20Panicles.jpg?width=900",
+      "verification": "The exact Commons own-work grant. Actual 960px image shows heavy ripe bent golden panicles on cereal crop, Nebraska experimental agricultural station.",
+      "source_origin": "OFFSITE_NONLOCAL_CULTIVATED_OR_BOTANICAL_GARDEN",
+      "identity_scope": "Species-labeled source image, not a wild Hays Panicum ID or cultivar authentication.",
+      "dedup_hash_pending": true,
+      "source_status": "CLEAR_EXACT_FILE_LICENSE_IMAGE_INSPECTED",
+      "published_by_lane": false,
+      "live_credited_image_checked": false
+    }
+  ],
+  "holds": [
+    {
+      "species_id": "steinchisma-hians",
+      "candidate": "https://wetland-plants.usace.army.mil/static/testing/STHI3_0.jpg",
+      "identifying_source": "https://warcapps.usgs.gov/PlantID/Species/Details/283",
+      "supporting_agency_page": "https://wetland-plants.usace.army.mil/plant/STHI3/",
+      "photographer": "Larry Allain",
+      "visual_identity": "Exact image inspected: flowering/seedhead of delicate open panicgrass with sparse nodding branches, but no spikelet dissection.",
+      "reason": "US Army Corps page marks image ©Larry Allain while USGS Louisiana page says Larry Allain, U.S. Geological Survey; whether this particular photo was made during federal duties and is US federal public-domain work cannot be established from conflicting notices. Hold exact photo rather than assert federal PD."
+    },
+    {
+      "species_id": "panicum-miliaceum",
+      "reason": "All three photos show cultivated or managed species examples, not proof any narrow/green heads on Hays observation page are truly P. miliaceum. Keep local ID and seed spill status unresolved."
+    }
+  ],
+  "summary": {
+    "reviewed_this_batch": 2,
+    "reviewed_cumulative": 11,
+    "source_cleared_this_batch": 3,
+    "source_cleared_cumulative": 22,
+    "species_with_eligible_general_images_cumulative": 9,
+    "license_hold_species": [
+      "melica-nitens",
+      "steinchisma-hians"
+    ],
+    "installed_by_lane": 0,
+    "new_gallery_photos_verified_visible": 0
+  },
+  "publisher_handoff": "De-duplicate exact source/sha vs original archives and live galleries. Release legal general millet photos promptly; gaping grass source-image copyright requires verification before release. No anatomy/bonus nativity waiting.",
+  "protected": [
+    "hays-candidates.json",
+    "photo assets",
+    "website UI",
+    "scored scoring JSON"
+  ]
+}
