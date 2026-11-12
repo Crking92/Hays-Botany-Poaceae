@@ -1,0 +1,33 @@
+name: Grass provisional Batch 4 — three source-scoped unverified field trials
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-batch4.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_provisional_trial_batch4.cjs'
+      - '.github/workflows/grass-provisional-batch4.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/provisional-trial-batch4.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'scripts/test_provisional_trial_batch4.cjs'
+      - '.github/workflows/grass-provisional-batch4.yml'
+permissions: {contents: read}
+jobs:
+  provisional-trial4:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Exact source/credit, provisional status, unknown-state and 112 scored invariants
+        run: |
+          node scripts/test_provisional_trial_batch4.cjs
+          node scripts/test_grass_key_integration.cjs
+          node scripts/test_provisional_trial_batch1.cjs
+          node scripts/test_provisional_trial_batch2.cjs
+          node scripts/test_provisional_trial_batch3.cjs
