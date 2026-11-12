@@ -2851,10 +2851,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1314) — Look past the woolly outline and measure the head from base to tip. The Flora gives about 2–15 cm.\n\nFind a tightly contracted, often lobed panicle approximately 1.5–16 cm long; the soft halo is a useful first clue, not a species-level proof. Existing panels show the real fuzzy head and moist-site colony, not attached roots.",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1314) — Look past the woolly outline and measure the head from base to tip. The Flora gives about 2–15 cm.\n\nFind a tightly contracted, often lobed panicle approximately 1.5–16 cm long; the soft halo is a useful first clue, not a species-level proof. Existing panels show the real fuzzy head and moist-site colony, not attached roots.\n\nField ID Lab: the dense rabbitfoot head can look like a short compact tuft or an elongated narrow cylindrical panicle. It is a branched panicle with long awns on the glumes, not a true spike or a Setaria bristlegrass.",
     "traits": {
       "head": [
-        "compact"
+        "compact",
+        "long_narrow_panicle"
       ],
       "habit": [
         "tuft"
@@ -2890,6 +2891,21 @@
         "reference": "The distinctive visible beard comes chiefly from long GLUME awns arising from emarginate tips; lemma may still be short-awned, so do not say lemma always awnless.",
         "status": "SOURCE_CHECKED_DIFFERENT_BRact_AWNS",
         "review_date": "2026-11-10"
+      },
+      "head_dense_narrow_region": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1314, Polypogon monspeliensis; Kew GrassBase",
+        "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "supplemental_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1048074-2/general-information",
+        "category": "reproductive",
+        "reported_states": [
+          "very dense contracted bristly panicle 2–15 cm long",
+          "ca. 1–2.5 cm broad in regional flora",
+          "often elongate oval or cylindrical"
+        ],
+        "reference": "The mature rabbitfoot/beardgrass head is dense (compact field choice), but an elongated contracted panicle can reasonably be recognized under the broad long-narrow category. Retain compact, do not call it a true unbranched spike, and confirm glume awns rather than confusing these with Setaria branch bristles.",
+        "certainty": "DIRECT_REGIONAL_REPRODUCTIVE_SOURCE_KNOWNSPECIES_BROAD_FIELD_CATEGORY",
+        "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
