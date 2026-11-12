@@ -425,12 +425,22 @@
         "queue_action": "Do not create new photo-needs entries before reconciling existing archives."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "No new measurements or filter characters asserted; photo-role review only."
+      "morphology_reference_note": "No new measurements or filter characters asserted; photo-role review only.",
+      "pass43_hosted_rechecks": [
+        {
+          "i": 0,
+          "pass": "PHASE4_PASS43_NO_NEW_COUNT",
+          "date": "2026-11-11",
+          "blob_sha": "a87d992c1371710ea1a4a89d460bbd0b77d7037b",
+          "result": "Existing previously counted hosted image re-rendered and verified against exact Git SHA; not new first audit. Caption corrected if needed.",
+          "rights_note": "Original metadata retained; rights not newly cleared"
+        }
+      ]
     },
     "review": {
       "pass": "PHASE4_PASS42_EXACT_SOURCE_PREVIEW",
       "review_date": "2026-11-11",
-      "status": "SOURCE_PREVIEW_ONLY_NOT_HOSTED_AUDITED",
+      "status": "SOURCE_PREVIEW_RECONCILED_WITH_PREEXISTING_HOSTED_QA",
       "scope": "The Commons original-file image was visually rendered through its source page. GitHub-hosted photo bytes could not be viewed or image-matched this pass; this source inspection does NOT increase 421/514 hosted-photo QA count.",
       "rights_status": "COMMONS_SOURCE_PAGE_CREATOR_AND_LICENSE_MATCH_ORIGINAL_RECORD; NOT_A_NEW_CLEARANCE_FOR_EXACT_HOSTED_FILE",
       "photo_roles": [
@@ -451,9 +461,7 @@
           "hosted_photo_status": "PENDING_ACTUAL_HOSTED_VISUAL_QA"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "glume vein counts, lemma length and number of florets cannot be reliably measured",
         "no attached roots or whole flowering shoot to certify annual habit"
@@ -463,7 +471,8 @@
       "seasonal_review": {
         "observed": "No independently established Hays County November–February date",
         "queue_action": "Existing master Photo Needs Queue only; seek diagnostic anatomy rather than duplicate general plant shots"
-      }
+      },
+      "hosted_photo_recheck": "PHASE4_PASS43_NO_NEW_COUNT"
     }
   },
   {
