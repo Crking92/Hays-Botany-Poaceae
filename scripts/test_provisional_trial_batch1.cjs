@@ -44,6 +44,12 @@ for(const t of trials){
    'Not exactly the four key characters');
 }
 const html=read('index.html');
+assert(html.includes('If awns are broken or missing, skip this question'),
+ 'Damaged/broken awns must guide users to skip an unknown character');
+assert(html.includes('If awns broke, fell off'),
+ 'The no-long-awn option must not claim worn or missing awns prove absence');
+assert(trials.find(x=>x.id==='bromus-tectorum').field_rule.includes('leave the awn question unanswered'),
+ 'Cheatgrass trial must warn about false exclusion from broken awns');
 assert(html.includes('provisional-trial-profiles.json'),'The normal key does not load trials');
 assert(html.includes('Research trial · unverified'),'Missing result badge');
 assert(html.includes('Not admitted to the officially scored 112'),'Missing explicit detail warning');
@@ -61,6 +67,8 @@ const positives=[
  ['setaria-leucopila',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'}],
  ['setaria-leucopila',{head:'foxtail',habit:'tuft',ligule:'hairs',awns:'bristles'}],
  ['bromus-tectorum',{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'long'}],
+ // A weathered specimen with broken or missing awns is UNKNOWN, not awnless.
+ ['bromus-tectorum',{head:'branched_oat',habit:'tuft',ligule:'membrane'}],
  ['bromus-catharticus',{head:'branched_oat',habit:'tuft',ligule:'membrane'}],
  ['bromus-catharticus',{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
  ['lolium-multiflorum',{head:'spike',habit:'tuft',ligule:'membrane',awns:'long'}],
@@ -76,6 +84,7 @@ const negatives=[
  ['setaria-viridis',{ligule:'absent'}],
  ['setaria-leucopila',{ligule:'absent'}],
  ['bromus-tectorum',{head:'foxtail'}],
+ ['bromus-tectorum',{head:'branched_oat',awns:'none_obvious'}],
  ['bromus-catharticus',{head:'spike'}],
  ['lolium-multiflorum',{head:'airy'}],
  ['echinochloa-colona',{ligule:'hairs'}]
