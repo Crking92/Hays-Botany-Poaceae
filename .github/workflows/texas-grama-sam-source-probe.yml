@@ -1,0 +1,20 @@
+name: Texas grama Sam source-specific replacement rights probe (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - scripts/texas_grama_sam_photo_source_probe_20261112.py
+      - .github/workflows/texas-grama-sam-source-probe.yml
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  texas-grama-original-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install Pillow
+        run: pip install --quiet pillow
+      - name: Check single exact photo observation and media-specific rights without publishing
+        run: python scripts/texas_grama_sam_photo_source_probe_20261112.py
