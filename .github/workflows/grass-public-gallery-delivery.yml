@@ -1,0 +1,34 @@
+name: Hays Grass public gallery delivery audit (no image downloads)
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/data/poaceae-release.json'
+      - 'site/data/gallery-index.json'
+      - 'site/data/species/*.json'
+      - 'scripts/smoke_public_grass_gallery.py'
+      - '.github/workflows/grass-public-gallery-delivery.yml'
+  pull_request:
+    paths:
+      - 'scripts/smoke_public_grass_gallery.py'
+      - '.github/workflows/grass-public-gallery-delivery.yml'
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check offline test syntax
+        run: python3 -m py_compile scripts/smoke_public_grass_gallery.py
+  live-photo-transport:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check public photo URL headers, credits, release counts and held-photo exclusions
+        run: python scripts/smoke_public_grass_gallery.py
