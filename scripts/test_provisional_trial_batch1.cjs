@@ -36,7 +36,7 @@ for(const t of trials){
   assert.deepEqual(original,src.approved_gallery[i],'Source photo/credit/license metadata changed');
   assert(original.src?.startsWith('https://')&&original.source_page?.startsWith('https://'),'Source URL absent');
   assert(original.creator&&original.license,'Exact creator/license required');
-  assert(/^CC (?:BY(?:-SA)?|0)(?:\b|$)/i.test(original.license),'Unexpected source license: '+original.license);
+  assert(/^(?:CC0|CC BY(?:-SA)?)(?:\b|$)/i.test(original.license),'Unexpected source license: '+original.license);
   photos++;
  }
  assert(t.diagnostic_checks?.length,'Diagnostic checks not supplied');
