@@ -150,6 +150,19 @@ const positives = [
   ['white tridens tuft inner membrane',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['tridens-albescens']],
   ['purpletop rhizome membranous collar',{head:'airy',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['tridens-flavus']],
   ['purpletop rhizome ciliate ligule',{head:'airy',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['tridens-flavus']],
+  // Lane A #102 — documented conflict-aware Texas grama / knotroot collar options.
+  ['Texas grama short rhizome tiny membrane',{head:'short_side_racemes',habit:'rhizome',ligule:'membrane',awns:'three_short'},['bouteloua-rigidiseta']],
+  ['Texas grama short rhizome cilia',{head:'short_side_racemes',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['bouteloua-rigidiseta']],
+  ['Texas grama tuft visible membrane',{head:'short_side_racemes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['bouteloua-rigidiseta']],
+  ['knotroot bristlegrass actual membrane exposed',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'},['setaria-parviflora']],
+  // Lane B #101 — unilateral, subdigitate and whorled answers.
+  ['green sprangletop many unilateral',{head:'many_one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['disakisperma-dubium']],
+  ['green sprangletop near-terminal fingers',{head:'fingers',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['disakisperma-dubium']],
+  ['southern crabgrass unilateral fingers',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['digitaria-ciliaris']],
+  ['southern crabgrass seven plus branches',{head:'many_one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['digitaria-ciliaris']],
+  ['southern crabgrass stacked whorls',{head:'whorls',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['digitaria-ciliaris']],
+  ['Texas signalgrass seven unilateral hair fringe',{head:'many_one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['urochloa-texana']],
+  ['Texas signalgrass seven unilateral ciliate membrane',{head:'many_one_sided',habit:'mat',ligule:'membrane',awns:'none_obvious'},['urochloa-texana']],
 ];
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
@@ -209,6 +222,16 @@ const negatives = [
   [{ligule:'absent'},'tridens-albescens'],
   [{habit:'mat'},'tridens-flavus'],
   [{head:'long_narrow_panicle',habit:'mat'},'tridentopsis-mutica'],
+  // Keep conditional source evidence from hard-coding other heads or false organs.
+  [{head:'combs'},'bouteloua-rigidiseta'],
+  [{habit:'mat'},'bouteloua-rigidiseta'],
+  [{head:'burrs'},'setaria-parviflora'],
+  [{awns:'burs'},'setaria-parviflora'],
+  [{head:'many_one_sided',awns:'long'},'digitaria-ciliaris'],
+  [{head:'many_one_sided',awns:'long'},'urochloa-texana'],
+  [{head:'fingers',awns:'bristles'},'disakisperma-dubium'],
+  [{head:'many_one_sided'},'hordeum-pusillum'],
+  [{head:'whorls'},'elymus-canadensis'],
   [{habit:'mat'},'paspalum-urvillei'],
 ];
 for(const [picks,id] of negatives) assert(!results(picks).includes(id),'false inclusion of ' + id);

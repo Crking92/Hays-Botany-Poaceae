@@ -47,6 +47,8 @@ jobs:
         run: node scripts/test_grass_field_rules.cjs
       - name: Execute Lane B Batch 3 long-contracted panicle regressions
         run: node scripts/test_grass_sprint_lane_b_batch3.cjs
+      - name: Execute Lane B Batch 5 branching/whorl production-filter test
+        run: node scripts/test_grass_sprint_lane_b_batch5.cjs
       - name: Execute Lane B Batch 4 barnyardgrass production-filter test
         run: node scripts/test_grass_sprint_lane_b_batch4.cjs
       - name: Execute Lane C Batch 5 self-contained real-filter regressions
