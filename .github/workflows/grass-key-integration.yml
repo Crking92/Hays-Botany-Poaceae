@@ -1,0 +1,27 @@
+name: Hays Grass Lab combined scoring regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/test_grass_key_integration.cjs'
+      - '.github/workflows/grass-key-integration.yml'
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/test_grass_key_integration.cjs'
+      - '.github/workflows/grass-key-integration.yml'
+jobs:
+  integrated-field-key:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check live filter, false exclusions and 112/57 admission boundary
+        run: node scripts/test_grass_key_integration.cjs
