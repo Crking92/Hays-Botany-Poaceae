@@ -74,7 +74,9 @@ const newlyValid=[
  ['chloris-verticillata',{head:'whorls',habit:'tuft',ligule:'hairs',awns:'long'}],
  ['chloris-verticillata',{head:'whorls',habit:'mat',ligule:'hairs',awns:'long'}],
  ['chloris-virgata',{head:'fingers',habit:'tuft',ligule:'hairs',awns:'long'}],
- ['chloris-virgata',{head:'fingers',habit:'mat',ligule:'hairs',awns:'long'}]
+ ['chloris-virgata',{head:'fingers',habit:'mat',ligule:'hairs',awns:'long'}],
+ ['bromus-japonicus',{head:'branched_oat',habit:'tuft',ligule:'hairs',awns:'long'}],
+ ['bromus-pubescens',{head:'branched_oat',habit:'tuft',ligule:'hairs',awns:'long'}]
 ];
 const incompatible=[
  ['chasmanthium-latifolium',{head:'fingers'}],
@@ -101,7 +103,13 @@ const incompatible=[
  ['chloris-verticillata',{head:'fingers'}],
  ['chloris-virgata',{head:'whorls'}],
  ['chloris-verticillata',{awns:'burs'}],
- ['chloris-virgata',{awns:'burs'}]
+ ['chloris-virgata',{awns:'burs'}],
+ ['bromus-japonicus',{head:'airy'}],
+ ['bromus-pubescens',{head:'airy'}],
+ ['bromus-japonicus',{habit:'rhizome'}],
+ ['bromus-pubescens',{habit:'rhizome'}],
+ ['bromus-japonicus',{ligule:'absent'}],
+ ['bromus-pubescens',{ligule:'absent'}]
 ];
 for(const [id,picks] of newlyValid) assert(results(picks).includes(id),'false exclusion remains: '+id+' '+JSON.stringify(picks));
 for(const [id,picks] of incompatible) assert(!results(picks).includes(id),'negative control leaked: '+id);
@@ -119,6 +127,12 @@ assert(specimenMap.get('bouteloua-rigidiseta').character_evidence.habit.reported
 assert(specimenMap.get('bouteloua-rigidiseta').character_evidence.ligule.reported_states?.length===2,'Texas grama hair fringe versus ciliate membrane disagreement must be preserved');
 assert(specimenMap.get('setaria-parviflora').character_evidence.ligule.reported_states?.length===2,'Knotroot bristlegrass ligule tissue observations must be retained');
 assert(specimenMap.get('bouteloua-hirsuta').character_evidence.habit.reported_states?.length===3,'Hairy grama H&L versus FNA surface-stem conflict must remain explicit');
+for(const id of ['bromus-japonicus','bromus-pubescens']){
+ const s=specimenMap.get(id);
+ assert(s.character_evidence.ligule.reported_states?.length===2,id+': ciliate membrane margin evidence missing');
+ assert(s.character_evidence.ligule.status.includes('SPECIMEN_PENDING'),id+': exact collar specimen not yet verified');
+ assert(s.traits.head.includes('branched_oat') && !s.traits.head.includes('airy'),id+': large multi-flowered spikelets cannot satisfy tiny-spikelet airy choice');
+}
 assert(specimenMap.get('bouteloua-hirsuta').character_evidence.head.reported_states?.length===2,'Hairy grama Diggs versus FNA digitate variation must remain visible');
 for(const id of ['chloris-verticillata','chloris-virgata'])assert(specimenMap.get(id).character_evidence.ligule.reported_states?.length===2,id+': ciliate membrane source observations absent');
 const unknown={id:'unknown',common:'Unknown',scientific:'Unknown',range:'UNRESOLVED',traits:{}};
@@ -138,7 +152,9 @@ const expectedAdditions={
  'setaria-parviflora':{ligule:['membrane']},
  'bouteloua-hirsuta':{head:['fingers'],habit:['mat']},
  'chloris-verticillata':{ligule:['hairs']},
- 'chloris-virgata':{ligule:['hairs']}
+ 'chloris-virgata':{ligule:['hairs']},
+ 'bromus-japonicus':{ligule:['hairs']},
+ 'bromus-pubescens':{ligule:['hairs']}
 };
 for(const [id,expected] of Object.entries(expectedAdditions)){
  const s=specimenMap.get(id);
@@ -193,7 +209,7 @@ if(process.argv[2]){
 }
 console.log(JSON.stringify({
  pass:true,scored:112,totalLearner:169,provisional:57,
- correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:21,
+ correctedSpecies:Object.keys(expectedAdditions),scoringStatesAdded:23,
  regressions: newlyValid.length,negativeControls:incompatible.length,disputedBuffalograssPathsRetained:retainedDisputed.length,unknownRetained:true,
  baselineChecked,historicalCombinationsRetained:historicalCombinations,
  photoReferencesPreserved
