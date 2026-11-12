@@ -18,6 +18,9 @@ on:
 permissions: {contents: read}
 jobs:
   verify-public-trial:
+    # A PR cannot pass exact live Pages parity before its changes are merged.
+    # Source/status regressions are covered by the local trial-4 workflow.
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
