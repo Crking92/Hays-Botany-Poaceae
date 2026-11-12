@@ -884,11 +884,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1246) — Look all the way around a stem node for a ring of short, spreading white hairs. The Flora key uses this alongside spikelet length to separate Cane Bluestem from Silver Bluestem.\n\nFirst find a genuine CULM node, NOT the base of a leaf blade or a fluffy flowering rachis. New real cane photos 5 and 6 show thick rings of long ascending soft hairs at true stem joints on a research-grade Williamson County plant. Photo 5 has a millimeter ruler beside two photographed nodes. Then compare the broader silvery head to KR and silver. Published hair-length ranges remain source claims, n",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1246) — Look all the way around a stem node for a ring of short, spreading white hairs. The Flora key uses this alongside spikelet length to separate Cane Bluestem from Silver Bluestem.\n\nFirst find a genuine CULM node, NOT the base of a leaf blade or a fluffy flowering rachis. New real cane photos 5 and 6 show thick rings of long ascending soft hairs at true stem joints on a research-grade Williamson County plant. Photo 5 has a millimeter ruler beside two photographed nodes. Then compare the broader silvery head to KR and silver. Published hair-length ranges remain source claims, n A compact mature CANE BLUESTEM panicle can make a fan of several near-terminal ascending racemes; under the broad filter a finger-like silhouette is therefore compatible. Many other cane plants instead show a long central panicle axis, so confirm the hairy culm nodes and sessile spikelets.",
     "traits": {
       "head": [
         "bushy",
-        "long_narrow_panicle"
+        "long_narrow_panicle",
+        "fingers"
       ],
       "habit": [
         "tuft"
@@ -905,10 +906,21 @@
     "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_RIGHTS_AND_ANATOMY_OPEN",
     "character_evidence": {
       "head": {
-        "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
-        "reference": "p.170 (printed 1246): silvery contracted branches, main axis typically longer than branches, unlike KR digitate inflorescence",
-        "status": "PARTIAL_REGIONAL_FLORA_CHECK",
-        "review_date": "2026-11-10"
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1246; Kew POWO/GrassBase Bothriochloa barbinodis; FNA treatment of the same species; USDA Forest Service FEIS",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35184-2/general-information",
+        "secondary_source_url": "https://research.fs.usda.gov/feis/species-reviews/botbar",
+        "reference": "Regional Flora distinguishes cane bluestem from KR by the usually elongate panicle axis and silvery branch cluster. GrassBase for this species explicitly permits racemes digitately arranged OR on a central axis; USFS describes a terminal fan of dense racemes. Keep bushy and long_narrow_panicle; add the visual fingers choice ONLY for digitate/near-terminal fan presentation. This is not a claim all branches arise at exactly one point or that a fan alone is diagnostic.",
+        "role": "reproductive",
+        "reported_states": [
+          "bushy",
+          "long_narrow_panicle",
+          "fingers (conditional terminal fan)"
+        ],
+        "status": "PRIMARY_REGIONAL_VS_GRASSBASE_ARCHITECTURE_VARIATION_COMPATIBLE_SPECIMEN_PENDING",
+        "review_date": "2026-11-12",
+        "historical_evidence": "p.170 (printed 1246): silvery contracted branches, main axis typically longer than branches, unlike KR digitate inflorescence",
+        "photo_voucher_support": "Existing stem-node photographs remain intact; no specific fully attached fan panicle newly specimen-verified.",
+        "source_scope": "Diggs leads regional reproductive morphology; Kew/GrassBase and FNA supplement the documented option; do not copy the secondary species diagnosis onto B. torreyana."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -927,6 +939,14 @@
         "compare": "KR: approximately 3–4.5 mm sessile spikelets and 9–17 mm awns",
         "certainty": "Comparative source-backed; overlap at boundary",
         "source": "Kew POWO / GrassBase, B. barbinodis and FNA B. ischaemum",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35184-2/general-information"
+      },
+      {
+        "look": "Separate a cane-bluestem terminal fan from a true KR finger cluster",
+        "check": "Cane bluestem can have a fan-like cluster of racemes and often a straight central panicle axis. Selecting finger-like near-terminal rays is compatible for some individuals, but it is not proof that all rays originate at one node. Check bearded culm nodes, mature spikelet lengths and the complete head.",
+        "compare": "KR bluestem often forms a more compact digitate head with different blade/collar hairs. Silver bluestem shares a silvery panicle but usually has shorter sessile spikelets and different node hairs.",
+        "certainty": "Diggs regional key + GrassBase alternative digitate architecture; exact authenticated cane fan/photo-to-source matching still pending.",
+        "source": "Diggs et al. (1999), p. 1246; Kew GrassBase Bothriochloa barbinodis; USDA FEIS",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35184-2/general-information"
       }
     ],
