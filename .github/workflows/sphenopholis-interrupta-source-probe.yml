@@ -1,0 +1,21 @@
+name: Group A Sphenopholis interrupta exact-photo source probe (READ ONLY)
+on:
+  pull_request:
+    paths:
+      - scripts/sphenopholis_interrupta_exact_media_gate_20261112.py
+      - .github/workflows/sphenopholis-interrupta-source-probe.yml
+  workflow_dispatch:
+permissions: {contents: read}
+jobs:
+  sphenopholis-photo-source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image decoder
+        run: pip install --quiet pillow
+      - name: Resolve exact original photo IDs, creator, CC version and pixel hashes
+        run: python scripts/sphenopholis_interrupta_exact_media_gate_20261112.py
