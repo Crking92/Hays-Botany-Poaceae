@@ -398,7 +398,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "MOURNING LOVEGRASS = unusually thin leaves and airy but finer panicle. Confirm inward-rolled blade with live cross section.",
+    "field_rule": "Compare mourning lovegrass’s inward-rolled 1–2 mm blades with the usually flat 2–3 mm blades reported for plains lovegrass in the Hill Country treatment. Width overlaps; check the collar and mature flowering specimen together. Historical determinations have confused the two. Do not decide from an airy panicle or sheath-margin hair alone.",
     "traits": {
       "head": [
         "airy"
@@ -429,16 +429,23 @@
         "reference": "Ligule a true hair fringe; upper sheath oral hairs may also be visible.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "regional_comparison": {
+        "source": "Hagenbuch & Lemke (2015), pp. 32, 48; Diggs et al. (1999), printed pp. 1270, 1272",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+        "reference": "Hagenbuch & Lemke p. 48 supports inward-rolled 1–2 mm blades, hairy collar margins and an approximately 1 mm hair-fringe ligule. Its p. 32 key calls the outer sheath margin ciliate, while the p. 48 description calls sheath margins entire: preserve this internal source discrepancy and do not force a hair-based exclusion. Diggs discusses E. lugens under E. intermedia and warns of reassigned specimens; that passage is not a separate reproductive description of mourning lovegrass. Existing secondary reproductive measurements remain supplementary and were not newly verified here.",
+        "status": "REGIONAL_VEGETATIVE_REVIEWED_SHEATH_MARGIN_CONFLICT_REPRODUCTIVE_GAP",
+        "review_date": "2026-11-12"
       }
     },
     "diagnostic_checks": [
       {
         "look": "Inspect the extraordinarily fine, often INROLLED blade",
-        "check": "GrassBase describes narrow often involute blades about 1–2 mm wide, with a generally smooth sheath surface but some hair at its mouth. A large hairy sheath surface should make you compare with E. hirsuta.",
-        "compare": "Bigtop lovegrass has much broader 4–8 mm blades and hairy sheaths; sand lovegrass also has narrow blades but different floral details.",
-        "certainty": "Kew GrassBase; leaf cross-section and sheath close-up still needed",
-        "source": "Kew GrassBase — Eragrostis lugens",
-        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:93132-2/general-information"
+        "check": "Hagenbuch & Lemke (2015), p. 48, describes inward-rolled blades 1–2 mm wide, smooth sheath surfaces, hairy collar margins and a hair-fringe ligule about 1 mm long. Its key on p. 32 calls the outer sheath margin ciliate, but the species description calls the margins entire. Do not turn that unresolved wording difference into an absence/presence test.",
+        "compare": "Plains lovegrass has flat 2–3 mm blades and hairy collars in the same regional account; widths overlap at 2 mm. Bigtop lovegrass remains a broader-bladed, hairy-sheath comparison in the earlier secondary evidence.",
+        "certainty": "Primary regional vegetative account directly checked; internal sheath-margin discrepancy and actual specimen verification remain open",
+        "source": "Hagenbuch & Lemke (2015), pp. 32, 48",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48"
       },
       {
         "look": "Trace the fine flexuous branches in the diffuse panicle",
