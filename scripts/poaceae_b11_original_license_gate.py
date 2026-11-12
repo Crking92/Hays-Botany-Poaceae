@@ -42,14 +42,14 @@ for species,obs_id,photo_id,want in TARGETS:
   creator=owner.get("name") or owner.get("login") or photo.get("attribution") or "UNKNOWN"
   media=photo.get("url")
   if not media: raise ValueError("media original URL absent")
-  original_url=re.sub(r"/(square|thumb|small|medium|large)\\.", "/original.",media)
+  original_url=re.sub(r"/(square|thumb|small|medium|large)\.", "/original.",media)
   original=load(original_url)
   img=Image.open(BytesIO(original));img.verify()
   img=Image.open(BytesIO(original))
   h=hashlib.sha256(original).hexdigest()
   try:
    page=load(f"https://www.inaturalist.org/photos/{photo_id}", 4*1024*1024).decode("utf-8","replace")
-   rights_links=sorted(set(unescape(u).replace("http://","https://") for u in re.findall(r"""https?://creativecommons\\.org/(?:licenses/[^\\s\"'<>]+|publicdomain/zero/[^\\s\"'<>]+)""",page,re.I)))
+   rights_links=sorted(set(unescape(u).replace("http://","https://") for u in re.findall(r"""https?://creativecommons\.org/(?:licenses/[^\s\"'<>]+|publicdomain/zero/[^\s\"'<>]+)""",page,re.I)))
    page_status="FETCHED"
   except Exception as e:
    rights_links=[];page_status="BLOCKED "+str(e)[:95]
