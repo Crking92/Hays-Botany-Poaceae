@@ -218,7 +218,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Munroa/munroa-pulchella/images/commons-79ab04a78c4f.jpg",
-        "label": "ARCHIVED — Patrick Alexander's exact-taxon flowering/habit reference",
+        "label": "Low gravel-ground fluffgrass clump with many pale woolly flowering clusters — spikelets not dissected",
         "creator": "Patrick Alexander from Las Cruces, NM",
         "license": "CC0",
         "source_page": "https://commons.wikimedia.org/wiki/File%3ADasyochloa_pulchella_-_Flickr_-_aspidoscelis_%283%29.jpg",
@@ -271,7 +271,7 @@
     "source_blob_sha": "91e217097c5bae84f64e06ccfa08b65a8b464acf",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "SOURCE REFERENCED; ROLE QA PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "broad_group_screened": "2026-11-10",
     "broad_group": "Spikes, awns, dropseeds and remaining grasses",
     "character_evidence": {
@@ -334,12 +334,29 @@
       "note": "Published botanical comparisons only; existing photos not individually anatomy/sex certified and source permissions not independently cleared."
     },
     "photo_character_audit": {
-      "pass": "PHASE4_PASS17_7_HOSTED_IMAGES",
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
       "review_date": "2026-11-11",
-      "status": "PARTIAL_VISUAL_REVIEW_3_OF_4",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_4_OF_4",
       "rights_status": "EXISTING_CREDITS_RETAINED_EXACT_IMAGE_SOURCE_LICENSE_NOT_REVALIDATED",
-      "scope": "3 of 4 current Lab gallery frames rendered from GitHub-hosted image bytes. Source photo rights, independent identity vouchers, measurements and collection dates not revalidated.",
+      "scope": "3 of 4 current Lab gallery frames rendered from GitHub-hosted image bytes. Source photo rights, independent identity vouchers, measurements and collection dates not revalidated. Pass43 additionally opened Munroa pulchella hosted index 0 with exact file Git blob verified via a read-only GitHub Actions run. No new image installation, license approval, or individual specimen identity certification.",
       "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "low dense gray-green tuft growing among gravel and stones",
+            "dozens of pale woolly reproductive clusters and fine pointed surrounding leaves"
+          ],
+          "cannot_verify": [
+            "individual nested spikelets, true inner glumes and lemma surfaces not isolated",
+            "roots and confirmed November–February photo date are not exposed"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Munroa/munroa-pulchella/images/commons-79ab04a78c4f.jpg",
+          "git_blob_sha": "f86b0872ce8dc7adaeedb9ca35b201b9aae34314",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
+        },
         {
           "i": 1,
           "verdict": "DIRECT_VISIBLE",
@@ -386,22 +403,25 @@
           "byte_verification": "GITHUB_CONNECTOR_RENDERED_IMAGE; SOURCE LICENSE NOT REVALIDATED"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "Archived Patrick Alexander exact-taxon habit image i=0 not renderable from connector",
         "rooted complete crown with attached inflorescence",
         "isolated true spikelet parts and calibrated anatomy",
         "confirmed dated winter standing plant"
       ],
-      "summary": "Three hosted images inspected: woolly pointed green reproductive bract groups and dry pale/white spikelet region, plus green/white/purple vegetative-floral mix. i=0 remains unreviewed.",
+      "summary": "Three hosted images inspected: woolly pointed green reproductive bract groups and dry pale/white spikelet region, plus green/white/purple vegetative-floral mix. i=0 remains unreviewed. Pass43 DIRECT_VISIBLE: low dense gray-green tuft growing among gravel and stones; dozens of pale woolly reproductive clusters and fine pointed surrounding leaves. Still unresolved: individual nested spikelets, true inner glumes and lemma surfaces not isolated; roots and confirmed November–February photo date are not exposed.",
       "seasonal_review": {
         "observed": "White dry-looking reproductive bracts visible, but winter or late-fall collection dates are not established.",
         "queue_action": "Inspect current dated winter/dormant archives before proposing new photos in the existing master Photo Needs Queue."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image-specific visual QA only; original region authority, key characters, taxonomy and morphology filters unchanged."
+      "morphology_reference_note": "Image-specific visual QA only; original region authority, key characters, taxonomy and morphology filters unchanged.",
+      "previous_pass": "PHASE4_PASS17_7_HOSTED_IMAGES",
+      "previous_scope": "3 of 4 current Lab gallery frames rendered from GitHub-hosted image bytes. Source photo rights, independent identity vouchers, measurements and collection dates not revalidated.",
+      "previous_summary": "Three hosted images inspected: woolly pointed green reproductive bract groups and dry pale/white spikelet region, plus green/white/purple vegetative-floral mix. i=0 remains unreviewed.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original photo creator, license and source link preserved; independent exact-image source-page rights review remains separate."
     }
   },
   {

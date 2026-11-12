@@ -878,7 +878,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/turner-brockman-hairy-tridens-green-attached-spikelet-698633127.jpg",
-        "label": "HAIRY WOOLLYGRASS — green overlapping spikelets and hairy blade margin",
+        "label": "Tightly overlapping pointed green spikelets beside narrow pale-edged blade — individual edge hairs and lemma nerves not resolved",
         "creator": "Turner Brockman",
         "license": "CC BY-SA 4.0",
         "source_page": "https://www.inaturalist.org/photos/698633127",
@@ -985,7 +985,17 @@
         "queue_action": "Check previously collected winter images before new requests."
       },
       "morphology_reference_status": "FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits."
+      "morphology_reference_note": "Image role and caption verification only; no key filter, measurements or native-status edits.",
+      "pass43_hosted_rechecks": [
+        {
+          "i": 0,
+          "pass": "PHASE4_PASS43_NO_NEW_COUNT",
+          "date": "2026-11-11",
+          "blob_sha": "a15308b0ee895fc3521bbba71d558d45b133e988",
+          "result": "Existing previously counted hosted image re-rendered and verified against exact Git SHA; not new first audit. Caption corrected if needed.",
+          "rights_note": "Original metadata retained; rights not newly cleared"
+        }
+      ]
     }
   },
   {
@@ -2292,12 +2302,30 @@
         "queue_action": "Use existing master Photo Needs Queue for specific missing seasonal and anatomy views; do not launch general re-downloads."
       },
       "morphology_reference_status": "ILLUSTRATED_FLORA_PRIMARY_PRIOR_REFERENCE_NOT_RECHECKED",
-      "morphology_reference_note": "Photo-caption QA only; preserved prior source-backed anatomy and key choices, no local nativity claims."
+      "morphology_reference_note": "Photo-caption QA only; preserved prior source-backed anatomy and key choices, no local nativity claims.",
+      "pass43_hosted_rechecks": [
+        {
+          "i": 0,
+          "pass": "PHASE4_PASS43_NO_NEW_COUNT",
+          "date": "2026-11-11",
+          "blob_sha": "0639a1fa5cae3a1589358fd465b44a7564b78c51",
+          "result": "Existing previously counted hosted image re-rendered and verified against exact Git SHA; not new first audit. Caption corrected if needed.",
+          "rights_note": "Original metadata retained; rights not newly cleared"
+        },
+        {
+          "i": 1,
+          "pass": "PHASE4_PASS43_NO_NEW_COUNT",
+          "date": "2026-11-11",
+          "blob_sha": "5ddf490f5cffebbbc6b8fbe361c70f5c37a92de0",
+          "result": "Existing previously counted hosted image re-rendered and verified against exact Git SHA; not new first audit. Caption corrected if needed.",
+          "rights_note": "Original metadata retained; rights not newly cleared"
+        }
+      ]
     },
     "review": {
       "pass": "PHASE4_PASS42_EXACT_SOURCE_PREVIEW",
       "review_date": "2026-11-11",
-      "status": "SOURCE_PREVIEW_ONLY_NOT_HOSTED_AUDITED",
+      "status": "SOURCE_PREVIEW_RECONCILED_WITH_PREEXISTING_HOSTED_QA",
       "scope": "The Commons original-file image was visually rendered through its source page. GitHub-hosted photo bytes could not be viewed or image-matched this pass; this source inspection does NOT increase 421/514 hosted-photo QA count.",
       "rights_status": "COMMONS_SOURCE_PAGE_CREATOR_AND_LICENSE_MATCH_ORIGINAL_RECORD; NOT_A_NEW_CLEARANCE_FOR_EXACT_HOSTED_FILE",
       "photo_roles": [
@@ -2319,7 +2347,6 @@
         }
       ],
       "unreviewed_hosted_indices": [
-        0,
         1
       ],
       "unmet_roles": [
@@ -2331,7 +2358,8 @@
       "seasonal_review": {
         "observed": "No independently established Hays County November–February date",
         "queue_action": "Existing master Photo Needs Queue only; seek diagnostic anatomy rather than duplicate general plant shots"
-      }
+      },
+      "hosted_photo_recheck": "PHASE4_PASS43_NO_NEW_COUNT"
     }
   },
   {
@@ -2345,7 +2373,7 @@
       {
         "i": 0,
         "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Muhlenbergia/muhlenbergia-reverchonii/images/seep-muhly-maine-botanical-garden-cc0.jpg",
-        "label": "Cultivated seep muhly clumps with narrow green basal leaves in a Maine garden — flowering panicle and inner ligule not visible",
+        "label": "Fine green leafy clumps of cultivated seep muhly at a Maine botanical garden — no flowers or visible ligule",
         "creator": "Daderot",
         "license": "CC0 1.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_reverchonii_-_Coastal_Maine_Botanical_Gardens_-_DSC03134.jpg",
@@ -2371,7 +2399,7 @@
     "source_blob_sha": "a794199d1c3d7a3dd28db602b9188e3c57f529d6",
     "trait_provenance": "Hays Botany Poaceae existing individual species lesson; provisional broad field-state coding; final GrassBase and North Central Texas flora comparison pending",
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
-    "diagnostic_photo_status": "PHASE4_PASS42_SOURCE_PREVIEW_ONLY; HOSTED_IMAGE_QA_PENDING",
+    "diagnostic_photo_status": "FIRST_HOSTED_PHOTO_ROLE_PASS_COMPLETE; EXACT_IMAGE_RIGHTS_AND_DIAGNOSTIC_ANATOMY_NOT_CERTIFIED",
     "character_evidence": {
       "awns": {
         "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, user-provided monocots excerpt, uploaded PDF p. 212",
@@ -2414,7 +2442,7 @@
     "review": {
       "pass": "PHASE4_PASS42_EXACT_SOURCE_PREVIEW",
       "review_date": "2026-11-11",
-      "status": "SOURCE_PREVIEW_ONLY_NOT_HOSTED_AUDITED",
+      "status": "SOURCE_PREVIEW_SUPERSEDED_BY_PASS43_EXACT_HOSTED_QA",
       "scope": "The Commons original-file image was visually rendered through its source page. GitHub-hosted photo bytes could not be viewed or image-matched this pass; this source inspection does NOT increase 421/514 hosted-photo QA count.",
       "rights_status": "COMMONS_SOURCE_PAGE_CREATOR_AND_LICENSE_MATCH_ORIGINAL_RECORD; NOT_A_NEW_CLEARANCE_FOR_EXACT_HOSTED_FILE",
       "photo_roles": [
@@ -2435,9 +2463,7 @@
           "hosted_photo_status": "PENDING_ACTUAL_HOSTED_VISUAL_QA"
         }
       ],
-      "unreviewed_hosted_indices": [
-        0
-      ],
+      "unreviewed_hosted_indices": [],
       "unmet_roles": [
         "no open airy flowering panicle, isolated floret, sheath interior or measured ligule",
         "cultivated garden view is not a wild Texas occurrence or authenticated local genotype"
@@ -2447,7 +2473,39 @@
       "seasonal_review": {
         "observed": "No independently established Hays County November–February date",
         "queue_action": "Existing master Photo Needs Queue only; seek diagnostic anatomy rather than duplicate general plant shots"
-      }
+      },
+      "source_preview_upgraded_to_hosted_qa": "PHASE4_PASS43"
+    },
+    "photo_character_audit": {
+      "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGES",
+      "review_date": "2026-11-11",
+      "status": "FULL_EXISTING_GALLERY_FIRST_PASS_1_OF_1",
+      "rights_status": "EXISTING_CREATOR_LICENSE_SOURCE_FIELDS_PRESERVED; EXACT_IMAGE_RIGHTS_NOT_NEWLY_REVALIDATED",
+      "photo_roles": [
+        {
+          "i": 0,
+          "verdict": "DIRECT_VISIBLE",
+          "shows": [
+            "several planted mounds of long narrow green leaves, photographed from above in maintained garden soil",
+            "small botanical garden identification sign"
+          ],
+          "cannot_verify": [
+            "airy flowering panicles, spikelets, ligules and exact blade width are not exposed",
+            "cultivated specimen is not evidence of wild Hays County provenance"
+          ],
+          "pass": "PHASE4_PASS43_HASH_VERIFIED_HOSTED_IMAGE_BATCH",
+          "review_date": "2026-11-11",
+          "hosted_file": "content/taxa/Poaceae/Muhlenbergia/muhlenbergia-reverchonii/images/seep-muhly-maine-botanical-garden-cc0.jpg",
+          "git_blob_sha": "2b4a3dc10cbea3010717773e71c2bc8b84690258",
+          "byte_verification": "GITHUB_ACTIONS_READ_ONLY_SPARSE_CHECKOUT; VERIFIED_EXACT_GIT_BLOB_SHA1; HOSTED_IMAGE_BYTES_RENDERED_AS_CONTACT_SHEET; NO_NEW_LICENSE_CLEARANCE"
+        }
+      ],
+      "unreviewed_hosted_indices": [],
+      "previous_pass": "PHASE4_PASS43_HOSTED_IMAGES",
+      "scope": "Pass43 additionally opened Muhlenbergia reverchonii hosted index 0 with exact file Git blob verified via a read-only GitHub Actions run. No new image installation, license approval, or individual specimen identity certification.",
+      "summary": "Pass43 DIRECT_VISIBLE: several planted mounds of long narrow green leaves, photographed from above in maintained garden soil; small botanical garden identification sign. Still unresolved: airy flowering panicles, spikelets, ligules and exact blade width are not exposed; cultivated specimen is not evidence of wild Hays County provenance.",
+      "last_hosted_qa_pass": "PHASE4_PASS43",
+      "new_photo_rights_note": "Original photo creator, license and source link preserved; independent exact-image source-page rights review remains separate."
     }
   },
   {
