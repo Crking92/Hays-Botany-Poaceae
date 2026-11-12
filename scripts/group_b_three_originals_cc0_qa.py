@@ -105,6 +105,35 @@ def cc0_search():
   show({"all_tridentopsis_cc0_hits":count,
         "note":"Source label and CC0 code alone do not prove species ID; no gallery changes"},
         "TRIDENTOPSIS_DISCOVERY_SUMMARY")
+def gbif_media():
+  obs_ids=(377001623,367070671)
+  photo_ids=("689363680","689363761","689363853","670314012","670314061")
+  for obs in obs_ids:
+    for identifier in (str(obs),f"https://www.inaturalist.org/observations/{obs}"):
+      query=urllib.parse.urlencode({"occurrenceId":identifier,"limit":30})
+      url="https://api.gbif.org/v1/occurrence/search?"+query
+      try:
+        raw=json.loads(read(url,5*1024*1024))
+        matching=[]
+        for item in raw.get("results",[]):
+          for media in item.get("media",[]):
+            media_text=json.dumps(media,ensure_ascii=False)
+            pid=next((pid for pid in photo_ids if pid in media_text),None)
+            if not pid:continue
+            matching.append({
+             "photo_id":pid,"gbif_key":item.get("key"),
+             "occurrence_id":item.get("occurrenceID"),
+             "gbif_media":media,
+             "gbif_record_license":item.get("license"),
+             "source":"https://www.gbif.org/occurrence/"+str(item.get("key"))
+            })
+        show({"observation_id":obs,"lookup":identifier,
+              "total_search_matches":raw.get("count"),"exact_photo_media":matching[:8]},
+             "GBIF_LICENSE_PROVENANCE")
+      except Exception as e:
+        show({"observation_id":obs,"lookup":identifier,"error":str(e)},
+             "GBIF_LICENSE_SEARCH_FAILED")
 if __name__=="__main__":
   originals()
   cc0_search()
+  gbif_media()
