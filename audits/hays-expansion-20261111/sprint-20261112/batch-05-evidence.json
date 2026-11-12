@@ -1,0 +1,624 @@
+{
+  "schema": "hays-grass-provisional-admission-batch-05-v1",
+  "date": "2026-11-12",
+  "repo": "Crking92/Hays-Botany-Poaceae",
+  "branch": "codex/grass-sprint-provisional-batch5",
+  "issue70": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70",
+  "scope": "Last 13 of 57 first-pass source/proof/occurrence identity audits. Not a botanical source photo signoff or rights clearance.",
+  "baseline": {
+    "configured_Learner_records": 169,
+    "existing_scored_key_profiles": 112,
+    "provisional_research_taxa": 57,
+    "source_literature_targets": 322,
+    "prior_4_batches_unique": 44,
+    "unique_this_batch": 13,
+    "cumulative_first_pass_audited": 57,
+    "remaining_first_pass_unreviewed": 0,
+    "actual_original_Hays_specimen_photos_newly_pixel_reviewed": 0,
+    "provisional_species_passing_full_admission_gate_this_batch": 0,
+    "cumulative_provisional_species_passing_full_admission_gate": 0,
+    "latest_live_web_display_verification_performed": false
+  },
+  "method_and_limits": [
+    "Compared all exact candidate IDs to merged Batches 1–4 on current GitHub main, confirming 13 distinct previously unaudited records and no previous provisional source-photo signoffs.",
+    "Primary vegetative source Hagenbuch & Lemke 2015 where a species is actually treated, and primary reproductive source Diggs et al. 1999 where a species is treated; consulted source interpretations saved in packets 2, 5, 6, 7 and original intake QA.",
+    "External Kew POWO 2026, Go Botany Native Plant Trust, ITIS, EPPO, Haines 2000 botanical note, USFS / FNA-derived treatments and comparative GrassBase were used only for names, taxa and morphological reference descriptions, not to certify individual Hays source observations.",
+    "Haines 2000 Botanical Notes p.5 PDF was directly reviewed via page screenshot; verified 9–18 Elymus macgregorii nodes vs 15–30 for glabriflorus. The regional packet 6 misattributed latter values to macgregorii. Modern Kew vs ITIS disagreement on glabriflorus explicitly preserved.",
+    "The iNaturalist original Hays pages remained browser inaccessible, including example observation 331384094. No new original Hays source photograph pixels were examined, and old photo notes are clearly distinguished from new image inspections.",
+    "Preflight rights flags are historical; no exact new photo-license check, download, image reuse or publication authorization was done.",
+    "Texas statewide native or introduced status is not a BONAP Hays County or target-west/north county map determination; no county-level atlas source cell checked this run.",
+    "No existing scored species shards, candidate metadata, UI, gallery manifests, credits, previous packet files or Legacy repository files changed."
+  ],
+  "records": [
+    {
+      "id": "alopecurus-carolinianus",
+      "scientific_name": "Alopecurus carolinianus",
+      "queue_id": "HAYS-044",
+      "priority": "SOURCE_IMAGE_ACCESS_BLOCKER",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs, Lipscomb & O'Kennon (1999), regional Flora printed p.1236, saved diagnostic packet 6: 3.5–7 mm membrane, silky-haired glumes, dorsal geniculate lemma awn and one flower per laterally compressed spikelet."
+      ],
+      "external_authorities": [],
+      "new_reconciliation_or_comparator_conflict": "The only Hays candidate source has zero source pixels previously inspectable under permitted photo review. A narrow soft flowering head cannot separate Alopecurus from Polypogon or Phleum. Do not assign ligule or awn states to this Hays individual from book traits.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Authenticate the exact Hays observation or gather a new dated local plant with 3.5–7 mm inner membranous ligule.",
+        "Dissect a mature one-flowered spikelet in a scaled macro showing silky paired glumes and a dorsally inserted bent lemma awn.",
+        "Check field locality and compare native regional Alopecurus with Polypogon and Phleum."
+      ],
+      "do_not_score_hard_exclusion": "Do not treat a compact cylinder head as diagnostic or 'no visible awn' as true awn absence.",
+      "local_occurrence_and_planting_status": "One Hays iNaturalist label, zero historical source pixels reviewed, no voucher and no source-media licensing evidence.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/5938511"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 1,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "briza-minor",
+      "scientific_name": "Briza minor",
+      "queue_id": "HAYS-045",
+      "priority": "HIGH_VISUAL_HEAD_BUT_SINGLE_SPECIMEN",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. (1999), regional Flora printed p.1250, packet 6: small hanging roughly triangular multi-flowered spikelets, tall 5–10 mm membrane.",
+        "Kew POWO 2026 accepts Briza minor and classifies Texas as introduced."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/393299-1"
+      ],
+      "new_reconciliation_or_comparator_conflict": "Three historical Hays photos show the little triangular dangling spikelet outline, but head shape does not establish floret count, full ciliate/unciliate ligule, or an introduced species diagnosis on the one local observation.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Photograph the same Hays plant with entire dangling spikelets on hairlike pedicels and a 1-mm profile ruler.",
+        "Pull one mature spikelet to count 3–8 florets and show its triangular size compared with Briza maxima and Melica.",
+        "Check true long membranous ligule (about 5–10 mm) and record independent locality."
+      ],
+      "do_not_score_hard_exclusion": "Do not hard-exclude from head alone based on apparent size; comparison grass may be immature or camera scale absent.",
+      "local_occurrence_and_planting_status": "One Hays observation, three historical licensed reference images reviewed, no original specimen microcharacters or Hays voucher. Introduced in Texas per POWO.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/346027854"
+      ],
+      "prior_original_Hays_photos_inspected": 3,
+      "prior_Hays_photo_notes": "Small nearly triangular pendulous spikelets on fine pedicels and low annual grassy plant, compatible with little quaking grass.",
+      "prior_Hays_missing_morphology": "No scaled multi-floret dissection or ligule measurements; only one Hays record.",
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 1,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "cenchrus-setaceus",
+      "scientific_name": "Cenchrus setaceus",
+      "queue_id": "HAYS-047",
+      "priority": "CRITICAL_CULTIVAR_HYBRID_NAME_CONFLICT",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "POWO 2026 accepts Cenchrus setaceus (Pennisetum setaceum), introduced in Texas, with 1–3 spikelets in bristled involucres; 4.5–6.5 mm spikelets and plumose bristles.",
+        "POWO and EPPO distinguish horticultural Cenchrus × cupreus (= Pennisetum × advena, trade 'Rubrum') from true C. setaceus; 2022 botanical review documents horticultural mislabelling."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77106046-1",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77176991-1",
+        "https://gd.eppo.int/taxon/PESAD",
+        "https://hbs.bishopmuseum.org/pubs-online/pdf/op148p41-98.pdf"
+      ],
+      "new_reconciliation_or_comparator_conflict": "One Hays observation has no source photo pixels available; purple landscaping material could represent C. × cupreus rather than C. setaceus. Nursery/tag name 'Pennisetum setaceum Rubrum' is NOT reliable species proof. C. × cupreus has documented parents C. elegans × C. setaceus and is a separate hybrid.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Access Hays original observation and check leaf color/width, growth habit and exact origin of the planted clump.",
+        "From same plant dissect 1–3 fertile-spikelet involucres, measure 4.5–6.5 mm spikelets, 16–40 mm plumose bristles, true ligule and culm sheath.",
+        "Compare independent C. setaceus vs purple nursery C. × cupreus material with current treatment, and distinguish cultivated from escaped seedling."
+      ],
+      "do_not_score_hard_exclusion": "Do not admit C. setaceus based on purple ornamental 'Rubrum', fuzzy head, or horticultural trade name. Do not substitute hybrid as the canonical species without evidence.",
+      "local_occurrence_and_planting_status": "One original Hays source observation and zero licensed historical source photo pixels; likely ornamental, wild escape and exact identity unverified.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/36111263"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 1,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "digitaria-californica",
+      "scientific_name": "Digitaria californica",
+      "queue_id": "HAYS-048",
+      "priority": "HAYS_NATIVE_POTENTIAL_ZERO_PIXELS",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. (1999), printed p.1263, packet 2: perennial, nearly digitate spike-like branches and 2–4 mm long upper glume/sterile lemma hairs.",
+        "Hagenbuch & Lemke (2015) cited in packet: hard knotty perennial base, truncated 1–3 mm membrane; vegetative plants can resemble other Digitaria.",
+        "Kew POWO (2026) accepts Digitaria californica, native in Texas."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/80220-2",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:80220-2/general-information"
+      ],
+      "new_reconciliation_or_comparator_conflict": "The one Hays observation is entirely unverified by local visual pixels; the old Trichachne californica combination is a synonym. Branch architecture alone overlaps local crabgrasses, so named occurrence is not diagnostic proof.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Same rooted Hays perennial crown with hard knotty base and a sharply framed 1–3 mm membranous ligule.",
+        "Measured mature one-sided near-digitate racemes and a mm-scaled spikelet showing conspicuous white hairs on upper glume and lower sterile lemma.",
+        "Check local Digitaria insularis, D. patens and related crabgrass lookalikes with a regional expert; BONAP Hays county cell separately."
+      ],
+      "do_not_score_hard_exclusion": "Do not use a generic digitate head, hard crown alone, or any one glume hair length as an absolute species cutoff.",
+      "local_occurrence_and_planting_status": "Single original Hays observation, zero source pixels, no voucher; native at Texas state level is NOT confirmed Hays BONAP nativity.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/387716642"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 0,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "elymus-macgregorii",
+      "scientific_name": "Elymus macgregorii",
+      "queue_id": "HAYS-049",
+      "priority": "CRITICAL_SOURCE_MISATTRIBUTION_AND_TAXONOMY",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. 1999 regional Flora does not directly treat the 2000 E. macgregorii species; older E. virginicus broadly includes relevant material.",
+        "Native Plant Trust Go Botany Elymus dichotomous key 2026: *E. glabriflorus* has 15–30 spike nodes / 3–5 mm internodes / 0–2 mm auricles; *E. macgregorii* has 9–18 nodes / 4–7 mm internodes / 2–3 mm auricles.",
+        "Arthur Haines Botanical Notes No. 3 (Sept. 2000), page 5, directly visually screenshot-checked: *macgregorii* 9–18 nodes and 4–7 mm internodes, 2–3 mm auricles, but documented Oklahoma/Texas transitional material relative to *E. virginicus* var. jejunus.",
+        "Kew POWO 2026 accepts E. macgregorii and records Texas as native; modern taxon interpretation of E. glabriflorus differs: Kew folds it into E. virginicus, ITIS accepts separate E. glabriflorus."
+      ],
+      "external_authorities": [
+        "https://gobotany.nativeplanttrust.org/dkey/elymus/",
+        "https://gobotany.nativeplanttrust.org/species/elymus/macgregorii/",
+        "https://static1.squarespace.com/static/5369617de4b054aef368005b/t/53d9d29ee4b047a1cbd79135/1406784158788/Botanical_Notes_number_3.pdf",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20008015-1",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:90247-2",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=512821"
+      ],
+      "new_reconciliation_or_comparator_conflict": "URGENT PACKET CORRECTION: existing packet 6 incorrectly attributes 15–30 spike nodes, 3–5 mm internodes and 0–2 mm auricles to E. macgregorii. These actually are *E. glabriflorus* key states. E. macgregorii usually has 9–18 nodes / 4–7 mm internodes / 2–3 mm auricles in Go Botany and Haines 2000; some Texas forms transitional. No Hays original pixels exist. The initial 58→57 count collapses E. glabriflorus to E. virginicus following Kew; this is a chosen taxonomic policy, not consensus, as ITIS accepts glabriflorus separately.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Coordinator to quarantine the wrongly assigned historical macgregorii node/auricle values from scored work pending original packet correction; preserve competing glabriflorus taxonomic treatments.",
+        "Locate expert-determined Hays physical voucher or authenticate full original image, and count all intact flowering rachis nodes and internode lengths.",
+        "On same stem measure auricles and glume width/awn lengths and document basal leaf/glume hairs; compare E. virginicus and glabriflorus explicitly; ask herbarium specialist to review Texas transitional forms."
+      ],
+      "do_not_score_hard_exclusion": "Do not use 15–30 nodes to admit E. macgregorii; it could select E. glabriflorus. Do not silently introduce 58th grass or reassign the previous Elymus alias without resolving reference taxonomy.",
+      "local_occurrence_and_planting_status": "One Hays claimed species, zero original photos accessible; Kew native Texas not BONAP Hays county proof; major accepted-taxon-concept conflict.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/314369187"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 0,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "lolium-x-boucheanum",
+      "scientific_name": "Lolium × boucheanum",
+      "queue_id": "HAYS-051",
+      "priority": "CRITICAL_HYBRID_PARENTAGE_CONFLICT",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Kew POWO 2026 accepts Lolium × boucheanum as L. perenne × L. rigidum and lists native southern Europe, no Texas distribution.",
+        "Kew POWO separately accepts Lolium × hybridum as L. multiflorum × L. perenne, with its own distribution; old literature and EPPO/forage trade sometimes apply boucheanum to the latter hybrid."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407468-1"
+      ],
+      "new_reconciliation_or_comparator_conflict": "One Hays observation labelled 'boucheanum' cannot establish either hybrid: the parents themselves are easily confused, and sources disagree on which pair the name denotes. This is NOT an ordinary unambiguous fourth ryegrass species. Do not infer ancestry from awn length, rolled vs folded vernation, or intermediate spikes alone.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Locate one authenticated Hays voucher with expert hybrid diagnosis plus direct evidence of which parents occur in same site/seed mix.",
+        "Collect matched entire flowering spike, scaled florets/glumes/awn, basal vernation, fresh auricles and full reproductive context; obtain cytological/genomic validation where needed.",
+        "Coordinator to document whether taxonomy follows Kew or alternate hybrid usage without silently merging L. × boucheanum with L. × hybridum."
+      ],
+      "do_not_score_hard_exclusion": "No binary 'awned = multiflorum' or 'intermediate = hybrid' filter; hybrid backcross and conflicting parentage require explicit unknown.",
+      "local_occurrence_and_planting_status": "One named local Hays record, zero available visual source pixels, no verified voucher or Texas distribution under Kew.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/45834760"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 0,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "scientific_name": "Miscanthus sinensis",
+      "queue_id": "HAYS-052",
+      "priority": "PLANTED_ORNAMENTAL_NO_FLOWERS",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. 1999, printed p.1284, packet 7: large perennial with paired unequal-pedicel spikelets and ciliate membrane, longer glume hairs and often bent lemmas.",
+        "Kew POWO 2026 accepts Miscanthus sinensis, Asian native; listed introduced jurisdictions do not explicitly include Texas at time checked."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:408768-1"
+      ],
+      "new_reconciliation_or_comparator_conflict": "The sole Hays photo was historically described as an ornamental vegetative clump with arching leaves. It does not show a seedhead, so the proposed identification may overlap Arundo, Cortaderia or cultivated ornamental grasses. An omission of Texas from Kew's introduced distribution is NOT proof species cannot occur in Hays gardens.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Original Hays observation image/access and known planting provenance, ideally plant label or accession; note variegation/cultivar.",
+        "From same plant observe flowering branched panicle with the paired long- and short-pedicelled spikelets and 4–5.5 mm hairy glumes.",
+        "Document ciliate membrane and leaf margins; separate planted clump from escaped or naturalized populations."
+      ],
+      "do_not_score_hard_exclusion": "Do not exclude from absence of flowering head in a juvenile or mown garden plant or assign a native status.",
+      "local_occurrence_and_planting_status": "One Hays source record, one prior vegetative licensed photo, landscaping likely; no Hays specimen floral signoff.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/352734605"
+      ],
+      "prior_original_Hays_photos_inspected": 1,
+      "prior_Hays_photo_notes": "Clumped tall arching narrow leaves in an ornamental-looking garden setting.",
+      "prior_Hays_missing_morphology": "No panicle or spikelets; cannot verify species or wild occurrence.",
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 1,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "panicum-dichotomiflorum",
+      "scientific_name": "Panicum dichotomiflorum",
+      "queue_id": "HAYS-053",
+      "priority": "NATIVE_POTENTIAL_NO_HAYS_PHOTO",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. 1999, printed p.1296, packet 5: annual or seasonally coarse grass, short membrane with hairs, many-branched panicle and small glumes.",
+        "Kew POWO (2026) accepts P. dichotomiflorum as species native to Texas, with accepted subspecies (not a direct Hays provenance statement)."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325362-2"
+      ],
+      "new_reconciliation_or_comparator_conflict": "There is one claimed Hays observation and zero original source-photo pixels in the audited sample. Dense vegetation and variable annual/perennial growth conditions mean plant stature and panicle branching cannot prove species; currently published taxonomic accounts may span differing forms.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Hays plant photographed in late growing season with entirely developed panicle and a mm-scaled 2.4–3-mm dorsally compressed spikelet.",
+        "Measure lower glume only roughly one-quarter spikelet versus near-full upper glume; film ligule ~0.5–1 mm membrane with cilia and basal culm habit.",
+        "Differentiate Panicum repens, P. miliaceum and Urochloa, and verify county-level distribution separately."
+      ],
+      "do_not_score_hard_exclusion": "Do not turn no visible membrane or unbranched immature panicle into an exclusion; retain name/subspecies provenance.",
+      "local_occurrence_and_planting_status": "One Hays record, zero prior pixels, no expert Hays specimen, Kew Texas-native at state level only.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/61315171"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 1,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "panicum-repens",
+      "scientific_name": "Panicum repens",
+      "queue_id": "HAYS-054",
+      "priority": "SPREADING_RHIZOME_AND_INVASIVE_ID",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Regional Diggs 1999 has no directly named species account, packet 5 compiles UF IFAS/USFS FEIS sharp-pointed scaly rhizomes, short ciliate membrane, small unawned spikelets and open panicle.",
+        "Kew POWO 2026 accepts Panicum repens, introduced to Texas."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/412908-1"
+      ],
+      "new_reconciliation_or_comparator_conflict": "The one Hays image previously reviewed shows only green grassy mat and distant branches; no pointed underground rhizome is visible. Key species identity hinges on connected torpedo-shaped rhizome and flowering panicle, not a lawn-like mat or wet-site context alone.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Carefully excavate entire connected long pale rhizome with sharp pointed tip and scale next to an intact flowering stem, after site permission.",
+        "Show same individual inner membranous/ciliate ligule, mature small unawned spikelets and panicle under scale.",
+        "Compare native P. dichotomiflorum, switchgrass and stolon-forming wetland grasses; document wild-colony versus planted context."
+      ],
+      "do_not_score_hard_exclusion": "Do not equate all rhizomatous grasses with torpedograss; hidden rhizome on an image is unknown rather than absent.",
+      "local_occurrence_and_planting_status": "One Hays claimed occurrence, one distant old photo, no rhizome proof, Texas introduced.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/136945230"
+      ],
+      "prior_original_Hays_photos_inspected": 1,
+      "prior_Hays_photo_notes": "Dense green grassy mat with some thin flowering branches visible only at distance.",
+      "prior_Hays_missing_morphology": "Rhizome/stolon structures and diagnostic spikelets absent; one image cannot resolve torpedograss.",
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 2,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "pappophorum-bicolor",
+      "scientific_name": "Pappophorum bicolor",
+      "queue_id": "HAYS-055",
+      "priority": "HIGH_LOCAL_NATIVE_CANDIDATE_AWN_COUNT_NOT_EXCLUSIVE",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "FNA species treatment via Red de Herbarios Mexicanos / Kew POWO: P. bicolor panicle pink-purple, 3–4 mm lemma body with 11–15 separate lemma awns; two to three bisexual florets.",
+        "Kew GrassBase both P. bicolor and P. mucronulatum show 11–15 separate awns; P. mucronulatum lemma mostly 2–3 mm (vs 3–4 mm bicolor) but the shared awn count is NOT diagnostic by itself.",
+        "Kew POWO 2026 records Pappophorum bicolor native to Texas."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413618-1/general-information",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413653-1/general-information",
+        "https://herbanwmex.net/portal/taxa/index.php?taxon=309"
+      ],
+      "new_reconciliation_or_comparator_conflict": "CRITICAL COMPARATOR TRAP: packet 5 recommends counting 11–15 lemma awns to distinguish Pappophorum bicolor from P. mucronulatum, but both taxa show 11–15 awns in GrassBase. Use measured body length, glume/lemma characters and multiple florets; not awn count alone. One Hays photo set has attractive seedhead and macro but cannot count exact awn origins.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Same rooted dry grassland Hays specimen with mm-scaled 3–4 mm mature lemma, floret-by-floret dissection and 11–15 attached awns all from the same lemma.",
+        "Compare P. mucronulatum smaller 2–3 mm fertile lemmas, glumes, panicle and fertile floret architecture in modern sources.",
+        "Save locality/habitat and check BONAP Hays county nativity independently."
+      ],
+      "do_not_score_hard_exclusion": "Do not use '11–15 awns' as species-exclusive filter; do not infer bicolor from pink head alone.",
+      "local_occurrence_and_planting_status": "One Hays observation with four historically inspected photos, no expert verification of actual lemma; state Texas native not independently county-confirmed.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/136755826"
+      ],
+      "prior_original_Hays_photos_inspected": 4,
+      "prior_Hays_photo_notes": "Dry grassland tuft with long hairy feathered flowering heads and good separate head details.",
+      "prior_Hays_missing_morphology": "Individual lemma appendage number and attachment details not counted.",
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 0,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "sclerochloa-dura",
+      "scientific_name": "Sclerochloa dura",
+      "queue_id": "HAYS-056",
+      "priority": "UNCOMMON_INTRODUCED_ANNUAL_LOOKALIKE",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. 1999, printed p.1316, packet 6: tiny hard-ground annual 3–10 cm, one-sided compact spike-like inflorescence with stout blunt glumes and spikelets.",
+        "Kew POWO/GrassBase 2026 accepts Sclerochloa dura, Texas introduced, 1–2 mm unfringed membrane and 6–11 mm usually 3–4-flowered spikelets."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:421086-1/general-information"
+      ],
+      "new_reconciliation_or_comparator_conflict": "Two historical source images show a diminutive disturbed-ground grass with a dense unilateral head. It could resemble Poa annua, Catapodium rigidum or other dwarfed annuals. Need true glume/lemma nervation and 1–2-mm membranous ligule, not seedhead density alone.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Same Hays source whole rooted flowering annual in hard dry soil with 1-cm ruler, verify total stature.",
+        "A 1–2-mm membranous ligule macro and isolated 6–11-mm broad spikelet with 3–4 florets, thick rounded glumes and strong nerves.",
+        "Compare Poa annua, Catapodium rigidum and short Puccinellia-like grasses at equal scale."
+      ],
+      "do_not_score_hard_exclusion": "No forced absolute 3–10 cm height (growth plasticity) or unilateral-head unique trait.",
+      "local_occurrence_and_planting_status": "One Hays iNat label, two old reference photos; Texas introduced, no physical voucher or mature spikelet inspection.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/148348772"
+      ],
+      "prior_original_Hays_photos_inspected": 2,
+      "prior_Hays_photo_notes": "Small low grass with short dense one-sided green inflorescence spikes in disturbed ground.",
+      "prior_Hays_missing_morphology": "No scale for multi-flowered spikelets, ligule or glume/lemma nerve count.",
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 2,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "sporobolus-cryptandrus",
+      "scientific_name": "Sporobolus cryptandrus",
+      "queue_id": "HAYS-057",
+      "priority": "NATIVE_POTENTIAL_NO_ORIGINAL_PIXELS",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Diggs et al. 1999, printed p.1327, packet 2: panicle sometimes hidden by uppermost sheath; long white tufts of sheath-summit hairs, sometimes 2–4 mm.",
+        "Hagenbuch & Lemke 2015 vegetative hierarchy cites 0.5–1 mm hair-fringe ligule, sheath summit white hair tufts.",
+        "Kew POWO 2026 accepts S. cryptandrus, native to Texas; broader literature recognizes related S. giganteus and S. flexuosus as separate species, though historically treated as varieties."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:422687-1/general-information",
+        "https://powo.science.kew.org/taxon/242986-2",
+        "https://powo.science.kew.org/taxon/242983-2"
+      ],
+      "new_reconciliation_or_comparator_conflict": "Hays source record has zero original photo pixels historically inspected. Unique-looking white collar tufts and panicled sheath emergence need linked same-plant photos. Avoid transferring historical S. cryptandrus var. giganteus/flexuosus characteristics to this modern species without re-identification.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Same Hays grass patch showing concealed early panicle and fully expanded flowering panicle, with accurate leaf-base position.",
+        "Scale-backed 2–4-mm white sheath-mouth hairs and true 0.5–1 mm hair-fringe ligule, plus an isolated mature spikelet.",
+        "Contrast S. giganteus, S. flexuosus and local S. compositus under accepted modern names; independently assess Hays county nativity."
+      ],
+      "do_not_score_hard_exclusion": "Partially enclosed panicle is a growth phase, not mandatory on all reproductive grass. White collar hairs may wear away in mature dormant leaves.",
+      "local_occurrence_and_planting_status": "One Hays observation, zero source pixels in saved record, no confirmed voucher; state native ≠ county proof.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/192579863"
+      ],
+      "prior_original_Hays_photos_inspected": 0,
+      "prior_Hays_photo_notes": null,
+      "prior_Hays_missing_morphology": null,
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NO_USABLE_CC_SOURCE_PHOTOS_IN_SAVED_SAMPLE",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 2,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific_name": "Stapfochloa canterae",
+      "queue_id": "HAYS-058",
+      "priority": "TAXON_PAIR_PRIORITY_RICH_HAYS_HISTORICAL_PHOTOS",
+      "decision": "HOLD_ADMISSION_EVIDENCE_UNVERIFIED",
+      "accepted_name_source_provenance": [
+        "Kew POWO 2026 accepts Stapfochloa canterae (Chloris canterae synonym), native S Brazil–N Argentina, introduced Texas.",
+        "Saved packet 5 cites Stapfochloa genus traits: ciliate fertile lemma margins and two to three upper sterile florets but does not verify an exact canterae-vs-ciliata species differential.",
+        "Kew POWO 2026 treats Stapfochloa ciliata as a separate species native in Texas; general raceme shape not unique."
+      ],
+      "external_authorities": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469004-2",
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469005-2/general-information"
+      ],
+      "new_reconciliation_or_comparator_conflict": "Single Hays observation reportedly offers four unusually diagnostic prior photos with ciliate racemes, node, ligule, detached spikelets and mm ruler. But no current source pixels were accessible or species-level sterile floret/awn counts independently measured. This is the best candidate for authorized image reinspection; confirm current genus, Texas introduced status and contrast native Stapfochloa ciliata.",
+      "exact_same_Hays_specimen_photo_or_voucher_gates": [
+        "Retrieve exact original Hays observation 137935400 photos with creator/license and actual specimen access; preserve source attribution.",
+        "Measure a whole spikelet's fertile and upper sterile florets plus lemma awn, ciliate margins and rachis hairs against a modern canterae/ciliata key on the same scale.",
+        "Identify planting vs naturalized stand; cross-check genus and original Chloris canterae specimen criteria."
+      ],
+      "do_not_score_hard_exclusion": "Do not score one-sided windmillgrass racemes as canterae-exclusive or conflate introduced S. canterae with Texas-native S. ciliata.",
+      "local_occurrence_and_planting_status": "One Hays observation with four previously inspected photos, rights remain NC unapproved, no current pixel-view or physical voucher.",
+      "previous_Hays_observation_count": 1,
+      "source_observation_links": [
+        "https://www.inaturalist.org/observations/137935400"
+      ],
+      "prior_original_Hays_photos_inspected": 4,
+      "prior_Hays_photo_notes": "Very useful image set: ciliate racemes, culm node/ligule, detached spikelets and metric ruler in frame.",
+      "prior_Hays_missing_morphology": "Precise fertile/sterile floret/awn comparison against Stapfochloa ciliata needs formal measurement.",
+      "local_voucher_reference": {
+        "status": "INAT_RECORD_ONLY",
+        "published_hays_gatherings": [],
+        "examined_original_tex_sheet_ids": [],
+        "original_sheet_microcharacters_verified": false
+      },
+      "preflight_rights_lane": "NC_LICENSE_PHOTOS_ONLY_NONCOMMERCIAL_ASSESSMENT_REQUIRED",
+      "prior_CC_photo_candidates": [],
+      "existing_general_reference_gallery_config_count": 0,
+      "original_Hays_specimen_pixels_newly_inspected": 0,
+      "actual_source_photo_license_approved": false,
+      "admit_to_scored_filter": false,
+      "complete_species_level_identification_signoff": false,
+      "county_level_BONAP_nativity_signed_off": false,
+      "public_gallery_live_pixel_verified": false
+    }
+  ]
+}
