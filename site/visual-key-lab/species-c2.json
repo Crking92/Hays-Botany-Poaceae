@@ -1936,13 +1936,14 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "One spike with paired multiflowered spikelets establishes Elymus-type architecture; Canada vs Virginia requires mature glume feet on multiple nodes plus habit and hybrid caution. Existing Texas anatomical photographs are real, but the same-voucher measured comparison is still missing.",
+    "field_rule": "One spike with paired multiflowered spikelets establishes Elymus-type architecture; Canada vs Virginia requires mature glume feet on multiple nodes plus habit and hybrid caution. Existing Texas anatomical photographs are real, but the same-voucher measured comparison is still missing. Hagenbuch & Lemke (2015) describes Canada wildrye as tufted, with short rhizomes sometimes present but usually absent. A confirmed short underground rhizome therefore must not filter it out; this is not a rhizome requirement or a standalone separation from Virginia wildrye.",
     "traits": {
       "head": [
         "spike"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "membrane"
@@ -1970,6 +1971,22 @@
         "reference": "Sharp V-like glume pair base and often nodding long-awned spike versus bowed U of typical Virginia wildrye; hybrids and variable erect/nodding phenotypes prevent a rigid one-criterion decision.",
         "status": "REGIONAL_COMPARISON_SOURCE_CHECKED_HYBRIDS_PENDING",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 47, Elymus canadensis",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+        "role": "vegetative",
+        "reference": "Perennial cespitose Canada wildrye: underground rhizomes short or usually absent, stolons absent. Preserve tuft as usual habit and conditionally add rhizome if a true belowground stem is found. Compare E. virginicus, which the same regional source says has no rhizomes or stolons; that distinction is not enough to diagnose hybrids alone.",
+        "reported_states": [
+          "cespitose tufted crown",
+          "short rhizomes occasionally present",
+          "rhizomes usually absent",
+          "stolons absent"
+        ],
+        "certainty": "DIRECT_REGIONAL_PRIMARY_CONDITIONAL_SHORT_RHIZOMES_PHOTO_PENDING",
+        "status": "SOURCE_SUPPORTED_VARIABLE_RHIZOME_STATE",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new same-plant connected rootstock and reproductive voucher checked; original photographs and rights remain unchanged."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1997,6 +2014,14 @@
         "certainty": "FNA; no same-specimen paired collar/glume examination yet",
         "source": "Flora of North America — Elymus canadensis",
         "url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Elymus+canadensis"
+      },
+      {
+        "look": "Compare actual underground bases of Canada and Virginia wildrye",
+        "check": "Canada wildrye is primarily tufted but the Hill Country source permits short rhizomes; Virginia wildrye is described there as non-rhizomatous. Expose a connected underground stem before using the rhizome choice.",
+        "compare": "Do not exclude Canada wildrye solely for a short rhizome, or assign a species from one base; combine several attached spikelet nodes, glume insertion, auricles and mature awns, allowing hybrid overlap.",
+        "certainty": "Hagenbuch & Lemke primary vegetative check; Hays specimen attachment and Canada–Virginia hybrid assessment pending.",
+        "source": "Hagenbuch & Lemke (2015), p. 47",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47"
       }
     ],
     "diagnostic_review": {

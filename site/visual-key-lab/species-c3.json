@@ -1165,13 +1165,14 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Real PISTILLATE POAR-FS / F2 webbing is a useful evidence-backed target species photo; true Poa L membrane is genus-wide. Final species call needs attached/reviewed female floret with sexual morphology and independently documented connected rhizome and male reference.",
+    "field_rule": "Real PISTILLATE POAR-FS / F2 webbing is a useful evidence-backed target species photo; true Poa L membrane is genus-wide. Final species call needs attached/reviewed female floret with sexual morphology and independently documented connected rhizome and male reference. The Hill Country vegetative account describes a CESPITOSE (tufted) grass with slender rhizomes; choosing a visible tuft must not remove Texas bluegrass even when rhizomes are hidden. Tufting alone cannot separate it from annual bluegrass.",
     "traits": {
       "head": [
         "compact",
         "long_narrow_panicle"
       ],
       "habit": [
+        "tuft",
         "rhizome"
       ],
       "ligule": [
@@ -1197,6 +1198,23 @@
         "reference": "Strictly dioecious; pistillate florets with 3 long silky callus webs (4–10 mm), staminate flowers may lack conspicuous webs. Do not require female webs on every plant.",
         "status": "SOURCE_CHECKED_SEX_SPECIFIC",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 59, Poa arachnifera",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+        "secondary_source": "Flora of North America — Poa arachnifera (R. J. Soreng, 2007)",
+        "secondary_source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=629190",
+        "role": "vegetative",
+        "reference": "The Hill Country account explicitly describes plants as perennial and cespitose with slender elongate rhizomes, stolons absent. The FNA species account also reports loose tufting with slender rhizomes. Both broad tuft and underground-rhizome choices therefore retain the species. Tufting alone does not distinguish it from annual bluegrass, and no mat/stolon state is added.",
+        "reported_states": [
+          "cespitose/loosely tufted crown",
+          "elongate slender underground rhizomes",
+          "no stolons in regional account"
+        ],
+        "certainty": "DIRECT_REGIONAL_PRIMARY_AND_FNA_AGREE_CONNECTED_LOCAL_BASE_PHOTO_PENDING",
+        "status": "SOURCE_SUPPORTED_OVERLAPPING_GROWTH_STATES",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly authenticated connected Hays specimen or photo was inspected; scored states express source-supported possibilities, not specimen approval."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1224,6 +1242,14 @@
         "certainty": "FNA checked; needs paired macro at same scale",
         "source": "Flora of North America — Poa arachnifera",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=629190"
+      },
+      {
+        "look": "Follow a tufted Texas bluegrass shoot down to its underground stem",
+        "check": "A visible basal bunch does not exclude Texas bluegrass: the Hill Country treatment calls it cespitose even though slender rhizomes are present. Photograph any connected scaly underground stem separately from the shoot crown.",
+        "compare": "Annual bluegrass can also be tufted with a membrane ligule, but lacks rhizomes. Do not identify either one by the tuft choice alone; use mature flowering/sex characters as available.",
+        "certainty": "Direct vegetative primary-source check; field attachment photograph still pending.",
+        "source": "Hagenbuch & Lemke (2015), p. 59; FNA Poa arachnifera",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59"
       }
     ],
     "diagnostic_review": {
@@ -2002,14 +2028,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Use visible macro morphology first and defer difficult perennial-species separations to mature material, reliable grain tests and microscope when necessary.",
+    "field_rule": "Use visible macro morphology first and defer difficult perennial-species separations to mature material, reliable grain tests and microscope when necessary. The regional vegetative account allows small clumps, solitary plants, and elongate scaly RHIZOMES that may also be absent. Keep tuft and true underground-rhizome observations eligible; neither alone distinguishes this plant from hidden dropseed.",
     "traits": {
       "head": [
         "long_narrow_panicle",
         "compact"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "rhizome"
       ],
       "ligule": [
         "hairs",
@@ -2044,6 +2071,21 @@
         "reference": "Many modern keys use gelatinizing/swelling pericarp when wet vs non-gelatinizing in S. clandestinus. UT explains ambiguity of wet/moist/loose terms; requires multiple grains and lemma pubescence, not binary photograph based choice.",
         "status": "SOURCE_TEST_AMBIGUOUS_DO_NOT_AUTOMATE_BINARY",
         "review_date": "2026-11-10"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 64, Sporobolus compositus",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=64",
+        "role": "vegetative",
+        "reference": "Perennial specimens may be solitary or small-clumped; rhizomes are elongate and scaly OR absent, while stolons are absent. Retain broad tuft and underground-rhizome observations without imposing rhizome presence on every specimen. The authors find no dependable vegetative separation from S. clandestinus; mature lemmas and authenticated vouchers remain essential.",
+        "reported_states": [
+          "solitary or small clumps",
+          "elongate scaly rhizomes present or absent",
+          "stolons absent"
+        ],
+        "certainty": "DIRECT_REGIONAL_PRIMARY_VARIATION_SPECIMEN_ATTACHMENT_PENDING",
+        "status": "SOURCE_SUPPORTED_CONDITIONAL_RHIZOME_STATE",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly authenticated source or local specimen image verified for rhizome visibility. Taxonomic complex and grain/pericarp uncertainty retained."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2071,6 +2113,14 @@
         "certainty": "UT Texas detailed critique of pericarp key vs FNA/Riggins; source-qualified evidence, not pass/fail filter",
         "source": "UT Plant Resources Center — Sporobolus pericarp caveats",
         "url": "https://w3.biosci.utexas.edu/prc/SPORO/SPORO-pericarp-comp.html"
+      },
+      {
+        "look": "Inspect a connected dropseed base for a scaly rhizome",
+        "check": "Some composite dropseeds have an elongate underground scaly rhizome; other plants lack it. A genuinely observed rhizome must not eliminate this species, but absence is not itself confirmation.",
+        "compare": "Hidden dropseed (S. clandestinus) remains vegetatively inseparable by this treatment; check mature lemma pubescence and several connected spikelets before a species-level determination.",
+        "certainty": "Direct regional vegetative-source account; connected local specimen and reproductive confirmation pending.",
+        "source": "Hagenbuch & Lemke (2015), p. 64",
+        "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=64"
       }
     ],
     "diagnostic_review": {
