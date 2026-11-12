@@ -59,10 +59,13 @@ def run():
                     c=local_by[species]
                     search=page.locator("#search")
                     search.fill(c["scientific"])
-                    card=page.locator("#list details.card")
-                    assert card.count()==1, f"{label}/{species}: expected exactly one filtered research card"
-                    root=card.first
-                    assert c["scientific"] in root.locator("summary").inner_text()
+                    # Some aliases also contain this scientific name. Find the EXACT
+                    # displayed binomial in the summary, not the first fuzzy search hit.
+                    cards=page.locator("#list details.card")
+                    exact=[node for node in cards.all()
+                           if node.locator("summary .latin").inner_text().strip()==c["scientific"]]
+                    assert len(exact)==1, f"{label}/{species}: {len(exact)} exact-name cards found"
+                    root=exact[0]
                     root.locator("summary").click()
                     fig=root.locator(".checked-gallery figure")
                     assert fig.count()==len(c["approved_gallery"]),(
@@ -84,13 +87,8 @@ def run():
                                 page.wait_for_timeout(450)
                                 try:
                                     im.evaluate("(el)=>{if(!el.complete)el.decode().catch(()=>{});}")
-                                    page.wait_for_function(
-                                        """([q,ix])=>{
-                                          const nodes=document.querySelectorAll('#list details.card');
-                                          if(!nodes.length)return false;
-                                          const img=nodes[0].querySelectorAll('.checked-gallery figure')[ix]?.querySelector('img');
-                                          return !img || img.complete;
-                                        }""",arg=[species,i],timeout=8500)
+                                    handle=im.element_handle()
+                                    page.wait_for_function("(el)=>el.complete",arg=handle,timeout=8500)
                                 except BrowserTimeout:
                                     pass
                             except Exception as exc:
