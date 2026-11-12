@@ -38,7 +38,7 @@ const negatives=[
  ['Urochloa is not long-awned','urochloa-texana',{head:'many_one_sided',awns:'long'}],
  ['Disakisperma is not a long bristle grass','disakisperma-dubium',{head:'fingers',awns:'bristles'}],
  ['Goosegrass is not seven-plus lateral branches','eleusine-indica',{head:'many_one_sided'}],
- ['Hooded windmillgrass is not seven-plus unilateral branches','chloris-cucullata',{head:'many_one_sided'}],
+ ['Little barley does not have seven-plus lateral racemes','hordeum-pusillum',{head:'many_one_sided'}],
  ['Elymus is not whorled Digitaria','elymus-canadensis',{head:'whorls'}],
  ['Barnyardgrass is not windmill tiers','echinochloa-crus-galli',{head:'whorls'}],
  ['Texas bluegrass is not radiate branches','poa-arachnifera',{head:'fingers'}]
