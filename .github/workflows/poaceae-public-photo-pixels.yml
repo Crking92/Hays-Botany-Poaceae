@@ -1,0 +1,39 @@
+name: Poaceae public Learner — photo pixels and attribution QA
+on:
+  pull_request:
+    paths:
+      - 'scripts/qa_public_poaceae_photos.py'
+      - '.github/workflows/poaceae-public-photo-pixels.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/app.js'
+      - 'scripts/qa_public_poaceae_photos.py'
+      - '.github/workflows/poaceae-public-photo-pixels.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-photo-qa:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser for exact public Pages inspection
+        run: |
+          python -m pip install "playwright>=1.55,<2"
+          python -m playwright install --with-deps chromium
+      - name: Count actual displayed provisional images and credits (not species or rights certification)
+        run: python scripts/qa_public_poaceae_photos.py
+      - name: Retain JSON QA counts and per-photo failures without copying photo bytes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: poaceae-live-provisional-photo-qa
+          path: qa-report/public-provisional-photo-pixels.json
+          if-no-files-found: warn
+          retention-days: 14
