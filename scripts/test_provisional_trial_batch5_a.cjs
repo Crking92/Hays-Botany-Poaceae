@@ -193,7 +193,21 @@ for(const p of scored){
  }
  visit(0);
 }
-assert.equal(scoredPaths,447,'Baseline scored character combinations changed');
+// Two primary-source-reviewed additions to the original scored set are documented
+// in the source records; this does not admit any provisional research species.
+for (const [id, status] of [
+  ['eleusine-indica','PRIMARY_HILL_COUNTRY_OCCASIONAL_STOLONS_ADDITIVE_NONEXCLUSION_IFAS_CONTRAST'],
+  ['polypogon-monspeliensis','PRIMARY_HILL_COUNTRY_ROOTED_DECUMBENT_CULM_ADDITIVE_NONEXCLUSION']
+]) {
+  const p=scored.find(x=>x.id===id);
+  assert(p?.traits.habit.includes('tuft') && p.traits.habit.includes('mat'),
+    'Missing source-backed conditional growth path '+id);
+  assert.equal(p.character_evidence?.habit?.status,status,
+    'Conditional growth option lost its primary-source provenance '+id);
+}
+// Formerly 447, now 452 permitted scored paths from exactly two additive
+// growth choices. No prior supported path is removed or narrowed.
+assert.equal(scoredPaths,452,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
