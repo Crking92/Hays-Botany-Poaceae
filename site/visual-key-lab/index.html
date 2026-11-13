@@ -171,6 +171,17 @@ html[data-theme="dark"] .optional-chosen{background:#305c41;color:#e3f3e6}
 html[data-theme="dark"] .optional-section-tabs button{background:#22362a;color:var(--ink)}
 html[data-theme="dark"] .optional-section-tabs button[aria-pressed="true"]{background:#326e50;color:white}
 @media(max-width:480px){.optional-section-tabs button{flex-basis:90px;padding:8px 6px}}
+
+/* Mobile discovery: all four ordinary questions visible, advanced characters above photos. */
+.optional-features > summary small{display:block;font-size:.75rem;font-weight:500;line-height:1.4;color:var(--muted);padding-top:3px}
+.optional-features{margin-top:12px}
+@media(max-width:600px){
+  .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;padding:12px}
+  .step{display:flex;white-space:normal;min-width:0;min-height:48px;text-align:left;justify-content:flex-start;align-items:center;gap:7px;border-radius:12px;padding:7px 9px;font-size:.83rem;line-height:1.2}
+  .step .head-shape{width:30px;height:30px;flex:0 0 30px}
+  .optional-features{margin:10px 12px 13px}
+  .optional-features > summary{padding:12px 14px}
+}
 </style>
 </head>
 <body>
@@ -182,15 +193,15 @@ html[data-theme="dark"] .optional-section-tabs button[aria-pressed="true"]{backg
     <section class="panel" aria-label="Photo-guided questions">
       <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions; answer in any order. Skip anything you cannot examine.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
       <nav class="steps" id="steps" aria-label="Choose a character"></nav>
-      <div class="question" id="question"></div>
       <details class="optional-features" id="optional-character-wrap" hidden>
-        <summary>More details to fine-tune matches (optional)</summary>
+        <summary>More identification options (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
         <div class="optional-inner">
-          <p class="optional-description">Choose extra features you've actually observed. Grasses with matching published descriptions move higher; missing information never rules out a grass.</p>
+          <p class="optional-description">Use these extra details when you need to narrow similar grasses. Open a section, then an individual feature to see its choices. Published matches rise in the results; missing descriptions do not exclude a grass.</p>
           <div class="optional-section-tabs" id="optional-section-tabs" role="group" aria-label="Choose extra plant features"></div><div id="optional-character-groups"></div>
           <button type="button" class="optional-reset" id="optional-clear">Clear extra details</button>
         </div>
       </details>
+      <div class="question" id="question"></div>
     </section>
     <aside class="panel results" aria-label="Candidate grasses">
       <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">112 scored</span></div><p id="results-note">Choose any observable trait to narrow scored profiles and labeled research trials.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
@@ -909,7 +920,7 @@ ligule:"Peel the blade gently away from the stem and examine the INNER junction.
 awns:"Use intact, mature spikelets and a hand lens. Count true awns per floret; do not mistake separate foxtail bristles, bur spines, or feathery stigmas for lemma awns."
 };
 function renderQuestion(){
-const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));const precision=node("details","field-precision");precision.append(node("summary","","Fine-tune: more field details (optional)"),node("p","",precisionNotes[q.id]));area.append(precision);
+const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));const precision=node("details","field-precision");precision.append(node("summary","","Field tip: where to look"),node("p","",precisionNotes[q.id]));area.append(precision);
 function buildChoice([key,title,note,refId,i]){
 const specimen=byId(refId),p=selectedPhotoOverrides[q.id+":"+key]||pic(specimen,i);
 const b=node("button","answer");b.type="button";b.setAttribute("aria-pressed",String(state.selected[q.id]===key));
