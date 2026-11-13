@@ -1284,10 +1284,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "TALL GRAMA B. pectinata is usually robust with 3–5 often relatively long straight combs; B. hirsuta has pronounced branch hairs and bare 'stinger' but can overlap in branch count and rachis tip. Blue grama mostly 1–3 curved eyebrows, spikelets tending to extend to branch tip; Texas grama very short woolly/awned groups; red grama thin wiry small appressed racemes. Avoid a species diagnosis from size or branch count alone.\n\nLigule and awn caution: FNA treats this as B. hirsuta subsp. pectinata, and its parent B. hirsuta description reports a tiny hair ligule; that supports the current hair choice. Hagenbuch & Lemke (2015) describes a ciliate membrane for B. hirsuta, but did NOT separately treat B. pectinata, and the present tall-grama gallery does not show its true inner ligule. Do not assume a photographed outer collar hair proves a membrane; keep the membrane alternative pending taxon-specific or same-specimen evidence. FNA's B. hirsuta complex has short floret awns, but no tall-grama fertile/sterile floret is resolved in these photos. 'None obvious' means no conspicuous long awns at whole-head scale, NOT truly awnless. Do not select Aristida-style three long awns from a grama comb.",
+    "field_rule": "TALL GRAMA B. pectinata is usually robust with 3–5 often relatively long straight combs; B. hirsuta has pronounced branch hairs and bare 'stinger' but can overlap in branch count and rachis tip. Blue grama mostly 1–3 curved eyebrows, spikelets tending to extend to branch tip; Texas grama very short woolly/awned groups; red grama thin wiry small appressed racemes. Avoid a species diagnosis from size or branch count alone.\n\nLigule and awn caution: FNA treats this as B. hirsuta subsp. pectinata, and its parent B. hirsuta description reports a tiny hair ligule; that supports the current hair choice. Hagenbuch & Lemke (2015) describes a ciliate membrane for B. hirsuta, but did NOT separately treat B. pectinata, and the present tall-grama gallery does not show its true inner ligule. Do not assume a photographed outer collar hair proves a membrane; keep the membrane alternative pending taxon-specific or same-specimen evidence. FNA's B. hirsuta complex has short floret awns, but no tall-grama fertile/sterile floret is resolved in these photos. 'None obvious' means no conspicuous long awns at whole-head scale, NOT truly awnless. Do not select Aristida-style three long awns from a grama comb.\n\nScoring audit 2026-11-13: Tall grama's long pectinate combs also align their spikelets on one side. This broad match is valid but not an ID; verify mature spikelets and beware hairy-grama intermediates.",
     "traits": {
       "head": [
-        "combs"
+        "combs",
+        "one_sided"
       ],
       "habit": [
         "tuft"
@@ -1339,6 +1340,21 @@
         "status": "TAXON_SCOPE_SHORT_FLORET_AWN_POSSIBILITY_UNSCORED_SAME_SPECIMEN_DISSECTION_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No pectinata gallery macro isolates a mature attached fertile lemma and apical sterile floret with scale."
+      },
+      "head_one_sided_field_alias": {
+        "role": "reproductive",
+        "category": "head",
+        "source": "Published botanical exact/genus treatments for Bouteloua pectinata",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=8323",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=35&pid=&taxauthid=1&tid=4782",
+        "reference": "FNA exact subspecies pectinata account reports (2)3–6 comb branches; FNA genus diagnosis describes such spike-bearing branches as unilateral. This is a species+genus crosswalk, not independent two-species proof. Keep hirsuta–pectinata intermediates uncertain.",
+        "reported_states": [
+          "pectinate comb-shaped flowering branches",
+          "spikelets borne on one side of those branches"
+        ],
+        "status": "SOURCE_SUPPORTED_UNILATERAL_COMB_FIELD_ALIAS",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-supported category equivalence only; no new image or voucher verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1659,10 +1675,11 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Red grama's narrow reddish APPRESSED units on very fine wiry culms contrast with Texas grama's short clustered woolly/awned branches, hairy grama's broader stinger-bearing combs, and pectinata's robust long combs. Thin branches alone do not establish the species; a close mature three-awned spikelet is needed.",
+    "field_rule": "Red grama's narrow reddish APPRESSED units on very fine wiry culms contrast with Texas grama's short clustered woolly/awned branches, hairy grama's broader stinger-bearing combs, and pectinata's robust long combs. Thin branches alone do not establish the species; a close mature three-awned spikelet is needed.\n\nScoring audit 2026-11-13: Red grama's reddish small combs carry one-sided spikelets. Keep the plant for a broad one-sided selection, then inspect the wiry culms and actual short three-awned florets. Its ligule is a hair fringe.",
     "traits": {
       "head": [
-        "combs"
+        "combs",
+        "one_sided"
       ],
       "habit": [
         "tuft",
@@ -1707,6 +1724,21 @@
         "confidence": "SOURCE_SUPPORTED_STAGE_DEPENDENT_BROAD_CHOICE",
         "status": "LITERATURE_BACKED_RHIZOMES_VARIABLE_WITH_AGE_NOT_A_REQUIRED_STATE",
         "review_date": "2026-11-11"
+      },
+      "head_one_sided_field_alias": {
+        "role": "reproductive",
+        "category": "head",
+        "source": "Published botanical exact/genus treatments for Bouteloua trifida",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35652-2/general-information",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=35&pid=&taxauthid=1&tid=4782",
+        "reference": "Kew exact red grama account gives 2–7 UNILATERAL racemes with 8–24(–32) spikelets each. FNA genus confirms branch architecture. The source-audited true ligule remains a hair fringe, never a presumed membrane.",
+        "reported_states": [
+          "pectinate comb-shaped flowering branches",
+          "spikelets borne on one side of those branches"
+        ],
+        "status": "SOURCE_SUPPORTED_UNILATERAL_COMB_FIELD_ALIAS",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-supported category equivalence only; no new image or voucher verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
