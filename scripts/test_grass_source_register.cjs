@@ -96,7 +96,7 @@ if(latestAwnBatch.some(id=>!entries.has(id+"|awns")))
  throw Error("Batch 6 awn records absent");
 if(!/0.3–0.5 mm/.test(atom("eriochloa-sericea").interpretation)||
    !/geniculate/.test(atom("limnodea-arkansana").interpretation)||
-   !/sometimes mucronate/.test(atom("disakisperma-dubium").interpretation)||
+   !/sometimes (a tiny mucro|mucronate)/.test(atom("disakisperma-dubium").interpretation)||
    !/genus-level/.test(atom("paspalum-dilatatum").references[1].locator))
  throw Error("Batch 6 key distinctions or provenance cautions lost");
 
