@@ -25,23 +25,23 @@
     {
       "id": "blade_width",
       "label": "Leaf width",
-      "hint": "Measure a fresh, expanded blade near its widest part. Widths overlap; compare several leaves.",
+      "hint": "Measure a fresh blade near its widest point. Ranges are approximate and can overlap; flatten curled leaves when practical.",
       "options": [
         {
           "id": "thread",
-          "label": "Thread-fine (up to 2 mm)"
+          "label": "Thread-fine (under 2 mm)"
         },
         {
           "id": "narrow",
-          "label": "Narrow (2–5 mm)"
+          "label": "Narrow (about 2–5 mm)"
         },
         {
           "id": "medium",
-          "label": "Medium (5–10 mm)"
+          "label": "Medium (about 5–10 mm)"
         },
         {
           "id": "broad",
-          "label": "Broad (10 mm or more)"
+          "label": "Broad (over 10 mm)"
         }
       ]
     },
@@ -356,9 +356,7 @@
       "id": "bothriochloa-ischaemum",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow",
-        "medium"
+        "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 37",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=37",
@@ -373,7 +371,6 @@
       "id": "bouteloua-curtipendula",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow",
         "medium"
       ],
@@ -390,8 +387,7 @@
       "id": "bouteloua-hirsuta",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow"
+        "thread"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 38",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
@@ -406,8 +402,7 @@
       "id": "bouteloua-rigidiseta",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow"
+        "thread"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 38",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
@@ -437,7 +432,6 @@
       "id": "chloris-andropogonoides",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 41",
@@ -453,7 +447,6 @@
       "id": "chloris-cucullata",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 41",
@@ -485,7 +478,6 @@
       "id": "chloris-virgata",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow",
         "medium"
       ],
@@ -502,7 +494,6 @@
       "id": "chasmanthium-latifolium",
       "character": "blade_width",
       "states": [
-        "medium",
         "broad"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 41",
@@ -534,7 +525,6 @@
       "id": "eragrostis-intermedia",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 48",
@@ -550,8 +540,7 @@
       "id": "eragrostis-lugens",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow"
+        "thread"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 48",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
@@ -566,7 +555,6 @@
       "id": "eragrostis-secundiflora",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 49",
@@ -599,7 +587,6 @@
       "id": "eriochloa-sericea",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 50",
@@ -615,8 +602,7 @@
       "id": "erioneuron-pilosum",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow"
+        "thread"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 50",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
@@ -631,9 +617,7 @@
       "id": "festuca-versuta",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow",
-        "medium"
+        "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 50",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
@@ -664,9 +648,7 @@
       "id": "hilaria-mutica",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow",
-        "medium"
+        "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 51",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
@@ -681,7 +663,6 @@
       "id": "hopia-obtusa",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow",
         "medium"
       ],
@@ -698,8 +679,7 @@
       "id": "leersia-oryzoides",
       "character": "blade_width",
       "states": [
-        "medium",
-        "broad"
+        "medium"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 52",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
@@ -714,9 +694,7 @@
       "id": "muhlenbergia-lindheimeri",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow",
-        "medium"
+        "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 54",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
@@ -731,8 +709,7 @@
       "id": "muhlenbergia-reverchonii",
       "character": "blade_width",
       "states": [
-        "thread",
-        "narrow"
+        "thread"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 55",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
@@ -764,8 +741,7 @@
       "character": "blade_width",
       "states": [
         "thread",
-        "narrow",
-        "medium"
+        "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 59",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
@@ -795,7 +771,6 @@
       "id": "polypogon-monspeliensis",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow",
         "medium"
       ],
@@ -812,7 +787,6 @@
       "id": "tripsacum-dactyloides",
       "character": "blade_width",
       "states": [
-        "medium",
         "broad"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 67",
@@ -828,7 +802,6 @@
       "id": "sorghum-bicolor",
       "character": "blade_width",
       "states": [
-        "medium",
         "broad"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 63",
@@ -877,7 +850,6 @@
       "id": "paspalum-distichum",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow",
         "medium"
       ],
@@ -911,7 +883,6 @@
       "id": "setaria-scheelei",
       "character": "blade_width",
       "states": [
-        "narrow",
         "medium",
         "broad"
       ],
@@ -928,7 +899,6 @@
       "id": "setaria-reverchonii",
       "character": "blade_width",
       "states": [
-        "thread",
         "narrow"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 61",
