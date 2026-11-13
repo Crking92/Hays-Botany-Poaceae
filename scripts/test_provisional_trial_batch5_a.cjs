@@ -221,7 +221,10 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // Batch 2 (2026-11-13): two species gain two reviewed unilateral-head
 // field matches each; 2 habit x 2 ligule x 1 awn = 4 new complete
 // combinations per head option per species: 459 + 16 = 475.
-assert.equal(scoredPaths,475,'Reviewed scored character-combination total changed');
+// Batch 3 (2026-11-13): five source-backed one-sided grama comb aliases.
+// New complete combinations: buffalograss 4 + blue 6 + hairy 8 + tall 1 + red 4 = 23.
+// Exact validated total: 475 + 23 = 498.
+assert.equal(scoredPaths,498,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
