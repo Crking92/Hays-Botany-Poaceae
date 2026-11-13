@@ -55,8 +55,32 @@ state.refineSelected={blade_width:"broad"};
 const withHead=run().map(x=>x.id);
 if(withHead.length!==baseWithHead.length||baseWithHead.some(x=>!withHead.includes(x)))
   throw Error("Optional width eliminated a legitimate four-question match");
+
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={blade_venation:"median_lines"};
+got=verifyUnchanged("Poa median grooves");
+if(got[0].id!=="poa-annua"||got[0].extras!==1)throw Error("Poa groove evidence ranking failed");
+state.refineSelected={blade_venation:"raised_ribs"};
+got=verifyUnchanged("unsourced ribs");
+if(got.some(x=>x.extras))throw Error("Research-pending ribs should not rank a taxon");
+state.refineSelected={ligule_length:"long"};
+got=verifyUnchanged("long ligule");
+if(!["muhlenbergia-lindheimeri","muhlenbergia-reverchonii","polypogon-monspeliensis"].includes(got[0].id)||got[0].extras!==1)
+  throw Error("Long ligule evidence not available");
+state.refineSelected={ligule_edge:"lacerate"};
+got=verifyUnchanged("lacerate ligule");
+if(!got.some(x=>x.id==="muhlenbergia-lindheimeri"&&x.extras))throw Error("Muhly torn edge was not ranked");
+state.refineSelected={sheath_margins:"closed"};
+got=verifyUnchanged("unverified closed sheath");
+if(got.some(x=>x.extras))throw Error("Unverified fused sheath must not rank");
+state.refineSelected={blade_venation:"rough_vein_lines",sheath_surface:"rough_surface"};
+got=verifyUnchanged("rough vein and sheath");
+if(!got.some(x=>x.id==="leersia-oryzoides"&&x.extras===2))throw Error("Leersia two documented traits not ranked");
+state.refineSelected={ligule_length:"tiny",blade_venation:"raised_ribs"};
+verifyUnchanged("conflicting biological clues with pending rib evidence");
+
 if(!html.includes('id="theme-toggle"')||!html.includes('id="compare-dialog"')||
    !html.includes('const group=node("details","optional-group")'))
   throw Error("Visitor theme, compare or accordion controls missing");
-console.log("PASS: 112 original species retained for all extra choices; 8 groups, "+
+console.log("PASS: 112 original species retained for all extra choices; 13 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");

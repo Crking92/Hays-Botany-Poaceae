@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_note": "Batch 2 adds sourced leaf-width ranges, shape, hairs, tips, margins, and midveins; all positive-ranking only, not hard exclusions. Multiple compatible states and gaps are intentionally retained.",
+  "release_note": "Batch 3 adds referenced veins, grooved midribs, collar, ligule and sheath options; raised parallel ribs and closed-fused sheaths remain visible research targets, not ranked species. No new exclusions or specimen certifications.",
   "mode": "NON_EXCLUDING_POSITIVE_RANKING",
   "characters": [
     {
@@ -91,6 +91,42 @@
       ]
     },
     {
+      "id": "blade_venation",
+      "label": "Veins, ribs & grooves",
+      "hint": "Look at both sides of a fresh blade with a hand lens. Parallel veins are common to grasses; a white center vein, raised single keel, paired pale grooves and many lengthwise ribs are different structures.",
+      "options": [
+        {
+          "id": "median_lines",
+          "label": "Two pale grooves beside the midrib"
+        },
+        {
+          "id": "pale_midvein",
+          "label": "Whitish center vein"
+        },
+        {
+          "id": "prominent_midvein",
+          "label": "Strong center vein"
+        },
+        {
+          "id": "raised_midvein",
+          "label": "Raised center vein (single ridge)"
+        },
+        {
+          "id": "rough_midrib_below",
+          "label": "Rough center ridge underneath"
+        },
+        {
+          "id": "rough_vein_lines",
+          "label": "Rough along parallel vein lines"
+        },
+        {
+          "id": "raised_ribs",
+          "label": "Many raised lengthwise ribs",
+          "evidence_pending": true
+        }
+      ]
+    },
+    {
       "id": "blade_hairs",
       "label": "Leaf blade hairs",
       "hint": "Use a hand lens if needed. Check whether hairs occur mostly at the base or across the blade. Collar and sheath hairs are separate.",
@@ -121,6 +157,111 @@
         {
           "id": "compressed_sheath",
           "label": "Flattened / keeled sheath"
+        }
+      ]
+    },
+    {
+      "id": "ligule_length",
+      "label": "Ligule height",
+      "hint": "Open the blade–sheath junction to measure the true ligule, not adjacent collar hairs.",
+      "options": [
+        {
+          "id": "tiny",
+          "label": "Tiny (under 1 mm)"
+        },
+        {
+          "id": "short",
+          "label": "Short (1–3 mm)"
+        },
+        {
+          "id": "medium",
+          "label": "Medium (3–8 mm)"
+        },
+        {
+          "id": "long",
+          "label": "Very long (over 8 mm)"
+        }
+      ]
+    },
+    {
+      "id": "ligule_edge",
+      "label": "Ligule edge",
+      "hint": "Find the inner papery flap or hair fringe. A ragged edge differs from fine hairs growing off its margin.",
+      "options": [
+        {
+          "id": "entire",
+          "label": "Smooth membrane edge"
+        },
+        {
+          "id": "erose",
+          "label": "Tiny notches or ragged edge"
+        },
+        {
+          "id": "lacerate",
+          "label": "Deeply torn / split membrane"
+        },
+        {
+          "id": "ciliate",
+          "label": "Hair-tipped membrane"
+        },
+        {
+          "id": "hair_fringe",
+          "label": "Fringe of short hairs"
+        }
+      ]
+    },
+    {
+      "id": "sheath_margins",
+      "label": "Leaf sheath opening",
+      "hint": "Check a fresh leaf. Closed sheaths sometimes split as they dry.",
+      "options": [
+        {
+          "id": "open",
+          "label": "Open edges / slit"
+        },
+        {
+          "id": "overlapping",
+          "label": "Overlapping edges"
+        },
+        {
+          "id": "closed",
+          "label": "Fused into a tube",
+          "evidence_pending": true
+        }
+      ]
+    },
+    {
+      "id": "sheath_surface",
+      "label": "Leaf sheath shape and feel",
+      "hint": "Examine the sheath surrounding the stem, not the exposed blade.",
+      "options": [
+        {
+          "id": "keeled_lower",
+          "label": "Lower sheath flattened / keeled"
+        },
+        {
+          "id": "lower_compressed",
+          "label": "Flattened lower sheath"
+        },
+        {
+          "id": "weak_keel",
+          "label": "Weak raised keel"
+        },
+        {
+          "id": "glanded",
+          "label": "Small glands along sheath"
+        },
+        {
+          "id": "rough_surface",
+          "label": "Rough exterior"
+        },
+        {
+          "id": "sometimes_hairy",
+          "label": "Sparse hairs on sheath"
+        },
+        {
+          "id": "hyaline_margins",
+          "label": "Translucent papery sheath edges"
         }
       ]
     },
@@ -1530,6 +1671,705 @@
       "source": "Hagenbuch & Lemke (2015), p. 50",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
       "note": "Whitish midnerve visible from beneath; leaf edges also pale.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "ligule_length",
+      "states": [
+        "long"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "8–15 mm torn-edge membrane; several mature leaves should be compared",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        8,
+        15
+      ]
+    },
+    {
+      "id": "muhlenbergia-reverchonii",
+      "character": "ligule_length",
+      "states": [
+        "short",
+        "medium",
+        "long"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 55",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+      "note": "2–9 mm membrane; size overlaps Lindheimer muhly",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        2,
+        9
+      ]
+    },
+    {
+      "id": "poa-annua",
+      "character": "ligule_length",
+      "states": [
+        "short",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "1.5–4 mm papery membrane; edge variable",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1.5,
+        4
+      ]
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "ligule_length",
+      "states": [
+        "short",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "1–4 mm acute membrane",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "ligule_length",
+      "states": [
+        "medium",
+        "long"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "3–15 mm membrane with a lacerate edge",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        3,
+        15
+      ]
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Tiny ligule with short cilia and membrane base Original treatment states only an upper bound; lower bound unspecified.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        null,
+        0.5
+      ]
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "ligule_length",
+      "states": [
+        "tiny",
+        "short"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 53",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+      "note": "Truncate membrane with erose edge",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.5,
+        2
+      ]
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Tiny hair-fringe ligule; not a tall membrane Original treatment states only an upper bound; lower bound unspecified.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        null,
+        1
+      ]
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "ligule_length",
+      "states": [
+        "short",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Stiff papery membrane; pointed auricles extend above",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        2,
+        6
+      ]
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Truncate ciliate membrane",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "festuca-versuta",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Small membranous ligule",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "id": "anatherum-glomeratum",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Ciliate membranous ligule; compare exterior collar hairs",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "anatherum-virginicum",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Ciliate membranous ligule; upper sheath often rounded",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "chloris-cucullata",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Short ciliate membrane",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.5,
+        1
+      ]
+    },
+    {
+      "id": "secale-cereale",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "A. C. Gibson, UT Austin PRC — Secale cereale",
+      "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale",
+      "note": "Membrane to around 0.7 mm, jagged Original treatment states only an upper bound; lower bound unspecified.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        null,
+        0.7
+      ]
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "ligule_edge",
+      "states": [
+        "lacerate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "Deeply torn membrane tip",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "ligule_edge",
+      "states": [
+        "entire",
+        "erose"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Entire or lightly ragged edge; both may occur",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "ligule_edge",
+      "states": [
+        "entire"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Generally entire papery ligule edge",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "ligule_edge",
+      "states": [
+        "lacerate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Deeply irregular/torn ligule tip",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "ligule_edge",
+      "states": [
+        "erose"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 53",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+      "note": "Slightly eroded membranous tip",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "ligule_edge",
+      "states": [
+        "hair_fringe"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Minute hair fringe",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "ligule_edge",
+      "states": [
+        "erose",
+        "ciliate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Erose and ciliolate membrane edge; can show both",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Papery membrane with projecting cilia",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "festuca-versuta",
+      "character": "ligule_edge",
+      "states": [
+        "entire"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Entire membrane edge",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Minute membrane with hairs",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-glomeratum",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Membrane with fine rim hairs",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-virginicum",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Short papery membrane with cilia",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-cucullata",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Ciliate truncate membrane",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "secale-cereale",
+      "character": "ligule_edge",
+      "states": [
+        "erose"
+      ],
+      "source": "A. C. Gibson, UT Austin PRC — Secale cereale",
+      "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale",
+      "note": "Short ragged membrane",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "Distinct, open sheath margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Open sheath edges, thin margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Distinct open margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Open sheath margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Open edges of the sheath",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 53",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+      "note": "Open margins; external face rough",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Open sheath margins connect with auricle-bearing top",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Distinct open sheath",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "festuca-versuta",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Open sheath margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Open margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "secale-cereale",
+      "character": "sheath_margins",
+      "states": [
+        "overlapping"
+      ],
+      "source": "A. C. Gibson, UT Austin PRC — Secale cereale",
+      "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale",
+      "note": "Sheath top commonly overlaps",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "sheath_surface",
+      "states": [
+        "keeled_lower"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "Lower sheaths compressed and keeled",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "sheath_surface",
+      "states": [
+        "weak_keel",
+        "glanded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Weakly keeled and glandular along keel and nerves",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "sheath_surface",
+      "states": [
+        "rough_surface"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 53",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+      "note": "Retrorsely rough outer sheath",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Outer sheath glabrous to sparsely pilose",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "sheath_surface",
+      "states": [
+        "hyaline_margins"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Thin translucent upper sheath margins",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "sheath_surface",
+      "states": [
+        "hyaline_margins"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Hyaline upper edges",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-glomeratum",
+      "character": "sheath_surface",
+      "states": [
+        "keeled_lower"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Compressed keeled sheath",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-virginicum",
+      "character": "sheath_surface",
+      "states": [
+        "lower_compressed"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Lower sheaths compressed, upper rounded",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "secale-cereale",
+      "character": "sheath_surface",
+      "states": [
+        "hyaline_margins"
+      ],
+      "source": "A. C. Gibson, UT Austin PRC — Secale cereale",
+      "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale",
+      "note": "Narrow translucent sheath margin",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "blade_venation",
+      "states": [
+        "median_lines"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Two pale median grooves parallel to center vein, not strong upper ribs",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "blade_venation",
+      "states": [
+        "rough_midrib_below"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Scabrous lower midnerve",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "blade_venation",
+      "states": [
+        "pale_midvein"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Visible white center nerve; glands are recorded along it",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "blade_venation",
+      "states": [
+        "rough_midrib_below",
+        "rough_vein_lines"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 53",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+      "note": "Midnerve and blade faces backward-rough",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "blade_venation",
+      "states": [
+        "prominent_midvein"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Conspicuous midnerve; not necessarily a raised ridge",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "blade_venation",
+      "states": [
+        "pale_midvein"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Conspicuous whitish center vein",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "secale-cereale",
+      "character": "blade_venation",
+      "states": [
+        "raised_midvein",
+        "rough_vein_lines"
+      ],
+      "source": "A. C. Gibson, UT Austin PRC — Secale cereale",
+      "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale",
+      "note": "Upper midrib low-raised and vein lines scabrous with short projections",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "blade_venation",
+      "states": [
+        "raised_midvein"
+      ],
+      "source": "Missouri DNR — Switchgrass",
+      "source_url": "https://mdc.mo.gov/discover-nature/field-guide/switchgrass",
+      "note": "Underside midvein raised and conspicuous",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     }
   ],
