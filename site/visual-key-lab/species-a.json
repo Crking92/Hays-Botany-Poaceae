@@ -1586,11 +1586,13 @@
     "common": "Tumble windmillgrass",
     "scientific": "Chloris verticillata",
     "range": "UNRESOLVED",
-    "field_rule": "Tumble windmillgrass tends to have separated tiers of longer (~5–15 cm) racemes and long awns. C. cucullata tends to have crowded shorter whorls and a swollen short-awned sterile hood. C. virgata often has one terminal feathery fan and a different fertile-lemma hair crown. The hybrid between cucullata and verticillata is a real confounder: never certify hybrid status from tier spacing.\n\nTrue ligule: Its ciliate membrane may show a short hair fringe, particularly at the edges. The actual inner membrane is still present even when hairs dominate the field of view. Do not mistake long sheath-mouth hairs for the ligule.",
+    "field_rule": "Tumble windmillgrass tends to have separated tiers of longer (~5–15 cm) racemes and long awns. C. cucullata tends to have crowded shorter whorls and a swollen short-awned sterile hood. C. virgata often has one terminal feathery fan and a different fertile-lemma hair crown. The hybrid between cucullata and verticillata is a real confounder: never certify hybrid status from tier spacing.\n\nTrue ligule: Its ciliate membrane may show a short hair fringe, particularly at the edges. The actual inner membrane is still present even when hairs dominate the field of view. Do not mistake long sheath-mouth hairs for the ligule.\n\nField-score cross-check (2026-11-13): the multi-whorled shape is diagnostic when visible, but every intact attached branch also carries spikelets on one side; a head with seven or more such branches genuinely fits both one-sided choices. These choices are BROAD patterns shared with other grasses, not permission to name a Chloris species without head-tier spacing and mature spikelets.",
     "hero_i": 2,
     "traits": {
       "head": [
-        "whorls"
+        "whorls",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -1702,6 +1704,22 @@
         "reference": "The perennial is primarily tuft-forming (caespitose) in FNA, Kew and the Texas Hill Country descriptions. FNA permits decumbent, lower-node-rooting culms; Texas A&M reports occasional short stolons producing a turf-like mat. Both the tuft and surface-runner/mat visual options must remain possible. Neither confirms a specimen without seeing the base.",
         "status": "LITERATURE_SUPPORTED_VARIABLE_TUFT_OR_SHORT_STOLON_VISUAL_STATES_LOCAL_BASE_PHOTO_NOT_CERTIFIED",
         "review_date": "2026-11-11"
+      },
+      "head": {
+        "source": "Flora of North America, Chloris verticillata (Barkworth), species treatment; Kew GrassBase via POWO exact species account; Texas A&M AgriLife, Tumble Windmillgrass",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=17600",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:991601-1/general-information",
+        "regional_source_url": "https://rangeplants.tamu.edu/plant/tumble-windmillgrass/",
+        "role": "reproductive",
+        "reference": "The primary whorled head remains characteristic: FNA describes 10–16 branches in well-separated whorls and explicitly describes two rows of spikelets confined to ONE SIDE of each branch; GrassBase calls 10–16 racemes unilateral; Texas A&M records 10–16 racemes, sometimes in a single whorl and sometimes more widely spaced. In the beginner key both 'spikelets on one side' and 'seven or more one-sided branches' are directly observable TRUE features of typical intact heads. Keep 'whorls' without automatically treating its alternative broad unilateral choices as a hybrid or as a species confirmation.",
+        "reported_states": [
+          "windmill spokes in separate whorls (diagnostic head architecture)",
+          "unilateral racemes with one-sided spikelet rows",
+          "typically seven or more one-sided racemes, count on attached intact head"
+        ],
+        "status": "EXACT_SPECIES_FNA_KEW_UNILATERAL_RACEMES_AND_COUNTS_ADDITIVE_HEAD_MATCH",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-scored field-choice aliases only. No new specimen, exact image or spikelet re-identification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1892,11 +1910,13 @@
     "common": "Feather fingergrass",
     "scientific": "Chloris virgata",
     "range": "UNRESOLVED",
-    "field_rule": "C. virgata often has a single terminal digitate fan of feathery racemes, while verticillata has well-separated tiers and may form a tumbling mature head. C. cucullata has shorter crowded whorls and the strongly inflated sterile hood. Fertile-lemma apical hair crown, awn and annual crown are needed for confident C. virgata.\n\nTrue ligule: Its tiny membranous ligule is ciliate; when the cilia are more obvious than the membrane, the key's 'fringe of hairs' choice must not eliminate feather fingergrass. Separate true inner ligule hairs from the much longer blade-base hairs.",
+    "field_rule": "C. virgata often has a single terminal digitate fan of feathery racemes, while verticillata has well-separated tiers and may form a tumbling mature head. C. cucullata has shorter crowded whorls and the strongly inflated sterile hood. Fertile-lemma apical hair crown, awn and annual crown are needed for confident C. virgata.\n\nTrue ligule: Its tiny membranous ligule is ciliate; when the cilia are more obvious than the membrane, the key's 'fringe of hairs' choice must not eliminate feather fingergrass. Separate true inner ligule hairs from the much longer blade-base hairs.\n\nField-score cross-check (2026-11-13): the feathery terminal fingers are unilateral spike-bearing racemes. An observer who sees one-sided spikelets can use that broad choice, and seven or more branches fit the branch-count choice; some plants have fewer than seven, so count instead of assuming. Confirm the species by lemma hair crown, flowering architecture, and perennial/annual crown.",
     "hero_i": 0,
     "traits": {
       "head": [
-        "fingers"
+        "fingers",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -2013,6 +2033,22 @@
         "certainty": "DIRECT_REGIONAL_SOURCE_OPTIONAL_SURFACE_RUNNERS_NOT_SAME_PLANT_PHOTO_CERTIFIED",
         "status": "SOURCE_SUPPORTED_CONDITIONAL_BROAD_KEY_STATE",
         "review_date": "2026-11-11"
+      },
+      "head": {
+        "source": "Kew GrassBase, Chloris virgata exact species treatment; PlantNET New South Wales Flora species description; University of Arizona Yavapai County grass key",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396063-1/general-information",
+        "secondary_source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Chloris~virgata&page=nswfl",
+        "additional_source_url": "https://yavapaiplants.extension.arizona.edu/chloris-virgata",
+        "role": "reproductive",
+        "reference": "Kew reports 4–12 DIGITATE UNILATERAL racemes, and the New South Wales Flora independently records 7–19 branches with 2 rows of spikelets on ONE SIDE of each. Therefore a counted mature specimen can match the broad 'one-sided' option and, only when at least seven racemes are present, the 'seven or more one-sided branches' option. Its original 'fingers' terminal fan remains the better broad head visual; unilateral architecture is not proof of identity.",
+        "reported_states": [
+          "terminal fingerlike spreading racemes",
+          "one-sided rows of attached spikelets",
+          "seven or more one-sided racemes in the reported 7–19 and overlapping 7–12 range"
+        ],
+        "status": "TWO_EXACT_SPECIES_FLORAS_ONE_SIDED_RACEMES_COUNTED_VARIATION_ADDITIVE_HEAD_MATCH",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-only; count/raceme sex and species must be verified on attached local material."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
