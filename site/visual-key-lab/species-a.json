@@ -4,7 +4,7 @@
     "common": "Little Bluestem",
     "scientific": "Schizachyrium scoparium",
     "range": "PASS",
-    "field_rule": "Little bluestem: trace separate short racemes to their leafy flowering branches and inspect paired spikelets and flattened sheaths. Usually bunch-forming; a short underground stem does not rule it out. Compare connected flowering structures with KR bluestem before naming the plant.",
+    "field_rule": "Little bluestem: trace separate short racemes to their leafy flowering branches and inspect paired spikelets and flattened sheaths. Usually bunch-forming; a short underground stem does not rule it out. Compare connected flowering structures with KR bluestem before naming the plant.\n\nScoring audit 2026-11-13: A short fertile awn on a mature little bluestem spikelet can fall near 2.5 mm, despite the more familiar conspicuous awns; 'no obvious LONG awns' may fit that scale. This is NOT a claim of an awnless lemma. Look at an intact sessile fertile spikelet; the sometimes awnless pedicelled partner is not the same thing.",
     "hero_i": 3,
     "traits": {
       "head": [
@@ -18,7 +18,8 @@
         "membrane"
       ],
       "awns": [
-        "long"
+        "long",
+        "none_obvious"
       ]
     },
     "photos": [
@@ -71,6 +72,22 @@
         "status": "DIRECT_REGIONAL_TEXT_REVIEWED_LOCAL_SPECIMEN_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No new specimen, photo or microscopic verification."
+      },
+      "awns": {
+        "source": "Flora of North America, Schizachyrium scoparium exact species treatment",
+        "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Schizachyrium+scoparium",
+        "secondary_source": "USDA NRCS, South Texas little bluestem germplasm release with cited Shaw (2012) measurements",
+        "secondary_source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcrn12733.pdf",
+        "role": "reproductive",
+        "reference": "FNA exact species lists awns on the UPPER FERTILE lemma 2.5–17 mm, not uniformly conspicuously long. South Texas USDA-NRCS morphology summary repeats the 2.5–17 mm range, and separates the sometimes unawned or much shorter awns of the PEDICELLED sterile/staminate spikelet (to 4 mm). The field answer 'no conspicuous LONG awns' must not reject a mature little bluestem with a genuinely short sessile fertile lemma awn. This observational alternative does NOT assert awnlessness or validate any local photo; a broken, obscured or immature awn means SKIP.",
+        "reported_states": [
+          "short but genuine fertile lemma awns present",
+          "conspicuous awns possible",
+          "coarse 'no conspicuous LONG awns' visual route possible on short-awn material"
+        ],
+        "status": "TWO_PUBLISHED_SPECIES_RECORDS_AWN_RANGE_SHORT_VISUAL_COARSE_ALTERNATE_NO_AWNLESS_CLAIM",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Source-supported visual-option ambiguity; no exact local mature attached spikelet measured or independently verified."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",

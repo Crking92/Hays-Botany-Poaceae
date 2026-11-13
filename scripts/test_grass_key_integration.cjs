@@ -89,6 +89,8 @@ for(const s of species) {
   visit(Object.entries(s.traits).filter(([,v]) => v.length > 0));
 }
 const positives = [
+  ['Little bluestem short fertile awn, no obvious long projection',{head:'short_racemes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['schizachyrium-scoparium']],
+  ['Little bluestem short rhizome and short awn',{head:'short_racemes',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['schizachyrium-scoparium']],
   ['Male buffalograss unilateral combs',{head:'one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-dactyloides']],
   ['Blue grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'hairs',awns:'three_short'},['bouteloua-gracilis']],
   ['Hairy grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'three_short'},['bouteloua-hirsuta']],
