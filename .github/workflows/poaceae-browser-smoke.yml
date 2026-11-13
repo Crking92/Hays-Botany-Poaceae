@@ -8,6 +8,7 @@ on:
       - "site/visual-key-lab/species-*.json"
       - "site/visual-key-lab/hays-candidates.json"
       - "site/visual-key-lab/index.html"
+      - "site/visual-key-lab/hays-candidates.html"
   pull_request:
     paths:
       - ".github/workflows/poaceae-browser-smoke.yml"
@@ -15,6 +16,7 @@ on:
       - "site/visual-key-lab/species-*.json"
       - "site/visual-key-lab/hays-candidates.json"
       - "site/visual-key-lab/index.html"
+      - "site/visual-key-lab/hays-candidates.html"
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
