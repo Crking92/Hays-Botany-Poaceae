@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only deployed 112+24 normal-key trial audit; no specimen or rights certification."""
+"""Read-only deployed 112+53 normal-key trial audit; no specimen or rights certification."""
 import json
 import time
 import urllib.error
@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "site" / "visual-key-lab"
 BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
-FILES = ["index.html", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json"]
+FILES = ["index.html", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
 ATTEMPTS = 12
 DELAY_SECONDS = 5
 
@@ -34,7 +34,7 @@ def http_check():
         local_bytes = (LAB / name).read_bytes()
         if name == "index.html":
             assert public_bytes == local_bytes, "Public normal key HTML differs from current main"
-            for token in [b"provisional-trial-profiles.json", b"provisional-trial-batch2.json", b"provisional-trial-batch3.json", b"provisional-trial-batch4.json",
+            for token in [b"provisional-trial-profiles.json", b"provisional-trial-batch2.json", b"provisional-trial-batch3.json", b"provisional-trial-batch4.json", b"provisional-trial-batch5-a.json", b"provisional-trial-batch5-b.json", b"provisional-trial-batch5-c.json",
                           b"Research trial"]:
                 assert token in public_bytes, f"Published key missing {token!r}"
         else:
@@ -46,9 +46,14 @@ def http_check():
     six_b = delivered["provisional-trial-batch2.json"]["profiles"]
     six_c = delivered["provisional-trial-batch3.json"]["profiles"]
     six_d = delivered["provisional-trial-batch4.json"]["profiles"]
-    groups = six_a + six_b + six_c + six_d
-    assert len(six_a) == len(six_b) == len(six_c) == 6 and len(six_d) == 6 and len(groups) == 24, "Twenty-four trial profiles not delivered"
-    assert len({x["id"] for x in groups}) == 24, "Duplicate trial IDs"
+    batch_a = delivered["provisional-trial-batch5-a.json"]["profiles"]
+    batch_b = delivered["provisional-trial-batch5-b.json"]["profiles"]
+    batch_c = delivered["provisional-trial-batch5-c.json"]["profiles"]
+    groups = six_a + six_b + six_c + six_d + batch_a + batch_b + batch_c
+    assert all(len(g) == 6 for g in [six_a, six_b, six_c, six_d]), "Earlier 24 research trial records changed"
+    assert (len(batch_a), len(batch_b), len(batch_c)) == (11, 10, 8), "Three new research lanes incomplete"
+    assert len(groups) == 53, "Fifty-three research trial profiles not delivered"
+    assert len({x["id"] for x in groups}) == 53, "Duplicate trial IDs"
     assert all(x["trial"] is True and
                x["admission_status"] == "RESEARCH_TRIAL_NOT_ADMITTED" and
                x["range"] == "UNVERIFIED" for x in groups), "Trial data silently admitted/certified"
@@ -77,11 +82,11 @@ def browser_check(groups):
             page = browser.new_page(viewport={"width": 390, "height": 844})
             page.goto(BASE, wait_until="domcontentloaded", timeout=60000)
             page.wait_for_function(
-                "() => document.querySelectorAll('#results .result').length === 136",
+                "() => document.querySelectorAll('#results .result').length === 165",
                 timeout=45000)
             labels = page.locator("#results .result .tag").all_text_contents()
-            assert sum("Research trial" in x and "unverified" in x for x in labels) == 24, (
-                "Normal four-character key missing or relabeling its twenty-four research trials")
+            assert sum("Research trial" in x and "unverified" in x for x in labels) == 53, (
+                "Normal four-character key missing or relabeling its fifty-three research trials")
             matches = []
             for x in groups:
                 scientific=x["scientific"]
@@ -115,14 +120,14 @@ def check():
     groups = http_check()
     visited = browser_check(groups)
     return {
-        "status": "PUBLIC_HTTP_AND_BROWSER_24_TRIALS_VERIFIED",
+        "status": "PUBLIC_HTTP_AND_BROWSER_53_TRIALS_VERIFIED",
         "public_url": BASE,
         "files_verified": FILES,
         "original_scored_count_unchanged": 112,
         "trial_matches_available": len(groups),
-        "total_normal_key_results": 136,
+        "total_normal_key_results": 165,
         "total_learner_species": 169,
-        "provisional_still_research_only": 33,
+        "provisional_still_research_only": 4,
         "verified_specimen_admissions": 0,
         "trial_source_photo_refs": sum(len(x["photos"]) for x in groups),
         "research_trial_cards_and_details_checked": len(visited),
@@ -141,8 +146,8 @@ if __name__ == "__main__":
             break
         except (AssertionError, urllib.error.URLError, json.JSONDecodeError, TimeoutError, Exception) as exc:
             error = f"{type(exc).__name__}: {exc}"
-            print(f"Published 24-trial key not yet verified ({attempt}/{ATTEMPTS}): {error}", flush=True)
+            print(f"Published 53-trial key not yet verified ({attempt}/{ATTEMPTS}): {error}", flush=True)
             if attempt != ATTEMPTS:
                 time.sleep(DELAY_SECONDS)
     else:
-        raise SystemExit(f"Public normal key not in verified 112+24 parity: {error}")
+        raise SystemExit(f"Public normal key not in verified 112+53 parity: {error}")
