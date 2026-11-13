@@ -343,7 +343,7 @@ function renderResearchCandidate(d,root){
    const section=make("details",{className:"field-tile"});if(i===0)section.open=true;
    const summary=make("summary");summary.append(txt("strong",String(c.part||"structure").replaceAll("_"," ")));section.append(summary);
    appendParagraph(section,c.description);
-   appendParagraph(section,"Photo still needed: "+(c.needed_view||"Same-specimen structure"),"photo-hold");
+   appendParagraph(section,"Inspect on the same plant: "+(c.needed_view||"Same-specimen structure").replaceAll("_"," ").toLowerCase(),"photo-hold");
    appendParagraph(section,"Literature: "+(c.source||"See regional research packet"),"source-flag");
    root.append(section);
   }
@@ -354,7 +354,7 @@ function renderResearchCandidate(d,root){
    const li=make("li",{className:"learner-step"}),copy=make("div",{className:"step-copy"});
    copy.append(txt("h4",String(c.part||"structure").replaceAll("_"," ")));
    appendParagraph(copy,c.description);
-   appendParagraph(copy,"Next photograph: "+(c.needed_view||"Same-specimen evidence"),"muted");
+   appendParagraph(copy,"Inspect or photograph on the same plant: "+(c.needed_view||"Same-specimen evidence").replaceAll("_"," ").toLowerCase(),"muted");
    appendParagraph(copy,"Reference: "+(c.source||"Regional research packet"),"source-flag");
    li.append(copy);steps.append(li);
   }
