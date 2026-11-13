@@ -89,6 +89,11 @@ for(const s of species) {
   visit(Object.entries(s.traits).filter(([,v]) => v.length > 0));
 }
 const positives = [
+  ['Male buffalograss unilateral combs',{head:'one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-dactyloides']],
+  ['Blue grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'hairs',awns:'three_short'},['bouteloua-gracilis']],
+  ['Hairy grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'three_short'},['bouteloua-hirsuta']],
+  ['Tall grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['bouteloua-pectinata']],
+  ['Red grama unilateral combs',{head:'one_sided',habit:'rhizome',ligule:'hairs',awns:'three_short'},['bouteloua-trifida']],
   ['Tumble windmillgrass unilateral branches',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['chloris-verticillata']],
   ['Tumble windmillgrass 7+ one-sided branches',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'long'},['chloris-verticillata']],
   ['Feather fingergrass unilateral branches',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['chloris-virgata']],
