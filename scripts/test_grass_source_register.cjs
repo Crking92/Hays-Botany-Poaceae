@@ -44,13 +44,27 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<278||448-indexed.size-unknown>167||unknown!==3)
+if(indexed.size<295||448-indexed.size-unknown>150||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
  "chloris-verticillata","chloris-virgata","elymus-canadensis","elymus-virginicus","hordeum-pusillum",
  "sorghastrum-nutans","sorghastrum-elliottii","anatherum-glomeratum","anatherum-virginicum",
  "setaria-italica","heteropogon-contortus","bromus-texensis","poa-annua"];
+const awnlessBatch=[
+ "eragrostis-spectabilis","eragrostis-intermedia","eragrostis-trichodes","eragrostis-cilianensis",
+ "eragrostis-hirsuta","eragrostis-lugens","eragrostis-secundiflora","sporobolus-compositus",
+ "sporobolus-clandestinus","sporobolus-vaginiflorus","panicum-hallii","panicum-virgatum",
+ "panicum-capillare","panicum-coloratum","dichanthelium-commutatum",
+ "dichanthelium-oligosanthes","poa-arachnifera"];
+if(awnlessBatch.some(id=>!entries.has(id+"|awns")))throw Error("Missing awnless source batch citation");
+const scopes=awnlessBatch.map(id=>cross.crosschecks.find(e=>e.id===id&&e.character==="awns"));
+if(scopes.some(x=>!x||x.references.length<2||!x.interpretation))
+ throw Error("Awnless citations missing sources/interpretations");
+if(!scopes.some(x=>x.status.includes("NOT_TWO_SPECIES_EXPLICIT"))||
+  !scopes.some(x=>x.status.includes("SPECIES_TREATMENT_COMPATIBLE_ONLY"))||
+  !scopes.some(x=>x.status.includes("HISTORICAL_PANICUM_CROSSWALK")))
+ throw Error("New citations falsely imply two independently explicit species-level accounts");
 if(awnBatch.some(id=>!entries.has(id+"|awns")))
  throw Error("Missing a named citation from 18-member first awn batch");
 const phrase=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="awns");
