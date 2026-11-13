@@ -18,7 +18,12 @@ assert.equal(new Set([...species,...candidates].map(s=>s.id)).size,169);
 assert.equal(species.reduce((n,s)=>n+s.photos.length,0),514);
 const target=species.find(s=>s.id==='bouteloua-pectinata');
 assert(target);
-assert.deepEqual(target.traits,{head:['combs'],habit:['tuft'],ligule:['hairs'],awns:['none_obvious']});
+// 2026-11-13 reviewed scoring extension: a pectinate comb is also a one-sided branch.
+// The alternate is backed by the FNA species+genus crosswalk; uncertainty around
+// the B. hirsuta subsp. pectinata complex remains, and no ligule/awn state changes.
+assert.deepEqual(target.traits,{head:['combs','one_sided'],habit:['tuft'],ligule:['hairs'],awns:['none_obvious']});
+assert.equal(target.character_evidence.head_one_sided_field_alias?.status,
+  'SOURCE_SUPPORTED_UNILATERAL_COMB_FIELD_ALIAS');
 assert(target.character_evidence.ligule.source.includes('Hagenbuch & Lemke'));
 assert(target.character_evidence.ligule.source.includes('Flora of North America'));
 assert(target.character_evidence.ligule.status.includes('SPECIMEN_PENDING'));
@@ -40,6 +45,7 @@ function matches(picks,rows=species){
 }
 const positive=[
  {head:'combs',habit:'tuft',ligule:'hairs',awns:'none_obvious'},
+ {head:'one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},
  {head:'combs',ligule:'hairs'},
  {head:'combs',habit:'tuft'}
 ];
@@ -49,5 +55,5 @@ for(const picks of unsupported)assert(!matches(picks).includes(target.id),'unsup
 const unknown={id:'unknown',scientific:'Unknown',common:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(matches({head:'combs',ligule:'hairs'},[unknown]),['unknown']);
 console.log(JSON.stringify({pass:true,scored:112,provisional:57,inventory:169,scoredPhotoReferences:514,
- evidenceAudited:'bouteloua-pectinata',newScoringStates:0,positivePaths:positive.length,
+ evidenceAudited:'bouteloua-pectinata',newScoringStates:1,positivePaths:positive.length,
  unsupportedPaths:unsupported.length,unknownNotHardExcluded:true,stillHeld:['tall grama true ligule','attached fertile-floret awns']},null,2));
