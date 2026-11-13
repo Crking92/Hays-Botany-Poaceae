@@ -1,0 +1,36 @@
+name: Hays Grass Lab Batch5 A-B-C integration regression
+on:
+  pull_request:
+    paths:
+      - "site/visual-key-lab/**"
+      - "scripts/test_grass_trial_batch5_abc_integrated.cjs"
+      - "scripts/test_provisional_trial_batch5_a.cjs"
+      - "scripts/test_provisional_trial_batch5_b.cjs"
+      - "scripts/test_grass_trial_batch5_c.cjs"
+      - "scripts/test_grass_key_integration.cjs"
+      - ".github/workflows/grass-trial-batch5-abc-integration.yml"
+  push:
+    branches: [main]
+    paths:
+      - "site/visual-key-lab/**"
+      - "scripts/test_grass_trial_batch5_abc_integrated.cjs"
+      - "scripts/test_grass_key_integration.cjs"
+permissions:
+  contents: read
+jobs:
+  integrated-research-only-key:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify A-B-C source photos, 29 new trials, holds and original 112 scoring
+        run: |
+          node scripts/test_grass_trial_batch5_abc_integrated.cjs
+          node scripts/test_provisional_trial_batch5_a.cjs
+          node scripts/test_provisional_trial_batch5_b.cjs
+          node scripts/test_grass_trial_batch5_c.cjs
+          node scripts/test_grass_key_integration.cjs
+          node scripts/test_provisional_trial_batch4.cjs
