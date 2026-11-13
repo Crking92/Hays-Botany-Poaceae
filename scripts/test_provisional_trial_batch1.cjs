@@ -52,7 +52,7 @@ assert(trials.find(x=>x.id==='bromus-tectorum').field_rule.includes('leave the a
  'Cheatgrass trial must warn about false exclusion from broken awns');
 assert(html.includes('provisional-trial-profiles.json'),'The normal key does not load trials');
 assert(html.includes('Research trial · unverified'),'Missing result badge');
-assert(html.includes('Not admitted to the officially scored 112'),'Missing explicit detail warning');
+assert(html.includes('Identification data still being checked'),'Missing visible provisional-identification status');
 const js=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert(js,'Production JavaScript absent');
 new vm.Script(js);
