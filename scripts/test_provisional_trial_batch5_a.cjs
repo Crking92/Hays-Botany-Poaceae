@@ -94,11 +94,11 @@ assert.equal(photoCount,28,'Photo-source parity changed in Chat A');
 // Execute the unchanged production matching function, not a reimplementation.
 // The branch intentionally leaves the shared key HTML untouched.
 const html=fs.readFileSync(path.join(lab,'index.html'),'utf8');
-const scripts=Array.from(html.matchAll(/<script(?:\\s[^>]*)?>([\\s\\S]*?)<\\/script>/g),m=>m[1]);
+const scripts=Array.from(html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g),m=>m[1]);
 const script=scripts.find(s=>s.includes('function currentResults()'));
 assert(script,'Production evaluator not found');
 const start=script.indexOf('function currentResults()');
-const end=script.indexOf('\\nfunction renderTabs',start);
+const end=script.indexOf('\nfunction renderTabs',start);
 assert(start>=0&&end>start,'Production evaluator boundary changed');
 const all=[...scored,...oldTrials,...newTrials];
 assert.equal(all.length,147);
