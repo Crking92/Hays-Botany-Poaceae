@@ -24,14 +24,14 @@ const trialProfiles = trialProfileFiles.flatMap(f => JSON.parse(read(f)).profile
 const trialCount = trialProfiles.length;
 const learnerOnlyCount = candidates.length - trialCount;
 assert.equal(new Set(trialProfiles.map(x=>x.id)).size, trialCount, 'Duplicate trial-profile identifiers');
-assert.equal(trialCount, 21, 'Research-trial inventory changed; review key admission and public copy');
+assert.equal(trialCount, 24, 'Research-trial inventory changed; review key admission and public copy');
 const html = read('index.html');
 assert(html.includes('id="coded-total"')&&html.includes('$("coded-total").textContent=state.species.length'),
  'Public key count must follow loaded scoring and research-trial data');
-assert(html.includes('provisional-trial-batch4.json')&&trialCount===21,
- 'The 21 research trials must remain a separate provisional inventory');
-assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===36,
- 'All 36 Learner-only records must be reported as missing identification-key data');
+assert(html.includes('provisional-trial-batch4.json')&&trialCount===24,
+ 'The 24 research trials must remain a separate provisional inventory');
+assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===33,
+ 'All 33 Learner-only records must be reported as missing identification-key data');
 assert(!html.includes('Phase 3 in progress:')&&!html.includes('Field-testing prototype:'),
  'Internal project progress banners should not appear on the visitor identification page');
 const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
