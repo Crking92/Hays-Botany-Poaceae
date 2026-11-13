@@ -2882,14 +2882,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1314) — Look past the woolly outline and measure the head from base to tip. The Flora gives about 2–15 cm.\n\nFind a tightly contracted, often lobed panicle approximately 1.5–16 cm long; the soft halo is a useful first clue, not a species-level proof. Existing panels show the real fuzzy head and moist-site colony, not attached roots.\n\nField ID Lab: the dense rabbitfoot head can look like a short compact tuft or an elongated narrow cylindrical panicle. It is a branched panicle with long awns on the glumes, not a true spike or a Setaria bristlegrass.",
+    "field_rule": "Flora field cue (Illustrated Flora of North Central Texas, p. 1314) — Look past the woolly outline and measure the head from base to tip. The Flora gives about 2–15 cm.\n\nFind a tightly contracted, often lobed panicle approximately 1.5–16 cm long; the soft halo is a useful first clue, not a species-level proof. Existing panels show the real fuzzy head and moist-site colony, not attached roots.\n\nField ID Lab: the dense rabbitfoot head can look like a short compact tuft or an elongated narrow cylindrical panicle. It is a branched panicle with long awns on the glumes, not a true spike or a Setaria bristlegrass.\n\nField ID Lab conditional growth note: Rabbitfoot grass usually grows in tufts, but outermost stems can recline on the soil and ROOT at their lower nodes. If you've actually observed a connected rooted lower culm, choose sprawling/mat without excluding rabbitfoot grass; this is not a claim that it makes true stolons.",
     "traits": {
       "head": [
         "compact",
         "long_narrow_panicle"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "membrane"
@@ -2937,6 +2938,20 @@
         "certainty": "DIRECT_REGIONAL_REPRODUCTIVE_SOURCE_KNOWNSPECIES_BROAD_FIELD_CATEGORY",
         "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
         "review_date": "2026-11-12"
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed pp. 59–60",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+        "category": "vegetative",
+        "reported_states": [
+          "annual cespitose (tuft typical)",
+          "outer culms decumbent, often rooting at lower nodes",
+          "rhizomes and true stolons absent"
+        ],
+        "reference": "The Lab's `mat` choice explicitly permits low decumbent culms rooting at nodes, not solely true stolons. Add conditional `mat` while preserving typical tuft; do not imply perennial surface runners.",
+        "status": "PRIMARY_HILL_COUNTRY_ROOTED_DECUMBENT_CULM_ADDITIVE_NONEXCLUSION",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly verified local attached rooting culm; source text supports the rare field path."
       }
     },
     "diagnostic_checks": [

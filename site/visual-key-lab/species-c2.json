@@ -1851,7 +1851,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Bob Harms's source-identified dried uprooted specimen (panel 10) shows true fibrous roots and attached flattened culms, while Harry Rose's in-situ photo (panel 1) shows field growth but hides the root crown. Goosegrass is an annual bunchgrass with notably compressed pale/whitish basal sheaths in life, NOT a network of rooting perennial runners. Neither photograph proves the LIVE milky-white crown at diagnostic close range. Next photograph: fresh uprooted living crown, fibrous roots, emerging tillers and cm scale. Goosegrass's flattened digitate branches carry spikelets in two rows on ONE SIDE. Kew GrassBase documents 1–10(17) unilateral branches, so exceptionally well-developed heads also legitimately match the seven-or-more one-sided-branches choice. Ordinary few-finger heads remain eligible under fingers and one-sided. Check the flattened leafy crown, membranous ligule and MULTIFLORED spikelets; branch count alone does not identify goosegrass.",
+    "field_rule": "Bob Harms's source-identified dried uprooted specimen (panel 10) shows true fibrous roots and attached flattened culms, while Harry Rose's in-situ photo (panel 1) shows field growth but hides the root crown. Goosegrass is an annual bunchgrass with notably compressed pale/whitish basal sheaths in life, NOT a network of rooting perennial runners. Neither photograph proves the LIVE milky-white crown at diagnostic close range. Next photograph: fresh uprooted living crown, fibrous roots, emerging tillers and cm scale. Goosegrass's flattened digitate branches carry spikelets in two rows on ONE SIDE. Kew GrassBase documents 1–10(17) unilateral branches, so exceptionally well-developed heads also legitimately match the seven-or-more one-sided-branches choice. Ordinary few-finger heads remain eligible under fingers and one-sided. Check the flattened leafy crown, membranous ligule and MULTIFLORED spikelets; branch count alone does not identify goosegrass.\n\nField ID Lab conditional growth note: Occasionally, an intact goosegrass plant has a short surface stolon or sprawled lower culm. If you TRACE a genuine runner at the surface, the Lab's sprawling/mat choice should still keep goosegrass among candidates. The usual plant is an annual tuft with a flattened whitish base, not a persistent rhizomatous lawn.",
     "traits": {
       "head": [
         "fingers",
@@ -1859,7 +1859,8 @@
         "many_one_sided"
       ],
       "habit": [
-        "tuft"
+        "tuft",
+        "mat"
       ],
       "ligule": [
         "membrane"
@@ -1888,6 +1889,21 @@
           "7–10(17) unilateral branches on unusually well-developed heads"
         ],
         "photo_voucher_support": "No newly observed Hays original whole head with countable unilateral racemes and attached mature spikelet dissection."
+      },
+      "habit": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 46; USDA NRCS East Texas Plant Materials Center, Goosegrass, p. 23",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=46",
+        "secondary_source_url": "https://www.nrcs.usda.gov/plantmaterials/etpmcpu8052.pdf",
+        "category": "vegetative",
+        "reported_states": [
+          "usually annual cespitose / tufted",
+          "stolons occasionally present in primary Hays-inclusive account",
+          "outermost culms can be decumbent, but decumbent alone is not a demonstrated rooted runner"
+        ],
+        "reference": "Allow `mat` as a CONDITIONAL nonexclusion when a true surface stolon or evident rooted spreading growth is observed. It is not typical or a perennial sod network. UF/IFAS 2025 reports stolons absent in its regional goosegrass key; retain this source tension and require a connected specimen.",
+        "status": "PRIMARY_HILL_COUNTRY_OCCASIONAL_STOLONS_ADDITIVE_NONEXCLUSION_IFAS_CONTRAST",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No new attached local surface stolon certified; existing photographed tuft does not establish a runner."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
