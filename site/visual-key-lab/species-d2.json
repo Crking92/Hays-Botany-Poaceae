@@ -1010,7 +1010,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Texas cupgrass: separate hair-FRINGE true LIGULE from hairy culm nodes; inspect the little CUP/RING just under a fallen spikelet (reduced lower glume fused to callus); check 4–10 upright fuzzy one-sided racemes and attached paired 3.6–4.2 mm spikelets. Do not certify from a fuzzy flowering head alone.\n\nField ID Lab: Texas cupgrass can have four to ten erect one-sided flowering branches, including seven or more. Use the hairy rachis and tiny cup/ring beneath an actual mature spikelet to distinguish it; branch count alone is not proof.",
+    "field_rule": "Texas cupgrass: separate hair-FRINGE true LIGULE from hairy culm nodes; inspect the little CUP/RING just under a fallen spikelet (reduced lower glume fused to callus); check 4–10 upright fuzzy one-sided racemes and attached paired 3.6–4.2 mm spikelets. Do not certify from a fuzzy flowering head alone.\n\nField ID Lab: Texas cupgrass can have four to ten erect one-sided flowering branches, including seven or more. Use the hairy rachis and tiny cup/ring beneath an actual mature spikelet to distinguish it; branch count alone is not proof.\n\nLigule source comparison: Hagenbuch & Lemke (2015, printed p. 50) reports a hair-ciliate ligule with a MINUTE membranous base. Texas A&M and GrassBase emphasize the conspicuous hair fringe. The Lab permits the membrane choice only when the tiny base is actually seen under magnification; a broad standalone papery flap is not claimed.",
     "traits": {
       "head": [
         "one_sided",
@@ -1021,7 +1021,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -1041,12 +1042,19 @@
         "review_date": "2026-11-10"
       },
       "ligule": {
-        "source": "Kew POWO / GrassBase Eriochloa sericea; Texas A&M Plants of Texas Rangelands",
-        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:402055-1/general-information",
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 50; Texas A&M Plants of Texas Rangelands; Kew GrassBase Eriochloa sericea",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
         "secondary_source_url": "https://rangeplants.tamu.edu/plant/texas-cupgrass/",
-        "reference": "Dense ring/fringe of straight hairs at inner blade/sheath junction; this is a true hair ligule, not a ciliate papery membrane, independently attested.",
-        "status": "TWO_SOURCES_MATCH_PHOTO_PENDING",
-        "review_date": "2026-11-10"
+        "additional_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:402055-1/general-information",
+        "role": "vegetative",
+        "reported_states": [
+          "primary regional source: minute membranous base with a ciliate margin, up to 1 mm",
+          "Texas A&M and Kew GrassBase: dense straight hair fringe is prominent at field scale"
+        ],
+        "reference": "Both visual appearances are conditionally retained: H&L explicitly describes a very small membranous base; field sources emphasize hairs. `membrane` is not a large ligule claim and requires a magnified intact collar. No local collar photo was independently measured.",
+        "status": "PRIMARY_HILL_COUNTRY_CILIATE_MINUTE_MEMBRANOUS_BASE_CONDITIONAL_PHOTO_PENDING",
+        "review_date": "2026-11-12",
+        "photo_voucher_support": "No newly authenticated same-plant close-up showing the minute membranous basal tissue; normal field choice remains hair fringe."
       },
       "head_many_unilateral_regional": {
         "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1274, Eriochloa species key; Kew GrassBase Eriochloa sericea",
@@ -1074,9 +1082,9 @@
       },
       {
         "look": "Check the REAL hair-fringe ligule",
-        "check": "Texas A&M and Kew both describe a DENSE FRINGE/RING of straight hairs at the inside blade–sheath junction, rather than a distinct papery membranous flap. Distinguish it from hairy culm nodes.",
+        "check": "Texas A&M and Kew describe a DENSE FRINGE of straight hairs at the true inner blade–sheath junction. Hagenbuch & Lemke (2015, p. 50) also describes a tiny membranous base beneath the cilia. Distinguish this short, ciliate structure from hairy culm nodes; a broad flap is not established.",
         "compare": "Paspalum flowering heads can also have one-sided racemes but usually membranous inner ligules.",
-        "certainty": "Two independent regional/GrassBase source checks; current source photo has not been validated for collar",
+        "certainty": "Regional source comparison supports a conditional tiny membrane base; exact fresh-collar macro verification pending",
         "source": "Texas A&M — Texas cupgrass",
         "url": "https://rangeplants.tamu.edu/plant/texas-cupgrass/"
       },
