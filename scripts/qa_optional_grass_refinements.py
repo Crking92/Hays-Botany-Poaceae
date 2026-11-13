@@ -26,7 +26,7 @@ assert len({x["id"] for x in original + universe}) == 169
 assert bundle["schema_version"] == 1
 assert bundle["mode"] == "NON_EXCLUDING_POSITIVE_RANKING"
 chars = {c["id"]: c for c in bundle["characters"]}
-assert len(chars) == len(bundle["characters"]) == 8
+assert len(chars) == len(bundle["characters"]) == 13
 for c in chars.values():
     vals = [v["id"] for v in c["options"]]
     assert vals and len(set(vals)) == len(vals)
@@ -42,7 +42,7 @@ for row in bundle["evidence"]:
     assert row["source"].strip() and row["source_url"].startswith("https://")
     assert row["note"].strip()
     assert row["evidence_level"] == "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
-assert len(bundle["evidence"]) >= 110 and len({r["id"] for r in bundle["evidence"]}) >= 45
+assert len(bundle["evidence"]) >= 167 and len({r["id"] for r in bundle["evidence"]}) >= 48
 width_rows = [r for r in bundle["evidence"] if r["character"] == "blade_width"]
 assert len(width_rows) >= 37
 def possible_width_states(low, high):
@@ -63,7 +63,25 @@ assert any(r["character"] == "blade_edge" for r in bundle["evidence"])
 assert any(r["character"] == "blade_midnerve" for r in bundle["evidence"])
 assert 'const group=node("details","optional-group")' in html
 assert "updateChosen()" in html
-assert "root.querySelectorAll(\".optional-chosen\").forEach(b=>b.remove())" in html
+assert 'id="optional-section-tabs"' in html
+assert "function refinementSection(id)" in html
+assert "evidence-pending" in html
+assert "Research-pending choices can be recorded" in html
+assert "No grass was removed" in html
+assert all(c in chars for c in ("blade_venation","ligule_length","ligule_edge","sheath_margins","sheath_surface"))
+assert len([r for r in bundle["evidence"] if r["character"]=="ligule_length"]) >= 15
+pending=[(c["id"],o["id"]) for c in bundle["characters"] for o in c["options"] if o.get("evidence_pending")]
+assert ("blade_venation","raised_ribs") in pending and ("sheath_margins","closed") in pending
+assert all(not any(r["character"]==cid and oid in r["states"] for r in bundle["evidence"]) for cid,oid in pending)
+for r in bundle["evidence"]:
+    if r["character"]!="ligule_length": continue
+    lo,hi=r["length_mm"]
+    expect=set()
+    if lo<1: expect.add("tiny")
+    if lo<3 and hi>1: expect.add("short")
+    if lo<8 and hi>3: expect.add("medium")
+    if hi>8: expect.add("long")
+    assert set(r["states"])==expect, r["id"]
 
 # A refinement is never included in the exclusion criteria or original four-character denominator.
 scorer = html.split("function currentResults(){", 1)[1].split("function renderTabs(){", 1)[0]
