@@ -9,9 +9,9 @@
   "prior_unverified_trials": 24,
   "new_unverified_trials": 8,
   "total_unverified_if_all_lanes_later_accepted": null,
-  "staging_status": "NOT_LOADED_IN_NORMAL_KEY_PENDING_COORDINATOR_INTEGRATION",
+  "staging_status": "INTEGRATED_UNVERIFIED_KEY_TRIALS_NOT_SPECIMEN_ADMITTED",
   "photo_source_manifest": "hays-candidates.json",
-  "coordinator_handoff": "DO NOT add loader or count changes in this PR. Coordinator may admit only profiles passing merged multi-lane false-exclusion/duplicate checks; count remains 136 in live key until separately integrated/deployed. Holds are NOT profiles; do not auto-admit them.",
+  "coordinator_handoff": "Integrated by coordinator with lanes A and B, after checking duplicate IDs, exact photo metadata, independent lane regressions and public 165/169 result constraints. All eight are research trials, not verified species determinations; three holds remain Learner-only.",
   "profiles": [
     {
       "id": "eragrostis-superba",
@@ -1660,5 +1660,7 @@
       "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
       "scoring": false
     }
-  ]
+  ],
+  "original_staging_status": "NOT_LOADED_IN_NORMAL_KEY_PENDING_COORDINATOR_INTEGRATION",
+  "original_coordinator_handoff": "DO NOT add loader or count changes in this PR. Coordinator may admit only profiles passing merged multi-lane false-exclusion/duplicate checks; count remains 136 in live key until separately integrated/deployed. Holds are NOT profiles; do not auto-admit them."
 }
