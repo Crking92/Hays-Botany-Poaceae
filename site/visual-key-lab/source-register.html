@@ -79,7 +79,8 @@ function show(s){
  add(root,"div",s.scored?"Original scored species":(g.holds.has(s.id)?"Learner-only research hold":"Unverified research candidate"),"muted");
  add(root,"h2",s.scientific);add(root,"p",s.common||"","muted");
  const missing=categories.filter(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source).length;
- add(root,"p",s.scored?("Named category citations: "+(4-missing)+"/4; assigned character source gaps: "+missing+". The second independent source still needs confirming for most records."):"An inventory entry is not permission to treat this species as reliably identified.","notice");
+ const named=categories.filter(([k])=>(s.traits?.[k]||[]).length&&s.character_evidence?.[k]?.source).length;
+ add(root,"p",s.scored?("Named category citations: "+named+"/4; assigned character source gaps: "+missing+". The second independent source still needs confirming for most records."):"An inventory entry is not permission to treat this species as reliably identified.","notice");
  for(const [cat,title] of categories)section(root,s,cat,title);
  const extras=g.optional.filter(x=>x.id===s.id);const advanced=add(root,"details");add(advanced,"summary","Advanced trait records with citations ("+extras.length+")");
  if(!extras.length)add(advanced,"p","No optional source entries in the current register.","warning");
