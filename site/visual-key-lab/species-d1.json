@@ -668,7 +668,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome can have an open, sparsely branched panicle, but its 20 mm multi-flowered spikelets are NOT the tiny-spikelet cloud shown in the 'airy' question. Choose the branched-oat field option and compare glume veins and attached florets.",
+    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome can have an open, sparsely branched panicle, but its 20 mm multi-flowered spikelets are NOT the tiny-spikelet cloud shown in the 'airy' question. Choose the branched-oat field option and compare glume veins and attached florets.\n\nScoring audit 2026-11-13: Texas brome has actual subapical awns, sometimes only 4–8 mm against a 9–15 mm lemma; they may not look like the key's LONG awn example. The alternative 'no conspicuous LONG awns' is a coarse field observation, NOT a statement of awnlessness. If the floret is broken or not yet mature, skip this question.",
     "traits": {
       "head": [
         "branched_oat"
@@ -680,7 +680,8 @@
         "membrane"
       ],
       "awns": [
-        "long"
+        "long",
+        "none_obvious"
       ]
     },
     "source_blob_sha": "7184a31f6ad2a2cd9ed56ec450077a7cc1d17c04",
@@ -728,6 +729,22 @@
         "reference": "This grass's panicle can be open, but attached spikelets are much larger or differently arranged than the tiny-spikelet cloud shown by the actual ID Lab choice. Remove head=airy while preserving its botanically appropriate existing head states; do not erase morphology or rights history.",
         "status": "REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION",
         "review_date": "2026-11-12"
+      },
+      "awns": {
+        "source": "Kew GrassBase, Bromus texensis exact species treatment",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37176-2/general-information",
+        "secondary_source": "World Flora Online, Bromus texensis exact historical morphology",
+        "secondary_source_url": "https://www.worldfloraonline.org/taxon/wfo-0000856685",
+        "role": "reproductive",
+        "reference": "Kew's exact species morphology reports true subapical fertile lemma awns 6–10 mm on lemmas 9–12 mm; World Flora Online records 4–8 mm awns on lemmas 9–15 mm and differs in apical terminology. Both agree that awns are real, short to moderate. Because the current beginner option is 'No conspicuous LONG awns' and not 'Awnless lemma', a short-awn plant with intact florets can plausibly match it at whole-head scale. Keep 'long' for individuals whose awns project clearly, and distinguish actual lemma awns from pointed glumes and 2-toothed apex.",
+        "reported_states": [
+          "short but genuine fertile lemma awns present",
+          "conspicuous awns possible",
+          "coarse 'no conspicuous LONG awns' visual route possible on short-awn material"
+        ],
+        "status": "TWO_PUBLISHED_SPECIES_RECORDS_AWN_RANGE_SHORT_VISUAL_COARSE_ALTERNATE_NO_AWNLESS_CLAIM",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Source-supported visual-option ambiguity; no exact local mature attached spikelet measured or independently verified."
       }
     },
     "diagnostic_checks": [
