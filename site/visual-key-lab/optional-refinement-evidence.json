@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "release_note": "Source-backed optional character clues. Positive ranking only; no species eliminated and no specimen certification.",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "characters": [
+    {
+      "id": "blade_shape",
+      "label": "Leaf blade shape",
+      "hint": "Check a fresh blade. Dry or folded tips can look rolled.",
+      "options": [
+        {
+          "id": "flat",
+          "label": "Flat / open"
+        },
+        {
+          "id": "folded",
+          "label": "Folded in a V"
+        },
+        {
+          "id": "inrolled",
+          "label": "Curled inward"
+        }
+      ]
+    },
+    {
+      "id": "blade_hairs",
+      "label": "Leaf blade hairs",
+      "hint": "Check the leaf itself, not the joint or the ligule.",
+      "options": [
+        {
+          "id": "base_hairs",
+          "label": "Hairs concentrated near the base"
+        },
+        {
+          "id": "blade_hairy",
+          "label": "Hairs along the blade"
+        }
+      ]
+    },
+    {
+      "id": "leaf_base",
+      "label": "Leaf base / sheath",
+      "hint": "Look where a blade joins its sheath. Ears (auricles) are separate from ligules.",
+      "options": [
+        {
+          "id": "pointed_auricles",
+          "label": "Two upright pointed ears"
+        },
+        {
+          "id": "clasping_auricles",
+          "label": "Ears wrapping around the stem"
+        },
+        {
+          "id": "compressed_sheath",
+          "label": "Flattened / keeled sheath"
+        }
+      ]
+    },
+    {
+      "id": "stem_nodes",
+      "label": "Stem joints",
+      "hint": "Find a real joint along the stem, not the leaf collar.",
+      "options": [
+        {
+          "id": "hairy_nodes",
+          "label": "Hairs around a stem joint"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "eragrostis-intermedia",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Usually flat blades about 2–3 mm; compare with involute mourning lovegrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-lugens",
+      "character": "blade_shape",
+      "states": [
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Often inward-rolled 1–2 mm blades; condition varies with maturity and moisture.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "blade_shape",
+      "states": [
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "Blades usually folded lengthwise, typically 2–3 mm and sometimes wider.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "muhlenbergia-reverchonii",
+      "character": "blade_shape",
+      "states": [
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 55",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+      "note": "Fine, arcuate, involute blades around 1–2 mm; use a fresh leaf and compare flowering head.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-verticillata",
+      "character": "blade_shape",
+      "states": [
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Basal blades often folded; not sufficient to distinguish windmillgrass on its own.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "UT Plant Resources Center — KR bluestem morphology",
+      "source_url": "https://www.biosci.utexas.edu/prc/DigFlora/KR/BOISS-morph.html",
+      "note": "Papilla-based hairs near the lower blade/collar are described; variants may differ.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "source": "Flora of North America — Setaria scheelei",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381",
+      "note": "Broad blades are frequently hairy, but not universally so.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "leaf_base",
+      "states": [
+        "pointed_auricles"
+      ],
+      "source": "Flora of North America — Sorghastrum nutans",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8700&taxauthid=1&taxon=12234",
+      "note": "Paired pointed auricles form the characteristic rifle-sight outline at the true collar.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "elymus-canadensis",
+      "character": "leaf_base",
+      "states": [
+        "clasping_auricles"
+      ],
+      "source": "Flora of North America — Elymus canadensis",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Elymus+canadensis",
+      "note": "Auricles often clasp the culm; similar Elymus and hybrid plants may share this.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-glomeratum",
+      "character": "leaf_base",
+      "states": [
+        "compressed_sheath"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Leaf sheaths are described as compressed and keeled, sometimes broader than the blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-virginicum",
+      "character": "leaf_base",
+      "states": [
+        "compressed_sheath"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Lower sheaths may be compressed while upper sheaths are more rounded; inspect the lower plant.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eleusine-indica",
+      "character": "leaf_base",
+      "states": [
+        "compressed_sheath"
+      ],
+      "source": "Regional goosegrass diagnostic dossier (rooted specimen and source description)",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:74675-3/general-information",
+      "note": "Basal sheaths are notably flattened/compressed, often pale or whitish.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "leaf_base",
+      "states": [
+        "compressed_sheath"
+      ],
+      "source": "Hagenbuch & Lemke 2015, p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "Lower leaf sheaths are often compressed and keeled.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-andropogonoides",
+      "character": "leaf_base",
+      "states": [
+        "compressed_sheath"
+      ],
+      "source": "Hagenbuch & Lemke 2015, regional windmillgrass diagnosis",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "note": "Weakly keeled, laterally compressed sheaths; confirm with attached flowering characters.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Kew GrassBase — Bothriochloa barbinodis",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35184-2/general-information",
+      "note": "True culm nodes bear an obvious beard of hairs; do not confuse with flowering-head hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "VicFlora — Dichanthium sericeum subsp. sericeum",
+      "source_url": "https://vicflora.rbg.vic.gov.au/flora/taxon/4b5a18dd-783f-4ab6-b1ac-75181b1c6878",
+      "note": "Published white node beard; not a unique stand-alone diagnostic.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-belangeri",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Texas A&M — common curlymesquite",
+      "source_url": "https://rangeplants.tamu.edu/plant/common-curlymesquite/",
+      "note": "Some rooting nodes along surface stolons have conspicuous white hair tufts.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Flora of North America — Setaria scheelei",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381",
+      "note": "Appressed hairs often occur on real culm nodes; character varies.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    }
+  ]
+}
