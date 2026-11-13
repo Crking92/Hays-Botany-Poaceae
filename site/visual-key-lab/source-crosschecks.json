@@ -3662,6 +3662,343 @@
           "source_checked": "Independent exact species GrassBase text viewed; note when terminology differs from regional H&L treatment"
         }
       ]
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "ligule",
+      "status": "TWO_DIRECT_SPECIES_MEMBRANE_SOURCES_LIGULE_MARGIN_AND_LENGTH_VARY",
+      "interpretation": "Sorghum has a membranous ligule, but published descriptions differ on edge hairs: H&L lists 1–3 mm membrane with ciliate margin; Kew GrassBase lists an eciliate 1–3 mm membrane; Cayman Flora on cultivated subsp. bicolor reports ciliate membrane ~4 mm. Preserve varietal/age differences and avoid false eciliate consensus.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 63; official PDF p. 63, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+          "support": "Sorghum bicolor 1–3 mm membranous, truncate with ciliate margins",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:422090-1/general-information",
+          "support": "Species ligule eciliate membrane, 1–3 mm",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        },
+        {
+          "authority": "Flora of the Cayman Islands via Kew Plants of the World Online",
+          "locator": "Subspecies bicolor, Flora of Cayman Islands under S. saccharatum synonym",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:3296834-4/general-information",
+          "support": "Cultivated Sorghum bicolor subsp. bicolor under synonym S. saccharatum: ciliate membranous ligule 4 mm",
+          "source_checked": "Published species account hosted in Kew records; synonym/subspecies scopes specified"
+        }
+      ]
+    },
+    {
+      "id": "dichanthium-annulatum",
+      "character": "ligule",
+      "status": "TWO_DIRECT_SPECIES_MEMBRANE_SOURCES_LENGTH_VARIATION",
+      "interpretation": "Kleberg bluestem's ligule is a transparent membrane, H&L approximately 1 mm with erose margin, GrassBase unfringed membrane without measurement and Flora Zambesiaca ca. 2 mm. The conspicuous bearded stem nodes are not ligule hairs; no automatic score change for stoloniferous culms.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 44; official PDF p. 44, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=44",
+          "support": "Dichanthium annulatum ligules ±1 mm, hyaline membranous, erose edge",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398528-1/general-information",
+          "support": "GrassBase exact species ligule eciliate membrane; independent Flora Zambesiaca source on same page states glabrous membrane ca. 2 mm",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "elymus-virginicus",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_LIGULE_TYPES_AGREE_CILIOLATE_MARGIN_QUALIFIER",
+      "interpretation": "Virginia wildrye has a 0.5–1-mm membranous ligule (H&L), with a very fine ciliolate or erose edge. GrassBase describes an eciliate, truncate membrane and includes historical glabriflorus material; membrane construction agrees, tiny edge hair classification/synonym scope should not be overstated.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 47; official PDF p. 47, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+          "support": "Elymus virginicus ligule 0.5–1 mm, membranous, truncate/erose and ciliolate; distinguish true falcate auricles",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:90367-2/general-information",
+          "support": "E. virginicus ligule eciliate membrane, truncate; synonym E. glabriflorus account gives 0.5–1 mm",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_HAIR_FRINGE_LIGULE_AGREE",
+      "interpretation": "Stinkgrass has a fringe-of-hairs ligule up to 1 mm long, not a projecting whole membrane. Both H&L and GrassBase explicitly describe the hair fringe; glandular leaf margins and yellowish-glandular stem rings are different structures.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 47; official PDF p. 47, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+          "support": "Eragrostis cilianensis ligules to 1 mm, a fringe of hairs; adjacent collar margins pilose",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1104599-2/general-information",
+          "support": "Exact E. cilianensis species ligule a fringe of hairs, glandular sheaths/culms",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "festuca-octoflora",
+      "character": "ligule",
+      "status": "TWO_DIRECT_HISTORICAL_VULPIA_SUBSPECIES_LIGULE_AGREE",
+      "interpretation": "Sixweeks fescue under historical Vulpia octoflora has a 0.5–1-mm truncate membranous ligule with erose margins in H&L. Kew GrassBase exact synonym Vulpia octoflora gives eciliate 0.5–1 mm membrane; accepted genus currently Festuca, not a different character. Historical concept and co-occurring fescues remain separate.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 68; official PDF p. 68, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=68",
+          "support": "Vulpia octoflora ligule 0.5–1 mm, membranous, truncate, erose, slightly longer at sides",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase under Vulpia octoflora synonym > Morphology General Habit",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:403190-1/general-information",
+          "support": "Under Vulpia octoflora synonym, GrassBase ligule eciliate membrane 0.5–1 mm; accepted Festuca octoflora",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "ligule",
+      "status": "TWO_DIRECT_HISTORICAL_SPECIES_MEMBRANE_EDGE_AGREES",
+      "interpretation": "Tobosagrass (Hilaria mutica, sometimes Pleuraphis mutica) has a 1–2-mm membranous ligule with lacerate edge in H&L and an eciliate roughly 1-mm lacerate membrane in GrassBase. Hairs just above ligule on the leaf blade must not be confused with a separate hair-fringe ligule.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 51; official PDF p. 51, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+          "support": "Hilaria mutica 1–2 mm membranous obtuse/truncate ligule, margin lacerate; long hairs on blade base immediately above ligule",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:404949-1/general-information",
+          "support": "H. mutica membrane 1 mm, eciliate with lacerate apex",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "hopia-obtusa",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_MEMBRANE_LENGTH_AGREE_HISTORICAL_PANICUM",
+      "interpretation": "Vine mesquite under accepted Hopia obtusa (historic Panicum obtusum) has a 1–2-mm membranous ligule, blunt and entire/lacerate in Hill Country; Kew independent description likewise calls an eciliate 1–2-mm membrane. Hairs at stolon nodes and leaf collars are not a ligule hair-fringe.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 51; official PDF p. 51, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+          "support": "Hopia obtusa membrane 1–2 mm, obtuse, entire or lacerate",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77077132-1/general-information",
+          "support": "Accepted H. obtusa, historic Panicum obtusum: 1–2-mm eciliate membrane",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_MEMBRANE_LIGULE_LENGTHS_OVERLAP",
+      "interpretation": "Rice cutgrass has a short, firm membranous ligule (H&L 0.5–2 mm, truncate with erose margin; Kew 0.5–1.5 mm eciliate, truncate). Its famous scratchy leaf-blade/keel hairs are not a ligule hair fringe. Preserve measurement overlap rather than fix exact 1-mm value.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 52; official PDF p. 52, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+          "support": "Leersia oryzoides 0.5–2 mm, firm membranous ligule, truncate and erose",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1109632-2/general-information",
+          "support": "Exact L. oryzoides 0.5–1.5-mm eciliate membrane, truncate",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "muhlenbergia-reverchonii",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_LONG_LACERATE_MEMBRANE_AGREE",
+      "interpretation": "Seep muhly ligules are long and torn-edged (Hill Country 2–9 mm, firm at base and transparent distally; Kew 2–4(–9) mm eciliate, lacerate). The broad range and filiform curled blades distinguish from the much taller Lindheimer muhly ligule but should not be used alone to name all Muhlenbergia.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 55; official PDF p. 55, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+          "support": "M. reverchonii membranous ligule 2–9 mm, firm base and hyaline distal part, acute/lacerate",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164871-2/general-information",
+          "support": "M. reverchonii eciliate lacerate 2–4(–9) mm membrane",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "muhlenbergia-schreberi",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_CILIOLATE_MEMBRANE_LENGTH_DISCREPANCY",
+      "interpretation": "Nimblewill has a tiny membranous ligule WITH marginal cilia; Hill Country says under 0.5 mm, erose/lacerate and ciliate, Kew GrassBase says 1 mm ciliolate membrane. The current 'membrane' + 'hairs' coarse choices both describe one composite ciliate membrane; do not flatten to a pure hair fringe or assert length agreement.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 55; official PDF p. 55, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+          "support": "M. schreberi ligule <0.5 mm, membranous and truncate, erose/lacerate, ciliate",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:409143-1/general-information",
+          "support": "Exact species ligule ciliolate membrane 1 mm (distinct from <0.5 mm H&L)",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "muhlenbergia-utilis",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_TINY_MEMBRANE_AGREE",
+      "interpretation": "Aparejo muhly has a tiny about 0.5-mm membranous ligule with truncate entire/slightly erose tip; GrassBase independently gives 0.5-mm eciliate membrane. The long scaly underground rhizomes are separate from the leaf junction, not evidence for ligule fringe.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 55; official PDF p. 55, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+          "support": "M. utilis ligule ±0.5 mm, membranous, truncate, entire or slightly erose",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164921-2/general-information",
+          "support": "Exact M. utilis ligule eciliate 0.5-mm truncate membrane",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "panicum-coloratum",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_CILIATE_MEMBRANE_BASAL_STRUCTURE_AGREE",
+      "interpretation": "Kleingrass is a hybrid ligule option case: H&L describes a 0.5–2-mm ciliate fringe arising from a minute membranous base, while GrassBase says a ciliate membrane. Both **membrane and hairs** are defensible, but hairs occur at the membrane edge, not as a completely separate hair-only organ. Maintain scored options unmodified.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 57; official PDF p. 57, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+          "support": "Panicum coloratum ligules 0.5–2 mm, ciliate with minute membranous base",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:410989-1/general-information",
+          "support": "Exact P. coloratum ligule a ciliate membrane",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_MEMBRANE_RANGE_OVERLAP",
+      "interpretation": "Dallisgrass H&L membranous ligule 2–4 mm, obtuse and entire, corroborated independently by GrassBase eciliate 3-mm membrane. Soft hairs at blade base or older sheath are not a fringe ligule, so don't miscode the ligule as 'hairs'.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 57; official PDF p. 57, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+          "support": "Paspalum dilatatum 2–4-mm membranous ligule, obtuse, entire; glabrous collar",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:414070-1/general-information",
+          "support": "P. dilatatum eciliate membrane 3 mm",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "paspalum-pubiflorum",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_MEMBRANE_AGREE_SECOND_NO_LENGTH",
+      "interpretation": "Hairyseed paspalum has a brownish membrane (H&L 1–3 mm, truncate/entire). GrassBase independently says an eciliate membrane but does not assign a species ligule length. Spikelet hairs and sheath pubescence used for varieties are not ligule hairs.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 58; official PDF p. 58, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+          "support": "Paspalum pubiflorum ligule 1–3 mm, membranous often brownish, truncate with entire margin",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184614-2/general-information",
+          "support": "Paspalum pubiflorum exact species has eciliate membranous ligule, no length measured in GrassBase",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
+    },
+    {
+      "id": "paspalum-setaceum",
+      "character": "ligule",
+      "status": "TWO_EXACT_SPECIES_MEMBRANE_HAIRS_BEHIND_NOT_ON_LIGULE",
+      "interpretation": "Thin paspalum has an exceptionally tiny membrane up to 0.5 mm (H&L), while its showy long, soft hairs are ON LEAF BLADE just above/behind the ligule. Kew GrassBase and Flora of the Cayman Islands explicitly recognize a membrane with long white hairs behind it, not a hair-fringe ligule. Distinguish from knotroot/setaria and from true hair-fringe lovegrasses.",
+      "references": [
+        {
+          "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country",
+          "locator": "2015 original printed p. 58; official PDF p. 58, exact vegetative species account > ligule",
+          "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+          "support": "P. setaceum ligule to 0.5 mm, membranous/truncate/entire, with separate long soft hairs immediately ABOVE ligule on leaf blade",
+          "source_checked": "Actual publisher PDF page directly inspected; ligule membrane/hair construction, length and adjacent collar hairs separated"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > According to GrassBase > Morphology > General Habit > Ligule",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325365-2/general-information",
+          "support": "P. setaceum GrassBase eciliate membrane; independent Cayman Flora description on same Kew page says membrane with long white hairs BEHIND it",
+          "source_checked": "Independent Kew-hosted named species GrassBase morphology examined; difference in measurements/type explicitly retained"
+        }
+      ]
     }
   ],
   "last_batch": {
