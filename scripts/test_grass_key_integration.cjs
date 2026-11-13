@@ -19,19 +19,33 @@ assert(candidates.every(c => c.status === 'RESEARCH_CANDIDATE_NOT_RELEASED'), 'u
 const originalPhotos = species.reduce((sum, s) => sum + s.photos.length, 0);
 assert.equal(originalPhotos, 514, 'first-pass scored photo reference inventory unexpectedly changed');
 
-const trialProfileFiles = ['provisional-trial-profiles.json','provisional-trial-batch2.json','provisional-trial-batch3.json','provisional-trial-batch4.json'];
+const trialProfileFiles = ['provisional-trial-profiles.json','provisional-trial-batch2.json','provisional-trial-batch3.json','provisional-trial-batch4.json','provisional-trial-batch5-a.json','provisional-trial-batch5-b.json','provisional-trial-batch5-c.json'];
 const trialProfiles = trialProfileFiles.flatMap(f => JSON.parse(read(f)).profiles);
 const trialCount = trialProfiles.length;
 const learnerOnlyCount = candidates.length - trialCount;
 assert.equal(new Set(trialProfiles.map(x=>x.id)).size, trialCount, 'Duplicate trial-profile identifiers');
-assert.equal(trialCount, 24, 'Research-trial inventory changed; review key admission and public copy');
+assert.equal(trialCount, 53, 'Combined Batch 5 should add exactly 29 unverified research trials');
 const html = read('index.html');
 assert(html.includes('id="coded-total"')&&html.includes('$("coded-total").textContent=state.species.length'),
  'Public key count must follow loaded scoring and research-trial data');
-assert(html.includes('provisional-trial-batch4.json')&&trialCount===24,
- 'The 24 research trials must remain a separate provisional inventory');
-assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===33,
- 'All 33 Learner-only records must be reported as missing identification-key data');
+assert(trialProfileFiles.every(file => html.includes(file))&&trialCount===53,
+ 'All 53 research trials must load in the normal key while staying unverified');
+assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===4,
+ 'All 4 held Learner-only records must be reported without developer banners');
+const newProfiles=trialProfiles.slice(24);
+assert.equal(newProfiles.length,29,'All 29 reviewed lane profiles must remain research-only');
+const byCandidate=new Map(candidates.map(c=>[c.id,c]));
+assert.equal(newProfiles.reduce((sum,p)=>sum+p.photos.length,0),75,'Exact 75 approved Batch 5 photo references changed');
+for(const p of newProfiles) {
+ assert(p.trial===true&&p.admission_status==='RESEARCH_TRIAL_NOT_ADMITTED'&&p.range==='UNVERIFIED',p.id+': incorrectly admitted');
+ const original=byCandidate.get(p.id);
+ assert(original,'New profile not in unified 169-grass Learner: '+p.id);
+ assert.equal(p.photos.length,original.approved_gallery.length,p.id+': photo count changed');
+ p.photos.forEach((photo,i)=>{
+  const copy={...photo}; delete copy.i;
+  assert.deepEqual(copy,original.approved_gallery[i],p.id+': exact per-photo source, creator, license or caption changed');
+ });
+}
 assert(!html.includes('Phase 3 in progress:')&&!html.includes('Field-testing prototype:'),
  'Internal project progress banners should not appear on the visitor identification page');
 const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
