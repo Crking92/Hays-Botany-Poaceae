@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#173b2e">
-<meta name="description" content="Picture-first grass identification lab for 112 scored grasses plus 21 labeled provisional research trials.">
-<title>Hays Grass ID Lab — picture-first pilot</title>
+<meta name="description" content="Find and compare grasses using real photographs and visible field characteristics.">
+<title>Hays Grass ID Lab — photo identification</title>
 <style>
 :root{--ink:#1e352b;--forest:#153e30;--forest2:#285c48;--muted:#65786e;--paper:#f5f6f0;--white:#fff;--line:#dae3d9;--mint:#e3efe5;--pale:#f0f3ec;--amber:#7b5927;--shadow:0 7px 22px rgba(17,51,31,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:#226b4d}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #dea94e;outline-offset:3px}
@@ -41,6 +41,10 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 .sitebar-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap}
 .preview-toggle{padding:7px 11px;border:1px solid #bad8c4;border-radius:9px;background:#e9f4e9;color:#1b4931;font-size:.82rem;font-weight:750}
 .preview-toggle:hover{background:#fff}
+.practice-links{display:flex;gap:8px 17px;flex-wrap:wrap;margin:0 0 22px;font-size:.88rem}
+.practice-links a{font-weight:700}
+.practice-links span{color:var(--muted)}
+html.guest-preview .practice-links{display:none}
 html.guest-preview main > .notice,
 html.guest-preview .hero .eyebrow,
 html.guest-preview .hero p,
@@ -53,12 +57,9 @@ html.guest-preview .head-illustration-note,
 html.guest-preview #results-note,
 html.guest-preview .results-footer,
 html.guest-preview .footer,
-html.guest-preview .detail-botany,
 html.guest-preview .detail-copy > h3,
-html.guest-preview .detail-copy > p,
-html.guest-preview .result .smallmuted,
 html.guest-preview .progress-label > span:last-child,
-html.guest-preview .pending {display:none}
+html.guest-preview .footer {display:none}
 html.guest-preview .hero{padding:24px 0 18px}
 html.guest-preview .hero h1{margin:0}
 html.guest-preview .answer-body{padding-top:10px}
@@ -66,13 +67,10 @@ html.guest-preview .question{padding-top:15px}
 </style>
 </head>
 <body>
-<header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">↖ Back to existing Grass Learner</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Hide explanations</button></div></header>
+<header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button></div></header>
 <main class="wrap">
-  <section class="hero"><div><p class="eyebrow">Picture-first identification · 169 in Learner · 112 scored + labeled research trials</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small id="coded-subtitle">scored profiles; trial matches load separately</small></div></section>
-  <p class="notice" style="background:#e9f2e6;border-color:#cce0cc;color:#295c3e"><strong>Field ID lessons:</strong> <a href="johnsongrass.html" style="font-weight:800">Six-step Johnsongrass photo lesson</a> · <a href="compare-bluestems.html" style="font-weight:800">King Ranch vs. little bluestem</a> · <a href="compare-gramas-paspalums.html" style="font-weight:800">NEW: 12 grama and paspalum look-alikes</a>. Lessons reuse existing credited photographs.</p>
-  <p class="notice" style="background:#eef3ea;border-color:#cee0cb;color:#315d45"><strong>169 grasses in the shared Learner:</strong> <a href="../" style="font-weight:800">Browse and search all 169 grass profiles</a>, including 57 reference-only additions with 322 literature character targets. The identifier retains 112 existing scored profiles. 21 of the 57 newer research grasses now appear as <strong>clearly labeled tentative matches for field testing</strong>; they are not locally verified or officially admitted. The other 36 remain searchable only in the full Learner. Previously approved reference photographs retain their individual credits.</p>
-  <p class="notice"><strong>Phase 3 in progress:</strong> All 112 grasses now have 315 first-pass source-linked botanical checks. Species-level checklists cover the full collection, including wildrye glume bases, reed lemma-versus-rachilla hairs, and protected Texas wild-rice. Open a grass result to compare culm nodes, true ligules, rachis tips, glumes, spikelets, and awns. These notes do not certify the example photos or a specimen identification.</p>
-  <p class="notice"><strong>Field-testing prototype:</strong> the original 112 grasses retain their scored character profiles, while additional grasses have explicitly unverified research-trial choices; the loaded trial count is shown above. These broad states are provisional and must be cross-checked with the regional flora, GrassBase, and the original lessons before treating the key as field-verified. This is not a confirmed species determination. Some choices are broad, some source photos are not local, and incomplete characters remain labeled as uncertain. Similar-looking Chloris species can hybridize; use the species-detail anatomy list before calling a definitive identification. We use your existing Hays Botany records and credited photos; the full GrassBase trait matrix has not yet been imported.</p>
+  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small id="coded-subtitle">grasses in this key</small></div></section>
+  <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
       <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions; answer in any order. Skip anything you cannot examine.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
@@ -85,7 +83,7 @@ html.guest-preview .question{padding-top:15px}
       <div class="results-footer" id="results-footer">Unknown characters never eliminate a grass automatically.</div><details class="pending" id="caution-details" hidden><summary id="caution-summary">Other provisional matches to review</summary><div id="caution-list" class="pending-list caution-list"></div></details><details class="pending"><summary id="pending-summary">Other species from our catalog</summary><div id="pending-items" class="pending-list"></div></details>
     </aside>
   </div>
-  <footer class="footer"><div>Built from existing <a href="../">Hays Botany Poaceae records</a>. GrassBase dataset for future structured enrichment: <a href="https://zenodo.org/records/22302582" target="_blank" rel="noopener noreferrer">Vorontsova et al., 2026 (CC BY 4.0)</a>.</div><div>Photographs retain their original creator and license credits. Some character-choice photos depict look-alikes for comparison. New whole-head examples: Johnsongrass (Harry Rose, CC BY 2.0), Indiangrass (Jennifer Anderson / USDA-NRCS, public domain), and knotroot foxtail (Harry Rose, CC BY 2.0).</div></footer>
+  <footer class="footer"><div>Compare several visible features before deciding on an identification. Each photograph keeps its original creator and license credit.</div></footer>
 </main>
 <dialog id="detail-dialog" aria-label="Grass details"><div id="detail-body"></div></dialog>
 <script>
@@ -150,7 +148,7 @@ const selectedPhotoOverrides={
 const $=id=>document.getElementById(id);
 const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[]};
 const previewToggle=$("preview-toggle");
-function syncPreviewToggle(){const simple=document.documentElement.classList.contains("guest-preview");previewToggle.textContent=simple?"Show explanations":"Hide explanations";previewToggle.setAttribute("aria-pressed",String(simple))}
+function syncPreviewToggle(){const simple=document.documentElement.classList.contains("guest-preview");previewToggle.textContent=simple?"Show field tips":"Fewer tips";previewToggle.setAttribute("aria-pressed",String(simple))}
 previewToggle.addEventListener("click",()=>{const simple=document.documentElement.classList.toggle("guest-preview");const url=new URL(location.href);if(simple)url.searchParams.set("demo","1");else url.searchParams.delete("demo");history.replaceState(null,"",url.toString());syncPreviewToggle()});
 syncPreviewToggle();
 function node(tag,cl,txt){const e=document.createElement(tag);if(cl)e.className=cl;if(txt!==undefined)e.textContent=txt;return e}
@@ -723,8 +721,7 @@ function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
 const sure=rows.filter(x=>!x.s.trial&&!x.unknown).length;const trials=rows.filter(x=>x.s.trial).length;
 $("count").textContent=rows.length+" possible";
-$("results-note").textContent=n?("Your choices retain "+(rows.length-trials)+" original scored-profile match"+(rows.length-trials===1?"":"es")+" and "+trials+" research trial"+(trials===1?"":"s")+". Of the original matches, "+sure+" have no unknown selected traits. A trial is NOT a verified ID."):
-"112 existing scored profiles, plus "+trials+" labeled research trials when available. All 169 grasses remain searchable in the Learner.";
+$("results-note").textContent=n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.";
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results");root.replaceChildren();
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
@@ -747,19 +744,19 @@ for(const x of scored){
 const btn=node("button","",x.s.common+" · "+x.s.scientific);btn.type="button";
 btn.append(node("small","","Differs on: "+x.disagree.join(", ")));btn.addEventListener("click",()=>detail(x.s));cautionList.append(btn);
 }
-$("results-footer").textContent="112 original scored species + "+state.species.filter(s=>s.trial).length+" provisional research trials in the matching list. Other Learner records remain research-only. Unknown traits stay possible; trial matches are not specimen confirmations.";
+$("results-footer").textContent="Not sure about a feature? Skip it. Newer research matches are marked as unverified.";
 }
 function renderPending(){
 const coded=new Set(state.species.map(s=>s.id));
 const pending=state.catalog.filter(s=>!coded.has(s.id));
-$("pending-summary").textContent=pending.length?pending.length+" additional grasses in the 169-species Learner (not scored yet)":"All Learner grasses have initial key-character profiles";
+$("pending-summary").textContent=pending.length?pending.length+" grasses not yet included in this photo key":"All grasses have key data";
 const box=$("pending-items");box.replaceChildren();
 for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";box.append(a)}
 }
-function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=s.trial?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","notice","RESEARCH TRIAL — Not admitted to the officially scored 112. Example photos are credited and often nonlocal; none certifies a Hays specimen ID. Examine mature spikelets, true leaf collar and local voucher evidence before naming the plant."));copy.append(node("p","",st+" — regional classification follows the existing Hays Botany record; this pilot does not independently certify county nativity."));copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
+function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=s.trial?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
 if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
   const panel=node("section","detail-botany");
-  panel.append(node("h3","","Look here next — diagnostic checks"),node("p","smallmuted","Source-backed structures to examine on the same plant. The example photos above are not yet individually certified to show each character."));
+  panel.append(node("h3","","Look here next — diagnostic checks"),node("p","smallmuted","Look for these structures on your plant. Some details may not be visible in the photographs yet."));
   for(const c of s.diagnostic_checks){
     const block=node("div","diagnostic-check");
     block.append(node("h4","",c.look),node("p","",c.check),node("p","check-compare","Compare with: "+c.compare),node("p","check-status",c.certainty));
@@ -780,7 +777,7 @@ try {const res=await fetch("provisional-trial-batch3.json",{cache:"no-store"});i
 // Fourth batch: three SOURCE-SCOPED literature hypotheses with credited photos.
 // All uncertain characters stay unknown and no provisional species is scored.
 try {const res=await fetch("provisional-trial-batch4.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==3||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)||x.range!=="UNVERIFIED"))throw Error("Fourth research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Fourth trial duplicates an existing species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Fourth research trial profiles unavailable; original key and earlier trials remain usable",err)}
-if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="112 original scored + "+state.species.filter(s=>s.trial).length+" research trials";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 boot();
 })();
 </script>
