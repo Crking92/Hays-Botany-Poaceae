@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Staged-only Chat C evidence gate. This script must not add profiles to the live key.
+ * Coordinator-integrated Chat C source evidence gate. Trial profiles remain NON-ADMITTED.
  * Only source-scoped hypotheses, not field-verified identities or rights grants.
  */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
@@ -31,7 +31,7 @@ assert.deepEqual(data.profiles.map(x=>x.id),expectedReady);
 assert.deepEqual(data.holds.map(x=>x.id),expectedHold);
 const allIds=[...scored,...old,...data.profiles].map(x=>x.id);
 assert.equal(new Set(allIds).size,allIds.length,'Duplicated scored or research trial id');
-assert.equal(allIds.length,144,'Staging scope is 112 scored plus 24 live trials plus 8 new staged');
+assert.equal(allIds.length,144,'C-scoped evaluator is 112 scored + 24 existing trials + 8 new unverified C trials');
 const byId=Object.fromEntries(candidates.map(x=>[x.id,x]));
 let photos=0;
 for(const p of data.profiles){
@@ -87,7 +87,7 @@ for(const h of data.holds){
 }
 assert.equal(byId['lolium-x-boucheanum'].approved_gallery?.length||0,0,'Hybrid suddenly granted photo');
 const html=read('index.html');
-assert(!html.includes('provisional-trial-batch5-c.json'),'Chat C silently changed normal public loader');
+assert(html.includes('provisional-trial-batch5-c.json'),'Coordinator key must load the unverified C profiles');
 assert(html.includes('Research trial · unverified'),'Guest trial status changed');
 const m=html.match(/<script>([\s\S]*?)<\/script>/);assert(m,'Current production scoring script absent');
 const source=m[1],start=source.indexOf('function currentResults()'),end=source.indexOf('\nfunction renderTabs',start);
