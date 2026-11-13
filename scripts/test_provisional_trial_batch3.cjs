@@ -39,7 +39,7 @@ assert.deepEqual(third.find(x=>x.id==='dactyloctenium-aegyptium').traits.habit,[
 assert.deepEqual(third.find(x=>x.id==='cenchrus-ciliaris').traits.habit,[],'Tuft vs spreading must remain unresolved');
 const html=read('index.html');
 assert(html.includes('provisional-trial-batch3.json')&&html.includes('provisional-trial-batch2.json'));
-assert(html.includes('Research trial · unverified')&&html.includes('Not admitted to the officially scored 112'));
+assert(html.includes('Research trial · unverified')&&html.includes('Identification data still being checked'),'Research trial status must remain visible to field testers');
 const match=html.match(/<script>([\s\S]*?)<\/script>/);assert(match);
 new vm.Script(match[1]);
 const js=match[1],from=js.indexOf('function currentResults()'),to=js.indexOf('\nfunction renderTabs',from);
