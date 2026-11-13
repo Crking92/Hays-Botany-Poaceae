@@ -56,7 +56,7 @@ def audit():
     assert release == local_release, "public release metadata differs from main"
     assert gallery == local_gallery, "public gallery index differs from main"
     assert release["species"] == gallery["species"] == 112
-    assert release["species_with_visible_photos"] == gallery["photo_species"] == 112
+    assert release["species_with_visible_photos"] == gallery["photo_species"] == 111
 
     public_index = get_json("data/poaceae-index.json")
     assert len(public_index) == 112
@@ -100,7 +100,15 @@ def audit():
             panels += 1
         if species_safe_panels:
             nonheld_panel_species += 1
-    assert panel_species == 112
+    assert panel_species == 111
+    # Never silently reintroduce the three Texas grama photographs whose exact
+    # federal-work/public-reuse status is disputed in Issue #81. A restored panel
+    # requires exact-image permission evidence and an explicit source release.
+    texas_grama = get_json("data/species/bouteloua-rigidiseta.json")
+    assert not texas_grama.get("panels"), "Texas grama photo hold incorrectly lifted"
+    assert gallery["entries"]["bouteloua-rigidiseta"]["count"] == 0
+    assert any(x.get("license_status") == "RIGHTS_HOLD_PUBLIC_GALLERY_UNPUBLISHED"
+               for x in texas_grama.get("unavailable_references", []))
     assert panels == release["photo_panels_visible"] == gallery["photo_panels"]
     assert len(urls) == release["photo_files_referenced_on_public_site"] == gallery["photo_files"]
     eligible_urls = sorted(urls - held_urls)
