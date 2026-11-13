@@ -330,6 +330,14 @@
           "label": "Short knotty underground stem"
         },
         {
+          "id": "short_rhizome",
+          "label": "Short rhizome (texture uncertain)"
+        },
+        {
+          "id": "long_rhizome",
+          "label": "Elongate rhizome (texture uncertain)"
+        },
+        {
           "id": "short_scaly",
           "label": "Short scaly rhizome"
         },
@@ -2942,12 +2950,11 @@
       "character": "surface_runners",
       "states": [
         "stolon",
-        "wiry_stolon",
-        "hairy_runner_nodes"
+        "wiry_stolon"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 51",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
-      "note": "Wiry surface stolons form linked small tufts; the lower nodes often bear villous hairs.",
+      "note": "Regional description confirms wiry surface stolons and independently reports that lower culm nodes are densely hairy. It does not specifically assign the culm-node hairs to the runner joints.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     },
     {
@@ -3011,11 +3018,11 @@
       "id": "cynodon-dactylon",
       "character": "underground_stems",
       "states": [
-        "long_scaly"
+        "long_rhizome"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 42",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
-      "note": "Elongate rhizomes are present, often together with aboveground stolons; inspect scale leaves.",
+      "note": "Elongate rhizomes are present, with surface stolons also described; the published species account does not explicitly confirm scale texture.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     },
     {
@@ -3101,11 +3108,11 @@
       "id": "paspalum-setaceum",
       "character": "underground_stems",
       "states": [
-        "short_knotty"
+        "short_rhizome"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 58",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
-      "note": "Short rhizomes at the base of a long-lived bunch.",
+      "note": "Short rhizomes documented, with a separate hard knotty base; don't assume the rhizome itself is knotty.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     },
     {
@@ -3191,11 +3198,11 @@
       "id": "schizachyrium-scoparium",
       "character": "underground_stems",
       "states": [
-        "short_knotty"
+        "short_rhizome"
       ],
       "source": "Hagenbuch & Lemke (2015), p. 60",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
-      "note": "Short rhizomes only occasionally observed; this option is compatible, not required.",
+      "note": "Rhizomes often absent, but may be short when present; this state is compatible, never required for an ID.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     },
     {
@@ -3437,9 +3444,9 @@
       "states": [
         "culm_branches"
       ],
-      "source": "Hagenbuch & Lemke (2015), p. 60",
-      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
-      "note": "Culm branches reported in vegetative key, but widespread among bluestems.",
+      "source": "Hagenbuch & Lemke (2015), vegetative key p. 25",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=25",
+      "note": "The regional vegetative key distinguishes branched culms and compressed sheaths; this is not sufficient to identify little bluestem without additional characters.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     },
     {
