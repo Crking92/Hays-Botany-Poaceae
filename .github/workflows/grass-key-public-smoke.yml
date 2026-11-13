@@ -5,6 +5,7 @@ on:
     paths:
       - 'site/visual-key-lab/species-*.json'
       - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/provisional-trial-*.json'
       - 'site/visual-key-lab/index.html'
       - 'scripts/smoke_public_grass_key.py'
       - '.github/workflows/grass-key-public-smoke.yml'
@@ -34,5 +35,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Confirm public Pages HTML and all scored/provisional JSON match current main
+      - name: Confirm public Pages HTML and all 112 scored plus 53 unverified trial JSON records match main
         run: python scripts/smoke_public_grass_key.py
