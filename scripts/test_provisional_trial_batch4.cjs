@@ -1,5 +1,5 @@
 'use strict';
-// Research-only trial Batch 4: three source-backed grass hypotheses, never scored/admitted.
+// Research-only trial Batch 4: six source-backed grass hypotheses, never scored/admitted.
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const lab=path.resolve(__dirname,'../site/visual-key-lab');
 const read=x=>fs.readFileSync(path.join(lab,x),'utf8');
@@ -8,14 +8,14 @@ const candidates=JSON.parse(read('hays-candidates.json')).candidates;
 const groups=['provisional-trial-profiles.json','provisional-trial-batch2.json','provisional-trial-batch3.json','provisional-trial-batch4.json'].map(x=>JSON.parse(read(x)).profiles);
 const [a,b,c,d]=groups;
 assert.equal(scored.length,112);assert.equal(candidates.length,57);
-assert.deepEqual(groups.map(g=>g.length),[6,6,6,3]);
-assert.deepEqual(d.map(x=>x.id),['rostraria-cristata','bothriochloa-bladhii','dichanthium-aristatum']);
+assert.deepEqual(groups.map(g=>g.length),[6,6,6,6]);
+assert.deepEqual(d.map(x=>x.id),['rostraria-cristata','bothriochloa-bladhii','dichanthium-aristatum','paspalum-langei','sphenopholis-obtusata','rottboellia-campestris']);
 assert.equal(scored.reduce((n,x)=>n+x.photos.length,0),514,'Original scored gallery references changed');
 assert.equal(new Set([...scored,...candidates].map(x=>x.id)).size,169,'Learner total changed');
 const trialRows=groups.flat();
 const all=[...scored,...trialRows];
-assert.equal(all.length,133,'Official scored/trial count changed');
-assert.equal(new Set(all.map(x=>x.id)).size,133,'Duplicate trial or scored species');
+assert.equal(all.length,136,'Official scored/trial count changed');
+assert.equal(new Set(all.map(x=>x.id)).size,136,'Duplicate trial or scored species');
 const candidateBy=Object.fromEntries(candidates.map(x=>[x.id,x]));
 let photoCount=0;
 for(const p of d){
@@ -34,7 +34,12 @@ for(const p of d){
    assert.equal(idx,i,'Photo index shifted '+p.id);
    assert.deepEqual(actual,src.approved_gallery[i],'Exact photo source and license mismatch '+p.id);
    assert(actual.creator&&actual.license&&actual.license_url&&actual.source_page,'Source rights absent');
-   assert(/^(?:CC0|CC BY(?:-SA)?|US public domain)(?:\s|$)/i.test(actual.license),'Unsupported source license '+p.id);
+   const standard=/^(?:CC0|CC BY(?:-SA)?|U\.?S\.? public domain)(?:\s|$)/i.test(actual.license);
+   const educational=p.id==='rottboellia-campestris'&&actual.creator==='Bob Harms'
+     &&actual.license==='© Bob Harms — scientific/educational use with credit (not Creative Commons)'
+     &&actual.license_url==='https://w3.biosci.utexas.edu/prc/Monocots/'
+     &&['b','L','d'].some(s=>actual.source_page==='https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-'+s+'.html');
+   assert(standard||educational,'Unsupported source license '+p.id);
    photoCount++;
  });
 }
@@ -57,7 +62,13 @@ const positive=[
  ['rostraria-cristata',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane'}],
  ['bothriochloa-bladhii',{head:'bushy',habit:'tuft',ligule:'membrane',awns:'long'}],
  ['bothriochloa-bladhii',{head:'bushy',habit:'rhizome',ligule:'membrane',awns:'long'}],
- ['dichanthium-aristatum',{head:'fingers',awns:'long'}]
+ ['dichanthium-aristatum',{head:'fingers',awns:'long'}],
+ ['paspalum-langei',{head:'one_sided',habit:'tuft'}],
+ ['paspalum-langei',{head:'paired_spikes',habit:'tuft'}],
+ ['sphenopholis-obtusata',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'}],
+ ['sphenopholis-obtusata',{head:'long_narrow_panicle',habit:'tuft',ligule:'hairs',awns:'none_obvious'}],
+ ['rottboellia-campestris',{head:'spike',habit:'rhizome',ligule:'membrane'}],
+ ['rottboellia-campestris',{head:'spike',habit:'tuft',ligule:'hairs'}]
 ];
 for(const [id,picks] of positive){
  assert(results(picks).includes(id),'Evidence-supported field path falsely excludes '+id+': '+JSON.stringify(picks));
@@ -65,7 +76,13 @@ for(const [id,picks] of positive){
 const negatives=[
  ['rostraria-cristata',{head:'foxtail'}],
  ['bothriochloa-bladhii',{head:'spike'}],
- ['dichanthium-aristatum',{head:'foxtail'}]
+ ['dichanthium-aristatum',{head:'foxtail'}],
+ ['paspalum-langei',{head:'many_one_sided'}],
+ ['paspalum-langei',{head:'spike'}],
+ ['sphenopholis-obtusata',{head:'spike'}],
+ ['sphenopholis-obtusata',{awns:'long'}],
+ ['rottboellia-campestris',{head:'foxtail'}],
+ ['rottboellia-campestris',{habit:'mat'}]
 ];
 for(const [id,picks] of negatives){
  assert(!results(picks).includes(id),'Contradictory field path retained '+id);
@@ -73,6 +90,19 @@ for(const [id,picks] of negatives){
 assert(results({ligule:'hairs'}).includes('dichanthium-aristatum'),'Unknown ligule hard-excluded tentative Dichanthium');
 assert(results({habit:'mat'}).includes('dichanthium-aristatum'),'Unknown habit hard-excluded tentative Dichanthium');
 assert(results({awns:'long'}).includes('dichanthium-aristatum'));
+// An unfinished trait must preserve the candidate across every answer, without implying a match.
+for(const ligule of ['membrane','hairs','absent']) assert(results({head:'one_sided',ligule}).includes('paspalum-langei'),'Unknown rustyseed ligule hard-excluded');
+for(const awns of ['none_obvious','long','bristles','burs']) {
+ assert(results({head:'one_sided',awns}).includes('paspalum-langei'),'Unknown rustyseed awn hard-excluded');
+ assert(results({head:'spike',awns}).includes('rottboellia-campestris'),'Unknown jointgrass awn hard-excluded');
+}
+const compact=results({head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'});
+assert(compact.includes('rostraria-cristata')&&compact.includes('sphenopholis-obtusata'),'Overlapping compact grasses must both remain possible');
+const jointed=results({head:'spike',ligule:'membrane'});
+assert(jointed.includes('aegilops-cylindrica')&&jointed.includes('rottboellia-campestris'),'Jointed-axis silhouette must retain goatgrass/jointgrass comparison');
+ctx.state.species=all;ctx.state.selected={head:'one_sided',habit:'tuft',ligule:'absent',awns:'long'};
+const incomplete=Array.from(ctx.currentResults()).find(x=>x.s.id==='paspalum-langei');
+assert(incomplete&&incomplete.unknown===2&&incomplete.confirmed===2,'Unknown rustyseed traits must not be counted as confirmed matches');
 let preserved=0;
 for(const s of scored){
  const entries=Object.entries(s.traits).filter(([,vals])=>vals.length);
@@ -82,6 +112,6 @@ for(const s of scored){
  };
  visit(0);
 }
-assert.equal(results({}).length,133);
+assert.equal(results({}).length,136);
 assert(results({}).slice(0,112).every(id=>scored.some(s=>s.id===id)),'Provisional trial displaced an official scored result');
-console.log(JSON.stringify({pass:true,officialScored:112,learnerTotal:169,provisionalUniverse:57,unverifiedTrials:21,newResearchTrials:d.map(x=>x.id),trialSourcePhotos:photoCount,positiveScenarios:positive.length,negativeScenarios:negatives.length,scoredPathsPreserved:preserved,localSpecimenAdmissions:0},null,2));
+console.log(JSON.stringify({pass:true,officialScored:112,learnerTotal:169,provisionalUniverse:57,unverifiedTrials:24,newResearchTrials:d.map(x=>x.id),trialSourcePhotos:photoCount,positiveScenarios:positive.length,negativeScenarios:negatives.length,scoredPathsPreserved:preserved,localSpecimenAdmissions:0},null,2));

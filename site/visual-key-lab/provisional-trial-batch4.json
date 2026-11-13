@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "label": "Three provisional photo-backed research-trial character profiles (not official scoring)",
+  "label": "Six provisional photo-backed research-trial character profiles (not official scoring)",
   "created": "2026-11-12",
   "policy": "SOURCE_SCOPED_GENERAL_PHOTO_LITERATURE_ONLY",
   "official_scored_baseline": 112,
   "provisional_universe": 57,
   "prior_unverified_trials": 18,
-  "new_unverified_trials": 3,
-  "total_unverified_trials_after_inclusion": 21,
+  "new_unverified_trials": 6,
+  "total_unverified_trials_after_inclusion": 24,
   "profiles": [
     {
       "id": "rostraria-cristata",
@@ -577,6 +577,578 @@
         "field_view": "Two to several reddish spreading racemes with awns, some extremely close flowering axis views, a ligule/collar view and bunchgrass basal shoots.",
         "source_taxonomic_aliases": [
           "Andropogon aristatus"
+        ]
+      }
+    },
+    {
+      "id": "paspalum-langei",
+      "scientific": "Paspalum langei",
+      "common": "rustyseed paspalum",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 1,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md",
+      "local_report_count": 23,
+      "warning_flags": [
+        "TAXONOMIC_REVIEW"
+      ],
+      "field_rule": "Research trial: compare the few one-sided, paired-spikelet branches and tufted base with other Paspalum species. Sources differ in branch count and spikelet size; do not use a single count to force a name. Measure mature paired spikelets and inspect short swollen-based hairs on the upper glume and sterile lemma. Ligule category and awn state remain unscored in this trial; unknown does not mean absent.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "one_sided",
+          "paired_spikes"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Paspalum Langei_infl 3.JPG",
+          "src": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Paspalum+Langei_infl+3.JPG&id=3514",
+          "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3514",
+          "original_source_page": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Paspalum+Langei_infl+3.JPG&id=3514",
+          "creator": "Larry Allain / U.S. Geological Survey",
+          "license": "U.S. public domain (USGS-authored)",
+          "license_url": "https://www.usgs.gov/faqs/are-usgs-reportspublications-copyrighted",
+          "label": "Rustyseed paspalum: one-sided spikelet row (USGS Louisiana reference)",
+          "caption": "Photographed for the federal USGS Plants of Louisiana guide; the source credits Larry Allain, USGS. Study the one-sided flowering branch, but don't infer Hays specimen identity from this view.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "paspalum-langei",
+          "role": "Flowering head",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Individual USGS species image credits Larry Allain, USGS; Larry Allain was USGS botanist. USGS-authored images are public domain unless separately marked as third-party. No third-party restriction displayed on this exact image.",
+          "reuse_status": "USGS_PUBLIC_DOMAIN_GENERAL_REFERENCE_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_USGS_IMAGE_NOT_COPIED_TO_GITHUB",
+          "modifications": "No image edits; remote USGS source image linked"
+        },
+        {
+          "i": 1,
+          "image_filename": "iNaturalist photo 48994287.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/48994287/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/48994287",
+          "original_source_page": "https://www.inaturalist.org/observations/31311178",
+          "creator": "Sophia K",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Rustyseed paspalum: basal green leafy tuft (Georgetown, Texas)",
+          "caption": "Living clump viewed from above, with multiple long, broad green blades radiating from a crowded base in exposed soil. Research-grade iNaturalist source identification near Southwestern University, Georgetown; root crown is not excavated and no independent Hays voucher or cultivar/genotype verification is implied.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "paspalum-langei",
+          "role": "Living basal leafy clump in soil",
+          "source_location_class": "SOURCE_LABELED_RESEARCH_GRADE_GEORGETOWN_TX_NOT_HAYS_VOUCHER",
+          "exact_rights_evidence": "Sophia K original iNaturalist photo 48994287 from Research Grade source-labeled Paspalum langei observation 31311178, Southwestern University, Georgetown, TX, 2019-08-22. Individual photo API lists CC BY, corroborated by independent exact media record in GBIF occurrence 2574066177 explicitly naming Sophia K and the photo-specific CC BY 4.0 license URL. Independently retrieved and decoded original 1536x2048 JPEG with SHA256 330eda8a81373c01e9751aacdf0186fded4716edbbaecb45f6c995c0cb2a6013 in one-shot Actions #43328916567; exact original ID rights-version cross-check in Actions #43329195244; actual contact image pixels inspected. Different photo IDs and original SHA256, from SAME observation; not independent voucher or diagnostic species verification.",
+          "reuse_status": "PHOTO_SPECIFIC_CC_BY4_SOURCE_LICENSE_AND_ORIGINAL_BYTES_VERIFIED_GENERAL_REFERENCE_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "No original edits; browser displays 1024px source-hosted large image rendition.",
+          "original_sha256": "330eda8a81373c01e9751aacdf0186fded4716edbbaecb45f6c995c0cb2a6013",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/48994287/original.jpg",
+          "independent_license_version_source": "https://www.gbif.org/occurrence/2574066177"
+        },
+        {
+          "i": 2,
+          "image_filename": "iNaturalist photo 48994274.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/48994274/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/48994274",
+          "original_source_page": "https://www.inaturalist.org/observations/31311178",
+          "creator": "Sophia K",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Rustyseed paspalum: upright stem and sheathing foliage (Georgetown, Texas)",
+          "caption": "Field close-up of an upright culm with adjacent green leaf blades and sheath/stem context. Same Georgetown research-grade source observation as the basal view; this does not show a verified inner ligule, dissected spikelets or measured glume structures.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "paspalum-langei",
+          "role": "Standing culm, leaf blades and sheath context",
+          "source_location_class": "SOURCE_LABELED_RESEARCH_GRADE_GEORGETOWN_TX_NOT_HAYS_VOUCHER",
+          "exact_rights_evidence": "Sophia K original iNaturalist photo 48994274 from Research Grade source-labeled Paspalum langei observation 31311178, Southwestern University, Georgetown, TX, 2019-08-22. Individual photo API lists CC BY, corroborated by independent exact media record in GBIF occurrence 2574066177 explicitly naming Sophia K and the photo-specific CC BY 4.0 license URL. Independently retrieved and decoded original 1536x2048 JPEG with SHA256 80842d3ec70d257b9eaec2a23bd3db78f4314d4cd92f35c8dcc269d761fed5d1 in one-shot Actions #43328916567; exact original ID rights-version cross-check in Actions #43329195244; actual contact image pixels inspected. Different photo IDs and original SHA256, from SAME observation; not independent voucher or diagnostic species verification.",
+          "reuse_status": "PHOTO_SPECIFIC_CC_BY4_SOURCE_LICENSE_AND_ORIGINAL_BYTES_VERIFIED_GENERAL_REFERENCE_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "No original edits; browser displays 1024px source-hosted large image rendition.",
+          "original_sha256": "80842d3ec70d257b9eaec2a23bd3db78f4314d4cd92f35c8dcc269d761fed5d1",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/48994274/original.jpg",
+          "independent_license_version_source": "https://www.gbif.org/occurrence/2574066177"
+        }
+      ],
+      "genus": "Paspalum",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Paspalum_langei",
+          "reviewed_for_admission": false,
+          "note": "Reviewed literature hypothesis, not local specimen certification or production admission. H&L leads vegetative states; FNA supplements existing regional reproductive dossier. Unknown states intentionally remain empty."
+        },
+        "character_basis": {
+          "status": "SOURCE_SCOPED_REVIEWED_LITERATURE_PENDING_LOCAL_SPECIMEN",
+          "source_details": {
+            "head": [
+              {
+                "part": "inflorescence",
+                "source": "Allen & Hall, FNA vol.25 p.588; earlier regional dossier retained in Learner",
+                "description": "One to four racemosely arranged branches, paired appressed spikelets; earlier dossier two to five. Map spreading unilateral branches, including a two-branch appearance, not seven-plus racemes."
+              }
+            ],
+            "habit": [
+              {
+                "part": "habit",
+                "source": "Allen & Hall, FNA vol.25 p.588; H&L2015 exact P.langei/P.ciliiferum account not found",
+                "description": "Perennial tuft-former; no unverified rhizome or stolon state added."
+              }
+            ],
+            "ligule": [],
+            "awns": []
+          },
+          "unknown_states": "Empty arrays mean unknown and must not exclude a match or be labeled absence."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Tufted perennial approximately 30–100 cm tall; leaf blades about 7–18 mm broad",
+          "needed_view": "GENERAL_HABIT",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "inflorescence",
+          "check": "The earlier regional dossier lists 2–5 branches, 4–8 cm long. FNA records 1–3, occasionally 4, branches measuring 2.3–13.4 cm. Count all attached branches, including a small lower one, and compare spikelets; branch count alone is not a species diagnosis.",
+          "needed_view": "SEEDHEAD",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae; direct supplemental comparison: C. M. Allen & D. W. Hall, FNA vol. 25, p. 588. https://floranorthamerica.org/Paspalum_langei",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Measure mature paired spikelets pressed close to the flowering branch. The older regional dossier gives 2.2–2.6 mm; FNA allows 2.1–3.3 mm long and 1.3–1.6 mm wide. Retain both source ranges rather than rejecting a specimen just outside the narrower interval.",
+          "needed_view": "SPIKELET_MEASURE",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae; direct supplemental comparison: C. M. Allen & D. W. Hall, FNA vol. 25, p. 588. https://floranorthamerica.org/Paspalum_langei",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "lower_glume",
+          "check": "First/lower glume present on some or all spikelets",
+          "needed_view": "DISSECTION",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "pubescence",
+          "check": "Use magnification to inspect short hairs with swollen bases on the upper glume and lower, sterile-floret lemma. FNA describes the lower lemma as three-veined without raised ribs over its veins. These details need focused views; a green leafy tuft does not establish them.",
+          "needed_view": "MICROSCOPY",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae; direct supplemental comparison: C. M. Allen & D. W. Hall, FNA vol. 25, p. 588. https://floranorthamerica.org/Paspalum_langei",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH4_PENDING_LOCAL_ID",
+        "unresolved": "First-glume presence and dark brown glandular blotches on second glume/sterile lemma cannot be verified at this review scale; species identification unproven.",
+        "comparison_required": true
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 3,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "First-glume presence and dark brown glandular blotches on second glume/sterile lemma cannot be verified at this review scale; species identification unproven.",
+        "risky_context": false,
+        "field_view": "Several slender racemes on branched flowering stalks, paired rows of spikelets in macro view, strap-like basal leaves, wooded/rocky ground context in some observations.",
+        "source_taxonomic_aliases": [
+          "Dimorphostachys langei",
+          "Paspalum ciliiferum",
+          "Paspalum abbreviatum",
+          "Dimorphostachys drummondii"
+        ]
+      }
+    },
+    {
+      "id": "sphenopholis-obtusata",
+      "scientific": "Sphenopholis obtusata",
+      "common": "prairie wedge grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 1,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md",
+      "local_report_count": 4,
+      "warning_flags": [],
+      "field_rule": "Research trial: a tufted grass with a narrow crowded panicle that can resemble a spike. It is a branched panicle, not a true unbranched spike. Inspect the small membrane inside the collar; its torn or ciliate rim may look hairlike. Compare both glumes on one mature spikelet: the lower is much narrower than the rounded upper. Short awns on an intermediate plant require hybrid/look-alike review; skip damaged or unseen awns.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Sphenopholis obtusata 269432617.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sphenopholis_obtusata_269432617.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sphenopholis_obtusata_269432617.jpg",
+          "original_source_page": "https://www.inaturalist.org/photos/269432617",
+          "creator": "Alex Abair",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Prairie wedgegrass: source-labeled field reference (Florida)",
+          "caption": "A source-labeled United States observation; no local specimen proof or claim that individual glumes and paleas are diagnostically visible.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sphenopholis-obtusata",
+          "role": "General flowering reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Checked exact Wikimedia Commons file-page description: named creator, source and explicit CC license. Source-labeled photo is not a Hays voucher; detailed anatomical identity remains to confirm.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No file edits; remote Commons resizing only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Utah State University Intermountain Herbarium — Sphenopholis obtusata specimen image.webp",
+          "src": "https://yavapaiplants.extension.arizona.edu/sites/default/files/styles/az_natural/public/Grasses/Images/3a5f30cee308c1fb6428feccfc48a23b.jpg.webp?itok=yzHGsNVk",
+          "source_page": "https://yavapaiplants.extension.arizona.edu/sphenopholis-obtusata",
+          "original_source_page": "https://yavapaiplants.extension.arizona.edu/sphenopholis-obtusata",
+          "creator": "Utah State University Intermountain Herbarium",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "label": "Prairie wedgegrass: complete pressed flowering specimen",
+          "caption": "Pressed herbarium specimen with flowering culms, narrow leaves, basal growth and specimen label. Specific Arizona Extension picture is credited to Utah State University Intermountain Herbarium under CC0; this is a herbarium reference, not a fresh Hays field photograph or independently reidentified local specimen.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sphenopholis-obtusata",
+          "role": "Pressed flowering specimen with basal growth",
+          "source_location_class": "NONLOCAL_HERBARIUM_SPECIMEN_SOURCE_LABELED",
+          "exact_rights_evidence": "Exact pictured specimen and credit/CC0 listed individually by University of Arizona Extension; actual image visually reviewed in Chat4 Issue #70 #6838510489; original source media is not independently SHA-hashed.",
+          "reuse_status": "SOURCE_IMAGE_RIGHTS_AND_CREATOR_CONFIRMED_GENERAL_PHOTO_NOT_LOCAL_VOUCHER",
+          "media_delivery": "ORIGINAL_EXTERNAL_HOSTING_PRESERVED_NO_REHOST",
+          "modifications": "No original image editing; remote display source requested in responsive format."
+        }
+      ],
+      "genus": "Sphenopholis",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Sphenopholis_obtusata",
+          "reviewed_for_admission": false,
+          "note": "Reviewed literature hypothesis, not local specimen certification or production admission. H&L leads vegetative states; FNA supplements existing regional reproductive dossier. Unknown states intentionally remain empty."
+        },
+        "character_basis": {
+          "status": "SOURCE_SCOPED_REVIEWED_LITERATURE_PENDING_LOCAL_SPECIMEN",
+          "source_details": {
+            "head": [
+              {
+                "part": "inflorescence",
+                "source": "Daniel, FNA vol.24 p.621",
+                "description": "Usually upright, crowded spike-like panicle; retain compact and long-narrow visual choices."
+              }
+            ],
+            "habit": [
+              {
+                "part": "habit",
+                "source": "Hagenbuch & Lemke 2015, Grasses of the Texas Hill Country, p.63 account135. https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+                "description": "Annual tuft-former without rhizomes or stolons."
+              }
+            ],
+            "ligule": [
+              {
+                "part": "ligule",
+                "source": "Hagenbuch & Lemke 2015, Grasses of the Texas Hill Country, p.63 account135; Daniel, FNA vol.24 p.621",
+                "description": "Membranous ligule 1.5–3mm with torn rim in H&L; FNA describes erose-ciliate/lacerate margin. Both membrane and hairlike-rim visual choices retained; not a claim of a wholly hair-only ligule."
+              }
+            ],
+            "awns": [
+              {
+                "part": "spikelet",
+                "source": "Daniel, FNA vol.24 p.621",
+                "description": "Unawned distal lemmas; short-awned S.×pallens intermediates require further review, not forced parent identification."
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays mean unknown and must not exclude a match or be labeled absence."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Annual with single or tufted culms about 15–100(120) cm",
+          "needed_view": "GENERAL_HABIT",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Membranous ligule around 1.5–3 mm long",
+          "needed_view": "COLLAR_MACRO",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "inflorescence",
+          "check": "Look for a narrow, usually upright panicle with crowded spikelets; it often resembles a spike. FNA gives a usual length of 5–15 cm, with extremes of 2–25 cm, and a width of 0.5–2 cm. A compact outline alone cannot distinguish the local wedgegrass look-alikes.",
+          "needed_view": "SEEDHEAD",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae; direct supplemental comparison: T. F. Daniel, FNA vol. 24, p. 621. https://floranorthamerica.org/Sphenopholis_obtusata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "The earlier regional dossier describes shiny, usually 2–3-flowered spikelets about 1.5–5 mm long. FNA gives 2.2–3.6 mm and unawned distal lemmas. Use mature spikelets and several characters; damaged tips or short awns on an intermediate plant require further comparison rather than a forced name.",
+          "needed_view": "SPIKELET_MEASURE",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae; direct supplemental comparison: T. F. Daniel, FNA vol. 24, p. 621. https://floranorthamerica.org/Sphenopholis_obtusata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "upper_glume",
+          "check": "Compare both glumes on the same mature spikelet: FNA describes the lower glume as less than one-third the width of the upper. The upper is 1.5–2.5 mm long, slightly hooded, with a rounded to flat-topped tip. A distant panicle photograph cannot verify this difference.",
+          "needed_view": "GLUME_DISSECTION",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae; direct supplemental comparison: T. F. Daniel, FNA vol. 24, p. 621. https://floranorthamerica.org/Sphenopholis_obtusata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH4_PENDING_LOCAL_ID",
+        "unresolved": "Second glume wide obovate blunt apex, floret arrangement and distinction from Koeleria or other wedgescales cannot be proven from contact-size images.",
+        "comparison_required": true
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Second glume wide obovate blunt apex, floret arrangement and distinction from Koeleria or other wedgescales cannot be proven from contact-size images.",
+        "risky_context": false,
+        "field_view": "Narrow erect densely flowered spikes/panicles, tan maturing flowers, green panicle heads, a close sheath/leaf junction and multiple independent field scenes.",
+        "source_taxonomic_aliases": [],
+        "life_history_scope": "Regional Hill Country vegetative account treats plants as annual; broader botanical accounts also describe annual or short-lived perennial growth. Duration is not a selectable trait or scored diagnostic in this research trial."
+      }
+    },
+    {
+      "id": "rottboellia-campestris",
+      "scientific": "Rottboellia campestris",
+      "common": "Carolina jointgrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 1,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md",
+      "local_report_count": 10,
+      "warning_flags": [
+        "TAXONOMIC_REVIEW",
+        "REGIONAL_FLORA_AND_FNA_PREFER_OLDER_GENUS_COELORACHIS"
+      ],
+      "field_rule": "Research trial: look for a thin cylindrical jointed raceme, with spikelets fitting closely into recesses in the axis. Check the sessile fertile and stalked sterile pair and pitted glume on the same specimen. The source name Coelorachis cylindrica refers to this profile. A small cluster may have short knotty rhizomes; inspect the tiny membrane and its ragged hair-edged rim inside the collar. Awn state remains unknown here, not scored as absent. Compare jointed goatgrass and other jointed grasses by actual spikelet arrangement.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Coelorachis cylindrica 2.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Coelorachis%20cylindrica%202.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Coelorachis_cylindrica_2.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Coelorachis_cylindrica_2.jpg",
+          "creator": "Eric Hunt",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Carolina jointgrass: jointed flowering spike (Arkansas)",
+          "caption": "Eric Hunt's photograph filed under Coelorachis cylindrica, a synonym of Rottboellia campestris in Kew POWO. Shows a segmented cylindrical reproductive axis; not a whole plant or certified Hays specimen.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "rottboellia-campestris",
+          "role": "Jointed cylindrical mature flowering raceme",
+          "source_location_class": "NONLOCAL_REFERENCE_ARKANSAS",
+          "exact_rights_evidence": "Wikimedia Commons original uploader Eric Hunt grants CC BY-SA 4.0 specifically for Coelorachis cylindrica 2.jpg; original EXIF All Rights Reserved predates express Commons license grant. Exact source preview was inspected in Group A B2; Kew confirms synonym.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_SOURCE_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edit to original image; external responsive display as originally provided."
+        },
+        {
+          "i": 1,
+          "image_filename": "COCY-b.jpg",
+          "src": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/COCY-b.jpg",
+          "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-b.html",
+          "original_source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-b.html",
+          "creator": "Bob Harms",
+          "license": "© Bob Harms — scientific/educational use with credit (not Creative Commons)",
+          "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+          "label": "Carolina jointgrass: collected flowering shoot and leaves",
+          "caption": "Collected flowering culm, leaves and a ruler in Bob Harms's reference image. The shoot lacks a rooted base; this is not evidence of rhizomes or a complete whole-plant specimen. Photograph © Bob Harms — Selected Monocots, University of Texas. Source labeled Coelorachis cylindrica, a synonym of Rottboellia campestris; exact collection locality and voucher are not stated on this image page.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "rottboellia-campestris",
+          "role": "Flowering shoot and foliage with scale",
+          "source_location_class": "REGIONAL_REFERENCE_EXACT_LOCALITY_NOT_STATED",
+          "exact_rights_evidence": "Exact COCY-b.html source page credits Images by Bob Harms and labels Coelorachis cylindrica. UT Selected Monocots terms (checked 2026-11-12) expressly permit scientific/educational use with proper Bob Harms credit. Custom copyright permission only, no CC or public-domain claim. Actual image visually inspected; current Poaceae source tree and Bob Harms transfer ledger have no COCY/Coelorachis/Rottboellia source match.",
+          "reuse_status": "SOURCE_EDUCATIONAL_PERMISSION_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_SOURCE_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edit to original image; external responsive display as originally provided."
+        },
+        {
+          "i": 2,
+          "image_filename": "COCY-L.jpg",
+          "src": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/COCY-L.jpg",
+          "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-L.html",
+          "original_source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-L.html",
+          "creator": "Bob Harms",
+          "license": "© Bob Harms — scientific/educational use with credit (not Creative Commons)",
+          "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+          "label": "Carolina jointgrass: leaf–sheath junction and collar",
+          "caption": "Leaf blades, sheaths and their junctions with an inset enlargement and scale. Use the source's collar view as a reference; the exact tiny ligule outline still needs a clear inner-junction examination. Photograph © Bob Harms — Selected Monocots, University of Texas. Source labeled Coelorachis cylindrica, a synonym of Rottboellia campestris; exact collection locality and voucher are not stated on this image page.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "rottboellia-campestris",
+          "role": "Collar, leaf and sheath reference with scale",
+          "source_location_class": "REGIONAL_REFERENCE_EXACT_LOCALITY_NOT_STATED",
+          "exact_rights_evidence": "Exact COCY-L.html source page credits Images by Bob Harms and labels Coelorachis cylindrica. UT Selected Monocots terms (checked 2026-11-12) expressly permit scientific/educational use with proper Bob Harms credit. Custom copyright permission only, no CC or public-domain claim. Actual image visually inspected; current Poaceae source tree and Bob Harms transfer ledger have no COCY/Coelorachis/Rottboellia source match.",
+          "reuse_status": "SOURCE_EDUCATIONAL_PERMISSION_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_SOURCE_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edit to original image; external responsive display as originally provided."
+        },
+        {
+          "i": 3,
+          "image_filename": "COCY-d.jpg",
+          "src": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/images/COCY-d.jpg",
+          "source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-d.html",
+          "original_source_page": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/COCY-d.html",
+          "creator": "Bob Harms",
+          "license": "© Bob Harms — scientific/educational use with credit (not Creative Commons)",
+          "license_url": "https://w3.biosci.utexas.edu/prc/Monocots/",
+          "label": "Carolina jointgrass: dry raceme and separated segments",
+          "caption": "Dry racemes beside loose jointed segments, with close views and scales. Shows the source's disarticulation view; this is not a rooted dormant tuft or a complete spikelet dissection. Photograph © Bob Harms — Selected Monocots, University of Texas. Source labeled Coelorachis cylindrica, a synonym of Rottboellia campestris; exact collection locality and voucher are not stated on this image page.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "rottboellia-campestris",
+          "role": "Dry raceme disarticulation and separated segments with scale",
+          "source_location_class": "REGIONAL_REFERENCE_EXACT_LOCALITY_NOT_STATED",
+          "exact_rights_evidence": "Exact COCY-d.html source page credits Images by Bob Harms and labels Coelorachis cylindrica. UT Selected Monocots terms (checked 2026-11-12) expressly permit scientific/educational use with proper Bob Harms credit. Custom copyright permission only, no CC or public-domain claim. Actual image visually inspected; current Poaceae source tree and Bob Harms transfer ledger have no COCY/Coelorachis/Rottboellia source match.",
+          "reuse_status": "SOURCE_EDUCATIONAL_PERMISSION_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_SOURCE_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edit to original image; external responsive display as originally provided."
+        }
+      ],
+      "genus": "Rottboellia",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-20261111.md",
+          "external_flora_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+          "reviewed_for_admission": false,
+          "note": "Reviewed literature hypothesis, not local specimen certification or production admission. H&L leads vegetative states; FNA supplements existing regional reproductive dossier. Unknown states intentionally remain empty."
+        },
+        "character_basis": {
+          "status": "SOURCE_SCOPED_REVIEWED_LITERATURE_PENDING_LOCAL_SPECIMEN",
+          "source_details": {
+            "head": [
+              {
+                "part": "inflorescence",
+                "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+                "description": "Very slender cylindrical spike-like raceme about 3 mm in diameter; axis breaks apart at joints"
+              }
+            ],
+            "habit": [
+              {
+                "part": "habit",
+                "source": "Hagenbuch & Lemke 2015, Grasses of the Texas Hill Country, p.42 account41, Coelorachis cylindrica. https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+                "description": "Solitary or small-cluster perennial with short knotty rhizomes; tuft choice covers a small basal cluster, not spreading mat."
+              }
+            ],
+            "ligule": [
+              {
+                "part": "ligule",
+                "source": "Hagenbuch & Lemke 2015, Grasses of the Texas Hill Country, p.42 account41. https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+                "description": "Tiny membrane with ragged/ciliate rim; retain membrane and hairlike-rim appearances, never call this ligule absent."
+              }
+            ],
+            "awns": []
+          },
+          "unknown_states": "Empty arrays mean unknown and must not exclude a match or be labeled absence."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Perennial with hard base, short knotty rhizomes, erect or arching culms 25–100 cm",
+          "needed_view": "GENERAL_HABIT",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Look inside the blade–sheath junction for a 0.5–1 mm membrane with a flat-topped, ragged or hair-edged rim. The regional account uses the synonym Coelorachis cylindrica. A flowering-raceme photograph cannot establish this tiny leaf character.",
+          "needed_view": "COLLAR_MACRO",
+          "source": "Hagenbuch & Lemke 2015. Grasses of the Texas Hill Country, p. 42, account 41. https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42; earlier dossier: Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "inflorescence",
+          "check": "Very slender cylindrical spike-like raceme about 3 mm in diameter; axis breaks apart at joints",
+          "needed_view": "SEEDHEAD",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet_position",
+          "check": "Rachis joints have niches in which spikelets fit tightly",
+          "needed_view": "RACHIS_CLOSEUP",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Pairs include sessile fertile spikelet with pitted glume and pedicelled sterile spikelet",
+          "needed_view": "PAIRED_SPIKELET_DISSECTION",
+          "source": "Diggs, Lipscomb & O'Kennon 1999. Illustrated Flora of North Central Texas, Poaceae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "SIX_SPECIES_TEST_BATCH4_PENDING_LOCAL_ID",
+        "unresolved": "Bob Harms reference photographs now show shoot, collar/sheath and dry raceme disarticulation under the synonym Coelorachis cylindrica. Exact inner ligule, sessile spikelet niche architecture and fresh paired spikelet/glume anatomy still need local specimen examination before final species-ID signoff.",
+        "comparison_required": true
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 4,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Bob Harms reference photographs now show shoot, collar/sheath and dry raceme disarticulation under the synonym Coelorachis cylindrica. Exact inner ligule, sessile spikelet niche architecture and fresh paired spikelet/glume anatomy still need local specimen examination before final species-ID signoff.",
+        "risky_context": false,
+        "field_view": "Very narrow pencil-like cylindrical inflorescence with obvious successive nodes/segment pattern and hand scale; erect to arching culms and natural grassy habitat in several independent observations.",
+        "source_taxonomic_aliases": [
+          "Mnesithea cylindrica",
+          "Manisuris cylindrica",
+          "Coelorachis cylindrica"
         ]
       }
     }
