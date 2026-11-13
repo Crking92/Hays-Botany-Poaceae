@@ -28,7 +28,7 @@ assert.equal(trialCount, 21, 'Research-trial inventory changed; review key admis
 const html = read('index.html');
 assert(html.includes('id="coded-total"')&&html.includes('$("coded-total").textContent=state.species.length'),
  'Public key count must follow loaded scoring and research-trial data');
-assert(html.includes('state.species.filter(s=>s.trial).length')&&trialCount===21,
+assert(html.includes('provisional-trial-batch4.json')&&trialCount===21,
  'The 21 research trials must remain a separate provisional inventory');
 assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===36,
  'All 36 Learner-only records must be reported as missing identification-key data');
