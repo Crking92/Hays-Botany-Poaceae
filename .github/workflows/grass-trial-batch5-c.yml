@@ -1,0 +1,21 @@
+name: Grass Chat C staged ornamental/research trial regression
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/provisional-trial-batch5-c.json'
+      - 'scripts/test_grass_trial_batch5_c.cjs'
+      - '.github/workflows/grass-trial-batch5-c.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage-only-traits:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test C-only photo references, key match paths and unresolved holds
+        run: node scripts/test_grass_trial_batch5_c.cjs
