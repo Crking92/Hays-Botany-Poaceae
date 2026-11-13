@@ -34,7 +34,7 @@ const expected=[
 assert.deepEqual(batch.profiles.map(x=>x.id),expected);
 const all=[...scored,...old,...batch.profiles], allIds=all.map(s=>s.id);
 assert.equal(new Set(allIds).size,all.length,'Scored/older trial/new trial ID collision');
-assert.equal(all.length,146,'Total only after an eventual coordinated integration; must not imply current site has 146');
+assert.equal(all.length,146,'Scoped B-only evaluator should model 112 scored + 24 existing trials + 10 new B trials');
 const options={
  head:new Set(['short_racemes','fingers','side_oats','short_side_racemes','combs','whorls',
   'flat_oats','airy','foxtail','sparse_bristles','wiry','compact','bushy','reed_plume',
@@ -78,7 +78,7 @@ for(const t of batch.profiles){
  }
 }
 const html=read('index.html');
-assert(!html.includes('provisional-trial-batch5-b.json'),'Lane B file must remain staged; coordinator owns key integration');
+assert(html.includes('provisional-trial-batch5-b.json'),'Coordinator key must load the unverified B profiles');
 const m=html.match(/<script>([\s\S]*?)<\/script>/);assert(m,'Cannot locate current production key JS');
 new vm.Script(m[1]);
 const js=m[1],start=js.indexOf('function currentResults()'),end=js.indexOf('\nfunction renderTabs',start);
@@ -147,7 +147,7 @@ for(const s of old)enumerate(s,picks=>{assert(has(s.id,picks),'Existing unverifi
 assert.equal(score({}).length,146);
 assert.equal(score({}).slice(0,112).filter(x=>scored.some(y=>y.id===x.id)).length,112,'Unverified trials displace official results');
 console.log(JSON.stringify({pass:true,originalScored:112,originalScoredPhotoRefs:514,totalLearner:169,
- priorUnverifiedTrials:24,chatBStaged:10,chatBHolds:1,
+ priorUnverifiedTrials:24,chatBUnverified:10,chatBHolds:1,
  normalKeyIfLaterIntegrated:146,approvedCreditedPhotoRefsCopied:credited,
  positivePaths:positives,contradictionChecks:negatives,unknownSurvivalChecks:unknownCases,
  preexistingOfficialPathsPreserved:scoredPaths,oldResearchPathsPreserved:previousPaths,
