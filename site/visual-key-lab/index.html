@@ -301,6 +301,19 @@ function refinementSection(id){
 // Suggest an optional side-by-side check ONLY when all compared taxa have
 // published states and at least one pair has non-overlapping states.
 // A missing description is UNKNOWN, not proof of a contrasting character.
+// A useful four-question suggestion needs documented, non-overlapping states
+// for every compared grass. Unknown and overlapping values are NOT contrasts.
+function compareCorePrompt(species){
+ if(!Array.isArray(species)||species.length<2)return null;
+ for(const q of qs){
+  if(state.selected[q.id])continue;
+  const found=species.map(s=>s.traits?.[q.id]);
+  if(found.some(v=>!Array.isArray(v)||!v.length))continue;
+  const differing=found.some((a,i)=>found.some((b,j)=>j>i&&a.every(v=>!b.includes(v))));
+  if(differing)return q;
+ }
+ return null;
+}
 function compareRefinementPrompt(species){
  if(!Array.isArray(species)||species.length<2)return null;
  for(const c of state.refineCharacters||[]){
@@ -988,9 +1001,8 @@ function compareCandidates(){
  tbody.append(row);
 }
 table.append(tbody);wrap.append(table);area.append(node("p","compare-scroll-note","On a phone, swipe the feature table sideways to see the other grasses."),wrap);
-  const candidates=qs.filter(q=>!state.selected[q.id]&&new Set(species.map(s=>(s.traits[q.id]||[]).slice().sort().join("|"))).size>1);
-  const next=candidates[0];
-  if(next)area.append(node("p","compare-next","Helpful next check: "+next.short+". "+next.hint));
+  const next=compareCorePrompt(species);
+  if(next)area.append(node("p","compare-next","Helpful next check: "+next.short+". "+next.hint+" The documented choices differ; check the real plant before deciding."));
   else{
     const extra=compareRefinementPrompt(species);
     if(extra)area.append(node("p","compare-next","Helpful next check: "+extra.label+". "+extra.hint+" Published descriptions differ; uncertain field features do not eliminate a grass."));
