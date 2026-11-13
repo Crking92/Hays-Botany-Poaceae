@@ -76,6 +76,11 @@ assert all(not any(r["character"]==cid and oid in r["states"] for r in bundle["e
 for r in bundle["evidence"]:
     if r["character"]!="ligule_length": continue
     lo,hi=r["length_mm"]
+    assert isinstance(hi,(int,float)) and hi>0
+    if lo is None:
+        assert hi<=1 and set(r["states"])=={"tiny"}, r["id"]
+        continue
+    assert isinstance(lo,(int,float)) and 0<lo<=hi
     expect=set()
     if lo<1: expect.add("tiny")
     if lo<3 and hi>1: expect.add("short")
