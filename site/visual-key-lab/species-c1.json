@@ -2120,7 +2120,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "WOODED PERENNIAL BROME: confirm durable crown and true hairs on mature lemmas; match a measured spikelet and sheath/collar photo before separating native pubescens from annual bromes.\n\nTrue ligule: Hairy woodland brome typically shows an erose membranous ligule. The Hill Country flora reports that its membrane margin can occasionally carry sparse cilia; an observer who sees those fine hairs at the true inner junction can still select a hair fringe without excluding it. Verify the perennial crown and hairy mature lemmas.",
+    "field_rule": "WOODED PERENNIAL BROME: confirm durable crown and true hairs on mature lemmas; match a measured spikelet and sheath/collar photo before separating native pubescens from annual bromes.\n\nTrue ligule: Hairy woodland brome typically shows an erose membranous ligule. The Hill Country flora reports that its membrane margin can occasionally carry sparse cilia; an observer who sees those fine hairs at the true inner junction can still select a hair fringe without excluding it. Verify the perennial crown and hairy mature lemmas.\n\nScoring check: awns on this species are often only 3–8 mm, so the field answer 'no conspicuous LONG awns' can be appropriate even though the lemmas truly bear short awns. Both visual options are supported as coarse routes; inspect an intact spikelet with a hand lens before concluding awnless.",
     "traits": {
       "head": [
         "branched_oat"
@@ -2133,7 +2133,8 @@
         "hairs"
       ],
       "awns": [
-        "long"
+        "long",
+        "none_obvious"
       ]
     },
     "source_blob_sha": "f439a3ee2234c67036eaadd8e99645441f620360",
@@ -2161,6 +2162,21 @@
         "status": "PRIMARY_HILL_COUNTRY_OCCASIONAL_CILIA_FNA_GLABROUS_TYPICAL_LOCAL_COLLAR_SPECIMEN_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No exact inner blade–sheath collar in a connected Hays-region specimen was independently verified in this audit."
+      },
+      "awns": {
+        "source": "Flora of North America, Bromus pubescens species account; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1252",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8668&taxauthid=1&tid=8885",
+        "regional_source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=176",
+        "role": "reproductive",
+        "reference": "FNA records straight subapical lemma awns (3–)4–7(–8) mm; Diggs supports awned spikelets (roughly 4–13 mm). In the current beginner UI, 'long' means obvious long projections and 'none_obvious' means NO CONSPICUOUS LONG awns, not awnless. Intact short-awn plants may fit either visual impression; both choices must retain the species. Microscope or hand lens should establish that the lemma is actually awned.",
+        "reported_states": [
+          "true short lemma awns present",
+          "long-looking awns when visible at field scale",
+          "no conspicuous LONG awns on short-awn material"
+        ],
+        "status": "TWO_DIRECT_SPECIES_AWNS_SHORT_FIELD_SILHOUETTE_AMBIGUITY_ADD_ALTERNATE_PATH",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-only; no new exact Hays voucher or awn measurement."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
