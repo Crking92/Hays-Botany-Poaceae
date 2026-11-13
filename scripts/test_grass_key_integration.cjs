@@ -26,12 +26,14 @@ const learnerOnlyCount = candidates.length - trialCount;
 assert.equal(new Set(trialProfiles.map(x=>x.id)).size, trialCount, 'Duplicate trial-profile identifiers');
 assert.equal(trialCount, 21, 'Research-trial inventory changed; review key admission and public copy');
 const html = read('index.html');
-assert(html.includes('plus '+trialCount+' labeled provisional research trials'),
- 'Public key description is stale relative to loaded trial files');
-assert(html.includes(trialCount+' of the '+candidates.length+' newer research grasses'),
- 'Public trial-count introduction is stale');
-assert(html.includes('The other '+learnerOnlyCount+' remain searchable only in the full Learner'),
- 'Public Learner-only research count is stale');
+assert(html.includes('id="coded-total"')&&html.includes('$("coded-total").textContent=state.species.length'),
+ 'Public key count must follow loaded scoring and research-trial data');
+assert(html.includes('state.species.filter(s=>s.trial).length')&&trialCount===21,
+ 'The 21 research trials must remain a separate provisional inventory');
+assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===36,
+ 'All 36 Learner-only records must be reported as missing identification-key data');
+assert(!html.includes('Phase 3 in progress:')&&!html.includes('Field-testing prototype:'),
+ 'Internal project progress banners should not appear on the visitor identification page');
 const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
 assert(scriptMatch, 'production inline script not located');
 const script = scriptMatch[1];
