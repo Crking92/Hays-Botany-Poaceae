@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<399||448-indexed.size-unknown>46||unknown!==3)
+if(indexed.size<414||448-indexed.size-unknown>31||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -173,6 +173,17 @@ if(!/long stiff 8–15-mm membrane/.test(lig12("muhlenbergia-lindheimeri").inter
  !/margin.*difference/.test(lig12("sorghastrum-nutans").interpretation)||
  !/subspecies bridge/.test(lig12("bothriochloa-torreyana").interpretation))
  throw Error("Ligule-specific structure or cross-source caution lost");
+
+
+// Batch 13: 15 additional vegetative ligule source records with edge vs blade-hair distinctions.
+const nextLiguleBatch=["sorghum-bicolor","dichanthium-annulatum","elymus-virginicus","eragrostis-cilianensis","festuca-octoflora","hilaria-mutica","hopia-obtusa","leersia-oryzoides","muhlenbergia-reverchonii","muhlenbergia-schreberi","muhlenbergia-utilis","panicum-coloratum","paspalum-dilatatum","paspalum-pubiflorum","paspalum-setaceum"];
+if(nextLiguleBatch.some(id=>!entries.has(id+"|ligule")))throw Error("Batch 13 ligules missing");
+const lg13=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="ligule");
+if(!/long, soft hairs are ON LEAF BLADE/.test(lg13("paspalum-setaceum").interpretation)||
+ !/marginal cilia/.test(lg13("muhlenbergia-schreberi").interpretation)||
+ !/minute membranous base/.test(lg13("panicum-coloratum").references[0].support)||
+ !/published descriptions differ/.test(lg13("sorghum-bicolor").interpretation))
+ throw Error("Batch 13 anatomy or source disagreement erased");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
