@@ -3155,7 +3155,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Genus: 3 ONE-FLOWERED spikelets on one barley rachis node. Species: little annual narrow erect spike + short straight glumes; foxtail = nodding feather with longer splayed glumes and perennial base. Detached awned group is NOT confirmation of the central fertile spikelet; get attached node macro.",
+    "field_rule": "Genus: 3 ONE-FLOWERED spikelets on one barley rachis node. Species: little annual narrow erect spike + short straight glumes; foxtail = nodding feather with longer splayed glumes and perennial base. Detached awned group is NOT confirmation of the central fertile spikelet; get attached node macro.\n\nScoring check: little barley has actual awns, but the fertile lemma awns may be only about 2 mm; a user seeing no conspicuously LONG awns should not lose this species. If the head is immature or awns are broken, skip the awn question rather than deciding they are absent.",
     "traits": {
       "head": [
         "spike"
@@ -3167,7 +3167,8 @@
         "membrane"
       ],
       "awns": [
-        "long"
+        "long",
+        "none_obvious"
       ]
     },
     "source_blob_sha": "6276a793df3cd9ecf17dc63a21e822a5a60a0fd0",
@@ -3181,6 +3182,21 @@
         "reference": "Small erect flattened barley spike; at nodes, three one-flowered spikelets; bristled spike is not a foxtail of sterile-branch bristles.",
         "status": "EXTERNAL_SOURCE_PARTIAL_CHARACTER_CHECK",
         "review_date": "2026-11-10"
+      },
+      "awns": {
+        "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1278; Kew GrassBase, Hordeum pusillum species treatment",
+        "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=202",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:123933-2/general-information",
+        "role": "reproductive",
+        "reference": "Diggs reports fertile lemma awns 2–10(–15) mm; GrassBase gives a principal awn 2–7 mm. The current 'long, obvious awns' field button is not guaranteed for specimens with 2-mm tips. The added 'none_obvious' route refers ONLY to lack of conspicuously LONG projections at field scale, not true awn absence. Old-source disagreement about perennial vs regional annual life history is unchanged.",
+        "reported_states": [
+          "short lemma awns present (from 2 mm)",
+          "longer visible awns possible",
+          "no conspicuous LONG awns on short-awn material"
+        ],
+        "status": "DIRECT_DIGGS_AND_GRASSBASE_SHORT_AWNS_ALLOW_BOTH_COARSE_FIELD_CHOICES",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-only; no measured local attached spikelet."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
