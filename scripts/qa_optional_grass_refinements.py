@@ -26,7 +26,7 @@ assert len({x["id"] for x in original + universe}) == 169
 assert bundle["schema_version"] == 1
 assert bundle["mode"] == "NON_EXCLUDING_POSITIVE_RANKING"
 chars = {c["id"]: c for c in bundle["characters"]}
-assert len(chars) == len(bundle["characters"]) == 18
+assert len(chars) == len(bundle["characters"]) == 24
 for c in chars.values():
     vals = [v["id"] for v in c["options"]]
     assert vals and len(set(vals)) == len(vals)
@@ -42,7 +42,7 @@ for row in bundle["evidence"]:
     assert row["source"].strip() and row["source_url"].startswith("https://")
     assert row["note"].strip()
     assert row["evidence_level"] == "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
-assert len(bundle["evidence"]) >= 251 and len({r["id"] for r in bundle["evidence"]}) >= 58
+assert len(bundle["evidence"]) >= 336 and len({r["id"] for r in bundle["evidence"]}) >= 58
 width_rows = [r for r in bundle["evidence"] if r["character"] == "blade_width"]
 assert len(width_rows) >= 37
 def possible_width_states(low, high):
@@ -75,6 +75,24 @@ assert len({e["id"] for e in bundle["evidence"] if e["character"] in ("culm_post
 assert any(e["id"]=="cynodon-dactylon" and e["states"]==["long_rhizome"] for e in bundle["evidence"] if e["character"]=="underground_stems")
 assert any(e["id"]=="paspalum-pubiflorum" and "rooted_nodes" in e["states"] for e in bundle["evidence"] if e["character"]=="surface_runners")
 assert any(e["id"]=="eragrostis-cilianensis" and "gland_ring" in e["states"] for e in bundle["evidence"] if e["character"]=="stem_nodes")
+# Reproductive optional character source and identity gate (printed Flora pages, no speculative absence).
+flower_ids=("florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position")
+assert all(k in chars for k in flower_ids)
+assert '["flower","Flowers / spikelets"]' in html
+assert '["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id)' in html
+flower_rows=[x for x in bundle["evidence"] if x["character"] in flower_ids]
+assert len(flower_rows)>=85 and len({x["id"] for x in flower_rows})>=28
+assert all("Diggs, Lipscomb & O'Kennon" in x["source"] and "printed p." in x["source"] for x in flower_rows)
+assert all(x["source_url"]=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas" for x in flower_rows)
+assert all(x["id"] in {o["id"] for o in original} for x in flower_rows), "Keep optional key evidence on 112 scored taxa"
+def positive(taxon,character,state):
+    return any(x["id"]==taxon and x["character"]==character and state in x["states"] for x in flower_rows)
+assert positive("arundo-donax","floral_hair_position","lemma")
+assert positive("phragmites-australis","floral_hair_position","rachilla")
+assert positive("setaria-parviflora","floral_hair_position","below_spikelet")
+assert positive("setaria-parviflora","true_lemma_awn","none")
+assert positive("sorghum-halepense","true_lemma_awn","short") and positive("sorghum-halepense","true_lemma_awn","none")
+assert positive("eragrostis-trichodes","lemma_texture","reddish_spotted")
 assert "short_rhizome" in {o["id"] for o in chars["underground_stems"]["options"]}
 assert "long_rhizome" in {o["id"] for o in chars["underground_stems"]["options"]}
 assert "evidence-pending" in html
