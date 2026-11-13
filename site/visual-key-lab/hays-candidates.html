@@ -71,7 +71,7 @@ function card(item){
  if(item.warning_flags?.length)body.append(paragraph("Additional checks:",item.warning_flags.map(s=>s.replaceAll("_"," ").toLowerCase()).join(", "),"context"));
  if(item.approved_gallery?.length){
   body.append(el("h3","","Credited general photos — not specimen verification"));
-  body.append(el("p","These images have checked file-specific reuse terms. Locations vary; see each photo label and original source. A photograph alone does not verify the fine anatomical claims below."));
+  body.append(el("p","","These images have checked file-specific reuse terms. Locations vary; see each photo label and original source. A photograph alone does not verify the fine anatomical claims below."));
   const gallery=el("div","checked-gallery");
   for(const p of item.approved_gallery){
    const fig=el("figure"),img=el("img");img.src=p.src;img.loading="lazy";img.decoding="async";img.alt=p.label;
