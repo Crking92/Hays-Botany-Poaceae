@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<365||448-indexed.size-unknown>80||unknown!==3)
+if(indexed.size<380||448-indexed.size-unknown>65||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -137,6 +137,18 @@ if(!/stoloniferous culms/.test(habit9("dichanthium-annulatum").interpretation)||
  !/narrower/.test(habit9("eragrostis-secundiflora").interpretation)||
  !/E. intermedia/.test(habit9("eragrostis-lugens").interpretation))
  throw Error("Batch 9 documented source limits lost");
+
+
+// Batch 10: preserve 15 new original-core vegetative habit citations and disputed anatomy.
+const habitBatch10=["heteropogon-contortus","setaria-scheelei","sorghastrum-nutans","bromus-texensis","dinebra-panicea-subsp-mucronata","festuca-octoflora","festuca-versuta","muhlenbergia-x-involuta","sporobolus-clandestinus","tridens-albescens","tridens-texanus","tridentopsis-buckleyana","tridentopsis-mutica","triplasiella-eragrostoides","dichanthelium-lindheimeri"];
+if(habitBatch10.some(id=>!entries.has(id+"|habit")))throw Error("15 habit source records missing");
+const h10=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="habit");
+if(!/UNDERGROUND\/SURFACE-STEM CONFLICT/.test(h10("tridentopsis-mutica").interpretation)||
+ !/solitary or in small clumps/.test(h10("sorghastrum-nutans").interpretation)||
+ !/NOT exact subspecies-only/.test(h10("dinebra-panicea-subsp-mucronata").references[0].support)||
+ !/SPRING phase/.test(h10("dichanthelium-lindheimeri").interpretation)||
+ !/solitary or forming small clusters/.test(h10("sporobolus-clandestinus").references[0].support))
+ throw Error("Habit source scope or structural conflict caveats lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
