@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_note": "Batch 3 adds referenced veins, grooved midribs, collar, ligule and sheath options; raised parallel ribs and closed-fused sheaths remain visible research targets, not ranked species. No new exclusions or specimen certifications.",
+  "release_note": "Batch 4 stem and rooted-base characters from regional original. Positive ranking only; never remove a species based on missing or variable stems. Posture and nodes are supporting traits, not specimen verification.",
   "mode": "NON_EXCLUDING_POSITIVE_RANKING",
   "characters": [
     {
@@ -266,13 +266,161 @@
       ]
     },
     {
+      "id": "culm_posture",
+      "label": "How the stem grows",
+      "hint": "Follow a stem, not just a drooping leaf. Knee-bent stems bend at a real joint; decumbent stems lie low but turn upright at the end. All extra answers are optional.",
+      "options": [
+        {
+          "id": "erect",
+          "label": "Upright"
+        },
+        {
+          "id": "geniculate",
+          "label": "Knee-bent at a joint"
+        },
+        {
+          "id": "decumbent",
+          "label": "Lies low with rising tip"
+        },
+        {
+          "id": "prostrate",
+          "label": "Flat along ground",
+          "evidence_pending": true
+        }
+      ]
+    },
+    {
+      "id": "surface_runners",
+      "label": "Surface runners and rooting",
+      "hint": "A stolon is a separate creeping horizontal stem with nodes. A low flowering stem that roots at one joint is not necessarily a stolon.",
+      "options": [
+        {
+          "id": "stolon",
+          "label": "Surface runner (stolon)"
+        },
+        {
+          "id": "wiry_stolon",
+          "label": "Thin, wiry runner"
+        },
+        {
+          "id": "rooted_nodes",
+          "label": "Roots at surface stem joints"
+        },
+        {
+          "id": "hairy_runner_nodes",
+          "label": "Wiry runner with hairy joints"
+        }
+      ]
+    },
+    {
+      "id": "underground_stems",
+      "label": "Underground stems",
+      "hint": "A rhizome has real stem nodes and scale leaves. Don't call ordinary roots or a short crown a rhizome, and do not dig plants where collection is restricted.",
+      "options": [
+        {
+          "id": "long_scaly",
+          "label": "Long scaly underground runner"
+        },
+        {
+          "id": "slender_long",
+          "label": "Long slender rhizome"
+        },
+        {
+          "id": "short_knotty",
+          "label": "Short knotty underground stem"
+        },
+        {
+          "id": "short_scaly",
+          "label": "Short scaly rhizome"
+        },
+        {
+          "id": "thick_rhizome",
+          "label": "Thick rhizome"
+        },
+        {
+          "id": "scaly_rhizome",
+          "label": "Scaly rhizome (length uncertain)"
+        },
+        {
+          "id": "rhizome_present",
+          "label": "Rhizome present; type uncertain"
+        }
+      ]
+    },
+    {
+      "id": "basal_crown",
+      "label": "Stem base and crown",
+      "hint": "Look at an attached plant base. Hard, knotty perennial crowns differ from long creeping runners; large cane stems are a separate clue.",
+      "options": [
+        {
+          "id": "hard_knotty",
+          "label": "Hard knotty crown"
+        },
+        {
+          "id": "stout_base",
+          "label": "Very stout lower stem"
+        },
+        {
+          "id": "large_cane",
+          "label": "Large reedlike cane"
+        }
+      ]
+    },
+    {
+      "id": "stem_special",
+      "label": "Other stem clues",
+      "hint": "Uncommon features can help with look-alikes, but verify them on the same grass as the other observations.",
+      "options": [
+        {
+          "id": "node_gland_ring",
+          "label": "Sticky gland ring below joints"
+        },
+        {
+          "id": "basal_branching",
+          "label": "Branches near the base"
+        },
+        {
+          "id": "prop_roots",
+          "label": "Stilt/prop roots on stem"
+        },
+        {
+          "id": "giant_canes",
+          "label": "Tall robust cane stems"
+        },
+        {
+          "id": "culm_branches",
+          "label": "Flowering stem branches"
+        },
+        {
+          "id": "succulent_stems",
+          "label": "Thick fleshy stems"
+        },
+        {
+          "id": "rooting_lower_nodes",
+          "label": "Lower stem joints root"
+        }
+      ]
+    },
+    {
       "id": "stem_nodes",
-      "label": "Stem joints",
-      "hint": "Find a real joint along the stem, not the leaf collar.",
+      "label": "Node hairs and gland rings",
+      "hint": "Examine an actual joint on the stem. Hairs at the ligule or leaf collar are different from node hairs. Some species vary by plant and season.",
       "options": [
         {
           "id": "hairy_nodes",
           "label": "Hairs around a stem joint"
+        },
+        {
+          "id": "backward_hairs",
+          "label": "Downward-pointing node hairs"
+        },
+        {
+          "id": "gland_ring",
+          "label": "Distinct sticky ring below node"
+        },
+        {
+          "id": "hairy_stolon_nodes",
+          "label": "Hairs on a surface runner's joints"
         }
       ]
     }
@@ -2370,6 +2518,961 @@
       "source": "Missouri DNR — Switchgrass",
       "source_url": "https://mdc.mo.gov/discover-nature/field-guide/switchgrass",
       "note": "Underside midvein raised and conspicuous",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "culm_posture",
+      "states": [
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Geniculate culms; distinguish true surface stolons from simply bent flowering shoots.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-dactyloides",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 40",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=40",
+      "note": "Very short fertile culms rise from rooted stolons; this doesn't mean the plant lacks runners.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-verticillata",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Erect, knee-bent, and decumbent culms reported; posture is highly variable.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-virgata",
+      "character": "culm_posture",
+      "states": [
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Typically geniculate or decumbent in the regional treatment.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cenchrus-spinifex",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Outer shoots can lie low and root at lower nodes; annual/perennial disagreement remains unresolved.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chasmanthium-latifolium",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Erect or knee-bent culms; this is a companion clue only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "elymus-canadensis",
+      "character": "culm_posture",
+      "states": [
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Regional vegetative account describes culms typically decumbent, not obligatorily so.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "elymus-virginicus",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Mostly upright or knee-bent, occasionally decumbent; not sufficient to distinguish wildryes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Upright or geniculate stems with basal branching and glands just below nodes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-intermedia",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Upright, tufted culms; many lovegrasses share this feature.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-lugens",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Typically upright or knee-bent; seasonal arching of leaves is a separate character.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-belangeri",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Short upright culms arise with a network of wiry surface stolons.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Stiff erect wiry culms; western species with short thick rhizomes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hopia-obtusa",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Flowering culms upright from a hard knotty base; elongate stolons are separate.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 52",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "note": "Upright or knee-bent culms, with extensive thin underground rhizomes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-hallii",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 56",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=56",
+      "note": "Erect to knee-bent; some nodes hairy and some smooth, so hair absence is not diagnostic.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Typical upright culms; younger shoots and grazing can alter apparent habit.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Upright from a persistent hard base and short knotty rhizomes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-distichum",
+      "character": "culm_posture",
+      "states": [
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Decumbent shoots from a mat-forming perennial. Published accounts of stolons vary.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-pubiflorum",
+      "character": "culm_posture",
+      "states": [
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Shoots often decumbent and may root at lower nodes without a permanent stolon.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-setaceum",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Erect from persistent hard/knotty base.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-urvillei",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Tall upright culms from hard base with short knotty rhizomes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Annual shoots upright, knee-bent or outer shoots decumbent; frequent in lawns.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Upright stems; female/male floral differences separate reproductive stage.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Upright or bent; outer stems decumbent and may root at low joints.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Typically upright bunch stems; short rhizomes occasionally reported, not a spreading habit.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Strong erect flowering culms, often taller than nearby prairie grasses.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Stout succulent upright annual stems; cultivars vary.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Usually erect or bent; outer culms may lie along ground with ascending tips.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "tripsacum-dactyloides",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 67",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+      "note": "Stout erect or geniculate culms, sometimes with prop roots.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 35",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=35",
+      "note": "Large upright cane-like stems, typically several meters tall.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Tall upright reed culms; compare whole head and leaf junction to Arundo.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-pubescens",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 39",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39",
+      "note": "Perennial woodland brome typically with erect stems; not a unique difference.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-texensis",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 40",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=40",
+      "note": "Upright annual brome, often shaded.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "surface_runners",
+      "states": [
+        "stolon",
+        "rooted_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Both belowground rhizomes and creeping surface stolons are described; trace the runner to rooted nodes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-dactyloides",
+      "character": "surface_runners",
+      "states": [
+        "stolon",
+        "rooted_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 40",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=40",
+      "note": "Stolons with alternating elongated and short crowded internodes; no claim that rhizomes are impossible elsewhere.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-belangeri",
+      "character": "surface_runners",
+      "states": [
+        "stolon",
+        "wiry_stolon",
+        "hairy_runner_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Wiry surface stolons form linked small tufts; the lower nodes often bear villous hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hopia-obtusa",
+      "character": "surface_runners",
+      "states": [
+        "stolon",
+        "wiry_stolon",
+        "hairy_runner_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Elongate wiry runners have swollen, hairy nodes, and upright flowering shoots rise from knotty bases.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-virgata",
+      "character": "surface_runners",
+      "states": [
+        "stolon"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Short stolons present in some material but absent in others; not a universal species character.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cenchrus-spinifex",
+      "character": "surface_runners",
+      "states": [
+        "rooted_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Low culm nodes may root without a documented perennial stolon; annual/perennial concept unsettled.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-pubiflorum",
+      "character": "surface_runners",
+      "states": [
+        "rooted_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Decumbent culms frequently root at lower nodes despite regional account reporting stolons absent.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "surface_runners",
+      "states": [
+        "rooted_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Annual culms often root at lower nodes but no true stolons are claimed.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "underground_stems",
+      "states": [
+        "long_scaly"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Elongate rhizomes are present, often together with aboveground stolons; inspect scale leaves.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chasmanthium-latifolium",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Short hard knotty underground stem; many culms still appear tufted.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty",
+        "thick_rhizome"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 35",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=35",
+      "note": "Short, thick knotty rhizomes support dense cane stands; do not assume they are thin runners.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "underground_stems",
+      "states": [
+        "short_scaly",
+        "thick_rhizome"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Short thick scaly rhizomes distinct from curlymesquite's wiry stolons.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "underground_stems",
+      "states": [
+        "slender_long"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 52",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "note": "Slender elongate non-scaly underground stems; wet-ground species.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "underground_stems",
+      "states": [
+        "scaly_rhizome"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Scaly rhizomes documented; nodal pubescence varies by source.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-distichum",
+      "character": "underground_stems",
+      "states": [
+        "rhizome_present"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Regional account states rhizomes present, stolons absent; other treatments may include creeping stolons.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Short knotty rhizomes accompany a hard persistent crown.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-setaceum",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Short rhizomes at the base of a long-lived bunch.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-urvillei",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Short knotty rhizome with hard stout base.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "underground_stems",
+      "states": [
+        "slender_long"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Slender elongate rhizomes; Texas bluegrass contrasted with annual Poa annua.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "underground_stems",
+      "states": [
+        "short_scaly"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Short stout scaly rhizomes, usually forming small clumps.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "underground_stems",
+      "states": [
+        "long_scaly"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Long scaly rhizomes, a high-value character to examine where safe/legal.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "tripsacum-dactyloides",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty",
+        "thick_rhizome"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 67",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+      "note": "Thick knotty underground stems beneath a robust crown.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "underground_stems",
+      "states": [
+        "thick_rhizome"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Thick rhizomes; some populations also have stolons (regional report varies).",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-compositus",
+      "character": "underground_stems",
+      "states": [
+        "long_scaly",
+        "rhizome_present"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 64",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=64",
+      "note": "Elongate scaly rhizomes may be present or absent; keep non-exclusion rules.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "underground_stems",
+      "states": [
+        "short_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Short rhizomes only occasionally observed; this option is compatible, not required.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "basal_crown",
+      "states": [
+        "hard_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Perennial culms arise from a persistent hard knotty base.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-setaceum",
+      "character": "basal_crown",
+      "states": [
+        "hard_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Short rhizomes and firm knotted stem crown.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-urvillei",
+      "character": "basal_crown",
+      "states": [
+        "hard_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Persistent hard crown beneath tall bunchgrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hopia-obtusa",
+      "character": "basal_crown",
+      "states": [
+        "hard_knotty"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Firm knotty base supports erect shoots separate from the long wiry stolons.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "basal_crown",
+      "states": [
+        "large_cane"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 35",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=35",
+      "note": "Thick upright woody/reedlike culms several meters high.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "basal_crown",
+      "states": [
+        "large_cane"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Tall reedlike culms and thick rhizomes; compare to giant reed.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "tripsacum-dactyloides",
+      "character": "basal_crown",
+      "states": [
+        "stout_base"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 67",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+      "note": "Large, very stout stems associated with thick underground stem.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 62",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=62",
+      "note": "Actual culm nodes hispid; do not mistake auricles or collar hairs for node hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Culm nodes pubescent; also has short scaly rhizomes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes",
+        "backward_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 52",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "note": "Actual culm nodes retrorsely (downward) pubescent.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Regional treatment allows glabrous or pubescent nodes; keep smooth plants possible.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-distichum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Regional treatment describes pubescent culm nodes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-pubiflorum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Some culm nodes tomentose, others glabrous; not obligatory.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Pubescent, less commonly glabrous culm nodes; not a strict exclusion.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-pubescens",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 39",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=39",
+      "note": "Culm nodes pubescent; compare sheath and floret characters.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-texensis",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 40",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=40",
+      "note": "Hairy nodes described; not a species-level determination.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "stem_nodes",
+      "states": [
+        "gland_ring"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "Distinct glandular ring below culm nodes; separated from ordinary hairiness.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "character": "stem_special",
+      "states": [
+        "node_gland_ring",
+        "basal_branching"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 47",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=47",
+      "note": "A ring of glands below stem joints, often with basal branching.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "tripsacum-dactyloides",
+      "character": "stem_special",
+      "states": [
+        "prop_roots"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 67",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+      "note": "Robust culms occasionally produce prop roots at low nodes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "stem_special",
+      "states": [
+        "giant_canes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 35",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=35",
+      "note": "Robust cane-like shoots grow several meters high.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "stem_special",
+      "states": [
+        "giant_canes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Tall reed-like shoots; compare stem and flowering head to giant reed.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "stem_special",
+      "states": [
+        "culm_branches"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Culm branches reported in vegetative key, but widespread among bluestems.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "stem_special",
+      "states": [
+        "succulent_stems"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Very stout, succulent annual culms; variable among cultivated forms.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cenchrus-spinifex",
+      "character": "stem_special",
+      "states": [
+        "rooting_lower_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Outer stems can root at lower nodes, without proving a perennial runner.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-pubiflorum",
+      "character": "stem_special",
+      "states": [
+        "rooting_lower_nodes"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Often roots at lower culm joints.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     }
   ],
