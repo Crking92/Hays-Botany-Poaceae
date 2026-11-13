@@ -131,9 +131,14 @@ try:
                     "quality":o.get("quality_grade"),"photo_license_code":code,
                     "source_photo_page":f"https://www.inaturalist.org/photos/{pid}"}
             try:
-                creator=p.get("attribution") or (p.get("user") or {}).get("name") or (o.get("user") or {}).get("name")
-                if not creator: raise ValueError("Creator not identified")
+                photo_user=p.get("user") or o.get("user") or {}
+                record["source_user_login"]=photo_user.get("login")
+                record["source_user_name"]=photo_user.get("name")
+                attribution=p.get("attribution") or ""
+                creator=(photo_user.get("name") or photo_user.get("login")) if code=="cc0" else (p.get("attribution") or photo_user.get("name") or photo_user.get("login"))
+                if not creator: raise ValueError("Creator/account not identified")
                 record["creator"]=creator
+                record["original_attribution"]=attribution
                 if code=="cc0":
                     record.update(license="CC0 1.0",license_url="https://creativecommons.org/publicdomain/zero/1.0/")
                 else:
