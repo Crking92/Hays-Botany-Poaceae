@@ -43,7 +43,7 @@ function list(q=""){
  for(const x of entries){
    const b=make("button",{type:"button","aria-current":String(state.active===x.id)});
    b.append(txt("strong",x.common||x.scientific),txt("em",x.scientific));
-   if(state.research.has(x.id))b.append(txt("small","Research profile · photo and ID review pending","comparison-count"));
+   if(state.research.has(x.id)){const n=state.research.get(x.id).approved_gallery?.length||0;b.append(txt("small","Research profile · "+(n?n+" credited photo"+(n===1?"":"s")+" · ID unverified":"photo and ID review pending"),"comparison-count"));}
    if(x.local_panel_count>0 && x.target_species_source_panels===0 && x.comparison_source_panels>0)
       b.append(txt("small","Comparison photos only — target species photo pending","comparison-count"));
    b.addEventListener("click",()=>select(x.id));
@@ -319,7 +319,7 @@ function renderResearchCandidate(d,root){
  const intro=txt("section","","learning-intro");
  intro.append(txt("p","Provisional taxon identification — published descriptions and any credited reference photos are not proof of a verified Hays specimen.","photo-hold"));
  const approved=Array.isArray(d.approved_gallery)?d.approved_gallery:[];
- if(approved.length)intro.append(txt("p",approved.length+" source-credited general photograph"+(approved.length===1?"":"s")+" cleared for this reference card. These are nonlocal visual examples, not certified Hays voucher specimens. Each image retains its creator, license and original-source link.","source-flag"));
+ if(approved.length)intro.append(txt("p",approved.length+" source-credited general photograph"+(approved.length===1?"":"s")+" cleared for this reference card. Photo locations vary; check each caption and original source. These images are not independently certified Hays voucher specimens. Each image retains its creator, license and original-source link.","source-flag"));
  else intro.append(txt("p","No general photograph has yet cleared exact-image rights and source checks for this species. Original observation links below are research sources, not licenses to republish images."));
  if(d.local_report_count)intro.append(txt("p","Research packet links "+d.local_report_count+" local observation reports; individual identities and native status remain to be verified.","muted"));
  if(d.aliases?.length)intro.append(txt("p","Other recorded names: "+d.aliases.join("; "),"muted"));
