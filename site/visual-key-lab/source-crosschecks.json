@@ -1908,6 +1908,282 @@
           "source_checked": "Public botanical treatment read for this exact description or genus-level qualification"
         }
       ]
+    },
+    {
+      "id": "muhlenbergia-paniculata",
+      "character": "awns",
+      "status": "SPECIES_ACCOUNT_VARIABLE_AWNLESS_OR_TIPPED_PLUS_HISTORICAL_CONTEXT",
+      "interpretation": "Tumblegrass, formerly Schedonnardus paniculatus, is mostly awnless at a field glance, but the Flora Neomexicana species description allows lemmas either awnless OR awn-tipped. Do not present 'no obvious long awns' as an invariant absolute. Diggs directly supports the historical concept and diagnostic twisted blades/tumblehead, not a measured awn.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1317; scanned monocot excerpt PDF p. 241; exact named treatment under historical nomenclature",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=241",
+          "support": "Schedonnardus paniculatus exact species account: twisted drying blades and spaced, spicate branches of detached tumbling inflorescence; no explicit lemma awn measurement",
+          "source_checked": "Owner-held 1999 regional flora's extracted species account consulted; absence never inferred merely from no mention"
+        },
+        {
+          "authority": "Allred & Ivey (2020), Flora Neomexicana III: Grasses",
+          "locator": "M. paniculata / Schedonnardus paniculatus species treatment, Grasses part I, under Muhlenbergia",
+          "uri": "https://floraneomexicana.org/wp-content/uploads/2021/07/fnm-iii-part-1-2020.pdf",
+          "support": "Species spikelets 3–5.5 mm broadly awnless; lemmas 3–5 mm, awnless or awn-tipped; synonym Schedonnardus paniculatus",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "bothriochloa-torreyana",
+      "character": "awns",
+      "status": "TWO_DIRECT_SOURCES_SHORT_TO_MODERATE_SESSILE_LEMMA_AWNS_TAXON_SCOPE",
+      "interpretation": "Silver bluestem, historically B. laguroides subsp. torreyana, has sessile-spikelet lemma awns, often noticeably shorter than cane bluestem; ‘long’ is a coarse visual bin, not proof of >18 mm in this taxon. Published measurements/figures vary and the old subsp. torreyana concept may overlap other Bothriochloa taxa. Never transfer B. barbinodis long-awn values.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1247; scanned monocot excerpt PDF p. 171; exact named treatment under historical nomenclature",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=171",
+          "support": "Bothriochloa laguroides subsp. torreyana: exact Silver Bluestem historical taxon and synonym complex; does not independently measure awn",
+          "source_checked": "Owner-held 1999 regional flora's extracted species account consulted; absence never inferred merely from no mention"
+        },
+        {
+          "authority": "Allred & Ivey / Jornada New Mexico field pocket guide (2023)",
+          "locator": "Bothriochloa species key: B. torreyana versus B. springfieldii / B. barbinodis",
+          "uri": "https://floraneomexicana.org/wp-content/uploads/2023/07/jornada-pocket-size.pdf",
+          "support": "Exact B. torreyana key route: awns shorter than 18 mm and sessile spikelets 3–4.5 mm; contrast >18-mm awns of springfieldii and barbinodis",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Early experimental Bothriochloa hybrid study, Oklahoma Academy of Science",
+          "locator": "B. saccharoides var. torreyana, Fig. 1 awn-length plots",
+          "uri": "https://ojs.library.okstate.edu/osu/index.php/OAS/article/download/4109/3782",
+          "support": "Historic B. saccharoides var. torreyana sample mean/plot near 11–12 mm awns; historical variety scope, not a current accepted B. torreyana species-level key",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "bromus-lanceolatus",
+      "character": "awns",
+      "status": "TWO_DIRECT_SPECIES_AWN_ACCOUNTS_LENGTH_RANGE_DIFFERS",
+      "interpretation": "Bromus lanceolatus has conspicuous subapical lemma awns below a two-toothed lemma apex. Kew codes 6–12 mm versus Flora of China / Pakistan accounts commonly 10–25 mm. Both support awned condition, not a single precise fixed length. Avoid confusing the lemma teeth themselves with the central awn.",
+      "references": [
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > Flowers > Florets",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:393818-1/general-information",
+          "support": "Species fertile lemma 8.5–18 mm long, 2-fid with 1–2.5 mm teeth, subapical 6–12 mm awn",
+          "source_checked": "Public GrassBase morphology, exact species or cited synonym inspected"
+        },
+        {
+          "authority": "Flora of China / Flora of Pakistan, via World Flora Online",
+          "locator": "Bromus lanceolatus species account > General Information / Flora of Pakistan / Flora of China",
+          "uri": "https://www.worldfloraonline.org/taxon/wfo-0000855870",
+          "support": "Species awn extends from lemma sinus between teeth; awn 10–20 mm or 15–25 mm in alternate flora treatments, becoming reflexed/twisted",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Naderi et al., Bromus section phylogeny and taxonomic treatment",
+          "locator": "Bromus lanceolatus versus B. danthoniae, nomenclature / taxon key, 2015",
+          "uri": "https://verlag.nhm-wien.ac.at/pdfs/118B_167180_Naderi.pdf",
+          "support": "The studied species B. lanceolatus is characterized by one awn on all lemmas, distinguishing taxa with multiple awns",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "catapodium-rigidum",
+      "character": "awns",
+      "status": "TWO_EXACT_SPECIES_ACCOUNTS_EXPLICIT_GLUMES_AND_LEMMAS_AWNLESS",
+      "interpretation": "Fern grass was called Desmazeria rigida in Diggs. Both regional flora and independent SANBI flora explicitly call the spikelets/lemmas awnless. Short rigid panicle branches should not be mislabeled as awns.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1261; scanned monocot excerpt PDF p. 185; exact named treatment under historical nomenclature",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=185",
+          "support": "Under exact synonym Desmazeria rigida (Catapodium rigidum), regional species explicitly says glumes and lemmas awnless",
+          "source_checked": "Owner-held 1999 regional flora's extracted species account consulted; absence never inferred merely from no mention"
+        },
+        {
+          "authority": "SANBI (2015), Strelitzia 36: Grasses of southern Africa",
+          "locator": "p. 156, Catapodium rigidum, fern grass species description",
+          "uri": "https://www.sanbi.org/wp-content/uploads/2024/05/2015_Strelitzia36.pdf",
+          "support": "C. rigidum species spikelets 5–7(–10) mm, explicitly awnless; 6–10 florets; Desmazeria and Scleropoa synonyms supplied",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Watson, Macfarlane & Dallwitz, Grass Genera of the World",
+          "locator": "Catapodium > reproductive organization > female-fertile florets",
+          "uri": "https://www.delta-intkey.com/grass/www/catapodi.htm",
+          "support": "Catapodium genus fertile lemmas are blunt, entire, awnless, consistent with independently species-explicit sources",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "dichanthelium-lindheimeri",
+      "character": "awns",
+      "status": "SUBSPECIES_INCLUDED_IN_ZERO_AWN_CODING_NOT_TWO_DIRECT_SUBSPECIES_ACCOUNTS",
+      "interpretation": "Lindheimer’s panicgrass was included under Panicum acuminatum var. lindheimeri by Diggs and in the Dichanthelium acuminatum aggregate by Go Botany; Go Botany codes lemma awn length 0 mm while describing ssp. lindheimeri, and the independent genus treatment explicitly states glumes, sterile and fertile lemmas awnless. That second source is genus-level, not a separate exact subspecies observation.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1295; scanned monocot excerpt PDF p. 219; exact named treatment under historical nomenclature",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=219",
+          "support": "Under Panicum acuminatum var. lindheimeri, exact taxon with synonym Dichanthelium lindheimeri, sparse pubescence and spring/fall rosette-panicgrass phases; no species-specific awn-zero number",
+          "source_checked": "Owner-held 1999 regional flora's extracted species account consulted; absence never inferred merely from no mention"
+        },
+        {
+          "authority": "Native Plant Trust, Go Botany",
+          "locator": "Dichanthelium acuminatum species aggregate > Flowers > Lemma awn length 0 mm; subspecies lindheimeri included",
+          "uri": "https://gobotany.nativeplanttrust.org/species/dichanthelium/acuminatum/",
+          "support": "The species aggregate encompassing D. acuminatum ssp. lindheimeri codes 0-mm lemma awns, with glume awns absent; not a taxon-exclusive measurement",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Watson, Macfarlane & Dallwitz, Grass Genera of the World",
+          "locator": "Dichanthelium genus reproductive organization; D. lindheimeri among sampled taxa",
+          "uri": "https://www.delta-intkey.com/grass/www/di_theli.htm",
+          "support": "Dichanthelium generic diagnosis: glumes, proximal and female-fertile lemmas awnless; species D. lindheimeri named in study list but state is genus-level",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "dichanthelium-pedicellatum",
+      "character": "awns",
+      "status": "EXACT_HISTORIC_SPECIES_PLUS_EXPLICIT_GENUS_AWNLESS_NOT_TWO_DIRECT_SPECIES_ACCOUNTS",
+      "interpretation": "Cedar rosette grass (Dichanthelium pedicellatum) is under Panicum pedicellatum in Diggs. The exact species account gives the rosette-grass characters, but not a lemma awn length. Watson/Dallwitz explicitly describe the genus as awnless. Independent 2024 sectional research distinguishes D. pedicellatum by panicles and leaf/ligule characters without calling out awn size. This is genus-direct, species-context support—not two species-level measured awns.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1301; scanned monocot excerpt PDF p. 225; exact named treatment under historical nomenclature",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=225",
+          "support": "Panicum pedicellatum Vasey named species, synonym D. pedicellatum; narrow leaf hair and ligule description, cedar rosette-grass on calcareous slopes; no awn-length declaration",
+          "source_checked": "Owner-held 1999 regional flora's extracted species account consulted; absence never inferred merely from no mention"
+        },
+        {
+          "authority": "Watson, Macfarlane & Dallwitz, Grass Genera of the World",
+          "locator": "Dichanthelium generic reproductive description: proximal sterile and upper fertile lemmas",
+          "uri": "https://www.delta-intkey.com/grass/www/di_theli.htm",
+          "support": "Genus explicit glumes and both upper female-fertile and lower sterile lemmas awnless; extrapolation to this species remains qualified",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "JBRIT (2024), Studies in the vascular flora of the southeastern United States X",
+          "locator": "Dichanthelium sect. Pedicellata key, comparing D. pedicellatum with D. nodatum and D. arenicollinum",
+          "uri": "https://www.researchgate.net/publication/382133793_Studies_in_the_vascular_flora_of_the_southeastern_United_States_X",
+          "support": "Exact D. pedicellatum sect. Pedicellata species context: spikelets 3.2–4.4 mm, ligule ciliate membrane, 3–6 cm spring panicles; does not measure awn",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "dinebra-panicea-subsp-mucronata",
+      "character": "awns",
+      "status": "HISTORICAL_SPECIES_EXPLICIT_USUALLY_AWNLESS_ACCEPTED_SUBSPECIES_SCOPE",
+      "interpretation": "Red sprangletop is identified as Leptochloa mucronata in Diggs, which says glumes and lemmas USUALLY awnless. Current accepted Dinebra panicea subsp. mucronata has the homotypic Leptochloa mucronata; the epithet ‘mucronata’ signals a small apex point, not a diagnostic long lemma awn. The second published authority independently confirms subspecies taxonomy, not an awn-zero value.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1282; scanned monocot excerpt PDF p. 206; exact named treatment under historical nomenclature",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=206",
+          "support": "Leptochloa mucronata species, glumes and lemmas usually awnless; flexible panicle branches and 2–4 florets",
+          "source_checked": "Owner-held 1999 regional flora's extracted species account consulted; absence never inferred merely from no mention"
+        },
+        {
+          "authority": "Kew POWO, World Checklist of Vascular Plants",
+          "locator": "Dinebra panicea subsp. mucronata > Synonyms > Leptochloa mucronata / Taxonomy",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458622-2/general-information",
+          "support": "Modern accepted subspecies with homotypic Leptochloa mucronata; no directly measured lemma awn claim here",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Flora of Florida, Franck (2026)",
+          "locator": "Dinebra panicea subsp. mucronata key and taxon account",
+          "uri": "https://www.floridamuseum.ufl.edu/wp-content/uploads/sites/67/2026/02/Flora-of-Florida-Franck-2026.pdf",
+          "support": "Accepted subspecies in southeastern flora with small 0.9–1.2 mm lemma and broadly obtuse fruit apex; absence of long awns not separately scored",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "festuca-versuta",
+      "character": "awns",
+      "status": "TWO_EXACT_SOURCE_TREATMENTS_AWNLESS_OR_MINUTELY_MUCRONATE",
+      "interpretation": "Texas fescue is generally awnless, sometimes minutely mucronate or with a very short point between tiny lemma apex teeth. This is NOT the conspicuously awned Festuca species. Older Silveus phrasing blurs very short ‘awn’ and mucro; newer North American manual calls this unawned or sometimes mucronate.",
+      "references": [
+        {
+          "authority": "Silveus (1933), Texas Grasses: Classification and Description",
+          "locator": "original printed pp. 23–24, species 8 Festuca versuta Beal; Festuca species key and account",
+          "uri": "https://www.edwardsaquifer.org/wp-content/uploads/2019/02/1933_Silveus_TexasGrasses1.pdf",
+          "support": "Species key lemmas 5–6.5 mm mucronate; species account explicitly: awnless or mucronate, sometimes very short extension between minutely bifid tip",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Barkworth et al. (2007), Manual of Grasses for North America",
+          "locator": "printed p. 93, Festuca key / species 1 F. versuta; p. 97 species text",
+          "uri": "https://dokumen.pub/manual-of-grasses-for-north-america-1nbsped-0874216869-9780874216868-t-4486830.html",
+          "support": "Species-level key: lower glumes 4–7 mm, lemma surface smooth and glabrous, apex unawned, sometimes mucronate",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "tridentopsis-buckleyana",
+      "character": "awns",
+      "status": "SPECIES_GRASSBASE_EXPLICIT_MUCRONATE_SECONDARY_GENUS_LIMITED",
+      "interpretation": "Buckley's tridens has 4–6 mm fertile lemmas, obtuse/emarginate and muticous (awnless) or mucronate; the little cusp is not a long awn. Independent modern reclassification recognizes Tridentopsis buckleyana under historical Tridens buckleyanus, but the taxonomy paper does not supply a separate numeric species awn measurement. The old Tridens generic morphology is broad and polyphyletic; do not force it as an exact replicate.",
+      "references": [
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > Flowers > Florets",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77160904-1/general-information",
+          "support": "Exact species under Tridens buckleyanus synonym: 4–6 mm fertile lemma apex obtuse/emarginate, muticous or mucronate, with hairy lower midnerve",
+          "source_checked": "Public GrassBase morphology, exact species or cited synonym inspected"
+        },
+        {
+          "authority": "Peterson, Romaschenko et al. (2016), A molecular phylogeny of Cynodonteae, Taxon 65",
+          "locator": "p. 1278, nomenclatural combination Tridentopsis buckleyana and synonym Tridens buckleyanus",
+          "uri": "https://www.academia.edu/64319850/A_molecular_phylogeny_and_classification_of_the_Cynodonteae_Poaceae_Chloridoideae_with_four_new_genera_Orthacanthus_Triplasiella_Tripogonella_and_Zaqiqah_three_new_subtribes_Dactylocteniinae_Orininae_and_Zaqiqahinae_and_a_subgeneric_classification_of_Distichlis",
+          "support": "Independent accepted-name crosswalk for exact Buckley taxon, with cited type; NOT an independent species awn-zero citation",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Valdés-Reyna, Flora of North America Tridens genus treatment",
+          "locator": "Genus morphology > lemma apices, historical genus scope",
+          "uri": "https://openherbarium.org/portal/taxa/index.php?tid=97258",
+          "support": "Historical Tridens generic lemma midvein sometimes projecting to 0.5 mm; genus scope includes segregates and is not decisive for T. buckleyana",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
+    },
+    {
+      "id": "triplasiella-eragrostoides",
+      "character": "awns",
+      "status": "TWO_EXACT_HISTORICAL_SPECIES_DESCRIPTIONS_MICRO_MUCRO_NOT_LONG_AWN",
+      "interpretation": "Lovegrass tridens/Triplasiella eragrostoides was historically called Tridens or Tridentopsis eragrostoides, now placed in monotypic Triplasiella. The lemma midnerve can project as a small mucro or bristle typically <0.5 mm; some material is awnless. The other lateral veins are not excurrent, unlike T. flavus. Keep 'no obvious long awns' but do not call the 0.5-mm point a conspicuous awn.",
+      "references": [
+        {
+          "authority": "Allred & Ivey (2020), Flora Neomexicana III, part 1",
+          "locator": "printed p. 260, Triplasiella generic key and T. eragrostoides account",
+          "uri": "https://floraneomexicana.org/wp-content/uploads/2021/07/fnm-iii-part-1-2020.pdf",
+          "support": "Triplasiella monotypic; lemma midnerve projecting as short point; 2–3 mm lemmas, not the three-pointed T. flavus condition",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Felger, Rutman & Malusa (2014), Flora of Southwestern Arizona Part 6",
+          "locator": "Phytoneuron 2014-35 p. 131, historical name Tridentopsis eragrostoides species account",
+          "uri": "https://herbarium.arizona.edu/sites/default/files/2024-08/Part%206.%20Poaceae%20%E2%80%93%20grass%20family.pdf",
+          "support": "Exact historical Tridentopsis eragrostoides: lemmas and sometimes glumes with delicate mucro <0.5 mm or awnless; taxonomy now Triplasiella",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        },
+        {
+          "authority": "Kew POWO, World Checklist of Vascular Plants",
+          "locator": "Triplasiella eragrostoides > Taxonomy > homotypic synonyms",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77160907-1",
+          "support": "Crosswalk: Tridens eragrostoides, Tridentopsis eragrostoides and Triodia eragrostoides all homotypic synonyms; no direct awn measurement",
+          "source_checked": "Published botanical account examined; statement limited to its stated taxonomic scope"
+        }
+      ]
     }
   ],
   "last_batch": {
