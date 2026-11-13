@@ -179,6 +179,28 @@ if(!html.includes('On a phone, swipe the feature table sideways')||
    !html.includes('Helpful next check: '))
   throw Error("Phone comparison and suggested check copy missing");
 
+
+// A real field contrast must be backed by fully documented states in
+// every compared species; missing/overlapping entries cannot imply absence.
+sandbox.qs=[{id:"head"},{id:"habit"},{id:"ligule"},{id:"awns"}];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+let coreNext=vm.runInContext(
+ 'compareCorePrompt(state.species.filter(s=>["chloris-cucullata","chloris-x-subdolichostachya"].includes(s.id)))',sandbox);
+if(coreNext!==null)throw Error("Missing hybrid awn incorrectly described as a true difference");
+coreNext=vm.runInContext(
+ 'compareCorePrompt(state.species.filter(s=>["schizachyrium-scoparium","bothriochloa-ischaemum"].includes(s.id)))',sandbox);
+if(!coreNext||coreNext.id!=="head")throw Error("Clear flowering head distinction not suggested");
+state.selected.head="short_racemes";
+coreNext=vm.runInContext(
+ 'compareCorePrompt(state.species.filter(s=>["schizachyrium-scoparium","bothriochloa-ischaemum"].includes(s.id)))',sandbox);
+if(coreNext!==null)throw Error("Already selected head or overlapping other traits suggested");
+state.selected={head:null,habit:null,ligule:null,awns:null};
+if(vm.runInContext('compareCorePrompt([state.species[0],state.species[0]])',sandbox)!==null)
+ throw Error("Identical grass shouldn't generate a core contrast");
+if(vm.runInContext('compareCorePrompt([state.species[0]])',sandbox)!==null)
+ throw Error("One grass isn't a comparison");
+verifyUnchanged("Comparison suggestions must never modify scoring");
+
 if(!html.includes('id="theme-toggle"')||!html.includes('id="compare-dialog"')||
    !html.includes('const group=node("details","optional-group")'))
   throw Error("Visitor theme, compare or accordion controls missing");
