@@ -859,12 +859,13 @@
     "common": "Buffalograss",
     "scientific": "Bouteloua dactyloides",
     "range": "PASS",
-    "field_rule": "Buffalograss is a perennial sod-former that spreads characteristically by ABOVEGROUND stolons rooting at leafy nodes; some botanical treatments also report occasional underground rhizomes, so rhizomes alone must not automatically exclude it. Blue grama typically has curved rooster-comb heads and is tufted or short-rhizomatous, while buffalograss usually has separate male combs and female hard bur-like clusters. Curlymesquite has often visibly hairy stolon nodes and a different three-spikelet fascicle; bermudagrass usually has multiple terminal fingers and both stolons and extensive rhizomes. Compare actual flowering and rooted features rather than identifying from one creeping stem.",
+    "field_rule": "Buffalograss is a perennial sod-former that spreads characteristically by ABOVEGROUND stolons rooting at leafy nodes; some botanical treatments also report occasional underground rhizomes, so rhizomes alone must not automatically exclude it. Blue grama typically has curved rooster-comb heads and is tufted or short-rhizomatous, while buffalograss usually has separate male combs and female hard bur-like clusters. Curlymesquite has often visibly hairy stolon nodes and a different three-spikelet fascicle; bermudagrass usually has multiple terminal fingers and both stolons and extensive rhizomes. Compare actual flowering and rooted features rather than identifying from one creeping stem.\n\nScoring audit 2026-11-13: The alternate one-sided branch answer applies only to the MALE comb-shaped heads. Female buffalograss has distinct hard seed clusters; never infer male spikelet structure from a female photo.",
     "hero_i": 1,
     "traits": {
       "head": [
         "combs",
-        "burrs"
+        "burrs",
+        "one_sided"
       ],
       "habit": [
         "mat",
@@ -962,6 +963,21 @@
           "Hagenbuch & Lemke (2015), p. 40: rhizomes absent, aboveground stolons present",
           "USDA Forest Service FEIS: occasional rhizomes reported; specimen and taxon scope unresolved"
         ]
+      },
+      "head_one_sided_field_alias": {
+        "role": "reproductive",
+        "category": "head",
+        "source": "Published botanical exact/genus treatments for Bouteloua dactyloides",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1008094-1/general-information",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=35&pid=&taxauthid=1&tid=4782",
+        "reference": "MALE ONLY: Kew's exact male (staminate) pectinate racemes are unilateral; female structures are hard glume/branch clusters and not one-sided combs.",
+        "reported_states": [
+          "pectinate comb-shaped flowering branches",
+          "spikelets borne on one side of those branches"
+        ],
+        "status": "MALE_ONLY_UNILATERAL_COMB_HEAD_FIELD_ALIAS",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-supported category equivalence only; no new image or voucher verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1087,11 +1103,12 @@
     "common": "Blue grama",
     "scientific": "Bouteloua gracilis",
     "range": "PASS",
-    "field_rule": "Blue grama usually bears 1–3 long curved terminal eyebrow combs whose spikelets extend nearly to the end. Hairy grama often has dense long hairs and a conspicuously bare terminal rachis projection. Pectinata is generally taller with longer and often more numerous combs but overlaps hairy. Texas grama has several much shorter bristly clustered branches. Sideoats has many short side branches all the way down a long stem. Blue grama can also have SHORT STOUT RHIZOMES or form an open low sod; some low culms bend and root at nodes. A rooted decumbent culm is not automatically a true stolon. Retain tuft, verify an underground stem before selecting rhizome, and use attached curved combs plus mature spikelets for the actual identification.",
+    "field_rule": "Blue grama usually bears 1–3 long curved terminal eyebrow combs whose spikelets extend nearly to the end. Hairy grama often has dense long hairs and a conspicuously bare terminal rachis projection. Pectinata is generally taller with longer and often more numerous combs but overlaps hairy. Texas grama has several much shorter bristly clustered branches. Sideoats has many short side branches all the way down a long stem. Blue grama can also have SHORT STOUT RHIZOMES or form an open low sod; some low culms bend and root at nodes. A rooted decumbent culm is not automatically a true stolon. Retain tuft, verify an underground stem before selecting rhizome, and use attached curved combs plus mature spikelets for the actual identification.\n\nScoring audit 2026-11-13: Blue grama's curved eyebrow combs carry spikelets on one side. A broad one-sided option should keep it in results, but confirm the 1–3 arched combs and attached florets.",
     "hero_i": 3,
     "traits": {
       "head": [
-        "combs"
+        "combs",
+        "one_sided"
       ],
       "habit": [
         "tuft",
@@ -1202,6 +1219,21 @@
         "status": "SUPPLEMENTAL_FNA_USFS_HL_TREATMENT_ABSENT_LOCAL_SPECIMEN_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "Existing whole-plant and comb photographs unchanged; no new same-specimen Hays-region underground stem, rooted culm, or voucher verified."
+      },
+      "head_one_sided_field_alias": {
+        "role": "reproductive",
+        "category": "head",
+        "source": "Published botanical exact/genus treatments for Bouteloua gracilis",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1026047-2/general-information",
+        "secondary_source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=35&pid=&taxauthid=1&tid=4782",
+        "reference": "Kew exact species account gives 1–3(–4) arching unilateral racemes; the FNA genus account also defines Bouteloua branch spikelet rows as one-sided.",
+        "reported_states": [
+          "pectinate comb-shaped flowering branches",
+          "spikelets borne on one side of those branches"
+        ],
+        "status": "SOURCE_SUPPORTED_UNILATERAL_COMB_FIELD_ALIAS",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-supported category equivalence only; no new image or voucher verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -1330,12 +1362,13 @@
     "common": "Hairy grama",
     "scientific": "Bouteloua hirsuta",
     "range": "PASS",
-    "field_rule": "Compared with blue grama, hairy grama has more conspicuously hairy reproductive parts and a naked projecting rachis tip; blue comb spikelets continue toward the tip. Taller B. pectinata often has longer, straighter and more numerous combs, but their features overlap enough to require mature units and provenance. Texas grama bears several very short highly awned/fuzzy branches rather than a few longer solid combs.\n\nA few hairy grama plants form short surface stolons or a low, rooting patch, even though the primary Hill Country treatment describes the species as tufted and without stolons. FNA also allows the usually pectinate branches to arise digitately at the tip. The 'mat' and 'fingers' answers are conditional visual observations; neither alone distinguishes hairy grama from blue grama or KR bluestem. Verify the naked projecting rachis tip, papillose-based hairs and attached mature spikelets.",
+    "field_rule": "Compared with blue grama, hairy grama has more conspicuously hairy reproductive parts and a naked projecting rachis tip; blue comb spikelets continue toward the tip. Taller B. pectinata often has longer, straighter and more numerous combs, but their features overlap enough to require mature units and provenance. Texas grama bears several very short highly awned/fuzzy branches rather than a few longer solid combs.\n\nA few hairy grama plants form short surface stolons or a low, rooting patch, even though the primary Hill Country treatment describes the species as tufted and without stolons. FNA also allows the usually pectinate branches to arise digitately at the tip. The 'mat' and 'fingers' answers are conditional visual observations; neither alone distinguishes hairy grama from blue grama or KR bluestem. Verify the naked projecting rachis tip, papillose-based hairs and attached mature spikelets.\n\nScoring audit 2026-11-13: The one-sided branches option can match hairy grama's combs. Check the tip projecting beyond the last spikelet and attached floral hair details, not head shape alone.",
     "hero_i": 1,
     "traits": {
       "head": [
         "combs",
-        "fingers"
+        "fingers",
+        "one_sided"
       ],
       "habit": [
         "tuft",
@@ -1452,6 +1485,21 @@
         "status": "PRIMARY_REGIONAL_VS_FNA_OCCASIONAL_STOLONS_LOCAL_SPECIMEN_PENDING",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No new linked stolon-to-identified reproductive shoot or Hays voucher certified."
+      },
+      "head_one_sided_field_alias": {
+        "role": "reproductive",
+        "category": "head",
+        "source": "Published botanical exact/genus treatments for Bouteloua hirsuta",
+        "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=35&pid=&taxauthid=1&tid=4782",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:328303-2/general-information",
+        "reference": "FNA genus describes one-sided spikelet-bearing branches; hairy grama has those pectinate comb branches. Genus-level context, not a fresh exact specimen measurement; distinguish from blue grama by terminal bare rachis and floral hairiness.",
+        "reported_states": [
+          "pectinate comb-shaped flowering branches",
+          "spikelets borne on one side of those branches"
+        ],
+        "status": "SOURCE_SUPPORTED_UNILATERAL_COMB_FIELD_ALIAS",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-supported category equivalence only; no new image or voucher verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
