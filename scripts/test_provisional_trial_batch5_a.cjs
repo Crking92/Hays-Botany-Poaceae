@@ -207,7 +207,14 @@ for (const [id, status] of [
 }
 // Formerly 447, now 452 permitted scored paths from exactly two additive
 // growth choices. No prior supported path is removed or narrowed.
-assert.equal(scoredPaths,452,'Reviewed scored character-combination total changed');
+// Source-backed additional ligule appearance for Texas cupgrass: the Hill Country
+// vegetative account has a tiny membranous base under the conspicuous cilia.
+const texasCupgrass=scored.find(x=>x.id==='eriochloa-sericea');
+assert(texasCupgrass?.traits.ligule.includes('hairs') &&
+       texasCupgrass.traits.ligule.includes('membrane') &&
+       texasCupgrass.character_evidence?.ligule?.status ===
+       'PRIMARY_HILL_COUNTRY_CILIATE_MINUTE_MEMBRANOUS_BASE_CONDITIONAL_PHOTO_PENDING');
+assert.equal(scoredPaths,455,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
