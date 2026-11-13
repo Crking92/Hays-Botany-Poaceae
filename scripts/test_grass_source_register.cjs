@@ -185,6 +185,16 @@ if(!/long, soft hairs are ON LEAF BLADE/.test(lg13("paspalum-setaceum").interpre
  !/published descriptions differ/.test(lg13("sorghum-bicolor").interpretation))
  throw Error("Batch 13 anatomy or source disagreement erased");
 
+// Botanical audit 2026-11-13: source-page accuracy matters beyond named-citation counts.
+// Red grama was previously misread as having a ciliate membranous ligule.
+// Exact H&L p. 38 and Kew species both state a true HAIR FRINGE.
+const trifida=cross.crosschecks.find(e=>e.id==="bouteloua-trifida"&&e.character==="ligule");
+if(!trifida || !/HAIR_FRINGE_NO_MEMBRANE_REPORTED/.test(trifida.status)||
+   !/fringe of hairs shorter than 0.5 mm/.test(trifida.interpretation)||
+   !/does NOT mention a tiny membranous base/.test(trifida.references?.[0]?.support||"") ||
+   !/ligule a fringe of hairs/.test(trifida.references?.[1]?.support||""))
+ throw Error("Red grama exact primary ligule account was misattributed or changed");
+
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 if(!viewer)throw Error("Source viewer script missing");
