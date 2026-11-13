@@ -42,7 +42,7 @@ const html=read('index.html');
 assert(html.includes('provisional-trial-batch4.json'),'Normal key missing Batch 4');
 assert(html.includes('Research trial · unverified'));
 assert(html.includes('Identification data still being checked'),'Research trial status must remain visible to field testers');
-assert(html.includes('provisional-trial-batch4.json')&&html.includes('state.species.filter(s=>s.trial).length'),'Trial counts must be derived from loaded data, not stale public status banners');
+assert(html.includes('provisional-trial-batch4.json')&&html.includes('$("coded-total").textContent=state.species.length'),'Trial counts must be derived from loaded data, not stale public status banners');
 assert(html.includes('pending.length+" grasses not yet included in this photo key"'),'Learner-only records must remain visibly labeled as missing key data');
 const match=html.match(/<script>([\s\S]*?)<\/script>/);assert(match);
 const script=match[1];
