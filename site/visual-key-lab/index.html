@@ -158,6 +158,17 @@ html[data-theme="dark"] .optional-choices button[aria-pressed=true]{background:#
 html[data-theme="dark"] .optional-group{background:#1a2a21}
 html[data-theme="dark"] .optional-group[open] summary,html[data-theme="dark"] .optional-group summary:hover{background:#2c4434}
 html[data-theme="dark"] .optional-chosen{background:#305c41;color:#e3f3e6}
+
+/* Keep advanced character menus compact: one group of buttons at a time. */
+.optional-section-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 13px}
+.optional-section-tabs button{flex:1 1 100px;min-height:42px;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--white);color:var(--ink);font-size:.82rem;font-weight:750}
+.optional-section-tabs button[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:white}
+.optional-need-note{margin:9px 0 0;color:var(--muted);font-size:.76rem;line-height:1.4}
+.optional-choices button.evidence-pending{border-style:dashed}
+.optional-choices .option-evidence-label{display:block;font-size:.68rem;opacity:.8}
+html[data-theme="dark"] .optional-section-tabs button{background:#22362a;color:var(--ink)}
+html[data-theme="dark"] .optional-section-tabs button[aria-pressed="true"]{background:#326e50;color:white}
+@media(max-width:480px){.optional-section-tabs button{flex-basis:90px;padding:8px 6px}}
 </style>
 </head>
 <body>
@@ -174,7 +185,7 @@ html[data-theme="dark"] .optional-chosen{background:#305c41;color:#e3f3e6}
         <summary>More details to fine-tune matches (optional)</summary>
         <div class="optional-inner">
           <p class="optional-description">Choose extra features you've actually observed. Grasses with matching published descriptions move higher; missing information never rules out a grass.</p>
-          <div id="optional-character-groups"></div>
+          <div class="optional-section-tabs" id="optional-section-tabs" role="group" aria-label="Choose extra plant features"></div><div id="optional-character-groups"></div>
           <button type="button" class="optional-reset" id="optional-clear">Clear extra details</button>
         </div>
       </details>
@@ -248,7 +259,7 @@ const selectedPhotoOverrides={
 "awns:bristles":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"}
 };
 const $=id=>document.getElementById(id);
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{}};
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineSection:null};
 
 const themeToggle=$("theme-toggle");
 let userTheme=null;
@@ -279,10 +290,28 @@ function refinementMatches(s){
    return Boolean(evidence&&evidence.states.includes(val));
  }).map(([id,val])=>({character:id,value:val}));
 }
+
+function refinementSection(id){
+ if(id==="stem_nodes")return"stem";
+ return ["leaf_base","ligule_length","ligule_edge","sheath_margins","sheath_surface"].includes(id)?"base":"blade";
+}
 function renderOptionalCharacters(){
- const holder=$("optional-character-wrap"),root=$("optional-character-groups");
- root.replaceChildren();holder.hidden=!state.refineCharacters.length;
- for(const c of state.refineCharacters){
+ const holder=$("optional-character-wrap"),root=$("optional-character-groups"),tabs=$("optional-section-tabs");
+ root.replaceChildren();tabs.replaceChildren();holder.hidden=!state.refineCharacters.length;
+ if(!state.refineCharacters.length)return;
+ if(!state.refineSection){
+  const selected=state.refineCharacters.find(c=>state.refineSelected[c.id]);
+  state.refineSection=selected?refinementSection(selected.id):"blade";
+ }
+ const sections=[["blade","Leaf blades"],["base","Collars / sheaths"],["stem","Stem joints"]];
+ for(const [id,label] of sections){
+   const count=state.refineCharacters.filter(c=>refinementSection(c.id)===id&&state.refineSelected[c.id]).length;
+   const b=node("button","",label+(count?" ("+count+")":""));
+   b.type="button";b.setAttribute("aria-pressed",String(state.refineSection===id));
+   b.addEventListener("click",()=>{state.refineSection=id;renderOptionalCharacters()});
+   tabs.append(b);
+ }
+ for(const c of state.refineCharacters.filter(c=>refinementSection(c.id)===state.refineSection)){
    const group=node("details","optional-group"),summary=node("summary","",c.label);
    const content=node("div","optional-group-body");
    const describe=node("p","",c.hint),choices=node("div","optional-choices");
@@ -293,23 +322,23 @@ function renderOptionalCharacters(){
    }
    updateChosen();group.open=Boolean(state.refineSelected[c.id]);
    for(const o of c.options){
-     const b=node("button","",o.label);b.type="button";
+     const b=node("button",o.evidence_pending?"evidence-pending":"",o.label);b.type="button";
      b.setAttribute("aria-pressed",String(state.refineSelected[c.id]===o.id));
+     if(o.evidence_pending){b.title="Record what you saw; species-level scoring evidence is not available for this detail yet.";b.append(node("span","option-evidence-label","Reference data pending"));}
      b.addEventListener("click",()=>{
        state.refineSelected[c.id]=state.refineSelected[c.id]===o.id?null:o.id;
        choices.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b&&state.refineSelected[c.id]===o.id)));
        updateChosen();updateUrl();renderResults();
+       const buttons=tabs.querySelectorAll("button");
+       buttons.forEach((x,i)=>{const section=sections[i][0];const count=state.refineCharacters.filter(c=>refinementSection(c.id)===section&&state.refineSelected[c.id]).length;x.textContent=sections[i][1]+(count?" ("+count+")":"")});
      });
      choices.append(b);
    }
-   content.append(describe,choices);group.append(summary,content);root.append(group);
+   content.append(describe,choices);
+   if(c.options.some(o=>o.evidence_pending))content.append(node("p","optional-need-note","Research-pending choices can be recorded, but won't yet rank any grass. All candidates stay possible."));
+   group.append(summary,content);root.append(group);
  }
- $("optional-clear").onclick=()=>{
-   state.refineSelected={};
-   root.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed","false"));
-   root.querySelectorAll(".optional-chosen").forEach(b=>b.remove());
-   updateUrl();renderResults();
- };
+ $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderResults()};
 }
 function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id;if(state.refineSelected[c.id])u.searchParams.set(key,state.refineSelected[c.id]);else u.searchParams.delete(key)});history.replaceState(null,"",u.toString())}
 function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?null:choice;updateUrl();render()}
@@ -955,7 +984,8 @@ const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).leng
 renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
 const sure=rows.filter(x=>!x.s.trial&&!x.unknown).length;const trials=rows.filter(x=>x.s.trial).length;
 $("count").textContent=rows.length+" possible";
-$("results-note").textContent=Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
+const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&state.refineSelected[c.id]===o.id));
+$("results-note").textContent=pendingChoice?"That extra feature is recorded as a research target, but it has no species-level evidence for ranking yet. No grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results");root.replaceChildren();
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
