@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<384||448-indexed.size-unknown>61||unknown!==3)
+if(indexed.size<399||448-indexed.size-unknown>46||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -160,6 +160,19 @@ if(!/caudices OR rhizomes/.test(finalHabit("dichanthelium-commutatum").interpret
  !/do NOT independently prove/.test(finalHabit("bromus-lanceolatus").interpretation)||
  !/TWO_INDEPENDENT_DIRECT_SPECIES_TUFT_ACCOUNTS_AGREE/.test(finalHabit("secale-cereale").status))
  throw Error("Final habit source scope or morphological limitations lost");
+
+
+// Batch 12: protect 15 original-core ligule references and independent anatomical caveats.
+const firstLiguleBatch=["bothriochloa-ischaemum","hilaria-belangeri","muhlenbergia-paniculata","avena-fatua","bothriochloa-barbinodis","bothriochloa-torreyana","eleusine-indica","elymus-canadensis","eragrostis-trichodes","hordeum-pusillum","muhlenbergia-lindheimeri","paspalum-distichum","poa-annua","poa-arachnifera","sorghastrum-nutans"];
+if(firstLiguleBatch.some(id=>!entries.has(id+"|ligule")))
+ throw Error("Missing first 15 ligule-source records");
+const lig12=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="ligule");
+if(!/long stiff 8–15-mm membrane/.test(lig12("muhlenbergia-lindheimeri").interpretation)||
+ !/fringe-of-hairs/.test(lig12("eragrostis-trichodes").interpretation)||
+ !/margin terminology/i.test(lig12("sorghastrum-nutans").status.replace(/_/g," "))&&
+ !/margin.*difference/.test(lig12("sorghastrum-nutans").interpretation)||
+ !/subspecies bridge/.test(lig12("bothriochloa-torreyana").interpretation))
+ throw Error("Ligule-specific structure or cross-source caution lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
