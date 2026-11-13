@@ -50,7 +50,7 @@ assert "const picks=Object.entries(state.selected)" in scorer
 assert "if(!vals.length)unknown++" in scorer
 assert ".filter(x=>!x.conflict)" in scorer
 assert "b.refinementMatches.length-a.refinementMatches.length" in scorer
-assert "refinementMatches:refinementMatches(s)" in scorer
+assert 'refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])' in scorer
 assert "state.refineSelected" not in scorer.split(".filter(x=>!x.conflict)", 1)[0], "extra traits must not cause exclusions"
 assert "optional-refinement-evidence.json" in html
 assert 'id="optional-character-wrap"' in html
