@@ -67,7 +67,14 @@ for(const p of data.profiles){
   assert.equal(originalIndex,i,'Changed index '+p.id);
   assert.deepEqual(originalPhoto,src.approved_gallery[i],'Altered original source/credits '+p.id+'/'+i);
   assert(photo.creator&&photo.license&&photo.license_url&&photo.source_page&&photo.src);
-  assert(/^(CC0|CC BY(?:-SA)?)(?:\s|$)/i.test(photo.license),'Unexpected rights '+p.id+'/'+i);
+  const cc=/^(CC0|CC BY(?:-SA)?)(?:\\s|$)/i.test(photo.license);
+  const usgs=p.id==='muhlenbergia-capillaris'&&i===1
+    &&photo.creator==='Elizabeth A. Sellers / U.S. Geological Survey'
+    &&photo.license==='U.S. public domain (USGS-authored)'
+    &&photo.license_url==='https://www.usgs.gov/faqs/are-usgs-reportspublications-copyrighted'
+    &&photo.source_page==='https://www.usgs.gov/media/images/gulf-muhly-muhlenbergia-capillaris'
+    &&photo.exact_rights_evidence?.includes('Public Domain');
+  assert(cc||usgs,'Unexpected rights '+p.id+'/'+i);
   photos++;
  });
 }
