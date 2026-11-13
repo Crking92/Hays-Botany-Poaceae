@@ -111,7 +111,7 @@ try:
     taxonid=(seed.get("taxon") or {}).get("id")
     if not taxonid: raise ValueError("No exact source taxon ID")
     q=urllib.parse.urlencode({"taxon_id":taxonid,"quality_grade":"research","photos":"true",
-      "per_page":150,"order_by":"created_at","order":"desc"})
+      "per_page":24,"order_by":"created_at","order":"desc"})
     raw=data("https://api.inaturalist.org/v1/observations?"+q)
     results=[o for o in raw.get("results",[]) if (o.get("taxon") or {}).get("name")=="Melica nitens"]
     print("GLOBAL_MELICA_SCAN "+json.dumps({"taxon_id":taxonid,"queried_observations":len(results),
