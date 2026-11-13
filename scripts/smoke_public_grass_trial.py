@@ -94,8 +94,10 @@ def browser_check(groups):
                 dialog=page.locator("#detail-dialog")
                 assert dialog.evaluate("(x) => x.open"), f"{scientific}: detail didn't open"
                 detail=dialog.inner_text()
-                assert "Not admitted to the officially scored 112" in detail, (
-                    f"{scientific}: unverified detail notice missing")
+                assert "Research trial · unverified" in detail, (
+                    f"{scientific}: unverified detail badge missing")
+                assert "Identification data still being checked." in detail, (
+                    f"{scientific}: pending identification notice missing")
                 hrefs=dialog.locator("a[href]").evaluate_all("(nodes) => nodes.map(n => n.href)")
                 for photo in x["photos"]:
                     assert photo["creator"] in detail and photo["license"] in detail, (
