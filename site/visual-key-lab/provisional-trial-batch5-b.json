@@ -2,7 +2,7 @@
   "schema": "hays-botany-grass-provisional-trial-batch5-b",
   "date": "2026-11-12",
   "assignment": "CHAT_B_DIAGNOSTIC_LOOKALIKES",
-  "status": "STAGED_RESEARCH_TRIALS_NOT_ADMITTED",
+  "status": "INTEGRATED_UNVERIFIED_KEY_TRIALS_NOT_SPECIMEN_ADMITTED",
   "original_scored": 112,
   "provisional_inventory": 57,
   "prior_unverified_trials": 24,
@@ -12,7 +12,7 @@
   "normal_lab_results_after_coordinated_integration": 146,
   "source_manifest": "hays-candidates.json",
   "source_manifest_sha": "ec1b87be4bf66a861be4c46660efe463d50cf52e",
-  "notes": "Candidate-only lane B. Never load automatically into website, certify a Hays voucher, publish photos, or replace source photos. Unknown traits and licensing metadata preserved verbatim. PR stays unmerged until Chat 1 integration, tests and public QA.",
+  "notes": "Originally staged as Chat B evidence. Coordinator integrates 10 research trials into the photo-based Lab while preserving the Bromus brevis hold, 112 official scored species, existing gallery images, attribution and all unknown traits. No specimen admissions.",
   "profiles": [
     {
       "id": "bothriochloa-longipaniculata",
@@ -2118,5 +2118,7 @@
       ],
       "gallery_photo_refs_unchanged": 3
     }
-  ]
+  ],
+  "original_staging_status": "STAGED_RESEARCH_TRIALS_NOT_ADMITTED",
+  "original_handoff_notes": "Candidate-only lane B. Never load automatically into website, certify a Hays voucher, publish photos, or replace source photos. Unknown traits and licensing metadata preserved verbatim. PR stays unmerged until Chat 1 integration, tests and public QA."
 }
