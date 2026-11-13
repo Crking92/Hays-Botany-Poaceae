@@ -1,4 +1,4 @@
-name: Grass trial public delivery — verify twenty-four normal-key cards and credit links
+name: Grass trial public delivery — verify 53 normal-key cards and credited photos
 on:
   pull_request:
     paths:
@@ -12,6 +12,9 @@ on:
       - 'site/visual-key-lab/provisional-trial-batch2.json'
       - 'site/visual-key-lab/provisional-trial-batch3.json'
       - 'site/visual-key-lab/provisional-trial-batch4.json'
+      - 'site/visual-key-lab/provisional-trial-batch5-a.json'
+      - 'site/visual-key-lab/provisional-trial-batch5-b.json'
+      - 'site/visual-key-lab/provisional-trial-batch5-c.json'
       - 'scripts/smoke_public_grass_trial.py'
       - '.github/workflows/grass-trial-public-delivery.yml'
   workflow_dispatch:
@@ -31,5 +34,5 @@ jobs:
         run: |
           python -m pip install 'playwright>=1.55,<2'
           python -m playwright install --with-deps chromium
-      - name: Confirm public Pages serves all twenty-four unverified research trials in mobile browser
+      - name: Confirm Pages serves all 53 unverified trials and 4 held Learner grasses
         run: python scripts/smoke_public_grass_trial.py
