@@ -26,7 +26,7 @@ assert len({x["id"] for x in original + universe}) == 169
 assert bundle["schema_version"] == 1
 assert bundle["mode"] == "NON_EXCLUDING_POSITIVE_RANKING"
 chars = {c["id"]: c for c in bundle["characters"]}
-assert len(chars) == len(bundle["characters"]) == 13
+assert len(chars) == len(bundle["characters"]) == 18
 for c in chars.values():
     vals = [v["id"] for v in c["options"]]
     assert vals and len(set(vals)) == len(vals)
@@ -42,7 +42,7 @@ for row in bundle["evidence"]:
     assert row["source"].strip() and row["source_url"].startswith("https://")
     assert row["note"].strip()
     assert row["evidence_level"] == "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
-assert len(bundle["evidence"]) >= 167 and len({r["id"] for r in bundle["evidence"]}) >= 48
+assert len(bundle["evidence"]) >= 251 and len({r["id"] for r in bundle["evidence"]}) >= 58
 width_rows = [r for r in bundle["evidence"] if r["character"] == "blade_width"]
 assert len(width_rows) >= 37
 def possible_width_states(low, high):
@@ -65,6 +65,18 @@ assert 'const group=node("details","optional-group")' in html
 assert "updateChosen()" in html
 assert 'id="optional-section-tabs"' in html
 assert "function refinementSection(id)" in html
+assert '["stem","Stems / roots"]' in html
+assert '["stem_nodes","culm_posture","surface_runners","underground_stems","basal_crown","stem_special"].includes(id)' in html
+for character in ("culm_posture","surface_runners","underground_stems","basal_crown","stem_special"):
+    assert character in chars
+    assert len([e for e in bundle["evidence"] if e["character"]==character])>=7, character
+assert len([e for e in bundle["evidence"] if e["character"]=="stem_nodes"])>=14
+assert len({e["id"] for e in bundle["evidence"] if e["character"] in ("culm_posture","surface_runners","underground_stems","basal_crown","stem_special","stem_nodes")})>=35
+assert any(e["id"]=="cynodon-dactylon" and e["states"]==["long_rhizome"] for e in bundle["evidence"] if e["character"]=="underground_stems")
+assert any(e["id"]=="paspalum-pubiflorum" and "rooted_nodes" in e["states"] for e in bundle["evidence"] if e["character"]=="surface_runners")
+assert any(e["id"]=="eragrostis-cilianensis" and "gland_ring" in e["states"] for e in bundle["evidence"] if e["character"]=="stem_nodes")
+assert "short_rhizome" in {o["id"] for o in chars["underground_stems"]["options"]}
+assert "long_rhizome" in {o["id"] for o in chars["underground_stems"]["options"]}
 assert "evidence-pending" in html
 assert "Research-pending choices can be recorded" in html
 assert "No grass was removed" in html
