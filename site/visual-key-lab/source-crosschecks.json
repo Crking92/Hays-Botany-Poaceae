@@ -347,22 +347,22 @@
     {
       "id": "bouteloua-trifida",
       "character": "ligule",
-      "status": "TWO_PUBLISHED_SOURCES_AGREE",
-      "interpretation": "A short hair fringe at the true inner ligule, not conspicuous hairs elsewhere on the leaf. Kew reports a hair-fringe ligule; the Hill Country account gives a ciliate ligule with a minute membrane base. An open field photo may show only the hair fringe.",
+      "status": "TWO_EXACT_SPECIES_SOURCES_AGREE_HAIR_FRINGE_NO_MEMBRANE_REPORTED",
+      "interpretation": "The actual Hays-inclusive Hill Country vegetative species description (printed p. 38, account 24) explicitly records the ligule as a fringe of hairs shorter than 0.5 mm. Kew GrassBase independently calls it a fringe of hairs. Neither exact species account reports a true membranous ligule for B. trifida. The previous crosscheck incorrectly transcribed a ciliate minute-membrane base from other neighboring Bouteloua accounts; do NOT add the membrane scoring option based on that mistaken text. Keep the existing hairs state; an outer collar or basal blade hair is not automatically the true inner ligule.",
       "references": [
         {
           "authority": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country: Vegetative key",
-          "locator": "article p. 38; species account in original PDF",
+          "locator": "original article printed p. 38, account 24: BOUTELOUA TRIFIDA; official publisher PDF page 38 (zero-index viewer page 37)",
           "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
-          "support": "Species 24: ligule under 1 mm, ciliate; minute membranous base recorded.",
-          "source_checked": "Published Hill Country species account located"
+          "support": "Ligules shorter than 0.5 mm; described specifically as a fringe of hairs. The account does NOT mention a tiny membranous base.",
+          "source_checked": "2026-11-13: original Hill Country PDF printed p. 38 visually inspected at high resolution; exact B. trifida account checked against adjacent B. hirsuta and B. repens descriptions."
         },
         {
           "authority": "Kew GrassBase, Plants of the World Online",
           "locator": "Descriptions > According to GrassBase > Morphology > General Habit > ligule (online treatment, no printed page)",
           "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:35652-2/general-information",
-          "support": "Ligule recorded as a fringe of hairs.",
-          "source_checked": "Published online treatment inspected; see treatment section"
+          "support": "Exact B. trifida GrassBase General Habit treatment: ligule a fringe of hairs; no true membrane specified.",
+          "source_checked": "Kew GrassBase species treatment independently rechecked via indexed POWO text 2026-11-13."
         }
       ]
     },
