@@ -27,5 +27,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - name: Check source citation locators, coverage counts and 169-species inventory
         run: node scripts/test_grass_source_register.cjs
+      - name: Confirm scored-key behavior and research admission unchanged
+        run: node scripts/test_grass_key_integration.cjs
+      - name: Confirm scored-shard photo, credit and core-state preservation
+        run: node scripts/test_grass_score_deltas.cjs

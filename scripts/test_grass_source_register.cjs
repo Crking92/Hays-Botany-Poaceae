@@ -31,6 +31,36 @@ for(const e of cross.crosschecks){
  }
  if(sources.size<2)throw Error("Sources not independent");
 }
+
+// Guard source-register coverage, anatomy and intentionally unknown slots.
+// A crosscheck only fills an assigned core slot if the main scored file has a state.
+const indexed=new Set(scored.flatMap(s=>cats.filter(c=>(s.traits?.[c]||[]).length&&s.character_evidence?.[c]?.source).map(c=>s.id+"|"+c)));
+const entries=new Set();
+for(const e of cross.crosschecks){
+ const key=e.id+"|"+e.character;
+ if(entries.has(key))throw Error("Duplicate source crosscheck "+key);
+ entries.add(key);
+ if(!scored.some(s=>s.id===e.id&&(s.traits[e.character]||[]).length))
+  throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
+ indexed.add(key);
+}
+if(indexed.size<278||448-indexed.size-unknown>167||unknown!==3)
+ throw Error("Awn citation batch dropped source-coverage guarantees");
+const awnBatch=[
+ "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
+ "chloris-verticillata","chloris-virgata","elymus-canadensis","elymus-virginicus","hordeum-pusillum",
+ "sorghastrum-nutans","sorghastrum-elliottii","anatherum-glomeratum","anatherum-virginicum",
+ "setaria-italica","heteropogon-contortus","bromus-texensis","poa-annua"];
+if(awnBatch.some(id=>!entries.has(id+"|awns")))
+ throw Error("Missing a named citation from 18-member first awn batch");
+const phrase=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="awns");
+if(!phrase("bothriochloa-barbinodis").references[0].support.includes("20–30 mm"))
+ throw Error("Bothriochloa barbinodis key accidentally switched with short-awn B. laguroides");
+if(!/involucral bristles/i.test(phrase("setaria-italica").interpretation)||
+   !/sterile lemma/i.test(phrase("chloris-verticillata").interpretation)||
+   !/life.history conflict/i.test(phrase("hordeum-pusillum").status.replace(/_/g," ")))
+ throw Error("Awn vs bristle vs sterile-lemma or source conflict distinction lost");
+
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 if(!viewer)throw Error("Source viewer script missing");
