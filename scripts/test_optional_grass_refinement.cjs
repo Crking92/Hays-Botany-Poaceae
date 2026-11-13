@@ -21,7 +21,7 @@ const pack=JSON.parse(fs.readFileSync(path.join(root,"optional-refinement-eviden
 const refs={};
 for(const e of pack.evidence)(refs[e.id]??=[]).push(e);
 const state={selected:{head:null,habit:null,ligule:null,awns:null},range:"all",query:"",
-  species,refineSelected:{},refineEvidenceMap:refs};
+  species,refineCharacters:pack.characters,refineSelected:{},refineEvidenceMap:refs};
 const sandbox={state};vm.createContext(sandbox);vm.runInContext(functions,sandbox);
 const run=()=>Array.from(vm.runInContext("currentResults()",sandbox)).map(x=>({id:x.s.id,extras:x.refinementMatches.length,unknown:x.unknown}));
 const full=run();if(full.length!==112)throw Error("Baseline excludes species");
@@ -155,6 +155,29 @@ if(!got.some(x=>x.id==="aristida-oligantha"&&x.extras===2)||
  throw Error("Threeawn key paths should preserve both species");
 state.refineSelected={true_lemma_awn:"three",florets_per_spikelet:"several",floral_hair_position:"rachilla"};
 verifyUnchanged("deliberately contradictory floral clues");
+
+// Final comparison check is only suggested when published states contrast for
+// EVERY compared taxon; no absent/unknown trait is treated as diagnostic.
+state.refineSelected={};
+let suggested=vm.runInContext(
+  'compareRefinementPrompt(state.species.filter(s=>["eragrostis-intermedia","eragrostis-lugens"].includes(s.id)))',sandbox);
+if(!suggested||suggested.id!=="blade_shape")
+  throw Error("Source-supported flat vs inrolled leaf comparison not offered");
+state.refineSelected={blade_shape:"flat"};
+suggested=vm.runInContext(
+  'compareRefinementPrompt(state.species.filter(s=>["eragrostis-intermedia","eragrostis-lugens"].includes(s.id)))',sandbox);
+if(suggested?.id==="blade_shape")throw Error("Already selected optional clue prompted again");
+state.refineSelected={};
+suggested=vm.runInContext('compareRefinementPrompt([state.species[0],state.species[0]])',sandbox);
+if(suggested)throw Error("Identical species must never generate a false diagnostic distinction");
+suggested=vm.runInContext('compareRefinementPrompt([state.species[0]])',sandbox);
+if(suggested)throw Error("One species does not need comparison");
+state.refineSelected={true_lemma_awn:"none",floral_hair_position:"below_spikelet"};
+verifyUnchanged("comparison helper must not change species scoring");
+if(!html.includes('On a phone, swipe the feature table sideways')||
+   !html.includes('max-height:calc(100dvh - 16px)')||
+   !html.includes('Helpful next check: '))
+  throw Error("Phone comparison and suggested check copy missing");
 
 if(!html.includes('id="theme-toggle"')||!html.includes('id="compare-dialog"')||
    !html.includes('const group=node("details","optional-group")'))
