@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<325||448-indexed.size-unknown>120||unknown!==3)
+if(indexed.size<335||448-indexed.size-unknown>110||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -99,6 +99,18 @@ if(!/0.3–0.5 mm/.test(atom("eriochloa-sericea").interpretation)||
    !/sometimes (a tiny mucro|mucronate)/.test(atom("disakisperma-dubium").interpretation)||
    !/genus, NOT independent species-level/.test(atom("paspalum-dilatatum").references[1].locator))
  throw Error("Batch 6 key distinctions or provenance cautions lost");
+
+
+// Batch 7: all 10 assigned awn slots now cited; anatomical caveats must remain visible.
+const finalAwnBatch=["muhlenbergia-paniculata","bothriochloa-torreyana","bromus-lanceolatus","catapodium-rigidum","dichanthelium-lindheimeri","dichanthelium-pedicellatum","dinebra-panicea-subsp-mucronata","festuca-versuta","tridentopsis-buckleyana","triplasiella-eragrostoides"];
+if(finalAwnBatch.some(id=>!entries.has(id+"|awns")))
+ throw Error("Final 10 awn-source records missing");
+if(!/awnless OR awn-tipped/.test(atom("muhlenbergia-paniculata").interpretation)||
+   !/two-toothed lemma apex/.test(atom("bromus-lanceolatus").interpretation)||
+   !/very short point/.test(atom("festuca-versuta").interpretation)||
+   !/genus-level/.test(atom("dichanthelium-lindheimeri").interpretation)||
+   !/mucro/.test(atom("triplasiella-eragrostoides").interpretation))
+ throw Error("Final awn batch nuances lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
