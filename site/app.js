@@ -91,6 +91,7 @@ function photoCard(panel,index,scientific){
  }
  fig.append(art);
  const caption=make("figcaption");
+ if(panel.src){const enlarge=make("a",{href:panel.src,target:"_blank",rel:"noopener noreferrer","aria-label":"Enlarge photo: "+(panel.label||scientific)});enlarge.textContent="Enlarge photo";caption.append(enlarge,document.createElement("br"));}
  caption.append(txt("strong",panel.label));
  appendParagraph(caption,panel.caption);
  caption.append(txt("span",[panel.creator,panel.license].filter(Boolean).join(" · "),"credit"));
@@ -382,7 +383,7 @@ async function select(id){
    if(!state.cache.has(id)){
      if(state.research.has(id))state.cache.set(id,state.research.get(id));
      else {
-      const response=await fetch("data/species/"+encodeURIComponent(id)+".json");
+      const response=await fetch("data/species/"+encodeURIComponent(id)+".json",{cache:"no-store"});
       if(!response.ok)throw new Error("species summary unavailable");
       state.cache.set(id,await response.json());
      }
@@ -423,7 +424,7 @@ function renderSelected(){
 async function boot(){
  try{
   const [indexResponse,researchResponse,glossaryResponse]=await Promise.all([
-    fetch("data/poaceae-index.json"),fetch("visual-key-lab/hays-candidates.json"),fetch("data/grass-terms.json")
+    fetch("data/poaceae-index.json",{cache:"no-store"}),fetch("visual-key-lab/hays-candidates.json",{cache:"no-store"}),fetch("data/grass-terms.json",{cache:"no-store"})
   ]);
   if(!indexResponse.ok||!researchResponse.ok||!glossaryResponse.ok)throw new Error("Unable to load the full grass inventory or glossary");
   const base=await indexResponse.json(),manifest=await researchResponse.json();
