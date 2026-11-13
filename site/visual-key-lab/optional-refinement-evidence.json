@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_note": "Batch 4 stem and rooted-base characters from regional original. Positive ranking only; never remove a species based on missing or variable stems. Posture and nodes are supporting traits, not specimen verification.",
+  "release_note": "Batch 5 adds six hidden optional flowering/spikelet character groups with direct source-page citations to Diggs et al. (1999). Evidence only ranks positively, never excludes or promotes a specimen ID. Setaria bristles, Arundo lemma hairs and Phragmites rachilla hairs are separated.",
   "mode": "NON_EXCLUDING_POSITIVE_RANKING",
   "characters": [
     {
@@ -429,6 +429,152 @@
         {
           "id": "hairy_stolon_nodes",
           "label": "Hairs on a surface runner's joints"
+        }
+      ]
+    },
+    {
+      "id": "florets_per_spikelet",
+      "label": "Florets in one spikelet",
+      "hint": "Check one mature spikelet with a hand lens. Several tiny florets can sit inside one spikelet, not on separate seedhead branches.",
+      "options": [
+        {
+          "id": "one",
+          "label": "One floret"
+        },
+        {
+          "id": "two",
+          "label": "Two florets"
+        },
+        {
+          "id": "several",
+          "label": "Three or more florets"
+        }
+      ]
+    },
+    {
+      "id": "spikelet_position",
+      "label": "How spikelets sit",
+      "hint": "Follow the actual little spikelets on a flowering branch: a stalked/stalkless pair differs from separate rows or one-sided branches.",
+      "options": [
+        {
+          "id": "paired",
+          "label": "Sessile + stalked pair"
+        },
+        {
+          "id": "reduced_partner",
+          "label": "Full spikelet + tiny partner"
+        },
+        {
+          "id": "two_rows",
+          "label": "Two neat rows"
+        },
+        {
+          "id": "one_side",
+          "label": "On one side of a branch"
+        }
+      ]
+    },
+    {
+      "id": "glume_marks",
+      "label": "Outer glumes",
+      "hint": "Look at the two outer spikelet scales, not the leaf sheath. A hand lens helps with small veins.",
+      "options": [
+        {
+          "id": "one_vein",
+          "label": "One prominent vein"
+        },
+        {
+          "id": "first_enclosing",
+          "label": "First glume wraps second"
+        },
+        {
+          "id": "lower_reduced",
+          "label": "Lower glume tiny or missing"
+        },
+        {
+          "id": "glabrous",
+          "label": "Glumes without hairs"
+        }
+      ]
+    },
+    {
+      "id": "lemma_texture",
+      "label": "Lemma surface",
+      "hint": "Check a floral scale itself for hairs, wrinkles, reddish marks or shininess. A hairy flower stalk is not a hairy lemma.",
+      "options": [
+        {
+          "id": "hairy",
+          "label": "Conspicuously hairy"
+        },
+        {
+          "id": "smooth",
+          "label": "Hairless or smooth"
+        },
+        {
+          "id": "wrinkled",
+          "label": "Finely wrinkled"
+        },
+        {
+          "id": "reddish_spotted",
+          "label": "Reddish marks"
+        },
+        {
+          "id": "shiny_hard",
+          "label": "Firm and shiny"
+        }
+      ]
+    },
+    {
+      "id": "true_lemma_awn",
+      "label": "Awns on the lemma",
+      "hint": "A true awn grows from a floral scale. Setaria's surrounding bristles are different structures. Some species vary.",
+      "options": [
+        {
+          "id": "three",
+          "label": "Three awns"
+        },
+        {
+          "id": "long",
+          "label": "Long single awn"
+        },
+        {
+          "id": "short",
+          "label": "Very short awn"
+        },
+        {
+          "id": "bent_twisted",
+          "label": "Bent and twisted"
+        },
+        {
+          "id": "none",
+          "label": "Awnless"
+        },
+        {
+          "id": "straight_or_bent",
+          "label": "Straight or bent with age"
+        }
+      ]
+    },
+    {
+      "id": "floral_hair_position",
+      "label": "Bristles and floral hairs",
+      "hint": "Check where hairs attach: under the spikelet, on the rachilla, on the lemma, or on the stalk of a reduced partner.",
+      "options": [
+        {
+          "id": "below_spikelet",
+          "label": "Bristles below spikelets"
+        },
+        {
+          "id": "rachilla",
+          "label": "Long hairs on rachilla"
+        },
+        {
+          "id": "lemma",
+          "label": "Hairs on lemmas"
+        },
+        {
+          "id": "partner_stalk",
+          "label": "Hairy reduced-partner stalk"
         }
       ]
     }
@@ -3481,6 +3627,950 @@
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
       "note": "Often roots at lower culm joints.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "aristida-oligantha",
+      "character": "florets_per_spikelet",
+      "states": [
+        "one"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1240",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Aristida generic spikelets are one-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "aristida-purpurea",
+      "character": "florets_per_spikelet",
+      "states": [
+        "one"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1240",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Aristida generic spikelets are one-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "aristida-oligantha",
+      "character": "true_lemma_awn",
+      "states": [
+        "three"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1240",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Aristida generic lemma has three awns; lengths vary.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "aristida-purpurea",
+      "character": "true_lemma_awn",
+      "states": [
+        "three"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1240",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Aristida generic lemma has three awns; lengths vary.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1244",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Giant reed usually has 2–4 florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "glume_marks",
+      "states": [
+        "glabrous"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1244",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Glumes hairless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "lemma_texture",
+      "states": [
+        "hairy"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1244",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Lemmas densely hairy.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "arundo-donax",
+      "character": "floral_hair_position",
+      "states": [
+        "lemma"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1244",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Hair is on lemmas; compare common reed rachilla hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-japonicus",
+      "character": "florets_per_spikelet",
+      "states": [
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1250",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Bromus generic spikelets with four or more florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-japonicus",
+      "character": "lemma_texture",
+      "states": [
+        "smooth"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1252",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Japanese brome species account reports glabrous lemmas.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-japonicus",
+      "character": "true_lemma_awn",
+      "states": [
+        "straight_or_bent"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1252",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Awns straight or bending out with age.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "glume_marks",
+      "states": [
+        "one_vein"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1247",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Bouteloua generic glumes have one nerve.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-gracilis",
+      "character": "glume_marks",
+      "states": [
+        "one_vein"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1247",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Bouteloua generic glumes have one nerve.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1248",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sideoats grama fertile lemma awnless; sterile-floret projections differ.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "florets_per_spikelet",
+      "states": [
+        "one"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1260",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Bermudagrass has one perfect floret.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "spikelet_position",
+      "states": [
+        "two_rows"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1260",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Closely overlapping spikelets on two rows of branch.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1260",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Single perfect floret awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-secundiflora",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic spikelets have two to many florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-spectabilis",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic spikelets have two to many florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-trichodes",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic spikelets have two to many florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-intermedia",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic spikelets have two to many florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-lugens",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic spikelets have two to many florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-secundiflora",
+      "character": "lemma_texture",
+      "states": [
+        "smooth"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Generic Eragrostis lemmas glabrous; this says nothing about rachilla hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-spectabilis",
+      "character": "lemma_texture",
+      "states": [
+        "smooth"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Generic Eragrostis lemmas glabrous; this says nothing about rachilla hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-trichodes",
+      "character": "lemma_texture",
+      "states": [
+        "smooth",
+        "reddish_spotted"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268; p. 1274",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Generic Eragrostis lemmas glabrous; this says nothing about rachilla hairs. Sand lovegrass species account describes reddish marks on lemmas.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-intermedia",
+      "character": "lemma_texture",
+      "states": [
+        "smooth"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Generic Eragrostis lemmas glabrous; this says nothing about rachilla hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-lugens",
+      "character": "lemma_texture",
+      "states": [
+        "smooth"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Generic Eragrostis lemmas glabrous; this says nothing about rachilla hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-secundiflora",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic lemmas awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-spectabilis",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic lemmas awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-trichodes",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic lemmas awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-intermedia",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic lemmas awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-lugens",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Eragrostis generic lemmas awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1292",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Panicum generic spikelet two-flowered, lower sterile or staminate.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "lemma_texture",
+      "states": [
+        "shiny_hard"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1292",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Upper fertile lemma hard and shiny.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "panicum-virgatum",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1292",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Panicum generic spikelets awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1305",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Paspalum lower floret sterile or staminate, upper fertile.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "spikelet_position",
+      "states": [
+        "one_side"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1305",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Spikelets on one face of flattened branches.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "glume_marks",
+      "states": [
+        "lower_reduced"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1305",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Paspalum lower glume often reduced or absent; variability retained.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "lemma_texture",
+      "states": [
+        "shiny_hard"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1305",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Fertile lemma typically firm, smooth and shiny.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "florets_per_spikelet",
+      "states": [
+        "several"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1312",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Common reed usually 4–8 florets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "glume_marks",
+      "states": [
+        "glabrous"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1312",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Glumes without hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "lemma_texture",
+      "states": [
+        "smooth"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1312",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Lemmas without hairs; rachilla hairs are different.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "floral_hair_position",
+      "states": [
+        "rachilla"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1312",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Long hairs attach to rachilla joints.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1316",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sessile spikelet two-flowered, upper floret fertile.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "spikelet_position",
+      "states": [
+        "paired"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1316",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Stalkless and stalked spikelets in pairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-parviflora",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Setaria lower floret sterile, upper fertile.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Setaria lower floret sterile, upper fertile.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-reverchonii",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Setaria lower floret sterile, upper fertile.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-italica",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Setaria lower floret sterile, upper fertile.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-parviflora",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "True lemmas awnless, despite surrounding bristles.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "True lemmas awnless, despite surrounding bristles.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-reverchonii",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "True lemmas awnless, despite surrounding bristles.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-italica",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "True lemmas awnless, despite surrounding bristles.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-parviflora",
+      "character": "floral_hair_position",
+      "states": [
+        "below_spikelet"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Persistent bristles arise below the spikelet.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "floral_hair_position",
+      "states": [
+        "below_spikelet"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Persistent bristles arise below the spikelet.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-reverchonii",
+      "character": "floral_hair_position",
+      "states": [
+        "below_spikelet"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Persistent bristles arise below the spikelet.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-italica",
+      "character": "floral_hair_position",
+      "states": [
+        "below_spikelet"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1318",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Persistent bristles arise below the spikelet.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-parviflora",
+      "character": "lemma_texture",
+      "states": [
+        "wrinkled"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Knotroot bristlegrass fertile lemma rugose.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "lemma_texture",
+      "states": [
+        "wrinkled"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Southwestern bristlegrass fertile lemma rugose.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-elliottii",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sorghastrum sessile fertile spikelet two-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sorghastrum sessile fertile spikelet two-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-elliottii",
+      "character": "spikelet_position",
+      "states": [
+        "reduced_partner"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Partner of fertile spikelet reduced to a hairy pedicel.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "spikelet_position",
+      "states": [
+        "reduced_partner"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Partner of fertile spikelet reduced to a hairy pedicel.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-elliottii",
+      "character": "true_lemma_awn",
+      "states": [
+        "bent_twisted"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Upper fertile lemma has a bent, twisted awn.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "true_lemma_awn",
+      "states": [
+        "bent_twisted"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Upper fertile lemma has a bent, twisted awn.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-elliottii",
+      "character": "floral_hair_position",
+      "states": [
+        "partner_stalk"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Hairy pedicel represents reduced partner.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghastrum-nutans",
+      "character": "floral_hair_position",
+      "states": [
+        "partner_stalk"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Hairy pedicel represents reduced partner.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1323",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sorghum generic fertile spikelet two-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1323",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sorghum generic fertile spikelet two-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "spikelet_position",
+      "states": [
+        "paired"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1323",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sorghum pairs sessile perfect and stalked staminate spikelets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "spikelet_position",
+      "states": [
+        "paired"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1323",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sorghum pairs sessile perfect and stalked staminate spikelets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "true_lemma_awn",
+      "states": [
+        "short",
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1324",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Johnsongrass lemma awnless or with 1–1.5 mm awn.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-compositus",
+      "character": "florets_per_spikelet",
+      "states": [
+        "one"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic spikelet one-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-clandestinus",
+      "character": "florets_per_spikelet",
+      "states": [
+        "one"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic spikelet one-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-vaginiflorus",
+      "character": "florets_per_spikelet",
+      "states": [
+        "one"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic spikelet one-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-compositus",
+      "character": "glume_marks",
+      "states": [
+        "one_vein"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic glumes one-nerved.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-clandestinus",
+      "character": "glume_marks",
+      "states": [
+        "one_vein"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic glumes one-nerved.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-vaginiflorus",
+      "character": "glume_marks",
+      "states": [
+        "one_vein"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic glumes one-nerved.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-compositus",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic spikelets awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-clandestinus",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic spikelets awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sporobolus-vaginiflorus",
+      "character": "true_lemma_awn",
+      "states": [
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1326",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sporobolus generic spikelets awnless.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "andropogon-gerardi",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1238",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Big bluestem generic sessile spikelet two-flowered.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "andropogon-gerardi",
+      "character": "spikelet_position",
+      "states": [
+        "paired"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1238",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Sessile and pedicelled spikelets in pairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "andropogon-gerardi",
+      "character": "glume_marks",
+      "states": [
+        "first_enclosing"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1238",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Andropogon first glume firm and encloses second glume.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "andropogon-gerardi",
+      "character": "true_lemma_awn",
+      "states": [
+        "long",
+        "none"
+      ],
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1238",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "note": "Big bluestem upper lemma can be awned or awnless; subspecies vary.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     }
   ],
   "botanical_sources": [
@@ -3488,6 +4578,11 @@
       "name": "Hagenbuch and Lemke 2015 — Grasses of the Texas Hill Country",
       "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
       "scope": "Hill Country vegetative characters; page-numbered citations per taxon. Different states can occur with age/drying."
+    },
+    {
+      "name": "Diggs, Lipscomb & O'Kennon (1999), Shinners & Mahler's Illustrated Flora of North Central Texas",
+      "uri": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "scope": "Primary source for reproductive characters; privately read user-provided excerpt, printed pages cited per row. No images or substantial copyrighted text reproduced."
     }
   ]
 }
