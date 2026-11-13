@@ -20,6 +20,31 @@ on:
   workflow_dispatch:
 permissions: {contents: read}
 jobs:
+  validate-public-trial-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax and exact 112/53/4 research inventory audit
+        run: |
+          python -m py_compile scripts/smoke_public_grass_trial.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          lab = Path("site/visual-key-lab")
+          files = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
+          groups = [json.loads((lab/f).read_text())["profiles"] for f in files]
+          assert list(map(len,groups)) == [6,6,6,6,11,10,8]
+          all_rows = [x for g in groups for x in g]
+          assert len(all_rows)==53 and len({x["id"] for x in all_rows})==53
+          assert all(x["trial"] is True and x["range"]=="UNVERIFIED" and x["admission_status"]=="RESEARCH_TRIAL_NOT_ADMITTED" for x in all_rows)
+          holds = [x for f in files[-3:] for x in json.loads((lab/f).read_text())["holds"]]
+          assert {x["id"] for x in holds} == {"bromus-brevis","cortaderia-selloana","phyllostachys-aurea","lolium-x-boucheanum"}
+          print("PASS: 112 official + 53 unverified / 4 documented holds")
+          PY
   verify-public-trial:
     # A PR cannot pass exact live Pages parity before its changes are merged.
     # Source/status regressions are covered by the local trial-4 workflow.
