@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<310||448-indexed.size-unknown>135||unknown!==3)
+if(indexed.size<325||448-indexed.size-unknown>120||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -88,6 +88,17 @@ if(!/involucral bristles/i.test(phrase("setaria-italica").interpretation)||
    !/sterile lemma/i.test(phrase("chloris-verticillata").interpretation)||
    !/life.history conflict/i.test(phrase("hordeum-pusillum").status.replace(/_/g," ")))
  throw Error("Awn vs bristle vs sterile-lemma or source conflict distinction lost");
+
+
+// Batch 6: preserve 15 explicitly qualified anatomy/source entries (no scored data edits).
+const latestAwnBatch=["paspalum-dilatatum","paspalum-floridanum","paspalum-pubiflorum","paspalum-setaceum","paspalum-urvillei","tripsacum-dactyloides","limnodea-arkansana","disakisperma-dubium","muhlenbergia-utilis","digitaria-cognata","urochloa-texana","eriochloa-sericea","hopia-obtusa","urochloa-fusca","urochloa-reptans"];
+if(latestAwnBatch.some(id=>!entries.has(id+"|awns")))
+ throw Error("Batch 6 awn records absent");
+if(!/0.3–0.5 mm/.test(atom("eriochloa-sericea").interpretation)||
+   !/geniculate/.test(atom("limnodea-arkansana").interpretation)||
+   !/sometimes (a tiny mucro|mucronate)/.test(atom("disakisperma-dubium").interpretation)||
+   !/genus, NOT independent species-level/.test(atom("paspalum-dilatatum").references[1].locator))
+ throw Error("Batch 6 key distinctions or provenance cautions lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
