@@ -133,6 +133,14 @@ assert "Source-backed refinements rank positive literature matches only" in html
 assert len(re.findall(r'id="optional-character-wrap"', html)) == 1
 assert 'id="theme-toggle"' in html and 'id="compare-dialog"' in html
 assert "function compareCandidates()" in html
+assert "function compareRefinementPrompt(species)" in html
+assert "if(found.some(e=>!e||!Array.isArray(e.states)||!e.states.length))continue" in html
+assert "a.states.every(v=>!b.states.includes(v))" in html
+assert "if(state.refineSelected[c.id])continue" in html
+assert "compare-scroll-note" in html
+assert "On a phone, swipe the feature table sideways" in html
+assert "max-height:calc(100dvh - 16px)" in html
+
 print(f"PASS: {len(original)} existing scored + {len(trials)} provisional key matches, "
       f"{len(universe)} research universe, {len(bundle['evidence'])} sourced extra clues, "
       f"{len({r['id'] for r in bundle['evidence']})} taxa; no new exclusions.")
