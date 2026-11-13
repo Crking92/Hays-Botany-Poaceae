@@ -64,10 +64,74 @@ html.guest-preview .hero{padding:24px 0 18px}
 html.guest-preview .hero h1{margin:0}
 html.guest-preview .answer-body{padding-top:10px}
 html.guest-preview .question{padding-top:15px}
+
+/* Visitor-selected light/dark theme; retain credit and verification notices in either mode. */
+[hidden]{display:none!important}
+.theme-toggle{padding:7px 11px;border:1px solid #bad8c4;border-radius:9px;background:#e9f4e9;color:#1b4931;font-size:.82rem;font-weight:750}
+.theme-toggle:hover{background:#fff}
+.field-precision{margin:0 0 18px;padding:10px 13px;border:1px solid var(--line);border-radius:11px;background:var(--pale)}
+.field-precision summary{cursor:pointer;font-size:.87rem;font-weight:750;color:var(--ink)}
+.field-precision p{font-size:.82rem;color:var(--muted);margin:9px 0 0;line-height:1.4}
+.compare-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.compare-controls button{font-size:.82rem;padding:8px 11px}
+.compare-help{font-size:.75rem;color:var(--muted)}
+.result-row{display:flex;gap:6px;align-items:stretch}
+.result-row .result{flex:1;min-width:0}
+.compare-pick{align-self:stretch;margin-bottom:9px;border-radius:10px;padding:7px 9px;border:1px solid var(--line);background:var(--pale);color:var(--ink);font-size:.77rem;font-weight:750;min-width:68px}
+.compare-pick[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:#fff}
+.compare-pick:disabled{opacity:.45;cursor:not-allowed}
+.compare-dialog{width:min(1050px,calc(100vw - 20px));background:var(--white)}
+.compare-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:20px 20px 10px}
+.compare-head h2{font-family:Georgia,serif;margin:4px 0 0;font-size:1.65rem}
+.compare-note{padding:0 20px;color:var(--muted);font-size:.88rem}
+.compare-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:13px;padding:12px 20px}
+.compare-card{padding:12px;border:1px solid var(--line);border-radius:13px;min-width:0;background:var(--pale)}
+.compare-card .photo-frame{border-radius:9px}
+.compare-card h3{font-size:1.02rem;line-height:1.25;margin:10px 0 3px}
+.compare-card .mini-credit{overflow-wrap:anywhere}
+.compare-card p{font-size:.83rem;line-height:1.43}
+.compare-table-wrap{overflow-x:auto;padding:2px 20px 20px}
+.compare-table{border-collapse:collapse;width:100%;min-width:550px;font-size:.83rem}
+.compare-table th,.compare-table td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:9px}
+.compare-table th{background:var(--pale)}
+.compare-next{padding:12px 15px;margin:0 20px 20px;border-radius:11px;background:var(--mint);font-size:.86rem}
+:root[data-theme="dark"]{color-scheme:dark;--ink:#e5f0e8;--forest:#295c42;--forest2:#357253;--muted:#b3c9ba;--paper:#101a15;--white:#1a2a21;--line:#3a5342;--mint:#234533;--pale:#22382b;--amber:#ecd69a;--shadow:0 8px 25px rgba(0,0,0,.22)}
+html[data-theme="dark"] .sitebar{background:#0c2419}
+html[data-theme="dark"] a{color:#a7e1bc}
+html[data-theme="dark"] .sitebar a{color:#d8f3e2}
+html[data-theme="dark"] .hero p,html[data-theme="dark"] .detail-copy p{color:#c0d4c4}
+html[data-theme="dark"] .eyebrow,html[data-theme="dark"] .section-kicker{color:#a0d1af}
+html[data-theme="dark"] .hero-stamp{background:#243b2c;border-color:var(--line)}
+html[data-theme="dark"] .hero-stamp b{color:#d9f5e2}
+html[data-theme="dark"] .step,html[data-theme="dark"] .answer,html[data-theme="dark"] .result,html[data-theme="dark"] .btn-secondary,html[data-theme="dark"] .filterline button,html[data-theme="dark"] .head-jumps button,html[data-theme="dark"] .close,html[data-theme="dark"] .preview-toggle,html[data-theme="dark"] .theme-toggle{background:#22362a;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .step[aria-current=true],html[data-theme="dark"] .filterline button[aria-pressed=true]{background:#326e50;color:#fff}
+html[data-theme="dark"] .answer[aria-pressed=true]{border-color:#9bd3a7;box-shadow:0 0 0 2px #416c50}
+html[data-theme="dark"] .answer:hover,html[data-theme="dark"] .result:hover,html[data-theme="dark"] .btn-secondary:hover,html[data-theme="dark"] .head-jumps button:hover{background:#2b4435}
+html[data-theme="dark"] .progress-track,html[data-theme="dark"] .photo-frame{background:#36483b}
+html[data-theme="dark"] .answer-note,html[data-theme="dark"] .photo-credit,html[data-theme="dark"] .head-group-help,html[data-theme="dark"] .head-illustration-note,html[data-theme="dark"] .mini-credit,html[data-theme="dark"] .help,html[data-theme="dark"] .footer,html[data-theme="dark"] .results-footer{color:#bed1c3}
+html[data-theme="dark"] .head-group-title,html[data-theme="dark"] .pending summary,html[data-theme="dark"] .diagnostic-check h4,html[data-theme="dark"] .diagnostic-check .check-compare{color:#b8e9c4}
+html[data-theme="dark"] .head-card-label .head-shape,html[data-theme="dark"] .step[aria-current=true] .head-shape{background:#e5eee1;border-color:#a7c2a6}
+html[data-theme="dark"] .whole-head img{background:#e0e9df}
+html[data-theme="dark"] .count,html[data-theme="dark"] .tag{background:#2d543a;color:#e1f4df}
+html[data-theme="dark"] .tag.warn{background:#604d25;color:#ffedb0}
+html[data-theme="dark"] .tag.bad{background:#60372e;color:#ffd2c0}
+html[data-theme="dark"] .tag.review{background:#36473a;color:#deeadf}
+html[data-theme="dark"] .results-footer,html[data-theme="dark"] .detail-botany{background:#203429;border-color:var(--line)}
+html[data-theme="dark"] .detail-botany .check-status{color:#e9c682}
+html[data-theme="dark"] .search{background:#13241a;color:var(--ink);border-color:var(--line)}
+html[data-theme="dark"] .search::placeholder{color:#a0bca7}
+html[data-theme="dark"] dialog{background:var(--white);color:var(--ink)}
+html[data-theme="dark"] .notice{background:#3a3525;border-color:#72623b;color:#f3e6c7}
+html[data-theme="dark"] .caution-list button{color:#c9e9d0}
+html[data-theme="dark"] .caution-list button:hover,html[data-theme="dark"] .pending-list a:hover{background:#2d4737}
+html[data-theme="dark"] .compare-pick{background:#273f30;color:var(--ink)}
+html[data-theme="dark"] .compare-pick[aria-pressed=true]{background:#326e50;color:#fff}
+@media(max-width:480px){.compare-head{padding:15px 13px 7px}.compare-note{padding:0 13px}.compare-cards{padding:12px 13px}.compare-table-wrap{padding:2px 13px 14px}.compare-next{margin:0 13px 14px}.sitebar-actions{gap:7px}.theme-toggle,.preview-toggle{min-height:40px}.compare-pick{min-width:63px}}
+
 </style>
 </head>
 <body>
-<header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button></div></header>
+<header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
 <main class="wrap">
   <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small id="coded-subtitle">grasses in this key</small></div></section>
   <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
@@ -78,14 +142,14 @@ html.guest-preview .question{padding-top:15px}
       <div class="question" id="question"></div>
     </section>
     <aside class="panel results" aria-label="Candidate grasses">
-      <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">112 scored</span></div><p id="results-note">Choose any observable trait to narrow scored profiles and labeled research trials.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"></div>
+      <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">112 scored</span></div><p id="results-note">Choose any observable trait to narrow scored profiles and labeled research trials.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
       <div class="results-list" id="results" aria-live="polite"></div>
       <div class="results-footer" id="results-footer">Unknown characters never eliminate a grass automatically.</div><details class="pending" id="caution-details" hidden><summary id="caution-summary">Other provisional matches to review</summary><div id="caution-list" class="pending-list caution-list"></div></details><details class="pending"><summary id="pending-summary">Other species from our catalog</summary><div id="pending-items" class="pending-list"></div></details>
     </aside>
   </div>
   <footer class="footer"><div>Compare several visible features before deciding on an identification. Each photograph keeps its original creator and license credit.</div></footer>
 </main>
-<dialog id="detail-dialog" aria-label="Grass details"><div id="detail-body"></div></dialog>
+<dialog id="detail-dialog" aria-label="Grass details"><div id="detail-body"></div></dialog><dialog class="compare-dialog" id="compare-dialog" aria-label="Compare possible grasses"><div id="compare-body"></div></dialog>
 <script>
 (function(){
 "use strict";
@@ -146,7 +210,15 @@ const selectedPhotoOverrides={
 "awns:bristles":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"}
 };
 const $=id=>document.getElementById(id);
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[]};
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[]};
+
+const themeToggle=$("theme-toggle");
+let userTheme=null;
+try{const saved=localStorage.getItem("hays-grass-theme");if(saved==="dark"||saved==="light")userTheme=saved}catch(_e){}
+function applyTheme(mode){document.documentElement.dataset.theme=mode;themeToggle.textContent=mode==="dark"?"Light mode":"Dark mode";themeToggle.setAttribute("aria-pressed",String(mode==="dark"));themeToggle.setAttribute("aria-label","Switch to "+(mode==="dark"?"light":"dark")+" mode");const meta=document.querySelector('meta[name="theme-color"]');if(meta)meta.content=mode==="dark"?"#0c2419":"#173b2e";}
+const systemDark=typeof window.matchMedia==="function"&&window.matchMedia("(prefers-color-scheme: dark)").matches;
+applyTheme(userTheme||(systemDark?"dark":"light"));
+themeToggle.addEventListener("click",()=>{const mode=document.documentElement.dataset.theme==="dark"?"light":"dark";applyTheme(mode);try{localStorage.setItem("hays-grass-theme",mode)}catch(_e){}});
 const previewToggle=$("preview-toggle");
 function syncPreviewToggle(){const simple=document.documentElement.classList.contains("guest-preview");previewToggle.textContent=simple?"Show field tips":"Fewer tips";previewToggle.setAttribute("aria-pressed",String(simple))}
 previewToggle.addEventListener("click",()=>{const simple=document.documentElement.classList.toggle("guest-preview");const url=new URL(location.href);if(simple)url.searchParams.set("demo","1");else url.searchParams.delete("demo");history.replaceState(null,"",url.toString());syncPreviewToggle()});
@@ -688,8 +760,15 @@ const flowerheadSections=[
 {title:"Spikes, foxtails, and burs",icon:"foxtail",help:"A central spike or bristle-bearing, bottlebrush-like, or bur-bearing axis.",keys:["spike","tangled_awns","foxtail","sparse_bristles","burrs"]},
 {title:"Unusual male / female arrangements",icon:"mixed_gender",help:"Specialized flowerheads with differently shaped pollen-bearing and seed-bearing parts.",keys:["mixed_gender","aquatic_gender","aquatic_mixed"]}
 ];
+
+const precisionNotes={
+head:"Look closely at where the branches attach. Count racemes, compare open versus crowded branches, and check whether the head is immature or has lost parts.",
+habit:"Follow a living stem to the base. Look for a true surface runner with rooted nodes, an underground rhizome, or a single concentrated crown.",
+ligule:"Peel the blade gently away from the stem and examine the INNER junction. Separate a membrane with hairlike cilia from hairs arising on the collar or sheath.",
+awns:"Use intact, mature spikelets and a hand lens. Count true awns per floret; do not mistake separate foxtail bristles, bur spines, or feathery stigmas for lemma awns."
+};
 function renderQuestion(){
-const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));
+const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));const precision=node("details","field-precision");precision.append(node("summary","","Fine-tune: more field details (optional)"),node("p","",precisionNotes[q.id]));area.append(precision);
 function buildChoice([key,title,note,refId,i]){
 const specimen=byId(refId),p=selectedPhotoOverrides[q.id+":"+key]||pic(specimen,i);
 const b=node("button","answer");b.type="button";b.setAttribute("aria-pressed",String(state.selected[q.id]===key));
@@ -717,8 +796,66 @@ skip.addEventListener("click",()=>{state.selected[q.id]=null;updateUrl();render(
 next.addEventListener("click",()=>{state.question=(state.question+1)%qs.length;render();window.scrollTo({top:Math.min(window.scrollY,document.querySelector(".workspace").offsetTop-15),behavior:"smooth"})});
 actions.append(skip,next);area.append(actions);
 }
+
+function renderCompareControls(rows,n){
+  const control=$("compare-controls"),eligible=n>0&&rows.length>=2;
+  control.hidden=!eligible;
+  if(!eligible){state.comparing=false;state.compareIds=[]}
+  const possible=new Set(rows.map(x=>x.s.id));
+  state.compareIds=state.compareIds.filter(id=>possible.has(id));
+  $("compare-toggle").textContent=state.comparing?"Cancel compare":"Compare matches";
+  $("compare-help").hidden=!state.comparing;
+  const open=$("compare-open");open.hidden=!state.comparing;open.disabled=state.compareIds.length<2;
+  open.textContent="Compare selected ("+state.compareIds.length+"/3)";
+}
+function compareCandidates(){
+  const species=state.compareIds.map(byId).filter(Boolean);
+  if(species.length<2||species.length>3)return;
+  const dialog=$("compare-dialog"),area=$("compare-body");area.replaceChildren();
+  const header=node("div","compare-head"),left=node("div");
+  left.append(node("div","section-kicker","Side-by-side field check"),node("h2","","Compare possible grasses"));
+  const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close comparison");close.addEventListener("click",()=>dialog.close());
+  header.append(left,close);area.append(header,node("p","compare-note","Look for differences in real photographs and field structures. A match is not proof of identification."));
+  const cards=node("div","compare-cards");
+  for(const s of species){
+    const card=node("section","compare-card"),p=pic(s,s.hero_i);
+    card.append(image(p,s.common),node("h3","",s.common),node("span","latin",s.scientific),node("span","tag "+status(s)[1],status(s)[0]));
+    card.append(node("p","mini-credit",(p?.label||"Photo reference")+" · "+credit(p)));
+    if(p?.source_page?.startsWith("https://")){
+      const a=node("a","mini-credit","Photo source and credit");a.href=p.source_page;a.target="_blank";a.rel="noopener noreferrer";card.append(a);
+    }
+    card.append(node("p","",s.field_rule||"Compare the complete grass lesson for diagnostic structures."));
+    const lesson=node("a","mini-credit","Open full grass lesson");lesson.href=BASE+"?species="+encodeURIComponent(s.id);lesson.target="_blank";lesson.rel="noopener noreferrer";card.append(lesson);
+    cards.append(card);
+  }
+  area.append(cards);
+  const wrap=node("div","compare-table-wrap"),table=node("table","compare-table");
+  const thead=document.createElement("thead"),headRow=document.createElement("tr");
+  headRow.append(node("th","","Visible feature"));
+  for(const s of species)headRow.append(node("th","",s.common));
+  thead.append(headRow);table.append(thead);
+  const tbody=document.createElement("tbody");
+  for(const q of qs){
+    const row=document.createElement("tr");row.append(node("th","",q.short));
+    for(const s of species){
+      const vals=s.traits[q.id]||[];
+      const names=vals.map(v=>q.options.find(o=>o[0]===v)?.[1]||v);
+      row.append(node("td","",names.length?names.join("; "):"Not documented — keep possible"));
+    }
+    tbody.append(row);
+  }
+  table.append(tbody);wrap.append(table);area.append(wrap);
+  const candidates=qs.filter(q=>!state.selected[q.id]&&new Set(species.map(s=>(s.traits[q.id]||[]).slice().sort().join("|"))).size>1);
+  const next=candidates[0];
+  if(next)area.append(node("p","compare-next","Helpful next check: "+next.short+". "+next.hint));
+  else area.append(node("p","compare-next","Compare additional visible structures in the full lessons. Skip any feature you cannot examine confidently."));
+  dialog.showModal();
+}
+$("compare-toggle").addEventListener("click",()=>{state.comparing=!state.comparing;state.compareIds=[];renderResults()});
+$("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
+renderCompareControls(rows,n);
 const sure=rows.filter(x=>!x.s.trial&&!x.unknown).length;const trials=rows.filter(x=>x.s.trial).length;
 $("count").textContent=rows.length+" possible";
 $("results-note").textContent=n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.";
@@ -732,7 +869,9 @@ info.append(node("strong","",s.common),node("span","latin",s.scientific));
 const [label,cl]=status(s);info.append(node("span","tag "+cl,label));
 if(s.trial)info.append(node("div","smallmuted","Tentative research match — check a local diagnostic specimen before naming."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));
-b.append(info);b.addEventListener("click",()=>detail(s));root.append(b);
+b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
+if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
+root.append(row);
 }
 const caution=$("caution-details"),cautionList=$("caution-list");
 cautionList.replaceChildren();const matches=new Set(rows.map(x=>x.s.id));
