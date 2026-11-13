@@ -51,7 +51,7 @@ for(const t of more){
 }
 const html=read('index.html');
 assert(html.includes('provisional-trial-batch2.json'));
-assert(html.includes('112 original scored + '));
+assert(html.includes('id="coded-total"')&&html.includes('grasses in this key'),'Public count is missing or mislabeled');
 assert(html.includes('Research trial · unverified'));
 const js=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert(js);
