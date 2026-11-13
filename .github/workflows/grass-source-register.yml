@@ -1,0 +1,31 @@
+name: Grass ID Lab source citation register
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/source-register.html'
+      - 'site/visual-key-lab/source-crosschecks.json'
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/optional-refinement-evidence.json'
+      - 'scripts/test_grass_source_register.cjs'
+      - '.github/workflows/grass-source-register.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/source-register.html'
+      - 'site/visual-key-lab/source-crosschecks.json'
+      - 'site/visual-key-lab/species-*.json'
+      - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/optional-refinement-evidence.json'
+      - 'scripts/test_grass_source_register.cjs'
+      - '.github/workflows/grass-source-register.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source-register:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check source citation locators, coverage counts and 169-species inventory
+        run: node scripts/test_grass_source_register.cjs

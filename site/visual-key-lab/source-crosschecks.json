@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "created_for": "Hays Grass ID Lab — source-by-character crosschecking",
+  "policy": "Independent citations are confirmed only for the exact claim and character stated. Do not use these records to mutate scored trait states; flag different terminology and taxonomic interpretations. Printed book page, excerpt-PDF page, or exact online section are mandatory when known. Range and county nativity deliberately excluded.",
+  "primary_refs": [
+    {
+      "key": "diggs",
+      "name": "Illustrated Flora of North Central Texas (Diggs et al. 1999)",
+      "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "locators": "printed book page + source PDF page"
+    },
+    {
+      "key": "hillcountry",
+      "name": "Hagenbuch & Lemke 2015, Grasses of the Texas Hill Country: Vegetative key and descriptions",
+      "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "locators": "original article page"
+    },
+    {
+      "key": "grassbase",
+      "name": "Kew GrassBase / Plants of the World Online",
+      "url": "https://powo.science.kew.org/",
+      "locators": "taxon URL and Descriptions subsection"
+    },
+    {
+      "key": "fna",
+      "name": "Flora of North America",
+      "url": "https://floranorthamerica.org/",
+      "locators": "species treatment and numbered volume/page when available"
+    }
+  ],
+  "crosschecks": [
+    {
+      "id": "panicum-hallii",
+      "character": "head",
+      "status": "TWO_PUBLISHED_SOURCES_AGREE",
+      "interpretation": "Open, rather small panicle; Kew additionally specifies pyramidal open panicle with stiff ascending branches.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1298, excerpt PDF p. 222",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=222",
+          "source_checked": "user-provided PDF page text inspected",
+          "support": "Open, relatively small flowering panicles"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > Reproductive morphology / Inflorescences (web treatment, no printed page)",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:411627-1/general-information",
+          "source_checked": "online treatment inspected",
+          "support": "Open pyramidal panicles 6–20 cm, with ascending stiff branches"
+        }
+      ]
+    },
+    {
+      "id": "panicum-hallii",
+      "character": "habit",
+      "status": "ONE_DIRECT_AND_ONE_COMPLEMENTARY_SOURCE",
+      "interpretation": "The regional flora explicitly calls this a tufted perennial; GrassBase supports perennial upright/ascending culms, but does not independently confirm tufted crown in the extracted description.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1298, excerpt PDF p. 222",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=222",
+          "source_checked": "user-provided PDF page text inspected",
+          "support": "Tufted perennial, 12–80 cm tall"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > General habit (web treatment, no printed page)",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:411627-1/general-information",
+          "source_checked": "online treatment inspected",
+          "support": "Perennial; culms erect or bent upward, 20–80 cm"
+        }
+      ]
+    },
+    {
+      "id": "panicum-hallii",
+      "character": "ligule",
+      "status": "TERMINOLOGY_DIFFERENCE_REQUIRES_CARE",
+      "interpretation": "Regional flora describes a tiny membrane with a hair fringe; GrassBase emphasizes the fringe. Both make hair tips visible, but do not prove a hair-only ligule.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1298, excerpt PDF p. 222",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=222",
+          "source_checked": "user-provided PDF page text inspected",
+          "support": "Short, fibrous, splitting membranous base with fringe of hairs up to 1.3 mm"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > General habit / Ligule (web treatment, no printed page)",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:411627-1/general-information",
+          "source_checked": "online treatment inspected",
+          "support": "Fringe of hairs approximately 1–1.5 mm"
+        }
+      ]
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "head",
+      "status": "TWO_PUBLISHED_SOURCES_AGREE",
+      "interpretation": "Many short, usually unilateral side racemes distributed along one elongated flowering axis.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1248, excerpt PDF p. 172",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=172",
+          "source_checked": "user-provided PDF page text inspected",
+          "support": "Typically 25–80 branches, about 1.5 cm long, along a single elongated flowering axis"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > Reproductive morphology / Inflorescences (web treatment, no printed page)",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1198286-2/general-information",
+          "source_checked": "Kew search-index excerpt checked; direct browser retrieval restricted",
+          "support": "Numerous one-sided, deflexed racemes along the central axis"
+        }
+      ]
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "habit",
+      "status": "TWO_PUBLISHED_SOURCES_WITH_VARIATION",
+      "interpretation": "Rhizomes occur, but tufted and creeping phenotypes both exist; do not enforce a single growth-form state.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1248, excerpt PDF p. 172",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=172",
+          "source_checked": "user-provided PDF page text inspected",
+          "support": "Rhizomatous species, with varietal descriptions of tufted versus creeping growth"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > General habit (web treatment, no printed page)",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1198286-2/general-information",
+          "source_checked": "Kew search-index excerpt checked; direct browser retrieval restricted",
+          "support": "Tufted perennial with short, scaly rhizomes"
+        }
+      ]
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "awns",
+      "status": "SOURCE_TERMINOLOGY_CONFLICT_UNRESOLVED",
+      "interpretation": "Diggs describes the fertile lemma as awnless; GrassBase describes 3 minute awn-like mucros. Preserve the key's 'no conspicuous long awns' state, but do not call the lemma universally unawned.",
+      "references": [
+        {
+          "authority": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+          "locator": "printed p. 1248, excerpt PDF p. 172",
+          "uri": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf#page=172",
+          "source_checked": "user-provided PDF page text inspected",
+          "support": "Fertile lemma described as awnless"
+        },
+        {
+          "authority": "Kew GrassBase via Plants of the World Online",
+          "locator": "Descriptions > GrassBase > Reproductive morphology / Fertile lemma (web treatment, no printed page)",
+          "uri": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1198286-2/general-information",
+          "source_checked": "Kew search-index excerpt checked; direct browser retrieval restricted",
+          "support": "Lemma apex three-toothed, mucronate, described as 3-awned (mucros)"
+        }
+      ]
+    }
+  ]
+}
