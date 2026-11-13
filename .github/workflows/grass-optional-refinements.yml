@@ -6,6 +6,7 @@ on:
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_optional_grass_refinement.cjs'
+      - 'scripts/test_grass_venation_field_guide.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -14,6 +15,7 @@ on:
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_optional_grass_refinement.cjs'
+      - 'scripts/test_grass_venation_field_guide.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -27,3 +29,5 @@ jobs:
         run: python3 scripts/qa_optional_grass_refinements.py
       - name: Exercise leaf-detail selections, inherited scoring and unknown-safe ranking
         run: node scripts/test_optional_grass_refinement.cjs
+      - name: Verify seven vein and rib diagrams, accessibility and unchanged evidence
+        run: node scripts/test_grass_venation_field_guide.cjs
