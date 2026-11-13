@@ -87,7 +87,7 @@ for(const h of data.holds){
 }
 assert.equal(byId['lolium-x-boucheanum'].approved_gallery?.length||0,0,'Hybrid suddenly granted photo');
 const html=read('index.html');
-assert(!html.includes('provisional-trial-batch5-c.json'),'Chat C silently changed normal public loader');
+assert(html.includes('provisional-trial-batch5-c.json'),'Coordinator integration must load approved Lane C unverified trials');
 assert(html.includes('Research trial · unverified'),'Guest trial status changed');
 const m=html.match(/<script>([\s\S]*?)<\/script>/);assert(m,'Current production scoring script absent');
 const source=m[1],start=source.indexOf('function currentResults()'),end=source.indexOf('\nfunction renderTabs',start);
