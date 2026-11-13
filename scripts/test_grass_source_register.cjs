@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<350||448-indexed.size-unknown>95||unknown!==3)
+if(indexed.size<365||448-indexed.size-unknown>80||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -124,6 +124,19 @@ if(!/rhizomes ABSENT/.test(growth("bouteloua-dactyloides").interpretation)||
  !/short rhizomes/.test(growth("paspalum-setaceum").interpretation)||
  !/life history/.test(growth("hordeum-pusillum").interpretation))
  throw Error("New growth form distinctions or open scoring caveat lost");
+
+
+// Batch 9: verify 15 additional habit records, exact old names and limits.
+const nextHabitBatch=["anatherum-glomeratum","anatherum-virginicum","catapodium-rigidum","dichanthelium-oligosanthes","dichanthelium-pedicellatum","dichanthium-annulatum","elymus-virginicus","eragrostis-lugens","eragrostis-secundiflora","erioneuron-pilosum","limnodea-arkansana","muhlenbergia-reverchonii","panicum-capillare","sporobolus-vaginiflorus","tridens-flavus"];
+if(nextHabitBatch.some(id=>!entries.has(id+"|habit")))
+ throw Error("Missing Batch 9 growth-form citation");
+const habit9=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="habit");
+if(!/stoloniferous culms/.test(habit9("dichanthium-annulatum").interpretation)||
+ !/NOT directly proven/.test(habit9("dichanthium-annulatum").interpretation)||
+ !/solitary/.test(habit9("limnodea-arkansana").interpretation)||
+ !/narrower/.test(habit9("eragrostis-secundiflora").interpretation)||
+ !/E. intermedia/.test(habit9("eragrostis-lugens").interpretation))
+ throw Error("Batch 9 documented source limits lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
