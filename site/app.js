@@ -91,6 +91,7 @@ function photoCard(panel,index,scientific){
  }
  fig.append(art);
  const caption=make("figcaption");
+ if(panel.src){const enlarge=make("a",{href:panel.src,target:"_blank",rel:"noopener noreferrer","aria-label":"Enlarge photo: "+(panel.label||scientific)});enlarge.textContent="Enlarge photo";caption.append(enlarge,document.createElement("br"));}
  caption.append(txt("strong",panel.label));
  appendParagraph(caption,panel.caption);
  caption.append(txt("span",[panel.creator,panel.license].filter(Boolean).join(" · "),"credit"));
