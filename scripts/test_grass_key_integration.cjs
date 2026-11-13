@@ -89,6 +89,10 @@ for(const s of species) {
   visit(Object.entries(s.traits).filter(([,v]) => v.length > 0));
 }
 const positives = [
+  ['Tumble windmillgrass unilateral branches',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['chloris-verticillata']],
+  ['Tumble windmillgrass 7+ one-sided branches',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'long'},['chloris-verticillata']],
+  ['Feather fingergrass unilateral branches',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['chloris-virgata']],
+  ['Feather fingergrass 7+ one-sided branches',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'long'},['chloris-virgata']],
   ['Foxtail millet fringed-membrane field path',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'},['setaria-italica']],
   ['Little barley short awns without obvious long projections',{head:'spike',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['hordeum-pusillum']],
   ['Hairy woodland brome short awns without obvious long projections',{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['bromus-pubescens']],
