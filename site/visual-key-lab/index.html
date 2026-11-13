@@ -91,6 +91,8 @@ html.guest-preview .question{padding-top:15px}
 .compare-card .mini-credit{overflow-wrap:anywhere}
 .compare-card p{font-size:.83rem;line-height:1.43}
 .compare-table-wrap{overflow-x:auto;padding:2px 20px 20px}
+.compare-scroll-note{display:none}
+@media(max-width:600px){.compare-scroll-note{display:block;margin:0 20px 7px;font-size:.8rem;color:var(--muted)}.compare-dialog{max-height:calc(100dvh - 16px);overflow-y:auto}}
 .compare-table{border-collapse:collapse;width:100%;min-width:550px;font-size:.83rem}
 .compare-table th,.compare-table td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:9px}
 .compare-table th{background:var(--pale)}
@@ -295,6 +297,20 @@ function refinementSection(id){
  if(["stem_nodes","culm_posture","surface_runners","underground_stems","basal_crown","stem_special"].includes(id))return"stem";
  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id))return"flower";
  return ["leaf_base","ligule_length","ligule_edge","sheath_margins","sheath_surface"].includes(id)?"base":"blade";
+}
+// Suggest an optional side-by-side check ONLY when all compared taxa have
+// published states and at least one pair has non-overlapping states.
+// A missing description is UNKNOWN, not proof of a contrasting character.
+function compareRefinementPrompt(species){
+ if(!Array.isArray(species)||species.length<2)return null;
+ for(const c of state.refineCharacters||[]){
+  if(state.refineSelected[c.id])continue;
+  const found=species.map(s=>refinementEvidence(s,c.id));
+  if(found.some(e=>!e||!Array.isArray(e.states)||!e.states.length))continue;
+  const differing=found.some((a,i)=>found.some((b,j)=>j>i&&a.states.every(v=>!b.states.includes(v))));
+  if(differing)return c;
+ }
+ return null;
 }
 function renderOptionalCharacters(){
  const holder=$("optional-character-wrap"),root=$("optional-character-groups"),tabs=$("optional-section-tabs");
@@ -971,11 +987,15 @@ function compareCandidates(){
  }
  tbody.append(row);
 }
-table.append(tbody);wrap.append(table);area.append(wrap);
+table.append(tbody);wrap.append(table);area.append(node("p","compare-scroll-note","On a phone, swipe the feature table sideways to see the other grasses."),wrap);
   const candidates=qs.filter(q=>!state.selected[q.id]&&new Set(species.map(s=>(s.traits[q.id]||[]).slice().sort().join("|"))).size>1);
   const next=candidates[0];
   if(next)area.append(node("p","compare-next","Helpful next check: "+next.short+". "+next.hint));
-  else area.append(node("p","compare-next","Compare additional visible structures in the full lessons. Skip any feature you cannot examine confidently."));
+  else{
+    const extra=compareRefinementPrompt(species);
+    if(extra)area.append(node("p","compare-next","Helpful next check: "+extra.label+". "+extra.hint+" Published descriptions differ; uncertain field features do not eliminate a grass."));
+    else area.append(node("p","compare-next","Compare additional visible structures in the full lessons. Skip any feature you cannot examine confidently."));
+  }
   dialog.showModal();
 }
 $("compare-toggle").addEventListener("click",()=>{state.comparing=!state.comparing;state.compareIds=[];renderResults()});
