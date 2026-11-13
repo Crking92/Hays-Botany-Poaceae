@@ -1,0 +1,20 @@
+name: Chat 5 - two empty gallery photo-source screen (read only)
+on:
+  pull_request:
+    paths:
+      - 'scripts/chat5-melica-steinchisma-source-screen-20261112.py'
+      - '.github/workflows/chat5-melica-steinchisma-source-screen-20261112.yml'
+permissions:
+  contents: read
+jobs:
+  photo-source-screen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check pillow==11.3.0
+      - name: Inspect exact source photo rights, original bytes, and manifest duplicates
+        run: python scripts/chat5-melica-steinchisma-source-screen-20261112.py
