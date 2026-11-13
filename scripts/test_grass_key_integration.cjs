@@ -89,6 +89,9 @@ for(const s of species) {
   visit(Object.entries(s.traits).filter(([,v]) => v.length > 0));
 }
 const positives = [
+  ['Foxtail millet fringed-membrane field path',{head:'foxtail',habit:'tuft',ligule:'membrane',awns:'bristles'},['setaria-italica']],
+  ['Little barley short awns without obvious long projections',{head:'spike',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['hordeum-pusillum']],
+  ['Hairy woodland brome short awns without obvious long projections',{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['bromus-pubescens']],
   ['Lindheimer visible awn narrow',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['muhlenbergia-lindheimeri']],
   ['Lindheimer visible awn airy',{head:'airy',habit:'tuft',ligule:'membrane',awns:'long'},['muhlenbergia-lindheimeri','muhlenbergia-reverchonii']],
   ['nimblewill small tuft',{head:'long_narrow_panicle',habit:'tuft',ligule:'membrane',awns:'long'},['muhlenbergia-schreberi']],
