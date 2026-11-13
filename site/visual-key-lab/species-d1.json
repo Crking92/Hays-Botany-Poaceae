@@ -668,7 +668,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome can have an open, sparsely branched panicle, but its 20 mm multi-flowered spikelets are NOT the tiny-spikelet cloud shown in the 'airy' question. Choose the branched-oat field option and compare glume veins and attached florets.\n\nScoring audit 2026-11-13: Texas brome has actual subapical awns, sometimes only 4–8 mm against a 9–15 mm lemma; they may not look like the key's LONG awn example. The alternative 'no conspicuous LONG awns' is a coarse field observation, NOT a statement of awnlessness. If the floret is broken or not yet mature, skip this question.",
+    "field_rule": "For native versus introduced Bromus, the important structures are glume VEINS, actual lemma dimensions and awns, and an annual or perennial rooted crown—not the word 'brome' or a pretty nodding head.\n\nField ID Lab: Texas brome can have an open, sparsely branched panicle, but its 20 mm multi-flowered spikelets are NOT the tiny-spikelet cloud shown in the 'airy' question. Choose the branched-oat field option and compare glume veins and attached florets.\n\nScoring audit 2026-11-13: Texas brome has true subapical lemma awns, 4–10 mm in the checked published descriptions. A short-awn field silhouette is potentially ambiguous, but the existing key's negative control explicitly keeps the 'no conspicuous long awns' route OFF until independently field-validated. Keep its awned score; if you cannot see an intact mature awn, SKIP the question rather than decide it is absent.",
     "traits": {
       "head": [
         "branched_oat"
@@ -680,8 +680,7 @@
         "membrane"
       ],
       "awns": [
-        "long",
-        "none_obvious"
+        "long"
       ]
     },
     "source_blob_sha": "7184a31f6ad2a2cd9ed56ec450077a7cc1d17c04",
@@ -733,18 +732,18 @@
       "awns": {
         "source": "Kew GrassBase, Bromus texensis exact species treatment",
         "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:37176-2/general-information",
-        "secondary_source": "World Flora Online, Bromus texensis exact historical morphology",
+        "secondary_source": "World Flora Online, Bromus texensis exact species description",
         "secondary_source_url": "https://www.worldfloraonline.org/taxon/wfo-0000856685",
         "role": "reproductive",
-        "reference": "Kew's exact species morphology reports true subapical fertile lemma awns 6–10 mm on lemmas 9–12 mm; World Flora Online records 4–8 mm awns on lemmas 9–15 mm and differs in apical terminology. Both agree that awns are real, short to moderate. Because the current beginner option is 'No conspicuous LONG awns' and not 'Awnless lemma', a short-awn plant with intact florets can plausibly match it at whole-head scale. Keep 'long' for individuals whose awns project clearly, and distinguish actual lemma awns from pointed glumes and 2-toothed apex.",
+        "reference": "Kew gives subapical true lemma awns 6–10 mm (lemmas 9–12 mm), while World Flora Online gives awns 4–8 mm (lemmas 9–15 mm), and the sources differ on lemma-apex shape. Both support TRUE awned fertile lemmas. Even though some awns are short relative to the flowering head, the existing Lane C Batch 8 false-match control expressly prohibits 'awns=none_obvious' for this species. Do NOT add that scoring choice solely from length; require exact specimen-level / field-photo confirmation and a reviewed UI threshold/semantic decision. If the observer cannot see its intact awns, SKIP the question rather than selecting apparent absence.",
         "reported_states": [
-          "short but genuine fertile lemma awns present",
-          "conspicuous awns possible",
-          "coarse 'no conspicuous LONG awns' visual route possible on short-awn material"
+          "true fertile-lemma awns present, often 4–10 mm",
+          "long field-choice retained (existing validated path)",
+          "no-conspicuous-long-awns alternative HELD pending field validation and review of established negative control"
         ],
-        "status": "TWO_PUBLISHED_SPECIES_RECORDS_AWN_RANGE_SHORT_VISUAL_COARSE_ALTERNATE_NO_AWNLESS_CLAIM",
+        "status": "TWO_SOURCE_SHORT_AWNS_OBSERVATION_ALTERNATE_HELD_EXISTING_NEGATIVE_CONTROL_RETAINED",
         "review_date": "2026-11-13",
-        "photo_voucher_support": "Source-supported visual-option ambiguity; no exact local mature attached spikelet measured or independently verified."
+        "photo_voucher_support": "No measured mature local spikelet; existing negative regression from Lane C Batch 8 preserved; no score addition made."
       }
     },
     "diagnostic_checks": [
