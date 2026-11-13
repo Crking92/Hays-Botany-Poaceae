@@ -5,6 +5,8 @@ on:
     paths:
       - 'site/visual-key-lab/species-*.json'
       - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/provisional-trial-batch5-*.json'
+      - 'scripts/test_provisional_trial_batch5_a.cjs'
       - 'site/visual-key-lab/index.html'
       - 'scripts/test_grass_key_integration.cjs'
       - 'scripts/test_grass_field_rules.cjs'
@@ -18,6 +20,8 @@ on:
     paths:
       - 'site/visual-key-lab/species-*.json'
       - 'site/visual-key-lab/hays-candidates.json'
+      - 'site/visual-key-lab/provisional-trial-batch5-*.json'
+      - 'scripts/test_provisional_trial_batch5_a.cjs'
       - 'site/visual-key-lab/index.html'
       - 'scripts/test_grass_key_integration.cjs'
       - 'scripts/test_grass_field_rules.cjs'
@@ -39,6 +43,8 @@ jobs:
           node-version: '22'
       - name: Check live filter, false exclusions and 112/57 admission boundary
         run: node scripts/test_grass_key_integration.cjs
+      - name: Validate 11 new Chat A seasonal grass trials and preserve 112 scored paths
+        run: node scripts/test_provisional_trial_batch5_a.cjs
       - name: Execute Lane B production-filter regressions
         run: node scripts/test_grass_sprint_lane_b.cjs
       - name: Execute Lane A paths if Lane A has landed
