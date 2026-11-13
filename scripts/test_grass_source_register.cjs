@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<295||448-indexed.size-unknown>150||unknown!==3)
+if(indexed.size<310||448-indexed.size-unknown>135||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -67,6 +67,20 @@ if(!scopes.some(x=>x.status.includes("NOT_TWO_SPECIES_EXPLICIT"))||
  throw Error("New citations falsely imply two independently explicit species-level accounts");
 if(awnBatch.some(id=>!entries.has(id+"|awns")))
  throw Error("Missing a named citation from 18-member first awn batch");
+const structuralAwnBatch=[
+ "chloris-cucullata","eleusine-indica","phalaris-caroliniana","erioneuron-pilosum",
+ "zizaniopsis-miliacea","hilaria-belangeri","bouteloua-dactyloides","tridens-albescens",
+ "tridens-flavus","tridens-texanus","arundo-donax","phragmites-australis",
+ "digitaria-ciliaris","leersia-oryzoides","paspalum-distichum"];
+if(structuralAwnBatch.some(id=>!entries.has(id+"|awns")))
+ throw Error("15 source-anatomy citations absent");
+const atom=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="awns");
+if(!/GLUME awns/i.test(atom("hilaria-belangeri").interpretation)||
+ !/pistillate/i.test(atom("zizaniopsis-miliacea").interpretation)||
+ !/SHORT awns/i.test(atom("chloris-cucullata").interpretation)||
+ !/PUBLISHED_TREATMENTS_DIFFER_SHORT_AWN_VS_MUCRO/.test(atom("arundo-donax").status)||
+ !/mucro/i.test(atom("tridens-flavus").interpretation))
+ throw Error("Awn source distinctions or conflict labels lost");
 const phrase=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="awns");
 if(!phrase("bothriochloa-barbinodis").references[0].support.includes("20–30 mm"))
  throw Error("Bothriochloa barbinodis key accidentally switched with short-awn B. laguroides");
