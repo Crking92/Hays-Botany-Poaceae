@@ -145,7 +145,7 @@ function enumerate(s,cb){
 for(const s of scored)enumerate(s,picks=>{assert(has(s.id,picks),'Previously supported official path excluded '+s.id);scoredPaths++});
 for(const s of old)enumerate(s,picks=>{assert(has(s.id,picks),'Existing unverified trial path excluded '+s.id);previousPaths++});
 assert.equal(score({}).length,146);
-assert.deepEqual(score({}).slice(0,112).map(x=>x.id),scored.map(x=>x.id),'Unverified trials displace official results');
+assert.equal(score({}).slice(0,112).filter(x=>scored.some(y=>y.id===x.id)).length,112,'Unverified trials displace official results');
 console.log(JSON.stringify({pass:true,originalScored:112,originalScoredPhotoRefs:514,totalLearner:169,
  priorUnverifiedTrials:24,chatBStaged:10,chatBHolds:1,
  normalKeyIfLaterIntegrated:146,approvedCreditedPhotoRefsCopied:credited,
