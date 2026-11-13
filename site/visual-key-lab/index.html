@@ -293,6 +293,7 @@ function refinementMatches(s){
 
 function refinementSection(id){
  if(["stem_nodes","culm_posture","surface_runners","underground_stems","basal_crown","stem_special"].includes(id))return"stem";
+ if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id))return"flower";
  return ["leaf_base","ligule_length","ligule_edge","sheath_margins","sheath_surface"].includes(id)?"base":"blade";
 }
 function renderOptionalCharacters(){
@@ -303,7 +304,7 @@ function renderOptionalCharacters(){
   const selected=state.refineCharacters.find(c=>state.refineSelected[c.id]);
   state.refineSection=selected?refinementSection(selected.id):"blade";
  }
- const sections=[["blade","Leaf blades"],["base","Collars / sheaths"],["stem","Stems / roots"]];
+ const sections=[["blade","Leaf blades"],["base","Collars / sheaths"],["stem","Stems / roots"],["flower","Flowers / spikelets"]];
  for(const [id,label] of sections){
    const count=state.refineCharacters.filter(c=>refinementSection(c.id)===id&&state.refineSelected[c.id]).length;
    const b=node("button","",label+(count?" ("+count+")":""));
