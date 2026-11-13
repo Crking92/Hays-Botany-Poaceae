@@ -47,10 +47,10 @@ width_rows = [r for r in bundle["evidence"] if r["character"] == "blade_width"]
 assert len(width_rows) >= 37
 def possible_width_states(low, high):
     expected = set()
-    if low <= 2: expected.add("thread")
-    if low <= 5 and high >= 2: expected.add("narrow")
-    if low <= 10 and high >= 5: expected.add("medium")
-    if high >= 10: expected.add("broad")
+    if low < 2: expected.add("thread")
+    if low < 5 and high > 2: expected.add("narrow")
+    if low < 10 and high > 5: expected.add("medium")
+    if high > 10: expected.add("broad")
     return expected
 for row in width_rows:
     mm = row.get("width_mm")
