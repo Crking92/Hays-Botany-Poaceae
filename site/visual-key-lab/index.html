@@ -996,6 +996,26 @@ try {const res=await fetch("provisional-trial-batch3.json",{cache:"no-store"});i
 // All uncertain characters stay unknown and no provisional species is scored.
 try {const res=await fetch("provisional-trial-batch4.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)||x.range!=="UNVERIFIED"))throw Error("Fourth research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Fourth trial duplicates an existing species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Fourth research trial profiles unavailable; original key and earlier trials remain usable",err)}
 
+// Combined Batch 5: 29 source-backed research trials from three independently reviewed lanes.
+// These are unverified comparison matches, never admissions into the 112 officially scored grasses.
+// Load the three lane packets together to avoid silently publishing an incomplete coordinator release.
+try {
+ const files=["provisional-trial-batch5-a.json","provisional-trial-batch5-b.json","provisional-trial-batch5-c.json"];
+ const responses=await Promise.all(files.map(file=>fetch(file,{cache:"no-store"})));
+ if(responses.some(res=>!res.ok))throw Error("One or more supplemental research trial packets are unavailable");
+ const packets=await Promise.all(responses.map(res=>res.json()));
+ const expected=[11,10,8],existing=new Set(state.species.map(x=>x.id));
+ for(let i=0;i<packets.length;i++){
+  const profiles=packets[i].profiles;
+  if(!Array.isArray(profiles)||profiles.length!==expected[i])throw Error("Research trial packet count mismatch: "+files[i]);
+  for(const p of profiles){
+   if(!p.trial||p.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||p.range!=="UNVERIFIED"||!Array.isArray(p.photos)||!p.photos.length||existing.has(p.id))throw Error("Duplicate or unsupported research trial: "+p.id);
+   existing.add(p.id);
+  }
+ }
+ state.species.push(...packets.flatMap(packet=>packet.profiles));
+} catch(err){console.warn("Additional unverified research trials unavailable; original scored key and earlier trials remain usable",err)}
+
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});
