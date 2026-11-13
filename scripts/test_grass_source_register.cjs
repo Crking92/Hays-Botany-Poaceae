@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<380||448-indexed.size-unknown>65||unknown!==3)
+if(indexed.size<384||448-indexed.size-unknown>61||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -149,6 +149,17 @@ if(!/UNDERGROUND\/SURFACE-STEM CONFLICT/.test(h10("tridentopsis-mutica").interpr
  !/SPRING phase/.test(h10("dichanthelium-lindheimeri").interpretation)||
  !/solitary or forming small clusters/.test(h10("sporobolus-clandestinus").references[0].support))
  throw Error("Habit source scope or structural conflict caveats lost");
+
+
+// Batch 11: all assigned original-core habit slots documented; protect source limitations.
+const finalHabits=["dichanthelium-commutatum","anatherum-tenuispatheum","bromus-lanceolatus","secale-cereale"];
+if(finalHabits.some(id=>!entries.has(id+"|habit")))throw Error("Final four habit citations missing");
+const finalHabit=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="habit");
+if(!/caudices OR rhizomes/.test(finalHabit("dichanthelium-commutatum").interpretation)||
+ !/historical/.test(finalHabit("anatherum-tenuispatheum").interpretation)||
+ !/do NOT independently prove/.test(finalHabit("bromus-lanceolatus").interpretation)||
+ !/TWO_INDEPENDENT_DIRECT_SPECIES_TUFT_ACCOUNTS_AGREE/.test(finalHabit("secale-cereale").status))
+ throw Error("Final habit source scope or morphological limitations lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
