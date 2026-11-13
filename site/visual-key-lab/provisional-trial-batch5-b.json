@@ -1,0 +1,2122 @@
+{
+  "schema": "hays-botany-grass-provisional-trial-batch5-b",
+  "date": "2026-11-12",
+  "assignment": "CHAT_B_DIAGNOSTIC_LOOKALIKES",
+  "status": "UNVERIFIED_TRIAL_LOADED_IN_NORMAL_KEY_NOT_SPECIMEN_ADMITTED",
+  "original_scored": 112,
+  "provisional_inventory": 57,
+  "prior_unverified_trials": 24,
+  "assigned_taxa": 11,
+  "new_unverified_trials": 10,
+  "held_taxa": 1,
+  "normal_lab_results_after_coordinated_integration": 146,
+  "source_manifest": "hays-candidates.json",
+  "source_manifest_sha": "ec1b87be4bf66a861be4c46660efe463d50cf52e",
+  "notes": "Candidate-only lane B. Never load automatically into website, certify a Hays voucher, publish photos, or replace source photos. Unknown traits and licensing metadata preserved verbatim. PR stays unmerged until Chat 1 integration, tests and public QA.",
+  "profiles": [
+    {
+      "id": "bothriochloa-longipaniculata",
+      "scientific": "Bothriochloa longipaniculata",
+      "common": "Longspike Beardgrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 3,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-3-20261111.md",
+      "local_report_count": 25,
+      "warning_flags": [
+        "SPECIES_CONCEPT_OLDER_FLORA_LUMPED_WITH_B_TORREYANA_CURRENT_POWO_GRIN_SEPARATE"
+      ],
+      "field_rule": "Research trial: Narrow silver-white lanceolate panicle with numerous short hairy rames on a long rachis. The head overlaps the silver-bluestem group: verify a 9–20 cm panicle, robust cauline stems, green shiny acute sessile spikelets (3–4.5 mm) and 9–14 mm awns against B. laguroides subsp. torreyana; no local voucher or glume measurement is established by the current reference image.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "long_narrow_panicle",
+          "bushy"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Bothriochloa longipaniculata_0001.JPG",
+          "src": "https://warcapps.usgs.gov/PlantID/Image/GivenFile?file=Bothriochloa+longipaniculata_0001.JPG&id=3284&size=w",
+          "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3284",
+          "original_source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3284",
+          "creator": "Larry Allain / USGS",
+          "license": "US public domain",
+          "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+          "label": "Longspike silver beardgrass: white silky flowerhead (Louisiana)",
+          "caption": "Narrow white silky mature flowering head from USGS Plants of Louisiana, photographed by Larry Allain. Similar B. torreyana requires measured panicle/glume characters; this source photo does not certify a Hays specimen.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "bothriochloa-longipaniculata",
+          "role": "Narrow silky flowering panicle",
+          "source_location_class": "NONLOCAL_REFERENCE_LOUISIANA",
+          "exact_rights_evidence": "USGS Plants of Louisiana image photo credit explicitly Larry Allain, U.S. Geological Survey; USGS-authored media generally U.S. public domain under 17 USC 105. USGS source website copyright policy checked; no contrary photo rights label in exact listing.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_SOURCE_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edit to original image; external responsive display as originally provided."
+        }
+      ],
+      "genus": "Bothriochloa",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-3-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "long_narrow_panicle",
+                "basis": [
+                  "FNA: 9–20 cm narrow lanceolate, silvery-white/tan, numerous branches 3–5 cm on rachises 7–15 cm.",
+                  "FNA: true lemma awns 9–14 mm; do not mistake long rachis hairs for lemma awns."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              },
+              {
+                "value": "bushy",
+                "basis": [
+                  "FNA: 9–20 cm narrow lanceolate, silvery-white/tan, numerous branches 3–5 cm on rachises 7–15 cm.",
+                  "FNA: true lemma awns 9–14 mm; do not mistake long rachis hairs for lemma awns."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [],
+            "ligule": [
+              {
+                "value": "membrane",
+                "basis": [
+                  "FNA: 9–20 cm narrow lanceolate, silvery-white/tan, numerous branches 3–5 cm on rachises 7–15 cm.",
+                  "FNA: true lemma awns 9–14 mm; do not mistake long rachis hairs for lemma awns."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "long",
+                "basis": [
+                  "FNA: 9–20 cm narrow lanceolate, silvery-white/tan, numerous branches 3–5 cm on rachises 7–15 cm.",
+                  "FNA: true lemma awns 9–14 mm; do not mistake long rachis hairs for lemma awns."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "panicle",
+          "check": "FNA: 9–20 cm narrow lanceolate, silvery-white/tan, numerous branches 3–5 cm on rachises 7–15 cm.",
+          "needed_view": "complete measurable head",
+          "source": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "paired_spikelets",
+          "check": "Sessile fertile spikelets (3)3.5–4.5 mm; sterile pedicellate spikelets 1.8–2.8 mm.",
+          "needed_view": "paired spikelets on scale",
+          "source": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glume",
+          "check": "Narrow shiny-green sessile spikelet with acute apex; lower glume short-hairy below middle, lacking dorsal pit.",
+          "needed_view": "dissected lower glume",
+          "source": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awns",
+          "check": "FNA: true lemma awns 9–14 mm; do not mistake long rachis hairs for lemma awns.",
+          "needed_view": "intact lemma with millimeter scale",
+          "source": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "FNA records ligules 2.5–3 mm; verify an inner papery ligule rather than outer collar hairs.",
+          "needed_view": "opened collar",
+          "source": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "No glume macro adequate to check narrow shiny green vs broad dull glumes; reliable panicle-length measurement unavailable; can't separate from B. torreyana on these views.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Bothriochloa laguroides subsp. torreyana",
+          "Bothriochloa bladhii",
+          "Dichanthium sericeum"
+        ],
+        "comparison_notes": [
+          "FNA recognizes longspike silver bluestem separately from B. laguroides, whereas the older regional concept groups some silver bluestems.",
+          "B. laguroides typically has shorter 4–12(14) cm panicles, less robust often basal-leaved culms and blunter, glaucous sessile spikelets; these ranges overlap and must be checked on mature material.",
+          "Existing single Larry Allain/USGS flowering-head image does not show dissected shiny green glumes, exact rachis length or ligule."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 1,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "No glume macro adequate to check narrow shiny green vs broad dull glumes; reliable panicle-length measurement unavailable; can't separate from B. torreyana on these views.",
+        "risky_context": false,
+        "field_view": "Silvery narrow feathery panicle and upright grass culms; basal grassy tuft shown. Multiple close flowering head views are present.",
+        "source_taxonomic_aliases": [
+          "Bothriochloa saccharoides var. longipaniculata",
+          "Andropogon saccharoides var. longipaniculatus"
+        ],
+        "direct_reference": "https://floranorthamerica.org/Bothriochloa_longipaniculata"
+      }
+    },
+    {
+      "id": "eragrostis-curtipedicellata",
+      "scientific": "Eragrostis curtipedicellata",
+      "common": "Gummy Lovegrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 2,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-2-20261111.md",
+      "local_report_count": 2,
+      "warning_flags": [
+        "SINGLE_LICENSED_PHOTO",
+        "MISSING_VISCID_AXIS"
+      ],
+      "field_rule": "Research trial: Diffuse, broad open Eragrostis panicle on a perennial tuft, with a hair-fringed inner ligule per Hill Country and Kew GrassBase. The most meaningful discriminator is the sticky, viscid panicle axis and branch bases: the current photographs have not demonstrated stickiness, so no species-level confirmation is possible. Keep awn state unscored; compare nonglandular and glandular lovegrasses with mature spikelets.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "iNaturalist photo 737076545.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/737076545/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/737076545",
+          "original_source_page": "https://www.inaturalist.org/observations/401575636",
+          "creator": "sonoresmore",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "label": "Sticky lovegrass: open panicle with hand",
+          "caption": "Source-labeled sparsely branched flowering panicle in field context with hand for scale. This photograph does not prove the sticky or viscid panicle axis.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "eragrostis-curtipedicellata",
+          "role": "Open flowering panicle in field context",
+          "source_location_class": "SOURCE_LABELED_OBSERVATION_LOCALITY_NOT_CERTIFIED",
+          "exact_rights_evidence": "iNaturalist observation 401575636 contains photo 737076545 labeled Eragrostis curtipedicellata, with individual per-photo CC0 and creator sonoresmore; verified full 2048px original and SHA256 078e01efb9dc3bc9ce6aec4eb0bc768e242819cd9d2e1c15974aeed2cde5a0fd via original-source GitHub Actions run #43324053597. Original medium pixels and photo role inspected separately in Group B PR #200. No Hays voucher ID claim.",
+          "reuse_status": "PHOTO_SPECIFIC_CC0_SOURCE_LICENSE_VERIFIED_GENERAL_REFERENCE_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Source unchanged, display uses 1024px derivative.",
+          "original_sha256": "078e01efb9dc3bc9ce6aec4eb0bc768e242819cd9d2e1c15974aeed2cde5a0fd",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737076545/original.jpg"
+        },
+        {
+          "i": 1,
+          "image_filename": "iNaturalist photo 737076623.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/737076623/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/737076623",
+          "original_source_page": "https://www.inaturalist.org/observations/401575636",
+          "creator": "sonoresmore",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "label": "Sticky lovegrass: small spikelets beside fingers",
+          "caption": "Finger-scaled small reproductive branchlet; no calibrated measurement, sticky axis test, or independently verified local specimen.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "eragrostis-curtipedicellata",
+          "role": "Flowering branchlet and spikelets",
+          "source_location_class": "SOURCE_LABELED_OBSERVATION_LOCALITY_NOT_CERTIFIED",
+          "exact_rights_evidence": "iNaturalist observation 401575636 contains photo 737076623 labeled Eragrostis curtipedicellata, with individual per-photo CC0 and creator sonoresmore; verified full 2048px original and SHA256 741cc44a77e7180c42cd509ce1ee6555afb5f251d81451e981b3f7da0e57d28f via original-source GitHub Actions run #43324053597. Original medium pixels and photo role inspected separately in Group B PR #200. No Hays voucher ID claim.",
+          "reuse_status": "PHOTO_SPECIFIC_CC0_SOURCE_LICENSE_VERIFIED_GENERAL_REFERENCE_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Source unchanged, display uses 1024px derivative.",
+          "original_sha256": "741cc44a77e7180c42cd509ce1ee6555afb5f251d81451e981b3f7da0e57d28f",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737076623/original.jpg"
+        }
+      ],
+      "genus": "Eragrostis",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-2-20261111.md",
+          "external_flora_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "airy",
+                "basis": [
+                  "Open ovate panicle, often 30–45 cm long, with stiff spreading or ascending branches.",
+                  "Inner ligule a short fringe of hairs, not a distinct broad membrane."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [
+              {
+                "value": "tuft",
+                "basis": [
+                  "Open ovate panicle, often 30–45 cm long, with stiff spreading or ascending branches.",
+                  "Inner ligule a short fringe of hairs, not a distinct broad membrane."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "ligule": [
+              {
+                "value": "hairs",
+                "basis": [
+                  "Open ovate panicle, often 30–45 cm long, with stiff spreading or ascending branches.",
+                  "Inner ligule a short fringe of hairs, not a distinct broad membrane."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": []
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "panicle",
+          "check": "Open ovate panicle, often 30–45 cm long, with stiff spreading or ascending branches.",
+          "needed_view": "whole measured panicle",
+          "source": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "axis",
+          "check": "Glandular or viscid rachis and branch surfaces, sometimes sticky enough to catch particles; not shown conclusively in existing photos.",
+          "needed_view": "touch-safe close photo plus field note",
+          "source": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Mature narrow flattened 4–5 mm spikelets with several (4–10) florets; count and compare on ruler.",
+          "needed_view": "detached spikelet",
+          "source": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Inner ligule a short fringe of hairs, not a distinct broad membrane.",
+          "needed_view": "open inner collar",
+          "source": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "habit",
+          "check": "Hard-based perennial tuft; require rooted base before claiming perennial tuft in the observed plant.",
+          "needed_view": "rooted crown",
+          "source": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Crucial viscid/gummy panicle axis cannot be demonstrated; mature spikelet dimensions not visible.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Eragrostis minor",
+          "Eragrostis spectabilis",
+          "Eragrostis secundiflora"
+        ],
+        "comparison_notes": [
+          "Kew GrassBase describes a 30–45 cm open panicle with viscid stiff branches; the current two source-photo roles are only flowering panicle and branchlet.",
+          "Do not turn failure to SEE gummy material in a photograph into proof of its absence.",
+          "Compare especially E. minor (annual, crateriform glands), E. spectabilis and other open lovegrasses."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Crucial viscid/gummy panicle axis cannot be demonstrated; mature spikelet dimensions not visible.",
+        "risky_context": false,
+        "field_view": "Single open and diffuse lovegrass-like panicle image.",
+        "source_taxonomic_aliases": [],
+        "direct_reference": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A400988-1/general-information"
+      }
+    },
+    {
+      "id": "eragrostis-minor",
+      "scientific": "Eragrostis minor",
+      "common": "Little Lovegrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 6,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+      "local_report_count": 2,
+      "warning_flags": [
+        "SPARSE_PHOTO_EVIDENCE"
+      ],
+      "field_rule": "Research trial: Small usually annual tufted lovegrass with a spreading to contracted branched panicle; use a hand lens for tiny ciliate ligule and distinctive crateriform glands on pedicels, leaf margins or near nodes. Mature spikelets are usually many-flowered and lack long awns. The gallery photographs show habit and dry panicle but do not certify glands, lemma/palea separation or a Hays specimen.",
+      "hero_i": 2,
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Eragrostis 1ziarnek.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Eragrostis_1ziarnek.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_1ziarnek.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_1ziarnek.jpg",
+          "creator": "Krzysztof Ziarnek (Kenraiz)",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Little lovegrass: historical Commons reference",
+          "caption": "The original upload caption misspells the scientific name as 'Eragrosis minor'; Commons places the file with Eragrostis minor. Treat identification as source-labeled, not independently verified, and require true glume/lemma and gland/hair comparisons.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "eragrostis-minor",
+          "role": "Plant reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Original individual Wikimedia Commons file page inspected for named creator, exact CC license and source identity; no permission inferred from species-level galleries",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original file; responsive display sizing only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Eragrostis minor habit.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Eragrostis_minor_habit.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_minor_habit.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_minor_habit.jpg",
+          "creator": "Mark Marathon",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "label": "Little lovegrass: dry whole plant with basal growth",
+          "caption": "Dry, source-labeled Eragrostis minor whole plant with basal growth in sandy Australian conditions. The Commons upload identifies the plant; it is not an independently authenticated Hays County collection, and fine glands/hairs remain for microscopic comparison.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "eragrostis-minor",
+          "role": "Dry rooted growth habit",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRALIA",
+          "exact_rights_evidence": "Commons exact individual file artist/license verified by Group C source review Issue #70 #6837684240, Commons SHA1 metadata 54b6928830cf107963527b1209772abe9849b639, actual photo role reviewed; original image bytes not independently rehashed.",
+          "reuse_status": "SOURCE_IMAGE_RIGHTS_AND_CREATOR_CONFIRMED_GENERAL_PHOTO_NOT_LOCAL_VOUCHER",
+          "media_delivery": "ORIGINAL_EXTERNAL_HOSTING_PRESERVED_NO_REHOST",
+          "modifications": "No original image editing; remote display source requested in responsive format.",
+          "commons_original_sha1": "54b6928830cf107963527b1209772abe9849b639"
+        },
+        {
+          "i": 2,
+          "image_filename": "Eragrostis minor seedhead.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Eragrostis_minor_seedhead.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_minor_seedhead.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_minor_seedhead.jpg",
+          "creator": "Mark Marathon",
+          "license": "CC BY-SA 3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "label": "Little lovegrass: mature dry seedhead and spikelets",
+          "caption": "Source-labeled mature dry branching Eragrostis minor panicle, distinct from its whole-plant habit image, possibly photographed from the same individual. No floret-size or hidden gland character is assumed, and no Hays voucher determined.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "eragrostis-minor",
+          "role": "Mature branched flowering panicle",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRALIA",
+          "exact_rights_evidence": "Exact Commons author and CC BY-SA 3.0 confirmed by Group C Issue #70 #6837684240; Commons original metadata SHA1 0f134148f8aaca8d31b1095c0d5b945489d49001; visual role reviewed; independently rehashed source bytes not claimed.",
+          "reuse_status": "SOURCE_IMAGE_RIGHTS_AND_CREATOR_CONFIRMED_GENERAL_PHOTO_NOT_LOCAL_VOUCHER",
+          "media_delivery": "ORIGINAL_EXTERNAL_HOSTING_PRESERVED_NO_REHOST",
+          "modifications": "No original image editing; remote display source requested in responsive format.",
+          "commons_original_sha1": "0f134148f8aaca8d31b1095c0d5b945489d49001"
+        }
+      ],
+      "genus": "Eragrostis",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Eragrostis_minor",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "airy",
+                "basis": [
+                  "Usually annual tuft without persistent perennial innovations (FNA).",
+                  "Open to contracted ovate panicle 4–20 cm; many relatively stiff divergent branches."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [
+              {
+                "value": "tuft",
+                "basis": [
+                  "Usually annual tuft without persistent perennial innovations (FNA).",
+                  "Open to contracted ovate panicle 4–20 cm; many relatively stiff divergent branches."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "ligule": [
+              {
+                "value": "hairs",
+                "basis": [
+                  "Usually annual tuft without persistent perennial innovations (FNA).",
+                  "Open to contracted ovate panicle 4–20 cm; many relatively stiff divergent branches."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "none_obvious",
+                "basis": [
+                  "Usually annual tuft without persistent perennial innovations (FNA).",
+                  "Open to contracted ovate panicle 4–20 cm; many relatively stiff divergent branches."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Usually annual tuft without persistent perennial innovations (FNA).",
+          "needed_view": "rooted plant and growth stage",
+          "source": "https://floranorthamerica.org/Eragrostis_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "panicle",
+          "check": "Open to contracted ovate panicle 4–20 cm; many relatively stiff divergent branches.",
+          "needed_view": "complete head",
+          "source": "https://floranorthamerica.org/Eragrostis_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "True short hair-fringed ligule 0.2–0.5 mm (FNA).",
+          "needed_view": "inner collar at magnification",
+          "source": "https://floranorthamerica.org/Eragrostis_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glands",
+          "check": "Crateriform glands often on pedicel near tip, leaf margin and sometimes below nodes; distinguish from the viscid Eragrostis curtipedicellata axis.",
+          "needed_view": "macro of pedicel/margin/node",
+          "source": "https://floranorthamerica.org/Eragrostis_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Compressed multi-floret spikelets 4–7(11) mm; 7–12(20) florets and persistent paleas.",
+          "needed_view": "mature spikelet and palea separation",
+          "source": "https://floranorthamerica.org/Eragrostis_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Species identification requires mature glumes and lemmas, leaf glands/hairs, and precise spikelet measurement, not shown.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Eragrostis curtipedicellata",
+          "Eragrostis cilianensis",
+          "Eragrostis pilosa"
+        ],
+        "comparison_notes": [
+          "FNA: annual 10–45 cm, ciliate ligule about 0.2–0.5 mm, divergent panicle branches and spikelets usually 4–7 mm with 7–12 florets.",
+          "Crateriform glands can be present on pedicels, margins, nodes and/or lemmas; they are not invariably conspicuous in all photos.",
+          "Do not confuse a dry panicle with a fine-scale gland or a sterile awn measurement."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 3,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Species identification requires mature glumes and lemmas, leaf glands/hairs, and precise spikelet measurement, not shown.",
+        "risky_context": false,
+        "field_view": "Small weedy grass with open branched seedhead in disturbed bare ground.",
+        "source_taxonomic_aliases": [],
+        "direct_reference": "https://floranorthamerica.org/Eragrostis_minor"
+      }
+    },
+    {
+      "id": "stapfochloa-ciliata",
+      "scientific": "Stapfochloa ciliata",
+      "common": "Fringed Windmill Grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 5,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+      "local_report_count": 2,
+      "warning_flags": [],
+      "field_rule": "Research trial: Tufted fringed windmillgrass with about 2–5(7) distinct digitately placed, short one-sided flowering branches and conspicuously hairy lemmas. FNA under Chloris ciliata gives fertile lemma hairs about 0.5–1.5 mm and awns only 0.9–1.4 mm. The ligule can be absent or a tiny ciliate remnant, so this trial deliberately leaves both ligule and awn choices unknown instead of falsely excluding ambiguous collars and small awns.",
+      "hero_i": 1,
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "iNaturalist photo 364000073.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/364000073/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/364000073",
+          "original_source_page": "https://www.inaturalist.org/observations/205834944",
+          "creator": "Alan Weakley",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "label": "Fringed windmillgrass: many arching mature flowering heads",
+          "caption": "Numerous arching, narrow flowering racemes amid mixed grasses. This is a source-identified field reference, not proof that all heads share one rooted plant or that a Hays specimen has been confirmed.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "stapfochloa-ciliata",
+          "role": "Mature flowering-head field context",
+          "source_location_class": "SOURCE_IDENTIFIED_RESEARCH_GRADE_OBSERVATION_LOCALITY_NOT_CERTIFIED",
+          "exact_rights_evidence": "Original iNaturalist observation 205834944 per-PHOTO 364000073 API returned cc0, source taxon 'Stapfochloa ciliata' and named creator; original image decoded as full-resolution 2048-pixel source; original SHA256 ff815fa0633969d4008de581ee8e266c6715215a0feda30b6e74909e8cbe1595. Prior Group B PR #200 reviewed preview pixels for photo role. Wikimedia/independent botanist Hays specimen ID not claimed.",
+          "reuse_status": "PHOTO_SPECIFIC_CC0_SOURCE_LICENSE_VERIFIED_GENERAL_REFERENCE_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Original hosted file unmodified; site displays iNaturalist 1024px large derivative.",
+          "original_sha256": "ff815fa0633969d4008de581ee8e266c6715215a0feda30b6e74909e8cbe1595",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/364000073/original.jpg"
+        },
+        {
+          "i": 1,
+          "image_filename": "iNaturalist photo 248229079.jpeg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/248229079/large.jpeg",
+          "source_page": "https://www.inaturalist.org/photos/248229079",
+          "original_source_page": "https://www.inaturalist.org/observations/144608484",
+          "creator": "Cleveland Powell",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Stapfochloa ciliata: hairy curved flowering racemes beside fingers",
+          "caption": "Curved strongly hairy one-sided flowering racemes held against fingers for scale. Source-labeled Stapfochloa ciliata, but not a rooted growth habit, demonstrated collar or measured glume anatomy; distinguish from lookalike windmillgrasses using intact floral details.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "stapfochloa-ciliata",
+          "role": "Hairy one-sided curved flowering racemes close-up",
+          "source_location_class": "SOURCE_IDENTIFIED_RESEARCH_GRADE_OBSERVATION_NOT_CERTIFIED_HAYS_VOUCHER",
+          "exact_rights_evidence": "Exact iNaturalist photo ID 248229079 verified on source research-grade observation 144608484; per-image CC BY 4.0 license and creator Cleveland Powell established from individual GBIF media occurrence 4006718069, original 2048px image independently downloaded/decoded and SHA256 02b72215a168e9186be95d5fd877b18ff9e2da6dd819ec00b48159cc116faefc computed by read-only Group B Actions #43330748046. Image composition/role independently inspected in contact-sheet PR #200. Does not prove fine species discrimination or local specimen certification.",
+          "reuse_status": "PHOTO_SPECIFIC_CC_BY4_ORIGINAL_SHA_SOURCE_CLEARED_GENERAL_REFERENCE",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Original source bytes unmodified; large derivative rendered on website",
+          "original_sha256": "02b72215a168e9186be95d5fd877b18ff9e2da6dd819ec00b48159cc116faefc",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/248229079/original.jpeg",
+          "independent_license_version_source": "https://www.gbif.org/occurrence/4006718069"
+        }
+      ],
+      "genus": "Stapfochloa",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Chloris_ciliata",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "fingers",
+                "basis": [
+                  "FNA: 2–5(7) digitately arranged racemes mostly 3.5–6(8) cm.",
+                  "Fertile and second-sterile lemma awns about 0.9–1.4 mm; these are NOT 'long obvious awns' in the current key."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [
+              {
+                "value": "tuft",
+                "basis": [
+                  "FNA: 2–5(7) digitately arranged racemes mostly 3.5–6(8) cm.",
+                  "Fertile and second-sterile lemma awns about 0.9–1.4 mm; these are NOT 'long obvious awns' in the current key."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "ligule": [],
+            "awns": []
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "head",
+          "check": "FNA: 2–5(7) digitately arranged racemes mostly 3.5–6(8) cm.",
+          "needed_view": "whole head with count",
+          "source": "https://floranorthamerica.org/Chloris_ciliata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "florets",
+          "check": "One bisexual and two sterile florets; compare the enclosing second sterile floret shape.",
+          "needed_view": "detached spikelet with floret stack",
+          "source": "https://floranorthamerica.org/Chloris_ciliata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "lemma_hairs",
+          "check": "Fertile lemma keels and margins ciliate with 0.5–1.5 mm hairs, shorter than typical S. canterae.",
+          "needed_view": "fertile lemma microscope photo",
+          "source": "https://floranorthamerica.org/Chloris_ciliata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awn",
+          "check": "Fertile and second-sterile lemma awns about 0.9–1.4 mm; these are NOT 'long obvious awns' in the current key.",
+          "needed_view": "awn scaled against neighboring species",
+          "source": "https://floranorthamerica.org/Chloris_ciliata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "FNA: absent or very short (0.3–0.4 mm) ciliate ligule; do not force 'hairs' or 'membrane' for every individual.",
+          "needed_view": "inside collar",
+          "source": "https://floranorthamerica.org/Chloris_ciliata",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Exact hairy structures along rachis, sterile/terminal florets and ligule details still need close confirmation; other Chloris/Stapfochloa types occur locally.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Stapfochloa canterae",
+          "Chloris verticillata",
+          "Chloris cucullata"
+        ],
+        "comparison_notes": [
+          "FNA's 2003 treatment uses Chloris ciliata; accepted learner name Stapfochloa ciliata retained.",
+          "Current two photos show spreading ciliate racemes, not a dissected same-plant basal fertile and upper sterile lemma pair.",
+          "Against S. canterae compare shorter 3.5–6(8) cm racemes, smaller 1.8–2.8 mm fertile lemmas, shorter marginal hairs and shorter awns; species overlap cannot be resolved by digitate architecture alone."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Exact hairy structures along rachis, sterile/terminal florets and ligule details still need close confirmation; other Chloris/Stapfochloa types occur locally.",
+        "risky_context": false,
+        "field_view": "Clear several digitate/fingerlike and strongly curved flowering branches, plus scaled rachis and collar region; good diagnostic imagery.",
+        "source_taxonomic_aliases": [
+          "Chloris ciliata"
+        ],
+        "direct_reference": "https://floranorthamerica.org/Chloris_ciliata"
+      }
+    },
+    {
+      "id": "briza-minor",
+      "scientific": "Briza minor",
+      "common": "Little quaking-grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 6,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [],
+      "field_rule": "Research trial: An open panicle with thin dangling pedicels bearing tiny triangular to ovoid, layered quaking-grass spikelets; inspect an inner, relatively long papery ligule. Do not confuse the small 2–7 mm many-flowered spikelets with the much larger broadly oval Briza maxima or flattened oats. An upright whole photo does not prove a tufted basal crown, which stays unscored.",
+      "hero_i": 1,
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Briza minor (GBIF 6130824499).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_(GBIF_6130824499).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_(GBIF_6130824499).jpg",
+          "original_source_page": "https://www.gbif.org/occurrence/6130824499",
+          "creator": "kiwialli",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Little quakinggrass: GBIF source image",
+          "caption": "GBIF occurrence source-labeled as Briza minor; source locality and definitive specimen diagnosis not independently checked.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "briza-minor",
+          "role": "General plant reference",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Wikimedia Commons individual source-image page reviewed; named photographer and exact file CC license recorded",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original file unmodified; responsive display request only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Briza minor plant1 (6829036782) (2).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_plant1_(6829036782)_(2).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_plant1_(6829036782)_(2).jpg",
+          "original_source_page": "https://www.flickr.com/photos/73840284@N04/6829036782",
+          "creator": "Harry Rose / Macleay Grass Man",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "label": "Little quakinggrass: whole flowering plant (Australia)",
+          "caption": "Little quakinggrass — whole flowering plant with dangling spikelets (Australia; hand obscures roots).",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "briza-minor",
+          "role": "Whole flowering plant",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRALIA",
+          "exact_rights_evidence": "Merged photo-specific source/pixel/role/creator/license QA #167/#174/#182; exact Commons file and original license checked. Commons original SHA-1: 4fa481addf1c1ae1eca6a820d103723dea24cebd.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original source media unchanged; responsive display sizing only",
+          "commons_original_sha1": "4fa481addf1c1ae1eca6a820d103723dea24cebd"
+        },
+        {
+          "i": 2,
+          "image_filename": "Briza minor ligule1 (6975160643) (2).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_ligule1_(6975160643)_(2).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_ligule1_(6975160643)_(2).jpg",
+          "original_source_page": "https://www.flickr.com/photos/73840284@N04/6975160643",
+          "creator": "Harry Rose / Macleay Grass Man",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "label": "Little quakinggrass: opened membranous ligule (Australia)",
+          "caption": "Little quakinggrass — membranous ligule at the opened inner leaf junction (Australian source reference).",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "briza-minor",
+          "role": "Leaf junction and membranous ligule",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRALIA",
+          "exact_rights_evidence": "Merged photo-specific source/pixel/role/creator/license QA #167/#174/#182; exact Commons file and original license checked. Commons original SHA-1: 661b2dd0989e905b3952d463fc18d0d40ff4e50e.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original source media unchanged; responsive display sizing only",
+          "commons_original_sha1": "661b2dd0989e905b3952d463fc18d0d40ff4e50e"
+        },
+        {
+          "i": 3,
+          "image_filename": "Briza minor spikelet1 (6975159719) (2).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Briza_minor_spikelet1_(6975159719)_(2).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Briza_minor_spikelet1_(6975159719)_(2).jpg",
+          "original_source_page": "https://www.flickr.com/photos/73840284@N04/6975159719",
+          "creator": "Harry Rose / Macleay Grass Man",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "label": "Little quakinggrass: triangular spikelet close-up (Australia)",
+          "caption": "Little quakinggrass — close view of layered triangular spikelets beside fingers for rough scale (Australia).",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "briza-minor",
+          "role": "Layered triangular spikelets",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRALIA",
+          "exact_rights_evidence": "Merged photo-specific source/pixel/role/creator/license QA #167/#174/#182; exact Commons file and original license checked. Commons original SHA-1: ca3b28ff9b19cdf0f4a16dd828df895b6f82dd50.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original source media unchanged; responsive display sizing only",
+          "commons_original_sha1": "ca3b28ff9b19cdf0f4a16dd828df895b6f82dd50"
+        }
+      ],
+      "genus": "Briza",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Briza_minor",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "airy",
+                "basis": [
+                  "Open panicle, individual small triangular/ovoid spikelets suspended on thin long pedicels.",
+                  "Long papery membranous ligule 4–13 mm (FNA), source-photo ligule close-up available."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [],
+            "ligule": [
+              {
+                "value": "membrane",
+                "basis": [
+                  "Open panicle, individual small triangular/ovoid spikelets suspended on thin long pedicels.",
+                  "Long papery membranous ligule 4–13 mm (FNA), source-photo ligule close-up available."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "none_obvious",
+                "basis": [
+                  "Open panicle, individual small triangular/ovoid spikelets suspended on thin long pedicels.",
+                  "Long papery membranous ligule 4–13 mm (FNA), source-photo ligule close-up available."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "head",
+          "check": "Open panicle, individual small triangular/ovoid spikelets suspended on thin long pedicels.",
+          "needed_view": "full head and one pedicel closeup",
+          "source": "https://floranorthamerica.org/Briza_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Long papery membranous ligule 4–13 mm (FNA), source-photo ligule close-up available.",
+          "needed_view": "opened leaf junction with ruler",
+          "source": "https://floranorthamerica.org/Briza_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Mostly 3–4 mm layered triangular spikelets with 4–7 florets (broader extremes exist).",
+          "needed_view": "flat face on millimeter scale",
+          "source": "https://floranorthamerica.org/Briza_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "comparison",
+          "check": "Briza maxima spikelets broader and commonly larger, distinct from smaller triangular B. minor.",
+          "needed_view": "matched spikelets side-by-side",
+          "source": "https://floranorthamerica.org/Briza_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awn",
+          "check": "No conspicuous long awns on intact mature spikelets.",
+          "needed_view": "intact floret macro",
+          "source": "https://floranorthamerica.org/Briza_minor",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "No scaled multi-floret dissection or ligule measurements; only one Hays record.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Briza maxima",
+          "Chasmanthium latifolium",
+          "Bromus japonicus"
+        ],
+        "comparison_notes": [
+          "FNA: annual with 4–13 mm membranous ligule, slender 4–12 mm pedicels, spikelets (2)3–4(7) mm with 4–7(13) florets.",
+          "An actual approved ligule close-up exists, so the membrane state is more strongly supported than most provisional grasses.",
+          "Other small panicles with hanging spikelets can be mistaken for this from a distance; inspect the broadly triangular layered spikelet face."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 4,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "No scaled multi-floret dissection or ligule measurements; only one Hays record.",
+        "risky_context": false,
+        "field_view": "Small nearly triangular pendulous spikelets on fine pedicels and low annual grassy plant, compatible with little quaking grass.",
+        "source_taxonomic_aliases": [],
+        "direct_reference": "https://floranorthamerica.org/Briza_minor"
+      }
+    },
+    {
+      "id": "elymus-macgregorii",
+      "scientific": "Elymus macgregorii",
+      "common": "MacGregor's Wildrye",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 6,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [],
+      "field_rule": "Research trial: Early wildrye forms an erect true spike, commonly with two outward-spreading spikelets at most rachis nodes; the long awns are on real glumes and lemmas, not hairs. FNA lists dark purplish-black auricles often present, short inner ligules, and earlier spring flowering than E. virginicus, but those features vary. The three source-labeled pictures alone cannot distinguish hybrids or confirm an independent Hays plant.",
+      "hero_i": 1,
+      "traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "iNaturalist photo 673153394.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/673153394/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/673153394",
+          "original_source_page": "https://www.inaturalist.org/observations/368549870",
+          "creator": "Casey Harless",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "label": "MacGregor's wildrye: attached spike and living foliage",
+          "caption": "Upright flowering wildrye spike with attached foliage. A source-labeled species reference, not an independently measured distinction from Elymus virginicus or a Hays County voucher.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "elymus-macgregorii",
+          "role": "Upright flowering spike and foliage",
+          "source_location_class": "SOURCE_LABELED_OBSERVATION_LOCALITY_NOT_CERTIFIED",
+          "exact_rights_evidence": "iNaturalist observation 368549870 contains photo 673153394 labeled Elymus macgregorii, with individual per-photo CC0 and creator Casey Harless; verified full 2048px original and SHA256 3c7fe14c85b30f2ea92c71b342d823f57812188a6139ed050a7e4242d87145e8 via original-source GitHub Actions run #43324053597. Original medium pixels and photo role inspected separately in Group B PR #200. No Hays voucher ID claim.",
+          "reuse_status": "PHOTO_SPECIFIC_CC0_SOURCE_LICENSE_VERIFIED_GENERAL_REFERENCE_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Source unchanged, display uses 1024px derivative.",
+          "original_sha256": "3c7fe14c85b30f2ea92c71b342d823f57812188a6139ed050a7e4242d87145e8",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/673153394/original.jpg"
+        },
+        {
+          "i": 1,
+          "image_filename": "iNaturalist photo 737334737.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/737334737/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/737334737",
+          "original_source_page": "https://www.inaturalist.org/observations/401708293",
+          "creator": "Bryan Connolly",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Elymus macgregorii: mature long-awned spike",
+          "caption": "Close view of mature long-awned spike from source-labeled Elymus macgregorii. Useful comparison with existing leafy green flowering shoot, but no independently measured glume awns or authenticated distinction from E. virginicus.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "elymus-macgregorii",
+          "role": "Mature long-awned flowering spike close-up",
+          "source_location_class": "SOURCE_IDENTIFIED_RESEARCH_GRADE_OBSERVATION_NOT_CERTIFIED_HAYS_VOUCHER",
+          "exact_rights_evidence": "Exact iNaturalist photo ID 737334737 verified on source research-grade observation 401708293; per-image CC BY 4.0 license and creator Bryan Connolly established from individual GBIF media occurrence 6552644725, original 2048px image independently downloaded/decoded and SHA256 3b932f6c5373f308a53790da5d01b0ba54c0b2dfa6792823af441dd22b02f14e computed by read-only Group B Actions #43330748046. Image composition/role independently inspected in contact-sheet PR #200. Does not prove fine species discrimination or local specimen certification.",
+          "reuse_status": "PHOTO_SPECIFIC_CC_BY4_ORIGINAL_SHA_SOURCE_CLEARED_GENERAL_REFERENCE",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Original source bytes unmodified; large derivative rendered on website",
+          "original_sha256": "3b932f6c5373f308a53790da5d01b0ba54c0b2dfa6792823af441dd22b02f14e",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/737334737/original.jpg",
+          "independent_license_version_source": "https://www.gbif.org/occurrence/6552644725"
+        },
+        {
+          "i": 2,
+          "image_filename": "iNaturalist photo 694889625.jpg",
+          "src": "https://inaturalist-open-data.s3.amazonaws.com/photos/694889625/large.jpg",
+          "source_page": "https://www.inaturalist.org/photos/694889625",
+          "original_source_page": "https://www.inaturalist.org/observations/379861752",
+          "creator": "Harry Podschwit",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Elymus macgregorii: dry mature seedhead",
+          "caption": "Dry mature seedhead from a separately source-labeled Elymus macgregorii observation. Seasonal contrast with fresh and close long-awned spikes; no inferred leaf collar, exact spikelet dimensions or independent Hays voucher.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "elymus-macgregorii",
+          "role": "Dry mature flowering/seed head, seasonal contrast",
+          "source_location_class": "SOURCE_IDENTIFIED_RESEARCH_GRADE_OBSERVATION_NOT_CERTIFIED_HAYS_VOUCHER",
+          "exact_rights_evidence": "Exact iNaturalist photo ID 694889625 verified on source research-grade observation 379861752; per-image CC BY 4.0 license and creator Harry Podschwit established from individual GBIF media occurrence 6441932927, original 2048px image independently downloaded/decoded and SHA256 81d03d3c2cd2bd8a3eb78ea4eb75e429566c8f46070b8be45ef267e1a3332aef computed by read-only Group B Actions #43330748046. Image composition/role independently inspected in contact-sheet PR #200. Does not prove fine species discrimination or local specimen certification.",
+          "reuse_status": "PHOTO_SPECIFIC_CC_BY4_ORIGINAL_SHA_SOURCE_CLEARED_GENERAL_REFERENCE",
+          "media_delivery": "REMOTE_INAT_OPEN_DATA_ORIGINAL_PRESERVED_NOT_REHOSTED",
+          "modifications": "Original source bytes unmodified; large derivative rendered on website",
+          "original_sha256": "81d03d3c2cd2bd8a3eb78ea4eb75e429566c8f46070b8be45ef267e1a3332aef",
+          "original_media_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/694889625/original.jpg",
+          "independent_license_version_source": "https://www.gbif.org/occurrence/6441932927"
+        }
+      ],
+      "genus": "Elymus",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Elymus_macgregorii",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "spike",
+                "basis": [
+                  "Erect exserted spike 4–12 cm, with mostly two spikelets at rachis nodes and divergent spikelets.",
+                  "Glumes commonly long-awned (15–20 mm) and lemmas (20–30 mm)."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [
+              {
+                "value": "tuft",
+                "basis": [
+                  "Erect exserted spike 4–12 cm, with mostly two spikelets at rachis nodes and divergent spikelets.",
+                  "Glumes commonly long-awned (15–20 mm) and lemmas (20–30 mm)."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "ligule": [
+              {
+                "value": "membrane",
+                "basis": [
+                  "Erect exserted spike 4–12 cm, with mostly two spikelets at rachis nodes and divergent spikelets.",
+                  "Glumes commonly long-awned (15–20 mm) and lemmas (20–30 mm)."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "long",
+                "basis": [
+                  "Erect exserted spike 4–12 cm, with mostly two spikelets at rachis nodes and divergent spikelets.",
+                  "Glumes commonly long-awned (15–20 mm) and lemmas (20–30 mm)."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "head",
+          "check": "Erect exserted spike 4–12 cm, with mostly two spikelets at rachis nodes and divergent spikelets.",
+          "needed_view": "whole spike plus enlarged rachis nodes",
+          "source": "https://floranorthamerica.org/Elymus_macgregorii",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awns",
+          "check": "Glumes commonly long-awned (15–20 mm) and lemmas (20–30 mm).",
+          "needed_view": "undamaged measured floret",
+          "source": "https://floranorthamerica.org/Elymus_macgregorii",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "auricles",
+          "check": "Often dark purplish-black auricles 2–3 mm fresh; color can be brown in peripheral populations.",
+          "needed_view": "fresh leaf collar",
+          "source": "https://floranorthamerica.org/Elymus_macgregorii",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Very short membrane under 1 mm (FNA).",
+          "needed_view": "opened inner collar",
+          "source": "https://floranorthamerica.org/Elymus_macgregorii",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glumes",
+          "check": "Firm narrow-linear glumes, usually 4–5 veins, base firm and hard to interpret when detached.",
+          "needed_view": "glume with ruler and veins",
+          "source": "https://floranorthamerica.org/Elymus_macgregorii",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "phenology",
+          "check": "Often blooms earlier in spring than sympatric E. virginicus; phenology must support, never solely decide identification.",
+          "needed_view": "dated comparison on local plants",
+          "source": "https://floranorthamerica.org/Elymus_macgregorii",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Confirmation still required: First choice for observer permission due to 12 source photographs; request scale-based glume and spike measurements and habitat context.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Elymus virginicus",
+          "Elymus glabriflorus",
+          "Elymus hystrix"
+        ],
+        "comparison_notes": [
+          "FNA: nonrhizomatous cespitose perennial, usually 2 spikelets at each spike node, spikelets 10–15 mm and 3–4 florets.",
+          "FNA: glume awns commonly 15–20 mm, lemma awns commonly 20–30 mm; these should be seen on an intact mature spike.",
+          "FNA notes hybridization with E. virginicus and intermediates toward var. jejunus, so auricle hue and spike node count alone are not definitive."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 3,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Confirmation still required: First choice for observer permission due to 12 source photographs; request scale-based glume and spike measurements and habitat context.",
+        "risky_context": false,
+        "field_view": null,
+        "source_taxonomic_aliases": [],
+        "direct_reference": "https://floranorthamerica.org/Elymus_macgregorii"
+      }
+    },
+    {
+      "id": "panicum-dichotomiflorum",
+      "scientific": "Panicum dichotomiflorum",
+      "common": "Smooth Witchgrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 5,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [],
+      "field_rule": "Research trial: Broad loose open fall-panicum panicle on geniculate or spreading green stems, with no long lemma awns. A tiny ciliate membrane may appear as a hair ring; both inner-ligule answers are accepted rather than treating one photographic interpretation as a hard conflict. Do not code bent stems as stolons: FNA reports rooting at lower nodes especially when in water, but this is not proof of a true runner. Compare actual glume proportions and pedicel arrangement with witchgrass and other Panicum.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Panicum dichotomiflorum sl37.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum_dichotomiflorum_sl37.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_sl37.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_sl37.jpg",
+          "creator": "Stefan.lefnaer",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Fall panicum: panicle reference (Austria)",
+          "caption": "Source-identified Austrian specimen. Do not confuse with a separate Commons fall-panicum photo series disputed as Echinochloa crus-galli. Ligule and mature floret details still need verification.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "panicum-dichotomiflorum",
+          "role": "Open panicle",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Original individual Wikimedia Commons file page inspected for named creator, exact CC license and source identity; no permission inferred from species-level galleries",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original file; responsive display sizing only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Panicum dichotomiflorum plant (12).jpeg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Panicum_dichotomiflorum_plant_(12).jpeg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_plant_(12).jpeg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Panicum_dichotomiflorum_plant_(12).jpeg",
+          "creator": "stephen (iNaturalist schizoform)",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0/",
+          "label": "Fall panicgrass: spreading leafy shoots in wet habitat",
+          "caption": "Spreading green vegetative stems and leaves at a wet-site bank in source-labeled Panicum dichotomiflorum. Rooted crown is obscured, and fine collar characters are not independently confirmed.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "panicum-dichotomiflorum",
+          "role": "Spreading green vegetative foliage",
+          "source_location_class": "SOURCE_LABELED_WET_SITE_NONLOCALITY_UNVERIFIED",
+          "exact_rights_evidence": "Wikimedia Commons individual-file artist and license/version, species ID, exact original-file SHA1 metadata d85aeafec92d7e802e776e407ba63d03d9603f4f and distinct-source/hash/URL check verified in read-only Group C source-gate #203 (Actions #43319670993). Actual pictured role inspected by Group C #167/#174/#177/#182/#186. Commons metadata SHA1 not independently recomputed original image binary; no local specimen ID signoff.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original image unchanged; browser requests responsive width.",
+          "commons_original_sha1": "d85aeafec92d7e802e776e407ba63d03d9603f4f"
+        }
+      ],
+      "genus": "Panicum",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Panicum_dichotomiflorum",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "airy",
+                "basis": [
+                  "Very open lax 4–40 cm panicle with stiff fine spreading branches and short 3-angled pedicels.",
+                  "Ciliate short membrane and hairs may present visually as a fringe; do not equate ligule hairs with node hairs."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [],
+            "ligule": [
+              {
+                "value": "membrane",
+                "basis": [
+                  "Very open lax 4–40 cm panicle with stiff fine spreading branches and short 3-angled pedicels.",
+                  "Ciliate short membrane and hairs may present visually as a fringe; do not equate ligule hairs with node hairs."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              },
+              {
+                "value": "hairs",
+                "basis": [
+                  "Very open lax 4–40 cm panicle with stiff fine spreading branches and short 3-angled pedicels.",
+                  "Ciliate short membrane and hairs may present visually as a fringe; do not equate ligule hairs with node hairs."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "none_obvious",
+                "basis": [
+                  "Very open lax 4–40 cm panicle with stiff fine spreading branches and short 3-angled pedicels.",
+                  "Ciliate short membrane and hairs may present visually as a fringe; do not equate ligule hairs with node hairs."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "panicle",
+          "check": "Very open lax 4–40 cm panicle with stiff fine spreading branches and short 3-angled pedicels.",
+          "needed_view": "whole panicle/branch insertion",
+          "source": "https://floranorthamerica.org/Panicum_dichotomiflorum",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Ciliate short membrane and hairs may present visually as a fringe; do not equate ligule hairs with node hairs.",
+          "needed_view": "opened true inner collar",
+          "source": "https://floranorthamerica.org/Panicum_dichotomiflorum",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "glumes",
+          "check": "Lower glume 0.6–1.2 mm, about one-quarter to one-third spikelet, upper glume nearly as long as spikelet.",
+          "needed_view": "isolated ripe spikelet",
+          "source": "https://floranorthamerica.org/Panicum_dichotomiflorum",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "habit",
+          "check": "Often annual, decumbent-to-ascending, may root at nodes in wet conditions; no true stolon assumed.",
+          "needed_view": "rooted base and stems",
+          "source": "https://floranorthamerica.org/Panicum_dichotomiflorum",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awns",
+          "check": "Awnless mature Panicum-type paired florets; anthers/stigmas do not count as awns.",
+          "needed_view": "whole intact spikelet",
+          "source": "https://floranorthamerica.org/Panicum_dichotomiflorum",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Confirmation still required: Permission to inspect source image or separate voucher; macro of ligule and mature floret plus habitat.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Panicum capillare",
+          "Panicum hallii",
+          "Janochloa antidotalis"
+        ],
+        "comparison_notes": [
+          "FNA: loose 4–40 cm panicles with often sparse spikelets; narrow elliptical spikelets 1.8–3.8 mm, lower glume about 1/4–1/3 spikelet length.",
+          "Regional Flora describes 0.5–1 mm membranous ligule with cilia about 2 mm; UC IPM illustrates a fringe of white hairs; do not split these as mutually exclusive specimens.",
+          "Source photos show airy panicle and vegetative leaves, not verified detached florets or soil-line rooting."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Confirmation still required: Permission to inspect source image or separate voucher; macro of ligule and mature floret plus habitat.",
+        "risky_context": false,
+        "field_view": null,
+        "source_taxonomic_aliases": [
+          "Leptoloma dichotomiflorum"
+        ],
+        "direct_reference": "https://floranorthamerica.org/Panicum_dichotomiflorum"
+      }
+    },
+    {
+      "id": "sclerochloa-dura",
+      "scientific": "Sclerochloa dura",
+      "common": "hardgrass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 6,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [],
+      "field_rule": "Research trial: Tiny often matted hardgrass with heavily overlapping leaves and a short crowded racemose head that may partly remain inside the upper sheath. It is NOT a Poa-style open panicle nor necessarily a true unbranched spike. The short smooth papery ligule and blunt smooth lemma tips contrast with Poa annua; current photos include a collar and separated reproductive units, but the local record is not independently specimen-confirmed.",
+      "hero_i": 2,
+      "traits": {
+        "head": [
+          "compact"
+        ],
+        "habit": [],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Sclerochloa dura sl31.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sclerochloa_dura_sl31.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl31.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl31.jpg",
+          "creator": "Stefan.lefnaer",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Hardgrass: low habit beside path (Austria)",
+          "caption": "Vienna path-side plant from photographer's self-labeled taxon. No Hays specimen verification or precise glume/ligule measurement.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sclerochloa-dura",
+          "role": "Whole plant habit",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Original individual Wikimedia Commons file page inspected for named creator, exact CC license and source identity; no permission inferred from species-level galleries",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original file; responsive display sizing only"
+        },
+        {
+          "i": 1,
+          "image_filename": "Sclerochloa dura sl30.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sclerochloa_dura_sl30.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl30.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl30.jpg",
+          "creator": "Stefan.lefnaer",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Hardgrass: second habit view (Austria)",
+          "caption": "A nearby view of the same Austrian collection area; overlapping habit evidence, not a second independent taxon identification.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sclerochloa-dura",
+          "role": "Whole plant context",
+          "source_location_class": "NONLOCAL_REFERENCE",
+          "exact_rights_evidence": "Original individual Wikimedia Commons file page inspected for named creator, exact CC license and source identity; no permission inferred from species-level galleries",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "No edits to original file; responsive display sizing only"
+        },
+        {
+          "i": 2,
+          "image_filename": "Sclerochloa dura (Europa-Hartgras) IMG 0496.JPG",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sclerochloa_dura_(Europa-Hartgras)_IMG_0496.JPG?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_(Europa-Hartgras)_IMG_0496.JPG",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_(Europa-Hartgras)_IMG_0496.JPG",
+          "creator": "HermannSchachner",
+          "license": "CC0 1.0",
+          "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "label": "Hardgrass: fresh green, compact one-sided flowering heads (Austria)",
+          "caption": "Source-labeled Austrian plant, with closely crowded green reproductive heads and foliage. Not isolated or measured glumes and not a Hays field specimen.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sclerochloa-dura",
+          "role": "Green flowering heads and overlapping spikelets",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRIA",
+          "exact_rights_evidence": "Individual Commons original image page: own photograph by HermannSchachner, 10 May 2016 Austria, explicit CC0 1.0. Actual preview photo/role reviewed in Issue #70 comment 6838239101.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original remote photograph preserved; no Hays edits, only responsive sizing"
+        },
+        {
+          "i": 3,
+          "image_filename": "Sclerochloa dura seeds.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sclerochloa_dura_seeds.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_seeds.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_seeds.jpg",
+          "creator": "Steve Hurst (USDA-NRCS PLANTS)",
+          "license": "US public domain",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "label": "Hardgrass: separated seed and floral units with 1-mm scale (USDA)",
+          "caption": "Four separate reproductive units against a blue background and a 1-mm scale; not all necessarily naked mature seeds. Original USDA-NRCS photograph; no Hays specimen ID certification.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sclerochloa-dura",
+          "role": "Separated reproductive units with scale",
+          "source_location_class": "NONLOCAL_REFERENCE_USDA",
+          "exact_rights_evidence": "Individual Commons file credits Steve Hurst / USDA-NRCS PLANTS, original image scdu2_003_ahp.tif, US-federal-public-domain rights. Actual preview and careful role reviewed in Issue #70 comment 6838239101.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original remote photograph preserved; no Hays edits, only responsive sizing"
+        },
+        {
+          "i": 4,
+          "image_filename": "Sclerochloa dura sl81.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Sclerochloa_dura_sl81.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl81.jpg",
+          "original_source_page": "https://commons.wikimedia.org/wiki/File:Sclerochloa_dura_sl81.jpg",
+          "creator": "Stefan.lefnaer",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "label": "Hardgrass: leaf collar with membranous ligule (Austria)",
+          "caption": "Opened leaf blade–sheath junction with short membranous ligule and visible reference scale. Austrian source-labeled teaching photo, not a verified local specimen or measurement of a Hays plant.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "sclerochloa-dura",
+          "role": "Leaf blade–sheath collar and ligule",
+          "source_location_class": "NONLOCAL_REFERENCE_AUSTRIA",
+          "exact_rights_evidence": "Exact Commons original file page identifies Stefan.lefnaer as original author (24 Apr 2019 Vienna-Floridsdorf), CC BY-SA 4.0, inspected source image role in Issue #70 comment 6837688046.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original remote photograph preserved; no Hays edits, only responsive sizing"
+        }
+      ],
+      "genus": "Sclerochloa",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-6-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Sclerochloa_dura",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "compact",
+                "basis": [
+                  "Low nearly prostrate annual, plants often matted with overlapping leaves but no verified stolon system.",
+                  "Crowded short raceme (1–4 cm), sometimes enclosed in upper leaf sheath; not a loose branched Poa panicle."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [],
+            "ligule": [
+              {
+                "value": "membrane",
+                "basis": [
+                  "Low nearly prostrate annual, plants often matted with overlapping leaves but no verified stolon system.",
+                  "Crowded short raceme (1–4 cm), sometimes enclosed in upper leaf sheath; not a loose branched Poa panicle."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "none_obvious",
+                "basis": [
+                  "Low nearly prostrate annual, plants often matted with overlapping leaves but no verified stolon system.",
+                  "Crowded short raceme (1–4 cm), sometimes enclosed in upper leaf sheath; not a loose branched Poa panicle."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Low nearly prostrate annual, plants often matted with overlapping leaves but no verified stolon system.",
+          "needed_view": "whole plant with ruler and lifted crown",
+          "source": "https://floranorthamerica.org/Sclerochloa_dura",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "head",
+          "check": "Crowded short raceme (1–4 cm), sometimes enclosed in upper leaf sheath; not a loose branched Poa panicle.",
+          "needed_view": "head removed from sheath",
+          "source": "https://floranorthamerica.org/Sclerochloa_dura",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Glabrous acute membranous ligule usually 0.7–2 mm.",
+          "needed_view": "actual collar closeup",
+          "source": "https://floranorthamerica.org/Sclerochloa_dura",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelets",
+          "check": "Usually 3–4(7) florets, spikelets often 5–12 mm, stout unequal glumes.",
+          "needed_view": "dissected spikelet with ruler",
+          "source": "https://floranorthamerica.org/Sclerochloa_dura",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "lemma",
+          "check": "Blunt, essentially smooth glabrous lemma, unlike many hairy-veined Poa annua lemmas.",
+          "needed_view": "lemma face with backlight",
+          "source": "https://floranorthamerica.org/Sclerochloa_dura",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "No scale for multi-flowered spikelets, ligule or glume/lemma nerve count.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Poa annua",
+          "Poa arachnifera",
+          "Sphenopholis obtusata"
+        ],
+        "comparison_notes": [
+          "FNA: culms 2–15(30) cm, racemes 1–4(5) cm, ligules usually 0.7–2 mm, often heavily overlapping leaf blades.",
+          "FNA: spikelets usually 5–12 mm and 3–4 florets; compare the smooth blunt glabrous lemma to Poa annua's often silky or crisp-hairy veins.",
+          "Although FNA describes matted plants, code habit unknown: no evidence of rooted stolons or low node-rooting appropriate to the Lab's mat option."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 5,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "No scale for multi-flowered spikelets, ligule or glume/lemma nerve count.",
+        "risky_context": false,
+        "field_view": "Small low grass with short dense one-sided green inflorescence spikes in disturbed ground.",
+        "source_taxonomic_aliases": [
+          "Cynosurus durus",
+          "Poa dura"
+        ],
+        "direct_reference": "https://floranorthamerica.org/Sclerochloa_dura"
+      }
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "common": "Paraguayan windmill grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 5,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [],
+      "field_rule": "Research trial: Tufted Paraguayan windmillgrass bearing 2–9 digitate/subdigitate racemes that may curve downward. Unlike tiny ciliate or absent-ligule S. ciliata, FNA under Chloris canterae reports a short erose membranous ligule. Distinguish with the comparatively longer 3–14 cm racemes, longer 1.5–3 mm fertile-lemma hairs and 2.4–5.5 mm lemma awns, not the shared finger-like outline. Leave awn choice unscored: this Lab has no precise 2–6 mm short-awn option.",
+      "hero_i": 0,
+      "traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Chloris canterae (20666772411).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Chloris%20canterae%20(20666772411).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Chloris_canterae_(20666772411).jpg",
+          "original_source_page": "https://www.flickr.com/photos/92252798@N07/20666772411/",
+          "creator": "Dick Culbert",
+          "license": "CC BY 2.0",
+          "license_url": "https://creativecommons.org/licenses/by/2.0/",
+          "label": "Canter's windmillgrass: curved ciliate racemes (Argentina)",
+          "caption": "Source-labeled plant (under Chloris canterae) with long arching racemes and white hairs; nonlocal field reference, not certified Hays material.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "stapfochloa-canterae",
+          "role": "Complete ciliate flowering-head racemes",
+          "source_location_class": "NONLOCAL_REFERENCE_ARGENTINA",
+          "exact_rights_evidence": "Exact Commons CC BY 2.0 individual photo by Dick Culbert, original Flickr reviewed by FlickreviewR on 2016-07-13.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Source photo unmodified; 900px responsive Commons display.",
+          "source_original_sha1": "f0643334d94fc4574c978984fddac2a8addbefe5"
+        },
+        {
+          "i": 1,
+          "image_filename": "Chloriscanterai.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Chloriscanterai.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Chloriscanterai.jpg",
+          "original_source_page": "https://plants.usda.gov/java/largeImage?imageID=chca6_002_ahp.tif",
+          "creator": "Jose Hernandez / USDA-ARS",
+          "license": "US public domain",
+          "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "label": "Canter's windmillgrass: three spikelets with 2-mm scale (Uruguay)",
+          "caption": "Original USDA-ARS educational photograph of three detached spikelets and awns with 2-mm scale; original source uses Chloris canterai spelling. Do not infer same Hays specimen.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "stapfochloa-canterae",
+          "role": "Separated awned spikelets and scale",
+          "source_location_class": "NONLOCAL_REFERENCE_URUGUAY",
+          "exact_rights_evidence": "USDA Agricultural Research Service exact image page labels Jose Hernandez and U.S. federal public domain.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Source photo unmodified; 900px responsive Commons display.",
+          "source_original_sha1": "fd5c0f6325dfeab72cb9370e6ce4e69db02d2b3f"
+        }
+      ],
+      "genus": "Stapfochloa",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-5-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Chloris_canterae",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "fingers",
+                "basis": [
+                  "2–9 digitate racemes 3–14 cm; count from one flowering stem and compare short S. ciliata racemes.",
+                  "FNA describes an erose membrane about 0.5 mm; don't confuse long hairs at the blade base with the true inner ligule."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [
+              {
+                "value": "tuft",
+                "basis": [
+                  "2–9 digitate racemes 3–14 cm; count from one flowering stem and compare short S. ciliata racemes.",
+                  "FNA describes an erose membrane about 0.5 mm; don't confuse long hairs at the blade base with the true inner ligule."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "ligule": [
+              {
+                "value": "membrane",
+                "basis": [
+                  "2–9 digitate racemes 3–14 cm; count from one flowering stem and compare short S. ciliata racemes.",
+                  "FNA describes an erose membrane about 0.5 mm; don't confuse long hairs at the blade base with the true inner ligule."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": []
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "head",
+          "check": "2–9 digitate racemes 3–14 cm; count from one flowering stem and compare short S. ciliata racemes.",
+          "needed_view": "whole head with metric ruler",
+          "source": "https://floranorthamerica.org/Chloris_canterae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "FNA describes an erose membrane about 0.5 mm; don't confuse long hairs at the blade base with the true inner ligule.",
+          "needed_view": "opened collar",
+          "source": "https://floranorthamerica.org/Chloris_canterae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "lemma_hairs",
+          "check": "Fertile lemma has long conspicuous 1.5–3 mm hairs along margins and keel, compared with typical 0.5–1.5 mm S. ciliata.",
+          "needed_view": "paired flattened fertile lemmas",
+          "source": "https://floranorthamerica.org/Chloris_canterae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "awn",
+          "check": "Fertile lemma awns 2.4–5.5 mm; too short for 'long obvious' but sometimes obvious at macro scale, so unknown in four-question UI.",
+          "needed_view": "fertile lemma awn with 1-mm reference",
+          "source": "https://floranorthamerica.org/Chloris_canterae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "sterile_florets",
+          "check": "Two or occasionally three distal sterile florets, second floret broadened distally and awned.",
+          "needed_view": "isolated and separated floret stack",
+          "source": "https://floranorthamerica.org/Chloris_canterae",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Precise fertile/sterile floret/awn comparison against Stapfochloa ciliata needs formal measurement.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Stapfochloa ciliata",
+          "Chloris verticillata",
+          "Chloris cucullata"
+        ],
+        "comparison_notes": [
+          "FNA Chloris canterae has 2–9 digitately grouped branches 3–14 cm long, lowest lemma 2.7–4.2 mm, margins/keel conspicuously hairy.",
+          "FNA second sterile floret awns about 1.5–3.5 mm; differentiation from S. ciliata requires actual fertile and sterile florets, not only a field photograph.",
+          "Modern name Stapfochloa canterae accepted by Kew; source photo under Chloris spelling is taxonomic synonym, not mistaken species."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 2,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Precise fertile/sterile floret/awn comparison against Stapfochloa ciliata needs formal measurement.",
+        "risky_context": false,
+        "field_view": "Very useful image set: ciliate racemes, culm node/ligule, detached spikelets and metric ruler in frame.",
+        "source_taxonomic_aliases": [
+          "Chloris canterae"
+        ],
+        "direct_reference": "https://floranorthamerica.org/Chloris_canterae"
+      }
+    },
+    {
+      "id": "janochloa-antidotalis",
+      "scientific": "Janochloa antidotalis",
+      "common": "blue panic grass",
+      "trial": true,
+      "admission_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "source_candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+      "range": "UNVERIFIED",
+      "source_packet": 2,
+      "source_location": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-2-20261111.md",
+      "local_report_count": 1,
+      "warning_flags": [
+        "GBIF_HIGHERRANK_DO_NOT_REPLACE_NAME"
+      ],
+      "field_rule": "Research trial: Robust blue panicgrass with an open to somewhat contracted panicle and knotted short rhizomes, not simply an airy annual roadside Panicum. The stem nodes are commonly swollen and can be hairy; these NODE hairs are NOT the true ligule. A short ligule may have a ciliate margin, so either hairs or a tiny membrane can be a reasonable first-look category. Compare mature 2.4–3.4 mm spikelets, rhizomes and florets with Panicum dichotomiflorum before proposing a Hays occurrence; forage planting remains unresolved.",
+      "hero_i": 1,
+      "traits": {
+        "head": [
+          "airy",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [
+          "hairs",
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "photos": [
+        {
+          "i": 0,
+          "image_filename": "Starr 050518-1617 Panicum antidotale.jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr%20050518-1617%20Panicum%20antidotale.jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr_050518-1617_Panicum_antidotale.jpg",
+          "original_source_page": "http://www.starrenvironmental.com/plants/images/image/?q=050518-1617",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/",
+          "label": "Giant panicgrass: large leafy stand (Molokaʻi)",
+          "caption": "Whole green stand on Molokaʻi photographed as Panicum antidotale, a synonym of Janochloa antidotalis. Nonlocal source context.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "janochloa-antidotalis",
+          "role": "Whole leafy stand and habitat",
+          "source_location_class": "NONLOCAL_REFERENCE_MOLOKAI",
+          "exact_rights_evidence": "Commons exact file page: Forest & Kim Starr, explicit individual CC BY 3.0/3.0 US grant; original Starr photo linked and source taxonomy synonym checked.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original unmodified, responsive 900px Commons delivery."
+        },
+        {
+          "i": 1,
+          "image_filename": "Starr-141025-2470-Panicum antidotale-seedhead and leaves-Kawela Bridge-Molokai (25129502752).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-141025-2470-Panicum%20antidotale-seedhead%20and%20leaves-Kawela%20Bridge-Molokai%20(25129502752).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr-141025-2470-Panicum_antidotale-seedhead_and_leaves-Kawela_Bridge-Molokai_(25129502752).jpg",
+          "original_source_page": "https://www.flickr.com/photos/starr-environmental/25129502752/",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0 US",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/us/",
+          "label": "Giant panicgrass: attached flowering panicle and leaves (Molokaʻi)",
+          "caption": "Attached open branching panicle held beside fingers for scale. Shows general reproductive habit; not a dissected ligule or mature grain.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "janochloa-antidotalis",
+          "role": "Open flowering panicle and leaf",
+          "source_location_class": "NONLOCAL_REFERENCE_MOLOKAI",
+          "exact_rights_evidence": "Commons exact file page: Forest & Kim Starr, explicit individual CC BY 3.0/3.0 US grant; original Starr photo linked and source taxonomy synonym checked.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original unmodified, responsive 900px Commons delivery."
+        },
+        {
+          "i": 2,
+          "image_filename": "Starr-141025-2486-Panicum antidotale-seeds-Kawela Bridge-Molokai (24880132189).jpg",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr-141025-2486-Panicum%20antidotale-seeds-Kawela%20Bridge-Molokai%20(24880132189).jpg?width=900",
+          "source_page": "https://commons.wikimedia.org/wiki/File:Starr-141025-2486-Panicum_antidotale-seeds-Kawela_Bridge-Molokai_(24880132189).jpg",
+          "original_source_page": "https://www.flickr.com/photos/starr-environmental/24880132189/",
+          "creator": "Forest & Kim Starr",
+          "license": "CC BY 3.0 US",
+          "license_url": "https://creativecommons.org/licenses/by/3.0/us/",
+          "label": "Giant panicgrass: mature spikelets and branches (Molokaʻi)",
+          "caption": "Mature attached seed-bearing branches over a hand. Original species labeled Panicum antidotale; no Hays voucher claim.",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "janochloa-antidotalis",
+          "role": "Mature reproductive branching close-up",
+          "source_location_class": "NONLOCAL_REFERENCE_MOLOKAI",
+          "exact_rights_evidence": "Commons exact file page: Forest & Kim Starr, explicit individual CC BY 3.0/3.0 US grant; original Starr photo linked and source taxonomy synonym checked.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_COMMONS_FILEPATH_NOT_COPIED_TO_GITHUB",
+          "modifications": "Original unmodified, responsive 900px Commons delivery."
+        }
+      ],
+      "genus": "Janochloa",
+      "character_evidence": {
+        "trial_phase": {
+          "status": "LITERATURE_SCORING_TRIAL_ONLY",
+          "source": "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-2-20261111.md",
+          "external_flora_url": "https://floranorthamerica.org/Panicum_antidotale",
+          "reviewed_for_admission": false,
+          "note": "Only four broad UI characters. Independently identified local specimen not established, no automatic native range certification."
+        },
+        "character_basis": {
+          "status": "EXISTING_CANDIDATE_DOSSIER_PLUS_DIRECT_FLORA",
+          "source_details": {
+            "head": [
+              {
+                "value": "airy",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              },
+              {
+                "value": "long_narrow_panicle",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "habit": [
+              {
+                "value": "tuft",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              },
+              {
+                "value": "rhizome",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "ligule": [
+              {
+                "value": "hairs",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              },
+              {
+                "value": "membrane",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ],
+            "awns": [
+              {
+                "value": "none_obvious",
+                "basis": [
+                  "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+                  "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm."
+                ],
+                "status": "LITERATURE_HYPOTHESIS_NOT_SAME_LOCAL_SPECIMEN"
+              }
+            ]
+          },
+          "unknown_states": "Empty arrays are UNKNOWN/UNVERIFIED, not a negative character. Do not hide an incomplete specimen after an unanswered character."
+        }
+      },
+      "diagnostic_checks": [
+        {
+          "look": "habit",
+          "check": "Hard-based perennial with knotted 1 cm rhizomes and stout often glaucous culms.",
+          "needed_view": "rooted excavated base",
+          "source": "https://floranorthamerica.org/Panicum_antidotale",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "nodes",
+          "check": "Swollen culm nodes sometimes pubescent; do not equate node hair with ligule.",
+          "needed_view": "separate stem-node macro",
+          "source": "https://floranorthamerica.org/Panicum_antidotale",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "panicle",
+          "check": "Open or narrow 10–45 cm panicle with many small spikelets, branches up to 12 cm.",
+          "needed_view": "measured full head",
+          "source": "https://floranorthamerica.org/Panicum_antidotale",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "ligule",
+          "check": "Very short 0.3–1.5 mm ligule, sometimes ciliate; need inside blade–sheath junction.",
+          "needed_view": "inner collar at mm scale",
+          "source": "https://floranorthamerica.org/Panicum_antidotale",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "spikelet",
+          "check": "Ellipsoid small spikelets 2.4–3.4 mm with a lower staminate and upper fertile floret.",
+          "needed_view": "ripe measured spikelet dissection",
+          "source": "https://floranorthamerica.org/Panicum_antidotale",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        },
+        {
+          "look": "context",
+          "check": "Determine planting/escaped status separately from morphology; no automatic Hays County specimen identity.",
+          "needed_view": "field provenance/habitat",
+          "source": "https://floranorthamerica.org/Panicum_antidotale",
+          "certainty": "LITERATURE_CHARACTER_NOT_SAME_LOCAL_SPECIMEN_VERIFIED"
+        }
+      ],
+      "diagnostic_review": {
+        "stage": "BATCH5_B_PENDING_LOCAL_ID",
+        "unresolved": "Exact glume/lemma measurements and spontaneous establishment versus forage planting still need review.",
+        "comparison_required": true,
+        "look_alikes": [
+          "Panicum dichotomiflorum",
+          "Panicum hallii",
+          "Panicum virgatum"
+        ],
+        "comparison_notes": [
+          "FNA's older name Panicum antidotale is the synonym used by current Janochloa antidotalis learner record.",
+          "FNA: tough often glaucous perennial 50–300 cm tall with roughly 1 cm knotted rhizomes, swollen nodes, 10–45 cm open or somewhat contracted panicles.",
+          "Flora's range or a photographed nonlocal planted stand is not Hays County spontaneous establishment; no BONAP local claim."
+        ]
+      },
+      "photo_character_audit": {
+        "status": "EXISTING_SOURCE_LABELED_REFERENCES_ONLY",
+        "approved_photo_count": 3,
+        "exact_photo_rights_metadata_reused": true,
+        "original_media_bytes_unchanged": true,
+        "specimen_identity_verified": false
+      },
+      "source_notes": {
+        "unresolved": "Exact glume/lemma measurements and spontaneous establishment versus forage planting still need review.",
+        "risky_context": true,
+        "field_view": "Excellent close panicles, mature spikelets, culm nodes, leaves and collar on one specimen.",
+        "source_taxonomic_aliases": [
+          "Panicum antidotale"
+        ],
+        "direct_reference": "https://floranorthamerica.org/Panicum_antidotale"
+      }
+    }
+  ],
+  "holds": [
+    {
+      "id": "bromus-brevis",
+      "scientific": "Bromus brevis",
+      "status": "HOLD_NOT_SCORED_NOT_TRIAL_READY",
+      "reason": "Accepted South American taxon, but no credible independently verified Hays specimen and Hays observations contain an ID dispute. Source-labeled nonlocal photographs cannot establish a safe Bromus brevis vs Bromus catharticus/hordeaceus/japonicus lemma-glume differential.",
+      "next_evidence": "Confirm Hays specimen against current Bromus key; collect entire rooted plant, glumes, intact mature spikelets, lemma nerve/awn/teeth and exact observation provenance; reconcile planted/introduced status.",
+      "source_refs": [
+        "https://powo.science.kew.org/taxon/36988-2",
+        "../../audits/hays-expansion-20261111/hays-8-flora-diagnostic-packet-3-20261111.md",
+        "https://powo.science.kew.org/taxon/36988-2"
+      ],
+      "gallery_photo_refs_unchanged": 3
+    }
+  ]
+}
