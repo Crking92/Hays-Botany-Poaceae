@@ -133,6 +133,11 @@ assert "Source-backed refinements rank positive literature matches only" in html
 assert len(re.findall(r'id="optional-character-wrap"', html)) == 1
 assert 'id="theme-toggle"' in html and 'id="compare-dialog"' in html
 assert "function compareCandidates()" in html
+assert "function compareCorePrompt(species)" in html
+assert 'const next=compareCorePrompt(species);' in html
+assert 'if(found.some(v=>!Array.isArray(v)||!v.length))continue' in html
+assert 'a.every(v=>!b.includes(v))' in html
+assert 'const candidates=qs.filter(q=>!state.selected[q.id]&&new Set(' not in html
 assert "function compareRefinementPrompt(species)" in html
 assert "if(found.some(e=>!e||!Array.isArray(e.states)||!e.states.length))continue" in html
 assert "a.states.every(v=>!b.states.includes(v))" in html
