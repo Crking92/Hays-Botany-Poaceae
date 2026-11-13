@@ -1,0 +1,23 @@
+name: Chat B - staged diagnostic trial Batch 5 independent regression
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/provisional-trial-batch5-b.json'
+      - 'site/visual-key-lab/provisional-trial-batch5-b-holds.md'
+      - 'scripts/test_provisional_trial_batch5_b.cjs'
+      - '.github/workflows/grass-trial-batch5-b.yml'
+permissions:
+  contents: read
+jobs:
+  batch5-b-source-scoring:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Chat B positive, contradictory, unknown, photo-provenance and original scored regressions
+        run: node scripts/test_provisional_trial_batch5_b.cjs
+      - name: Verify unchanged earlier six-trial Batch 4 regression
+        run: node scripts/test_provisional_trial_batch4.cjs
