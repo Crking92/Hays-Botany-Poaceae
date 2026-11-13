@@ -996,6 +996,31 @@ try {const res=await fetch("provisional-trial-batch3.json",{cache:"no-store"});i
 // All uncertain characters stay unknown and no provisional species is scored.
 try {const res=await fetch("provisional-trial-batch4.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)||x.range!=="UNVERIFIED"))throw Error("Fourth research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Fourth trial duplicates an existing species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Fourth research trial profiles unavailable; original key and earlier trials remain usable",err)}
 
+// Fifth research batch: A/B/C are three source-scoped lanes. Treat all 29 as a
+// single optional import, so a missing or inconsistent file never adds a partial
+// lane or changes the protected 112 officially scored species. None is admitted.
+try {
+ const laneSpecs=[["a",11],["b",10],["c",8]];
+ const responses=await Promise.all(laneSpecs.map(([lane])=>fetch("provisional-trial-batch5-"+lane+".json",{cache:"no-store"})));
+ if(responses.some(res=>!res.ok))throw Error("A research lane file is unavailable");
+ const lanes=await Promise.all(responses.map(res=>res.json()));
+ const existing=new Set(state.species.map(s=>s.id));
+ const known=new Set(state.catalog.map(s=>s.id));
+ const additional=[];
+ for(let i=0;i<lanes.length;i++){
+   const lane=lanes[i],expected=laneSpecs[i][1];
+   if(!Array.isArray(lane.profiles)||lane.profiles.length!==expected||!Array.isArray(lane.holds))throw Error("Research lane count/schema incorrect");
+   for(const p of lane.profiles){
+     if(!p.trial||p.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||p.range!=="UNVERIFIED"||p.source_candidate_status!=="RESEARCH_CANDIDATE_NOT_RELEASED"||!known.has(p.id)||existing.has(p.id)||!Array.isArray(p.photos)||p.photos.length===0||p.photos.some(x=>!x.src||!x.creator||!x.license||!x.source_page)||!p.traits||["head","habit","ligule","awns"].some(k=>!Array.isArray(p.traits[k])))throw Error("Unverified grass profile failed safety check: "+p.id);
+     existing.add(p.id);
+     additional.push(p);
+   }
+ }
+ if(additional.length!==29)throw Error("Research trial lane total is not 29");
+ state.species.push(...additional);
+}catch(err){console.warn("New research trials unavailable; original 112 and earlier trial matches remain usable",err)}
+
+
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});
