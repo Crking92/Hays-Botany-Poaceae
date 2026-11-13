@@ -120,7 +120,7 @@ if(latestHabitBatch.some(id=>!entries.has(id+"|habit")))
 const growth=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="habit");
 if(!/rhizomes ABSENT/.test(growth("bouteloua-dactyloides").interpretation)||
  !/CURRENT|Current/.test(growth("bouteloua-dactyloides").interpretation)||
- !/thick-knotty-rhizomatous/.test(growth("tripsacum-dactyloides").references[1].support)||
+ !/hard-based rhizomatous perennial/.test(growth("tripsacum-dactyloides").references[1].support)||
  !/short rhizomes/.test(growth("paspalum-setaceum").interpretation)||
  !/life history/.test(growth("hordeum-pusillum").interpretation))
  throw Error("New growth form distinctions or open scoring caveat lost");
