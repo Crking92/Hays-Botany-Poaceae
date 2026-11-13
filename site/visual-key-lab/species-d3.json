@@ -3402,7 +3402,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Avoid native/introduced calls or true species ID solely from bristle silhouette. Count several attached mature spikelets and study rootstock on the same plant.",
+    "field_rule": "Avoid native/introduced calls or true species ID solely from bristle silhouette. Count several attached mature spikelets and study rootstock on the same plant.\n\nScoring check: published foxtail-millet descriptions allow either a fringe of hairs or a fringed membrane at the true inner leaf junction, so both beginner ligule options keep it in results. Do not mistake the long head bristles or outer sheath hairs for its ligule.",
     "traits": {
       "head": [
         "foxtail"
@@ -3411,7 +3411,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "bristles"
@@ -3433,6 +3434,20 @@
         "reference": "Annual with fibrous roots, not perennial rhizome.",
         "status": "REFERENCE_CHECKED_PARTIAL",
         "review_date": "2026-11-10"
+      },
+      "ligule": {
+        "source": "World Flora Online, e-Flora of South Africa / Flora Helvetica species account; Kew GrassBase, Setaria italica species treatment",
+        "source_url": "https://prod.worldfloraonline.org/taxon/wfo-0000899281",
+        "secondary_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1207294-2/general-information",
+        "role": "vegetative",
+        "reference": "An independent published species description permits either a fringed membrane or a fringe of hairs, whereas Kew GrassBase calls the ligule a fringe of hairs. Both are descriptions of the TRUE adaxial blade–sheath junction, not the involucral bristles of the flowering head. Keep the existing hair path and add the documented fringed-membrane path; this does not claim that all individuals have a visible unfringed papery flap.",
+        "reported_states": [
+          "fringe of hairs at inner collar",
+          "fringed membrane at inner collar (independent flora alternative)"
+        ],
+        "status": "EXACT_SPECIES_FLORA_DESCRIBES_HAIRS_OR_FRINGED_MEMBRANE_BOTH_FIELD_PATHS",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "Literature-only; no new exact ligule macro or cultivar-level voucher."
       }
     },
     "diagnostic_checks": [
