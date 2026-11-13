@@ -192,6 +192,11 @@ html[data-theme="dark"] .optional-section-tabs button[aria-pressed="true"]{backg
 .venation-field-source{color:var(--muted)}
 html[data-theme="dark"] .venation-field-guide{background:#23372b}
 @media(max-width:420px){.venation-field-guide{gap:9px}.venation-field-guide svg{width:116px;max-width:40%}}
+
+/* Leaf anatomy guidance shares the existing compact diagram style. */
+.leaf-detail-guide svg{object-fit:contain}
+.leaf-detail-guide .venation-field-text p{overflow-wrap:anywhere}
+@media(max-width:355px){.leaf-detail-guide{flex-wrap:wrap}.leaf-detail-guide svg{max-width:100%;width:136px}}
 </style>
 </head>
 <body>
@@ -391,6 +396,80 @@ function venationSketch(choice){
  return svg;
 }
 
+
+/* Supplementary leaf-blade diagrams; they teach observable structures, not
+   specimen identity or new evidence. The published source data stays separate. */
+const leafDetailGuides={
+ blade_shape:{
+  flat:["View blade edge-on","A fresh expanded blade lies mostly flat. Drying can cause temporary rolling, so inspect several leaves."],
+  folded:["View blade edge-on","The two sides meet at a central V-shaped fold. A fold is different from margins curled inward."],
+  inrolled:["View blade edge-on","The margins curl inward toward the center, sometimes forming a tube. Check fresh blades, not only drought-curled leaves."]},
+ blade_width:{
+  thread:["Measure expanded blade","Under 2 mm wide. The sketch compares widths but is not a ruler; unroll the blade before measuring."],
+  narrow:["Measure expanded blade","About 2–5 mm wide at its broadest point. Width categories overlap natural published ranges."],
+  medium:["Measure expanded blade","About 5–10 mm wide. Use a small ruler on a fresh, opened leaf."],
+  broad:["Measure expanded blade","Over 10 mm wide. Measure the widest intact part of the unfolded leaf."]},
+ blade_tip:{
+  boat_tipped:["Inspect intact leaf tip","The end is rounded or boat-shaped instead of extending into a hard pointed tip."],
+  hardened_tip:["Inspect mature leaf tip","A firm, hardened point continues from the apex. A dried or torn tip may be misleading."],
+  tiny_point:["Use a hand lens","Look for a minute abrupt point extending beyond the leaf outline, not a normal taper or torn edge."]},
+ blade_edge:{
+  serrate:["Inspect blade margin","Tiny teeth or rough projections line the edge. Grass margins can cut; avoid dragging fingers along them."],
+  whitish:["Look along both margins","A narrow pale stripe follows the blade edge, separate from any pale midrib."]},
+ blade_midnerve:{
+  pale_center:["Follow center line","The pale or whitish line runs down the middle of the blade. It need not be elevated above the leaf."]},
+ blade_hairs:{
+  base_hairs:["Inspect blade base","Hairs occur near the bottom of the blade. Distinguish blade hairs from collar or sheath hairs."],
+  blade_hairy:["Inspect blade surface","Hairs continue along the blade beyond the base. The density can vary by leaf age and surface."]}
+};
+function leafDetailSketch(character,choice){
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
+ svg.setAttribute("viewBox","0 0 168 92");
+ svg.setAttribute("role","img");svg.setAttribute("focusable","false");
+ svg.setAttribute("aria-label","Simplified "+character.replaceAll("_"," ")+" sketch for "+choice.replaceAll("_"," ")+"; not a specimen photo or scale drawing");
+ const shape=(d,stroke="#537e58",width=2,fill="none")=>{
+  const p=document.createElementNS(ns,"path");
+  for(const [k,v] of Object.entries({d,stroke,"stroke-width":width,fill,"stroke-linejoin":"round","stroke-linecap":"round"}))p.setAttribute(k,String(v));
+  svg.append(p);return p;
+ };
+ const blade=(d,fill="#c8dda8")=>shape(d,"#5c8966",2,fill);
+ if(character==="blade_shape"){
+  if(choice==="flat")shape("M20 51 Q84 54 148 51","#447c52",6);
+  if(choice==="folded")shape("M22 30 L84 72 L146 30","#447c52",6);
+  if(choice==="inrolled")shape("M22 32 C14 11 56 6 70 39 C82 76 94 76 100 39 C113 7 153 11 146 32","#447c52",6);
+  shape("M20 83 H148","#b4c5ad",1);
+ }else if(character==="blade_width"){
+  const ids=["thread","narrow","medium","broad"],widths=[3,11,22,35],xs=[28,65,103,145];
+  for(let i=0;i<4;i++){
+   const x=xs[i],w=widths[i],active=ids[i]===choice;
+   blade("M"+(x-w/2)+" 75 L"+(x-w/2)+" 25 Q"+x+" 13 "+(x+w/2)+" 25 L"+(x+w/2)+" 75 Z",active?"#50865d":"#cadcbb");
+   shape("M"+(x-w/2-2)+" 81 H"+(x+w/2+2),active?"#336b43":"#a7bba0",active?3:1.5);
+  }
+ }else if(character==="blade_tip"){
+  if(choice==="boat_tipped")blade("M48 80 L48 33 Q48 14 84 14 Q120 14 120 33 L120 80 Z");
+  if(choice==="hardened_tip"){blade("M49 80 L49 43 L84 13 L119 43 L119 80 Z");shape("M84 13 L84 4","#447b53",3);}
+  if(choice==="tiny_point"){blade("M49 80 L49 35 Q84 16 119 35 L119 80 Z");shape("M84 23 L84 8","#447b53",3);}
+  shape("M84 25 V75","#90ae83",1.5);
+ }else if(character==="blade_edge"){
+  if(choice==="serrate"){
+   let d="M46 80";for(let y=74;y>=18;y-=8)d+=" L46 "+(y+4)+" L38 "+y+" L46 "+y;
+   blade(d+" L124 18 L124 80 Z");
+  }else{
+   blade("M46 80 L46 18 Q84 12 124 18 L124 80 Z");
+   shape("M46 79 V18","#fff6d9",6);shape("M124 18 V79","#fff6d9",6);
+  }
+  shape("M84 20 V75","#95b889",1.6);
+ }else if(character==="blade_midnerve"){
+  blade("M43 80 L43 18 Q84 13 125 18 L125 80 Z");
+  shape("M84 20 V78","#fff8da",8);shape("M84 20 V78","#efe2ad",2);
+ }else if(character==="blade_hairs"){
+  blade("M46 80 L46 18 Q84 13 122 18 L122 80 Z");
+  const ys=choice==="base_hairs"?[62,69,76]:[25,34,43,52,61,70,77];
+  for(const y of ys){shape("M46 "+y+" l-10 -8","#558b63",1.6);shape("M122 "+y+" l10 -8","#558b63",1.6);shape("M68 "+y+" l-6 -7","#558b63",1.2);shape("M100 "+y+" l6 -7","#558b63",1.2);}
+ }
+ return svg;
+}
+
 function renderOptionalCharacters(){
  const holder=$("optional-character-wrap"),root=$("optional-character-groups"),tabs=$("optional-section-tabs");
  root.replaceChildren();tabs.replaceChildren();holder.hidden=!state.refineCharacters.length;
@@ -448,6 +527,23 @@ function renderOptionalCharacters(){
        info.append(node("strong","",tip.where),node("p","",tip.tip),
          node("p","venation-field-source",count?("Recorded in "+count+" published grass description"+(count===1?"":"s")+". Other grasses with unknown vein data remain possible."):"No species-level ranking evidence linked yet. The selection is saved, but cannot favor or exclude any grass."));
        guide.append(venationSketch(selected.id),info);
+     };
+     refreshVeinGuide();content.append(guide);
+   }
+   if(Object.prototype.hasOwnProperty.call(leafDetailGuides,c.id)){
+     const guide=node("div","venation-field-guide leaf-detail-guide");
+     guide.setAttribute("aria-live","polite");
+     refreshVeinGuide=()=>{
+       guide.replaceChildren();
+       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       if(!selected){guide.append(node("p","venation-field-prompt","Choose a leaf detail to see what to examine and a simplified diagram."));return;}
+       const [where,tip]=leafDetailGuides[c.id][selected.id]||[];
+       if(!where)return;
+       const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
+       const info=node("div","venation-field-text");
+       info.append(node("strong","",where),node("p","",tip),
+         node("p","venation-field-source",count?("Recorded for "+count+" grasses in cited descriptions. Missing character data does not exclude other grasses."):"No species-level ranking evidence linked yet. You can record this observation, but it cannot favor or exclude a grass."));
+       guide.append(leafDetailSketch(c.id,selected.id),info);
      };
      refreshVeinGuide();content.append(guide);
    }

@@ -7,6 +7,7 @@ on:
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
+      - 'scripts/test_grass_leaf_detail_field_guide.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -16,6 +17,7 @@ on:
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
+      - 'scripts/test_grass_leaf_detail_field_guide.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -31,3 +33,5 @@ jobs:
         run: node scripts/test_optional_grass_refinement.cjs
       - name: Verify seven vein and rib diagrams, accessibility and unchanged evidence
         run: node scripts/test_grass_venation_field_guide.cjs
+      - name: Test leaf shape, width, tip, edge, midrib and hair diagrams
+        run: node scripts/test_grass_leaf_detail_field_guide.cjs
