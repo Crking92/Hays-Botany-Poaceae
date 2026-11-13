@@ -224,7 +224,11 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // Batch 3 (2026-11-13): five source-backed one-sided grama comb aliases.
 // New complete combinations: buffalograss 4 + blue 6 + hairy 8 + tall 1 + red 4 = 23.
 // Exact validated total: 475 + 23 = 498.
-assert.equal(scoredPaths,498,'Reviewed scored character-combination total changed');
+// Batch 4 (2026-11-13): source-supported SHORT true lemma awn ranges
+// may be observed as 'no conspicuous LONG awns' at field scale.
+// Little bluestem adds 2 complete combinations, Texas brome adds 1.
+// 498 + 3 = 501. Neither taxon is coded biologically awnless.
+assert.equal(scoredPaths,501,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
