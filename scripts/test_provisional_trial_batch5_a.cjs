@@ -218,7 +218,10 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // (Bromus pubescens and Hordeum pusillum short-awns; Setaria italica fringed
 // membrane) add four valid complete combinations: 455 -> 459. This retains
 // a strict exact count to catch unreviewed expansion or deletion of scored paths.
-assert.equal(scoredPaths,459,'Reviewed scored character-combination total changed');
+// Batch 2 (2026-11-13): two species gain two reviewed unilateral-head
+// field matches each; 2 habit x 2 ligule x 1 awn = 4 new complete
+// combinations per head option per species: 459 + 16 = 475.
+assert.equal(scoredPaths,475,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
