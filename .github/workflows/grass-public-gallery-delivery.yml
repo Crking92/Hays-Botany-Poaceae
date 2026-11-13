@@ -21,6 +21,32 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check offline test syntax
         run: python3 -m py_compile scripts/smoke_public_grass_gallery.py
+      - name: Verify rights-held Texas grama photos are not published and original source records remain
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path(".")
+          card=json.loads((root/"site/data/species/bouteloua-rigidiseta.json").read_text())
+          release=json.loads((root/"site/data/poaceae-release.json").read_text())
+          gallery=json.loads((root/"site/data/gallery-index.json").read_text())
+          ledger=json.loads((root/"migration/source-file-ledger.json").read_text())
+          species=json.loads((root/"content/taxa/Poaceae/Bouteloua/bouteloua-rigidiseta/species.json").read_text())
+          held=[x for x in ledger if x["disposition"]=="IMAGE_HELD_IN_ORIGINAL_SOURCE_ONLY" and "larry-allain-usgs-texas-grama-" in x["path"]]
+          assert len(held)==3, "Historic exact-photo rights hold changed"
+          assert all((root/x["path"]).is_file() for x in held), "Original photo file lost"
+          assert len(card["panels"])==0, "Rights-held source displayed in public card"
+          blocked=[x for x in card["unavailable_references"] if x.get("license_status")=="RIGHTS_HOLD_PUBLIC_GALLERY_UNPUBLISHED"]
+          assert len(blocked)==3
+          assert len([x for x in species["images"] if "larry-allain-usgs-texas-grama-" in x["file"]])==3, "Original source photos/credits removed"
+          assert release["species"]==gallery["species"]==112
+          assert release["species_with_visible_photos"]==gallery["photo_species"]==111
+          assert release["photo_panels_visible"]==gallery["photo_panels"]==601
+          assert release["photo_files_referenced_on_public_site"]==gallery["photo_files"]==483
+          assert gallery["entries"]["bouteloua-rigidiseta"]["count"]==0
+          assert len(gallery["entries"])==112
+          print("PASS: 3 Texas grama links unpublished, originals and historical rights records retained; 111/112 galleries with photos")
+          PY
   live-photo-transport:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
