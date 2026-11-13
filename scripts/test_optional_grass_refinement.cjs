@@ -79,8 +79,45 @@ if(!got.some(x=>x.id==="leersia-oryzoides"&&x.extras===2))throw Error("Leersia t
 state.refineSelected={ligule_length:"tiny",blade_venation:"raised_ribs"};
 verifyUnchanged("conflicting biological clues with pending rib evidence");
 
+
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={surface_runners:"wiry_stolon"};
+got=verifyUnchanged("wiry runners");
+if(!got.some(x=>x.id==="hilaria-belangeri"&&x.extras===1)||
+   !got.some(x=>x.id==="hopia-obtusa"&&x.extras===1))
+  throw Error("Wiry runner evidence missing");
+state.refineSelected={surface_runners:"rooted_nodes"};
+got=verifyUnchanged("rooting lower nodes");
+if(!got.some(x=>x.id==="paspalum-pubiflorum"&&x.extras===1))
+  throw Error("Low culm rooting not recorded separately from stolons");
+state.refineSelected={underground_stems:"long_scaly"};
+got=verifyUnchanged("long scaly rhizomes");
+if(!got.some(x=>x.id==="sorghum-halepense"&&x.extras===1)||
+   !got.some(x=>x.id==="sporobolus-compositus"&&x.extras===1))
+  throw Error("Published long rhizome matches missing");
+state.refineSelected={underground_stems:"short_rhizome"};
+got=verifyUnchanged("short rhizomes without guessing texture");
+if(!got.some(x=>x.id==="schizachyrium-scoparium"&&x.extras===1))
+  throw Error("Optional short little-bluestem rhizome missing");
+state.refineSelected={stem_nodes:"gland_ring",stem_special:"node_gland_ring"};
+got=verifyUnchanged("gland ring below actual culm joints");
+if(!got.some(x=>x.id==="eragrostis-cilianensis"&&x.extras===2))
+  throw Error("Stinkgrass gland ring not recorded in both observational contexts");
+state.refineSelected={basal_crown:"hard_knotty"};
+got=verifyUnchanged("knotty crowns");
+if(!got.some(x=>x.id==="paspalum-dilatatum"&&x.extras===1))throw Error("Knotty Paspalum not ranked");
+state.refineSelected={culm_posture:"geniculate"};
+verifyUnchanged("knee-bent stems");
+state.refineSelected={culm_posture:"prostrate"};
+got=verifyUnchanged("unconfirmed prostrate posture");
+if(got.some(x=>x.extras))throw Error("Research-pending prostrate posture must not boost rankings");
+for(const id of ["culm_posture","surface_runners","underground_stems","basal_crown","stem_special","stem_nodes"]){
+ if(vm.runInContext("refinementSection("+JSON.stringify(id)+")",sandbox)!=="stem")throw Error("Wrong optional tab for "+id);
+}
+if(vm.runInContext('refinementSection("blade_width")',sandbox)!=="blade")throw Error("Blade tab changed unexpectedly");
+
 if(!html.includes('id="theme-toggle"')||!html.includes('id="compare-dialog"')||
    !html.includes('const group=node("details","optional-group")'))
   throw Error("Visitor theme, compare or accordion controls missing");
-console.log("PASS: 112 original species retained for all extra choices; 13 groups, "+
+console.log("PASS: 112 original species retained for all extra choices; 18 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
