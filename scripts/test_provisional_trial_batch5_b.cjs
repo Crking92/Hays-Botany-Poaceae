@@ -78,7 +78,7 @@ for(const t of batch.profiles){
  }
 }
 const html=read('index.html');
-assert(!html.includes('provisional-trial-batch5-b.json'),'Lane B file must remain staged; coordinator owns key integration');
+assert(html.includes('provisional-trial-batch5-b.json'),'Coordinator integration must load approved Lane B unverified trials');
 const m=html.match(/<script>([\s\S]*?)<\/script>/);assert(m,'Cannot locate current production key JS');
 new vm.Script(m[1]);
 const js=m[1],start=js.indexOf('function currentResults()'),end=js.indexOf('\nfunction renderTabs',start);
