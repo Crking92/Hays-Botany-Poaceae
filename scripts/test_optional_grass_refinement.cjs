@@ -116,8 +116,48 @@ for(const id of ["culm_posture","surface_runners","underground_stems","basal_cro
 }
 if(vm.runInContext('refinementSection("blade_width")',sandbox)!=="blade")throw Error("Blade tab changed unexpectedly");
 
+// Batch 5 — close-up reproductive characters remain OPTIONAL positive ranking only.
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const id of ["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"]){
+ if(vm.runInContext("refinementSection("+JSON.stringify(id)+")",sandbox)!=="flower")
+   throw Error("Wrong flower mini-tab for "+id);
+}
+state.refineSelected={true_lemma_awn:"none",floral_hair_position:"below_spikelet"};
+got=verifyUnchanged("Setaria bristle, not true lemma awn");
+if(!got.some(x=>x.id==="setaria-parviflora"&&x.extras===2))
+ throw Error("Setaria awnless lemma + subtending bristles must both rank");
+state.refineSelected={floral_hair_position:"rachilla"};
+got=verifyUnchanged("Phragmites long rachilla hairs");
+if(!got.some(x=>x.id==="phragmites-australis"&&x.extras===1)||
+   got.some(x=>x.id==="arundo-donax"&&x.extras))
+ throw Error("Reed rachilla and lemma hair structures conflated");
+state.refineSelected={floral_hair_position:"lemma"};
+got=verifyUnchanged("Arundo lemma hairs");
+if(!got.some(x=>x.id==="arundo-donax"&&x.extras===1)||
+   got.some(x=>x.id==="phragmites-australis"&&x.extras))
+ throw Error("Giant reed lemma hairs incorrectly assigned to common reed");
+state.refineSelected={true_lemma_awn:"short"};
+got=verifyUnchanged("very short Johnsongrass lemma awn");
+if(!got.some(x=>x.id==="sorghum-halepense"&&x.extras===1))
+ throw Error("Johnsongrass short variable awn missing");
+state.refineSelected={true_lemma_awn:"none"};
+got=verifyUnchanged("Johnsongrass awnless variation");
+if(!got.some(x=>x.id==="sorghum-halepense"&&x.extras===1))
+ throw Error("Johnsongrass awnless alternate state missing");
+state.refineSelected={lemma_texture:"reddish_spotted"};
+got=verifyUnchanged("sand lovegrass red-marked lemma");
+if(!got.some(x=>x.id==="eragrostis-trichodes"&&x.extras===1))
+ throw Error("Sand lovegrass lemma marks missing");
+state.refineSelected={true_lemma_awn:"three",florets_per_spikelet:"one"};
+got=verifyUnchanged("Aristida triple awns and single-floret spikelet");
+if(!got.some(x=>x.id==="aristida-oligantha"&&x.extras===2)||
+   !got.some(x=>x.id==="aristida-purpurea"&&x.extras===2))
+ throw Error("Threeawn key paths should preserve both species");
+state.refineSelected={true_lemma_awn:"three",florets_per_spikelet:"several",floral_hair_position:"rachilla"};
+verifyUnchanged("deliberately contradictory floral clues");
+
 if(!html.includes('id="theme-toggle"')||!html.includes('id="compare-dialog"')||
    !html.includes('const group=node("details","optional-group")'))
   throw Error("Visitor theme, compare or accordion controls missing");
-console.log("PASS: 112 original species retained for all extra choices; 18 groups, "+
+console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
