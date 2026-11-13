@@ -31,9 +31,10 @@ button[aria-pressed=true]{background:var(--forest);color:white;border-color:var(
 .card-body{border-top:1px solid var(--line);padding:15px 17px 20px}.card-body p{margin:8px 0;font-size:.9rem;color:#495c4d}
 .card-body h3{margin:20px 0 7px;font-size:1rem}
 .trait{padding:10px 0;border-top:1px solid #e5ece3}.trait strong{display:block;color:#264d38;text-transform:capitalize}.trait p{margin:3px 0 5px}.trait small{color:#64796e;display:block}
-.links{display:flex;gap:8px;flex-wrap:wrap}.checked-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.checked-gallery figure{margin:0;min-width:0}.checked-gallery img{display:block;max-width:100%;width:100%;aspect-ratio:4/3;object-fit:contain;background:#e6ece3;border-radius:7px}.checked-gallery figcaption{font-size:.74rem;color:#566857;line-height:1.4}.checked-gallery a{display:block;font-size:.74rem}.links a{font-size:.8rem;padding:5px 8px;background:#edf4ed;border-radius:8px}
+.links{display:flex;gap:8px;flex-wrap:wrap}.checked-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.checked-gallery figure{margin:0;min-width:0}.checked-gallery img{display:block;max-width:100%;width:100%;aspect-ratio:4/3;object-fit:contain;background:#e6ece3;border-radius:7px}.checked-gallery figcaption>strong,.checked-gallery figcaption>span{display:block}.checked-gallery figcaption{font-size:.74rem;color:#566857;line-height:1.4}.checked-gallery a{display:block;font-size:.74rem}.links a{font-size:.8rem;padding:5px 8px;background:#edf4ed;border-radius:8px}
 .context{color:#695633!important;font-size:.83rem!important}
 footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);font-size:.85rem}
+@media(max-width:450px){.checked-gallery{grid-template-columns:1fr}}
 @media(max-width:750px){.list{grid-template-columns:1fr}.controls{align-items:stretch}.controls label{width:100%}.controls input{min-width:0;width:100%;flex-basis:100%}.stat{flex:1;min-width:100px}.card summary{padding:14px}header a{font-size:.8rem}}
 </style>
 </head>
@@ -41,9 +42,9 @@ footer{border-top:1px solid var(--line);padding:24px 0 35px;color:var(--muted);f
 <header><div class="wrap"><strong>HAYS BOTANY / GRASS ID LAB</strong><nav><a href="./">← Photo identification key</a> · <a href="../">Grass Learner</a></nav></div></header>
 <main class="wrap">
 <section class="hero"><div class="eyebrow">Hays County expansion · reference library</div><h1>Additional grasses under review</h1><p>Explore the new Hays County candidate grasses and the actual structures our botanical references recommend examining. Each reference description is paired with a specific field-photo target. These are educational reference cards, not confirmed local species IDs.</p></section>
-<p class="notice"><strong>Important:</strong> These 57 candidate records are <strong>not yet in the scored 112-species identification key</strong> or approved as verified Hays County taxa. Source observation labels are not independent identifications. Source-specific licensing and photographer credits have been checked for selected general photographs. The remaining records stay photo-pending; source photographs are visual references and do not verify Hays specimen identity. An unrecorded trait means unknown, not absent.</p>
-<div class="summary" aria-label="Current project counts"><div class="stat"><b id="total">57</b><span>Research candidate taxa</span></div><div class="stat"><b id="characters">322</b><span>Literature character targets</span></div><div class="stat"><b id="holds">7</b><span>Photo-access holds</span></div><div class="stat"><b id="photo-species">0</b><span>Taxa with credited photo links</span></div><div class="stat"><b id="photo-total">0</b><span>Licensed general photos linked</span></div></div>
-<div class="controls"><label for="search">Find a grass</label><input id="search" type="search" placeholder="Scientific name, common name, synonym…" autocomplete="off"><button type="button" data-view="all" aria-pressed="true">All 57</button><button type="button" data-view="reviewed" aria-pressed="false">Photos reviewed</button><button type="button" data-view="holds" aria-pressed="false">Access holds</button></div>
+<p class="notice"><strong>Important:</strong> These 57 candidate records are <strong>provisional</strong> and separate from the 112 production-scored grasses. Some appear in the identification key as explicitly unverified research trials; a trial match is not a confirmed species identification. Source observation labels are not independent identifications. Source-specific licensing and photographer credits have been checked for selected general photographs. The remaining records stay photo-pending; source photographs are visual references and do not verify Hays specimen identity. An unrecorded trait means unknown, not absent.</p>
+<div class="summary" aria-label="Current project counts"><div class="stat"><b id="total">57</b><span>Research candidate taxa</span></div><div class="stat"><b id="characters">322</b><span>Literature character targets</span></div><div class="stat"><b id="holds">7</b><span>Original observation reviews pending</span></div><div class="stat"><b id="photo-species">0</b><span>Taxa with credited photo links</span></div><div class="stat"><b id="photo-total">0</b><span>Licensed general photos linked</span></div></div>
+<div class="controls"><label for="search">Find a grass</label><input id="search" type="search" placeholder="Scientific name, common name, synonym…" autocomplete="off"><button type="button" data-view="all" aria-pressed="true">All 57</button><button type="button" data-view="reviewed" aria-pressed="false">Original observations reviewed</button><button type="button" data-view="holds" aria-pressed="false">Original observation reviews pending</button></div>
 <p id="count" role="status">Loading research candidates…</p>
 <section class="list" id="list" aria-label="Research candidate profiles"></section>
 <footer>Source morphology: <em>Illustrated Flora of North Central Texas</em> (1999), <em>Grasses of the Texas Hill Country</em> (2015), and cited supplemental references. Diagnostic characters are literature expectations, not proof from a particular Hays specimen. <a href="https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/audits/hays-expansion-20261111/README.md">See the full methodology and release checks</a>.</footer>
@@ -70,15 +71,15 @@ function card(item){
  if(item.warning_flags?.length)body.append(paragraph("Additional checks:",item.warning_flags.map(s=>s.replaceAll("_"," ").toLowerCase()).join(", "),"context"));
  if(item.approved_gallery?.length){
   body.append(el("h3","","Credited general photos — not specimen verification"));
-  body.append(el("p","These images have checked file-specific reuse terms, but were photographed outside Hays County. They do not certify the fine anatomical claims below."));
+  body.append(el("p","These images have checked file-specific reuse terms. Locations vary; see each photo label and original source. A photograph alone does not verify the fine anatomical claims below."));
   const gallery=el("div","checked-gallery");
   for(const p of item.approved_gallery){
    const fig=el("figure"),img=el("img");img.src=p.src;img.loading="lazy";img.decoding="async";img.alt=p.label;
    img.addEventListener("error",()=>{img.replaceWith(el("span","","Photo temporarily unavailable — see original source."))});
-   fig.append(img);
+   const enlarged=link("",p.src);if(enlarged){enlarged.setAttribute("aria-label","Enlarge photo: "+p.label);enlarged.append(img);fig.append(enlarged)}else fig.append(img);
    const cap=el("figcaption");cap.append(el("strong","",p.label),el("span","",p.creator+" · "+p.license));
    const source=link("Original photo source",p.source_page),rights=link("License",p.license_url);
-   if(source)cap.append(source);if(rights)cap.append(rights);fig.append(cap);gallery.append(fig);
+   if(p.caption)cap.append(el("span","",p.caption));if(source)cap.append(source);if(rights)cap.append(rights);fig.append(cap);gallery.append(fig);
   }
   body.append(gallery);
  }
