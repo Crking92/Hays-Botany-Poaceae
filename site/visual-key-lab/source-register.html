@@ -44,13 +44,15 @@ function evidenceCard(root,title,locator,statement,url,tag){
  if(tag)add(x,"small",tag);
  sourceLink(x,url,"Read original source");
 }
+function crosschecks(s,cat){return g.checks.filter(x=>x.id===s.id&&x.character===cat)}
+function hasNamedEvidence(s,cat){return Boolean(s.character_evidence?.[cat]?.source||crosschecks(s,cat).length)}
 function sourceGap(s){
- return s.scored&&categories.some(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source);
+ return s.scored&&categories.some(([k])=>(s.traits?.[k]||[]).length&&!hasNamedEvidence(s,k));
 }
 function section(root,s,cat,title){
  const el=add(root,"section",null,"core");const top=add(el,"div",null,"row");add(top,"h3",title);
  const states=s.traits?.[cat]||[];add(top,"span",states.length?states.join(" · "):"Unknown","badge");
- const reviewed=g.checks.filter(x=>x.id===s.id&&x.character===cat);
+ const reviewed=crosschecks(s,cat);
  for(const x of reviewed){
   add(el,"p",x.interpretation,"notice");
   add(el,"p",x.status.replace(/_/g," ").toLowerCase(),"muted");
@@ -58,13 +60,13 @@ function section(root,s,cat,title){
  }
  if(s.scored){
   const evidence=s.character_evidence?.[cat];const d=add(el,"details");
-  add(d,"summary",evidence?.source?"Existing source record (preserved)":"No named source record — research needed");
+  add(d,"summary",evidence?.source?"Existing source record (preserved)":reviewed.length?"New citations above; original species file not yet updated":"No named source record — research needed");
   if(evidence?.source){
    const linkEntries=[["Primary",evidence.source_url],["FNA",evidence.fna_url],["Kew",evidence.grassbase_url],["UT",evidence.ut_url],["Flora",evidence.external_flora_url]].filter(x=>x[1]?.startsWith("https://"));
    const refPages=pages(evidence.source+" "+(evidence.reference||""));
    evidenceCard(d,evidence.source,refPages.length?refPages.join("; "):"Exact page not yet recorded",evidence.reference||"",linkEntries[0]?.[1]||fallbackUrl(evidence.source),evidence.status||"Existing literature note only");
    for(const [label,url] of linkEntries.slice(1))sourceLink(d,url,"Additional "+label+" reference");
-  }else add(d,"p","A visible character choice is already assigned, but its named category-source entry is missing. Do not claim this is verified.","warning");
+  }else add(d,"p",reviewed.length?"Two or more references are recorded above, but they have not yet been copied into the separate scored species file. Check the comparison status and source scope before using as a hard exclusion.":"A visible character choice is already assigned, but both its category-source entry and the separate crosscheck register are missing. Do not claim this is verified.","warning");
  }else{
   add(el,"p","Research candidate only. These are source leads, not verified scored-character assignments.","warning");
   const patterns={head:/panicle|head|spike|inflorescence/i,habit:/habit|root|stolon|rhizome/i,ligule:/ligule|sheath|collar|leaf base/i,awns:/awn|bristle|lemma|bur/i};
@@ -78,9 +80,10 @@ function show(s){
  g.selected=s.id;const root=$("detail");root.replaceChildren();
  add(root,"div",s.scored?"Original scored species":(g.holds.has(s.id)?"Learner-only research hold":"Unverified research candidate"),"muted");
  add(root,"h2",s.scientific);add(root,"p",s.common||"","muted");
- const missing=categories.filter(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source).length;
- const named=categories.filter(([k])=>(s.traits?.[k]||[]).length&&s.character_evidence?.[k]?.source).length;
- add(root,"p",s.scored?("Named category citations: "+named+"/4; assigned character source gaps: "+missing+". The second independent source still needs confirming for most records."):"An inventory entry is not permission to treat this species as reliably identified.","notice");
+ const missing=categories.filter(([k])=>(s.traits?.[k]||[]).length&&!hasNamedEvidence(s,k)).length;
+ const named=categories.filter(([k])=>(s.traits?.[k]||[]).length&&hasNamedEvidence(s,k)).length;
+ const unknown=categories.filter(([k])=>!(s.traits?.[k]||[]).length).length;
+ add(root,"p",s.scored?("Documented category citations (original files or source register): "+named+"/4; assigned source gaps: "+missing+"; unknown/unassigned categories: "+unknown+". The source scope and agreement status still matter, and literature citations do not certify field specimens."):"An inventory entry is not permission to treat this species as reliably identified.","notice");
  for(const [cat,title] of categories)section(root,s,cat,title);
  const extras=g.optional.filter(x=>x.id===s.id);const advanced=add(root,"details");add(advanced,"summary","Advanced trait records with citations ("+extras.length+")");
  if(!extras.length)add(advanced,"p","No optional source entries in the current register.","warning");
@@ -106,9 +109,10 @@ async function start(){
  g.holds=new Set(["bromus-brevis","phyllostachys-aurea","cortaderia-selloana","lolium-x-boucheanum"]);
  g.optional=data[10].evidence||[];g.checks=data[11].crosschecks||[];
  g.species=scored.map(x=>Object.assign({},x,{scored:true})).concat(candidates.map(x=>Object.assign({},x,{scored:false}))).sort((a,b)=>a.scientific.localeCompare(b.scientific));
- const named=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&s.character_evidence?.[k]?.source).length,0);
- const needed=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source).length,0);
- const counters=[["169","species inventoried"],[named,"assigned core traits with named source"],[needed,"assigned core traits needing source"],[g.optional.length,"additional source-linked traits"],[g.checks.length,"two-source character comparisons"]];
+ const original=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&s.character_evidence?.[k]?.source).length,0);
+ const named=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&hasNamedEvidence(s,k)).length,0);
+ const needed=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&!hasNamedEvidence(s,k)).length,0);
+ const counters=[["169","species inventoried"],[original,"existing core citations in scored files"],[named,"assigned traits with any named citation"],[needed,"assigned traits without a named citation"],[g.optional.length,"additional source-linked traits"],[g.checks.length,"character crosschecks (source scope noted)"]];
  $("stats").replaceChildren();for(const [num,label] of counters){let x=add($("stats"),"div",null,"stat");add(x,"strong",num);add(x,"span",label)}
  $("query").addEventListener("input",listing);$("scope").addEventListener("change",listing);listing();
  }catch(err){$("detail").replaceChildren(node("p",err.message));$("stats").textContent="Reference loading issue"}
