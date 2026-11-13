@@ -1,0 +1,116 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hays Grass ID Lab — Character Sources</title>
+<style>
+:root{--bg:#f5f7f2;--paper:#fff;--text:#173b2d;--sub:#506658;--line:#c8dacc;--shade:#edf3eb;--link:#235d43}
+@media(prefers-color-scheme:dark){:root{--bg:#112018;--paper:#203429;--text:#eef5ed;--sub:#b9d3c1;--line:#476452;--shade:#2b4436;--link:#ace0b5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.48 system-ui,-apple-system,sans-serif}a{color:var(--link)}header{padding:22px max(16px,calc((100vw - 1160px)/2));background:var(--paper);border-bottom:1px solid var(--line)}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.14}h1{font-size:clamp(1.5rem,4vw,2.3rem);margin:12px 0}h2{margin:0 0 4px}h3{margin:0}
+header p{max-width:930px;margin:8px 0;color:var(--sub)}main{max-width:1160px;margin:18px auto;padding:0 14px}
+#stats{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px}.stat{flex:1;min-width:150px;border:1px solid var(--line);background:var(--paper);padding:11px;border-radius:12px}.stat strong{display:block;font-size:1.45rem}.stat span{font-size:.75rem;color:var(--sub)}
+.columns{display:grid;grid-template-columns:275px minmax(0,1fr);gap:14px}.side,.detail{min-width:0;border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:14px}.side{position:sticky;top:12px;align-self:start}
+input,select,button{font:inherit;background:var(--paper);color:var(--text);border:1px solid var(--line);border-radius:8px}input,select{display:block;width:100%;padding:10px;margin:5px 0 12px}label{font-weight:750}
+#species-list{max-height:63vh;overflow:auto;border-top:1px solid var(--line);margin-top:9px;padding-top:7px}
+.species{width:100%;display:block;text-align:left;margin:3px 0;padding:9px}.species small{display:block;color:var(--sub)}.species.active{background:var(--shade);border-color:var(--link)}
+.core{border:1px solid var(--line);border-radius:10px;margin:13px 0;padding:12px}.core p{margin:5px 0}.core h3{font-size:1.15rem}.source{padding:9px 11px;background:var(--shade);border-left:3px solid var(--link);margin:8px 0;overflow-wrap:anywhere}.source strong,.source small{display:block}.source small,.muted{color:var(--sub)}.source small{font-size:.78rem}
+.warning{border-left:3px solid #bb914e;padding:8px 10px;color:var(--sub);margin:7px 0}.badge{font-size:.75rem;background:var(--shade);border:1px solid var(--line);border-radius:15px;padding:3px 8px}
+.row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}.notice{background:var(--shade);border-radius:9px;padding:10px 13px;margin:12px 0}
+details{margin-top:10px;border:1px solid var(--line);border-radius:9px;padding:9px}summary{cursor:pointer;font-weight:750}
+@media(max-width:700px){.columns{display:block}.side{position:static;margin-bottom:12px}#species-list{max-height:190px}header{padding:16px}main{padding:0 10px}.core{padding:10px}}
+</style></head><body>
+<header><div><a href="./">Grass ID Lab</a> · <a href="../">Browse all grasses</a></div>
+<h1>Botanical character source register</h1>
+<p>Find each identification characteristic, its cited page or online treatment, and any agreements or unresolved source differences. This is a live source-work tracker—not a claim that all plants have two verified references yet.</p>
+<p>Reference priority: <strong>Illustrated Flora of North Central Texas</strong>, <strong>Grasses of the Texas Hill Country</strong>, <strong>Flora of North America</strong>, and <strong>Kew GrassBase</strong>. No nativity or county distribution work is included.</p></header>
+<main><section id="stats">Loading evidence…</section><div class="columns">
+<aside class="side"><label for="query">Find a grass</label><input id="query" placeholder="Scientific or common name" type="search">
+<label for="scope">Show</label><select id="scope"><option value="all">All 169 grasses</option><option value="scored">Original 112 scored</option><option value="candidate">57 research candidates</option><option value="gap">Scored grasses with source gaps</option></select>
+<div id="count" class="muted"></div><div id="species-list"></div></aside>
+<section id="detail" class="detail"><h2>Loading source records…</h2></section>
+</div></main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const categories=[["head","Flowering head"],["habit","Growth form"],["ligule","True ligule"],["awns","Awns / bristles / burs"]];
+const files=["a","b","c1","c2","c3","d1","d2","d3","d4"].map(x=>"species-"+x+".json").concat(["hays-candidates.json","optional-refinement-evidence.json","source-crosschecks.json"]);
+const node=(tag,txt,cls)=>{let e=document.createElement(tag);if(txt!=null)e.textContent=String(txt);if(cls)e.className=cls;return e};
+const add=(p,tag,txt,cls)=>{let e=node(tag,txt,cls);p.append(e);return e};
+const sourceLink=(p,url,label)=>{if(typeof url!=="string"||!url.startsWith("https://"))return;let a=add(p,"a",label);a.href=url;a.rel="noopener noreferrer";a.target="_blank"};
+const pages=text=>[...new Set([...String(text||"").matchAll(/(?:printed\s+)?pp?\.?\s*(\d{1,4})(?:\s*[-–]\s*(\d{1,4}))?/gi)].map(m=>m[0]))];
+const fallbackUrl=source=>/Hagenbuch|Lemke/i.test(source)?"https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf":/Diggs|North Central Texas|Illustrated Flora/i.test(source)?"https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf":null;
+const g={};
+function evidenceCard(root,title,locator,statement,url,tag){
+ const x=add(root,"div",null,"source");add(x,"strong",title||"Unspecified source");
+ if(locator)add(x,"small",locator);
+ if(statement)add(x,"p",statement);
+ if(tag)add(x,"small",tag);
+ sourceLink(x,url,"Read original source");
+}
+function sourceGap(s){
+ return s.scored&&categories.some(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source);
+}
+function section(root,s,cat,title){
+ const el=add(root,"section",null,"core");const top=add(el,"div",null,"row");add(top,"h3",title);
+ const states=s.traits?.[cat]||[];add(top,"span",states.length?states.join(" · "):"Unknown","badge");
+ const reviewed=g.checks.filter(x=>x.id===s.id&&x.character===cat);
+ for(const x of reviewed){
+  add(el,"p",x.interpretation,"notice");
+  add(el,"p",x.status.replace(/_/g," ").toLowerCase(),"muted");
+  for(const r of x.references)evidenceCard(el,r.authority,r.locator,r.support,r.uri,r.source_checked);
+ }
+ if(s.scored){
+  const evidence=s.character_evidence?.[cat];const d=add(el,"details");
+  add(d,"summary",evidence?.source?"Existing source record (preserved)":"No named source record — research needed");
+  if(evidence?.source){
+   const linkEntries=[["Primary",evidence.source_url],["FNA",evidence.fna_url],["Kew",evidence.grassbase_url],["UT",evidence.ut_url],["Flora",evidence.external_flora_url]].filter(x=>x[1]?.startsWith("https://"));
+   const refPages=pages(evidence.source+" "+(evidence.reference||""));
+   evidenceCard(d,evidence.source,refPages.length?refPages.join("; "):"Exact page not yet recorded",evidence.reference||"",linkEntries[0]?.[1]||fallbackUrl(evidence.source),evidence.status||"Existing literature note only");
+   for(const [label,url] of linkEntries.slice(1))sourceLink(d,url,"Additional "+label+" reference");
+  }else add(d,"p","A visible character choice is already assigned, but its named category-source entry is missing. Do not claim this is verified.","warning");
+ }else{
+  add(el,"p","Research candidate only. These are source leads, not verified scored-character assignments.","warning");
+  const patterns={head:/panicle|head|spike|inflorescence/i,habit:/habit|root|stolon|rhizome/i,ligule:/ligule|sheath|collar|leaf base/i,awns:/awn|bristle|lemma|bur/i};
+  const relevant=(s.details||[]).filter(x=>patterns[cat].test(x.part||""));
+  if(relevant.length){const d=add(el,"details");add(d,"summary","Existing dossier clues — page not yet confirmed");
+   for(const x of relevant)evidenceCard(d,x.source||"Existing candidate dossier","Printed page not recorded",x.part+": "+x.description,null,"Needs verification against an original treatment");
+  }
+ }
+}
+function show(s){
+ g.selected=s.id;const root=$("detail");root.replaceChildren();
+ add(root,"div",s.scored?"Original scored species":(g.holds.has(s.id)?"Learner-only research hold":"Unverified research candidate"),"muted");
+ add(root,"h2",s.scientific);add(root,"p",s.common||"","muted");
+ const missing=categories.filter(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source).length;
+ add(root,"p",s.scored?("Named category citations: "+(4-missing)+"/4; assigned character source gaps: "+missing+". The second independent source still needs confirming for most records."):"An inventory entry is not permission to treat this species as reliably identified.","notice");
+ for(const [cat,title] of categories)section(root,s,cat,title);
+ const extras=g.optional.filter(x=>x.id===s.id);const advanced=add(root,"details");add(advanced,"summary","Advanced trait records with citations ("+extras.length+")");
+ if(!extras.length)add(advanced,"p","No optional source entries in the current register.","warning");
+ for(const e of extras)evidenceCard(advanced,e.source,pages(e.source).join("; ")||"Printed page not recorded",e.character+": "+e.states.join(" / ")+". "+(e.note||""),e.source_url,e.evidence_level);
+}
+function listing(){
+ let q=$("query").value.trim().toLowerCase(),v=$("scope").value;
+ const species=g.species.filter(s=>(v==="all"||(v==="scored"&&s.scored)||(v==="candidate"&&!s.scored)||(v==="gap"&&sourceGap(s)))&&(s.scientific+" "+s.common).toLowerCase().includes(q));
+ $("count").textContent=species.length+" species";$("species-list").replaceChildren();
+ for(const s of species){let b=add($("species-list"),"button",s.scientific,"species"+(g.selected===s.id?" active":""));
+ add(b,"small",s.scored?(sourceGap(s)?"Scored · source gap":"Scored · category sources named"):(g.holds.has(s.id)?"Research hold":"Research candidate"));
+ b.addEventListener("click",()=>{show(s);listing();if(innerWidth<701)$("detail").scrollIntoView({behavior:"smooth",block:"start"})});
+ }
+ if(species.length&&!species.some(s=>s.id===g.selected))show(species[0]);
+ if(!species.length){g.selected=null;$("detail").replaceChildren(node("p","No species match your search"))}
+}
+async function start(){
+ try{
+ const responses=await Promise.all(files.map(x=>fetch(x,{cache:"no-store"})));
+ if(responses.some(x=>!x.ok))throw Error("Some files are not deployed yet. Refresh after GitHub Pages publishes.");
+ const data=await Promise.all(responses.map(r=>r.json())),scored=data.slice(0,9).flat(),candidates=data[9].candidates||[];
+ if(scored.length!==112||candidates.length!==57||new Set(scored.concat(candidates).map(x=>x.id)).size!==169)throw Error("Species inventory is not a valid 112+57 set.");
+ g.holds=new Set(["bromus-brevis","phyllostachys-aurea","cortaderia-selloana","lolium-x-boucheanum"]);
+ g.optional=data[10].evidence||[];g.checks=data[11].crosschecks||[];
+ g.species=scored.map(x=>Object.assign({},x,{scored:true})).concat(candidates.map(x=>Object.assign({},x,{scored:false}))).sort((a,b)=>a.scientific.localeCompare(b.scientific));
+ const named=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&s.character_evidence?.[k]?.source).length,0);
+ const needed=scored.reduce((n,s)=>n+categories.filter(([k])=>(s.traits?.[k]||[]).length&&!s.character_evidence?.[k]?.source).length,0);
+ const counters=[["169","species inventoried"],[named,"assigned core traits with named source"],[needed,"assigned core traits needing source"],[g.optional.length,"additional source-linked traits"],[g.checks.length,"two-source character comparisons"]];
+ $("stats").replaceChildren();for(const [num,label] of counters){let x=add($("stats"),"div",null,"stat");add(x,"strong",num);add(x,"span",label)}
+ $("query").addEventListener("input",listing);$("scope").addEventListener("change",listing);listing();
+ }catch(err){$("detail").replaceChildren(node("p",err.message));$("stats").textContent="Reference loading issue"}
+}
+start();
+</script></body></html>
