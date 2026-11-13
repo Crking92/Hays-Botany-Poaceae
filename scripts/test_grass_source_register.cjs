@@ -44,7 +44,7 @@ for(const e of cross.crosschecks){
   throw Error("Crosscheck cannot fill unassigned/non-scored slot "+key);
  indexed.add(key);
 }
-if(indexed.size<335||448-indexed.size-unknown>110||unknown!==3)
+if(indexed.size<350||448-indexed.size-unknown>95||unknown!==3)
  throw Error("Awn citation batch dropped source-coverage guarantees");
 const awnBatch=[
  "aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens",
@@ -111,6 +111,19 @@ if(!/awnless OR awn-tipped/.test(atom("muhlenbergia-paniculata").interpretation)
    !/genus-level/.test(atom("dichanthelium-lindheimeri").interpretation)||
    !/mucro/.test(atom("triplasiella-eragrostoides").interpretation))
  throw Error("Final awn batch nuances lost");
+
+
+// Batch 8: document 15 vegetative growth-form slots; do not erase conflicts.
+const latestHabitBatch=["bouteloua-dactyloides","aristida-purpurea","avena-fatua","bothriochloa-barbinodis","bromus-japonicus","bromus-pubescens","disakisperma-dubium","echinochloa-crus-galli","hordeum-pusillum","muhlenbergia-lindheimeri","phalaris-caroliniana","tripsacum-dactyloides","paspalum-dilatatum","paspalum-setaceum","paspalum-urvillei"];
+if(latestHabitBatch.some(id=>!entries.has(id+"|habit")))
+ throw Error("Missing 15 growth-habit source records");
+const growth=id=>cross.crosschecks.find(e=>e.id===id&&e.character==="habit");
+if(!/rhizomes ABSENT/.test(growth("bouteloua-dactyloides").interpretation)||
+ !/CURRENT|Current/.test(growth("bouteloua-dactyloides").interpretation)||
+ !/hard-based rhizomatous perennial/.test(growth("tripsacum-dactyloides").references[1].support)||
+ !/short rhizomes/.test(growth("paspalum-setaceum").interpretation)||
+ !/life history/.test(growth("hordeum-pusillum").interpretation))
+ throw Error("New growth form distinctions or open scoring caveat lost");
 
 if(optional.some(e=>!e.source||!e.source_url?.startsWith("https://")))throw Error("Optional source citation missing");
 const viewer=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
