@@ -214,7 +214,11 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
        texasCupgrass.traits.ligule.includes('membrane') &&
        texasCupgrass.character_evidence?.ligule?.status ===
        'PRIMARY_HILL_COUNTRY_CILIATE_MINUTE_MEMBRANOUS_BASE_CONDITIONAL_PHOTO_PENDING');
-assert.equal(scoredPaths,455,'Reviewed scored character-combination total changed');
+// Scoring review 2026-11-13: three source-backed, additive non-exclusion choices
+// (Bromus pubescens and Hordeum pusillum short-awns; Setaria italica fringed
+// membrane) add four valid complete combinations: 455 -> 459. This retains
+// a strict exact count to catch unreviewed expansion or deletion of scored paths.
+assert.equal(scoredPaths,459,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
