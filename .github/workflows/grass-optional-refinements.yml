@@ -5,6 +5,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'scripts/qa_optional_grass_refinements.py'
+      - 'scripts/test_optional_grass_refinement.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -12,6 +13,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'scripts/qa_optional_grass_refinements.py'
+      - 'scripts/test_optional_grass_refinement.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -23,3 +25,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate source-backed states, original 112, research holds and unknown-safe sorting
         run: python3 scripts/qa_optional_grass_refinements.py
+      - name: Exercise leaf-detail selections, inherited scoring and unknown-safe ranking
+        run: node scripts/test_optional_grass_refinement.cjs

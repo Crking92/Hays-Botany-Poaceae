@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "release_note": "Source-backed optional character clues. Positive ranking only; no species eliminated and no specimen certification.",
+  "release_note": "Batch 2 adds sourced leaf-width ranges, shape, hairs, tips, margins, and midveins; all positive-ranking only, not hard exclusions. Multiple compatible states and gaps are intentionally retained.",
   "mode": "NON_EXCLUDING_POSITIVE_RANKING",
   "characters": [
     {
       "id": "blade_shape",
       "label": "Leaf blade shape",
-      "hint": "Check a fresh blade. Dry or folded tips can look rolled.",
+      "hint": "Look at a fresh, expanded blade. V-folded and inward-rolled leaves are different. Drying or drought may change the apparent shape.",
       "options": [
         {
           "id": "flat",
@@ -23,9 +23,77 @@
       ]
     },
     {
+      "id": "blade_width",
+      "label": "Leaf width",
+      "hint": "Measure a fresh blade near its widest point. Ranges are approximate and can overlap; flatten curled leaves when practical.",
+      "options": [
+        {
+          "id": "thread",
+          "label": "Thread-fine (under 2 mm)"
+        },
+        {
+          "id": "narrow",
+          "label": "Narrow (about 2–5 mm)"
+        },
+        {
+          "id": "medium",
+          "label": "Medium (about 5–10 mm)"
+        },
+        {
+          "id": "broad",
+          "label": "Broad (over 10 mm)"
+        }
+      ]
+    },
+    {
+      "id": "blade_tip",
+      "label": "Leaf tip",
+      "hint": "Examine a mature intact tip, not one torn by mowing or grazing.",
+      "options": [
+        {
+          "id": "boat_tipped",
+          "label": "Rounded / boat-shaped"
+        },
+        {
+          "id": "hardened_tip",
+          "label": "Stiff, hardened point"
+        },
+        {
+          "id": "tiny_point",
+          "label": "Tiny abrupt point"
+        }
+      ]
+    },
+    {
+      "id": "blade_edge",
+      "label": "Blade edge",
+      "hint": "Observe under a hand lens. Some grass edges can cut skin; don't drag fingers across them.",
+      "options": [
+        {
+          "id": "serrate",
+          "label": "Sawtooth / sharp edge"
+        },
+        {
+          "id": "whitish",
+          "label": "Pale whitish edge"
+        }
+      ]
+    },
+    {
+      "id": "blade_midnerve",
+      "label": "Leaf midrib",
+      "hint": "Look along the center of the blade, separate from its edge.",
+      "options": [
+        {
+          "id": "pale_center",
+          "label": "Prominent pale center line"
+        }
+      ]
+    },
+    {
       "id": "blade_hairs",
       "label": "Leaf blade hairs",
-      "hint": "Check the leaf itself, not the joint or the ligule.",
+      "hint": "Use a hand lens if needed. Check whether hairs occur mostly at the base or across the blade. Collar and sheath hairs are separate.",
       "options": [
         {
           "id": "base_hairs",
@@ -266,6 +334,1210 @@
       "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=8663&taxauthid=1&tid=20381",
       "note": "Appressed hairs often occur on real culm nodes; character varies.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Mostly 1.5–4 mm, occasionally up to 6 mm; do not measure a dried curled tip.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1.5,
+        6
+      ]
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 37",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=37",
+      "note": "2–5 mm in the Hill Country treatment; regional variants and hair patterns differ.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "2–7 mm, with width varying by plant and leaf age.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": "bouteloua-hirsuta",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Usually 1–2 mm; very narrow leaves are not species-specific.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "bouteloua-rigidiseta",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Usually 1–2 mm; compare attached short racemes for identification.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "bouteloua-trifida",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Usually 1–1.5 mm; narrow leaves are not enough to distinguish other gramas.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        1.5
+      ]
+    },
+    {
+      "id": "chloris-andropogonoides",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "2–4 mm; windmillgrass introgressants overlap in leaf form.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "chloris-cucullata",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "2–4 mm, typically folded tightly lengthwise.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": "chloris-verticillata",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "1–3 mm, often lengthwise-folded; parent/hybrid overlap persists.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "chloris-virgata",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "2–6 mm, flat to folded; annual and mature-head characters still needed.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        6
+      ]
+    },
+    {
+      "id": "chasmanthium-latifolium",
+      "character": "blade_width",
+      "states": [
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Broad 10–20 mm leaves; compare fish-shaped drooping spikelets.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        10,
+        20
+      ]
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Commonly 1–3 mm, occasionally about 4 mm; flattened blade width, not the diameter of a rolled bud.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "eragrostis-intermedia",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Plains lovegrass usually 2–3 mm; overlaps mourning lovegrass near 2 mm.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "eragrostis-lugens",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Mourning lovegrass usually 1–2 mm; often inward-rolled.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "eragrostis-secundiflora",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 49",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+      "note": "Typically 2–2.5 mm; primary vegetative work could not reliably separate this from sand lovegrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        2.5
+      ]
+    },
+    {
+      "id": "eragrostis-trichodes",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 49",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+      "note": "1–8 mm; wide variability means width cannot reliably separate this from red lovegrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        8
+      ]
+    },
+    {
+      "id": "eriochloa-sericea",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Texas cupgrass usually 2–3 mm; hairs vary by specimen.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "erioneuron-pilosum",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Hairy tridens 1–2 mm; the hardened white blade tip is a more useful supporting clue.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "festuca-versuta",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Texas fescue 2–5 mm; may be loosely folded.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "hilaria-belangeri",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Curlymesquite 1–3 mm; low turf and surface stolons are useful companion evidence.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Tobosagrass 2–5 mm; sometimes stiff or inward-rolled.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "hopia-obtusa",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Vine mesquite 2–7 mm; leaf shape alone does not establish identification.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "blade_width",
+      "states": [
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 52",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "note": "Rice cutgrass 7–10 mm; edges can be sharply serrate—avoid rubbing them.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "muhlenbergia-lindheimeri",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 54",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
+      "note": "Usually 2–3 mm, occasionally about 5 mm; often folded lengthwise.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "muhlenbergia-reverchonii",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 55",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=55",
+      "note": "Seep muhly 1–2 mm, generally very fine and involute.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "poa-annua",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Annual bluegrass 1.5–4 mm; boat-shaped tip and seasonal habit are supplementary clues.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1.5,
+        4
+      ]
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Texas bluegrass 1–5 mm; overlap with annual bluegrass is substantial.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "blade_width",
+      "states": [
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Common reed 15–50 mm; broad leaves alone do not distinguish giant reed.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        15,
+        50
+      ]
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Rabbitfoot grass 2–8 mm; leaf width overlaps other annual wet-ground grasses.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        8
+      ]
+    },
+    {
+      "id": "tripsacum-dactyloides",
+      "character": "blade_width",
+      "states": [
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 67",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+      "note": "Eastern gamagrass 10–25 mm; stem and sex-differentiated inflorescence are needed too.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        10,
+        25
+      ]
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "blade_width",
+      "states": [
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Cultivated/weedy sorghum 10–50 mm; phenotype varies widely across varieties.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        10,
+        50
+      ]
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "blade_width",
+      "states": [
+        "medium",
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Johnsongrass 8–20 mm; check rhizomes and white midnerve, not width alone.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        8,
+        20
+      ]
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium",
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Dallisgrass 3–12 mm; wide range means a single measured blade is not decisive.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        3,
+        12
+      ]
+    },
+    {
+      "id": "paspalum-distichum",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Knotgrass 2–6 mm; may appear folded or curled.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        6
+      ]
+    },
+    {
+      "id": "paspalum-urvillei",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium",
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Vaseygrass 4–15 mm; examine lower sheaths and mature branch arrangement.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        4,
+        15
+      ]
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "blade_width",
+      "states": [
+        "medium",
+        "broad"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 61",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+      "note": "Scheele's bristlegrass 5–18 mm; can be flat or folded and hairy.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        5,
+        18
+      ]
+    },
+    {
+      "id": "setaria-reverchonii",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 61",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+      "note": "Reverchon's bristlegrass 2–3 mm; can curl inward when dried.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "schizachyrium-scoparium",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Normally plane; occasional drying can deform the tip.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 37",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=37",
+      "note": "Normally plane; this does not distinguish KR from other bluestems.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-curtipendula",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Usually plane along the main blade.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-hirsuta",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Plane or slightly involute; do not force a single permanent shape.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-rigidiseta",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Plane or slightly involute.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-trifida",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Plane, conduplicate or convolute; rolled-about-one-margin may be unlike simple involute.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-andropogonoides",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Plane blades; introgressants and hybrids require floral examination.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-cucullata",
+      "character": "blade_shape",
+      "states": [
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Tightly conduplicate (folded lengthwise) blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-virgata",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Plane or conduplicate, depending leaf and growth stage.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chasmanthium-latifolium",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Broad, plane lanceolate blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "cynodon-dactylon",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Plane or conduplicate leaves; both occur.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-secundiflora",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 49",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+      "note": "Plane or involute; shares vegetative traits with sand lovegrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-trichodes",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 49",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+      "note": "Blade broadly plane with involute tip; choose the observed mature blade form.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eriochloa-sericea",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Plane or involute blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "erioneuron-pilosum",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Plane, often conduplicate; distinctive hardened white tip.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "festuca-versuta",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Plane to loosely folded; do not equate with bud vernation.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Plane or involute; sometimes stiff.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hopia-obtusa",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "Plane or involute; width varies.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 52",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "note": "Plane serrated blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Typically plane; prow-like/boat-shaped tip.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-arachnifera",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Plane, less often folded.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "phragmites-australis",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "Broad plane leaf; attenuate tip may involute.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "polypogon-monspeliensis",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "note": "Plane leaf; other characters required.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "tripsacum-dactyloides",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 67",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=67",
+      "note": "Broad plane blade with often rough margins.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Broad plane blade; cultivated variation.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Broad plane blade; check attached rhizome and midnerve.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Plane blades; not a unique genus feature.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-distichum",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Usually plane, occasionally folded; paper also describes convolute.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-urvillei",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "Plane blades and a basal fringe of soft hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-scheelei",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 61",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+      "note": "Plane or conduplicate, often scabrous/fine pubescent.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-reverchonii",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "inrolled"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 61",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+      "note": "Plane in life; dries involute. Avoid coding a dried tip as permanent rolled shape.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "andropogon-gerardi",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 34",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=34",
+      "note": "Long hairs occur just above and behind the ligule, distinct from true ligule tissue.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chasmanthium-latifolium",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Upper surface can be sparsely pilose at base.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-virgata",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Sparse longer hairs may occur toward blade base.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-intermedia",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 48",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+      "note": "Some hairs occur near the base behind the ligule; blade faces otherwise largely glabrous.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-trichodes",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 49",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+      "note": "Mostly smooth blade with occasional basal hairs; red lovegrass overlaps.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eriochloa-sericea",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Blades usually pubescent on both faces, less commonly glabrous.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-rigidiseta",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "Sparse pilose hairs on blade surfaces; may be hard to see.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "hilaria-mutica",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 51",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=51",
+      "note": "A few long hairs immediately above ligule are common.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-dilatatum",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 57",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=57",
+      "note": "Some long soft hairs near base of upper surface.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "paspalum-urvillei",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 58",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=58",
+      "note": "A distinct fringe of long soft hairs just above the ligule.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Pubescence can occur just behind the ligule on blade base.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "setaria-reverchonii",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 61",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=61",
+      "note": "A few long soft hairs may occur on basal blade margins.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-trifida",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 38",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=38",
+      "note": "One or two long hairs near base can occur; absence cannot exclude.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "character": "blade_tip",
+      "states": [
+        "boat_tipped"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 59",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=59",
+      "note": "A rounded, prow-shaped blade tip is reported; Poa species may share the character.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "erioneuron-pilosum",
+      "character": "blade_tip",
+      "states": [
+        "hardened_tip"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Abruptly acute hardened tip, often with conspicuous pale tissue.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-andropogonoides",
+      "character": "blade_tip",
+      "states": [
+        "tiny_point"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 41",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=41",
+      "note": "Mucronate tip; a tiny abrupt tip point, not a distinct awn.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-verticillata",
+      "character": "blade_tip",
+      "states": [
+        "tiny_point"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Blunt or mucronate; small point is possible, not required.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "chloris-virgata",
+      "character": "blade_tip",
+      "states": [
+        "tiny_point"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 42",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=42",
+      "note": "Blunt or mucronate; small point is possible, not universal.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "leersia-oryzoides",
+      "character": "blade_edge",
+      "states": [
+        "serrate"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 52",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "note": "Retrorsely serrate blade edges and surfaces; avoid sliding your fingers along edges.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "erioneuron-pilosum",
+      "character": "blade_edge",
+      "states": [
+        "whitish"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Margins are cartilaginous/white-colored; midrib often pale too.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "blade_edge",
+      "states": [
+        "whitish"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Hyaline or whitish leaf margins; compare to prominent pale midrib.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-halepense",
+      "character": "blade_midnerve",
+      "states": [
+        "pale_center"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Prominent often whitish midnerve; not exclusive to Johnsongrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "sorghum-bicolor",
+      "character": "blade_midnerve",
+      "states": [
+        "pale_center"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 63",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+      "note": "Conspicuous whitish midnerve; similar to Johnsongrass.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "erioneuron-pilosum",
+      "character": "blade_midnerve",
+      "states": [
+        "pale_center"
+      ],
+      "source": "Hagenbuch & Lemke (2015), p. 50",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+      "note": "Whitish midnerve visible from beneath; leaf edges also pale.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    }
+  ],
+  "botanical_sources": [
+    {
+      "name": "Hagenbuch and Lemke 2015 — Grasses of the Texas Hill Country",
+      "uri": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "scope": "Hill Country vegetative characters; page-numbered citations per taxon. Different states can occur with age/drying."
     }
   ]
 }

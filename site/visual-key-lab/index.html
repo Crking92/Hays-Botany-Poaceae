@@ -147,6 +147,17 @@ html[data-theme="dark"] .compare-pick[aria-pressed=true]{background:#326e50;colo
 html[data-theme="dark"] .optional-choices button,html[data-theme="dark"] .optional-reset{background:#22362a;border-color:var(--line);color:var(--ink)}
 html[data-theme="dark"] .optional-choices button[aria-pressed=true]{background:#326e50;color:#fff}
 @media(max-width:480px){.optional-features{margin:0 12px 15px}.optional-choices button{min-height:44px}}
+/* A second accordion keeps many leaf details out of the beginner's way. */
+.optional-group{border:1px solid var(--line);border-radius:10px;background:var(--white);margin:0 0 8px;overflow:hidden}
+.optional-group summary{display:flex;align-items:center;gap:9px;flex-wrap:wrap;cursor:pointer;padding:11px 12px;font-weight:750;font-size:.86rem;color:var(--ink)}
+.optional-group summary:hover{background:var(--pale)}
+.optional-group[open] summary{border-bottom:1px solid var(--line);background:var(--pale)}
+.optional-chosen{display:inline-block;padding:2px 8px;font-size:.75rem;border-radius:20px;background:var(--mint);color:var(--ink);font-weight:650}
+.optional-group-body{padding:10px 12px 12px}
+.optional-group-body p{color:var(--muted);font-size:.77rem;margin:0 0 10px}
+html[data-theme="dark"] .optional-group{background:#1a2a21}
+html[data-theme="dark"] .optional-group[open] summary,html[data-theme="dark"] .optional-group summary:hover{background:#2c4434}
+html[data-theme="dark"] .optional-chosen{background:#305c41;color:#e3f3e6}
 </style>
 </head>
 <body>
@@ -272,24 +283,31 @@ function renderOptionalCharacters(){
  const holder=$("optional-character-wrap"),root=$("optional-character-groups");
  root.replaceChildren();holder.hidden=!state.refineCharacters.length;
  for(const c of state.refineCharacters){
-   const group=document.createElement("fieldset");group.className="optional-group";
-   group.append(node("legend","",c.label),node("p","",c.hint));
-   const choices=node("div","optional-choices");
+   const group=node("details","optional-group"),summary=node("summary","",c.label);
+   const content=node("div","optional-group-body");
+   const describe=node("p","",c.hint),choices=node("div","optional-choices");
+   function updateChosen(){
+     const prior=summary.querySelector(".optional-chosen");if(prior)prior.remove();
+     const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+     if(selected)summary.append(node("span","optional-chosen",selected.label));
+   }
+   updateChosen();group.open=Boolean(state.refineSelected[c.id]);
    for(const o of c.options){
      const b=node("button","",o.label);b.type="button";
      b.setAttribute("aria-pressed",String(state.refineSelected[c.id]===o.id));
      b.addEventListener("click",()=>{
        state.refineSelected[c.id]=state.refineSelected[c.id]===o.id?null:o.id;
        choices.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b&&state.refineSelected[c.id]===o.id)));
-       updateUrl();renderResults();
+       updateChosen();updateUrl();renderResults();
      });
      choices.append(b);
    }
-   group.append(choices);root.append(group);
+   content.append(describe,choices);group.append(summary,content);root.append(group);
  }
  $("optional-clear").onclick=()=>{
    state.refineSelected={};
    root.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed","false"));
+   root.querySelectorAll(".optional-chosen").forEach(b=>b.remove());
    updateUrl();renderResults();
  };
 }
