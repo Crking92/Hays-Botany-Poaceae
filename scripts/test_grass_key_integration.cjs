@@ -19,19 +19,19 @@ assert(candidates.every(c => c.status === 'RESEARCH_CANDIDATE_NOT_RELEASED'), 'u
 const originalPhotos = species.reduce((sum, s) => sum + s.photos.length, 0);
 assert.equal(originalPhotos, 514, 'first-pass scored photo reference inventory unexpectedly changed');
 
-const trialProfileFiles = ['provisional-trial-profiles.json','provisional-trial-batch2.json','provisional-trial-batch3.json','provisional-trial-batch4.json'];
+const trialProfileFiles = ['provisional-trial-profiles.json','provisional-trial-batch2.json','provisional-trial-batch3.json','provisional-trial-batch4.json','provisional-trial-batch5-a.json','provisional-trial-batch5-b.json','provisional-trial-batch5-c.json'];
 const trialProfiles = trialProfileFiles.flatMap(f => JSON.parse(read(f)).profiles);
 const trialCount = trialProfiles.length;
 const learnerOnlyCount = candidates.length - trialCount;
 assert.equal(new Set(trialProfiles.map(x=>x.id)).size, trialCount, 'Duplicate trial-profile identifiers');
-assert.equal(trialCount, 24, 'Research-trial inventory changed; review key admission and public copy');
+assert.equal(trialCount, 53, 'Research-trial inventory changed; review key admission and public copy');
 const html = read('index.html');
 assert(html.includes('id="coded-total"')&&html.includes('$("coded-total").textContent=state.species.length'),
  'Public key count must follow loaded scoring and research-trial data');
-assert(html.includes('provisional-trial-batch4.json')&&trialCount===24,
- 'The 24 research trials must remain a separate provisional inventory');
-assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===33,
- 'All 33 Learner-only records must be reported as missing identification-key data');
+assert(trialProfileFiles.every(file=>html.includes(file))&&trialCount===53,
+ 'All 53 explicit research trial rows must remain a separate provisional inventory');
+assert(html.includes('pending.length+" grasses not yet included in this photo key"')&&learnerOnlyCount===4,
+ 'All four documented holds must remain Learner-only until botanical evidence supports a trial');
 assert(!html.includes('Phase 3 in progress:')&&!html.includes('Field-testing prototype:'),
  'Internal project progress banners should not appear on the visitor identification page');
 const scriptMatch = html.match(/<script>([\s\S]*?)<\/script>/);
