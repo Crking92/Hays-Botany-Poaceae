@@ -214,6 +214,7 @@ html[data-theme="dark"] .flower-field-guide{background:#23372b}
 html[data-theme="dark"] .stem-field-guide{background:#23372b}
 @media(max-width:355px){.stem-field-guide{flex-wrap:wrap}.stem-field-guide svg{max-width:100%;width:136px}}
 </style>
+<link rel="stylesheet" href="grass-glossary.css?v=1">
 </head>
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
@@ -1728,5 +1729,6 @@ if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("
 boot();
 })();
 </script>
+<script src="grass-glossary-bridge.js?v=1" defer></script>
 </body>
 </html>
