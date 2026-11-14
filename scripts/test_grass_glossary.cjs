@@ -11,6 +11,8 @@ const helper=read('grass-glossary-bridge.js');
 const html=read('index.html');
 const ext=JSON.parse(read('grass-glossary-terms.json'));
 const mirrored=JSON.parse(read('shared-glossary-snapshot.json'));
+const media=JSON.parse(read('glossary-approved-source-photos.json'));
+const approved=media.approved_photos;
 const morph=JSON.parse(read('optional-refinement-evidence.json'));
 assert.doesNotThrow(()=>new vm.Script(helper));
 const inline=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
@@ -25,6 +27,8 @@ assert.equal(mirrored.source_path,'data/learning-layer.json');
 assert.match(mirrored.source_sha,/^[a-f0-9]{40}$/);
 assert.equal(Object.keys(mirrored.terms).length,147);
 assert.equal(Object.keys(ext.terms).length,26);
+assert.equal(Object.keys(approved).length,26,'verified Commons source recovery count');
+assert.ok(media.held_photos.coriaceous,'do not publish unverified coriaceous photo');
 assert.equal(new Set([...Object.keys(mirrored.terms),...Object.keys(ext.terms)]).size,173);
 for(const [name,item] of Object.entries({...mirrored.terms,...ext.terms})){
  assert.ok(item.term&&item.plain,name+': missing definition');
@@ -62,10 +66,41 @@ for(const [name,item] of Object.entries(ext.terms)){
  assert.ok(fs.existsSync(path.join(root,local)),name+': referenced original image file missing: '+local);
  uniquePhotos.add(local);
 }
+let eligibleLegacy=0;
+for(const [key,v] of Object.entries(mirrored.terms)){
+ const src=v.real_photo||{};
+ const approvedPhoto=approved[key];
+ if(approvedPhoto){
+  assert.equal(approvedPhoto.source_page,src.source_page,'original photo reference must stay exact: '+key);
+  assert.ok(approvedPhoto.creator&&approvedPhoto.visual_scope&&approvedPhoto.verified_on,key+' missing review evidence');
+  assert.ok(creditOK(approvedPhoto.license),key+' license unsupported');
+  if(approvedPhoto.license!=='Public domain')assert.ok(approvedPhoto.license_url.startsWith('https://creativecommons.org/'),key+' no license url');
+  eligibleLegacy++;continue;
+ }
+ if(key==='ligule'){
+  assert.match(helper,/key==="ligule"/,'use the separately approved grass ligule photo');
+  eligibleLegacy++;continue;
+ }
+ if(key==='coriaceous'){
+  assert.match(helper,/key==="coriaceous"/,'uncertain photograph needs separate schematic');
+  eligibleLegacy++;continue;
+ }
+ if(src.media_type==='diagram'&&/Hays Botany learner diagram/.test(src.credit||'')){
+  eligibleLegacy++;continue;
+ }
+ if(src.source_page&&creditOK(src.credit)){
+  eligibleLegacy++;continue;
+ }
+ if(v.visual&&/^assets\/diagrams\//.test(v.visual)){
+  eligibleLegacy++;continue;
+ }
+ throw Error('Glossary term lacks cleared media or an accurate teaching diagram: '+key);
+}
+assert.equal(eligibleLegacy,147);
 assert.equal(photographed,18);
 assert.equal(uniquePhotos.size,8);
 assert.match(helper,/shared-glossary-snapshot\.json/,'local fallback must load');
 assert.match(helper,/read\(SHARED\)\.then/,'canonical glossary should refresh when accessible');
 assert.match(helper,/key==="ligule"/,'the unsupported legacy GFDL ligule image must be replaced');
 assert.match(helper,/route|right|photo|copyright/i);
-console.log('GRASS_GLOSSARY_QA PASS '+JSON.stringify({shared:Object.keys(mirrored.terms).length,new:Object.keys(ext.terms).length,total:173,advancedGroups:ids.length,coreGroups:4,photoUses:photographed,distinctPhotoFiles:uniquePhotos.size,originalSketchFallbacks:8}));
+console.log('GRASS_GLOSSARY_QA PASS '+JSON.stringify({shared:Object.keys(mirrored.terms).length,new:Object.keys(ext.terms).length,total:173,advancedGroups:ids.length,coreGroups:4,photoUses:photographed,distinctPhotoFiles:uniquePhotos.size,originalSketchFallbacks:8,sharedVisualMediaCoverage:eligibleLegacy,sourceRightsRecovered:Object.keys(approved).length}));
