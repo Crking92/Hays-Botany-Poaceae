@@ -43,6 +43,31 @@ const root=path.resolve(__dirname,'..');
   await page.locator('.answer').first().click();assert.equal(await page.locator('.answer[aria-pressed=true]').count(),1);
   await page.getByRole('button',{name:'Clear this choice',exact:true}).click();assert.equal(await page.locator('.answer[aria-pressed=true]').count(),0);
   await page.locator('.result').first().click();assert.equal(await page.locator('#detail-dialog').evaluate(d=>d.open),true);await page.getByRole('button',{name:'Close species detail',exact:true}).click();
+
+  // Comparison photos must remain clear and fully visible even on a narrow phone.
+  await page.evaluate(()=>{review.state.selected={head:'airy',habit:null,ligule:null,awns:null};review.render()});
+  await page.locator('#compare-toggle').click();
+  assert.equal(await page.locator('.compare-pick[aria-pressed="true"]').count(),2,'Default pair not selected');
+  await page.locator('#compare-open').click();
+  const compared=page.locator('#compare-dialog');
+  assert.equal(await compared.evaluate(d=>d.open),true);
+  assert.equal(await compared.locator('.compare-card').count(),2);
+  assert.ok(await compared.locator('.compare-photo').count()>=2,'Known grass photos missing from comparison');
+  assert.equal(await compared.locator('.compare-photo').count(),await compared.locator('.compare-photo figcaption').count(),'Every image needs a visible caption/credit');
+  assert.equal(await compared.locator('.compare-photo a').count(),await compared.locator('.compare-photo').count(),'Each photo needs its original source');
+  const fit=await compared.evaluate(d=>{
+    const frame=d.querySelector('.compare-photo .photo-frame');
+    if(!frame)return 'missing-frame';
+    // Remote photos are blocked by this browser test; the app correctly shows
+    // its missing-image fallback. Inspect CSS with a temporary local <img>.
+    const img=document.createElement('img');frame.append(img);
+    const computed=getComputedStyle(img).objectFit;img.remove();return computed;
+  });
+  assert.equal(fit,'contain','Botanical comparison photos must not be cropped');
+  assert.ok(await compared.evaluate(d=>d.scrollWidth<=d.clientWidth+2),'Comparison dialog overflows at '+width+'px');
+  await compared.getByRole('button',{name:'Close comparison'}).click();
+  await page.evaluate(()=>{review.state.selected={head:null,habit:null,ligule:null,awns:null};review.render()});
+
  }
  assert.deepEqual(errors,[]);console.log(JSON.stringify({status:'PASS',...result,grouped:undefined,heads:undefined,viewports:[1366,390,320],photos:'Network images blocked: no image-content or license certification'},null,2));
  }finally{await browser.close();}

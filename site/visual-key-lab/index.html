@@ -87,6 +87,19 @@ html.guest-preview .question{padding-top:15px}
 .compare-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:13px;padding:12px 20px}
 .compare-card{padding:12px;border:1px solid var(--line);border-radius:13px;min-width:0;background:var(--pale)}
 .compare-card .photo-frame{border-radius:9px}
+
+/* The comparison deliberately shows more of each source image, not a cropped thumbnail. */
+.compare-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;margin:8px 0 10px}
+.compare-photo{margin:0;min-width:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--white)}
+.compare-photo .photo-frame{aspect-ratio:5/4;background:var(--pale)}
+.compare-photo .photo-frame img{object-fit:contain}
+.compare-photo figcaption{padding:7px 8px 8px;font-size:.72rem;line-height:1.38}
+.compare-photo figcaption a{display:inline-block;margin-top:4px;overflow-wrap:anywhere}
+.compare-photo-caption{display:block;margin-bottom:4px}
+.compare-photo-credit{display:block;color:var(--muted);font-size:.69rem;line-height:1.4}
+.compare-photo-missing{margin:4px 0 8px;font-size:.76rem;color:var(--muted)}
+@media(max-width:480px){.compare-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.compare-photo figcaption{font-size:.69rem}}
+
 .compare-card h3{font-size:1.02rem;line-height:1.25;margin:10px 0 3px}
 .compare-card .mini-credit{overflow-wrap:anywhere}
 .compare-card p{font-size:.83rem;line-height:1.43}
@@ -1638,6 +1651,55 @@ function inspectComparisonFeature(feature){
  }
 }
 
+
+/* Existing photographs only. Distinct useful views beat a duplicate hero.
+   Recorded per-image legal holds and doubtful source identities are excluded
+   from NEW comparison placements, without rewriting photo archives or rights. */
+const comparePhotoHolds={
+ "aristida-oligantha":[3,4], /* copyright-reserved Texas sheet images */
+ "eragrostis-trichodes":[4,6], /* TEX exact-image rights conflict */
+ "chloris-andropogonoides":[3,4], /* institutional scans held for licensing */
+ "dinebra-panicea-subsp-mucronata":[4,6], /* TEX rights conflict */
+ "anatherum-tenuispatheum":[1,2], /* duplicate image; other species filename */
+ "triplasiella-eragrostoides":[1] /* conspicuous other grass in same frame */
+};
+function comparisonPhotos(species){
+ const blocked=new Set(comparePhotoHolds[species.id]||[]);
+ const photoRoles=new Map((species.photo_character_audit?.photo_roles||[]).map(r=>[r.i,r]));
+ const choices=(species.photos||[]).filter(p=>
+   !blocked.has(p.i)&&
+   typeof p.src==="string"&&p.src.startsWith("https://")&&
+   typeof p.source_page==="string"&&p.source_page.startsWith("https://")&&
+   typeof p.creator==="string"&&p.creator.trim()&&
+   typeof p.license==="string"&&
+   /^(CC0(?:\s|$)|CC BY(?:-SA)?(?:\s+\d|$)|Public domain|US public domain)/i.test(p.license)&&
+   !/duplicate of|different grass|source filename says .*virginicus|rights hold|rights review required|copyright reserved/i.test(p.label||"")&&
+   !/hold|reject|wrong.id/i.test(photoRoles.get(p.i)?.verdict||"")&&
+   (!p.source_species_id||p.source_species_id===species.id)
+ );
+ const distinct=[...new Map(choices.map(p=>[p.src,p])).values()];
+ const first=distinct.find(p=>p.i===species.hero_i)||distinct[0];
+ if(!first)return[];
+ const label=p=>((p.label||"")+" "+(p.role||"")).toLowerCase();
+ const habit=p=>/habit|whole|clump|bunch|tuft|stand|in.ground|rooted|plant base|leafy plant/i.test(label(p));
+ const head=p=>/flower|head|panicle|raceme|spikelet|bristle|awn|plume|seedhead|spike/i.test(label(p));
+ const firstHasHead=head(first),firstHasHabit=habit(first);
+ const score=p=>{
+  const role=photoRoles.get(p.i);
+  let result=0;
+  if(firstHasHead&&!firstHasHabit&&habit(p))result+=7;
+  else if(firstHasHabit&&!firstHasHead&&head(p))result+=7;
+  else if(firstHasHead&&head(p)&&habit(p))result+=4;
+  else if(head(p)||habit(p))result+=2;
+  if(role?.verdict==="DIRECT_VISIBLE")result+=3;
+  if(/attached|whole|complete|in.ground/i.test(label(p)))result+=2;
+  if(/detached|pressed|herbarium|annotated|obscured|unresolved|uncertain/i.test(label(p)))result-=2;
+  return result;
+ };
+ const second=distinct.filter(p=>p.src!==first.src).sort((a,b)=>score(b)-score(a)||a.i-b.i)[0];
+ return second?[first,second]:[first];
+}
+
 function compareCandidates(){
   const species=state.compareIds.map(byId).filter(Boolean);
   if(species.length<2||species.length>3)return;
@@ -1648,11 +1710,26 @@ function compareCandidates(){
   header.append(left,close);area.append(header,node("p","compare-note","Look for differences in real photographs and field structures. A match is not proof of identification."));
   const cards=node("div","compare-cards");
   for(const s of species){
-    const card=node("section","compare-card"),p=pic(s,s.hero_i);
-    card.append(image(p,s.common),node("h3","",s.common),node("span","latin",s.scientific),node("span","tag "+status(s)[1],status(s)[0]));
-    card.append(node("p","mini-credit",(p?.label||"Photo reference")+" · "+credit(p)));
-    if(p?.source_page?.startsWith("https://")){
-      const a=node("a","mini-credit","Photo source and credit");a.href=p.source_page;a.target="_blank";a.rel="noopener noreferrer";card.append(a);
+    const card=node("section","compare-card");
+    card.append(node("h3","",s.common),node("span","latin",s.scientific),node("span","tag "+status(s)[1],status(s)[0]));
+    const views=comparisonPhotos(s),photos=node("div","compare-photo-grid");
+    for(const p of views){
+      const figure=node("figure","compare-photo"),caption=node("figcaption");
+      const label=node("span","compare-photo-caption",p.label||"Source-identified grass photograph");
+      const byline=node("span","compare-photo-credit",credit(p));
+      caption.append(label,byline);
+      if(p?.source_page?.startsWith("https://")){
+        const a=node("a","mini-credit","Photo source and credit");
+        a.href=p.source_page;a.target="_blank";a.rel="noopener noreferrer";
+        caption.append(a);
+      }
+      figure.append(image(p,s.common+" — "+(p.label||"photograph")),caption);
+      photos.append(figure);
+    }
+    if(!views.length)card.append(image(null,s.common),node("p","compare-photo-missing","Comparison photo pending identity or rights verification."));
+    else{
+      card.append(photos);
+      if(views.length===1)card.append(node("p","compare-photo-missing","Only one cleared comparison view is recorded; additional angles are still needed."));
     }
     card.append(node("p","",s.field_rule||"Compare the complete grass lesson for diagnostic structures."));
     const lesson=node("a","mini-credit","Open full grass lesson");lesson.href=BASE+"?species="+encodeURIComponent(s.id);lesson.target="_blank";lesson.rel="noopener noreferrer";card.append(lesson);

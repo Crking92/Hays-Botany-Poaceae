@@ -12,6 +12,7 @@ on:
       - 'scripts/test_grass_stem_field_guide.cjs'
       - 'scripts/test_grass_flower_spikelet_field_guide.cjs'
       - 'scripts/test_grass_guided_comparison.cjs'
+      - 'scripts/test_grass_compare_photo_quality.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -26,6 +27,7 @@ on:
       - 'scripts/test_grass_stem_field_guide.cjs'
       - 'scripts/test_grass_flower_spikelet_field_guide.cjs'
       - 'scripts/test_grass_guided_comparison.cjs'
+      - 'scripts/test_grass_compare_photo_quality.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -51,3 +53,5 @@ jobs:
         run: node scripts/test_grass_flower_spikelet_field_guide.cjs
       - name: Verify novice comparison with source-backed differences and unknown-safe states
         run: node scripts/test_grass_guided_comparison.cjs
+      - name: Review scored and trial comparison photos without duplicating or promoting held images
+        run: node scripts/test_grass_compare_photo_quality.cjs
