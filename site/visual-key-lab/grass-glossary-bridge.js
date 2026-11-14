@@ -160,6 +160,8 @@ function footer(){
 function showDefinition(key){
  const v=vocab.get(key);if(!v){showIndex();return;}
  const pic=resolvePicture(v,key);
+ const sketch=window.HaysGrassGlossarySketches?.forTerm?.(key);
+ const sketchMarkup=sketch?.outerHTML?'<figure class="grass-glossary-figure grass-glossary-sketch">'+sketch.outerHTML+'<figcaption>Original simplified Grass ID Lab teaching diagram — not a verified specimen photograph or scoring record.</figcaption></figure>':'';
  const main=ensureDialog().querySelector("#grass-glossary-content");
  const fields=[["Where to look",v.where],["Why it helps with ID",v.why],["Botanical definition",v.formal]].filter(a=>a[1]);
  main.innerHTML='<div class="grass-glossary-definition"><button type="button" class="grass-glossary-back">← Browse terms</button>'+
@@ -173,7 +175,8 @@ function showDefinition(key){
    (pic.note?'<div>'+escapeHTML(pic.note)+'</div>':"")+
    (isHttps(pic.source_page)?'<a href="'+escapeHTML(pic.source_page)+'" target="_blank" rel="noopener noreferrer">Original photo / source</a>':"")+
    '</figcaption></figure>':
-   '<div class="grass-glossary-missing">A verified, rights-cleared close-up for this exact structure is not available in the connected glossary yet. The definition still works; no unapproved photograph is displayed.</div>')+
+   (sketch?'':'<div class="grass-glossary-missing">A verified, rights-cleared close-up for this exact structure is not available in the connected glossary yet. The definition still works; no unapproved photograph is displayed.</div>'))+
+  sketchMarkup+
   (fields.length?'<dl>'+fields.map(([t,val])=>'<div><dt>'+t+'</dt><dd>'+escapeHTML(val)+'</dd></div>').join("")+'</dl>':"")+
   footer()+'</div>';
  main.querySelector(".grass-glossary-back").addEventListener("click",showIndex);
@@ -200,7 +203,7 @@ function showResults(query){
  const q=normalized(query);
  const matches=[...vocab].filter(([k,v])=>!q||normalized([k,v.term,v.plain,...(v.aliases||[])].join(" ")).includes(q));
  if(!q){const priority=["ligule","collar","culm","spikelet","glume","lemma","palea","awn","panicle","stolon","rhizome","floret","rachilla","auricle","midrib","venation","leaf-blade","bristle","node","ciliate","pedicel","stigma"];
-  matches.sort((a,b)=>priority.indexOf(a[0])===-1?1:priority.indexOf(b[0])===-1?-1:priority.indexOf(a[0])-priority.indexOf(b[0]));}
+  matches.sort((a,b)=>{const ai=priority.indexOf(a[0]),bi=priority.indexOf(b[0]);return ai===-1?(bi===-1?a[1].term.localeCompare(b[1].term):1):(bi===-1?-1:ai-bi)});}
  else matches.sort((a,b)=>a[1].term.localeCompare(b[1].term));
  out.replaceChildren();
  if(!matches.length){const p=document.createElement("p");p.className="grass-glossary-hint";p.textContent="No matching term yet. Try another botanical word.";out.append(p);return;}
