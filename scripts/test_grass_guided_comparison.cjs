@@ -57,7 +57,7 @@ assert.equal(pair[1].selected,"flat");
 assert.equal(JSON.stringify(state),JSON.stringify({...JSON.parse(start),refineSelected:{blade_shape:"flat"}}));
 const pack=JSON.parse(fs.readFileSync(path.join(root,"optional-refinement-evidence.json"),"utf8"));
 assert.equal(pack.mode,"NON_EXCLUDING_POSITIVE_RANKING");
-assert.equal(pack.evidence.length,336,"Compare work cannot add species facts");
+assert.ok(pack.evidence.length>=336,"Protect the original evidence floor across later source batches");
 assert.ok(html.includes("group.dataset.character=c.id"));
 assert.ok(html.includes('const highlights=contrasts.filter(f=>!f.selected)'));
 assert.ok(html.includes('row.documented=row.values.every(vs=>vs.length>0)'));
