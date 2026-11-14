@@ -1,0 +1,45 @@
+/* Hays Grass Lab glossary bridge. Learning only; does not alter character scoring. */
+.grass-glossary-launch{border:1px solid #bad8c4;border-radius:9px;padding:7px 11px;background:#e9f4e9;color:#1b4931;font-size:.82rem;font-weight:750;cursor:pointer}
+.grass-glossary-launch:hover{background:#fff}
+.grass-term-inline{border:0;border-bottom:1px dotted currentColor;background:transparent;color:inherit;font:inherit;display:inline;padding:0 1px;cursor:help;text-underline-offset:3px}
+.grass-term-inline:hover{color:#24784f;border-bottom-style:solid}
+.grass-term-inline:focus-visible,.grass-term-chip:focus-visible,.grass-glossary-launch:focus-visible{outline:3px solid #dea94e;outline-offset:3px}
+.grass-terms-quick{font-size:.8rem;border:1px solid var(--line);border-radius:10px;background:var(--pale);padding:9px 11px;margin:8px 0 13px}
+.grass-terms-quick summary{cursor:pointer;color:var(--ink);font-weight:750;list-style-position:inside}
+.grass-terms-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.grass-term-chip{background:var(--white);color:var(--ink);font-size:.76rem;line-height:1.2;padding:6px 9px;border:1px solid var(--line);border-radius:20px;cursor:pointer}
+.grass-term-chip:hover{background:var(--mint)}
+.grass-group-terms{font-size:.75rem;padding:8px 0 4px;color:var(--muted)}
+.grass-group-terms > span{margin-right:7px}
+.grass-glossary-dialog{position:fixed;max-width:min(720px,calc(100vw - 22px));width:680px;max-height:min(90dvh,860px);padding:0;border:1px solid var(--line);border-radius:16px;background:var(--white);color:var(--ink);box-shadow:0 25px 90px rgba(0,0,0,.35)}
+.grass-glossary-dialog::backdrop{background:rgba(0,0,0,.63)}
+.grass-glossary-shell{display:flex;flex-direction:column;max-height:89dvh}
+.grass-glossary-head{display:flex;align-items:center;gap:10px;justify-content:space-between;padding:15px 17px;border-bottom:1px solid var(--line)}
+.grass-glossary-head h2{font-size:1.35rem;font-family:Georgia,serif;margin:0}
+.grass-glossary-close,.grass-glossary-back{background:var(--pale);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:7px 10px;cursor:pointer}
+.grass-glossary-content{overflow-y:auto;padding:17px;overscroll-behavior:contain}
+.grass-glossary-search{width:100%;background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:10px 12px;color:var(--ink);font:inherit;margin:0 0 12px}
+.grass-glossary-results{display:grid;gap:7px}
+.grass-glossary-results button{text-align:left;background:var(--pale);color:var(--ink);border:1px solid var(--line);padding:10px 12px;border-radius:10px;cursor:pointer}
+.grass-glossary-results button:hover{background:var(--mint)}
+.grass-glossary-results strong{display:block;font-size:.92rem}
+.grass-glossary-results span{display:block;color:var(--muted);font-size:.82rem;margin-top:2px}
+.grass-glossary-hint{font-size:.79rem;color:var(--muted);margin:0 0 12px}
+.grass-glossary-definition h3{font-family:Georgia,serif;font-size:1.75rem;margin:7px 0 0}
+.grass-glossary-definition .pronunciation{color:var(--muted);margin:4px 0 14px}
+.grass-glossary-definition .plain{font-size:1.02rem;line-height:1.48}
+.grass-glossary-definition dl{display:grid;gap:11px;margin:15px 0}
+.grass-glossary-definition dt{font-weight:750;font-size:.86rem}
+.grass-glossary-definition dd{margin:2px 0 0;font-size:.92rem}
+.grass-glossary-figure{background:var(--pale);border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:17px 0}
+.grass-glossary-figure img{display:block;width:100%;max-height:315px;object-fit:contain;background:#f0f1e9}
+.grass-glossary-figure figcaption{padding:10px 12px;font-size:.79rem;color:var(--muted);overflow-wrap:anywhere}
+.grass-glossary-figure figcaption strong{color:var(--ink)}
+.grass-glossary-figure figcaption a{color:inherit;text-decoration:underline}
+.grass-glossary-missing{border:1px dashed var(--line);border-radius:9px;background:var(--pale);padding:12px;font-size:.86rem;color:var(--muted)}
+.grass-glossary-external{margin-top:15px;border-top:1px solid var(--line);padding-top:12px;font-size:.84rem}
+.grass-glossary-external a{color:inherit;text-decoration:underline}
+html[data-theme="dark"] .grass-glossary-launch{background:#263f2f;border-color:var(--line);color:var(--ink)}
+html[data-theme="dark"] .grass-term-inline:hover{color:#b9edc5}
+html[data-theme="dark"] .grass-glossary-figure img{background:#dfebda}
+@media(max-width:600px){.grass-glossary-launch{min-height:40px}.grass-glossary-dialog{max-height:95dvh}.grass-glossary-shell{max-height:94dvh}.grass-glossary-content{padding:12px}.grass-glossary-head{padding:12px}.grass-glossary-figure img{max-height:260px}}
