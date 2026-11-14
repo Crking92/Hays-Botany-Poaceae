@@ -849,14 +849,15 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "The gallery now shows broad habit, an ACTUAL rooted Australian var. makarikariense crown, real collar/ligule-region hairs and attached spikelets. Confirm a Texas plant using a matched rooted flowering voucher with measured true inner ligule and mature spikelet anatomy; do not infer local variety or native status from Australian reference photographs.\n\nField choice: open the inner blade–sheath junction. Kleingrass has short hairs attached to a tiny membranous ligule, so a visible fringe or its papery base can both be reasonable choices. Do not count outside sheath hairs.",
+    "field_rule": "The gallery now shows broad habit, an ACTUAL rooted Australian var. makarikariense crown, real collar/ligule-region hairs and attached spikelets. Confirm a Texas plant using a matched rooted flowering voucher with measured true inner ligule and mature spikelet anatomy; do not infer local variety or native status from Australian reference photographs.\n\nField choice: open the inner blade–sheath junction. Kleingrass has short hairs attached to a tiny membranous ligule, so a visible fringe or its papery base can both be reasonable choices. Do not count outside sheath hairs.\n\nScoring audit 2026-11-13: The 'sprawling/mat' FIELD option also includes a low decumbent culm visibly rooting where its nodes touch moist soil; it does not require a true stolon. Williamson County's detailed account documents decumbent kleingrass with geniculate lower nodes, while a Texas seed reference explicitly reports opportunistic rooting at nodes on wet ground. Tropical Forages reports that SOME P. coloratum types have spreading stolons, but this is taxon/strain conditional, not the usual erect local bunchgrass. Retain tuft and short-rhizome pathways. Select 'mat' only with an observed rooted surface stem or true stolon; ordinary fallen stems, leaf litter or a knotty underground rhizome alone do not qualify. No fresh same-plant local rooted culm specimen or photo independently verified.",
     "traits": {
       "head": [
         "airy"
       ],
       "habit": [
         "tuft",
-        "rhizome"
+        "rhizome",
+        "mat"
       ],
       "ligule": [
         "membrane",
@@ -898,6 +899,27 @@
         "certainty": "DIRECT_REGIONAL_VEGETATIVE_SOURCE_NOT_LOCAL_PHOTO_CERTIFIED",
         "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
         "review_date": "2026-11-12"
+      },
+      "habit_rooted_surface_stems_audit_20261113": {
+        "source": "A. C. Gibson, Vascular Plants of Williamson County, Panicum coloratum, printed p. 1",
+        "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Panicum%20coloratum",
+        "secondary_source": "Native Seeds Catalog, p. 26, Kleingrass, species-level Texas pasture description",
+        "secondary_source_url": "https://online.flipbuilder.com/xusk/ligw/files/basic-html/page26.html",
+        "third_source": "Tropical Forages, Panicum coloratum species morphology and variety-specific spreading habits",
+        "third_source_url": "https://www.tropicalforages.info/text/entities/panicum_coloratum.htm",
+        "regional_primary": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 56, Panicum coloratum",
+        "regional_primary_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=56",
+        "category": "vegetative",
+        "reported_states": [
+          "Hill Country account: bunch-forming perennial with short knotty rhizomes",
+          "Williamson County account: caespitose but decumbent shoots and bent lower nodes",
+          "Texas seed catalog: occasional aboveground stem nodes root on contact with moist soil",
+          "Tropical Forages: variable species, some forms with genuine long spreading stolons; not typical of every local Texas plant"
+        ],
+        "reference": "The production habit=mat label explicitly accepts a decumbent CULM rooted at its soil-contact nodes as well as a true stolon. Neither should be confused with a subterranean rhizome or merely prostrate non-rooting leaves. Retain tuft and rhizome; add a conditional 'mat' field route only when rooted surface structures are actually observed. Not a general claim of local long-stolon prevalence, and no photo or Texas voucher rooted-node verification newly completed.",
+        "status": "TEXAS_LOCAL_DECUMBENT_ACCOUNT_AND_TEXAS_NODAL_ROOTING_DESCRIPTION_CROSSCHECKED_CONDITIONAL_FIELD_MAT_PATH_LOCAL_SAME_PLANT_PHOTO_PENDING",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "No new same-plant rooted culm or long stolon from authenticated Hays specimen inspected; the new state is a source-backed conditional observer pathway only."
       }
     },
     "diagnostic_checks": [
@@ -924,6 +946,14 @@
         "certainty": "Sex and palea only observable on appropriate flowering material; taxon/season variation flagged",
         "source": "Flora of North America — Panicum coloratum",
         "url": "https://openherbarium.org/portal/taxa/index.php?clid=139&taxauthid=1&tid=239866"
+      },
+      {
+        "look": "Separate a truly rooted surface culm from underground rhizomes",
+        "check": "An occasional low stem of kleingrass can root where nodes contact damp ground. Trace a real aboveground culm into a node with new roots, rather than deciding from leaning stems alone. A true stolon is a different spreading stem type; most Texas kleingrass still looks tufted, and short knotty underground rhizomes are a separate growth form.",
+        "compare": "Bermudagrass forms extensive surface runner mats; Hall's panicgrass is generally a small tuft. The rooted-node clue alone never confirms kleingrass without a matching mature open panicle and inner collar.",
+        "certainty": "Williamson County detailed decumbent-form account; Texas seed catalog nodal-rooting observations; Tropical Forages variable species habits. No locally verified same-plant specimen.",
+        "source": "Gibson, Vascular Plants of Williamson County, Panicum coloratum, p. 1; Native Seeds Catalog p. 26; Tropical Forages species account",
+        "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Panicum%20coloratum"
       }
     ],
     "diagnostic_review": {
