@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "description": "Poaceae-only glossary extensions. Canonical shared definitions are fetched read-only from Hays-County-Botany. Existing credited grass photo URLs reused from the published Grass ID Lab; each image is illustrative and may not demonstrate every named microfeature.",
+  "terms": {
+    "panicle": {
+      "term": "Panicle",
+      "pronunciation": "PAN-ih-kul",
+      "plain": "A branching flowerhead whose smaller flower-bearing branches come off a main axis.",
+      "where": "Trace the inflorescence axis; look for side branches and then the spikelets they carry.",
+      "why": "Distinguish a broad open panicle from a spike or narrow contracted panicle.",
+      "aliases": [
+        "branching flowerhead"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eragrostis/eragrostis-spectabilis/images/03-flowering-stems.jpg",
+        "label": "Purple lovegrass — open branching flowerhead",
+        "creator": "David J. Stang",
+        "license": "CC BY-SA 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_spectabilis_7zz.jpg",
+        "note": "A whole flowering panicle, not an isolated branch dissection."
+      }
+    },
+    "stolon": {
+      "term": "Stolon",
+      "pronunciation": "STOH-lun",
+      "plain": "A stem that runs along the ground surface and can root at its joints.",
+      "where": "Trace a runner on the soil surface and look for roots or shoots at nodes.",
+      "why": "Do not confuse a surface stolon with an underground rhizome or a decumbent flowering culm.",
+      "aliases": [
+        "surface runner",
+        "surface runners"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Cynodon/cynodon-dactylon/images/jimmex-410585094-stolon-leafy-node.jpg",
+        "label": "Bermudagrass — connected creeping stem and leafy nodes",
+        "creator": "Photographer credited as no rights reserved",
+        "license": "CC0",
+        "source_page": "https://www.inaturalist.org/photos/410585094",
+        "note": "Creeping stem is visible; the original gallery does not establish whether it was above or below the soil."
+      }
+    },
+    "internode": {
+      "term": "Internode",
+      "pronunciation": "IN-ter-nohd",
+      "plain": "The stretch of stem between two successive nodes (joints).",
+      "where": "Locate two nodes on one culm; the stem section connecting them is the internode.",
+      "why": "Internode length, shape and surface can be useful characters.",
+      "aliases": [
+        "stem internode"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-7c3f960605f8.jpg",
+        "label": "Silky bluestem stem node",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_sericeum_node3_%2814157759518%29.jpg",
+        "note": "A node close-up; trace the internode on the specimen."
+      }
+    },
+    "floret": {
+      "term": "Floret",
+      "pronunciation": "FLOR-it",
+      "plain": "A single tiny grass flower, usually enclosed by a lemma and palea, inside a spikelet.",
+      "where": "Use a hand lens on an opened spikelet; separate whole spikelet from one floret.",
+      "why": "Counting florets per spikelet is critical in many grass groups.",
+      "aliases": [
+        "grass floret",
+        "florets"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bouteloua/bouteloua-gracilis/images/commons-archive-33759a354892ca50.jpg",
+        "label": "Blue grama — developing floral parts and spikelet details",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bouteloua_gracilis_(4080038299).jpg",
+        "note": "Developing reproductive parts; not an isolated complete mature floret."
+      }
+    },
+    "rachilla": {
+      "term": "Rachilla",
+      "pronunciation": "ruh-KIL-uh",
+      "plain": "The little central axis inside a grass spikelet that bears its florets.",
+      "where": "Dissect a multi-flowered spikelet and follow the tiny axis between florets.",
+      "why": "Rachilla hairs and articulation are useful diagnostic characters.",
+      "aliases": [
+        "spikelet axis"
+      ],
+      "photo": null
+    },
+    "auricle": {
+      "term": "Auricle",
+      "pronunciation": "OR-ih-kul",
+      "plain": "A small ear-shaped projection at the base of a grass leaf blade beside the collar.",
+      "where": "Spread the blade away from the sheath and inspect both sides at the junction.",
+      "why": "Auricles may clasp the stem, be small or be absent; do not confuse them with the ligule.",
+      "aliases": [
+        "auricles",
+        "leaf ear",
+        "leaf ears"
+      ],
+      "photo": null
+    },
+    "midrib": {
+      "term": "Midrib",
+      "pronunciation": "MID-rib",
+      "plain": "The central lengthwise vein of a leaf blade.",
+      "where": "Hold the blade against light and inspect both faces along its center.",
+      "why": "A pale midrib is not necessarily raised; observe color and relief separately.",
+      "aliases": [
+        "midvein",
+        "midnerve",
+        "center vein",
+        "central vein"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthelium/dichanthelium-commutatum/images/commons-abair-363938844.jpg",
+        "label": "Variable panicgrass — broad leaf blade with visible parallel veins",
+        "creator": "Alex Abair",
+        "license": "CC BY 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthelium_commutatum_363938844.jpg",
+        "note": "Parallel veins are visible; this image does not demonstrate raised ribs or a raised midrib."
+      }
+    },
+    "venation": {
+      "term": "Venation",
+      "pronunciation": "vee-NAY-shun",
+      "plain": "The arrangement of veins in a leaf; grasses commonly have mostly parallel veins.",
+      "where": "View the leaf blade in side light to compare the lengthwise veins.",
+      "why": "The number and prominence of veins can help distinguish grasses.",
+      "aliases": [
+        "leaf veins",
+        "parallel veins",
+        "vein pattern"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthelium/dichanthelium-commutatum/images/commons-abair-363938844.jpg",
+        "label": "Variable panicgrass — broad leaf blade with visible parallel veins",
+        "creator": "Alex Abair",
+        "license": "CC BY 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthelium_commutatum_363938844.jpg",
+        "note": "Parallel veins are visible; this image does not demonstrate raised ribs or a raised midrib."
+      }
+    },
+    "raised-ribs": {
+      "term": "Raised ribs",
+      "pronunciation": "RAYZD RIBZ",
+      "plain": "Lengthwise ridges that project above the blade surface, often associated with veins.",
+      "where": "Look across the blade edge-on, then use side light or touch to detect ridges.",
+      "why": "Raised ribs differ from flat veins or color bands; the pictured leaf does not prove ribs.",
+      "aliases": [
+        "rib",
+        "ribs",
+        "ribbed blade",
+        "raised rib"
+      ],
+      "photo": null
+    },
+    "leaf-blade": {
+      "term": "Leaf blade",
+      "pronunciation": "LEEF BLAYD",
+      "plain": "The free, often flat or rolled part of a grass leaf extending beyond the sheath.",
+      "where": "Follow a leaf from its sheath to its free tip.",
+      "why": "Blade width, folding, hairs and veins are common field-identification clues.",
+      "aliases": [
+        "blade",
+        "blades"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthelium/dichanthelium-commutatum/images/commons-abair-363938844.jpg",
+        "label": "Variable panicgrass — broad leaf blade with visible parallel veins",
+        "creator": "Alex Abair",
+        "license": "CC BY 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthelium_commutatum_363938844.jpg",
+        "note": "Parallel veins are visible; this image does not demonstrate raised ribs or a raised midrib."
+      }
+    },
+    "trichome": {
+      "term": "Trichome",
+      "pronunciation": "TRY-kohm",
+      "plain": "A hair or hairlike outgrowth produced by a plant surface.",
+      "where": "Inspect the leaf, sheath or culm with side light or a hand lens.",
+      "why": "Hair placement, length and direction can be diagnostic.",
+      "aliases": [
+        "trichomes",
+        "plant hair",
+        "plant hairs"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/detail-20261022-matt-lavin-collar.jpg",
+        "label": "KR bluestem — collar region and hairs",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_ischaemum_-_yellow_bluestem_-_Flickr_-_Matt_Lavin_(3).jpg",
+        "note": "Collar hairs visible; do not infer all hairs are ligule cilia."
+      }
+    },
+    "bristle": {
+      "term": "Bristle",
+      "pronunciation": "BRISS-ul",
+      "plain": "A stiff slender projection; in bristlegrasses some bristles are modified sterile branchlets.",
+      "where": "Inspect how each projection attaches; do not assume it is a lemma awn.",
+      "why": "Bristles below a Setaria spikelet differ from awns arising from glumes or lemmas.",
+      "aliases": [
+        "bristles",
+        "foxtail bristles"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg",
+        "label": "Knotroot bristlegrass — reproductive units, bristles, feathery stigmas",
+        "creator": "Stefan.lefnaer",
+        "license": "CC BY-SA 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg",
+        "note": "Bristles and feathery stigmas are distinct structures; 3-mm source scale."
+      }
+    },
+    "ciliate": {
+      "term": "Ciliate",
+      "pronunciation": "SIL-ee-it",
+      "plain": "Bearing a fringe of hairs along an edge or margin.",
+      "where": "Look along the edge of a ligule, sheath or other structure with magnification.",
+      "why": "The position of edge hairs matters more than simply seeing a hairy plant.",
+      "aliases": [
+        "cilia",
+        "ciliated",
+        "hair-fringed"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/detail-20261022-matt-lavin-collar.jpg",
+        "label": "KR bluestem — collar region and hairs",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_ischaemum_-_yellow_bluestem_-_Flickr_-_Matt_Lavin_(3).jpg",
+        "note": "Collar hairs visible; do not infer all hairs are ligule cilia."
+      }
+    },
+    "pedicel": {
+      "term": "Pedicel",
+      "pronunciation": "PED-ih-sel",
+      "plain": "A short stalk supporting a single flower or spikelet.",
+      "where": "Look where a grass spikelet attaches to its flowering branch.",
+      "why": "Paired sessile and pedicelled spikelets are diagnostic in several bluestems.",
+      "aliases": [
+        "pedicelled",
+        "pedicellate",
+        "stalked spikelet"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-dichanthium-sericeum-pedicelled-spikelet-scale.jpg",
+        "label": "Silky bluestem — stalked spikelet beside scale",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_spikelet_size_stalked1_(14362578995).jpg",
+        "note": "Detached reproductive unit; the pedicel's attachment is not shown."
+      }
+    },
+    "stigma": {
+      "term": "Stigma",
+      "pronunciation": "STIG-muh",
+      "plain": "The pollen-receiving part of the pistil; grass stigmas are usually feathery.",
+      "where": "Look for fine feathery parts protruding from flowering spikelets.",
+      "why": "Feathery stigmas are not awns or bristles.",
+      "aliases": [
+        "stigmas",
+        "feathery stigma"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg",
+        "label": "Knotroot bristlegrass — reproductive units, bristles, feathery stigmas",
+        "creator": "Stefan.lefnaer",
+        "license": "CC BY-SA 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg",
+        "note": "Bristles and feathery stigmas are distinct structures; 3-mm source scale."
+      }
+    },
+    "anther": {
+      "term": "Anther",
+      "pronunciation": "AN-ther",
+      "plain": "The pollen-producing part of a stamen.",
+      "where": "Look for small dangling pollen-bearing sacs emerging from florets.",
+      "why": "Dangling anthers can help distinguish actual flowering structures from awns.",
+      "aliases": [
+        "anthers"
+      ],
+      "photo": null
+    },
+    "gland": {
+      "term": "Gland",
+      "pronunciation": "GLAND",
+      "plain": "A small structure that secretes substances, sometimes visible as a dot or sticky ring.",
+      "where": "Inspect nodes, leaf sheaths and the base of blades for dots or rings.",
+      "why": "A gland ring is different from a band of hairs or a simple swollen node.",
+      "aliases": [
+        "glands",
+        "gland ring",
+        "glandular"
+      ],
+      "photo": null
+    },
+    "sheath-margin": {
+      "term": "Sheath margin",
+      "pronunciation": "SHEETH MAR-jin",
+      "plain": "The edge of a leaf sheath where the sheath wraps around the culm.",
+      "where": "Find the longitudinal opening or seam of the sheath and inspect its edges.",
+      "why": "Sheath margins can be open, overlapping or fused; check the actual collar region.",
+      "aliases": [
+        "sheath edge",
+        "sheath margins"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/detail-20261022-matt-lavin-collar.jpg",
+        "label": "KR bluestem — collar region and hairs",
+        "creator": "Matt Lavin",
+        "license": "CC BY-SA 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bothriochloa_ischaemum_-_yellow_bluestem_-_Flickr_-_Matt_Lavin_(3).jpg",
+        "note": "Collar hairs visible; do not infer all hairs are ligule cilia."
+      }
+    },
+    "flag-leaf": {
+      "term": "Flag leaf",
+      "pronunciation": "FLAG LEEF",
+      "plain": "The uppermost leaf beneath a grass inflorescence.",
+      "where": "Follow the flowering culm downward from its seedhead to the highest leaf.",
+      "why": "The flag leaf position can help orient close examination, but it is not present on all specimens.",
+      "aliases": [
+        "flag leaves"
+      ],
+      "photo": null
+    },
+    "decumbent": {
+      "term": "Decumbent",
+      "pronunciation": "dee-KUM-bent",
+      "plain": "Lying along the ground at the base but bending upward at the tips.",
+      "where": "Follow the actual culm from its base through the bend and toward the tip.",
+      "why": "A decumbent culm may root at nodes without being a true stolon.",
+      "aliases": [
+        "decumbent stem",
+        "decumbent culm"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Cynodon/cynodon-dactylon/images/jimmex-410585094-stolon-leafy-node.jpg",
+        "label": "Bermudagrass — connected creeping stem and leafy nodes",
+        "creator": "Photographer credited as no rights reserved",
+        "license": "CC0",
+        "source_page": "https://www.inaturalist.org/photos/410585094",
+        "note": "Creeping stem is visible; the original gallery does not establish whether it was above or below the soil."
+      }
+    },
+    "geniculate": {
+      "term": "Geniculate",
+      "pronunciation": "juh-NIK-yoo-lit",
+      "plain": "Bent abruptly at a joint, like a knee.",
+      "where": "Inspect the culm at successive nodes for sharp changes in direction.",
+      "why": "Knee-bent growth differs from a long continuous surface runner.",
+      "aliases": [
+        "geniculate stem",
+        "knee-bent"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-7c3f960605f8.jpg",
+        "label": "Silky bluestem stem node",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_sericeum_node3_%2814157759518%29.jpg",
+        "note": "A node close-up; trace the internode on the specimen."
+      }
+    },
+    "scabrous": {
+      "term": "Scabrous",
+      "pronunciation": "SKAY-brus",
+      "plain": "Rough to the touch because of minute stiff projections.",
+      "where": "Gently stroke the blade edge or vein in both directions.",
+      "why": "Roughness can occur on specific margins, veins or sheaths, not every surface.",
+      "aliases": [
+        "scabrous margin",
+        "rough surface"
+      ],
+      "photo": null
+    },
+    "crown": {
+      "term": "Crown",
+      "pronunciation": "KROWN",
+      "plain": "The concentrated basal region from which grass shoots and roots arise.",
+      "where": "Separate old leaves gently at the plant base and inspect where multiple culms originate.",
+      "why": "A hard crown should not automatically be recorded as a spreading rhizome.",
+      "aliases": [
+        "basal crown",
+        "root crown"
+      ],
+      "photo": null
+    },
+    "culm-node": {
+      "term": "Culm node",
+      "pronunciation": "KULM NOHD",
+      "plain": "The joint on a grass stem where a leaf sheath attaches.",
+      "where": "Follow the culm and locate the often swollen joint between internodes.",
+      "why": "Node hairs, rooting and gland rings are separate traits.",
+      "aliases": [
+        "stem joint",
+        "stem joints",
+        "culm joints"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-sericeum/images/harry-rose-7c3f960605f8.jpg",
+        "label": "Silky bluestem stem node",
+        "creator": "Harry Rose (Macleay Grass Man)",
+        "license": "CC BY 2.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File%3ADichanthium_sericeum_node3_%2814157759518%29.jpg",
+        "note": "A node close-up; trace the internode on the specimen."
+      }
+    },
+    "involucre-bristles": {
+      "term": "Involucre bristles",
+      "pronunciation": "in-VOH-loo-ker BRISS-ulz",
+      "plain": "Modified bristles surrounding one or more spikelets; in sandburs they become a spiny bur-like unit.",
+      "where": "Inspect the base of the bur under magnification, rather than counting the spines as lemma awns.",
+      "why": "These bristles are outside the spikelet and are distinct from glumes and lemmas.",
+      "aliases": [
+        "bur bristles",
+        "bur spines"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg",
+        "label": "Knotroot bristlegrass — reproductive units, bristles, feathery stigmas",
+        "creator": "Stefan.lefnaer",
+        "license": "CC BY-SA 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg",
+        "note": "Bristles and feathery stigmas are distinct structures; 3-mm source scale."
+      }
+    },
+    "rachis-branch": {
+      "term": "Rachis branch",
+      "pronunciation": "RAY-kis BRANCH",
+      "plain": "A branch arising from the main inflorescence axis and carrying spikelets.",
+      "where": "Trace a flowering head from the main axis outward through its branches.",
+      "why": "Branch pattern helps separate panicles, spikes and racemose arrangements.",
+      "aliases": [
+        "panicle branch",
+        "inflorescence branch"
+      ],
+      "photo": {
+        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eragrostis/eragrostis-spectabilis/images/03-flowering-stems.jpg",
+        "label": "Purple lovegrass — open branching flowerhead",
+        "creator": "David J. Stang",
+        "license": "CC BY-SA 4.0",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Eragrostis_spectabilis_7zz.jpg",
+        "note": "A whole flowering panicle, not an isolated branch dissection."
+      }
+    }
+  }
+}
