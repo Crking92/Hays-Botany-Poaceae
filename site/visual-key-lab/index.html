@@ -203,6 +203,12 @@ html[data-theme="dark"] .venation-field-guide{background:#23372b}
 html[data-theme="dark"] .collar-field-guide{background:#23372b}
 @media(max-width:355px){.collar-field-guide{flex-wrap:wrap}.collar-field-guide svg{width:136px;max-width:100%}}
 
+
+/* Flower and spikelet sketches are optional teaching views, never photo evidence. */
+.flower-field-guide svg{object-fit:contain}
+html[data-theme="dark"] .flower-field-guide{background:#23372b}
+@media(max-width:355px){.flower-field-guide{flex-wrap:wrap}.flower-field-guide svg{max-width:100%;width:136px}}
+
 /* Diagram guidance remains hidden until the visitor expands a stem detail. */
 .stem-field-guide svg{object-fit:contain}
 html[data-theme="dark"] .stem-field-guide{background:#23372b}
@@ -707,6 +713,140 @@ function stemFieldSketch(character,choice){
  return svg;
 }
 
+
+/* Original flower and spikelet teaching sketches: not specimens, scale drawings,
+   species diagnoses, or additions to the source-backed ranking evidence. */
+const flowerFieldTips={
+ florets_per_spikelet:{
+  one:["Open one spikelet, not the whole seedhead","Count flowers (florets) enclosed by a single pair of outer glumes. One floret can have multiple flower parts; do not count awns as extra florets."],
+  two:["Look inside one pair of glumes","Find two distinct lemma-and-palea florets on the short spikelet axis. A paired spikelet on a branch is not the same as a two-flowered spikelet."],
+  several:["Inspect a mature, intact spikelet","Three or more florets are stacked on a common small spikelet axis, inside the outer glumes. Some lower or upper florets may be reduced."]
+ },
+ spikelet_position:{
+  paired:["Look at one node along a flowering branch","Two neighboring spikelets form a pair: one sits directly on the axis (sessile) and one has a short stalk (pedicel). Count spikelets, not florets."],
+  reduced_partner:["Look for a small neighboring unit","A full spikelet is accompanied by a much smaller or reduced partner. Do not assume that the tiny partner has a complete fertile floret."],
+  two_rows:["Look along the central flowering axis","Spikelets are organized into two distinct longitudinal rows. Rotate the head to confirm there are two rows rather than a one-sided branch."],
+  one_side:["Turn a flowering branch sideways","Most spikelets attach on the same side of the branch axis. A single one-sided branch is not necessarily a true unbranched spike."]
+ },
+ glume_marks:{
+  one_vein:["Use a hand lens on an outer glume","Follow one prominent lengthwise vein on the glume (the bract outside the florets). Veins on a lemma are a different character."],
+  first_enclosing:["Compare the two outer glumes","The first, lower glume partly wraps around or encloses the second. Check the relative margins rather than simply comparing lengths."],
+  lower_reduced:["Find the lower glume at the spikelet base","The first glume is very small or absent. Do not mistake it for a tiny floret or conclude that both glumes are missing."],
+  glabrous:["Inspect the glume faces and margins","A glabrous glume has no hairs on the examined surface. A smooth glume may still have veins; check under magnification."]
+ },
+ lemma_texture:{
+  hairy:["Look on the lemma, not the stalk","Hairs emerge from the lemma surface or margins surrounding a floret. Hairs on a rachilla or a spikelet's stalk must be recorded separately."],
+  smooth:["Look across a mature lemma surface","A hairless or smooth lemma lacks obvious surface hairs or roughness. Wear, lighting, and maturity can hide fine texture."],
+  wrinkled:["Tilt the lemma under side lighting","Small transverse wrinkles cross the lemma surface. These are not longitudinal veins or detached hairs."],
+  reddish_spotted:["Inspect the lemma itself for pigment","Distinct reddish spots or marks occur on the lemma, not simply on the outer glumes. Color may change as a spikelet ages."],
+  shiny_hard:["Check an intact, mature lemma","A firm, glossy lemma reflects light and resists gentle pressure. This is a surface clue, not evidence of a particular species on its own."]
+ },
+ true_lemma_awn:{
+  three:["Trace all projections to the lemma","Three awns arise from one lemma. Do not count the three separate awns of neighboring florets or surrounding bristles."],
+  long:["Follow the awn back to its base","One conspicuous awn projects from a lemma. A long bristle arising below the whole spikelet is a different structure."],
+  short:["Use a hand lens at the lemma tip","A tiny projection comes directly from the lemma. A blunt lemma without an awn should not be scored as short-awned."],
+  bent_twisted:["Inspect the base and bend of the awn","The lemma awn has a twisted section and a clear elbow. A bent grass stem or bent spikelet stalk is not an awn."],
+  none:["Look carefully for any attached awn","The lemma is awnless. Fine hairs and bristles outside the spikelet do not count as lemma awns."],
+  straight_or_bent:["Compare young and mature awns","A lemma awn may appear straight or bend with development. The sketch shows both appearances, not two awns on one floret."]
+ },
+ floral_hair_position:{
+  below_spikelet:["Trace a bristle to its attachment","The bristle begins below or beside the spikelet on the flowering branch. It does not originate from the lemma tip as a true awn."],
+  rachilla:["Open the spikelet to find its short axis","Long hairs arise from the rachilla, the small axis between successive florets. They are not hairs attached to a lemma surface."],
+  lemma:["Inspect the surface of one floret's lemma","Fine hairs attach directly to the lemma, the lower of the two floret bracts. Separate them from hairs on the outer glumes."],
+  partner_stalk:["Look at the stalk of the reduced spikelet","Hairs line the pedicel supporting a neighboring reduced or stalked spikelet. They do not arise from the sessile spikelet's lemma."]
+ }
+};
+function flowerFieldSketch(character,choice){
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
+ svg.setAttribute("viewBox","0 0 168 92");svg.setAttribute("role","img");svg.setAttribute("focusable","false");
+ svg.setAttribute("aria-label","Simplified diagram of "+character.replaceAll("_"," ")+" / "+choice.replaceAll("_"," ")+"; not a specimen photograph or scale drawing");
+ const p=(d,color="#3f7750",w=2.5,fill="none")=>{
+  const el=document.createElementNS(ns,"path");
+  for(const [k,v]of Object.entries({d,stroke:color,"stroke-width":w,fill,"stroke-linejoin":"round","stroke-linecap":"round"}))el.setAttribute(k,String(v));
+  svg.append(el);
+ };
+ const dot=(x,y,r=2,color="#58845e")=>{
+  const el=document.createElementNS(ns,"circle");
+  for(const [k,v]of Object.entries({cx:x,cy:y,r,fill:color}))el.setAttribute(k,String(v));svg.append(el);
+ };
+ const glume=(x,y,side=1,size=1)=>p("M"+x+" "+y+" Q"+(x+side*14*size)+" "+(y-13*size)+" "+(x+side*5*size)+" "+(y-32*size)+" Q"+(x+side*3*size)+" "+(y-16*size)+" "+x+" "+y,"#78975d",2.3,"#edf2d6");
+ const floret=(x,y,s=1)=>{p("M"+x+" "+y+" Q"+(x-10*s)+" "+(y-11*s)+" "+(x-3*s)+" "+(y-28*s)+" Q"+(x+10*s)+" "+(y-9*s)+" "+x+" "+y,"#376f52",2.4,"#c6dba6");p("M"+x+" "+y+" L"+(x-2*s)+" "+(y-23*s),"#5c895d",1.1);};
+ const hair=(x,y,dx=7,dy=-8)=>p("M"+x+" "+y+" l"+dx+" "+dy,"#53835b",1.4);
+ const seed=(x,y,s=1)=>{p("M"+(x-8*s)+" "+(y+10*s)+" Q"+(x-12*s)+" "+(y-7*s)+" "+x+" "+(y-18*s)+" Q"+(x+12*s)+" "+(y-7*s)+" "+(x+8*s)+" "+(y+10*s)+" Z","#427c52",2,"#c5dca8");p("M"+x+" "+(y+7*s)+" V"+(y-15*s),"#79a36a",1.1);};
+ if(character==="florets_per_spikelet"){
+  p("M84 82 V14","#647b56",2);
+  glume(80,79,-1,1.15);glume(88,79,1,1.15);
+  const n=choice==="one"?1:choice==="two"?2:4;
+  for(let i=0;i<n;i++)floret(84,74-i*17,n===4?.5:.62);
+  if(choice==="one")p("M84 45 L92 24","#aa8c54",1.6);
+ }else if(character==="spikelet_position"){
+  p("M81 84 V12","#457c53",3);
+  if(choice==="paired"||choice==="reduced_partner"){
+   for(const y of [34,61]){
+    p("M81 "+y+" L103 "+(y-4),"#64895a",1.7);
+    seed(76,y-10,.56);seed(108,y-17,choice==="paired"?.56:.24);
+    dot(81,y,2.5);
+   }
+  }else if(choice==="two_rows"){
+   for(const y of [27,48,69]){p("M81 "+y+" l-12 -5 M81 "+(y+4)+" l13 -5","#709463",1.7);seed(64,y-12,.48);seed(99,y-8,.48);}
+  }else{
+   p("M81 78 L96 21","#4b7e54",3);
+   for(const [x,y] of [[91,59],[96,40],[101,21]]){p("M"+(x-6)+" "+(y+15)+" l17 -1","#67925c",1.6);seed(x+18,y+4,.48);}
+  }
+ }else if(character==="glume_marks"){
+  p("M84 82 V17","#4d7653",2);
+  if(choice==="lower_reduced"){
+   glume(87,78,1,1.3);p("M77 77 l-5 -6 l8 3","#7b945e",2.4);floret(85,63,.55);
+  }else if(choice==="first_enclosing"){
+   glume(84,82,-1,1.55);glume(86,73,1,.93);floret(83,57,.49);
+   p("M85 78 Q52 59 68 24","#b58756",2.3);
+  }else if(choice==="one_vein"){
+   glume(81,79,-1,1.1);glume(87,79,1,1.1);
+   p("M80 77 Q67 51 75 42","#be8b45",3);
+  }else{
+   glume(81,79,-1,1.1);glume(87,79,1,1.1);floret(84,59,.45);
+   p("M113 31 Q127 19 141 30 M113 37 Q127 49 141 37","#7ca76d",1.5);
+  }
+ }else if(character==="lemma_texture"){
+  seed(84,45,1.75);
+  if(choice==="hairy"){for(const y of [24,37,51,63]){hair(68,y,-12,-7);hair(100,y,12,-7);}for(const x of [79,89])hair(x,35,x===79?-6:6,-9);}
+  if(choice==="wrinkled"){for(const y of [26,34,42,50,58])p("M70 "+y+" Q84 "+(y+6)+" 98 "+y,"#9b875b",1.6);}
+  if(choice==="reddish_spotted"){for(const [x,y] of [[77,32],[90,43],[79,55],[92,60]])dot(x,y,3.5,"#b36e64");}
+  if(choice==="shiny_hard"){p("M76 52 Q65 30 85 18","#f9faf3",5);p("M109 23 l7 -7 M117 31 l10 -1","#b7a155",2.3);}
+  if(choice==="smooth")p("M105 20 L111 14 M113 22 L122 21","#7b9e6c",1.5);
+ }else if(character==="true_lemma_awn"){
+  if(choice==="straight_or_bent"){
+   seed(48,58,.85);seed(117,58,.85);
+   p("M48 42 L42 12 M117 42 L117 29 L137 10","#af8d54",2.4);
+   p("M24 82 H145","#cad5ba",1.4);
+  }else{
+   seed(84,61,1.1);
+   if(choice==="three"){p("M84 41 L54 9 M84 41 L84 6 M84 41 L116 9","#b48c4e",2.3);}
+   if(choice==="long")p("M84 42 Q89 24 86 4","#b48c4e",2.6);
+   if(choice==="short")p("M84 42 l3 -9","#b48c4e",2.7);
+   if(choice==="bent_twisted"){p("M84 42 L86 34 L80 29 L88 25 L86 18 L124 5","#b48c4e",2.4);}
+   if(choice==="none")p("M70 21 H99","#9bbd8d",1.7);
+  }
+ }else if(character==="floral_hair_position"){
+  if(choice==="below_spikelet"){
+   p("M84 84 V61","#447b55",3);seed(84,45,.95);
+   for(const x of [47,58,110,123])p("M84 64 Q"+x+" 40 "+x+" "+(x<84?15:11),"#ac8856",2);
+  }else if(choice==="rachilla"){
+   glume(79,81,-1,1.1);glume(89,81,1,1.1);
+   p("M84 82 V21","#527c57",3);floret(80,63,.52);floret(89,40,.46);
+   for(const y of [37,48,58]){hair(84,y,-17,-15);hair(84,y,17,-15);}
+  }else if(choice==="lemma"){
+   seed(84,47,1.45);
+   for(const y of [25,38,50,62]){hair(71,y,-12,-6);hair(98,y,12,-6);}
+  }else if(choice==="partner_stalk"){
+   p("M67 85 V45 M67 66 L113 78 L118 44","#447b55",2.9);
+   seed(67,33,.73);seed(117,36,.35);
+   for(const [x,y] of [[91,70],[100,73],[109,76],[117,65]]){hair(x,y,-5,-10);hair(x,y,5,-10);}
+  }
+ }
+ return svg;
+}
+
 function renderOptionalCharacters(){
  const holder=$("optional-character-wrap"),root=$("optional-character-groups"),tabs=$("optional-section-tabs");
  root.replaceChildren();tabs.replaceChildren();holder.hidden=!state.refineCharacters.length;
@@ -818,6 +958,25 @@ function renderOptionalCharacters(){
      };
      refreshVeinGuide();content.append(guide);
    }
+
+   if(Object.prototype.hasOwnProperty.call(flowerFieldTips,c.id)){
+     const guide=node("div","venation-field-guide leaf-detail-guide flower-field-guide");
+     guide.setAttribute("aria-live","polite");
+     refreshVeinGuide=()=>{
+       guide.replaceChildren();
+       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       if(!selected){guide.append(node("p","venation-field-prompt","Choose a flower or spikelet detail for a diagram and a closer-look tip. No flowerhead? Skip this section."));return;}
+       const [where,tip]=flowerFieldTips[c.id][selected.id]||[];
+       if(!where)return;
+       const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
+       const info=node("div","venation-field-text");
+       info.append(node("strong","",where),node("p","",tip),
+         node("p","venation-field-source",count?("Source-backed matching detail recorded for "+count+" grass"+(count===1?"":"es")+". Grasses with unknown spikelet descriptions remain possible."):"Species-level published evidence is not linked for this choice yet. You can record it, but it cannot rank or exclude a grass."));
+       guide.append(flowerFieldSketch(c.id,selected.id),info);
+     };
+     refreshVeinGuide();content.append(guide);
+   }
+
    if(c.options.some(o=>isPendingChoice(c,o)))content.append(node("p","optional-need-note","Research-pending choices can be recorded, but won't yet rank any grass. All candidates stay possible."));
    group.append(summary,content);root.append(group);
  }
