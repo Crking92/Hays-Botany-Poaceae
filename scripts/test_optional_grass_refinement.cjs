@@ -231,5 +231,86 @@ state.refineSelected={true_lemma_awn:"three"};
 got=verifyUnchanged("Batch 8 Texas grama three awns");
 if(!got.some(x=>x.id==="bouteloua-rigidiseta"&&x.extras===1))throw Error("Texas grama documented lemma awns missing");
 state.refineSelected={};
+// Batch 9: five newly source-covered scored grasses; no optional hard exclusions.
+const batch9={
+  "echinochloa-crus-galli": [
+    "blade_shape",
+    "blade_width",
+    "blade_edge",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "leaf_base",
+    "culm_posture"
+  ],
+  "heteropogon-contortus": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "leaf_base",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "hordeum-pusillum": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "florets_per_spikelet"
+  ],
+  "phalaris-caroliniana": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "florets_per_spikelet"
+  ],
+  "panicum-capillare": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "stem_nodes",
+    "florets_per_spikelet"
+  ]
+};
+if(pack.evidence.length<410)throw Error("Batch 9 evidence total unexpectedly low");
+for(const [id,characters] of Object.entries(batch9)){
+ const taxon=species.find(s=>s.id===id);
+ if(!taxon?.character_evidence?.audit_batch9_core_advanced_20261113||taxon.character_evidence.audit_batch9_core_advanced_20261113.core_scoring_changed!==false)throw Error("Batch 9 four-core review missing: "+id);
+ for(const character of characters){
+  const e=pack.evidence.find(r=>r.id===id&&r.character===character);
+  if(!e||!e.source||!e.source_url?.startsWith("https://")||!e.states?.length)throw Error("Batch 9 missing published character "+id+"/"+character);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"open"};
+got=verifyUnchanged("Batch 9 open sheath must only positively rank");
+for(const id of Object.keys(batch9)){
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Batch 9 source-backed open sheath not ranked: "+id);
+}
+state.refineSelected={florets_per_spikelet:"several"};
+got=verifyUnchanged("Batch 9 Carolina canarygrass 3 florets");
+if(!got.some(x=>x.id==="phalaris-caroliniana"&&x.extras===1))throw Error("Phalaris 3-floret source missing");
+state.refineSelected={ligule_length:"tiny"};
+got=verifyUnchanged("Batch 9 very short ligules");
+for(const id of ["heteropogon-contortus","hordeum-pusillum","panicum-capillare"]){
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Missing tiny true ligule: "+id);
+}
+if(got.some(x=>x.id==="echinochloa-crus-galli"&&x.extras>0))throw Error("Barnyardgrass has NO true ligule: do not invent length");
+state.refineSelected={};
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
