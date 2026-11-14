@@ -202,6 +202,11 @@ html[data-theme="dark"] .venation-field-guide{background:#23372b}
 .collar-field-guide svg{object-fit:contain}
 html[data-theme="dark"] .collar-field-guide{background:#23372b}
 @media(max-width:355px){.collar-field-guide{flex-wrap:wrap}.collar-field-guide svg{width:136px;max-width:100%}}
+
+/* Diagram guidance remains hidden until the visitor expands a stem detail. */
+.stem-field-guide svg{object-fit:contain}
+html[data-theme="dark"] .stem-field-guide{background:#23372b}
+@media(max-width:355px){.stem-field-guide{flex-wrap:wrap}.stem-field-guide svg{max-width:100%;width:136px}}
 </style>
 </head>
 <body>
@@ -565,6 +570,143 @@ function collarFieldSketch(character,choice){
  return svg;
 }
 
+
+/* Original teaching sketches of stem/posture/root structures. These sketches
+   are NOT photos, species vouchers, measurements or new scoring evidence. */
+const stemFieldTips={
+ culm_posture:{
+  erect:["Follow a full flowering culm","The culm rises mostly upright from the base. Leaves that droop sideways do not make the stem itself decumbent."],
+  geniculate:["Follow the culm through its joints","An actual stem node forms a knee-like bend. The bend must be in the culm rather than just in the leaf blade."],
+  decumbent:["Follow stem from crown to tip","The lower culm lies near the ground but turns upward toward its tip. This is not necessarily a separate runner."],
+  prostrate:["Trace the culm along the ground","A low culm remains mostly horizontal. This observation currently lacks species-level ranking evidence; a fallen upright culm may mimic it."]
+ },
+ surface_runners:{
+  stolon:["Follow a true surface runner","A horizontal stem travels on or above the soil and bears identifiable nodes; rooting at those nodes may produce new shoots."],
+  wiry_stolon:["Examine the runner diameter","A thin, wiry surface stem has nodes and can spread laterally. A narrow root without nodes is not a stolon."],
+  rooted_nodes:["Look where a low stem meets soil","Roots emerge from one or more actual stem joints. One rooting culm is not by itself proof of a long stolon."],
+  hairy_runner_nodes:["Use a hand lens at runner joints","Hairs cluster at nodes of a surface runner. Hairs on the leaf sheath or ligule are different structures."]
+ },
+ underground_stems:{
+  long_scaly:["Trace underground stem nodes if permissible","An elongate underground stem has scale leaves at real stem nodes. Do not mistake narrow roots or buried aboveground stolons for rhizomes."],
+  slender_long:["Trace underground stem nodes if permissible","A long thin rhizome runs below the soil. Check its nodes and scale leaves rather than relying on thickness alone."],
+  short_knotty:["Inspect an attached base, where allowed","A short, irregular, knotty underground stem has crowded nodes. Distinguish it from a simple hard crown."],
+  short_rhizome:["Inspect nearby underground nodes","A short rhizome is documented without a reliable texture description. The diagram intentionally does not assume scales or knots."],
+  long_rhizome:["Inspect underground stem length","An extended rhizome is documented without a reliable thickness or scale description. Confirm that it has stem nodes."],
+  short_scaly:["Inspect close-spaced underground nodes","A short rhizome bears visible scale leaves. The scales are modified leaves, not fine branching roots."],
+  thick_rhizome:["Check diameter and nodes","A relatively thick underground stem stores resources and has true nodes. A coarse root can look similar but lacks stem nodes."],
+  scaly_rhizome:["Inspect scale leaves on rhizome","The underground stem is scaly, but its length has not been confidently recorded. Avoid guessing long versus short."],
+  rhizome_present:["Look for a true underground stem","Rhizome presence is supported, but its length and texture are uncertain. A true rhizome has nodes and potential buds."]
+ },
+ basal_crown:{
+  hard_knotty:["Inspect intact basal crown","Short, crowded stem bases form a hard, knotty crown. This does not mean the plant has long underground runners."],
+  stout_base:["Compare stem thickness from base up","The lower culm is unusually robust. A large lower stem is not automatically a rhizome or woody crown."],
+  large_cane:["Look at an entire mature culm","The stem is tall and cane-like, often with distinct nodes. Judge actual stem structure, not simply a tall flowering head."]
+ },
+ stem_special:{
+  node_gland_ring:["Look immediately below a stem node","A narrow glandular band lies below the actual stem joint. A hairy ligule above the sheath is a separate character."],
+  basal_branching:["Look at the lowest stem joints","Side shoots emerge near the stem base. Branching culms are not necessarily independent stolons."],
+  prop_roots:["Look at lower aboveground joints","Support roots arise from culm nodes above soil and descend to the ground. These are not underground rhizomes."],
+  giant_canes:["Observe the full culm","Large stout reedlike stems have prominent nodes and internodes; size alone is not proof of a particular species."],
+  culm_branches:["Inspect branching above the base","Lateral stems emerge from culm joints along the stem. Do not count separate panicle branches as culm branches."],
+  succulent_stems:["Look closely at lower culms","Fleshy or thickened stem tissue is the feature, not simply an unusually wide grass blade."],
+  rooting_lower_nodes:["Trace low culm joints to soil","Roots emerge from lower nodes of a leaning or creeping stem. This does not alone establish a long surface runner."]
+ },
+ stem_nodes:{
+  hairy_nodes:["Find the joint where two internodes meet","Hairs arise at or around an actual culm node, rather than along the leaf sheath or at the inner ligule."],
+  backward_hairs:["Look closely at hair direction","Hairs around the stem node point backward/downward. Rotate the stem to separate this from ordinary sheath hairs."],
+  gland_ring:["Inspect a band just below the node","A distinct glandular ring sits below the joint. The sticky or colored band is not the ligule."],
+  hairy_stolon_nodes:["Examine a surface runner's joints","Hairy nodes are on the horizontal creeping stem itself, not merely on a nearby upright shoot. This option has no linked ranking evidence yet."]
+ }
+};
+function stemFieldSketch(character,choice){
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
+ svg.setAttribute("viewBox","0 0 168 92");svg.setAttribute("role","img");svg.setAttribute("focusable","false");
+ svg.setAttribute("aria-label","Simplified diagram of "+character.replaceAll("_"," ")+" / "+choice.replaceAll("_"," ")+"; not a specimen photograph or scale drawing");
+ const path=(d,color="#3f7750",w=3,fill="none")=>{
+   const el=document.createElementNS(ns,"path");
+   for(const [k,v]of Object.entries({d,stroke:color,"stroke-width":w,fill,"stroke-linejoin":"round","stroke-linecap":"round"}))el.setAttribute(k,String(v));
+   svg.append(el);return el;
+ };
+ const spot=(cx,cy,r=3,fill="#5a8858")=>{
+  const el=document.createElementNS(ns,"circle");
+  for(const [k,v]of Object.entries({cx,cy,r,fill}))el.setAttribute(k,String(v));
+  svg.append(el);return el;
+ };
+ const soil=(height=72)=>{path("M10 "+height+" H158","#9b805a",2);path("M10 "+(height+4)+" H158","#d5c4a8",5);};
+ const roots=(x,y,wide=15)=>{path("M"+x+" "+y+" l-"+wide+" 15 M"+x+" "+y+" l"+wide+" 16 M"+x+" "+y+" v17","#a08457",1.7);};
+ const node=(x,y)=>{spot(x,y,3);path("M"+(x-5)+" "+y+" H"+(x+5),"#376b48",1.8);};
+ const hair=(x,y,sense=1)=>{path("M"+x+" "+y+" l"+(-9*sense)+" -7","#477c51",1.7);path("M"+x+" "+y+" l"+(9*sense)+" 6","#477c51",1.4);};
+ const leaf=(x,y,d=1)=>path("M"+x+" "+y+" q"+(22*d)+" -22 "+(39*d)+" -14","#75a86e",2.2);
+ if(character==="culm_posture"){
+  soil();roots(40,72);
+  if(choice==="erect"){path("M40 72 Q45 43 48 13","#3d7c52",5);node(44,47);leaf(45,48);}
+  if(choice==="geniculate"){path("M40 72 L75 64 L86 45 L90 14","#3d7c52",5);node(75,64);node(86,45);leaf(86,45);}
+  if(choice==="decumbent"){path("M40 72 Q65 70 94 71 Q119 70 124 18","#3d7c52",5);node(94,71);leaf(109,61);}
+  if(choice==="prostrate"){path("M40 72 Q85 70 140 68","#3d7c52",5);node(94,70);node(125,69);leaf(94,70,-1);}
+ }else if(character==="surface_runners"){
+  soil(73);path("M18 68 Q82 64 150 68","#3d7c52",choice==="wiry_stolon"?2.6:5);
+  for(const x of [47,90,130]){node(x,67);path("M"+x+" 67 l2 -20","#4c8c5d",2.8);leaf(x+2,49);}
+  if(choice==="wiry_stolon"){path("M27 67 L147 66","#b8d6aa",1);}
+  if(choice==="stolon"){roots(47,72,10);roots(90,72,10);}
+  if(choice==="rooted_nodes"){roots(90,72,10);path("M85 75 l10 8","#ad8957",1.4);}
+  if(choice==="hairy_runner_nodes"){for(const x of [47,90,130]){hair(x-3,66);hair(x+3,66,-1);}}
+ }else if(character==="underground_stems"){
+  soil(35);path("M10 43 H158","#e6d8bd",1.5);
+  const short=["short_knotty","short_rhizome","short_scaly"].includes(choice);
+  const thick=["short_knotty","thick_rhizome"].includes(choice);
+  const slender=choice==="slender_long";
+  const left=short?58:19,right=short?112:149,y=61;
+  path("M"+left+" "+y+" Q84 "+(short?55:63)+" "+right+" "+y,"#5f8b5c",thick?11:slender?2.8:5.2);
+  const xs=short?[65,83,101]:[34,64,94,124,145];
+  for(const x of xs)node(x,61);
+  for(const x of xs){if(["long_scaly","short_scaly","scaly_rhizome"].includes(choice))path("M"+x+" 58 l-7 -8 l10 5","#7b9867",2);else if(choice==="short_knotty")spot(x,60,5.5,"#7b985f");}
+  if(choice==="rhizome_present"){path("M84 60 L84 42","#4c8a5a",3);leaf(84,43);}
+  if(choice==="long_rhizome"){path("M29 55 Q43 42 50 56","#6a9e62",1.8);}
+  if(choice==="scaly_rhizome"){path("M13 56 l8 5 l-8 5 M147 56 l8 5 l-8 5","#9cae8e",1.8);}
+  if(choice==="slender_long")path("M26 56 L143 56","#a4c78b",1.3);
+  if(choice==="thick_rhizome"){path("M25 67 Q85 75 144 68","#8db57b",2);}
+  if(choice==="short_rhizome")path("M82 62 L88 49","#7eab76",2);
+  roots(short?83:64,65,9);
+ }else if(character==="basal_crown"){
+  soil(73);const center=84;
+  if(choice==="hard_knotty"){
+    for(const x of [68,77,86,96])path("M"+x+" 72 Q"+(x-7)+" 40 "+(x-21)+" 17","#447e53",3);
+    for(const x of [70,81,91])spot(x,71,7.3,"#7d8857");roots(83,74,16);
+  }
+  if(choice==="stout_base"){
+    path("M65 74 Q70 46 74 19 L101 19 Q97 49 105 74 Z","#477b53",2,"#a4c68c");
+    path("M84 23 V71","#6e9f67",2);roots(85,74,19);
+  }
+  if(choice==="large_cane"){
+    path("M67 74 L69 7 L106 7 L108 74 Z","#477b53",2,"#a7ca91");
+    for(const y of [25,50,67])path("M69 "+y+" H106","#4f8252",4);
+    roots(84,73,14);
+  }
+ }else if(character==="stem_special"){
+  soil(79);
+  const robust=["giant_canes","succulent_stems"].includes(choice);
+  path("M82 78 Q83 41 84 10","#417b51",robust?13:5);
+  node(84,44);node(84,65);
+  if(choice==="node_gland_ring"){path("M75 52 H93","#b07a31",6);spot(88,52,2,"#a96b30");}
+  if(choice==="basal_branching"){path("M83 69 Q59 51 37 31 M84 66 Q115 56 139 28","#4c8f5c",4);leaf(60,52,-1);}
+  if(choice==="prop_roots"){path("M82 52 L55 78 M86 52 L121 78 M84 66 L69 79","#b48b60",3);}
+  if(choice==="giant_canes"){path("M78 25 H89 M77 44 H90 M77 65 H90","#d5e0ae",3);path("M90 43 Q115 25 141 33","#7eaf70",4);}
+  if(choice==="culm_branches"){path("M84 44 Q112 35 130 13 M84 65 Q54 54 38 32","#5c9663",4);leaf(104,35);}
+  if(choice==="succulent_stems"){path("M77 28 Q84 21 90 28 M78 55 Q84 48 90 55","#afd4a7",3);}
+  if(choice==="rooting_lower_nodes"){path("M83 65 Q112 76 137 68","#4c8a59",4);node(118,72);roots(118,73,12);}
+ }else if(character==="stem_nodes"){
+  soil(84);
+  const horizontal=choice==="hairy_stolon_nodes";
+  if(horizontal){path("M18 69 Q83 63 147 68","#497f53",5);for(const x of [50,84,122])node(x,67);path("M84 67 L84 33","#497f53",3);}
+  else{path("M84 85 Q80 46 84 9","#497f53",7);node(84,49);node(84,72);}
+  if(choice==="gland_ring"){path("M75 57 H93","#ab7135",6);spot(85,56,1.5,"#c08a42");}
+  if(choice==="hairy_nodes"||choice==="backward_hairs"){for(const y of [49,72]){hair(77,y,1);hair(91,y,-1);
+    if(choice==="backward_hairs"){path("M80 "+y+" l-8 14 M88 "+y+" l8 14","#447a52",2);}}}
+  if(choice==="hairy_stolon_nodes"){for(const x of [50,84,122]){hair(x-4,66);hair(x+4,66,-1);}}
+ }
+ return svg;
+}
+
 function renderOptionalCharacters(){
  const holder=$("optional-character-wrap"),root=$("optional-character-groups"),tabs=$("optional-section-tabs");
  root.replaceChildren();tabs.replaceChildren();holder.hidden=!state.refineCharacters.length;
@@ -656,6 +798,23 @@ function renderOptionalCharacters(){
        info.append(node("strong","",where),node("p","",tip),
          node("p","venation-field-source",matching?("Source-backed matching detail recorded for "+matching+" grass"+(matching===1?"":"es")+". Missing anatomy never excludes another grass."):"No species-specific published ranking evidence linked for this choice yet. The observation is saved, but no grass is promoted or excluded."));
        guide.append(collarFieldSketch(c.id,selected.id),info);
+     };
+     refreshVeinGuide();content.append(guide);
+   }
+   if(Object.prototype.hasOwnProperty.call(stemFieldTips,c.id)){
+     const guide=node("div","venation-field-guide leaf-detail-guide stem-field-guide");
+     guide.setAttribute("aria-live","polite");
+     refreshVeinGuide=()=>{
+       guide.replaceChildren();
+       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       if(!selected){guide.append(node("p","venation-field-prompt","Choose a stem or root detail for a simplified sketch and what to inspect."));return;}
+       const [where,tip]=stemFieldTips[c.id][selected.id]||[];
+       if(!where)return;
+       const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
+       const info=node("div","venation-field-text");
+       info.append(node("strong","",where),node("p","",tip),
+         node("p","venation-field-source",count?("Documented for "+count+" grass"+(count===1?"":"es")+" in the source evidence. Unknown characters never remove other grasses."):"Species-specific ranking evidence is not yet linked. This observation can be recorded but will not favor or exclude a grass."));
+       guide.append(stemFieldSketch(c.id,selected.id),info);
      };
      refreshVeinGuide();content.append(guide);
    }
