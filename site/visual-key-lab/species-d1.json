@@ -3040,7 +3040,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Use mature attached glume bases plus spikelet arrangement and overall head habit together; the source-identified Montana glume image and the Texas root-to-spike plate fill different photo roles. Keep ambiguous hybrids as Elymus sp.",
+    "field_rule": "Use mature attached glume bases plus spikelet arrangement and overall head habit together; the source-identified Montana glume image and the Texas root-to-spike plate fill different photo roles. Keep ambiguous hybrids as Elymus sp.\n\nScoring audit 2026-11-13: Mature Virginia wildrye lemma awns can be short (Diggs 5–25 mm; Go Botany 3–25 mm), considerably shorter than the normally longer, outward-curving awns of Canada wildrye. If an INTACT MATURE spikelet has only a truly short awn without a conspicuous long projection, the coarse visual choice 'no conspicuous long awns' may fit while retaining the normal 'long, obvious awns' path. This never means the lemma is necessarily awnless. If awns are broken, immature, hidden or unmeasured, SKIP instead of selecting absence; inspect bowed hardened glume bases and paired spikelets before identification.",
     "traits": {
       "head": [
         "spike"
@@ -3052,7 +3052,8 @@
         "membrane"
       ],
       "awns": [
-        "long"
+        "long",
+        "none_obvious"
       ]
     },
     "source_blob_sha": "607a84bb7a92f25e9c367c3856d42c05a879e9f9",
@@ -3075,6 +3076,25 @@
         "reference": "Often bowed U-like glume base; erect spike, rather than Canada's sharper V and often nodding head. These can hybridize, so require multiple same-plant node/lemma views.",
         "status": "REGIONAL_COMPARISON_SOURCE_CHECKED_HYBRIDS_PENDING",
         "review_date": "2026-11-10"
+      },
+      "awns_short_field_audit_20261113": {
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1268, Elymus couplet (Virginia vs Canada wildrye)",
+        "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+        "secondary_source": "Flora of North America Elymus virginicus species treatment, presented through BioGator/University of Florida",
+        "secondary_source_url": "https://biogator.org/taxa/index.php?tid=7748",
+        "third_source": "Go Botany, Elymus virginicus species factsheet (Barkworth-based flora)",
+        "third_source_url": "https://gobotany.nativeplanttrust.org/species/elymus/virginicus/",
+        "role": "reproductive",
+        "reported_states": [
+          "Diggs: Virginia wildrye fertile lemma awns 5–25 mm, usually straight or only slightly curved",
+          "FNA species treatment: fertile lemma awns (5–)8–20(–25) mm and glume awns 3–10(–15) mm",
+          "Go Botany: lemma awn length 3–25 mm",
+          "Canada wildrye contrast: lemma awns 15–50 mm in Diggs"
+        ],
+        "reference": "Both authors describe true awned lemmas, but the lower end is not necessarily conspicuously LONG at coarse field scale. Admit 'none_obvious' only as a visibility alternative on intact mature spikelets with genuinely short awns, not as true awnlessness or an invitation to ignore broken/hidden immature material. Retain 'long'. Preserve a negative no-long-awns test for normally much longer-awned Elymus canadensis, and the separately held Texas brome negative control. Same-plant local spikelet/macrophotograph not newly measured.",
+        "status": "REGIONAL_REPRODUCTIVE_AND_FNA_SHORT_AWN_SOURCE_CROSSCHECKED_COARSE_ALTERNATE_LOCAL_SPIKELET_MACRO_PENDING",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "No exact mature Hays-region lemma awn individually measured or photographed; inference limited to published lengths and coarse observer button semantics."
       }
     },
     "diagnostic_checks": [
@@ -3101,6 +3121,14 @@
         "certainty": "Kew morphology includes older synonym concepts; exact same-plant macro pending",
         "source": "Kew GrassBase — Elymus virginicus",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:90367-2/general-information"
+      },
+      {
+        "look": "Measure the intact lemma awns rather than guessing from the outline",
+        "check": "Virginia wildrye's mature lemma awns may be only 3–5 mm at the short end of published treatments. A short-awned intact specimen can fit 'no conspicuous LONG awns' without actually being awnless. If awns are damaged or not clearly visible, SKIP this field question. Confirm the straight/weakly curved awns, hardened outward-bowed glume bases and paired spikelets together.",
+        "compare": "Canada wildrye is generally longer-awned (Diggs 15–50 mm) with outcurving lemmas; do not apply the short-awn exception to Canada wildrye automatically.",
+        "certainty": "Regional flora (Diggs p. 1268), FNA and Go Botany species descriptions; exact Hays mature spikelet photo and measurement pending",
+        "source": "Diggs et al. 1999, p. 1268; Flora of North America Elymus virginicus; Go Botany Elymus virginicus",
+        "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
       }
     ],
     "diagnostic_review": {
