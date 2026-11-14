@@ -89,6 +89,7 @@ for(const s of species) {
   visit(Object.entries(s.traits).filter(([,v]) => v.length > 0));
 }
 const positives = [
+  ['Virginia wildrye short mature lemma awn, not conspicuously long',{head:'spike',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['elymus-virginicus']],
   ['Little bluestem short fertile awn, no obvious long projection',{head:'short_racemes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['schizachyrium-scoparium']],
   ['Little bluestem short rhizome and short awn',{head:'short_racemes',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['schizachyrium-scoparium']],
   ['Male buffalograss unilateral combs',{head:'one_sided',habit:'mat',ligule:'hairs',awns:'none_obvious'},['bouteloua-dactyloides']],
@@ -245,6 +246,8 @@ const positives = [
 for(const [label,picks,expected] of positives) for(const id of expected)
   assert(results(picks).includes(id), label + ': false exclusion of ' + id);
 const negatives = [
+  [{head:'spike',habit:'tuft',ligule:'membrane',awns:'none_obvious'},'elymus-canadensis'],
+  [{head:'branched_oat',habit:'tuft',ligule:'membrane',awns:'none_obvious'},'bromus-texensis'],
   [{awns:'three'},'muhlenbergia-lindheimeri'],
   [{head:'burrs'},'eragrostis-trichodes'],
   [{head:'short_racemes',habit:'mat'},'schizachyrium-scoparium'],
