@@ -647,7 +647,8 @@ function stemFieldSketch(character,choice){
   soil(73);path("M18 68 Q82 64 150 68","#3d7c52",choice==="wiry_stolon"?2.6:5);
   for(const x of [47,90,130]){node(x,67);path("M"+x+" 67 l2 -20","#4c8c5d",2.8);leaf(x+2,49);}
   if(choice==="wiry_stolon"){path("M27 67 L147 66","#b8d6aa",1);}
-  if(choice==="rooted_nodes"||choice==="stolon"){roots(47,72,10);roots(90,72,10);}
+  if(choice==="stolon"){roots(47,72,10);roots(90,72,10);}
+  if(choice==="rooted_nodes"){roots(90,72,10);path("M85 75 l10 8","#ad8957",1.4);}
   if(choice==="hairy_runner_nodes"){for(const x of [47,90,130]){hair(x-3,66);hair(x+3,66,-1);}}
  }else if(character==="underground_stems"){
   soil(35);path("M10 43 H158","#e6d8bd",1.5);
