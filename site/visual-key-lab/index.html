@@ -662,6 +662,7 @@ function stemFieldSketch(character,choice){
   for(const x of xs){if(["long_scaly","short_scaly","scaly_rhizome"].includes(choice))path("M"+x+" 58 l-7 -8 l10 5","#7b9867",2);else if(choice==="short_knotty")spot(x,60,5.5,"#7b985f");}
   if(choice==="rhizome_present"){path("M84 60 L84 42","#4c8a5a",3);leaf(84,43);}
   if(choice==="long_rhizome"){path("M29 55 Q43 42 50 56","#6a9e62",1.8);}
+  if(choice==="scaly_rhizome"){path("M13 56 l8 5 l-8 5 M147 56 l8 5 l-8 5","#9cae8e",1.8);}
   if(choice==="slender_long")path("M26 56 L143 56","#a4c78b",1.3);
   if(choice==="thick_rhizome"){path("M25 67 Q85 75 144 68","#8db57b",2);}
   if(choice==="short_rhizome")path("M82 62 L88 49","#7eab76",2);
