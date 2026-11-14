@@ -154,6 +154,8 @@ const positives = [
   // Lane C #83 — alternate Hill Country growth forms and unilateral branch counts.
   ['tobosa true visible tuft',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['hilaria-mutica']],
   ['kleingrass hair fringe tuft',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['panicum-coloratum']],
+  ['kleingrass rooted low culm membrane at collar',{head:'airy',habit:'mat',ligule:'membrane',awns:'none_obvious'},['panicum-coloratum']],
+  ['kleingrass rooted low culm fringe at collar',{head:'airy',habit:'mat',ligule:'hairs',awns:'none_obvious'},['panicum-coloratum']],
   ['kleingrass hair fringe rhizome',{head:'airy',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['panicum-coloratum']],
   ['vaseygrass exposed rhizome many side branches',{head:'many_one_sided',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-urvillei']],
   ['vaseygrass exposed rhizome fewer side branches',{head:'one_sided',habit:'rhizome',ligule:'membrane',awns:'none_obvious'},['paspalum-urvillei']],
@@ -276,6 +278,7 @@ const negatives = [
   // Lane C #83 — no generalized over-admission from expanded head/habit choices.
   [{habit:'mat'},'hilaria-mutica'],
   [{ligule:'absent'},'panicum-coloratum'],
+  [{head:'airy',habit:'mat',ligule:'membrane',awns:'long'},'panicum-coloratum'],
   [{head:'fingers'},'urochloa-reptans'],
   [{head:'foxtail'},'dinebra-panicea-subsp-mucronata'],
   // Lane C #91 — don't conflate unilateral branches and true spikes or awns.
