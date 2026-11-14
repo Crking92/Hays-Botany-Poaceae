@@ -34,6 +34,7 @@ def test(browser, width, height):
     page.route(HOSTED + "**", route_original)
     page.goto(URL, wait_until="domcontentloaded", timeout=30000)
     page.wait_for_function("window.HaysGrassGlossary && window.HaysGrassGlossary.available() === 173", timeout=25000)
+    page.wait_for_function("window.HaysGrassGlossary.approvedPhotos() === 26", timeout=25000)
     page.wait_for_selector("#question .answer", timeout=25000)
     check(page.locator("#coded-total").inner_text() == "165" or int(page.locator("#coded-total").inner_text()) >= 112,
           "Grass key failed to load its scored and research species")
@@ -59,10 +60,18 @@ def test(browser, width, height):
     page.locator(".grass-glossary-back").click()
     page.locator("#grass-glossary-search").fill("legume")
     page.locator('#grass-glossary-results [data-grass-term="legume"]').click()
+    licensed_caption = page.locator(".grass-glossary-definition figcaption").inner_text()
+    check("Schlaghecken Josef" in licensed_caption and "CC BY-SA 4.0" in licensed_caption,
+          "Exact-source verified historical glossary photo is missing its credit")
+    check(page.locator(".grass-glossary-definition a").filter(has_text="License terms").count() == 1,
+          "Creative Commons license link must be visible")
+    page.locator(".grass-glossary-back").click()
+    page.locator("#grass-glossary-search").fill("coriaceous")
+    page.locator('#grass-glossary-results [data-grass-term="coriaceous"]').click()
     check(page.locator(".grass-glossary-definition img").count() == 0,
-          "A rights-uncertain legacy photo was displayed")
-    check(page.locator(".grass-glossary-missing").count() == 1,
-          "Missing/uncleared photos need honest placeholders")
+          "The remaining rights-uncertain coriaceous photo was displayed")
+    check(page.locator(".grass-glossary-sketch svg").count() == 1,
+          "Rights hold must display a truthful original teaching sketch")
     page.locator(".grass-glossary-close").click()
     check(not page.locator("#grass-glossary-dialog").evaluate("(d)=>d.open"),
           "Glossary dialog failed to close")
