@@ -164,10 +164,52 @@ function footer(){
  return '<div class="grass-glossary-external"><a href="'+HUB+'?view=glossary" target="_blank" rel="noopener noreferrer">Open the complete Hays Botany glossary</a>'+
  (!sharedLoaded?' · Shared glossary temporarily unavailable; locally added grass definitions still work.':"")+'</div>';
 }
+// A tiny original botanical orientation sketch is preferable to a photo that
+// does not actually show the character being defined.
+function additionalSketch(key){
+ if(!["anther","flag-leaf","distichous"].includes(key))return null;
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
+ svg.setAttribute("viewBox","0 0 320 190");svg.setAttribute("role","img");
+ svg.setAttribute("aria-label","Simplified original botanical drawing of "+key.replace("-"," "));
+ const make=(tag,attrs,text)=>{const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text)el.textContent=text;svg.append(el);return el};
+ const line=(d,width=3,color="#356b45")=>make("path",{d,fill:"none",stroke:color,"stroke-width":String(width),"stroke-linecap":"round","stroke-linejoin":"round"});
+ const label=(value,x,y)=>make("text",{x:String(x),y:String(y),fill:"#204a35","font-size":"14","font-family":"Arial, sans-serif","font-weight":"bold"},value);
+ if(key==="anther"){
+  line("M158 177 L159 89",4);
+  line("M158 123 Q124 108 92 94 M158 119 Q197 94 234 97",2.4);
+  line("M115 104 Q112 65 103 46 M156 90 Q154 52 159 39 M198 104 Q211 62 219 47",2);
+  for(const [x,y] of [[103,46],[159,39],[219,47]]){
+   make("ellipse",{cx:String(x),cy:String(y),rx:"9",ry:"17",fill:"#d7a54b",stroke:"#846232","stroke-width":"1.8"});
+  }
+  label("ANTHERS",12,28);line("M97 26 L105 34",1.7,"#a26c31");
+  label("filaments",212,152);line("M214 137 L198 109",1.6);
+ }else if(key==="flag-leaf"){
+  line("M146 177 L146 65",4);
+  for(const [x,y] of [[146,57],[116,40],[174,27],[138,15],[161,7]]){
+   line("M146 65 Q"+x+" "+(y+20)+" "+x+" "+y,1.8);
+   make("circle",{cx:String(x),cy:String(y),r:"4.4",fill:"#ba9655"});
+  }
+  line("M146 134 Q101 121 34 116",4,"#6f9b59");
+  line("M146 107 Q211 79 274 94",4,"#6f9b59");
+  line("M146 156 Q201 141 256 146",3,"#9ab77b");
+  label("FLAG LEAF",197,63);line("M209 68 L240 90",1.8);
+  label("flowering head",15,61);line("M97 55 L131 42",1.7);
+ }else if(key==="distichous"){
+  line("M156 172 L157 22",4);
+  line("M157 138 Q92 123 33 139",4,"#5d9959");
+  line("M157 106 Q215 89 286 105",4,"#5d9959");
+  line("M157 72 Q88 53 35 74",4,"#5d9959");
+  line("M157 39 Q220 28 277 43",4,"#5d9959");
+  for(const y of [139,105,73,39])make("circle",{cx:"157",cy:String(y),r:"4",fill:"#926d3c"});
+  label("RANK 1",14,181);label("RANK 2",225,181);
+  line("M72 173 L84 142",1.6);line("M256 173 L248 107",1.6);
+ }
+ return svg;
+}
 function showDefinition(key){
  const v=vocab.get(key);if(!v){showIndex();return;}
  const pic=resolvePicture(v,key);
- const sketch=window.HaysGrassGlossarySketches?.forTerm?.(key);
+ const sketch=window.HaysGrassGlossarySketches?.forTerm?.(key)||additionalSketch(key);
  const sketchMarkup=sketch?.outerHTML?'<figure class="grass-glossary-figure grass-glossary-sketch">'+sketch.outerHTML+'<figcaption>Original simplified Grass ID Lab teaching diagram — not a verified specimen photograph or scoring record.</figcaption></figure>':'';
  const main=ensureDialog().querySelector("#grass-glossary-content");
  const fields=[["Where to look",v.where],["Why it helps with ID",v.why],["Botanical definition",v.formal]].filter(a=>a[1]);
