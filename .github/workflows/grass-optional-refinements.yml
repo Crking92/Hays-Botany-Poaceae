@@ -11,6 +11,7 @@ on:
       - 'scripts/test_grass_collar_sheath_field_guide.cjs'
       - 'scripts/test_grass_stem_field_guide.cjs'
       - 'scripts/test_grass_flower_spikelet_field_guide.cjs'
+      - 'scripts/test_grass_guided_comparison.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -24,6 +25,7 @@ on:
       - 'scripts/test_grass_collar_sheath_field_guide.cjs'
       - 'scripts/test_grass_stem_field_guide.cjs'
       - 'scripts/test_grass_flower_spikelet_field_guide.cjs'
+      - 'scripts/test_grass_guided_comparison.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -47,3 +49,5 @@ jobs:
         run: node scripts/test_grass_stem_field_guide.cjs
       - name: Test 26 flower and spikelet structure sketches without changing species scores
         run: node scripts/test_grass_flower_spikelet_field_guide.cjs
+      - name: Verify novice comparison with source-backed differences and unknown-safe states
+        run: node scripts/test_grass_guided_comparison.cjs

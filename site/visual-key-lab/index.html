@@ -96,6 +96,32 @@ html.guest-preview .question{padding-top:15px}
 .compare-table{border-collapse:collapse;width:100%;min-width:550px;font-size:.83rem}
 .compare-table th,.compare-table td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:9px}
 .compare-table th{background:var(--pale)}
+
+/* Progressive-disclosure comparison: short next-step clues first; full data on request. */
+.compare-highlights{margin:9px 20px 17px}
+.compare-highlights h3{font:700 1.06rem/1.3 system-ui,-apple-system,Segoe UI,sans-serif;margin:0 0 4px}
+.compare-highlights-intro{margin:0 0 12px;color:var(--muted);font-size:.84rem}
+.compare-clue-list{display:grid;gap:10px}
+.compare-clue{border:1px solid var(--line);border-radius:12px;background:var(--pale);padding:12px}
+.compare-clue-head{display:flex;justify-content:space-between;align-items:start;gap:10px;flex-wrap:wrap}
+.compare-clue h4{margin:0;font-size:.92rem;line-height:1.4}
+.compare-clue-note{font-size:.75rem;color:var(--muted);margin:5px 0 8px}
+.compare-clue-values{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:7px;margin:0 0 10px}
+.compare-clue-value{padding:8px;border:1px solid var(--line);border-radius:8px;background:var(--white)}
+.compare-clue-value strong{display:block;font-size:.76rem;line-height:1.3;margin-bottom:3px}
+.compare-clue-value span{display:block;font-size:.79rem;line-height:1.4}
+.compare-inspect{background:var(--forest);border:1px solid var(--forest);border-radius:8px;color:white;padding:8px 12px;min-height:42px;font-size:.82rem;font-weight:750}
+.compare-inspect:hover{background:var(--forest2)}
+.compare-all-features{margin:0 20px 16px;border:1px solid var(--line);border-radius:11px}
+.compare-all-features summary{cursor:pointer;padding:13px 14px;font-weight:750;font-size:.87rem}
+.compare-all-features summary:focus-visible{outline:3px solid #dea94e;outline-offset:2px}
+.compare-all-description{margin:0;padding:0 14px 7px;font-size:.79rem;color:var(--muted)}
+.compare-all-features .compare-table-wrap{padding:2px 12px 13px}
+.compare-table .compare-unknown{color:var(--muted);font-style:italic}
+.compare-table .compare-choice-note{display:block;font-size:.73rem;margin-top:5px;color:var(--muted)}
+@media(max-width:600px){.compare-clue-values{grid-template-columns:1fr}.compare-scroll-note{margin:0 14px 8px}}
+@media(max-width:480px){.compare-highlights{margin:9px 13px 15px}.compare-all-features{margin:0 13px 14px}.compare-clue{padding:10px}}
+
 .compare-next{padding:12px 15px;margin:0 20px 20px;border-radius:11px;background:var(--mint);font-size:.86rem}
 :root[data-theme="dark"]{color-scheme:dark;--ink:#e5f0e8;--forest:#295c42;--forest2:#357253;--muted:#b3c9ba;--paper:#101a15;--white:#1a2a21;--line:#3a5342;--mint:#234533;--pale:#22382b;--amber:#ecd69a;--shadow:0 8px 25px rgba(0,0,0,.22)}
 html[data-theme="dark"] .sitebar{background:#0c2419}
@@ -869,6 +895,7 @@ function renderOptionalCharacters(){
  for(const c of state.refineCharacters.filter(c=>refinementSection(c.id)===state.refineSection)){
    const group=node("details","optional-group"),summary=node("summary","",c.label);
    const content=node("div","optional-group-body");
+   group.dataset.character=c.id; // Direct navigation from a documented comparison clue.
    const describe=node("p","",c.hint),choices=node("div","optional-choices");
    function updateChosen(){
      const prior=summary.querySelector(".optional-chosen");if(prior)prior.remove();
@@ -1558,9 +1585,58 @@ function renderCompareControls(rows,n){
   state.compareIds=state.compareIds.filter(id=>possible.has(id));
   $("compare-toggle").textContent=state.comparing?"Cancel compare":"Compare matches";
   $("compare-help").hidden=!state.comparing;
+  $("compare-help").textContent="Top two started for you — change or add a third grass below.";
   const open=$("compare-open");open.hidden=!state.comparing;open.disabled=state.compareIds.length<2;
   open.textContent="Compare selected ("+state.compareIds.length+"/3)";
 }
+
+/* Compare only positive, recorded character states. A missing description is
+   unknown, never proof of the opposite state or a species-level exclusion. */
+function comparisonFeatureRows(species){
+ const rows=[];
+ for(const q of qs){
+  const values=species.map(s=>Array.isArray(s.traits?.[q.id])?s.traits[q.id]:[]);
+  const labels=values.map(vs=>vs.map(v=>q.options?.find(o=>o[0]===v)?.[1]||v));
+  rows.push({id:q.id,label:q.short,kind:"core",values,labels,selected:state.selected[q.id]||null,refs:species.map(()=>null)});
+ }
+ for(const c of state.refineCharacters){
+  const evidence=species.map(s=>refinementEvidence(s,c.id));
+  const values=evidence.map(e=>Array.isArray(e?.states)?e.states:[]);
+  const labels=values.map(vs=>vs.map(v=>c.options.find(o=>o.id===v)?.label||v));
+  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:state.refineSelected[c.id]||null,refs:evidence});
+ }
+ for(const row of rows){
+  row.documented=row.values.every(vs=>vs.length>0);
+  let pairs=0,differences=0;
+  for(let a=0;a<row.values.length;a++)for(let b=a+1;b<row.values.length;b++){
+   pairs++;
+   if(row.values[a].length&&row.values[b].length&&
+      row.values[a].every(v=>!row.values[b].includes(v)))differences++;
+  }
+  row.distinguishes=row.documented&&differences>0;
+  row.separatesEveryPair=row.distinguishes&&pairs===differences;
+ }
+ return rows;
+}
+function inspectComparisonFeature(feature){
+ $("compare-dialog").close();
+ if(feature.kind==="core"){
+  const index=qs.findIndex(q=>q.id===feature.id);
+  if(index<0)return;
+  state.question=index;render();
+  const target=$("question");
+  target?.scrollIntoView({behavior:"smooth",block:"start"});
+  target?.querySelector("button")?.focus({preventScroll:true});
+ }else{
+  state.refineSection=refinementSection(feature.id);
+  renderOptionalCharacters();
+  const holder=$("optional-character-wrap");holder.open=true;
+  const group=Array.from($("optional-character-groups").querySelectorAll("details"))
+    .find(x=>x.dataset.character===feature.id);
+  if(group){group.open=true;group.scrollIntoView({behavior:"smooth",block:"center"});group.querySelector("summary")?.focus({preventScroll:true});}
+ }
+}
+
 function compareCandidates(){
   const species=state.compareIds.map(byId).filter(Boolean);
   if(species.length<2||species.length>3)return;
@@ -1582,37 +1658,73 @@ function compareCandidates(){
     cards.append(card);
   }
   area.append(cards);
+
+  const features=comparisonFeatureRows(species);
+  const contrasts=features.filter(f=>f.distinguishes);
+  const highlights=contrasts.filter(f=>!f.selected).concat(contrasts.filter(f=>f.selected)).slice(0,3);
+  const highlightsBox=node("section","compare-highlights");
+  highlightsBox.append(node("h3","","Useful differences to check"),node("p","compare-highlights-intro",
+    "These are recorded character differences, not a final identification. Look at your plant; some choices can overlap or vary."));
+  if(!highlights.length){
+    highlightsBox.append(node("p","compare-clue-note","No fully documented difference is available among these grasses in the current key. Keep all of them possible and use their full lessons and photographs."));
+  }else{
+    const list=node("div","compare-clue-list");
+    for(const feature of highlights){
+      const clue=node("article","compare-clue"),top=node("div","compare-clue-head");
+      top.append(node("h4","",feature.label));
+      const action=node("button","compare-inspect","Check this feature");
+      action.type="button";
+      action.setAttribute("aria-label","Inspect "+feature.label+" in the identification key");
+      action.addEventListener("click",()=>inspectComparisonFeature(feature));
+      top.append(action);clue.append(top);
+      clue.append(node("p","compare-clue-note",feature.separatesEveryPair?
+        "Each compared grass has different recorded states for this feature.":
+        "This feature distinguishes at least two choices; it may not separate every grass shown."));
+      const cells=node("div","compare-clue-values");
+      species.forEach((s,i)=>{
+        const cell=node("div","compare-clue-value");
+        cell.append(node("strong","",s.common),node("span","",feature.labels[i].join("; ")));
+        cells.append(cell);
+      });
+      clue.append(cells);list.append(clue);
+    }
+    highlightsBox.append(list);
+  }
+  area.append(highlightsBox);
+  const fullFeatures=features.filter(f=>f.kind==="core"||f.values.some(v=>v.length)||f.selected);
+  const disclosure=node("details","compare-all-features");
+  disclosure.append(node("summary","","See full character comparison ("+fullFeatures.length+" features)"),
+    node("p","compare-all-description","Recorded values are shown for each grass. Unknown means not documented, not absent; variation may overlap."));
   const wrap=node("div","compare-table-wrap"),table=node("table","compare-table");
   const thead=document.createElement("thead"),headRow=document.createElement("tr");
   headRow.append(node("th","","Visible feature"));
   for(const s of species)headRow.append(node("th","",s.common));
   thead.append(headRow);table.append(thead);
   const tbody=document.createElement("tbody");
-  for(const q of qs){
-    const row=document.createElement("tr");row.append(node("th","",q.short));
-    for(const s of species){
-      const vals=s.traits[q.id]||[];
-      const names=vals.map(v=>q.options.find(o=>o[0]===v)?.[1]||v);
-      row.append(node("td","",names.length?names.join("; "):"Not documented — keep possible"));
-    }
+  for(const feature of fullFeatures){
+    const row=document.createElement("tr");row.append(node("th","",feature.label));
+    species.forEach((s,i)=>{
+      const td=document.createElement("td"),value=feature.labels[i];
+      if(!value.length)td.append(node("span","compare-unknown","Unknown — not documented"));
+      else td.append(node("span","",value.join("; ")));
+      if(feature.selected){
+        const match=feature.values[i].includes(feature.selected);
+        if(match)td.append(node("span","compare-choice-note","Your selected observation is recorded here."));
+        else if(value.length)td.append(node("span","compare-choice-note","Your selected observation is not among the recorded states; double-check the specimen."));
+      }
+      const evidence=feature.refs[i];
+      if(feature.kind==="optional"&&evidence&&typeof evidence.source_url==="string"&&evidence.source_url.startsWith("https://")){
+        const link=node("a","mini-credit","Published character source: "+(evidence.source||"View reference"));
+        link.href=evidence.source_url;link.target="_blank";link.rel="noopener noreferrer";
+        td.append(document.createElement("p"),link);
+      }
+      row.append(td);
+    });
     tbody.append(row);
   }
-  for(const c of state.refineCharacters.filter(c=>state.refineSelected[c.id])){
- const row=document.createElement("tr");row.append(node("th","",c.label+" (additional clue)"));
- for(const s of species){
-   const td=document.createElement("td"),ev=refinementEvidence(s,c.id);
-   if(ev&&ev.states.includes(state.refineSelected[c.id])){
-     td.append(node("span","","Documented match: "+(c.options.find(x=>x.id===state.refineSelected[c.id])?.label||state.refineSelected[c.id])));
-     if(ev.source_url.startsWith("https://")){
-       const a=node("a","mini-credit","Published character source: "+ev.source);
-       a.href=ev.source_url;a.target="_blank";a.rel="noopener noreferrer";td.append(document.createElement("p"),a);
-     }
-   }else td.append(node("span","","Not documented for this selection — do not exclude"));
-   row.append(td);
- }
- tbody.append(row);
-}
-table.append(tbody);wrap.append(table);area.append(node("p","compare-scroll-note","On a phone, swipe the feature table sideways to see the other grasses."),wrap);
+  table.append(tbody);wrap.append(table);
+  disclosure.append(node("p","compare-scroll-note","On a phone, swipe the feature table sideways to see the other grasses."),wrap);
+  area.append(disclosure);
   const next=compareCorePrompt(species);
   if(next)area.append(node("p","compare-next","Helpful next check: "+next.short+". "+next.hint+" The documented choices differ; check the real plant before deciding."));
   else{
@@ -1622,7 +1734,7 @@ table.append(tbody);wrap.append(table);area.append(node("p","compare-scroll-note
   }
   dialog.showModal();
 }
-$("compare-toggle").addEventListener("click",()=>{state.comparing=!state.comparing;state.compareIds=[];renderResults()});
+$("compare-toggle").addEventListener("click",()=>{state.comparing=!state.comparing;state.compareIds=state.comparing?currentResults().slice(0,2).map(x=>x.s.id):[];renderResults()});
 $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
