@@ -6,7 +6,7 @@
 const HUB="https://crking92.github.io/Hays-County-Botany/";
 const SHARED=HUB+"data/learning-layer.json";
 const LAB="https://crking92.github.io/Hays-Botany-Poaceae/";
-const vocab=new Map(),aliases=new Map();
+const vocab=new Map(),aliases=new Map(),verifiedPhotos=new Map();
 let matcher=null,dialog=null,lastTrigger=null,sharedLoaded=false,loading=false;
 const escapeHTML=v=>String(v==null?"":v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const normalized=v=>String(v||"").trim().toLowerCase().replace(/[\s_-]+/g," ");
@@ -24,6 +24,19 @@ function resolvePicture(v,key){
    label:"Silky bluestem — exposed short membranous ligule at sheath mouth",creator:"Harry Rose (Macleay Grass Man)",license:"CC BY 2.0",
    source_page:"https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_ligule5_(14344423535).jpg",
    note:"Existing Grass ID Lab source photograph; the short pale membrane is exposed."};
+ }
+ const approval=verifiedPhotos.get(key);
+ if(approval&&p.source_page===approval.source_page&&allowedCredit(approval.license)){
+  try{
+   const filename=decodeURIComponent(approval.source_page.split("/wiki/File:")[1].split("#")[0].split("?")[0]).replace(/_/g," ");
+   return {
+    src:"https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(filename.replace(/ /g,"_"))+"?width=900",
+    label:p.label||v.term,alt:p.alt||p.label||v.term,
+    creator:approval.creator,license:approval.license,license_url:approval.license_url,
+    source_page:approval.source_page,note:approval.visual_scope||p.focus||"",
+    diagram:p.media_type==="diagram"||/\.svg$/i.test(filename)
+   };
+  }catch(_e){}
  }
  if(p.media_type==="diagram"&&/Hays Botany learner diagram/i.test(p.credit||"")){
   const src=localPicture(p.image_url)||canonicalURL(v.visual);
@@ -167,7 +180,7 @@ function footer(){
 // A tiny original botanical orientation sketch is preferable to a photo that
 // does not actually show the character being defined.
 function additionalSketch(key){
- if(!["anther","flag-leaf","distichous"].includes(key))return null;
+ if(!["anther","flag-leaf","distichous","coriaceous"].includes(key))return null;
  const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
  svg.setAttribute("viewBox","0 0 320 190");svg.setAttribute("role","img");
  svg.setAttribute("aria-label","Simplified original botanical drawing of "+key.replace("-"," "));
@@ -194,6 +207,11 @@ function additionalSketch(key){
   line("M146 156 Q201 141 256 146",3,"#9ab77b");
   label("FLAG LEAF",197,63);line("M209 68 L240 90",1.8);
   label("flowering head",15,61);line("M97 55 L131 42",1.7);
+ }else if(key==="coriaceous"){
+  make("path",{d:"M45 88 Q151 46 283 78 L282 100 Q146 130 45 100 Z",fill:"#5a9969",stroke:"#326b47","stroke-width":"3"});
+  line("M47 92 Q154 110 283 89",2,"#acd2a3");
+  label("THICK, FIRM LEAF",46,41);line("M160 45 L158 72",1.7,"#5c7f48");
+  label("texture needs touch",95,159);
  }else if(key==="distichous"){
   line("M156 172 L157 22",4);
   line("M157 138 Q92 123 33 139",4,"#5d9959");
@@ -219,9 +237,10 @@ function showDefinition(key){
   '<p class="plain">'+escapeHTML(v.plain)+'</p>'+
   (pic?'<figure class="grass-glossary-figure"><img loading="lazy" decoding="async" alt="'+escapeHTML(pic.alt||pic.label||v.term)+'" src="'+escapeHTML(pic.src)+'">'+
    '<figcaption><strong>'+escapeHTML(pic.label||v.term)+'</strong>'+
-   (pic.diagram?' · Original diagram':' · Photo reference')+
+   (pic.diagram?' · Botanical illustration':' · Photo reference')+
    '<div>'+escapeHTML([pic.creator,pic.license].filter(Boolean).join(" · "))+'</div>'+
    (pic.note?'<div>'+escapeHTML(pic.note)+'</div>':"")+
+   (isHttps(pic.license_url)?'<a href="'+escapeHTML(pic.license_url)+'" target="_blank" rel="noopener noreferrer">License terms</a> · ':'')+
    (isHttps(pic.source_page)?'<a href="'+escapeHTML(pic.source_page)+'" target="_blank" rel="noopener noreferrer">Original photo / source</a>':"")+
    '</figcaption></figure>':
    (sketch?'':'<div class="grass-glossary-missing">A verified, rights-cleared close-up for this exact structure is not available in the connected glossary yet. The definition still works; no unapproved photograph is displayed.</div>'))+
@@ -289,18 +308,19 @@ function setup(){
 async function load(){
  if(loading)return;loading=true;
  const read=async path=>{const response=await fetch(path);if(!response.ok)throw Error("Glossary unavailable");return response.json()};
- // Local backup loads before any remote cross-site request.
- const [local,snapshot]=await Promise.allSettled([
-  read("grass-glossary-terms.json"),read("shared-glossary-snapshot.json")
+ const [local,snapshot,permissions]=await Promise.allSettled([
+  read("grass-glossary-terms.json"),read("shared-glossary-snapshot.json"),read("glossary-approved-source-photos.json")
  ]);
  if(local.status==="fulfilled")for(const [key,item] of Object.entries(local.value.terms||{}))if(item.term&&item.plain)vocab.set(key,item);
  if(snapshot.status==="fulfilled"&&snapshot.value?.terms){
   for(const [key,item] of Object.entries(snapshot.value.terms))if(item.term&&item.plain)vocab.set(key,item);
   sharedLoaded=true;
  }
+ if(permissions.status==="fulfilled")for(const [key,record] of Object.entries(permissions.value.approved_photos||{})){
+  if(record?.source_page&&record?.creator&&allowedCredit(record.license)&&record.source_page===vocab.get(key)?.real_photo?.source_page)verifiedPhotos.set(key,record);
+ }
  rebuildMatcher();scheduleEnhance();
  if(dialog?.open&&!dialog.querySelector(".grass-glossary-definition"))showIndex();
- // Canonical glossary remains authoritative, but its network request does not block.
  read(SHARED).then(canonical=>{
   if(!canonical?.terms)return;
   for(const [key,item] of Object.entries(canonical.terms))if(item.term&&item.plain)vocab.set(key,item);
@@ -310,5 +330,5 @@ async function load(){
 }
 setup();
 load();
-window.HaysGrassGlossary={open,findTerms:findKeys,available:()=>vocab.size,sharedLoaded:()=>sharedLoaded};
+window.HaysGrassGlossary={open,findTerms:findKeys,available:()=>vocab.size,sharedLoaded:()=>sharedLoaded,approvedPhotos:()=>verifiedPhotos.size};
 })();
