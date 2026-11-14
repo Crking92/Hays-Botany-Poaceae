@@ -204,5 +204,32 @@ verifyUnchanged("Comparison suggestions must never modify scoring");
 if(!html.includes('id="theme-toggle"')||!html.includes('id="compare-dialog"')||
    !html.includes('const group=node("details","optional-group")'))
   throw Error("Visitor theme, compare or accordion controls missing");
+// Batch 8: five locally described gramas; source-backed optional choices
+// are positive-only ranking and retain the normal four-question matches.
+const batch8={
+ "bouteloua-curtipendula":["sheath_margins","ligule_length","ligule_edge","culm_posture","blade_hairs","sheath_surface"],
+ "bouteloua-hirsuta":["blade_hairs","sheath_margins","ligule_length","ligule_edge","culm_posture","glume_marks"],
+ "bouteloua-rigidiseta":["sheath_margins","ligule_length","ligule_edge","culm_posture","glume_marks","true_lemma_awn"],
+ "bouteloua-trifida":["sheath_margins","ligule_length","ligule_edge","culm_posture","underground_stems","glume_marks"],
+ "bouteloua-dactyloides":["blade_width","blade_shape","sheath_margins","ligule_length","ligule_edge","blade_hairs","sheath_surface"]
+};
+if(pack.evidence.length<367)throw Error("Batch 8 must preserve 31 new source-backed records");
+for(const [id,chars] of Object.entries(batch8)){
+ for(const character of chars){
+  const e=pack.evidence.find(x=>x.id===id&&x.character===character);
+  if(!e||!e.source||!e.source_url?.startsWith("https://")||!e.states?.length)throw Error("Batch 8 missing source character "+id+"/"+character);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={ligule_length:"tiny",sheath_margins:"open"};
+got=verifyUnchanged("Batch 8 tiny ligule and open sheath");
+for(const id of Object.keys(batch8)){
+ const row=got.find(x=>x.id===id);
+ if(!row||row.extras!==2)throw Error("Batch 8 two independent positive observations failed: "+id);
+}
+state.refineSelected={true_lemma_awn:"three"};
+got=verifyUnchanged("Batch 8 Texas grama three awns");
+if(!got.some(x=>x.id==="bouteloua-rigidiseta"&&x.extras===1))throw Error("Texas grama documented lemma awns missing");
+state.refineSelected={};
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
