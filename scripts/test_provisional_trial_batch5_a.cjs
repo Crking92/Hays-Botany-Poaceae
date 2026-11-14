@@ -232,7 +232,11 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // Batch 5 (2026-11-13): mourning lovegrass has a minute fused/ciliate
 // basal ligule supported by Williamson County and PlantNET; retain hairs
 // and add the documented under-lens membrane alternative: 500 + 1 = 501.
-assert.equal(scoredPaths,501,'Reviewed scored character-combination total changed');
+// Batch 6 (2026-11-13): mature Elymus virginicus lemma awns can be
+// 3–5 mm at published lower limits; only a truly intact short-awn view
+// gets an alternate 'no conspicuous LONG awns' path: 501 + 1 = 502.
+// Keep the existing E. canadensis and Texas brome exclusion safeguards.
+assert.equal(scoredPaths,502,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
