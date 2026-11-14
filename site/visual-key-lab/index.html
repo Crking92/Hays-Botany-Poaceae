@@ -197,6 +197,11 @@ html[data-theme="dark"] .venation-field-guide{background:#23372b}
 .leaf-detail-guide svg{object-fit:contain}
 .leaf-detail-guide .venation-field-text p{overflow-wrap:anywhere}
 @media(max-width:355px){.leaf-detail-guide{flex-wrap:wrap}.leaf-detail-guide svg{max-width:100%;width:136px}}
+
+/* Collar and sheath diagram panel, shared with the existing optional leaf guides. */
+.collar-field-guide svg{object-fit:contain}
+html[data-theme="dark"] .collar-field-guide{background:#23372b}
+@media(max-width:355px){.collar-field-guide{flex-wrap:wrap}.collar-field-guide svg{width:136px;max-width:100%}}
 </style>
 </head>
 <body>
@@ -470,6 +475,96 @@ function leafDetailSketch(character,choice){
  return svg;
 }
 
+
+/* Beginner diagrams for the existing collar/sheath options, not species photos.
+   Visual illustrations never supply botanical evidence or exclusion scores. */
+const collarFieldTips={
+ leaf_base:{
+  pointed_auricles:["Look at the collar from the outside","Two small pointed ear-like lobes rise beside the blade base. Auricles are outside the junction; the ligule is on the inside."],
+  clasping_auricles:["Look at both sides of the stem","Ear-like lobes curve around or hug the culm. Check their attachment; a folded leaf edge is not an auricle."],
+  compressed_sheath:["Look across the lower sheath","The sheath around the culm is flattened or keel-shaped rather than evenly rounded. This is sheath structure, not a raised blade midrib."]
+ },
+ ligule_length:{
+  tiny:["Open the inner collar; use a hand lens","The true ligule is under 1 mm tall. Find the flap or hair fringe at the blade–sheath junction before measuring."],
+  short:["Open the inner collar; use a millimeter scale","The ligule is about 1–3 mm tall. Measure the tissue itself, not hairs farther down the sheath."],
+  medium:["Open the inner collar; use a millimeter scale","The ligule rises about 3–8 mm. Measure from the base of the ligule to its tip."],
+  long:["Open the inner collar; use a millimeter scale","The ligule can rise more than 8 mm above the blade–sheath junction. This drawing shows proportions, not actual millimeters."]
+ },
+ ligule_edge:{
+  entire:["Look closely at the membranous rim","An intact papery ligule has a comparatively smooth, unbroken top edge. Natural wear can make an entire edge appear torn."],
+  erose:["Use a hand lens on the papery rim","The margin has small uneven nicks or notches. Distinguish fine notches from deep splits and from hairs."],
+  lacerate:["Look for deep cuts into the membrane","The papery ligule is deeply split into uneven lobes, not simply fringed by hairlike projections."],
+  ciliate:["Look for hairs attached to the membrane's edge","A real papery membrane is present, with fine hairlike cilia along its upper margin. The hairs are not a separate hair-only ligule."],
+  hair_fringe:["Look at the inner blade–sheath junction","Short hairs themselves form most of the ligule; check for a minute membrane at the base before assuming no membrane exists."]
+ },
+ sheath_margins:{
+  open:["Follow the sheath lengthwise around the stem","The margins are separated by a longitudinal slit. Check living tissue: a formerly closed sheath may split as it ages."],
+  overlapping:["Follow the sheath margins around the stem","One free edge passes over another like a wrap. Overlapping edges are not the same as edges fused into a tube."],
+  closed:["Trace the sheath down from the collar","A continuously fused tubular sheath has no free lengthwise seam in the inspected portion. Research-pending option; old sheaths may split."]
+ },
+ sheath_surface:{
+  keeled_lower:["Look across the lower leaf sheath","The lower sheath is flattened, with a relatively pronounced lengthwise keel. Inspect the sheath around the culm, not the blade."],
+  lower_compressed:["Inspect the lower sheath in cross-section","The lower sheath is flattened side-to-side; that alone does not prove a sharp keel is present."],
+  weak_keel:["Look along the sheath's outer midline","A slight lengthwise ridge is visible or felt; it is not as sharply keeled as a conspicuously folded sheath."],
+  glanded:["Use a hand lens on the sheath exterior","Look for small glandular spots or dots on the sheath. Do not confuse dirt, ordinary hairs, or insect damage with glands."],
+  rough_surface:["Look closely at the sheath face","Minute projections make the exterior scabrous (rough). Check texture visually with magnification rather than rubbing sharp margins."],
+  sometimes_hairy:["Check multiple sheaths","Sparse or scattered hairs may occur on the sheath. A hairless sheath on one leaf does not rule out occasional pubescence."],
+  hyaline_margins:["Hold the sheath edge against light","Thin translucent, papery margins transmit light. A pale leaf blade stripe is not the same as a transparent sheath edge."]
+ }
+};
+function collarFieldSketch(character,choice){
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
+ svg.setAttribute("viewBox","0 0 168 92");svg.setAttribute("role","img");svg.setAttribute("focusable","false");
+ svg.setAttribute("aria-label","Simplified "+character.replaceAll("_"," ")+" diagram for "+choice.replaceAll("_"," ")+"; not a specimen photograph or scale drawing");
+ const p=(d,stroke="#477957",width=2,fill="none")=>{const e=document.createElementNS(ns,"path");
+  for(const [k,v] of Object.entries({d,stroke,"stroke-width":width,fill,"stroke-linecap":"round","stroke-linejoin":"round"}))e.setAttribute(k,String(v));
+  svg.append(e);return e;};
+ const dot=(x,y,r=2,fill="#4a7851")=>{const e=document.createElementNS(ns,"circle");
+  for(const [k,v] of Object.entries({cx:x,cy:y,r,fill}))e.setAttribute(k,String(v));
+  svg.append(e);return e;};
+ const sheath=()=>{p("M53 82 L53 25 Q84 16 115 25 L115 82 Z","#5b9067",2,"#c6dda8");p("M84 23 V80","#8ba881",1.5);};
+ if(character==="leaf_base"){
+  sheath();p("M70 23 Q84 4 98 23 L95 58 L73 58 Z","#5b9067",2,"#b4cf94");
+  if(choice==="pointed_auricles"){p("M73 31 L53 5 L61 33","#386d4b",4);p("M95 31 L116 5 L107 33","#386d4b",4);}
+  if(choice==="clasping_auricles"){p("M73 31 Q35 22 45 48 Q54 59 68 44","#386d4b",5);p("M95 31 Q134 22 122 48 Q114 59 99 44","#386d4b",5);}
+  if(choice==="compressed_sheath"){p("M53 29 L84 39 L115 29 M84 39 V82","#386d4b",4);p("M56 48 L84 56 L112 48","#83b181",2);}
+ }else if(character==="ligule_length"){
+  sheath();p("M48 40 L120 40","#6b9870",2);
+  const heights={tiny:4,short:13,medium:25,long:38},height=heights[choice];
+  p("M69 40 L69 "+(40-height)+" Q84 "+(36-height)+" 99 "+(40-height)+" L99 40 Z","#41784d",2,"#fff1bc");
+  p("M125 40 V"+(40-height)+" M120 40 H130 M120 "+(40-height)+" H130","#9c8345",1.8);
+ }else if(character==="ligule_edge"){
+  sheath();p("M55 51 H113","#467a55",2);
+  if(choice==="hair_fringe"){
+   for(let x=61;x<=109;x+=7){const high= (x%3===0)?20:25;p("M"+x+" 51 Q"+(x+2)+" "+(42-high/2)+" "+(x+3)+" "+(51-high),"#477957",1.9);}
+  }else{
+   let outline="M58 51 L58 26 ";
+   if(choice==="entire")outline+="Q84 23 110 26";
+   if(choice==="erose")outline+="L64 25 L69 30 L75 24 L81 29 L87 23 L94 30 L101 25 L106 29 L110 26";
+   if(choice==="lacerate")outline+="L65 22 L71 42 L77 17 L84 39 L92 18 L99 42 L105 23 L110 27";
+   if(choice==="ciliate")outline+="Q84 23 110 26";
+   outline+=" L110 51 Z";
+   p(outline,"#477957",2,"#fff1bc");
+   if(choice==="ciliate")for(let x=61;x<=109;x+=7)p("M"+x+" 25 l-3 -12","#4b7b50",1.8);
+  }
+ }else if(character==="sheath_margins"){
+  p("M38 75 Q45 18 84 12 Q123 18 130 75","#678f66",2);
+  if(choice==="open"){p("M55 72 Q50 35 69 19","#54885b",8);p("M113 72 Q118 35 99 19","#54885b",8);}
+  if(choice==="overlapping"){p("M53 73 Q41 29 100 17 L115 31 Q74 43 93 75","#6c9b67",4);p("M96 19 Q81 36 100 75","#386a49",4);}
+  if(choice==="closed"){p("M55 73 Q47 30 84 20 Q121 30 113 73 Z","#5b9067",2,"#c6dda8");p("M84 22 V73","#8eac8b",1.3);}
+ }else if(character==="sheath_surface"){
+  sheath();
+  if(choice==="keeled_lower"){p("M53 29 L84 43 L115 29 M84 43 V81","#386c4b",4);p("M57 53 L84 62 L111 53","#73a678",2);}
+  if(choice==="lower_compressed"){p("M60 26 L60 82 M108 26 L108 82","#79a179",5);p("M61 46 H107 M61 66 H107","#b0cba3",2);}
+  if(choice==="weak_keel")p("M83 28 V81","#567f55",2.5);
+  if(choice==="glanded")for(const y of [35,47,59,72])for(const x of [68,98])dot(x,y,2.8,"#976f48");
+  if(choice==="rough_surface")for(const y of [36,48,60,72])for(const x of [67,83,99]){p("M"+x+" "+y+" l-5 -4","#477957",1.7);p("M"+x+" "+(y+1)+" l5 3","#477957",1.3);}
+  if(choice==="sometimes_hairy")for(const [x,y] of [[65,43],[101,48],[77,67],[109,73]])p("M"+x+" "+y+" l"+(x<84?-12:12)+" -9","#477957",1.6);
+  if(choice==="hyaline_margins"){p("M54 27 L54 80 L67 80 L67 24 Z","#adc49e",1.6,"#f6f4d8");p("M101 24 L101 80 L114 80 L114 27 Z","#adc49e",1.6,"#f6f4d8");}
+ }
+ return svg;
+}
+
 function renderOptionalCharacters(){
  const holder=$("optional-character-wrap"),root=$("optional-character-groups"),tabs=$("optional-section-tabs");
  root.replaceChildren();tabs.replaceChildren();holder.hidden=!state.refineCharacters.length;
@@ -544,6 +639,23 @@ function renderOptionalCharacters(){
        info.append(node("strong","",where),node("p","",tip),
          node("p","venation-field-source",count?("Recorded for "+count+" grasses in cited descriptions. Missing character data does not exclude other grasses."):"No species-level ranking evidence linked yet. You can record this observation, but it cannot favor or exclude a grass."));
        guide.append(leafDetailSketch(c.id,selected.id),info);
+     };
+     refreshVeinGuide();content.append(guide);
+   }
+   if(Object.prototype.hasOwnProperty.call(collarFieldTips,c.id)){
+     const guide=node("div","venation-field-guide leaf-detail-guide collar-field-guide");
+     guide.setAttribute("aria-live","polite");
+     refreshVeinGuide=()=>{
+       guide.replaceChildren();
+       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       if(!selected){guide.append(node("p","venation-field-prompt","Choose a collar or sheath detail to see a diagram and where to examine your plant."));return;}
+       const [where,tip]=collarFieldTips[c.id][selected.id]||[];
+       if(!where)return;
+       const matching=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
+       const info=node("div","venation-field-text");
+       info.append(node("strong","",where),node("p","",tip),
+         node("p","venation-field-source",matching?("Source-backed matching detail recorded for "+matching+" grass"+(matching===1?"":"es")+". Missing anatomy never excludes another grass."):"No species-specific published ranking evidence linked for this choice yet. The observation is saved, but no grass is promoted or excluded."));
+       guide.append(collarFieldSketch(c.id,selected.id),info);
      };
      refreshVeinGuide();content.append(guide);
    }
