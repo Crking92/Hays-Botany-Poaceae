@@ -1,0 +1,45 @@
+name: Grass ID Lab glossary — definitions, rights and browser QA
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/grass-glossary-*'
+      - 'site/visual-key-lab/shared-glossary-snapshot.json'
+      - 'scripts/test_grass_glossary.cjs'
+      - 'scripts/test_grass_glossary_browser.py'
+      - '.github/workflows/grass-glossary-qa.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/grass-glossary-*'
+      - 'site/visual-key-lab/shared-glossary-snapshot.json'
+      - 'scripts/test_grass_glossary.cjs'
+      - 'scripts/test_grass_glossary_browser.py'
+      - '.github/workflows/grass-glossary-qa.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  glossary-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate all 173 terms, reused image files, rights and unchanged scoring
+        run: node scripts/test_grass_glossary.cjs
+  glossary-browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Chromium for desktop and mobile browser QA
+        run: |
+          python -m pip install "playwright>=1.53,<2"
+          python -m playwright install --with-deps chromium
+      - name: Test local fallback when canonical glossary is unreachable
+        run: |
+          python -m http.server 8770 --directory . >/tmp/hays-grass-glossary-http.log 2>&1 &
+          echo $! >/tmp/hays-grass-glossary-server.pid
+          python scripts/test_grass_glossary_browser.py
