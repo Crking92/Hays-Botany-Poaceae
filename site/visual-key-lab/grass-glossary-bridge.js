@@ -34,7 +34,7 @@ function resolvePicture(v,key){
     label:p.label||v.term,alt:p.alt||p.label||v.term,
     creator:approval.creator,license:approval.license,license_url:approval.license_url,
     source_page:approval.source_page,note:approval.visual_scope||p.focus||"",
-    diagram:/\\.svg$/i.test(filename)
+    diagram:p.media_type==="diagram"||/\.svg$/i.test(filename)
    };
   }catch(_e){}
  }
@@ -237,7 +237,7 @@ function showDefinition(key){
   '<p class="plain">'+escapeHTML(v.plain)+'</p>'+
   (pic?'<figure class="grass-glossary-figure"><img loading="lazy" decoding="async" alt="'+escapeHTML(pic.alt||pic.label||v.term)+'" src="'+escapeHTML(pic.src)+'">'+
    '<figcaption><strong>'+escapeHTML(pic.label||v.term)+'</strong>'+
-   (pic.diagram?' · Original diagram':' · Photo reference')+
+   (pic.diagram?' · Botanical illustration':' · Photo reference')+
    '<div>'+escapeHTML([pic.creator,pic.license].filter(Boolean).join(" · "))+'</div>'+
    (pic.note?'<div>'+escapeHTML(pic.note)+'</div>':"")+
    (isHttps(pic.license_url)?'<a href="'+escapeHTML(pic.license_url)+'" target="_blank" rel="noopener noreferrer">License terms</a> · ':'')+
