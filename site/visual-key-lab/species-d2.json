@@ -398,7 +398,7 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "Compare mourning lovegrass’s inward-rolled 1–2 mm blades with the usually flat 2–3 mm blades reported for plains lovegrass in the Hill Country treatment. Width overlaps; check the collar and mature flowering specimen together. Historical determinations have confused the two. Do not decide from an airy panicle or sheath-margin hair alone.",
+    "field_rule": "Compare mourning lovegrass’s inward-rolled 1–2 mm blades with the usually flat 2–3 mm blades reported for plains lovegrass in the Hill Country treatment. Width overlaps; check the collar and mature flowering specimen together. Historical determinations have confused the two. Do not decide from an airy panicle or sheath-margin hair alone.\n\nScoring audit 2026-11-13: In addition to the regional flora's visible hair-fringe ligule, a detailed Williamson County account describes a tiny FUSED basal ligule with ciliate tips (to 0.4 mm); the NSW flora explicitly records a basal membrane 0.3–0.5 mm. Under a lens an actual inner basal membranous rim can reasonably match the membrane visual answer. Retain the hairs choice; do not infer membrane from surrounding collar/sheath hairs, and SKIP if the inner junction cannot be resolved. No local ligule macro or voucher newly certified.",
     "traits": {
       "head": [
         "airy"
@@ -407,7 +407,8 @@
         "tuft"
       ],
       "ligule": [
-        "hairs"
+        "hairs",
+        "membrane"
       ],
       "awns": [
         "none_obvious"
@@ -436,6 +437,24 @@
         "reference": "Hagenbuch & Lemke p. 48 supports inward-rolled 1–2 mm blades, hairy collar margins and an approximately 1 mm hair-fringe ligule. Its p. 32 key calls the outer sheath margin ciliate, while the p. 48 description calls sheath margins entire: preserve this internal source discrepancy and do not force a hair-based exclusion. Diggs discusses E. lugens under E. intermedia and warns of reassigned specimens; that passage is not a separate reproductive description of mourning lovegrass. Existing secondary reproductive measurements remain supplementary and were not newly verified here.",
         "status": "REGIONAL_VEGETATIVE_REVIEWED_SHEATH_MARGIN_CONFLICT_REPRODUCTIVE_GAP",
         "review_date": "2026-11-12"
+      },
+      "ligule_membranous_base_audit_20261113": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 48, E. lugens",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=48",
+        "secondary_source": "A. C. Gibson, Vascular Plants of Williamson County, Eragrostis lugens, p. 1",
+        "secondary_source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Eragrostis%20lugens",
+        "third_source": "PlantNET NSW Flora, Eragrostis lugens, Jacobs, Whalley & Wheeler (2008)",
+        "third_source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Eragrostis~lugens&page=nswfl",
+        "role": "vegetative",
+        "reported_states": [
+          "Hagenbuch and Lemke: approximately 1 mm fringe of hairs",
+          "Williamson County: minute fused basal ligule, short-ciliate above, to 0.4 mm",
+          "PlantNET NSW Flora: 0.3–0.5 mm membranous below and ciliate above"
+        ],
+        "reference": "Keep hair-fringe pathway and admit a very short MEMBRANOUS basal-rim visual pathway only when the actual inner blade-sheath junction is seen under magnification. The regional flora emphasizes visible hairs, whereas Williamson County and the NSW flora explicitly document the fused or membranous base. The latter is not a claim that the membrane is obvious unaided, nor a botanical change to the species. Do not treat adjacent collar hairs as the ligule; SKIP if unseen.",
+        "status": "TWO_SPECIES_DESCRIPTIONS_MEMBRANOUS_BASE_VS_REGIONAL_HAIR_FRINGE_COARSE_VISUAL_ALTERNATE_LOCAL_MACRO_PENDING",
+        "review_date": "2026-11-13",
+        "photo_voucher_support": "No new exact Texas mature inner-ligule macro/measurement authenticated; alternate is species-text supported only."
       }
     },
     "diagnostic_checks": [

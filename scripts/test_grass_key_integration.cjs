@@ -125,6 +125,7 @@ const positives = [
   ['plains lovegrass tuft',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['eragrostis-intermedia']],
   ['plains lovegrass rhizome',{head:'airy',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['eragrostis-intermedia']],
   ['mourning lovegrass',{head:'airy',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['eragrostis-lugens']],
+  ['mourning lovegrass tiny membranous ligule base under lens',{head:'airy',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['eragrostis-lugens']],
   // Lane B — #71: previously excluded regional growth forms.
   ['Texas bluegrass rhizomes hidden',{head:'compact',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['poa-arachnifera']],
   ['Texas bluegrass rhizome exposed',{head:'long_narrow_panicle',habit:'rhizome',ligule:'membrane'},['poa-arachnifera']],
@@ -255,6 +256,7 @@ const negatives = [
   [{awns:'burs'},'setaria-scheelei'],
   [{awns:'burs'},'setaria-reverchonii'],
   [{awns:'long'},'eragrostis-lugens'],
+  [{ligule:'absent'},'eragrostis-lugens'],
   [{head:'foxtail'},'eragrostis-intermedia'],
   // Lane B/C — protect the rejected alternatives as well as permitted paths.
   [{habit:'rhizome'},'poa-annua'],

@@ -229,7 +229,10 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // Texas brome's similar proposed path remains HELD by the existing Lane C
 // negative control until field-voucher and UI semantics can be reconciled.
 // Little bluestem adds 2 full combinations: 498 + 2 = 500.
-assert.equal(scoredPaths,500,'Reviewed scored character-combination total changed');
+// Batch 5 (2026-11-13): mourning lovegrass has a minute fused/ciliate
+// basal ligule supported by Williamson County and PlantNET; retain hairs
+// and add the documented under-lens membrane alternative: 500 + 1 = 501.
+assert.equal(scoredPaths,501,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
