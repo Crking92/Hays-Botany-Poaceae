@@ -69,13 +69,18 @@ function findKeys(txt,cap=30){
 function chip(key){
  const item=vocab.get(key),b=document.createElement("button");
  b.type="button";b.className="grass-term-chip";b.dataset.grassTerm=key;
- b.textContent=item?.term||key;
+ b.textContent=item?.term||key;b.title="Define "+b.textContent;b.setAttribute("aria-label",b.title);
  return b;
 }
+const termsByFeature={"head":["panicle","spikelet","raceme","rachis-branch"],"habit":["stolon","rhizome","crown","decumbent"],"ligule":["ligule","collar","leaf-sheath","ciliate"],"awns":["awn","lemma","glume","bristle","floret"],"blade_shape":["leaf-blade"],"blade_width":["leaf-blade"],"blade_tip":["leaf-blade"],"blade_edge":["leaf-blade","scabrous","ciliate"],"blade_midnerve":["midrib"],"blade_venation":["venation","midrib","raised-ribs","scabrous"],"blade_hairs":["trichome","pubescent","glabrous"],"leaf_base":["auricle","collar","leaf-sheath"],"ligule_length":["ligule","collar"],"ligule_edge":["ligule","ciliate"],"sheath_margins":["sheath-margin","leaf-sheath"],"sheath_surface":["leaf-sheath","scabrous","gland","trichome"],"culm_posture":["culm","geniculate","decumbent"],"surface_runners":["stolon","node","internode"],"underground_stems":["rhizome","stolon"],"basal_crown":["crown","culm"],"stem_special":["node","gland","stolon","culm"],"stem_nodes":["node","culm-node","trichome","gland"],"florets_per_spikelet":["floret","spikelet","rachilla"],"spikelet_position":["spikelet","pedicel","distichous"],"glume_marks":["glume","spikelet","venation"],"lemma_texture":["lemma","pubescent","scabrous"],"true_lemma_awn":["lemma","awn","floret"],"floral_hair_position":["bristle","rachilla","trichome","lemma"]};
+const featureByLabel={"Leaf blade shape":"blade_shape","Leaf width":"blade_width","Leaf tip":"blade_tip","Blade edge":"blade_edge","Leaf midrib":"blade_midnerve","Veins, ribs & grooves":"blade_venation","Leaf blade hairs":"blade_hairs","Leaf base / sheath":"leaf_base","Ligule height":"ligule_length","Ligule edge":"ligule_edge","Leaf sheath opening":"sheath_margins","Leaf sheath shape and feel":"sheath_surface","How the stem grows":"culm_posture","Surface runners and rooting":"surface_runners","Underground stems":"underground_stems","Stem base and crown":"basal_crown","Other stem clues":"stem_special","Node hairs and gland rings":"stem_nodes","Florets in one spikelet":"florets_per_spikelet","How spikelets sit":"spikelet_position","Outer glumes":"glume_marks","Lemma surface":"lemma_texture","Awns on the lemma":"true_lemma_awn","Bristles and floral hairs":"floral_hair_position"};
+const mergeKeys=(automatic,required)=>[...new Set([...required,...automatic])].filter(key=>vocab.has(key));
 function quickTermLinks(){
  const question=document.getElementById("question");
  if(question&&!question.querySelector(".grass-terms-quick")){
-  const terms=findKeys(question.textContent,36);
+  const title=question.querySelector("h3")?.textContent||"";
+  const group=title.includes("flowering head")?"head":title.includes("grass grow")?"habit":title.includes("true ligule")?"ligule":title.includes("projections surround")?"awns":null;
+  const terms=mergeKeys(findKeys(question.textContent,36),termsByFeature[group]||[]);
   if(terms.length){
    const wrap=document.createElement("details");wrap.className="grass-terms-quick";
    const summary=document.createElement("summary");summary.textContent="Learn botanical terms in this question ("+terms.length+")";
@@ -91,7 +96,9 @@ function quickTermLinks(){
  for(const group of root.querySelectorAll(".optional-group")){
   if(group.querySelector(".grass-group-terms"))continue;
   const content=group.querySelector(".optional-group-body");if(!content)continue;
-  const words=findKeys(group.textContent,25);
+  const title=group.querySelector("summary")?.firstChild?.textContent||"";
+   const character=featureByLabel[title]||null;
+   const words=mergeKeys(findKeys(group.textContent,25),termsByFeature[character]||[]);
   if(!words.length)continue;
   const bar=document.createElement("div");bar.className="grass-group-terms";
   const label=document.createElement("span");label.textContent="Define:";bar.append(label);
@@ -157,10 +164,52 @@ function footer(){
  return '<div class="grass-glossary-external"><a href="'+HUB+'?view=glossary" target="_blank" rel="noopener noreferrer">Open the complete Hays Botany glossary</a>'+
  (!sharedLoaded?' · Shared glossary temporarily unavailable; locally added grass definitions still work.':"")+'</div>';
 }
+// A tiny original botanical orientation sketch is preferable to a photo that
+// does not actually show the character being defined.
+function additionalSketch(key){
+ if(!["anther","flag-leaf","distichous"].includes(key))return null;
+ const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
+ svg.setAttribute("viewBox","0 0 320 190");svg.setAttribute("role","img");
+ svg.setAttribute("aria-label","Simplified original botanical drawing of "+key.replace("-"," "));
+ const make=(tag,attrs,text)=>{const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);if(text)el.textContent=text;svg.append(el);return el};
+ const line=(d,width=3,color="#356b45")=>make("path",{d,fill:"none",stroke:color,"stroke-width":String(width),"stroke-linecap":"round","stroke-linejoin":"round"});
+ const label=(value,x,y)=>make("text",{x:String(x),y:String(y),fill:"#204a35","font-size":"14","font-family":"Arial, sans-serif","font-weight":"bold"},value);
+ if(key==="anther"){
+  line("M158 177 L159 89",4);
+  line("M158 123 Q124 108 92 94 M158 119 Q197 94 234 97",2.4);
+  line("M115 104 Q112 65 103 46 M156 90 Q154 52 159 39 M198 104 Q211 62 219 47",2);
+  for(const [x,y] of [[103,46],[159,39],[219,47]]){
+   make("ellipse",{cx:String(x),cy:String(y),rx:"9",ry:"17",fill:"#d7a54b",stroke:"#846232","stroke-width":"1.8"});
+  }
+  label("ANTHERS",12,28);line("M97 26 L105 34",1.7,"#a26c31");
+  label("filaments",212,152);line("M214 137 L198 109",1.6);
+ }else if(key==="flag-leaf"){
+  line("M146 177 L146 65",4);
+  for(const [x,y] of [[146,57],[116,40],[174,27],[138,15],[161,7]]){
+   line("M146 65 Q"+x+" "+(y+20)+" "+x+" "+y,1.8);
+   make("circle",{cx:String(x),cy:String(y),r:"4.4",fill:"#ba9655"});
+  }
+  line("M146 134 Q101 121 34 116",4,"#6f9b59");
+  line("M146 107 Q211 79 274 94",4,"#6f9b59");
+  line("M146 156 Q201 141 256 146",3,"#9ab77b");
+  label("FLAG LEAF",197,63);line("M209 68 L240 90",1.8);
+  label("flowering head",15,61);line("M97 55 L131 42",1.7);
+ }else if(key==="distichous"){
+  line("M156 172 L157 22",4);
+  line("M157 138 Q92 123 33 139",4,"#5d9959");
+  line("M157 106 Q215 89 286 105",4,"#5d9959");
+  line("M157 72 Q88 53 35 74",4,"#5d9959");
+  line("M157 39 Q220 28 277 43",4,"#5d9959");
+  for(const y of [139,105,73,39])make("circle",{cx:"157",cy:String(y),r:"4",fill:"#926d3c"});
+  label("RANK 1",14,181);label("RANK 2",225,181);
+  line("M72 173 L84 142",1.6);line("M256 173 L248 107",1.6);
+ }
+ return svg;
+}
 function showDefinition(key){
  const v=vocab.get(key);if(!v){showIndex();return;}
  const pic=resolvePicture(v,key);
- const sketch=window.HaysGrassGlossarySketches?.forTerm?.(key);
+ const sketch=window.HaysGrassGlossarySketches?.forTerm?.(key)||additionalSketch(key);
  const sketchMarkup=sketch?.outerHTML?'<figure class="grass-glossary-figure grass-glossary-sketch">'+sketch.outerHTML+'<figcaption>Original simplified Grass ID Lab teaching diagram — not a verified specimen photograph or scoring record.</figcaption></figure>':'';
  const main=ensureDialog().querySelector("#grass-glossary-content");
  const fields=[["Where to look",v.where],["Why it helps with ID",v.why],["Botanical definition",v.formal]].filter(a=>a[1]);
@@ -215,8 +264,7 @@ function showResults(query){
  }
 }
 function open(key,from){
- lastTrigger=from||document.activeElement;
- const d=ensureDialog();if(!d.open)d.showModal();
+ const d=ensureDialog();if(!d.open){lastTrigger=from||document.activeElement;d.showModal();}
  if(key&&vocab.has(key))showDefinition(key);else showIndex();
 }
 function setup(){
@@ -240,16 +288,25 @@ function setup(){
 }
 async function load(){
  if(loading)return;loading=true;
- const [local,canonical]=await Promise.allSettled([
-  fetch("grass-glossary-terms.json").then(r=>{if(!r.ok)throw Error("local glossary unavailable");return r.json()}),
-  fetch(SHARED).then(r=>{if(!r.ok)throw Error("shared glossary unavailable");return r.json()})
+ const read=async path=>{const response=await fetch(path);if(!response.ok)throw Error("Glossary unavailable");return response.json()};
+ // Local backup loads before any remote cross-site request.
+ const [local,snapshot]=await Promise.allSettled([
+  read("grass-glossary-terms.json"),read("shared-glossary-snapshot.json")
  ]);
  if(local.status==="fulfilled")for(const [key,item] of Object.entries(local.value.terms||{}))if(item.term&&item.plain)vocab.set(key,item);
- if(canonical.status==="fulfilled"&&canonical.value?.terms){
-  for(const [key,item] of Object.entries(canonical.value.terms))if(item.term&&item.plain)vocab.set(key,item);
+ if(snapshot.status==="fulfilled"&&snapshot.value?.terms){
+  for(const [key,item] of Object.entries(snapshot.value.terms))if(item.term&&item.plain)vocab.set(key,item);
   sharedLoaded=true;
  }
  rebuildMatcher();scheduleEnhance();
+ if(dialog?.open&&!dialog.querySelector(".grass-glossary-definition"))showIndex();
+ // Canonical glossary remains authoritative, but its network request does not block.
+ read(SHARED).then(canonical=>{
+  if(!canonical?.terms)return;
+  for(const [key,item] of Object.entries(canonical.terms))if(item.term&&item.plain)vocab.set(key,item);
+  sharedLoaded=true;rebuildMatcher();scheduleEnhance();
+  if(dialog?.open&&!dialog.querySelector(".grass-glossary-definition"))showIndex();
+ }).catch(()=>{});
 }
 setup();
 load();
