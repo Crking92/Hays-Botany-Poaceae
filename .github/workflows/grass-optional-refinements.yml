@@ -8,6 +8,7 @@ on:
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
+      - 'scripts/test_grass_collar_sheath_field_guide.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -18,6 +19,7 @@ on:
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
+      - 'scripts/test_grass_collar_sheath_field_guide.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -35,3 +37,5 @@ jobs:
         run: node scripts/test_grass_venation_field_guide.cjs
       - name: Test leaf shape, width, tip, edge, midrib and hair diagrams
         run: node scripts/test_grass_leaf_detail_field_guide.cjs
+      - name: Verify twenty-two collar, ligule and sheath field-guide sketches
+        run: node scripts/test_grass_collar_sheath_field_guide.cjs
