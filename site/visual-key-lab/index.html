@@ -342,7 +342,7 @@ const selectedPhotoOverrides={
 "head:foxtail":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole dense bristly foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"},
 };
 const $=id=>document.getElementById(id);
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineSection:null};
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineSection:null,candidateManifest:[]};
 
 const themeToggle=$("theme-toggle");
 let userTheme=null;
@@ -1995,7 +1995,7 @@ async function boot(){try{const responses=await Promise.all(["species-a.json","s
 try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
 catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
 // Keep all 169 grasses together in one matching result group while retaining 112 verified-core vs 57 pending-source metadata.
-try {const res=await fetch("hays-candidates.json",{cache:"no-store"});if(res.ok){const manifest=await res.json();if(Array.isArray(manifest.candidates)&&manifest.candidates.length===57){const original=new Set(state.catalog.map(x=>x.id));for(const c of manifest.candidates)if(!original.has(c.id))state.catalog.push({id:c.id,scientific:c.scientific,common:c.common});}}} catch(_e) { /* A research index failure must never break the scored identifier. */ }
+try {const res=await fetch("hays-candidates.json",{cache:"no-store"});if(res.ok){const manifest=await res.json();if(Array.isArray(manifest.candidates)&&manifest.candidates.length===57){state.candidateManifest=manifest.candidates;const original=new Set(state.catalog.map(x=>x.id));for(const c of manifest.candidates)if(!original.has(c.id))state.catalog.push({id:c.id,scientific:c.scientific,common:c.common});}}} catch(_e) { /* A research index failure must never break the scored identifier. */ }
 try {const res=await fetch("provisional-trial-profiles.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)))throw Error("Research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Trial duplicates scored species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Research trial profiles unavailable; original 112 remain usable",err)}
 // Optional second six source-labelled research trials; the first six and official 112 remain untouched.
 try {const res=await fetch("provisional-trial-batch2.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)||x.range!=="UNVERIFIED"))throw Error("Second research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Second trial duplicates earlier species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Second research trial profiles unavailable; original key and first trials remain usable",err)}
@@ -2025,6 +2025,15 @@ try {
  state.species.push(...packets.flatMap(packet=>packet.profiles));
 } catch(err){console.warn("Additional unverified research trials unavailable; original scored key and earlier trials remain usable",err)}
 
+// Every original 112 and every research 57 belongs in ONE candidate group.
+// Do not invent photo rights or identification states for the four photo-held taxa.
+const groupedIds=new Set(state.species.map(x=>x.id));
+for(const candidate of state.candidateManifest){
+ if(groupedIds.has(candidate.id))continue;
+ state.species.push({id:candidate.id,scientific:candidate.scientific,common:candidate.common||candidate.scientific,trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",traits:{head:[],habit:[],ligule:[],awns:[]},photos:[],hero_i:0,field_rule:"Research profile needs a verified diagnostic photograph and a connected specimen assessment. Earlier source packets include hypotheses, not confirmed core scoring. Keep unseen structures unknown and compare several features before naming.",warning_flags:candidate.warning_flags||[],source_candidate_status:candidate.status});
+ groupedIds.add(candidate.id);
+}
+if(state.candidateManifest.length===57&&state.species.length!==169)throw Error("Unified 169 grass inventory mismatch; inspect duplicate trial IDs");
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});
