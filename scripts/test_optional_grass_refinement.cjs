@@ -1162,7 +1162,8 @@ const pdfPass6={"eragrostis-superba":6,"paspalum-langei":1,"echinochloa-walteri"
 if(pack.evidence.length<918||new Set(pack.evidence.map(r=>r.id)).size<143)throw Error("PDF pass 6 coverage regressed");
 for(const [id,n] of Object.entries(pdfPass6)){
  const a=pack.evidence.filter(x=>x.id===id);
- if(a.length!==n)throw Error("Pass6 missing records "+id);
+ if(a.length<n)throw Error("Pass6 historical records lost "+id);
+ if(id==="paspalum-langei"&&!a.some(r=>r.character==="blade_width"&&r.pdf_printed_page===1306))throw Error("Pass6 original Paspalum blade width/source disappeared");
  if(![...groupedTrials,...placeholderProfiles].some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass6 changed admission "+id);
  for(const r of a){
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("Pass6 quality "+id);
