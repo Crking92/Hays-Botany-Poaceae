@@ -17,6 +17,7 @@ assert.match(script,/state\.all=.*sort/,"All species should be in the review lis
 assert.match(script,/textContent/,"Do not interpolate untrusted photographer labels into HTML");
 assert.doesNotMatch(script,/innerHTML\s*=/,"Do not inject third-party photo captions");
 assert.match(html,/No approved photograph/,"Unavailable photo hold should be visible");
+assert.match(script,/if\(row\.hero_i===p\.i\)s\.hero_i=p\.i/,"Existing published selected flowering hero must be preserved in review page");
 assert.match(html,/Unverified anatomy arrows|unverified anatomy arrows/);
 const scored=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(x=>JSON.parse(read("species-"+x+".json")));
 const trial=["provisional-trial-profiles.json","provisional-trial-batch2.json","provisional-trial-batch3.json","provisional-trial-batch4.json","provisional-trial-batch5-a.json","provisional-trial-batch5-b.json","provisional-trial-batch5-c.json"].flatMap(x=>JSON.parse(read(x)).profiles);
