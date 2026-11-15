@@ -103,7 +103,7 @@ def audit_view(browser, width, height):
             "Core botanical term link missing")
     check_photo(page,"ligule","Ligule")
     check_photo(page,"stolon","Stolon")
-    for term,title in [("panicle","Panicle"),("pedicel","Pedicel"),("trichome","Trichome")]:
+    for term,title in [("panicle","Panicle"),("pedicel","Pedicel"),("trichome","Trichome"),("collar","Collar")]:
         check_photo(page,term,title)
     # Legacy image was held, recovered under exact CC BY-SA source permission.
     check_photo(page,"legume","Legume")
