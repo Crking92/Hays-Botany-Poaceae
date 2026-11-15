@@ -906,7 +906,11 @@ for(const [id,chars] of Object.entries(batch17)){
 }
 const lastFour=Object.keys(batch17);
 for(const id of lastFour){
- if(pack.evidence.some(x=>x.id===id&&["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(x.character)))throw Error("No reproductive evidence without printed Diggs page "+id);
+ // Previously zero reproductive citations; later additions must have directly traced Flora pages.
+ for(const x of pack.evidence.filter(r=>r.id===id&&["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(r.character))){
+  if(!x.source?.includes("Diggs, Lipscomb & O'Kennon (1999)")||!x.source?.includes("printed p.")||!Number.isInteger(x.pdf_printed_page)||x.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")
+   throw Error("No reproductive evidence without printed Diggs page "+id);
+ }
 }
 if(pack.evidence.some(x=>x.id==="bouteloua-pectinata"&&["ligule_length","ligule_edge"].includes(x.character)))throw Error("Parent hairy grama ligule cannot replace tall grama evidence");
 if(pack.evidence.some(x=>x.id==="dinebra-panicea-subsp-mucronata"&&x.character==="ligule_edge"))throw Error("Unresolved mucronata ciliate/erose ligule edge should be held");
@@ -1198,7 +1202,7 @@ const pdfPass7={"rottboellia-campestris":11,"pappophorum-bicolor":7,"sphenopholi
 if(pack.evidence.length<964||new Set(pack.evidence.map(x=>x.id)).size<153)throw Error("PDF pass 7 source coverage regression");
 for(const [id,n] of Object.entries(pdfPass7)){
  const a=pack.evidence.filter(x=>x.id===id);
- if(a.length!==n)throw Error("Pass7 missing or duplicate "+id+" characters: "+a.length);
+ if(a.length<n)throw Error("Pass7 historical source-character baseline regressed "+id+": "+a.length); // Later cite-backed additions are tested independently.
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass7 must not promote provisional grass "+id);
  for(const x of a){
   if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.note?.trim())throw Error("Pass7 insufficient source note "+id);
@@ -1429,6 +1433,30 @@ for(const [sel,id] of [
  if(got.length!==169||!got.some(r=>r.id===id&&r.extras>=1))throw Error("Issue336 optional ranking excludes unknown species "+id);
 }
 state.refineSelected={};if(run().length!==169)throw Error("Issue336 altered 169 species pool");
+
+// Issue #336 Lane C02: six independently read Diggs-backed reproductive rows.
+const c02Flora={
+ "panicum-miliaceum":{florets_per_spikelet:["two"],lemma_texture:["smooth","shiny_hard"],true_lemma_awn:["none"]},
+ "bouteloua-pectinata":{glume_marks:["one_vein"]},
+ "setaria-italica":{lemma_texture:["smooth"]},
+ "setaria-reverchonii":{lemma_texture:["wrinkled"]}
+};
+if(pack.evidence.length<1147||new Set(pack.evidence.map(r=>r.id)).size!==168)throw Error("Lane C02 evidence counts regressed");
+if(new Set(pack.evidence.map(r=>r.id+"|"+r.character)).size!==pack.evidence.length)throw Error("Lane C02 introduced duplicate source row");
+for(const [id,fields] of Object.entries(c02Flora))for(const [ch,states] of Object.entries(fields)){
+ const x=pack.evidence.find(r=>r.id===id&&r.character===ch);
+ if(!x||x.review_lane!=="C"||x.coordination_issue!==336||x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.pdf_printed_page||x.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas"||!states.every(s=>x.states.includes(s)))throw Error("Missing authoritative Lane C02 state "+id+"/"+ch);
+}
+for(const ch of ["florets_per_spikelet","lemma_texture","true_lemma_awn"]){
+ const x=pack.evidence.find(r=>r.id==="panicum-virgatum"&&r.character===ch);
+ if(!x||x.pdf_printed_page!==1291)throw Error("Switchgrass Panicum genus page correction missing "+ch);
+}
+if(!pack.evidence.find(r=>r.id==="panicum-virgatum"&&r.character==="lemma_texture").states.includes("smooth"))throw Error("Switchgrass glabrous upper fertile lemma lost");
+for(const [id,ch,s] of [["panicum-miliaceum","florets_per_spikelet","two"],["setaria-italica","lemma_texture","smooth"],["setaria-reverchonii","lemma_texture","wrinkled"]]){
+ state.refineSelected={[ch]:s};const result=run();
+ if(result.length!==169||!result.some(r=>r.id===id&&r.extras>=1))throw Error("Lane C02 must rank positively but never exclude "+id+"/"+ch);
+}
+state.refineSelected={};if(run().length!==169)throw Error("Lane C02 altered unified 169 grass pool");
 
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
