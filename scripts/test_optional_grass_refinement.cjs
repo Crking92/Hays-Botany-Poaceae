@@ -906,7 +906,11 @@ for(const [id,chars] of Object.entries(batch17)){
 }
 const lastFour=Object.keys(batch17);
 for(const id of lastFour){
- if(pack.evidence.some(x=>x.id===id&&["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(x.character)))throw Error("No reproductive evidence without printed Diggs page "+id);
+ // Previously zero reproductive citations; later additions must have directly traced Flora pages.
+ for(const x of pack.evidence.filter(r=>r.id===id&&["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(r.character))){
+  if(!x.source?.includes("Diggs, Lipscomb & O'Kennon (1999)")||!x.source?.includes("printed p.")||!Number.isInteger(x.pdf_printed_page)||x.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")
+   throw Error("No reproductive evidence without printed Diggs page "+id);
+ }
 }
 if(pack.evidence.some(x=>x.id==="bouteloua-pectinata"&&["ligule_length","ligule_edge"].includes(x.character)))throw Error("Parent hairy grama ligule cannot replace tall grama evidence");
 if(pack.evidence.some(x=>x.id==="dinebra-panicea-subsp-mucronata"&&x.character==="ligule_edge"))throw Error("Unresolved mucronata ciliate/erose ligule edge should be held");
