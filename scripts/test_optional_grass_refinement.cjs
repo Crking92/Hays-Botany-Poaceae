@@ -948,8 +948,8 @@ if(pack.evidence.length<736)throw Error("PDF audit pass1: fewer than 736 cited o
 if(new Set(pack.evidence.map(x=>x.id)).size<115)throw Error("PDF audit pass1: 115 of 169 need at least one optional observation");
 for(const [id,expected] of Object.entries(pdfPass1)){
  const rows=pack.evidence.filter(x=>x.id===id);
- if(rows.length!==expected)throw Error("Source-count mismatch "+id);
- for(const row of rows){
+ if(rows.length<expected)throw Error("Historic source rows were lost "+id);
+ for(const row of rows.slice(0,expected)){
   const expectedPaper=["florets_per_spikelet","lemma_texture"].includes(row.character)?"Diggs, Lipscomb & O\'Kennon (1999)":"Hagenbuch & Lemke (2015)";
   if(!row.source.includes(expectedPaper)||!/printed pp?\./.test(row.source)||!row.source_url?.startsWith("https://"))throw Error("Bad PDF citation "+id+"/"+row.character);
  }
@@ -1075,9 +1075,9 @@ if(pack.evidence.length<883)throw Error("PDF pass 4 source record baseline regre
 if(new Set(pack.evidence.map(x=>x.id)).size<133)throw Error("PDF pass 4 requires 133/169 species with an optional source");
 for(const [id,info] of Object.entries(pdfPass4)){
  const rows=pack.evidence.filter(e=>e.id===id);
- if(rows.length!==info.n)throw Error("PDF pass 4 missing cited species identifiers "+id+" "+rows.length);
+ if(rows.length<info.n)throw Error("PDF pass 4 original citations missing "+id+" "+rows.length);
  if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("PDF pass4 changed research profile into old scored set "+id);
- for(const rec of rows){
+ for(const rec of rows.slice(0,info.n)){
   const isDiggs=info.diggs.includes(rec.character);
   if(rec.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!rec.note?.trim())throw Error("PDF pass4 citation quality drift "+id+"/"+rec.character);
   if(isDiggs){
@@ -1165,7 +1165,7 @@ for(const [id,n] of Object.entries(pdfPass6)){
  if(a.length<n)throw Error("Pass6 historical records lost "+id);
  if(id==="paspalum-langei"&&!a.some(r=>r.character==="blade_width"&&r.pdf_printed_page===1306))throw Error("Pass6 original Paspalum blade width/source disappeared");
  if(![...groupedTrials,...placeholderProfiles].some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass6 changed admission "+id);
- for(const r of a){
+ for(const r of a.slice(0,n)){
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("Pass6 quality "+id);
   if(id==="eragrostis-superba"){
    if(!r.source.includes("printed p. 49")||!r.source_url.endsWith("#page=49"))throw Error("Pass6 Hill Country source error");
@@ -1381,6 +1381,54 @@ for(const [choice,id] of [
 }
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass11 changed one 169-grass pool");
+
+
+// Issue #336: four-lane research integration after A01, B01, C01 and D01.
+const laneIntegration12={"bothriochloa-barbinodis":3,"bothriochloa-ischaemum":2,"muhlenbergia-capillaris":1,"muhlenbergia-lindheimeri":1,"muhlenbergia-schreberi":1,"chloris-cucullata":1,"chloris-virgata":3,"panicum-capillare":2,"setaria-leucopila":3,"setaria-viridis":3,"paspalum-distichum":3,"paspalum-floridanum":2,"paspalum-langei":3,"paspalum-notatum":2,"paspalum-pubiflorum":2,"paspalum-setaceum":2,"paspalum-urvillei":2,"tridens-albescens":5,"tridens-congestus":3,"bromus-japonicus":1};
+if(pack.evidence.length<1141||new Set(pack.evidence.map(r=>r.id)).size!==168)throw Error("Issue336 evidence count/source coverage regression");
+for(const [id,n] of Object.entries(laneIntegration12)){
+ const r=pack.evidence.filter(x=>x.id===id&&x.coordination_issue===336);
+ if(r.length!==n)throw Error("Issue336 missing research-row count "+id+" "+r.length);
+ for(const x of r){
+  if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||x.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas"||!x.source.includes("Diggs, Lipscomb & O'Kennon")||!Number.isInteger(x.pdf_printed_page)||x.pdf_document!=="Flora of North Central Texas-monocots-Acor-Zanni.pdf"||!x.note?.trim())throw Error("Issue336 provenance or printed page "+id);
+ }
+}
+for(const id of ["paspalum-notatum","paspalum-pubiflorum","paspalum-setaceum"]){
+ const x=pack.evidence.find(r=>r.id===id&&r.character==="glume_marks");
+ if(!x?.states.includes("glabrous")||!x.states.includes("lower_reduced")||x.secondary_printed_page!==1305)throw Error("Paspalum glume amendment missing "+id);
+}
+for(const id of ["paspalum-distichum","paspalum-floridanum","paspalum-langei","paspalum-notatum","paspalum-pubiflorum","paspalum-setaceum","paspalum-urvillei"]){
+ const x=pack.evidence.find(r=>r.id===id&&r.character==="spikelet_position");
+ if(!x?.states.includes("one_side")||x.states.includes("paired"))throw Error("Paspalum one-sided branch mistaken for heteromorphic spikelet pair "+id);
+}
+if(pack.evidence.some(r=>r.id==="lolium-x-boucheanum"))throw Error("Unresolved Lolium hybrid not held");
+if(pack.evidence.some(r=>r.id==="tridens-congestus"&&r.character==="true_lemma_awn"))throw Error("Tridens mucro incorrectly scored as lemma awn");
+state.species=[...species,...groupedTrials,...placeholderProfiles];state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [sel,id] of [
+ [{spikelet_position:"paired"},"bothriochloa-barbinodis"],
+ [{florets_per_spikelet:"two"},"bothriochloa-ischaemum"],
+ [{floral_hair_position:"lemma"},"muhlenbergia-capillaris"],
+ [{glume_marks:"lower_reduced"},"muhlenbergia-schreberi"],
+ [{true_lemma_awn:"short"},"chloris-cucullata"],
+ [{lemma_texture:"hairy"},"chloris-virgata"],
+ [{lemma_texture:"shiny_hard"},"panicum-capillare"],
+ [{floral_hair_position:"below_spikelet"},"setaria-leucopila"],
+ [{true_lemma_awn:"none"},"setaria-viridis"],
+ [{glume_marks:"lower_reduced"},"paspalum-distichum"],
+ [{spikelet_position:"one_side"},"paspalum-floridanum"],
+ [{glume_marks:"lower_reduced"},"paspalum-langei"],
+ [{glume_marks:"lower_reduced"},"paspalum-notatum"],
+ [{glume_marks:"lower_reduced"},"paspalum-pubiflorum"],
+ [{glume_marks:"lower_reduced"},"paspalum-setaceum"],
+ [{spikelet_position:"one_side"},"paspalum-urvillei"],
+ [{true_lemma_awn:"none"},"tridens-albescens"],
+ [{floral_hair_position:"lemma"},"tridens-congestus"],
+ [{glume_marks:"glabrous"},"bromus-japonicus"]
+]){
+ state.refineSelected=sel;const got=run();
+ if(got.length!==169||!got.some(r=>r.id===id&&r.extras>=1))throw Error("Issue336 optional ranking excludes unknown species "+id);
+}
+state.refineSelected={};if(run().length!==169)throw Error("Issue336 altered 169 species pool");
 
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
