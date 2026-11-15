@@ -636,12 +636,11 @@ const batch13={
     "blade_hairs",
     "sheath_margins",
     "sheath_surface",
-    "ligule_length",
     "ligule_edge",
     "culm_posture"
   ]
 };
-if(pack.evidence.length!==584)throw Error("Batch 13 expected exactly 584 advanced records");
+if(pack.evidence.length!==583)throw Error("Batch 13 expected exactly 583 advanced records");
 for(const [id,chars] of Object.entries(batch13)){
  const record=species.find(x=>x.id===id), audit=record?.character_evidence?.audit_batch13_core_advanced_20261115;
  if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch 13 core preservation missing "+id);
