@@ -6290,7 +6290,7 @@
       "photo_status": "GENERAL_REFERENCE_PHOTOS_LICENSE_CLEARED_ID_STILL_PENDING",
       "existing_photo_pixels_checked": 2,
       "field_view": "Two source-labeled nonlocal Lolium × boucheanum references show a spike in hand and upright flowering stalks; no proof of hybrid parentage.",
-      "unresolved": "Source-labeled general photographs are not diagnostic proof of a named hybrid; Hays voucher, independently verified parentage and adequate spikelet/floret measurements remain held. POWO treats Lolium × boucheanum and Lolium × hybridum as distinct accepted hybrid taxa; do not substitute the latter's images. Original Hays observation requires review.",
+      "unresolved": "TAXONOMIC CONCEPT HOLD (2026-11-15): Kew POWO assigns Lolium × boucheanum to L. perenne × L. rigidum and recognizes L. × hybridum separately as L. multiflorum × L. perenne; EPPO, BSBI and other sources call L. multiflorum × L. perenne 'Lolium × boucheanum'. Do not transfer measurements or infer Hays identity across those concepts. A verified local voucher and nomenclatural/specialist reconciliation are required before new optional species-character evidence or key admission. Existing source-labeled general photos are not proof of hybrid identity.",
       "risky_context": true,
       "warning_flags": [
         "CHECK_PLANTED_OR_ESCAPED",
@@ -6301,7 +6301,10 @@
         "Kew POWO Lolium × boucheanum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
         "EPPO Lolium × boucheanum https://gd.eppo.int/taxon/LOLBO",
         "Maity et al., Weed Science Texas ryegrass diversity https://www.cambridge.org/core/journals/weed-science/article/species-identification-and-morphological-trait-diversity-assessment-in-ryegrass-lolium-spp-populations-from-the-texas-blackland-prairies/5A683DE517E45D8834C4CCF2A3EA16D8",
-        "Flora of North America Lolium perenne excerpt via Burke Herbarium https://burkeherbarium.org/waflora/checklist.php?Taxon=Lolium+perenne"
+        "Flora of North America Lolium perenne excerpt via Burke Herbarium https://burkeherbarium.org/waflora/checklist.php?Taxon=Lolium+perenne",
+        "Kew POWO Lolium × hybridum (L. multiflorum × L. perenne) https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407468-1",
+        "BSBI Plant Crib Lolium perenne/multiflorum hybrid discussion https://bsbi.org/wp-content/uploads/dlm_uploads/Lolium_Crib.pdf",
+        "USDA ARS GRIN Lolium boucheanum taxonomic note https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=401904"
       ],
       "taxonomy_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A407425-1",
       "details": [
@@ -6334,6 +6337,12 @@
           "description": "Hybrid identity remains an evidence/provenance question; a typical intermediate morphology cannot establish lineage on its own",
           "source": "Kew POWO Lolium × boucheanum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
           "needed_view": "voucher, documented seed pedigree or specialist assessment; genetic evidence when necessary"
+        },
+        {
+          "part": "taxonomic_concept_review",
+          "description": "SOURCE/TAXON CONCEPT HOLD: Kew POWO currently treats Lolium × boucheanum as L. perenne × L. rigidum and recognizes L. × hybridum separately as L. multiflorum × L. perenne. EPPO Global Database, the BSBI Plant Crib and some agronomic studies instead use L. × boucheanum for L. multiflorum × L. perenne. These competing concepts must not be combined when assigning leaf width, ligule, awn or floret states. Literature describing one interpretation does not identify a Hays specimen as the other. Keep all species-specific optional key characters unscored for this hybrid until the intended concept and an actual voucher are reconciled.",
+          "source": "Kew POWO Lolium × boucheanum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1 ; Kew POWO Lolium × hybridum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407468-1 ; EPPO Global Database https://gd.eppo.int/taxon/LOLBO ; BSBI Plant Crib https://bsbi.org/wp-content/uploads/dlm_uploads/Lolium_Crib.pdf",
+          "needed_view": "Locally collected, independently examined herbarium voucher with mature spikelets, awns and leaf collars; review parentage and taxon usage before optional key scoring"
         }
       ],
       "approved_gallery": [
