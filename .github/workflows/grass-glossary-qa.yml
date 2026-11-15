@@ -8,6 +8,7 @@ on:
       - 'site/visual-key-lab/glossary-approved-source-photos.json'
       - 'scripts/test_grass_glossary.cjs'
       - 'scripts/test_grass_glossary_browser.py'
+      - 'scripts/smoke_public_grass_glossary.py'
       - '.github/workflows/grass-glossary-qa.yml'
   push:
     branches: [main]
@@ -18,6 +19,7 @@ on:
       - 'site/visual-key-lab/glossary-approved-source-photos.json'
       - 'scripts/test_grass_glossary.cjs'
       - 'scripts/test_grass_glossary_browser.py'
+      - 'scripts/smoke_public_grass_glossary.py'
       - '.github/workflows/grass-glossary-qa.yml'
   workflow_dispatch:
 permissions:
@@ -45,3 +47,19 @@ jobs:
           python -m http.server 8770 --directory . >/tmp/hays-grass-glossary-http.log 2>&1 &
           echo $! >/tmp/hays-grass-glossary-server.pid
           python scripts/test_grass_glossary_browser.py
+
+  glossary-public-site:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install real Chromium for live GitHub Pages verification
+        run: |
+          python -m pip install "playwright>=1.53,<2"
+          python -m playwright install --with-deps chromium
+      - name: Verify live glossary files, actual photo loading, and desktop/mobile behavior
+        run: python scripts/smoke_public_grass_glossary.py
