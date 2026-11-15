@@ -359,6 +359,31 @@ function node(tag,cl,txt){const e=document.createElement(tag);if(cl)e.className=
 function image(p,alt){const f=node("div","photo-frame");if(!p){f.append(node("div","photo-bad","Photograph pending verification"));return f}const img=document.createElement("img");img.loading="lazy";img.decoding="async";img.alt=alt||p.label||"Grass reference";img.src=p.src;img.addEventListener("error",()=>f.replaceChildren(node("div","photo-bad","Image unavailable — check original gallery")));f.append(img);return f}
 function pic(spec,i){return spec&&spec.photos.find(p=>p.i===i)||spec&&spec.photos.find(p=>p.i===spec.hero_i)||spec&&spec.photos[0]||null}
 function byId(id){return state.species.find(s=>s.id===id)}
+/* Photo-only supplement: lets already-published, source-approved family photos
+   improve the field UI without changing the 112 scored source shards. */
+function applyApprovedGeneralPhotos(scored,manifest){
+  if(!Array.isArray(scored)||manifest?.schema!=="HAYS_GRASS_GENERAL_PHOTO_ARCHIVE_EXTRAS_V1"||!Array.isArray(manifest.photos))return 0;
+  const approved={
+    "bromus-pubescens":"efe6b458d8a4e06aaf02854401fe416cd96037f3",
+    "tridens-flavus":"af7f91eb910e56dc682f73274f2bfadfc230ae6d"
+  };
+  let installed=0;
+  for(const entry of manifest.photos){
+    if(!Object.prototype.hasOwnProperty.call(approved,entry?.species_id))continue;
+    const s=scored.find(x=>x.id===entry.species_id&&!x.trial);
+    const p=entry.photo;
+    if(!s||!Array.isArray(s.photos)||!p||!Number.isInteger(p.i)||p.i<0||
+       s.photos.some(x=>x.src===p.src||x.i===p.i)||
+       entry.hero_i!==p.i||p.hosted_git_blob_sha!==approved[entry.species_id]||
+       typeof p.src!=="string"||!p.src.startsWith("https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/")||
+       typeof p.source_page!=="string"||!p.source_page.startsWith("https://commons.wikimedia.org/wiki/File")||
+       typeof p.creator!=="string"||!p.creator.trim()||
+       typeof p.license!=="string"||!p.license.startsWith("Public domain"))continue;
+    s.photos.push({...p});s.hero_i=p.i;installed++;
+  }
+  return installed;
+}
+
 function credit(p){return p?[p.creator,p.license].filter(Boolean).join(" · "):"Source image pending"}
 function status(s){if(s.trial)return["Research trial · unverified","warn"];if(s.range==="PASS")return["Regional native set",""];if(s.range==="FAIL"||s.range==="INTRODUCED_NOT_NATIVE"||s.range==="COMPARISON_NON_NATIVE")return["Introduced / comparison","bad"];return["Range status to verify","review"]}
 
@@ -1868,6 +1893,10 @@ if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
 }copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal()}
 function render(){renderTabs();renderQuestion();renderResults()}
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
+// Separately approved general photographs enrich the visitor view, never the scored records.
+// If this optional manifest is unavailable, the 112 original galleries still work.
+try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
+catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
 // Keep the 112 scored results unchanged; expose new research taxa as links to the unified 169-grass Learner.
 try {const res=await fetch("hays-candidates.json",{cache:"no-store"});if(res.ok){const manifest=await res.json();if(Array.isArray(manifest.candidates)&&manifest.candidates.length===57){const original=new Set(state.catalog.map(x=>x.id));for(const c of manifest.candidates)if(!original.has(c.id))state.catalog.push({id:c.id,scientific:c.scientific,common:c.common});}}} catch(_e) { /* A research index failure must never break the scored identifier. */ }
 try {const res=await fetch("provisional-trial-profiles.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)))throw Error("Research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Trial duplicates scored species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Research trial profiles unavailable; original 112 remain usable",err)}
