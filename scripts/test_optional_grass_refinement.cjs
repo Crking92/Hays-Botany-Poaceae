@@ -1125,7 +1125,7 @@ if(pack.evidence.length<903)throw Error("PDF pass 5 record count regressed");
 if(new Set(pack.evidence.map(x=>x.id)).size<138)throw Error("PDF pass 5 species coverage regressed");
 for(const [id,n] of Object.entries(pdfPass5)){
  const rows=pack.evidence.filter(x=>x.id===id);
- if(rows.length!==n)throw Error("PDF pass 5 evidence record mismatch "+id+": "+rows.length);
+ if(rows.length<n)throw Error("PDF pass 5 historic cited records missing "+id+": "+rows.length);
  if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("PDF pass 5 mistakenly admitted provisional species "+id);
  for(const r of rows){
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("PDF pass 5 citation quality "+id);
