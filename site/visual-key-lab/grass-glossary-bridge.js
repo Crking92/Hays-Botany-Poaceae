@@ -180,7 +180,7 @@ function footer(){
 // A tiny original botanical orientation sketch is preferable to a photo that
 // does not actually show the character being defined.
 function additionalSketch(key){
- if(!["anther","flag-leaf","distichous","coriaceous"].includes(key))return null;
+ if(!["anther","flag-leaf","distichous","coriaceous","ciliate"].includes(key))return null;
  const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
  svg.setAttribute("viewBox","0 0 320 190");svg.setAttribute("role","img");
  svg.setAttribute("aria-label","Simplified original botanical drawing of "+key.replace("-"," "));
@@ -207,6 +207,19 @@ function additionalSketch(key){
   line("M146 156 Q201 141 256 146",3,"#9ab77b");
   label("FLAG LEAF",197,63);line("M209 68 L240 90",1.8);
   label("flowering head",15,61);line("M97 55 L131 42",1.7);
+ }else if(key==="ciliate"){
+  // Diagram illustrates a clearly defined leaf margin lined by distinct cilia.
+  // Avoid a photo of a wholly hair-based ligule, which is not the same character.
+  make("path",{d:"M49 115 Q152 68 273 103 L272 138 Q157 113 49 145 Z",fill:"#73a773",stroke:"#2f6e46","stroke-width":"3"});
+  line("M49 115 Q152 68 273 103",2.7,"#d9efac");
+  for(let i=0;i<=14;i++){
+   const x=52+i*15.4;
+   const y=115-46*Math.sin(Math.PI*(x-49)/224);
+   line("M"+x.toFixed(1)+" "+y.toFixed(1)+" l-1 -14",1.7,"#ad7d38");
+  }
+  label("CILIA = MARGIN HAIRS",29,35);
+  line("M152 39 L155 65",1.8,"#ad7d38");
+  label("LEAF BLADE",194,166);
  }else if(key==="coriaceous"){
   make("path",{d:"M45 88 Q151 46 283 78 L282 100 Q146 130 45 100 Z",fill:"#5a9969",stroke:"#326b47","stroke-width":"3"});
   line("M47 92 Q154 110 283 89",2,"#acd2a3");
