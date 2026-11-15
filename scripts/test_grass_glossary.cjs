@@ -26,6 +26,15 @@ assert.equal(mirrored.source_repo,'Crking92/Hays-County-Botany');
 assert.equal(mirrored.source_path,'data/learning-layer.json');
 assert.match(mirrored.source_sha,/^[a-f0-9]{40}$/);
 assert.equal(Object.keys(mirrored.terms).length,147);
+assert.equal(Object.keys(mirrored.local_review_metadata?.reviewed_terms||{}).length,4,
+  'First original-source arrow QA checkpoint must preserve four inspected terms');
+assert.equal(Object.keys(mirrored.local_review_metadata?.pending_source_image_checks||{}).length,6,
+  'Wikimedia rate-limited sources must remain held, not auto-approved');
+assert.ok(!/real_photo\\.annotations|\\bitem\\.annotations\\b/.test(helper),
+  'Draft legacy arrows must not be rendered before photo-level verification');
+assert.ok(helper.includes('key==="collar"') && helper.includes('jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg'),
+  'Corrected collar image not wired in');
+
 assert.equal(Object.keys(ext.terms).length,26);
 assert.equal(Object.keys(approved).length,26,'verified Commons source recovery count');
 assert.ok(media.held_photos.coriaceous,'do not publish unverified coriaceous photo');
@@ -97,7 +106,24 @@ for(const [key,v] of Object.entries(mirrored.terms)){
  throw Error('Glossary term lacks cleared media or an accurate teaching diagram: '+key);
 }
 assert.equal(eligibleLegacy,147);
-assert.equal(photographed,18);
+
+for(const [key,expectedPath] of Object.entries({
+ panicle:'dichanthelium-commutatum-2-archive.jpg',
+ 'rachis-branch':'dichanthelium-commutatum-2-archive.jpg',
+ pedicel:'douglas-goldman-single-spikelet-3.jpg',
+ trichome:'jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg'
+})){
+ assert.ok(ext.terms[key].photo.src.includes(expectedPath),key+': obsolete or incorrect anatomy photo was restored');
+ assert.equal(ext.terms[key].visual_review.status,'DIRECT_STRUCTURE_VISIBLE',key+': exact-image QA record missing');
+}
+for(const key of ['ciliate','sheath-margin','geniculate','decumbent']){
+ assert.equal(ext.terms[key].photo,null,key+': photo does not prove this morphology; use a diagram');
+ assert.equal(ext.terms[key].visual_review.status,'DIAGRAM_ONLY_PHOTO_WITHHELD');
+}
+assert.ok(helper.includes('key==="ciliate"'), 'Ciliate must have a dedicated edge-hair diagram');
+assert.equal(ext.terms.stolon.visual_review.status,'CONTEXT_ONLY_NOT_SURFACE_PROVEN');
+assert.equal(ext.terms.pedicel.photo.creator,'Douglas Goldman');
+assert.equal(photographed,14);
 assert.equal(uniquePhotos.size,8);
 assert.match(helper,/shared-glossary-snapshot\.json/,'local fallback must load');
 assert.match(helper,/read\(SHARED\)\.then/,'canonical glossary should refresh when accessible');

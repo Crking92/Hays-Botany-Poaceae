@@ -73,6 +73,24 @@ def test(browser, width, height):
     check(page.locator(".grass-glossary-sketch svg").count() == 1,
           "Rights hold must display a truthful original teaching sketch")
     page.locator(".grass-glossary-close").click()
+    for term,who in [("panicle","Alex Abair"),("pedicel","Douglas Goldman"),("trichome","Jim Conrad"),("collar","Jim Conrad")]:
+        page.locator("#grass-glossary-launch").click()
+        page.locator("#grass-glossary-search").fill(term)
+        page.locator('#grass-glossary-results [data-grass-term="'+term+'"]').click()
+        caption = page.locator(".grass-glossary-figure figcaption").inner_text()
+        check(who in caption,"Photo QA replacement credit missing for "+term)
+        check(page.locator(".grass-glossary-definition img").count()==1,
+              "QA-approved exact photo not present for "+term)
+        page.locator(".grass-glossary-close").click()
+    for term in ["ciliate","sheath-margin","geniculate","decumbent"]:
+        page.locator("#grass-glossary-launch").click()
+        page.locator("#grass-glossary-search").fill(term)
+        page.locator('#grass-glossary-results [data-grass-term="'+term+'"]').click()
+        check(page.locator(".grass-glossary-definition img").count()==0,
+              "A structurally misleading photo reappeared for "+term)
+        check(page.locator(".grass-glossary-sketch svg").count()==1,
+              "Original teaching diagram missing for "+term)
+        page.locator(".grass-glossary-close").click()
     check(not page.locator("#grass-glossary-dialog").evaluate("(d)=>d.open"),
           "Glossary dialog failed to close")
     check(page.locator("#progress-label").inner_text() == total_before,

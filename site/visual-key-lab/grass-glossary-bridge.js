@@ -25,6 +25,29 @@ function resolvePicture(v,key){
    source_page:"https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_ligule5_(14344423535).jpg",
    note:"Existing Grass ID Lab source photograph; the short pale membrane is exposed."};
  }
+ if(key==="collar"){
+  return {src:LAB+"content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg",
+   label:"King Ranch bluestem — leaf blade–sheath junction with distinctive hairs",
+   creator:"Jim Conrad",license:"Public domain — photographer's express release",
+   source_page:"https://www.backyardnature.net/n/h/kingblue.htm",
+   note:"Use this image to orient the collar region. The blade–sheath boundary and hairs are visible; the exact ligule membrane is NOT isolated. Original unverified draft arrows are deliberately not shown."};
+ }
+ if(["culm","node","leaf-sheath"].includes(key)&&p.source_page==="https://commons.wikimedia.org/wiki/File:Phleum_pratense_culm.jpg"){
+  // The source photograph is already numbered and published under CC BY-SA 4.0.
+  // Original numbered captions were checked against the image; the older draft
+  // percentage arrows are not published until their endpoints are corrected.
+  const printed={"culm":"5 = exposed culm; 4 = node; 3 and 6 = leaf sheaths.",
+   "node":"4 = actual stem node; 5 = exposed culm. Do not point to the sheath below.",
+   "leaf-sheath":"3 = upper leaf sheath; 6 = lower leaf sheath; 1 = blade; 5 = exposed culm."};
+  const photo=allowedCredit(p.credit)?{
+   src:"https://commons.wikimedia.org/wiki/Special:FilePath/Phleum_pratense_culm.jpg?width=900",
+   label:p.label||"Numbered Timothy grass culm, node and sheaths",
+   creator:"Kostka Martin",license:"CC BY-SA 4.0",
+   license_url:"https://creativecommons.org/licenses/by-sa/4.0/",
+   source_page:p.source_page,
+   note:"Source's own printed legend: "+printed[key]+" Draft added arrows remain withheld."}:null;
+  if(photo)return photo;
+ }
  const approval=verifiedPhotos.get(key);
  if(approval&&p.source_page===approval.source_page&&allowedCredit(approval.license)){
   try{
@@ -180,7 +203,7 @@ function footer(){
 // A tiny original botanical orientation sketch is preferable to a photo that
 // does not actually show the character being defined.
 function additionalSketch(key){
- if(!["anther","flag-leaf","distichous","coriaceous"].includes(key))return null;
+ if(!["anther","flag-leaf","distichous","coriaceous","ciliate"].includes(key))return null;
  const ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg");
  svg.setAttribute("viewBox","0 0 320 190");svg.setAttribute("role","img");
  svg.setAttribute("aria-label","Simplified original botanical drawing of "+key.replace("-"," "));
@@ -207,6 +230,19 @@ function additionalSketch(key){
   line("M146 156 Q201 141 256 146",3,"#9ab77b");
   label("FLAG LEAF",197,63);line("M209 68 L240 90",1.8);
   label("flowering head",15,61);line("M97 55 L131 42",1.7);
+ }else if(key==="ciliate"){
+  // Diagram illustrates a clearly defined leaf margin lined by distinct cilia.
+  // Avoid a photo of a wholly hair-based ligule, which is not the same character.
+  make("path",{d:"M49 115 Q152 68 273 103 L272 138 Q157 113 49 145 Z",fill:"#73a773",stroke:"#2f6e46","stroke-width":"3"});
+  line("M49 115 Q152 68 273 103",2.7,"#d9efac");
+  for(let i=0;i<=14;i++){
+   const x=52+i*15.4;
+   const y=115-46*Math.sin(Math.PI*(x-49)/224);
+   line("M"+x.toFixed(1)+" "+y.toFixed(1)+" l-1 -14",1.7,"#ad7d38");
+  }
+  label("CILIA = MARGIN HAIRS",29,35);
+  line("M152 39 L155 65",1.8,"#ad7d38");
+  label("LEAF BLADE",194,166);
  }else if(key==="coriaceous"){
   make("path",{d:"M45 88 Q151 46 283 78 L282 100 Q146 130 45 100 Z",fill:"#5a9969",stroke:"#326b47","stroke-width":"3"});
   line("M47 92 Q154 110 283 89",2,"#acd2a3");

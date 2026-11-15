@@ -103,6 +103,8 @@ def audit_view(browser, width, height):
             "Core botanical term link missing")
     check_photo(page,"ligule","Ligule")
     check_photo(page,"stolon","Stolon")
+    for term,title in [("panicle","Panicle"),("pedicel","Pedicel"),("trichome","Trichome"),("collar","Collar")]:
+        check_photo(page,term,title)
     # Legacy image was held, recovered under exact CC BY-SA source permission.
     check_photo(page,"legume","Legume")
     page.locator("#grass-glossary-launch").click()
@@ -113,6 +115,15 @@ def audit_view(browser, width, height):
     require(page.locator(".grass-glossary-sketch svg").count()==1,
             "Correct fallback botanical illustration missing")
     page.locator(".grass-glossary-close").click()
+    for term in ["ciliate","sheath-margin","geniculate","decumbent"]:
+        page.locator("#grass-glossary-launch").click()
+        page.locator("#grass-glossary-search").fill(term)
+        page.locator('#grass-glossary-results [data-grass-term="'+term+'"]').click()
+        require(page.locator(".grass-glossary-definition img").count()==0,
+                "Misleading glossary photo displayed: "+term)
+        require(page.locator(".grass-glossary-sketch svg").count()==1,
+                "Original anatomy sketch missing for "+term)
+        page.locator(".grass-glossary-close").click()
     require(before==page.locator("#progress-label").inner_text(),
             "Glossary interactions altered scoring")
     wrap=page.locator("#optional-character-wrap")
