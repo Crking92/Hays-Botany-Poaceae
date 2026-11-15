@@ -29,7 +29,7 @@ const allIDs=new Set([...scored,...trial].map(x=>x.id));
 assert.equal(allIDs.size,165);
 const held=candidates.filter(x=>!allIDs.has(x.id));
 assert.deepEqual(held.map(x=>x.id).sort(),["bromus-brevis","cortaderia-selloana","lolium-x-boucheanum","phyllostachys-aurea"].sort(),"Four research photo holds must not be fabricated");
-assert.ok(extra.length>=13);
+assert.equal(extra.length,20,"Twenty source-approved supplemental photos expected after Bob Harms batch");
 const byID=new Map(scored.map(s=>[s.id,s]));
 const added=new Set(),urls=new Set();
 for(const entry of extra){
@@ -49,5 +49,7 @@ const withPhoto=[...painted.values()].filter(x=>x>0).length;
 const multiple=[...painted.values()].filter(x=>x>=2).length;
 const holds=[...painted.values()].filter(x=>x===0).length;
 assert.ok(withPhoto>=160 && multiple>=155,"Unexpected published gallery depletion");
-assert.equal(holds,5,"One scored hybrid plus four research holds should remain unphotographed");
+assert.equal(holds,4,"Only the four explicit research photo holds should remain unphotographed");
+assert.equal(withPhoto,165,"Both previously under-photographed scored grasses should now show real archive sources");
+assert.equal(multiple,163,"The 7 supplemental source photographs must improve two species galleries");
 console.log("GRASS_PHOTO_REVIEW_QA_PASS "+JSON.stringify({grassCards:painted.size,photographedSpecies:withPhoto,multiPhotoSpecies:multiple,holds,approvedExtras:extra.length,scoredOriginalPhotos:514}));
