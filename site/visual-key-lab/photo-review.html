@@ -17,12 +17,12 @@ html[data-theme=dark]{--paper:#142019;--card:#213228;--ink:#edf5ed;--muted:#b0c6
 <header><strong>HAYS BOTANY / PHOTO REVIEW</strong><nav><a href="index.html">Back to ID Lab</a><a href="../">Species learner</a><button id="theme" type="button" aria-pressed="false">Dark mode</button></nav></header>
 <main><p class="kicker">Live published photo collection</p><h1>Review the grass photos.</h1>
 <p class="intro">See whole photographs and original credits, not cropped thumbnails. Search a species, open its other views, or select a photo to inspect the published full-size image. If a photo looks wrong, tell us the species and photographer. The newer grasses are research candidates, and no unverified anatomy arrows appear here.</p>
-<div class="stats"><div class="stat"><b id="total">—</b><span>Grasses in the key</span></div><div class="stat"><b id="photographed">—</b><span>With photographs</span></div><div class="stat"><b id="multi">—</b><span>With 2+ photos</span></div><div class="stat"><b id="holds">—</b><span>Photo holds</span></div></div>
+<div class="stats"><div class="stat"><b id="total">—</b><span>Grasses in the key</span></div><div class="stat"><b id="photographed">—</b><span>With photographs</span></div><div class="stat"><b id="multi">—</b><span>With 2+ photos</span></div><div class="stat"><b id="holds">—</b><span>Without general photos</span></div></div>
 <div class="controls"><input id="search" type="search" aria-label="Search grass photos" placeholder="Search a common or scientific name…">
 <div class="filters" id="filters"><button type="button" aria-pressed="true" data-filter="all">All 169</button><button type="button" aria-pressed="false" data-filter="scored">Original 112</button><button type="button" aria-pressed="false" data-filter="trial">Newer 57</button><button type="button" aria-pressed="false" data-filter="gaps">0–1 photo</button></div></div>
 <p id="summary" aria-live="polite">Loading published photographs…</p><p id="error" role="alert" hidden></p>
 <section id="cards" class="cards" aria-label="Published grass photograph cards"></section><button id="more" type="button" hidden>Show more grasses</button>
-<footer>Photos and credits come from the existing ID Lab galleries and approved general-photo supplement; this page does not grant new reuse rights or certify specimen identities. An original scored grass profile is a character-data status, not a photographic voucher. If a microscopic structure cannot be seen, keep it unverified.</footer></main>
+<footer>Photos and credits come from the existing ID Lab galleries, previously approved general-photo supplement, and exact-source research references; this page does not grant new reuse rights or certify specimen identities. An original scored grass profile is a character-data status, not a photographic voucher. If a microscopic structure cannot be seen, keep it unverified.</footer></main>
 <script>
 (function(){
 "use strict";
@@ -30,6 +30,25 @@ const $=id=>document.getElementById(id);
 const shards=["a","b","c1","c2","c3","d1","d2","d3","d4"].map(n=>"species-"+n+".json");
 const trials=["provisional-trial-profiles.json","provisional-trial-batch2.json","provisional-trial-batch3.json","provisional-trial-batch4.json","provisional-trial-batch5-a.json","provisional-trial-batch5-b.json","provisional-trial-batch5-c.json"];
 const state={all:[],filter:"all",search:"",limit:24};
+/* Previously source/rights reviewed references only: exact allowed photos, not species admission.
+   These provisional cards remain RESEARCH_TRIAL_NOT_ADMITTED with unknown morphology. */
+function clearedResearchPhotos(candidate){
+ const allow={"phyllostachys-aurea":["https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea_157349870.jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys-%C3%A9caille-tortue.JPG?width=900"],"bromus-brevis":["https://commons.wikimedia.org/wiki/Special:FilePath/Bromus%20brevis%20plant1%20(11261984224).jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Bromus%20brevis%20flowerhead1%20(11261864716)%20(2).jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Bromus%20brevis%20spikelet1%20(11261822745).jpg?width=900"],"cortaderia-selloana":["https://commons.wikimedia.org/wiki/Special:FilePath/Starr-010423-0018-Cortaderia%20selloana-habit-Kula-Maui%20(24164607769).jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Starr-010423-0016-Cortaderia%20selloana-plumes%20and%20leaves-Kula-Maui%20(24506184396).jpg?width=900"],"lolium-x-boucheanum":["https://bs.plantnet.org/image/o/0ec985d99f4b6c8cce05a999aec522959f7da8da","https://bs.plantnet.org/image/o/22c1b49052813d5e8f13ef41f94f0adbdff82cb7"]};
+ const urls=allow[candidate?.id],records=candidate?.approved_gallery;
+ if(!urls||!Array.isArray(records)||records.length!==urls.length||
+    !candidate.approved_gallery_review?.status?.startsWith("GENERAL_IMAGES_CLEARED_EXACT_FILE_LICENSE_AND_SOURCE"))return [];
+ if(records.some((p,i)=>p.src!==urls[i]||p.source_species_id!==candidate.id||
+    p.reuse_status!=="SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER"||
+    p.photo_role!=="TARGET_SPECIES_SOURCE"||!p.source_page?.startsWith("https://")||
+    !p.license_url?.startsWith("https://")||!p.creator||
+    !/^CC BY(?:-SA)?/.test(p.license||"")||!p.caption||
+    !p.src.startsWith("https://")||!p.source_location_class))return [];
+ return records.map((p,i)=>({i,src:p.src,label:p.label+" — "+p.caption,
+    creator:p.creator,license:p.license,license_url:p.license_url,source_page:p.source_page,
+    photo_role:"SOURCE_LABELED_RESEARCH_REFERENCE",photo_qa_note:p.exact_rights_evidence,
+    original_source_page:p.original_source_page||p.src,source_location_class:p.source_location_class}));
+}
+
 function e(tag,cls,value){const n=document.createElement(tag);if(cls)n.className=cls;if(value!==undefined)n.textContent=value;return n}
 function a(url,label){if(typeof url!=="string"||!url.startsWith("https://"))return null;const n=e("a","",label);n.href=url;n.target="_blank";n.rel="noopener noreferrer";return n}
 function photo(p,small){
@@ -73,8 +92,8 @@ async function boot(){
  for(const row of extras.photos){const s=byId.get(row.species_id),p=row.photo;if(s&&p&&p.src&&p.creator&&p.license&&p.source_page&&p.hosted_git_blob_sha&&!s.photos.some(x=>x.i===p.i||x.src===p.src)){s.photos.push(p);if(row.hero_i===p.i)s.hero_i=p.i;}}
  const seen=new Set([...scored,...research].map(s=>s.id));
  if(seen.size!==165)throw Error("Research and scored IDs overlap");
- const held=candidates.candidates.filter(s=>!seen.has(s.id)).map(s=>({id:s.id,scientific:s.scientific,common:s.common||s.scientific,trial:true,photos:[],hero_i:0}));
- if(held.length!==4)throw Error("Four photo-held profiles missing");
+ const held=candidates.candidates.filter(s=>!seen.has(s.id)).map(s=>({id:s.id,scientific:s.scientific,common:s.common||s.scientific,trial:true,photos:clearedResearchPhotos(s),hero_i:0}));
+ if(held.length!==4||held.reduce((n,s)=>n+s.photos.length,0)!==9)throw Error("Four source-cleared research galleries missing; no identity admission");
  state.all=[...scored,...research,...held].sort((x,y)=>(x.common||x.scientific).localeCompare(y.common||y.scientific));
  $("total").textContent=state.all.length;$("photographed").textContent=state.all.filter(s=>s.photos.length).length;
  $("multi").textContent=state.all.filter(s=>s.photos.length>=2).length;$("holds").textContent=state.all.filter(s=>!s.photos.length).length;
