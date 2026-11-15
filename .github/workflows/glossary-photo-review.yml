@@ -1,0 +1,23 @@
+name: Review glossary specimen photos — exact archived image contact sheet
+on:
+  push:
+    branches:
+      - audit/glossary-photo-arrow-batch1-20261115
+    paths:
+      - 'scripts/review_glossary_images_batch.py'
+      - '.github/workflows/glossary-photo-review.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visual-review-sheet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Render exact on-repository images for temporary visual inspection
+        run: |
+          python -m pip install pillow
+          python scripts/review_glossary_images_batch.py
