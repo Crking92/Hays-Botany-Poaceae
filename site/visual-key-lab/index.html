@@ -363,27 +363,55 @@ function byId(id){return state.species.find(s=>s.id===id)}
    improve the field UI without changing the 112 scored source shards. */
 function applyApprovedGeneralPhotos(scored,manifest){
   if(!Array.isArray(scored)||manifest?.schema!=="HAYS_GRASS_GENERAL_PHOTO_ARCHIVE_EXTRAS_V1"||!Array.isArray(manifest.photos))return 0;
+  // Source-specific image approvals; never treat a general-domain CC marker as rights evidence.
+  const root="https://crking92.github.io/Hays-Botany-Poaceae/";
   const approved={
-    "bromus-pubescens":"efe6b458d8a4e06aaf02854401fe416cd96037f3",
-    "tridens-flavus":"af7f91eb910e56dc682f73274f2bfadfc230ae6d"
+    "bromus-pubescens":{
+      path:"content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-bromus-pubescens-epa.jpg",
+      sha:"efe6b458d8a4e06aaf02854401fe416cd96037f3",
+      source:"https://commons.wikimedia.org/wiki/File:Bromus_pubescens.jpg",
+      creator:"U.S. Environmental Protection Agency, Great Lakes image collection",
+      license:"Public domain (U.S. federal employee work)",
+      licenseUrl:"https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    "tridens-flavus":{
+      path:"content/taxa/Poaceae/Tridens/tridens-flavus/images/tridens-flavus-provisional-face.jpg",
+      sha:"af7f91eb910e56dc682f73274f2bfadfc230ae6d",
+      source:"https://commons.wikimedia.org/wiki/File:Tridens_flavus.jpg",
+      creator:"Mason Brock (Masebrock)",
+      license:"Public domain (author's worldwide release)",
+      licenseUrl:"https://creativecommons.org/publicdomain/mark/1.0/"
+    },
+    "muhlenbergia-lindheimeri":{
+      path:"content/taxa/Poaceae/Muhlenbergia/muhlenbergia-lindheimeri/images/library-review014-aa102d046852702.jpg",
+      sha:"0a37f7836fdc189b3bbbf829bf3c41d2ee5016bb",
+      source:"https://www.gbif.org/occurrence/6234431311",
+      creator:"Wendy A",
+      license:"CC0 1.0",
+      licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    "sporobolus-compositus":{
+      path:"content/taxa/Poaceae/Sporobolus/sporobolus-compositus/images/gbif-manual-6178340261-33f83ef05.jpg",
+      sha:"4565144aaae65865a2c55688fd9ff01b28201c5c",
+      source:"https://www.gbif.org/occurrence/6178340261",
+      creator:"sonoresmore",
+      license:"CC0 1.0",
+      licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/"
+    }
   };
   let installed=0;
   for(const entry of manifest.photos){
     if(!Object.prototype.hasOwnProperty.call(approved,entry?.species_id))continue;
-    const s=scored.find(x=>x.id===entry.species_id&&!x.trial);
-    const p=entry.photo;
+    const rule=approved[entry.species_id],s=scored.find(x=>x.id===entry.species_id&&!x.trial),p=entry.photo;
     if(!s||!Array.isArray(s.photos)||!p||!Number.isInteger(p.i)||p.i<0||
        s.photos.some(x=>x.src===p.src||x.i===p.i)||
-       entry.hero_i!==p.i||p.hosted_git_blob_sha!==approved[entry.species_id]||
-       typeof p.src!=="string"||!p.src.startsWith("https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/")||
-       typeof p.source_page!=="string"||!p.source_page.startsWith("https://commons.wikimedia.org/wiki/File")||
-       typeof p.creator!=="string"||!p.creator.trim()||
-       typeof p.license!=="string"||!p.license.startsWith("Public domain"))continue;
+       entry.hero_i!==p.i||p.hosted_git_blob_sha!==rule.sha||
+       p.src!==root+rule.path||p.source_page!==rule.source||
+       p.creator!==rule.creator||p.license!==rule.license||p.license_url!==rule.licenseUrl)continue;
     s.photos.push({...p});s.hero_i=p.i;installed++;
   }
   return installed;
 }
-
 function credit(p){return p?[p.creator,p.license].filter(Boolean).join(" · "):"Source image pending"}
 function status(s){if(s.trial)return["Research trial · unverified","warn"];if(s.range==="PASS")return["Regional native set",""];if(s.range==="FAIL"||s.range==="INTRODUCED_NOT_NATIVE"||s.range==="COMPARISON_NON_NATIVE")return["Introduced / comparison","bad"];return["Range status to verify","review"]}
 
