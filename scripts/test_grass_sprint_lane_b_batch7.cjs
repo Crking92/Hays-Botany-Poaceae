@@ -9,7 +9,7 @@ const scored=ids.flatMap(x=>JSON.parse(fs.readFileSync(path.join(lab,'species-'+
 const provisional=JSON.parse(fs.readFileSync(path.join(lab,'hays-candidates.json'),'utf8')).candidates;
 assert.equal(scored.length,112);assert.equal(provisional.length,57);
 assert.equal(new Set([...scored,...provisional].map(x=>x.id)).size,169);
-assert.equal(scored.reduce((total,s)=>total+(s.photos||[]).length,0),514);
+assert.equal(scored.reduce((total,s)=>total+(s.photos||[]).length,0),514+2,'Only two approved flowering photo additions permitted beyond the initial 514');
 const html=fs.readFileSync(path.join(lab,'index.html'),'utf8'),src=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert(src);const b=src.indexOf('function currentResults()'),e=src.indexOf('\nfunction renderTabs',b);
 assert(b>=0&&e>b);
@@ -39,4 +39,4 @@ const oldTests=['scripts/test_grass_sprint_lane_b_batch4.cjs','scripts/test_gras
 for(const old of oldTests){const content=fs.readFileSync(path.join(root,old),'utf8');assert(!/many_one_sided.{0,80}eleusine-indica|eleusine-indica.{0,80}many_one_sided/.test(content),'old invalid goosegrass assertion still present: '+old);}
 const unknown={id:'unknown-lane-b',scientific:'Unknown',common:'Unknown',traits:{}};
 assert(get({head:'many_one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},[unknown]).has('unknown-lane-b'));
-console.log(JSON.stringify({pass:true,positive:positive.length,negative:unsupported.length,unknownRetention:true,scored:112,provisional:57,photoRefs:514},null,2));
+console.log(JSON.stringify({pass:true,positive:positive.length,negative:unsupported.length,unknownRetention:true,scored:112,provisional:57,photoRefs:516},null,2));
