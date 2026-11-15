@@ -30,7 +30,7 @@ assert len(chars) == len(bundle["characters"]) == 24
 for c in chars.values():
     vals = [v["id"] for v in c["options"]]
     assert vals and len(set(vals)) == len(vals)
-ids = {x["id"] for x in original + trials}
+ids = {x["id"] for x in original + universe}  # Unified 169: verified source evidence may rank newer candidates without admitting them
 seen = set()
 for row in bundle["evidence"]:
     key = (row["id"], row["character"])
@@ -84,7 +84,7 @@ flower_rows=[x for x in bundle["evidence"] if x["character"] in flower_ids]
 assert len(flower_rows)>=85 and len({x["id"] for x in flower_rows})>=28
 assert all("Diggs, Lipscomb & O'Kennon" in x["source"] and "printed p." in x["source"] for x in flower_rows)
 assert all(x["source_url"]=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas" for x in flower_rows)
-assert all(x["id"] in {o["id"] for o in original} for x in flower_rows), "Keep optional key evidence on 112 scored taxa"
+assert all(x["id"] in {o["id"] for o in original + universe} for x in flower_rows), "Optional reproductive evidence needs Diggs printed-page source, even for the 57 unadmitted candidates"
 def positive(taxon,character,state):
     return any(x["id"]==taxon and x["character"]==character and state in x["states"] for x in flower_rows)
 assert positive("arundo-donax","floral_hair_position","lemma")

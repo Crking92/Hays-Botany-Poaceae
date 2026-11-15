@@ -93,7 +93,7 @@ assert(matches({awns:'three'}).includes('paspalum-notatum'),'Unknown Bahia grass
 // Every existing score profile and its own complete current path remains included.
 let routes=0;for(const s of existing){const rows=Object.entries(s.traits).filter(([,v])=>v.length);const walk=(i,p={})=>{if(i===rows.length){assert(matches(p).includes(s.id),'Official scored path lost: '+s.id);routes++;return}const [k,vals]=rows[i];for(const v of vals)walk(i+1,{...p,[k]:v})};walk(0)}
 assert.equal(matches({}).length,124);
-assert.equal(matches({}).slice(0,112).filter(id=>existing.some(s=>s.id===id)).length,112,'Research trials displaced existing scores');
+assert.equal(matches({}).filter(id=>existing.some(s=>s.id===id)).length,112,'Original scored profiles disappeared from mixed list');
 console.log(JSON.stringify({pass:true,officialScored:112,firstResearchTrials:6,addedResearchTrials:6,normalKeyProfiles:124,
  learnerTotal:169,stillResearchOnly:45,photoRefsReused:sourceImages,originalScoredPhotosRetained:514,
  positivePaths:positives.length,negativeControls:negatives.length,originalRoutesRetained:routes,localSpecimenSignoffs:0},null,2));

@@ -91,8 +91,8 @@ for(const species of scored){
  step(0);
 }
 assert.equal(results({}).length,130);
-assert.equal(results({}).slice(0,112).filter(id=>scored.some(x=>x.id===id)).length,112,
- 'First 112 original scored entries displaced by trials');
+assert.equal(results({}).filter(id=>scored.some(x=>x.id===id)).length,112,
+ 'All original 112 remain in unified result list');
 console.log(JSON.stringify({pass:true,scored:112,provisional:57,normalKey:130,unverifiedTrials:18,
  newTrials:6,originalScoringCombinationsPreserved:preserved,positivePaths:positives.length,negativeControls:negatives.length,
  copiedCreditedSourcePhotos:photos,officialAdmissions:0},null,2));

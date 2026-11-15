@@ -106,8 +106,8 @@ for(const s of scored){
  };visit(0);
 }
 assert.equal(filter({},all).length,118,'Initial results did not include six research matches');
-assert.equal(filter({},all).slice(0,112).filter(x=>!allowedIds.includes(x)).length,112,
- 'Research trials should not displace original scored species above the fold');
+assert.equal(filter({},all).filter(x=>!allowedIds.includes(x)).length,112,
+ 'All 112 original scored profiles must remain present in one result list');
 console.log(JSON.stringify({pass:true,officialScored:112,provisionalUniverse:57,trialMatches:6,
  totalNormalKeyMatches:118,positivePaths:positives.length,negativeControls:negatives.length,
  originalSupportedCombinationsPreserved:preserved,creditedSourcePhotoRefs:photos,

@@ -258,7 +258,7 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
 <main class="wrap">
-  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">112</b><small id="coded-subtitle">grasses in this key</small></div></section>
+  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
   <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
@@ -275,7 +275,7 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
       <div class="question" id="question"></div>
     </section>
     <aside class="panel results" aria-label="Candidate grasses">
-      <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">112 scored</span></div><p id="results-note">Choose any observable trait to narrow scored profiles and labeled research trials.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
+      <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">169 grasses</span></div><p id="results-note">All 169 grasses appear together. Newer profiles are labeled when their identity or traits still need verification.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
       <div class="results-list" id="results" aria-live="polite"></div>
       <div class="results-footer" id="results-footer">Unknown characters never eliminate a grass automatically.</div><details class="pending" id="caution-details" hidden><summary id="caution-summary">Other provisional matches to review</summary><div id="caution-list" class="pending-list caution-list"></div></details><details class="pending"><summary id="pending-summary">Other species from our catalog</summary><div id="pending-items" class="pending-list"></div></details>
     </aside>
@@ -342,7 +342,7 @@ const selectedPhotoOverrides={
 "head:foxtail":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole dense bristly foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"},
 };
 const $=id=>document.getElementById(id);
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineSection:null};
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineSection:null,candidateManifest:[]};
 
 const themeToggle=$("theme-toggle");
 let userTheme=null;
@@ -1124,7 +1124,7 @@ function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else conflict++}
-return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>Number(!!a.s.trial)-Number(!!b.s.trial)||b.refinementMatches.length-a.refinementMatches.length||a.unknown-b.unknown||b.confirmed-a.confirmed||a.s.common.localeCompare(b.s.common))}
+return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
 
 /* Original outline diagrams for beginners; these are shapes, NOT photographs or species-level determinations. */
@@ -1939,7 +1939,7 @@ $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
 renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
-const sure=rows.filter(x=>!x.s.trial&&!x.unknown).length;const trials=rows.filter(x=>x.s.trial).length;
+const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 $("count").textContent=rows.length+" possible";
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&state.refineSelected[c.id]===o.id));
 $("results-note").textContent=pendingChoice?"That extra feature is recorded as a research target, but it has no species-level evidence for ranking yet. No grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
@@ -1951,7 +1951,7 @@ const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
 info.append(node("strong","",s.common),node("span","latin",s.scientific));
 const [label,cl]=status(s);info.append(node("span","tag "+cl,label));
-if(s.trial)info.append(node("div","smallmuted","Tentative research match — check a local diagnostic specimen before naming."));
+if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
@@ -1967,7 +1967,7 @@ for(const x of scored){
 const btn=node("button","",x.s.common+" · "+x.s.scientific);btn.type="button";
 btn.append(node("small","","Differs on: "+x.disagree.join(", ")));btn.addEventListener("click",()=>detail(x.s));cautionList.append(btn);
 }
-$("results-footer").textContent="Not sure about a feature? Skip it. Newer research matches are marked as unverified.";
+$("results-footer").textContent="One list of 169 grasses. Unknown traits never exclude; review excluded possibilities and verify research-profile characters.";
 }
 function renderPending(){
 const coded=new Set(state.species.map(s=>s.id));
@@ -1994,8 +1994,8 @@ async function boot(){try{const responses=await Promise.all(["species-a.json","s
 // If this optional manifest is unavailable, the 112 original galleries still work.
 try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
 catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
-// Keep the 112 scored results unchanged; expose new research taxa as links to the unified 169-grass Learner.
-try {const res=await fetch("hays-candidates.json",{cache:"no-store"});if(res.ok){const manifest=await res.json();if(Array.isArray(manifest.candidates)&&manifest.candidates.length===57){const original=new Set(state.catalog.map(x=>x.id));for(const c of manifest.candidates)if(!original.has(c.id))state.catalog.push({id:c.id,scientific:c.scientific,common:c.common});}}} catch(_e) { /* A research index failure must never break the scored identifier. */ }
+// Keep all 169 grasses together in one matching result group while retaining 112 verified-core vs 57 pending-source metadata.
+try {const res=await fetch("hays-candidates.json",{cache:"no-store"});if(res.ok){const manifest=await res.json();if(Array.isArray(manifest.candidates)&&manifest.candidates.length===57){state.candidateManifest=manifest.candidates;const original=new Set(state.catalog.map(x=>x.id));for(const c of manifest.candidates)if(!original.has(c.id))state.catalog.push({id:c.id,scientific:c.scientific,common:c.common});}}} catch(_e) { /* A research index failure must never break the scored identifier. */ }
 try {const res=await fetch("provisional-trial-profiles.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)))throw Error("Research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Trial duplicates scored species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Research trial profiles unavailable; original 112 remain usable",err)}
 // Optional second six source-labelled research trials; the first six and official 112 remain untouched.
 try {const res=await fetch("provisional-trial-batch2.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)||x.range!=="UNVERIFIED"))throw Error("Second research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Second trial duplicates earlier species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Second research trial profiles unavailable; original key and first trials remain usable",err)}
@@ -2006,7 +2006,7 @@ try {const res=await fetch("provisional-trial-batch3.json",{cache:"no-store"});i
 try {const res=await fetch("provisional-trial-batch4.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)||x.range!=="UNVERIFIED"))throw Error("Fourth research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Fourth trial duplicates an existing species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Fourth research trial profiles unavailable; original key and earlier trials remain usable",err)}
 
 // Combined Batch 5: 29 source-backed research trials from three independently reviewed lanes.
-// These are unverified comparison matches, never admissions into the 112 officially scored grasses.
+// These 57 newer profiles appear in the SAME result list, clearly marked as needing further verification.
 // Load the three lane packets together to avoid silently publishing an incomplete coordinator release.
 try {
  const files=["provisional-trial-batch5-a.json","provisional-trial-batch5-b.json","provisional-trial-batch5-c.json"];
@@ -2025,6 +2025,15 @@ try {
  state.species.push(...packets.flatMap(packet=>packet.profiles));
 } catch(err){console.warn("Additional unverified research trials unavailable; original scored key and earlier trials remain usable",err)}
 
+// Every original 112 and every research 57 belongs in ONE candidate group.
+// Do not invent photo rights or identification states for the four photo-held taxa.
+const groupedIds=new Set(state.species.map(x=>x.id));
+for(const candidate of state.candidateManifest){
+ if(groupedIds.has(candidate.id))continue;
+ state.species.push({id:candidate.id,scientific:candidate.scientific,common:candidate.common||candidate.scientific,trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",traits:{head:[],habit:[],ligule:[],awns:[]},photos:[],hero_i:0,field_rule:"Research profile needs a verified diagnostic photograph and a connected specimen assessment. Earlier source packets include hypotheses, not confirmed core scoring. Keep unseen structures unknown and compare several features before naming.",warning_flags:candidate.warning_flags||[],source_candidate_status:candidate.status});
+ groupedIds.add(candidate.id);
+}
+if(state.candidateManifest.length===57&&state.species.length!==169)throw Error("Unified 169 grass inventory mismatch; inspect duplicate trial IDs");
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});
