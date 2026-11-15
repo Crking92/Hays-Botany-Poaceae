@@ -70,7 +70,7 @@ async function boot(){
  const scored=scoredData.flat().map(s=>({...s,trial:false,photos:s.photos.slice()})),research=trialData.flatMap(p=>p.profiles).map(s=>({...s,photos:s.photos.slice()}));
  if(scored.length!==112||research.length!==53||candidates.candidates?.length!==57||!Array.isArray(extras.photos)||extras.photos.length<9)throw Error("Published 169-grass data are incomplete.");
  const byId=new Map(scored.map(s=>[s.id,s]));if(byId.size!==112)throw Error("Duplicate scored grass");
- for(const row of extras.photos){const s=byId.get(row.species_id),p=row.photo;if(s&&p&&p.src&&p.creator&&p.license&&p.source_page&&p.hosted_git_blob_sha&&!s.photos.some(x=>x.i===p.i||x.src===p.src))s.photos.push(p);}
+ for(const row of extras.photos){const s=byId.get(row.species_id),p=row.photo;if(s&&p&&p.src&&p.creator&&p.license&&p.source_page&&p.hosted_git_blob_sha&&!s.photos.some(x=>x.i===p.i||x.src===p.src)){s.photos.push(p);if(row.hero_i===p.i)s.hero_i=p.i;}}
  const seen=new Set([...scored,...research].map(s=>s.id));
  if(seen.size!==165)throw Error("Research and scored IDs overlap");
  const held=candidates.candidates.filter(s=>!seen.has(s.id)).map(s=>({id:s.id,scientific:s.scientific,common:s.common||s.scientific,trial:true,photos:[],hero_i:0}));
