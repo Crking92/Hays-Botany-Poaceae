@@ -1155,5 +1155,41 @@ for(const [choice,expected] of [
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass 5 default result pool changed");
 
+
+// PDF pass 6: direct H&L 2015 p.49 and species-level Diggs 1999 pages only.
+// Cross-taxon absence is not encoded, nor are genus-only statements.
+const pdfPass6={"eragrostis-superba":6,"paspalum-langei":1,"echinochloa-walteri":2,"muhlenbergia-capillaris":2,"phyllostachys-aurea":4};
+if(pack.evidence.length<918||new Set(pack.evidence.map(r=>r.id)).size<143)throw Error("PDF pass 6 coverage regressed");
+for(const [id,n] of Object.entries(pdfPass6)){
+ const a=pack.evidence.filter(x=>x.id===id);
+ if(a.length!==n)throw Error("Pass6 missing records "+id);
+ if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass6 changed admission "+id);
+ for(const r of a){
+  if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("Pass6 quality "+id);
+  if(id==="eragrostis-superba"){
+   if(!r.source.includes("printed p. 49")||!r.source_url.endsWith("#page=49"))throw Error("Pass6 Hill Country source error");
+  }else if(!r.source.includes("Diggs, Lipscomb & O'Kennon")||!r.pdf_printed_page||r.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")throw Error("Pass6 Diggs source error "+id);
+ }
+}
+if(!pack.evidence.some(x=>x.id==="echinochloa-walteri"&&x.character==="true_lemma_awn"&&x.states.includes("none")))throw Error("Echinochloa awnless variation lost");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [choice,expected] of [
+ [{blade_shape:"inrolled"},["eragrostis-superba"]],
+ [{blade_width:"broad"},["paspalum-langei","phyllostachys-aurea"]],
+ [{ligule_edge:"hair_fringe"},["eragrostis-superba"]],
+ [{sheath_surface:"sometimes_hairy"},["echinochloa-walteri"]],
+ [{true_lemma_awn:"long"},["echinochloa-walteri","muhlenbergia-capillaris"]],
+ [{true_lemma_awn:"none"},["echinochloa-walteri"]],
+ [{stem_special:"giant_canes"},["phyllostachys-aurea"]]
+]){
+ state.refineSelected=choice;
+ const res=run();
+ if(res.length!==169)throw Error("Pass6 excluded source-unknown grasses");
+ for(const id of expected)if(!res.some(r=>r.id===id&&r.extras>=1))throw Error("Pass6 positive ranking missing "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass6 default result pool changed");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
