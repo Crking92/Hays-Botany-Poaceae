@@ -640,7 +640,7 @@ const batch13={
     "culm_posture"
   ]
 };
-if(pack.evidence.length!==583)throw Error("Batch 13 expected exactly 583 advanced records");
+if(pack.evidence.length<583)throw Error("Batch 13 baseline 583 advanced records regressed");
 for(const [id,chars] of Object.entries(batch13)){
  const record=species.find(x=>x.id===id), audit=record?.character_evidence?.audit_batch13_core_advanced_20261115;
  if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch 13 core preservation missing "+id);
@@ -670,6 +670,97 @@ got=verifyUnchanged("Batch13 ragged lovegrass-tridens ligule");
 if(!got.some(x=>x.id==="triplasiella-eragrostoides"&&x.extras===1))throw Error("Lovegrass tridens lacerate ligule lost");
 for(const id of ["tridens-albescens","tridentopsis-buckleyana","tridentopsis-mutica","tridens-texanus"])
  if(got.some(x=>x.id===id&&x.extras>0))throw Error("Ciliate ligule mistaken for lacerate "+id);
+state.refineSelected={};
+
+// Batch 14 — five original zero-coverage grasses, H&L 2015 direct regional species accounts.
+const batch14={
+  "catapodium-rigidum": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "dichanthium-annulatum": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "ligule_edge",
+    "culm_posture",
+    "surface_runners",
+    "stem_nodes"
+  ],
+  "limnodea-arkansana": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "urochloa-fusca": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "surface_runners",
+    "stem_nodes"
+  ],
+  "zizaniopsis-miliacea": [
+    "blade_shape",
+    "blade_width",
+    "blade_edge",
+    "sheath_margins",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "underground_stems"
+  ]
+};
+if(pack.evidence.length<624)throw Error("Batch14 baseline 624 advanced observations regressed");
+for(const [id,chs] of Object.entries(batch14)){
+ const row=species.find(s=>s.id===id), audit=row?.character_evidence?.audit_batch14_core_advanced_20261115;
+ if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch14 original four categories not reviewed: "+id);
+ if(JSON.stringify(audit.advanced_characters_added)!==JSON.stringify(chs))throw Error("Batch14 audit/evidence mismatch: "+id);
+ for(const ch of chs){
+  const e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+  if(!e||!e.states?.length||!e.source?.includes("Hagenbuch & Lemke (2015)")||!e.source_url?.startsWith("https://"))throw Error("Batch14 source/state absent "+id+"/"+ch);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"overlapping"};
+got=verifyUnchanged("Batch14 overlapping Urochloa fusca sheaths");
+if(!got.some(x=>x.id==="urochloa-fusca"&&x.extras===1))throw Error("Urochloa fusca overlapping sheath not ranked");
+for(const id of ["catapodium-rigidum","dichanthium-annulatum","limnodea-arkansana","zizaniopsis-miliacea"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Open sheath wrongly made overlapping "+id);
+state.refineSelected={ligule_edge:"lacerate"};
+got=verifyUnchanged("Batch14 fern grass/Ozarkgrass torn ligules");
+for(const id of ["catapodium-rigidum","limnodea-arkansana"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Published lacerate ligule missing "+id);
+for(const id of ["dichanthium-annulatum","urochloa-fusca","zizaniopsis-miliacea"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Erose/ciliate ligule misranked as lacerate "+id);
+state.refineSelected={surface_runners:"rooted_nodes"};
+got=verifyUnchanged("Batch14 lower-node rooting is not a true stolon");
+if(!got.some(x=>x.id==="urochloa-fusca"&&x.extras===1))throw Error("Urochloa fusca rooting nodes missing");
+if(got.some(x=>x.id==="dichanthium-annulatum"&&x.extras>0))throw Error("Kleberg stoloniferous culms cannot automatically be called rooted nodes");
+state.refineSelected={surface_runners:"stolon"};
+got=verifyUnchanged("Batch14 Kleberg optional stoloniferous stems");
+if(!got.some(x=>x.id==="dichanthium-annulatum"&&x.extras===1))throw Error("Stoloniferous Kleberg feature missing");
+if(got.some(x=>x.id==="urochloa-fusca"&&x.extras>0))throw Error("Lower node rooting incorrectly scored as stolon");
+state.refineSelected={ligule_length:"long"};
+got=verifyUnchanged("Batch14 giant cutgrass exceptionally long true membrane");
+if(!got.some(x=>x.id==="zizaniopsis-miliacea"&&x.extras===1))throw Error("Giant cutgrass very long ligule missing");
+for(const id of ["catapodium-rigidum","limnodea-arkansana","urochloa-fusca","dichanthium-annulatum"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Long membrane incorrectly attributed to "+id);
 state.refineSelected={};
 
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
