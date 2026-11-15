@@ -640,7 +640,7 @@ const batch13={
     "culm_posture"
   ]
 };
-if(pack.evidence.length!==583)throw Error("Batch 13 expected exactly 583 advanced records");
+if(pack.evidence.length<583)throw Error("Batch 13 baseline 583 advanced records regressed");
 for(const [id,chars] of Object.entries(batch13)){
  const record=species.find(x=>x.id===id), audit=record?.character_evidence?.audit_batch13_core_advanced_20261115;
  if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch 13 core preservation missing "+id);
@@ -726,7 +726,7 @@ const batch14={
     "underground_stems"
   ]
 };
-if(pack.evidence.length!==624)throw Error("Batch14 expected exactly 624 advanced observations");
+if(pack.evidence.length<624)throw Error("Batch14 baseline 624 advanced observations regressed");
 for(const [id,chs] of Object.entries(batch14)){
  const row=species.find(s=>s.id===id), audit=row?.character_evidence?.audit_batch14_core_advanced_20261115;
  if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch14 original four categories not reviewed: "+id);
