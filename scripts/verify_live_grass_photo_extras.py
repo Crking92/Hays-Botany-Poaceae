@@ -127,7 +127,7 @@ def browser_photo_cards(manifest, by_id):
                 page = browser.new_page(viewport={"width": width, "height": height})
                 page.goto(PUBLIC + "index.html", wait_until="domcontentloaded", timeout=70000)
                 page.wait_for_function(
-                    "() => document.querySelectorAll('#results .result').length === 165",
+                    "() => document.querySelectorAll('#results .result').length === 169",
                     timeout=70000)
                 for sid, photos in groups.items():
                     scientific = by_id[sid]["scientific"]
@@ -182,7 +182,7 @@ def main():
     args = parser.parse_args()
     manifest, scored = local_records()
     if args.local_only:
-        print("PASS_LOCAL_NINE_SOURCE_VERIFIED_PHOTO_FILES", len(manifest["photos"]), flush=True)
+        print("PASS_LOCAL_SOURCE_VERIFIED_PHOTO_FILES", len(manifest["photos"]), flush=True)
         return
     n = remote_parity(manifest)
     browser_photo_cards(manifest, scored)
