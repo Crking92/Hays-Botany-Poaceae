@@ -15,7 +15,7 @@ const candidates = JSON.parse(read(dir+'hays-candidates.json')).candidates;
 assert.equal(species.length,112);
 assert.equal(candidates.length,57);
 assert.equal(new Set([...species,...candidates].map(s=>s.id)).size,169);
-assert.equal(species.reduce((sum,s)=>sum+s.photos.length,0),514);
+assert.equal(species.reduce((sum,s)=>sum+s.photos.length,0),516);
 const id='andropogon-gerardi';
 const target=species.find(s=>s.id===id);
 assert(target);
@@ -73,7 +73,7 @@ for(const oldRec of before.filter(s=>ownIDs.has(s.id))){
 }
 const unknown={id:'unknown',scientific:'Unknown',common:'Unknown',range:'UNRESOLVED',traits:{}};
 assert.deepEqual(resultIds({head:'combs',ligule:'hairs'},[unknown]),['unknown']);
-console.log(JSON.stringify({pass:true,scored:112,provisional:57,total:169,photoRefs:514,
+console.log(JSON.stringify({pass:true,scored:112,provisional:57,total:169,photoRefs:516,
  correctedSpecies:[id],addedStates:1,previouslyExcludedNowValid:positive.length,
  negativesRetained:negatives.length,earlierLaneACombinationsRetained:historicalCombinations,
  unknownStatesNotHardExcluded:true,specimenRightsGate:'not changed'},null,2));
