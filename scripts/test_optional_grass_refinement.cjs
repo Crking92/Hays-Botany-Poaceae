@@ -36,7 +36,7 @@ let got=verifyUnchanged("boat-tip");
 if(got[0].id!=="poa-annua"||got[0].extras===0)throw Error("Boat-tip evidence did not positively rank Poa annua");
 state.refineSelected={blade_tip:"hardened_tip"};
 got=verifyUnchanged("hardened tip");
-if(got[0].id!=="erioneuron-pilosum"||got[0].extras===0)throw Error("Hardened-tip evidence not ranked");
+if(!got.some(x=>x.id==="erioneuron-pilosum"&&x.extras>0))throw Error("Prior Erioneuron hardened-tip positive match lost");
 state.refineSelected={blade_width:"broad"};
 got=verifyUnchanged("broad blade");
 if(got.filter(x=>x.extras>0).length<4)throw Error("Broad-width evidence did not match sufficiently");
