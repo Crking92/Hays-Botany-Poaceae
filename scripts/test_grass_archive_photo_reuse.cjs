@@ -201,7 +201,7 @@ for(const x of additions){
  assert.ok(/version (?:not recorded|is unrecorded|was not recorded)/i.test(p.photo_qa_note),"No invented CC license version: "+x.file);
  const bytes=fs.readFileSync(path.join(root,x.file));
  assert.ok(bytes.length>25000&&bytes.subarray(0,3).equals(Buffer.from([0xff,0xd8,0xff])),"Missing or invalid archive JPEG "+x.file);
- const hash=crypto.createHash("sha1").update(Buffer.from("blob "+bytes.length+"\\0")).update(bytes).digest("hex");
+ const hash=crypto.createHash("sha1").update(Buffer.from("blob "+bytes.length+"\0")).update(bytes).digest("hex");
  assert.equal(hash,x.sha,"Exact source-image Git blob changed: "+x.file);
 }
 for(const id of ["muhlenbergia-reverchonii","bromus-lanceolatus"]){
