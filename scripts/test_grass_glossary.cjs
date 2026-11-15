@@ -26,6 +26,15 @@ assert.equal(mirrored.source_repo,'Crking92/Hays-County-Botany');
 assert.equal(mirrored.source_path,'data/learning-layer.json');
 assert.match(mirrored.source_sha,/^[a-f0-9]{40}$/);
 assert.equal(Object.keys(mirrored.terms).length,147);
+assert.equal(Object.keys(mirrored.local_review_metadata?.reviewed_terms||{}).length,4,
+  'First original-source arrow QA checkpoint must preserve four inspected terms');
+assert.equal(Object.keys(mirrored.local_review_metadata?.pending_source_image_checks||{}).length,6,
+  'Wikimedia rate-limited sources must remain held, not auto-approved');
+assert.ok(!/real_photo\\.annotations|\\bitem\\.annotations\\b/.test(helper),
+  'Draft legacy arrows must not be rendered before photo-level verification');
+assert.ok(helper.includes('key==="collar"') && helper.includes('jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg'),
+  'Corrected collar image not wired in');
+
 assert.equal(Object.keys(ext.terms).length,26);
 assert.equal(Object.keys(approved).length,26,'verified Commons source recovery count');
 assert.ok(media.held_photos.coriaceous,'do not publish unverified coriaceous photo');
