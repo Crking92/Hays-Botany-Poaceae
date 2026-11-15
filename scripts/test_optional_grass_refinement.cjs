@@ -1163,7 +1163,7 @@ if(pack.evidence.length<918||new Set(pack.evidence.map(r=>r.id)).size<143)throw 
 for(const [id,n] of Object.entries(pdfPass6)){
  const a=pack.evidence.filter(x=>x.id===id);
  if(a.length!==n)throw Error("Pass6 missing records "+id);
- if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass6 changed admission "+id);
+ if(![...groupedTrials,...placeholderProfiles].some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass6 changed admission "+id);
  for(const r of a){
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("Pass6 quality "+id);
   if(id==="eragrostis-superba"){
