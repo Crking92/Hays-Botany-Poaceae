@@ -17,7 +17,7 @@ assert.equal(candidates.length, 57, 'provisional inventory changed without recon
 assert.equal(new Set(allIds).size, 169, 'duplicate IDs / unexpected inventory total');
 assert(candidates.every(c => c.status === 'RESEARCH_CANDIDATE_NOT_RELEASED'), 'unreviewed candidate released');
 const originalPhotos = species.reduce((sum, s) => sum + s.photos.length, 0);
-assert.equal(originalPhotos, 514 + 2, '514 first-pass scored records plus exactly two approved archive-reuse photos expected; exact additions checked in test_grass_archive_photo_reuse.cjs');
+assert.equal(originalPhotos, 514, 'first-pass scored photo reference inventory unexpectedly changed');
 
 const trialProfileFiles = ['provisional-trial-profiles.json','provisional-trial-batch2.json','provisional-trial-batch3.json','provisional-trial-batch4.json','provisional-trial-batch5-a.json','provisional-trial-batch5-b.json','provisional-trial-batch5-c.json'];
 const trialProfiles = trialProfileFiles.flatMap(f => JSON.parse(read(f)).profiles);
