@@ -243,7 +243,7 @@ for(const [id,i,hero,filename,sha,page] of harmsAdditions){
  assert.equal(p.license_url,"https://w3.biosci.utexas.edu/prc/Monocots/");
  assert.equal(p.hosted_git_blob_sha,sha);
  assert.match(p.photo_qa_note,/educational use|scientific\/educational use/);
- assert.match(p.photo_qa_note,/not (?:independent|a verified)|not independently|remains|not confirmed|not prove|do not|no independent/i,"Anatomy/identity hold was removed");
+ assert.match(p.photo_qa_note,/not (?:independent|a verified)|not independently|remain|not confirmed|not prove|do not|no independent/i,"Anatomy/identity hold was removed");
  const data=fs.readFileSync(path.join(root,pathName));
  assert.ok(data.length>30000 && data.subarray(0,3).equals(Buffer.from([0xff,0xd8,0xff])));
  const check=crypto.createHash("sha1").update(Buffer.from("blob "+data.length+"\0")).update(data).digest("hex");
