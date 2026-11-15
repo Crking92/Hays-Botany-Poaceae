@@ -1191,5 +1191,39 @@ for(const [choice,expected] of [
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass6 default result pool changed");
 
+
+// PDF pass 7: ten exact H&L/Diggs treatment crosswalks and non-excluding evidence.
+const pdfPass7={"rottboellia-campestris":11,"pappophorum-bicolor":7,"sphenopholis-interrupta":10,"oplismenus-hirtellus":5,"panicum-miliaceum":3,"sclerochloa-dura":2,"lolium-multiflorum":1,"miscanthus-sinensis":3,"cortaderia-selloana":3,"tridentopsis-elongata":1};
+if(pack.evidence.length<964||new Set(pack.evidence.map(x=>x.id)).size<153)throw Error("PDF pass 7 source coverage regression");
+for(const [id,n] of Object.entries(pdfPass7)){
+ const a=pack.evidence.filter(x=>x.id===id);
+ if(a.length!==n)throw Error("Pass7 missing or duplicate "+id+" characters: "+a.length);
+ if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass7 must not promote provisional grass "+id);
+ for(const x of a){
+  if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.note?.trim())throw Error("Pass7 insufficient source note "+id);
+  if(!(/Hagenbuch & Lemke|Diggs, Lipscomb & O'Kennon/.test(x.source))||!x.source.includes("printed p. "))throw Error("Pass7 missing exact original-book page "+id);
+  if(["florets_per_spikelet","spikelet_position","true_lemma_awn","floral_hair_position"].includes(x.character)&&(!x.source.includes("Diggs, Lipscomb & O'Kennon")||!x.pdf_printed_page))throw Error("Pass7 reproductive trait not in Diggs "+id);
+ }
+}
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [sel,id] of [
+ [{underground_stems:"short_knotty"},"rottboellia-campestris"],
+ [{ligule_edge:"hair_fringe"},"pappophorum-bicolor"],
+ [{ligule_edge:"lacerate"},"sphenopholis-interrupta"],
+ [{spikelet_position:"one_side"},"oplismenus-hirtellus"],
+ [{blade_hairs:"blade_hairy"},"panicum-miliaceum"],
+ [{florets_per_spikelet:"several"},"sclerochloa-dura"],
+ [{leaf_base:"pointed_auricles"},"lolium-multiflorum"],
+ [{true_lemma_awn:"bent_twisted"},"miscanthus-sinensis"],
+ [{floral_hair_position:"lemma"},"cortaderia-selloana"],
+ [{blade_width:"narrow"},"tridentopsis-elongata"]
+]){
+ state.refineSelected=sel;let r=run();
+ if(r.length!==169||!r.some(x=>x.id===id&&x.extras>=1))throw Error("Pass7 candidate retention / positive match "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass7 changed 169-grass pool");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
