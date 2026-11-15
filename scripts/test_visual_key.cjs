@@ -54,7 +54,7 @@ const root=path.resolve(__dirname,'..');
   assert.equal(await compared.locator('.compare-card').count(),2);
   assert.ok(await compared.locator('.compare-photo').count()>=2,'Known grass photos missing from comparison');
   assert.equal(await compared.locator('.compare-photo').count(),await compared.locator('.compare-photo figcaption').count(),'Every image needs a visible caption/credit');
-  assert.equal(await compared.locator('.compare-photo a').count(),await compared.locator('.compare-photo').count(),'Each photo needs its original source');
+  assert.equal(await compared.locator('.compare-photo a').filter({hasText:'Photo source and credit'}).count(),await compared.locator('.compare-photo').count(),'Each photo needs its original source; supplemental license/permission links are allowed');
   const fit=await compared.evaluate(d=>{
     const frame=d.querySelector('.compare-photo .photo-frame');
     if(!frame)return 'missing-frame';
