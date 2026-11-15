@@ -29,7 +29,7 @@ const newTrials=pack.profiles;
 assert.equal(scored.length,112);
 assert.equal(oldTrials.length,24);
 assert.equal(candidates.length,57);
-assert.equal(scored.reduce((n,x)=>n+x.photos.length,0),514);
+assert.equal(scored.reduce((n,x)=>n+x.photos.length,0),514+2,'514 initial scored photos plus exactly two reviewed family-archive additions; verified by archive photo QA');
 assert.equal(new Set([...scored,...candidates].map(x=>x.id)).size,169);
 assert.equal(new Set([...scored,...oldTrials].map(x=>x.id)).size,136);
 assert.equal(pack.publication_status,'UNVERIFIED_TRIAL_LOADED_IN_NORMAL_KEY_NOT_SPECIMEN_ADMITTED');
