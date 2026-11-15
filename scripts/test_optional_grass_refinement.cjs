@@ -1287,5 +1287,47 @@ for(const [sel,id] of [
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass9 changed 169-grass identification pool");
 
+
+// Reproductive Depth Pass 10: Diggs (1999) species accounts and precise sex/variety ranges.
+const reproductivePass10={"aegilops-cylindrica":2,"sphenopholis-obtusata":2,"triticum-aestivum":3,"bromus-catharticus":3,"bromus-tectorum":2,"poa-annua":1,"poa-arachnifera":1,"bouteloua-dactyloides":1,"eleusine-indica":2,"polypogon-viridis":1,"paspalum-notatum":1,"hordeum-murinum":1};
+if(pack.evidence.length<1054||new Set(pack.evidence.map(r=>r.id)).size!==168)throw Error("Pass10 baseline evidence/unified coverage drift");
+for(const [id,n] of Object.entries(reproductivePass10)){
+ const newTraits=pack.evidence.filter(r=>r.id===id&&r.pdf_document==="Flora of North Central Texas-monocots-Acor-Zanni.pdf"&&r.note?.includes("")&&r.pdf_printed_page>=1200);
+ const expected=pack.evidence.filter(r=>r.id===id&&["florets_per_spikelet","spikelet_position","lemma_texture","true_lemma_awn","glume_marks"].includes(r.character));
+ if(expected.length<n)throw Error("Pass10 missing or duplicate reproductive traits "+id);
+ if(newTraits.length<n)throw Error("Pass10 Flora printed-page provenance missing "+id);
+ for(const r of expected){
+  if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.source.includes("Diggs, Lipscomb & O'Kennon")||!r.source.includes("printed p.")||r.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")throw Error("Pass10 source policy "+id);
+ }
+}
+const pass10Find=(id,char)=>pack.evidence.find(r=>r.id===id&&r.character===char);
+if(JSON.stringify(pass10Find("bouteloua-dactyloides","florets_per_spikelet").states)!==JSON.stringify(["one","two"]))throw Error("Buffalograss sexes incorrectly simplified");
+if(!pass10Find("bromus-tectorum","lemma_texture").states.includes("smooth"))throw Error("Cheatgrass glabratus overlooked");
+if(pass10Find("triticum-aestivum","spikelet_position").states.includes("paired"))throw Error("Spikelets on opposite sides are not sessile/pedicelled pairs");
+if(pack.evidence.some(r=>r.id==="lolium-x-boucheanum"))throw Error("Unresolved Lolium hybrid hold lost");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [selected,id] of [
+ [{florets_per_spikelet:"several"},"aegilops-cylindrica"],
+ [{true_lemma_awn:"none"},"sphenopholis-obtusata"],
+ [{spikelet_position:"two_rows"},"triticum-aestivum"],
+ [{true_lemma_awn:"short"},"bromus-catharticus"],
+ [{lemma_texture:"hairy"},"bromus-tectorum"],
+ [{lemma_texture:"hairy"},"poa-annua"],
+ [{lemma_texture:"hairy"},"poa-arachnifera"],
+ [{florets_per_spikelet:"one"},"bouteloua-dactyloides"],
+ [{florets_per_spikelet:"two"},"bouteloua-dactyloides"],
+ [{spikelet_position:"two_rows"},"eleusine-indica"],
+ [{true_lemma_awn:"none"},"polypogon-viridis"],
+ [{glume_marks:"glabrous"},"paspalum-notatum"],
+ [{true_lemma_awn:"long"},"hordeum-murinum"]
+]){
+ state.refineSelected=selected;
+ const got=run();
+ if(got.length!==169||!got.some(x=>x.id===id&&x.extras>=1))throw Error("Pass10 positive rank or non-excluding regression "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass10 changed 169-grass pool");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
