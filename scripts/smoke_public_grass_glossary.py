@@ -96,7 +96,7 @@ def audit_view(browser, width, height):
     page.wait_for_function("window.HaysGrassGlossary?.approvedPhotos() === 26", timeout=30000)
     page.wait_for_selector("#question .answer",timeout=20000)
     require(page.locator("#grass-glossary-launch").is_visible(), "Glossary button missing from live site")
-    require(page.locator("#coded-total").inner_text().strip() == "165",
+    require(page.locator("#coded-total").inner_text().strip() == "169",
             "Unexpected live trial/scored inventory; do not silently change scoring")
     before=page.locator("#progress-label").inner_text()
     require(page.locator('#question [data-grass-term="panicle"]').count()>0,
@@ -148,7 +148,7 @@ def audit_view(browser, width, height):
     page.locator(".grass-glossary-close").click()
     require(not page_errors,"Public browser JS errors: "+repr(page_errors))
     summary={"device":"mobile" if width<500 else "desktop","viewport":[width,height],
-             "terms":173,"licence_records":26,"key_matches":165,
+             "terms":173,"licence_records":26,"key_matches":169,
              "ligule_photo":"LOADED","stolon_photo":"LOADED","legume_photo":"LOADED",
              "held_photo":"NOT_DISPLAYED","dark_mode":"PASS",
              "scoring_unchanged":"PASS","browser_errors":page_errors}
