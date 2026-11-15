@@ -1257,5 +1257,35 @@ for(const [choice,id] of [
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass8 mutated unified 169 pool");
 
+
+// Source Pass 9: exact FNA, Kew/GrassBase, Go Botany and national-flora species entries.
+const supplementalPass9={"stapfochloa-ciliata":3,"tridens-congestus":4,"cenchrus-setaceus":5,"elymus-macgregorii":5,"panicum-repens":7,"stapfochloa-canterae":4};
+if(pack.evidence.length<1034||new Set(pack.evidence.map(x=>x.id)).size<168)throw Error("Pass9 evidence coverage regressed");
+for(const [id,n] of Object.entries(supplementalPass9)){
+ const a=pack.evidence.filter(x=>x.id===id);
+ if(a.length!==n)throw Error("Pass9 missing or duplicate rows "+id+": "+a.length);
+ if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass9 accidentally admitted provisional taxon "+id);
+ for(const r of a){
+  if(!r.source_url.startsWith("https://")||!r.note?.trim()||r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED")throw Error("Pass9 bad provenance "+id);
+  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(r.character))throw Error("Pass9 non-Diggs reproductive states were added");
+ }
+}
+if(pack.evidence.some(x=>x.id==="lolium-x-boucheanum"))throw Error("Kew vs Austrian Lolium x boucheanum hybrid taxon mismatch needs taxonomic review, not automatic scoring");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [sel,id] of [
+ [{ligule_edge:"hair_fringe"},"stapfochloa-ciliata"],
+ [{underground_stems:"long_rhizome"},"tridens-congestus"],
+ [{ligule_length:"tiny"},"cenchrus-setaceus"],
+ [{sheath_margins:"overlapping"},"elymus-macgregorii"],
+ [{underground_stems:"long_scaly"},"panicum-repens"],
+ [{blade_shape:"folded"},"stapfochloa-canterae"]
+]){
+ state.refineSelected=sel;const r=run();
+ if(r.length!==169||!r.some(x=>x.id===id&&x.extras>=1))throw Error("Pass9 mismatch ranking "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass9 changed 169-grass identification pool");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
