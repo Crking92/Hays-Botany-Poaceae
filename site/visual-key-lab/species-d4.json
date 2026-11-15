@@ -1072,7 +1072,7 @@
     "common": "Purpletop / redtop tridens",
     "genus": "Tridens",
     "range": "PROVISIONAL",
-    "hero_i": 1,
+    "hero_i": 0,
     "photos": [
       {
         "i": 0,
@@ -1082,18 +1082,6 @@
         "license": "CC BY-SA 2.0",
         "source_page": "https://commons.wikimedia.org/wiki/File:Tridens_flavus_(4120267818).jpg",
         "photo_role": "TARGET_SPECIES_SOURCE"
-      },
-      {
-        "i": 1,
-        "src": "https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Tridens/tridens-flavus/images/tridens-flavus-provisional-face.jpg",
-        "label": "Purpletop tridens — attached, openly branched red-purple flowering panicle; Tennessee reference, basal crown and lemma nerves not shown",
-        "creator": "Mason Brock (Masebrock)",
-        "license": "Public domain (author's worldwide release)",
-        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
-        "source_page": "https://commons.wikimedia.org/wiki/File:Tridens_flavus.jpg",
-        "photo_role": "TARGET_SPECIES_SOURCE",
-        "hosted_git_blob_sha": "af7f91eb910e56dc682f73274f2bfadfc230ae6d",
-        "photo_qa_note": "Existing archived image pixels opened and visually inspected 2026-11-15. Open reddish branched panicle with attached multispikelet branches visible; roots and ligule absent. Commons exact image by Mason Brock, public-domain dedication, taken Tennessee 2014. Source-labeled nonlocal identity, not a Hays County voucher."
       }
     ],
     "field_rule": "Species-level Tridens confidence requires panicle architecture PLUS mature spikelet/glume/lemma anatomy; do not identify from pigmentation alone.\n\nField ID Lab: purpletop can appear as a bunch even when its crown contains short knotty rhizomes. Both tuft and rhizome are valid; look for the broad, drooping mature head and real spikelets.",
@@ -1146,6 +1134,33 @@
         "status": "SOURCE_BACKED_ADDITIVE_NONEXCLUSION",
         "certainty": "DIRECT_HILL_COUNTRY_REGIONAL_SOURCE_NO_SAME_PLANT_RHIZOME_PHOTO",
         "review_date": "2026-11-12"
+      },
+      "audit_batch10_core_advanced_20261115": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 66",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=66",
+        "reproductive_status": "Previously existing named Diggs/Flora crosschecks examined; reproductive variants not re-certified from new specimen or independently reread entire Diggs account in this batch",
+        "review_date": "2026-11-15",
+        "core_traits_reviewed": [
+          "head",
+          "habit",
+          "ligule",
+          "awns"
+        ],
+        "core_scoring_changed": false,
+        "advanced_characters_added": [
+          "blade_shape",
+          "blade_width",
+          "blade_hairs",
+          "sheath_margins",
+          "sheath_surface",
+          "ligule_length",
+          "ligule_edge",
+          "culm_posture",
+          "underground_stems"
+        ],
+        "status": "REGIONAL_VEGETATIVE_EXACT_PURPLETOP_TINY_LIGULE_AND_SHORT_RHIZOME",
+        "reference": "Current airy mature drooping head and none-obvious awns agree with Diggs species description and existing source crosschecks (mucronate lemma tip, not long awn). Perennial tuft with SHORT knotty rhizomes; ligule <0.5 mm ciliate membrane with hairlike fringe in H&L p.66. Hairs-only and membrane core UI alternatives retained, no speculative stolons.",
+        "specimen_certainty": "Published account only. No new local verified same-plant macro, measured voucher, or image-rights signoff. Advanced observations POSITIVE_ONLY, absent records UNKNOWN."
       }
     },
     "diagnostic_checks": [
