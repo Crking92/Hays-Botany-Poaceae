@@ -13,6 +13,9 @@ on:
       - 'scripts/test_grass_flower_spikelet_field_guide.cjs'
       - 'scripts/test_grass_guided_comparison.cjs'
       - 'scripts/test_grass_compare_photo_quality.cjs'
+      - 'scripts/test_grass_archive_photo_reuse.cjs'
+      - 'site/visual-key-lab/species-c1.json'
+      - 'site/visual-key-lab/species-d4.json'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -28,6 +31,9 @@ on:
       - 'scripts/test_grass_flower_spikelet_field_guide.cjs'
       - 'scripts/test_grass_guided_comparison.cjs'
       - 'scripts/test_grass_compare_photo_quality.cjs'
+      - 'scripts/test_grass_archive_photo_reuse.cjs'
+      - 'site/visual-key-lab/species-c1.json'
+      - 'site/visual-key-lab/species-d4.json'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -55,3 +61,5 @@ jobs:
         run: node scripts/test_grass_guided_comparison.cjs
       - name: Review scored and trial comparison photos without duplicating or promoting held images
         run: node scripts/test_grass_compare_photo_quality.cjs
+      - name: Verify archived public-domain whole-flowering photo reuse and source credits
+        run: node scripts/test_grass_archive_photo_reuse.cjs
