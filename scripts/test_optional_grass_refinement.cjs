@@ -1162,7 +1162,8 @@ const pdfPass6={"eragrostis-superba":6,"paspalum-langei":1,"echinochloa-walteri"
 if(pack.evidence.length<918||new Set(pack.evidence.map(r=>r.id)).size<143)throw Error("PDF pass 6 coverage regressed");
 for(const [id,n] of Object.entries(pdfPass6)){
  const a=pack.evidence.filter(x=>x.id===id);
- if(a.length!==n)throw Error("Pass6 missing records "+id);
+ if(a.length<n)throw Error("Pass6 historical records lost "+id);
+ if(id==="paspalum-langei"&&!a.some(r=>r.character==="blade_width"&&r.pdf_printed_page===1306))throw Error("Pass6 original Paspalum blade width/source disappeared");
  if(![...groupedTrials,...placeholderProfiles].some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass6 changed admission "+id);
  for(const r of a){
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("Pass6 quality "+id);
@@ -1328,6 +1329,58 @@ for(const [selected,id] of [
 }
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass10 changed 169-grass pool");
+
+
+// Reproductive Depth Pass 11: exact Diggs 1999 species account (flora-only, 169-grass pool).
+const reproductivePass11={"erioneuron-pilosum":5,"limnodea-arkansana":1,"nassella-leucotricha":3,"secale-cereale":3,"tridens-texanus":3,"tripsacum-dactyloides":2,"urochloa-texana":1,"paspalum-floridanum":1,"bromus-pubescens":2,"chloris-cucullata":1,"chloris-verticillata":1,"chloris-virgata":1,"hilaria-belangeri":1,"hordeum-pusillum":1,"muhlenbergia-lindheimeri":2,"muhlenbergia-reverchonii":2,"muhlenbergia-schreberi":3,"digitaria-cognata":1,"zizaniopsis-miliacea":2,"bothriochloa-ischaemum":1,"eragrostis-hirsuta":1,"paspalum-langei":2,"paspalum-pubiflorum":1,"paspalum-setaceum":1};
+if(pack.evidence.length<1096||new Set(pack.evidence.map(x=>x.id)).size!==168)throw Error("Pass11 total or covered grass regression");
+for(const [id,n] of Object.entries(reproductivePass11)){
+ const floralChars=new Set(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"]);
+ const a=pack.evidence.filter(x=>x.id===id&&floralChars.has(x.character)&&x.pdf_document==="Flora of North Central Texas-monocots-Acor-Zanni.pdf"&&x.source?.includes("printed p."));
+ if(a.length<n)throw Error("Pass11 insufficient new reproductive records: "+id+" "+a.length+"<"+n);
+ for(const e of a){
+  if(!e.source?.includes("Diggs, Lipscomb & O'Kennon (1999)")||!e.source.includes("printed p.")||!Number.isInteger(e.pdf_printed_page)||e.pdf_document!=="Flora of North Central Texas-monocots-Acor-Zanni.pdf")throw Error("Pass11 missing exact printed Flora page "+id+"/"+e.character);
+  if(e.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas"||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim())throw Error("Pass11 provenance/conditional note "+id);
+ }
+}
+if(JSON.stringify(pack.evidence.find(x=>x.id==="hilaria-belangeri"&&x.character==="florets_per_spikelet").states)!==JSON.stringify(["one","two"]))throw Error("Pass11 curly-mesquite spikelet sexes flattened");
+if(pack.evidence.find(x=>x.id==="zizaniopsis-miliacea"&&x.character==="glume_marks"))throw Error("No-glume grass cannot be mis-scored as tiny lower glume");
+if(pack.evidence.some(x=>x.id==="lolium-x-boucheanum"))throw Error("Ryegrass hybrid hold unexpectedly removed");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [choice,id] of [
+ [{florets_per_spikelet:"several"},"erioneuron-pilosum"],
+ [{florets_per_spikelet:"one"},"limnodea-arkansana"],
+ [{true_lemma_awn:"long"},"nassella-leucotricha"],
+ [{glume_marks:"one_vein"},"secale-cereale"],
+ [{floral_hair_position:"lemma"},"tridens-texanus"],
+ [{true_lemma_awn:"none"},"tripsacum-dactyloides"],
+ [{floral_hair_position:"lemma"},"urochloa-texana"],
+ [{glume_marks:"glabrous"},"paspalum-floridanum"],
+ [{lemma_texture:"hairy"},"bromus-pubescens"],
+ [{florets_per_spikelet:"two"},"chloris-cucullata"],
+ [{florets_per_spikelet:"two"},"chloris-verticillata"],
+ [{florets_per_spikelet:"two"},"chloris-virgata"],
+ [{florets_per_spikelet:"one"},"hilaria-belangeri"],
+ [{florets_per_spikelet:"two"},"hilaria-belangeri"],
+ [{true_lemma_awn:"short"},"hordeum-pusillum"],
+ [{true_lemma_awn:"none"},"muhlenbergia-lindheimeri"],
+ [{true_lemma_awn:"short"},"muhlenbergia-reverchonii"],
+ [{lemma_texture:"hairy"},"muhlenbergia-schreberi"],
+ [{glume_marks:"lower_reduced"},"digitaria-cognata"],
+ [{florets_per_spikelet:"one"},"zizaniopsis-miliacea"],
+ [{true_lemma_awn:"short"},"bothriochloa-ischaemum"],
+ [{florets_per_spikelet:"several"},"eragrostis-hirsuta"],
+ [{floral_hair_position:"lemma"},"paspalum-langei"],
+ [{glume_marks:"glabrous"},"paspalum-pubiflorum"],
+ [{glume_marks:"glabrous"},"paspalum-setaceum"]
+]){
+ state.refineSelected=choice;
+ const r=run();
+ if(r.length!==169||!r.some(s=>s.id===id&&s.extras>=1))throw Error("Pass11 positive matching or missing species "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass11 changed one 169-grass pool");
 
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
