@@ -6025,5 +6025,43 @@
         ]
       }
     }
+  },
+  "local_review_metadata": {
+    "basis": "Visual comparison of exact original Commons source images with previously stored draft percent-coordinates; these approvals are scoped to Poaceae, not edits to the read-only original glossary.",
+    "reviewed_on": "2026-11-15",
+    "reviewed_terms": {
+      "culm": {
+        "image_review": "SOURCE_IMAGE_VISUALLY_INSPECTED",
+        "source_numbers": "5 is the exposed culm, 4 the node, 3 and 6 leaf sheaths",
+        "arrow_review": "DRAFT_POINT_NOT_CONFIRMED; arrows withheld",
+        "source_image": "https://commons.wikimedia.org/wiki/File:Phleum_pratense_culm.jpg"
+      },
+      "node": {
+        "image_review": "SOURCE_IMAGE_VISUALLY_INSPECTED",
+        "source_numbers": "4 is the true stem joint",
+        "arrow_review": "DRAFT_POINT_RIGHT_OF_JOINT; re-anchor to original number 4 before publication",
+        "source_image": "https://commons.wikimedia.org/wiki/File:Phleum_pratense_culm.jpg"
+      },
+      "leaf-sheath": {
+        "image_review": "SOURCE_IMAGE_VISUALLY_INSPECTED",
+        "source_numbers": "3 indicates upper sheath; 6 indicates lower sheath; 1 blade; 5 culm",
+        "arrow_review": "DRAFT_POINT_NEEDS_SOURCE_NUMBER_6_REANCHOR; arrows withheld",
+        "source_image": "https://commons.wikimedia.org/wiki/File:Phleum_pratense_culm.jpg"
+      },
+      "collar": {
+        "image_review": "SOURCE_IMAGE_VISUALLY_INSPECTED",
+        "source_numbers": "No printed numbered caption; proposed collar pointer lands on blade area rather than demonstrably at junction",
+        "arrow_review": "REJECT_DRAFT_COLLAR_POINT; no overlays; Poaceae close-up replacement preferred",
+        "source_image": "https://commons.wikimedia.org/wiki/File:Panicum_capillare_(3812305589).jpg"
+      }
+    },
+    "pending_source_image_checks": {
+      "spikelet": "Source request blocked by Wikimedia HTTP 429; no point reviewed or approved",
+      "glume": "Source request blocked by Wikimedia HTTP 429; no point reviewed or approved",
+      "lemma": "Source request blocked by Wikimedia HTTP 429; no point reviewed or approved",
+      "palea": "Source request blocked by Wikimedia HTTP 429; no point reviewed or approved",
+      "awn": "Source request blocked by Wikimedia HTTP 429; no point reviewed or approved",
+      "parallel-veined": "Source request blocked by Wikimedia HTTP 429; no point reviewed or approved"
+    }
   }
 }
