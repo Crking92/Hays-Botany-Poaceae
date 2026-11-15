@@ -25,6 +25,29 @@ function resolvePicture(v,key){
    source_page:"https://commons.wikimedia.org/wiki/File:Dichanthium_sericeum_ligule5_(14344423535).jpg",
    note:"Existing Grass ID Lab source photograph; the short pale membrane is exposed."};
  }
+ if(key==="collar"){
+  return {src:LAB+"content/taxa/Poaceae/Bothriochloa/bothriochloa-ischaemum/images/jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg",
+   label:"King Ranch bluestem — leaf blade–sheath junction with distinctive hairs",
+   creator:"Jim Conrad",license:"Public domain — photographer's express release",
+   source_page:"https://www.backyardnature.net/n/h/kingblue.htm",
+   note:"Use this image to orient the collar region. The blade–sheath boundary and hairs are visible; the exact ligule membrane is NOT isolated. Original unverified draft arrows are deliberately not shown."};
+ }
+ if(["culm","node","leaf-sheath"].includes(key)&&p.source_page==="https://commons.wikimedia.org/wiki/File:Phleum_pratense_culm.jpg"){
+  // The source photograph is already numbered and published under CC BY-SA 4.0.
+  // Original numbered captions were checked against the image; the older draft
+  // percentage arrows are not published until their endpoints are corrected.
+  const printed={"culm":"5 = exposed culm; 4 = node; 3 and 6 = leaf sheaths.",
+   "node":"4 = actual stem node; 5 = exposed culm. Do not point to the sheath below.",
+   "leaf-sheath":"3 = upper leaf sheath; 6 = lower leaf sheath; 1 = blade; 5 = exposed culm."};
+  const photo=allowedCredit(p.credit)?{
+   src:"https://commons.wikimedia.org/wiki/Special:FilePath/Phleum_pratense_culm.jpg?width=900",
+   label:p.label||"Numbered Timothy grass culm, node and sheaths",
+   creator:"Kostka Martin",license:"CC BY-SA 4.0",
+   license_url:"https://creativecommons.org/licenses/by-sa/4.0/",
+   source_page:p.source_page,
+   note:"Source's own printed legend: "+printed[key]+" Draft added arrows remain withheld."}:null;
+  if(photo)return photo;
+ }
  const approval=verifiedPhotos.get(key);
  if(approval&&p.source_page===approval.source_page&&allowedCredit(approval.license)){
   try{
