@@ -1118,5 +1118,42 @@ for(const id of ["dactyloctenium-aegyptium","setaria-leucopila","steinchisma-hia
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass4 options should not remove any of 169 grasses");
 
+
+// PDF pass 5: authoritatively sourced five species, preserving the 169-result pool.
+const pdfPass5={"janochloa-antidotalis":11,"alopecurus-carolinianus":2,"briza-minor":2,"panicum-dichotomiflorum":3,"paspalum-notatum":2};
+if(pack.evidence.length<903)throw Error("PDF pass 5 record count regressed");
+if(new Set(pack.evidence.map(x=>x.id)).size<138)throw Error("PDF pass 5 species coverage regressed");
+for(const [id,n] of Object.entries(pdfPass5)){
+ const rows=pack.evidence.filter(x=>x.id===id);
+ if(rows.length!==n)throw Error("PDF pass 5 evidence record mismatch "+id+": "+rows.length);
+ if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("PDF pass 5 mistakenly admitted provisional species "+id);
+ for(const r of rows){
+  if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("PDF pass 5 citation quality "+id);
+  if(id==="janochloa-antidotalis"){
+   if(!r.source.includes("printed p. 56")||!r.source_url.endsWith("#page=56")||!r.taxon_crosswalk_url?.includes("77319974-1"))throw Error("Pass 5 Panicum/Janochloa crosswalk is missing");
+  }else if(!r.source.includes("Diggs, Lipscomb & O'Kennon")||r.pdf_document!=="Flora of North Central Texas-monocots-Acor-Zanni.pdf"||r.pdf_printed_page<1200||r.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")throw Error("Pass 5 Flora reproductive/vegetative page missing "+id);
+ }
+}
+if(pack.evidence.some(x=>x.id==="janochloa-antidotalis"&&x.character==="stem_nodes"&&x.states.includes("backward_hairs")))throw Error("Antrorse is not backward-facing");
+if(pack.evidence.some(x=>x.id==="panicum-dichotomiflorum"&&x.character==="culm_posture"&&x.states.includes("prostrate")))throw Error("Trails along soil must not activate research-pending prostrate");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [choice,expected] of [
+ [{ligule_length:"medium"},["alopecurus-carolinianus","briza-minor"]],
+ [{underground_stems:"thick_rhizome"},["janochloa-antidotalis"]],
+ [{underground_stems:"rhizome_present"},["paspalum-notatum"]],
+ [{florets_per_spikelet:"one"},["alopecurus-carolinianus"]],
+ [{florets_per_spikelet:"several"},["briza-minor"]],
+ [{ligule_edge:"ciliate"},["janochloa-antidotalis","panicum-dichotomiflorum"]],
+ [{culm_posture:"erect"},["janochloa-antidotalis","panicum-dichotomiflorum","paspalum-notatum"]]
+]){
+ state.refineSelected=choice;
+ const r=run();
+ if(r.length!==169)throw Error("Pass 5 optional clue excluded one of 169 species");
+ for(const id of expected)if(!r.some(x=>x.id===id&&x.extras>=1))throw Error("Pass 5 clue did not rank "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass 5 default result pool changed");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
