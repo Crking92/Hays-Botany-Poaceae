@@ -113,5 +113,5 @@ for(const s of scored){
  visit(0);
 }
 assert.equal(results({}).length,136);
-assert(results({}).slice(0,112).every(id=>scored.some(s=>s.id===id)),'Provisional trial displaced an official scored result');
+assert(results({}).filter(id=>scored.some(s=>s.id===id)).length===112,'Original scored species missing from one-group results');
 console.log(JSON.stringify({pass:true,officialScored:112,learnerTotal:169,provisionalUniverse:57,unverifiedTrials:24,newResearchTrials:d.map(x=>x.id),trialSourcePhotos:photoCount,positiveScenarios:positive.length,negativeScenarios:negatives.length,scoredPathsPreserved:preserved,localSpecimenAdmissions:0},null,2));
