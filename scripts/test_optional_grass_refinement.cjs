@@ -498,5 +498,93 @@ for(const id of ["muhlenbergia-utilis","festuca-octoflora"])
  if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Inrolled blades missing "+id);
 if(got.some(x=>x.id==="muhlenbergia-x-involuta"&&x.extras>0))throw Error("Canyon hybrid has folded, not inrolled, blade");
 state.refineSelected={};
+// Batch 12: original 112 scored grasses; source-linked advanced anatomy
+// remains non-excluding. Preserve conflicting wintergrass rhizome references.
+const batch12={
+  "muhlenbergia-paniculata": [
+    "blade_shape",
+    "blade_width",
+    "blade_edge",
+    "blade_venation",
+    "leaf_base",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "nassella-leucotricha": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "stem_nodes"
+  ],
+  "avena-fatua": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "digitaria-cognata": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "basal_crown",
+    "underground_stems"
+  ],
+  "disakisperma-dubium": [
+    "blade_shape",
+    "blade_width",
+    "leaf_base",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ]
+};
+if(pack.evidence.length<543)throw Error("Batch 12 evidence total dropped");
+for(const [id,characters] of Object.entries(batch12)){
+ const row=species.find(s=>s.id===id), audit=row?.character_evidence?.audit_batch12_core_advanced_20261115;
+ if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch 12 core literature audit absent "+id);
+ for(const character of characters){
+  const e=pack.evidence.find(q=>q.id===id&&q.character===character);
+  if(!e||!e.source?.includes("Hagenbuch & Lemke (2015)")||!e.source_url?.startsWith("https://")||!e.states?.length)
+   throw Error("Batch 12 exact source record absent "+id+"/"+character);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"open"};
+got=verifyUnchanged("Batch12 sheath openings rank only");
+for(const id of Object.keys(batch12))
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Open sheath missing "+id);
+state.refineSelected={ligule_length:"tiny"};
+got=verifyUnchanged("Batch12 short membranes conditional on presence");
+for(const id of ["nassella-leucotricha","digitaria-cognata","disakisperma-dubium"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Tiny ligule not ranked "+id);
+state.refineSelected={blade_edge:"whitish"};
+got=verifyUnchanged("Tumblegrass pale edges");
+if(!got.some(x=>x.id==="muhlenbergia-paniculata"&&x.extras===1))throw Error("Tumblegrass white margin lost");
+state.refineSelected={basal_crown:"hard_knotty"};
+got=verifyUnchanged("Fall witchgrass hard subrhizomatous base");
+if(!got.some(x=>x.id==="digitaria-cognata"&&x.extras===1))throw Error("Fall witchgrass basal hard crown absent");
+state.refineSelected={surface_runners:"stolon"};
+got=verifyUnchanged("Do not infer stolons from condensed short rhizomes");
+for(const id of Object.keys(batch12))
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("False surface stolon "+id);
+state.refineSelected={};
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
