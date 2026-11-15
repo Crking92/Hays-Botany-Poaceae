@@ -3,15 +3,19 @@ on:
   pull_request:
     paths:
       - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/photo-review.html'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
       - 'scripts/verify_live_grass_photo_extras.py'
+      - 'scripts/test_grass_photo_review.cjs'
       - '.github/workflows/grass-photo-extras-public-qa.yml'
   push:
     branches: [main]
     paths:
       - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/photo-review.html'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
       - 'scripts/verify_live_grass_photo_extras.py'
+      - 'scripts/test_grass_photo_review.cjs'
       - '.github/workflows/grass-photo-extras-public-qa.yml'
   workflow_dispatch:
 permissions: {contents: read}
@@ -22,6 +26,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check validator syntax
         run: python3 -m py_compile scripts/verify_live_grass_photo_extras.py
+      - name: Check review gallery source lists, link, un-cropped images and JavaScript syntax
+        run: node scripts/test_grass_photo_review.cjs
       - name: Verify original archive photo bytes, individual credits, and untouched scored shards
         run: python3 scripts/verify_live_grass_photo_extras.py --local-only
   public-visible-photo-galleries:

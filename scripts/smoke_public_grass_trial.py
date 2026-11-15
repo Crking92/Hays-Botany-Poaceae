@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read-only deployed 112+53 normal-key trial audit; no specimen or rights certification."""
+"""Read-only deployed 112+53+4 unified-key trial audit; no specimen or rights certification."""
 import json
 import time
 import urllib.error
@@ -80,11 +80,11 @@ def browser_check(groups):
             page = browser.new_page(viewport={"width": 390, "height": 844})
             page.goto(BASE, wait_until="domcontentloaded", timeout=60000)
             page.wait_for_function(
-                "() => document.querySelectorAll('#results .result').length === 165",
+                "() => document.querySelectorAll('#results .result').length === 169",
                 timeout=45000)
             labels = page.locator("#results .result .tag").all_text_contents()
-            assert sum("Research trial" in x and "unverified" in x for x in labels) == 53, (
-                "Normal four-character key missing or relabeling its 53 research trials")
+            assert sum("Research trial" in x and "unverified" in x for x in labels) == 57, (
+                "Unified 169 key missing its 53 pictured trials or four photo-held research labels")
             matches = []
             for x in groups:
                 scientific=x["scientific"]
@@ -123,9 +123,9 @@ def check():
         "files_verified": FILES,
         "original_scored_count_unchanged": 112,
         "trial_matches_available": len(groups),
-        "total_normal_key_results": 165,
+        "total_normal_key_results": 169,
         "total_learner_species": 169,
-        "learner_only_unloaded_holds": 4,
+        "photo_held_research_profiles_in_key": 4,
         "verified_specimen_admissions": 0,
         "trial_source_photo_refs": sum(len(x["photos"]) for x in groups),
         "research_trial_cards_and_details_checked": len(visited),
@@ -148,4 +148,4 @@ if __name__ == "__main__":
             if attempt != ATTEMPTS:
                 time.sleep(DELAY_SECONDS)
     else:
-        raise SystemExit(f"Public normal key not in verified 112+53 parity: {error}")
+        raise SystemExit(f"Public normal key not in verified 112+53+4 parity: {error}")
