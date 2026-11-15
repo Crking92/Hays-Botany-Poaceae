@@ -97,7 +97,24 @@ for(const [key,v] of Object.entries(mirrored.terms)){
  throw Error('Glossary term lacks cleared media or an accurate teaching diagram: '+key);
 }
 assert.equal(eligibleLegacy,147);
-assert.equal(photographed,18);
+
+for(const [key,expectedPath] of Object.entries({
+ panicle:'dichanthelium-commutatum-2-archive.jpg',
+ 'rachis-branch':'dichanthelium-commutatum-2-archive.jpg',
+ pedicel:'douglas-goldman-single-spikelet-3.jpg',
+ trichome:'jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg'
+})){
+ assert.ok(ext.terms[key].photo.src.includes(expectedPath),key+': obsolete or incorrect anatomy photo was restored');
+ assert.equal(ext.terms[key].visual_review.status,'DIRECT_STRUCTURE_VISIBLE',key+': exact-image QA record missing');
+}
+for(const key of ['ciliate','sheath-margin','geniculate','decumbent']){
+ assert.equal(ext.terms[key].photo,null,key+': photo does not prove this morphology; use a diagram');
+ assert.equal(ext.terms[key].visual_review.status,'DIAGRAM_ONLY_PHOTO_WITHHELD');
+}
+assert.ok(helper.includes('key==="ciliate"'), 'Ciliate must have a dedicated edge-hair diagram');
+assert.equal(ext.terms.stolon.visual_review.status,'CONTEXT_ONLY_NOT_SURFACE_PROVEN');
+assert.equal(ext.terms.pedicel.photo.creator,'Douglas Goldman');
+assert.equal(photographed,14);
 assert.equal(uniquePhotos.size,8);
 assert.match(helper,/shared-glossary-snapshot\.json/,'local fallback must load');
 assert.match(helper,/read\(SHARED\)\.then/,'canonical glossary should refresh when accessible');
