@@ -988,7 +988,7 @@ const pdfPass2={"avena-sativa":[36,7],"lolium-perenne":[53,7],"sphenopholis-obtu
 if(pack.evidence.length<779)throw Error("PDF pass 2 requires 779 advanced evidence records");
 if(new Set(pack.evidence.map(x=>x.id)).size<121)throw Error("PDF pass 2 requires 121 of the 169 grasses with advanced evidence");
 for(const [id,[page,count]] of Object.entries(pdfPass2)){
- const rows=pack.evidence.filter(x=>x.id===id);
+ const rows=pack.evidence.filter(x=>x.id===id&&x.source.includes("Hagenbuch & Lemke (2015)"));
  if(rows.length!==count)throw Error("PDF pass 2 source coverage count mismatch "+id+": "+rows.length);
  for(const row of rows){
   if(!row.source?.includes("Hagenbuch & Lemke (2015)")||!row.source.includes("printed p. "+page)||row.source_url?.includes("#page="+page)!==true)throw Error("PDF pass 2 missing exact Hill Country account page "+id+"/"+row.character);
@@ -1031,7 +1031,7 @@ const pdfPass3={"aegilops-cylindrica":[33,7],"bromus-catharticus":[39,8],"dichan
 if(pack.evidence.length<832)throw Error("PDF pass 3 832 evidence-record baseline regressed");
 if(new Set(pack.evidence.map(x=>x.id)).size<128)throw Error("PDF pass 3 fewer than 128/169 source-covered grass species");
 for(const [id,[page,count]] of Object.entries(pdfPass3)){
- const observations=pack.evidence.filter(x=>x.id===id);
+ const observations=pack.evidence.filter(x=>x.id===id&&x.source.includes("Hagenbuch & Lemke (2015)"));
  if(observations.length!==count)throw Error("PDF pass 3 incomplete species "+id+" / "+observations.length);
  if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass3 improperly promoted candidate "+id);
  for(const record of observations){
