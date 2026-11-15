@@ -397,18 +397,51 @@ function applyApprovedGeneralPhotos(scored,manifest){
       creator:"sonoresmore",
       license:"CC0 1.0",
       licenseUrl:"https://creativecommons.org/publicdomain/zero/1.0/"
-    }
+    },
+    "erioneuron-pilosum":[
+      {path:"content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/tom-chester-hairy-tridens-in-situ-heads-and-crown.jpg",
+       sha:"82fb3407e1ec323eb822c345df5f8550d1f542c5",
+       source:"https://tchester.org/gc/plants/species/pix/erioneuron_pilosum/erioneuron_pilosum_5_crop_35.jpg",
+       creator:"Tom Chester",license:"Copyright Tom Chester; permission to reproduce with source credit (not CC)",
+       licenseUrl:"https://tchester.org/gc/plants/species/erioneuron_pilosum.html"},
+      {path:"content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/tom-chester-hairy-tridens-narrow-white-edged-basal-leaves.jpg",
+       sha:"e7b87bbda4182f654a7316e77d30df3a5a3dcdef",
+       source:"https://tchester.org/gc/plants/species/pix/erioneuron_pilosum/erioneuron_pilosum_4_crop_50.jpg",
+       creator:"Tom Chester",license:"Copyright Tom Chester; permission to reproduce with source credit (not CC)",
+       licenseUrl:"https://tchester.org/gc/plants/species/erioneuron_pilosum.html"},
+      {path:"content/taxa/Poaceae/Erioneuron/erioneuron-pilosum/images/tom-chester-hairy-tridens-woolly-spikelet-head-close.jpg",
+       sha:"856648c6b058fd75a75ca9b6573bf85d0a96e8f6",
+       source:"https://tchester.org/gc/plants/species/pix/erioneuron_pilosum/erioneuron_pilosum_3_crop_2.jpg",
+       creator:"Tom Chester",license:"Copyright Tom Chester; permission to reproduce with source credit (not CC)",
+       licenseUrl:"https://tchester.org/gc/plants/species/erioneuron_pilosum.html"}
+    ],
+    "tridentopsis-mutica":[
+      {path:"content/taxa/Poaceae/Tridentopsis/tridentopsis-mutica/images/joey-inat-667323408.jpg",
+       sha:"5e53f5816e02aa7b118e40edf9ad63526997523f",
+       source:"https://www.inaturalist.org/photos/667323408",
+       creator:"Joey Santore",license:"CC BY-NC 4.0",
+       licenseUrl:"https://creativecommons.org/licenses/by-nc/4.0/"},
+      {path:"content/taxa/Poaceae/Tridentopsis/tridentopsis-mutica/images/joey-inat-667323452.jpg",
+       sha:"aa0ea821fe8bbe059662bb6fb968cff0e4f66af4",
+       source:"https://www.inaturalist.org/photos/667323452",
+       creator:"Joey Santore",license:"CC BY-NC 4.0",
+       licenseUrl:"https://creativecommons.org/licenses/by-nc/4.0/"}
+    ]
   };
   let installed=0;
   for(const entry of manifest.photos){
     if(!Object.prototype.hasOwnProperty.call(approved,entry?.species_id))continue;
-    const rule=approved[entry.species_id],s=scored.find(x=>x.id===entry.species_id&&!x.trial),p=entry.photo;
-    if(!s||!Array.isArray(s.photos)||!p||!Number.isInteger(p.i)||p.i<0||
+    const s=scored.find(x=>x.id===entry.species_id&&!x.trial),p=entry.photo;
+    const candidateRules=Array.isArray(approved[entry.species_id])?approved[entry.species_id]:[approved[entry.species_id]];
+    const rule=candidateRules.find(x=>p&&x.sha===p.hosted_git_blob_sha);
+    if(!s||!Array.isArray(s.photos)||!p||!rule||!Number.isInteger(p.i)||p.i<0||
        s.photos.some(x=>x.src===p.src||x.i===p.i)||
-       entry.hero_i!==p.i||p.hosted_git_blob_sha!==rule.sha||
+       (entry.hero_i!==null&&entry.hero_i!==p.i)||
        p.src!==root+rule.path||p.source_page!==rule.source||
        p.creator!==rule.creator||p.license!==rule.license||p.license_url!==rule.licenseUrl)continue;
-    s.photos.push({...p});s.hero_i=p.i;installed++;
+    s.photos.push({...p});
+    if(entry.hero_i===p.i)s.hero_i=p.i;
+    installed++;
   }
   return installed;
 }
@@ -1716,6 +1749,27 @@ const comparePhotoHolds={
  "anatherum-tenuispatheum":[1,2], /* duplicate image; other species filename */
  "triplasiella-eragrostoides":[1] /* conspicuous other grass in same frame */
 };
+/* The non-CC author grant and noncommercial photo license are narrowly
+   approved for THESE exact hosted image files and source IDs only.
+   Don't expand these exceptions to arbitrary images with the same label. */
+function approvedRestrictedComparisonPhoto(species,p){
+  const source=p?.source_page||"";
+  if(species?.id==="erioneuron-pilosum"&&p?.creator==="Tom Chester"&&
+     p?.license==="Copyright Tom Chester; permission to reproduce with source credit (not CC)"&&
+     p?.license_url==="https://tchester.org/gc/plants/species/erioneuron_pilosum.html"&&
+     source.startsWith("https://tchester.org/gc/plants/species/pix/erioneuron_pilosum/")){
+     return ["82fb3407e1ec323eb822c345df5f8550d1f542c5",
+             "e7b87bbda4182f654a7316e77d30df3a5a3dcdef",
+             "856648c6b058fd75a75ca9b6573bf85d0a96e8f6"].includes(p.hosted_git_blob_sha);
+  }
+  if(species?.id==="tridentopsis-mutica"&&p?.creator==="Joey Santore"&&
+     p?.license==="CC BY-NC 4.0"&&
+     p?.license_url==="https://creativecommons.org/licenses/by-nc/4.0/"){
+     return (p.hosted_git_blob_sha==="5e53f5816e02aa7b118e40edf9ad63526997523f"&&source==="https://www.inaturalist.org/photos/667323408")||
+            (p.hosted_git_blob_sha==="aa0ea821fe8bbe059662bb6fb968cff0e4f66af4"&&source==="https://www.inaturalist.org/photos/667323452");
+  }
+  return false;
+}
 function comparisonPhotos(species){
  const blocked=new Set(comparePhotoHolds[species.id]||[]);
  const photoRoles=new Map((species.photo_character_audit?.photo_roles||[]).map(r=>[r.i,r]));
@@ -1725,7 +1779,7 @@ function comparisonPhotos(species){
    typeof p.source_page==="string"&&p.source_page.startsWith("https://")&&
    typeof p.creator==="string"&&p.creator.trim()&&
    typeof p.license==="string"&&
-   /^(CC0(?:\s|$)|CC BY(?:-SA)?(?:\s+\d|$)|Public domain|US public domain)/i.test(p.license)&&
+   (/^(CC0(?:\s|$)|CC BY(?:-SA)?(?:\s+\d|$)|Public domain|US public domain)/i.test(p.license)||approvedRestrictedComparisonPhoto(species,p))&&
    !/duplicate of|different grass|source filename says .*virginicus|rights hold|rights review required|copyright reserved/i.test(p.label||"")&&
    !/hold|reject|wrong.id/i.test(photoRoles.get(p.i)?.verdict||"")&&
    (!p.source_species_id||p.source_species_id===species.id)
@@ -1775,6 +1829,12 @@ function compareCandidates(){
         const a=node("a","mini-credit","Photo source and credit");
         a.href=p.source_page;a.target="_blank";a.rel="noopener noreferrer";
         caption.append(a);
+      }
+      if(p?.license_url?.startsWith("https://")){
+        const terms=node("a","mini-credit",
+          p.license.startsWith("Copyright Tom Chester")?"Author's reuse permission":"Photo license terms");
+        terms.href=p.license_url;terms.target="_blank";terms.rel="noopener noreferrer";
+        caption.append(terms);
       }
       figure.append(image(p,s.common+" — "+(p.label||"photograph")),caption);
       photos.append(figure);
