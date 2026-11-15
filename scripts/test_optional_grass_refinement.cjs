@@ -1069,5 +1069,54 @@ if(!pass3Rows.some(x=>x.id==="aegilops-cylindrica"&&x.extras===1))throw Error("D
 state.refineSelected={};
 if(run().length!==169)throw Error("PDF pass3 did not restore the full 169-grass pool");
 
+// PDF pass 4: five published taxon treatments, H&L vegetative and Diggs reproductive.
+const pdfPass4={"dactyloctenium-aegyptium":{"n":12,"hl":"42","diggs":["florets_per_spikelet","spikelet_position","true_lemma_awn"],"printed":"1259"},"cenchrus-ciliaris":{"n":12,"hl":"58","diggs":[]},"setaria-leucopila":{"n":8,"hl":"61","diggs":["lemma_texture"],"printed":"1319"},"steinchisma-hians":{"n":7,"hl":"65","diggs":[]},"stenotaphrum-secundatum":{"n":12,"hl":"65","diggs":["florets_per_spikelet","spikelet_position","true_lemma_awn"],"printed":"1328"}};
+if(pack.evidence.length<883)throw Error("PDF pass 4 source record baseline regressed");
+if(new Set(pack.evidence.map(x=>x.id)).size<133)throw Error("PDF pass 4 requires 133/169 species with an optional source");
+for(const [id,info] of Object.entries(pdfPass4)){
+ const rows=pack.evidence.filter(e=>e.id===id);
+ if(rows.length!==info.n)throw Error("PDF pass 4 missing cited species identifiers "+id+" "+rows.length);
+ if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("PDF pass4 changed research profile into old scored set "+id);
+ for(const rec of rows){
+  const isDiggs=info.diggs.includes(rec.character);
+  if(rec.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!rec.note?.trim())throw Error("PDF pass4 citation quality drift "+id+"/"+rec.character);
+  if(isDiggs){
+   if(!rec.source.includes("Diggs, Lipscomb & O\'Kennon")||!rec.source.includes("printed p. "+info.printed)||rec.pdf_printed_page!==Number(info.printed)||rec.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")throw Error("PDF pass4 reproductive citation gate "+id+"/"+rec.character);
+  }else if(!rec.source.includes("Hagenbuch & Lemke (2015)")||!rec.source_url.startsWith("https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page="+info.hl))throw Error("PDF pass4 authoritative vegetative page missing "+id+"/"+rec.character);
+ }
+}
+if(pack.evidence.some(x=>x.id==="steinchisma-hians"&&x.character==="ligule_edge"))throw Error("H&L vs Diggs disagreement over Steinchisma ligule rim was incorrectly scored");
+if(pack.evidence.some(x=>x.id==="stenotaphrum-secundatum"&&x.character==="culm_posture"&&x.states.includes("prostrate")))throw Error("Research pending prostrate answer should not be activated");
+if(pack.evidence.some(x=>x.id==="setaria-leucopila"&&x.character==="ligule_edge"&&x.states.includes("hair_fringe")))throw Error("Setaria ciliate membrane misidentified as hair-only ligule");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={spikelet_position:"two_rows"};
+let pdf4Got=run();
+if(pdf4Got.length!==169||!pdf4Got.some(x=>x.id==="dactyloctenium-aegyptium"&&x.extras===1))throw Error("Diggs crowfoot two-row spikelet clue does not rank");
+state.refineSelected={spikelet_position:"one_side"};
+pdf4Got=run();
+for(const id of ["dactyloctenium-aegyptium","stenotaphrum-secundatum"])
+ if(!pdf4Got.some(x=>x.id===id&&x.extras===1))throw Error("Diggs one-sided spikelet position missing "+id);
+state.refineSelected={lemma_texture:"wrinkled"};
+pdf4Got=run();
+if(!pdf4Got.some(x=>x.id==="setaria-leucopila"&&x.extras===1))throw Error("Diggs Setaria finely rugose fertile lemma missing");
+state.refineSelected={basal_crown:"hard_knotty"};
+pdf4Got=run();
+if(!pdf4Got.some(x=>x.id==="cenchrus-ciliaris"&&x.extras===1))throw Error("H&L knotty buffelgrass crown unranked");
+state.refineSelected={surface_runners:"stolon"};
+pdf4Got=run();
+for(const id of ["stenotaphrum-secundatum","dactyloctenium-aegyptium"])
+ if(!pdf4Got.some(x=>x.id===id&&x.extras===1))throw Error("Published stolon conditional positive observation missing "+id);
+state.refineSelected={ligule_length:"tiny"};
+pdf4Got=run();
+for(const id of Object.keys(pdfPass4))
+ if(!pdf4Got.some(x=>x.id===id&&x.extras===1))throw Error("Short ligule range evidence missing "+id);
+state.refineSelected={blade_shape:"folded"};
+pdf4Got=run();
+for(const id of ["dactyloctenium-aegyptium","setaria-leucopila","steinchisma-hians","stenotaphrum-secundatum"])
+ if(!pdf4Got.some(x=>x.id===id&&x.extras===1))throw Error("Source documented conduplicate blade unranked "+id);
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass4 options should not remove any of 169 grasses");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
