@@ -11,7 +11,7 @@ const trials=JSON.parse(read('provisional-trial-profiles.json')).profiles;
 assert.equal(scored.length,112,'Official scored inventory must remain unchanged');
 assert.equal(candidates.length,57,'All original candidate records must be kept');
 assert.equal(trials.length,6,'Expected first six provisional trials');
-assert.equal(scored.reduce((n,x)=>n+x.photos.length,0),514,'Original scored photo references modified');
+assert.equal(scored.reduce((n,x)=>n+x.photos.length,0),514+2,'514 original scored references plus two rights-cleared archived photo additions; see test_grass_archive_photo_reuse.cjs');
 assert.equal(new Set([...scored,...candidates].map(x=>x.id)).size,169,'Original Learner inventory changed');
 assert.equal(new Set([...scored,...trials].map(x=>x.id)).size,118,'Trial duplicates an official score record');
 const allowedIds=['setaria-viridis','setaria-leucopila','bromus-tectorum','bromus-catharticus','lolium-multiflorum','echinochloa-colona'];
