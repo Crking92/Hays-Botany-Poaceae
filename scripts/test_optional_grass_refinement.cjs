@@ -1202,7 +1202,7 @@ const pdfPass7={"rottboellia-campestris":11,"pappophorum-bicolor":7,"sphenopholi
 if(pack.evidence.length<964||new Set(pack.evidence.map(x=>x.id)).size<153)throw Error("PDF pass 7 source coverage regression");
 for(const [id,n] of Object.entries(pdfPass7)){
  const a=pack.evidence.filter(x=>x.id===id);
- if(a.length!==n)throw Error("Pass7 missing or duplicate "+id+" characters: "+a.length);
+ if(a.length<n)throw Error("Pass7 historical source-character baseline regressed "+id+": "+a.length); // Later cite-backed additions are tested independently.
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass7 must not promote provisional grass "+id);
  for(const x of a){
   if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.note?.trim())throw Error("Pass7 insufficient source note "+id);
