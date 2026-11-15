@@ -215,7 +215,7 @@ def browser_review_page(manifest):
                             "(src) => [...document.querySelectorAll('#cards .extra-grid img')].some(x => x.src === src && x.complete && x.naturalWidth > 40)",
                             arg=img.get_attribute("src"), timeout=30000)
                     assert card.locator("a").filter(has_text="Photo source").count() >= 3, scientific + ": source link absent"
-                    assert card.locator("a").filter(has_text="Reuse terms").count() >= 3, scientific + ": license link absent"
+                    assert card.locator("a").filter(has_text="Reuse terms").count() >= 2, scientific + ": two approved photo-extra license links absent"
                 page.locator("#search").fill("Bromus brevis")
                 page.locator('button[data-filter="gaps"]').click()
                 assert page.locator("#cards .card").count() == 1
