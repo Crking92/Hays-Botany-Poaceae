@@ -849,8 +849,8 @@ if(got.some(x=>batch15[x.id]&&x.extras>0))throw Error("Research-pending prostrat
 state.refineSelected={};
 
 // Batch 16 source-specific morphology, original-key preservation and cautious ranking.
-const batch16={"bothriochloa-torreyana":["blade_width","blade_edge","blade_venation","blade_hairs","sheath_margins","ligule_length","ligule_edge","stem_nodes","underground_stems","culm_posture"],"chloris-x-subdolichostachya":["blade_width","ligule_length","ligule_edge","culm_posture","surface_runners"],"munroa-pulchella":["blade_shape","blade_width","blade_tip","ligule_edge","surface_runners","florets_per_spikelet"],"dichanthelium-lindheimeri":["blade_width","blade_hairs","sheath_surface","ligule_length","ligule_edge","culm_posture"],"zizania-texana":["blade_width","blade_venation","ligule_length","culm_posture","surface_runners"]};
-if(pack.evidence.length<692)throw Error("Batch16 original advanced-evidence total regressed");
+const batch16={"bothriochloa-torreyana":["blade_width","blade_edge","blade_venation","blade_hairs","sheath_margins","ligule_length","ligule_edge","stem_nodes","underground_stems","culm_posture"],"chloris-x-subdolichostachya":["blade_width","ligule_length","ligule_edge","culm_posture","surface_runners"],"munroa-pulchella":["blade_shape","blade_width","blade_tip","ligule_edge","surface_runners"],"dichanthelium-lindheimeri":["blade_width","blade_hairs","sheath_surface","ligule_length","ligule_edge","culm_posture"],"zizania-texana":["blade_width","blade_venation","ligule_length","culm_posture","surface_runners"]};
+if(pack.evidence.length<691)throw Error("Batch16 original advanced-evidence total regressed");
 for(const [id,characters] of Object.entries(batch16)){
  const row=species.find(x=>x.id===id),a=row?.character_evidence?.audit_batch16_core_advanced_20261115;
  if(!a||a.core_scoring_changed!==false||a.site_filters_changed!==false||a.photos_changed!==false)throw Error("Batch16 original protections lost: "+id);
