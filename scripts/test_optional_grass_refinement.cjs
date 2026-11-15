@@ -1225,5 +1225,37 @@ for(const [sel,id] of [
 state.refineSelected={};
 if(run().length!==169)throw Error("Pass7 changed 169-grass pool");
 
+
+// Supplement Pass 8: exact species treatments outside regional book coverage; all positive-only.
+const supplementalPass8={"bothriochloa-longipaniculata":3,"bothriochloa-bladhii":3,"dichanthium-aristatum":3,"bromus-brevis":5,"rostraria-cristata":4,"megathyrsus-maximus":5,"eragrostis-minor":8,"melinis-repens":8,"nassella-tenuissima":3};
+if(pack.evidence.length<1006||new Set(pack.evidence.map(x=>x.id)).size<162)throw Error("Pass8 coverage regressed");
+for(const [id,n] of Object.entries(supplementalPass8)){
+ const a=pack.evidence.filter(x=>x.id===id);
+ if(a.length!==n)throw Error("Pass8 missing species-level records "+id+" "+a.length);
+ if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass8 changed admission "+id);
+ for(const e of a){
+  if(!e.source_url.startsWith("https://")||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim())throw Error("Pass8 citation quality "+id);
+  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(e.character))throw Error("Pass8 non-Diggs floral character incorrectly scored");
+ }
+}
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+for(const [choice,id] of [
+ [{stem_special:"basal_branching"},"bothriochloa-longipaniculata"],
+ [{underground_stems:"short_rhizome"},"bothriochloa-bladhii"],
+ [{culm_posture:"decumbent"},"dichanthium-aristatum"],
+ [{blade_hairs:"blade_hairy"},"bromus-brevis"],
+ [{blade_width:"medium"},"rostraria-cristata"],
+ [{sheath_surface:"sometimes_hairy"},"megathyrsus-maximus"],
+ [{stem_nodes:"gland_ring"},"eragrostis-minor"],
+ [{surface_runners:"rooted_nodes"},"melinis-repens"],
+ [{blade_width:"thread"},"nassella-tenuissima"]
+]){
+ state.refineSelected=choice;const v=run();
+ if(v.length!==169||!v.some(x=>x.id===id&&x.extras>=1))throw Error("Pass8 unknown-safe ranking failed "+id);
+}
+state.refineSelected={};
+if(run().length!==169)throw Error("Pass8 mutated unified 169 pool");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");

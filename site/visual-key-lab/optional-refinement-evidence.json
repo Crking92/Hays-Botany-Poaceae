@@ -12494,6 +12494,541 @@
       ],
       "taxon_crosswalk": "Tridens muticus var. elongatus accepted under current Tridentopsis elongata (Kew POWO 2026).",
       "taxon_crosswalk_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A77313940-1"
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "source": "USDA NRCS Plant Guide, Bothriochloa longipaniculata (Gould) Allred & Gould, Description, p. 1",
+      "source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+      "note": "USDA documents blades 4–6 mm wide; these two field bins are positive only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "source": "USDA NRCS Plant Guide, Bothriochloa longipaniculata (Gould) Allred & Gould, Description, p. 1",
+      "source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+      "note": "USDA describes glabrous truncate ligule 1.8–2.4 mm; alternate South American morphometrics report longer ranges, so don't exclude.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1.8,
+        2.4
+      ]
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "character": "stem_special",
+      "states": [
+        "basal_branching"
+      ],
+      "source": "USDA NRCS Plant Guide, Bothriochloa longipaniculata (Gould) Allred & Gould, Description, p. 1",
+      "source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+      "note": "USDA specifically records stems branched near the base; no inference about node hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bothriochloa-bladhii",
+      "character": "underground_stems",
+      "states": [
+        "short_rhizome"
+      ],
+      "source": "Kew GrassBase, exact Bothriochloa bladhii species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A392701-1/general-information",
+      "note": "Species-level GrassBase describes short rhizomes; does not say hard or scaly.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bothriochloa-bladhii",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Kew GrassBase, exact Bothriochloa bladhii species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A392701-1/general-information",
+      "note": "GrassBase reports erect culms 50–150 cm.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bothriochloa-bladhii",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium",
+        "broad"
+      ],
+      "source": "Kew GrassBase, exact Bothriochloa bladhii species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A392701-1/general-information",
+      "note": "GrassBase blades 2–12 mm across, spanning narrow medium and broad bins.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        12
+      ]
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "character": "culm_posture",
+      "states": [
+        "decumbent"
+      ],
+      "source": "Kew GrassBase, exact Dichanthium aristatum species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A398529-1/general-information",
+      "note": "GrassBase reports decumbent culms 20–100 cm; other regional populations may be ascending.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "character": "blade_width",
+      "states": [
+        "narrow"
+      ],
+      "source": "Kew GrassBase, exact Dichanthium aristatum species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A398529-1/general-information",
+      "note": "GrassBase leaf blades 2–5 mm wide, entirely in narrow bin under strict thresholds.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "character": "blade_hairs",
+      "states": [
+        "base_hairs"
+      ],
+      "source": "Kew GrassBase, exact Dichanthium aristatum species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A398529-1/general-information",
+      "note": "Flora Zambesiaca treatment, presented on Kew POWO same exact taxon page, describes otherwise largely glabrous blades with long hairs near ligule.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-brevis",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Edgar & Connor (2000), Flora of New Zealand vol. 5, exact Bromus brevis species description",
+      "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+      "note": "Flora of New Zealand species account: tufted upright stems 30–75 cm tall.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-brevis",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Edgar & Connor (2000), Flora of New Zealand vol. 5, exact Bromus brevis species description",
+      "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+      "note": "Species-level New Zealand blades 1.5–4.5 mm wide. Local Hays identity remains unverified.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1.5,
+        4.5
+      ]
+    },
+    {
+      "id": "bromus-brevis",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "source": "Edgar & Connor (2000), Flora of New Zealand vol. 5, exact Bromus brevis species description",
+      "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+      "note": "Species ligules 1.5–2.5 mm, denticulate (no unjustified smooth-edge state).",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1.5,
+        2.5
+      ]
+    },
+    {
+      "id": "bromus-brevis",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Edgar & Connor (2000), Flora of New Zealand vol. 5, exact Bromus brevis species description",
+      "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+      "note": "Sheaths often long-soft-hairy; source does not claim every sheath is hairy.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bromus-brevis",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "source": "Edgar & Connor (2000), Flora of New Zealand vol. 5, exact Bromus brevis species description",
+      "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+      "note": "Long fine hairs scattered to dense on leaves; only a positive clue, not species admission.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "rostraria-cristata",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "decumbent"
+      ],
+      "source": "Kew GrassBase, exact Rostraria cristata species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1/general-information",
+      "note": "Kew GrassBase gives both upright and decumbent stems for the species.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "rostraria-cristata",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow",
+        "medium"
+      ],
+      "source": "Kew GrassBase, exact Rostraria cristata species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1/general-information",
+      "note": "GrassBase blades 1.5–8 mm wide, spanning thread/narrow/medium bins.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1.5,
+        8
+      ]
+    },
+    {
+      "id": "rostraria-cristata",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Kew GrassBase, exact Rostraria cristata species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1/general-information",
+      "note": "Exact GrassBase description says leaf blades flat.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "rostraria-cristata",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "source": "Kew GrassBase, exact Rostraria cristata species treatment, via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A419582-1/general-information",
+      "note": "Leaf surfaces can be glabrous or pubescent; conditional positive observation.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "character": "underground_stems",
+      "states": [
+        "short_rhizome"
+      ],
+      "source": "Kew GrassBase, exact Panicum maximum species treatment (current Megathyrsus maximus), via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2/general-information",
+      "note": "GrassBase historical Panicum maximum species account says rhizomes short.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Kew GrassBase, exact Panicum maximum species treatment (current Megathyrsus maximus), via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2/general-information",
+      "note": "Panicum maximum treatment says erect or knee-bent ascending culms.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium",
+        "broad"
+      ],
+      "source": "Kew GrassBase, exact Panicum maximum species treatment (current Megathyrsus maximus), via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2/general-information",
+      "note": "Variable species blades (4–)12–35 mm; all three bins may be seen.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        4,
+        35
+      ]
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Kew GrassBase, exact Panicum maximum species treatment (current Megathyrsus maximus), via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2/general-information",
+      "note": "Kew GrassBase states a ciliate membranous ligule, not a pure tuft of hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Kew GrassBase, exact Panicum maximum species treatment (current Megathyrsus maximus), via POWO General Information, morphology",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A60426565-2/general-information",
+      "note": "The exact Panicum maximum account records pubescent basal (butt) sheaths, not uniform culm sheath hairs.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "decumbent"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "FNA documents erect to decumbent stems, conditional varied posture.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "FNA describes flat leaf blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "FNA blades 1–3(–4) mm; scored range 1–4 mm.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "FNA ligule length 0.2–0.5 mm.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.2,
+        0.5
+      ]
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "FNA documents a tiny ciliate ligule.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "FNA leaf sheaths often hairy at their apices, sometimes glandular.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "stem_nodes",
+      "states": [
+        "gland_ring"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "Some culms have a ring of glandular tissue below joints; not a required sign.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-minor",
+      "character": "stem_special",
+      "states": [
+        "node_gland_ring"
+      ],
+      "source": "Peterson, Flora of North America, exact Eragrostis minor species treatment (Burke Herbarium transcription)",
+      "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Eragrostis+minor",
+      "note": "Gland tissue ring below node reported as occasional in FNA, same optional structural clue in special-stem menu.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "culm_posture",
+      "states": [
+        "decumbent"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA describes decumbent stems; other populations may stand more erect.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "surface_runners",
+      "states": [
+        "rooted_nodes"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "Stems usually root at lower surface nodes; does not prove an independent stolon system.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA describes pubescent stem nodes.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA reports smooth or papilla-hairy sheaths; positive hair condition only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "ligule_edge",
+      "states": [
+        "hair_fringe"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA states ligule made of hairs, not membrane with ciliate edge.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "ligule_length",
+      "states": [
+        "tiny",
+        "short"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA hairs range 0.7–2.2 mm, straddling tiny and short bins.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.7,
+        2.2
+      ]
+    },
+    {
+      "id": "melinis-repens",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA documents flat blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium",
+        "broad"
+      ],
+      "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
+      "note": "FNA blades 2–9(–14) mm; includes narrow/medium/broad ranges.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        2,
+        14
+      ]
+    },
+    {
+      "id": "nassella-tenuissima",
+      "character": "blade_width",
+      "states": [
+        "thread"
+      ],
+      "source": "Mary E. Barkworth, Flora of North America, exact Nassella tenuissima species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630068",
+      "note": "FNA extremely fine blades 0.2–1.5 mm wide, strictly thread-size.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        0.2,
+        1.5
+      ]
+    },
+    {
+      "id": "nassella-tenuissima",
+      "character": "ligule_length",
+      "states": [
+        "short",
+        "medium"
+      ],
+      "source": "Mary E. Barkworth, Flora of North America, exact Nassella tenuissima species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630068",
+      "note": "FNA membranous ligule 1–5 mm, spans short and medium bins.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "nassella-tenuissima",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate"
+      ],
+      "source": "Mary E. Barkworth, Flora of North America, exact Nassella tenuissima species treatment (Open Herbarium transcription)",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630068",
+      "note": "FNA erect stems with occasional knee-bent basal nodes; geniculate sign conditional.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
     }
   ],
   "botanical_sources": [
