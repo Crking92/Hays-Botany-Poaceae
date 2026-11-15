@@ -983,5 +983,48 @@ state.refineSelected={};
 if(run().length!==169)throw Error("Unified 169 inventory was not restored after selection");
 if(!html.includes("candidateManifest")||!html.includes("traits:{head:[],habit:[],ligule:[],awns:[]}"))throw Error("Missing no-photo fallback for four research grasses");
 
+// Authoritative H&L PDF pass 2: six original research taxa, one mixed pool of 169.
+const pdfPass2={"avena-sativa":[36,7],"lolium-perenne":[53,7],"sphenopholis-obtusata":[63,7],"polypogon-viridis":[60,9],"bromus-tectorum":[40,7],"sporobolus-cryptandrus":[64,6]};
+if(pack.evidence.length<779)throw Error("PDF pass 2 requires 779 advanced evidence records");
+if(new Set(pack.evidence.map(x=>x.id)).size<121)throw Error("PDF pass 2 requires 121 of the 169 grasses with advanced evidence");
+for(const [id,[page,count]] of Object.entries(pdfPass2)){
+ const rows=pack.evidence.filter(x=>x.id===id);
+ if(rows.length!==count)throw Error("PDF pass 2 source coverage count mismatch "+id+": "+rows.length);
+ for(const row of rows){
+  if(!row.source?.includes("Hagenbuch & Lemke (2015)")||!row.source.includes("printed p. "+page)||row.source_url?.includes("#page="+page)!==true)throw Error("PDF pass 2 missing exact Hill Country account page "+id+"/"+row.character);
+  if(row.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED")throw Error("PDF pass 2 cannot certify photographed specimens "+id);
+ }
+}
+for(const id of ["avena-sativa","lolium-perenne","sphenopholis-obtusata","polypogon-viridis","bromus-tectorum","sporobolus-cryptandrus"])
+ if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("PDF pass 2 accidentally admits source candidate into 112 scored");
+if(pack.evidence.some(x=>x.id==="bromus-tectorum"&&x.character==="sheath_margins"))throw Error("Do not score research-pending closed Bromus sheath");
+if(pack.evidence.some(x=>x.id==="lolium-perenne"&&x.character==="leaf_base"))throw Error("Do not infer exact auricle form from H&L merely reporting presence");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"overlapping"};
+let pdfP2Matches=run();
+if(pdfP2Matches.length!==169)throw Error("PDF pass 2 optional feature removed candidates");
+if(!pdfP2Matches.some(x=>x.id==="sporobolus-cryptandrus"&&x.extras===1))throw Error("Sand dropseed overlapping sheath not positively ranked");
+if(pdfP2Matches.some(x=>x.id==="lolium-perenne"&&x.extras>0))throw Error("Ryegrass open sheath misranked as overlapping");
+state.refineSelected={ligule_edge:"hair_fringe"};
+pdfP2Matches=run();
+if(!pdfP2Matches.some(x=>x.id==="sporobolus-cryptandrus"&&x.extras===1))throw Error("Sand dropseed hair-fringe ligule missing");
+if(pdfP2Matches.some(x=>x.id==="bromus-tectorum"&&x.extras>0))throw Error("Downy brome erose/lacerate ligule misread as hair fringe");
+state.refineSelected={surface_runners:"rooted_nodes"};
+pdfP2Matches=run();
+if(!pdfP2Matches.some(x=>x.id==="polypogon-viridis"&&x.extras===1))throw Error("Water bentgrass rooting nodes missing");
+state.refineSelected={blade_shape:"folded"};
+pdfP2Matches=run();
+if(!pdfP2Matches.some(x=>x.id==="sporobolus-cryptandrus"&&x.extras===1))throw Error("Sand dropseed plane/conduplicate blade variation not coded");
+state.refineSelected={blade_hairs:"blade_hairy"};
+pdfP2Matches=run();
+if(!pdfP2Matches.some(x=>x.id==="bromus-tectorum"&&x.extras===1))throw Error("Downy brome pubescent blades missing");
+state.refineSelected={ligule_length:"medium"};
+pdfP2Matches=run();
+for(const id of ["avena-sativa","polypogon-viridis"])
+ if(!pdfP2Matches.some(x=>x.id===id&&x.extras===1))throw Error("H&L medium ligule bin missing "+id);
+state.refineSelected={};
+if(run().length!==169)throw Error("PDF pass 2 failed to restore all 169 mixed results");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
