@@ -73,7 +73,7 @@ def test(browser, width, height):
     check(page.locator(".grass-glossary-sketch svg").count() == 1,
           "Rights hold must display a truthful original teaching sketch")
     page.locator(".grass-glossary-close").click()
-    for term,who in [("panicle","Alex Abair"),("pedicel","Douglas Goldman"),("trichome","Jim Conrad")]:
+    for term,who in [("panicle","Alex Abair"),("pedicel","Douglas Goldman"),("trichome","Jim Conrad"),("collar","Jim Conrad")]:
         page.locator("#grass-glossary-launch").click()
         page.locator("#grass-glossary-search").fill(term)
         page.locator('#grass-glossary-results [data-grass-term="'+term+'"]').click()
