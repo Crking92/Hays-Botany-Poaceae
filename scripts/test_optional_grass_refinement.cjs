@@ -891,5 +891,55 @@ for(const id of ["munroa-pulchella","dichanthelium-lindheimeri"])
 if(got.some(x=>x.id==="chloris-x-subdolichostachya"&&x.extras>0))throw Error("Hybrid ciliate membrane mistaken for hair-only ligule");
 state.refineSelected={};
 
+// Batch 17 — every one of 112 original grasses has at least one published optional observation.
+const batch17={"bouteloua-pectinata":["sheath_surface","culm_posture"],"dichanthelium-commutatum":["blade_width","blade_hairs","sheath_margins","sheath_surface","ligule_length","ligule_edge","culm_posture","underground_stems","stem_nodes"],"anatherum-tenuispatheum":["ligule_length","ligule_edge","sheath_surface"],"dinebra-panicea-subsp-mucronata":["blade_width","ligule_length","blade_shape","sheath_margins","sheath_surface"]};
+if(pack.evidence.length<710)throw Error("Batch17 710-row evidence baseline regressed");
+if(new Set(pack.evidence.map(x=>x.id)).size!==112)throw Error("Batch17 expected all original 112 to have positive-only advanced evidence");
+for(const [id,chars] of Object.entries(batch17)){
+ const row=species.find(x=>x.id===id),a=row?.character_evidence?.audit_batch17_first_coverage_20261115;
+ if(!a||a.core_scoring_changed!==false||a.site_filters_changed!==false||a.photos_changed!==false||a.provisional_admissions_changed!==false)throw Error("Batch17 core and research guards lost "+id);
+ if(JSON.stringify(a.advanced_characters_added)!==JSON.stringify(chars))throw Error("Batch17 exact trait list mismatch "+id);
+ for(const character of chars){
+  const e=pack.evidence.find(x=>x.id===id&&x.character===character);
+  if(!e||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.source_url?.startsWith("https://"))throw Error("Batch17 named source missing "+id+"/"+character);
+ }
+}
+const lastFour=Object.keys(batch17);
+for(const id of lastFour){
+ if(pack.evidence.some(x=>x.id===id&&["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(x.character)))throw Error("No reproductive evidence without printed Diggs page "+id);
+}
+if(pack.evidence.some(x=>x.id==="bouteloua-pectinata"&&["ligule_length","ligule_edge"].includes(x.character)))throw Error("Parent hairy grama ligule cannot replace tall grama evidence");
+if(pack.evidence.some(x=>x.id==="dinebra-panicea-subsp-mucronata"&&x.character==="ligule_edge"))throw Error("Unresolved mucronata ciliate/erose ligule edge should be held");
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_surface:"sometimes_hairy"};
+got=verifyUnchanged("Batch17 four-species hair variation");
+for(const id of ["bouteloua-pectinata","dichanthelium-commutatum","anatherum-tenuispatheum","dinebra-panicea-subsp-mucronata"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Hairy sheath positive option absent "+id);
+state.refineSelected={ligule_length:"tiny"};
+got=verifyUnchanged("Batch17 very short true ligules");
+for(const id of ["dichanthelium-commutatum","anatherum-tenuispatheum","dinebra-panicea-subsp-mucronata"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Very short ligule positive option absent "+id);
+if(got.some(x=>x.id==="bouteloua-pectinata"&&x.extras>0))throw Error("Unproven pectinata parent tiny ligule should stay unknown");
+state.refineSelected={ligule_length:"short"};
+got=verifyUnchanged("Batch17 exact Anatherum 0.6-1.3mm spans two bins");
+if(!got.some(x=>x.id==="anatherum-tenuispatheum"&&x.extras===1))throw Error("Anatherum 1-mm-boundary length not ranked");
+for(const id of ["dichanthelium-commutatum","dinebra-panicea-subsp-mucronata"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Less-than-1mm single-bin ligule falsely classified short "+id);
+state.refineSelected={sheath_margins:"open"};
+got=verifyUnchanged("Batch17 FNA nonoverlapping variable-panicgrass sheaths");
+if(!got.some(x=>x.id==="dichanthelium-commutatum"&&x.extras===1))throw Error("Dichanthelium nonoverlapping sheath not ranked");
+if(got.some(x=>x.id==="dinebra-panicea-subsp-mucronata"&&x.extras>0))throw Error("Dinebra overlapping sheath falsely open");
+state.refineSelected={sheath_margins:"overlapping"};
+got=verifyUnchanged("Batch17 mucronata overlapping sheaths");
+if(!got.some(x=>x.id==="dinebra-panicea-subsp-mucronata"&&x.extras===1))throw Error("Mucronate sprangletop overlapping sheath not ranked");
+if(got.some(x=>x.id==="dichanthelium-commutatum"&&x.extras>0))throw Error("Dichanthelium open sheath falsely overlapping");
+state.refineSelected={sheath_surface:"rough_surface"};
+got=verifyUnchanged("Batch17 Anatherum documented culm sheath texture variation");
+if(!got.some(x=>x.id==="anatherum-tenuispatheum"&&x.extras===1))throw Error("Maritime bluestem rough sheath option lost");
+state.refineSelected={underground_stems:"rhizome_present"};
+got=verifyUnchanged("Batch17 conditional variable-panicgrass rhizomes");
+if(!got.some(x=>x.id==="dichanthelium-commutatum"&&x.extras===1))throw Error("Conditional 2mm Dichanthelium rhizomes not ranked");
+state.refineSelected={};
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");

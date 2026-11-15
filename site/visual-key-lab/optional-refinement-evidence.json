@@ -8942,6 +8942,250 @@
       "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:271183-2/general-information",
       "note": "Kew species account: rooting from lower nodes; stolons absent or present, neither mandatory.",
       "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-pectinata",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Flora of North America, J.K. Wipff, Bouteloua hirsuta subsp. pectinata (as Bouteloua pectinata), exact taxon account, unpaginated",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=8323",
+      "note": "Exact pectinata subspecies account reports sheaths mostly pubescent. Variable sheath hair may positively rank, but smooth sheaths must not exclude.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "bouteloua-pectinata",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "source": "Flora of North America, J.K. Wipff, Bouteloua hirsuta subsp. pectinata (as Bouteloua pectinata), exact taxon account, unpaginated",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=8323",
+      "note": "Exact pectinata account reports densely tufted culms 35–75 cm, erect, usually unbranched.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "blade_width",
+      "states": [
+        "medium",
+        "broad"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA describes cauline blades 5–25 mm. Width spans medium/broad field categories; basal leaves may differ.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        5,
+        25
+      ]
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA blades glabrous OR puberulent, with papillose marginal cilia. Hair observation optional; glabrous form remains eligible.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "sheath_margins",
+      "states": [
+        "open"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA species account explicitly states cauline sheaths not overlapping. Model as open rather than overlapped; lower sheath positions may vary.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA sheaths glabrous to puberulent, often with ciliate margins. Ciliate margins are not automatically ligule fringe.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "Anatomical membrane ~0.3 mm; cilia extend longer than membrane. Do NOT measure the cilia as the membranous ligule.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA identifies a CILIATE MEMBRANE, not a pure hair fringe. WFO's fringe/absent wording remains a visibility/tissue-source conflict.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "decumbent"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA culms erect or decumbent to sprawling. The prostrate UI option is research-pending, not activated.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "underground_stems",
+      "states": [
+        "rhizome_present"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA species complex can form rhizomes up to 2 mm thick OR short caudices; a rhizome is conditional, never required.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "dichanthelium-commutatum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes"
+      ],
+      "source": "Flora of North America, Freckmann & Lelong, Dichanthelium commutatum sensu lato, unpaginated taxon account",
+      "source_url": "https://biogator.org/taxa/index.php?tid=11963",
+      "note": "FNA true culm nodes sometimes puberulent or pubescent, sometimes glabrous; field positive only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+    },
+    {
+      "id": "anatherum-tenuispatheum",
+      "character": "ligule_length",
+      "states": [
+        "tiny",
+        "short"
+      ],
+      "source": "Weakley et al. (2020), Studies in the Vascular Flora of the Southeastern United States: VI, diagnostic key and Table 5, printed pp. 216–217, 219 (under Andropogon tenuispatheus)",
+      "source_url": "https://journals.brit.org/jbrit/article/download/1004/988/495#page=19",
+      "note": "Weakley et al. exact Andropogon tenuispatheus key: (0.6–)0.8(–1.3) mm ligule proper; hair lengths separately given and not added.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.6,
+        1.3
+      ],
+      "taxon_crosswalk": "Kew POWO accepted Anatherum tenuispatheum (Nash) Sorrie & Weakley, 2024; Weakley 2020 treatment uses homotypic Andropogon tenuispatheus.",
+      "taxon_crosswalk_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77347166-1/general-information"
+    },
+    {
+      "id": "anatherum-tenuispatheum",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate"
+      ],
+      "source": "Weakley et al. (2020), Studies in the Vascular Flora of the Southeastern United States: VI, diagnostic key and Table 5, printed pp. 216–217, 219 (under Andropogon tenuispatheus)",
+      "source_url": "https://journals.brit.org/jbrit/article/download/1004/988/495#page=19",
+      "note": "Published exact-species key reports ciliate ligules, cilia ~0.2–0.9 mm with longer hairs possible. Not a hair-only ligule.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "taxon_crosswalk": "Kew POWO accepted Anatherum tenuispatheum (Nash) Sorrie & Weakley, 2024; Weakley 2020 treatment uses homotypic Andropogon tenuispatheus.",
+      "taxon_crosswalk_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77347166-1/general-information"
+    },
+    {
+      "id": "anatherum-tenuispatheum",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy",
+        "rough_surface"
+      ],
+      "source": "Weakley et al. (2020), Studies in the Vascular Flora of the Southeastern United States: VI, diagnostic key and Table 5, printed pp. 216–217, 219 (under Andropogon tenuispatheus)",
+      "source_url": "https://journals.brit.org/jbrit/article/download/1004/988/495#page=19",
+      "note": "Weakley key permits culm sheaths NOT scabrous (possibly hirsute) or antrorsely scabrous/scabridulous (often hirsute). These are alternative conditional field looks, not exclusion rules.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "taxon_crosswalk": "Kew POWO accepted Anatherum tenuispatheum (Nash) Sorrie & Weakley, 2024; Weakley 2020 treatment uses homotypic Andropogon tenuispatheus.",
+      "taxon_crosswalk_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77347166-1/general-information"
+    },
+    {
+      "id": "dinebra-panicea-subsp-mucronata",
+      "character": "blade_width",
+      "states": [
+        "medium"
+      ],
+      "source": "Flora of North America, Neil Snow, Leptochloa mucronata / L. panicea subsp. mucronata, exact taxon account, unpaginated",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=44973",
+      "note": "FNA exact Leptochloa panicea subsp. mucronata account: mature blades 5–9 mm; do not import broader Dinebra panicea 1.5–7 mm range.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "width_mm": [
+        5,
+        9
+      ],
+      "taxon_crosswalk": "FNA treats the exact mucronata taxon under Leptochloa panicea subsp. mucronata; the site's accepted combo is Dinebra panicea subsp. mucronata."
+    },
+    {
+      "id": "dinebra-panicea-subsp-mucronata",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "source": "Flora of North America, Neil Snow, Leptochloa mucronata / L. panicea subsp. mucronata, exact taxon account, unpaginated",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=44973",
+      "note": "FNA named mucronata subspecies gives 0.6–1.0 mm ligules. The 1991 manual's 1–2 mm is a documented disagreement; keep source-exact chosen interval positive only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "length_mm": [
+        0.6,
+        1
+      ],
+      "taxon_crosswalk": "FNA treats the exact mucronata taxon under Leptochloa panicea subsp. mucronata; the site's accepted combo is Dinebra panicea subsp. mucronata."
+    },
+    {
+      "id": "dinebra-panicea-subsp-mucronata",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Gleason & Cronquist (1991), Manual of Vascular Plants of Northeastern United States and Adjacent Canada, Leptochloa mucronata (= L. attenuata), hosted on NEON taxon page",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=44973",
+      "note": "Gleason & Cronquist exact synonymous Leptochloa mucronata / L. attenuata manual description says soft, flat blades.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "taxon_crosswalk": "FNA treats the exact mucronata taxon under Leptochloa panicea subsp. mucronata; the site's accepted combo is Dinebra panicea subsp. mucronata."
+    },
+    {
+      "id": "dinebra-panicea-subsp-mucronata",
+      "character": "sheath_margins",
+      "states": [
+        "overlapping"
+      ],
+      "source": "Gleason & Cronquist (1991), Manual of Vascular Plants of Northeastern United States and Adjacent Canada, Leptochloa mucronata (= L. attenuata), hosted on NEON taxon page",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=44973",
+      "note": "Gleason & Cronquist names overlapping leaf sheaths for mucronata synonym; sheath may have hairs but is not a permanently closed tube.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "taxon_crosswalk": "FNA treats the exact mucronata taxon under Leptochloa panicea subsp. mucronata; the site's accepted combo is Dinebra panicea subsp. mucronata."
+    },
+    {
+      "id": "dinebra-panicea-subsp-mucronata",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy"
+      ],
+      "source": "Gleason & Cronquist (1991), Manual of Vascular Plants of Northeastern United States and Adjacent Canada, Leptochloa mucronata (= L. attenuata), hosted on NEON taxon page",
+      "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=44973",
+      "note": "Gleason & Cronquist describes sparsely papillose-pilose sheaths for exact mucronata synonym; degree of hairiness variable.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "taxon_crosswalk": "FNA treats the exact mucronata taxon under Leptochloa panicea subsp. mucronata; the site's accepted combo is Dinebra panicea subsp. mucronata."
     }
   ],
   "botanical_sources": [
