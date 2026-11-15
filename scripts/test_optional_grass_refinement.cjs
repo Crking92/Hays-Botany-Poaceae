@@ -586,5 +586,92 @@ got=verifyUnchanged("Do not infer stolons from condensed short rhizomes");
 for(const id of Object.keys(batch12))
  if(got.some(x=>x.id===id&&x.extras>0))throw Error("False surface stolon "+id);
 state.refineSelected={};
+// Batch 13 — five formerly zero-coverage scored grasses in the Tridens/Tridentopsis complex.
+// Source is H&L 2015 printed pp. 65–66; nomenclatural combinations are explicit.
+const batch13={
+  "tridens-albescens": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "underground_stems"
+  ],
+  "tridentopsis-buckleyana": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "stem_nodes"
+  ],
+  "triplasiella-eragrostoides": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "tridentopsis-mutica": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "stem_nodes"
+  ],
+  "tridens-texanus": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ]
+};
+if(pack.evidence.length!==584)throw Error("Batch 13 expected exactly 584 advanced records");
+for(const [id,chars] of Object.entries(batch13)){
+ const record=species.find(x=>x.id===id), audit=record?.character_evidence?.audit_batch13_core_advanced_20261115;
+ if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch 13 core preservation missing "+id);
+ for(const ch of chars){
+  const e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+  if(!e||!e.states?.length||!e.source.includes("Hagenbuch & Lemke (2015)")||!e.source_url.startsWith("https://"))throw Error("Batch 13 provenance missing "+id+"/"+ch);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"overlapping"};
+got=verifyUnchanged("Batch13 overlapping Texas tridens sheath");
+if(!got.some(x=>x.id==="tridens-texanus"&&x.extras===1))throw Error("Texas tridens sheath not ranked");
+for(const id of ["tridens-albescens","tridentopsis-buckleyana","triplasiella-eragrostoides","tridentopsis-mutica"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Open sheath incorrectly called overlapping "+id);
+state.refineSelected={underground_stems:"short_knotty"};
+got=verifyUnchanged("Batch13 published white-tridens rhizome versus unresolved slim tridens");
+if(!got.some(x=>x.id==="tridens-albescens"&&x.extras===1))throw Error("White tridens short rhizome missing");
+if(got.some(x=>x.id==="tridentopsis-mutica"&&x.extras>0))throw Error("Slim tridens disputed rhizomes must remain unknown");
+state.refineSelected={blade_shape:"inrolled"};
+got=verifyUnchanged("Batch13 involute blades are distinct from plane");
+for(const id of ["tridentopsis-mutica","tridens-texanus"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Published involute option not ranked "+id);
+for(const id of ["tridentopsis-buckleyana","triplasiella-eragrostoides","tridens-albescens"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Unpublished involute blade falsely ranked "+id);
+state.refineSelected={ligule_edge:"lacerate"};
+got=verifyUnchanged("Batch13 ragged lovegrass-tridens ligule");
+if(!got.some(x=>x.id==="triplasiella-eragrostoides"&&x.extras===1))throw Error("Lovegrass tridens lacerate ligule lost");
+for(const id of ["tridens-albescens","tridentopsis-buckleyana","tridentopsis-mutica","tridens-texanus"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Ciliate ligule mistaken for lacerate "+id);
+state.refineSelected={};
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
