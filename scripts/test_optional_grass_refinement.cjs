@@ -763,5 +763,90 @@ for(const id of ["catapodium-rigidum","limnodea-arkansana","urochloa-fusca","dic
  if(got.some(x=>x.id===id&&x.extras>0))throw Error("Long membrane incorrectly attributed to "+id);
 state.refineSelected={};
 
+// Batch 15: FNA, Kew GrassBase and UT PRC species-level vegetative observations.
+const batch15={
+  "bromus-lanceolatus": [
+    "blade_width",
+    "blade_hairs",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "eragrostis-hirsuta": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "muhlenbergia-dubia": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "paspalum-floridanum": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "culm_posture",
+    "underground_stems"
+  ],
+  "urochloa-reptans": [
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "culm_posture",
+    "surface_runners",
+    "stem_nodes"
+  ]
+};
+if(pack.evidence.length<660)throw Error("Batch15 cumulative evidence count dropped");
+for(const [id,chars] of Object.entries(batch15)){
+ const sp=species.find(x=>x.id===id),audit=sp?.character_evidence?.audit_batch15_core_advanced_20261115;
+ if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed?.length!==4)throw Error("Batch15 original score review missing "+id);
+ if(JSON.stringify(audit.advanced_characters_added)!==JSON.stringify(chars))throw Error("Batch15 character audit mismatch "+id);
+ for(const ch of chars){const e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+  if(!e||!e.states?.length||!e.source_url?.startsWith("https://"))throw Error("Batch15 source missing "+id+"/"+ch);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={ligule_edge:"hair_fringe"};
+got=verifyUnchanged("Batch15 true hair ligule");
+if(!got.some(x=>x.id==="eragrostis-hirsuta"&&x.extras===1))throw Error("Bigtop lovegrass hair ligule not matched");
+state.refineSelected={ligule_length:"long"};
+got=verifyUnchanged("Batch15 pine muhly exceptionally long ligule");
+if(!got.some(x=>x.id==="muhlenbergia-dubia"&&x.extras===1))throw Error("Pine muhly long ligule absent");
+for(const id of ["bromus-lanceolatus","eragrostis-hirsuta","paspalum-floridanum","urochloa-reptans"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Invented long ligule "+id);
+state.refineSelected={blade_shape:"folded"};
+got=verifyUnchanged("Batch15 Florida paspalum basal fold");
+if(!got.some(x=>x.id==="paspalum-floridanum"&&x.extras===1))throw Error("Florida paspalum folded blade not matched");
+state.refineSelected={surface_runners:"rooted_nodes"};
+got=verifyUnchanged("Batch15 low stem rooting versus stolon");
+if(!got.some(x=>x.id==="urochloa-reptans"&&x.extras===1))throw Error("Sprawling signalgrass rooted nodes absent");
+state.refineSelected={surface_runners:"stolon"};
+got=verifyUnchanged("Batch15 cannot infer true stolon");
+if(got.some(x=>x.id==="urochloa-reptans"&&x.extras>0))throw Error("False Urochloa true stolon");
+state.refineSelected={underground_stems:"rhizome_present"};
+got=verifyUnchanged("Batch15 Paspalum confirmed rhizome");
+if(!got.some(x=>x.id==="paspalum-floridanum"&&x.extras===1))throw Error("Paspalum rhizome missing");
+if(got.some(x=>x.id==="muhlenbergia-dubia"&&x.extras>0))throw Error("Rhizome fabricated for pine muhly");
+state.refineSelected={culm_posture:"prostrate"};
+got=verifyUnchanged("Batch15 prostrate still pending");
+if(got.some(x=>batch15[x.id]&&x.extras>0))throw Error("Research-pending prostrate wrongly scored");
+state.refineSelected={};
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
