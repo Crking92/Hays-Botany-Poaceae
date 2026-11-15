@@ -1336,7 +1336,7 @@ const reproductivePass11={"erioneuron-pilosum":5,"limnodea-arkansana":1,"nassell
 if(pack.evidence.length<1096||new Set(pack.evidence.map(x=>x.id)).size!==168)throw Error("Pass11 total or covered grass regression");
 for(const [id,n] of Object.entries(reproductivePass11)){
  const floralChars=new Set(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"]);
- const a=pack.evidence.filter(x=>x.id===id&&floralChars.has(x.character));
+ const a=pack.evidence.filter(x=>x.id===id&&floralChars.has(x.character)&&x.pdf_document==="Flora of North Central Texas-monocots-Acor-Zanni.pdf"&&x.source?.includes("printed p."));
  if(a.length<n)throw Error("Pass11 insufficient new reproductive records: "+id+" "+a.length+"<"+n);
  for(const e of a){
   if(!e.source?.includes("Diggs, Lipscomb & O'Kennon (1999)")||!e.source.includes("printed p.")||!Number.isInteger(e.pdf_printed_page)||e.pdf_document!=="Flora of North Central Texas-monocots-Acor-Zanni.pdf")throw Error("Pass11 missing exact printed Flora page "+id+"/"+e.character);
