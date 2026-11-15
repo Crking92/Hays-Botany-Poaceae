@@ -36,7 +36,7 @@ let got=verifyUnchanged("boat-tip");
 if(got[0].id!=="poa-annua"||got[0].extras===0)throw Error("Boat-tip evidence did not positively rank Poa annua");
 state.refineSelected={blade_tip:"hardened_tip"};
 got=verifyUnchanged("hardened tip");
-if(got[0].id!=="erioneuron-pilosum"||got[0].extras===0)throw Error("Hardened-tip evidence not ranked");
+if(!got.some(x=>x.id==="erioneuron-pilosum"&&x.extras>0))throw Error("Prior Erioneuron hardened-tip positive match lost");
 state.refineSelected={blade_width:"broad"};
 got=verifyUnchanged("broad blade");
 if(got.filter(x=>x.extras>0).length<4)throw Error("Broad-width evidence did not match sufficiently");
@@ -846,6 +846,49 @@ if(got.some(x=>x.id==="muhlenbergia-dubia"&&x.extras>0))throw Error("Rhizome fab
 state.refineSelected={culm_posture:"prostrate"};
 got=verifyUnchanged("Batch15 prostrate still pending");
 if(got.some(x=>batch15[x.id]&&x.extras>0))throw Error("Research-pending prostrate wrongly scored");
+state.refineSelected={};
+
+// Batch 16 source-specific morphology, original-key preservation and cautious ranking.
+const batch16={"bothriochloa-torreyana":["blade_width","blade_edge","blade_venation","blade_hairs","sheath_margins","ligule_length","ligule_edge","stem_nodes","underground_stems","culm_posture"],"chloris-x-subdolichostachya":["blade_width","ligule_length","ligule_edge","culm_posture","surface_runners"],"munroa-pulchella":["blade_shape","blade_width","blade_tip","ligule_edge","surface_runners"],"dichanthelium-lindheimeri":["blade_width","blade_hairs","sheath_surface","ligule_length","ligule_edge","culm_posture"],"zizania-texana":["blade_width","blade_venation","ligule_length","culm_posture","surface_runners"]};
+if(pack.evidence.length<691)throw Error("Batch16 original advanced-evidence total regressed");
+for(const [id,characters] of Object.entries(batch16)){
+ const row=species.find(x=>x.id===id),a=row?.character_evidence?.audit_batch16_core_advanced_20261115;
+ if(!a||a.core_scoring_changed!==false||a.site_filters_changed!==false||a.photos_changed!==false)throw Error("Batch16 original protections lost: "+id);
+ if(JSON.stringify(a.advanced_characters_added)!==JSON.stringify(characters))throw Error("Batch16 character audit differs: "+id);
+ for(const ch of characters){const e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+  if(!e||!e.states?.length||!e.source_url?.startsWith("https://"))throw Error("Batch16 named citation missing "+id+"/"+ch);
+ }
+}
+if(pack.evidence.some(x=>x.id==="munroa-pulchella"&&x.character==="ligule_length"))throw Error("Disputed fluffgrass ligule length must remain unknown");
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={blade_tip:"hardened_tip"};
+got=verifyUnchanged("Batch16 fluffgrass hardened leaf tip");
+if(!got.some(x=>x.id==="munroa-pulchella"&&x.extras===1))throw Error("Fluffgrass hardened tip missing");
+state.refineSelected={blade_venation:"prominent_midvein"};
+got=verifyUnchanged("Batch16 protected wildrice prominent vein");
+if(!got.some(x=>x.id==="zizania-texana"&&x.extras===1))throw Error("Texas wildrice prominent vein missing");
+state.refineSelected={blade_venation:"raised_midvein"};
+got=verifyUnchanged("Batch16 silver bluestem underside midrib");
+if(!got.some(x=>x.id==="bothriochloa-torreyana"&&x.extras===1))throw Error("Silver bluestem raised midvein missing");
+state.refineSelected={surface_runners:"stolon"};
+got=verifyUnchanged("Batch16 conditional published stolon form");
+for(const id of ["chloris-x-subdolichostachya","munroa-pulchella","zizania-texana"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Positive stolon observation missing "+id);
+if(got.some(x=>x.id==="bothriochloa-torreyana"&&x.extras>0))throw Error("Underground rhizome must not be ranked as stolon");
+state.refineSelected={underground_stems:"rhizome_present"};
+got=verifyUnchanged("Batch16 conditional local silver bluestem rhizome");
+if(!got.some(x=>x.id==="bothriochloa-torreyana"&&x.extras===1))throw Error("Silver bluestem positive rhizome observation missing");
+if(got.some(x=>x.id==="chloris-x-subdolichostachya"&&x.extras>0))throw Error("Chloris stolon must not imply rhizome");
+state.refineSelected={ligule_length:"long"};
+got=verifyUnchanged("Batch16 Kew named Zizania 5-15mm ligule");
+if(!got.some(x=>x.id==="zizania-texana"&&x.extras===1))throw Error("Texas wildrice long ligule not ranked");
+for(const id of ["bothriochloa-torreyana","chloris-x-subdolichostachya","dichanthelium-lindheimeri","munroa-pulchella"])
+ if(got.some(x=>x.id===id&&x.extras>0))throw Error("Unsupported long membrane falsely ranked "+id);
+state.refineSelected={ligule_edge:"hair_fringe"};
+got=verifyUnchanged("Batch16 hair-only ligules versus ciliate membrane");
+for(const id of ["munroa-pulchella","dichanthelium-lindheimeri"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("True ligule hair fringe not matched "+id);
+if(got.some(x=>x.id==="chloris-x-subdolichostachya"&&x.extras>0))throw Error("Hybrid ciliate membrane mistaken for hair-only ligule");
 state.refineSelected={};
 
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+

@@ -1620,6 +1620,31 @@
         "reference": "Ciliate membrane can present visually as fringe or tiny papery flap. Do not code anatomically hair-only, and do not count unrelated hair on collar/sheath. Parent-varying and hybrid diagnosis remains on hold.",
         "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
         "review_date": "2026-11-12"
+      },
+      "audit_batch16_core_advanced_20261115": {
+        "review_date": "2026-11-15",
+        "source": "Kew GrassBase, named hybrid Chloris × subdolichostachya",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information",
+        "core_traits_reviewed": [
+          "head",
+          "habit",
+          "ligule",
+          "awns"
+        ],
+        "core_scoring_changed": false,
+        "advanced_characters_added": [
+          "blade_width",
+          "ligule_length",
+          "ligule_edge",
+          "culm_posture",
+          "surface_runners"
+        ],
+        "reproductive_status": "Original head/awn sources retained, not independently re-certified by this optional evidence pass.",
+        "status": "NAMED_SOURCE_OPTIONAL_NON_EXCLUDING",
+        "cautions": "GrassBase describes named hybrid stolons and ciliate membrane; parental identity of any observed individual remains unverified.",
+        "specimen_certainty": "Published taxon account only; no new verified specimen/photo, rights review, or physical collection.",
+        "site_filters_changed": false,
+        "photos_changed": false
       }
     },
     "diagnostic_checks": [
@@ -1806,6 +1831,32 @@
         "reference": "Names crosswalk, but historical floral/ligule measurements are under older variety concept; old identified photos must be independently linked to present accepted species concept.",
         "status": "NAME_CROSSWALK_SOURCE_CHECKED_LEGACY_CONCEPT_CAUTION",
         "review_date": "2026-11-10"
+      },
+      "audit_batch16_core_advanced_20261115": {
+        "review_date": "2026-11-15",
+        "source": "J.R. Thomas (2015), Phytoneuron 2015-50, printed pp.22 and 37",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/50PhytoN-Dichantheliumlanuginosa.pdf#page=37",
+        "core_traits_reviewed": [
+          "head",
+          "habit",
+          "ligule",
+          "awns"
+        ],
+        "core_scoring_changed": false,
+        "advanced_characters_added": [
+          "blade_width",
+          "blade_hairs",
+          "sheath_surface",
+          "ligule_length",
+          "ligule_edge",
+          "culm_posture"
+        ],
+        "reproductive_status": "Original head/awn sources retained, not independently re-certified by this optional evidence pass.",
+        "status": "NAMED_SOURCE_OPTIONAL_NON_EXCLUDING",
+        "cautions": "Exact species treatment after extensive revision; old D. acuminatum variety measurements and lookalikes not transferred.",
+        "specimen_certainty": "Published taxon account only; no new verified specimen/photo, rights review, or physical collection.",
+        "site_filters_changed": false,
+        "photos_changed": false
       }
     },
     "diagnostic_checks": [
