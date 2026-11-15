@@ -1026,5 +1026,48 @@ for(const id of ["avena-sativa","polypogon-viridis"])
 state.refineSelected={};
 if(run().length!==169)throw Error("PDF pass 2 failed to restore all 169 mixed results");
 
+// PDF pass 3: seven exact H&L 2015 species accounts, no inferred unapproved traits.
+const pdfPass3={"aegilops-cylindrica":[33,7],"bromus-catharticus":[39,8],"dichanthelium-acuminatum":[43,9],"digitaria-californica":[44,8],"echinochloa-colona":[46,5],"hordeum-murinum":[52,9],"triticum-aestivum":[67,7]};
+if(pack.evidence.length<832)throw Error("PDF pass 3 832 evidence-record baseline regressed");
+if(new Set(pack.evidence.map(x=>x.id)).size<128)throw Error("PDF pass 3 fewer than 128/169 source-covered grass species");
+for(const [id,[page,count]] of Object.entries(pdfPass3)){
+ const observations=pack.evidence.filter(x=>x.id===id);
+ if(observations.length!==count)throw Error("PDF pass 3 incomplete species "+id+" / "+observations.length);
+ if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass3 improperly promoted candidate "+id);
+ for(const record of observations){
+  if(record.source?.includes("Hagenbuch & Lemke (2015)")!==true||record.source?.includes("printed p. "+page)!==true||record.source_url?.endsWith("#page="+page)!==true)throw Error("Wrong H&L citation "+id+"/"+record.character);
+  if(record.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED")throw Error("Pass3 evidence incorrectly marks an identified photograph "+id);
+ }
+}
+for(const id of ["bromus-catharticus","echinochloa-colona"])
+ if(pack.evidence.some(x=>x.id===id&&x.character==="sheath_margins"&&x.states.includes("closed")))throw Error("Closed sheath remains unapproved "+id);
+if(pack.evidence.some(x=>x.id==="echinochloa-colona"&&x.character==="ligule_length"))throw Error("Absent Echinochloa ligule incorrectly coded with a numerical length");
+if(pack.evidence.some(x=>x.id==="aegilops-cylindrica"&&x.character==="leaf_base"))throw Error("Tiny goatgrass auricles should not be fabricated as pointed/clasping");
+if(pack.evidence.some(x=>x.id==="digitaria-californica"&&x.character==="underground_stems"))throw Error("Digitaria subrhizomatous knotty base does not prove a true rhizome");
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={basal_crown:"hard_knotty"};
+let pass3Rows=run();
+if(pass3Rows.length!==169)throw Error("Pass3 advanced basal-crown choice eliminated grasses");
+if(!pass3Rows.some(x=>x.id==="digitaria-californica"&&x.extras===1))throw Error("California cottontop source-backed knotty base not ranked");
+state.refineSelected={leaf_base:"compressed_sheath"};
+pass3Rows=run();
+if(!pass3Rows.some(x=>x.id==="echinochloa-colona"&&x.extras===1))throw Error("Jungle rice compressed sheath not ranked");
+state.refineSelected={stem_special:"succulent_stems"};
+pass3Rows=run();
+if(!pass3Rows.some(x=>x.id==="hordeum-murinum"&&x.extras===1))throw Error("Wall barley succulent culm source not ranked");
+state.refineSelected={blade_venation:"prominent_midvein"};
+pass3Rows=run();
+if(!pass3Rows.some(x=>x.id==="bromus-catharticus"&&x.extras===1))throw Error("Rescuegrass conspicuous lower midvein not ranked");
+state.refineSelected={ligule_edge:"hair_fringe"};
+pass3Rows=run();
+if(!pass3Rows.some(x=>x.id==="dichanthelium-acuminatum"&&x.extras===1))throw Error("Hairy panicgrass multilevel fringe missing");
+if(pass3Rows.some(x=>x.id==="bromus-catharticus"&&x.extras>0))throw Error("Rescuegrass erose membrane cannot be called a hair-only ligule");
+state.refineSelected={blade_shape:"folded"};
+pass3Rows=run();
+if(!pass3Rows.some(x=>x.id==="aegilops-cylindrica"&&x.extras===1))throw Error("Dry-folded goatgrass blade observation missing");
+state.refineSelected={};
+if(run().length!==169)throw Error("PDF pass3 did not restore the full 169-grass pool");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
