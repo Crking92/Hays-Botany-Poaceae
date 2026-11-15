@@ -30,6 +30,42 @@ assert.equal(current.length,112,'unexpected scored inventory size');
 assert.equal(previous.length,112,'historical inventory boundary must be reconciled explicitly');
 assert.equal(new Set(current.map(x=>x.id)).size,112,'duplicate scored species');
 const allowedChanges=new Set(['traits','field_rule','character_evidence','diagnostic_checks']);
+// Two source/license checked public-domain JPEGs previously archived in this
+// family repo are the only permitted non-scoring photo changes in this batch.
+// Never make photos/hero globally mutable in a scoring sprint.
+const verifiedArchivePhotoAdditions={
+ 'bromus-pubescens':{
+  sha:'efe6b458d8a4e06aaf02854401fe416cd96037f3',
+  path:'content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-bromus-pubescens-epa.jpg',
+  source:'https://commons.wikimedia.org/wiki/File:Bromus_pubescens.jpg',
+  creator:'U.S. Environmental Protection Agency, Great Lakes image collection'
+ },
+ 'tridens-flavus':{
+  sha:'af7f91eb910e56dc682f73274f2bfadfc230ae6d',
+  path:'content/taxa/Poaceae/Tridens/tridens-flavus/images/tridens-flavus-provisional-face.jpg',
+  source:'https://commons.wikimedia.org/wiki/File:Tridens_flavus.jpg',
+  creator:'Mason Brock (Masebrock)'
+ }
+};
+function approvedArchivePhotoDifference(old,now,key){
+ if(key!=='photos'&&key!=='hero_i')return false;
+ const approval=verifiedArchivePhotoAdditions[old.id];
+ if(!approval)return false;
+ assert.equal(old.photos.length,1,old.id+': unexpected prior gallery size');
+ assert.deepEqual(now.photos[0],old.photos[0],old.id+': prior source/rights/credit changed');
+ assert.equal(now.photos.length,2,old.id+': only one new photo permitted');
+ assert.equal(old.hero_i,0,old.id+': unexpected prior hero');
+ assert.equal(now.hero_i,1,old.id+': added flowering photo must be shown first');
+ const photo=now.photos[1];
+ assert.equal(photo.i,1);
+ assert.equal(photo.hosted_git_blob_sha,approval.sha);
+ assert.equal(photo.src,'https://crking92.github.io/Hays-Botany-Poaceae/'+approval.path);
+ assert.equal(photo.source_page,approval.source);
+ assert.equal(photo.creator,approval.creator);
+ assert.ok(/^Public domain/.test(photo.license),old.id+': original source not public-domain');
+ assert.ok(photo.photo_qa_note?.includes('2026-11-15'),old.id+': missing image QA record');
+ return true;
+}
 /**
  * Three specifically reviewed corrections to the UI's airy option, whose
  * description says "an open cloud of tiny spikelets." A botanically open
@@ -56,7 +92,7 @@ for(const shard of shards){
     if(JSON.stringify(old)===JSON.stringify(now))continue;
     for(const key of new Set([...Object.keys(old),...Object.keys(now)])){
       if(JSON.stringify(old[key])!==JSON.stringify(now[key]))
-        assert(allowedChanges.has(key),
+        assert(allowedChanges.has(key)||approvedArchivePhotoDifference(old,now,key),
           old.id+': unexpected mutation of photo/credit/identity or non-scoring field '+key);
     }
     const priorTraits=old.traits||{},nextTraits=now.traits||{};
@@ -96,7 +132,7 @@ for(const shard of shards){
     changes.push(delta);
   }
 }
-assert.equal(photoRefs,514,'scored photo reference inventory unexpectedly changed');
+assert.equal(photoRefs,514+2,'514 original photos plus the two exact, verified archive reuses only');
 const candidates=JSON.parse(fs.readFileSync(path.join(root,prefix,'hays-candidates.json'),'utf8')).candidates;
 assert.equal(candidates.length,57,'candidate inventory count change must be reviewed');
 assert.equal(new Set([...current,...candidates].map(x=>x.id)).size,169);
