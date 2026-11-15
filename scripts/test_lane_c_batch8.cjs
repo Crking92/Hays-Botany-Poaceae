@@ -10,7 +10,7 @@ const all=shards.flatMap(s=>JSON.parse(read('species-'+s+'.json')));
 const candidates=JSON.parse(read('hays-candidates.json')).candidates;
 assert.equal(all.length,112);assert.equal(candidates.length,57);
 assert.equal(new Set([...all,...candidates].map(x=>x.id)).size,169);
-assert.equal(all.reduce((sum,x)=>sum+x.photos.length,0),514,'original 514 scored photo refs changed');
+assert.equal(all.reduce((sum,x)=>sum+x.photos.length,0),516,'original 516 scored photo refs changed');
 const html=read('index.html'),body=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert(body,'production inline JS missing');
 new vm.Script(body);
@@ -90,5 +90,5 @@ for(const id of ['bromus-texensis','sorghastrum-elliottii']){
 }
 console.log(JSON.stringify({pass:true,scored:112,provisional:57,addedStates:1,
   formerlyExcludedPathsCorrected:positives.length,negativeControls:negatives.length,
-  previousFullCharacterCombinationsRetained:olderFullCombinations,photoRefsPreserved:514,
+  previousFullCharacterCombinationsRetained:olderFullCombinations,photoRefsPreserved:516,
   uncertainRhizomeExcludedFromScoring:true},null,2));
