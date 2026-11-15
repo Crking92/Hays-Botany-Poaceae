@@ -312,5 +312,103 @@ for(const id of ["heteropogon-contortus","hordeum-pusillum","panicum-capillare"]
 }
 if(got.some(x=>x.id==="echinochloa-crus-galli"&&x.extras>0))throw Error("Barnyardgrass has NO true ligule: do not invent length");
 state.refineSelected={};
+// Batch 10: five formerly zero-coverage originals; measured Hill Country
+// morphology only. Existing core scoring and source conflicts are untouched.
+const batch10={
+  "dichanthelium-oligosanthes": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "stem_nodes"
+  ],
+  "dichanthelium-pedicellatum": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "stem_nodes",
+    "basal_crown"
+  ],
+  "digitaria-ciliaris": [
+    "blade_shape",
+    "blade_width",
+    "blade_edge",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "surface_runners"
+  ],
+  "tridens-flavus": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "underground_stems"
+  ],
+  "urochloa-texana": [
+    "blade_shape",
+    "blade_width",
+    "blade_edge",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "surface_runners",
+    "stem_nodes"
+  ]
+};
+if(pack.evidence.length<459)throw Error("Batch 10 evidence count below documented additions");
+for(const [id,chars] of Object.entries(batch10)){
+ const taxon=species.find(s=>s.id===id);
+ if(!taxon?.character_evidence?.audit_batch10_core_advanced_20261115 || taxon.character_evidence.audit_batch10_core_advanced_20261115.core_scoring_changed!==false)
+  throw Error("Batch 10 four-core audit record missing "+id);
+ for(const c of chars){
+  const e=pack.evidence.find(r=>r.id===id&&r.character===c);
+  if(!e||!e.states?.length||!e.source?.includes("Hagenbuch & Lemke (2015)")||!e.source_url?.startsWith("https://"))
+   throw Error("Batch 10 advanced provenance missing "+id+"/"+c);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"open"};
+got=verifyUnchanged("Batch 10 sheath opening must only rank");
+for(const id of Object.keys(batch10))
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Batch 10 species not ranked with sourced open sheath: "+id);
+state.refineSelected={surface_runners:"rooted_nodes"};
+got=verifyUnchanged("Batch 10 decumbent rooted nodes are not true stolons");
+for(const id of ["digitaria-ciliaris","urochloa-texana"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Batch 10 documented rooted culm missing: "+id);
+state.refineSelected={surface_runners:"stolon"};
+got=verifyUnchanged("Batch 10 cannot fabricate true stolons");
+for(const id of ["digitaria-ciliaris","urochloa-texana"])
+ if(got.some(x=>x.id===id&&x.extras!==0))throw Error("False stolon claim for "+id);
+state.refineSelected={ligule_edge:"hair_fringe"};
+got=verifyUnchanged("Few-flowered panicgrass hair ligule");
+if(!got.some(x=>x.id==="dichanthelium-oligosanthes"&&x.extras===1))throw Error("Few-flowered panicgrass hair ligule missing");
+state.refineSelected={ligule_length:"tiny"};
+got=verifyUnchanged("Short ciliate membrane on purpletop and signalgrass");
+for(const id of ["dichanthelium-pedicellatum","tridens-flavus","urochloa-texana"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Tiny ligule missing "+id);
+state.refineSelected={culm_posture:"prostrate"};
+got=verifyUnchanged("Research-pending prostrate option must not rank");
+if(got.some(x=>x.extras))throw Error("Uncited prostrate option unexpectedly ranks species");
+state.refineSelected={};
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
