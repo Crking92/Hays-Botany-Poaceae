@@ -2035,12 +2035,31 @@ try {
  state.species.push(...packets.flatMap(packet=>packet.profiles));
 } catch(err){console.warn("Additional unverified research trials unavailable; original scored key and earlier trials remain usable",err)}
 
+/* Previously source/rights reviewed references only: exact allowed photos, not species admission.
+   These provisional cards remain RESEARCH_TRIAL_NOT_ADMITTED with unknown morphology. */
+function clearedResearchPhotos(candidate){
+ const allow={"phyllostachys-aurea":["https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys_aurea_157349870.jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Phyllostachys-%C3%A9caille-tortue.JPG?width=900"],"bromus-brevis":["https://commons.wikimedia.org/wiki/Special:FilePath/Bromus%20brevis%20plant1%20(11261984224).jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Bromus%20brevis%20flowerhead1%20(11261864716)%20(2).jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Bromus%20brevis%20spikelet1%20(11261822745).jpg?width=900"],"cortaderia-selloana":["https://commons.wikimedia.org/wiki/Special:FilePath/Starr-010423-0018-Cortaderia%20selloana-habit-Kula-Maui%20(24164607769).jpg?width=900","https://commons.wikimedia.org/wiki/Special:FilePath/Starr-010423-0016-Cortaderia%20selloana-plumes%20and%20leaves-Kula-Maui%20(24506184396).jpg?width=900"],"lolium-x-boucheanum":["https://bs.plantnet.org/image/o/0ec985d99f4b6c8cce05a999aec522959f7da8da","https://bs.plantnet.org/image/o/22c1b49052813d5e8f13ef41f94f0adbdff82cb7"]};
+ const urls=allow[candidate?.id],records=candidate?.approved_gallery;
+ if(!urls||!Array.isArray(records)||records.length!==urls.length||
+    !candidate.approved_gallery_review?.status?.startsWith("GENERAL_IMAGES_CLEARED_EXACT_FILE_LICENSE_AND_SOURCE"))return [];
+ if(records.some((p,i)=>p.src!==urls[i]||p.source_species_id!==candidate.id||
+    p.reuse_status!=="SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER"||
+    p.photo_role!=="TARGET_SPECIES_SOURCE"||!p.source_page?.startsWith("https://")||
+    !p.license_url?.startsWith("https://")||!p.creator||
+    !/^CC BY(?:-SA)?/.test(p.license||"")||!p.caption||
+    !p.src.startsWith("https://")||!p.source_location_class))return [];
+ return records.map((p,i)=>({i,src:p.src,label:p.label+" — "+p.caption,
+    creator:p.creator,license:p.license,license_url:p.license_url,source_page:p.source_page,
+    photo_role:"SOURCE_LABELED_RESEARCH_REFERENCE",photo_qa_note:p.exact_rights_evidence,
+    original_source_page:p.original_source_page||p.src,source_location_class:p.source_location_class}));
+}
+
 // Every original 112 and every research 57 belongs in ONE candidate group.
 // Do not invent photo rights or identification states for the four photo-held taxa.
 const groupedIds=new Set(state.species.map(x=>x.id));
 for(const candidate of state.candidateManifest){
  if(groupedIds.has(candidate.id))continue;
- state.species.push({id:candidate.id,scientific:candidate.scientific,common:candidate.common||candidate.scientific,trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",traits:{head:[],habit:[],ligule:[],awns:[]},photos:[],hero_i:0,field_rule:"Research profile needs a verified diagnostic photograph and a connected specimen assessment. Earlier source packets include hypotheses, not confirmed core scoring. Keep unseen structures unknown and compare several features before naming.",warning_flags:candidate.warning_flags||[],source_candidate_status:candidate.status});
+ state.species.push({id:candidate.id,scientific:candidate.scientific,common:candidate.common||candidate.scientific,trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",traits:{head:[],habit:[],ligule:[],awns:[]},photos:clearedResearchPhotos(candidate),hero_i:0,field_rule:"These photographs are source-labeled research references, not an independent identification or proof of a Hays County plant. Look for several diagnostic structures on the real plant; hybrid identity and missing measurements still need specialist verification.",warning_flags:candidate.warning_flags||[],source_candidate_status:candidate.status});
  groupedIds.add(candidate.id);
 }
 if(state.candidateManifest.length===57&&state.species.length!==169)throw Error("Unified 169 grass inventory mismatch; inspect duplicate trial IDs");

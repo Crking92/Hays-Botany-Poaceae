@@ -86,15 +86,18 @@ def remote_parity(manifest):
     local_html = (LAB / "index.html").read_bytes()
     local_manifest = (LAB / MANIFEST).read_bytes()
     local_review = (LAB / "photo-review.html").read_bytes()
+    local_candidates = (LAB / "hays-candidates.json").read_bytes()
     last = None
     for attempt in range(24):
         try:
             live_html = fetch(PUBLIC + "index.html")
             live_manifest = fetch(PUBLIC + MANIFEST)
             live_review = fetch(PUBLIC + "photo-review.html")
+            live_candidates = fetch(PUBLIC + "hays-candidates.json")
             assert live_html == local_html, "Public Grass ID key HTML is not at this commit"
             assert live_manifest == local_manifest, "Public photo manifest does not match main"
             assert live_review == local_review, "Public photo review page does not match main"
+            assert live_candidates == local_candidates, "Public research-photo source metadata does not match main"
             assert b"applyApprovedGeneralPhotos" in live_html
             assert b"photo-general-archive-extras.json" in live_html
             break
@@ -195,8 +198,8 @@ def browser_review_page(manifest):
                 page.wait_for_function(
                     "() => document.querySelector('#total')?.textContent === '169' && document.querySelectorAll('#cards .card').length > 0",
                     timeout=70000)
-                assert int(page.locator("#photographed").inner_text()) == 165, "The two new source-backed species galleries are not live"
-                assert page.locator("#holds").inner_text().strip() == "4", "Research photo holds incorrectly promoted"
+                assert int(page.locator("#photographed").inner_text()) == 169, "All 169 source-reviewed general photo galleries are not live"
+                assert page.locator("#holds").inner_text().strip() == "0", "One or more source-reviewed research general galleries still missing"
                 assert page.locator("a[href='index.html']").count() == 1, "No link back to main identification key"
                 for scientific,creator,expected_total,minimum_license_links in [
                     ("Muhlenbergia reverchonii", "Sam Kieschnick",3,2),
@@ -219,16 +222,37 @@ def browser_review_page(manifest):
                             arg=img.get_attribute("src"), timeout=30000)
                     assert card.locator("a").filter(has_text="Photo source").count() >= expected_total, scientific + ": source link absent"
                     assert card.locator("a").filter(has_text="Reuse terms").count() >= minimum_license_links, scientific + ": expected source-specific license or grant links absent"
-                page.locator("#search").fill("Bromus brevis")
+                for scientific, creator, expected_total in [
+                    ("Phyllostachys aurea", "Gary Rogers", 2),
+                    ("Bromus brevis", "Harry Rose", 3),
+                    ("Cortaderia selloana", "Forest & Kim Starr", 2),
+                    ("Lolium × boucheanum", "Vitor Miralha Alves / Pl@ntNet", 2),
+                ]:
+                    page.locator("#search").fill(scientific)
+                    card = page.locator("#cards .card")
+                    assert card.count() == 1, scientific + ": missing source-labeled research general photos"
+                    assert "Research" in card.inner_text() and "unverified" in card.inner_text(), scientific + ": research flag was hidden"
+                    assert creator in card.inner_text(), scientific + ": contributor credit not visible"
+                    card.locator("details summary").click()
+                    card.locator(".extra-grid .photo").first.wait_for(state="visible", timeout=10000)
+                    assert card.locator(".extra-grid .photo").count() == expected_total, scientific + ": gallery photos missing"
+                    for img in card.locator(".extra-grid img").all():
+                        img.scroll_into_view_if_needed()
+                        page.wait_for_function(
+                            "(src) => [...document.querySelectorAll('#cards .extra-grid img')].some(x => x.src === src && x.complete && x.naturalWidth > 40)",
+                            arg=img.get_attribute("src"), timeout=30000)
+                    assert card.locator("a").filter(has_text="Photo source").count() >= expected_total, scientific + ": author source links not displayed"
+                    assert card.locator("a").filter(has_text="Reuse terms").count() >= expected_total, scientific + ": license links missing"
+                page.locator("#search").fill("")
                 page.locator('button[data-filter="gaps"]').click()
-                assert page.locator("#cards .card").count() == 1
-                assert "No approved photograph" in page.locator("#cards .card").inner_text(), "Held research photo invented"
+                assert page.locator("#cards .card").count() == 2, "Expected two one-photo species still needing complementary views"
+                assert page.locator("#cards .card").count() == 2, "Plains tanglehead and Chloris hybrid still need another view"
                 page.locator("#theme").click()
                 assert page.locator("html").get_attribute("data-theme") == "dark", "Dark review mode broken"
                 if width < 500:
                     assert page.evaluate("document.documentElement.scrollWidth-innerWidth") < 10, "Mobile gallery overflows"
                 assert not page_errors, "Photo review browser errors: " + repr(page_errors)
-                results.append({"width":width,"scientific_cards_checked":4,"held_photo_status":"NO_IMAGE","dark_mode":"PASS"})
+                results.append({"width":width,"scientific_cards_checked":8,"held_photo_status":"NO_IMAGE","dark_mode":"PASS"})
                 page.close()
         finally:
             browser.close()

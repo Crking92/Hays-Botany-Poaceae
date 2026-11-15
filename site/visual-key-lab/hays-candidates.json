@@ -6287,10 +6287,10 @@
       "observation_urls": [
         "https://www.inaturalist.org/observations/45834760"
       ],
-      "photo_status": "PHOTO_PIXEL_ACCESS_PENDING",
-      "existing_photo_pixels_checked": 0,
-      "field_view": null,
-      "unresolved": "Confirmation still required: Inspect original two images only with permission; keep hybrid-status hold unless exceptional diagnostic or provenance evidence.",
+      "photo_status": "GENERAL_REFERENCE_PHOTOS_LICENSE_CLEARED_ID_STILL_PENDING",
+      "existing_photo_pixels_checked": 2,
+      "field_view": "Two source-labeled nonlocal Lolium × boucheanum references show a spike in hand and upright flowering stalks; no proof of hybrid parentage.",
+      "unresolved": "Source-labeled general photographs are not diagnostic proof of a named hybrid; Hays voucher, independently verified parentage and adequate spikelet/floret measurements remain held. POWO treats Lolium × boucheanum and Lolium × hybridum as distinct accepted hybrid taxa; do not substitute the latter's images. Original Hays observation requires review.",
       "risky_context": true,
       "warning_flags": [
         "CHECK_PLANTED_OR_ESCAPED",
@@ -6335,7 +6335,57 @@
           "source": "Kew POWO Lolium × boucheanum https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
           "needed_view": "voucher, documented seed pedigree or specialist assessment; genetic evidence when necessary"
         }
-      ]
+      ],
+      "approved_gallery": [
+        {
+          "src": "https://bs.plantnet.org/image/o/0ec985d99f4b6c8cce05a999aec522959f7da8da",
+          "creator": "Vitor Miralha Alves / Pl@ntNet",
+          "label": "Hybrid ryegrass reference — hand-held flowering spike (Pl@ntNet, nonlocal)",
+          "role": "Flowering spike in hand",
+          "caption": "A source-labeled flowering Lolium spike held in a hand; not a proved Lolium × boucheanum hybrid voucher, measured spikelet diagnosis, or Hays County record. Other grass plants are visible behind it.",
+          "image_filename": "0ec985d99f4b6c8cce05a999aec522959f7da8da.jpg",
+          "source_page": "https://identify.plantnet.org/sw/k-northern-europe/species/Lolium%20%C3%97%20boucheanum%20Kunth/data",
+          "original_source_page": "https://bs.plantnet.org/image/o/0ec985d99f4b6c8cce05a999aec522959f7da8da",
+          "license": "CC BY-SA (Pl@ntNet)",
+          "license_url": "https://identify.plantnet.org/terms_of_use",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "lolium-x-boucheanum",
+          "source_location_class": "NONLOCAL_RESEARCH_REFERENCE",
+          "exact_rights_evidence": "Photo displayed by Pl@ntNet under Lolium × boucheanum with the named contributor and CC-BY-SA credit; Pl@ntNet's original user terms specify CC BY-SA 2.0 for shared observations. Original hosted image URL and Pl@ntNet photo gallery are retained. 2026-11-15 visual review of actual photo; not a verified hybrid voucher.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_PLANTNET_ORIGINAL_NO_REUPLOAD",
+          "modifications": "No changes to source pixels; displayed remotely unchanged; photographer and Pl@ntNet credited",
+          "photo_id": "0ec985d99f4b6c8cce05a999aec522959f7da8da"
+        },
+        {
+          "src": "https://bs.plantnet.org/image/o/22c1b49052813d5e8f13ef41f94f0adbdff82cb7",
+          "creator": "Frédéric Andrieu / Pl@ntNet",
+          "label": "Hybrid ryegrass reference — field habit and upright flowering spikes (Pl@ntNet, nonlocal)",
+          "role": "Whole habit and flowering spikes",
+          "caption": "Pl@ntNet-labeled ryegrass clump with upright flowering spikes in a nonlocal field. Genetic parentage, a Hays occurrence, and hybrid diagnostic anatomy have not been independently established.",
+          "image_filename": "22c1b49052813d5e8f13ef41f94f0adbdff82cb7.jpg",
+          "source_page": "https://identify.plantnet.org/sw/k-northern-europe/species/Lolium%20%C3%97%20boucheanum%20Kunth/data",
+          "original_source_page": "https://bs.plantnet.org/image/o/22c1b49052813d5e8f13ef41f94f0adbdff82cb7",
+          "license": "CC BY-SA (Pl@ntNet)",
+          "license_url": "https://identify.plantnet.org/terms_of_use",
+          "photo_role": "TARGET_SPECIES_SOURCE",
+          "source_species_id": "lolium-x-boucheanum",
+          "source_location_class": "NONLOCAL_RESEARCH_REFERENCE",
+          "exact_rights_evidence": "Photo displayed by Pl@ntNet under Lolium × boucheanum with the named contributor and CC-BY-SA credit; Pl@ntNet's original user terms specify CC BY-SA 2.0 for shared observations. Original hosted image URL and Pl@ntNet photo gallery are retained. 2026-11-15 visual review of actual photo; not a verified hybrid voucher.",
+          "reuse_status": "SOURCE_LICENSE_VERIFIED_GENERAL_PHOTO_ID_NOT_LOCAL_VOUCHER",
+          "media_delivery": "REMOTE_PLANTNET_ORIGINAL_NO_REUPLOAD",
+          "modifications": "No changes to source pixels; displayed remotely unchanged; photographer and Pl@ntNet credited",
+          "photo_id": "22c1b49052813d5e8f13ef41f94f0adbdff82cb7"
+        }
+      ],
+      "approved_gallery_review": {
+        "status": "GENERAL_IMAGES_CLEARED_EXACT_FILE_LICENSE_AND_SOURCE_PENDING_LIVE_QA",
+        "species_identity_scope": "Exact-name Pl@ntNet source-labeled photo references only; genetic hybrid identity, separate parent taxa and local Texas occurrence NOT independently verified",
+        "rights_source": "Pl@ntNet image cards name each photographer and CC BY-SA; official Pl@ntNet terms of use specify contributor CC BY-SA 2.0 with credit to author and Pl@ntNet",
+        "review_date": "2026-11-15",
+        "original_files": "External unchanged original JPG image endpoints. No new local copies.",
+        "remaining_targets": "Independent voucher/genetic or specialist hybrid ID confirmation, local wild provenance and direct flower/spikelet/collar diagnostic macro photographs. DO NOT substitute Lolium × hybridum photos under the currently conflicting taxonomic treatments."
+      }
     },
     {
       "id": "miscanthus-sinensis",
