@@ -410,5 +410,93 @@ state.refineSelected={culm_posture:"prostrate"};
 got=verifyUnchanged("Research-pending prostrate option must not rank");
 if(got.some(x=>x.extras))throw Error("Uncited prostrate option unexpectedly ranks species");
 state.refineSelected={};
+// Batch 11 — five additional scored species from named Hill Country
+// pages, with source-backed advanced positive ranking; core remains unchanged.
+const batch11={
+  "muhlenbergia-schreberi": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "surface_runners"
+  ],
+  "muhlenbergia-utilis": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "underground_stems"
+  ],
+  "muhlenbergia-x-involuta": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "sheath_surface",
+    "leaf_base",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ],
+  "panicum-coloratum": [
+    "blade_shape",
+    "blade_width",
+    "blade_hairs",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture",
+    "underground_stems",
+    "basal_crown"
+  ],
+  "festuca-octoflora": [
+    "blade_shape",
+    "blade_width",
+    "sheath_margins",
+    "sheath_surface",
+    "ligule_length",
+    "ligule_edge",
+    "culm_posture"
+  ]
+};
+if(pack.evidence.length<499)throw Error("Batch 11: missing 40 new advanced character citations");
+for(const [id,characters] of Object.entries(batch11)){
+ const speciesRecord=species.find(s=>s.id===id);
+ const audit=speciesRecord?.character_evidence?.audit_batch11_core_advanced_20261115;
+ if(!audit||audit.core_scoring_changed!==false||audit.core_traits_reviewed.length!==4)
+  throw Error("Batch 11 core four review missing "+id);
+ for(const character of characters){
+  const e=pack.evidence.find(x=>x.id===id&&x.character===character);
+  if(!e||!e.source.includes("Hagenbuch & Lemke (2015)")||!e.source_url.startsWith("https://")||!e.states.length)
+   throw Error("Batch 11 sourced field character missing "+id+"/"+character);
+ }
+}
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={sheath_margins:"open"};
+got=verifyUnchanged("Batch 11 reported open sheath cannot exclude grasses");
+for(const id of Object.keys(batch11))
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Batch11 open sheaths not ranked "+id);
+state.refineSelected={ligule_length:"long"};
+got=verifyUnchanged("Canyon muhly long ligule must only positively rank");
+if(!got.some(x=>x.id==="muhlenbergia-x-involuta"&&x.extras===1))throw Error("Canyon muhly long ligule missing");
+if(got.some(x=>x.id==="muhlenbergia-utilis"&&x.extras>0))throw Error("Aparejo cannot receive hybrid long ligule");
+state.refineSelected={surface_runners:"stolon"};
+got=verifyUnchanged("Nimblewill stolon is not a rhizome");
+if(!got.some(x=>x.id==="muhlenbergia-schreberi"&&x.extras===1))throw Error("Nimblewill true stolon unsupported");
+if(got.some(x=>x.id==="panicum-coloratum"&&x.extras>0))throw Error("Regional kleingrass must not be automatically called a stolon");
+state.refineSelected={underground_stems:"scaly_rhizome"};
+got=verifyUnchanged("Aparejo underground scaly rhizome");
+if(!got.some(x=>x.id==="muhlenbergia-utilis"&&x.extras===1))throw Error("Aparejo rhizome missing");
+state.refineSelected={blade_shape:"inrolled"};
+got=verifyUnchanged("Actual involute leaves on two nonhybrid grasses");
+for(const id of ["muhlenbergia-utilis","festuca-octoflora"])
+ if(!got.some(x=>x.id===id&&x.extras===1))throw Error("Inrolled blades missing "+id);
+if(got.some(x=>x.id==="muhlenbergia-x-involuta"&&x.extras>0))throw Error("Canyon hybrid has folded, not inrolled, blade");
+state.refineSelected={};
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
