@@ -208,6 +208,7 @@ def browser_review_page(manifest):
                     assert creator in card.inner_text(), scientific + ": photo creator not shown"
                     assert "Original scored" in card.inner_text(), scientific + ": source scored status missing"
                     card.locator("details summary").click()
+                    card.locator(".extra-grid .photo").first.wait_for(state="visible", timeout=10000)
                     assert card.locator(".extra-grid .photo").count() == 3, scientific + ": source photo sequence incomplete"
                     for img in card.locator(".extra-grid img").all():
                         img.scroll_into_view_if_needed()
