@@ -171,7 +171,8 @@ for(const id of ["erioneuron-pilosum","tridentopsis-mutica"]){
  const photos=compare(visitor.find(x=>x.id===id));
  assert.equal(photos.length,2,"Two distinct credited comparisons not available for "+id);
  assert.equal(new Set(photos.map(p=>p.src)).size,2);
- assert.ok(photos.every(p=>p.source_page&&p.license_url),"A selected comparison photo lacks legal attribution");
+ assert.ok(photos.every(p=>p.source_page&&p.creator&&p.license),"A selected comparison photo lacks its source, creator or legal status");
+ assert.ok(photos.some(p=>p.license_url),"Newly admitted rights-controlled photos must link the exact author permission or CC deed");
 }
 assert.ok(inline.includes("Author's reuse permission"),"Tom Chester permission link is not displayed");
 assert.ok(inline.includes("Photo license terms"),"NC license link is not displayed");
