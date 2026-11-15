@@ -85,13 +85,16 @@ def fetch(url, *, attempts=1):
 def remote_parity(manifest):
     local_html = (LAB / "index.html").read_bytes()
     local_manifest = (LAB / MANIFEST).read_bytes()
+    local_review = (LAB / "photo-review.html").read_bytes()
     last = None
     for attempt in range(24):
         try:
             live_html = fetch(PUBLIC + "index.html")
             live_manifest = fetch(PUBLIC + MANIFEST)
+            live_review = fetch(PUBLIC + "photo-review.html")
             assert live_html == local_html, "Public Grass ID key HTML is not at this commit"
             assert live_manifest == local_manifest, "Public photo manifest does not match main"
+            assert live_review == local_review, "Public photo review page does not match main"
             assert b"applyApprovedGeneralPhotos" in live_html
             assert b"photo-general-archive-extras.json" in live_html
             break
@@ -176,6 +179,58 @@ def browser_photo_cards(manifest, by_id):
                       "species_checks": results}), flush=True)
 
 
+
+def browser_review_page(manifest):
+    """Confirm the review interface itself is visible, searchable and fully attributed."""
+    from playwright.sync_api import sync_playwright
+    results = []
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
+        try:
+            for width, height in [(1280, 900), (390, 844)]:
+                page = browser.new_page(viewport={"width": width, "height": height})
+                page_errors = []
+                page.on("pageerror", lambda error: page_errors.append(str(error)))
+                page.goto(PUBLIC + "photo-review.html", wait_until="domcontentloaded", timeout=70000)
+                page.wait_for_function(
+                    "() => document.querySelector('#total')?.textContent === '169' && document.querySelectorAll('#cards .card').length > 0",
+                    timeout=70000)
+                assert int(page.locator("#photographed").inner_text()) >= 160, "Photos not in the public review gallery"
+                assert page.locator("#holds").inner_text().strip() == "5", "Withheld images incorrectly promoted"
+                assert page.locator("a[href='index.html']").count() == 1, "No link back to main identification key"
+                for scientific,creator in [
+                    ("Muhlenbergia reverchonii", "Sam Kieschnick"),
+                    ("Bromus lanceolatus", "Tyler Cannon"),
+                ]:
+                    page.locator("#search").fill(scientific)
+                    card = page.locator("#cards .card")
+                    assert card.count() == 1, scientific + ": should be one search result"
+                    assert creator in card.inner_text(), scientific + ": photo creator not shown"
+                    assert "Original scored" in card.inner_text(), scientific + ": source scored status missing"
+                    card.locator("details summary").click()
+                    assert card.locator(".extra-grid .photo").count() == 3, scientific + ": source photo sequence incomplete"
+                    for img in card.locator(".extra-grid img").all():
+                        img.scroll_into_view_if_needed()
+                        page.wait_for_function(
+                            "(src) => [...document.querySelectorAll('#cards .extra-grid img')].some(x => x.src === src && x.complete && x.naturalWidth > 40)",
+                            arg=img.get_attribute("src"), timeout=30000)
+                    assert card.locator("a").filter(has_text="Photo source").count() >= 3, scientific + ": source link absent"
+                    assert card.locator("a").filter(has_text="Reuse terms").count() >= 3, scientific + ": license link absent"
+                page.locator("#search").fill("Bromus brevis")
+                page.locator('button[data-filter="gaps"]').click()
+                assert page.locator("#cards .card").count() == 1
+                assert "No approved photograph" in page.locator("#cards .card").inner_text(), "Held research photo invented"
+                page.locator("#theme").click()
+                assert page.locator("html").get_attribute("data-theme") == "dark", "Dark review mode broken"
+                if width < 500:
+                    assert page.evaluate("document.documentElement.scrollWidth-innerWidth") < 10, "Mobile gallery overflows"
+                assert not page_errors, "Photo review browser errors: " + repr(page_errors)
+                results.append({"width":width,"scientific_cards_checked":2,"held_photo_status":"NO_IMAGE","dark_mode":"PASS"})
+                page.close()
+        finally:
+            browser.close()
+    print("LIVE_PHOTO_REVIEW_PAGE_VISIBLE", json.dumps(results), flush=True)
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--local-only", action="store_true")
@@ -186,6 +241,7 @@ def main():
         return
     n = remote_parity(manifest)
     browser_photo_cards(manifest, scored)
+    browser_review_page(manifest)
     print(json.dumps({"status": "PASS", "public_photo_files_byte_verified": n,
                       "scored_source_photo_refs_unchanged": 514,
                       "source_published": PUBLIC,
