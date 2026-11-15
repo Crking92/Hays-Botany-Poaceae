@@ -137,7 +137,7 @@ for(const check of restricted){
  assert.equal(p.hosted_git_blob_sha,check.sha);
  assert.equal(p.src,"https://crking92.github.io/Hays-Botany-Poaceae/"+check.file);
  assert.ok(p.photo_qa_note.includes("2026-11-15"),"Pixel review missing: "+check.file);
- if(check.creator==="Tom Chester")assert.ok(p.photo_qa_note.includes("permission"),"Explicit credited permission not recorded");
+ if(check.creator==="Tom Chester")assert.ok(/permission/i.test(p.photo_qa_note)&&p.license_url==="https://tchester.org/gc/plants/species/erioneuron_pilosum.html","Exact credited permission not recorded");
  else assert.ok(/noncommercial/i.test(p.photo_qa_note),"Joey CC BY-NC must restrict commercial reuse");
  const bytes=fs.readFileSync(path.join(root,check.file));
  assert.ok(bytes.length>30000,"Empty original photo: "+check.file);
