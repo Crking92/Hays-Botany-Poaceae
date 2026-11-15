@@ -1620,6 +1620,31 @@
         "reference": "Ciliate membrane can present visually as fringe or tiny papery flap. Do not code anatomically hair-only, and do not count unrelated hair on collar/sheath. Parent-varying and hybrid diagnosis remains on hold.",
         "status": "SOURCE_BACKED_CONDITIONAL_FIELD_OBSERVATION",
         "review_date": "2026-11-12"
+      },
+      "audit_batch16_core_advanced_20261115": {
+        "review_date": "2026-11-15",
+        "core_traits_reviewed": [
+          "head",
+          "habit",
+          "ligule",
+          "awns"
+        ],
+        "core_scoring_changed": false,
+        "advanced_characters_added": [
+          "blade_width",
+          "ligule_length",
+          "ligule_edge",
+          "culm_posture",
+          "surface_runners"
+        ],
+        "source": "Kew GrassBase (Clayton et al.), Chloris × subdolichostachya named hybrid species account, unpaginated",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:396032-1/general-information",
+        "reproduction_status": "Existing reproductive scoring unchanged; focus on documented observable plant morphology.",
+        "taxon_scope_status": "Kew named hybrid species description only; no photo or examined plant certified as hybrid. Parent overlap cannot be diagnostic.",
+        "status": "EXACT_TAXON_SOURCE_REGIONAL_MORPHOLOGY_POSITIVE_ONLY",
+        "specimen_certainty": "Source-grounded taxon morphology, not confirmation of any specific photo, voucher, protected plant handling, or rights.",
+        "site_filters_changed": false,
+        "photos_changed": false
       }
     },
     "diagnostic_checks": [
@@ -1806,6 +1831,32 @@
         "reference": "Names crosswalk, but historical floral/ligule measurements are under older variety concept; old identified photos must be independently linked to present accepted species concept.",
         "status": "NAME_CROSSWALK_SOURCE_CHECKED_LEGACY_CONCEPT_CAUTION",
         "review_date": "2026-11-10"
+      },
+      "audit_batch16_core_advanced_20261115": {
+        "review_date": "2026-11-15",
+        "core_traits_reviewed": [
+          "head",
+          "habit",
+          "ligule",
+          "awns"
+        ],
+        "core_scoring_changed": false,
+        "advanced_characters_added": [
+          "blade_width",
+          "blade_hairs",
+          "sheath_surface",
+          "ligule_length",
+          "ligule_edge",
+          "culm_posture"
+        ],
+        "source": "J. R. Thomas (2015), Revision of Dichanthelium sect. Lanuginosa, Phytoneuron 2015-50, printed p. 37, D. lindheimeri",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/50PhytoN-Dichantheliumlanuginosa.pdf#page=37",
+        "reproduction_status": "Existing reproductive scoring unchanged; focus on documented observable plant morphology.",
+        "taxon_scope_status": "Thomas 2015 species-specific revision from 285 analyzed specimens; older infraspecific name conflation not used for new ranges.",
+        "status": "EXACT_TAXON_SOURCE_REGIONAL_MORPHOLOGY_POSITIVE_ONLY",
+        "specimen_certainty": "Source-grounded taxon morphology, not confirmation of any specific photo, voucher, protected plant handling, or rights.",
+        "site_filters_changed": false,
+        "photos_changed": false
       }
     },
     "diagnostic_checks": [
