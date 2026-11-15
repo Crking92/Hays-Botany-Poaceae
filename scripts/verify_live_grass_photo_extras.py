@@ -195,12 +195,14 @@ def browser_review_page(manifest):
                 page.wait_for_function(
                     "() => document.querySelector('#total')?.textContent === '169' && document.querySelectorAll('#cards .card').length > 0",
                     timeout=70000)
-                assert int(page.locator("#photographed").inner_text()) >= 160, "Photos not in the public review gallery"
-                assert page.locator("#holds").inner_text().strip() == "5", "Withheld images incorrectly promoted"
+                assert int(page.locator("#photographed").inner_text()) == 165, "The two new source-backed species galleries are not live"
+                assert page.locator("#holds").inner_text().strip() == "4", "Research photo holds incorrectly promoted"
                 assert page.locator("a[href='index.html']").count() == 1, "No link back to main identification key"
-                for scientific,creator in [
-                    ("Muhlenbergia reverchonii", "Sam Kieschnick"),
-                    ("Bromus lanceolatus", "Tyler Cannon"),
+                for scientific,creator,expected_total,minimum_license_links in [
+                    ("Muhlenbergia reverchonii", "Sam Kieschnick",3,2),
+                    ("Bromus lanceolatus", "Tyler Cannon",3,2),
+                    ("Muhlenbergia ×involuta", "Bob Harms",4,4),
+                    ("Eragrostis intermedia", "Cecelia Alexander",4,4),
                 ]:
                     page.locator("#search").fill(scientific)
                     card = page.locator("#cards .card")
@@ -209,14 +211,14 @@ def browser_review_page(manifest):
                     assert "Original scored" in card.inner_text(), scientific + ": source scored status missing"
                     card.locator("details summary").click()
                     card.locator(".extra-grid .photo").first.wait_for(state="visible", timeout=10000)
-                    assert card.locator(".extra-grid .photo").count() == 3, scientific + ": source photo sequence incomplete"
+                    assert card.locator(".extra-grid .photo").count() == expected_total, scientific + ": source photo sequence incomplete"
                     for img in card.locator(".extra-grid img").all():
                         img.scroll_into_view_if_needed()
                         page.wait_for_function(
                             "(src) => [...document.querySelectorAll('#cards .extra-grid img')].some(x => x.src === src && x.complete && x.naturalWidth > 40)",
                             arg=img.get_attribute("src"), timeout=30000)
-                    assert card.locator("a").filter(has_text="Photo source").count() >= 3, scientific + ": source link absent"
-                    assert card.locator("a").filter(has_text="Reuse terms").count() >= 2, scientific + ": two approved photo-extra license links absent"
+                    assert card.locator("a").filter(has_text="Photo source").count() >= expected_total, scientific + ": source link absent"
+                    assert card.locator("a").filter(has_text="Reuse terms").count() >= minimum_license_links, scientific + ": expected source-specific license or grant links absent"
                 page.locator("#search").fill("Bromus brevis")
                 page.locator('button[data-filter="gaps"]').click()
                 assert page.locator("#cards .card").count() == 1
@@ -226,7 +228,7 @@ def browser_review_page(manifest):
                 if width < 500:
                     assert page.evaluate("document.documentElement.scrollWidth-innerWidth") < 10, "Mobile gallery overflows"
                 assert not page_errors, "Photo review browser errors: " + repr(page_errors)
-                results.append({"width":width,"scientific_cards_checked":2,"held_photo_status":"NO_IMAGE","dark_mode":"PASS"})
+                results.append({"width":width,"scientific_cards_checked":4,"held_photo_status":"NO_IMAGE","dark_mode":"PASS"})
                 page.close()
         finally:
             browser.close()
