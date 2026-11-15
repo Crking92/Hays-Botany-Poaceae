@@ -894,7 +894,7 @@ state.refineSelected={};
 // Batch 17 — every one of 112 original grasses has at least one published optional observation.
 const batch17={"bouteloua-pectinata":["sheath_surface","culm_posture"],"dichanthelium-commutatum":["blade_width","blade_hairs","sheath_margins","sheath_surface","ligule_length","ligule_edge","culm_posture","underground_stems","stem_nodes"],"anatherum-tenuispatheum":["ligule_length","ligule_edge","sheath_surface"],"dinebra-panicea-subsp-mucronata":["blade_width","ligule_length","blade_shape","sheath_margins","sheath_surface"]};
 if(pack.evidence.length<710)throw Error("Batch17 710-row evidence baseline regressed");
-if(new Set(pack.evidence.map(x=>x.id)).size!==112)throw Error("Batch17 expected all original 112 to have positive-only advanced evidence");
+if(new Set(pack.evidence.filter(x=>species.some(s=>s.id===x.id)).map(x=>x.id)).size!==112)throw Error("Batch17 requires at least one advanced clue for every original scored grass");
 for(const [id,chars] of Object.entries(batch17)){
  const row=species.find(x=>x.id===id),a=row?.character_evidence?.audit_batch17_first_coverage_20261115;
  if(!a||a.core_scoring_changed!==false||a.site_filters_changed!==false||a.photos_changed!==false||a.provisional_admissions_changed!==false)throw Error("Batch17 core and research guards lost "+id);
@@ -975,7 +975,9 @@ if(all169.length!==169)throw Error("One unfiltered result list must show all 169
 state.selected.head="foxtail";
 const selective=run();
 if(!selective.length||selective.length>=169)throw Error("Original 112 no longer narrow under scored head selections");
-for(const candidate of [...groupedTrials,...placeholderProfiles])if(!selective.some(x=>x.id===candidate.id))throw Error("Provisional disagreement must be UNKNOWN, not a hard exclusion: "+candidate.id);
+for(const candidate of placeholderProfiles)if(!selective.some(x=>x.id===candidate.id))throw Error("Uncoded photo-held grass must stay possible: "+candidate.id);
+if(!selective.some(x=>x.id==="setaria-viridis"))throw Error("Documented newer foxtail trait failed to match");
+if(selective.some(x=>x.id==="melica-nitens"))throw Error("Known Melica panicle should not be treated as a foxtail");
 state.selected={head:null,habit:null,ligule:null,awns:null};
 state.refineSelected={};
 if(run().length!==169)throw Error("Unified 169 inventory was not restored after selection");
