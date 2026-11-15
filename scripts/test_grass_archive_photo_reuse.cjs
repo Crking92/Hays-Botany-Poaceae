@@ -11,7 +11,7 @@ assert.equal(new Set(originals.map(s=>s.id)).size,112);
 assert.equal(originals.reduce((n,s)=>n+(s.photos||[]).length,0),514,"Original 514 scored source photos must be untouched");
 const manifest=JSON.parse(fs.readFileSync(path.join(lab,"photo-general-archive-extras.json"),"utf8"));
 assert.equal(manifest.schema,"HAYS_GRASS_GENERAL_PHOTO_ARCHIVE_EXTRAS_V1");
-assert.equal(manifest.photos.length,13);
+assert.equal(manifest.photos.length,20);
 const checks=[
  {id:"bromus-pubescens",file:"content/taxa/Poaceae/Bromus/bromus-pubescens/images/commons-bromus-pubescens-epa.jpg",
   source:"https://commons.wikimedia.org/wiki/File:Bromus_pubescens.jpg",
@@ -63,7 +63,7 @@ assert.ok(start>=0&&end>start,"Runtime photo-only overlay unavailable");
 const sandbox={};vm.createContext(sandbox);vm.runInContext(inline.slice(start,end),sandbox);
 const install=(scored,pack)=>vm.runInContext("applyApprovedGeneralPhotos(scored,manifest)",Object.assign(sandbox,{scored,manifest:pack}));
 const visitor=structuredClone(originals),baseline=JSON.stringify(originals);
-assert.equal(install(visitor,manifest),13,"Thirteen source-specific archival photographs must install only into in-memory galleries");
+assert.equal(install(visitor,manifest),20,"Twenty source-specific archival photographs must install only into in-memory galleries");
 for(const check of checks){
  const s=visitor.find(x=>x.id===check.id);
  assert.equal(s.photos.length,2);assert.equal(s.hero_i,1);
@@ -71,24 +71,24 @@ for(const check of checks){
  assert.deepEqual(JSON.parse(JSON.stringify(s.photos[0])),originals.find(x=>x.id===check.id).photos[0]);
  assert.deepEqual(JSON.parse(JSON.stringify(s.traits)),originals.find(x=>x.id===check.id).traits);
 }
-assert.equal(visitor.reduce((n,s)=>n+s.photos.length,0),527);
-assert.equal(visitor.filter(s=>s.photos.length>=2).length,109);
-assert.equal(visitor.filter(s=>s.photos.length===1).length,2);
-assert.deepEqual(visitor.filter(s=>s.photos.length===0).map(s=>s.id),["muhlenbergia-x-involuta"]);
+assert.equal(visitor.reduce((n,s)=>n+s.photos.length,0),534);
+assert.equal(visitor.filter(s=>s.photos.length>=2).length,111);
+assert.equal(visitor.filter(s=>s.photos.length===1).length,1);
+assert.deepEqual(visitor.filter(s=>s.photos.length===0).map(s=>s.id),[]);
 assert.equal(install(visitor,manifest),0,"Repeat manifest load must not duplicate gallery photos");
 assert.equal(install(structuredClone(originals),{schema:"INVALID",photos:manifest.photos}),0,"Unknown manifest schema cannot install");
 const forged=structuredClone(manifest);forged.photos[0].photo.license="All rights reserved";
 const partial=structuredClone(originals);
-assert.equal(install(partial,forged),12,"Unapproved rights cannot be promoted");
+assert.equal(install(partial,forged),19,"Unapproved rights cannot be promoted");
 const alteredSource=structuredClone(manifest);
 alteredSource.photos[2].photo.source_page="https://www.gbif.org/occurrence/000000000";
-assert.equal(install(structuredClone(originals),alteredSource),12,"Different GBIF photo source cannot inherit the approval");
+assert.equal(install(structuredClone(originals),alteredSource),19,"Different GBIF photo source cannot inherit the approval");
 const alteredSha=structuredClone(manifest);
 alteredSha.photos[3].photo.hosted_git_blob_sha="0".repeat(40);
-assert.equal(install(structuredClone(originals),alteredSha),12,"Different archived bytes cannot inherit the approval");
+assert.equal(install(structuredClone(originals),alteredSha),19,"Different archived bytes cannot inherit the approval");
 const alteredCreator=structuredClone(manifest);
 alteredCreator.photos[2].photo.creator="Unknown";
-assert.equal(install(structuredClone(originals),alteredCreator),12,"Attribution cannot be substituted");
+assert.equal(install(structuredClone(originals),alteredCreator),19,"Attribution cannot be substituted");
 
 /* Five photo-specific permission decisions from sources that were opened and
    visually inspected. A Tom Chester page-level grant is not a CC license. */
@@ -157,11 +157,11 @@ const tryRemoveOne=(index,property,value)=>{
  const altered=structuredClone(manifest);altered.photos[index].photo[property]=value;
  return install(structuredClone(originals),altered);
 };
-assert.equal(tryRemoveOne(4,"license_url","https://not-permitted.invalid/"),12,"Tom Chester permission page was ignored");
-assert.equal(tryRemoveOne(5,"hosted_git_blob_sha","0".repeat(40)),12,"Unknown Tom Chester bytes were approved");
-assert.equal(tryRemoveOne(6,"source_page","https://tchester.org/elsewhere.jpg"),12,"Different Tom Chester photo was approved");
-assert.equal(tryRemoveOne(7,"license","CC BY 4.0"),12,"Changed noncommercial license was treated as approved");
-assert.equal(tryRemoveOne(8,"creator","Uncredited"),12,"Joey image attribution can not change");
+assert.equal(tryRemoveOne(4,"license_url","https://not-permitted.invalid/"),19,"Tom Chester permission page was ignored");
+assert.equal(tryRemoveOne(5,"hosted_git_blob_sha","0".repeat(40)),19,"Unknown Tom Chester bytes were approved");
+assert.equal(tryRemoveOne(6,"source_page","https://tchester.org/elsewhere.jpg"),19,"Different Tom Chester photo was approved");
+assert.equal(tryRemoveOne(7,"license","CC BY 4.0"),19,"Changed noncommercial license was treated as approved");
+assert.equal(tryRemoveOne(8,"creator","Uncredited"),19,"Joey image attribution can not change");
 const comparisonStart=inline.indexOf("/* Existing photographs only.");
 const comparisonEnd=inline.indexOf("function compareCandidates(){",comparisonStart);
 assert.ok(comparisonStart>=0&&comparisonEnd>comparisonStart,"Comparison selector unavailable");
@@ -188,7 +188,7 @@ const additions=[
  {id:"bromus-lanceolatus",i:2,hero:null,file:"content/taxa/Poaceae/Bromus/bromus-lanceolatus/images/tx-lanceolate-brome-391179324.jpg",
   source:"https://www.inaturalist.org/photos/391179324",creator:"Jared Shorma",sha:"5d706cbc3d6e6920d802ddc18e4a8d71fc6071ad"}
 ];
-assert.deepEqual(manifest.photos.slice(9).map(x=>x.species_id+":"+x.photo.i),additions.map(x=>x.id+":"+x.i));
+assert.deepEqual(manifest.photos.slice(9,13).map(x=>x.species_id+":"+x.photo.i),additions.map(x=>x.id+":"+x.i));
 for(const x of additions){
  const entry=manifest.photos.find(e=>e.species_id===x.id&&e.photo.i===x.i),p=entry?.photo;
  assert.ok(p,"Missing exact archival photo "+x.id+":"+x.i);
@@ -214,13 +214,56 @@ for(const id of ["muhlenbergia-reverchonii","bromus-lanceolatus"]){
  assert.equal(new Set(shown.photos.map(p=>p.src)).size,3,id+" duplicate URL");
  assert.equal(compare(shown).length,2,id+" side-by-side gallery did not inherit photos");
 }
-assert.equal(tryRemoveOne(9,"license","CC0 1.0"),12,"CC BY photo cannot silently become public domain");
-assert.equal(tryRemoveOne(10,"source_page","https://www.inaturalist.org/photos/0"),12,"Unknown seep muhly source was approved");
-assert.equal(tryRemoveOne(11,"hosted_git_blob_sha","0".repeat(40)),12,"Different brome photo bytes approved");
-assert.equal(tryRemoveOne(12,"creator","Uncredited"),12,"Brome author attribution was lost");
+assert.equal(tryRemoveOne(9,"license","CC0 1.0"),19,"CC BY photo cannot silently become public domain");
+assert.equal(tryRemoveOne(10,"source_page","https://www.inaturalist.org/photos/0"),19,"Unknown seep muhly source was approved");
+assert.equal(tryRemoveOne(11,"hosted_git_blob_sha","0".repeat(40)),19,"Different brome photo bytes approved");
+assert.equal(tryRemoveOne(12,"creator","Uncredited"),19,"Brome author attribution was lost");
+
+/* Copyright-retained author grant: exact archived Bob Harms photographs,
+   not public domain or Creative Commons and not hybrid parentage certification. */
+const harmsAdditions=[
+ ["eragrostis-intermedia",1,null,"bob-harms-erin-l-collar-hairy-sheath.jpg","f1524868c73aed1c1898ceb2865ba483c771baf1","ERIN-L"],
+ ["eragrostis-intermedia",2,null,"bob-harms-erin-z-connected-crown-fibrous-roots.jpg","855f8228d942cac259a837cbc8a576537e89cf83","ERIN-z"],
+ ["eragrostis-intermedia",3,null,"bob-harms-erin-9-actual-scaled-mature-spikelets.jpg","69346e24cd6f82ac52cf9d6a370e041941a473f3","ERIN-9"],
+ ["muhlenbergia-x-involuta",1,1,"bob-harms-muin-a.jpg","66b7eb37dcd907b0182e0c87b9f0e82af5177ba0","MUIN-a"],
+ ["muhlenbergia-x-involuta",2,null,"bob-harms-muin-i.jpg","3cf48d76d95e84dcc69579ad3aa4c66989442a55","MUIN-I"],
+ ["muhlenbergia-x-involuta",3,null,"bob-harms-muin-j.jpg","6b09c1669192433e97bdc689a22109c4886656c2","MUIN-J"],
+ ["muhlenbergia-x-involuta",4,null,"bob-harms-muin-l.jpg","f2efcaffd82987e25a61b2701f8aa8691adcb8e5","MUIN-L"]
+];
+assert.deepEqual(manifest.photos.slice(13).map(x=>x.species_id+":"+x.photo.i),harmsAdditions.map(x=>x[0]+":"+x[1]));
+for(const [id,i,hero,filename,sha,page] of harmsAdditions){
+ const row=manifest.photos.find(x=>x.species_id===id&&x.photo.i===i),p=row?.photo;
+ assert.ok(row&&p,"Missing named photographic archive "+id+":"+i);
+ const pathName="content/taxa/Poaceae/"+(id.startsWith("eragrostis")?"Eragrostis":"Muhlenbergia")+"/"+id+"/images/"+filename;
+ assert.equal(p.src,"https://crking92.github.io/Hays-Botany-Poaceae/"+pathName);
+ assert.equal(p.source_page,"https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/"+page+".html");
+ assert.equal(row.hero_i,hero);
+ assert.equal(p.creator,"Bob Harms");
+ assert.equal(p.license,"© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)");
+ assert.equal(p.license_url,"https://w3.biosci.utexas.edu/prc/Monocots/");
+ assert.equal(p.hosted_git_blob_sha,sha);
+ assert.match(p.photo_qa_note,/educational use|scientific\/educational use/);
+ assert.match(p.photo_qa_note,/not (?:independent|a verified)|not independently|remains|not confirmed|not prove|do not|no independent/i,"Anatomy/identity hold was removed");
+ const data=fs.readFileSync(path.join(root,pathName));
+ assert.ok(data.length>30000 && data.subarray(0,3).equals(Buffer.from([0xff,0xd8,0xff])));
+ const check=crypto.createHash("sha1").update(Buffer.from("blob "+data.length+"\0")).update(data).digest("hex");
+ assert.equal(check,sha,"Archive exact bytes have changed "+pathName);
+}
+for(const [id,count,hero] of [["eragrostis-intermedia",4,0],["muhlenbergia-x-involuta",4,1]]){
+ const before=originals.find(x=>x.id===id),after=visitor.find(x=>x.id===id);
+ assert.equal(after.photos.length,count,id+" incomplete");
+ assert.equal(after.hero_i,hero,id+" should show the approved lead");
+ assert.deepEqual(after.traits,before.traits,id+" scoring traits changed");
+ assert.deepEqual(after.photos.slice(0,before.photos.length),before.photos,id+" original scored photos changed");
+ assert.equal(new Set(after.photos.map(p=>p.src)).size,count,id+" duplicated source");
+}
+assert.equal(tryRemoveOne(13,"license","Public domain"),19,"Explicit photographer educational grant cannot become PD");
+assert.equal(tryRemoveOne(14,"creator","Uncredited"),19,"Botanical photographer lost");
+assert.equal(tryRemoveOne(16,"hosted_git_blob_sha","0".repeat(40)),19,"Unknown canyon muhly bytes must remain held");
+assert.equal(tryRemoveOne(19,"source_page","https://invalid.example/"),19,"Different collar photo source has no permission");
 
 assert.equal(JSON.stringify(originals),baseline,"In-memory photo overlay mutated original scored source records");
 assert.ok(inline.includes('await fetch("photo-general-archive-extras.json"'),"Visitor boot does not retrieve supplement");
 assert.ok(inline.includes("if(state.species.length!==112)"),"112 scored count guard removed");
 assert.ok(inline.includes("const views=comparisonPhotos(s)"),"Comparison does not use same enriched photos");
-console.log("PASS: 13 source-specific archived photos; 514 original source records unchanged, 527 visitor references, 109 grasses with 2+ photos, 2 single and 1 empty; rights and byte-hash guards intact.");
+console.log("PASS: 20 exact-source archived photos; 514 original source records unchanged, 534 visitor references, 111 scored grasses with 2+ photos, 1 scored single and no scored empty; educational-use license/rights and SHA guards intact.");
