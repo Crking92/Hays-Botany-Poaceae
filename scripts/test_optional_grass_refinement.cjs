@@ -941,5 +941,45 @@ got=verifyUnchanged("Batch17 conditional variable-panicgrass rhizomes");
 if(!got.some(x=>x.id==="dichanthelium-commutatum"&&x.extras===1))throw Error("Conditional 2mm Dichanthelium rhizomes not ranked");
 state.refineSelected={};
 
+// Unified 169 grass list — original 112 retain scored exclusion logic; 57 uncertain profiles join one group.
+// PDF source audit pass 1: H&L vegetative first, Diggs reproductive printed-page gate.
+const pdfPass1={"melica-nitens":8,"setaria-viridis":10,"eragrostis-curtipedicellata":8};
+if(pack.evidence.length<736)throw Error("PDF audit pass1: fewer than 736 cited observations");
+if(new Set(pack.evidence.map(x=>x.id)).size<115)throw Error("PDF audit pass1: 115 of 169 need at least one optional observation");
+for(const [id,expected] of Object.entries(pdfPass1)){
+ const rows=pack.evidence.filter(x=>x.id===id);
+ if(rows.length!==expected)throw Error("Source-count mismatch "+id);
+ for(const row of rows){
+  const expectedPaper=["florets_per_spikelet","lemma_texture"].includes(row.character)?"Diggs, Lipscomb & O\'Kennon (1999)":"Hagenbuch & Lemke (2015)";
+  if(!row.source.includes(expectedPaper)||!row.source.includes("printed p.")||!row.source_url?.startsWith("https://"))throw Error("Bad PDF citation "+id+"/"+row.character);
+ }
+}
+if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="underground_stems"))throw Error("Disputed Melica nitens rhizome incorrectly scored");
+if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="sheath_margins"))throw Error("Research-pending closed Melica sheath incorrectly scored");
+if(html.includes("Number(!!a.s.trial)-Number(!!b.s.trial)"))throw Error("Old trial-last ranking still separates the 57 newer grasses");
+const unifiedManifest=JSON.parse(fs.readFileSync(path.join(root,"hays-candidates.json"),"utf8"));
+const unifiedFiles=["provisional-trial-profiles.json","provisional-trial-batch2.json","provisional-trial-batch3.json","provisional-trial-batch4.json","provisional-trial-batch5-a.json","provisional-trial-batch5-b.json","provisional-trial-batch5-c.json"];
+const groupedTrials=unifiedFiles.flatMap(name=>JSON.parse(fs.readFileSync(path.join(root,name),"utf8")).profiles);
+if(groupedTrials.length!==53||unifiedManifest.candidates.length!==57)throw Error("Expected 53 gallery trials plus four photo-held candidates");
+if(groupedTrials.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"))throw Error("Research trial admission status drift");
+const loadedIds=new Set([...species,...groupedTrials].map(x=>x.id));
+const missingPhotos=unifiedManifest.candidates.filter(c=>!loadedIds.has(c.id));
+if(missingPhotos.length!==4)throw Error("Expected exactly four no-photo research inventory profiles");
+const placeholderProfiles=missingPhotos.map(c=>({id:c.id,scientific:c.scientific,common:c.common||c.scientific,trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",traits:{head:[],habit:[],ligule:[],awns:[]},photos:[]}));
+state.species=[...species,...groupedTrials,...placeholderProfiles];
+if(new Set(state.species.map(x=>x.id)).size!==169)throw Error("One result group must contain 169 distinct grasses");
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={};
+const all169=run();
+if(all169.length!==169)throw Error("One unfiltered result list must show all 169");
+state.selected.head="foxtail";
+const selective=run();
+if(!selective.length||selective.length>=169)throw Error("Original 112 no longer narrow under scored head selections");
+for(const candidate of [...groupedTrials,...placeholderProfiles])if(!selective.some(x=>x.id===candidate.id))throw Error("Provisional disagreement must be UNKNOWN, not a hard exclusion: "+candidate.id);
+state.selected={head:null,habit:null,ligule:null,awns:null};
+state.refineSelected={};
+if(run().length!==169)throw Error("Unified 169 inventory was not restored after selection");
+if(!html.includes("candidateManifest")||!html.includes("traits:{head:[],habit:[],ligule:[],awns:[]}"))throw Error("Missing no-photo fallback for four research grasses");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
