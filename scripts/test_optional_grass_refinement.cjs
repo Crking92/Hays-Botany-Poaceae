@@ -951,7 +951,7 @@ for(const [id,expected] of Object.entries(pdfPass1)){
  if(rows.length!==expected)throw Error("Source-count mismatch "+id);
  for(const row of rows){
   const expectedPaper=["florets_per_spikelet","lemma_texture"].includes(row.character)?"Diggs, Lipscomb & O\'Kennon (1999)":"Hagenbuch & Lemke (2015)";
-  if(!row.source.includes(expectedPaper)||!row.source.includes("printed p.")||!row.source_url?.startsWith("https://"))throw Error("Bad PDF citation "+id+"/"+row.character);
+  if(!row.source.includes(expectedPaper)||!/printed pp?\\./.test(row.source)||!row.source_url?.startsWith("https://"))throw Error("Bad PDF citation "+id+"/"+row.character);
  }
 }
 if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="underground_stems"))throw Error("Disputed Melica nitens rhizome incorrectly scored");
