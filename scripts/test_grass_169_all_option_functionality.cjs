@@ -105,8 +105,21 @@ state.refineSelected={};assert.equal(run().confirmed.length,169,"clearing advanc
 assert(html.includes('const advancedExcluded=groups.excluded.map('),"visitor ruled-out area missing");
 assert(html.includes('id="optional-documented-only"'),"explicit documented-only control missing");
 assert(html.includes('id="unresolved-candidates"')||html.includes('unknown.id="unresolved-candidates"'),"unknown possible species list missing");
+assert(html.includes('id="focus-confirmed"'),"User-facing documented-only focus button is missing");
+assert(html.includes('const focusing=state.focusConfirmed&&groups.active'),"Focus choice does not preserve candidate grouping");
+assert(html.includes('focusing?[...groups.confirmed]:[...groups.confirmed,...groups.unresolved]'),"Opt-in match view fails to separate documented and unknown");
+assert(html.includes('if(excludedIds.has(x.s.id)||(focusing&&unresolvedIds.has(x.s.id)))continue;'),"Unknowns not hidden only by explicit focus action");
+assert(html.includes('state.focusConfirmed=false;'),"Reset must restore conservative all-possibilities view");
+const evidencePending=characterizeMissingEvidence();
+function characterizeMissingEvidence(){
+ return findings.filter(x=>x.matches===0).map(x=>x.character+":"+x.choice);
+}
+assert.equal(evidencePending.length,13,"Pending source-free options are not all identified");
+const narrowMatches=findings.filter(x=>x.matches>0&&x.matches<=2).map(x=>({character:x.character,choice:x.choice,sourceMatches:x.matches}));
+
 console.log(JSON.stringify({
  result:"PASS",groups:groupCount,options:choices,sourceBackedOptions:backed,
  pendingOptions:pending,selectionCases:choices,sourceEvidence:pack.evidence.length,
- preservedScored:base.length,preservedProvisional:trials.length,choicesWithConservativeExclusions:withExclusions
+ preservedScored:base.length,preservedProvisional:trials.length,choicesWithConservativeExclusions:withExclusions,
+ evidencePendingOptions:evidencePending,weakEvidenceOptions:narrowMatches
 }));
