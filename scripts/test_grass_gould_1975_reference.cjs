@@ -326,7 +326,7 @@ assert(newRefs.every(Boolean),"Gould five photo page treatments all present");
 assert.equal(new Set(source.additional_species_treatments.map(x=>x.species_id)).size,source.additional_species_treatments.length,"No duplicate Gould species links");
 assert.deepEqual(newRefs.map(r=>r.observations.length),[20,11,16,14,16,8]);
 assert.deepEqual(newRefs.map(r=>r.learner_diagnostic_checks.length),[2,0,2,0,2,0]);
-assert.equal(source.additional_species_treatments.length,19);
+assert.equal(source.additional_species_treatments.length,22); // 19 prior treatments plus the three new photographed Gould species
 const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
