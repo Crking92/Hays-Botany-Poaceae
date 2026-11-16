@@ -216,6 +216,9 @@ html[data-theme="dark"] .optional-chosen{background:#305c41;color:#e3f3e6}
 .optional-need-note{margin:9px 0 0;color:var(--muted);font-size:.76rem;line-height:1.4}
 .optional-choices button.evidence-pending{border-style:dashed}
 .optional-choices .option-evidence-label{display:block;font-size:.68rem;opacity:.8}
+.optional-mode-note{font-size:.74rem;line-height:1.4;color:var(--muted);margin:8px 0 12px}
+#optional-documented-only[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:#fff}
+html[data-theme="dark"] #optional-documented-only[aria-pressed="true"]{background:#326e50;color:#fff}
 html[data-theme="dark"] .optional-section-tabs button{background:#22362a;color:var(--ink)}
 html[data-theme="dark"] .optional-section-tabs button[aria-pressed="true"]{background:#326e50;color:white}
 @media(max-width:480px){.optional-section-tabs button{flex-basis:90px;padding:8px 6px}}
@@ -286,7 +289,9 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
         <div class="optional-inner">
           <p class="optional-description">Use these extra details when you need to narrow similar grasses. Open a section, then an individual feature to see its choices. Published matches rise in the results; missing descriptions do not exclude a grass.</p>
           <div class="optional-section-tabs" id="optional-section-tabs" role="group" aria-label="Choose extra plant features"></div><div id="optional-character-groups"></div>
-          <button type="button" class="optional-reset" id="optional-clear">Clear extra details</button>
+          <button type="button" class="optional-reset" id="optional-documented-only" aria-pressed="false">Show only source-documented matches</button>
+           <p class="optional-mode-note">Optional evidence-only view: grasses lacking published records for any selected detail are hidden, not ruled out. Turn it off to see all possibilities.</p>
+           <button type="button" class="optional-reset" id="optional-clear">Clear extra details</button>
         </div>
       </details>
       <div class="question" id="question"></div>
@@ -359,7 +364,7 @@ const selectedPhotoOverrides={
 "head:foxtail":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole dense bristly foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"},
 };
 const $=id=>document.getElementById(id);
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineSection:null,candidateManifest:[]};
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineOnlyDocumented:false,refineSection:null,candidateManifest:[]};
 
 const themeToggle=$("theme-toggle");
 let userTheme=null;
@@ -504,6 +509,15 @@ function refinementMatches(s){
  });
 }
 
+// Evidence-only view is optional and reversible; unknown traits remain botanically possible.
+function hasAllDocumentedRefinements(s){
+ return Object.keys(state.refineSelected).every(id=>{
+  const values=selectedRefinementStates(id);
+  if(!values.length)return true;
+  const evidence=refinementEvidence(s,id);
+  return Boolean(evidence&&values.every(value=>evidence.states.includes(value)));
+ });
+}
 function refinementSection(id){
  if(["stem_nodes","culm_posture","surface_runners","underground_stems","basal_crown","stem_special"].includes(id))return"stem";
  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id))return"flower";
@@ -1034,8 +1048,11 @@ function renderOptionalCharacters(){
    tabs.append(b);
  }
  // Empty evidence is UNKNOWN, not a negative trait. Label that answer as research pending.
- const evidencedOptions=new Set(Object.values(state.refineEvidenceMap).flat().flatMap(e=>e.states.map(v=>e.character+":"+v)));
- const isPendingChoice=(group,option)=>Boolean(option.evidence_pending||!evidencedOptions.has(group.id+":"+option.id));
+ const optionCounts=new Map();
+ for(const rows of Object.values(state.refineEvidenceMap))for(const e of rows)for(const value of e.states){
+  const key=e.character+":"+value;optionCounts.set(key,(optionCounts.get(key)||0)+1);
+ }
+ const isPendingChoice=(group,option)=>Boolean(option.evidence_pending||!optionCounts.has(group.id+":"+option.id));
  for(const c of state.refineCharacters.filter(c=>refinementSection(c.id)===state.refineSection)){
    const group=node("details","optional-group"),summary=node("summary","",c.label);
    const content=node("div","optional-group-body");
@@ -1054,6 +1071,7 @@ function renderOptionalCharacters(){
      b.type="button";b.dataset.option=o.id;
      b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
      if(pending){b.title="Record what you saw; species-level scoring evidence is not available for this detail yet.";b.append(node("span","option-evidence-label","Reference data pending"));}
+     else{const n=optionCounts.get(c.id+":"+o.id);b.append(node("span","option-evidence-label",n+" source-documented grass"+(n===1?"":"es")));}
      b.addEventListener("click",()=>{
        const old=selectedRefinementStates(c.id);
        const next=c.multi_select?(old.includes(o.id)?old.filter(v=>v!==o.id):[...old,o.id]):(old.includes(o.id)?[]:[o.id]);
@@ -1174,14 +1192,17 @@ function renderOptionalCharacters(){
    group.append(summary,content);root.append(group);
  }
  $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderResults()};
+ const evidenceToggle=$("optional-documented-only");
+ evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));
+ evidenceToggle.onclick=()=>{state.refineOnlyDocumented=!state.refineOnlyDocumented;evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));updateUrl();renderResults()};
 }
-function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id,values=selectedRefinementStates(c.id);if(values.length)u.searchParams.set(key,values.join(","));else u.searchParams.delete(key)});history.replaceState(null,"",u.toString())}
+function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id,values=selectedRefinementStates(c.id);if(values.length)u.searchParams.set(key,values.join(","));else u.searchParams.delete(key)});if(state.refineOnlyDocumented)u.searchParams.set("more_mode","documented");else u.searchParams.delete("more_mode");history.replaceState(null,"",u.toString())}
 function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?null:choice;updateUrl();render()}
 function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else conflict++}
-return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
+return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
 
 /* Original outline diagrams for beginners; these are shapes, NOT photographs or species-level determinations. */
@@ -1763,13 +1784,13 @@ function comparisonFeatureRows(species){
  for(const q of qs){
   const values=species.map(s=>Array.isArray(s.traits?.[q.id])?s.traits[q.id]:[]);
   const labels=values.map(vs=>vs.map(v=>q.options?.find(o=>o[0]===v)?.[1]||v));
-  rows.push({id:q.id,label:q.short,kind:"core",values,labels,selected:state.selected[q.id]||null,refs:species.map(()=>null)});
+  rows.push({id:q.id,label:q.short,kind:"core",values,labels,selected:state.selected[q.id]||null,selectedValues:state.selected[q.id]?[state.selected[q.id]]:[],refs:species.map(()=>null)});
  }
  for(const c of state.refineCharacters){
   const evidence=species.map(s=>refinementEvidence(s,c.id));
   const values=evidence.map(e=>Array.isArray(e?.states)?e.states:[]);
   const labels=values.map(vs=>vs.map(v=>c.options.find(o=>o.id===v)?.label||v));
-  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:(Array.isArray(state.refineSelected[c.id])?state.refineSelected[c.id].join(", "):state.refineSelected[c.id])||null,refs:evidence});
+  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:selectedRefinementStates(c.id).join(", ")||null,selectedValues:selectedRefinementStates(c.id),refs:evidence});
  }
  for(const row of rows){
   row.documented=row.values.every(vs=>vs.length>0);
@@ -1965,9 +1986,11 @@ function compareCandidates(){
       if(!value.length)td.append(node("span","compare-unknown","Unknown — not documented"));
       else td.append(node("span","",value.join("; ")));
       if(feature.selected){
-        const match=feature.values[i].includes(feature.selected);
-        if(match)td.append(node("span","compare-choice-note","Your selected observation is recorded here."));
-        else if(value.length)td.append(node("span","compare-choice-note","Your selected observation is not among the recorded states; double-check the specimen."));
+        const chosen=feature.selectedValues||[feature.selected];
+        const matches=chosen.filter(v=>feature.values[i].includes(v));
+        if(matches.length===chosen.length)td.append(node("span","compare-choice-note","Every selected observation is documented here."));
+        else if(matches.length)td.append(node("span","compare-choice-note",matches.length+" of "+chosen.length+" selected observations are documented here; others remain unknown."));
+        else if(value.length)td.append(node("span","compare-choice-note","None of your selected observations is documented here; this is not proof of absence."));
       }
       const evidence=feature.refs[i];
       if(feature.kind==="optional"&&evidence&&typeof evidence.source_url==="string"&&evidence.source_url.startsWith("https://")){
@@ -1997,9 +2020,13 @@ function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
 renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
-$("count").textContent=rows.length+" possible";
+const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
+$("count").textContent=rows.length+(state.refineOnlyDocumented&&extraChosen?" documented":" possible");
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
-$("results-note").textContent=pendingChoice?"At least one selected extra detail is a research target without species-level ranking evidence yet. Other documented details may still rank positively. No grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
+$("results-note").textContent=state.refineOnlyDocumented&&extraChosen?
+ (pendingChoice?"A selected detail is research-pending, so no grass can be documented for every selected detail. This does not prove absence; switch off evidence-only view to see all possibilities.":"Evidence-only view: each listed grass has a published record for EVERY selected extra detail. Unknown descriptions are hidden here, never botanically excluded."):
+ pendingChoice?"At least one selected extra detail is a research target without species-level ranking evidence yet. Other documented details may still rank positively. No grass was removed.":
+ extraChosen?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results");root.replaceChildren();
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
@@ -2024,7 +2051,7 @@ for(const x of scored){
 const btn=node("button","",x.s.common+" · "+x.s.scientific);btn.type="button";
 btn.append(node("small","","Differs on: "+x.disagree.join(", ")));btn.addEventListener("click",()=>detail(x.s));cautionList.append(btn);
 }
-$("results-footer").textContent="One list of 169 grasses. Unknown traits never exclude; review excluded possibilities and verify research-profile characters.";
+$("results-footer").textContent=state.refineOnlyDocumented&&extraChosen?"Evidence-only view hides undocumented grasses; switch it off to restore them. Missing evidence does not prove absence.":"One list of 169 grasses. Unknown traits never exclude; review excluded possibilities and verify research-profile characters.";
 }
 function renderPending(){
 const coded=new Set(state.species.map(s=>s.id));
@@ -2125,7 +2152,7 @@ try{
    state.refineCharacters=bundle.characters;
  }
 }catch(err){console.warn("Additional field details unavailable; original four-question key remains intact",err);state.refineCharacters=[];state.refineEvidenceMap={};}
-if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 
 /* Reuse existing hand-drawn field diagrams for glossary education.
    These are visual explanations only, never species-level scoring evidence. */
