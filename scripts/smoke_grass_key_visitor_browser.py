@@ -129,7 +129,7 @@ def check_view(browser, name, width, height):
             try:
                 detail_page.goto(lesson_url,wait_until="domcontentloaded",timeout=65000)
                 detail_page.wait_for_function(
-                    "() => document.querySelector('#species-detail h2')?.textContent.includes('Bothriochloa longipaniculata')",
+                    "() => document.querySelector('#species-detail .subtitle')?.textContent.includes('Bothriochloa longipaniculata')",
                     timeout=60000)
                 assert detail_page.evaluate("document.activeElement.id") == "species-detail", (
                     "Deep-linked profile was loaded but stayed unfocused below the catalog")
