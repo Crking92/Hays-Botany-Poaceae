@@ -60,4 +60,41 @@ assert(html.includes('"elymus-virginicus",1]'),"Previously credited Virginia flo
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Source-specific field checks not displayed");
 assert(!html.includes('["foxtail","A dense bristly cylinder"'));
 
-console.log("Gould 1975 little bluestem + Virginia wildrye source intake, explicit holds and unchanged core scoring OK");
+// Gould Cenchrus ciliaris photographed account: source information, not promoted scored states.
+const buffel=source.additional_species_treatments?.find(t=>t.species_id==="cenchrus-ciliaris");
+assert(buffel,"Gould buffelgrass species treatment missing");
+assert.equal(buffel.taxon,"Cenchrus ciliaris");
+assert.equal(buffel.historical_synonym_as_printed,"Pennisetum ciliare (L.) Link");
+assert.equal(buffel.printed_page,"NOT_VISIBLE_IN_OWNER_PHOTO");
+assert.equal(buffel.illustration_reference.includes("Fig. 294"),true);
+assert.equal(buffel.observations.length,16);
+assert.equal(buffel.learner_diagnostic_checks.length,3);
+assert.equal(buffel.classification_decision.action,"PRESERVE_PROVISIONAL_RESEARCH_STATES_NO_NEW_SCORING");
+const buffelObs=new Map(buffel.observations.map(x=>[x.character,x]));
+assert.deepEqual(buffelObs.get("culm_height").height_cm,[50,100]);
+assert.deepEqual(buffelObs.get("ligule").hairs_mm,[1,1.5]);
+assert(buffelObs.get("ligule").details.includes("NOT an explicit measured height"));
+assert.deepEqual(buffelObs.get("blade").length_cm,[8,30]);
+assert.deepEqual(buffelObs.get("blade").width_mm,[2.5,8]);
+assert.deepEqual(buffelObs.get("inflorescence").length_cm_mostly,[4,10]);
+assert.equal(buffelObs.get("inflorescence").length_cm_parenthetical_max,13);
+assert.deepEqual(buffelObs.get("bristles").length_mm,[4,10]);
+assert.deepEqual(buffelObs.get("fascicles").spikelets_per_fascicle,[2,4]);
+assert.deepEqual(buffelObs.get("spikelet_length").length_mm,[2.5,5.6]);
+assert.deepEqual(buffelObs.get("upper_floret_lemma_length").length_mm,[2.2,5.4]);
+assert.deepEqual(buffelObs.get("caryopsis").length_mm,[1.4,1.9]);
+assert.deepEqual(buffelObs.get("chromosome_numbers").reported_2n,[32,34,35,36,40,44,52,54]);
+assert(buffelObs.get("Texas_distribution").status.includes("NOT_BONAP"));
+assert.equal(buffel.adjacent_genus_key_excerpt.taxa.length,3);
+assert.equal(buffel.adjacent_genus_key_excerpt.status,"SAVE_FOR_FUTURE_SPECIES_ONLY_INCOMPLETE_COUPLET");
+const research=read("hays-candidates.json").candidates.find(s=>s.id==="cenchrus-ciliaris");
+const trial=read("provisional-trial-batch3.json").profiles.find(s=>s.id==="cenchrus-ciliaris");
+assert(research&&trial,"Original buffelgrass source candidate/trial missing");
+assert.equal(trial.admission_status,"RESEARCH_TRIAL_NOT_ADMITTED");
+assert.deepEqual(trial.traits,{head:["foxtail"],habit:[],ligule:[],awns:["bristles"]});
+assert(!trial.source_scored);
+assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(shard=>read("species-"+shard+".json")).some(s=>s.id==="cenchrus-ciliaris"));
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing Gould source-side display route missing");
+assert(buffel.learner_diagnostic_checks.every(c=>c.source?.includes("Gould")&&c.url?.startsWith("https://")));
+
+console.log("PASS: Gould little bluestem, Virginia wildrye and buffelgrass source details retained; research status and scoring unchanged");
