@@ -20,6 +20,16 @@ assert.equal(batch.annotated_choice_count,8);
 assert.equal(batch.existing_marker_records,14);
 assert.equal(batch.photos_rehosted,0);assert.equal(batch.new_photograph_downloads,0);
 assert.equal(batch.placements.length,8);
+// Exact anatomy correction from CHAT B's archived-photo pixel inspection in
+// Issue #368: the old (48,55) endpoint was on GREEN sheath below the membrane.
+// Keep the separately verified sheath reference, and require the Learner's
+// canonical pin to stay aligned with the main key's copied marker.
+const paleLigule=batch.placements.find(x=>x.option==="ligule:membrane");
+assert(paleLigule&&paleLigule.species_id==="dichanthium-sericeum");
+assert.equal(paleLigule.markers[0].label,"Actual pale membranous ligule");
+assert.equal(paleLigule.markers[0].target_x,48);
+assert.equal(paleLigule.markers[0].target_y,45);
+assert.equal(paleLigule.markers[1].target_y,79);
 const used=new Set(),keys=new Set(),len={};
 const filename=s=>decodeURIComponent(s.split("?")[0].split("/").pop());
 for(const x of batch.placements){
