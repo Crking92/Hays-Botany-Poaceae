@@ -196,6 +196,20 @@ html[data-theme="dark"] .compare-pick[aria-pressed=true]{background:#326e50;colo
 html[data-theme="dark"] .optional-choices button,html[data-theme="dark"] .optional-reset{background:#22362a;border-color:var(--line);color:var(--ink)}
 html[data-theme="dark"] .optional-choices button[aria-pressed=true]{background:#326e50;color:#fff}
 @media(max-width:480px){.optional-features{margin:0 12px 15px}.optional-choices button{min-height:44px}}
+
+/* Source-reviewed existing photographs: examples, not assertions of precise botanical states. */
+.character-photo-example{margin:11px 0 13px;display:grid;grid-template-columns:minmax(0,180px) 1fr;gap:12px;border:1px solid var(--line);padding:9px;background:var(--pale);border-radius:12px;align-items:start}
+.character-photo-example .photo-frame{width:100%;aspect-ratio:4/3;border-radius:8px;background:var(--paper)}
+.character-photo-example .photo-frame img{object-fit:contain}
+.character-photo-example figcaption{min-width:0;font-size:.77rem;line-height:1.45;color:var(--ink)}
+.character-photo-example figcaption strong{display:block;font-size:.8rem;margin-bottom:4px}
+.character-photo-example figcaption p{margin:0 0 5px;font-size:.76rem}
+.character-photo-example .character-photo-limit{color:var(--muted)}
+.character-photo-example .photo-credit{font-size:.69rem;margin:6px 0}
+.character-photo-links{display:flex;flex-wrap:wrap;gap:5px 11px;margin-top:5px}
+.character-photo-links a{font-size:.72rem;overflow-wrap:anywhere}
+@media(max-width:440px){.character-photo-example{grid-template-columns:1fr}.character-photo-example .photo-frame{max-height:240px}}
+
 /* A second accordion keeps many leaf details out of the beginner's way. */
 .optional-group{border:1px solid var(--line);border-radius:10px;background:var(--white);margin:0 0 8px;overflow:hidden}
 .optional-group summary{display:flex;align-items:center;gap:9px;flex-wrap:wrap;cursor:pointer;padding:11px 12px;font-weight:750;font-size:.86rem;color:var(--ink)}
@@ -495,6 +509,112 @@ function applyApprovedGeneralPhotos(scored,manifest){
   return installed;
 }
 function credit(p){return p?[p.creator,p.license].filter(Boolean).join(" · "):"Source image pending"}
+
+/* Eight pinned, previously-reviewed photo examples. These don't create evidence
+   states, award points, certify local vouchers, or grant reuse rights. */
+const reviewedCharacterPhotoExamples={
+  "blade_shape": {
+    "species_id": "erioneuron-pilosum",
+    "photo_i": 2,
+    "expected_source": "https://tchester.org/gc/plants/species/pix/erioneuron_pilosum/erioneuron_pilosum_4_crop_50.jpg",
+    "expected_creator": "Tom Chester",
+    "expected_license": "Copyright Tom Chester; permission to reproduce with source credit (not CC)",
+    "hosted_sha": "e7b87bbda4182f654a7316e77d30df3a5a3dcdef",
+    "visible": "Narrow basal leaf blades with contrasting pale edges.",
+    "limit": "The inner ligule, exact blade cross-section and measured width cannot be verified here."
+  },
+  "leaf_base": {
+    "species_id": "eragrostis-intermedia",
+    "photo_i": 1,
+    "expected_source": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ERIN-L.html",
+    "expected_creator": "Bob Harms",
+    "expected_license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+    "hosted_sha": "f1524868c73aed1c1898ceb2865ba483c771baf1",
+    "visible": "The blade–sheath junction and surrounding hairy collar.",
+    "limit": "Collar hairs do not establish the true inner ligule type or its length."
+  },
+  "ligule_length": {
+    "species_id": "cynodon-dactylon",
+    "photo_i": 2,
+    "expected_source": "https://commons.wikimedia.org/wiki/File:Cynodon_dactylon_sl1.jpg",
+    "expected_creator": "Stefan.lefnaer (Stefan Lefnaer)",
+    "expected_license": "CC BY-SA 4.0",
+    "visible": "An opened collar with pale hairs and an image scale.",
+    "limit": "The true ligule length cannot be measured precisely from this view."
+  },
+  "stem_nodes": {
+    "species_id": "cynodon-dactylon",
+    "photo_i": 0,
+    "expected_source": "https://www.inaturalist.org/photos/410585094",
+    "expected_creator": "no rights reserved",
+    "expected_license": "CC0",
+    "visible": "A connected creeping stem with narrow leafy shoots.",
+    "limit": "The stem does not prove which nodes rooted or whether it ran aboveground."
+  },
+  "basal_crown": {
+    "species_id": "eragrostis-intermedia",
+    "photo_i": 2,
+    "expected_source": "https://w3.biosci.utexas.edu/prc/Monocots/GrassHTML/data/pages/ERIN-z.html",
+    "expected_creator": "Bob Harms",
+    "expected_license": "© Bob Harms — scientific/educational use with attribution (NOT Creative Commons)",
+    "hosted_sha": "855f8228d942cac259a837cbc8a576537e89cf83",
+    "visible": "Connected lower stem bases and fibrous roots.",
+    "limit": "This photograph does not establish an underground rhizome."
+  },
+  "spikelet_position": {
+    "species_id": "bromus-lanceolatus",
+    "photo_i": 1,
+    "expected_source": "https://www.inaturalist.org/photos/64786436",
+    "expected_creator": "Tyler Cannon",
+    "expected_license": "CC BY",
+    "hosted_sha": "8243f12658dee3741aa2b8b628745ae604b7c080",
+    "visible": "Large spikelets attached along branching flowering axes.",
+    "limit": "Exact attachment geometry, glume anatomy and measurements remain unverified."
+  },
+  "florets_per_spikelet": {
+    "species_id": "bromus-lanceolatus",
+    "photo_i": 2,
+    "expected_source": "https://www.inaturalist.org/photos/391179324",
+    "expected_creator": "Jared Shorma",
+    "expected_license": "CC BY",
+    "hosted_sha": "5d706cbc3d6e6920d802ddc18e4a8d71fc6071ad",
+    "visible": "Multi-flowered awned spikelets on an attached flowering branch.",
+    "limit": "Exact floret counts and the awn's anatomical attachment require dissection."
+  },
+  "culm_posture": {
+    "species_id": "erioneuron-pilosum",
+    "photo_i": 1,
+    "expected_source": "https://tchester.org/gc/plants/species/pix/erioneuron_pilosum/erioneuron_pilosum_5_crop_35.jpg",
+    "expected_creator": "Tom Chester",
+    "expected_license": "Copyright Tom Chester; permission to reproduce with source credit (not CC)",
+    "hosted_sha": "82fb3407e1ec323eb822c345df5f8550d1f542c5",
+    "visible": "Leafy field tufts with upright pale flowering shoots.",
+    "limit": "The complete stem base and its lifetime growth angle are not shown."
+  }
+};
+function characterPhotoExample(id){
+ const x=reviewedCharacterPhotoExamples[id];if(!x)return null;
+ const specimen=byId(x.species_id),p=specimen?.photos?.find(p=>p.i===x.photo_i);
+ if(!p||p.source_page!==x.expected_source||p.creator!==x.expected_creator||
+    p.license!==x.expected_license||(x.hosted_sha&&p.hosted_git_blob_sha!==x.hosted_sha)||
+    !p.src?.startsWith("https://")||!p.license_url?.startsWith("https://"))return null;
+ const figure=node("figure","character-photo-example");
+ figure.append(image(p,"Photo of "+specimen.common+": "+x.visible));
+ const caption=node("figcaption");
+ caption.append(node("strong","","Real photo · "+specimen.common),
+   node("p","","Look for: "+x.visible),
+   node("p","character-photo-limit","Not proven: "+x.limit),
+   node("span","photo-credit","Photo: "+credit(p)));
+ const links=node("div","character-photo-links");
+ for(const [url,label] of [[p.source_page,"Original photo"],[p.license_url,"License"],["photo-review.html?species="+encodeURIComponent(specimen.id),"More views"]]){
+   if(!url.startsWith("https://")&&!url.startsWith("photo-review.html?"))continue;
+   const a=node("a","",label);a.href=url;
+   if(url.startsWith("https://")){a.target="_blank";a.rel="noopener noreferrer";}
+   links.append(a);
+ }
+ caption.append(links);figure.append(caption);return figure;
+}
+
 function status(s){if(s.trial)return["Research trial · unverified","warn"];if(s.range==="PASS")return["Regional native set",""];if(s.range==="FAIL"||s.range==="INTRODUCED_NOT_NATIVE"||s.range==="COMPARISON_NON_NATIVE")return["Introduced / comparison","bad"];return["Range status to verify","review"]}
 
 /* Source-backed refinements rank positive literature matches only; no new exclusions. */
@@ -1103,7 +1223,10 @@ function renderOptionalCharacters(){
        wrap.append(row);choices.append(wrap);
      }
    }else for(const o of c.options)choices.append(makeButton(o));
-   content.append(describe,choices);
+   content.append(describe);
+   const reviewedPhoto=characterPhotoExample(c.id);
+   if(reviewedPhoto)content.append(reviewedPhoto);
+   content.append(choices);
    if(c.id==="blade_venation"){
      const guide=node("div","venation-field-guide");
      guide.setAttribute("aria-live","polite");
