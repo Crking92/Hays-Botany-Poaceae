@@ -132,4 +132,42 @@ assert.equal(ryeCandidate.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
 assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).some(x=>x.id==="lolium-perenne"));
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing source-only display must support Lolium");
 
-console.log("PASS: Gould little bluestem, Virginia wildrye, buffelgrass, and perennial ryegrass saved; scoring untouched");
+
+// Gould (1975) p. 160, historical Hordeum leporinum = Kew-accepted H. murinum subsp. leporinum.
+const hare=source.additional_species_treatments?.find(x=>x.species_id==="hordeum-murinum");
+assert(hare,"Gould hare barley literature treatment missing");
+assert.equal(hare.taxon,"Hordeum leporinum");
+assert.equal(hare.printed_page,160);
+assert.equal(hare.illustration_reference.includes("Fig. 81"),true);
+assert.equal(hare.taxonomic_crosswalk.accepted_name,"Hordeum murinum subsp. leporinum (Link) Arcang.");
+assert.equal(hare.taxonomic_crosswalk.current_rank,"subspecies");
+assert.equal(hare.taxonomic_crosswalk.current_concept_scope,"SUBSPECIES_LEPORINUM_ONLY");
+assert(hare.taxonomic_crosswalk.accepted_taxon_url.includes("powo.science.kew.org"));
+assert(hare.taxonomic_crosswalk.usda_synonym_url.includes("grin"));
+assert(hare.taxonomic_crosswalk.bibliographic_discrepancy.includes("1834"));
+assert.equal(hare.classification_decision.action,"DO_NOT_CHANGE_EXISTING_PROVISIONAL_HEAD_HABIT_LIGULE_AWN_SCORES");
+assert.equal(hare.observations.length,18);
+assert.equal(hare.learner_diagnostic_checks.length,3);
+const hareObs=new Map(hare.observations.map(x=>[x.character,x]));
+assert.deepEqual(hareObs.get("culm").height_cm_mostly,[15,60]);
+assert.deepEqual(hareObs.get("leaf_blade").width_mm_mostly,[3,8]);
+assert.deepEqual(hareObs.get("leaf_blade").length_cm,[6,15]);
+assert.equal(hareObs.get("ligule").height_mm_approx,1);
+assert.deepEqual(hareObs.get("inflorescence").length_cm,[4,8]);
+assert.deepEqual(hareObs.get("glume_awn").length_cm_mostly,[1,2.5]);
+assert.deepEqual(hareObs.get("lemma_body_and_awn").lemma_body_length_mm,[6,12]);
+assert.deepEqual(hareObs.get("lemma_body_and_awn").lemma_awn_length_mm,[10,35]);
+assert.equal(hareObs.get("chromosome_number").reported_2n,28);
+assert.equal(hareObs.get("adjacent_previous_treatment").status,"NOT_LEPORINUM_DO_NOT_TRANSFER");
+assert.equal(hareObs.get("historical_Texas_distribution").status,"PARTIAL_TEXT_HISTORICAL_ONLY");
+assert(hare.learner_diagnostic_checks.every(x=>x.source.includes("Gould") && x.url.startsWith("https://")));
+const barleyTrial=read("provisional-trial-batch3.json").profiles.find(x=>x.id==="hordeum-murinum");
+const barleyCandidate=read("hays-candidates.json").candidates.find(x=>x.id==="hordeum-murinum");
+assert(barleyTrial&&barleyCandidate);
+assert.equal(barleyTrial.admission_status,"RESEARCH_TRIAL_NOT_ADMITTED");
+assert.deepEqual(barleyTrial.traits,{head:["spike"],habit:[],ligule:[],awns:["long"]});
+assert.equal(barleyCandidate.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
+assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).some(x=>x.id==="hordeum-murinum"));
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing source-specific display must support hare barley");
+
+console.log("PASS: Gould little bluestem, Virginia wildrye, buffelgrass, perennial ryegrass, and subspecies-scoped hare barley saved; scoring untouched");
