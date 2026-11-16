@@ -677,7 +677,9 @@ function verifiedAdvancedConflict(s){
   if(!observed.length)continue;
   const evidence=refinementEvidence(s,character.id);
   if(!evidence?.states?.length||observed.some(value=>evidence.states.includes(value)))continue;
-  if(observed.some(v=>!state.refineEvidenceOptionKeys?.has(character.id+":"+v)))continue;
+  if(observed.some(v=>state.refineEvidenceOptionKeys?
+   !state.refineEvidenceOptionKeys.has(character.id+":"+v):
+   character.options.some(o=>o.id===v&&o.evidence_pending)))continue;
   const policy=advancedExclusionPolicy[character.id];
   if(!policy||evidence.source_disagreement||evidence.conflicting_source||evidence.source_scope_caution)continue;
   if(evidence.source_status==="HOLD"||evidence.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"||
