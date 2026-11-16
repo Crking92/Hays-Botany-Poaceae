@@ -866,6 +866,248 @@
         }
       ],
       "audit_hold": "Preserve leporinum as subsp. leporinum, not generic H. murinum species-wide states. No promotion, no photos relabeled, no county nativity inference, no score/UI option changes, no transfer of H. jubatum text or unfinished historical range."
+    },
+    {
+      "taxon": "Triticum aestivum",
+      "common_name": "Wheat; bread wheat",
+      "species_id": "triticum-aestivum",
+      "authority_as_printed": "Triticum aestivum L., Sp. Pl. 85. 1753",
+      "printed_page": 173,
+      "illustration_reference": "Fig. 87 cited in species heading; figure itself is not visible in submitted photograph",
+      "material": "User-photographed Gould, The Grasses of Texas, printed p. 173: full visible Triticum aestivum treatment, comparative genus key, historical distribution and flowering period",
+      "added_on": "2026-11-16",
+      "evidence_level": "AUTHORITATIVE_PUBLISHED_TEXAS_WHEAT_TREATMENT_NOT_LOCAL_SPECIMEN",
+      "genus_context": {
+        "genus_as_printed": "Triticum",
+        "printed_page": 173,
+        "source_boundary": "The image begins mid-genus description; genus introduction is incomplete. The intact visible two-choice comparison and historical notes are saved, not an exhaustive key.",
+        "historical_general_context": "Gould describes approximately 30 Triticum species under his historical circumscription, in cool-temperate southern Europe and western Asia, and includes weedy Aegilops formerly treated by others under Aegilops. These historical genus limits are not adopted as modern taxonomy.",
+        "historical_two_choice_key": [
+          {
+            "taxon_as_printed": "T. aestivum",
+            "character": "Spikelets laterally flattened (compressed from side to side)",
+            "reference_species_id": "triticum-aestivum"
+          },
+          {
+            "taxon_as_printed": "T. cylindricum",
+            "character": "Spikelets cylindrical or nearly so",
+            "modern_species_id": "aegilops-cylindrica",
+            "modern_name": "Aegilops cylindrica Host"
+          }
+        ],
+        "modern_name_crosswalk": {
+          "historical_name": "Triticum cylindricum",
+          "accepted_name": "Aegilops cylindrica Host",
+          "accepted_species_id": "aegilops-cylindrica",
+          "interpretation": "Jointed goatgrass is separate from cultivated wheat and is no longer generally placed in Triticum. The historical genus key cannot be used as an exhaustive modern Triticum versus Aegilops identification key.",
+          "authority_url": "https://inspection.canada.ca/en/plant-health/invasive-species/directives/pest-risk-management/rmd-13-04"
+        },
+        "caution": "Do not transfer the cylindrical-spikelet and weedy Aegilops statements to wheat; no additional Aegilops specimen promotion or scoring inferred."
+      },
+      "classification_decision": {
+        "existing_trial_state": "RESEARCH_TRIAL_NOT_ADMITTED",
+        "existing_core_traits": {
+          "head": [
+            "spike"
+          ],
+          "habit": [],
+          "ligule": [
+            "membrane"
+          ],
+          "awns": []
+        },
+        "action": "PRESERVE_PROVISIONAL_IDENTIFICATION_STATES_AND_UNCERTAINTY",
+        "rationale": "Awned and awnless wheat forms are both documented. Gould's 1–3 cm ligule length conflicts with Texas botanical sources showing ~1–3 mm; retain the literal cm but HOLD numerical length scoring as possible print error. Introductory cultivated wheat, transient roadsides, and cultivar variation require care; don't admit to Hays native flora."
+      },
+      "observations": [
+        {
+          "character": "life_history",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Gould describes wheat as an annual."
+        },
+        {
+          "character": "culm_height",
+          "status": "SOURCE_SPECIFIC_RANGE",
+          "height_cm_mostly": [
+            60,
+            100
+          ],
+          "details": "Thick culms mostly 60–100 cm tall."
+        },
+        {
+          "character": "sheath_form_and_hairs",
+          "status": "SOURCE_SPECIFIC_VARIABLE",
+          "details": "Sheaths thin and rounded; typically hairless but lower sheaths can be finely puberulent."
+        },
+        {
+          "character": "auricles",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Usually slender auricles on both sides of the leaf collar."
+        },
+        {
+          "character": "ligule",
+          "status": "PUBLISHED_UNIT_DISCREPANCY_HOLD",
+          "literal_source_length": "1–3 cm",
+          "source_reported_apex": "truncate",
+          "comparison_sources": [
+            {
+              "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, Triticum aestivum",
+              "reported_length": "2–3 mm",
+              "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+            },
+            {
+              "source": "University of Texas Plant Resources Center, Williamson County Triticum aestivum",
+              "reported_length": "1.5–3 mm",
+              "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Triticum%20aestivum"
+            },
+            {
+              "source": "Kew GrassBase / POWO, Triticum aestivum",
+              "reported_length": "1 mm",
+              "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A332110-2/general-information"
+            }
+          ],
+          "details": "The photographed Gould page visibly prints 'Ligules truncate, mostly 1–3 cm long.' This is preserved VERBATIM as source transcription, NOT treated as a verified 10–30 mm identification trait. Other independent sources report millimetres; likely printing/unit error, but source erratum not established. Ligule membrane type is separately supported by regional sources."
+        },
+        {
+          "character": "blade_width_and_surface",
+          "status": "SOURCE_SPECIFIC_VARIABLE",
+          "width_cm": [
+            0.7,
+            2
+          ],
+          "width_mm_equivalent": [
+            7,
+            20
+          ],
+          "details": "Blades elongated, 0.7–2 cm broad, glabrous or scabrous in Gould's Texas material; dry/young variation not quantified."
+        },
+        {
+          "character": "inflorescence_spike",
+          "status": "SOURCE_SPECIFIC_MEASUREMENT",
+          "length_cm": [
+            5,
+            12
+          ],
+          "details": "Spike 5–12 cm long excluding awns, with closely imbricate spikelets in two ranks along a stout, continuous rachis."
+        },
+        {
+          "character": "spikelet_length",
+          "status": "SOURCE_SPECIFIC_RANGE",
+          "length_mm": [
+            10,
+            15
+          ],
+          "details": "Spikelets mostly 10–15 mm long excluding awns, sometimes glabrous or pubescent, with or without awns."
+        },
+        {
+          "character": "spikelet_florets",
+          "status": "SOURCE_SPECIFIC_RANGE",
+          "florets_per_spikelet": [
+            2,
+            5
+          ],
+          "details": "Gould reports 2–5 florets within spikelets. Do not confuse whole spikelet counts with floret counts."
+        },
+        {
+          "character": "spikelet_orientation_and_compression",
+          "status": "SOURCE_SPECIFIC_ARCHITECTURE",
+          "details": "Spikelets laterally compressed, oriented flatwise to rachis, two-ranked and closely overlapping. The genus couplet contrasts this with old 'Triticum cylindricum' (modern Aegilops cylindrica)."
+        },
+        {
+          "character": "spikelet_disarticulation",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Fragmentation described as above glumes and between florets; continuous stout rachis is not proof that every cultivated form sheds naturally."
+        },
+        {
+          "character": "glume_keel",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Glumes normally strongly keeled toward one side, with keel often ending in a minute point (mucronate) or stout awn."
+        },
+        {
+          "character": "glume_awn",
+          "status": "SOURCE_SPECIFIC_VARIABLE_LOWER_BOUND_EXPRESSION",
+          "reported_maximum": "6 cm or more",
+          "details": "Gould permits stout glume awns of 6 cm or more; does not require every glume to be awned. Do not conflate glume awn length with fertile lemma awns."
+        },
+        {
+          "character": "lemma_shape",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Lemmas keeled or rounded on the back; may be awnless, mucronate, or conspicuously awned."
+        },
+        {
+          "character": "lemma_awn",
+          "status": "SOURCE_SPECIFIC_VARIABLE_LOWER_BOUND_EXPRESSION",
+          "reported_maximum": "15 cm or more",
+          "details": "Gould permits stout, scabrous lemma awns to 15 cm or more; both awned and awnless forms included. This is not a universal phenotype or an absolute species maximum."
+        },
+        {
+          "character": "palea",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Paleas well developed, about as large as lemmas."
+        },
+        {
+          "character": "caryopsis_form",
+          "status": "SOURCE_SPECIFIC",
+          "details": "Caryopses ovate or oblong, usually pubescent at the apex. This describes grain tip, not the whole spikelet."
+        },
+        {
+          "character": "embryo_relative_length",
+          "status": "SOURCE_SPECIFIC",
+          "embryo_fraction_of_endosperm": [
+            0.25,
+            0.3333333333333333
+          ],
+          "details": "Gould describes embryo as roughly one-fourth to one-third the length of the endosperm, not the whole spikelet."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "SOURCE_REPORTED_CYTOLOGY_NONSCORING",
+          "reported_2n": 42,
+          "details": "Published 2n=42; do not treat as chromosome certification of Hays roadside plants."
+        },
+        {
+          "character": "historical_Texas_distribution",
+          "status": "HISTORICAL_CULTIGEN_CONTEXT_NOT_ESTABLISHMENT_PROOF",
+          "details": "Gould reports wheat as cultivated and collected as a weed on Texas roadsides and waste areas, especially around agriculture, while stating it did not become independently established outside cultivation in his historical observations. This is not a modern Hays naturalization determination."
+        },
+        {
+          "character": "historical_general_origin",
+          "status": "GOULD_HISTORICAL_RANGE_CONTEXT",
+          "details": "Gould calls wheat native to Eurasia and widespread as a cultivated plant. Modern Kew describes a cultigen origin more precisely; do not treat the historical broad phrase as a natural wild species range."
+        },
+        {
+          "character": "historical_flowering_period",
+          "status": "SOURCE_HISTORICAL_CONTEXT",
+          "details": "Gould gives flowering mostly March to May, not guaranteed site-level timing in Hays County."
+        }
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Follow the two-ranked wheat spike (Gould p. 173)",
+          "check": "Gould describes a stiff 5–12 cm flowering spike with closely overlapping, laterally flattened spikelets in two ranks on a stout rachis. Spikelets are usually 10–15 mm (excluding awns) and contain 2–5 florets. Compare several complete mature spikes rather than relying on a single silhouette.",
+          "compare": "Jointed goatgrass (Aegilops cylindrica; Gould's T. cylindricum) has more cylindrical spikelets; other cereals can overlap in head outline.",
+          "certainty": "Published description for cultivated bread wheat; not identification of an individual local escaped plant.",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, p. 173, Triticum aestivum",
+          "url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A332110-2/general-information"
+        },
+        {
+          "look": "Look at the glume versus lemma awn (Gould p. 173)",
+          "check": "The glume may end in a short point or a stout awn reported to 6 cm or more; the lemma may be awnless, mucronate or have rough stout awns reaching 15 cm or more. This source includes both awned and awnless wheat, so don't force one exclusive awn answer.",
+          "compare": "Identify the exact bract from which an awn arises, and distinguish the glume keel from a lemma awn. Cultivated forms differ widely.",
+          "certainty": "Gould source description only; no new scoring of awn length or mandatory awn state.",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, p. 173, Triticum aestivum",
+          "url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf"
+        },
+        {
+          "look": "Check collar auricles and the ligule-unit warning",
+          "check": "Gould describes slender auricles and a truncate ligule but prints a ligule length of 1–3 cm. Regional botanical floras report millimetres instead (roughly 1–3 mm). Treat Gould's printed centimetre value as ON HOLD, not a measurement to use in identification. Stems are mostly 60–100 cm and leaves 7–20 mm wide.",
+          "compare": "A ligule is inside the leaf blade–sheath junction; auricles are different projections on either side. Verify with a scale before applying a length bin.",
+          "certainty": "Printed Gould cm versus external mm sources explicitly disagreed; exact source erratum unconfirmed.",
+          "source": "Gould (1975), The Grasses of Texas, p. 173; Diggs et al. (1999) wheat account; UT PRC Williamson County wheat treatment",
+          "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Triticum%20aestivum"
+        }
+      ],
+      "audit_hold": "Keep Triticum aestivum as non-native research-trial candidate, do not promote from supplied cultivated wheat description. Protect all original 112 source shards, optional 1,815-record evidence master, 57 provisional scoring states, photos and credits. Printed ligule 1–3 cm is a documented conflict and must NOT be used for any filter without resolving edition erratum. Historical Triticum cylindricum belongs to modern Aegilops cylindrica, not wheat. No copyrighted book page is rehosted."
     }
   ]
 }
