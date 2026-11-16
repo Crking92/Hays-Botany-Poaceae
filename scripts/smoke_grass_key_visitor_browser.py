@@ -108,6 +108,17 @@ def check_view(browser, name, width, height):
     page.locator("#species-search").fill("Cenchrus ciliaris")
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
     assert "Source-scored" in page.locator("#results .result").first.inner_text(), ("Buffelgrass source-scored option was not admitted")
+    # Fresh targeted releases must show as cited literature, not false local vouchers.
+    for scientific in ("Bothriochloa longipaniculata", "Panicum miliaceum"):
+        page.locator("#species-search").fill(scientific)
+        page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+        assert "Source-scored" in page.locator("#results .result").first.inner_text(), (
+            scientific + ": newly verified literature admission absent")
+        page.locator("#results .result").first.click()
+        modal=page.locator("#detail-dialog")
+        assert "NOT a Hays County specimen voucher" in modal.inner_text()
+        assert modal.locator("section.detail-botany a[href^='https://']").count() >= 4
+        modal.get_by_role("button",name="Close species detail").click()
     page.locator("#species-search").fill("Dichanthelium acuminatum")
     page.wait_for_function("document.querySelectorAll(\'#results .result\').length === 1",timeout=15000)
     assert "Research trial" in page.locator("#results .result").first.inner_text(), ("Broad-complex identity hold was lost")
