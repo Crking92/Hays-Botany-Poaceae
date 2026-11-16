@@ -159,7 +159,7 @@ def check_view(browser, name, width, height):
     for scientific,count,needle in [
         ("Dichanthelium acuminatum",3,"BROAD-COMPLEX"),
         ("Phyllostachys aurea",2,"Flowers are extremely rare"),
-        ("Cortaderia selloana",2,"large, tall tuft")]:
+        ("Cortaderia selloana",2,"dense, tall tuft")]:
         page.locator("#species-search").fill(scientific)
         page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
         assert "Source-scored" in page.locator("#results .result").first.inner_text(), (
