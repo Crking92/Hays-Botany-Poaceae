@@ -75,4 +75,12 @@ for(const hold of assignments.held_unknown){
  const s=bySpecies.get(hold.id);
  assert(s&&s.traits[hold.character].length===0,"Held unknown unexpectedly scored: "+hold.id+"|"+hold.character);
 }
+// New specialized option is a field teaching distinction, not a species admission.
+// Its positive-only scoring cannot disprove other unreviewed Cenchrus/Pennisetum.
+assert(html.includes('["soft_involucre","Soft, basally joined bristles"'));
+assert(js.includes('buffel.traits.awns=["soft_involucre"]'));
+assert(js.includes('else if(key==="awns"&&val==="soft_involucre")unknown++'));
+const gould=read("source-reference-gould-1975.json");
+assert(gould.additional_species_treatments.some(x=>x.species_id==="cenchrus-ciliaris"||x.taxon==="Cenchrus ciliaris"),"Source-photo book evidence missing");
+assert.equal(admissions.length,37,"New bristle option is not a promotion");
 console.log(JSON.stringify({result:"PASS",original112:112,unmodifiedTrialPackets:53,visibleGrasses:169,readyCoreFields:28,documentedHolds:13,recoveredPolypogon:true,sourceRowsPreserved:1815,negativeExclusionsFromNewFields:0}));
