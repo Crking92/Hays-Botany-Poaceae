@@ -2613,6 +2613,71 @@ try{
    throw Error("Targeted source-scored totals inconsistent");
 }catch(err){console.warn("Gould targeted admission failed safely; prior 149/20 preserved",err)}
 
+// Focused review of two source-labeled but previously photo/taxon-held grasses.
+// Release status is exact literature profile only, not a specimen/photo validation.
+// Keep the source data, images and original #378/#390 admission ledgers unchanged.
+// A failed validation leaves the 162/169 established source-scored cohort intact.
+try{
+ const resp=await fetch("focused-identity-review-20261116.json",{cache:"no-store"});
+ if(!resp.ok)throw Error("Focused identity review file not delivered");
+ const pack=await resp.json();
+ const currentScored=state.species.filter(s=>s.source_scored).length;
+ const currentHeld=state.species.filter(s=>s.trial).length;
+ const expectedHeld=new Set(["dichanthelium-acuminatum","phyllostachys-aurea","bromus-brevis","cortaderia-selloana","lolium-x-boucheanum"]);
+ if(pack.schema!=="HAYS_GRASS_FOCUSED_IDENTITY_ADMISSIONS_V1"||
+    currentScored!==50||currentHeld!==7||
+    pack.prior_scored_162!==true||pack.admission_count!==2||
+    pack.total_source_scored_after_release!==164||
+    pack.remaining_research_species_count!==5||
+    !Array.isArray(pack.admissions)||pack.admissions.length!==2||
+    pack.remaining_holds?.length!==5||
+    pack.remaining_holds.some(id=>!expectedHeld.has(id)))
+    throw Error("Focused identity review has mismatched historic baseline or holds");
+ const options=new Map(qs.map(q=>[q.id,new Set(q.options.map(o=>o[0]))]));
+ const expected=new Set(["bothriochloa-longipaniculata","panicum-miliaceum"]),validated=[];
+ for(const a of pack.admissions){
+  if(!expected.delete(a.id)||a.admission_level!=="SOURCE_SCORED_NOT_LOCAL_VOUCHER"||
+     a.local_voucher_status!=="NOT_CERTIFIED"||
+     a.bonap_county_status!=="UNVERIFIED"||a.photo_specific_identity_certified!==false)
+    throw Error("Unapproved exact species or certification claim");
+  const species=state.species.find(s=>s.id===a.id);
+  if(!species||!species.trial||species.scientific!==a.scientific||
+     !species.photos?.length||species.range!=="UNVERIFIED")
+    throw Error("Previously held species did not match source packet: "+a.id);
+  for(const q of qs){
+   const states=a.core_traits?.[q.id],proof=a.core_sources?.[q.id];
+   if(!Array.isArray(states)||!states.length||states.some(k=>!options.get(q.id).has(k))||
+      !proof?.reference||!proof?.note||!proof?.source_url?.startsWith("https://"))
+     throw Error("No exact organ evidence for focused admission: "+a.id+" / "+q.id);
+  }
+  const reference=a.identification_reference;
+  if(reference.existing_photo_index<0||!species.photos[reference.existing_photo_index]||
+     species.photos[reference.existing_photo_index].source_page!==reference.source_page)
+    throw Error("Existing credited photo provenance changed: "+a.id);
+  if(!a.field_rule||!a.remaining_cautions?.length)throw Error("Missing lookalike/cultivar cautions");
+  validated.push([species,a]);
+ }
+ if(expected.size)throw Error("Missing one of two focused resolutions");
+ for(const [s,a] of validated){
+  s.traits=structuredClone(a.core_traits);
+  s.positiveOnlyCoreKeys=[...new Set([...(s.positiveOnlyCoreKeys||[]),...(a.positive_only_core_keys||[])])];
+  s.trial=false;s.source_scored=true;s.admission_status=a.admission_level;
+  s.source_admission={
+   core_traits:a.core_traits,core_sources:a.core_sources,
+   remaining_cautions:a.remaining_cautions
+  };
+  s.field_rule=a.field_rule;s.local_voucher_status="NOT_CERTIFIED";
+  if(s.id==="panicum-miliaceum"){
+   s.hero_i=a.identification_reference.existing_photo_index;
+   // Source image with mature grain is more informative than immature head.
+  }
+  if(s.promotion_hold)delete s.promotion_hold;
+ }
+ if(state.species.filter(s=>s.source_scored).length!==52||
+    state.species.filter(s=>s.trial).length!==5)
+   throw Error("Result is not 164 source-scored with five research holds");
+}catch(err){console.warn("Focused identity admission failed safely; prior cohort preserved",err)}
+
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});

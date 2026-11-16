@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "site" / "visual-key-lab"
 BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
-FILES = ["index.html", "promotion-review-37-20261116.json", "source-scored-admissions.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
+FILES = ["index.html", "promotion-review-37-20261116.json", "source-scored-admissions.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
 ATTEMPTS = 12
 DELAY_SECONDS = 5
 
@@ -78,16 +78,22 @@ def http_check():
     assert len(followup["admissions"]) == 13
     added_ids = {x["id"] for x in followup["admissions"]}
     assert len(added_ids) == 13 and historical_ids.isdisjoint(added_ids)
-    promoted_ids = historical_ids | added_ids
-    assert len(promoted_ids) == 50
+    focused = delivered["focused-identity-review-20261116.json"]
+    assert focused["schema"] == "HAYS_GRASS_FOCUSED_IDENTITY_ADMISSIONS_V1"
+    focused_ids = {x["id"] for x in focused["admissions"]}
+    assert focused_ids == {"bothriochloa-longipaniculata", "panicum-miliaceum"}
+    assert focused_ids.isdisjoint(historical_ids | added_ids)
+    promoted_ids = historical_ids | added_ids | focused_ids
+    assert len(promoted_ids) == 52
     assert promoted_ids <= {x["id"] for x in groups}
     review = delivered["promotion-review-37-20261116.json"]
     assert review["approved_count"] == 33 and review["hold_count"] == 4
     older_holds = {x["id"] for x in review["reviewed"] if x["decision"].startswith("HOLD_")}
     assert older_holds.isdisjoint(historical_ids), "Historical admissions altered"
-    assert (older_holds - {"cenchrus-ciliaris"}).isdisjoint(promoted_ids)
+    assert (older_holds - {"cenchrus-ciliaris"} - focused_ids) == {"dichanthelium-acuminatum"}
     assert "cenchrus-ciliaris" in added_ids
-    assert set(followup["unresolved_species_holds"]).isdisjoint(promoted_ids)
+    assert set(followup["unresolved_species_holds"]) - focused_ids == set(focused["remaining_holds"])
+    assert not set(focused["remaining_holds"]).intersection(promoted_ids)
     gaps = delivered["ready-core-gap-assignments.json"]
     assert gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
     assert len(gaps["rows"]) == 28 and len(gaps["held_unknown"]) == 13
@@ -104,10 +110,10 @@ def browser_check(groups,promoted_ids):
                 "() => document.querySelectorAll('#results .result').length === 169",
                 timeout=45000)
             labels = page.locator("#results .result .tag").all_text_contents()
-            assert sum("Research trial" in x and "unverified" in x for x in labels) == 7, (
-                "Unified 169 key missing three identity holds and four manifest-only research labels")
-            assert sum("Source-scored" in x for x in labels) == 50, (
-                "Fifty admitted literature-scored profiles not labeled separately from source trials")
+            assert sum("Research trial" in x and "unverified" in x for x in labels) == 5, (
+                "Unified 169 key missing one broad taxonomic hold and four manifest-only research labels")
+            assert sum("Source-scored" in x for x in labels) == 52, (
+                "Fifty-two literature-scored profiles not labeled separately from source trials")
             matches = []
             for x in groups:
                 scientific=x["scientific"]
@@ -150,7 +156,7 @@ def check():
     groups,promoted_ids = http_check()
     visited = browser_check(groups,promoted_ids)
     return {
-        "status": "PUBLIC_HTTP_AND_BROWSER_53_ORIGINAL_TRIAL_PACKETS_WITH_50_LITERATURE_ADMISSIONS_VERIFIED",
+        "status": "PUBLIC_HTTP_AND_BROWSER_53_ORIGINAL_TRIAL_PACKETS_WITH_52_LITERATURE_ADMISSIONS_VERIFIED",
         "public_url": BASE,
         "files_verified": FILES,
         "original_scored_count_unchanged": 112,
