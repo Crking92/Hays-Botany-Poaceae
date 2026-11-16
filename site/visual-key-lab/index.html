@@ -1100,7 +1100,9 @@ const flowerFieldTips={
   one_vein:["Use a hand lens on an outer glume","Follow one prominent lengthwise vein on the glume (the bract outside the florets). Veins on a lemma are a different character."],
   first_enclosing:["Compare the two outer glumes","The first, lower glume partly wraps around or encloses the second. Check the relative margins rather than simply comparing lengths."],
   lower_reduced:["Find the lower glume at the spikelet base","The first glume is very small or absent. Do not mistake it for a tiny floret or conclude that both glumes are missing."],
-  glabrous:["Inspect the glume faces and margins","A glabrous glume has no hairs on the examined surface. A smooth glume may still have veins; check under magnification."]
+  glabrous:["Inspect the glume faces and margins","A glabrous glume has no hairs on the examined surface. A smooth glume may still have veins; check under magnification."],
+  central_glume_glabrous:["Examine the FIRST (lower) glume","Inspect its median vein, not a third central glume. Smooth/not rough is the observed state; a hairless surface can still be scabrous."],
+  central_glume_scabrous:["Examine the FIRST (lower) glume","Inspect its median vein for tiny rough points using a hand lens. Do not confuse them with lemma hairs."]
  },
  lemma_texture:{
   hairy:["Look on the lemma, not the stalk","Hairs emerge from the lemma surface or margins surrounding a floret. Hairs on a rachilla or a spikelet's stalk must be recorded separately."],
@@ -1115,7 +1117,8 @@ const flowerFieldTips={
   short:["Use a hand lens at the lemma tip","A tiny projection comes directly from the lemma. A blunt lemma without an awn should not be scored as short-awned."],
   bent_twisted:["Inspect the base and bend of the awn","The lemma awn has a twisted section and a clear elbow. A bent grass stem or bent spikelet stalk is not an awn."],
   none:["Look carefully for any attached awn","The lemma is awnless. Fine hairs and bristles outside the spikelet do not count as lemma awns."],
-  straight_or_bent:["Compare young and mature awns","A lemma awn may appear straight or bend with development. The sketch shows both appearances, not two awns on one floret."]
+  straight_or_bent:["Compare young and mature awns","A lemma awn may appear straight or bend with development. The sketch shows both appearances, not two awns on one floret."],
+  apical_mucro:["Use a hand lens on a mature fertile lemma","A mucro is a very small, abrupt point at the lemma tip. It is not one of the foxtail bristles below the spikelet and not an awn on the glume."]
  },
  floral_hair_position:{
   below_spikelet:["Trace a bristle to its attachment","The bristle begins below or beside the spikelet on the flowering branch. It does not originate from the lemma tip as a true awn."],
@@ -1171,6 +1174,15 @@ function flowerFieldSketch(character,choice){
   }else if(choice==="one_vein"){
    glume(81,79,-1,1.1);glume(87,79,1,1.1);
    p("M80 77 Q67 51 75 42","#be8b45",3);
+  }else if(choice==="central_glume_glabrous"||choice==="central_glume_scabrous"){
+   // Legacy IDs had an anatomically inaccurate 'central glume' name.
+   // Draw the midnerve of the first / LOWER of the two true glumes.
+   glume(84,84,-1,1.55);glume(92,77,1,.87);
+   p("M83 80 Q62 59 78 38","#a98645",2.7);
+   if(choice==="central_glume_scabrous"){
+    for(const [x,y] of [[73,64],[72,56],[75,48],[78,40]])
+     p("M"+x+" "+y+" l-7 -3","#986f44",1.5);
+   }
   }else{
    glume(81,79,-1,1.1);glume(87,79,1,1.1);floret(84,59,.45);
    p("M113 31 Q127 19 141 30 M113 37 Q127 49 141 37","#7ca76d",1.5);
@@ -1194,6 +1206,7 @@ function flowerFieldSketch(character,choice){
    if(choice==="short")p("M84 42 l3 -9","#b48c4e",2.7);
    if(choice==="bent_twisted"){p("M84 42 L86 34 L80 29 L88 25 L86 18 L124 5","#b48c4e",2.4);}
    if(choice==="none")p("M70 21 H99","#9bbd8d",1.7);
+   if(choice==="apical_mucro")p("M84 42 l3 -5","#b48c4e",2.6);
   }
  }else if(character==="floral_hair_position"){
   if(choice==="below_spikelet"){
