@@ -318,4 +318,51 @@ assert(!allScored.some(x=>["paspalum-langei","pappophorum-bicolor"].includes(x.i
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"));
 assert([...langei.learner_diagnostic_checks,...bicolor.learner_diagnostic_checks].every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
 
-console.log("PASS: Gould final rustyseed and pink pappusgrass source treatments with taxonomy holds saved; no scoring or species admissions changed");
+
+// Five owner-photographed Gould pages: Chloris canterai, Trisetum interruptum,
+// Panicum hians, and the three adjacent taxon treatments. No scored schema mutations.
+const newGouldIds=["stapfochloa-canterae","sphenopholis-interrupta","steinchisma-hians","sphenopholis-nitida","phanopyrum-gymnocarpon","urochloa-mutica"];
+const newGouldEntries=newGouldIds.map(id=>source.additional_species_treatments.find(x=>x.species_id===id));
+assert(newGouldEntries.every(Boolean),"Five-photo Gould treatment references incomplete");
+assert.deepEqual(newGouldEntries.map(x=>x.observations.length),[15,16,16,11,12,6]);
+assert.deepEqual(newGouldEntries.map(x=>x.learner_diagnostic_checks.length),[2,2,2,0,0,0]);
+assert(source.additional_source_image_notes.some(x=>x.note.includes("Fig. 173 labeled Chloris ciliata")));
+const [windmill,prairie,gaping,shiny,savannah,para]=newGouldEntries;
+assert.equal(windmill.taxon,"Chloris canterai");
+assert.equal(windmill.taxonomy.accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
+assert.equal(windmill.taxonomy.corrected_basionym,"Chloris canterae Arechav.");
+assert(windmill.figure.includes("NOT"));
+assert.deepEqual(new Map(windmill.observations.map(x=>[x.character,x])).get("panicle").branches_typical,[3,6]);
+assert.equal(new Map(windmill.observations.map(x=>[x.character,x])).get("ligule").ligule_hair_length_mm_max,7);
+assert.equal(new Map(windmill.observations.map(x=>[x.character,x])).get("chromosomes").reported_2n,36);
+assert.equal(prairie.taxon,"Trisetum interruptum Buckley");
+assert.equal(prairie.taxonomy.accepted,"Sphenopholis interrupta (Buckley) Scribn.");
+assert(prairie.taxonomy.critical_homonym_hold.includes("E.Fourn."));
+assert.deepEqual(prairie.printed_pages,[130,131]);
+assert.deepEqual(new Map(prairie.observations.map(x=>[x.character,x])).get("lemma_awn").length_mm,[5,8]);
+assert.equal(new Map(prairie.observations.map(x=>[x.character,x])).get("chromosome_report").report_status,"NOT_REPORTED");
+assert.equal(gaping.taxon,"Panicum hians Elliott");
+assert.equal(gaping.taxonomy.accepted,"Steinchisma hians (Elliott) Nash");
+assert.deepEqual(gaping.printed_pages,[458,459]);
+assert.deepEqual(new Map(gaping.observations.map(x=>[x.character,x])).get("spikelets").length_mm,[1.8,2.6]);
+assert.equal(new Map(gaping.observations.map(x=>[x.character,x])).get("chromosome_number").reported_2n,20);
+assert.equal(shiny.scientific_name_current,"Sphenopholis nitida (Biehler) Scribn.");
+assert.equal(shiny.treatment_completeness,"PARTIALLY_OBSCURED_BY_FINGERS_AND_CROP");
+assert.equal(new Map(shiny.observations.map(x=>[x.character,x])).get("chromosomes").reported_2n,14);
+assert.equal(savannah.taxonomy.accepted_itis,"Phanopyrum gymnocarpon (Elliott) Nash");
+assert.equal(new Map(savannah.observations.map(x=>[x.character,x])).get("chromosomes").report_status,"NOT_REPORTED");
+assert.equal(para.scientific_name_current,"Urochloa mutica (Forssk.) T.Q.Nguyen");
+assert.equal(para.treatment_completeness,"OPENING_PORTION_ONLY_CONTINUATION_OBSCURED");
+assert.equal(new Map(para.observations.map(x=>[x.character,x])).get("ligule").hair_length_mm_approx,1.5);
+const candidates=read("hays-candidates.json").candidates;
+for(const speciesId of newGouldIds.slice(0,3)){
+  const candidate=candidates.find(x=>x.id===speciesId);
+  assert(candidate&&candidate.status==="RESEARCH_CANDIDATE_NOT_RELEASED","Gould owner photos cannot promote "+speciesId);
+}
+assert(!candidates.some(x=>newGouldIds.slice(3).includes(x.id)),"Adjacent source-only grasses must not change the 169-species roster");
+const scored=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json"));
+assert.equal(scored.length,112);
+assert(!scored.some(x=>newGouldIds.includes(x.id)),"No Gould-only research entries promoted into original scored species");
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Source-linked learner checks must render separately");
+
+console.log("PASS: Five owner-photographed Gould pages, correct modern names, protected scoring, and adjacency holds");
