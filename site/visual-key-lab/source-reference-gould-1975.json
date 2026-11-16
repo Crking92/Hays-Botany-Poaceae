@@ -2039,6 +2039,901 @@
         "reason": "Outside current 169-species research set and both taxonomic concept and paragraph incomplete."
       },
       "audit_hold": "No invented continuation, flower period, locality or extra morphological details. In particular, do not automatically treat Gould P. vaginatum as every POWO P. mucronulatum specimen."
+    },
+    {
+      "source_name": "Frank W. Gould (1975), The Grasses of Texas",
+      "added_on": "2026-11-16",
+      "source_evidence_status": "PUBLISHED_MORPHOLOGY_NOT_LOCAL_VERIFIED_SPECIMEN",
+      "photographs": "Owner-submitted page photographs interpreted as source excerpts; photographs themselves are not republished.",
+      "species_id": "stapfochloa-canterae",
+      "taxon_as_printed": "Chloris canterai",
+      "name_as_printed": "Chloris canterai Arech., Anales Mus. Nac. Montevideo 5:386. 1896 [bibliographic typography as visible in owner's photo]",
+      "accepted_species": "Stapfochloa canterae (Arechav.) P.M.Peterson",
+      "common_name": "Paraguayan windmillgrass",
+      "printed_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "source_illustration": "Fig. 174 cited for Chloris canterai but not visible in this photograph. Fig. 173 on same page explicitly labels Chloris ciliata, a DIFFERENT species.",
+      "taxonomy": {
+        "status": "HISTORICAL_GENUS_AND_ORTHOGRAPHIC_CORRECTION",
+        "original_photo_spelling": "Chloris canterai",
+        "original_corrected_spelling": "Chloris canterae Arechav.",
+        "currently_accepted": "Stapfochloa canterae (Arechav.) P.M.Peterson",
+        "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469004-2",
+        "usda_url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=10246",
+        "note": "USDA GRIN explicitly notes original 'canterai' as orthographic spelling corrected to 'canterae'; taxonomic transfer to Stapfochloa was published in 2015. Gould's 1896 bibliographic data need independent line-by-line checking against protologue; retain scan as printed."
+      },
+      "observations": [
+        {
+          "character": "habit",
+          "status": "SOURCE_PUBLISHED",
+          "details": "Tufted perennial grass, erect slender smooth culms."
+        },
+        {
+          "character": "culm_height",
+          "status": "SOURCE_NUMERIC",
+          "height_m_max": 1,
+          "details": "Culms erect, slender and glabrous to approximately 1 m tall."
+        },
+        {
+          "character": "leaf_sheath",
+          "status": "SOURCE_PUBLISHED",
+          "details": "Leaf sheaths glabrous."
+        },
+        {
+          "character": "ligule",
+          "status": "HIGH_VALUE_COLLAR_MORPHOLOGY",
+          "structure": "long-ciliate",
+          "hair_length_mm_max": 7,
+          "details": "Long-ciliate ligule with hairs up to 7 mm long. This is the maximum HAIR length, not evidence of a 7-mm membranous flap. Requires close leaf-collar photo."
+        },
+        {
+          "character": "leaf_blades",
+          "status": "SOURCE_NUMERIC",
+          "length_cm_max": 25,
+          "width_mm": [
+            1,
+            5
+          ],
+          "details": "Narrow leaf blades to 25 cm, 1–5 mm wide, often inrolled and filamentlike."
+        },
+        {
+          "character": "panicle_digitations",
+          "status": "SOURCE_VARIATION",
+          "branch_count_usual": [
+            3,
+            6
+          ],
+          "branch_count_occasional": [
+            2,
+            9
+          ],
+          "details": "Panicles with generally 3–6 digitately clustered branches, occasionally 2–9, erect to arcuate."
+        },
+        {
+          "character": "raceme_length",
+          "status": "SOURCE_NUMERIC",
+          "branch_length_cm": [
+            4,
+            14
+          ],
+          "details": "Individual digitately arranged branches 4–14 cm long."
+        },
+        {
+          "character": "raceme_density",
+          "status": "SOURCE_APPROXIMATE",
+          "spikelets_per_cm_rachis_approx": 11,
+          "details": "About 11 spikelets per centimeter of rachis, a descriptive approximate count."
+        },
+        {
+          "character": "spikelet_appearance",
+          "status": "SOURCE_PUBLISHED",
+          "details": "Brown, densely imbricated spikelets."
+        },
+        {
+          "character": "glume_shape_surface",
+          "status": "SOURCE_ANATOMY",
+          "details": "Glumes narrowly lanceolate, glabrous except roughened (scabrous) midnerve; margins thin translucent (hyaline)."
+        },
+        {
+          "character": "first_glume_length",
+          "status": "SOURCE_NUMERIC",
+          "length_mm": [
+            1.6,
+            2.4
+          ],
+          "details": "First glume 1.6–2.4 mm long."
+        },
+        {
+          "character": "second_glume_length",
+          "status": "SOURCE_NUMERIC",
+          "length_mm": [
+            2.3,
+            3.8
+          ],
+          "details": "Second glume 2.3–3.8 mm long; don't conflate with first glume."
+        },
+        {
+          "character": "lower_fertile_lemma",
+          "status": "SOURCE_STRUCTURE_NUMERIC",
+          "length_mm_approx": [
+            2.7,
+            3.7
+          ],
+          "details": "Lower floret lemma flattened, narrowly ovate, printed approximately 3(2.7)–3.7 mm; densely ciliate keel. Nonstandard parenthetical form preserved as a published approximate range."
+        },
+        {
+          "character": "lower_fertile_lemma_awn",
+          "status": "SOURCE_NUMERIC",
+          "length_mm": [
+            2.4,
+            5.5
+          ],
+          "details": "Awn of lower (fertile) floret 2.4–5.5 mm."
+        },
+        {
+          "character": "sterile_florets",
+          "status": "SOURCE_ANATOMY",
+          "count": [
+            2,
+            3
+          ],
+          "length_mm": [
+            1.1,
+            1.8
+          ],
+          "details": "Two or three sterile florets, turbinatelike, flattened, glabrous, 1.1–1.8 mm long, with upper sterile florets successively smaller and enclosed by the lower."
+        },
+        {
+          "character": "lowest_sterile_awn",
+          "status": "SOURCE_NUMERIC",
+          "awn_length_mm": [
+            1.5,
+            3.5
+          ],
+          "details": "Awn on LOWEST sterile floret 1.5–3.5 mm; not the same awn as that on the fertile floret."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "HISTORICAL_REPORT_NOT_FIELD_SCORE",
+          "reported_2n": 36,
+          "details": "Gould reports 2n=36."
+        },
+        {
+          "character": "historic_Texas_distribution",
+          "status": "INTRODUCED_HISTORIC_DESCRIPTION",
+          "regions": [
+            2,
+            6
+          ],
+          "counties_as_printed": [
+            "Atascosa",
+            "Bexar",
+            "Jackson",
+            "Milam",
+            "Wharton"
+          ],
+          "details": "Introduced/naturalized in historical Texas regions 2 and 6, with named counties and low-lying roadsides on sandy to loamy/clayey soils; does not confirm a Hays specimen."
+        },
+        {
+          "character": "historic_origin",
+          "status": "SOURCE_GENERAL_DISTRIBUTION",
+          "details": "Gould reports native to northern Argentina, Paraguay and Uruguay; Kew broadens native area to southern Brazil as well. Introduced in Texas."
+        },
+        {
+          "character": "flowering_period",
+          "status": "PUBLISHED_HISTORICAL_WINDOW",
+          "months": "April–September",
+          "details": "Gould reports Texas flowering April through September."
+        }
+      ],
+      "adjacent_page_material": [
+        {
+          "taxon": "Chloris ciliata",
+          "status": "ILLUSTRATION_CAPTION_ONLY",
+          "description": "Gould page shows Fig. 173 explicitly captioned Chloris ciliata spikelet, credited Gould and Box (1965). This figure must NOT be used as an anatomy photo of Chloris canterai/Stapfochloa canterae."
+        },
+        {
+          "taxon": "Chloris divaricata",
+          "status": "INCOMPLETE_TREATMENT",
+          "description": "Beginning of next species treatment appears below, partially obscured by the hand; do not import measurements or use its characters for canterae."
+        }
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Count the windmill branches and check bristly ligule hairs (Gould)",
+          "check": "Tufted plant with 3–6 (sometimes 2–9) digitately arranged branches roughly 4–14 cm long, erect to curved. Inner leaf-collar ligule has long cilia reaching about 7 mm; look for true ligule at blade-sheath junction.",
+          "compare": "Other Stapfochloa and Chloris lookalikes require dissected spikelets; a close-up illustration on the source page labeled Chloris ciliata is NOT this species.",
+          "source": "Gould (1975), Chloris canterai treatment (printed page not visible)",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469004-2",
+          "certainty": "Published morphological clue, not locally confirmed photographed anatomy."
+        },
+        {
+          "look": "Separate fertile and sterile floret awns (Gould)",
+          "check": "First glume 1.6–2.4 mm, second 2.3–3.8 mm. Lower fertile lemma has ciliate keel and an awn 2.4–5.5 mm; the lowest sterile floret may have its own 1.5–3.5 mm awn. A mature spikelet typically has 2–3 smaller sterile florets above.",
+          "compare": "Do not score the awn on a sterile floret as the fertile lemma awn. Use magnification and a millimeter scale.",
+          "source": "Gould (1975), Chloris canterai treatment (printed page not visible)",
+          "url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=10246",
+          "certainty": "Published morphological clue, not locally confirmed photographed anatomy."
+        }
+      ],
+      "classification_decision": {
+        "existing_candidate_id": "stapfochloa-canterae",
+        "action": "EVIDENCE_ONLY_NO_PROMOTION_OR_SCORING",
+        "status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+        "note": "Historical spelling/combination normalized as reference only; no admission to main key or photo identification certified."
+      }
+    },
+    {
+      "source_name": "Frank W. Gould (1975), The Grasses of Texas",
+      "added_on": "2026-11-16",
+      "source_evidence_status": "PUBLISHED_MORPHOLOGY_NOT_LOCAL_VERIFIED_SPECIMEN",
+      "photographs": "Owner-submitted page photographs interpreted as source excerpts; photographs themselves are not republished.",
+      "species_id": "sphenopholis-nitida",
+      "taxon_as_printed": "Sphenopholis nitida (Biehler) Scribn.",
+      "accepted_species": "Sphenopholis nitida (Biehler) Scribn.",
+      "common_name": "Shiny wedgescale",
+      "printed_page": 130,
+      "completeness": "PARTIAL_TREATMENT_PHOTO: significant lines obscured by owner's hand; retain only legible measurements",
+      "taxonomy": {
+        "status": "STILL_ACCEPTED_SPECIES",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:242042-2"
+      },
+      "observations": [
+        {
+          "character": "habit",
+          "status": "PARTIALLY_VISIBLE_PUBLISHED",
+          "details": "Tufted perennial (or annual in Gould's wording), slender culms, mostly 30–70 cm tall."
+        },
+        {
+          "character": "leaf_hairs",
+          "status": "PARTIALLY_VISIBLE",
+          "details": "Culms, sheaths and blades usually pubescent, occasionally glabrous."
+        },
+        {
+          "character": "blade_width",
+          "status": "SOURCE_NUMERIC",
+          "width_mm": [
+            2,
+            4
+          ],
+          "details": "Flat blades 2–4 mm wide."
+        },
+        {
+          "character": "panicle",
+          "status": "SOURCE_NUMERIC",
+          "length_cm": [
+            9,
+            20
+          ],
+          "width_cm": [
+            1,
+            5
+          ],
+          "details": "Open, few-flowered panicles mostly 9–20 cm long and 1–5 cm wide with flexuous slender pedicels."
+        },
+        {
+          "character": "pedicel_length",
+          "status": "SOURCE_APPROXIMATE",
+          "length_mm": [
+            0.5,
+            2
+          ],
+          "details": "Pedicels about 0.5–2 mm long (text partly obscured, check original page before treating as exact hard range)."
+        },
+        {
+          "character": "spikelets",
+          "status": "SOURCE_MEASUREMENT",
+          "length_mm": [
+            2.5,
+            4
+          ],
+          "florets_per_spikelet": [
+            2,
+            3
+          ],
+          "details": "Spikelets 2.5–4 mm and usually 2–3-flowered, spreading at maturity."
+        },
+        {
+          "character": "glumes",
+          "status": "PARTIAL_READING_HOLD",
+          "details": "Gould describes thin, smooth glumes, about equal and 1.5–3.5 mm, but the comparative width wording is obscured. Do not infer exact glume-width ratio."
+        },
+        {
+          "character": "lemmas",
+          "status": "SOURCE_MEASUREMENT",
+          "length_mm": [
+            2.6,
+            3.3
+          ],
+          "details": "Lemmas firm and rounded on back, finely rough or papillate and about 2.6–3.3 mm; second lemma sometimes with minute pressed papillae near tip."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "HISTORICAL_CYTOLOGY",
+          "reported_2n": 14,
+          "details": "Gould reports 2n=14."
+        },
+        {
+          "character": "historic_Texas_distribution",
+          "status": "HISTORICAL_RANGE_NOT_COUNTY_CERTIFICATE",
+          "details": "Region 1 forest/opening collections; Gould also notes an Edwards Plateau (region 7) collection on an earlier distribution map, not a verified Hays specimen."
+        },
+        {
+          "character": "flowering_period",
+          "status": "PUBLISHED_HISTORICAL_WINDOW",
+          "months": "April–May",
+          "details": "Gould reports flowering mostly April and May."
+        }
+      ],
+      "learner_diagnostic_checks": [],
+      "classification_decision": {
+        "action": "SOURCE_REFERENCE_ONLY_NOT_IN_169_RESEARCH_LIST",
+        "note": "Accepted species, but user-provided treatment is partly blocked and no new species admission or Hays county inference is authorized."
+      }
+    },
+    {
+      "source_name": "Frank W. Gould (1975), The Grasses of Texas",
+      "added_on": "2026-11-16",
+      "source_evidence_status": "PUBLISHED_MORPHOLOGY_NOT_LOCAL_VERIFIED_SPECIMEN",
+      "photographs": "Owner-submitted page photographs interpreted as source excerpts; photographs themselves are not republished.",
+      "species_id": "sphenopholis-interrupta",
+      "taxon_as_printed": "Trisetum interruptum Buckl.",
+      "accepted_species": "Sphenopholis interrupta (Buckley) Scribn.",
+      "common_name": "Prairie trisetum / prairie wedgescale",
+      "printed_pages": [
+        130,
+        131
+      ],
+      "source_illustration": "Fig. 64 for Trisetum interruptum, shown on printed p. 131 with separately labeled inflorescence and spikelet drawings credited Gould and Box (1965)",
+      "taxonomy": {
+        "status": "HISTORICAL_GENUS_TRANSFER",
+        "old_name": "Trisetum interruptum Buckley",
+        "accepted_name": "Sphenopholis interrupta (Buckley) Scribn.",
+        "itis_url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41305",
+        "kew_genus_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296142-2"
+      },
+      "observations": [
+        {
+          "character": "life_history",
+          "status": "PUBLISHED",
+          "details": "Tufted annual."
+        },
+        {
+          "character": "culm",
+          "status": "SOURCE_RANGE",
+          "height_cm_mostly": [
+            10,
+            50
+          ],
+          "height_cm_rare_max": 60,
+          "details": "Weak culms erect or geniculate-spreading, mostly 10–50 cm, rarely to 60 cm."
+        },
+        {
+          "character": "culm_hairs",
+          "status": "SOURCE_VARIABLE",
+          "details": "Culms glabrous or minutely puberulent, especially below nodes."
+        },
+        {
+          "character": "sheath_surface",
+          "status": "SOURCE_VARIABLE",
+          "details": "Sheaths rounded, hispid with short spreading or recurved hairs; sometimes densely hairy."
+        },
+        {
+          "character": "ligule",
+          "status": "SOURCE_DIAGNOSTIC",
+          "length_mm": [
+            1.5,
+            2
+          ],
+          "structure": "rounded or lacerate ciliate membrane",
+          "details": "Membranous ligule about 1.5–2 mm, rounded or torn (lacerate) and ciliate. True membrane plus hairs; not hair-only."
+        },
+        {
+          "character": "leaf_blade",
+          "status": "SOURCE_RANGE",
+          "width_mm": [
+            1,
+            4
+          ],
+          "length_cm_mostly": [
+            2,
+            10
+          ],
+          "length_cm_rare_max": 15,
+          "details": "Thin, flat blades mostly 1–4 mm wide by 2–10(–15) cm long, nearly hairless to densely hispid."
+        },
+        {
+          "character": "panicle",
+          "status": "SOURCE_RANGE",
+          "length_cm_mostly": [
+            5,
+            10
+          ],
+          "length_cm_occasional_max": 15,
+          "width_mm": [
+            4,
+            15
+          ],
+          "details": "Narrow contracted panicle mostly 5–10 cm long (occasionally to 15), 4–15 mm thick; main axis/branches glabrous or almost so."
+        },
+        {
+          "character": "spikelet_size_florets",
+          "status": "SOURCE_NUMERIC",
+          "length_mm_excluding_awns": [
+            4,
+            6
+          ],
+          "florets": [
+            2,
+            3
+          ],
+          "details": "Spikelets 4–6 mm without awns, 2–3-flowered; upper floret often reduced and sterile."
+        },
+        {
+          "character": "disarticulation",
+          "status": "SOURCE_ANATOMY",
+          "details": "Disarticulation both between florets and below glumes."
+        },
+        {
+          "character": "glumes",
+          "status": "SOURCE_ANATOMY",
+          "details": "Glumes unequal in width; second usually broader; about as long as lemmas, glabrous or rough, obovate; first glume 3-nerved and second 3–5-nerved."
+        },
+        {
+          "character": "lemma",
+          "status": "SOURCE_ANATOMY",
+          "length_mm_excluding_awn_including_teeth": [
+            3.5,
+            5
+          ],
+          "details": "Glabrous lemmas rounded on back, minutely rugose, obscurely nerved; 3.5–5 mm measured without awn but including slender apical teeth."
+        },
+        {
+          "character": "lemma_awn",
+          "status": "HIGH_VALUE",
+          "length_mm_mostly": [
+            5,
+            8
+          ],
+          "details": "Lemma awns mostly 5–8 mm, loosely twisted and TWICE geniculate (bent at two knees) at maturity; don't mistake the apical teeth for an awn."
+        },
+        {
+          "character": "palea",
+          "status": "SOURCE_ANATOMY",
+          "typical_fraction_of_lemma": 0.6666666666666666,
+          "details": "Paleas hyaline and colorless, variable but typically two-thirds the lemma length."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "NOT_REPORTED",
+          "reported": null,
+          "details": "Gould explicitly states chromosome number not reported. Do not invent or impute from congeners."
+        },
+        {
+          "character": "historic_Texas_distribution",
+          "status": "HISTORICAL",
+          "details": "Gould reports occasional Texas occurrences outside extreme eastern and southern historical regions, not local Hays occurrence certification."
+        },
+        {
+          "character": "flowering_period",
+          "status": "SOURCE_HISTORICAL",
+          "months": "Late March–May",
+          "details": "Gould reports flowering late March to May."
+        }
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Find the narrow panicle and twice-bent lemma awn (Gould pp. 130–131)",
+          "check": "A small tufted annual with a narrow, 4–15 mm-thick panicle, usually 5–10 cm long. Mature 4–6 mm spikelets typically have 2–3 florets; lemma awns are 5–8 mm and TWICE geniculate, with two bends. Inspect an intact floret under a hand lens.",
+          "compare": "Do not confuse the slender toothlike ends of the lemma with the separately attached bent awn. Nearby Sphenopholis nitida is a different species.",
+          "source": "Gould (1975), Trisetum interruptum, pp. 130–131; ITIS nomenclatural crosswalk",
+          "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41305",
+          "certainty": "Published morphological clue, not locally confirmed photographed anatomy."
+        },
+        {
+          "look": "Check ciliate, ragged ligule and sheath hairs (Gould)",
+          "check": "Membranous inner ligule is rounded or lacerate, 1.5–2 mm long, with cilia; sheaths usually have short spreading or reflexed stiff hairs. Gould also notes long awns and 2–3 florets per spikelet.",
+          "compare": "Look at the actual inner blade–sheath junction, not the hairs on outer nodes or at the blade base.",
+          "source": "Gould (1975), Trisetum interruptum, pp. 130–131",
+          "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=41305",
+          "certainty": "Published morphological clue, not locally confirmed photographed anatomy."
+        }
+      ],
+      "classification_decision": {
+        "existing_candidate": "sphenopholis-interrupta",
+        "action": "SOURCE_CROSSWALK_ONLY_KEEP_RESEARCH_UNADMITTED",
+        "note": "All source measurements retain original Trisetum taxon concept; local identification/flowered specimen and promotion remains unverified."
+      }
+    },
+    {
+      "source_name": "Frank W. Gould (1975), The Grasses of Texas",
+      "added_on": "2026-11-16",
+      "source_evidence_status": "PUBLISHED_MORPHOLOGY_NOT_LOCAL_VERIFIED_SPECIMEN",
+      "photographs": "Owner-submitted page photographs interpreted as source excerpts; photographs themselves are not republished.",
+      "species_id": "phanopyrum-gymnocarpon",
+      "taxon_as_printed": "Panicum gymnocarpon Ell.",
+      "accepted_treatment_disagreement": true,
+      "common_name": "Savannah panicum",
+      "printed_page": 458,
+      "taxonomy": {
+        "old_name": "Panicum gymnocarpon Elliott",
+        "usda_itis_accepted": "Phanopyrum gymnocarpon (Elliott) Nash",
+        "powo_genus_position": "Panicum (Phanopyrum treated as synonym of Panicum)",
+        "status": "ACCEPTED_GENUS_DISAGREEMENT",
+        "usda_url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=425550",
+        "itis_url": "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=42017",
+        "powo_url": "https://powo.science.kew.org/taxon/295236-2",
+        "note": "Save descriptive morphology under original Panicum gymnocarpon with search alias Phanopyrum; don't force only one accepted genus when authorities disagree."
+      },
+      "observations": [
+        {
+          "character": "habit",
+          "status": "PUBLISHED",
+          "details": "Stout perennial essentially glabrous, with erect culms rooted in creeping stoloniferous bases."
+        },
+        {
+          "character": "culm_height",
+          "status": "SOURCE_RANGE",
+          "height_cm_mostly": [
+            60,
+            100
+          ],
+          "details": "Erect culms about 60–100 cm tall."
+        },
+        {
+          "character": "stolons",
+          "status": "SOURCE_RANGE",
+          "stolon_length_m_max": 2,
+          "details": "Creeping stoloniferous bases extending as much as 2 m, rooting freely at nodes."
+        },
+        {
+          "character": "ligule",
+          "status": "SOURCE_RANGE",
+          "length_mm": [
+            0.6,
+            1
+          ],
+          "structure": "membrane",
+          "details": "Membranous ligule 0.6–1 mm."
+        },
+        {
+          "character": "blade",
+          "status": "SOURCE_RANGE",
+          "width_cm": [
+            0.8,
+            3
+          ],
+          "length_cm_mostly": [
+            15,
+            40
+          ],
+          "details": "Broad, flat blades about 0.8–3 cm wide and 15–40 cm long, base auriculate or cordate, sometimes ciliate on lower margins."
+        },
+        {
+          "character": "panicle",
+          "status": "SOURCE_DESCRIPTION",
+          "details": "Large panicle with many stiffly erect-spreading primary branches bearing spikelets on short lateral branches and pedicels."
+        },
+        {
+          "character": "spikelets",
+          "status": "SOURCE_RANGE",
+          "length_mm": [
+            5.5,
+            7
+          ],
+          "details": "Smooth, hairless spikelets 5.5–7 mm long."
+        },
+        {
+          "character": "first_glume",
+          "status": "SOURCE_ANATOMY",
+          "veins": 3,
+          "details": "First glume 3-nerved, roughly the length of the lower sterile floret lemma."
+        },
+        {
+          "character": "second_glume",
+          "status": "SOURCE_ANATOMY",
+          "veins": 5,
+          "longer_by_mm": [
+            1,
+            1.5
+          ],
+          "details": "Second glume 5-nerved and about 1–1.5 mm longer than the first glume and lower lemma."
+        },
+        {
+          "character": "lower_floret",
+          "status": "SOURCE_ANATOMY",
+          "details": "Lower floret neuter, its palea about half as long as its lemma."
+        },
+        {
+          "character": "upper_lemma",
+          "status": "SOURCE_ANATOMY",
+          "length_mm_approx": 2,
+          "details": "Upper fertile lemma narrowly oblong, far shorter than glumes and lower lemma, about 2 mm."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "NOT_REPORTED",
+          "reported": null,
+          "details": "Chromosome number not reported by Gould."
+        },
+        {
+          "character": "historic_habitat",
+          "status": "HISTORICAL",
+          "regions": [
+            1,
+            3,
+            2
+          ],
+          "details": "Gould reports moist woodland/forest habitat in historical Texas regions 1 and 3 and wooded part of region 2; not certified in Hays."
+        },
+        {
+          "character": "flowering_period",
+          "status": "SOURCE_HISTORICAL",
+          "months": "July–October",
+          "details": "Flowering July through October in Gould's treatment."
+        }
+      ],
+      "learner_diagnostic_checks": [],
+      "classification_decision": {
+        "action": "ADJACENT_SOURCE_REFERENCE_ONLY",
+        "note": "Not in current 57 research candidates by this specific name; taxonomic disagreement Kew vs USDA. Do not add to candidate roster or main key."
+      }
+    },
+    {
+      "source_name": "Frank W. Gould (1975), The Grasses of Texas",
+      "added_on": "2026-11-16",
+      "source_evidence_status": "PUBLISHED_MORPHOLOGY_NOT_LOCAL_VERIFIED_SPECIMEN",
+      "photographs": "Owner-submitted page photographs interpreted as source excerpts; photographs themselves are not republished.",
+      "species_id": "steinchisma-hians",
+      "taxon_as_printed": "Panicum hians Ell., Bot. S.C. and Ga. 1:118. 1816",
+      "accepted_species": "Steinchisma hians (Elliott) Nash",
+      "common_name": "Gaping panicum",
+      "printed_page": 458,
+      "continuation_page": "Following facing/next page; printed number not visible in photograph",
+      "source_figure": "Fig. 246 cited in Gould text; figure not included in these photographs",
+      "taxonomy": {
+        "status": "HISTORICAL_GENUS_TRANSFER",
+        "synonym": "Panicum hians Elliott",
+        "accepted_name": "Steinchisma hians (Elliott) Nash",
+        "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:243676-2",
+        "powo_synonym_url": "https://powo.science.kew.org/taxon/181965-2"
+      },
+      "observations": [
+        {
+          "character": "habit",
+          "status": "SOURCE",
+          "details": "Perennial with slender tufted stems, erect or more commonly decumbent at their bases, often freely branched."
+        },
+        {
+          "character": "culm_height",
+          "status": "SOURCE_RANGE",
+          "height_cm_mostly": [
+            20,
+            75
+          ],
+          "details": "Culms mostly 20–75 cm."
+        },
+        {
+          "character": "nodes",
+          "status": "SOURCE_VARIES",
+          "details": "Nodes glabrous or scabrous."
+        },
+        {
+          "character": "sheaths",
+          "status": "SOURCE_VARIES",
+          "details": "Sheaths rounded or somewhat laterally flattened, smooth or hairy/ciliate on their upper margins."
+        },
+        {
+          "character": "ligule",
+          "status": "SOURCE_ANATOMY",
+          "height_mm_approx": 0.5,
+          "structure": "fringed scale",
+          "details": "Gould describes a 'fringed scale' roughly 0.5 mm; modern GrassBase describes a ciliolate membrane. Save both descriptions; don't automatically treat as hair-only."
+        },
+        {
+          "character": "blade",
+          "status": "SOURCE_RANGE",
+          "length_cm_mostly": [
+            6,
+            18
+          ],
+          "width_mm": [
+            2,
+            5
+          ],
+          "details": "Blades flat or folded, generally 6–18 cm long and 2–5 mm wide, often hairy above ligule on upper (adaxial) surface."
+        },
+        {
+          "character": "panicle",
+          "status": "SOURCE_RANGE",
+          "length_cm_mostly": [
+            6,
+            20
+          ],
+          "details": "Small few-flowered panicle with variable branching and shape, mostly 6–20 cm long, spikelets on short erect-spreading branches."
+        },
+        {
+          "character": "bare_primary_branch_base",
+          "status": "HIGH_VALUE_ANATOMY",
+          "bare_length_cm": [
+            1.5,
+            3
+          ],
+          "details": "Primary branches often bare of spikelets on their lower 1.5–3 cm. This feature is conditional, not a mandatory hard exclusion."
+        },
+        {
+          "character": "spikelets",
+          "status": "SOURCE_RANGE",
+          "length_mm": [
+            1.8,
+            2.6
+          ],
+          "details": "Spikelets glabrous, 1.8–2.6 mm long, broadly oblong when young; later gaping widely at apex between florets."
+        },
+        {
+          "character": "first_glume",
+          "status": "SOURCE_RANGE",
+          "fraction_spikelet_length": [
+            0.3333333333333333,
+            0.5
+          ],
+          "details": "Lower/first glume acute, roughly one-third to one-half the total spikelet length."
+        },
+        {
+          "character": "second_glume",
+          "status": "SOURCE_COMPARATIVE",
+          "details": "Second glume as long as or slightly shorter than lower-floret lemma."
+        },
+        {
+          "character": "lower_neuter_floret",
+          "status": "KEY_GAPING_STRUCTURE",
+          "details": "Lower floret neuter, with palea becoming inflated, obovate and often apiculate, much larger and broader than its lemma. This produces the characteristic gaping appearance; not an awned fertile lemma."
+        },
+        {
+          "character": "upper_lemma",
+          "status": "SOURCE",
+          "details": "Fertile upper lemma narrowly ovate, pointed, smooth but not glossy."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "SOURCE_CYTOLOGY",
+          "reported_2n": 20,
+          "details": "Gould reports 2n=20."
+        },
+        {
+          "character": "historic_Texas_distribution",
+          "status": "HISTORICAL_LOCALITY_NOT_COUNTY_VOUCHER",
+          "regions": [
+            1,
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "details": "Historical regions 1, 2, 3, 4, 6, 7 in moist, low, often shaded sites; this does not certify particular local populations."
+        },
+        {
+          "character": "flowering_period",
+          "status": "PUBLISHED_HISTORICAL_WINDOW",
+          "months": "Mostly December–May, sometimes year-round",
+          "details": "Gould gives mostly December through May, occasionally flowering throughout year. Preserve regional seasonal variation."
+        }
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Look for the gaping spikelet and swollen lower palea (Gould)",
+          "check": "Mature spikelets 1.8–2.6 mm often gape open at the top between florets. The LOWER sterile floret's palea inflates into a broad obovate, sometimes pointed structure larger than its lemma; dissect a few ripe spikelets to confirm.",
+          "compare": "Distinguish that swollen sterile palea from an upper fertile lemma, an awn or an insect-damaged spikelet. This is not a feature you can confirm reliably in a distant whole-plant photograph.",
+          "source": "Gould (1975), Panicum hians treatment, printed p. 458 and following page; Kew accepted Steinchisma hians",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:243676-2",
+          "certainty": "Published morphological clue, not locally confirmed photographed anatomy."
+        },
+        {
+          "look": "Inspect the short fringed ligule and bare lower panicle branches (Gould)",
+          "check": "Gould calls the ligule a fringed scale around 0.5 mm; modern sources interpret this as a tiny ciliate membrane. Panicle branches can be bare of spikelets for 1.5–3 cm at their base, with 6–20 cm variable few-flowered panicles.",
+          "compare": "Use a hand lens to look for membrane beneath the cilia; avoid hair-only assumptions. Branch-baseline bareness is variable.",
+          "source": "Gould (1975), Panicum hians pp. 458 and continuation; Kew GrassBase Steinchisma hians",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:243676-2/general-information",
+          "certainty": "Published morphological clue, not locally confirmed photographed anatomy."
+        }
+      ],
+      "classification_decision": {
+        "existing_candidate": "steinchisma-hians",
+        "action": "SOURCE_REFERENCE_ONLY_RETAIN_RESEARCH_STATUS",
+        "note": "No changes to provisional or scored traits; evidence supports later anatomy-photo work, not automatic species promotion."
+      }
+    },
+    {
+      "source_name": "Frank W. Gould (1975), The Grasses of Texas",
+      "added_on": "2026-11-16",
+      "source_evidence_status": "PUBLISHED_MORPHOLOGY_NOT_LOCAL_VERIFIED_SPECIMEN",
+      "photographs": "Owner-submitted page photographs interpreted as source excerpts; photographs themselves are not republished.",
+      "species_id": "urochloa-mutica",
+      "taxon_as_printed": "Panicum purpurascens Raddi",
+      "accepted_species": "Urochloa mutica (Forssk.) T.Q.Nguyen",
+      "common_name": "Paragrass",
+      "printed_page": "NEXT_PAGE_AFTER_458_NUMBER_NOT_VISIBLE",
+      "completeness": "PARTIAL_ADJACENT_TREATMENT_ONLY: lower right paragraph covered by user's hand and photo stops before end",
+      "taxonomy": {
+        "status": "HISTORICAL_SYNONYM_TRANSFER",
+        "source_name": "Panicum purpurascens Raddi",
+        "accepted_name": "Urochloa mutica (Forssk.) T.Q.Nguyen",
+        "powo_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:426266-1",
+        "itis_url": "https://itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=523027&source=to_print",
+        "texas_status": "Introduced in Texas per Kew"
+      },
+      "observations": [
+        {
+          "character": "growth",
+          "status": "VISIBLE_PUBLISHED",
+          "details": "Coarse perennial with stout decumbent/trailing stems to 4–5 m."
+        },
+        {
+          "character": "nodes",
+          "status": "VISIBLE_PUBLISHED",
+          "details": "Gould calls densely bearded 'nodes' actually sheath bases, an important anatomical clarification."
+        },
+        {
+          "character": "sheaths",
+          "status": "VISIBLE_PUBLISHED",
+          "details": "Rounded, often densely hairy sheaths with papilla-based stiff hairs, especially toward back; uppermost can be nearly glabrous."
+        },
+        {
+          "character": "ligule",
+          "status": "VISIBLE_PUBLISHED",
+          "fringe_length_mm_approx": 1.5,
+          "details": "Fringe of hairs around 1.5 mm on minute membranous collar or callus; do not treat hair fringe as proof of no membrane."
+        },
+        {
+          "character": "blades",
+          "status": "SOURCE_RANGE",
+          "length_cm_mostly": [
+            10,
+            30
+          ],
+          "width_cm": [
+            0.5,
+            1.5
+          ],
+          "details": "Flat blades about 10–30 cm long, 0.5–1.5 cm wide, smooth to rough or with papilla-based hairs."
+        },
+        {
+          "character": "panicle",
+          "status": "PARTIAL_VISIBLE_RANGE",
+          "length_cm_mostly": [
+            12,
+            20
+          ],
+          "primary_branches_usually": [
+            8,
+            18
+          ],
+          "details": "Panicles 12–20 cm with 8–18 broadly spread primary branches according to visible text. Finger hides some branching words."
+        },
+        {
+          "character": "primary_branch_length",
+          "status": "PARTIAL_VISIBLE_RANGE",
+          "length_cm": [
+            2,
+            9
+          ],
+          "details": "Primary panicle branches 2–9 cm long where legible."
+        },
+        {
+          "character": "spikelets",
+          "status": "PARTIAL_VISIBLE_RANGE",
+          "length_mm": [
+            2.8,
+            3.4
+          ],
+          "details": "Text states glabrous short-pedicelled spikelets approximately 2.8–3.4 mm, but lower anatomy is obscured by hand; do not infer glume or lemma particulars."
+        }
+      ],
+      "learner_diagnostic_checks": [],
+      "classification_decision": {
+        "action": "HISTORIC_PARTIAL_ADJACENT_RECORD_ONLY",
+        "note": "Separate from Steinchisma hians, non-native to Texas and not a new candidate admitted to the 169-species project; incomplete visible paragraph."
+      }
     }
   ]
 }
