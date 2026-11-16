@@ -126,7 +126,8 @@ assert "short_rhizome" in {o["id"] for o in chars["underground_stems"]["options"
 assert "long_rhizome" in {o["id"] for o in chars["underground_stems"]["options"]}
 assert "evidence-pending" in html
 assert "Research-pending choices can be recorded" in html
-assert "No grass was removed" in html
+assert "function progressiveResultGroups(rows)" in html and 'unknown.id="unresolved-candidates"' in html
+assert "Missing evidence is NOT the same as a contradictory trait" in html
 assert all(c in chars for c in ("blade_venation","ligule_length","ligule_edge","sheath_margins","sheath_surface"))
 assert len([r for r in bundle["evidence"] if r["character"]=="ligule_length"]) >= 15
 pending=[(c["id"],o["id"]) for c in bundle["characters"] for o in c["options"] if o.get("evidence_pending")]
