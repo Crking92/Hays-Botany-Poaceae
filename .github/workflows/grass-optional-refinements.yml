@@ -6,6 +6,8 @@ on:
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'site/visual-key-lab/optional-evidence-targeted-20261116.json'
       - 'scripts/test_grass_targeted_advanced_evidence.cjs'
+      - 'site/visual-key-lab/optional-evidence-final-four-20261116.json'
+      - 'scripts/test_grass_final_four_advanced_options.cjs'
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_grass_backlog_d_primary_344.cjs'
       - 'scripts/test_grass_backlog_bc_primary_344.cjs'
@@ -57,6 +59,8 @@ on:
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'site/visual-key-lab/optional-evidence-targeted-20261116.json'
       - 'scripts/test_grass_targeted_advanced_evidence.cjs'
+      - 'site/visual-key-lab/optional-evidence-final-four-20261116.json'
+      - 'scripts/test_grass_final_four_advanced_options.cjs'
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_169_all_option_functionality.cjs'
@@ -124,6 +128,8 @@ jobs:
         run: node scripts/test_grass_169_all_option_functionality.cjs
       - name: Verify nine newly sourced advanced field states and four genuine unknown options
         run: node scripts/test_grass_targeted_advanced_evidence.cjs
+      - name: Verify four final source-backed options and real lower-glume structures
+        run: node scripts/test_grass_final_four_advanced_options.cjs
       - name: Verify source-scored grass admission, original 112 and all four holds
         run: node scripts/test_grass_source_scored_admissions.cjs
       - name: Protect 28 source-reviewed core observations and 13 deliberate unknowns
