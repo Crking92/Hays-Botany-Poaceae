@@ -114,6 +114,24 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text() == "169 possible"
 
+    # A previously EMPTY advanced choice now has an exact plant-organ source.
+    # Poa annua sheath closure is botanically documented; no other grass is
+    # eliminated just because its sheath is not documented.
+    choose_extra(page, "Collars / sheaths", "sheath_margins", "closed")
+    target=page.locator('#optional-character-groups .optional-group[data-character="sheath_margins"] button[data-option="closed"]')
+    assert "Reference data pending" not in target.inner_text()
+    assert "source-documented" in target.inner_text()
+    matches, unknown, ruled_out = buckets(page)
+    assert matches >= 1 and unknown > 0 and ruled_out == 0, (
+        "Exact source-backed sheath should rank Poa annua without ruling out unknowns")
+    focus.click()
+    assert "Poa annua" in page.locator("#results").inner_text()
+    assert "documented matches" in page.locator("#count").inner_text()
+    focus.click()
+    assert page.locator("#count").inner_text() == "169 possible"
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text() == "169 possible"
+
     assert "168 source-scored, 1 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
