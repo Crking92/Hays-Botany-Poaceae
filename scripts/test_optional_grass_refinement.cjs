@@ -1458,5 +1458,22 @@ for(const [id,ch,s] of [["panicum-miliaceum","florets_per_spikelet","two"],["set
 }
 state.refineSelected={};if(run().length!==169)throw Error("Lane C02 altered unified 169 grass pool");
 
+
+// Phase 4: coordinator-approved A–D batch of 40 exact H&L vegetative traits (Issue #340).
+const phase4Expected={"arundo-donax|sheath_margins":["open"],"bothriochloa-barbinodis|sheath_margins":["open"],"bothriochloa-barbinodis|sheath_surface":["sometimes_hairy"],"bothriochloa-barbinodis|culm_posture":["erect","geniculate"],"bothriochloa-ischaemum|sheath_margins":["open"],"bothriochloa-ischaemum|culm_posture":["erect","decumbent"],"bothriochloa-ischaemum|stem_nodes":["hairy_nodes"],"chloris-andropogonoides|sheath_margins":["open"],"chloris-andropogonoides|sheath_surface":["lower_compressed","weak_keel"],"chloris-andropogonoides|culm_posture":["erect","geniculate"],"chloris-andropogonoides|surface_runners":["stolon"],"chloris-cucullata|sheath_margins":["open"],"chloris-cucullata|sheath_surface":["lower_compressed","keeled_lower"],"chloris-cucullata|culm_posture":["erect"],"chloris-cucullata|surface_runners":["stolon"],"chloris-verticillata|sheath_margins":["open"],"chloris-verticillata|sheath_surface":["lower_compressed","keeled_lower","hyaline_margins"],"chloris-virgata|sheath_margins":["open"],"cynodon-dactylon|sheath_margins":["open"],"aristida-oligantha|sheath_margins":["open"],"aristida-oligantha|culm_posture":["erect","geniculate"],"aristida-oligantha|stem_special":["basal_branching"],"aristida-purpurea|sheath_margins":["open"],"aristida-purpurea|sheath_surface":["rough_surface","sometimes_hairy"],"aristida-purpurea|culm_posture":["erect"],"aristida-purpurea|stem_special":["basal_branching"],"elymus-canadensis|sheath_margins":["open"],"elymus-canadensis|sheath_surface":["sometimes_hairy"],"elymus-canadensis|underground_stems":["short_rhizome"],"elymus-virginicus|sheath_margins":["open"],"elymus-virginicus|sheath_surface":["sometimes_hairy"],"eriochloa-sericea|sheath_margins":["open"],"eriochloa-sericea|culm_posture":["erect"],"eriochloa-sericea|stem_nodes":["hairy_nodes"],"erioneuron-pilosum|sheath_margins":["open"],"erioneuron-pilosum|culm_posture":["erect"],"bromus-japonicus|culm_posture":["erect","geniculate"],"bromus-japonicus|stem_nodes":["backward_hairs"],"bromus-pubescens|sheath_margins":["open"],"bromus-texensis|sheath_margins":["open"]};
+if(pack.evidence.length<1187||new Set(pack.evidence.map(r=>r.id+"|"+r.character)).size!==pack.evidence.length||new Set(pack.evidence.map(r=>r.id)).size!==168)throw Error("Phase4 record count, duplicates, or 169-inventory guard");
+for(const [key,required] of Object.entries(phase4Expected)){
+ const [id,ch]=key.split("|"),e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+ if(!e||e.coordination_issue!==340||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim()||!e.source.includes("Hagenbuch & Lemke (2015)")||!e.source.includes("printed p. "+e.pdf_printed_page)||!e.source_url.endsWith("#page="+e.pdf_printed_page)||!required.every(v=>e.states.includes(v)))throw Error("Phase4 citation or botanical state failed "+key);
+}
+for(const [id,ch] of [["aristida-oligantha","sheath_surface"],["eriochloa-sericea","sheath_surface"],["bromus-japonicus","sheath_margins"],["cynodon-dactylon","sheath_surface"],["melica-nitens","underground_stems"]]){
+ if(pack.evidence.some(x=>x.id===id&&x.character===ch))throw Error("Phase4 unresolved source/UI/organ hold was accidentally promoted "+id+"/"+ch);
+}
+for(const [id,ch,choice] of [["bromus-japonicus","stem_nodes","backward_hairs"],["chloris-cucullata","sheath_surface","keeled_lower"],["elymus-canadensis","underground_stems","short_rhizome"],["eriochloa-sericea","stem_nodes","hairy_nodes"],["aristida-oligantha","stem_special","basal_branching"]]){
+ state.refineSelected={[ch]:choice};const res=run();
+ if(res.length!==169||!res.some(r=>r.id===id&&r.extras>=1))throw Error("Phase4 positive-only matching failed "+id+"/"+ch);
+}
+state.refineSelected={};if(run().length!==169)throw Error("Phase4 altered unified 169 grass inventory");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
