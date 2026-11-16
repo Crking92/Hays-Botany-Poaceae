@@ -309,7 +309,7 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
       <details class="optional-features" id="optional-character-wrap" hidden>
         <summary>All detailed characteristics (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
         <div class="optional-inner">
-          <p class="optional-description">Use these extra details when you need to narrow similar grasses. Open a section, then an individual feature to see its choices. Published matches rise in the results; missing descriptions do not exclude a grass.</p>
+          <p class="optional-description">Choose whichever visible feature you recognize. Supported matches rise to the top. Only source-verified numeric or exact mature-floret contradictions can set a grass aside; missing, overlapping and unreviewed descriptions never prove absence. Ruled-out grasses remain reviewable.</p>
           <div class="optional-section-tabs" id="optional-section-tabs" role="group" aria-label="Choose extra plant features"></div><div id="optional-character-groups"></div>
           <button type="button" class="optional-reset" id="optional-documented-only" aria-pressed="false">Show only source-documented matches</button>
            <p class="optional-mode-note">Optional evidence-only view: grasses lacking published records for any selected detail are hidden, not ruled out. Turn it off to see all possibilities.</p>
@@ -2203,25 +2203,28 @@ $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
 const groups=progressiveResultGroups(rows);
-renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
+const possibleRows=[...groups.confirmed,...groups.unresolved];
+renderCompareControls(possibleRows,n+Object.values(state.refineSelected).filter(Boolean).length);
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
 $("count").textContent=groups.active?groups.confirmed.length+" documented":rows.length+" possible";
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
 $("results-note").textContent=state.refineOnlyDocumented&&extraChosen?
  (pendingChoice?"A selected detail is research-pending. No complete documented match is possible yet; this does not prove absence. Switch off evidence-only view to restore other possibilities.":"Showing grasses with published records matching every selected advanced detail. Other unknown descriptions are hidden by your evidence-only choice."):
- groups.active?"Each selection narrows the main list to fully documented matches. Open 'Still possible' below to review grasses with missing trait descriptions; they are not ruled out.":"Choose any photo or detailed character to start narrowing 169 possibilities.";
+ groups.active?"Source-backed matches stay in the main results. Missing or nonexclusive evidence remains under Still possible; documented measured or exact-floret contradictions move into the reviewable Ruled out section. Other advanced features rank matches until source-audited.":"Choose any photo or detailed character to start narrowing 169 possibilities.";
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results"),wasUnresolvedOpen=$("unresolved-candidates")?.open===true;
 root.replaceChildren();
 const unknownRoot=node("div","unresolved-cards");
 if(groups.active){
- root.append(node("p","progressive-status",groups.confirmed.length+" fully documented match"+(groups.confirmed.length===1?"":"es")+" · "+groups.unresolved.length+" possible but not fully documented"));
+ root.append(node("p","progressive-status",groups.confirmed.length+" supported match"+(groups.confirmed.length===1?"":"es")+" · "+groups.unresolved.length+" unresolved · "+groups.excluded.length+" advanced source conflict"+(groups.excluded.length===1?"":"s")));
 }
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
 else if(groups.active&&!groups.confirmed.length)root.append(node("p","smallmuted","No grass has published evidence supporting every selection yet. That is not proof no grass fits. Expand 'Still possible' to inspect the unresolved species."));
 const unresolvedIds=new Set(groups.unresolved.map(x=>x.s.id));
+const excludedIds=new Set(groups.excluded.map(x=>x.s.id));
 for(const x of rows){
+if(excludedIds.has(x.s.id))continue;
 const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
 info.append(node("strong","",s.common),node("span","latin",s.scientific));
