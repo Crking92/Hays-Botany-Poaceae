@@ -1371,7 +1371,7 @@ function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?nul
 function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
-for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else conflict++}
+for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
 return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 // Progressive key display: group fully documented matches separately from
 // evidence gaps, without treating an unstudied character as an absent structure.
@@ -2232,7 +2232,7 @@ const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
 info.append(node("strong","",s.common),node("span","latin",s.scientific));
 const [label,cl]=status(s);info.append(node("span","tag "+cl,label));
-if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));if(s.source_scored)info.append(node("div","smallmuted","Literature-supported identification profile. Local occurrence, nativity and specimen identity are not certified."));
+if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));if(s.source_scored)info.append(node("div","smallmuted","Literature-supported identification profile. Local occurrence, nativity and specimen identity are not certified."));if(s.gapEvidence?.length)info.append(node("div","smallmuted",s.gapEvidence.length+" newly verified field detail"+(s.gapEvidence.length===1?"":"s")+" (positive-only; not evidence for exclusion)."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
@@ -2290,6 +2290,23 @@ if(s.source_scored&&s.source_admission){
   if(s.source_admission.remaining_cautions?.length)
     for(const warning of s.source_admission.remaining_cautions)panel.append(node("p","smallmuted","Identification caution: "+warning));
   copy.append(panel);
+}
+if(s.gapEvidence?.length){
+ const panel=node("section","detail-botany");
+ panel.append(node("h3","","Newly source-verified field characters"),
+    node("p","smallmuted","These were formerly unknown beginner options. Published descriptions support them as positive matches, but overlapping, conditional or undocumented forms must remain possible rather than being wrongly ruled out. No new photograph or local voucher has been certified."));
+ for(const clue of s.gapEvidence){
+   const row=node("div","diagnostic-check");
+   row.append(node("strong","",({habit:"Growth form",ligule:"True ligule",awns:"Awns / bristles"})[clue.character]+": "+clue.states.join(" / ")),
+     node("p","",clue.variation_note));
+   const cite=node("a","mini-credit","Botanical source: "+clue.source_citation);
+   cite.href=clue.source_url;cite.target="_blank";cite.rel="noopener noreferrer";
+   row.append(cite);
+   const handoff=node("a","mini-credit","Original verified A–D decision");
+   handoff.href=clue.handoff;handoff.target="_blank";handoff.rel="noopener noreferrer";row.append(handoff);
+   panel.append(row);
+ }
+ copy.append(panel);
 }
 if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
   const panel=node("section","detail-botany");
@@ -2405,6 +2422,49 @@ try{
  }
 }catch(err){console.warn("Source-scored admission ledger unavailable: original source and research categories retained",err)}
 
+// Integrate only the 28 reviewed core gaps; preserve the 13 documented holds.
+// These are POSITIVE-ONLY observations. Their absence cannot disprove another
+// individual because the prior source review found variation or incomplete scope.
+try{
+ const response=await fetch("ready-core-gap-assignments.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Verified core-gap handoff not delivered");
+ const bundle=await response.json();
+ if(bundle.schema!=="HAYS_GRASS_READY_CORE_GAPS_V1"||bundle.integration_count!==28||
+    bundle.rows?.length!==28||bundle.held_unknown?.length!==13||bundle.prior_research_master_records!==1815)
+    throw Error("Verified core-gap ledger invalid");
+ const allowed=new Map(qs.map(q=>[q.id,new Set(q.options.map(o=>o[0]))]));
+ const original=new Set(state.species.slice(0,112).map(s=>s.id));
+ const seen=new Set(),prepared=[];
+ for(const r of bundle.rows){
+    const key=r.id+"|"+r.character;
+    if(seen.has(key)||original.has(r.id)||!["habit","ligule","awns"].includes(r.character)||
+       !Array.isArray(r.states)||!r.states.length||r.states.some(v=>!allowed.get(r.character)?.has(v))||
+       !r.status?.includes("READY")||!r.source_citation||!r.source_url?.startsWith("https://")||
+       !r.handoff?.startsWith("https://github.com/Crking92/Hays-Botany-Poaceae/issues/368"))
+       throw Error("Invalid proposed core trait: "+key);
+    seen.add(key);
+    const species=state.species.find(s=>s.id===r.id);
+    if(!species||!species.trial||species.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||
+       !Array.isArray(species.traits?.[r.character])||species.traits[r.character].length!==0)
+       throw Error("Core-gap source packet already filled or no longer a research candidate: "+key);
+    prepared.push([species,r]);
+ }
+ for(const hold of bundle.held_unknown){
+    const key=hold.id+"|"+hold.character;
+    if(seen.has(key)||!["habit","ligule","awns"].includes(hold.character))
+       throw Error("Held trait accidentally integrated: "+key);
+    const s=state.species.find(x=>x.id===hold.id);
+    if(!s||!s.trial||!Array.isArray(s.traits?.[hold.character])||s.traits[hold.character].length)
+       throw Error("Held source/option accidentally scored: "+key);
+    seen.add(key);
+ }
+ if(seen.size!==41)throw Error("Original 41-specific-gap coverage changed");
+ for(const [s,r] of prepared){
+    s.traits[r.character]=[...r.states];
+    (s.positiveOnlyCoreKeys??=[]).push(r.character);
+    (s.gapEvidence??=[]).push(r);
+ }
+}catch(err){console.warn("Verified optional core-gap handoff unavailable; existing 169 profiles remain usable without new assignments",err)}
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});
