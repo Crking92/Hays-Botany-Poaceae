@@ -1,0 +1,141 @@
+{
+  "schema": "HAYS_GRASS_TARGETED_ADVANCED_EVIDENCE_V1",
+  "date": "2026-11-16",
+  "prior_master_records": 1815,
+  "original_advanced_groups": 24,
+  "original_advanced_options": 111,
+  "original_pending_options": 13,
+  "newly_source_supported_options": 9,
+  "expected_pending_after_release": 4,
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "policy": "Append directly traceable exact-taxon organ evidence ONLY. No negative inference, no county nativity or voucher certification; retain original master JSON, source photos, rights and scores. Sex/stage/variant observations are conditional.",
+  "evidence": [
+    {
+      "id": "poa-annua",
+      "scientific": "Poa annua",
+      "character": "sheath_margins",
+      "states": [
+        "closed"
+      ],
+      "source": "Flora of North America, Poa annua treatment via Burke Herbarium",
+      "source_url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Poa+annua",
+      "note": "Leaf sheaths CLOSED for approximately the basal one-third of their length; sheath may be free/open above closure. Score true fused sheath margins, not overlapping but separate edges.",
+      "organ_scope": "leaf sheath / fused basal margins",
+      "conditional": true,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "poa-annua",
+      "scientific": "Poa annua",
+      "character": "culm_posture",
+      "states": [
+        "prostrate"
+      ],
+      "source": "Flora of North America, Poa annua treatment via Burke Herbarium",
+      "source_url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Poa+annua",
+      "note": "Culms described as prostrate TO erect, 2–20(–45) cm; prostrate refers to the actual flowering culm and is variable, not automatically a stolon or every individual.",
+      "organ_scope": "flowering culm posture",
+      "conditional": true,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "eragrostis-spectabilis",
+      "scientific": "Eragrostis spectabilis",
+      "character": "glume_marks",
+      "states": [
+        "upper_one_vein",
+        "lower_one_vein"
+      ],
+      "source": "Kew GrassBase, Eragrostis spectabilis, separate lower/upper glume descriptions",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1137778-2/general-information",
+      "note": "Lower glume: 1-veined; upper glume: 1-veined. Separate organs described in this exact species, not a lemma or spikelet rachilla vein.",
+      "organ_scope": "lower and upper glumes independently 1-veined",
+      "conditional": false,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "scientific": "Melinis repens",
+      "character": "true_lemma_awn",
+      "states": [
+        "lower_sterile_awn_variable"
+      ],
+      "source": "Kew GrassBase, Melinis repens exact species under accepted name",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:2945817-1/general-information",
+      "note": "LOWER STERILE floret lemma may be mucronate or bear a single awn 0–7(–10) mm long; UPPER fertile lemma is a different, short hard structure without this awn. Awn varies, and does not arise from a glume.",
+      "organ_scope": "lower sterile-floret lemma only",
+      "conditional": true,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "scientific": "Melinis repens",
+      "character": "floral_hair_position",
+      "states": [
+        "lower_sterile_lemma_hairs"
+      ],
+      "source": "Kew GrassBase, Melinis repens exact species",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:2945817-1/general-information",
+      "note": "Lower sterile lemma is glabrous OR villous, with white/purple hairs that can reach 2–6 mm; not hairs on the spikelet stalk, fertile lemma or glumes. The observation is conditional.",
+      "organ_scope": "lower sterile floret lemma",
+      "conditional": true,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "cortaderia-selloana",
+      "scientific": "Cortaderia selloana",
+      "character": "floral_hair_position",
+      "states": [
+        "upper_fertile_lemma_hairs"
+      ],
+      "source": "Kew GrassBase, Cortaderia selloana, female fertile florets",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:66317-2/general-information",
+      "note": "PISTILLATE/female fertile lemmas have long silky hairs 4–8 mm, especially below; male spikelets can be glabrous. Score only when floret sex is established, not on a whole-plume photo.",
+      "organ_scope": "female fertile floret lemma only",
+      "conditional": true,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "nassella-tenuissima",
+      "scientific": "Nassella tenuissima",
+      "character": "floral_hair_position",
+      "states": [
+        "spikelet_callus_hairs"
+      ],
+      "source": "Kew GrassBase, Nassella tenuissima, floret callus",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:281184-2/general-information",
+      "note": "The floret callus is pilose, around 0.2–0.4 mm; hairs are near one-quarter to one-third fertile lemma length. Distinguish hairs at the callus from those of lemma surface, rachilla or glume.",
+      "organ_scope": "fertile floret callus",
+      "conditional": false,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "true_lemma_awn",
+      "states": [
+        "fertile_awn_2_to_5mm"
+      ],
+      "source": "Gould (1975), Grasses of Texas, Chloris canterai/canterae printed account; modern Stapfochloa canterae",
+      "source_url": "https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/site/visual-key-lab/source-reference-gould-1975.json",
+      "note": "The actual FERTILE lower floret lemma bears one 2.4–5.5 mm awn; some fall within the Lab's 2–5 mm band, others extend beyond it. The additional lowest sterile floret awn (about 1.5–3.5 mm) is a different organ. Conditional bin match only.",
+      "organ_scope": "fertile floret lemma, not sterile floret",
+      "conditional": true,
+      "decision": "READY_ORGAN_SPECIFIC_POSITIVE_ONLY",
+      "hays_local_voucher": "NOT_CERTIFIED"
+    }
+  ],
+  "retained_pending": [
+    "blade_venation:raised_ribs",
+    "glume_marks:central_glume_glabrous",
+    "glume_marks:central_glume_scabrous",
+    "true_lemma_awn:apical_mucro"
+  ]
+}

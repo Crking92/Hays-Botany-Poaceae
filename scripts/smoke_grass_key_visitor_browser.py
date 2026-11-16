@@ -114,6 +114,24 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text() == "169 possible"
 
+    # A previously EMPTY advanced choice now has an exact plant-organ source.
+    # Poa annua sheath closure is botanically documented; no other grass is
+    # eliminated just because its sheath is not documented.
+    choose_extra(page, "Collars / sheaths", "sheath_margins", "closed")
+    target=page.locator('#optional-character-groups .optional-group[data-character="sheath_margins"] button[data-option="closed"]')
+    assert "Reference data pending" not in target.inner_text()
+    assert "source-documented" in target.inner_text()
+    matches, unknown, ruled_out = buckets(page)
+    assert matches >= 1 and unknown > 0 and ruled_out == 0, (
+        "Exact source-backed sheath should rank Poa annua without ruling out unknowns")
+    focus.click()
+    assert "Poa annua" in page.locator("#results").inner_text()
+    assert "documented matches" in page.locator("#count").inner_text()
+    focus.click()
+    assert page.locator("#count").inner_text() == "169 possible"
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text() == "169 possible"
+
     assert "168 source-scored, 1 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
@@ -241,18 +259,20 @@ def check_view(browser, name, width, height):
     assert page.locator("#caution-details").is_hidden()
     assert page.locator("#progress-label").inner_text().startswith("0 of 4")
 
-    # Research pending anatomy cannot invent species matches or negate 169 grasses.
+    # Upper ONE-veined glume now has an exact named species source:
+    # Eragrostis spectabilis, Kew GrassBase. Other grasses remain unknown.
     choose_extra(page, "Flowers / spikelets", "glume_marks", "upper_one_vein")
     m, u, e = buckets(page)
-    assert (m, u, e) == (0, 169, 0), f"{name}: pending glume option incorrectly scored {m,u,e}"
+    assert (m, u, e) == (1, 168, 0), f"{name}: cited upper-glume evidence not integrated {m,u,e}"
     assert page.locator("#count").inner_text() == "169 possible"
+    assert "Eragrostis spectabilis" in page.locator("#results").inner_text()
     assert page.locator("#unresolved-candidates").count() == 1, "Unresolved list inaccessible"
     page.locator("#unresolved-candidates > summary").click()
-    assert page.locator("#unresolved-candidates .result").count() == 169
+    assert page.locator("#unresolved-candidates .result").count() == 168
 
     # Explicit documented-only mode suppresses unknowns reversibly (not exclusion).
     page.locator("#optional-documented-only").click()
-    assert page.locator("#count").inner_text() == "0 possible", "Documented-only mode should show no fabricated match"
+    assert page.locator("#count").inner_text() == "1 possible", "Documented-only mode should focus exactly the cited glume match"
     page.locator("#optional-documented-only").click()
     assert page.locator("#count").inner_text() == "169 possible"
     page.locator("#reset-field-key").click()
