@@ -1475,5 +1475,24 @@ for(const [id,ch,choice] of [["bromus-japonicus","stem_nodes","backward_hairs"],
 }
 state.refineSelected={};if(run().length!==169)throw Error("Phase4 altered unified 169 grass inventory");
 
+
+// Issue #336 Lane D04: 10 original Diggs page-reviewed reproductive records; holds stay unresolved.
+const d04SourceApproved={"poa-annua|florets_per_spikelet":["several"],"poa-annua|true_lemma_awn":["none"],"poa-annua|floral_hair_position":["lemma"],"poa-arachnifera|florets_per_spikelet":["several"],"poa-arachnifera|true_lemma_awn":["none"],"poa-arachnifera|floral_hair_position":["lemma"],"sporobolus-cryptandrus|florets_per_spikelet":["one"],"sporobolus-cryptandrus|glume_marks":["one_vein"],"sporobolus-cryptandrus|true_lemma_awn":["none"],"sporobolus-vaginiflorus|floral_hair_position":["lemma"]};
+if(pack.evidence.length<1197||new Set(pack.evidence.map(x=>x.id+"|"+x.character)).size!==pack.evidence.length||new Set(pack.evidence.map(x=>x.id)).size!==168)throw Error("Issue336 D04 record/inventory regression");
+for(const [key,states] of Object.entries(d04SourceApproved)){
+ const [id,ch]=key.split("|");
+ const e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+ if(!e||e.review_lane!=="D"||e.coordination_issue!==336||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||e.pdf_document!=="Flora of North Central Texas-monocots-Acor-Zanni.pdf"||!Number.isInteger(e.pdf_printed_page)||!e.source.includes("printed p. "+e.pdf_printed_page)||!states.every(v=>e.states.includes(v)))throw Error("D04 source/field invalid "+key);
+}
+for(const [id,ch] of [["poa-annua","glume_marks"],["poa-arachnifera","glume_marks"],["rostraria-cristata","florets_per_spikelet"],["sporobolus-clandestinus","lemma_texture"],["sporobolus-vaginiflorus","lemma_texture"],["tripsacum-dactyloides","lemma_texture"]]){
+ if(pack.evidence.some(e=>e.id===id&&e.character===ch))throw Error("D04 hold auto-promoted "+id+"/"+ch);
+}
+for(const [id,ch,choice] of [["poa-annua","true_lemma_awn","none"],["poa-arachnifera","floral_hair_position","lemma"],["sporobolus-cryptandrus","florets_per_spikelet","one"],["sporobolus-vaginiflorus","floral_hair_position","lemma"]]){
+ state.refineSelected={[ch]:choice};
+ const results=run();
+ if(results.length!==169||!results.some(r=>r.id===id&&r.extras>=1))throw Error("D04 positive-only scoring "+id+"/"+ch);
+}
+state.refineSelected={};if(run().length!==169)throw Error("D04 changed the 169-inventory");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
