@@ -53,6 +53,27 @@ const history={replaceState(_a,_b,x){writtenUrl=x;}};
 const sandbox={state,location,history,URL,qs:["head","habit","ligule","awns"].map(id=>({id}))};
 vm.createContext(sandbox);vm.runInContext(section+"\n"+results+"\n"+urlFn,sandbox);
 const match=id=>Array.from(vm.runInContext("refinementMatches({id:"+JSON.stringify(id)+"})",sandbox));
+// Progressive key must narrow the visible list while preserving unknown species
+// as explicit review candidates, never promoting research trials or invented states.
+const progressive=()=>vm.runInContext("progressiveResultGroups(currentResults())",sandbox);
+const initial=progressive();
+if(initial.active||initial.confirmed.length!==112||initial.unresolved.length)throw Error("Unselected key should begin with all grasses");
+state.refineSelected={blade_width:"narrow"};
+const widthGroups=progressive();
+if(!widthGroups.active||!widthGroups.confirmed.length||!widthGroups.unresolved.length||
+ widthGroups.confirmed.length+widthGroups.unresolved.length!==112)
+ throw Error("Leaf width selection must narrow main results but preserve all unknown possibilities");
+if(widthGroups.confirmed.some(r=>!refs[r.s.id]?.some(e=>e.character==="blade_width"&&e.states.includes("narrow"))))
+ throw Error("Main matches include a grass without matching evidence");
+state.refineSelected={blade_width:"narrow",glume_marks:["upper_one_vein"]};
+const pendingGroups=progressive();
+if(pendingGroups.confirmed.length||pendingGroups.unresolved.length!==112)
+ throw Error("Research-pending detail cannot invent matching species or eliminate unknowns");
+state.refineSelected={};
+if(progressive().active||progressive().confirmed.length!==112)throw Error("Clearing selections must restore entire baseline");
+if(!html.includes('id="unresolved-candidates"')&&!script.includes('unknown.id="unresolved-candidates"'))
+ throw Error("Unresolved species are not accessible through the progressive disclosure");
+
 const current=()=>Array.from(vm.runInContext("currentResults()",sandbox));
 const n0=current().length;if(n0!==112)throw Error("Baseline filtering mutated");
 state.refineSelected={glume_marks:["lower_reduced","one_vein"]};

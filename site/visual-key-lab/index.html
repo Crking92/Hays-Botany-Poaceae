@@ -17,7 +17,15 @@
 .question{padding:22px}.question h3{font-family:Georgia,serif;font-size:1.55rem;line-height:1.22;margin:0 0 8px}.help{color:#566e5f;font-size:.95rem;margin:0 0 18px}.answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .answer{background:#fff;border:2px solid #dbe5da;border-radius:14px;text-align:left;padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .15s,transform .15s}.answer:hover{border-color:#71987c;transform:translateY(-1px)}.answer[aria-pressed=true]{border-color:#17693c;box-shadow:0 0 0 3px #d6ecd8}.photo-frame{aspect-ratio:4/3;background:#d7dfd4;position:relative;overflow:hidden}.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.photo-bad{display:flex;align-items:center;justify-content:center;height:100%;padding:10px;text-align:center;color:var(--muted);font-size:.82rem}.tick{position:absolute;top:10px;right:10px;border-radius:50%;background:#17583a;color:white;display:none;width:30px;height:30px;align-items:center;justify-content:center;font-weight:800}.answer[aria-pressed=true] .tick{display:flex}.answer-body{padding:12px 13px 13px;flex:1}.answer-title{font-weight:800;font-size:.94rem;line-height:1.25}.answer-note{display:block;font-size:.81rem;line-height:1.35;color:#597064;margin-top:6px}.photo-credit{display:block;font-size:.67rem;line-height:1.35;color:#64796c;margin-top:9px}.head-group{margin:20px 0 26px}.head-group-title{font-family:Georgia,serif;font-size:1.3rem;margin:0 0 3px;color:#214a36}.head-group-help{font-size:.81rem;color:#61776a;margin:0 0 11px}.head-jumps{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}.head-jumps button{background:#eef4ed;border:1px solid #c9decf;color:#315c40;border-radius:100px;padding:7px 10px;font-size:.78rem;font-weight:700}.head-jumps button:hover{background:#dcebdd}.caution-list{padding-top:9px}.caution-list button{width:100%;background:transparent;border:0;border-radius:6px;padding:8px 5px;cursor:pointer;text-align:left;color:#345441;font-size:.8rem}.caution-list button:hover{background:#edf4ed}.caution-list small{display:block;color:#788779;font-size:.73rem}.question-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:20px}.btn{border-radius:11px;padding:11px 16px;font-weight:750;font-size:.91rem}.btn-primary{background:#18513a;border:1px solid #18513a;color:#fff}.btn-primary:hover{background:#267351}.btn-secondary{background:#fff;border:1px solid #cbdace;color:#3c5948}.btn-secondary:hover{background:#edf4ea}.statusline{font-size:.82rem;color:#63796e}
 .results{position:sticky;top:18px;max-height:calc(100vh - 35px);display:flex;flex-direction:column}.results-head{padding:20px 18px 12px;border-bottom:1px solid var(--line)}.results-title{display:flex;align-items:center;justify-content:space-between;gap:10px}.results-title h2{font-size:1.55rem;margin:0}.count{background:#dfece1;color:#215238;border-radius:20px;padding:4px 11px;font-size:.79rem;font-weight:800}.results-head p{font-size:.83rem;margin:7px 0;color:var(--muted)}.filterline{display:flex;gap:7px;flex-wrap:wrap;padding:10px 0 0}.filterline button{background:#f7faf5;border:1px solid #d6e2d7;border-radius:20px;font-size:.74rem;padding:6px 10px;color:#4b6655}.filterline button[aria-pressed=true]{background:#205842;color:#fff;border-color:#205842}.search{margin-top:11px;width:100%;padding:10px 12px;border:1px solid #cbdccc;border-radius:10px;outline-offset:3px}
-.results-list{padding:12px;overflow-y:auto;min-height:120px}.result{display:grid;grid-template-columns:104px 1fr;gap:12px;width:100%;border:1px solid #e1e7de;background:#fff;text-align:left;border-radius:12px;padding:8px;margin-bottom:9px;align-items:center}.result:hover{border-color:#73a887;background:#f9fbf8}.result .photo-frame{aspect-ratio:4/3;border-radius:8px}.result strong{display:block;font-size:.9rem;line-height:1.2}.latin{font-size:.75rem;color:var(--muted);font-style:italic;display:block;margin-top:3px}.tag{display:inline-block;border-radius:8px;padding:2px 7px;font-size:.66rem;font-weight:700;background:#e7efe6;color:#48624d;margin-top:6px}.tag.warn{background:#f5eedf;color:#7a622b}.tag.bad{background:#f8ece5;color:#874f39}.tag.review{background:#eef0ef;color:#647067}.smallmuted{font-size:.73rem;color:var(--muted)}.results-footer{background:#f4f7f1;padding:10px 17px;font-size:.76rem;color:#586f60;border-top:1px solid var(--line)}.pending{padding:12px 16px;border-top:1px solid var(--line)}.pending summary{cursor:pointer;color:#305a40;font-size:.82rem;font-weight:750}.pending-list{display:grid;gap:5px;max-height:240px;overflow-y:auto;padding-top:12px}.pending-list a{font-size:.8rem;text-decoration:none;padding:5px}.pending-list a:hover{background:#f2f7f0}
+.results-list{padding:12px;overflow-y:auto;min-height:120px}
+.progressive-status{margin:0 0 12px;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:var(--pale);color:var(--ink);font-size:.8rem;font-weight:750}
+.unresolved-disclosure{border:1px solid var(--line);border-radius:12px;margin:12px 0;background:var(--pale);overflow:hidden}
+.unresolved-disclosure > summary{padding:13px;cursor:pointer;font-size:.85rem;font-weight:750;color:var(--ink)}
+.unresolved-disclosure[open] > summary{border-bottom:1px solid var(--line)}
+.unresolved-disclosure > p{font-size:.77rem;color:var(--muted);line-height:1.45;margin:10px 13px}
+.unresolved-cards{padding:8px 10px;max-height:340px;overflow:auto}
+.unresolved-cards .result-row{margin-bottom:5px}
+html[data-theme="dark"] .progressive-status,html[data-theme="dark"] .unresolved-disclosure{background:#243b2c}.result{display:grid;grid-template-columns:104px 1fr;gap:12px;width:100%;border:1px solid #e1e7de;background:#fff;text-align:left;border-radius:12px;padding:8px;margin-bottom:9px;align-items:center}.result:hover{border-color:#73a887;background:#f9fbf8}.result .photo-frame{aspect-ratio:4/3;border-radius:8px}.result strong{display:block;font-size:.9rem;line-height:1.2}.latin{font-size:.75rem;color:var(--muted);font-style:italic;display:block;margin-top:3px}.tag{display:inline-block;border-radius:8px;padding:2px 7px;font-size:.66rem;font-weight:700;background:#e7efe6;color:#48624d;margin-top:6px}.tag.warn{background:#f5eedf;color:#7a622b}.tag.bad{background:#f8ece5;color:#874f39}.tag.review{background:#eef0ef;color:#647067}.smallmuted{font-size:.73rem;color:var(--muted)}.results-footer{background:#f4f7f1;padding:10px 17px;font-size:.76rem;color:#586f60;border-top:1px solid var(--line)}.pending{padding:12px 16px;border-top:1px solid var(--line)}.pending summary{cursor:pointer;color:#305a40;font-size:.82rem;font-weight:750}.pending-list{display:grid;gap:5px;max-height:240px;overflow-y:auto;padding-top:12px}.pending-list a{font-size:.8rem;text-decoration:none;padding:5px}.pending-list a:hover{background:#f2f7f0}
 .footer{border-top:1px solid #d5e1d5;padding:20px 0 32px;color:#657b6d;font-size:.84rem}.footer a{margin-right:12px}
 dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-height:88vh;overflow:auto;box-shadow:0 25px 70px rgba(13,43,28,.32);padding:0;color:var(--ink)}dialog::backdrop{background:rgba(18,35,25,.6)}.detail-head{padding:22px 22px 5px;display:flex;justify-content:space-between;gap:10px}.detail-head h2{font-family:Georgia,serif;font-size:1.85rem;margin:4px 0 0}.close{border-radius:20px;background:#ecf2eb;border:0;width:38px;height:38px;font-size:1.25rem}.detail-grid{padding:16px 22px 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.detail-grid .photo-frame{aspect-ratio:4/3;border-radius:10px}.detail-grid .photo-frame img{object-fit:contain;background:var(--pale)}.detail-copy{padding:0 22px 24px;font-size:.95rem}.detail-copy p{color:#42594b}.mini-credit{font-size:.7rem;color:#6d8271;margin:4px 0 0}.detail-botany{margin:18px 0 20px;padding:15px;border:1px solid #dbe5da;border-radius:13px;background:#f8faf6}.detail-botany h3{margin:0 0 6px;font-family:Georgia,serif;font-size:1.2rem}.diagnostic-check{border-top:1px solid #dce6da;margin-top:12px;padding-top:12px}.diagnostic-check h4{margin:0 0 5px;font-size:.99rem;color:#264e38}.diagnostic-check p{margin:5px 0;font-size:.89rem}.diagnostic-check .check-compare{font-weight:650;color:#315f49}.diagnostic-check .check-status{font-size:.78rem;color:#7b5927}.diagnostic-check a{display:inline-block;margin-top:5px;overflow-wrap:anywhere}.linkbutton{display:inline-block;background:#1b5b40;color:white;text-decoration:none;border-radius:9px;padding:10px 15px;font-weight:700;font-size:.87rem}.linkbutton:hover{background:#247853}
 @media(min-width:1040px){.answer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:830px){.workspace{grid-template-columns:1fr}.results{position:static;max-height:none}.results-list{max-height:480px}.hero{grid-template-columns:1fr}.hero-stamp{justify-self:start;padding:9px 17px}.hero-stamp b{display:inline;font-size:1.45rem;margin-right:8px}.results .result{grid-template-columns:95px 1fr}}@media(max-width:480px){.wrap{width:calc(100% - 24px)}.sitebar{padding:13px}.sitebar a{font-size:.75rem}.hero{padding-top:24px}.panel-head{padding:17px 15px 8px}.steps{padding:12px}.question{padding:14px}.answer-grid{gap:9px}.answer-body{padding:9px 10px 11px}.answer-title{font-size:.85rem}.answer-note{font-size:.76rem}.photo-credit{font-size:.63rem}.detail-grid{grid-template-columns:1fr}.question-actions{flex-wrap:wrap}}
@@ -282,10 +290,10 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
   </details>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
-      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions; answer in any order. Skip anything you cannot examine.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
+      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions first, plus 24 detailed characteristic groups below. Answer in any order and skip what you cannot check. Results narrow after every observation.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
       <nav class="steps" id="steps" aria-label="Choose a character"></nav>
       <details class="optional-features" id="optional-character-wrap" hidden>
-        <summary>More identification options (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
+        <summary>All detailed characteristics (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
         <div class="optional-inner">
           <p class="optional-description">Use these extra details when you need to narrow similar grasses. Open a section, then an individual feature to see its choices. Published matches rise in the results; missing descriptions do not exclude a grass.</p>
           <div class="optional-section-tabs" id="optional-section-tabs" role="group" aria-label="Choose extra plant features"></div><div id="optional-character-groups"></div>
@@ -1203,6 +1211,18 @@ const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else conflict++}
 return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
+// Progressive key display: group fully documented matches separately from
+// evidence gaps, without treating an unstudied character as an absent structure.
+function progressiveResultGroups(rows){
+ const coreChosen=Object.values(state.selected).some(Boolean);
+ const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
+ if(!coreChosen&&!extraChosen)return {active:false,confirmed:rows,unresolved:[]};
+ const confirmed=[],unresolved=[];
+ for(const row of rows){
+  (row.unknown===0&&hasAllDocumentedRefinements(row.s)?confirmed:unresolved).push(row);
+ }
+ return {active:true,confirmed,unresolved};
+}
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
 
 /* Original outline diagrams for beginners; these are shapes, NOT photographs or species-level determinations. */
@@ -2020,18 +2040,25 @@ $("compare-toggle").addEventListener("click",()=>{state.comparing=!state.compari
 $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
+const groups=progressiveResultGroups(rows);
 renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
-$("count").textContent=rows.length+(state.refineOnlyDocumented&&extraChosen?" documented":" possible");
+$("count").textContent=groups.active?groups.confirmed.length+" documented":rows.length+" possible";
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
 $("results-note").textContent=state.refineOnlyDocumented&&extraChosen?
- (pendingChoice?"A selected detail is research-pending, so no grass can be documented for every selected detail. This does not prove absence; switch off evidence-only view to see all possibilities.":"Evidence-only view: each listed grass has a published record for EVERY selected extra detail. Unknown descriptions are hidden here, never botanically excluded."):
- pendingChoice?"At least one selected extra detail is a research target without species-level ranking evidence yet. Other documented details may still rank positively. No grass was removed.":
- extraChosen?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
+ (pendingChoice?"A selected detail is research-pending. No complete documented match is possible yet; this does not prove absence. Switch off evidence-only view to restore other possibilities.":"Showing grasses with published records matching every selected advanced detail. Other unknown descriptions are hidden by your evidence-only choice."):
+ groups.active?"Each selection narrows the main list to fully documented matches. Open 'Still possible' below to review grasses with missing trait descriptions; they are not ruled out.":"Choose any photo or detailed character to start narrowing 169 possibilities.";
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
-const root=$("results");root.replaceChildren();
+const root=$("results"),wasUnresolvedOpen=$("unresolved-candidates")?.open===true;
+root.replaceChildren();
+const unknownRoot=node("div","unresolved-cards");
+if(groups.active){
+ root.append(node("p","progressive-status",groups.confirmed.length+" fully documented match"+(groups.confirmed.length===1?"":"es")+" · "+groups.unresolved.length+" possible but not fully documented"));
+}
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
+else if(groups.active&&!groups.confirmed.length)root.append(node("p","smallmuted","No grass has published evidence supporting every selection yet. That is not proof no grass fits. Expand 'Still possible' to inspect the unresolved species."));
+const unresolvedIds=new Set(groups.unresolved.map(x=>x.s.id));
 for(const x of rows){
 const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
@@ -2041,7 +2068,14 @@ if(s.trial)info.append(node("div","smallmuted","Still under verification · not 
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
-root.append(row);
+if(groups.active&&unresolvedIds.has(s.id))unknownRoot.append(row);
+else root.append(row);
+}
+if(groups.active&&groups.unresolved.length){
+ const unknown=node("details","unresolved-disclosure");unknown.id="unresolved-candidates";unknown.open=wasUnresolvedOpen;
+ unknown.append(node("summary","","Still possible — "+groups.unresolved.length+" grasses need more evidence"),
+  node("p","","These grasses do not have all the selected traits documented. Missing evidence is NOT the same as a contradictory trait. Open to review or compare them."),unknownRoot);
+ root.append(unknown);
 }
 const caution=$("caution-details"),cautionList=$("caution-list");
 cautionList.replaceChildren();const matches=new Set(rows.map(x=>x.s.id));
@@ -2053,7 +2087,9 @@ for(const x of scored){
 const btn=node("button","",x.s.common+" · "+x.s.scientific);btn.type="button";
 btn.append(node("small","","Differs on: "+x.disagree.join(", ")));btn.addEventListener("click",()=>detail(x.s));cautionList.append(btn);
 }
-$("results-footer").textContent=state.refineOnlyDocumented&&extraChosen?"Evidence-only view hides undocumented grasses; switch it off to restore them. Missing evidence does not prove absence.":"One list of 169 grasses. Unknown traits never exclude; review excluded possibilities and verify research-profile characters.";
+$("results-footer").textContent=state.refineOnlyDocumented&&extraChosen?
+ "Evidence-only mode hides undocumented advanced matches; switch it off to restore them. Missing evidence does not prove absence.":
+ "Progressive key: documented matches stay on top; unverified possibilities are in the expandable list; proven core conflicts appear below for review.";
 }
 function renderPending(){
 const coded=new Set(state.species.map(s=>s.id));
