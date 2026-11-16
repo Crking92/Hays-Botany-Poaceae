@@ -146,6 +146,16 @@ def check_view(browser, name, width, height):
             finally:
                 detail_page.close()
         modal.get_by_role("button",name="Close species detail").click()
+    # Historical manifest-only Bromus is literature-scored but is NOT a Hays voucher.
+    page.locator("#species-search").fill("Bromus brevis")
+    page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+    assert "Source-scored" in page.locator("#results .result").first.inner_text()
+    page.locator("#results .result").first.click()
+    brome=page.locator("#detail-dialog")
+    assert "NOT a Hays County specimen voucher" in brome.inner_text()
+    assert "compact-panicled" in brome.inner_text()
+    assert brome.locator(".detail-grid img").count() == 3
+    brome.get_by_role("button",name="Close species detail").click()
     page.locator("#species-search").fill("Dichanthelium acuminatum")
     page.wait_for_function("document.querySelectorAll(\'#results .result\').length === 1",timeout=15000)
     assert "Research trial" in page.locator("#results .result").first.inner_text(), ("Broad-complex identity hold was lost")
