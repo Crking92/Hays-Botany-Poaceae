@@ -2245,16 +2245,25 @@ if(groups.active&&groups.unresolved.length){
 const caution=$("caution-details"),cautionList=$("caution-list");
 cautionList.replaceChildren();const matches=new Set(rows.map(x=>x.s.id));
 const leftovers=state.species.filter(s=>!matches.has(s.id)).filter(s=>state.range==="all"||(state.range==="native"?s.range==="PASS":(["FAIL","INTRODUCED_NOT_NATIVE","COMPARISON_NON_NATIVE"].includes(s.range)))).filter(s=>(s.common+" "+s.scientific).toLowerCase().includes(state.query));
-const scored=leftovers.map(s=>({s,disagree:qs.filter(q=>state.selected[q.id]&&s.traits[q.id]?.length&&!s.traits[q.id].includes(state.selected[q.id])).map(q=>q.short)})).filter(x=>x.disagree.length).sort((a,b)=>a.disagree.length-b.disagree.length||a.s.common.localeCompare(b.s.common));
-caution.hidden=!n||!scored.length;
-$("caution-summary").textContent=scored.length+" other grasses excluded by provisional character coding — review if needed";
+const coreExcluded=leftovers.map(s=>({s,disagree:qs.filter(q=>state.selected[q.id]&&s.traits[q.id]?.length&&!s.traits[q.id].includes(state.selected[q.id])).map(q=>q.short)})).filter(x=>x.disagree.length);
+const advancedExcluded=groups.excluded.map(x=>({s:x.s,disagree:x.contradictions.map(c=>c.label+" (published: "+c.reported+")"),contradictions:x.contradictions}));
+const scored=[...coreExcluded,...advancedExcluded].sort((a,b)=>a.disagree.length-b.disagree.length||a.s.common.localeCompare(b.s.common));
+caution.hidden=!(n||extraChosen)||!scored.length;
+$("caution-summary").textContent=scored.length+" ruled out by source-documented characters — review if your plant differs";
 for(const x of scored){
 const btn=node("button","",x.s.common+" · "+x.s.scientific);btn.type="button";
 btn.append(node("small","","Differs on: "+x.disagree.join(", ")));btn.addEventListener("click",()=>detail(x.s));cautionList.append(btn);
+ for(const conflict of x.contradictions||[]){
+  if(conflict.source_url?.startsWith("https://")){
+   const link=node("a","mini-credit","Published evidence: "+conflict.source);
+   link.href=conflict.source_url;link.target="_blank";link.rel="noopener noreferrer";
+   cautionList.append(link);
+  }
+ }
 }
 $("results-footer").textContent=state.refineOnlyDocumented&&extraChosen?
  "Evidence-only mode hides undocumented advanced matches; switch it off to restore them. Missing evidence does not prove absence.":
- "Progressive key: documented matches stay on top; unverified possibilities are in the expandable list; proven core conflicts appear below for review.";
+ "Progressive key: documented matches stay on top; unknown possibilities remain expandable; source-supported measured or exact mature-floret conflicts are set aside for review. Other advanced options never exclude without a verified contradiction.";
 }
 function renderPending(){
 const coded=new Set(state.species.map(s=>s.id));
