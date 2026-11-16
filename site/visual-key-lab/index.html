@@ -252,6 +252,9 @@ html[data-theme="dark"] .flower-field-guide{background:#23372b}
 .stem-field-guide svg{object-fit:contain}
 html[data-theme="dark"] .stem-field-guide{background:#23372b}
 @media(max-width:355px){.stem-field-guide{flex-wrap:wrap}.stem-field-guide svg{max-width:100%;width:136px}}
+.source-decision-note{margin:0 0 14px;color:var(--muted);font-size:.78rem;line-height:1.55}
+.source-decision-note summary{cursor:pointer;font-weight:650}
+.source-decision-note p{margin:7px 0 0}
 </style>
 <link rel="stylesheet" href="grass-glossary.css?v=2">
 </head>
@@ -260,6 +263,11 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
 <main class="wrap">
   <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
   <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
+  <details class="source-decision-note" id="source-disagreement-policy">
+    <summary>Botanical source note: how disagreements are handled</summary>
+    <p>Some published grass descriptions disagree. Until further notice, when two sources directly contradict each other about the same species concept and plant part, this Lab provisionally follows <em>Illustrated Flora of North Central Texas</em> (Diggs et al., 1999). We retain and cite the other interpretation instead of treating it as disproven. If the Flora does not address that exact trait, or the identification choice cannot represent it accurately, the result stays unresolved rather than being guessed.</p>
+    <p><strong>Example:</strong> <em>Melica nitens</em> is described as rhizomatous by Diggs et al. (1999, printed p. 1284), while Hagenbuch &amp; Lemke (2015, printed p. 54) report rhizomes absent. The Flora interpretation is preferred provisionally; both descriptions remain recorded. <a href="https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/site/visual-key-lab/MORPHOLOGY_SOURCE_POLICY.md" rel="noopener noreferrer">Read the source policy</a>.</p>
+  </details>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
       <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions; answer in any order. Skip anything you cannot examine.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
