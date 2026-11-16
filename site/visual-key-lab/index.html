@@ -646,6 +646,43 @@ function hasAllDocumentedRefinements(s){
   return Boolean(evidence&&values.every(value=>evidence.states.includes(value)));
  });
 }
+
+/* Only source-measured incompatible intervals and explicitly checked exact-species
+   mature-floret counts can exclude a grass. Other positive evidence is NOT proof
+   the alternative is absent. Unknown and source-conflicted records stay possible. */
+const advancedExclusionPolicy={
+ blade_width:"MEASURED_CLOSED_INTERVAL",
+ ligule_length:"MEASURED_CLOSED_INTERVAL",
+ florets_per_spikelet:"EXACT_SPECIES_PRIMARY_FLORET_COUNT"
+};
+function verifiedAdvancedConflict(s){
+ const conflicts=[];
+ for(const character of state.refineCharacters){
+  const observed=selectedRefinementStates(character.id);
+  if(!observed.length)continue;
+  const evidence=refinementEvidence(s,character.id);
+  if(!evidence?.states?.length||observed.some(value=>evidence.states.includes(value)))continue;
+  if(character.options.some(o=>observed.includes(o.id)&&o.evidence_pending))continue;
+  const policy=advancedExclusionPolicy[character.id];
+  if(!policy||evidence.source_disagreement||evidence.conflicting_source||evidence.source_scope_caution)continue;
+  if(evidence.source_status==="HOLD"||/sources? disagree|taxon hold|unresolved contradiction/i.test(evidence.note||""))continue;
+  if(policy==="MEASURED_CLOSED_INTERVAL"){
+   const interval=character.id==="blade_width"?evidence.width_mm:evidence.length_mm;
+   if(!Array.isArray(interval)||interval.length!==2||
+      !interval.every(Number.isFinite)||interval[0]>interval[1])continue;
+  }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(evidence.source_status!=="READY_PRIMARY"||
+      !Number.isInteger(evidence.pdf_printed_page)||
+      !/exact/i.test(evidence.source||"")||
+      !/Diggs/i.test(evidence.source||""))continue;
+  }else continue;
+  const labels=evidence.states.map(v=>character.options.find(o=>o.id===v)?.label||v);
+  conflicts.push({character:character.id,label:character.label,reported:labels.join(" / "),
+    source:evidence.source,source_url:evidence.source_url,note:evidence.note,policy});
+ }
+ return conflicts;
+}
+
 function refinementSection(id){
  if(["stem_nodes","culm_posture","surface_runners","underground_stems","basal_crown","stem_special"].includes(id))return"stem";
  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id))return"flower";
@@ -1339,12 +1376,14 @@ return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches=
 function progressiveResultGroups(rows){
  const coreChosen=Object.values(state.selected).some(Boolean);
  const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
- if(!coreChosen&&!extraChosen)return {active:false,confirmed:rows,unresolved:[]};
- const confirmed=[],unresolved=[];
+ if(!coreChosen&&!extraChosen)return {active:false,confirmed:rows,unresolved:[],excluded:[]};
+ const confirmed=[],unresolved=[],excluded=[];
  for(const row of rows){
+  const contradictions=extraChosen?verifiedAdvancedConflict(row.s):[];
+  if(contradictions.length){excluded.push({...row,contradictions});continue;}
   (row.unknown===0&&hasAllDocumentedRefinements(row.s)?confirmed:unresolved).push(row);
  }
- return {active:true,confirmed,unresolved};
+ return {active:true,confirmed,unresolved,excluded};
 }
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
 
