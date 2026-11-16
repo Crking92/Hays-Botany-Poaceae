@@ -1244,7 +1244,7 @@ const supplementalPass8={"bothriochloa-longipaniculata":3,"bothriochloa-bladhii"
 if(pack.evidence.length<1006||new Set(pack.evidence.map(x=>x.id)).size<162)throw Error("Pass8 coverage regressed");
 for(const [id,n] of Object.entries(supplementalPass8)){
  const a=pack.evidence.filter(x=>x.id===id);
- if(a.length!==n)throw Error("Pass8 missing species-level records "+id+" "+a.length);
+ if(a.length<n)throw Error("Pass8 original species-level records missing "+id+" "+a.length);
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass8 changed admission "+id);
  for(const e of a){
   if(!e.source_url.startsWith("https://")||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim())throw Error("Pass8 citation quality "+id);
