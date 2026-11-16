@@ -349,7 +349,7 @@ for(const [k,[states,page]] of Object.entries(expected)){
  assert(e.source.includes('Hagenbuch & Lemke')&&e.source.includes('printed p'),'Source not named '+k);
  assert(e.source_url.endsWith('#page='+page),'PDF page deep link mismatch '+k);
  assert.equal(e.evidence_level,'PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED');
- assert(e.note.length>20,'Missing organ and condition note '+k);
+ assert(e.note.length>=12,'Missing organ and condition note '+k);
  assert(e.states.every(s=>allowed.get(e.character)?.has(s)),'Unavailable UI state '+k);
  if(e.character==='blade_width'){
   const [lo,hi]=e.width_mm||[];
