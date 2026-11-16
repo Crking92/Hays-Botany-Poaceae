@@ -125,9 +125,15 @@ def check_view(browser, name, width, height):
         if scientific == "Bothriochloa longipaniculata":
             lesson_url = modal.get_by_role("link",name="Open full Hays Botany lesson").get_attribute("href")
             assert "species=bothriochloa-longipaniculata#species-detail" in lesson_url
+            # The link is the future public URL, but a PR cannot yet serve
+            # unmerged site/app.js on public Pages. Exercise the corresponding
+            # local Learner during PR QA, then the real link on main deploy.
+            check_url = lesson_url if LIVE else URL.replace(
+                "/visual-key-lab/index.html", "/index.html").split("?")[0] + (
+                "?species=bothriochloa-longipaniculata#species-detail")
             detail_page = ctx.new_page()
             try:
-                detail_page.goto(lesson_url,wait_until="domcontentloaded",timeout=65000)
+                detail_page.goto(check_url,wait_until="domcontentloaded",timeout=65000)
                 detail_page.wait_for_function(
                     "() => document.querySelector('#species-detail .subtitle')?.textContent.includes('Bothriochloa longipaniculata')",
                     timeout=60000)
