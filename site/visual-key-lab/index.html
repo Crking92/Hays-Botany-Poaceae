@@ -43,6 +43,17 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 .step .head-shape{width:30px;height:30px;flex:0 0 30px}
 .step[aria-current=true] .head-shape{background:#f8fbf4;border-radius:50%}
 .whole-head img{object-fit:contain;background:#eef2e9}
+/* Arrow annotations are reused from existing, source-matched Learner photos.
+   Image and SVG share the same aspect-preserving frame; no misleading crop. */
+.photo-frame.with-reviewed-arrows img{object-fit:contain;background:#edf1e8}
+.photo-frame .field-photo-arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
+.photo-arrow-legend{list-style:none;margin:9px 0 0;padding:0;display:grid;gap:3px;color:var(--ink);font-size:.72rem;line-height:1.38}
+.photo-arrow-legend li{display:flex;gap:6px;align-items:baseline}
+.photo-arrow-legend strong{color:#9b4b12;min-width:14px}
+.photo-truth-note{font-size:.69rem;color:var(--muted);line-height:1.35;margin-top:7px}
+.photo-truth-note.annotated{font-weight:650}
+html.guest-preview .photo-arrow-legend,html.guest-preview .photo-truth-note{display:block}
+
 @media(max-width:480px){.step .head-shape{width:25px;height:25px;flex:0 0 25px}.step{gap:5px}}
 /* Optional visitor preview: hides explanations, never photo credits or research tags. */
 .sitebar{flex-wrap:wrap}
@@ -366,7 +377,7 @@ const qs=[
 ["aquatic_mixed","Male and female spikelets intermixed","Giant cutgrass: both floral sexes mixed along a big open wetland panicle.","zizaniopsis-miliacea",0]
 ]},
 {id:"habit",short:"Growth form",title:"How does the grass grow?",hint:"Follow a stem to its base. A true stolon runs along the soil; a decumbent culm can also root at nodes. A rhizome runs underground. Look at an intact crown when possible.",options:[
-["tuft","A bunch or tuft","Many stems rise from one concentrated crown.","panicum-hallii",1],
+["tuft","A bunch or tuft","Many stems rise from one concentrated crown.","panicum-hallii",0],
 ["mat","Sprawling or mat-forming at the surface","Look for true stolons OR low decumbent culms that root at their nodes; a rooted culm is not necessarily a stolon. The drawing shows the stolon example.","bouteloua-dactyloides",3],
 ["rhizome","Underground rhizomes — short or long","Look for true underground stem links, sometimes only short ones at the older crown. These are not surface stolons.","sorghum-halepense",0],
 ["woody_canes","Tall, jointed woody bamboo canes","The grass has persistent hollow woody culms with clear nodes; fishpole bamboo often has crowded swollen lower internodes. This is a vegetative character, NOT a flowering-head state.","phyllostachys-aurea",1],
@@ -395,7 +406,7 @@ const selectedPhotoOverrides={
 "head:foxtail":{src:"https://commons.wikimedia.org/wiki/Special:FilePath/Setaria_parviflora_plant3_%2814391626073%29.jpg?width=900",label:"Setaria: whole dense bristly foxtail head",creator:"Harry Rose",license:"CC BY 2.0",source_page:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_plant3_(14391626073).jpg"},
 };
 const $=id=>document.getElementById(id);
-const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineOnlyDocumented:false,focusConfirmed:false,refineSection:null,candidateManifest:[]};
+const state={selected:{head:null,habit:null,ligule:null,awns:null},question:0,range:"all",query:"",species:[],catalog:[],comparing:false,compareIds:[],refineSelected:{},refineCharacters:[],refineEvidenceMap:{},refineOnlyDocumented:false,focusConfirmed:false,refineSection:null,candidateManifest:[],mainPhotoArrows:new Map()};
 
 const themeToggle=$("theme-toggle");
 let userTheme=null;
@@ -409,7 +420,51 @@ function syncPreviewToggle(){const simple=document.documentElement.classList.con
 previewToggle.addEventListener("click",()=>{const simple=document.documentElement.classList.toggle("guest-preview");const url=new URL(location.href);if(simple)url.searchParams.set("demo","1");else url.searchParams.delete("demo");history.replaceState(null,"",url.toString());syncPreviewToggle()});
 syncPreviewToggle();
 function node(tag,cl,txt){const e=document.createElement(tag);if(cl)e.className=cl;if(txt!==undefined)e.textContent=txt;return e}
-function image(p,alt){const f=node("div","photo-frame");if(!p){f.append(node("div","photo-bad","Photograph pending verification"));return f}const img=document.createElement("img");img.loading="lazy";img.decoding="async";img.alt=alt||p.label||"Grass reference";img.src=p.src;img.addEventListener("error",()=>f.replaceChildren(node("div","photo-bad","Image unavailable — check original gallery")));f.append(img);return f}
+function image(p,alt,markers=null){
+ const f=node("div","photo-frame");
+ if(!p){f.append(node("div","photo-bad","Photograph pending verification"));return f}
+ const img=document.createElement("img");
+ img.loading="lazy";img.decoding="async";img.alt=alt||p.label||"Grass reference";
+ img.src=p.src;
+ img.addEventListener("error",()=>f.replaceChildren(node("div","photo-bad","Image unavailable — check original gallery")));
+ f.append(img);
+ if(Array.isArray(markers)&&markers.length){
+  f.classList.add("with-reviewed-arrows");
+  const ns="http://www.w3.org/2000/svg", svg=document.createElementNS(ns,"svg");
+  svg.classList.add("field-photo-arrows");
+  svg.setAttribute("preserveAspectRatio","xMidYMid meet");
+  svg.setAttribute("role","img");
+  svg.setAttribute("aria-label","Previously positioned photo arrows; numbered descriptions follow below the image.");
+  const el=(tag,attrs)=>{
+    const out=document.createElementNS(ns,tag);
+    for(const [k,v] of Object.entries(attrs))out.setAttribute(k,String(v));
+    svg.append(out);return out;
+  };
+  const setGeometry=()=>{
+   if(!img.naturalWidth||!img.naturalHeight)return;
+   const w=img.naturalWidth,h=img.naturalHeight,scale=Math.min(w,h);
+   svg.setAttribute("viewBox","0 0 "+w+" "+h);
+   svg.replaceChildren();
+   const px=(x,y)=>[w*x/100,h*y/100];
+   const thick=Math.max(2,scale*.009),radius=Math.max(9,scale*.026);
+   markers.forEach((m,n)=>{
+    const [sx,sy]=px(m.label_x,m.label_y),[tx,ty]=px(m.target_x,m.target_y);
+    const line="M "+sx+" "+sy+" L "+tx+" "+ty;
+    el("path",{d:line,fill:"none",stroke:"#fff","stroke-width":thick*2.7,"stroke-linecap":"round"});
+    el("path",{d:line,fill:"none",stroke:"#b84b11","stroke-width":thick,"stroke-linecap":"round"});
+    el("circle",{cx:tx,cy:ty,r:radius*.35,fill:"#fcf5da",stroke:"#ad4411","stroke-width":thick*.75});
+    el("circle",{cx:sx,cy:sy,r:radius,fill:"#9a3d16",stroke:"#fff","stroke-width":thick*.9});
+    const txt=el("text",{x:sx,y:sy,fill:"#fff","text-anchor":"middle","dominant-baseline":"central",
+      "font-size":radius*1.45,"font-weight":"800"});
+    txt.textContent=String(n+1);
+   });
+  };
+  img.addEventListener("load",setGeometry,{once:true});
+  if(img.complete&&img.naturalWidth)setGeometry();
+  f.append(svg);
+ }
+ return f;
+}
 function pic(spec,i){return spec&&spec.photos.find(p=>p.i===i)||spec&&spec.photos.find(p=>p.i===spec.hero_i)||spec&&spec.photos[0]||null}
 function byId(id){return state.species.find(s=>s.id===id)}
 /* Photo-only supplement: lets already-published, source-approved family photos
@@ -2013,10 +2068,30 @@ const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",
 function buildChoice([key,title,note,refId,i]){
 const specimen=byId(refId),p=selectedPhotoOverrides[q.id+":"+key]||pic(specimen,i);
 const b=node("button","answer");b.type="button";b.setAttribute("aria-pressed",String(state.selected[q.id]===key));
-const f=image(p,title+" — photo example");if(q.id==="head")f.classList.add("whole-head");f.append(node("span","tick","✓"));b.append(f);
+const reviewed=state.mainPhotoArrows.get(q.id+":"+key);
+const validReviewed=reviewed&&refId===reviewed.species_id&&i===reviewed.photo_i&&p&&
+ p.src===reviewed.expected_src&&p.source_page===reviewed.expected_source&&
+ p.creator===reviewed.expected_creator&&p.license===reviewed.expected_license?reviewed:null;
+const f=image(p,title+" — "+(validReviewed?"annotated reference photo":"general photo example"),
+ validReviewed?.markers);
+if(q.id==="head")f.classList.add("whole-head");
+f.append(node("span","tick","✓"));b.append(f);
 const body=node("div","answer-body");
 const label=node("div","head-card-label");label.append(q.id==="head"?headIcon(key):characterIcon(q.id,key),node("div","answer-title",title));body.append(label);
-body.append(node("span","answer-note",note),node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
+body.append(node("span","answer-note",note));
+if(validReviewed){
+ const legend=node("ol","photo-arrow-legend");
+ validReviewed.markers.forEach((m,n)=>{
+  const li=node("li","");
+  li.append(node("strong","",String(n+1)+"."),node("span","",m.label));
+  legend.append(li);
+ });
+ body.append(legend,node("span","photo-truth-note annotated","In this source-matched photo: "+validReviewed.visible),
+   node("span","photo-truth-note","Not proven here: "+validReviewed.not_proven));
+}else{
+ body.append(node("span","photo-truth-note","General reference photo; the drawing explains the structure. No arrow target has been verified for this card."));
+}
+body.append(node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
 b.append(body);b.addEventListener("click",()=>choose(q.id,key));return b;
 }
 if(q.id==="head"){
@@ -2451,7 +2526,47 @@ catch(_e){ /* Missing literature supplement never blocks the scored key. */ }
 // If this optional manifest is unavailable, the 112 original galleries still work.
 try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
 catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
-// Keep all 169 grasses together in one matching result group while retaining 112 verified-core vs 57 pending-source metadata.
+// Existing, source-matched numbered pointers from the 112-grass Learner:
+ // must match original photo source/creator/license/filename exactly.
+ // This is non-scoring teaching media; any error leaves regular photos intact.
+ try{
+  const r=await fetch("main-question-existing-arrows-batch1.json",{cache:"no-store"});
+  if(!r.ok)throw Error("Main photo annotation manifest not delivered");
+  const data=await r.json();
+  const actualOptions=new Map(qs.flatMap(q=>q.options.map(o=>[q.id+":"+o[0],{id:o[3],i:o[4]}])));
+  const staged=new Map(),seen=new Set();
+  if(data.schema!=="HAYS_GRASS_MAIN_KEY_EXISTING_PHOTO_MARKERS_BATCH1_V1"||
+     data.annotated_choice_count!==8||data.existing_marker_records!==14||
+     data.new_photograph_downloads!==0||data.photos_rehosted!==0||
+     data.placements?.length!==8||data.main_question_groups?.join(",")!=="head,habit,ligule,awns")
+    throw Error("Main photo arrow batch not source-scoped");
+  for(const row of data.placements){
+   const choice=actualOptions.get(row.option),species=state.species.find(x=>x.id===row.species_id);
+   const p=species?.photos?.find(x=>x.i===row.photo_i);
+   if(staged.has(row.option)||!choice||choice.id!==row.species_id||choice.i!==row.photo_i||
+      !p||p.src!==row.expected_src||p.source_page!==row.expected_source||
+      p.creator!==row.expected_creator||p.license!==row.expected_license||
+      !row.expected_source?.startsWith("https://")||
+      (p.license_url&&!p.license_url.startsWith("https://"))||
+      (!p.license_url&&(!p.source_page?.startsWith("https://commons.wikimedia.org/wiki/File:")||
+        !/^CC BY(?:-SA)? (?:2\.0|4\.0)$/.test(p.license)))||
+      !row.visible||!row.not_proven||row.not_proven.length<35||
+      row.annotation_provenance!=="EXISTING_LEARNER_TARGET_SPECIES_PHOTO_MARKERS_NOT_NEW_LOCATION_CLAIM"||
+      !Array.isArray(row.markers)||!row.markers.length)
+    throw Error("Main-choice photo marker provenance mismatch: "+row.option);
+   for(const m of row.markers){
+    if(!m.label||["target_x","target_y","label_x","label_y"].some(k=>typeof m[k]!=="number"||m[k]<0||m[k]>100))
+     throw Error("Unpositioned source photo arrow: "+row.option);
+   }
+   const unique=row.species_id+":"+row.photo_i;
+   if(seen.has(unique))throw Error("Same photo assigned two character captions without review");
+   seen.add(unique);staged.set(row.option,row);
+  }
+  if(staged.size!==8||[...staged.values()].reduce((n,x)=>n+x.markers.length,0)!==14)
+   throw Error("Incomplete previously reviewed main-card arrow cohort");
+  state.mainPhotoArrows=staged;
+ }catch(err){console.warn("Existing marked photo batch skipped safely; full unannotated source gallery preserved",err)}
+ // Keep all 169 grasses together in one matching result group while retaining 112 verified-core vs 57 pending-source metadata.
 try {const res=await fetch("hays-candidates.json",{cache:"no-store"});if(res.ok){const manifest=await res.json();if(Array.isArray(manifest.candidates)&&manifest.candidates.length===57){state.candidateManifest=manifest.candidates;const original=new Set(state.catalog.map(x=>x.id));for(const c of manifest.candidates)if(!original.has(c.id))state.catalog.push({id:c.id,scientific:c.scientific,common:c.common});}}} catch(_e) { /* A research index failure must never break the scored identifier. */ }
 try {const res=await fetch("provisional-trial-profiles.json",{cache:"no-store"});if(res.ok){const trial=await res.json();if(!Array.isArray(trial.profiles)||trial.profiles.length!==6||trial.profiles.some(x=>!x.trial||x.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||!Array.isArray(x.photos)))throw Error("Research trial data invalid");const existing=new Set(state.species.map(x=>x.id));for(const p of trial.profiles){if(existing.has(p.id))throw Error("Trial duplicates scored species");existing.add(p.id)}state.species.push(...trial.profiles)}}catch(err){console.warn("Research trial profiles unavailable; original 112 remain usable",err)}
 // Optional second six source-labelled research trials; the first six and official 112 remain untouched.
