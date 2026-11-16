@@ -2934,6 +2934,476 @@
         "action": "HISTORIC_PARTIAL_ADJACENT_RECORD_ONLY",
         "note": "Separate from Steinchisma hians, non-native to Texas and not a new candidate admitted to the 169-species project; incomplete visible paragraph."
       }
+    },
+    {
+      "added_on": "2026-11-16",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "HISTORICAL_PUBLISHED_SPECIES_CONCEPT_NOT_LOCAL_SPECIMEN",
+      "preservation": "Paraphrased botanical characters from user photographs; photographed book pages not republished; no immediate scoring or promotions",
+      "species_id": "tridentopsis-elongata",
+      "taxon": "Tridens muticus (Torr.) Nash var. elongatus (Buckl.) Shinners",
+      "current_taxon": "Tridentopsis elongata (Buckley) Wipff & Weakley",
+      "common_name": "Rough tridens",
+      "printed_page": 213,
+      "figure": "Fig. 110 cited for adjacent typical variety; no verified var. elongatus figure in submitted photograph",
+      "taxonomy": {
+        "status": "KEW_ACCEPTS_SEPARATE_SPECIES; ITIS_USES_OLD_VARIETY",
+        "original_name_as_printed": "Tridens muticus (Torr.) Nash var. elongatus (Buckl.) Shinners, Rhodora 56:28 (1954)",
+        "additional_historical_synonym": "Tridens elongatus (Buckl.) Nash",
+        "current_accepted_name": "Tridentopsis elongata (Buckley) Wipff & Weakley",
+        "kew_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77313940-1",
+        "itis_old_variety_url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=522810",
+        "interpretation": "Kew now treats former variety elongatus as separate accepted species, not part of modern Tridentopsis mutica; do not attribute Gould's typical var. muticus measurements to elongata."
+      },
+      "observations": [
+        {
+          "character": "growth_and_height",
+          "details": "Gould says similar to typical variety, but culms usually 40–80 cm tall.",
+          "culm_height_cm_mostly": [
+            40,
+            80
+          ]
+        },
+        {
+          "character": "leaf_blade_width",
+          "details": "Blades commonly 3–4 mm broad and comparatively firm (no blade length given in this variety section).",
+          "width_mm_common": [
+            3,
+            4
+          ]
+        },
+        {
+          "character": "second_glume_venation",
+          "details": "Second glume usually 3–7-nerved; differentiates from Gould's typical var. muticus (1-nerved).",
+          "veins": [
+            3,
+            7
+          ]
+        },
+        {
+          "character": "second_glume_length",
+          "details": "Variety treatment says second glume usually 5.5–10 mm long. Nearby couplet gives typical 6–8 mm; preserve both ranges as different parts of source, not a measurement error.",
+          "treatment_mm": [
+            5.5,
+            10
+          ],
+          "couplet_typical_mm": [
+            6,
+            8
+          ]
+        },
+        {
+          "character": "chromosome_number",
+          "details": "Gould reports 2n=40 in the variety elongatus description.",
+          "reported_2n": 40
+        },
+        {
+          "character": "historical_habitat",
+          "details": "Often clayey soils; also sandy sites, including well-drained sandy or gravelly-clay soils."
+        },
+        {
+          "character": "historical_texas_range",
+          "details": "Gould reports Texas regions 5, 7, 8, 9, and northern portions of regions 3 and 4; old Texas regional system, not BONAP county nativity.",
+          "historical_regions": [
+            5,
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "character": "flowering_period",
+          "details": "Gould reports April–November, conditional on region and season.",
+          "reported_months": "April–November"
+        },
+        {
+          "character": "inflorescence_structure_unknown",
+          "details": "Provided page does not include full heading and panicle description of parent species; do not invent a panicle length or assign general adjacent account detail to this modern species.",
+          "status": "HOLD_PARTIAL_PARENT_TREATMENT"
+        }
+      ],
+      "historical_couplet_comparison": {
+        "source_name": "Tridens muticus Gould variety key, p. 213",
+        "not_same_modern_species": true,
+        "typical_variety": {
+          "source_name": "Tridens muticus var. muticus",
+          "modern_concept": "Tridentopsis mutica (Torr.) P.M.Peterson",
+          "second_glume_veins": 1,
+          "second_glume_length_mm": "usually <= 5 mm",
+          "culm_cm_mostly": [
+            20,
+            50
+          ],
+          "leaf_blade_mm_typically": [
+            1,
+            2
+          ],
+          "chromosome_2n": 40,
+          "flowering": "mostly August–November, sometimes as early as May",
+          "note": "The photographed key/treatment applies to typical var. muticus; DO NOT assign these states to elongata."
+        },
+        "elongatus_variety": {
+          "source_name": "Tridens muticus var. elongatus",
+          "modern_concept": "Tridentopsis elongata",
+          "second_glume_veins": [
+            3,
+            7
+          ],
+          "couplet_second_glume_mm": "typically 6–8 mm",
+          "account_second_glume_mm": [
+            5.5,
+            10
+          ],
+          "culm_cm_mostly": [
+            40,
+            80
+          ],
+          "blade_width_mm_common": [
+            3,
+            4
+          ],
+          "chromosome_2n": 40,
+          "flowering": "April–November"
+        },
+        "interpretation": "An unusually valuable differentiating source: vein counts and glume length should be retained for future advanced matching but not used without anatomy confirmation and current taxon concept review."
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Count veins and measure the second glume (Gould p. 213)",
+          "check": "Rough tridens, treated by Gould as T. muticus var. elongatus, has a second glume with 3–7 veins and generally 5.5–10 mm long. Gould's typical var. muticus differs: usually one vein and 5 mm or less. Examine a mature second glume, not the first glume or fertile lemma.",
+          "compare": "Modern Tridentopsis elongata is treated as a separate species by Kew; do not transfer typical mutica characters to elongata.",
+          "certainty": "Original published variety description, not a local field-voucher verification.",
+          "source": "Gould (1975), The Grasses of Texas, p. 213; Kew POWO modern concept",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77313940-1"
+        },
+        {
+          "look": "Check growth size without treating it as exclusive",
+          "check": "Gould gives rough tridens culms mostly 40–80 cm and comparatively firm blades 3–4 mm wide; both have substantial variation and are less decisive than second-glume anatomy.",
+          "compare": "Gould's typical muticus variety has shorter culms and narrower blades, but these ranges overlap.",
+          "certainty": "Published measurements for former variety elongatus; no production key scoring changes.",
+          "source": "Gould (1975), The Grasses of Texas, p. 213",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77313940-1"
+        }
+      ],
+      "classification_decision": {
+        "action": "SAVE_SOURCE_ONLY_NO_SCORING_OR_PROMOTION",
+        "status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+        "taxonomy_hold": "Kew treats elongata as species, ITIS retains variety; modern species-level mapping explicit."
+      },
+      "audit_hold": "Historical comparison is NOT a verified Hays specimen; do not score second-glume subtype for all Tridentopsis taxa without local source review. Protect existing 57 trial species and all 112 original scored grasses."
+    },
+    {
+      "added_on": "2026-11-16",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "HISTORICAL_PUBLISHED_SPECIES_CONCEPT_NOT_LOCAL_SPECIMEN",
+      "preservation": "Paraphrased botanical characters from user photographs; photographed book pages not republished; no immediate scoring or promotions",
+      "species_id": "melinis-repens",
+      "taxon": "Rhynchelytrum repens (Willd.) C.E.Hubb.",
+      "current_taxon": "Melinis repens (Willd.) Zizka",
+      "common_name": "Natal grass",
+      "printed_page": 542,
+      "figure": "Fig. 284 cited, illustration on facing page only partly visible; no photograph rights assigned",
+      "taxonomy": {
+        "status": "KEW_ACCEPTS_MELINIS_REPENS",
+        "original_spelling_on_page": "Rhynchelytrum repens",
+        "alternative_orthography": "Rhynchelythrum repens appears in current Kew synonym record",
+        "accepted_name": "Melinis repens (Willd.) Zizka",
+        "kew_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:2945817-1",
+        "old_combination_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:419413-1",
+        "nativity": "African native; introduced and naturalized in Texas per modern Kew and Gould's older Texas observations"
+      },
+      "observations": [
+        {
+          "character": "growth_habit",
+          "details": "Tufted perennial in Gould's treatment, knee-bent at base and upright above, culms usually 0.7–1 m tall; other regional sources include annual forms.",
+          "height_m": [
+            0.7,
+            1
+          ]
+        },
+        {
+          "character": "culm_nodes",
+          "details": "Nodes minutely hairy (puberulent)."
+        },
+        {
+          "character": "vegetative_hairiness",
+          "details": "Herbage may be strongly hairy (hispid) to almost glabrous; don't assume always silky leaves."
+        },
+        {
+          "character": "ligule",
+          "details": "Ligule is a fringe of hairs about 0.5–1 mm long, not a demonstrated membranous flap height.",
+          "hair_length_mm": [
+            0.5,
+            1
+          ]
+        },
+        {
+          "character": "leaf_blades",
+          "details": "Narrow, flat or folded blades usually 8–18 cm long and 2–5 mm wide.",
+          "length_cm": [
+            8,
+            18
+          ],
+          "width_mm": [
+            2,
+            5
+          ]
+        },
+        {
+          "character": "panicle_shape",
+          "details": "Loosely contracted panicle mostly 6–20 cm long, with thin curving secondary branches and pedicels.",
+          "length_cm": [
+            6,
+            20
+          ]
+        },
+        {
+          "character": "panicle_spikelet_color_and_hairs",
+          "details": "Purplish spikelets with silky, shaggy (villous) hairs; assess on flowering panicle, not whole-plant photo."
+        },
+        {
+          "character": "spikelet_disarticulation",
+          "details": "Separates at base of spikelet."
+        },
+        {
+          "character": "glumes_and_lower_lemma",
+          "details": "First glume minute; second glume and lower-floret lemma approximately equal, both silky-villous with fine hairs."
+        },
+        {
+          "character": "glume_and_lemma_apex",
+          "details": "Second glume and lower-floret lemma notched and minutely awned at apex; do not mistake the fine hairs as their minute awns."
+        },
+        {
+          "character": "upper_floret_lemma",
+          "details": "Upper lemma much shorter than lower lemma and second glume, narrow, membranous, glabrous; its thin margins do not roll over palea."
+        },
+        {
+          "character": "historical_Texas_distribution",
+          "details": "Gould reports Texas region 6 at roadsides and ditchbanks in moderately disturbed, well-drained soils; historical regional occurrence not proof of Hays nativity."
+        },
+        {
+          "character": "flowering_period",
+          "details": "Gould gives year-round flowering IF temperature and moisture are favorable.",
+          "conditions": "favorable temperature and moisture"
+        }
+      ],
+      "adjacent_genus_context": {
+        "taxon": "Setaria P.Beauv.",
+        "source_location": "Immediately follows Natal grass account on printed p. 542; NOT Melinis traits",
+        "status": "GENUS_LEVEL_SOURCE_SEPARATE_FROM_MELINIS",
+        "observations": [
+          "Tufted annual and perennial grasses with erect or knee-bent culms; short membranous ligule fringed with hairs.",
+          "Often dense bristly panicles; one to several persistent bristles are sterile branchlets or reduced pedicels immediately below individual spikelets.",
+          "Spikelets disarticulate ABOVE those bristles; upper floret lemma and palea hardened and sometimes transversely wrinkled.",
+          "Visible first couplet mentions Setaria reverchonii and particular bristle/blade arrangement, but key is incomplete and not an authority to assign new species filtering states."
+        ],
+        "caution": "This genus-level context helps distinguish Setaria separate bristles from Melinis silky spikelet hairs, but do not label Melinis foxtail bristles from the next genus."
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Separate silky hairs from true bristles on Natal grass (Gould p. 542)",
+          "check": "Gould describes a 6–20 cm loose panicle, often purple, with long silky hairs ON the spikelets, unlike Setaria's separate sterile-branchlet bristles. Its ligule is a fringe of small 0.5–1 mm hairs, and blades are 2–5 mm wide.",
+          "compare": "Differentiate silky spikelet hairs of Melinis from the persistent bristles below Setaria spikelets and from lemma awns.",
+          "certainty": "Gould species description and modern accepted name; photograph of an individual Hays plant not newly verified.",
+          "source": "Gould (1975), The Grasses of Texas, p. 542; Kew POWO",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:2945817-1"
+        },
+        {
+          "look": "Examine upper and lower fertile structure separately (Gould)",
+          "check": "The first glume is minute. The second glume and lower sterile lemma are similar in size and silky hairy with tiny terminal notches/awns. The upper fertile lemma is shorter, narrow, hairless and membranous, and its margins are NOT curled over the palea.",
+          "compare": "Use a dissected spikelet; don't misinterpret long silky covering hairs as the tiny awns.",
+          "certainty": "Source-specific original account; no automatic key or photo changes.",
+          "source": "Gould (1975), The Grasses of Texas, p. 542",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:2945817-1"
+        }
+      ],
+      "classification_decision": {
+        "action": "SAVE_SOURCE_ONLY_NO_PROMOTION",
+        "status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+        "notes": "Gould historic perennial claim is not generalized to all Melinis repens; no scoring from this source alone."
+      }
+    },
+    {
+      "added_on": "2026-11-16",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "HISTORICAL_PUBLISHED_SPECIES_CONCEPT_NOT_LOCAL_SPECIMEN",
+      "preservation": "Paraphrased botanical characters from user photographs; photographed book pages not republished; no immediate scoring or promotions",
+      "species_id": "megathyrsus-maximus",
+      "taxon": "Panicum maximum Jacq.",
+      "current_taxon": "Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs",
+      "common_name": "Guineagrass",
+      "printed_page": 469,
+      "figure": "Fig. 251 cited in printed account; not displayed in supplied photo",
+      "taxonomy": {
+        "status": "KEW_ACCEPTS_MEGATHYRSUS_MAXIMUS",
+        "original_name": "Panicum maximum Jacq.",
+        "accepted_name": "Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs",
+        "accepted_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60426565-2",
+        "synonym_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321830-2",
+        "nativity": "Native Africa and adjacent regions, introduced in Texas per Kew"
+      },
+      "observations": [
+        {
+          "character": "growth_habit",
+          "details": "Robust perennial with thick culms arising from a firm often rhizomatous base.",
+          "rhizomatous_base": "often"
+        },
+        {
+          "character": "culm_height",
+          "details": "Stems 1–2.5 m tall (Gould Texas treatment).",
+          "height_m": [
+            1,
+            2.5
+          ]
+        },
+        {
+          "character": "culm_node_hairiness",
+          "details": "Culm nodes typically densely hirsute (coarsely hairy)."
+        },
+        {
+          "character": "sheaths",
+          "details": "Round sheaths, usually hispid or hirsute, often with papilla-based hairs; collar densely pubescent."
+        },
+        {
+          "character": "ligule",
+          "details": "Short membranous ligule densely fringed with stiff hairs 3–4 mm long. The 3–4 mm measures HAIRS, not membrane height.",
+          "marginal_hair_length_mm": [
+            3,
+            4
+          ]
+        },
+        {
+          "character": "blade_width",
+          "details": "Long flat blades usually 0.8–3.5 cm broad (8–35 mm); hairiness ranges from hispid/pubescent to almost glabrous.",
+          "width_cm": [
+            0.8,
+            3.5
+          ],
+          "width_mm": [
+            8,
+            35
+          ]
+        },
+        {
+          "character": "panicle_length_architecture",
+          "details": "Very large open panicle, broadly to narrowly spreading, usually 20–50 cm with thin wiry main branches.",
+          "length_cm": [
+            20,
+            50
+          ]
+        },
+        {
+          "character": "primary_panicle_branches",
+          "details": "Slender wiry primary branches usually 8–20 cm or more.",
+          "length_cm_mostly": [
+            8,
+            20
+          ]
+        },
+        {
+          "character": "spikelet_attachment",
+          "details": "Short-pedicelled glabrous oblong spikelets, loosely spaced on branchlets or somewhat clustered."
+        },
+        {
+          "character": "spikelet_length",
+          "details": "Spikelets usually 3–3.5 mm long.",
+          "length_mm": [
+            3,
+            3.5
+          ]
+        },
+        {
+          "character": "lower_glume",
+          "details": "First glume generally one-quarter to one-third spikelet length, broad acute to blunt apex.",
+          "fraction_of_spikelet": [
+            0.25,
+            0.3333333333333333
+          ]
+        },
+        {
+          "character": "second_glume_and_lower_floret_lemma",
+          "details": "Second glume and lower-floret lemma nearly equal, usually about 0.75–1 mm longer than upper fertile lemma.",
+          "difference_over_upper_lemma_mm": [
+            0.75,
+            1
+          ]
+        },
+        {
+          "character": "lower_floret",
+          "details": "Lower floret staminate (male), palea approximately as long as lemma."
+        },
+        {
+          "character": "upper_fertile_floret",
+          "details": "Lemma and palea of upper floret transverse-rugose (wrinkled across), upper lemma sometimes minutely apiculate."
+        },
+        {
+          "character": "chromosome_reports",
+          "details": "Aneuploid 2n=32 frequently reported; other numbers 2n=18,36,44,48. Different reports, not all numbers on one specimen.",
+          "frequent_2n": 32,
+          "other_reported_2n": [
+            18,
+            36,
+            44,
+            48
+          ]
+        },
+        {
+          "character": "historical_Texas_introduction",
+          "details": "Gould claimed probably not established anywhere in Texas in 1975, citing experimental plantings in Angleton, Kingsville and Austin. Kew now lists Texas among its introduced territories. Preserve the time-dependent disagreement: NOT evidence it is currently absent or strictly cultivated.",
+          "old_Texas_localities": [
+            "Angleton",
+            "Kingsville",
+            "Austin"
+          ],
+          "current_source": "Kew POWO introduced in Texas"
+        },
+        {
+          "character": "historical_general_origin",
+          "details": "Gould regarded it as probably African native, widespread forage in tropical regions."
+        },
+        {
+          "character": "flowering_period",
+          "details": "Gould gives mostly September–November in his Texas account; do not imply all local plants obey those months.",
+          "months": "September–November"
+        }
+      ],
+      "adjacent_partial_note": {
+        "taxon_as_printed": "Panicum diffusum Sw.",
+        "status": "PARTIAL_ADJACENT_TREATMENT_ONLY_NOT_MEGATHYRSUS",
+        "source_page": 469,
+        "visible_details": "Gould begins the spreading panicum treatment below guineagrass: weak perennial in small tufts, usually spreading culms often ~30 cm or less, occasionally to 100 cm, ligule a membrane with ciliate hairs 1–2 mm; text and leaf measurements partly obscured and continue beyond photograph.",
+        "caution": "Do not apply Panicum diffusum characters to Megathyrsus maximus, do not add unverified candidate from page fragment."
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Measure the huge open panicle and hairy collar (Gould p. 469)",
+          "check": "Guineagrass is a robust, often rhizomatous perennial with culms 1–2.5 m tall, open panicles often 20–50 cm, wiry branches 8–20 cm or more, and 3–3.5 mm spikelets. The collar, nodes and sheaths can be conspicuously hairy.",
+          "compare": "Distinguish from other open-panicled grasses using size plus leaf-collar and spikelet details; one overall photo is insufficient.",
+          "certainty": "Gould measurements and modern Kew species name; no added local-voucher or scoring validation.",
+          "source": "Gould (1975), The Grasses of Texas, p. 469",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60426565-2"
+        },
+        {
+          "look": "Check the ciliate membrane and transverse wrinkles of the upper floret (Gould)",
+          "check": "The ligule is a SHORT membrane with stiff marginal hairs about 3–4 mm long; do not treat the 3–4 mm as membrane height. The upper fertile lemma and palea are wrinkled crosswise, while the lower floret may be staminate.",
+          "compare": "Dissect mature florets; check wrinkles on the upper lemma/palea rather than simply rough leaves or dense lower-stem hairs.",
+          "certainty": "Source-backed morphological description only. Keep genus and historical name crosswalk.",
+          "source": "Gould (1975), The Grasses of Texas, p. 469",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60426565-2"
+        }
+      ],
+      "classification_decision": {
+        "action": "SAVE_SOURCE_ONLY_NO_PROMOTION",
+        "status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+        "note": "Do not use 1975 'probably not established' for modern Texas absence: Kew reports introduced Texas; no automatic Hays nativity."
+      }
+    }
+  ],
+  "additional_source_image_notes": [
+    {
+      "received_on": "2026-11-16",
+      "subject": "Five image batch: Gould pp. 213, 542, 469 and two prior-page repeats",
+      "note": "Only three NEW treatments were added: rough tridens (p.213), Natal grass (p.542), guineagrass (p.469). Uploaded Chloris canterai and Trisetum interruptum images repeat the prior Gould entry; these species were NOT duplicated. Adjacent Setaria genus paragraph and incomplete Panicum diffusum opening retained as context only."
     }
   ]
 }
