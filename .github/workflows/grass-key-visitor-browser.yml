@@ -5,6 +5,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'scripts/smoke_grass_key_visitor_browser.py'
       - 'site/visual-key-lab/source-scored-admissions.json'
+      - 'site/visual-key-lab/ready-core-gap-assignments.json'
       - '.github/workflows/grass-key-visitor-browser.yml'
   push:
     branches: [main]
@@ -12,6 +13,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'scripts/smoke_grass_key_visitor_browser.py'
       - 'site/visual-key-lab/source-scored-admissions.json'
+      - 'site/visual-key-lab/ready-core-gap-assignments.json'
       - '.github/workflows/grass-key-visitor-browser.yml'
   workflow_dispatch:
 permissions:
