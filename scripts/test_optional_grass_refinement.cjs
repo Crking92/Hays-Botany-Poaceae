@@ -1036,7 +1036,7 @@ if(pack.evidence.length<832)throw Error("PDF pass 3 832 evidence-record baseline
 if(new Set(pack.evidence.map(x=>x.id)).size<128)throw Error("PDF pass 3 fewer than 128/169 source-covered grass species");
 for(const [id,[page,count]] of Object.entries(pdfPass3)){
  const observations=pack.evidence.filter(x=>x.id===id&&x.source.includes("Hagenbuch & Lemke (2015)"));
- if(observations.length!==count)throw Error("PDF pass 3 incomplete species "+id+" / "+observations.length);
+ if(observations.length<count)throw Error("PDF pass 3 original species citations missing "+id+" / "+observations.length);
  if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("Pass3 improperly promoted candidate "+id);
  for(const record of observations){
   if(record.source?.includes("Hagenbuch & Lemke (2015)")!==true||record.source?.includes("printed p. "+page)!==true||record.source_url?.endsWith("#page="+page)!==true)throw Error("Wrong H&L citation "+id+"/"+record.character);

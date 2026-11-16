@@ -6,6 +6,7 @@ on:
       - 'site/visual-key-lab/optional-refinement-evidence.json'
       - 'scripts/qa_optional_grass_refinements.py'
       - 'scripts/test_grass_backlog_d_primary_344.cjs'
+      - 'scripts/test_grass_backlog_bc_primary_344.cjs'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -44,6 +45,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate source-backed states, original 112, research holds and unknown-safe sorting
         run: python3 scripts/qa_optional_grass_refinements.py
+      - name: Verify 87 B/C primary leaf, sheath and stem source-page mappings
+        run: node scripts/test_grass_backlog_bc_primary_344.cjs
       - name: Verify 51 Lane D source-page character records and protected holds
         run: node scripts/test_grass_backlog_d_primary_344.cjs
       - name: Exercise leaf-detail selections, inherited scoring and unknown-safe ranking
