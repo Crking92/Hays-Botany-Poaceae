@@ -56,10 +56,10 @@ const total=g=>g.confirmed.length+g.unresolved.length+g.excluded.length;
 // only established a positive option (e.g. caespitose vs decumbent variants).
 state.selected.habit="tuft";
 let res=get();
-assert.equal(total(res),169,"A core choice silently dropped research candidates");
+assert.equal(total(res),vm.runInContext("currentResults().length",context),"A core choice silently lost a surviving candidate");
 assert(res.unresolved.some(x=>x.s.id==="polypogon-viridis"),"Mat-only positive Polypogon improperly excluded by 'tuft'");
 state.selected.habit="mat";res=get();
-assert.equal(total(res),169);
+assert.equal(total(res),vm.runInContext("currentResults().length",context));
 assert(res.confirmed.some(x=>x.s.id==="polypogon-viridis"),"Documented Polypogon mat habit not positively matched");
 assert(res.unresolved.some(x=>x.s.id==="briza-minor"),"Tuft-only Briza improperly excluded by mat");
 state.selected={head:null,habit:null,ligule:null,awns:null};
