@@ -336,6 +336,21 @@ def check_view(browser, name, width, height):
     assert page.locator("#count").inner_text() == "1 possible", "Documented-only mode should focus exactly the cited glume match"
     page.locator("#optional-documented-only").click()
     assert page.locator("#count").inner_text() == "169 possible"
+
+    # Regression: literature-supported positive-only head states do not establish
+    # the absence of other flowering forms. Evidence-only view may HIDE an
+    # undocumented advanced observation, but must never move that species to
+    # "Ruled out" based on an unlisted, explicitly nonexclusive core state.
+    page.locator("#steps button.step").first.click()
+    page.locator("#question .answer").filter(has_text="Wheat-like upright or nodding spike").click()
+    assert "Panicum miliaceum" in page.locator("#results").text_content(), (
+        f"{name}: documented cultivar variation was incorrectly excluded from possible")
+    page.locator("#optional-documented-only").click()
+    assert "Panicum miliaceum" not in page.locator("#caution-list").text_content(), (
+        f"{name}: evidence-only view falsely classified unknown proso-millet head as ruled out")
+    page.locator("#optional-documented-only").click()
+    assert "Panicum miliaceum" in page.locator("#results").text_content(), (
+        f"{name}: reversing evidence-only view failed to restore possible proso millet")
     page.locator("#reset-field-key").click()
 
     # Multiple independent glume states survive URL bookmark/reload.
