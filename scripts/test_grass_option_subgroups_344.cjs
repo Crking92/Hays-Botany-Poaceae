@@ -98,10 +98,13 @@ for(const [id,o] of allOptions){
  const backed=optionCounts.has(id+":"+o.id);
  if(backed===Boolean(o.evidence_pending))throw Error("Incorrect evidence-pending state: "+id+"/"+o.id);
 }
-if(!script.includes('n+" source-documented grass"')||!script.includes('id="optional-documented-only"'))throw Error("No evidence counts / documented-only control visible");
-state.refineSelected={glume_marks:["lower_reduced","one_vein"]};
+if(!script.includes('n+" source-documented grass"')||!html.includes('id="optional-documented-only"'))throw Error("No evidence counts / documented-only control visible");
+const documentedGrass=species.find(s=>refs[s.id]?.some(e=>e.character==="blade_width"&&e.states.length));
+if(!documentedGrass)throw Error("No original grass has a documented leaf width");
+const documentedWidth=refs[documentedGrass.id].find(e=>e.character==="blade_width").states[0];
+state.refineSelected={blade_width:documentedWidth};
 state.refineOnlyDocumented=true;
-if(!current().some(x=>x.s.id==="cenchrus-setaceus")||current().length>=n0)throw Error("Evidence-only mode failed to narrow source-backed grasses");
+if(!current().some(x=>x.s.id===documentedGrass.id)||current().length>=n0)throw Error("Evidence-only mode failed to narrow source-backed grasses");
 state.refineSelected={glume_marks:["upper_one_vein"]};
 if(current().length!==0)throw Error("Pending glume detail must not yield fabricated species matches");
 state.refineOnlyDocumented=false;
