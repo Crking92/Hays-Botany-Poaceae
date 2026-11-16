@@ -309,7 +309,7 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
       <details class="optional-features" id="optional-character-wrap" hidden>
         <summary>All detailed characteristics (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
         <div class="optional-inner">
-          <p class="optional-description">Use these extra details when you need to narrow similar grasses. Open a section, then an individual feature to see its choices. Published matches rise in the results; missing descriptions do not exclude a grass.</p>
+          <p class="optional-description">Choose whichever visible feature you recognize. Supported matches rise to the top. Only source-verified numeric or exact mature-floret contradictions can set a grass aside; missing, overlapping and unreviewed descriptions never prove absence. Ruled-out grasses remain reviewable.</p>
           <div class="optional-section-tabs" id="optional-section-tabs" role="group" aria-label="Choose extra plant features"></div><div id="optional-character-groups"></div>
           <button type="button" class="optional-reset" id="optional-documented-only" aria-pressed="false">Show only source-documented matches</button>
            <p class="optional-mode-note">Optional evidence-only view: grasses lacking published records for any selected detail are hidden, not ruled out. Turn it off to see all possibilities.</p>
@@ -646,6 +646,43 @@ function hasAllDocumentedRefinements(s){
   return Boolean(evidence&&values.every(value=>evidence.states.includes(value)));
  });
 }
+
+/* Only source-measured incompatible intervals and explicitly checked exact-species
+   mature-floret counts can exclude a grass. Other positive evidence is NOT proof
+   the alternative is absent. Unknown and source-conflicted records stay possible. */
+const advancedExclusionPolicy={
+ blade_width:"MEASURED_CLOSED_INTERVAL",
+ ligule_length:"MEASURED_CLOSED_INTERVAL",
+ florets_per_spikelet:"EXACT_SPECIES_PRIMARY_FLORET_COUNT"
+};
+function verifiedAdvancedConflict(s){
+ const conflicts=[];
+ for(const character of state.refineCharacters){
+  const observed=selectedRefinementStates(character.id);
+  if(!observed.length)continue;
+  const evidence=refinementEvidence(s,character.id);
+  if(!evidence?.states?.length||observed.some(value=>evidence.states.includes(value)))continue;
+  if(character.options.some(o=>observed.includes(o.id)&&o.evidence_pending))continue;
+  const policy=advancedExclusionPolicy[character.id];
+  if(!policy||evidence.source_disagreement||evidence.conflicting_source||evidence.source_scope_caution)continue;
+  if(evidence.source_status==="HOLD"||/sources? disagree|taxon hold|unresolved contradiction/i.test(evidence.note||""))continue;
+  if(policy==="MEASURED_CLOSED_INTERVAL"){
+   const interval=character.id==="blade_width"?evidence.width_mm:evidence.length_mm;
+   if(!Array.isArray(interval)||interval.length!==2||
+      !interval.every(Number.isFinite)||interval[0]>interval[1])continue;
+  }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(evidence.source_status!=="READY_PRIMARY"||
+      !Number.isInteger(evidence.pdf_printed_page)||
+      !/exact/i.test(evidence.source||"")||
+      !/Diggs/i.test(evidence.source||""))continue;
+  }else continue;
+  const labels=evidence.states.map(v=>character.options.find(o=>o.id===v)?.label||v);
+  conflicts.push({character:character.id,label:character.label,reported:labels.join(" / "),
+    source:evidence.source,source_url:evidence.source_url,note:evidence.note,policy});
+ }
+ return conflicts;
+}
+
 function refinementSection(id){
  if(["stem_nodes","culm_posture","surface_runners","underground_stems","basal_crown","stem_special"].includes(id))return"stem";
  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id))return"flower";
@@ -1339,12 +1376,14 @@ return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches=
 function progressiveResultGroups(rows){
  const coreChosen=Object.values(state.selected).some(Boolean);
  const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
- if(!coreChosen&&!extraChosen)return {active:false,confirmed:rows,unresolved:[]};
- const confirmed=[],unresolved=[];
+ if(!coreChosen&&!extraChosen)return {active:false,confirmed:rows,unresolved:[],excluded:[]};
+ const confirmed=[],unresolved=[],excluded=[];
  for(const row of rows){
+  const contradictions=extraChosen?verifiedAdvancedConflict(row.s):[];
+  if(contradictions.length){excluded.push({...row,contradictions});continue;}
   (row.unknown===0&&hasAllDocumentedRefinements(row.s)?confirmed:unresolved).push(row);
  }
- return {active:true,confirmed,unresolved};
+ return {active:true,confirmed,unresolved,excluded};
 }
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
 
@@ -2164,25 +2203,28 @@ $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
 const groups=progressiveResultGroups(rows);
-renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
+const possibleRows=[...groups.confirmed,...groups.unresolved];
+renderCompareControls(possibleRows,n+Object.values(state.refineSelected).filter(Boolean).length);
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
 $("count").textContent=groups.active?groups.confirmed.length+" documented":rows.length+" possible";
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
 $("results-note").textContent=state.refineOnlyDocumented&&extraChosen?
  (pendingChoice?"A selected detail is research-pending. No complete documented match is possible yet; this does not prove absence. Switch off evidence-only view to restore other possibilities.":"Showing grasses with published records matching every selected advanced detail. Other unknown descriptions are hidden by your evidence-only choice."):
- groups.active?"Each selection narrows the main list to fully documented matches. Open 'Still possible' below to review grasses with missing trait descriptions; they are not ruled out.":"Choose any photo or detailed character to start narrowing 169 possibilities.";
+ groups.active?"Source-backed matches stay in the main results. Missing or nonexclusive evidence remains under Still possible; documented measured or exact-floret contradictions move into the reviewable Ruled out section. Other advanced features rank matches until source-audited.":"Choose any photo or detailed character to start narrowing 169 possibilities.";
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results"),wasUnresolvedOpen=$("unresolved-candidates")?.open===true;
 root.replaceChildren();
 const unknownRoot=node("div","unresolved-cards");
 if(groups.active){
- root.append(node("p","progressive-status",groups.confirmed.length+" fully documented match"+(groups.confirmed.length===1?"":"es")+" · "+groups.unresolved.length+" possible but not fully documented"));
+ root.append(node("p","progressive-status",groups.confirmed.length+" supported match"+(groups.confirmed.length===1?"":"es")+" · "+groups.unresolved.length+" unresolved · "+groups.excluded.length+" advanced source conflict"+(groups.excluded.length===1?"":"s")));
 }
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
 else if(groups.active&&!groups.confirmed.length)root.append(node("p","smallmuted","No grass has published evidence supporting every selection yet. That is not proof no grass fits. Expand 'Still possible' to inspect the unresolved species."));
 const unresolvedIds=new Set(groups.unresolved.map(x=>x.s.id));
+const excludedIds=new Set(groups.excluded.map(x=>x.s.id));
 for(const x of rows){
+if(excludedIds.has(x.s.id))continue;
 const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
 info.append(node("strong","",s.common),node("span","latin",s.scientific));
@@ -2203,16 +2245,25 @@ if(groups.active&&groups.unresolved.length){
 const caution=$("caution-details"),cautionList=$("caution-list");
 cautionList.replaceChildren();const matches=new Set(rows.map(x=>x.s.id));
 const leftovers=state.species.filter(s=>!matches.has(s.id)).filter(s=>state.range==="all"||(state.range==="native"?s.range==="PASS":(["FAIL","INTRODUCED_NOT_NATIVE","COMPARISON_NON_NATIVE"].includes(s.range)))).filter(s=>(s.common+" "+s.scientific).toLowerCase().includes(state.query));
-const scored=leftovers.map(s=>({s,disagree:qs.filter(q=>state.selected[q.id]&&s.traits[q.id]?.length&&!s.traits[q.id].includes(state.selected[q.id])).map(q=>q.short)})).filter(x=>x.disagree.length).sort((a,b)=>a.disagree.length-b.disagree.length||a.s.common.localeCompare(b.s.common));
-caution.hidden=!n||!scored.length;
-$("caution-summary").textContent=scored.length+" other grasses excluded by provisional character coding — review if needed";
+const coreExcluded=leftovers.map(s=>({s,disagree:qs.filter(q=>state.selected[q.id]&&s.traits[q.id]?.length&&!s.traits[q.id].includes(state.selected[q.id])).map(q=>q.short)})).filter(x=>x.disagree.length);
+const advancedExcluded=groups.excluded.map(x=>({s:x.s,disagree:x.contradictions.map(c=>c.label+" (published: "+c.reported+")"),contradictions:x.contradictions}));
+const scored=[...coreExcluded,...advancedExcluded].sort((a,b)=>a.disagree.length-b.disagree.length||a.s.common.localeCompare(b.s.common));
+caution.hidden=!(n||extraChosen)||!scored.length;
+$("caution-summary").textContent=scored.length+" ruled out by source-documented characters — review if your plant differs";
 for(const x of scored){
 const btn=node("button","",x.s.common+" · "+x.s.scientific);btn.type="button";
 btn.append(node("small","","Differs on: "+x.disagree.join(", ")));btn.addEventListener("click",()=>detail(x.s));cautionList.append(btn);
+ for(const conflict of x.contradictions||[]){
+  if(conflict.source_url?.startsWith("https://")){
+   const link=node("a","mini-credit","Published evidence: "+conflict.source);
+   link.href=conflict.source_url;link.target="_blank";link.rel="noopener noreferrer";
+   cautionList.append(link);
+  }
+ }
 }
 $("results-footer").textContent=state.refineOnlyDocumented&&extraChosen?
  "Evidence-only mode hides undocumented advanced matches; switch it off to restore them. Missing evidence does not prove absence.":
- "Progressive key: documented matches stay on top; unverified possibilities are in the expandable list; proven core conflicts appear below for review.";
+ "Progressive key: documented matches stay on top; unknown possibilities remain expandable; source-supported measured or exact mature-floret conflicts are set aside for review. Other advanced options never exclude without a verified contradiction.";
 }
 function renderPending(){
 const coded=new Set(state.species.map(s=>s.id));
