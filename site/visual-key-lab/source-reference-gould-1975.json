@@ -680,6 +680,192 @@
         }
       ],
       "audit_hold": "Historical treatment, no evidence of a local native Hays voucher. Keep all original 112 data, research trial statuses and current core/optional scores unchanged; preserve possible awned variants separately from modern typical awnlessness, and do not publish a book page scan or unsourced inferred photograph."
+    },
+    {
+      "taxon": "Hordeum leporinum",
+      "common_name": "Hare barley",
+      "species_id": "hordeum-murinum",
+      "authority_as_printed": "Hordeum leporinum Link, Linnaea 9:133. 1835",
+      "printed_page": 160,
+      "illustration_reference": "Fig. 81 cited in the treatment, not visible in this supplied photograph",
+      "material": "Owner photograph of Frank W. Gould, The Grasses of Texas, printed p. 160; original Hordeum leporinum treatment and opening of distribution, with preceding Hordeum jubatum material not assigned to this taxon",
+      "added_on": "2026-11-16",
+      "evidence_level": "PUBLISHED_HISTORICAL_SUBSPECIES_TREATMENT_NOT_CURRENT_LOCAL_SPECIMEN",
+      "taxonomic_crosswalk": {
+        "historical_name_as_printed": "Hordeum leporinum Link",
+        "accepted_name": "Hordeum murinum subsp. leporinum (Link) Arcang.",
+        "current_species": "Hordeum murinum L.",
+        "current_rank": "subspecies",
+        "current_concept_scope": "SUBSPECIES_LEPORINUM_ONLY",
+        "verification_status": "Kew POWO AND USDA ARS GRIN AGREE",
+        "accepted_taxon_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77189804-1",
+        "synonym_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:405283-1",
+        "usda_synonym_url": "https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomydetail?id=19311",
+        "bibliographic_discrepancy": "Gould printed Link, Linnaea 9:133, 1835; POWO and GRIN list Link, Linnaea 9:133, 1834. Preserve the original printed date and record the modern bibliographic difference rather than silently rewriting the image.",
+        "interpretation": "The dated species-level Gould description does not automatically characterize subspp. murinum or glaucum, nor demonstrate which subspecies is represented in existing general H. murinum images and local observation records.",
+        "introduced_status": "Current Kew distribution treats subsp. leporinum as introduced in Texas. This is not native to Hays County under the project nativity standard, nor proof any individual local record belongs to this subspecies."
+      },
+      "classification_decision": {
+        "attached_research_species_id": "hordeum-murinum",
+        "status": "SOURCE_REFERENCE_ONLY_SUBSPECIES_SCOPE",
+        "existing_trial_head": "spike",
+        "existing_trial_awn": "long",
+        "action": "DO_NOT_CHANGE_EXISTING_PROVISIONAL_HEAD_HABIT_LIGULE_AWN_SCORES",
+        "reason": "Gould's old Hordeum leporinum applies to modern H. murinum subsp. leporinum. Store the morphology on the existing H. murinum research profile with explicit subspecies scoping, not as exclusive states for the entire species complex. No new Hays County subspecies voucher or photo audit.",
+        "photo_caution": "Existing gallery images labeled H. murinum do not prove subsp. leporinum and should not be relabeled.",
+        "history_caution": "Gould's historical Texas regional description is not a modern BONAP county occurrence or native-status determination."
+      },
+      "observations": [
+        {
+          "character": "life_history",
+          "status": "HISTORICAL_SUBSPECIES_NONSCORING",
+          "details": "Gould describes a tufted annual under the name Hordeum leporinum, referring to modern H. murinum subsp. leporinum."
+        },
+        {
+          "character": "culm",
+          "status": "SOURCE_SPECIFIC_MEASUREMENT",
+          "height_cm_mostly": [
+            15,
+            60
+          ],
+          "details": "Culms thick, succulent, mostly 15–60 cm tall, usually geniculate-spreading at their lower portions. The bent base is not a nodding flowerhead."
+        },
+        {
+          "character": "leaf_hairs",
+          "status": "SOURCE_SPECIFIC_VARIATION",
+          "details": "Leaves reported glabrous or more frequently hispid (bearing rather stiff hairs); this must not be recoded as obligatorily hairy."
+        },
+        {
+          "character": "ligule",
+          "status": "SOURCE_SPECIFIC_MEASUREMENT",
+          "height_mm_approx": 1,
+          "details": "Ligules truncate (flat-tipped), about 1 mm long. The visible Gould paragraph does not specify ligule construction explicitly, so do not infer a new membrane-versus-hair classification from this sentence alone."
+        },
+        {
+          "character": "leaf_blade",
+          "status": "SOURCE_SPECIFIC_MEASUREMENT",
+          "width_mm_mostly": [
+            3,
+            8
+          ],
+          "length_cm": [
+            6,
+            15
+          ],
+          "details": "Blades weak and flat, mostly 3–8 mm wide and 6–15 cm long."
+        },
+        {
+          "character": "auricles",
+          "status": "SOURCE_SPECIFIC_COLLAR_CHARACTER",
+          "details": "Usually with well-developed, slender, pointed auricles at the leaf base; inspect actual clasping structures before deciding their shape."
+        },
+        {
+          "character": "inflorescence",
+          "status": "SUBSPECIES_SCOPE_SPIKE_MEASUREMENT",
+          "length_cm": [
+            4,
+            8
+          ],
+          "width_cm_approx": 1,
+          "details": "Flowerhead 4–8 cm long and around 1 cm broad, excluding awns; often partly enclosed in the expanded uppermost leaf sheath."
+        },
+        {
+          "character": "lateral_vs_central_florets",
+          "status": "TRIAD_STRUCTURE_ORGAN_SPECIFIC",
+          "details": "Florets of lateral spikelets described as large, usually as large as or larger than the floret of the central spikelet. This is Gould's leporinum concept, not necessarily true for every H. murinum subspecies."
+        },
+        {
+          "character": "central_rachilla",
+          "status": "TRIAD_STRUCTURE_ORGAN_SPECIFIC",
+          "details": "Central spikelet floret sits on an elongated rachilla joint about as long as the pedicels of the lateral spikelets; distinguish the rachilla from an actual spikelet pedicel."
+        },
+        {
+          "character": "outer_lateral_glumes",
+          "status": "GLUME_ANATOMY_ORGAN_SPECIFIC",
+          "details": "Outer glumes associated with the lateral florets are narrow, bristlelike (setaceous), and long-awned. Save printed anatomical wording without conflating glumes and true florets."
+        },
+        {
+          "character": "central_and_inner_lateral_glumes",
+          "status": "GLUME_ANATOMY_ORGAN_SPECIFIC",
+          "details": "Central-spikelet glumes and inner glumes of lateral spikelets are long-awned, broadened/flattened below, with coarse cilia on the margins of that flattened basal portion. A macro photograph is required to confirm that architecture on a specimen."
+        },
+        {
+          "character": "glume_awn",
+          "status": "SOURCE_SPECIFIC_MEASUREMENT",
+          "length_cm_mostly": [
+            1,
+            2.5
+          ],
+          "surface": "scabrous",
+          "details": "Glume awns are rough (scabrous), mostly 1–2.5 cm long. Not the 10–35 mm lemma awn described separately."
+        },
+        {
+          "character": "lemma_body_and_awn",
+          "status": "SOURCE_SPECIFIC_TWO_PART_MEASUREMENTS",
+          "lemma_body_length_mm": [
+            6,
+            12
+          ],
+          "lemma_awn_length_mm": [
+            10,
+            35
+          ],
+          "details": "Lemma BODY 6–12 mm long, gradually tapering to a separate AWN 10–35 mm long. Preserve which organ is being measured; do not add these numbers together as a spikelet length."
+        },
+        {
+          "character": "lateral_floret_palea",
+          "status": "ANATOMICAL_SURFACE_NONSCORING",
+          "details": "Paleas of lateral florets pubescent (hairy), as distinct from lemma or glume hairs."
+        },
+        {
+          "character": "central_stamens",
+          "status": "FLOWER_REPRODUCTIVE_STAGE_NONSCORING",
+          "details": "Stamens of central florets exserted at anthesis (projecting from the flower at flowering time)."
+        },
+        {
+          "character": "chromosome_number",
+          "status": "HISTORICAL_CYTOLOGY_NOT_LOCAL",
+          "reported_2n": 28,
+          "details": "Gould reports chromosome number 2n=28; no Hays specimen cytological proof."
+        },
+        {
+          "character": "historical_Texas_distribution",
+          "status": "PARTIAL_TEXT_HISTORICAL_ONLY",
+          "details": "Gould says occasional across Texas except the far eastern and southern regions (his regions 1 and 6), and begins describing it as a roadside weed. The remainder continues beyond this photo; no additional habitats should be invented."
+        },
+        {
+          "character": "adjacent_previous_treatment",
+          "status": "NOT_LEPORINUM_DO_NOT_TRANSFER",
+          "details": "Text immediately ABOVE this treatment refers to Hordeum jubatum (foxtail barley), including its separate flowering period and measurements. No Hordeum jubatum traits were assigned to leporinum."
+        }
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Hare barley within the wall-barley complex — check the triads",
+          "check": "Gould's historical H. leporinum is now H. murinum subsp. leporinum. In its flowering spike, the lateral florets may equal or exceed the central one. Check central and lateral spikelet structures at several intact rachis nodes; don't assume every H. murinum specimen is this subspecies.",
+          "compare": "Other H. murinum subspecies and H. pusillum; require same-specimen close-ups of the central and lateral spikelets before identifying below species rank.",
+          "certainty": "Gould's p. 160 published subsp. leporinum concept plus Kew/USDA name crosswalk; not a locally confirmed subspecies.",
+          "source": "Gould (1975), The Grasses of Texas, p. 160 (as H. leporinum); Kew POWO accepted subsp. leporinum",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77189804-1"
+        },
+        {
+          "look": "Separate flattened, ciliate GLUMES from rough awns",
+          "check": "For Gould's hare-barley treatment, the central glumes and inner lateral glumes are broadened and flattened below, with coarse hairs on the flattened margin. Glume awns are mostly 10–25 mm and rough; lemma bodies 6–12 mm taper to lemma awns 10–35 mm. These are separate organs, not interchangeable lengths.",
+          "compare": "Compare bristlelike outer lateral glumes with flattened, hair-margined inner lateral glumes; verify the distinction with a hand lens or macro photo.",
+          "certainty": "Source-specific published anatomy, not subspecies-confirmed in existing Lab photos.",
+          "source": "Gould (1975), The Grasses of Texas, p. 160, original name Hordeum leporinum",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Inspect the leaf collar and compact seedhead",
+          "check": "Gould reports a tufted annual, stems mostly 15–60 cm tall, flat blades 3–8 mm wide and 6–15 cm long, a truncate ligule around 1 mm, and usually narrow pointed auricles. The flowering head is about 4–8 × 1 cm excluding awns, often partly sheltered by the uppermost sheath. These are for subsp. leporinum specifically.",
+          "compare": "Do not treat a roughly bristly Hordeum head or general H. murinum gallery photo as a proven hare-barley subspecies record.",
+          "certainty": "Published Gould morphological description only; original trial score unchanged.",
+          "source": "Gould (1975), The Grasses of Texas, p. 160, original name Hordeum leporinum",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        }
+      ],
+      "audit_hold": "Preserve leporinum as subsp. leporinum, not generic H. murinum species-wide states. No promotion, no photos relabeled, no county nativity inference, no score/UI option changes, no transfer of H. jubatum text or unfinished historical range."
     }
   ]
 }
