@@ -958,7 +958,15 @@ for(const [id,expected] of Object.entries(pdfPass1)){
   if(!row.source.includes(expectedPaper)||!/printed pp?\./.test(row.source)||!row.source_url?.startsWith("https://"))throw Error("Bad PDF citation "+id+"/"+row.character);
  }
 }
-if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="underground_stems"))throw Error("Disputed Melica nitens rhizome incorrectly scored");
+// Owner's 2026-11-15 same-organ conflict tie-break (Issue #344 D12) now
+// provisionally prefers Diggs, while preserving the opposing H&L report.
+const melicaRhizome=pack.evidence.find(x=>x.id==="melica-nitens"&&x.character==="underground_stems");
+if(!melicaRhizome||melicaRhizome.states.join(',')!=="rhizome_present"
+  ||!melicaRhizome.note.includes("SOURCES DISAGREE")
+  ||!melicaRhizome.note.includes("printed p. 1284")
+  ||!melicaRhizome.note.includes("printed p. 54")
+  ||!melicaRhizome.conflicting_source_url?.includes("page=54"))
+  throw Error("Provisional Melica rhizome source disagreement not safely recorded");
 if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="sheath_margins"))throw Error("Research-pending closed Melica sheath incorrectly scored");
 if(html.includes("Number(!!a.s.trial)-Number(!!b.s.trial)"))throw Error("Old trial-last ranking still separates the 57 newer grasses");
 const unifiedManifest=JSON.parse(fs.readFileSync(path.join(root,"hays-candidates.json"),"utf8"));
