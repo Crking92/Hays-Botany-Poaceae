@@ -20,13 +20,34 @@ const sandbox={document};vm.createContext(sandbox);
 vm.runInContext(script.slice(from,to),sandbox);
 const pack=JSON.parse(fs.readFileSync(path.join(lab,"optional-refinement-evidence.json"),"utf8"));
 assert.equal(pack.mode,"NON_EXCLUDING_POSITIVE_RANKING");
-const expected={florets_per_spikelet:3,spikelet_position:4,glume_marks:4,lemma_texture:5,true_lemma_awn:6,floral_hair_position:4};
-let count=0;
-for(const [character,n] of Object.entries(expected)){
+const original={
+ florets_per_spikelet:["one","two","several"],
+ spikelet_position:["paired","reduced_partner","two_rows","one_side"],
+ glume_marks:["one_vein","first_enclosing","lower_reduced","glabrous"],
+ lemma_texture:["hairy","smooth","wrinkled","reddish_spotted","shiny_hard"],
+ true_lemma_awn:["three","long","short","bent_twisted","none","straight_or_bent"],
+ floral_hair_position:["below_spikelet","rachilla","lemma","partner_stalk"]
+};
+const pending={
+ glume_marks:["upper_one_vein","lower_one_vein","central_glume_glabrous","central_glume_scabrous"],
+ true_lemma_awn:["fertile_awn_2_to_5mm","lower_sterile_awn_variable","apical_mucro"],
+ floral_hair_position:["lower_sterile_lemma_hairs","upper_fertile_lemma_hairs","spikelet_callus_hairs"]
+};
+let count=0,added=0;
+for(const [character,ids] of Object.entries(original)){
  const group=pack.characters.find(c=>c.id===character);
- assert.equal(group?.options.length,n,"Unexpected floral options: "+character);
+ assert.deepEqual(group.options.slice(0,ids.length).map(o=>o.id),ids,"Established diagram-linked option order changed: "+character);
+ assert.deepEqual(group.options.slice(ids.length).map(o=>o.id),pending[character]||[],"Unexpected new floral observations: "+character);
+ for(const option of group.options.slice(ids.length)){
+  added++;
+  assert.equal(option.evidence_pending,true,"Anatomical suboption cannot rank unsourced species");
+  assert.ok(option.detail?.length>65,"Unscored observation needs a clear text-only anatomical instruction");
+  assert.ok(!pack.evidence.some(e=>e.character===character&&e.states.includes(option.id)),"An unverified suboption was accidentally scored");
+  assert.equal(vm.runInContext("flowerFieldTips["+JSON.stringify(character)+"]["+JSON.stringify(option.id)+"]",sandbox),undefined,
+    "Unverified suboptions must use text-only guidance instead of a misleading generic drawing");
+ }
  const signatures=new Set();
- for(const option of group.options){
+ for(const option of group.options.slice(0,ids.length)){
   const drawing=vm.runInContext("flowerFieldSketch("+JSON.stringify(character)+","+JSON.stringify(option.id)+")",sandbox);
   assert.equal(drawing.tag,"svg");
   assert.equal(drawing.attrs.role,"img");
@@ -44,6 +65,10 @@ for(const [character,n] of Object.entries(expected)){
  }
 }
 assert.equal(count,26);
+assert.equal(added,10,"Exactly ten new pending anatomy options; no diagrams are passed off as verified");
+assert.ok(html.includes('Anatomically specific observation only; no verified species-level match yet.'));
+assert.ok(html.includes('const [where,tip]=flowerFieldTips[c.id][selected.id]||[];'));
+
 assert.ok(pack.evidence.length>=336,"Keep original source evidence; later evidence batches may add records");
 assert.ok(html.includes("Object.prototype.hasOwnProperty.call(flowerFieldTips,c.id)"));
 assert.ok(html.includes("guide.append(flowerFieldSketch(c.id,selected.id),info)"));
@@ -55,4 +80,4 @@ for(const f of ["venationSketch","leafDetailSketch","collarFieldSketch","stemFie
  assert.ok(html.includes("function "+f+"("),"Prior illustration missing: "+f);
 assert.ok(html.includes("const picks=Object.entries(state.selected)")&&html.includes(".filter(x=>!x.conflict)"));
 assert.ok(html.includes("b.refinementMatches.length-a.refinementMatches.length"));
-console.log("PASS: 26 distinct optional floret/spikelet/glume/lemma/awn/hair illustrations in six groups; cited data, rights, exclusions and scoring unchanged.");
+console.log("PASS: original 26 distinct floral illustrations preserved; 10 new anatomy-scoped observations use text-only help and no invented species scores.");
