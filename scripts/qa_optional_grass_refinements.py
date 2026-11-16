@@ -82,8 +82,17 @@ assert '["flower","Flowers / spikelets"]' in html
 assert '["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(id)' in html
 flower_rows=[x for x in bundle["evidence"] if x["character"] in flower_ids]
 assert len(flower_rows)>=85 and len({x["id"] for x in flower_rows})>=28
-assert all("Diggs, Lipscomb & O'Kennon" in x["source"] and "printed p." in x["source"] for x in flower_rows)
-assert all(x["source_url"]=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas" for x in flower_rows)
+def verified_flower_provenance(x):
+    if x.get("source_status") == "READY_SUPPLEMENTAL_CONDITIONAL":
+        return (x.get("coordination_issue") == 344
+                and x.get("source_priority_status") == "supplemental_not_overriding_primary"
+                and x.get("original_source_citation", "").strip()
+                and x.get("note", "").strip()
+                and x.get("source_url", "").startswith("https://"))
+    return ("Diggs, Lipscomb & O'Kennon" in x["source"]
+            and "printed p." in x["source"]
+            and x["source_url"] == "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")
+assert all(verified_flower_provenance(x) for x in flower_rows), "Floral record has neither Diggs primary nor cited conditional supplemental source"
 assert all(x["id"] in {o["id"] for o in original + universe} for x in flower_rows), "Optional reproductive evidence needs Diggs printed-page source, even for the 57 unadmitted candidates"
 def positive(taxon,character,state):
     return any(x["id"]==taxon and x["character"]==character and state in x["states"] for x in flower_rows)
