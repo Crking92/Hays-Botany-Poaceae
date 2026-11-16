@@ -259,4 +259,63 @@ assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing Gould display route must show bahiagrass diagnostic checks");
 assert(bahia.learner_diagnostic_checks.every(x=>x.source.includes("Gould") && x.url.startsWith("https://")));
 
-console.log("PASS: Gould Paspalum notatum comparison, adjacent species, taxon and ligule holds saved; key scoring unchanged");
+
+// Final owner-supplied Gould pages: Paspalum langei p.510, Pappophorum bicolor p.378,
+// and three adjacent treatments with protected historical taxonomic concepts.
+const langei=source.additional_species_treatments.find(t=>t.species_id==="paspalum-langei");
+const bicolor=source.additional_species_treatments.find(t=>t.species_id==="pappophorum-bicolor");
+const separatum=source.additional_species_treatments.find(t=>t.species_id==="paspalum-separatum");
+const mono=source.additional_species_treatments.find(t=>t.species_id==="paspalum-monostachyum");
+const vag=source.additional_species_treatments.find(t=>t.species_id==="pappophorum-vaginatum");
+assert(langei&&bicolor&&separatum&&mono&&vag);
+assert.equal(langei.printed_page,510);
+assert.equal(bicolor.printed_page,378);
+assert.equal(langei.taxonomy.status,"CURRENT_NAME_ACCEPTED");
+assert.equal(bicolor.taxonomy.status,"CURRENT_NAME_ACCEPTED");
+assert.equal(langei.observations.length,16);
+assert.equal(bicolor.observations.length,21);
+assert.equal(langei.learner_diagnostic_checks.length,2);
+assert.equal(bicolor.learner_diagnostic_checks.length,3);
+const lo=new Map(langei.observations.map(x=>[x.character,x]));
+assert.deepEqual(lo.get("culm_height").height_cm,[30,100]);
+assert.deepEqual(lo.get("leaf_blade").width_mm_mostly,[7,18]);
+assert.deepEqual(lo.get("inflorescence_branch_count").usually,[2,5]);
+assert.deepEqual(lo.get("inflorescence_branch_length").length_cm_mostly,[4,8]);
+assert.deepEqual(lo.get("spikelet_length_and_shape").length_mm,[2.2,2.6]);
+assert.deepEqual(lo.get("first_glume").fraction_spikelet_length,[0.25,1/3]);
+assert(lo.get("second_glume_and_lower_lemma").details.includes("glandular"));
+assert.equal(lo.get("chromosome_number").reported_2n,60);
+const bo=new Map(bicolor.observations.map(x=>[x.character,x]));
+assert.deepEqual(bo.get("culm_height_posture").height_cm_mostly,[30,80]);
+assert.deepEqual(bo.get("blade_base_hairs").hair_length_mm,[2,4]);
+assert.deepEqual(bo.get("blade").width_mm,[1.5,5]);
+assert.deepEqual(bo.get("panicle_length").length_cm_mostly,[12,20]);
+assert.deepEqual(bo.get("floret_counts").perfect_florets,[2,3]);
+assert.equal(bo.get("floret_counts").reduced_florets_above,2);
+assert.deepEqual(bo.get("lemma_awns").awn_count_per_lemma,[11,15]);
+assert.deepEqual(bo.get("lemma_awns").longest_awn_mm,[2.5,5]);
+assert.equal(bo.get("chromosome_number").reported_2n,100);
+assert(bo.get("ligule").details.includes("ring of short hairs"));
+assert(bicolor.genus_key_context.second_choice.name.includes("vaginatum"));
+assert.equal(separatum.observations.length,10);
+assert.equal(mono.observations.length,7);
+assert.equal(vag.observations.length,4);
+assert.equal(separatum.taxonomy.current_kew_name,"Paspalum setaceum var. setaceum");
+assert.equal(vag.taxonomy.kew_accepted_name,"Pappophorum mucronulatum Nees");
+assert.equal(vag.taxonomy.grin_accepted_name,"Pappophorum vaginatum Buckley");
+assert.equal(vag.taxonomy.conflict_status,"DISAGREEMENT_KEEP_BOTH_TAXON_CONCEPTS");
+assert.equal(mono.evidence_level,"PARTIAL_ADJACENT_SPECIES_TREATMENT_ONLY");
+const lTrial=read("provisional-trial-batch4.json").profiles.find(x=>x.id==="paspalum-langei");
+const lCandidate=read("hays-candidates.json").candidates.find(x=>x.id==="paspalum-langei");
+const bCandidate2=read("hays-candidates.json").candidates.find(x=>x.id==="pappophorum-bicolor");
+assert(lTrial&&lCandidate&&bCandidate2);
+assert.deepEqual(lTrial.traits,{head:["one_sided","paired_spikes"],habit:["tuft"],ligule:[],awns:[]});
+assert.equal(lTrial.admission_status,"RESEARCH_TRIAL_NOT_ADMITTED");
+assert.equal(bCandidate2.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
+assert(!read("hays-candidates.json").candidates.some(x=>["paspalum-separatum","paspalum-monostachyum","pappophorum-vaginatum"].includes(x.id)));
+const allScored=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json"));
+assert(!allScored.some(x=>["paspalum-langei","pappophorum-bicolor"].includes(x.id)),"Do not silently promote source-only species");
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"));
+assert([...langei.learner_diagnostic_checks,...bicolor.learner_diagnostic_checks].every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
+
+console.log("PASS: Gould final rustyseed and pink pappusgrass source treatments with taxonomy holds saved; no scoring or species admissions changed");
