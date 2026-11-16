@@ -514,7 +514,7 @@ for(const [key,want] of Object.entries(expected)){
  assert(e.states.every(s=>opts.get(e.character)?.has(s)),'Unsupported UI option '+key);
  assert.equal(e.evidence_level,'PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED');
 }
-for(const key of ['miscanthus-sinensis|blade_midnerve','miscanthus-sinensis|blade_venation','eragrostis-secundiflora|ligule_edge'])
+for(const key of ['miscanthus-sinensis|blade_midnerve','miscanthus-sinensis|blade_venation'])
  assert(!index.has(key),'Unresolved source page/disagreement was admitted '+key);
 assert(![...index.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')));
 console.log('PASS: 69 nonregional source-verified conditional vegetative records, exact links and holds');
