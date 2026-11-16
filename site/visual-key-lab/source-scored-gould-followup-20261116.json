@@ -1,0 +1,511 @@
+{
+  "schema": "HAYS_GRASS_GOULD_TARGETED_ADMISSIONS_V1",
+  "release_date": "2026-11-16",
+  "original_scored_species": 112,
+  "earlier_source_scored_admissions": 37,
+  "new_literature_admissions": 13,
+  "total_source_scored_after_release": 162,
+  "remaining_research_profiles": 7,
+  "release_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+  "policy": "Named-species evidence permits source-scored admission with at least three supported core traits; held true UNKNOWN is legitimate, and variation is positive-only. No Hays wild specimen, county nativity, exact photo identity or plant status certification.",
+  "unresolved_species_holds": [
+    "dichanthelium-acuminatum",
+    "bothriochloa-longipaniculata",
+    "panicum-miliaceum",
+    "phyllostachys-aurea",
+    "bromus-brevis",
+    "cortaderia-selloana",
+    "lolium-x-boucheanum"
+  ],
+  "admissions": [
+    {
+      "id": "lolium-perenne",
+      "scientific": "Lolium perenne",
+      "core_traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious",
+          "short_single"
+        ]
+      },
+      "source_url": "https://rangeplants.tamu.edu/plant/ryegrass/",
+      "core_notes": {
+        "head": "Gould 1975 p.106: two-ranked unbranched ryegrass spike.",
+        "habit": "Texas A&M AgriLife exact species growth habit: bunch grass.",
+        "ligule": "Gould 1975 p.106: membranous inner leaf-collar ligule.",
+        "awns": "Gould 1975 p.106: lemmas can lack obvious awns or bear ONE up to 8 mm; conditional morphs, not simultaneous structures."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "habit",
+        "awns"
+      ],
+      "remaining_cautions": [
+        "Mature ryegrass glumes and planting history are needed to separate perenne, multiflorum and hybrids."
+      ],
+      "field_rule": "Look for the two-ranked spike, membranous ligule and basal bunch; awnless and occasionally short-awned lemmas are both documented.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "hordeum-murinum",
+      "scientific": "Hordeum murinum",
+      "core_traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:405301-1/general-information",
+      "core_notes": {
+        "head": "Kew GrassBase, exact H. murinum: barley spike with spikelet triplets.",
+        "habit": "Kew GrassBase, exact species: annual caespitose; Gould p.160 tuft applies only to subsp. leporinum.",
+        "ligule": "Hagenbuch & Lemke 2015 printed p.52: membranous, truncate 0.5–1 mm.",
+        "awns": "Kew GrassBase exact H. murinum: glumes and lemma have long awns."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "habit"
+      ],
+      "remaining_cautions": [
+        "Gould's historical H. leporinum should never be generalized as an exact subspecies identification of gallery photographs."
+      ],
+      "field_rule": "Check the triplets of spikelets at spike joints, long awns, tiny membranous ligule and tufted annual crown.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "triticum-aestivum",
+      "scientific": "Triticum aestivum",
+      "core_traits": {
+        "head": [
+          "spike"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "none_obvious",
+          "long"
+        ]
+      },
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:332110-2/general-information",
+      "core_notes": {
+        "head": "Gould 1975 p.173: two-ranked unbranched wheat spike.",
+        "habit": "Kew GrassBase, exact species: annual, caespitose.",
+        "ligule": "Diggs 1999 printed p.1334: membranous ligule; Gould prints disputed 1–3 cm versus independently 1–3 mm, so do not use length.",
+        "awns": "Gould 1975 p.173 and Diggs 1999 p.1334: cultivar-dependent awnless or long lemma awns; polymorphic OR."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "habit",
+        "awns"
+      ],
+      "remaining_cautions": [
+        "Cultivated wheat is not automatically a wild Hays County occurrence.",
+        "Preserve Gould's contested ligule units as transcription, not a diagnostic measurement."
+      ],
+      "field_rule": "Look for the wheat spike, basal tuft and auricles; cultivars may have long lemma awns or lack conspicuous awns.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "steinchisma-hians",
+      "scientific": "Steinchisma hians",
+      "core_traits": {
+        "head": [
+          "airy",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:243676-2/general-information",
+      "core_notes": {
+        "head": "Kew GrassBase: open to contracted branched panicle.",
+        "habit": "Gould 1975 p.458 under Panicum hians: slender tufted stems, erect or decumbent at bases.",
+        "ligule": "Gould p.458/Kew GrassBase: tiny ciliate membrane, not a pure missing ligule."
+      },
+      "held_unknown_core": {
+        "awns": "True lemma awn presence or absence not independently settled by named-species account."
+      },
+      "positive_only_core_keys": [
+        "habit",
+        "ligule"
+      ],
+      "remaining_cautions": [
+        "Do not infer awns from the inflated lower sterile palea or source silence."
+      ],
+      "field_rule": "Look for the characteristically enlarged gaping sterile palea, tufted stems and tiny ciliate collar; awns remain unknown.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "paspalum-notatum",
+      "scientific": "Paspalum notatum",
+      "core_traits": {
+        "head": [
+          "paired_spikes",
+          "one_sided"
+        ],
+        "habit": [
+          "mat",
+          "rhizome"
+        ],
+        "ligule": [
+          "hairs",
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Paspalum~notatum&page=nswfl",
+      "core_notes": {
+        "head": "Gould 1975 species account: usually two one-sided racemes near culm tip.",
+        "habit": "Kew GrassBase: mat-forming perennial with strong rhizomes.",
+        "ligule": "PlantNET NSW Flora, exact species: 0.3–0.6 mm truncate ligule with short dense white hair row behind it; do not claim strictly hair-only."
+      },
+      "held_unknown_core": {
+        "awns": "No directly documented exact fertile lemma awn state admitted."
+      },
+      "positive_only_core_keys": [
+        "habit",
+        "ligule"
+      ],
+      "remaining_cautions": [
+        "Cultivated pasture/turf does not establish a local spontaneous voucher."
+      ],
+      "field_rule": "Check the paired racemes, true rhizomes and tiny membrane plus hairs at leaf collar; awns remain unknown.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "paspalum-langei",
+      "scientific": "Paspalum langei",
+      "core_traits": {
+        "head": [
+          "one_sided",
+          "paired_spikes"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184424-2/general-information",
+      "core_notes": {
+        "head": "Kew GrassBase: 2–5 unilateral branches and paired spikelets.",
+        "habit": "Gould 1975 p.510: perennial with firm, nonrhizomatous tufted base.",
+        "ligule": "Kew GrassBase, exact accepted species: eciliate membranous ligule."
+      },
+      "held_unknown_core": {
+        "awns": "Source doesn't conclusively establish a true lemma awn presence/absence state."
+      },
+      "positive_only_core_keys": [
+        "head"
+      ],
+      "remaining_cautions": [
+        "Verify glandular hair markings and spikelet dimensions before species-level local identification."
+      ],
+      "field_rule": "Check 2–5 one-sided racemes, glandular hairy glumes and a membrane ligule; true awn state remains unresolved.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "sphenopholis-interrupta",
+      "scientific": "Sphenopholis interrupta",
+      "core_traits": {
+        "head": [
+          "compact",
+          "long_narrow_panicle"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "bent_dorsal"
+        ]
+      },
+      "source_url": "https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/site/visual-key-lab/source-reference-gould-1975.json",
+      "core_notes": {
+        "head": "Gould 1975 pp.130–131, Trisetum interruptum: narrow sometimes interrupted panicle.",
+        "habit": "Gould: tufted annual.",
+        "ligule": "Gould: rounded or lacerate ciliate membrane 1.5–2 mm.",
+        "awns": "Gould: ONE dorsal lemma awn 5–8 mm twisted and twice geniculate, distinct from apical teeth."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "awns"
+      ],
+      "remaining_cautions": [
+        "Separate S. interrupta from S. obtusata and other wedgescales using mature florets."
+      ],
+      "field_rule": "Check the narrow panicle, ragged membranous ligule and one dorsal twice-bent lemma awn on mature spikelets.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "pappophorum-bicolor",
+      "scientific": "Pappophorum bicolor",
+      "core_traits": {
+        "head": [
+          "long_narrow_panicle",
+          "golden_plume"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "many_feathery"
+        ]
+      },
+      "source_url": "https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/site/visual-key-lab/source-reference-gould-1975.json",
+      "core_notes": {
+        "head": "Gould 1975 p.378: narrow pinkish feathery panicle.",
+        "habit": "Texas A&M Plants of Texas Rangelands: perennial bunchgrass.",
+        "ligule": "Gould: a genuine ring of short ligular hairs, separate from upper collar hairs.",
+        "awns": "Gould: ELEVEN to FIFTEEN unequal TRUE terminal lemma awns ON ONE lemma, 2.5–5 mm longest."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "awns"
+      ],
+      "remaining_cautions": [
+        "A mature isolated lemma macro is still needed for the photo-identification teaching set."
+      ],
+      "field_rule": "Look for the pinkish plume and 11–15 unequal awns from a SINGLE lemma; not Setaria bristles or bur spines.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "core_traits": {
+        "head": [
+          "fingers"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "short_single"
+        ]
+      },
+      "source_url": "https://floranorthamerica.org/Chloris_canterae",
+      "core_notes": {
+        "head": "Gould 1975 Chloris canterai/canterae: 2–9 fingerlike racemes.",
+        "habit": "Gould: tufted perennial.",
+        "ligule": "FNA under Chloris canterae: membranous inner ligule, distinct from long cilia.",
+        "awns": "Gould: one FERTILE-lemma awn 2.4–5.5 mm, separate short awn on lowest STERILE floret."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "awns"
+      ],
+      "remaining_cautions": [
+        "Compare S. ciliata and check which floret bears each awn."
+      ],
+      "field_rule": "Look for tufted habit, fingers and short fertile lemma awn; distinguish the separate sterile lemma awn.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "scientific": "Megathyrsus maximus",
+      "core_traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60426565-2/general-information",
+      "core_notes": {
+        "head": "Kew GrassBase under Panicum maximum: extensive open panicle, lower branches sometimes whorled.",
+        "habit": "Kew GrassBase: caespitose perennial, short rhizomes frequent.",
+        "ligule": "Gould 1975 p.469: short membrane edged by 3–4 mm hairs; hair length is not membrane height."
+      },
+      "held_unknown_core": {
+        "awns": "No currently approved exact awn state; retain unknown instead of forcing absence."
+      },
+      "positive_only_core_keys": [
+        "habit",
+        "ligule"
+      ],
+      "remaining_cautions": [
+        "Guineagrass is often planted/escaped; no independent Hays voucher certified."
+      ],
+      "field_rule": "Look for tall basal tuft, broad leaves, open branching panicle and a ciliate membranous collar; awns remain unknown.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "melinis-repens",
+      "scientific": "Melinis repens",
+      "core_traits": {
+        "head": [
+          "airy",
+          "compact"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:2945817-1/general-information",
+      "core_notes": {
+        "head": "Smithsonian Hawaiian Flora / Kew: silky pink to silver open or contracted panicle.",
+        "habit": "Kew GrassBase: loosely caespitose annual or short-lived perennial.",
+        "ligule": "Gould 1975 p.542, Rhynchelytrum repens: 0.5–1 mm fringe of actual collar hairs."
+      },
+      "held_unknown_core": {
+        "awns": "Glumes and lower sterile lemma may be minutely to moderately awned, while fertile lemma is awnless; no universal beginner label."
+      },
+      "positive_only_core_keys": [
+        "habit"
+      ],
+      "remaining_cautions": [
+        "Do not mistake purple plume hairs for lemma awns or infer local native status."
+      ],
+      "field_rule": "Check short true hair ligule and silky panicle; sterile floret and glume awn variation remain unknown.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "tridentopsis-elongata",
+      "scientific": "Tridentopsis elongata",
+      "core_traits": {
+        "head": [
+          "long_narrow_panicle",
+          "compact"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "source_url": "https://www.phytoneuron.net/wp-content/uploads/2022/04/29PhytoN-Tridentopsiselongata.pdf",
+      "core_notes": {
+        "head": "Wipff & Weakley 2022 exact segregate: comparatively long 12–25 cm narrow panicle.",
+        "habit": "Gould 1975 p.213 under Tridens muticus var. elongatus, plus Kew current perennial/rhizomatous concept.",
+        "awns": "Wipff & Weakley exact species comparison: no conspicuous long lemma awns in source-key interpretation."
+      },
+      "held_unknown_core": {
+        "ligule": "Gould's infraspecific description doesn't explicitly identify the independent inner ligule of modern strict T. elongata."
+      },
+      "positive_only_core_keys": [
+        "habit",
+        "awns"
+      ],
+      "remaining_cautions": [
+        "Do not import a broad T. mutica ligule character into the modern separate species without confirmation."
+      ],
+      "field_rule": "Compare 3–7-veined upper glumes and 12–25 cm panicles against T. mutica; ligule remains unknown.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "scientific": "Cenchrus ciliaris",
+      "core_traits": {
+        "head": [
+          "foxtail"
+        ],
+        "habit": [
+          "tuft",
+          "rhizome"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "soft_involucre"
+        ]
+      },
+      "source_url": "https://github.com/Crking92/Hays-Botany-Poaceae/blob/main/site/visual-key-lab/source-reference-gould-1975.json",
+      "core_notes": {
+        "head": "Gould 1975, exact Cenchrus ciliaris/Pennisetum ciliare: foxtail-like cylindrical head.",
+        "habit": "Hagenbuch & Lemke 2015 pp.58–59: cespitose crown, rhizomes present or absent.",
+        "ligule": "Gould: minute ciliate membrane; 1–1.5 mm is hair height, NOT membrane height.",
+        "awns": "Gould: 2–4 spikelets per cluster with soft 4–10 mm bristles basally joined in involucres, unlike separate Setaria bristles."
+      },
+      "held_unknown_core": {},
+      "positive_only_core_keys": [
+        "habit",
+        "ligule",
+        "awns"
+      ],
+      "remaining_cautions": [
+        "No photo-specific Hays voucher; all existing CC credits preserved.",
+        "Rhizomes are conditional, not required of every plant."
+      ],
+      "field_rule": "Look for soft basally joined bristles around multiple spikelets; compare Setaria and hard sandburs with a hand lens.",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    }
+  ]
+}
