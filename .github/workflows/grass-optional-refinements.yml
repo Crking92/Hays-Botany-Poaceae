@@ -17,6 +17,7 @@ on:
       - 'scripts/test_grass_backlog_b18_344.cjs'
       - 'scripts/test_grass_backlog_final_primary_344.cjs'
       - 'scripts/test_grass_backlog_final_supp_344.cjs'
+      - 'scripts/test_grass_backlog_final_reconcile_344.cjs'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -63,6 +64,8 @@ jobs:
         run: node scripts/test_grass_backlog_final_primary_344.cjs
       - name: Check A/D supplemental and in-place amended source records
         run: node scripts/test_grass_backlog_final_supp_344.cjs
+      - name: Verify final species-specific florets and unresolved field/source contradictions
+        run: node scripts/test_grass_backlog_final_reconcile_344.cjs
       - name: Check 24 supplemental measured attributes and boundary holds
         run: node scripts/test_grass_backlog_conditional_measurements_344.cjs
       - name: Verify 149 supplemental reproductive citations and anatomy holds
