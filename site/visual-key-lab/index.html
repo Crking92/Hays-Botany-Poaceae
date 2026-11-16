@@ -200,6 +200,15 @@ html[data-theme="dark"] .optional-group{background:#1a2a21}
 html[data-theme="dark"] .optional-group[open] summary,html[data-theme="dark"] .optional-group summary:hover{background:#2c4434}
 html[data-theme="dark"] .optional-chosen{background:#305c41;color:#e3f3e6}
 
+/* Suboptions separate different anatomical organs while preserving one 24-group
+   scoring unit. Multiple selected details remain visible and keyboard accessible. */
+.optional-subgroups{display:grid;gap:12px}
+.optional-subgroup{border-top:1px solid var(--line);padding-top:10px}
+.optional-subgroup:first-child{border-top:0;padding-top:0}
+.optional-subgroup-title{font-size:.83rem;font-weight:750;margin:0 0 8px;color:var(--ink)}
+.optional-multi-note{font-size:.76rem;line-height:1.45;margin:4px 0 12px;color:var(--muted)}
+.optional-choices button[aria-pressed="true"]{font-weight:750}
+.optional-chosen{max-width:100%;overflow-wrap:anywhere}
 /* Keep advanced character menus compact: one group of buttons at a time. */
 .optional-section-tabs{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 13px}
 .optional-section-tabs button{flex:1 1 100px;min-height:42px;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--white);color:var(--ink);font-size:.82rem;font-weight:750}
@@ -479,12 +488,20 @@ function status(s){if(s.trial)return["Research trial · unverified","warn"];if(s
 function refinementEvidence(s,character){
  return (state.refineEvidenceMap[s.id]||[]).find(e=>e.character===character)||null;
 }
+// Keep a group to one positive ranking point even if several independent
+// observations (for example lower + upper glume) are selected together.
+// Old one-value share links are still accepted.
+function selectedRefinementStates(id){
+ const value=state.refineSelected[id];
+ return Array.isArray(value)?value:(typeof value==="string"&&value?[value]:[]);
+}
 function refinementMatches(s){
- return Object.entries(state.refineSelected).filter(([id,val])=>{
-   if(!val)return false;
-   const evidence=refinementEvidence(s,id);
-   return Boolean(evidence&&evidence.states.includes(val));
- }).map(([id,val])=>({character:id,value:val}));
+ return Object.keys(state.refineSelected).flatMap(id=>{
+   const observed=selectedRefinementStates(id),evidence=refinementEvidence(s,id);
+   if(!observed.length||!evidence)return[];
+   const matched=observed.filter(value=>evidence.states.includes(value));
+   return matched.length?[{character:id,value:matched[0],matched}]:[];
+ });
 }
 
 function refinementSection(id){
@@ -1023,34 +1040,50 @@ function renderOptionalCharacters(){
    const group=node("details","optional-group"),summary=node("summary","",c.label);
    const content=node("div","optional-group-body");
    group.dataset.character=c.id; // Direct navigation from a documented comparison clue.
-   const describe=node("p","",c.hint),choices=node("div","optional-choices");
+   const describe=node("p","",c.hint),choices=node("div",c.subgroups?"optional-subgroups":"optional-choices");
+   if(c.multi_select)content.append(node("p","optional-multi-note","Select every separately observed detail that applies. This group still contributes at most one positive ranking point; unknowns never exclude grasses."));
    function updateChosen(){
      const prior=summary.querySelector(".optional-chosen");if(prior)prior.remove();
-     const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
-     if(selected)summary.append(node("span","optional-chosen",selected.label));
+     const selected=selectedRefinementStates(c.id),labels=selected.map(id=>c.options.find(o=>o.id===id)?.label||id);
+     if(labels.length)summary.append(node("span","optional-chosen",labels.length===1?labels[0]:labels.length+" details selected"));
    }
-   updateChosen();group.open=Boolean(state.refineSelected[c.id]);
+   updateChosen();group.open=selectedRefinementStates(c.id).length>0;
    let refreshVeinGuide=()=>{};
-   for(const o of c.options){
-     const pending=isPendingChoice(c,o);const b=node("button",pending?"evidence-pending":"",o.label);b.type="button";
-     b.setAttribute("aria-pressed",String(state.refineSelected[c.id]===o.id));
+   const makeButton=o=>{
+     const pending=isPendingChoice(c,o),b=node("button",pending?"evidence-pending":"",o.label);
+     b.type="button";b.dataset.option=o.id;
+     b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
      if(pending){b.title="Record what you saw; species-level scoring evidence is not available for this detail yet.";b.append(node("span","option-evidence-label","Reference data pending"));}
      b.addEventListener("click",()=>{
-       state.refineSelected[c.id]=state.refineSelected[c.id]===o.id?null:o.id;
-       choices.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b&&state.refineSelected[c.id]===o.id)));
+       const old=selectedRefinementStates(c.id);
+       const next=c.multi_select?(old.includes(o.id)?old.filter(v=>v!==o.id):[...old,o.id]):(old.includes(o.id)?[]:[o.id]);
+       if(next.length)state.refineSelected[c.id]=c.multi_select?next:next[0];
+       else delete state.refineSelected[c.id];
+       choices.querySelectorAll("button[data-option]").forEach(x=>x.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(x.dataset.option))));
        updateChosen();updateUrl();renderResults();refreshVeinGuide();
-       const buttons=tabs.querySelectorAll("button");
-       buttons.forEach((x,i)=>{const section=sections[i][0];const count=state.refineCharacters.filter(c=>refinementSection(c.id)===section&&state.refineSelected[c.id]).length;x.textContent=sections[i][1]+(count?" ("+count+")":"")});
+       tabs.querySelectorAll("button").forEach((x,i)=>{const section=sections[i][0];const count=state.refineCharacters.filter(k=>refinementSection(k.id)===section&&selectedRefinementStates(k.id).length).length;x.textContent=sections[i][1]+(count?" ("+count+")":"")});
      });
-     choices.append(b);
-   }
+     return b;
+   };
+   if(Array.isArray(c.subgroups)){
+     for(const subgroup of c.subgroups){
+       const wrap=node("section","optional-subgroup");
+       wrap.append(node("h4","optional-subgroup-title",subgroup.label));
+       const row=node("div","optional-choices");
+       for(const id of subgroup.options){
+         const option=c.options.find(o=>o.id===id);
+         if(option)row.append(makeButton(option));
+       }
+       wrap.append(row);choices.append(wrap);
+     }
+   }else for(const o of c.options)choices.append(makeButton(o));
    content.append(describe,choices);
    if(c.id==="blade_venation"){
      const guide=node("div","venation-field-guide");
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a vein or rib detail to see a simplified diagram and what to examine."));return;}
        const tip=venationFieldTips[selected.id];
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
@@ -1066,7 +1099,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a leaf detail to see what to examine and a simplified diagram."));return;}
        const [where,tip]=leafDetailGuides[c.id][selected.id]||[];
        if(!where)return;
@@ -1083,7 +1116,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a collar or sheath detail to see a diagram and where to examine your plant."));return;}
        const [where,tip]=collarFieldTips[c.id][selected.id]||[];
        if(!where)return;
@@ -1100,7 +1133,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a stem or root detail for a simplified sketch and what to inspect."));return;}
        const [where,tip]=stemFieldTips[c.id][selected.id]||[];
        if(!where)return;
@@ -1118,7 +1151,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>o.id===state.refineSelected[c.id]);
+       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a flower or spikelet detail for a diagram and a closer-look tip. No flowerhead? Skip this section."));return;}
        const [where,tip]=flowerFieldTips[c.id][selected.id]||[];
        if(!where)return;
@@ -1136,7 +1169,7 @@ function renderOptionalCharacters(){
  }
  $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderResults()};
 }
-function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id;if(state.refineSelected[c.id])u.searchParams.set(key,state.refineSelected[c.id]);else u.searchParams.delete(key)});history.replaceState(null,"",u.toString())}
+function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id,values=selectedRefinementStates(c.id);if(values.length)u.searchParams.set(key,values.join(","));else u.searchParams.delete(key)});history.replaceState(null,"",u.toString())}
 function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?null:choice;updateUrl();render()}
 function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
@@ -1730,7 +1763,7 @@ function comparisonFeatureRows(species){
   const evidence=species.map(s=>refinementEvidence(s,c.id));
   const values=evidence.map(e=>Array.isArray(e?.states)?e.states:[]);
   const labels=values.map(vs=>vs.map(v=>c.options.find(o=>o.id===v)?.label||v));
-  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:state.refineSelected[c.id]||null,refs:evidence});
+  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:selectedRefinementStates(c.id).join(", ")||null,refs:evidence});
  }
  for(const row of rows){
   row.documented=row.values.every(vs=>vs.length>0);
@@ -1959,8 +1992,8 @@ const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).leng
 renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean).length);
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 $("count").textContent=rows.length+" possible";
-const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&state.refineSelected[c.id]===o.id));
-$("results-note").textContent=pendingChoice?"That extra feature is recorded as a research target, but it has no species-level evidence for ranking yet. No grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
+const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
+$("results-note").textContent=pendingChoice?"At least one selected extra detail is a research target without species-level ranking evidence yet. Other documented details may still rank positively; no grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results");root.replaceChildren();
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
@@ -2086,7 +2119,7 @@ try{
    state.refineCharacters=bundle.characters;
  }
 }catch(err){console.warn("Additional field details unavailable; original four-question key remains intact",err);state.refineCharacters=[];state.refineEvidenceMap={};}
-if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(c.options.some(o=>o.id===val))state.refineSelected[c.id]=val}renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 
 /* Reuse existing hand-drawn field diagrams for glossary education.
    These are visual explanations only, never species-level scoring evidence. */
