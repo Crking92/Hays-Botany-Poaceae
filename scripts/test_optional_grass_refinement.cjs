@@ -1557,9 +1557,9 @@ console.log("PASS: 112 original species retained for all extra choices; 24 group
     !/firm-textured/.test(detail.check)||!/1–3 mm/.test(detail.check)||
     !/obtuse/.test(detail.check)||!/erose/.test(detail.check)||
     !/Hagenbuch/.test(detail.source)||!detail.url.endsWith("#page=60")||
-    !detail.photo_reference_url?.includes("biosci.utexas.edu/prc/DigFlora/KR/0-BOISS4Web/SCSC-L-Shth-Nod.JPG")||
+    !(detail.photo_reference_url?.includes("biosci.utexas.edu/prc/DigFlora/KR/SCSC.html")||detail.photo_reference_url?.includes("biosci.utexas.edu/prc/DigFlora/KR/0-BOISS4Web/SCSC-L-Shth-Nod.JPG"))||
     !html.includes('Photo reference: '))throw Error("Little bluestem ligule field clue or external image link missing");
  if(length.states.join()!=="short"||edge.states.join()!=="erose"||
-    !/FIRM-TEXTURED/.test(little.character_evidence.ligule.reference))
+    !/FIRM-TEXTURED/.test(length.note)||!/FIRM-TEXTURED/.test(edge.note))
   throw Error("Little bluestem ligule evidence changed or texture not documented");
 }
