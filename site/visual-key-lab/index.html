@@ -1083,7 +1083,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
+       const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a vein or rib detail to see a simplified diagram and what to examine."));return;}
        const tip=venationFieldTips[selected.id];
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
@@ -1099,7 +1099,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
+       const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a leaf detail to see what to examine and a simplified diagram."));return;}
        const [where,tip]=leafDetailGuides[c.id][selected.id]||[];
        if(!where)return;
@@ -1116,7 +1116,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
+       const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a collar or sheath detail to see a diagram and where to examine your plant."));return;}
        const [where,tip]=collarFieldTips[c.id][selected.id]||[];
        if(!where)return;
@@ -1133,7 +1133,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
+       const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a stem or root detail for a simplified sketch and what to inspect."));return;}
        const [where,tip]=stemFieldTips[c.id][selected.id]||[];
        if(!where)return;
@@ -1151,7 +1151,7 @@ function renderOptionalCharacters(){
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
        guide.replaceChildren();
-       const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
+       const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a flower or spikelet detail for a diagram and a closer-look tip. No flowerhead? Skip this section."));return;}
        const [where,tip]=flowerFieldTips[c.id][selected.id]||[];
        if(!where){

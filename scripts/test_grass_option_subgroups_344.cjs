@@ -80,6 +80,7 @@ if(url.searchParams.get("more_glume_marks")!=="lower_reduced,one_vein"||
    url.searchParams.get("more_leaf_base")!=="pointed_auricles"||
    url.searchParams.get("guest")!=="1")
  throw Error("Scoped optional observations do not survive share-link encoding");
+if((script.match(/const selectedIds=selectedRefinementStates\(c\.id\);const selected=c\.options\.find\(o=>o\.id===selectedIds\[selectedIds\.length-1\]\);/g)||[]).length!==5)throw Error("Teaching guides must follow the most recently picked detail in every optional plant-part area");
 if(!script.includes('val.split(",").filter(id=>c.options.some(o=>o.id===id))'))
  throw Error("Share-link multi-option decoding missing");
 if(!script.includes('choices.querySelectorAll("button[data-option]")')||
