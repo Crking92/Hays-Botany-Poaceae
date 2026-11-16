@@ -101,8 +101,16 @@ if(!got.some(x=>x.id==="schizachyrium-scoparium"&&x.extras===1))
   throw Error("Optional short little-bluestem rhizome missing");
 state.refineSelected={stem_nodes:"gland_ring",stem_special:"node_gland_ring"};
 got=verifyUnchanged("gland ring below actual culm joints");
-if(!got.some(x=>x.id==="eragrostis-cilianensis"&&x.extras===2))
-  throw Error("Stinkgrass gland ring not recorded in both observational contexts");
+if(!got.some(x=>x.id==="eragrostis-cilianensis"&&x.extras===1))
+  throw Error("One physical stinkgrass node gland ring must not score twice");
+// The two differently named UI observations remain independently selectable;
+// only the positive ranking bonus is shared when they describe the same organ.
+for(const [key,value] of [["stem_nodes","gland_ring"],["stem_special","node_gland_ring"]]){
+ state.refineSelected={[key]:value};
+ got=verifyUnchanged("independent node gland observation "+key);
+ if(!got.some(x=>x.id==="eragrostis-cilianensis"&&x.extras===1))
+   throw Error("Verified node gland evidence lost for "+key);
+}
 state.refineSelected={basal_crown:"hard_knotty"};
 got=verifyUnchanged("knotty crowns");
 if(!got.some(x=>x.id==="paspalum-dilatatum"&&x.extras===1))throw Error("Knotty Paspalum not ranked");
