@@ -516,5 +516,5 @@ for(const [key,want] of Object.entries(expected)){
 }
 for(const key of ['miscanthus-sinensis|blade_midnerve','miscanthus-sinensis|blade_venation','eragrostis-secundiflora|ligule_edge'])
  assert(!index.has(key),'Unresolved source page/disagreement was admitted '+key);
-assert(![...index.keys()].some(k=>k.startsWith('lolium-x-boucheanum|'));
+assert(![...index.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')));
 console.log('PASS: 69 nonregional source-verified conditional vegetative records, exact links and holds');
