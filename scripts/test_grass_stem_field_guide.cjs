@@ -42,10 +42,13 @@ for(const [char,n] of Object.entries(expected)){
 }
 assert.equal(count,31);
 assert.ok(pack.evidence.length>=336,"Preserve original source evidence; later evidence batches may add records");
-for(const [c,o] of [["culm_posture","prostrate"],["stem_nodes","hairy_stolon_nodes"]]){
- assert.equal(pack.evidence.filter(e=>e.character===c&&e.states.includes(o)).length,0,
- "Uncited field observations must not add species ranking: "+c+" "+o);
-}
+assert.equal(pack.evidence.filter(e=>e.character==="culm_posture"&&e.states.includes("prostrate")).length,0,
+ "Uncited prostrate state remains pending and must not rank grasses");
+const stolonNodeHairs=pack.evidence.filter(e=>e.character==="stem_nodes"&&e.states.includes("hairy_stolon_nodes"));
+assert.equal(stolonNodeHairs.length,1,"Only the newly documented Hopia stolon-node hairs may rank");
+assert.equal(stolonNodeHairs[0].id,"hopia-obtusa");
+assert(stolonNodeHairs[0].source.includes("Hagenbuch & Lemke")&&stolonNodeHairs[0].pdf_printed_page===51&&
+ stolonNodeHairs[0].note.includes("STOLONS"),"Stolon-node hair record must preserve organ and printed page");
 assert.equal(pack.characters.find(x=>x.id==="culm_posture").options.find(x=>x.id==="prostrate").evidence_pending,true);
 assert.ok(html.includes("Object.prototype.hasOwnProperty.call(stemFieldTips,c.id)"));
 assert.ok(html.includes("guide.append(stemFieldSketch(c.id,selected.id),info)"));
