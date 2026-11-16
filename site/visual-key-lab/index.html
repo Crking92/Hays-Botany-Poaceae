@@ -744,6 +744,19 @@ function verifiedAdvancedConflict(s){
    const interval=character.id==="blade_width"?evidence.width_mm:evidence.length_mm;
    if(!Array.isArray(interval)||interval.length!==2||
       !interval.every(Number.isFinite)||interval[0]>interval[1])continue;
+   // Answer labels are APPROXIMATE ranges with shared boundaries, not
+   // mutually exclusive exact-mm measurements. A plant documented at 1 mm
+   // can fit both tiny and short ligule choices; 2/5/10-mm blade boundaries
+   // likewise overlap. Use the original interval before ruling anything out.
+   const bands=character.id==="blade_width"?
+     {thread:[0,2],narrow:[2,5],medium:[5,10],broad:[10,Infinity]}:
+     {tiny:[0,1],short:[1,3],medium:[3,8],long:[8,Infinity]};
+   const tolerance=0.1; // generous to labels like "about 2–5 mm"
+   const canOverlap=observed.some(value=>{
+     const band=bands[value];
+     return !band||interval[0]<=band[1]+tolerance&&interval[1]>=band[0]-tolerance;
+   });
+   if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||

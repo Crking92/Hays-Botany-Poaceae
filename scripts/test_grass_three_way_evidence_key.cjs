@@ -39,6 +39,27 @@ refs["bouteloua-hirsuta"]=priorBrome;
 state.refineSelected={ligule_length:"tiny"};
 assert(excluded().includes("muhlenbergia-lindheimeri"),"8–15 mm ligule conflicts with tiny membrane");
 assert(contradictions("phragmites-australis").length===0,"unbounded tiny ligule cannot be ruled out");
+// Approximate bands SHARE their 1, 2, 3 and 5 mm endpoints. The
+// exact published interval must be consulted before calling a species
+// incompatible merely because its pre-binned positive state differs.
+for(const [species,char,choice,cutpoint] of [
+ ["hordeum-murinum","ligule_length","short",1],
+ ["bouteloua-hirsuta","blade_width","narrow",2],
+ ["bothriochloa-ischaemum","blade_width","medium",5],
+ ["melica-nitens","ligule_length","short",3]
+]){
+ const record=(refs[species]||[]).find(x=>x.character===char);
+ assert(record,"Expected named species and measured trait present: "+species+"/"+char);
+ const interval=char==="blade_width"?record.width_mm:record.length_mm;
+ assert(Array.isArray(interval)&&interval[0]<=cutpoint&&interval[1]>=cutpoint,
+   species+": source interval does not cross expected boundary "+cutpoint);
+ state.refineSelected={[char]:choice};
+ assert(!contradictions(species).some(x=>x.character===char),
+   species+": adjacent approximate band wrongly treated as a documented contradiction");
+}
+state.refineSelected={blade_width:"broad"};
+assert(excluded().includes("bouteloua-hirsuta"),
+ "Clearly separated 1–2 vs >10 mm blade widths must still exclude when measured.");
 state.refineSelected={florets_per_spikelet:"one"};
 assert(excluded().includes("eragrostis-spectabilis"),"exact species mature several-floret count must conflict with one");
 assert(!excluded().includes("bromus-japonicus"),"generic many-flowered note without exact source gate cannot eliminate");
