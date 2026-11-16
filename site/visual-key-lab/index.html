@@ -1790,7 +1790,9 @@ function comparisonFeatureRows(species){
   const evidence=species.map(s=>refinementEvidence(s,c.id));
   const values=evidence.map(e=>Array.isArray(e?.states)?e.states:[]);
   const labels=values.map(vs=>vs.map(v=>c.options.find(o=>o.id===v)?.label||v));
-  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:selectedRefinementStates(c.id).join(", ")||null,selectedValues:selectedRefinementStates(c.id),refs:evidence});
+  const rawSelected=state.refineSelected[c.id];
+   const selectedValues=Array.isArray(rawSelected)?rawSelected:(typeof rawSelected==="string"&&rawSelected?[rawSelected]:[]);
+   rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:selectedValues.join(", ")||null,selectedValues,refs:evidence});
  }
  for(const row of rows){
   row.documented=row.values.every(vs=>vs.length>0);
