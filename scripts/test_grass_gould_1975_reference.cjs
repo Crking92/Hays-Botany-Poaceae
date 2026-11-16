@@ -97,4 +97,39 @@ assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(shard=>read("specie
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing Gould source-side display route missing");
 assert(buffel.learner_diagnostic_checks.every(c=>c.source?.includes("Gould")&&c.url?.startsWith("https://")));
 
-console.log("PASS: Gould little bluestem, Virginia wildrye and buffelgrass source details retained; research status and scoring unchanged");
+
+// Gould (1975) p.106: source-specific Lolium perenne data and adjacent genus key, never automatic scoring.
+const rye=source.additional_species_treatments?.find(x=>x.species_id==="lolium-perenne");
+assert(rye,"Gould perennial ryegrass treatment missing");
+assert.equal(rye.printed_page,106);
+assert.equal(rye.taxon,"Lolium perenne");
+assert.equal(rye.authority_as_printed,"Lolium perenne L., Sp. Pl. 83. 1753");
+assert.equal(rye.classification_decision.action,"PRESERVE_RESEARCH_TRIAL_SCORING_AND_ALL_TAXONOMIC_HOLDS");
+assert.equal(rye.genus_context.genus_as_printed,"23. Lolium L.");
+assert.equal(rye.genus_context.observations.length,7);
+assert.deepEqual(rye.genus_context.printed_historical_key.map(x=>x.taxon_as_printed),["L. perenne","L. temulentum"]);
+assert(rye.genus_context.cautions.includes("multiflorum"));
+assert.equal(rye.observations.length,18);
+assert.equal(rye.learner_diagnostic_checks.length,3);
+const ryeObs=new Map(rye.observations.map(x=>[x.character,x]));
+assert.deepEqual(ryeObs.get("culm_height").height_cm,[25,70]);
+assert.deepEqual(ryeObs.get("blade_width").width_mm,[2,10]);
+assert.deepEqual(ryeObs.get("spike_length").length_cm,[10,20]);
+assert.deepEqual(ryeObs.get("spikelet_arrangement").spikelets_per_spike,[15,30]);
+assert.deepEqual(ryeObs.get("florets_per_spikelet").florets_mostly,[5,12]);
+assert.deepEqual(ryeObs.get("glume_size_and_veins").glume_length_mm,[5,10]);
+assert.deepEqual(ryeObs.get("glume_size_and_veins").strong_veins,[3,7]);
+assert.equal(ryeObs.get("lemma_tip_and_awn").awn_length_mm_max,8);
+assert.equal(ryeObs.get("lemma_tip_and_awn").status,"SOURCE_VARIATION_HOLD_FOR_CORE_AWN_MAPPING");
+assert.equal(ryeObs.get("chromosome_number").reported_2n,14);
+assert(rye.learner_diagnostic_checks.every(x=>x.source.includes("Gould") && x.url.startsWith("https://")));
+const ryeTrial=read("provisional-trial-batch2.json").profiles.find(x=>x.id==="lolium-perenne");
+const ryeCandidate=read("hays-candidates.json").candidates.find(x=>x.id==="lolium-perenne");
+assert(ryeTrial&&ryeCandidate);
+assert.equal(ryeTrial.admission_status,"RESEARCH_TRIAL_NOT_ADMITTED");
+assert.deepEqual(ryeTrial.traits,{head:["spike"],habit:[],ligule:[],awns:["none_obvious"]});
+assert.equal(ryeCandidate.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
+assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).some(x=>x.id==="lolium-perenne"));
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing source-only display must support Lolium");
+
+console.log("PASS: Gould little bluestem, Virginia wildrye, buffelgrass, and perennial ryegrass saved; scoring untouched");
