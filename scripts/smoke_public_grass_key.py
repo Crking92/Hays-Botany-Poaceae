@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "index.html"]
 
 
 def read_public(name):
@@ -73,8 +73,17 @@ def verify():
     assert followup_ids <= {p["id"] for p in trials}
     assert followup["total_source_scored_after_release"] == 162
     assert followup["remaining_research_profiles"] == 7
-    all_promoted_ids = promoted_ids | followup_ids
-    assert len(all_promoted_ids) == 50
+    focused = public["focused-identity-review-20261116.json"]
+    assert focused["schema"] == "HAYS_GRASS_FOCUSED_IDENTITY_ADMISSIONS_V1"
+    assert focused["admission_count"] == 2 and focused["total_source_scored_after_release"] == 164
+    focused_ids = {a["id"] for a in focused["admissions"]}
+    assert focused_ids == {"bothriochloa-longipaniculata", "panicum-miliaceum"}
+    assert focused_ids.isdisjoint(promoted_ids | followup_ids)
+    assert all(not a["photo_specific_identity_certified"] for a in focused["admissions"])
+    all_promoted_ids = promoted_ids | followup_ids | focused_ids
+    assert len(all_promoted_ids) == 52
+    assert len(set(focused["remaining_holds"])) == 5
+    assert set(focused["remaining_holds"]).isdisjoint(all_promoted_ids)
     review = public["promotion-review-37-20261116.json"]
     assert review["schema"] == "HAYS_GRASS_PROMOTION_REVIEW_37_20261116_V1"
     assert review["review_count"] == 37 and review["approved_count"] == 33 and review["hold_count"] == 4
@@ -82,8 +91,8 @@ def verify():
     old_holds = {x["id"] for x in review["reviewed"] if x["decision"].startswith("HOLD_")}
     assert old_holds.isdisjoint(promoted_ids), "Historical 37-cohort holds were changed"
     assert "cenchrus-ciliaris" in followup_ids, "Supported buffelgrass bristle hold not resolved"
-    assert (old_holds - {"cenchrus-ciliaris"}).isdisjoint(all_promoted_ids), "Three remaining identity holds were promoted"
-    assert set(followup["unresolved_species_holds"]).isdisjoint(all_promoted_ids), "Seven exact species holds not preserved"
+    assert (old_holds - {"cenchrus-ciliaris"}) - focused_ids == {"dichanthelium-acuminatum"}, "Historical three holds not accounted for"
+    assert set(followup["unresolved_species_holds"]) - focused_ids == set(focused["remaining_holds"]), "Historic seven holds not properly resolved"
     core_gaps = public["ready-core-gap-assignments.json"]
     assert core_gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
     assert core_gaps["integration_count"] == len(core_gaps["rows"]) == 28
