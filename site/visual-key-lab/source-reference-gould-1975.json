@@ -257,6 +257,210 @@
         }
       ],
       "audit_hold": "Do not map bristly silhouette to foxtail; retain original head='spike', original awn classifications, photo credits and saved conditional variation. No original printed page photograph is rehosted."
+    },
+    {
+      "taxon": "Cenchrus ciliaris",
+      "common_name": "buffelgrass",
+      "species_id": "cenchrus-ciliaris",
+      "historical_synonym_as_printed": "Pennisetum ciliare (L.) Link",
+      "authority_as_printed": "Cenchrus ciliaris L., Mant. 302. 1771",
+      "printed_page": "NOT_VISIBLE_IN_OWNER_PHOTO",
+      "illustration_reference": "Fig. 294 cited in treatment, not pictured in this submitted page",
+      "material": "Owner photograph of Gould's Cenchrus key fragment above the Cenchrus ciliaris species account, plus visible distribution and flowering period",
+      "added_on": "2026-11-16",
+      "evidence_level": "AUTHORITATIVE_PUBLISHED_SPECIES_DESCRIPTION_NOT_LOCAL_VOUCHER",
+      "classification_decision": {
+        "existing_research_head": "foxtail",
+        "existing_research_awn_bristle_option": "bristles",
+        "action": "PRESERVE_PROVISIONAL_RESEARCH_STATES_NO_NEW_SCORING",
+        "rationale": "A dense cylindrical bristly inflorescence supports a foxtail-like outward appearance. Buffelgrass fascicle bristles are mostly fused only at the base and are distinct from lemma/glume awns. Current research-trial head/awn categorization can remain until original-key promotion evidence is independently reconciled.",
+        "ligule_note": "The book says short CILIATE MEMBRANE with hairs 1–1.5 mm: this is a membranous structure carrying marginal hairs, not evidence for a hair-only ligule. Preserve the current unknown core ligule slot until source-specific mapping and organism-wide candidate promotion is reviewed.",
+        "nativity_note": "Gould calls it introduced forage grass; do not treat its reported Texas presence or one Hays occurrence as native county flora."
+      },
+      "observations": [
+        {
+          "character": "taxonomic_name",
+          "status": "HISTORICAL_SYNONYM_RECORDED",
+          "details": "Original treatment names Cenchrus ciliaris L. and synonym Pennisetum ciliare (L.) Link. Do not assume any extra synonym or cultivar based on this page."
+        },
+        {
+          "character": "growth_habit",
+          "status": "PUBLISHED_NONSCORING_CORROBORATION",
+          "details": "Perennial; stems erect or knee-bent and spreading, branched and described as 'knotty' at base. Growth form is NOT established from the available research-trial photographs."
+        },
+        {
+          "character": "culm_height",
+          "status": "PUBLISHED_MEASUREMENT_NOT_HAYS_SPECIMEN",
+          "height_cm": [
+            50,
+            100
+          ],
+          "details": "Stems 50–100 cm tall in this historical Texas treatment."
+        },
+        {
+          "character": "sheath",
+          "status": "SOURCE_BACKED_NONSCORING_DETAIL",
+          "details": "Sheaths laterally compressed and keeled, from hairless to sparsely pilose."
+        },
+        {
+          "character": "ligule",
+          "status": "MEMBRANEOUS_WITH_CILIATE_MARGIN_HAIR_ONLY_CLASSIFICATION_NOT_SUPPORTED",
+          "hairs_mm": [
+            1,
+            1.5
+          ],
+          "details": "Short, ciliate membranous ligule. Gould describes the hairs as mostly 1–1.5 mm long; this is the hair length, NOT an explicit measured height of the membrane itself. Do not transform this into a hair-only ligule score."
+        },
+        {
+          "character": "blade",
+          "status": "PUBLISHED_LEAF_RANGE_NONSCORING",
+          "length_cm": [
+            8,
+            30
+          ],
+          "width_mm": [
+            2.5,
+            8
+          ],
+          "details": "Blades thin, usually flat, rough or slightly hairy; mostly 8–30 cm long and 2.5–8 mm broad."
+        },
+        {
+          "character": "inflorescence",
+          "status": "RESEARCH_TRIAL_APPEARANCE_SUPPORTED",
+          "length_cm_mostly": [
+            4,
+            10
+          ],
+          "length_cm_parenthetical_max": 13,
+          "thickness_cm": [
+            1,
+            2
+          ],
+          "details": "Dense, cylindrical flowering head, mostly 4–10 cm long, occasionally to 13 cm, and 1–2 cm thick. This supports an observational dense bristly cylinder, not a universally identified local specimen."
+        },
+        {
+          "character": "bristles",
+          "status": "SOURCE_BACKED_ORGAN_DETAIL",
+          "length_mm": [
+            4,
+            10
+          ],
+          "details": "Purplish bristles 4–10 mm long, cylindrical in cross section (terete), long-ciliate along inner margins, united (connate) only at their bases or slightly above. Separate bristles from glume and lemma awns."
+        },
+        {
+          "character": "fascicles",
+          "status": "SOURCE_BACKED_ANATOMY_NONSCORING",
+          "spikelets_per_fascicle": [
+            2,
+            4
+          ],
+          "details": "Each fascicle has 2–4 spikelets and a minute, hairy (pilose) peduncle. Count the spikelets inside one bristle-bearing fascicle rather than counting separate fascicles."
+        },
+        {
+          "character": "spikelet_length",
+          "status": "PUBLISHED_MEASUREMENT_NONSCORING",
+          "length_mm": [
+            2.5,
+            5.6
+          ],
+          "details": "Spikelets reported as 2.5–5.6 mm long."
+        },
+        {
+          "character": "upper_floret_lemma_length",
+          "status": "PUBLISHED_MEASUREMENT_ANATOMICALLY_SCOPED",
+          "length_mm": [
+            2.2,
+            5.4
+          ],
+          "details": "Lemma of the UPPER floret 2.2–5.4 mm long; never map directly to spikelet length or awn length."
+        },
+        {
+          "character": "caryopsis",
+          "status": "PUBLISHED_MEASUREMENT_NONSCORING",
+          "length_mm": [
+            1.4,
+            1.9
+          ],
+          "diameter_mm_approx": 1,
+          "details": "Caryopses turgid, ovoid, about 1.4–1.9 mm long and approximately 1 mm in diameter. This describes mature grains, not the entire spikelet."
+        },
+        {
+          "character": "chromosome_numbers",
+          "status": "HISTORICAL_MULTIPLE_REPORTS_NOT_FIELD_SCORING",
+          "reported_2n": [
+            32,
+            34,
+            35,
+            36,
+            40,
+            44,
+            52,
+            54
+          ],
+          "details": "Gould lists multiple reported chromosome counts, not a specific cytotype confirmed from Hays County."
+        },
+        {
+          "character": "Texas_distribution",
+          "status": "HISTORICAL_INTRODUCED_NOT_BONAP_COUNTY_NATIVITY",
+          "details": "Gould describes the grass as introduced for forage, then common on sandy rangelands and semi-disturbed sites through Texas region 6, occasionally regions 2, 3, 7, and 10. Historical regional bins are NOT current county-level native distribution."
+        },
+        {
+          "character": "general_origin",
+          "status": "GOULD_HISTORICAL_ORIGIN_STATEMENT",
+          "details": "Gould describes it as native to India and Africa and widely introduced elsewhere. Do not translate this historical generalization into a present-day global distribution determination."
+        },
+        {
+          "character": "flowering_period",
+          "status": "CONDITIONAL_HISTORICAL_PHENOLOGY",
+          "details": "Gould reports flowering from early spring to late autumn under favorable growing conditions. Do not imply a guaranteed Hays County observation window."
+        }
+      ],
+      "adjacent_genus_key_excerpt": {
+        "scope": "Partial Cenchrus key printed immediately ABOVE Cenchrus ciliaris; NOT the C. ciliaris species diagnosis, and the beginning of the key is cut off.",
+        "status": "SAVE_FOR_FUTURE_SPECIES_ONLY_INCOMPLETE_COUPLET",
+        "taxa": [
+          {
+            "taxon_as_printed": "C. echinatus",
+            "diagnostic_condition": "Burs with one whorl of united flattened spines, subtended by one to several whorls of bristles."
+          },
+          {
+            "taxon_as_printed": "C. incertus",
+            "diagnostic_condition": "Burs with more than one whorl of flattened spines at irregular intervals; mostly 8–40 spines, larger spine bases often to 1.5 mm wide, upper floret 3.4–5.8 mm."
+          },
+          {
+            "taxon_as_printed": "C. longispinus",
+            "diagnostic_condition": "Burs with more than one whorl of flattened spines at irregular intervals; mostly 45–75 spines, larger spine bases seldom over 1 mm wide, upper floret 5.8–7.6 mm."
+          }
+        ],
+        "caution": "Do not apply these spiny-bur species counts as C. ciliaris diagnostic states, and do not treat partial genus couplets as an exhaustive Cenchrus key."
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Measure the dense bristly head (Gould)",
+          "check": "The buffelgrass inflorescence is a close-packed cylinder, mostly 4–10 cm long (sometimes to 13 cm), about 1–2 cm thick. Its purplish bristles are about 4–10 mm and can look foxtail-like, but inspect the bristles and spikelets rather than identifying by the silhouette alone.",
+          "compare": "Setaria foxtails and other Cenchrus grasses; confirm whether a fascicle's bristles are united near their bases and how many spikelets it encloses.",
+          "certainty": "Gould published description; Cenchrus ciliaris remains a research trial, with no verified Hays specimen.",
+          "source": "Frank W. Gould, The Grasses of Texas, Cenchrus ciliaris treatment, printed page not visible in photograph",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Inspect the ciliate membrane and flattened sheath (Gould)",
+          "check": "The ligule is a short MEMBRANE with marginal hairs mostly 1–1.5 mm long; this is not a pure fringe-of-hairs ligule. The leaf sheath is flattened and keeled, sometimes bearing sparse hairs; flat blades are mostly 2.5–8 mm wide.",
+          "compare": "Separate the true membrane from its hairs at the inner blade–sheath junction using magnification; do not measure nearby collar hairs as ligule height.",
+          "certainty": "Published Texas flora source. No new core ligule state scored in the provisional identification key.",
+          "source": "Frank W. Gould, The Grasses of Texas, Cenchrus ciliaris treatment, printed page not visible in photograph",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Separate a fascicle and count spikelets (Gould)",
+          "check": "The bristles are joined only at their bases or a little above. Gould reports 2–4 spikelets per fascicle and spikelets 2.5–5.6 mm long; the UPPER floret lemma is 2.2–5.4 mm. Avoid equating a bristle, a true awn, a fascicle and a spikelet.",
+          "compare": "Compare whole fascicles with Setaria's separate sterile branchlet bristles and spiny sandbur involucres.",
+          "certainty": "Gould's organism-specific source measurements; dissection and a source-certified local macrophotograph still needed.",
+          "source": "Frank W. Gould, The Grasses of Texas, Cenchrus ciliaris treatment, printed page not visible in photograph",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        }
+      ],
+      "audit_hold": "Keep Cenchrus ciliaris introduced and provisional; no changes to original 112, the optional 1,815-record master, candidate promotion/stock photos/rights or core head/awn/ligule scoring. Historical Texas regions and genus key fragments do not certify Hays nativity or local species ID. Do not host owner-photographed book page image as public source media."
     }
   ]
 }
