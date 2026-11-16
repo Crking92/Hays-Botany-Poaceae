@@ -1,0 +1,149 @@
+{
+  "schema": "HAYS_GRASS_FOCUSED_IDENTITY_ADMISSIONS_V1",
+  "release_date": "2026-11-16",
+  "prior_scored_162": true,
+  "admission_count": 2,
+  "total_source_scored_after_release": 164,
+  "remaining_research_species_count": 5,
+  "source_scored_meaning": "Published species concept and beginner characters, not a verified photo specimen, local voucher, introduced establishment or BONAP county nativity.",
+  "immutable_previous_records": true,
+  "remaining_holds": [
+    "dichanthelium-acuminatum",
+    "phyllostachys-aurea",
+    "bromus-brevis",
+    "cortaderia-selloana",
+    "lolium-x-boucheanum"
+  ],
+  "admissions": [
+    {
+      "id": "bothriochloa-longipaniculata",
+      "scientific": "Bothriochloa longipaniculata",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "core_traits": {
+        "head": [
+          "long_narrow_panicle",
+          "bushy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": [
+          "long"
+        ]
+      },
+      "positive_only_core_keys": [
+        "head",
+        "habit",
+        "awns"
+      ],
+      "core_sources": {
+        "head": {
+          "reference": "Allred, Flora of North America, vol. 25, printed p.640, exact B. longipaniculata",
+          "source_url": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "note": "Panicles narrowly lanceolate 9–20 cm, silvery-white to light tan, with 3–5 cm flowering branches; distinguish from shorter B. laguroides panicles only provisionally."
+        },
+        "habit": {
+          "reference": "USDA NRCS exact-species Plant Guide, printed p.1; prior coordinator-reviewed Issue #368",
+          "source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+          "note": "Tuft-forming upright bunchgrass; this already received READY_SUPPLEMENTAL_CONDITIONAL, not a claim that the Louisiana reference photo displays rooted crown."
+        },
+        "ligule": {
+          "reference": "Allred, Flora of North America, vol.25, printed p.640",
+          "source_url": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "note": "Membranous ligule approximately 2.5–3 mm, structurally distinguished from stem or collar hairs."
+        },
+        "awns": {
+          "reference": "Allred, Flora of North America, vol.25, printed p.640",
+          "source_url": "https://floranorthamerica.org/Bothriochloa_longipaniculata",
+          "note": "True fertile-lemma awns 9–14 mm; do not confuse with hairy rame internodes."
+        }
+      },
+      "identification_reference": {
+        "source_page": "https://warcapps.usgs.gov/PlantID/Species/Details/3284",
+        "photographer": "Larry Allain / USGS",
+        "existing_photo_index": 0,
+        "role": "named exact-species institutional general reference",
+        "image_anatomy_limit": "Silvery head plausibly fits the source description, but no individual glume measurement or Hays specimen verification."
+      },
+      "field_rule": "Source-scored literature: Longspike silver beardgrass has a narrow 9–20 cm panicle, robust leafy stems, and shiny narrow acute sessile spikelets 3.5–4.5 mm with awns 9–14 mm. Compare the blunt, often glaucous sessile glumes and shorter panicle of B. laguroides subsp. torreyana. A distant silky flowerhead is never a strict-species identification.",
+      "remaining_cautions": [
+        "FNA strict B. longipaniculata is distinct from B. laguroides subsp. torreyana; older Diggs/Hagenbuch descriptions may lump them.",
+        "The source-labeled USGS photograph is a credible named reference, not an anatomical glume certificate or Hays County voucher.",
+        "Do not claim Hays nativity from FNA state-level distribution."
+      ],
+      "photo_specific_identity_certified": false,
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "core_traits": {
+        "head": [
+          "compact",
+          "airy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "membrane",
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "positive_only_core_keys": [
+        "head",
+        "habit",
+        "ligule",
+        "awns"
+      ],
+      "core_sources": {
+        "head": {
+          "reference": "USDA NRCS Proso Millet Plant Guide, pp.1–2; Flora of North America P. miliaceum ssp. miliaceum",
+          "source_url": "https://plants.sc.egov.usda.gov/DocumentLibrary/plantguide/pdf/pg_pami2.pdf",
+          "note": "Named crop species forms spreading/loose, one-sided, upright or drooping/contracted panicles depending on cultivar; a narrow green head does not alone imply misidentification. Airy or compact are documented conditional appearances."
+        },
+        "habit": {
+          "reference": "Ibrahim & Peterson, Grasses of Washington, D.C., Smithsonian Contributions to Botany 99, printed p.90; already READY in Issue #368",
+          "source_url": "https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf",
+          "note": "Caespitose annual, though sometimes only a loose several-stemmed basal tuft; no rhizomatous perennial scoring."
+        },
+        "ligule": {
+          "reference": "Diggs et al. 1999, Illustrated Flora of North Central Texas, printed p.1300",
+          "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+          "note": "Ciliate membrane at the true inner blade/sheath junction; membrane and hair fringe are conditional first-look alternatives."
+        },
+        "awns": {
+          "reference": "Diggs et al. 1999, exact Panicum miliaceum species treatment",
+          "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+          "note": "No conspicuous long lemma awns on intact mature spikelets, not a claim that every immature/obscured spikelet can be scored."
+        }
+      },
+      "identification_reference": {
+        "source_page": "https://commons.wikimedia.org/wiki/File:Mature_Proso_Millet_Panicles.jpg",
+        "photographer": "Jschnable",
+        "license": "CC BY 4.0",
+        "existing_photo_index": 2,
+        "role": "credible source-labeled ripe grain crop reference, preferred hero",
+        "image_anatomy_limit": "Mature golden panicles and grains support the broad concept; specific embryo and mature spikelet details aren't measurable from this photograph."
+      },
+      "field_rule": "Source-scored literature: Proso millet is a short-lived caespitose annual with broad often hairy foliage, a ciliate inner ligule and ovoid grain-bearing spikelets. Flowerheads may be broad/airy or compact and nodding by cultivar. Compare mature spikelets, hairy sheaths, P. capillare, and P. dichotomiflorum; cultivated or seed-spill habitat is not a native or Hays-voucher claim.",
+      "remaining_cautions": [
+        "The immature green Jardin des Plantes image remains only a historically source-labeled cultivated comparison; its exact species identity cannot be independently proved from that view. Do not treat it as a diagnostic photo.",
+        "A mature Commons seedhead image is a better first-view reference; it remains a source photo, not a voucher.",
+        "Do not classify a crop or seed-spill volunteer as established locally without occurrence evidence.",
+        "Spreading versus compact panicles are legitimate within the crop/weed complex; avoid hard negative exclusions by one outline."
+      ],
+      "photo_specific_identity_certified": false,
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED"
+    }
+  ]
+}
