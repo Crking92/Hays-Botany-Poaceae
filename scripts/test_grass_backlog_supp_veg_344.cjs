@@ -514,7 +514,13 @@ for(const [key,want] of Object.entries(expected)){
  assert(e.states.every(s=>opts.get(e.character)?.has(s)),'Unsupported UI option '+key);
  assert.equal(e.evidence_level,'PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED');
 }
-for(const key of ['miscanthus-sinensis|blade_midnerve','miscanthus-sinensis|blade_venation'])
- assert(!index.has(key),'Unresolved source page/disagreement was admitted '+key);
+// A29 verified direct USDA printed p.83 upper/underside leaf midvein;
+ // historical no-record holds are superseded, with exact source and surfaces guarded.
+ for(const [key,required] of [['miscanthus-sinensis|blade_midnerve',['pale_center']],['miscanthus-sinensis|blade_venation',['pale_midvein','raised_midvein']]]){
+  const e=index.get(key);
+  assert(e&&JSON.stringify(e.states)===JSON.stringify(required),'Miscanthus direct source state lost '+key);
+  assert(e.supplemental_source_page===83&&/USDA Forest Service/.test(e.source),'USDA printed source p83 lost '+key);
+  assert(/UPPER|upper|adaxial/.test(e.note),'Miscanthus blade-surface caveat lost '+key);
+ }
 assert(![...index.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')));
 console.log('PASS: 69 nonregional source-verified conditional vegetative records, exact links and holds');
