@@ -1,0 +1,72 @@
+name: Grass ID Lab visitor browser — local and published desktop/mobile
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/smoke_grass_key_visitor_browser.py'
+      - '.github/workflows/grass-key-visitor-browser.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'scripts/smoke_grass_key_visitor_browser.py'
+      - '.github/workflows/grass-key-visitor-browser.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  visitor-local:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install real Chromium browser
+        run: |
+          python -m pip install 'playwright>=1.53,<2'
+          python -m playwright install --with-deps chromium
+      - name: Test 169-species key interactions, photo pixels, and desktop/mobile reset
+        env:
+          HAYS_GRASS_TEST_URL: http://127.0.0.1:8772/site/visual-key-lab/index.html
+        run: |
+          mkdir -p qa-report
+          python -m http.server 8772 --directory . >/tmp/hays-grass-key-http.log 2>&1 &
+          sleep 2
+          python scripts/smoke_grass_key_visitor_browser.py
+      - name: Upload visitor screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grass-key-local-visitor-desktop-mobile
+          path: qa-report/grass-key-visitor-*.png
+          if-no-files-found: warn
+          retention-days: 14
+  visitor-public:
+    needs: visitor-local
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install real Chromium browser
+        run: |
+          python -m pip install 'playwright>=1.53,<2'
+          python -m playwright install --with-deps chromium
+      - name: Verify public Pages matches main and full visitor behavior and credits
+        env:
+          HAYS_GRASS_TEST_URL: https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/index.html
+          HAYS_GRASS_TEST_LIVE: '1'
+        run: python scripts/smoke_grass_key_visitor_browser.py
+      - name: Upload verified public-site screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grass-key-public-visitor-desktop-mobile
+          path: qa-report/grass-key-visitor-*.png
+          if-no-files-found: warn
+          retention-days: 14
