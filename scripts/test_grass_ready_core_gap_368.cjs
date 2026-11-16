@@ -10,7 +10,7 @@ const trials=["provisional-trial-profiles.json","provisional-trial-batch2.json",
 const manifest=read("hays-candidates.json").candidates;
 const assignments=read("ready-core-gap-assignments.json");
 const admissions=read("source-scored-admissions.json").admissions;
-assert.equal(base.length,112);assert.equal(trials.length,53);assert.equal(manifest.length,57);assert.equal(admissions.length,4);
+assert.equal(base.length,112);assert.equal(trials.length,53);assert.equal(manifest.length,57);assert.equal(admissions.length,37);
 assert.equal(assignments.schema,"HAYS_GRASS_READY_CORE_GAPS_V1");assert.equal(assignments.integration_count,28);
 assert.equal(assignments.rows.length,28);assert.equal(assignments.held_unknown.length,13);
 assert.equal(assignments.prior_research_master_records,1815);

@@ -2232,7 +2232,8 @@ const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
 info.append(node("strong","",s.common),node("span","latin",s.scientific));
 const [label,cl]=status(s);info.append(node("span","tag "+cl,label));
-if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));if(s.source_scored)info.append(node("div","smallmuted","Literature-supported identification profile. Local occurrence, nativity and specimen identity are not certified."));if(s.gapEvidence?.length)info.append(node("div","smallmuted",s.gapEvidence.length+" newly verified field detail"+(s.gapEvidence.length===1?"":"s")+" (positive-only; not evidence for exclusion)."));
+if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));if(s.source_scored)info.append(node("div","smallmuted","Literature-supported identification profile. Local occurrence, nativity and specimen identity are not certified."));
+if(s.promotion_hold)info.append(node("div","smallmuted","Promotion hold: "+s.promotion_hold.code.replace(/_/g," ").toLowerCase()+". See profile for the exact blocker."));if(s.gapEvidence?.length)info.append(node("div","smallmuted",s.gapEvidence.length+" newly verified field detail"+(s.gapEvidence.length===1?"":"s")+" (positive-only; not evidence for exclusion)."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
@@ -2290,6 +2291,14 @@ if(s.source_scored&&s.source_admission){
   if(s.source_admission.remaining_cautions?.length)
     for(const warning of s.source_admission.remaining_cautions)panel.append(node("p","smallmuted","Identification caution: "+warning));
   copy.append(panel);
+}
+if(s.promotion_hold){
+ const panel=node("section","detail-botany");
+ panel.append(node("h3","","Source-scoring hold — specific issue"),
+   node("p","smallmuted",s.promotion_hold.reason),
+   node("p","smallmuted","To reconsider: "+s.promotion_hold.needed),
+   node("p","smallmuted","The current research photographs and literature remain available as learning references. This is not a species-identity or county-occurrence certification."));
+ copy.append(panel);
 }
 if(s.gapEvidence?.length){
  const panel=node("section","detail-botany");
@@ -2390,43 +2399,6 @@ for(const candidate of state.candidateManifest){
  groupedIds.add(candidate.id);
 }
 if(state.candidateManifest.length===57&&state.species.length!==169)throw Error("Unified 169 grass inventory mismatch; inspect duplicate trial IDs");
-// Apply separately authorized source-scoring admissions AFTER all 169 raw profiles load.
-// Keep original 112 shards, 53 original trial source packets, four named holds and all
-// photo metadata unchanged. An invalid batch fails closed, before any mutation.
-try{
- const response=await fetch("source-scored-admissions.json",{cache:"no-store"});
- if(!response.ok)throw Error("Source-scored admission registry not available");
- const bundle=await response.json();
- if(bundle.schema!=="HAYS_GRASS_SOURCE_SCORED_ADMISSIONS_V1"||
-    bundle.original_baseline_scored!==112||!Array.isArray(bundle.admissions))throw Error("Source-scored admission registry invalid");
- const original=new Set(state.species.slice(0,112).map(s=>s.id));
- const seen=new Set(),validated=[];
- for(const admission of bundle.admissions){
-   if(!admission||admission.admission_level!=="SOURCE_SCORED_NOT_LOCAL_VOUCHER"||
-      !admission.id||original.has(admission.id)||seen.has(admission.id))throw Error("Overlapping or invalid source-scored admission");
-   seen.add(admission.id);
-   const species=state.species.find(s=>s.id===admission.id);
-   if(!species||!species.trial||species.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||
-      species.range!=="UNVERIFIED"||!species.photos?.length||species.scientific!==admission.scientific)
-       throw Error("Source-scored profile mismatch: "+admission.id);
-   for(const key of ["head","habit","ligule","awns"]){
-      const options=admission.core_traits?.[key];
-      const proof=admission.core_sources?.[key];
-      if(!Array.isArray(options)||!options.length||
-         JSON.stringify(options)!==JSON.stringify(species.traits?.[key])||
-         !proof?.reference||!proof?.note||!proof.source_url?.startsWith("https://"))
-         throw Error("Missing or changed published-character admission: "+admission.id+" / "+key);
-   }
-   validated.push([species,admission]);
- }
- for(const [species,admission] of validated){
-   species.trial=false;species.source_scored=true;
-   species.admission_status=admission.admission_level;species.source_admission=admission;
-   species.local_voucher_status="NOT_CERTIFIED";
-   species.field_rule=species.field_rule.replace(/^Research trial:/,"Source-scored literature:");
- }
-}catch(err){console.warn("Source-scored admission ledger unavailable: original source and research categories retained",err)}
-
 // Integrate only the 28 reviewed core gaps; preserve the 13 documented holds.
 // These are POSITIVE-ONLY observations. Their absence cannot disprove another
 // individual because the prior source review found variation or incomplete scope.
@@ -2470,6 +2442,66 @@ try{
     (s.gapEvidence??=[]).push(r);
  }
 }catch(err){console.warn("Verified optional core-gap handoff unavailable; existing 169 profiles remain usable without new assignments",err)}
+
+// Apply separately authorized source-scoring admissions AFTER 169 raw profiles and 28 verified source-backed gap assignments load.
+// Keep original 112 shards, 53 original trial source packets, four named holds and all
+// photo metadata unchanged. An invalid batch fails closed, before any mutation.
+try{
+ const response=await fetch("source-scored-admissions.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Source-scored admission registry not available");
+ const bundle=await response.json();
+ if(bundle.schema!=="HAYS_GRASS_SOURCE_SCORED_ADMISSIONS_V1"||
+    bundle.original_baseline_scored!==112||!Array.isArray(bundle.admissions))throw Error("Source-scored admission registry invalid");
+ // Check the 37 individually reviewed species, including four explicit holds.
+ const checkResponse=await fetch("promotion-review-37-20261116.json",{cache:"no-store"});
+ if(!checkResponse.ok)throw Error("37-species source-scoring review unavailable");
+ const check=await checkResponse.json();
+ if(check.schema!=="HAYS_GRASS_PROMOTION_REVIEW_37_20261116_V1"||
+    check.review_count!==37||check.approved_count!==33||check.hold_count!==4||
+    !Array.isArray(check.reviewed)||check.reviewed.length!==37||
+    check.total_source_scored_after_release!==149||check.total_research_only_after_release!==20)
+       throw Error("37-species source-scored review invalid");
+ const original=new Set(state.species.slice(0,112).map(s=>s.id));
+ const originalAdmitted=new Set(["setaria-viridis","setaria-leucopila","oplismenus-hirtellus","nassella-tenuissima"]);
+ const approved=new Set(check.reviewed.filter(x=>x.decision==="APPROVE_SOURCE_SCORED_SPECIES_PROFILE").map(x=>x.id));
+ const held=new Set(check.reviewed.filter(x=>x.decision.startsWith("HOLD_")).map(x=>x.id));
+ if(bundle.admissions.length!==37||approved.size!==33||held.size!==4||
+    [...originalAdmitted].some(id=>!bundle.admissions.some(a=>a.id===id))||
+    [...approved].some(id=>!bundle.admissions.some(a=>a.id===id))||
+    [...held].some(id=>bundle.admissions.some(a=>a.id===id)))
+       throw Error("37 source-scored approvals conflict with 4 species holds");
+ const seen=new Set(),validated=[];
+ for(const admission of bundle.admissions){
+   if(!admission||admission.admission_level!=="SOURCE_SCORED_NOT_LOCAL_VOUCHER"||
+      !admission.id||original.has(admission.id)||seen.has(admission.id))throw Error("Overlapping or invalid source-scored admission");
+   seen.add(admission.id);
+   const species=state.species.find(s=>s.id===admission.id);
+   if(!species||!species.trial||species.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||
+      species.range!=="UNVERIFIED"||!species.photos?.length||species.scientific!==admission.scientific)
+       throw Error("Source-scored profile mismatch: "+admission.id);
+   for(const key of ["head","habit","ligule","awns"]){
+      const options=admission.core_traits?.[key];
+      const proof=admission.core_sources?.[key];
+      if(!Array.isArray(options)||!options.length||
+         JSON.stringify(options)!==JSON.stringify(species.traits?.[key])||
+         !proof?.reference||!proof?.note||!proof.source_url?.startsWith("https://"))
+         throw Error("Missing or changed published-character admission: "+admission.id+" / "+key);
+   }
+   validated.push([species,admission]);
+ }
+ for(const item of check.reviewed.filter(x=>x.decision.startsWith("HOLD_"))){
+   const s=state.species.find(x=>x.id===item.id);
+   if(s&&s.trial)s.promotion_hold={code:item.decision,reason:item.reason,needed:item.needed_for_admission};
+ }
+ for(const [species,admission] of validated){
+   species.trial=false;species.source_scored=true;
+   species.admission_status=admission.admission_level;species.source_admission=admission;
+   species.local_voucher_status="NOT_CERTIFIED";
+   species.field_rule=species.field_rule.replace(/^Research trial:/,"Source-scored literature:");
+ }
+}catch(err){console.warn("Source-scored admission ledger unavailable: original source and research categories retained",err)}
+
+
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});

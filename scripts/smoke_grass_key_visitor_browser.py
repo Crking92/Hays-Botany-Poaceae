@@ -88,7 +88,7 @@ def check_view(browser, name, width, height):
     )
     assert page.locator("#count").inner_text() == "169 possible"
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
-    assert "116 source-scored, 53 research-only" in page.locator("#coded-subtitle").inner_text(), (
+    assert "149 source-scored, 20 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
     # Test the new admitted species in the actual browser, not just source JSON.
@@ -105,10 +105,11 @@ def check_view(browser, name, width, height):
         "Admission evidence pages not linked in visitor species detail")
     assert admission.locator(".detail-grid img").count() >= 2, "Existing credited source photos were truncated"
     admission.get_by_role("button",name="Close species detail").click()
-    page.locator("#species-search").fill("Bromus catharticus")
+    page.locator("#species-search").fill("Cenchrus ciliaris")
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
     assert "Research trial" in page.locator("#results .result").first.inner_text(), (
         "Unpromoted species was accidentally admitted")
+    assert "Source-scored" not in page.locator("#results .result").first.inner_text(), ("Justified species hold was not preserved")
     page.locator("#species-search").fill("Polypogon viridis")
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
     page.locator("#results .result").first.click()

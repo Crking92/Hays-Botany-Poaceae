@@ -19,10 +19,18 @@ assert(manifest.candidates.every(c=>c.status==="RESEARCH_CANDIDATE_NOT_RELEASED"
 assert.equal(bundle.schema,"HAYS_GRASS_SOURCE_SCORED_ADMISSIONS_V1");
 assert.equal(bundle.original_baseline_scored,112);
 assert.equal(bundle.release_stage,"SOURCE_SCORED_SPECIES_LITERATURE_NOT_HAYS_SPECIMEN_CERTIFIED");
-assert.equal(bundle.admissions.length,4,"Initial admission cohort changed without explicit QA update");
+const review=read("promotion-review-37-20261116.json");
+const gapMap=new Map(read("ready-core-gap-assignments.json").rows.map(g=>[g.id+"|"+g.character,g.states]));
+assert.equal(bundle.admissions.length,37,"Source-scored release must comprise initial 4 + approved 33");
+assert.equal(review.review_count,37);assert.equal(review.approved_count,33);assert.equal(review.hold_count,4);
+const approvals=new Set(review.reviewed.filter(x=>x.decision==="APPROVE_SOURCE_SCORED_SPECIES_PROFILE").map(x=>x.id));
+const heldReview=new Set(review.reviewed.filter(x=>x.decision.startsWith("HOLD_")).map(x=>x.id));
+assert.equal(approvals.size,33);assert.equal(heldReview.size,4);
+assert.equal(review.total_source_scored_after_release,149);assert.equal(review.total_research_only_after_release,20);
+const initialIds=new Set(["setaria-viridis","setaria-leucopila","oplismenus-hirtellus","nassella-tenuissima"]);
 const originalIds=new Set(original.map(s=>s.id)),byTrial=new Map(trials.map(s=>[s.id,s]));
 const held=new Set(["phyllostachys-aurea","bromus-brevis","cortaderia-selloana","lolium-x-boucheanum"]);
-const expectedIds=new Set(["setaria-viridis","setaria-leucopila","oplismenus-hirtellus","nassella-tenuissima"]);
+const expectedIds=new Set([...initialIds,...approvals]);
 const names=new Set(),characters=["head","habit","ligule","awns"];
 for(const admission of bundle.admissions){
   assert(expectedIds.has(admission.id),"Unexpected/uncleared species in promotion registry: "+admission.id);
@@ -36,13 +44,16 @@ for(const admission of bundle.admissions){
   assert.equal(t.range,"UNVERIFIED","County native/range status MUST remain unverified");
   assert(Array.isArray(admission.remaining_cautions)&&admission.remaining_cautions.length>=1,"Cautions were silently erased");
   for(const character of characters){
-    assert.deepEqual(admission.core_traits[character],t.traits[character],admission.id+"/"+character+": changing previously trial-scored options");
+    const gap=gapMap.get(admission.id+"|"+character);
+    const expected=t.traits[character].length?t.traits[character]:gap;
+    assert.deepEqual(admission.core_traits[character],expected,admission.id+"/"+character+": core choices not in approved previous data");
+    if(!t.traits[character].length)assert(gap&&gap.length,"Missing source-backed original core gap: "+admission.id+"|"+character);
     const src=admission.core_sources[character];
     assert(src&&src.reference&&src.note&&src.source_url?.startsWith("https://"),admission.id+"/"+character+": published exact-species source missing");
     assert(!src.source_url.includes("iNaturalist.org/observations/"),"An occurrence observation is not printed species morphology evidence");
   }
 }
-assert.equal(names.size,4);
+assert.equal(names.size,37);assert([...heldReview].every(id=>!names.has(id)),"Promoted one of four held species");
 assert.equal(original.length+bundle.admissions.length+57-bundle.admissions.length,169,"Production/research pool partition changed");
 const html=fs.readFileSync(path.join(dir,"index.html"),"utf8");
 const js=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];assert(js,"Grass Lab visitor JavaScript missing");new vm.Script(js);
@@ -51,4 +62,4 @@ for(const phrase of ["source-scored-admissions.json","SOURCE_SCORED_NOT_LOCAL_VO
 }
 assert(js.includes("if(s.trial||s.source_scored)")||js.includes("(s.trial||s.source_scored)?allPicks"),
   "Source-scored galleries must keep all already-credited trial photos, not truncate them");
-console.log("PASS: first four literature-scored Grass ID profiles, 112 original protected, 53 original trial source packets unchanged, 4 taxon holds, exact 4x4 flora references and county caution");
+console.log("PASS: 112 original + 37 literature-scored admissions (4 original + 33 new), 20 research-only, 4 latest holds + 4 manifest holds, all original photos and 28 gap sources preserved");
