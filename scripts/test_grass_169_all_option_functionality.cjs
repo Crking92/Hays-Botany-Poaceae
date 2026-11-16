@@ -6,9 +6,23 @@ const dir=path.join(__dirname,"..","site","visual-key-lab");
 const read=n=>JSON.parse(fs.readFileSync(path.join(dir,n),"utf8"));
 const base=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(n=>read("species-"+n+".json"));
 const trialNames=["provisional-trial-profiles.json","provisional-trial-batch2.json","provisional-trial-batch3.json","provisional-trial-batch4.json","provisional-trial-batch5-a.json","provisional-trial-batch5-b.json","provisional-trial-batch5-c.json"];
-const trials=trialNames.flatMap(n=>read(n).profiles);
+const publishedTrials=trialNames.flatMap(n=>read(n).profiles);
 assert.equal(base.length,112,"112 existing scored species changed");
-assert.equal(trials.length,57,"57 provisional research species changed");
+assert.equal(publishedTrials.length,53,"53 photo-backed research trial profiles changed");
+// The actual visitor boot() also loads the four deliberately photo/identity-held
+// candidates from the 57-species manifest as trial-only profiles with UNKNOWN core traits.
+const candidateManifest=read("hays-candidates.json").candidates;
+assert.equal(candidateManifest.length,57,"57-grass research manifest changed");
+const seen=new Set(publishedTrials.map(s=>s.id));
+const held=candidateManifest.filter(x=>!seen.has(x.id));
+assert.equal(held.length,4,"photo-held/unverified candidates must remain separate");
+const heldTrials=held.map(c=>({
+ id:c.id,scientific:c.scientific,common:c.common||c.scientific,
+ trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",
+ traits:{head:[],habit:[],ligule:[],awns:[]},photos:[]
+}));
+const trials=[...publishedTrials,...heldTrials];
+assert.equal(trials.length,57,"the full provisional research roster must remain 57");
 assert(trials.every(s=>s.trial&&s.admission_status==="RESEARCH_TRIAL_NOT_ADMITTED"),"research-only status changed");
 const species=[...base,...trials];
 assert.equal(new Set(species.map(s=>s.id)).size,169,"duplicate species IDs");
