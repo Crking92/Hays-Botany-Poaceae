@@ -377,6 +377,7 @@ const qs=[
 ["three_short","Three short awn tips (hand lens)","Three small awns can arise from a fertile lemma; in some gramas they are only 1–4 mm. Check an actual floret, not the whole comb. The photo is a general spikelet example; the drawing marks the tiny awns.","bouteloua-hirsuta",3],
 ["long","Long, obvious awns","Long straight, bent, or twisted projections extend from the reproductive units.","bothriochloa-ischaemum",2],
 ["bristles","Separate bristles under spikelets","Setaria bristles are sterile branchlets below the spikelet. Count them and compare attachment; these are NOT lemma awns.","setaria-parviflora",3],
+["soft_involucre","Soft, basally joined bristles","Buffelgrass has fine bristles joined at their bases around a small cluster of spikelets. Not separate Setaria bristles and not a hard, spiny sandbur. The source photo shows general habit; the drawing explains the bristle cluster.","cenchrus-ciliaris",0],
 ["none_obvious","No conspicuous long awns","Choose this only when a clear view of intact spikelets shows no obvious long awns. If awns broke, fell off, are immature or cannot be seen clearly, skip the question instead.","bouteloua-curtipendula",1],
 ["burs","Spiny sandbur involucres","Fused bristles form a cup enclosing several actual spikelets. This is not a many-awned lemma.","cenchrus-spinifex",1]
 ]}];
@@ -1371,7 +1372,7 @@ function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?nul
 function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
-for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
+for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if(key==="awns"&&val==="soft_involucre")unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
 return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 // Progressive key display: group fully documented matches separately from
 // evidence gaps, without treating an unstudied character as an absent structure.
@@ -1886,6 +1887,15 @@ function characterIcon(category,key){
    node(55,88,2.9);
    for(const [tx,ty,dx] of [[11,29,-1],[33,9,-1],[80,6,1],[102,30,1],[14,61,-1],[98,64,1]]){
     path("M55 88 Q"+(55+dx*16)+" 51 "+tx+" "+ty,warm,1.45);
+   }
+  }else if(key==="soft_involucre"){
+   // Gould 1975, Cenchrus ciliaris treatment: 2–4 spikelets/fascicle,
+   // fine bristles partly connate at base; diagram is schematic, not photo proof.
+   path("M55 104 L55 88",g,2);
+   for(const [x,y,angle] of [[43,64,-13],[55,60,0],[67,65,13]])oval(x,y,4.1,11,angle,"#f7eecb");
+   shape("M39 82 Q55 94 73 82 L70 89 Q55 98 42 89 Z","#e6d9a9",g,1.2);
+   for(const [sx,sy,tx,ty] of [[43,84,16,39],[48,87,31,22],[53,89,46,12],[57,89,62,13],[63,87,81,23],[69,84,96,40],[41,82,8,62],[71,82,103,61]]){
+    path("M"+sx+" "+sy+" Q"+((sx+tx)/2)+" "+(ty+20)+" "+tx+" "+ty,warm,1.25);
    }
   }else if(key==="none_obvious"){
    // Awnless-looking floret retains glume/lemma detail, minus prominent projections.
@@ -2444,6 +2454,17 @@ try{
     (s.gapEvidence??=[]).push(r);
  }
 }catch(err){console.warn("Verified optional core-gap handoff unavailable; existing 169 profiles remain usable without new assignments",err)}
+
+// Correct the outwardly similar but anatomically distinct buffelgrass bristle case.
+// The historic research packet remains unchanged; this source-backed runtime
+// option is positive-only and does NOT lift its explicit species promotion hold.
+// Gould (1975), exact Cenchrus ciliaris account, retained in
+// source-reference-gould-1975.json. Check an intact mature bristle fascicle.
+const buffel=state.species.find(s=>s.id==="cenchrus-ciliaris");
+if(buffel?.trial&&buffel.traits?.awns?.length===1&&buffel.traits.awns[0]==="bristles"){
+ buffel.traits.awns=["soft_involucre"];
+ (buffel.positiveOnlyCoreKeys??=[]).push("awns");
+}
 
 // Apply separately authorized source-scoring admissions AFTER 169 raw profiles and 28 verified source-backed gap assignments load.
 // Keep original 112 shards, 53 original trial source packets, four named holds and all
