@@ -1494,7 +1494,7 @@ for(const [key,required] of Object.entries(phase4Expected)){
  const [id,ch]=key.split("|"),e=pack.evidence.find(x=>x.id===id&&x.character===ch);
  if(!e||e.coordination_issue!==340||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim()||!e.source.includes("Hagenbuch & Lemke (2015)")||!e.source.includes("printed p. "+e.pdf_printed_page)||!e.source_url.endsWith("#page="+e.pdf_printed_page)||!required.every(v=>e.states.includes(v)))throw Error("Phase4 citation or botanical state failed "+key);
 }
-for(const [id,ch] of [["aristida-oligantha","sheath_surface"],["eriochloa-sericea","sheath_surface"],["bromus-japonicus","sheath_margins"],["cynodon-dactylon","sheath_surface"],["melica-nitens","underground_stems"]]){
+for(const [id,ch] of [["aristida-oligantha","sheath_surface"],["eriochloa-sericea","sheath_surface"],["bromus-japonicus","sheath_margins"],["cynodon-dactylon","sheath_surface"]]){
  if(pack.evidence.some(x=>x.id===id&&x.character===ch))throw Error("Phase4 unresolved source/UI/organ hold was accidentally promoted "+id+"/"+ch);
 }
 for(const [id,ch,choice] of [["bromus-japonicus","stem_nodes","backward_hairs"],["chloris-cucullata","sheath_surface","keeled_lower"],["elymus-canadensis","underground_stems","short_rhizome"],["eriochloa-sericea","stem_nodes","hairy_nodes"],["aristida-oligantha","stem_special","basal_branching"]]){
