@@ -124,7 +124,8 @@
           "label": "Many raised lengthwise ribs",
           "evidence_pending": true
         }
-      ]
+      ],
+      "multi_select": true
     },
     {
       "id": "blade_hairs",
@@ -144,11 +145,11 @@
     {
       "id": "leaf_base",
       "label": "Leaf base / sheath",
-      "hint": "Look where a blade joins its sheath. Ears (auricles) are separate from ligules.",
+      "hint": "Inspect the junction where leaf blade meets sheath. Auricle SHAPE (pointed or clasping) is not proof of an upright orientation. A flattened sheath is a separate observation.",
       "options": [
         {
           "id": "pointed_auricles",
-          "label": "Two upright pointed ears"
+          "label": "Two pointed ears (auricles)"
         },
         {
           "id": "clasping_auricles",
@@ -158,20 +159,36 @@
           "id": "compressed_sheath",
           "label": "Flattened / keeled sheath"
         }
+      ],
+      "multi_select": true,
+      "subgroups": [
+        {
+          "label": "Auricles (ears at the collar)",
+          "options": [
+            "pointed_auricles",
+            "clasping_auricles"
+          ]
+        },
+        {
+          "label": "Sheath below the collar",
+          "options": [
+            "compressed_sheath"
+          ]
+        }
       ]
     },
     {
       "id": "ligule_length",
       "label": "Ligule height",
-      "hint": "Open the blade–sheath junction to measure the true ligule, not adjacent collar hairs.",
+      "hint": "Expose the INSIDE blade–sheath junction and measure the true membranous flap or ciliate hair fringe. Do not measure stray collar hairs as the ligule. The 1 mm and 3 mm boundaries are approximate; if a specimen lies on a boundary, use caution and compare multiple leaves.",
       "options": [
         {
           "id": "tiny",
-          "label": "Tiny (under 1 mm)"
+          "label": "Tiny (less than 1 mm)"
         },
         {
           "id": "short",
-          "label": "Short (1–3 mm)"
+          "label": "Short (about 1–3 mm)"
         },
         {
           "id": "medium",
@@ -213,7 +230,7 @@
     {
       "id": "sheath_margins",
       "label": "Leaf sheath opening",
-      "hint": "Check a fresh leaf. Closed sheaths sometimes split as they dry.",
+      "hint": "Follow the leaf sheath lengthwise. A sheath can be OPEN (slit) and its FREE margins can OVERLAP, both on the same leaf. Only choose closed if actually fused into a tube; drying can tear a closed sheath.",
       "options": [
         {
           "id": "open",
@@ -228,7 +245,8 @@
           "label": "Fused into a tube",
           "evidence_pending": true
         }
-      ]
+      ],
+      "multi_select": true
     },
     {
       "id": "sheath_surface",
@@ -292,7 +310,7 @@
     {
       "id": "surface_runners",
       "label": "Surface runners and rooting",
-      "hint": "A stolon is a separate creeping horizontal stem with nodes. A low flowering stem that roots at one joint is not necessarily a stolon.",
+      "hint": "Check for true horizontal runners and which joints form roots. An ordinary low flowering stem that roots at a joint is not automatically a specialized stolon. More than one observed feature can apply.",
       "options": [
         {
           "id": "stolon",
@@ -310,7 +328,8 @@
           "id": "hairy_runner_nodes",
           "label": "Wiry runner with hairy joints"
         }
-      ]
+      ],
+      "multi_select": true
     },
     {
       "id": "underground_stems",
@@ -407,7 +426,8 @@
           "id": "rooting_lower_nodes",
           "label": "Lower stem joints root"
         }
-      ]
+      ],
+      "multi_select": true
     },
     {
       "id": "stem_nodes",
@@ -430,7 +450,8 @@
           "id": "hairy_stolon_nodes",
           "label": "Hairs on a surface runner's joints"
         }
-      ]
+      ],
+      "multi_select": true
     },
     {
       "id": "florets_per_spikelet",
@@ -477,11 +498,11 @@
     {
       "id": "glume_marks",
       "label": "Outer glumes",
-      "hint": "Look at the two outer spikelet scales, not the leaf sheath. A hand lens helps with small veins.",
+      "hint": "First find the two OUTER spikelet scales (glumes), not the lemma. Name LOWER vs UPPER glume whenever possible; a single vein on one does not mean both have one vein. In a three-spikelet cluster, also distinguish the central spikelet from the lateral ones. Select every observation you verified.",
       "options": [
         {
           "id": "one_vein",
-          "label": "One prominent vein"
+          "label": "One-veined glume (side not specified)"
         },
         {
           "id": "first_enclosing",
@@ -493,14 +514,55 @@
         },
         {
           "id": "glabrous",
-          "label": "Glumes without hairs"
+          "label": "Outer glumes without hairs (location unspecified)"
+        },
+        {
+          "id": "upper_one_vein",
+          "label": "UPPER glume has one vein",
+          "evidence_pending": true
+        },
+        {
+          "id": "lower_one_vein",
+          "label": "LOWER glume has one vein",
+          "evidence_pending": true
+        },
+        {
+          "id": "central_glume_glabrous",
+          "label": "CENTRAL spikelet glumes without hairs",
+          "evidence_pending": true
+        },
+        {
+          "id": "central_glume_scabrous",
+          "label": "CENTRAL spikelet glumes rough to touch",
+          "evidence_pending": true
+        }
+      ],
+      "multi_select": true,
+      "subgroups": [
+        {
+          "label": "Which glume and its veins?",
+          "options": [
+            "upper_one_vein",
+            "lower_one_vein",
+            "one_vein",
+            "lower_reduced",
+            "first_enclosing"
+          ]
+        },
+        {
+          "label": "Glume hair or roughness (which spikelet?)",
+          "options": [
+            "glabrous",
+            "central_glume_glabrous",
+            "central_glume_scabrous"
+          ]
         }
       ]
     },
     {
       "id": "lemma_texture",
       "label": "Lemma surface",
-      "hint": "Check a floral scale itself for hairs, wrinkles, reddish marks or shininess. A hairy flower stalk is not a hairy lemma.",
+      "hint": "Identify which floral scale you are examining: LOWER sterile or UPPER fertile lemma. Glabrous means hairless, not necessarily polished, and a hairy vein is not a uniformly fuzzy surface. Several textures can coexist; select only those actually visible.",
       "options": [
         {
           "id": "hairy",
@@ -522,12 +584,30 @@
           "id": "shiny_hard",
           "label": "Firm and shiny"
         }
+      ],
+      "multi_select": true,
+      "subgroups": [
+        {
+          "label": "Hairs / smoothness of the lemma",
+          "options": [
+            "hairy",
+            "smooth"
+          ]
+        },
+        {
+          "label": "Surface marks / finish",
+          "options": [
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard"
+          ]
+        }
       ]
     },
     {
       "id": "true_lemma_awn",
       "label": "Awns on the lemma",
-      "hint": "A true awn grows from a floral scale. Setaria's surrounding bristles are different structures. Some species vary.",
+      "hint": "An awn must arise from a LEMMA, not a glume or a Setaria bristle. Check the LOWER sterile vs UPPER fertile lemma, and distinguish a real awn from a short apical mucro (extended midvein). A single species may have awned and awnless florets (for example, male vs female). The generic short option has no numerical cutoff.",
       "options": [
         {
           "id": "three",
@@ -535,11 +615,11 @@
         },
         {
           "id": "long",
-          "label": "Long single awn"
+          "label": "Conspicuously long single lemma awn"
         },
         {
           "id": "short",
-          "label": "Very short awn"
+          "label": "Short true lemma awn (no fixed cutoff)"
         },
         {
           "id": "bent_twisted",
@@ -552,13 +632,50 @@
         {
           "id": "straight_or_bent",
           "label": "Straight or bent with age"
+        },
+        {
+          "id": "fertile_awn_2_to_5mm",
+          "label": "FERTILE lemma awn about 2–5 mm",
+          "evidence_pending": true
+        },
+        {
+          "id": "lower_sterile_awn_variable",
+          "label": "LOWER sterile lemma awn variable or absent",
+          "evidence_pending": true
+        },
+        {
+          "id": "apical_mucro",
+          "label": "Apical mucro (short midvein tip), not a confirmed awn",
+          "evidence_pending": true
+        }
+      ],
+      "multi_select": true,
+      "subgroups": [
+        {
+          "label": "Precisely located awn or mucro",
+          "options": [
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro"
+          ]
+        },
+        {
+          "label": "General awn count and appearance",
+          "options": [
+            "three",
+            "long",
+            "short",
+            "none",
+            "bent_twisted",
+            "straight_or_bent"
+          ]
         }
       ]
     },
     {
       "id": "floral_hair_position",
       "label": "Bristles and floral hairs",
-      "hint": "Check where hairs attach: under the spikelet, on the rachilla, on the lemma, or on the stalk of a reduced partner.",
+      "hint": "First trace each hair to its EXACT attachment. Lower sterile lemma, upper fertile lemma, rachilla axis, callus below a floret, pedicel of a paired spikelet, and bristles outside the whole spikelet are different organs. You may select more than one if you can actually see each.",
       "options": [
         {
           "id": "below_spikelet",
@@ -570,11 +687,46 @@
         },
         {
           "id": "lemma",
-          "label": "Hairs on lemmas"
+          "label": "Hairs on lemma (floret side unspecified)"
         },
         {
           "id": "partner_stalk",
-          "label": "Hairy reduced-partner stalk"
+          "label": "Hairs on a paired spikelet's pedicel"
+        },
+        {
+          "id": "lower_sterile_lemma_hairs",
+          "label": "Hairs on LOWER sterile lemma",
+          "evidence_pending": true
+        },
+        {
+          "id": "upper_fertile_lemma_hairs",
+          "label": "Hairs on UPPER fertile lemma",
+          "evidence_pending": true
+        },
+        {
+          "id": "spikelet_callus_hairs",
+          "label": "Hairs at floret callus (base)",
+          "evidence_pending": true
+        }
+      ],
+      "multi_select": true,
+      "subgroups": [
+        {
+          "label": "Hairs on the floret itself",
+          "options": [
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "lemma",
+            "rachilla"
+          ]
+        },
+        {
+          "label": "Hairs outside / under the floret",
+          "options": [
+            "spikelet_callus_hairs",
+            "partner_stalk",
+            "below_spikelet"
+          ]
         }
       ]
     }
