@@ -221,6 +221,11 @@ assert(sporo,'D12 source-qualified positive thread observation missing');
 assert.deepEqual(sporo.states,['thread'],'2 mm strict boundary falsely assigned another width bin');
 assert.deepEqual(sporo.width_mm,[1,2],'Original 1–2 mm width source bounds changed');
 assert(sporo.note.includes('Exactly 2 mm'),'Missing strict 2 mm caveat');
-assert(!rows.has('dichanthium-sericeum|ligule_length'),'1 mm threshold-only mismatch released');
+// D12 exact-species AusGrass and Kew measurements now resolve this as a
+// 0.5–1.5 mm MEMBRANE, legitimately spanning tiny and short bins.
+const dser=rows.get('dichanthium-sericeum|ligule_length');
+assert(dser&&dser.states.join(',')==='tiny,short','D12 exact true-ligule states lost');
+assert.deepEqual(dser.length_mm,[0.5,1.5],'Exact source range drift');
+assert(/MEMBRANOUS/.test(dser.note)&&/collar hairs/.test(dser.note),'Ligule anatomy qualification lost');
 assert(![...rows.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')),'Hybrid hold released');
 console.log('PASS: 24 supplemental measured traits, threshold QA and excluded uncertain boundary cases');
