@@ -1248,7 +1248,7 @@ for(const [id,n] of Object.entries(supplementalPass8)){
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass8 changed admission "+id);
  for(const e of a){
   if(!e.source_url.startsWith("https://")||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim())throw Error("Pass8 citation quality "+id);
-  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(e.character))throw Error("Pass8 non-Diggs floral character incorrectly scored");
+  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(e.character)&&!(e.coordination_issue===344&&e.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"))throw Error("Pass8 historical source or new floral handoff unsupported");
  }
 }
 state.species=[...species,...groupedTrials,...placeholderProfiles];
@@ -1280,7 +1280,7 @@ for(const [id,n] of Object.entries(supplementalPass9)){
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass9 accidentally admitted provisional taxon "+id);
  for(const r of a.slice(0,n)){
   if(!r.source_url.startsWith("https://")||!r.note?.trim()||r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED")throw Error("Pass9 bad provenance "+id);
-  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(r.character))throw Error("Pass9 non-Diggs reproductive states were added");
+  if(["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture","true_lemma_awn","floral_hair_position"].includes(r.character)&&!(r.coordination_issue===344&&r.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"))throw Error("Pass9 historic or new floral citation unsupported");
  }
 }
 if(pack.evidence.some(x=>x.id==="lolium-x-boucheanum"))throw Error("Kew vs Austrian Lolium x boucheanum hybrid taxon mismatch needs taxonomic review, not automatic scoring");
