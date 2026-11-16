@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "project": "Hays Grass ID Lab — reusable botanical reference intake",
+  "source": {
+    "id": "gould-1975-grasses-of-texas",
+    "title": "The Grasses of Texas",
+    "author": "Frank W. Gould",
+    "illustrations": "Drawings by Valloo Kapadia and others",
+    "first_publication_year": 1975,
+    "publisher": "Texas A&M University Press",
+    "bibliographic_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+    "printing_of_user_copy": "UNVERIFIED_FROM_COVER",
+    "status": "ACCEPTED_AUTHORITATIVE_TEXAS_GRASS_FLORA"
+  },
+  "source_intake": {
+    "received_on": "2026-11-16",
+    "material": "User-photographed cover and a Schizachyrium scoparium species treatment",
+    "taxon": "Schizachyrium scoparium",
+    "section": "4. Schizachyrium scoparium (Michx.) Nash",
+    "printed_page": "NOT_VISIBLE_IN_PHOTO",
+    "preservation": "Paraphrased provenance and observations, not copyrighted page-image bytes; further species require supplied relevant taxon pages"
+  },
+  "source_use_policy": "Use alongside Hagenbuch & Lemke (2015) for vegetative characters and Diggs et al. (1999) for regional and reproductive characters. Do not discard previous evidence or silently resolve conflicting morphology. Historical taxon concepts, ranges, and chromosome reports are descriptive, not automatic Hays County voucher/nativity proof. Add new trait scoring only when option meaning matches the correct organ and supporting evidence.",
+  "observations": [
+    {
+      "character": "plant_growth",
+      "details": "Cespitose perennial; may be without rhizomes or have rhizomes. Already represented as tufted with possible short underground stems; Gould does not justify a spreading-only score.",
+      "status": "CORROBORATES_EXISTING"
+    },
+    {
+      "character": "culm_height",
+      "value_cm": [
+        50,
+        200
+      ],
+      "details": "Culms described from 50 to 200 cm; this is a broad published range and not a hard rejection criterion.",
+      "status": "NEW_NONSCORING_MEASUREMENT"
+    },
+    {
+      "character": "culm_color_and_branching",
+      "details": "Culms green or glaucous, freely branching in their upper portion and bearing numerous flowering branches. Branching already scored; color and abundance are new contextual details.",
+      "status": "PART_NEW_NONSCORING"
+    },
+    {
+      "character": "sheath",
+      "width_mm_max": 10,
+      "details": "Sheaths strongly keeled and laterally compressed, as broad as 10 mm in some plants but usually considerably narrower. Hairiness ranges from glabrous to villous-pubescent. Existing sheath form and conditional hair mapping retained.",
+      "status": "NEW_WIDTH_EXISTING_OTHER_DETAILS"
+    },
+    {
+      "character": "ligule",
+      "length_mm": [
+        1,
+        3
+      ],
+      "details": "Ligules firm, 1–3 mm long. Matches already source-scored membranous firm ligule; Gould text alone does not separately restate the ligule membrane/edge form in this excerpt.",
+      "status": "INDEPENDENT_CORROBORATION_NO_SCORING_CHANGE"
+    },
+    {
+      "character": "basal_leaf_blade",
+      "width_mm_common": [
+        1.5,
+        4
+      ],
+      "width_mm_rare_upper": 6,
+      "length_cm_min": 25,
+      "details": "Basal blades mainly 1.5–4 mm wide, rarely as broad as 6 mm, and 25 cm or longer; linear-tapering with hairiness from smooth to sparse stiff hairs or villous. Width and variable hairiness already represented; minimum length newly retained.",
+      "status": "NEW_LENGTH_EXISTING_WIDTH_HAIR"
+    },
+    {
+      "character": "raceme_length",
+      "length_cm": [
+        2.5,
+        5
+      ],
+      "details": "Short flowering racemes mostly 2.5–5 cm long; their architecture is already a primary key clue, numeric interval now retained as a Gould reference.",
+      "status": "NEW_SOURCE_SPECIFIC_MEASUREMENT"
+    },
+    {
+      "character": "rachis_and_pedicel_hairs",
+      "details": "Rachis joints and pedicels with long silvery cilia at least on the upper two-thirds of these structures. Earlier evidence mapped hairs to the partner stalk; this adds distribution and color without asserting hairs on the spikelet itself.",
+      "status": "PART_NEW_ANATOMICAL_QUALIFIER"
+    },
+    {
+      "character": "sessile_spikelet",
+      "length_mm": [
+        6,
+        8
+      ],
+      "details": "Sessile spikelets usually 6–8 mm; first glume glabrous or scabrous. True lemma/awn should not be confused with the stalked spikelet partner.",
+      "status": "NEW_NONSCORING_MEASUREMENT_AND_SURFACE"
+    },
+    {
+      "character": "pedicelled_spikelet",
+      "details": "Pedicelled spikelets staminate or neuter, from equal in length to the sessile ones to much shorter; either awnless or bearing a short straight awn. This describes the pedicelled partner, NOT the fertile sessile spikelet awn.",
+      "status": "NEW_PARTNER_DETAIL_NONEXCLUSIVE"
+    },
+    {
+      "character": "chromosome_number",
+      "value_2n": 40,
+      "details": "Gould reports 2n=40; cytological report only, not a field-identification or Hays population certification.",
+      "status": "NEW_NONSCORING_CYTOLOGY"
+    },
+    {
+      "character": "lemma_length_wording",
+      "printed_claim": "lemma 8–15 mm long",
+      "details": "Gould's line explicitly says 'lemma 8–15 mm long.' Its organ interpretation requires source reconciliation with other treatments; do NOT silently recode this as true-lemma length or true lemma-awn length.",
+      "status": "HOLD_ANATOMICAL_INTERPRETATION"
+    },
+    {
+      "character": "infraspecific_key",
+      "details": "Only the beginning of the var. divergens couplet is visible below the treatment; the full key was not supplied, and no local subspecies/variety assignment is supported.",
+      "status": "HOLD_INCOMPLETE_SOURCE_PAGE"
+    }
+  ],
+  "learner_diagnostic_checks": [
+    {
+      "look": "Measure the plant and its lower leaves (Gould)",
+      "check": "Gould reports stems about 50–200 cm tall, green or bluish-waxy (glaucous); basal leaves typically 1.5–4 mm wide (rarely 6 mm) and 25 cm or longer. Stems may branch repeatedly above. These broad ranges are supporting clues, not exclusive limits.",
+      "compare": "season, site conditions, and multiple plants; other grasses overlap these sizes",
+      "certainty": "Published Texas flora description, not verified for a local specimen; retain variation.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Schizachyrium scoparium account (photographed page number not visible)",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Inspect the short raceme and its silvery hairs (Gould)",
+      "check": "Racemes are mostly 2.5–5 cm long. Their rachis joints and pedicels bear long silvery hairs over at least the upper two-thirds. Sessile spikelets are usually 6–8 mm long, with a first glume that may be smooth or rough. Look at intact flowering material with a hand lens.",
+      "compare": "silky-haired rachis joints and pedicels versus hairs actually on the spikelet or distant culm nodes",
+      "certainty": "Gould's published anatomical measurements; no newly verified macrophotograph.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Schizachyrium scoparium account (photographed page number not visible)",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Check which paired spikelet has the awn (Gould)",
+      "check": "The pedicelled partner may be staminate or neuter and as long as or shorter than the sessile spikelet; its awn can be absent or short and straight. This does NOT mean the fertile sessile spikelet lacks a true awn. Sheaths may be strongly keeled and laterally flattened, up to 10 mm broad but usually narrower.",
+      "compare": "upper fertile lemma awn on the sessile spikelet; do not score the pedicelled partner's short awn as the fertile one",
+      "certainty": "Gould treatment corroborates the separate-anatomy caution. No automatic key-state changes.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Schizachyrium scoparium account (photographed page number not visible)",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ]
+}
