@@ -2283,6 +2283,7 @@ if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
     const block=node("div","diagnostic-check");
     block.append(node("h4","",c.look),node("p","",c.check),node("p","check-compare","Compare with: "+c.compare),node("p","check-status",c.certainty));
     if(c.url&&c.url.startsWith("https://")){const link=node("a","mini-credit","Botanical source: "+c.source);link.href=c.url;link.target="_blank";link.rel="noopener noreferrer";block.append(link);}
+    if(c.photo_reference_url?.startsWith("https://")){const link=node("a","mini-credit","Photo reference: "+(c.photo_reference_label||"Open externally hosted anatomy photograph"));link.href=c.photo_reference_url;link.target="_blank";link.rel="noopener noreferrer";block.append(link);}
     panel.append(block);
   }
   copy.append(panel);
