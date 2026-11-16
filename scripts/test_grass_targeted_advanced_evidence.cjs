@@ -57,7 +57,11 @@ assert(js);new vm.Script(js);
 for(const phrase of ["optional-evidence-targeted-20261116.json","originalRows!==1815",
 "state.species.filter(s=>s.source_scored).length!==56",
 "state.species.filter(s=>s.trial).length!==1",
-"for(const e of validated)(state.refineEvidenceMap[e.id]??=[]).push(e)",
+"existing.states=[...new Set([...existing.states,...e.states])]",
+"additional_state_sources",
+"source_scope_caution=(existing.source_scope_caution||",
+"state.refineEvidenceOptionKeys=new Set(",
+"const isPendingChoice=(group,option)=>!optionCounts.has(",
 "expected_pending_after_release!==4","seen.size!==9",
 "Additional field details unavailable"])
  assert(js.includes(phrase),"Supplement safely fails closed? Missing "+phrase);
