@@ -53,6 +53,15 @@ def possible_width_states(low, high):
     if high > 10: expected.add("broad")
     return expected
 for row in width_rows:
+    # Diggs gives only a maximum to 16(-21) mm for the foxtail millet;
+    # a positive broad clue is supported, but no lower bound may be forged.
+    if row["id"] == "setaria-italica" and "width_mm" not in row:
+        assert row.get("width_max_mm") == 21
+        assert row.get("width_usual_max_mm") == 16
+        assert set(row["states"]) == {"broad"}
+        assert "no lower bound" in row["note"].lower()
+        assert row.get("pdf_printed_page") == 1319
+        continue
     mm = row.get("width_mm")
     assert isinstance(mm, list) and len(mm) == 2 and all(isinstance(x, (float, int)) for x in mm), row["id"]
     lo, hi = mm
