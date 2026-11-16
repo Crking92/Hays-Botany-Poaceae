@@ -57,17 +57,17 @@ const match=id=>Array.from(vm.runInContext("refinementMatches({id:"+JSON.stringi
 // as explicit review candidates, never promoting research trials or invented states.
 const progressive=()=>vm.runInContext("progressiveResultGroups(currentResults())",sandbox);
 const initial=progressive();
-if(initial.active||initial.confirmed.length!==112||initial.unresolved.length)throw Error("Unselected key should begin with all grasses");
+if(initial.active||initial.confirmed.length!==112||initial.unresolved.length||initial.excluded.length)throw Error("Unselected key should begin with all grasses");
 state.refineSelected={blade_width:"narrow"};
 const widthGroups=progressive();
 if(!widthGroups.active||!widthGroups.confirmed.length||!widthGroups.unresolved.length||
- widthGroups.confirmed.length+widthGroups.unresolved.length!==112)
+ widthGroups.confirmed.length+widthGroups.unresolved.length+widthGroups.excluded.length!==112)
  throw Error("Leaf width selection must narrow main results but preserve all unknown possibilities");
 if(widthGroups.confirmed.some(r=>!refs[r.s.id]?.some(e=>e.character==="blade_width"&&e.states.includes("narrow"))))
  throw Error("Main matches include a grass without matching evidence");
 state.refineSelected={blade_width:"narrow",glume_marks:["upper_one_vein"]};
 const pendingGroups=progressive();
-if(pendingGroups.confirmed.length||pendingGroups.unresolved.length!==112)
+if(pendingGroups.confirmed.length||pendingGroups.unresolved.length+pendingGroups.excluded.length!==112)
  throw Error("Research-pending detail cannot invent matching species or eliminate unknowns");
 state.refineSelected={};
 if(progressive().active||progressive().confirmed.length!==112)throw Error("Clearing selections must restore entire baseline");
@@ -79,7 +79,7 @@ const n0=current().length;if(n0!==112)throw Error("Baseline filtering mutated");
 state.refineSelected={glume_marks:["lower_reduced","one_vein"]};
 let m=match("cenchrus-setaceus");
 if(m.length!==1||m[0].matched.length!==2)throw Error("Two source-supported glume observations must count as exactly ONE character");
-if(current().length!==n0)throw Error("Optional double observation excluded grasses");
+if(current().length!==n0)throw Error("Optional double observation changed the recoverable candidate universe");
 state.refineSelected={glume_marks:["lower_reduced","upper_one_vein"]};
 m=match("cenchrus-setaceus");
 if(m.length!==1||m[0].matched.length!==1)throw Error("Pending exact side of glume cannot silently match a generic glume observation");
