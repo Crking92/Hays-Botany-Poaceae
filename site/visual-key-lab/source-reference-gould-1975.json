@@ -1108,6 +1108,340 @@
         }
       ],
       "audit_hold": "Keep Triticum aestivum as non-native research-trial candidate, do not promote from supplied cultivated wheat description. Protect all original 112 source shards, optional 1,815-record evidence master, 57 provisional scoring states, photos and credits. Printed ligule 1–3 cm is a documented conflict and must NOT be used for any filter without resolving edition erratum. Historical Triticum cylindricum belongs to modern Aegilops cylindrica, not wheat. No copyrighted book page is rehosted."
+    },
+    {
+      "source_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "photo_description": "Owner-submitted photograph of Gould's The Grasses of Texas page featuring Paspalum conjugatum, P. notatum and beginning of P. minus treatments",
+      "added_on": "2026-11-16",
+      "source_authority": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "PUBLISHED_HISTORIC_SPECIES_DESCRIPTION_NOT_LOCAL_SPECIMEN_VERIFICATION",
+      "taxon": "Paspalum notatum",
+      "species_id": "paspalum-notatum",
+      "common_name": "Bahiagrass",
+      "authority_as_printed": "Paspalum notatum Flügge, Monogr. Pasp. 106. 1810",
+      "printed_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "illustration": "Fig. 266 cited, illustration not visible on provided page",
+      "current_species_name": "Paspalum notatum Flüggé",
+      "current_taxon_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:414477-1",
+      "release_status": "RESEARCH_TRIAL_NOT_ADMITTED",
+      "observations": [
+        {
+          "character": "habit",
+          "status": "SOURCE_BACKED_PERENNIAL",
+          "details": "Perennial with culms rising from thick, scaly rhizomes; clonal growth is supported, but source does not require true surface stolons."
+        },
+        {
+          "character": "culm_height",
+          "status": "PUBLISHED_MEASUREMENTS_NOT_LOCAL_SPECIMEN",
+          "mostly_cm": [
+            20,
+            75
+          ],
+          "details": "Erect culms mostly 20–75 cm tall."
+        },
+        {
+          "character": "leaf_hairs",
+          "status": "SOURCE_VARIABLE_CHARACTER",
+          "details": "Leaves glabrous or essentially glabrous; this is not a claim every individual leaf has no hairs."
+        },
+        {
+          "character": "ligule",
+          "status": "ANATOMICAL_CLASSIFICATION_REVIEW_HOLD",
+          "gould_literal_paraphrase": "Dense ring of short hairs",
+          "details": "Gould describes a dense ring of short hairs; UT Plant Resources Center describes a true membranous truncate ligule approximately 0.2–0.5 mm tall, with hairs above/along its upper side. University of Florida independently characterizes it as a membrane with a fringe of hairs. Preserve Gould's visible ring but do not assume hair-only membrane absence from the 1975 wording.",
+          "comparison_refs": [
+            {
+              "authority": "UT Plant Resources Center, Williamson County Paspalum notatum",
+              "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20notatum",
+              "support": "True membranous ligule 0.2–0.5 mm with separate short hairs near the collar"
+            },
+            {
+              "authority": "University of Florida IFAS Florida Turfgrass Identification",
+              "url": "https://ask.ifas.ufl.edu/publication/EP646",
+              "support": "Membranous ligule fringed with hairs"
+            }
+          ]
+        },
+        {
+          "character": "blade_width",
+          "status": "PUBLISHED_MEASUREMENT",
+          "width_mm": [
+            2,
+            6
+          ],
+          "details": "Blades 2–6 mm broad; may be flat, folded or inward-rolled (involute) and usually firm and tough."
+        },
+        {
+          "character": "blade_posture_texture",
+          "status": "SOURCE_VARIABLE_CHARACTER",
+          "details": "Blades flat, folded or involute, generally firm and tough rather than necessarily permanently flat."
+        },
+        {
+          "character": "inflorescence",
+          "status": "SOURCE_SPECIFIC_REPRODUCTIVE",
+          "branches_typical": 2,
+          "branch_length_cm": [
+            4,
+            12
+          ],
+          "details": "Usually two spicate raceme-like flowering branches near the culm tip, paired at one apex or one somewhat below the other. A third branch is sometimes present below the terminal pair. Not two independent culms."
+        },
+        {
+          "character": "spikelet_rows",
+          "status": "SOURCE_SPECIFIC_STRUCTURE",
+          "row_count": 2,
+          "details": "Spikelets closely imbricated in two rows along the raceme rachis; distinguish this from a general unbranched cereal spike."
+        },
+        {
+          "character": "spikelet_shape_surface_size",
+          "status": "PUBLISHED_DIAGNOSTIC_MEASUREMENTS",
+          "length_mm": [
+            2.8,
+            3.5
+          ],
+          "details": "Spikelets broadly ovate, elliptic or obovate, glabrous and shiny, about 2.8–3.5 mm long; visual and numeric comparison with P. minus matters."
+        },
+        {
+          "character": "upper_floret_lemma_color",
+          "status": "SOURCE_SPECIFIC_STRUCTURE",
+          "details": "Lemma of upper (fertile) floret straw-colored; not all bracts or glumes are necessarily this color."
+        },
+        {
+          "character": "chromosome_numbers",
+          "status": "PUBLISHED_MULTIPLE_REPORTS_NONSCORING",
+          "reported_2n": [
+            20,
+            30,
+            40
+          ],
+          "details": "Gould reports 2n=20, 30 and 40; numbers are historical reports, not verified local cytotypes or definitive species filters."
+        },
+        {
+          "character": "historical_Texas_distribution",
+          "status": "INTRODUCED_HISTORICAL_REGION_REPORT",
+          "details": "Gould reports Texas regions 1 and 2, introduced as a pasture grass and occasionally along roadsides, ditches and lightly disturbed moist sites; historical region bins do not prove Hays county native status."
+        },
+        {
+          "character": "historical_origin",
+          "status": "HISTORICAL_ORIGIN_STATEMENT_DISAGREEMENT",
+          "details": "Gould calls the species native to Mexico, Central and South America; current Kew POWO's native-range treatment is Peru through Brazil to northern Argentina and lists Texas and Mexico among introduced territories. Preserve both source eras rather than silently replacing Gould's wording.",
+          "comparison_ref": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:414477-1"
+        },
+        {
+          "character": "phenology",
+          "status": "PUBLISHED_TEXAS_FLOWERING_PERIOD",
+          "reported_months": "June–November",
+          "details": "Historical Texas flowering period June–November; season not guaranteed in Hays County."
+        }
+      ],
+      "historical_variety": {
+        "original_name": "Paspalum notatum var. saurae Parodi",
+        "original_status": "Gould describes an introduced strain/variety found in Texas",
+        "published_characters": "A large, coarse plant with long blades, mostly 2.8–3 mm spikelets and occasionally one to three extra flowering branches below the terminal pair",
+        "current_taxonomic_conflict": {
+          "kew_accepted_name": "Paspalum saurae (Parodi) Parodi",
+          "kew_name_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184656-2",
+          "variety_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184507-2",
+          "alternate_accepted_variety_authority": "USDA GRIN and ITIS retain Paspalum notatum var. saurae as an infraspecific taxon",
+          "alternate_source_url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=529414",
+          "resolution": "HOLD_AUTHORITIES_DIFFER_KEEP_SEPARATE_TAXON_CONCEPTS"
+        },
+        "policy": "Never assign var. saurae-only coarse/extra-branch traits to every ordinary Paspalum notatum and do not combine Paspalum saurae with the project species without concept reconciliation."
+      },
+      "classification_decision": {
+        "existing_trial_traits": {
+          "head": [
+            "paired_spikes",
+            "one_sided"
+          ],
+          "habit": [
+            "mat",
+            "rhizome"
+          ],
+          "ligule": [
+            "hairs"
+          ],
+          "awns": []
+        },
+        "action": "RETAIN_TRIAL_STATES_PENDING_LIGULE_STRUCTURE_REVIEW",
+        "rationale": "Existing 57-species trial already has paired racemes and rhizomatous growth hypotheses. The Gould hair ring and current membrane evidence together raise a ligule anatomy issue; no exclusive hair-only classification or new key scoring should be asserted from this page alone.",
+        "taxonomy_note": "Gould var. saurae must stay distinct from P. notatum common species concept; current Kew treats P. saurae as accepted separate species.",
+        "locality_note": "Introduced turf/pasture status and county-level nativity require independent review."
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Compare the paired bahiagrass branches and shiny spikelets (Gould)",
+          "check": "Bahiagrass typically has two flower-bearing branches about 4–12 cm long, paired at the stem tip or slightly offset. A third branch occasionally occurs lower down. The closely packed spikelets form two rows, are usually 2.8–3.5 mm long, and are broad, smooth and shiny. Inspect an intact mature branch and several separate spikelets.",
+          "compare": "Paspalum minus can have smaller, less-shiny spikelets and denser low mats; P. conjugatum has much smaller spikelets and stolons.",
+          "certainty": "Gould's published Texas source treatment, not verified on a same-plant Hays County voucher.",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, Paspalum notatum treatment (page not visible in source photo)",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Open the inner collar: look for membrane beneath the hairs",
+          "check": "Gould calls the ligule a ring of short hairs, but UT PRC and UF IFAS describe a tiny membranous ligule with hairs above or along its edge. Do not identify a hair-only ligule until magnification shows whether a membrane is present.",
+          "compare": "Check the true inner blade–sheath junction, not hairs on the nearby collar or stem node; hair ring and membrane can coexist.",
+          "certainty": "Source terminology needs reconciliation; no production ligule scoring change based on this literature-only page.",
+          "source": "Gould (1975), The Grasses of Texas; UT Plant Resources Center; UF IFAS",
+          "url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Paspalum%20notatum"
+        },
+        {
+          "look": "Check for thick scaly rhizomes and avoid confusing varieties",
+          "check": "Gould describes rhizomes that are thick and scaly and flowering culms mostly 20–75 cm tall. He also mentions an introduced var. saurae; modern authorities differ about its rank, so don't automatically apply those larger-plant traits to every bahiagrass.",
+          "compare": "Do not mistake underground rhizomes for surface stolons; look at the rooted crown. P. conjugatum instead has long leafy stolons.",
+          "certainty": "Published morphology; the historical variety requires a separate taxonomic review.",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, Paspalum notatum treatment (page not visible in source photo)",
+          "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:414477-1"
+        }
+      ],
+      "audit_hold": "Main-key scored states and 57-species research trial untouched. Pending identification of true ligule membrane beneath short hairs, Paspalum notatum vs Paspalum saurae concept, and local establishment/nativity. Page scan not published and printed page number not invented."
+    },
+    {
+      "source_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "photo_description": "Owner-submitted photograph of Gould's The Grasses of Texas page featuring Paspalum conjugatum, P. notatum and beginning of P. minus treatments",
+      "added_on": "2026-11-16",
+      "source_authority": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "PUBLISHED_HISTORIC_SPECIES_DESCRIPTION_NOT_LOCAL_SPECIMEN_VERIFICATION",
+      "taxon": "Paspalum conjugatum",
+      "species_id": "paspalum-conjugatum",
+      "common_name": "Sour paspalum",
+      "authority_as_printed": "Paspalum conjugatum Bergius, Acta Helv. Phys. Math. 7:129, pl. 8, 1762",
+      "printed_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "illustration": "Fig. 265 cited, not included in submitted image",
+      "release_status": "ADJACENT_BOOK_TREATMENT_NOT_IN_169_RESEARCH_UNIVERSE",
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/30011315-2",
+      "bibliographic_date_hold": "Gould photo prints 1762 while POWO reports first publication in 1772; preserve Gould's original transcription and modern catalogue discrepancy.",
+      "observations": [
+        {
+          "character": "growth_habit",
+          "status": "SOURCE_BACKED",
+          "details": "Perennial with erect stems arising from long, leafy aboveground stolons."
+        },
+        {
+          "character": "culm_height",
+          "status": "PUBLISHED_NUMERIC",
+          "height_cm": [
+            25,
+            50
+          ],
+          "details": "Culms 25–50 cm tall."
+        },
+        {
+          "character": "stolon_node_hairs",
+          "status": "SOURCE_BACKED",
+          "details": "Nodes of stolons usually pilose (softly hairy)."
+        },
+        {
+          "character": "blade",
+          "status": "PUBLISHED_NUMERIC_AND_VARIABLE",
+          "length_cm_mostly": [
+            8,
+            12
+          ],
+          "width_mm": [
+            5,
+            15
+          ],
+          "details": "Blades thin and flat, usually 8–12 cm long and 5–15 mm wide, smooth or less frequently pilose."
+        },
+        {
+          "character": "ligule_and_collar",
+          "status": "MEMBRANE_WITH_ADJACENT_HAIR_RING",
+          "details": "Membranous ligule with a ring of stiff hairs immediately ABOVE it, not necessarily hairs replacing the ligule."
+        },
+        {
+          "character": "flowering_branches",
+          "status": "PUBLISHED_NUMERIC",
+          "typical_count": 2,
+          "length_cm_mostly": [
+            5,
+            15
+          ],
+          "details": "Two flowering racemes paired at culm tip, mostly 5–15 cm long and widely spreading."
+        },
+        {
+          "character": "spikelet_size_arrangement",
+          "status": "PUBLISHED_DIAGNOSTIC",
+          "length_mm_mostly": [
+            1.5,
+            2
+          ],
+          "details": "Spikelets elliptical, broadly pointed, packed closely along rachis."
+        },
+        {
+          "character": "glume_hairs",
+          "status": "SOURCE_BACKED",
+          "details": "Glumes sparsely long-pilose along margins; don't transfer glume-margin hairiness to the bahiagrass glumes."
+        },
+        {
+          "character": "upper_floret_lemma",
+          "status": "SOURCE_BACKED",
+          "details": "Upper-floret lemma straw-colored."
+        },
+        {
+          "character": "chromosome_count",
+          "status": "PUBLISHED_CYTOLOGY",
+          "reported_2n": 40,
+          "details": "Reported 2n=40; not a specimen count."
+        },
+        {
+          "character": "Texas_historical_distribution",
+          "status": "HISTORICALLY_SCOPED",
+          "details": "Gould's regional Texas material was confined to the southern part of region 2, with specimens examined from Cameron County. Current POWO includes Texas in a broader native range but neither proves occurrence in Hays County."
+        },
+        {
+          "character": "Texas_historical_flowering",
+          "status": "HISTORICAL_RECORDS",
+          "reported_months": "September–November",
+          "details": "Gould says Texas flowering specimens were collected from September to November; not a statewide phenology guarantee."
+        }
+      ],
+      "learner_diagnostic_checks": [],
+      "audit_hold": "Separate species from P. notatum. This adjacent source treatment is outside current 169-species Lab candidate collection and must not be added to scored filters, public gallery, or Hays native roster without independent scope and county verification."
+    },
+    {
+      "source_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "photo_description": "Owner-submitted photograph of Gould's The Grasses of Texas page featuring Paspalum conjugatum, P. notatum and beginning of P. minus treatments",
+      "added_on": "2026-11-16",
+      "source_authority": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "PUBLISHED_HISTORIC_SPECIES_DESCRIPTION_NOT_LOCAL_SPECIMEN_VERIFICATION",
+      "taxon": "Paspalum minus",
+      "species_id": "paspalum-minus",
+      "common_name": "Mat paspalum / matted paspalum",
+      "authority_as_printed": "Paspalum minus Fourn., Mex. Pl. 2:6. 1886",
+      "printed_page": "NOT_VISIBLE_IN_USER_PHOTO",
+      "release_status": "ADJACENT_PARTIAL_BOOK_TREATMENT_NOT_IN_169_RESEARCH_UNIVERSE",
+      "modern_taxonomy_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:414434-1",
+      "treatment_completeness": "PARTIAL_TEXT_ONLY_NEXT_PAGE_REQUIRED",
+      "observations": [
+        {
+          "character": "overall_comparison",
+          "status": "DIRECT_SOURCE_COMPARISON",
+          "details": "Gould explicitly says Paspalum minus is similar to P. notatum."
+        },
+        {
+          "character": "culm_height_and_mat",
+          "status": "PUBLISHED_COMPARATIVE",
+          "height_cm_rarely_over": 30,
+          "details": "Culms rarely over 30 cm; rhizomatous bases often form dense mats."
+        },
+        {
+          "character": "spikelets",
+          "status": "PUBLISHED_DIAGNOSTIC_MEASUREMENT",
+          "length_mm": [
+            2,
+            2.5
+          ],
+          "details": "Spikelets 2–2.5 mm long and LESS shiny than P. notatum; comparison, not absolute sheen quantification."
+        },
+        {
+          "character": "sheath_and_blade_hairs",
+          "status": "SOURCE_VARIABLE",
+          "details": "Lower sheaths and leaf blades often hirsute or hispid (hairy/bristly)."
+        }
+      ],
+      "learner_diagnostic_checks": [],
+      "audit_hold": "Only the beginning of Gould's P. minus treatment is visible; continuation and distribution not supplied. Contemporary Kew accepts P. minus and lists Texas in its broad native range, but no Hays County BONAP/voucher claim can be made. Do not turn this partial comparison into a full key profile."
     }
   ]
 }
