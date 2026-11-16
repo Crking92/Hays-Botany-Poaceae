@@ -1,0 +1,216 @@
+{
+  "schema": "HAYS_GRASS_FINAL_THREE_TAXON_SCOPE_V1",
+  "release_date": "2026-11-16",
+  "previous_source_scored": 165,
+  "promotions": 3,
+  "total_source_scored_after_release": 168,
+  "remaining_research_only": 1,
+  "remaining_exact_hybrid_taxonomic_hold": [
+    "lolium-x-boucheanum"
+  ],
+  "definition": "Source-scored means named published morphological states, not exact photograph/voucher, Hays local occurrence or county native qualification. Vegetative-only bamboo and broad-concept Dichanthelium are explicitly qualified and retain hidden/unknown anatomy.",
+  "admissions": [
+    {
+      "id": "cortaderia-selloana",
+      "scientific": "Cortaderia selloana",
+      "common": "Pampas Grass",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "core_traits": {
+        "head": [
+          "pampas_plume"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": []
+      },
+      "core_sources": {
+        "head": {
+          "reference": "Flora of New South Wales, PlantNET: Cortaderia selloana (Jacobs & Hastings)",
+          "source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Cortaderia~selloana&page=nswfl",
+          "note": "Very large 25–100 cm densely silky, white to pink plume-like panicle rising just above a stout tuft, NOT an Arundo plume or slender golden plume."
+        },
+        "habit": {
+          "reference": "Kew GrassBase exact Cortaderia selloana species account",
+          "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:66317-2/general-information",
+          "note": "Strongly caespitose, large dense perennial tuft; established landscape clumps are usual in the source photos."
+        },
+        "ligule": {
+          "reference": "Flora of New South Wales Cortaderia selloana exact species",
+          "source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Cortaderia~selloana&page=nswfl",
+          "note": "True inner ligule is a rim of hairs; source estimates differ (2–3 mm NSW, 3–5 mm Kew GrassBase, FNA 1–2 mm). Do not use fixed hair length to exclude."
+        }
+      },
+      "held_unknown_core": {
+        "awns": "FNA reports true lemma awns approximately 2.5–5 mm, NSW ~1 mm deciduous and synoptic Cortaderia treatment describes no distinct awn; the Lab's organ/length choices would overstate one account. Inspect a mature sex-known floret."
+      },
+      "positive_only_core_keys": [
+        "head",
+        "habit",
+        "ligule"
+      ],
+      "method": "THREE_CORE_SOURCE_DIAGNOSIS",
+      "field_rule": "Source-scored literature: Pampas grass forms a dense, tall tuft with long, rough-edged, bluish to green basal leaves and huge 25–100 cm white/silver-to-pale-pink feathery panicles. The true collar ligule is a fringe of hairs. Compare C. jubata: plume colour alone varies and does NOT prove identity; use relative height, bluish/glaucous leaf upper surfaces, leaf tip and sex-known florets. A garden or roadside plant is not a verified wild Hays County record.",
+      "remaining_cautions": [
+        "The two previously licensed Forest & Kim Starr photos document source-identified cultivated Hawaiian pampas clumps; this is not verification of the existing disputed Hays observation photographs.",
+        "Awn length/identity and plant sex are intentionally not scored from distant plume photos; differences among cited species treatments are preserved.",
+        "Do not assume planted ornamentals in Kyle are native, naturalized or wild county vouchers."
+      ],
+      "photo_identity_held": true,
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED",
+      "required_gallery_creators": [
+        "Forest & Kim Starr",
+        "Forest & Kim Starr"
+      ],
+      "required_gallery_count": 2
+    },
+    {
+      "id": "phyllostachys-aurea",
+      "scientific": "Phyllostachys aurea",
+      "common": "fishpole bamboo",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "core_traits": {
+        "head": [],
+        "habit": [
+          "rhizome",
+          "woody_canes"
+        ],
+        "ligule": [
+          "membrane"
+        ],
+        "awns": []
+      },
+      "core_sources": {
+        "habit": {
+          "reference": "Flora of China, Phyllostachys aurea; USDA USFS FEIS",
+          "source_url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=200025882",
+          "note": "Woody hollow jointed bamboo culms with commonly swollen, crowded basal internodes; underground running rhizomes form large spreading colonies. These are diagnostic VEGETATIVE structures, not flowering head shapes."
+        },
+        "ligule": {
+          "reference": "Kew GrassBase, exact species Phyllostachys aurea",
+          "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415983-1/general-information",
+          "note": "True leaf-sheath inner ligule is a minute ciliate MEMBRANE approximately 1 mm; distinguish culm-sheath ligules from leafy twig ligules."
+        }
+      },
+      "vegetative_diagnostic_sources": [
+        {
+          "reference": "Flora of China, exact P. aurea",
+          "source_url": "https://www.efloras.org/florataxon.aspx?flora_id=2&taxon_id=200025882",
+          "note": "Basal culm internodes commonly strongly shortened and swollen/ventricose (tortoiseshell-like), but may not be obvious on young culms."
+        },
+        {
+          "reference": "USDA USFS FEIS Phyllostachys aurea",
+          "source_url": "https://research.fs.usda.gov/feis/species-reviews/phyaur",
+          "note": "Persistent hollow woody jointed canes emerge from long branching running rhizomes; flowering is exceptional and must not be required for identification."
+        },
+        {
+          "reference": "Kew GrassBase Phyllostachys aurea",
+          "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:415983-1/general-information",
+          "note": "Small pseudopetiolate lanceolate twig leaf blades, swollen lower culm nodes, branching from culm nodes and ciliate membrane."
+        },
+        {
+          "reference": "Flora of North Central Texas, Diggs et al. 1999, printed p.1311",
+          "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+          "note": "Culm flattened on side above branch node, mostly two unequal branches per node; use several mature nodes rather than one generic bamboo culm."
+        }
+      ],
+      "held_unknown_core": {
+        "head": "Bamboo spikelets flower rarely and cannot reliably be assigned to the everyday flowering-head photographs. The source describes bracted fascicles, but no verified bloom image is available in the published gallery.",
+        "awns": "No exact flowering lemma awn state may be inferred from the vegetative source photo; flowering is rare."
+      },
+      "positive_only_core_keys": [
+        "habit",
+        "ligule"
+      ],
+      "method": "VEGETATIVE_ONLY_EXACT_SPECIES_WITH_FOUR_DIAGNOSTICS",
+      "field_rule": "Source-scored vegetative-only comparison: Fishpole bamboo has tall hollow woody canes, running underground rhizomes, an inner ciliate membrane ligule and characteristically closely crowded swollen basal cane internodes on many mature canes. Look for one stronger and one weaker branch at many nodes and narrow pseudopetiolate leaves. Flowers are extremely rare; skip flowering-head and awn questions. Compare native Arundinaria and other planted Phyllostachys using several culm nodes. Planted or spreading from planting is not evidence of native Hays status.",
+      "remaining_cautions": [
+        "The original Commons basal-internode photo is cultivated and source-labeled, but no Hays stand or same-specimen exact bamboo identity has been certified.",
+        "Woody culms, crowded basal internodes, branch arrangement and running rhizomes provide an exception to the usual flowerhead-centric source-scoring threshold. Flowerhead and awns stay UNKNOWN.",
+        "Cultivation versus established spread and BONAP/Hays native-target qualification are separate from botanical species comparison."
+      ],
+      "photo_identity_held": true,
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED",
+      "required_gallery_creators": [
+        "Gary Rogers",
+        "Abrahami"
+      ],
+      "required_gallery_count": 2
+    },
+    {
+      "id": "dichanthelium-acuminatum",
+      "scientific": "Dichanthelium acuminatum",
+      "common": "hairy rosette-panicgrass (FNA broad concept)",
+      "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+      "concept_scope": "Dichanthelium acuminatum sensu Flora of North America 2003 sensu lato, including multiple subspecies that other treatments treat as separate species; NOT strict acuminatum sensu Kartesz",
+      "core_traits": {
+        "head": [
+          "airy"
+        ],
+        "habit": [
+          "tuft"
+        ],
+        "ligule": [
+          "hairs"
+        ],
+        "awns": [
+          "none_obvious"
+        ]
+      },
+      "core_sources": {
+        "head": {
+          "reference": "Flora of North America treatment via Burke Herbarium: Dichanthelium acuminatum broad species",
+          "source_url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Dichanthelium+acuminatum",
+          "note": "Spring primary panicles 3–12 cm, commonly open and well exserted; later autumn panicles smaller/partially sheathed, so selected spring head is positive-only."
+        },
+        "habit": {
+          "reference": "U.S. Forest Service FEIS species review: Dichanthelium acuminatum",
+          "source_url": "https://research.fs.usda.gov/feis/species-reviews/dicacu",
+          "note": "Rosette grass perennial with cespitose spring flowering culms radiating from basal rosette; late culms decumbent and much-branched, not automatically rooted stolons."
+        },
+        "ligule": {
+          "reference": "Flora of North America 2003 sensu lato, via Burke Herbarium",
+          "source_url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Dichanthelium+acuminatum",
+          "note": "True ligules and pseudoligules typically a fringe of hairs 1–5 mm, not membranous proof from stem pubescence photo."
+        },
+        "awns": {
+          "reference": "U.S. Forest Service FEIS Dichanthelium acuminatum species account",
+          "source_url": "https://research.fs.usda.gov/feis/species-reviews/dicacu",
+          "note": "The broad literature species concept has awnless spikelets. Absence must be checked on mature florets, not inferred from foliage."
+        }
+      },
+      "taxon_comparison_source": {
+        "reference": "NatureServe Explorer nomenclature review: broad FNA vs narrow Kartesz",
+        "source_url": "https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.806818/Dichanthelium_acuminatum",
+        "note": "FNA includes D. lindheimeri and other variants/subspecies, some of which Kartesz and other floras recognize as distinct species."
+      },
+      "positive_only_core_keys": [
+        "head",
+        "habit",
+        "ligule",
+        "awns"
+      ],
+      "method": "BROAD_SOURCE_CONCEPT_AGGREGATE_NOT_STRICT_SPECIES_IDENTIFICATION",
+      "field_rule": "SOURCE-SCORED BROAD-COMPLEX MATCH ONLY: FNA (2003) Dichanthelium acuminatum sensu lato can show a winter basal rosette, tufted spring flowering culms and airy spring panicles, followed by branched autumn shoots with reduced partly hidden flowering heads. Hair ligules and awnless tiny spikelets support the FNA aggregate, NOT strict D. acuminatum or distinction from D. lindheimeri, D. meridionale and related segregates. Compare measured mature spring spikelets, hairs and glumes before assigning a narrow species name.",
+      "remaining_cautions": [
+        "The FNA 2003 broad species treatment covers several taxa treated as separate species by Kartesz (1999); a match means broad D. acuminatum aggregate, never proof of D. acuminatum sensu stricto.",
+        "Three existing source-labeled photos show autumn shoots, open panicle, and stem hairs, but not calibrated diagnostic mature spring spikelets or a proven inner collar ligule.",
+        "Local county native distribution and exact identification remain unresolved; do not infer membership in the established Hays target nativity set."
+      ],
+      "photo_identity_held": true,
+      "local_voucher_status": "NOT_CERTIFIED",
+      "bonap_county_status": "UNVERIFIED",
+      "required_gallery_creators": [
+        "James H. Miller & Ted Bodner / Southern Weed Science Society",
+        "Robert H. Mohlenbrock / USDA-SCS",
+        "Robert H. Mohlenbrock / USDA-SCS"
+      ],
+      "required_gallery_count": 3
+    }
+  ]
+}
