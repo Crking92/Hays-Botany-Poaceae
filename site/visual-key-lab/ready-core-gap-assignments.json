@@ -1,0 +1,448 @@
+{
+  "schema": "HAYS_GRASS_READY_CORE_GAPS_V1",
+  "date": "2026-11-16",
+  "prior_research_master_records": 1815,
+  "policy": "28 already verified botanical choices are positive-only core additions. Never hard exclude variants or species just because their population, maturity or observed organ varies. Original 112, 53 trial source packets and all photo metadata remain untouched; 13 held slots remain UNKNOWN.",
+  "integration_count": 28,
+  "source_issue": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368",
+  "rows": [
+    {
+      "id": "avena-sativa",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY",
+      "source_citation": "[Hagenbuch & Lemke 2015, printed p. 36](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf)",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923552772",
+      "variation_note": "*Avena sativa* exact treatment explicitly says annual, cespitose (clustered basal shoots); rhizomes and stolons absent. Annual alone is not the evidence: cespitose is. Do not mistake an oat crop planting for wild Kyle occurrence. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "avena-sativa",
+      "character": "ligule",
+      "states": [
+        "membrane"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY",
+      "source_citation": "[Hagenbuch & Lemke 2015, printed p. 36](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf)",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923552772",
+      "variation_note": "Exact *A. sativa* 2–5 mm whitish membranous ligule, decurrent at sides with erose (notched) edge. NOT a pure fringe of ligular hairs. Matches currently integrated `ligule_length=short,medium` and `ligule_edge=erose`. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "character": "habit",
+      "states": [
+        "tuft",
+        "rhizome"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "[Hagenbuch & Lemke 2015, printed pp. 58–59](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf), under exact historical *Pennisetum ciliare* (= *Cenchrus ciliaris*)",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923552772",
+      "variation_note": "Species explicitly perennial, cespitose, with hard knotty crown; rhizomes PRESENT OR ABSENT, so positive rhizome score ONLY when an underground rhizome is physically observed. Do not make rhizomes required, and no stolon or surface `mat` inferred. The evidence master separately records basal crown and optional rhizome. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "cenchrus-ciliaris",
+      "character": "ligule",
+      "states": [
+        "membrane",
+        "hairs"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "[Hagenbuch & Lemke 2015, printed pp. 58–59](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf)",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923552772",
+      "variation_note": "True ligule 0.5–2 mm ciliate, with a MINUTE MEMBRANOUS BASE. Main `membrane` is morphologically certain; `hairs` is a conditional positive for a visible short ciliate rim as seen with hand lens, NOT a claim of a pure hair-only ligule (the fringe attaches to the membrane). Optional master `ligule_edge=ciliate`, `ligule_length=tiny,short` agrees; future UI could distinguish ciliate membranes. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "A",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "[USDA NRCS exact-species Plant Guide, printed p. 1](https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf); [Phase 4 Lane A original verification](https://github.com/Crking92/Hays-Botany-Poaceae/issues/340#issuecomment-6903548718)",
+      "source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923552772",
+      "variation_note": "Strict *B. longipaniculata* described as upright tufted bunchgrass with 70–115 cm culms and basal branching. Diggs 1999 pp. 1246–47 and H&L 2015 pp.37–38 use broader historical *B. laguroides* concepts: do not import their rhizome/stolon states. No local voucher inferred. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "rottboellia-campestris",
+      "character": "awns",
+      "states": [
+        "none_obvious"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY",
+      "source_citation": "[Diggs et al. (1999), printed p.1258](https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view), named *Coelorachis cylindrica* (synonym of *Rottboellia campestris*); [Lane A #336](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6903020607)",
+      "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923583796",
+      "variation_note": "Historical EXACT species account describes jointed RACEME spikelets as awnless, agreeing with integrated optional `true_lemma_awn=none`. The diagnostic pitted lower glume and articulated rachis are NOT awns. Source-scored `none_obvious` on mature intact spikelets; do not treat undeveloped spikes as proof. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "eragrostis-curtipedicellata",
+      "character": "awns",
+      "states": [
+        "none_obvious"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "[Diggs et al. 1999, *Eragrostis* genus, printed pp.1269–70; named species key pp.1271–72](https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view); [Hagenbuch & Lemke 2015 exact species, pp.47–48](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf); [Lane A #336](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6902495565)",
+      "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923583796",
+      "variation_note": "Diggs explicitly describes *Eragrostis* lemmas awnless at genus scope (the named species belongs to that genus); no contrary awned species account in verified research. Optional strict `true_lemma_awn=none` was previously held because no independent named-species strict-negative citation, but the main option only asserts no CONSPICUOUS LONG awns. Thus positive-only `none_obvious` is permissible only if mature intact gummy-lovegrass spikelets are seen; never assert a direct species-level 'no awns' sentence from FNA/Kew silence. Viscoid/panicle gland and palea-keel hairs are not awns. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "character": "awns",
+      "states": [
+        "long"
+      ],
+      "lane": "A",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "[Diggs 1999, printed p.1284](https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view); [Kew GrassBase exact species unpaginated](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A408768-1/general-information); [Lane A #336](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6903020607)",
+      "source_url": "https://drive.google.com/file/d/1AhogqmJRi_bvr7Q2fdgnvuh0u9evQiwU/view",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923583796",
+      "variation_note": "Upper FERTILE LEMMA has a single geniculate, twisted 5–10mm awn per Diggs; Kew independently 6–12mm, starting between lemma lobes. Longer than the 3.5–7mm spikelet but DELICATE; source-scored main `long` is a conditional positive observable with intact mature florets/hand lens, not a claim this awn is obvious from existing whole-head photos. The long white CALLUS HAIRS at spikelet base are not awns. Broader name not conflated with *M. × giganteus* or variegated ornamentals. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "briza-minor",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "B",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "[Lane B #340 Phase 4 B01](https://github.com/Crking92/Hays-Botany-Poaceae/issues/340#issuecomment-6903524631); A.C. Gibson, UT *Briza minor* exact page https://w3.biosci.utexas.edu/prc/K12/pages/Briza%20minor.html and FNA exact species https://openherbarium.org/portal/taxa/index.php?taxon=236510 (both unpaginated online); Diggs 1999 printed p.1250 covers named reproductive diagnosis, not the basal habit",
+      "source_url": "https://w3.biosci.utexas.edu/prc/K12/pages/Briza%20minor.html",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923588001",
+      "variation_note": "Source-reviewed annual tuft/clump with 15–50-cm rising stems. This `tuft` proposal is for a genuinely clumped basal plant; an erect stem alone or photo with roots hidden does not certify the habit. No `mat`/rhizome guess. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "dichanthelium-acuminatum",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "B",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "Hagenbuch & Lemke 2015 *Grasses of the Texas Hill Country*, printed p.43, exact broad *D. acuminatum* account https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=43 ; [Lane B #340 Phase 4 B01](https://github.com/Crking92/Hays-Botany-Poaceae/issues/340#issuecomment-6903524631)",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=43",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923588001",
+      "variation_note": "Source described cespitose perennial base in broad complex; positive tuft when the actual rooted basal crown is visible. Seasonal autumnal decumbent branches and taxonomic segregates may not look tufted; do not make `tuft` a universal exclusion, infer `mat`, or transfer to narrowly delimited variety. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "lolium-perenne",
+      "character": "ligule",
+      "states": [
+        "membrane"
+      ],
+      "lane": "B",
+      "status": "READY_PRIMARY",
+      "source_citation": "H&L 2015 p.53 https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53 ; existing master `ligule_length=tiny,short`, `ligule_edge=entire`",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=53",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923588001",
+      "variation_note": "Actual inner leaf collar has entire membranous ligule 0.5–1.5 mm, not auricles, leaf sheath edges or folded juvenile vernation. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "hordeum-murinum",
+      "character": "ligule",
+      "states": [
+        "membrane"
+      ],
+      "lane": "B",
+      "status": "READY_PRIMARY",
+      "source_citation": "H&L 2015 p.52 https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52 ; existing master `ligule_length=tiny`, `ligule_edge=erose`",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=52",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923588001",
+      "variation_note": "Membranous, truncate, erose-edged ligule 0.5–1 mm. Tiny marginal irregularities are not a hair fringe; don't transfer glume-margin cilia to the collar. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "stapfochloa-ciliata",
+      "character": "ligule",
+      "states": [
+        "hairs",
+        "absent"
+      ],
+      "lane": "B",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "Kew GrassBase, exact historic *Chloris ciliata* (= *Stapfochloa ciliata*), unpaginated https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469005-2/general-information ; FNA *Chloris ciliata* unpaginated https://floranorthamerica.org/Chloris_ciliata ; [#338 B04](https://github.com/Crking92/Hays-Botany-Poaceae/issues/338#issuecomment-6903409596)",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469005-2/general-information",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923588001",
+      "variation_note": "The actual inner collar ligule may be a hair fringe or absent, source-dependent; FNA notes a minute 0.3–0.4-mm ciliate remnant. `hairs` only when hairs are truly observed in the collar, `absent` only if a mature intact collar actually lacks a ligule. Never infer absence from an unclear photo or treat leaf-base hairs as a ligule. `membrane` not approved. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "stapfochloa-ciliata",
+      "character": "awns",
+      "states": [
+        "none_obvious"
+      ],
+      "lane": "B",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "Cerros-Tlatilpa, Siqueiros-Delgado & Skendzic 2015, *Acta Botánica Mexicana* 112, printed p.106 under *Chloris ciliata*, https://abm.ojs.inecol.mx/index.php/abm/article/download/1091/1273?inline=1 ; Kew GrassBase exact synonym crosswalk, unpaginated, https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60469005-2/general-information ; [previous B13](https://github.com/Crking92/Hays-Botany-Poaceae/issues/344#issuecomment-6904383348)",
+      "source_url": "https://abm.ojs.inecol.mx/index.php/abm/article/download/1091/1273?inline=1",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923612324",
+      "variation_note": "True FERTILE lemma awn 0.4–1.6 mm in 2015 account (Kew reported 0.9–2.7 mm); sterile lemma awn separately 0.4–1.6 mm. These are tiny awns, NOT botanical awnlessness. Main-key `none_obvious` means no conspicuous long projections, only when mature intact spikelets are inspected. Do NOT code `long` or `bristles`. A future precise short-awn option would be more diagnostic. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "muhlenbergia-capillaris",
+      "character": "awns",
+      "states": [
+        "long"
+      ],
+      "lane": "B",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "Diggs, Lipscomb & O'Kennon 1999, *Illustrated Flora of North Central Texas*, species exact printed p.1288, https://shopbritpress.org/products/illustrated-flora-of-north-central-texas ; [Lane B original research](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6902485806) and master `true_lemma_awn=[long,short]`",
+      "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923612324",
+      "variation_note": "Actual lemma awns (2–)5–15 mm, mostly the larger 5–15-mm range: `long` is valid only for visibly long awns on mature florets, not a pink cloud of pedicels or thin hairs. The 2-mm rare short condition remains legitimate; do not use `long` as a hard elimination criterion, do not infer `none_obvious` merely from far-away photos, and do not code `bristles`. Ornamental photo/planting context does not establish a Hays wild specimen. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "dactyloctenium-aegyptium",
+      "character": "habit",
+      "states": [
+        "mat",
+        "tuft"
+      ],
+      "lane": "C",
+      "status": "READY_PRIMARY (mat) + READY_SUPPLEMENTAL_CONDITIONAL (tuft)",
+      "source_citation": "[Hagenbuch & Lemke 2015](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf), printed pp.42–43; existing approved master `culm_posture=erect,geniculate,decumbent`, `surface_runners=stolon,rooted_nodes`, `stem_special=rooting_lower_nodes`; [Kew GrassBase exact species](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:397387-1/general-information), online, unpaginated, explicitly “mat forming, or caespitose”",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923561128",
+      "variation_note": "H&L records rooting LOWER FLOWERING CULMS and stolons present OR absent: a rooted culm is *not* automatically a stolon. Mat-forming individuals and more concentrated tuft individuals both occur. Do not infer rhizomes or claim every plant is mat-forming. Homotypic authority spellings differ between historic Diggs vs H&L; exact `D. aegyptium` concept is the target. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "echinochloa-walteri",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "C",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "[Ibrahim & Peterson, *Grasses of Washington, D.C.* (Smithsonian Contributions to Botany 99)](https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf), printed p.61, exact *Echinochloa walteri*: caespitose annuals, whole-plant habit figure 84; [Diggs 1999](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf), p.1266 exact species for hair/awn/taxon crosscheck",
+      "source_url": "https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923561128",
+      "variation_note": "`Caespitose` means tuft-forming from the base, not “all culms are erect,” and not a rhizome/stolon observation. Smithsonian p.61 provides a named-species supplemental basal habit where Diggs 1999 p.1266 gives plant height/hairy sheaths but did not define a validated core habit. Do NOT copy *E. crus-galli* characteristics to this species. True ligule remains ABSENT, not a tiny fringe. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "panicum-dichotomiflorum",
+      "character": "habit",
+      "states": [
+        "tuft",
+        "mat"
+      ],
+      "lane": "C",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "[Ibrahim & Peterson Smithsonian 99](https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf), printed p.88, exact species: caespitose annual/short-lived perennial; decumbent to geniculately ascending, lower nodes rooting; [Flora of North America, exact species](https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Panicum+dichotomiflorum), online/unpaginated, decumbent-to-erect culms rooting at lower nodes when in water; [Diggs 1999](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf), p.1296 exact species: erect or trailing annual stems",
+      "source_url": "https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923561128",
+      "variation_note": "`tuft` applies to the caespitose basal form. `mat` is positive-only for spreading, decumbent stems with observed rooting at actual nodes, especially wet-site specimens; *trailing* alone is insufficient. Rooted culms are not verified true stolons. This is NOT the `aquatic_rooted` streaming-ribbon choice, and not evidence of underground rhizomes. No regional source conflict: Diggs “trailing” is less anatomically specific, not an assertion of absent rooting. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "sclerochloa-dura",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "C",
+      "status": "READY_PRIMARY",
+      "source_citation": "[Diggs, Lipscomb & O'Kennon (1999), *Illustrated Flora of North Central Texas*](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf), printed p.1316 exact monotypic genus/species; independent supplemental [World Flora Online, exact species](https://worldfloraonline.org/taxon/wfo-0000898415), online/unpaginated, small dense tufts",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923590235",
+      "variation_note": "Diggs describes tufted annual prostrate to erect, 3–10(–18) cm. Tufted means a concentrated stem base, NOT necessarily upright culms. FNA also describes sometimes matted prostrate individuals, but does NOT document true stolons or rooting decumbent nodes, as demanded by the actual `mat` teaching definition. Do not add `mat`, `rhizome` or `aquatic_rooted`. The previously held optional `culm_posture=prostrate` evidence-pending option remains separate, unaltered. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "C",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "[Ibrahim & Peterson, *Grasses of Washington, D.C.* (Smithsonian Contributions to Botany 99)](https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf), printed p.90, exact *Panicum miliaceum* caespitose annuals; [VicFlora exact species account](https://vicflora.rbg.vic.gov.au/flora/taxon/66bb8e0c-0d3e-42e3-97df-7b1ff5af2941), online/unpaginated, “tufted annual, not or barely tussock-forming” and several stems from base; [Diggs 1999](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf), printed p.1300, crop escape account, *without an explicit regional tuft diagnosis*",
+      "source_url": "https://choosenatives.org/wp-content/uploads/2020/04/Grasses-of-Washington-DC.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923590235",
+      "variation_note": "Caespitose/tufted refers to basal clumping, not panicle compactness, stems that merely stand erect, or long pubescent sheaths. May be only a loose, several-stemmed tuft, especially cultivar/planting variation. Keep existing `CROP_OR_SEED_SPILL` and `POTENTIAL_SPECIES_MISID` warnings; source-scored comparison does not verify a local wild millet plant or a specific crop escape. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "dactyloctenium-aegyptium",
+      "character": "awns",
+      "states": [
+        "none_obvious"
+      ],
+      "lane": "C",
+      "status": "READY_PRIMARY (conditional exact label, NOT awns absent)",
+      "source_citation": "[Diggs et al. 1999](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf), printed p.1259 exact species; optional master already has `true_lemma_awn=short` on this source; [Hagenbuch & Lemke 2015](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf) pp.42–43 recognizes the projecting rachis tip; [Kew GrassBase exact species](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:397387-1/general-information) online/unpaginated for variation",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923590235",
+      "variation_note": "Do not code `awns=none` (not an existing core option) or `long` for the extended branch axis. Diggs confirms usually short-awned LEMMAS and second GLUMES; Kew describes many lemma terminal mucros/short cusps, while the flattened fingerlike rachis can extend 1–7 mm past spikelets, which is not a lemma awn. The actual `none_obvious` label is “No conspicuous long awns”, so it is defensible only after inspecting intact mature spikelets for long visible glume/lemma awns; minute real short awns may still exist. Positive-only, no hard exclusion for variant conspicuous projections or missing/damaged spikelets. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "polypogon-viridis",
+      "character": "habit",
+      "states": [
+        "mat"
+      ],
+      "lane": "C",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "Hagenbuch & Lemke 2015, Polypogon viridis exact species, printed p.60",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923734030",
+      "variation_note": "Stolons present and lower culm nodes often root. True surface runners OR rooted decumbent culms support the field mat choice. Tuft and underground rhizomes are NOT inferred. Positive-only."
+    },
+    {
+      "id": "aegilops-cylindrica",
+      "character": "habit",
+      "states": [
+        "tuft"
+      ],
+      "lane": "D",
+      "status": "READY_PRIMARY",
+      "source_citation": "Hagenbuch & Lemke (2015) exact *Aegilops cylindrica* account printed p.33, annual and tufted; [original Lane D Phase2](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6902831025); [H&L PDF](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf). Current master separately records `culm_posture=erect,geniculate`.",
+      "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923580694",
+      "variation_note": "Tuft is from the explicitly documented concentrated grassy base, NOT inferred from upright culms. H&L explicitly says stolons/rhizomes absent in [Phase4](https://github.com/Crking92/Hays-Botany-Poaceae/issues/340#issuecomment-6903518603); do not assign `mat` or `rhizome`. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "character": "habit",
+      "states": [
+        "tuft",
+        "mat"
+      ],
+      "lane": "D",
+      "status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_citation": "Flora Zambesiaca (Cope 2002), exact species, calls the perennial caespitose with short stolons; Kew GrassBase exact species has decumbent culms; [POWO combined species account](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398529-1/general-information), unpaginated; Phase4 [Lane D02](https://github.com/Crking92/Hays-Botany-Poaceae/issues/340#issuecomment-6903543227). Master separately has `surface_runners=stolon` (short, conditional) and `culm_posture=decumbent`. No exact H&L/Diggs account/page.",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398529-1/general-information",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923580694",
+      "variation_note": "`tuft` maps the species' caespitose base; `mat` is a conditional broad UI match to actual short surface stolons, not a claim every plant forms a broad turf mat or that decumbent stems necessarily root at nodes. Positive-only; neither answer may exclude variants lacking a visible runner. No `rhizome` proof. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "dichanthium-aristatum",
+      "character": "ligule",
+      "states": [
+        "membrane"
+      ],
+      "lane": "D",
+      "status": "READY_SUPPLEMENTAL",
+      "source_citation": "Kew GrassBase / Flora Zambesiaca exact species reports a true eciliate membranous ligule, [species account](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398529-1/general-information), unpaginated; [Phase3 D02](https://github.com/Crking92/Hays-Botany-Poaceae/issues/338#issuecomment-6903325746).",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398529-1/general-information",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923580694",
+      "variation_note": "Ligule length is unreported, but main-key option asks composition, not length. Eciliate membrane is `membrane`, not `hairs` or `absent`; hairs near blade base or culm nodes are different anatomical sites. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "paspalum-langei",
+      "character": "ligule",
+      "states": [
+        "membrane"
+      ],
+      "lane": "D",
+      "status": "READY_SUPPLEMENTAL",
+      "source_citation": "Kew GrassBase exact *P. langei* describes eciliate membranous ligule, [species account](https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184424-2/general-information), unpaginated; [Phase3 D03](https://github.com/Crking92/Hays-Botany-Poaceae/issues/338#issuecomment-6903394314). Diggs (1999) printed p.1306 provides species context but not a documented ligule type.",
+      "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:184424-2/general-information",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923580694",
+      "variation_note": "Does NOT imply ligule length, edge shape, or all populations have a hair fringe. `membrane` is exact existing beginner core choice; keep supplementary provenance and P. langei name crosswalk. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "bromus-catharticus",
+      "character": "awns",
+      "states": [
+        "none_obvious"
+      ],
+      "lane": "D",
+      "status": "READY_PRIMARY, wording-scoped",
+      "source_citation": "Diggs, Lipscomb & O'Kennon (1999), *Illustrated Flora of North Central Texas*, printed pp.1251–1252 (exact species key/account); [original Lane D Phase2 D01](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6902510318); [flora excerpt](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf). Existing master `true_lemma_awn=[none,short]`.",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923601701",
+      "variation_note": "Lemmas awnless OR with short 1–3 mm apical awns. Under exact UI's NO CONSPICUOUS LONG criterion both variants qualify for `none_obvious`. This does NOT certify always awnless or conceal the sometimes-present short awns in taxon notes. Positive-only: do not treat other forms as absent solely from this source."
+    },
+    {
+      "id": "triticum-aestivum",
+      "character": "awns",
+      "states": [
+        "none_obvious",
+        "long"
+      ],
+      "lane": "D",
+      "status": "READY_PRIMARY_CONDITIONAL",
+      "source_citation": "Diggs et al. (1999) exact wheat account printed p.1334; [Lane D Phase2 D04](https://github.com/Crking92/Hays-Botany-Poaceae/issues/336#issuecomment-6903006891); [flora excerpt](https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf). Master `true_lemma_awn=[none,long]`, specifically annotated as cultivar/spikelet variable.",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "handoff": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6923601701",
+      "variation_note": "True lemma awn may be absent or up to 150 mm or more. `long` matches awned forms; `none_obvious` matches source-described awnless forms. This is a polymorphic OR mapping, not an assertion that one spikelet simultaneously displays both. Glume awns cannot substitute for lemma awns; no selection hard-eliminates the other form. Positive-only: do not treat other forms as absent solely from this source."
+    }
+  ],
+  "held_unknown": [
+    {
+      "id": "tridentopsis-elongata",
+      "character": "ligule",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "megathyrsus-maximus",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "lolium-perenne",
+      "character": "habit",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "hordeum-murinum",
+      "character": "habit",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "steinchisma-hians",
+      "character": "habit",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "steinchisma-hians",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "pappophorum-bicolor",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "triticum-aestivum",
+      "character": "habit",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "paspalum-notatum",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "paspalum-langei",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "sphenopholis-interrupta",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    },
+    {
+      "id": "melinis-repens",
+      "character": "awns",
+      "reason": "Previously classified HOLD in A–D final #368; source/option not sufficient"
+    }
+  ]
+}

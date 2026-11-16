@@ -22,6 +22,8 @@ on:
       - 'scripts/test_grass_three_way_evidence_key.cjs'
       - 'scripts/test_grass_169_all_option_functionality.cjs'
       - 'scripts/test_grass_source_scored_admissions.cjs'
+      - 'scripts/test_grass_ready_core_gap_368.cjs'
+      - 'site/visual-key-lab/ready-core-gap-assignments.json'
       - 'site/visual-key-lab/source-scored-admissions.json'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
@@ -44,6 +46,8 @@ on:
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_169_all_option_functionality.cjs'
       - 'scripts/test_grass_source_scored_admissions.cjs'
+      - 'scripts/test_grass_ready_core_gap_368.cjs'
+      - 'site/visual-key-lab/ready-core-gap-assignments.json'
       - 'site/visual-key-lab/source-scored-admissions.json'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -84,6 +88,8 @@ jobs:
         run: node scripts/test_grass_169_all_option_functionality.cjs
       - name: Verify source-scored grass admission, original 112 and all four holds
         run: node scripts/test_grass_source_scored_admissions.cjs
+      - name: Protect 28 source-reviewed core observations and 13 deliberate unknowns
+        run: node scripts/test_grass_ready_core_gap_368.cjs
       - name: Check 24 supplemental measured attributes and boundary holds
         run: node scripts/test_grass_backlog_conditional_measurements_344.cjs
       - name: Verify 149 supplemental reproductive citations and anatomy holds
