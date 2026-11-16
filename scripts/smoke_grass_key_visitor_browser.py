@@ -97,6 +97,7 @@ def check_view(browser, name, width, height):
     assert page.locator("#caution-details").is_visible(), "Ruled-out sources not reviewable"
     assert page.locator("#caution-list a[href^='https://']").count() >= 1, "Citations missing for exclusions"
     assert page.locator("#results .result").count() == m+u
+    broad_buckets = [m, u, e]
 
     # The initial comparison selection must NEVER choose a grass already ruled out.
     if m+u >= 2:
@@ -184,7 +185,7 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     page.screenshot(path=str(REPORT / f"grass-key-visitor-{name}.png"), full_page=False)
     ctx.close()
-    return {"device":name,"viewport":[width,height],"broad_leaf_buckets":[m,u,e],
+    return {"device":name,"viewport":[width,height],"broad_leaf_buckets":broad_buckets,
             "core_and_advanced_reset":"PASS","pending_glume":"PASS",
             "source_links":"PRESENT","comparison":"PASS",
             "multi_select_link":"PASS","real_photo_dimensions":natural,
