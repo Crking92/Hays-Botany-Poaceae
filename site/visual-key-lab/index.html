@@ -2877,6 +2877,71 @@ try{
    state.refineCharacters=bundle.characters;
  }
 }catch(err){console.warn("Additional field details unavailable; original four-question key remains intact",err);state.refineCharacters=[];state.refineEvidenceMap={};}
+// Additional organ-specific positive evidence for nine formerly pending
+// advanced options. This supplement is additive and NOT a mutation of the
+// 1,815-source master. Validate the entire batch BEFORE adding any rows.
+// Unstudied species remain unknown, not contradicted or eliminated.
+try{
+ const resp=await fetch("optional-evidence-targeted-20261116.json",{cache:"no-store"});
+ if(!resp.ok)throw Error("Targeted optional flora evidence unavailable");
+ const supplement=await resp.json();
+ const originalRows=Object.values(state.refineEvidenceMap).reduce((n,rows)=>n+rows.length,0);
+ const choices=new Map(state.refineCharacters.map(c=>[c.id,new Set(c.options.map(o=>o.id))]));
+ const originalKnown=new Set(Object.entries(state.refineEvidenceMap).flatMap(([id,rows])=>
+   rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
+ const expectedKeys=new Set([
+  "sheath_margins:closed","culm_posture:prostrate",
+  "glume_marks:upper_one_vein","glume_marks:lower_one_vein",
+  "true_lemma_awn:lower_sterile_awn_variable",
+  "floral_hair_position:lower_sterile_lemma_hairs",
+  "floral_hair_position:upper_fertile_lemma_hairs",
+  "floral_hair_position:spikelet_callus_hairs",
+  "true_lemma_awn:fertile_awn_2_to_5mm"
+ ]);
+ const remained=new Set([
+  "blade_venation:raised_ribs","glume_marks:central_glume_glabrous",
+  "glume_marks:central_glume_scabrous","true_lemma_awn:apical_mucro"
+ ]);
+ if(supplement.schema!=="HAYS_GRASS_TARGETED_ADVANCED_EVIDENCE_V1"||
+    supplement.prior_master_records!==1815||
+    supplement.original_advanced_groups!==24||
+    supplement.original_advanced_options!==111||
+    supplement.original_pending_options!==13||
+    supplement.newly_source_supported_options!==9||
+    supplement.expected_pending_after_release!==4||
+    supplement.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||
+    originalRows!==1815||choices.size!==24||
+    state.species.length!==169||
+    state.species.filter(s=>s.source_scored).length!==56||
+    state.species.filter(s=>s.trial).length!==1||
+    !Array.isArray(supplement.evidence)||supplement.evidence.length!==8||
+    supplement.retained_pending?.length!==4||
+    supplement.retained_pending.some(v=>!remained.has(v)))
+   throw Error("Targeted optional character baseline or holds changed");
+ const validated=[],seen=new Set();
+ for(const e of supplement.evidence){
+  const s=state.species.find(x=>x.id===e.id);
+  if(!s||s.trial||s.scientific!==e.scientific||
+     !choices.has(e.character)||!Array.isArray(e.states)||!e.states.length||
+     !e.source||!e.source_url?.startsWith("https://")||
+     !e.note||e.note.length<65||!e.organ_scope||
+     e.decision!=="READY_ORGAN_SPECIFIC_POSITIVE_ONLY"||
+     e.hays_local_voucher!=="NOT_CERTIFIED")
+    throw Error("Unsupported species or species-specific evidence: "+e.id+" / "+e.character);
+  for(const value of e.states){
+    const key=e.character+":"+value;
+    if(!expectedKeys.has(key)||!choices.get(e.character).has(value)||
+       originalKnown.has(key)||seen.has(key))
+       throw Error("Wrong, duplicate or historically supported option: "+key);
+    seen.add(key);
+  }
+  validated.push(e);
+ }
+ if(seen.size!==9||[...expectedKeys].some(v=>!seen.has(v))||
+    [...remained].some(v=>originalKnown.has(v)||seen.has(v)))
+    throw Error("Targeted nine supported / four pending advanced states are not exact");
+ for(const e of validated)(state.refineEvidenceMap[e.id]??=[]).push(e);
+}catch(err){console.warn("Targeted optional evidence failed safely; original 1,815 advanced records retained",err)}
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
  $("focus-confirmed").addEventListener("click",()=>{
   state.focusConfirmed=!state.focusConfirmed;
