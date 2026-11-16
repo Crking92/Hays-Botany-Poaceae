@@ -473,6 +473,11 @@ for(const [key,item] of Object.entries(expected)){
  assert(row.source?.includes('printed p. '+item.page)&&row.note?.trim(),'Citation or note lost '+key);
  assert.equal(row.coordination_issue,344);
 }
-assert(!index.has('sporobolus-vaginiflorus|blade_width'),'Unresolved exactly 2-mm threshold was force-inserted');
+// Updated D12 verification now explicitly supports only widths below 2 mm.
+const sporo=index.get('sporobolus-vaginiflorus|blade_width');
+assert(sporo&&sporo.states.length===1&&sporo.states[0]==='thread','D12 strict thread evidence wrong');
+assert.deepEqual(sporo.width_mm,[1,2],'D12 published width interval lost');
+assert(!sporo.states.includes('narrow'),'Unverified 2+ mm narrow assignment');
+assert(sporo.note.includes('Exactly 2 mm'),'Missing held exact-boundary caveat');
 assert(![...index.keys()].some(x=>x.startsWith('lolium-x-boucheanum|')),'Held hybrid admitted');
 console.log('PASS 44 regional-source width and ligule measurements, boundary and hold integrity');

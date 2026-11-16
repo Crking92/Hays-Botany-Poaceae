@@ -53,6 +53,15 @@ def possible_width_states(low, high):
     if high > 10: expected.add("broad")
     return expected
 for row in width_rows:
+    # Diggs gives only a maximum to 16(-21) mm for the foxtail millet;
+    # a positive broad clue is supported, but no lower bound may be forged.
+    if row["id"] == "setaria-italica" and "width_mm" not in row:
+        assert row.get("width_max_mm") == 21
+        assert row.get("width_usual_max_mm") == 16
+        assert set(row["states"]) == {"broad"}
+        assert "no lower bound" in row["note"].lower()
+        assert row.get("pdf_printed_page") == 1319
+        continue
     mm = row.get("width_mm")
     assert isinstance(mm, list) and len(mm) == 2 and all(isinstance(x, (float, int)) for x in mm), row["id"]
     lo, hi = mm
@@ -83,6 +92,17 @@ assert '["florets_per_spikelet","spikelet_position","glume_marks","lemma_texture
 flower_rows=[x for x in bundle["evidence"] if x["character"] in flower_ids]
 assert len(flower_rows)>=85 and len({x["id"] for x in flower_rows})>=28
 def verified_flower_provenance(x):
+    # Wipff & Weakley (2022) is an original printed modern-species treatment,
+    # not a Diggs genus-level synonym assumption. Permit only its checked p. 2
+    # Tridentopsis fields, never arbitrary non-Flora florals.
+    if (x.get("source_status") == "READY_PRIMARY"
+            and x["id"] in ("tridentopsis-mutica", "tridentopsis-elongata")
+            and x["character"] in ("glume_marks", "lemma_texture", "floral_hair_position")
+            and "Wipff & Weakley (2022)" in x["source"]
+            and x.get("pdf_printed_page") == 2
+            and x["source_url"].startswith("https://www.phytoneuron.net/wp-content/uploads/2022/04/29PhytoN-Tridentopsiselongata.pdf")
+            and x.get("coordination_issue") == 344):
+        return True
     if x.get("source_status") == "READY_SUPPLEMENTAL_CONDITIONAL":
         return (x.get("coordination_issue") == 344
                 and x.get("source_priority_status") == "supplemental_not_overriding_primary"
@@ -114,6 +134,20 @@ assert ("blade_venation","raised_ribs") in pending and ("sheath_margins","closed
 assert all(not any(r["character"]==cid and oid in r["states"] for r in bundle["evidence"]) for cid,oid in pending)
 for r in bundle["evidence"]:
     if r["character"]!="ligule_length": continue
+    # Printed regional descriptions say 'approximately 1 mm' for three hair
+    # fringes, which does not justify fabricating a lower/upper numeric range.
+    # Keep strict measured-span QA for every other row.
+    if r.get("length_approx_mm") == 1 and "length_mm" not in r:
+        expected_approx = {
+            "eragrostis-lugens": {"tiny", "short"},
+            "panicum-virgatum": {"short"},
+            "setaria-parviflora": {"short"},
+        }
+        assert r["id"] in expected_approx, r["id"]
+        assert set(r["states"]) == expected_approx[r["id"]], r["id"]
+        assert "fringe" in r["note"].lower(), r["id"]
+        assert r.get("pdf_printed_page") in (48, 57, 61), r["id"]
+        continue
     lo,hi=r["length_mm"]
     assert isinstance(hi,(int,float)) and hi>0
     if lo is None:

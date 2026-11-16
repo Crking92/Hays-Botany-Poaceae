@@ -958,7 +958,15 @@ for(const [id,expected] of Object.entries(pdfPass1)){
   if(!row.source.includes(expectedPaper)||!/printed pp?\./.test(row.source)||!row.source_url?.startsWith("https://"))throw Error("Bad PDF citation "+id+"/"+row.character);
  }
 }
-if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="underground_stems"))throw Error("Disputed Melica nitens rhizome incorrectly scored");
+// Owner's 2026-11-15 same-organ conflict tie-break (Issue #344 D12) now
+// provisionally prefers Diggs, while preserving the opposing H&L report.
+const melicaRhizome=pack.evidence.find(x=>x.id==="melica-nitens"&&x.character==="underground_stems");
+if(!melicaRhizome||melicaRhizome.states.join(',')!=="rhizome_present"
+  ||!melicaRhizome.note.includes("SOURCES DISAGREE")
+  ||!melicaRhizome.note.includes("printed p. 1284")
+  ||!melicaRhizome.note.includes("printed p. 54")
+  ||!melicaRhizome.conflicting_source_url?.includes("page=54"))
+  throw Error("Provisional Melica rhizome source disagreement not safely recorded");
 if(pack.evidence.some(x=>x.id==="melica-nitens"&&x.character==="sheath_margins"))throw Error("Research-pending closed Melica sheath incorrectly scored");
 if(html.includes("Number(!!a.s.trial)-Number(!!b.s.trial)"))throw Error("Old trial-last ranking still separates the 57 newer grasses");
 const unifiedManifest=JSON.parse(fs.readFileSync(path.join(root,"hays-candidates.json"),"utf8"));
@@ -1212,6 +1220,14 @@ for(const [id,n] of Object.entries(pdfPass7)){
   if(x.coordination_issue===344&&x.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"){
    if(!x.source_url?.startsWith("https://")||!x.original_source_citation||!x.note?.trim())throw Error("Uncited supplemental evidence "+id);
    continue; // Historical book-only source checks follow.
+  }
+  // Final A30 strict 2022 Tridentopsis Table 1 supersedes a historically
+  // pooled Diggs taxon concept, with both anatomical site and page retained.
+  if(id==="tridentopsis-elongata"&&x.coordination_issue===344
+     &&x.source_status==="READY_PRIMARY"&&x.source.includes("Wipff & Weakley (2022)")){
+    if(x.pdf_printed_page!==2||!x.source_url.includes("29PhytoN-Tridentopsiselongata.pdf")
+       ||!x.note.includes("LEMMA"))throw Error("Unverified strict Tridentopsis source "+id);
+    continue;
   }
   if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.note?.trim())throw Error("Pass7 insufficient source note "+id);
   if(!(/Hagenbuch & Lemke|Diggs, Lipscomb & O'Kennon/.test(x.source))||!x.source.includes("printed p. "))throw Error("Pass7 missing exact original-book page "+id);
@@ -1478,7 +1494,7 @@ for(const [key,required] of Object.entries(phase4Expected)){
  const [id,ch]=key.split("|"),e=pack.evidence.find(x=>x.id===id&&x.character===ch);
  if(!e||e.coordination_issue!==340||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim()||!e.source.includes("Hagenbuch & Lemke (2015)")||!e.source.includes("printed p. "+e.pdf_printed_page)||!e.source_url.endsWith("#page="+e.pdf_printed_page)||!required.every(v=>e.states.includes(v)))throw Error("Phase4 citation or botanical state failed "+key);
 }
-for(const [id,ch] of [["aristida-oligantha","sheath_surface"],["eriochloa-sericea","sheath_surface"],["bromus-japonicus","sheath_margins"],["cynodon-dactylon","sheath_surface"],["melica-nitens","underground_stems"]]){
+for(const [id,ch] of [["aristida-oligantha","sheath_surface"],["eriochloa-sericea","sheath_surface"],["bromus-japonicus","sheath_margins"],["cynodon-dactylon","sheath_surface"]]){
  if(pack.evidence.some(x=>x.id===id&&x.character===ch))throw Error("Phase4 unresolved source/UI/organ hold was accidentally promoted "+id+"/"+ch);
 }
 for(const [id,ch,choice] of [["bromus-japonicus","stem_nodes","backward_hairs"],["chloris-cucullata","sheath_surface","keeled_lower"],["elymus-canadensis","underground_stems","short_rhizome"],["eriochloa-sericea","stem_nodes","hairy_nodes"],["aristida-oligantha","stem_special","basal_branching"]]){
