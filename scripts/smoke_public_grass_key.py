@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "source-scored-final-three-20261116.json", "index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "source-scored-final-three-20261116.json", "main-question-existing-arrows-batch1.json", "index.html"]
 
 
 def read_public(name):
@@ -44,6 +44,13 @@ def verify():
                 "Published Grass ID Lab index.html differs from current main"
             )
             assert b"function currentResults()" in raw, "Scoring function missing on public page"
+    reviewed_arrows = public["main-question-existing-arrows-batch1.json"]
+    assert reviewed_arrows["schema"] == "HAYS_GRASS_MAIN_KEY_EXISTING_PHOTO_MARKERS_BATCH1_V1"
+    assert len(reviewed_arrows["placements"]) == reviewed_arrows["annotated_choice_count"] == 8
+    assert reviewed_arrows["existing_marker_records"] == 14
+    assert reviewed_arrows["photos_rehosted"] == reviewed_arrows["new_photograph_downloads"] == 0
+    assert all(x["expected_source"].startswith("https://") and len(x["markers"]) >= 1
+               for x in reviewed_arrows["placements"])
     scored = [item for suffix in SHARDS for item in public["species-" + suffix + ".json"]]
     candidates = public["hays-candidates.json"]["candidates"]
     ids = [x["id"] for x in scored + candidates]
