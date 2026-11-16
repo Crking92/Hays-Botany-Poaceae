@@ -33,7 +33,8 @@ const pending={
  true_lemma_awn:["fertile_awn_2_to_5mm","lower_sterile_awn_variable","apical_mucro"],
  floral_hair_position:["lower_sterile_lemma_hairs","upper_fertile_lemma_hairs","spikelet_callus_hairs"]
 };
-let count=0,added=0;
+const nowSupportedAndIllustrated=new Set(["glume_marks:central_glume_glabrous","glume_marks:central_glume_scabrous","true_lemma_awn:apical_mucro"]);
+let count=0,added=0,illustratedNew=0;
 for(const [character,ids] of Object.entries(original)){
  const group=pack.characters.find(c=>c.id===character);
  assert.deepEqual(group.options.slice(0,ids.length).map(o=>o.id),ids,"Established diagram-linked option order changed: "+character);
@@ -43,8 +44,18 @@ for(const [character,ids] of Object.entries(original)){
   assert.equal(option.evidence_pending,true,"Anatomical suboption cannot rank unsourced species");
   assert.ok(option.detail?.length>65,"Unscored observation needs a clear text-only anatomical instruction");
   assert.ok(!pack.evidence.some(e=>e.character===character&&e.states.includes(option.id)),"An unverified suboption was accidentally scored");
-  assert.equal(vm.runInContext("flowerFieldTips["+JSON.stringify(character)+"]["+JSON.stringify(option.id)+"]",sandbox),undefined,
-    "Unverified suboptions must use text-only guidance instead of a misleading generic drawing");
+  const scoped=character+":"+option.id;
+  const tip=vm.runInContext("flowerFieldTips["+JSON.stringify(character)+"]["+JSON.stringify(option.id)+"]",sandbox);
+  if(nowSupportedAndIllustrated.has(scoped)){
+    // The source-backed final-four supplement proves these plant organs; the
+    // immutable historical master still correctly records original pending flags.
+    assert.equal(tip.length,2,"Precise confirmed organ now needs a novice field tip");
+    assert(tip[1].length>=65);
+    const drawing=vm.runInContext("flowerFieldSketch("+JSON.stringify(character)+","+JSON.stringify(option.id)+")",sandbox);
+    assert(drawing.children.length>=3,"Now-supported plant anatomy illustration absent");
+    illustratedNew++;
+  }else assert.equal(tip,undefined,
+    "Historical source-pending suboptions without a custom drawing should stay text-only");
  }
  const signatures=new Set();
  for(const option of group.options.slice(0,ids.length)){
@@ -65,7 +76,8 @@ for(const [character,ids] of Object.entries(original)){
  }
 }
 assert.equal(count,26);
-assert.equal(added,10,"Exactly ten new pending anatomy options; no diagrams are passed off as verified");
+assert.equal(added,10,"Original historical 10 anatomy additions must remain immutable");
+assert.equal(illustratedNew,3,"Two lower-glume midnerve variants and fertile lemma mucro must have distinct instructional diagrams");
 assert.ok(html.includes('Anatomically specific observation only; no verified species-level match yet.'));
 assert.ok(html.includes('const [where,tip]=flowerFieldTips[c.id][selected.id]||[];'));
 
@@ -80,4 +92,4 @@ for(const f of ["venationSketch","leafDetailSketch","collarFieldSketch","stemFie
  assert.ok(html.includes("function "+f+"("),"Prior illustration missing: "+f);
 assert.ok(html.includes("const picks=Object.entries(state.selected)")&&html.includes(".filter(x=>!x.conflict)"));
 assert.ok(html.includes("b.refinementMatches.length-a.refinementMatches.length"));
-console.log("PASS: original 26 distinct floral illustrations preserved; 10 new anatomy-scoped observations use text-only help and no invented species scores.");
+console.log("PASS: original 26 floral diagrams, immutable 10 historic raw pending flags, 3 newly verified precise anatomy diagrams, zero fabricated specimen identifications");

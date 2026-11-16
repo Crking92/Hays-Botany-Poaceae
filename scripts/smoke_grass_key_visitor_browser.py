@@ -132,6 +132,29 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text() == "169 possible"
 
+    # Final four advanced choices must actually rank a known exact species,
+    # use corrected FIRST-GLUME anatomy and retain nonmatching unknown grasses.
+    for section, character, choice, scientific in [
+        ("Leaf blades","blade_venation","raised_ribs","Lolium perenne"),
+        ("Flowers / spikelets","true_lemma_awn","apical_mucro","Setaria italica"),
+        ("Flowers / spikelets","glume_marks","central_glume_glabrous","Setaria italica"),
+        ("Flowers / spikelets","glume_marks","central_glume_scabrous","Poa annua")
+    ]:
+        choose_extra(page, section, character, choice)
+        selected=page.locator(
+            f'#optional-character-groups .optional-group[data-character="{character}"] button[data-option="{choice}"]')
+        assert selected.count()==1 and "Reference data pending" not in selected.inner_text()
+        assert "source-documented" in selected.inner_text()
+        m,u,e=buckets(page)
+        assert m>=1 and m+u+e==169 and e==0, (
+            scientific+": final anatomical option failed to produce a positive match without false exclusions")
+        assert scientific in page.locator("#results").inner_text()
+        if choice.startswith("central_glume"):
+            assert selected.inner_text().startswith("Lower glume midnerve"), (
+                "Key still describes a nonexistent third central glume")
+        page.locator("#reset-field-key").click()
+        assert page.locator("#count").inner_text()=="169 possible"
+
     assert "168 source-scored, 1 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
