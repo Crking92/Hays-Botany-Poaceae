@@ -77,4 +77,37 @@ assert(sum(inspect())===112,"clear both core and advanced observations restores 
 assert(html.includes('const advancedExcluded=groups.excluded.map('),"advanced exclusions must appear in visitor review section");
 assert(html.includes('Published evidence: '),"published source links must accompany exclusions");
 assert(html.includes("const excludedIds=new Set(groups.excluded.map("),"excluded matches should not remain in main results");
+// Exact callus/beard vs separate sterile-branchlet anatomy from Chat D.
+const wrongBelow=[
+ "bothriochloa-bladhii","anatherum-virginicum","andropogon-gerardi",
+ "avena-fatua","chasmanthium-latifolium","heteropogon-contortus",
+ "miscanthus-sinensis","nassella-tenuissima","tridentopsis-buckleyana"
+];
+const originalCount=bundle.evidence.length;
+for(const id of wrongBelow){
+ const e=(refs[id]||[]).find(x=>x.character==="floral_hair_position");
+ assert(e?.states.includes("below_spikelet"),id+": historical callus state not present for correction");
+ assert(e.source_url?.startsWith("https://"),id+": exact source record not linked");
+}
+const remapStart=script.indexOf("const callusInsteadOfBristles=[");
+const remapEnd=script.indexOf("state.refineEvidenceOptionKeys=new Set(",remapStart);
+assert(remapStart>0&&remapEnd>remapStart,"Runtime callus/bristle organ correction missing");
+vm.runInContext(script.slice(remapStart,remapEnd),sandbox);
+for(const id of wrongBelow){
+ const e=refs[id].find(x=>x.character==="floral_hair_position");
+ assert(!e.states.includes("below_spikelet"),id+": still falsely shown as independent subtending bristles");
+ assert(e.states.includes("spikelet_callus_hairs"),id+": true callus hairs not selectable");
+}
+state.refineSelected={floral_hair_position:"below_spikelet"};
+assert(vm.runInContext('refinementMatches({id:"setaria-parviflora"})',sandbox).length===1,
+ "Setaria's verified separate branchlet bristles accidentally removed");
+for(const id of wrongBelow)
+ assert(vm.runInContext("refinementMatches({id:"+JSON.stringify(id)+"})",sandbox).length===0,
+  id+": wrong positive bristle match persisted");
+state.refineSelected={floral_hair_position:"spikelet_callus_hairs"};
+for(const id of wrongBelow)
+ assert(vm.runInContext("refinementMatches({id:"+JSON.stringify(id)+"})",sandbox).length===1,
+  id+": correct callus match missing");
+assert.equal(bundle.evidence.length,originalCount,"Master row count changed during exact organ remap");
+state.refineSelected={};
 console.log("PASS: 169-universe policy, 24 groups, 1815 sources, 112 unchanged core, conservative measured/exact exclusions and reversible unknowns");
