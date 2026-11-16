@@ -665,7 +665,9 @@ function verifiedAdvancedConflict(s){
   if(character.options.some(o=>observed.includes(o.id)&&o.evidence_pending))continue;
   const policy=advancedExclusionPolicy[character.id];
   if(!policy||evidence.source_disagreement||evidence.conflicting_source||evidence.source_scope_caution)continue;
-  if(evidence.source_status==="HOLD"||/sources? disagree|taxon hold|unresolved contradiction/i.test(evidence.note||""))continue;
+  if(evidence.source_status==="HOLD"||evidence.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"||
+     evidence.source_priority_status==="supplemental_not_overriding_primary"||
+     /sources? disagree|taxon hold|unresolved contradiction/i.test(evidence.note||""))continue;
   if(policy==="MEASURED_CLOSED_INTERVAL"){
    const interval=character.id==="blade_width"?evidence.width_mm:evidence.length_mm;
    if(!Array.isArray(interval)||interval.length!==2||
