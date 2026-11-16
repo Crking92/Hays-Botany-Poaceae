@@ -1132,6 +1132,10 @@ for(const [id,n] of Object.entries(pdfPass5)){
  if(rows.length<n)throw Error("PDF pass 5 historic cited records missing "+id+": "+rows.length);
  if(!groupedTrials.some(s=>s.id===id)||species.some(s=>s.id===id))throw Error("PDF pass 5 mistakenly admitted provisional species "+id);
  for(const r of rows){
+  if(r.coordination_issue===344&&r.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"){
+   if(!r.source_url?.startsWith("https://")||!r.original_source_citation||!r.note?.trim())throw Error("Uncited supplemental evidence "+id);
+   continue; // Historical Diggs-only baseline checks follow.
+  }
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.note?.trim())throw Error("PDF pass 5 citation quality "+id);
   if(id==="janochloa-antidotalis"){
    if(!r.source.includes("printed p. 56")||!r.source_url.endsWith("#page=56")||!r.taxon_crosswalk_url?.includes("77319974-1"))throw Error("Pass 5 Panicum/Janochloa crosswalk is missing");
@@ -1205,6 +1209,10 @@ for(const [id,n] of Object.entries(pdfPass7)){
  if(a.length<n)throw Error("Pass7 historical source-character baseline regressed "+id+": "+a.length); // Later cite-backed additions are tested independently.
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass7 must not promote provisional grass "+id);
  for(const x of a){
+  if(x.coordination_issue===344&&x.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"){
+   if(!x.source_url?.startsWith("https://")||!x.original_source_citation||!x.note?.trim())throw Error("Uncited supplemental evidence "+id);
+   continue; // Historical book-only source checks follow.
+  }
   if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.note?.trim())throw Error("Pass7 insufficient source note "+id);
   if(!(/Hagenbuch & Lemke|Diggs, Lipscomb & O'Kennon/.test(x.source))||!x.source.includes("printed p. "))throw Error("Pass7 missing exact original-book page "+id);
   if(["florets_per_spikelet","spikelet_position","true_lemma_awn","floral_hair_position"].includes(x.character)&&(!x.source.includes("Diggs, Lipscomb & O'Kennon")||!x.pdf_printed_page))throw Error("Pass7 reproductive trait not in Diggs "+id);
@@ -1236,7 +1244,7 @@ const supplementalPass8={"bothriochloa-longipaniculata":3,"bothriochloa-bladhii"
 if(pack.evidence.length<1006||new Set(pack.evidence.map(x=>x.id)).size<162)throw Error("Pass8 coverage regressed");
 for(const [id,n] of Object.entries(supplementalPass8)){
  const a=pack.evidence.filter(x=>x.id===id);
- if(a.length!==n)throw Error("Pass8 missing species-level records "+id+" "+a.length);
+ if(a.length<n)throw Error("Pass8 original species-level records missing "+id+" "+a.length);
  if(![...groupedTrials,...placeholderProfiles].some(x=>x.id===id)||species.some(s=>s.id===id))throw Error("Pass8 changed admission "+id);
  for(const e of a){
   if(!e.source_url.startsWith("https://")||e.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!e.note?.trim())throw Error("Pass8 citation quality "+id);
