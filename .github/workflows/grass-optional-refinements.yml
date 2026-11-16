@@ -28,6 +28,7 @@ on:
       - 'scripts/test_grass_guided_comparison.cjs'
       - 'scripts/test_grass_compare_photo_quality.cjs'
       - 'scripts/test_grass_archive_photo_reuse.cjs'
+      - 'scripts/test_grass_reviewed_character_photos.cjs'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
@@ -45,6 +46,7 @@ on:
       - 'scripts/test_grass_guided_comparison.cjs'
       - 'scripts/test_grass_compare_photo_quality.cjs'
       - 'scripts/test_grass_archive_photo_reuse.cjs'
+      - 'scripts/test_grass_reviewed_character_photos.cjs'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
@@ -103,3 +105,5 @@ jobs:
         run: node scripts/test_grass_compare_photo_quality.cjs
       - name: Verify archived public-domain whole-flowering photo reuse and source credits
         run: node scripts/test_grass_archive_photo_reuse.cjs
+      - name: Confirm eight exact-source anatomy photos, reuse permissions and truthful limits
+        run: node scripts/test_grass_reviewed_character_photos.cjs
