@@ -2787,7 +2787,7 @@ try{
     pack.remaining_exact_hybrid_taxonomic_hold?.length!==1||
     pack.remaining_exact_hybrid_taxonomic_hold[0]!=="lolium-x-boucheanum"||
     pack.admissions?.length!==3||
-    state.species.filter(s=>s.source_scored).length!==54||
+    state.species.filter(s=>s.source_scored).length!==53||
     state.species.filter(s=>s.trial).length!==4)
    throw Error("Final three release has invalid baseline or taxonomic holds");
  const validOptions=new Map(qs.map(q=>[q.id,new Set(q.options.map(o=>o[0]))]));
