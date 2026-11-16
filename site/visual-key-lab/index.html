@@ -356,6 +356,7 @@ const qs=[
 ["tangled_awns","Dark awns twisted into a tangle","A narrow flowering raceme whose long dark awns twist together at maturity (tanglehead example).","heteropogon-contortus",0],
 ["long_narrow_panicle","Long, narrow panicle","A relatively contracted and elongated head, not a broad cloud.","sporobolus-compositus",0],
 ["golden_plume","Narrow upright plume","Crowded ascending branches form a dense golden or bronze plume; compare the broader, openly branched reed plume.","sorghastrum-nutans",2],
+["pampas_plume","Very large silvery, feathery plume","A tall, dense, pale silvery-white to pinkish plume over broad arching basal leaves, usually many tens of centimeters long. Compare true Cortaderia spikelets against other ornamental plumes.","cortaderia-selloana",1],
 ["paired_spikes","Two spreading flower branches in a V","Usually two near-terminal racemes, sometimes a third below (knotgrass). Check the insertion points.","paspalum-distichum",1],
 ["mixed_gender","Upper male / lower female sections","One flowering branch with light upper male and thick lower female units.","tripsacum-dactyloides",1],
 ["aquatic_gender","Lower male and upper female branches","Texas wild-rice flowering stalk with dangling male flowers beneath erect awned female branches.","zizania-texana",5],
@@ -365,6 +366,7 @@ const qs=[
 ["tuft","A bunch or tuft","Many stems rise from one concentrated crown.","panicum-hallii",1],
 ["mat","Sprawling or mat-forming at the surface","Look for true stolons OR low decumbent culms that root at their nodes; a rooted culm is not necessarily a stolon. The drawing shows the stolon example.","bouteloua-dactyloides",3],
 ["rhizome","Underground rhizomes — short or long","Look for true underground stem links, sometimes only short ones at the older crown. These are not surface stolons.","sorghum-halepense",0],
+["woody_canes","Tall, jointed woody bamboo canes","The grass has persistent hollow woody culms with clear nodes; fishpole bamboo often has crowded swollen lower internodes. This is a vegetative character, NOT a flowering-head state.","phyllostachys-aurea",1],
 ["aquatic_rooted","Rooted in running water, leaves trail downstream","A fully aquatic grass whose long submerged ribbons flow with the current; observe only, do not touch protected wild-rice.","zizania-texana",2]
 ]},
 {id:"ligule",short:"Leaf collar",title:"What does the true ligule look like?",hint:"Open a leaf where the blade joins the sheath. A tiny membrane with cilia may look like only hairs; check beneath the hair tips. Ignore hairs on a distant stem node.",options:[
@@ -1375,7 +1377,8 @@ function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?nul
 function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
-for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if(key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
+for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if((key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))||
+       (key==="head"&&val==="pampas_plume")||(key==="habit"&&val==="woody_canes"))unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
 return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 // Progressive key display: group fully documented matches separately from
 // evidence gaps, without treating an unstudied character as an absent structure.
@@ -1475,7 +1478,24 @@ function headIcon(key){
   }
   break;
  }
- case "golden_plume":{
+ case "pampas_plume":{
+   // Enormous broad soft silver-white ornamental plume, not golden indiangrass or an open reed panicle.
+   path("M55 107 L55 88",2.8);
+   for(let j=0;j<13;j++){
+     const y=84-j*5.2, spread= 12+18*Math.sin((j+1)/14*Math.PI),dir=j%2?-1:1;
+     for(const d of [-1,1]){
+       const tx=55+d*spread,ty=y-(4+j%3);
+       path("M55 "+y.toFixed(1)+" Q"+(55+d*spread*.51).toFixed(1)+" "+(y-10)+" "+tx.toFixed(1)+" "+ty.toFixed(1),1.35,olive);
+       for(const t of [.25,.5,.75]){
+         const xx=55+d*spread*t,yy=y-10*t;
+         path("M"+xx.toFixed(1)+" "+yy.toFixed(1)+" l"+(d*4.5).toFixed(1)+" -7",.75,gold);
+       }
+       ellipse(tx,ty,1.5,3.1,d*25,pale);
+     }
+   }
+   break;
+  }
+  case "golden_plume":{
   // Narrow upright plume: visibly shorter and stouter than tall reed's broad,
   // tall, highly branched panicle; fine crowded, ascending golden branchlets.
   path("M55 105 L55 38",2.45);
@@ -1824,6 +1844,20 @@ function characterIcon(category,key){
     node(x,84,3.1);
     path("M"+x+" 86 Q"+(x-5)+" 94 "+(x-10)+" 108 M"+x+" 86 Q"+(x+3)+" 96 "+(x+7)+" 107",ground,1.25);
    }
+  }else if(key==="woody_canes"){
+   // P. aurea field hallmark: woody jointed hollow cane and crowded/swollen basal internodes.
+   path("M7 105 Q55 101 103 105",ground,1.1);
+   shape("M47 102 L47 15 Q48 9 55 9 Q63 9 63 15 L63 102 Z","#dfebd1",g,1.65);
+   for(const y of [38,61,72,81,89]){
+     path("M45 "+y+" Q55 "+(y+4)+" 65 "+y,g,2.0);
+     path("M50 "+(y-2)+" Q55 "+(y-5)+" 60 "+(y-2),light,.95);
+   }
+   path("M55 89 Q76 81 91 57 M55 61 Q36 48 24 28",g,1.85);
+   path("M75 82 Q89 69 99 60 M36 50 Q22 41 15 28",light,1.3);
+   for(const [x,y,dx] of [[83,68,7],[35,41,-7],[92,55,5],[24,28,-6]]){
+     path("M"+x+" "+y+" Q"+(x+dx)+" "+(y-16)+" "+(x+dx*2)+" "+(y-24),light,1.2);
+   }
+   path("M52 102 l-12 7 M58 102 l14 7",ground,1.3);
   }else if(key==="aquatic_rooted"){
    // Submerged, attached at streambed, flowing downstream to the right.
    path("M3 27 Q15 23 27 27 T51 27 T75 27 T107 27",stream,1.9);
@@ -1938,7 +1972,7 @@ function characterIcon(category,key){
 
 const flowerheadSections=[
 {title:"Open or spreading panicles",icon:"airy",help:"A main stalk divides into visible branches, with spikelets hanging or scattered along them.",keys:["airy","wiry","branched_oat","flat_oats","reed_plume"]},
-{title:"Narrow, plumed, or crowded heads",icon:"golden_plume",help:"Branches remain closer to the main axis, forming a narrower or denser outline.",keys:["long_narrow_panicle","golden_plume","compact","bushy"]},
+{title:"Narrow, plumed, or crowded heads",icon:"golden_plume",help:"Branches remain closer to the main axis, forming a narrower or denser outline.",keys:["long_narrow_panicle","golden_plume","pampas_plume","compact","bushy"]},
 {title:"Distinct fingers, racemes, or combs",icon:"fingers",help:"Several recognizable side branches or one-sided rows carry the flowering units.",keys:["short_racemes","fingers","side_oats","short_side_racemes","combs","whorls","one_sided","many_one_sided","paired_spikes"]},
 {title:"Spikes, foxtails, and burs",icon:"foxtail",help:"A central spike or bristle-bearing, bottlebrush-like, or bur-bearing axis.",keys:["spike","tangled_awns","foxtail","sparse_bristles","burrs"]},
 {title:"Unusual male / female arrangements",icon:"mixed_gender",help:"Specialized flowerheads with differently shaped pollen-bearing and seed-bearing parts.",keys:["mixed_gender","aquatic_gender","aquatic_mixed"]}
@@ -2737,6 +2771,84 @@ try{
  if(state.species.filter(s=>s.source_scored).length!==53||state.species.filter(s=>s.trial).length!==4)
    throw Error("Bromus source-scored totals inconsistent");
 }catch(err){console.warn("Bromus source-scored review failed safely; prior 164/5 preserved",err)}
+
+// Final three exact-source literature profiles; explicitly distinguish
+// FNA broad D. acuminatum, vegetative-only bamboo, and pampas awn conflict.
+// No changes to original 112, 53 research packets, 57 manifest entries,
+// 1,815 optional evidence records, or any original photo bytes/rights.
+try{
+ const response=await fetch("source-scored-final-three-20261116.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Final three source review was not delivered");
+ const pack=await response.json();
+ const expected=new Set(["cortaderia-selloana","phyllostachys-aurea","dichanthelium-acuminatum"]);
+ if(pack.schema!=="HAYS_GRASS_FINAL_THREE_TAXON_SCOPE_V1"||
+    pack.previous_source_scored!==165||pack.promotions!==3||
+    pack.total_source_scored_after_release!==168||pack.remaining_research_only!==1||
+    pack.remaining_exact_hybrid_taxonomic_hold?.length!==1||
+    pack.remaining_exact_hybrid_taxonomic_hold[0]!=="lolium-x-boucheanum"||
+    pack.admissions?.length!==3||
+    state.species.filter(s=>s.source_scored).length!==53||
+    state.species.filter(s=>s.trial).length!==4)
+   throw Error("Final three release has invalid baseline or taxonomic holds");
+ const validOptions=new Map(qs.map(q=>[q.id,new Set(q.options.map(o=>o[0]))]));
+ const validated=[];
+ for(const a of pack.admissions){
+  const s=state.species.find(x=>x.id===a.id);
+  const manifest=state.candidateManifest.find(x=>x.id===a.id);
+  if(!expected.delete(a.id)||!s?.trial||!manifest||s.scientific!==a.scientific||
+     s.range!=="UNVERIFIED"||s.source_scored||
+     a.admission_level!=="SOURCE_SCORED_NOT_LOCAL_VOUCHER"||
+     a.local_voucher_status!=="NOT_CERTIFIED"||a.bonap_county_status!=="UNVERIFIED"||
+     s.photos?.length!==a.required_gallery_count||
+     manifest.approved_gallery?.length!==a.required_gallery_count||
+     a.required_gallery_creators?.some((name,i)=>s.photos[i]?.creator!==name||
+       s.photos[i]?.source_page!==manifest.approved_gallery[i]?.source_page||
+       s.photos[i]?.license!==manifest.approved_gallery[i]?.license))
+    throw Error("Final three species or licensed gallery mismatch: "+a.id);
+  let core=0;
+  for(const q of qs){
+   const values=a.core_traits?.[q.id],proof=a.core_sources?.[q.id];
+   if(!Array.isArray(values)||values.some(v=>!validOptions.get(q.id)?.has(v)))
+     throw Error("Invalid beginner options: "+a.id+" "+q.id);
+   if(values.length){
+    core++;
+    if(!proof?.source_url?.startsWith("https://")||!proof?.note||!proof?.reference)
+      throw Error("Missing exact named anatomy evidence: "+a.id+" "+q.id);
+   }else if(!a.held_unknown_core?.[q.id])
+    throw Error("Unexplained actual morphological unknown: "+a.id+" "+q.id);
+  }
+  if(a.id==="phyllostachys-aurea"){
+   if(core!==2||a.method!=="VEGETATIVE_ONLY_EXACT_SPECIES_WITH_FOUR_DIAGNOSTICS"||
+      a.vegetative_diagnostic_sources?.length!==4||
+      a.vegetative_diagnostic_sources.some(p=>!p.source_url?.startsWith("https://")||!p.note))
+      throw Error("Flowering-rare bamboo special policy needs four separate vegetative sources");
+  }else if(core<3)throw Error("Fewer than three defensible main traits: "+a.id);
+  if(a.id==="dichanthelium-acuminatum"&&!a.concept_scope?.includes("sensu lato"))
+    throw Error("Strict/broad Dichanthelium conflict not stated");
+  if(!a.field_rule||a.remaining_cautions?.length<3||a.photo_identity_held!==true)
+    throw Error("Photo, identity or species scope caution missing");
+  validated.push([s,a]);
+ }
+ if(expected.size!==0)throw Error("Incomplete final-three admission batch");
+ for(const [s,a] of validated){
+  s.traits=structuredClone(a.core_traits);
+  s.positiveOnlyCoreKeys=[...new Set([...(s.positiveOnlyCoreKeys||[]),...(a.positive_only_core_keys||[])])];
+  s.trial=false;s.source_scored=true;s.admission_status=a.admission_level;
+  s.local_voucher_status="NOT_CERTIFIED";
+  s.source_admission={
+   core_traits:a.core_traits,core_sources:a.core_sources,
+   held_unknown_core:a.held_unknown_core||{},remaining_cautions:a.remaining_cautions,
+   concept_scope:a.concept_scope||null,method:a.method,
+   vegetative_diagnostic_sources:a.vegetative_diagnostic_sources||[]
+  };
+  s.field_rule=a.field_rule;
+  if(a.id==="dichanthelium-acuminatum")s.common=a.common;
+  if(s.promotion_hold)delete s.promotion_hold;
+ }
+ if(state.species.filter(s=>s.source_scored).length!==56||
+    state.species.filter(s=>s.trial).length!==1)
+   throw Error("Final source-scored counts not 168 / 1");
+}catch(err){console.warn("Final three taxonomy-scoped admission failed safely; baseline 165/4 retained",err)}
 
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{

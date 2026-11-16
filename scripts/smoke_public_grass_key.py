@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "source-scored-final-three-20261116.json", "index.html"]
 
 
 def read_public(name):
@@ -88,11 +88,25 @@ def verify():
     assert brome_id == "bromus-brevis"
     assert brome_id in candidate_by_id and brome_id not in {x["id"] for x in trials}
     assert brome_id not in promoted_ids | followup_ids | focused_ids
-    all_promoted_ids = promoted_ids | followup_ids | focused_ids | {brome_id}
-    assert len(all_promoted_ids) == 53
+    final = public["source-scored-final-three-20261116.json"]
+    assert final["schema"] == "HAYS_GRASS_FINAL_THREE_TAXON_SCOPE_V1"
+    assert final["previous_source_scored"] == 165
+    assert final["total_source_scored_after_release"] == 168
+    assert final["remaining_research_only"] == 1
+    final_ids = {a["id"] for a in final["admissions"]}
+    assert final_ids == {"phyllostachys-aurea", "cortaderia-selloana", "dichanthelium-acuminatum"}
+    assert final_ids <= set(candidate_by_id)
+    assert final_ids.isdisjoint(promoted_ids | followup_ids | focused_ids | {brome_id})
+    assert len(final["admissions"]) == 3
+    assert all(a["photo_identity_held"] and a["local_voucher_status"] == "NOT_CERTIFIED" for a in final["admissions"])
+    assert "sensu lato" in next(a for a in final["admissions"] if a["id"] == "dichanthelium-acuminatum")["concept_scope"]
+    all_promoted_ids = promoted_ids | followup_ids | focused_ids | {brome_id} | final_ids
+    assert len(all_promoted_ids) == 56
     assert len(set(focused["remaining_holds"])) == 5
     assert set(focused["remaining_holds"]) - {brome_id} == set(brome["remaining_holds"])
-    assert set(brome["remaining_holds"]).isdisjoint(all_promoted_ids)
+    assert set(brome["remaining_holds"]) - final_ids == {"lolium-x-boucheanum"}
+    assert set(final["remaining_exact_hybrid_taxonomic_hold"]) == {"lolium-x-boucheanum"}
+    assert not set(final["remaining_exact_hybrid_taxonomic_hold"]).intersection(all_promoted_ids)
     review = public["promotion-review-37-20261116.json"]
     assert review["schema"] == "HAYS_GRASS_PROMOTION_REVIEW_37_20261116_V1"
     assert review["review_count"] == 37 and review["approved_count"] == 33 and review["hold_count"] == 4

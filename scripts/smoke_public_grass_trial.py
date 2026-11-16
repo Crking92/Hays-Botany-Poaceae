@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "site" / "visual-key-lab"
 BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
-FILES = ["index.html", "promotion-review-37-20261116.json", "source-scored-admissions.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
+FILES = ["index.html", "promotion-review-37-20261116.json", "source-scored-admissions.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "source-scored-final-three-20261116.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
 ATTEMPTS = 12
 DELAY_SECONDS = 5
 
@@ -99,6 +99,13 @@ def http_check():
     assert brome["admission"]["id"] == "bromus-brevis"
     assert brome["total_source_scored_after_release"] == 165
     assert set(focused["remaining_holds"]) - {"bromus-brevis"} == set(brome["remaining_holds"])
+    final = delivered["source-scored-final-three-20261116.json"]
+    assert final["schema"] == "HAYS_GRASS_FINAL_THREE_TAXON_SCOPE_V1"
+    final_ids = {a["id"] for a in final["admissions"]}
+    assert final_ids == {"phyllostachys-aurea", "cortaderia-selloana", "dichanthelium-acuminatum"}
+    assert final["total_source_scored_after_release"] == 168
+    assert set(brome["remaining_holds"]) - final_ids == {"lolium-x-boucheanum"}
+    assert set(final["remaining_exact_hybrid_taxonomic_hold"]) == {"lolium-x-boucheanum"}
     gaps = delivered["ready-core-gap-assignments.json"]
     assert gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
     assert len(gaps["rows"]) == 28 and len(gaps["held_unknown"]) == 13
@@ -115,10 +122,10 @@ def browser_check(groups,promoted_ids):
                 "() => document.querySelectorAll('#results .result').length === 169",
                 timeout=45000)
             labels = page.locator("#results .result .tag").all_text_contents()
-            assert sum("Research trial" in x and "unverified" in x for x in labels) == 4, (
-                "Unified 169 key missing one broad taxonomic hold and three manifest-only research labels")
-            assert sum("Source-scored" in x for x in labels) == 53, (
-                "Fifty-three literature-scored profiles not labeled separately from source trials")
+            assert sum("Research trial" in x and "unverified" in x for x in labels) == 1, (
+                "Unified 169 key missing one narrowly scoped hybrid taxonomic hold")
+            assert sum("Source-scored" in x for x in labels) == 56, (
+                "Fifty-six literature-scored profiles not labeled separately from source trials")
             matches = []
             for x in groups:
                 scientific=x["scientific"]
@@ -161,6 +168,25 @@ def browser_check(groups,promoted_ids):
             assert "Harry Rose" in brome_detail.inner_text()
             assert brome_detail.locator(".detail-grid img").count() == 3
             page.get_by_role("button",name="Close species detail").click()
+            for scientific, photos in [
+                ("Dichanthelium acuminatum", 3), ("Phyllostachys aurea", 2),
+                ("Cortaderia selloana", 2)]:
+                page.locator("#species-search").fill(scientific)
+                matches_row=page.locator("#results .result")
+                assert matches_row.count() == 1 and "Source-scored" in matches_row.first.inner_text()
+                matches_row.first.click()
+                dlg=page.locator("#detail-dialog")
+                assert "NOT a Hays County specimen voucher" in dlg.inner_text()
+                assert dlg.locator(".detail-grid img").count() == photos
+                if scientific == "Phyllostachys aurea":
+                    assert "Flowers are extremely rare" in dlg.inner_text()
+                    assert "Awns / bristles" in dlg.inner_text()
+                if scientific == "Dichanthelium acuminatum":
+                    assert "BROAD-COMPLEX" in dlg.inner_text()
+                page.get_by_role("button",name="Close species detail").click()
+            page.locator("#species-search").fill("Lolium × boucheanum")
+            assert page.locator("#results .result").count() == 1
+            assert "Research trial" in page.locator("#results .result").first.inner_text()
             return matches
         finally:
             browser.close()
@@ -175,8 +201,8 @@ def check():
         "files_verified": FILES,
         "original_scored_count_unchanged": 112,
         "historical_source_trial_packets_preserved": len(groups),
-        "source_scored_admissions_displayed": len(promoted_ids) + 1,
-        "research_only_including_four_manifest_holds": 57 - len(promoted_ids) - 1,
+        "source_scored_admissions_displayed": len(promoted_ids) + 4,
+        "research_only_including_four_manifest_holds": 57 - len(promoted_ids) - 4,
         "total_normal_key_results": 169,
         "total_learner_species": 169,
         "photo_held_research_profiles_in_key": 4,
