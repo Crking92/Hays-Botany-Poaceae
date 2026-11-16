@@ -8,6 +8,7 @@ on:
       - 'scripts/test_grass_backlog_d_primary_344.cjs'
       - 'scripts/test_grass_backlog_bc_primary_344.cjs'
       - 'scripts/test_grass_backlog_floral_344.cjs'
+      - 'scripts/test_grass_backlog_numeric_344.cjs'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -46,6 +47,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate source-backed states, original 112, research holds and unknown-safe sorting
         run: python3 scripts/qa_optional_grass_refinements.py
+      - name: Test 44 source-measured width and ligule states against numeric bins
+        run: node scripts/test_grass_backlog_numeric_344.cjs
       - name: Check 65 verified Flora reproductive records and anatomy safeguards
         run: node scripts/test_grass_backlog_floral_344.cjs
       - name: Verify 87 B/C primary leaf, sheath and stem source-page mappings
