@@ -34,6 +34,9 @@ on:
       - 'scripts/test_grass_archive_photo_reuse.cjs'
       - 'scripts/test_grass_reviewed_character_photos.cjs'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
+      - 'site/visual-key-lab/species-a.json'
+      - 'site/visual-key-lab/source-reference-gould-1975.json'
+      - 'scripts/test_grass_gould_1975_reference.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -55,6 +58,9 @@ on:
       - 'scripts/test_grass_archive_photo_reuse.cjs'
       - 'scripts/test_grass_reviewed_character_photos.cjs'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
+      - 'site/visual-key-lab/species-a.json'
+      - 'site/visual-key-lab/source-reference-gould-1975.json'
+      - 'scripts/test_grass_gould_1975_reference.cjs'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -66,6 +72,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate source-backed states, original 112, research holds and unknown-safe sorting
         run: python3 scripts/qa_optional_grass_refinements.py
+      - name: Validate Gould (1975) source intake and protect original little bluestem scoring
+        run: node scripts/test_grass_gould_1975_reference.cjs
       - name: Verify 16 organ- and sex-specific Flora/supplemental clues
         run: node scripts/test_grass_backlog_organs_344.cjs
       - name: Protect Lane B18 sterile-versus-fertile lemma hairs and blocked awns
