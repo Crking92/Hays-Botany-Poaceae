@@ -446,7 +446,15 @@ async function boot(){
   }
   list();
   const wanted=new URLSearchParams(location.search).get("species");
-  if(wanted&&state.index.some(x=>x.id===wanted))await select(wanted);
+  if(wanted&&state.index.some(x=>x.id===wanted)){
+    await select(wanted);
+    // A deep link from the ID Lab must SHOW the selected lesson, not just
+    // update the off-screen detail beside the full 169-grass catalog.
+    const selected=$("species-detail");
+    selected.setAttribute("tabindex","-1");
+    selected.focus({preventScroll:true});
+    selected.scrollIntoView({behavior:"auto",block:"start"});
+  }
  }catch(error){$("count").textContent="Could not load staging learner: "+error.message}
 }
 boot();
