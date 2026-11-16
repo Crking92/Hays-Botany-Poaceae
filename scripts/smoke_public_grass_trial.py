@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "site" / "visual-key-lab"
 BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
-FILES = ["index.html", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
+FILES = ["index.html", "source-scored-admissions.json", "ready-core-gap-assignments.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
 ATTEMPTS = 12
 DELAY_SECONDS = 5
 
@@ -70,10 +70,17 @@ def http_check():
             assert copied == ref[i], f"{trial['id']}: credits/source metadata diverged"
     assert sum(len(x["photos"]) for x in groups) >= 38, (
         "Original research-trial image coverage was unexpectedly removed")
-    return groups
+    promotions = delivered["source-scored-admissions.json"]["admissions"]
+    assert len(promotions) == 4 and all(x["admission_level"] == "SOURCE_SCORED_NOT_LOCAL_VOUCHER" for x in promotions)
+    promoted_ids = {x["id"] for x in promotions}
+    assert promoted_ids <= {x["id"] for x in groups}
+    gaps = delivered["ready-core-gap-assignments.json"]
+    assert gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
+    assert len(gaps["rows"]) == 28 and len(gaps["held_unknown"]) == 13
+    return groups, promoted_ids
 
 
-def browser_check(groups):
+def browser_check(groups,promoted_ids):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         try:
@@ -83,8 +90,10 @@ def browser_check(groups):
                 "() => document.querySelectorAll('#results .result').length === 169",
                 timeout=45000)
             labels = page.locator("#results .result .tag").all_text_contents()
-            assert sum("Research trial" in x and "unverified" in x for x in labels) == 57, (
-                "Unified 169 key missing its 53 pictured trials or four photo-held research labels")
+            assert sum("Research trial" in x and "unverified" in x for x in labels) == 53, (
+                "Unified 169 key missing remaining 49 trial cards and four photo-held research labels")
+            assert sum("Source-scored" in x for x in labels) == 4, (
+                "Four admitted literature-scored profiles not labeled separately from source trials")
             matches = []
             for x in groups:
                 scientific=x["scientific"]
@@ -92,15 +101,24 @@ def browser_check(groups):
                 rows=page.locator("#results .result").filter(has_text=scientific)
                 assert rows.count() == 1, f"{scientific}: not exactly one normal-key result"
                 row=rows.first
-                assert "Research trial" in row.inner_text(), f"{scientific}: missing trial badge"
+                if x["id"] in promoted_ids:
+                    assert "Source-scored" in row.inner_text(), f"{scientific}: missing literature-scored badge"
+                else:
+                    assert "Research trial" in row.inner_text(), f"{scientific}: missing trial badge"
                 row.click()
                 dialog=page.locator("#detail-dialog")
                 assert dialog.evaluate("(x) => x.open"), f"{scientific}: detail didn't open"
                 detail=dialog.inner_text()
-                assert "Research trial · unverified" in detail, (
-                    f"{scientific}: unverified detail badge missing")
-                assert "Identification data still being checked." in detail, (
-                    f"{scientific}: pending identification notice missing")
+                if x["id"] in promoted_ids:
+                    assert "Source-scored" in detail and "Source-scored character evidence" in detail, (
+                        f"{scientific}: cited literature admission not displayed")
+                    assert "NOT a Hays County specimen voucher" in detail, (
+                        f"{scientific}: publication wrongly implies local voucher")
+                else:
+                    assert "Research trial · unverified" in detail, (
+                        f"{scientific}: unverified detail badge missing")
+                    assert "Identification data still being checked." in detail, (
+                        f"{scientific}: pending identification notice missing")
                 hrefs=dialog.locator("a[href]").evaluate_all("(nodes) => nodes.map(n => n.href)")
                 for photo in x["photos"]:
                     assert photo["creator"] in detail and photo["license"] in detail, (
@@ -115,20 +133,22 @@ def browser_check(groups):
 
 
 def check():
-    groups = http_check()
-    visited = browser_check(groups)
+    groups,promoted_ids = http_check()
+    visited = browser_check(groups,promoted_ids)
     return {
-        "status": "PUBLIC_HTTP_AND_BROWSER_53_TRIALS_VERIFIED",
+        "status": "PUBLIC_HTTP_AND_BROWSER_53_SOURCE_TRIAL_PACKETS_WITH_4_LITERATURE_ADMISSIONS_VERIFIED",
         "public_url": BASE,
         "files_verified": FILES,
         "original_scored_count_unchanged": 112,
-        "trial_matches_available": len(groups),
+        "historical_source_trial_packets_preserved": len(groups),
+        "source_scored_admissions_displayed": len(promoted_ids),
+        "research_only_including_four_manifest_holds": 57 - len(promoted_ids),
         "total_normal_key_results": 169,
         "total_learner_species": 169,
         "photo_held_research_profiles_in_key": 4,
         "verified_specimen_admissions": 0,
         "trial_source_photo_refs": sum(len(x["photos"]) for x in groups),
-        "research_trial_cards_and_details_checked": len(visited),
+        "former_trial_source_cards_and_details_checked": len(visited),
         "species_checked": visited,
         "browser_photo_pixels_verified": False,
         "important_limit": "Links, labels, metadata and UI tested. No Hays specimen ID, exact image rights or photo-pixel confirmation."
