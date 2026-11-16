@@ -550,7 +550,8 @@ for(const [k,want] of Object.entries(expected)){
  assert(e.note?.trim()&&e.states.every(s=>choices.get(e.character)?.has(s)));
  assert.equal(e.evidence_level,'PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED');
 }
-assert(!idx.has('eragrostis-secundiflora|ligule_edge'),'Published paper-vs-fringe source dispute incorrectly released');
+const secundiflora=idx.get('eragrostis-secundiflora|ligule_edge');
+assert(secundiflora&&secundiflora.states.join(',')==='hair_fringe'&&secundiflora.pdf_printed_page===49,'Exact H&L p49 short-hair ligule correction lost');
 assert(!idx.has('triticum-aestivum|leaf_base'),'Two-source pointed auricle hold incorrectly released');
 assert(![...idx.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')),'Hybrid hold incorrectly released');
 console.log('PASS: 75 source-page primary vegetative traits; historic source conflicts retained on hold');
