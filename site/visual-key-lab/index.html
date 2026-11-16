@@ -2684,6 +2684,60 @@ try{
    throw Error("Result is not 164 source-scored with five research holds");
 }catch(err){console.warn("Focused identity admission failed safely; prior cohort preserved",err)}
 
+// Targeted Kew-accepted Bromus brevis literature admission from an original
+// manifest-only source-labelled gallery. Protect the actual original 53
+// trial packets and all source/photo/rights metadata; do not imply Hays voucher.
+try{
+ const r=await fetch("source-scored-bromus-brevis-20261116.json",{cache:"no-store"});
+ if(!r.ok)throw Error("Targeted Bromus packet unavailable");
+ const pack=await r.json(),a=pack.admission;
+ const allowed=new Map(qs.map(q=>[q.id,new Set(q.options.map(o=>o[0]))]));
+ const remaining=new Set(["dichanthelium-acuminatum","phyllostachys-aurea","cortaderia-selloana","lolium-x-boucheanum"]);
+ const beforeSource=state.species.filter(s=>s.source_scored).length;
+ const beforeTrial=state.species.filter(s=>s.trial).length;
+ const source=state.candidateManifest.find(c=>c.id==="bromus-brevis");
+ const species=state.species.find(s=>s.id==="bromus-brevis");
+ if(pack.schema!=="HAYS_GRASS_BROMUS_BREVIS_TARGETED_ADMISSION_V1"||
+    pack.baseline_source_scored!==164||pack.admission_count!==1||
+    pack.total_source_scored_after_release!==165||pack.remaining_research_only!==4||
+    !Array.isArray(pack.remaining_holds)||pack.remaining_holds.length!==4||
+    pack.remaining_holds.some(id=>!remaining.has(id))||
+    beforeSource!==52||beforeTrial!==5||
+    !source||!species?.trial||species.source_scored||species.scientific!=="Bromus brevis"||
+    a?.id!=="bromus-brevis"||a?.scientific!=="Bromus brevis"||
+    a?.admission_level!=="SOURCE_SCORED_NOT_LOCAL_VOUCHER"||
+    a?.local_voucher_status!=="NOT_CERTIFIED"||
+    a?.bonap_county_status!=="UNVERIFIED"||
+    species.range!=="UNVERIFIED"||source.status!=="RESEARCH_CANDIDATE_NOT_RELEASED"||
+    species.photos.length!==3||source.approved_gallery?.length!==3||
+    a.expected_original_gallery_count!==3||
+    source.approved_gallery_review?.status?.startsWith("GENERAL_IMAGES_CLEARED_EXACT_FILE_LICENSE_AND_SOURCE")!==true)
+   throw Error("Exact Bromus source packet, public photos or preserved baseline invalid");
+ if(a.expected_source_pages.some((url,i)=>species.photos[i]?.source_page!==url||
+   species.photos[i]?.creator!==source.approved_gallery[i]?.creator||
+   species.photos[i]?.license!==source.approved_gallery[i]?.license))
+   throw Error("Named-source Bromus photograph or original rights metadata changed");
+ for(const q of qs){
+   const states=a.core_traits?.[q.id],proof=a.core_sources?.[q.id];
+   if(!Array.isArray(states)||!states.length||states.some(x=>!allowed.get(q.id)?.has(x))||
+      !proof?.reference||!proof?.note||!proof?.source_url?.startsWith("https://"))
+      throw Error("Unverified Bromus beginner trait "+q.id);
+ }
+ if(!a.taxonomic_source?.url?.startsWith("https://")||!a.field_rule?.includes("NOT a documented Hays plant")||
+    !a.remaining_cautions?.some(x=>x.includes("Texas voucher")))
+    throw Error("Taxonomy/county uncertainty erased from Bromus admission");
+ species.traits=structuredClone(a.core_traits);
+ species.positiveOnlyCoreKeys=[...new Set([...(species.positiveOnlyCoreKeys||[]),...(a.positive_only_core_keys||[])])];
+ species.trial=false;species.source_scored=true;
+ species.admission_status=a.admission_level;
+ species.local_voucher_status="NOT_CERTIFIED";
+ species.source_admission={core_traits:a.core_traits,core_sources:a.core_sources,
+    remaining_cautions:a.remaining_cautions};
+ species.field_rule=a.field_rule;
+ if(state.species.filter(s=>s.source_scored).length!==53||state.species.filter(s=>s.trial).length!==4)
+   throw Error("Bromus source-scored totals inconsistent");
+}catch(err){console.warn("Bromus source-scored review failed safely; prior 164/5 preserved",err)}
+
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});

@@ -1,0 +1,84 @@
+{
+  "schema": "HAYS_GRASS_BROMUS_BREVIS_TARGETED_ADMISSION_V1",
+  "release_date": "2026-11-16",
+  "baseline_source_scored": 164,
+  "admission_count": 1,
+  "total_source_scored_after_release": 165,
+  "remaining_research_only": 4,
+  "admission": {
+    "id": "bromus-brevis",
+    "scientific": "Bromus brevis",
+    "common": "Pampas Brome",
+    "admission_level": "SOURCE_SCORED_NOT_LOCAL_VOUCHER",
+    "native_hays_county": "NOT_CLAIMED",
+    "local_voucher_status": "NOT_CERTIFIED",
+    "bonap_county_status": "UNVERIFIED",
+    "core_traits": {
+      "head": [
+        "compact"
+      ],
+      "habit": [
+        "tuft",
+        "rhizome"
+      ],
+      "ligule": [
+        "membrane"
+      ],
+      "awns": [
+        "none_obvious"
+      ]
+    },
+    "positive_only_core_keys": [
+      "head",
+      "habit",
+      "awns"
+    ],
+    "core_sources": {
+      "head": {
+        "reference": "Jacobs & Hastings, PlantNET Flora of New South Wales, Bromus brevis",
+        "source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Bromus~brevis&page=nswfl",
+        "note": "Named species has usually compact 3.5–20 cm panicles, especially at apex, with short rigid ascending branches; do not call all Bromus spikelets loosely dangling."
+      },
+      "habit": {
+        "reference": "PlantNET Flora of NSW, exact Bromus brevis; Edgar & Connor (2000), Flora of New Zealand vol. 5",
+        "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+        "note": "Short 30–75 cm tufted plants; sources vary annual/biennial/perennial and PlantNET reports occasional rhizomatous forms. Tuft and observed underground rhizome are conditional positive states, not requirements for every plant."
+      },
+      "ligule": {
+        "reference": "Edgar & Connor (2000), Flora of New Zealand, exact Bromus brevis; PlantNET NSW",
+        "source_url": "https://www.nzflora.info/factsheet/taxon/Bromus-brevis.html",
+        "note": "Leaf-sheath ligule is a torn or denticulate membranous flap, often 1.5–2.5 mm or to 5 mm; neighboring sheath hairs are not a hair-only true ligule."
+      },
+      "awns": {
+        "reference": "Jacobs & Hastings, PlantNET NSW Bromus brevis; Flora of New Zealand species description",
+        "source_url": "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?lvl=sp&name=Bromus~brevis&page=nswfl",
+        "note": "Lemma awns may be completely absent or very short (to 3 mm); a mature spikelet has no conspicuous long awns. Do NOT equate absent obvious long awns with no terminal mucro or minute awn."
+      }
+    },
+    "taxonomic_source": {
+      "reference": "Kew POWO accepts Bromus brevis Steud.",
+      "url": "https://powo.science.kew.org/taxon/36988-2",
+      "warning": "Other authorities including older ITIS treatments apply a broad Bromus catharticus var. rupestris concept. Use Kew's accepted exact species scope for these flora traits; no automatic Hays occurrence."
+    },
+    "expected_original_gallery_count": 3,
+    "expected_source_pages": [
+      "https://commons.wikimedia.org/wiki/File:Bromus_brevis_plant1_(11261984224).jpg",
+      "https://commons.wikimedia.org/wiki/File:Bromus_brevis_flowerhead1_(11261864716)_(2).jpg",
+      "https://commons.wikimedia.org/wiki/File:Bromus_brevis_spikelet1_(11261822745).jpg"
+    ],
+    "field_rule": "Source-scored literature: Pampas brome is a rather stiff, compact-panicled Bromus with short ascending flowering branches, mostly erect flattened green 9–20 mm spikelets, a ragged membranous ligule and very short or absent awns. Look for a tufted crown (sometimes with rhizomes). Compare B. catharticus and other compressed-spikelet Bromus using glume veins and mature lemma shape. These Australian source-labeled photographs are reference views, NOT a documented Hays plant.",
+    "remaining_cautions": [
+      "No accepted Kew county occurrence or Texas voucher has been established; retain as an introduced source-scored comparison, not Hays native or locally verified.",
+      "Alternative older treatments place some material within Bromus catharticus var. rupestris; this profile uses the Kew-accepted B. brevis species and named Australian/New Zealand accounts.",
+      "Three source-labeled licensed Australian reference photos preserve original creators and rights; no same-specimen Hays glume measurement or photo-specific identity certification.",
+      "Life history and rhizomes are variable in published descriptions; never use missing rhizomes alone to reject the name."
+    ]
+  },
+  "remaining_holds": [
+    "dichanthelium-acuminatum",
+    "phyllostachys-aurea",
+    "cortaderia-selloana",
+    "lolium-x-boucheanum"
+  ],
+  "evidence_policy": "Exact named-species published characters support literature-scored comparison status only. All four original manifest research source records remain untouched; no native Hays county acceptance, established population or individual gallery photo anatomy is certified."
+}

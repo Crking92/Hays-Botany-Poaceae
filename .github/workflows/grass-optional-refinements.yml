@@ -43,6 +43,8 @@ on:
       - 'site/visual-key-lab/source-scored-gould-followup-20261116.json'
       - 'scripts/test_grass_focused_identity_admissions.cjs'
       - 'site/visual-key-lab/focused-identity-review-20261116.json'
+      - 'scripts/test_grass_bromus_brevis_admission.cjs'
+      - 'site/visual-key-lab/source-scored-bromus-brevis-20261116.json'
       - '.github/workflows/grass-optional-refinements.yml'
   push:
     branches: [main]
@@ -73,6 +75,8 @@ on:
       - 'site/visual-key-lab/source-scored-gould-followup-20261116.json'
       - 'scripts/test_grass_focused_identity_admissions.cjs'
       - 'site/visual-key-lab/focused-identity-review-20261116.json'
+      - 'scripts/test_grass_bromus_brevis_admission.cjs'
+      - 'site/visual-key-lab/source-scored-bromus-brevis-20261116.json'
       - '.github/workflows/grass-optional-refinements.yml'
   workflow_dispatch:
 permissions:
@@ -90,6 +94,8 @@ jobs:
         run: node scripts/test_grass_gould_targeted_admissions.cjs
       - name: Confirm two narrowly reviewed species and five remaining identity holds
         run: node scripts/test_grass_focused_identity_admissions.cjs
+      - name: Check Kew Bromus brevis admission, photo provenance and four remaining holds
+        run: node scripts/test_grass_bromus_brevis_admission.cjs
       - name: Verify 16 organ- and sex-specific Flora/supplemental clues
         run: node scripts/test_grass_backlog_organs_344.cjs
       - name: Protect Lane B18 sterile-versus-fertile lemma hairs and blocked awns
