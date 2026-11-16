@@ -88,6 +88,32 @@ def check_view(browser, name, width, height):
     )
     assert page.locator("#count").inner_text() == "169 possible"
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
+    # The source-backed Pappophorum option should lead to a real documented
+    # match. The optional focus button hides unknown records but NEVER calls
+    # them botanical contradictions, and clearing the view restores all 169.
+    focus=page.locator("#focus-confirmed")
+    assert focus.is_visible() and focus.is_disabled()
+    page.locator("#steps .step").nth(3).click()
+    page.locator("#question .answer").filter(has_text="Many feathery awns on one lemma").click()
+    page.wait_for_function("document.querySelector('#count')?.textContent.endsWith('possible')",timeout=15000)
+    all_possible=page.locator("#results .result").count()
+    assert all_possible > 1, "Positive-only specialized awn was made a false exclusion"
+    assert "supported match" in page.locator(".progressive-status").inner_text()
+    assert focus.is_enabled()
+    focus.click()
+    assert focus.get_attribute("aria-pressed") == "true"
+    documented=page.locator("#results .result").count()
+    assert 1 <= documented < all_possible, "Documented match view did not focus candidates"
+    assert "documented matches" in page.locator("#count").inner_text()
+    assert "Pappophorum bicolor" in page.locator("#results").inner_text()
+    assert "not ruled out" in page.locator("#focus-note").inner_text()
+    focus.click()
+    assert focus.get_attribute("aria-pressed") == "false"
+    assert page.locator("#results .result").count() == all_possible, (
+        "Toggling off focus failed to restore all unknown possibilities")
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text() == "169 possible"
+
     assert "168 source-scored, 1 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
