@@ -1769,7 +1769,7 @@ function comparisonFeatureRows(species){
   const evidence=species.map(s=>refinementEvidence(s,c.id));
   const values=evidence.map(e=>Array.isArray(e?.states)?e.states:[]);
   const labels=values.map(vs=>vs.map(v=>c.options.find(o=>o.id===v)?.label||v));
-  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:selectedRefinementStates(c.id).join(", ")||null,refs:evidence});
+  rows.push({id:c.id,label:c.label,kind:"optional",values,labels,selected:(Array.isArray(state.refineSelected[c.id])?state.refineSelected[c.id].join(", "):state.refineSelected[c.id])||null,refs:evidence});
  }
  for(const row of rows){
   row.documented=row.values.every(vs=>vs.length>0);
