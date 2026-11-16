@@ -2477,12 +2477,19 @@
       "id": "secale-cereale",
       "character": "sheath_margins",
       "states": [
-        "overlapping"
+        "overlapping",
+        "open"
       ],
       "source": "A. C. Gibson, UT Austin PRC — Secale cereale",
       "source_url": "https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale",
-      "note": "Sheath top commonly overlaps",
-      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+      "note": "Regional Williamson County Gibson PDF p.1: leaf sheath OPEN with longitudinal SLIT; sheath TOP margins commonly OVERLAP, which does not mean fused/closed. Both states describe differing aspects/positions of SAME sheath. Open edges are not a claim of closed tube.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "B",
+      "coordination_issue": 344,
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "original_source_citation": "[A. C. Gibson, Secale cereale, Vascular Plants of Williamson County, PDF p. 1](https://w3.biosci.utexas.edu/prc/K12/pdf/Secale%20cereale)",
+      "supplemental_source_page": 1
     },
     {
       "id": "muhlenbergia-lindheimeri",
@@ -4278,10 +4285,13 @@
       "states": [
         "wrinkled"
       ],
-      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1320",
+      "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p. 1319",
       "source_url": "https://shopbritpress.org/products/illustrated-flora-of-north-central-texas",
-      "note": "Knotroot bristlegrass fertile lemma rugose.",
-      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+      "note": "True upper FERTILE lemma of knotroot bristlegrass rugose/wrinkled. Diggs, Lipscomb & O'Kennon (1999), exact Setaria parviflora account, printed p.1319; historic synonym Setaria geniculata. The previous p.1320 reference was offset to a neighboring account.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "pdf_printed_page": 1319,
+      "review_lane": "C",
+      "coordination_issue": 344
     },
     {
       "id": "setaria-scheelei",
@@ -6897,12 +6907,16 @@
       "id": "digitaria-cognata",
       "character": "blade_hairs",
       "states": [
-        "base_hairs"
+        "base_hairs",
+        "blade_hairy"
       ],
       "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p. 45",
       "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=45",
-      "note": "Upper blade sparsely pilose BASALLY, often with additional sparse pubescence; note nonpapillose hairs in regional species treatment.",
-      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+      "note": "Hagenbuch & Lemke (2015), printed p.45: UPPER adaxial blade usually glabrous or sparse pubescence, including pilose hairs concentrated BASALLY; LOWER abaxial blade sometimes sparsely PUBESCENT along surface. Both options are conditional, NOT a universal hair distribution; taxon historically Leptoloma cognatum, broad H&L concept may include D. pubiflora.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "pdf_printed_page": 45,
+      "review_lane": "D",
+      "coordination_issue": 344
     },
     {
       "id": "digitaria-cognata",
@@ -12973,12 +12987,20 @@
       "id": "melinis-repens",
       "character": "blade_shape",
       "states": [
-        "flat"
+        "flat",
+        "folded"
       ],
       "source": "J.K. Wipff, Flora of North America, exact Melinis repens species treatment (Open Herbarium transcription)",
       "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884",
-      "note": "FNA documents flat blades.",
-      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"
+      "note": "FNA exact Melinis repens species account documents FLAT blades. Smithsonian Flora of Hawaiian Islands specifically describes Melinis repens subsp. repens blades FLAT OR FOLDED (conduplicate). Folded is a CONDITIONAL infraspecific observation; not universal across all populations/subspecies, and not the same as rolled vernation or a dried leaf.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "supplemental_source": "Smithsonian Flora of Hawaiian Islands, Melinis repens subsp. repens, unpaginated",
+      "supplemental_source_url": "https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Melinis&species=repens",
+      "review_lane": "D",
+      "coordination_issue": 344,
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "original_source_citation": "[FNA Melinis repens exact species](https://openherbarium.org/portal/taxa/index.php?clid=26&taxauthid=1&tid=239884); [Smithsonian subsp. repens](https://naturalhistory2.si.edu/botany/hawaiianflora/speciesdescr.cfm?genus=Melinis&species=repens)"
     },
     {
       "id": "melinis-repens",
@@ -25386,6 +25408,167 @@
       "conflicting_source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54",
       "source_priority_status": "provisional_diggs_conflict_tiebreak",
       "original_source_citation": "[Diggs et al. (1999), printed p. 1284](https://shopbritpress.org/products/illustrated-flora-of-north-central-texas); [Hagenbuch & Lemke (2015), printed p. 54](https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=54)"
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "character": "blade_midnerve",
+      "states": [
+        "pale_center"
+      ],
+      "note": "Distinct whitish MIDVEIN visible on UPPER/adaxial blade surface, not a white collar or horticultural leaf variegation; source describes wild Miscanthus sinensis morphology.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "USDA Forest Service, Miller et al. (2015), GTR SRS-119, printed p. 83",
+      "source_url": "https://www.govinfo.gov/content/pkg/GOVPUB-A13-PURL-gpo105825/pdf/GOVPUB-A13-PURL-gpo105825.pdf",
+      "original_source_citation": "[USDA Forest Service, Miller et al. (2015), GTR SRS-119, printed p. 83](https://www.govinfo.gov/content/pkg/GOVPUB-A13-PURL-gpo105825/pdf/GOVPUB-A13-PURL-gpo105825.pdf)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "supplemental_source_page": 83
+    },
+    {
+      "id": "miscanthus-sinensis",
+      "character": "blade_venation",
+      "states": [
+        "pale_midvein",
+        "raised_midvein"
+      ],
+      "note": "The SAME blade midvein shows whitish upper (adaxial) stripe AND raised green ridge beneath (abaxial); two views of a SINGLE vein, not all longitudinal ribs. Surface-specific positive ranking only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "USDA Forest Service, Miller et al. (2015), GTR SRS-119, printed p. 83",
+      "source_url": "https://www.govinfo.gov/content/pkg/GOVPUB-A13-PURL-gpo105825/pdf/GOVPUB-A13-PURL-gpo105825.pdf",
+      "original_source_citation": "[USDA Forest Service, Miller et al. (2015), GTR SRS-119, printed p. 83](https://www.govinfo.gov/content/pkg/GOVPUB-A13-PURL-gpo105825/pdf/GOVPUB-A13-PURL-gpo105825.pdf)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "supplemental_source_page": 83
+    },
+    {
+      "id": "bothriochloa-longipaniculata",
+      "character": "true_lemma_awn",
+      "states": [
+        "long"
+      ],
+      "note": "Strict separately recognized Bothriochloa longipaniculata: TRUE FERTILE LEMMA awn 11.8–15.5 mm in Scrivanti p.37; USDA reports 10–18 mm awn bending near its base. BENT does not prove TWISTED; do NOT assign bent_twisted. Historical Diggs (1999) B. laguroides subsp. torreyana pooled distinct taxa, so do not transfer that broad concept blindly.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "Scrivanti et al. (2013), strict Bothriochloa longipaniculata species treatment, printed p. 37; USDA NRCS Plant Guide, printed p. 1",
+      "source_url": "https://ri.conicet.gov.ar/bitstream/handle/11336/3403/CONICET_Digital_Nro.4442_G.pdf?isAllowed=y&sequence=8",
+      "original_source_citation": "[Scrivanti et al. (2013), strict Bothriochloa longipaniculata species treatment, printed p. 37; USDA NRCS Plant Guide, printed p. 1](https://ri.conicet.gov.ar/bitstream/handle/11336/3403/CONICET_Digital_Nro.4442_G.pdf?isAllowed=y&sequence=8)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "supplemental_source_page": 37,
+      "additional_source_url": "https://www.nrcs.usda.gov/plantmaterials/stpmcpg13519.pdf",
+      "source_taxon_concept": "strict_2013_species_not_historic_pooled_torreyana"
+    },
+    {
+      "id": "bothriochloa-torreyana",
+      "character": "spikelet_position",
+      "states": [
+        "paired"
+      ],
+      "note": "Strict modern B. torreyana: one fertile SESSILE spikelet paired with a PEDICELLATE/stalked partner. The partner is not necessarily reduced; only paired is supported. Historical Diggs B. laguroides subsp. torreyana groups names now separated.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "Scrivanti et al. (2013), strict Bothriochloa torreyana species treatment, printed p. 38",
+      "source_url": "https://ri.conicet.gov.ar/bitstream/handle/11336/3403/CONICET_Digital_Nro.4442_G.pdf?isAllowed=y&sequence=8",
+      "original_source_citation": "[Scrivanti et al. (2013), strict Bothriochloa torreyana species treatment, printed p. 38](https://ri.conicet.gov.ar/bitstream/handle/11336/3403/CONICET_Digital_Nro.4442_G.pdf?isAllowed=y&sequence=8)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "supplemental_source_page": 38,
+      "source_taxon_concept": "strict_2013_species"
+    },
+    {
+      "id": "cenchrus-setaceus",
+      "character": "glume_marks",
+      "states": [
+        "lower_reduced",
+        "one_vein"
+      ],
+      "note": "LOWER glume rudimentary or absent; UPPER glume one-veined, 1–2 mm. Do not imply BOTH glumes one-veined. Surrounding involucre BRISTLES are not lemma awns. Historic Pennisetum setaceum name and introduced ornamental context retained.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "VicFlora exact Cenchrus setaceus (Walsh 1994) species account, online/unpaginated",
+      "source_url": "https://vicflora.rbg.vic.gov.au/flora/taxon/63bce897-9220-4efd-a1bf-e3ab8d7f46bd",
+      "original_source_citation": "[VicFlora exact Cenchrus setaceus (Walsh 1994) species account, online/unpaginated](https://vicflora.rbg.vic.gov.au/flora/taxon/63bce897-9220-4efd-a1bf-e3ab8d7f46bd)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary"
+    },
+    {
+      "id": "cenchrus-spinifex",
+      "character": "glume_marks",
+      "states": [
+        "one_vein"
+      ],
+      "note": "LOWER glume alone one-veined (1–1.3 mm); UPPER glume 5–7-veined. Historical Cenchrus incertus name included in current species concept. Burr spines are NOT lemma awns; positive clue attaches to identified lower glume only.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "Kew GrassBase exact Cenchrus spinifex species treatment, online/unpaginated",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A395325-1/general-information",
+      "original_source_citation": "[Kew GrassBase exact Cenchrus spinifex species treatment, online/unpaginated](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A395325-1/general-information)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary"
+    },
+    {
+      "id": "nassella-tenuissima",
+      "character": "true_lemma_awn",
+      "states": [
+        "long"
+      ],
+      "note": "True FERTILE LEMMA awn ~45–100 mm in FNA, ~50–90 mm in Kew; often weakly twice bent, but twist is not obligatory and bent_twisted is NOT supported universally. Do not claim a glume awn.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "FNA Barkworth exact Nassella tenuissima species account, online/unpaginated",
+      "source_url": "https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630068",
+      "original_source_citation": "[FNA Barkworth exact Nassella tenuissima species account, online/unpaginated](https://openherbarium.org/portal/taxa/index.php?clid=0&taxauthid=1&tid=630068)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "additional_source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A281184-2/general-information"
+    },
+    {
+      "id": "zizania-texana",
+      "character": "true_lemma_awn",
+      "states": [
+        "long",
+        "none"
+      ],
+      "note": "UNISEXUAL FLOWERS on separate branches: PISTILLATE (female) lemma bears a single long awn 10–20 mm, whereas STAMINATE (male) lemma is MUTICOUS/awnless. States do NOT describe alternative developmental stages of same floret, and both glumes are absent/obscure. Endangered Texas wild-rice: NEVER collect or disturb to inspect.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "A",
+      "coordination_issue": 344,
+      "source": "Kew GrassBase exact Zizania texana species account, online/unpaginated",
+      "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A271183-2/general-information",
+      "original_source_citation": "[Kew GrassBase exact Zizania texana species account, online/unpaginated](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A271183-2/general-information)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary"
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "character": "ligule_length",
+      "states": [
+        "tiny",
+        "short"
+      ],
+      "note": "TRUE eciliate MEMBRANOUS ligule measured 0.5–1.0 mm by AusGrass; Kew/Flora Zambesiaca descriptions extend near 1.5 mm. Tiny (<1mm) and short (1–3mm) are conditional on individual measurement, not an apparent contradiction. Do NOT measure neighboring collar hairs as membrane.",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "review_lane": "D",
+      "coordination_issue": 344,
+      "source": "AusGrass exact Dichanthium sericeum species account, online/unpaginated; Kew GrassBase/Flora Zambesiaca exact species, online/unpaginated",
+      "source_url": "https://ausgrass.org/content/dichanthium-sericeum",
+      "original_source_citation": "[AusGrass exact Dichanthium sericeum species account, online/unpaginated; Kew GrassBase/Flora Zambesiaca exact species, online/unpaginated](https://ausgrass.org/content/dichanthium-sericeum)",
+      "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+      "source_priority_status": "supplemental_not_overriding_primary",
+      "length_mm": [
+        0.5,
+        1.5
+      ],
+      "additional_source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:398571-1/general-information"
     }
   ],
   "botanical_sources": [
