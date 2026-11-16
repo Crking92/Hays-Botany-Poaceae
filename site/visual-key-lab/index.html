@@ -2546,7 +2546,10 @@ catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
    if(staged.has(row.option)||!choice||choice.id!==row.species_id||choice.i!==row.photo_i||
       !p||p.src!==row.expected_src||p.source_page!==row.expected_source||
       p.creator!==row.expected_creator||p.license!==row.expected_license||
-      !row.expected_source?.startsWith("https://")||!p.license_url?.startsWith("https://")||
+      !row.expected_source?.startsWith("https://")||
+      (p.license_url&&!p.license_url.startsWith("https://"))||
+      (!p.license_url&&(!p.source_page?.startsWith("https://commons.wikimedia.org/wiki/File:")||
+        !/^CC BY(?:-SA)? (?:2\.0|4\.0)$/.test(p.license)))||
       !row.visible||!row.not_proven||row.not_proven.length<35||
       row.annotation_provenance!=="EXISTING_LEARNER_TARGET_SPECIES_PHOTO_MARKERS_NOT_NEW_LOCATION_CLAIM"||
       !Array.isArray(row.markers)||!row.markers.length)
