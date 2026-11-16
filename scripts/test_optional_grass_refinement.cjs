@@ -1221,6 +1221,14 @@ for(const [id,n] of Object.entries(pdfPass7)){
    if(!x.source_url?.startsWith("https://")||!x.original_source_citation||!x.note?.trim())throw Error("Uncited supplemental evidence "+id);
    continue; // Historical book-only source checks follow.
   }
+  // Final A30 strict 2022 Tridentopsis Table 1 supersedes a historically
+  // pooled Diggs taxon concept, with both anatomical site and page retained.
+  if(id==="tridentopsis-elongata"&&x.coordination_issue===344
+     &&x.source_status==="READY_PRIMARY"&&x.source.includes("Wipff & Weakley (2022)")){
+    if(x.pdf_printed_page!==2||!x.source_url.includes("29PhytoN-Tridentopsiselongata.pdf")
+       ||!x.note.includes("LEMMA"))throw Error("Unverified strict Tridentopsis source "+id);
+    continue;
+  }
   if(x.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!x.note?.trim())throw Error("Pass7 insufficient source note "+id);
   if(!(/Hagenbuch & Lemke|Diggs, Lipscomb & O'Kennon/.test(x.source))||!x.source.includes("printed p. "))throw Error("Pass7 missing exact original-book page "+id);
   if(["florets_per_spikelet","spikelet_position","true_lemma_awn","floral_hair_position"].includes(x.character)&&(!x.source.includes("Diggs, Lipscomb & O'Kennon")||!x.pdf_printed_page))throw Error("Pass7 reproductive trait not in Diggs "+id);
