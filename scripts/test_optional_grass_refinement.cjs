@@ -1310,6 +1310,10 @@ for(const [id,n] of Object.entries(reproductivePass10)){
  if(expected.length<n)throw Error("Pass10 missing or duplicate reproductive traits "+id);
  if(newTraits.length<n)throw Error("Pass10 Flora printed-page provenance missing "+id);
  for(const r of expected){
+  if(r.coordination_issue===344&&r.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"){
+   if(!r.original_source_citation||!r.source_url?.startsWith("https://")||!r.note?.trim())throw Error("Pass10 supplementary citation incomplete "+id);
+   continue; // Original Diggs-only assertion below still applies to historical primary evidence.
+  }
   if(r.evidence_level!=="PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED"||!r.source.includes("Diggs, Lipscomb & O'Kennon")||!r.source.includes("printed p.")||r.source_url!=="https://shopbritpress.org/products/illustrated-flora-of-north-central-texas")throw Error("Pass10 source policy "+id);
  }
 }
