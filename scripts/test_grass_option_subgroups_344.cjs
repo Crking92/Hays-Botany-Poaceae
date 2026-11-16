@@ -50,7 +50,7 @@ const state={refineSelected:{},refineEvidenceMap:refs,refineCharacters:bundle.ch
 const location={href:"https://example.org/site/visual-key-lab/?guest=1"};
 let writtenUrl;
 const history={replaceState(_a,_b,x){writtenUrl=x;}};
-const sandbox={state,location,history,URL};
+const sandbox={state,location,history,URL,qs:["head","habit","ligule","awns"].map(id=>({id}))};
 vm.createContext(sandbox);vm.runInContext(section+"\n"+results+"\n"+urlFn,sandbox);
 const match=id=>Array.from(vm.runInContext("refinementMatches({id:"+JSON.stringify(id)+"})",sandbox));
 const current=()=>Array.from(vm.runInContext("currentResults()",sandbox));
