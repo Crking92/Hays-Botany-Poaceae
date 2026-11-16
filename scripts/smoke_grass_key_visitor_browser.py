@@ -88,6 +88,44 @@ def check_view(browser, name, width, height):
     )
     assert page.locator("#count").inner_text() == "169 possible"
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
+    # Main-question photographs are reused from ORIGINAL credited Learner
+    # photo records, with the exact historic coordinates and no image crop.
+    for q_index, label, pointer_count in [
+        (0, "Many little hanging side branches", 2),
+        (1, "A bunch or tuft", 1),
+        (2, "A fringe of hairs", 2),
+        (3, "Separate bristles under spikelets", 2)
+    ]:
+        page.locator("#steps button.step").nth(q_index).click()
+        card = page.locator("#question .answer").filter(has_text=label)
+        assert card.count() == 1, f"{name}: annotated photo answer missing: {label}"
+        frame = card.locator(".photo-frame.with-reviewed-arrows")
+        assert frame.count() == 1, f"{name}: missing approved arrow overlay: {label}"
+        photo = frame.locator("img")
+        photo.scroll_into_view_if_needed()
+        photo.evaluate("(img) => {img.loading='eager'}")
+        frame.locator("svg.field-photo-arrows circle").first.wait_for(
+            state="attached", timeout=50000)
+        assert frame.locator("svg.field-photo-arrows circle").count() == pointer_count*2, (
+            f"{name}: image arrow overlay does not match source marker count: {label}")
+        assert card.locator("ol.photo-arrow-legend li").count() == pointer_count, (
+            f"{name}: marker numbers have no corresponding structure labels: {label}")
+        assert "Not proven here:" in card.inner_text(), (
+            f"{name}: annotation is implying undocumented plant anatomy: {label}")
+        actual = photo.evaluate("(img) => [img.naturalWidth,img.naturalHeight]")
+        assert min(actual) > 40, f"{name}: source image did not visibly decode: {label}"
+        viewbox = frame.locator("svg.field-photo-arrows").get_attribute("viewBox")
+        assert viewbox == f"0 0 {actual[0]} {actual[1]}", (
+            f"{name}: arrow overlay proportions differ from actual photo: {label}")
+        assert photo.evaluate("(img) => getComputedStyle(img).objectFit") == "contain", (
+            f"{name}: diagnostic photo was cropped underneath a marker: {label}")
+    # A photo without reviewed arrows must say it is a GENERAL example.
+    page.locator("#steps button.step").nth(2).click()
+    unknown = page.locator("#question .answer").filter(has_text="No true ligule apparent")
+    assert unknown.locator("svg.field-photo-arrows").count() == 0
+    assert "General reference photo" in unknown.inner_text()
+    page.locator("#steps button.step").first.click()
+
     # The source-backed Pappophorum option should lead to a real documented
     # match. The optional focus button hides unknown records but NEVER calls
     # them botanical contradictions, and clearing the view restores all 169.
