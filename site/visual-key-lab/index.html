@@ -342,7 +342,7 @@ const qs=[
 ["whorls","Windmill spokes in tiers","Branches may arise in tight or widely separated levels. Widely separated whorls favor tumble windmillgrass; examine sterile florets to exclude hooded or hybrid plants.","chloris-verticillata",2],
 ["flat_oats","Flat dangling oat-like spikelets","Flattened hanging spikelets suspended on fine stalks.","chasmanthium-latifolium",0],
 ["airy","An open, airy branching panicle","Many thin branches form an open cloud of tiny spikelets.","eragrostis-spectabilis",0],
-["foxtail","A dense bristly cylinder","A compact foxtail-like head crowded with bristles.","setaria-parviflora",0],
+["foxtail","Foxtail-like bristly cylinder","A dense foxtail-like head: in Setaria the bristles are separate sterile branchlets beneath spikelets, NOT the lemma awns of a true wheat-like spike. Virginia wildrye belongs under spike.","setaria-parviflora",0],
 ["sparse_bristles","Sparse interrupted bristlegrass head","Spikelets separated along a thin axis, with only occasional bristles near upper spikelets.","setaria-reverchonii",3],
 ["wiry","Very long spreading wiry rays","Sparse thin branches diverge from a long curved axis.","muhlenbergia-paniculata",0],
 ["compact","A compact, crowded head","A short head with densely clustered branches or spikelets (not necessarily a true spike).","hilaria-belangeri",2],
@@ -352,7 +352,7 @@ const qs=[
 ["burrs","Spiny burs or hard seed clusters","Cenchrus has fused spiny bristle burs. Female buffalograss has non-spiny hard clusters made from glumes and branch tissue. Inspect closely; these are not the same structure.","cenchrus-spinifex",0],
 ["one_sided","Spikelets on one side of spreading branches","Slender racemes with a mainly one-sided row of spikelets.","disakisperma-dubium",1],
 ["many_one_sided","Seven or more one-sided branches","Count the attached racemes. Vaseygrass commonly has many, but Dallisgrass and P. pubiflorum may reach seven or eight; confirm spikelet hair and vein patterns.","paspalum-urvillei",0],
-["spike","Long upright or nodding spike","A single axis carrying many attached spikelets with little branching.","elymus-canadensis",0],
+["spike","Wheat-like upright or nodding spike","A single axis with directly attached spikelets; awns can make it look densely bristly. Virginia wildrye typically stays stiffly upright; Canada wildrye often nods. Awns are not separate foxtail bristles.","elymus-virginicus",1],
 ["tangled_awns","Dark awns twisted into a tangle","A narrow flowering raceme whose long dark awns twist together at maturity (tanglehead example).","heteropogon-contortus",0],
 ["long_narrow_panicle","Long, narrow panicle","A relatively contracted and elongated head, not a broad cloud.","sporobolus-compositus",0],
 ["golden_plume","Narrow upright plume","Crowded ascending branches form a dense golden or bronze plume; compare the broader, openly branched reed plume.","sorghastrum-nutans",2],
@@ -2308,7 +2308,9 @@ if(s.gapEvidence?.length){
  }
  copy.append(panel);
 }
-const extraChecks=(s.id==="schizachyrium-scoparium"&&state.gouldSource?.source_intake?.taxon===s.scientific&&Array.isArray(state.gouldSource.learner_diagnostic_checks))?state.gouldSource.learner_diagnostic_checks:[];
+const gouldPrimaryChecks=(s.id==="schizachyrium-scoparium"&&state.gouldSource?.source_intake?.taxon===s.scientific&&Array.isArray(state.gouldSource.learner_diagnostic_checks))?state.gouldSource.learner_diagnostic_checks:[];
+const gouldAdditional=state.gouldSource?.additional_species_treatments?.find(t=>t.species_id===s.id);
+const extraChecks=[...gouldPrimaryChecks,...(gouldAdditional?.learner_diagnostic_checks||[])];
 const displayedChecks=[...(s.diagnostic_checks||[]),...extraChecks];
 if(displayedChecks.length){
   const panel=node("section","detail-botany");
