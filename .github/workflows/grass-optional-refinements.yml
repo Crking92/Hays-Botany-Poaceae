@@ -40,6 +40,8 @@ on:
       - 'scripts/test_grass_compare_photo_quality.cjs'
       - 'scripts/test_grass_archive_photo_reuse.cjs'
       - 'scripts/test_grass_reviewed_character_photos.cjs'
+      - 'scripts/test_grass_main_question_photo_arrows.cjs'
+      - 'site/visual-key-lab/main-question-existing-arrows-batch1.json'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
       - 'site/visual-key-lab/source-reference-gould-1975.json'
       - 'scripts/test_grass_gould_1975_reference.cjs'
@@ -78,6 +80,8 @@ on:
       - 'scripts/test_grass_compare_photo_quality.cjs'
       - 'scripts/test_grass_archive_photo_reuse.cjs'
       - 'scripts/test_grass_reviewed_character_photos.cjs'
+      - 'scripts/test_grass_main_question_photo_arrows.cjs'
+      - 'site/visual-key-lab/main-question-existing-arrows-batch1.json'
       - 'site/visual-key-lab/photo-general-archive-extras.json'
       - 'site/visual-key-lab/source-reference-gould-1975.json'
       - 'scripts/test_grass_gould_1975_reference.cjs'
@@ -170,3 +174,5 @@ jobs:
         run: node scripts/test_grass_archive_photo_reuse.cjs
       - name: Confirm eight exact-source anatomy photos, reuse permissions and truthful limits
         run: node scripts/test_grass_reviewed_character_photos.cjs
+      - name: Confirm eight main question photographs reuse 14 exact Learner arrows and source credits
+        run: node scripts/test_grass_main_question_photo_arrows.cjs
