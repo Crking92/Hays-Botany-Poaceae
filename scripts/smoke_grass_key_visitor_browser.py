@@ -118,6 +118,24 @@ def check_view(browser, name, width, height):
         modal=page.locator("#detail-dialog")
         assert "NOT a Hays County specimen voucher" in modal.inner_text()
         assert modal.locator("section.detail-botany a[href^='https://']").count() >= 4
+        assert "Compare with: undefined" not in modal.inner_text(), (
+            scientific + ": missing optional comparison data displayed as undefined")
+        # Follow the actual link used by the Lab: the destination must show
+        # THIS specific grass, not merely the 169-species catalog heading.
+        if scientific == "Bothriochloa longipaniculata":
+            lesson_url = modal.get_by_role("link",name="Open full Hays Botany lesson").get_attribute("href")
+            assert "species=bothriochloa-longipaniculata#species-detail" in lesson_url
+            detail_page = ctx.new_page()
+            try:
+                detail_page.goto(lesson_url,wait_until="domcontentloaded",timeout=65000)
+                detail_page.wait_for_function(
+                    "() => document.querySelector('#species-detail h2')?.textContent.includes('Bothriochloa longipaniculata')",
+                    timeout=60000)
+                assert detail_page.evaluate("document.activeElement.id") == "species-detail", (
+                    "Deep-linked profile was loaded but stayed unfocused below the catalog")
+                assert detail_page.locator("#species-detail").is_visible()
+            finally:
+                detail_page.close()
         modal.get_by_role("button",name="Close species detail").click()
     page.locator("#species-search").fill("Dichanthelium acuminatum")
     page.wait_for_function("document.querySelectorAll(\'#results .result\').length === 1",timeout=15000)
