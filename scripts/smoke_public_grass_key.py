@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "index.html"]
 
 
 def read_public(name):
@@ -64,11 +64,26 @@ def verify():
     assert len(promotions) == len(promoted_ids) == 37
     assert promoted_ids <= {p["id"] for p in trials}, "Source scored admission lacks trial source packet"
     assert all(p["admission_level"] == "SOURCE_SCORED_NOT_LOCAL_VOUCHER" for p in promotions)
+    followup = public["source-scored-gould-followup-20261116.json"]
+    assert followup["schema"] == "HAYS_GRASS_GOULD_TARGETED_ADMISSIONS_V1"
+    assert followup["new_literature_admissions"] == 13
+    assert len(followup["admissions"]) == 13
+    followup_ids = {p["id"] for p in followup["admissions"]}
+    assert len(followup_ids) == 13 and not (followup_ids & promoted_ids)
+    assert followup_ids <= {p["id"] for p in trials}
+    assert followup["total_source_scored_after_release"] == 162
+    assert followup["remaining_research_profiles"] == 7
+    all_promoted_ids = promoted_ids | followup_ids
+    assert len(all_promoted_ids) == 50
     review = public["promotion-review-37-20261116.json"]
     assert review["schema"] == "HAYS_GRASS_PROMOTION_REVIEW_37_20261116_V1"
     assert review["review_count"] == 37 and review["approved_count"] == 33 and review["hold_count"] == 4
     assert review["total_source_scored_after_release"] == 149 and review["total_research_only_after_release"] == 20
-    assert {x["id"] for x in review["reviewed"] if x["decision"].startswith("HOLD_")}.isdisjoint(promoted_ids)
+    old_holds = {x["id"] for x in review["reviewed"] if x["decision"].startswith("HOLD_")}
+    assert old_holds.isdisjoint(promoted_ids), "Historical 37-cohort holds were changed"
+    assert "cenchrus-ciliaris" in followup_ids, "Supported buffelgrass bristle hold not resolved"
+    assert (old_holds - {"cenchrus-ciliaris"}).isdisjoint(all_promoted_ids), "Three remaining identity holds were promoted"
+    assert set(followup["unresolved_species_holds"]).isdisjoint(all_promoted_ids), "Seven exact species holds not preserved"
     core_gaps = public["ready-core-gap-assignments.json"]
     assert core_gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
     assert core_gaps["integration_count"] == len(core_gaps["rows"]) == 28
@@ -86,9 +101,9 @@ def verify():
         "pass": True,
         "public_url": BASE,
         "public_files_matching_main": len(FILES),
-        "original_scored_unchanged": len(scored), "promoted_source_scored": len(promotions),
-        "live_source_scored_total": len(scored) + len(promotions),
-        "research_only_remaining": len(candidates) - len(promotions), "provisional_manifest_unchanged": len(candidates),
+        "original_scored_unchanged": len(scored), "promoted_source_scored": len(all_promoted_ids),
+        "live_source_scored_total": len(scored) + len(all_promoted_ids),
+        "research_only_remaining": len(candidates) - len(all_promoted_ids), "provisional_manifest_unchanged": len(candidates),
         "configured": len(ids),
         "normal_key_species": len(ids), "previous_trial_source_packets_preserved": len(trials),
         "source_reviewed_new_core_fields": len(core_gaps["rows"]), "explicit_core_unknown_holds": len(core_gaps["held_unknown"]),

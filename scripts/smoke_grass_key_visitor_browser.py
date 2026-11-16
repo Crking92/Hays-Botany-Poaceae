@@ -88,7 +88,7 @@ def check_view(browser, name, width, height):
     )
     assert page.locator("#count").inner_text() == "169 possible"
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
-    assert "149 source-scored, 20 research-only" in page.locator("#coded-subtitle").inner_text(), (
+    assert "162 source-scored, 7 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
     # Test the new admitted species in the actual browser, not just source JSON.
@@ -107,9 +107,10 @@ def check_view(browser, name, width, height):
     admission.get_by_role("button",name="Close species detail").click()
     page.locator("#species-search").fill("Cenchrus ciliaris")
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
-    assert "Research trial" in page.locator("#results .result").first.inner_text(), (
-        "Unpromoted species was accidentally admitted")
-    assert "Source-scored" not in page.locator("#results .result").first.inner_text(), ("Justified species hold was not preserved")
+    assert "Source-scored" in page.locator("#results .result").first.inner_text(), ("Buffelgrass source-scored option was not admitted")
+    page.locator("#species-search").fill("Dichanthelium acuminatum")
+    page.wait_for_function("document.querySelectorAll(\'#results .result\').length === 1",timeout=15000)
+    assert "Research trial" in page.locator("#results .result").first.inner_text(), ("Broad-complex identity hold was lost")
     page.locator("#species-search").fill("Polypogon viridis")
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
     page.locator("#results .result").first.click()
