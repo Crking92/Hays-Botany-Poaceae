@@ -1453,11 +1453,28 @@ function renderOptionalCharacters(){
 }
 function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id,values=selectedRefinementStates(c.id);if(values.length)u.searchParams.set(key,values.join(","));else u.searchParams.delete(key)});if(state.refineOnlyDocumented)u.searchParams.set("more_mode","documented");else u.searchParams.delete("more_mode");if(state.focusConfirmed)u.searchParams.set("focus","documented");else u.searchParams.delete("focus");history.replaceState(null,"",u.toString())}
 function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?null:choice;updateUrl();render()}
+/* A source-backed positive state does not prove that unrecorded alternatives
+   are absent. Share ONE decision across visible candidates and the ruled-out
+   panel; evidence-only display mode must not turn an unknown into a conflict. */
+function coreChoiceStatus(s,key,val){
+ const vals=s.traits?.[key]||[];
+ if(!vals.length)return "unknown";
+ if(vals.includes(val))return "match";
+ if((key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))||
+    (key==="head"&&val==="pampas_plume")||
+    (key==="habit"&&val==="woody_canes")||
+    s.positiveOnlyCoreKeys?.includes(key))return "unknown";
+ return "conflict";
+}
 function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
-for(const [key,val] of picks){const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if((key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))||
-       (key==="head"&&val==="pampas_plume")||(key==="habit"&&val==="woody_canes"))unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
+for(const [key,val] of picks){
+ const outcome=coreChoiceStatus(s,key,val);
+ if(outcome==="match")confirmed++;
+ else if(outcome==="unknown")unknown++;
+ else conflict++;
+}
 return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 // Progressive key display: group fully documented matches separately from
 // evidence gaps, without treating an unstudied character as an absent structure.
@@ -2423,7 +2440,7 @@ if(groups.active&&!focusing&&groups.unresolved.length){
 const caution=$("caution-details"),cautionList=$("caution-list");
 cautionList.replaceChildren();const matches=new Set(rows.map(x=>x.s.id));
 const leftovers=state.species.filter(s=>!matches.has(s.id)).filter(s=>state.range==="all"||(state.range==="native"?s.range==="PASS":(["FAIL","INTRODUCED_NOT_NATIVE","COMPARISON_NON_NATIVE"].includes(s.range)))).filter(s=>(s.common+" "+s.scientific).toLowerCase().includes(state.query));
-const coreExcluded=leftovers.map(s=>({s,disagree:qs.filter(q=>state.selected[q.id]&&s.traits[q.id]?.length&&!s.traits[q.id].includes(state.selected[q.id])).map(q=>q.short)})).filter(x=>x.disagree.length);
+const coreExcluded=leftovers.map(s=>({s,disagree:qs.filter(q=>state.selected[q.id]&&coreChoiceStatus(s,q.id,state.selected[q.id])==="conflict").map(q=>q.short)})).filter(x=>x.disagree.length);
 const advancedExcluded=groups.excluded.map(x=>({s:x.s,disagree:x.contradictions.map(c=>c.label+" (published: "+c.reported+")"),contradictions:x.contradictions}));
 const scored=[...coreExcluded,...advancedExcluded].sort((a,b)=>a.disagree.length-b.disagree.length||a.s.common.localeCompare(b.s.common));
 caution.hidden=!(n||extraChosen)||!scored.length;
