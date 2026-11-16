@@ -1080,8 +1080,13 @@ for(const [key,v] of Object.entries(expected)){
  assert(e.states.every(s=>allowed.get(e.character)?.has(s)),'Invalid menu choice '+key);
  assert.equal(e.evidence_level,'PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED');
 }
-for(const key of ['echinochloa-crus-galli|true_lemma_awn','bothriochloa-longipaniculata|true_lemma_awn',
-/* Lane B18 superseded this exact historical hold after direct IDTools sterile-lemma confirmation; now protected by test_grass_backlog_b18_344.cjs. */'zizania-texana|true_lemma_awn'])
- assert(!idx.has(key),'Anatomical/source hold incorrectly released '+key);
+// Still held: barnyardgrass long awn is on the LOWER STERILE lemma,
+ // not yet represented safely by a fertile-vs-sterile option.
+ assert(!idx.has('echinochloa-crus-galli|true_lemma_awn'),'Sterile/fertile awn hold incorrectly released');
+ // A29/A30 exact taxon and sex/organ verification supersedes these two historical holds.
+ const both=idx.get('bothriochloa-longipaniculata|true_lemma_awn');
+ assert(both&&both.states.join(',')==='long'&&both.note.includes('FERTILE LEMMA')&&both.supplemental_source_page===37,'Strict B. longipaniculata fertile lemma source lost');
+ const z=idx.get('zizania-texana|true_lemma_awn');
+ assert(z&&z.states.join(',')==='long,none'&&z.note.includes('PISTILLATE')&&z.note.includes('STAMINATE'),'Texas wild-rice male/female florets collapsed');
 assert(![...idx.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')),'Hybrid hold released');
 console.log('PASS: 149 verified supplemental reproductive clues, full source links and retained holds');
