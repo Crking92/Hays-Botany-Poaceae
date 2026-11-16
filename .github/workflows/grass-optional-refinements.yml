@@ -19,6 +19,7 @@ on:
       - 'scripts/test_grass_backlog_final_supp_344.cjs'
       - 'scripts/test_grass_backlog_final_reconcile_344.cjs'
       - 'scripts/test_grass_option_subgroups_344.cjs'
+      - 'scripts/test_grass_three_way_evidence_key.cjs'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -71,6 +72,8 @@ jobs:
         run: node scripts/test_grass_backlog_final_reconcile_344.cjs
       - name: Test botanical suboption scoping, multi-selections, share links and unchanged scoring
         run: node scripts/test_grass_option_subgroups_344.cjs
+      - name: Verify conservative dichotomous-style exclusions and reversible unknown grasses
+        run: node scripts/test_grass_three_way_evidence_key.cjs
       - name: Check 24 supplemental measured attributes and boundary holds
         run: node scripts/test_grass_backlog_conditional_measurements_344.cjs
       - name: Verify 149 supplemental reproductive citations and anatomy holds
