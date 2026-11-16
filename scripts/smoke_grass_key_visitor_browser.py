@@ -88,7 +88,7 @@ def check_view(browser, name, width, height):
     )
     assert page.locator("#count").inner_text() == "169 possible"
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
-    assert "162 source-scored, 7 research-only" in page.locator("#coded-subtitle").inner_text(), (
+    assert "164 source-scored, 5 research-only" in page.locator("#coded-subtitle").inner_text(), (
         "Scored vs research totals did not update in the actual visitor UI")
 
     # Test the new admitted species in the actual browser, not just source JSON.
