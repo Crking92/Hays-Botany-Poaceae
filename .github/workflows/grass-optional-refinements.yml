@@ -14,6 +14,7 @@ on:
       - 'scripts/test_grass_backlog_supp_floral_344.cjs'
       - 'scripts/test_grass_backlog_conditional_measurements_344.cjs'
       - 'scripts/test_grass_backlog_organs_344.cjs'
+      - 'scripts/test_grass_backlog_b18_344.cjs'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -54,6 +55,8 @@ jobs:
         run: python3 scripts/qa_optional_grass_refinements.py
       - name: Verify 16 organ- and sex-specific Flora/supplemental clues
         run: node scripts/test_grass_backlog_organs_344.cjs
+      - name: Protect Lane B18 sterile-versus-fertile lemma hairs and blocked awns
+        run: node scripts/test_grass_backlog_b18_344.cjs
       - name: Check 24 supplemental measured attributes and boundary holds
         run: node scripts/test_grass_backlog_conditional_measurements_344.cjs
       - name: Verify 149 supplemental reproductive citations and anatomy holds

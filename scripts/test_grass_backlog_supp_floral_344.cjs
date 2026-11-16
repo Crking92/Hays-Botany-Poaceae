@@ -1081,7 +1081,7 @@ for(const [key,v] of Object.entries(expected)){
  assert.equal(e.evidence_level,'PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED');
 }
 for(const key of ['echinochloa-crus-galli|true_lemma_awn','bothriochloa-longipaniculata|true_lemma_awn',
-'dichanthelium-acuminatum|floral_hair_position','zizania-texana|true_lemma_awn'])
+/* Lane B18 superseded this exact historical hold after direct IDTools sterile-lemma confirmation; now protected by test_grass_backlog_b18_344.cjs. */'zizania-texana|true_lemma_awn'])
  assert(!idx.has(key),'Anatomical/source hold incorrectly released '+key);
 assert(![...idx.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')),'Hybrid hold released');
 console.log('PASS: 149 verified supplemental reproductive clues, full source links and retained holds');
