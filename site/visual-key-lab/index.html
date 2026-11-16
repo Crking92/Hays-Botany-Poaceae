@@ -615,7 +615,7 @@ function characterPhotoExample(id){
  caption.append(links);figure.append(caption);return figure;
 }
 
-function status(s){if(s.trial)return["Research trial · unverified","warn"];if(s.range==="PASS")return["Regional native set",""];if(s.range==="FAIL"||s.range==="INTRODUCED_NOT_NATIVE"||s.range==="COMPARISON_NON_NATIVE")return["Introduced / comparison","bad"];return["Range status to verify","review"]}
+function status(s){if(s.source_scored)return["Source-scored · local status unverified","review"];if(s.trial)return["Research trial · unverified","warn"];if(s.range==="PASS")return["Regional native set",""];if(s.range==="FAIL"||s.range==="INTRODUCED_NOT_NATIVE"||s.range==="COMPARISON_NON_NATIVE")return["Introduced / comparison","bad"];return["Range status to verify","review"]}
 
 /* Source-backed refinements rank positive literature matches only; no new exclusions. */
 function refinementEvidence(s,character){
@@ -2213,7 +2213,7 @@ $("count").textContent=groups.active?(groups.confirmed.length+groups.unresolved.
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
 $("results-note").textContent=state.refineOnlyDocumented&&extraChosen?
  (pendingChoice?"A selected detail is research-pending. No complete documented match is possible yet; this does not prove absence. Switch off evidence-only view to restore other possibilities.":"Showing grasses with published records matching every selected advanced detail. Other unknown descriptions are hidden by your evidence-only choice."):
- groups.active?"Source-backed matches stay in the main results. Missing or nonexclusive evidence remains under Still possible; documented measured or exact-floret contradictions move into the reviewable Ruled out section. Other advanced features rank matches until source-audited.":"Choose any photo or detailed character to start narrowing 169 possibilities.";
+ groups.active?"Source-backed matches stay in the main results. Missing or nonexclusive evidence remains under Still possible; documented measured or exact-floret contradictions move into the reviewable Ruled out section. Other advanced features rank matches until source-audited.":"Choose any photo or detailed character to start narrowing 169 possibilities. "+state.species.filter(s=>!s.trial).length+" source-scored profiles; "+state.species.filter(s=>s.trial).length+" research-only.";
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results"),wasUnresolvedOpen=$("unresolved-candidates")?.open===true;
 root.replaceChildren();
@@ -2232,7 +2232,7 @@ const s=x.s,p=pic(s,s.hero_i),b=node("button","result");b.type="button";
 b.append(image(p,s.common));const info=node("div");
 info.append(node("strong","",s.common),node("span","latin",s.scientific));
 const [label,cl]=status(s);info.append(node("span","tag "+cl,label));
-if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));
+if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));if(s.source_scored)info.append(node("div","smallmuted","Literature-supported identification profile. Local occurrence, nativity and specimen identity are not certified."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
@@ -2275,7 +2275,22 @@ $("pending-summary").textContent=pending.length?pending.length+" grasses not yet
 const box=$("pending-items");box.replaceChildren();
 for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";box.append(a)}
 }
-function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=s.trial?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photo.license_url?.startsWith("https://")){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photo.license_url;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
+function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photo.license_url?.startsWith("https://")){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photo.license_url;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
+if(s.source_scored&&s.source_admission){
+  const panel=node("section","detail-botany");
+  panel.append(node("h3","","Source-scored character evidence"),
+    node("p","smallmuted","The four beginner choices were admitted from published botanical descriptions. This is NOT a Hays County specimen voucher, local population confirmation, or BONAP native-range decision. Nonlocal source photographs remain labeled as references."));
+  for(const [key,proof] of Object.entries(s.source_admission.core_sources)){
+    const row=node("div","diagnostic-check");
+    row.append(node("strong","",({head:"Flowerhead",habit:"Growth form",ligule:"True ligule",awns:"Awns / bristles"})[key]+": "+s.source_admission.core_traits[key].join(" / ")),
+      node("p","",proof.note));
+    const a=node("a","mini-credit",proof.reference);a.href=proof.source_url;a.target="_blank";a.rel="noopener noreferrer";row.append(a);
+    panel.append(row);
+  }
+  if(s.source_admission.remaining_cautions?.length)
+    for(const warning of s.source_admission.remaining_cautions)panel.append(node("p","smallmuted","Identification caution: "+warning));
+  copy.append(panel);
+}
 if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
   const panel=node("section","detail-botany");
   panel.append(node("h3","","Look here next — diagnostic checks"),node("p","smallmuted","Look for these structures on your plant. Some details may not be visible in the photographs yet."));
@@ -2353,6 +2368,43 @@ for(const candidate of state.candidateManifest){
  groupedIds.add(candidate.id);
 }
 if(state.candidateManifest.length===57&&state.species.length!==169)throw Error("Unified 169 grass inventory mismatch; inspect duplicate trial IDs");
+// Apply separately authorized source-scoring admissions AFTER all 169 raw profiles load.
+// Keep original 112 shards, 53 original trial source packets, four named holds and all
+// photo metadata unchanged. An invalid batch fails closed, before any mutation.
+try{
+ const response=await fetch("source-scored-admissions.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Source-scored admission registry not available");
+ const bundle=await response.json();
+ if(bundle.schema!=="HAYS_GRASS_SOURCE_SCORED_ADMISSIONS_V1"||
+    bundle.original_baseline_scored!==112||!Array.isArray(bundle.admissions))throw Error("Source-scored admission registry invalid");
+ const original=new Set(state.species.slice(0,112).map(s=>s.id));
+ const seen=new Set(),validated=[];
+ for(const admission of bundle.admissions){
+   if(!admission||admission.admission_level!=="SOURCE_SCORED_NOT_LOCAL_VOUCHER"||
+      !admission.id||original.has(admission.id)||seen.has(admission.id))throw Error("Overlapping or invalid source-scored admission");
+   seen.add(admission.id);
+   const species=state.species.find(s=>s.id===admission.id);
+   if(!species||!species.trial||species.admission_status!=="RESEARCH_TRIAL_NOT_ADMITTED"||
+      species.range!=="UNVERIFIED"||!species.photos?.length||species.scientific!==admission.scientific)
+       throw Error("Source-scored profile mismatch: "+admission.id);
+   for(const key of ["head","habit","ligule","awns"]){
+      const options=admission.core_traits?.[key];
+      const proof=admission.core_sources?.[key];
+      if(!Array.isArray(options)||!options.length||
+         JSON.stringify(options)!==JSON.stringify(species.traits?.[key])||
+         !proof?.reference||!proof?.note||!proof.source_url?.startsWith("https://"))
+         throw Error("Missing or changed published-character admission: "+admission.id+" / "+key);
+   }
+   validated.push([species,admission]);
+ }
+ for(const [species,admission] of validated){
+   species.trial=false;species.source_scored=true;
+   species.admission_status=admission.admission_level;species.source_admission=admission;
+   species.local_voucher_status="NOT_CERTIFIED";
+   species.field_rule=species.field_rule.replace(/^Research trial:/,"Source-scored literature:");
+ }
+}catch(err){console.warn("Source-scored admission ledger unavailable: original source and research categories retained",err)}
+
 /* Optional refinement bundle: failure never disables the original four-character ID key. */
 try{
  const res=await fetch("optional-refinement-evidence.json",{cache:"no-store"});
@@ -2368,7 +2420,7 @@ try{
    state.refineCharacters=bundle.characters;
  }
 }catch(err){console.warn("Additional field details unavailable; original four-question key remains intact",err);state.refineCharacters=[];state.refineEvidenceMap={};}
-if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});
+if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});
 $("reset-field-key").addEventListener("click",()=>{
  state.selected={head:null,habit:null,ligule:null,awns:null};
  state.refineSelected={};state.refineOnlyDocumented=false;

@@ -88,6 +88,28 @@ def check_view(browser, name, width, height):
     )
     assert page.locator("#count").inner_text() == "169 possible"
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
+    assert "116 source-scored, 53 research-only" in page.locator("#coded-subtitle").inner_text(), (
+        "Scored vs research totals did not update in the actual visitor UI")
+
+    # Test the new admitted species in the actual browser, not just source JSON.
+    page.locator("#species-search").fill("Setaria viridis")
+    page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+    line = page.locator("#results .result").first
+    assert "Source-scored" in line.inner_text() and "Research trial" not in line.inner_text(), (
+        "Promoted species still looks like a provisional research trial")
+    line.click()
+    admission = page.locator("#detail-dialog")
+    assert admission.evaluate("(dlg)=>dlg.open")
+    assert "Source-scored character evidence" in admission.inner_text()
+    assert admission.locator("section.detail-botany a[href^='https://']").count() >= 4, (
+        "Admission evidence pages not linked in visitor species detail")
+    assert admission.locator(".detail-grid img").count() >= 2, "Existing credited source photos were truncated"
+    admission.get_by_role("button",name="Close species detail").click()
+    page.locator("#species-search").fill("Bromus catharticus")
+    page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+    assert "Research trial" in page.locator("#results .result").first.inner_text(), (
+        "Unpromoted species was accidentally admitted")
+    page.locator("#species-search").fill("")
 
     # Measured leaf width: documented matches, unknowns, and recoverable exclusions.
     choose_extra(page, "Leaf blades", "blade_width", "broad")

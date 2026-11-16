@@ -4,12 +4,14 @@ on:
     paths:
       - 'site/visual-key-lab/index.html'
       - 'scripts/smoke_grass_key_visitor_browser.py'
+      - 'site/visual-key-lab/source-scored-admissions.json'
       - '.github/workflows/grass-key-visitor-browser.yml'
   push:
     branches: [main]
     paths:
       - 'site/visual-key-lab/index.html'
       - 'scripts/smoke_grass_key_visitor_browser.py'
+      - 'site/visual-key-lab/source-scored-admissions.json'
       - '.github/workflows/grass-key-visitor-browser.yml'
   workflow_dispatch:
 permissions:

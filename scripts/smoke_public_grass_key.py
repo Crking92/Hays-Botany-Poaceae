@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "index.html"]
 
 
 def read_public(name):
@@ -58,6 +58,12 @@ def verify():
     assert len(scored) + len(trials) == 165
     candidate_by_id = {c["id"]: c for c in candidates}
     assert len({c["id"] for c in candidates} - {p["id"] for p in trials}) == 4
+    promotions = public["source-scored-admissions.json"]["admissions"]
+    assert public["source-scored-admissions.json"]["schema"] == "HAYS_GRASS_SOURCE_SCORED_ADMISSIONS_V1"
+    promoted_ids = {p["id"] for p in promotions}
+    assert len(promotions) == len(promoted_ids) == 4
+    assert promoted_ids <= {p["id"] for p in trials}, "Source scored admission lacks trial source packet"
+    assert all(p["admission_level"] == "SOURCE_SCORED_NOT_LOCAL_VOUCHER" for p in promotions)
     for p in trials:
         assert p["trial"] is True and p["admission_status"] == "RESEARCH_TRIAL_NOT_ADMITTED" and p["range"] == "UNVERIFIED"
         source = candidate_by_id[p["id"]]["approved_gallery"]
@@ -69,10 +75,12 @@ def verify():
         "pass": True,
         "public_url": BASE,
         "public_files_matching_main": len(FILES),
-        "scored": len(scored), "provisional": len(candidates),
+        "original_scored_unchanged": len(scored), "promoted_source_scored": len(promotions),
+        "live_source_scored_total": len(scored) + len(promotions),
+        "research_only_remaining": len(candidates) - len(promotions), "provisional_manifest_unchanged": len(candidates),
         "configured": len(ids),
-        "normal_key_matches": len(scored) + len(trials), "unverified_trial_matches": len(trials),
-        "learner_only_holds": len(candidates) - len(trials),
+        "normal_key_species": len(ids), "previous_trial_source_packets_preserved": len(trials),
+        "manifest_only_holds": len(candidates) - len(trials),
         "verification": "PUBLIC_HTML_AND_JSON_BYTES_NOT_BROWSER_PIXELS",
         "photo_identity_rights_and_rendered_pixels": "NOT_CERTIFIED",
     }, indent=2))
