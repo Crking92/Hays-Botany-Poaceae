@@ -519,22 +519,26 @@
         {
           "id": "upper_one_vein",
           "label": "UPPER glume has one vein",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Open the spikelet to locate the second (upper) outer scale and trace its veins. Do not infer the lower glume has the same venation."
         },
         {
           "id": "lower_one_vein",
           "label": "LOWER glume has one vein",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Identify the first (lower) outer scale and inspect its vein count. Do not transfer that count to the upper glume."
         },
         {
           "id": "central_glume_glabrous",
           "label": "CENTRAL spikelet glumes without hairs",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "On a three-spikelet unit identify the central spikelet; inspect its glumes only for hairs. Lateral spikelets may differ."
         },
         {
           "id": "central_glume_scabrous",
           "label": "CENTRAL spikelet glumes rough to touch",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Identify the central spikelet before examining rough glume surfaces or raised veins with magnification. Do not assume the lateral glumes are identical."
         }
       ],
       "multi_select": true,
@@ -636,17 +640,20 @@
         {
           "id": "fertile_awn_2_to_5mm",
           "label": "FERTILE lemma awn about 2–5 mm",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Find the actual fertile lemma and measure the awn from its attachment; do not use lengths of a lower sterile lemma awn or bristle."
         },
         {
           "id": "lower_sterile_awn_variable",
           "label": "LOWER sterile lemma awn variable or absent",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Find the LOWER sterile lemma and check whether its awn is present and how long. This option records variability; it is not a claim that every floret bears an awn."
         },
         {
           "id": "apical_mucro",
           "label": "Apical mucro (short midvein tip), not a confirmed awn",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "A mucro is an abrupt extension of the lemma's midvein at the tip. Do not automatically classify it as a true free awn; check the species account."
         }
       ],
       "multi_select": true,
@@ -696,17 +703,20 @@
         {
           "id": "lower_sterile_lemma_hairs",
           "label": "Hairs on LOWER sterile lemma",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Open one spikelet to find the lower sterile lemma, then inspect the lemma itself. The upper fertile lemma may be smooth."
         },
         {
           "id": "upper_fertile_lemma_hairs",
           "label": "Hairs on UPPER fertile lemma",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Inspect the upper fertile floret's lemma, not the lower sterile lemma, palea, rachilla or floret callus."
         },
         {
           "id": "spikelet_callus_hairs",
           "label": "Hairs at floret callus (base)",
-          "evidence_pending": true
+          "evidence_pending": true,
+          "detail": "Look below the floret at its attachment (callus); these hairs arise at the base, not on a lemma surface or on a partner spikelet's pedicel."
         }
       ],
       "multi_select": true,
