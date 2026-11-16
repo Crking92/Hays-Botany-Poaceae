@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "ready-core-gap-assignments.json", "index.html"]
 
 
 def read_public(name):
@@ -64,6 +64,12 @@ def verify():
     assert len(promotions) == len(promoted_ids) == 4
     assert promoted_ids <= {p["id"] for p in trials}, "Source scored admission lacks trial source packet"
     assert all(p["admission_level"] == "SOURCE_SCORED_NOT_LOCAL_VOUCHER" for p in promotions)
+    core_gaps = public["ready-core-gap-assignments.json"]
+    assert core_gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
+    assert core_gaps["integration_count"] == len(core_gaps["rows"]) == 28
+    assert len(core_gaps["held_unknown"]) == 13
+    assert core_gaps["prior_research_master_records"] == 1815
+    assert {r["id"] for r in core_gaps["rows"]} <= {p["id"] for p in trials}
     for p in trials:
         assert p["trial"] is True and p["admission_status"] == "RESEARCH_TRIAL_NOT_ADMITTED" and p["range"] == "UNVERIFIED"
         source = candidate_by_id[p["id"]]["approved_gallery"]
@@ -80,6 +86,7 @@ def verify():
         "research_only_remaining": len(candidates) - len(promotions), "provisional_manifest_unchanged": len(candidates),
         "configured": len(ids),
         "normal_key_species": len(ids), "previous_trial_source_packets_preserved": len(trials),
+        "source_reviewed_new_core_fields": len(core_gaps["rows"]), "explicit_core_unknown_holds": len(core_gaps["held_unknown"]),
         "manifest_only_holds": len(candidates) - len(trials),
         "verification": "PUBLIC_HTML_AND_JSON_BYTES_NOT_BROWSER_PIXELS",
         "photo_identity_rights_and_rendered_pixels": "NOT_CERTIFIED",
