@@ -52,7 +52,7 @@ for(const e of add.evidence){
 assert.deepEqual(seen,expected);
 assert.equal(111-(formerlyPending.length-seen.size),107);
 const html=fs.readFileSync(path.join(root,"index.html"),"utf8");
-const js=html.match(/<script>([\\s\\S]*?)<\\/script>/)?.[1];
+const js=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert(js);new vm.Script(js);
 for(const phrase of ["optional-evidence-targeted-20261116.json","originalRows!==1815",
 "state.species.filter(s=>s.source_scored).length!==56",
