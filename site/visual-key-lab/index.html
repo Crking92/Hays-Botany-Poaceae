@@ -661,7 +661,7 @@ function leafDetailSketch(character,choice){
    Visual illustrations never supply botanical evidence or exclusion scores. */
 const collarFieldTips={
  leaf_base:{
-  pointed_auricles:["Look at the collar from the outside","Two small pointed ear-like lobes rise beside the blade base. Auricles are outside the junction; the ligule is on the inside."],
+  pointed_auricles:["Look at the collar from the outside","Two small pointed ear-like lobes extend beside the blade base; their upward orientation is not a diagnostic requirement. Auricles are outside the junction; the ligule is on the inside."],
   clasping_auricles:["Look at both sides of the stem","Ear-like lobes curve around or hug the culm. Check their attachment; a folded leaf edge is not an auricle."],
   compressed_sheath:["Look across the lower sheath","The sheath around the culm is flattened or keel-shaped rather than evenly rounded. This is sheath structure, not a raised blade midrib."]
  },
@@ -1154,7 +1154,13 @@ function renderOptionalCharacters(){
        const selected=c.options.find(o=>selectedRefinementStates(c.id).includes(o.id));
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a flower or spikelet detail for a diagram and a closer-look tip. No flowerhead? Skip this section."));return;}
        const [where,tip]=flowerFieldTips[c.id][selected.id]||[];
-       if(!where)return;
+       if(!where){
+         const info=node("div","venation-field-text");
+         info.append(node("strong","",selected.label),
+           node("p","",selected.detail||"Confirm the exact spikelet organ with a hand lens before using this observation."),
+           node("p","venation-field-source","Anatomically specific observation only; no verified species-level match yet. Other grasses remain possible. A diagram is not shown until its structure is verified."));
+         guide.append(info);return;
+       }
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
        const info=node("div","venation-field-text");
        info.append(node("strong","",where),node("p","",tip),
@@ -1993,7 +1999,7 @@ renderCompareControls(rows,n+Object.values(state.refineSelected).filter(Boolean)
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 $("count").textContent=rows.length+" possible";
 const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
-$("results-note").textContent=pendingChoice?"At least one selected extra detail is a research target without species-level ranking evidence yet. Other documented details may still rank positively; no grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
+$("results-note").textContent=pendingChoice?"At least one selected extra detail is a research target without species-level ranking evidence yet. Other documented details may still rank positively. No grass was removed.":Object.values(state.refineSelected).some(Boolean)?"Extra details move documented matches higher. Grasses with unknown traits stay possible.":(n?"These grasses match your selected features. Open a photo to compare details.":"Choose the features you can see to narrow the list.");
 $("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
 const root=$("results");root.replaceChildren();
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
