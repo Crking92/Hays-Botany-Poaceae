@@ -156,9 +156,25 @@ def check_view(browser, name, width, height):
     assert "compact-panicled" in brome.inner_text()
     assert brome.locator(".detail-grid img").count() == 3
     brome.get_by_role("button",name="Close species detail").click()
-    page.locator("#species-search").fill("Dichanthelium acuminatum")
-    page.wait_for_function("document.querySelectorAll(\'#results .result\').length === 1",timeout=15000)
-    assert "Research trial" in page.locator("#results .result").first.inner_text(), ("Broad-complex identity hold was lost")
+    for scientific,count,needle in [
+        ("Dichanthelium acuminatum",3,"BROAD-COMPLEX"),
+        ("Phyllostachys aurea",2,"Flowers are extremely rare"),
+        ("Cortaderia selloana",2,"large, tall tuft")]:
+        page.locator("#species-search").fill(scientific)
+        page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+        assert "Source-scored" in page.locator("#results .result").first.inner_text(), (
+            scientific + ": scoped literature evidence not surfaced")
+        page.locator("#results .result").first.click()
+        dlg=page.locator("#detail-dialog")
+        assert needle.lower() in dlg.inner_text().lower(), (
+            scientific + ": critical taxon or field-character caveat missing")
+        assert dlg.locator(".detail-grid img").count()==count
+        assert "NOT a Hays County specimen voucher" in dlg.inner_text()
+        dlg.get_by_role("button",name="Close species detail").click()
+    page.locator("#species-search").fill("Lolium × boucheanum")
+    page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+    assert "Research trial" in page.locator("#results .result").first.inner_text(), (
+        "Hybrid lineage conflict must remain on hold")
     page.locator("#species-search").fill("Polypogon viridis")
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
     page.locator("#results .result").first.click()
