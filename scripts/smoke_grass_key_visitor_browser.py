@@ -109,6 +109,16 @@ def check_view(browser, name, width, height):
     page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
     assert "Research trial" in page.locator("#results .result").first.inner_text(), (
         "Unpromoted species was accidentally admitted")
+    page.locator("#species-search").fill("Polypogon viridis")
+    page.wait_for_function("document.querySelectorAll('#results .result').length === 1",timeout=15000)
+    page.locator("#results .result").first.click()
+    gap_dialog = page.locator("#detail-dialog")
+    assert "Newly source-verified field characters" in gap_dialog.inner_text(), (
+        "Previously skipped water bentgrass growth form not published")
+    assert "mat" in gap_dialog.inner_text().lower(), "Supported rooting mat habit missing"
+    assert gap_dialog.locator("section.detail-botany a[href^='https://']").count() >= 2, (
+        "Hays Hill Country source and exact handoff links missing")
+    gap_dialog.get_by_role("button",name="Close species detail").click()
     page.locator("#species-search").fill("")
 
     # Measured leaf width: documented matches, unknowns, and recoverable exclusions.
