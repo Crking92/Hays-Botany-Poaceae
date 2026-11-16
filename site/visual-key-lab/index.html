@@ -3199,6 +3199,39 @@ try{
   option.evidence_pending=false;
  }
 }catch(err){console.warn("Final four advanced states held safely; earlier source evidence preserved",err)}
+/* Organ-faithful correction of nine historical callus-beard states previously
+   grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
+   leaves the immutable 1,815-row source master and original source notes intact.
+   Exact-species morphology handoff: Issue #368, CHAT D Batch 01/02.
+   Setaria bristles remain in below_spikelet. */
+const callusInsteadOfBristles=[
+ "bothriochloa-bladhii","anatherum-virginicum","andropogon-gerardi",
+ "avena-fatua","chasmanthium-latifolium","heteropogon-contortus",
+ "miscanthus-sinensis","nassella-tenuissima","tridentopsis-buckleyana"
+];
+try{
+ const corrected=callusInsteadOfBristles.map(id=>{
+  const row=(state.refineEvidenceMap[id]||[]).find(e=>
+    e.character==="floral_hair_position"&&e.states?.includes("below_spikelet"));
+  if(!row||!row.source_url?.startsWith("https://"))
+    throw Error("Original exact-species callus source missing: "+id);
+  return row;
+ });
+ for(let i=0;i<corrected.length;i++){
+  const record=corrected[i];
+  // Hairs on a floret callus are NOT bristles beneath an entire spikelet.
+  record.states=[...new Set([...record.states.filter(v=>v!=="below_spikelet"),
+    "spikelet_callus_hairs"])];
+  record.additional_state_sources??={};
+  if(!record.additional_state_sources.spikelet_callus_hairs)
+    record.additional_state_sources.spikelet_callus_hairs={
+      source:record.source,source_url:record.source_url,
+      note:(record.note||"")+" Corrected legacy organ interpretation: the hairs arise from the floret/spikelet callus, not a separate sterile branchlet.",
+      organ_scope:"floret or sessile spikelet callus",conditional:false};
+  record.source_scope_caution=(record.source_scope_caution||"")+
+    " Corrected legacy below_spikelet bristle mapping: true callus pubescence; no negative exclusion.";
+ }
+}catch(err){console.warn("Callus organ remap held; unverified evidence left unchanged",err)}
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
  rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
