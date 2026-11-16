@@ -2975,6 +2975,88 @@ try{
   }else bucket.push(e);
 }
 }catch(err){console.warn("Targeted optional evidence failed safely; original 1,815 advanced records retained",err)}
+// Final four previously pending advanced choices: two leaf/lemma states and
+// two corrected lower-glume MIDNERVE states. Old IDs remain for bookmark
+// compatibility; no third "central glume" is asserted. Positive-only evidence.
+try{
+ const response=await fetch("optional-evidence-final-four-20261116.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Final four grass characters unavailable");
+ const pack=await response.json();
+ const optionGroups=new Map(state.refineCharacters.map(c=>[c.id,c]));
+ const actual=new Set(Object.values(state.refineEvidenceMap).flatMap(records=>
+     records.flatMap(e=>e.states.map(v=>e.character+":"+v))));
+ const expected=new Map([
+   ["blade_venation:raised_ribs","lolium-perenne"],
+   ["true_lemma_awn:apical_mucro","setaria-italica"],
+   ["glume_marks:central_glume_glabrous","setaria-italica"],
+   ["glume_marks:central_glume_scabrous","poa-annua"]
+ ]);
+ const lowerGlume=optionGroups.get("glume_marks");
+ if(pack.schema!=="HAYS_GRASS_FINAL_FOUR_OPTION_CORRECTION_V1"||
+   pack.species_scored_baseline!==168||pack.remaining_taxon_hold!=="lolium-x-boucheanum"||
+   pack.original_master_records!==1815||pack.original_advanced_groups!==24||
+   pack.original_advanced_options!==111||
+   pack.previous_supplement_supported!==9||pack.previous_supplement_evidence_rows!==8||
+   pack.previously_pending_options!==4||pack.new_supported_options!==4||
+   pack.remaining_pending_options!==0||pack.final_option_count_with_any_source!==111||
+   pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||
+   state.species.length!==169||state.species.filter(x=>x.source_scored).length!==56||
+   state.species.filter(x=>x.trial).length!==1||
+   optionGroups.size!==24||state.refineCharacters.reduce((n,c)=>n+c.options.length,0)!==111||
+   !Array.isArray(pack.evidence)||pack.evidence.length!==4||
+   !Array.isArray(pack.legacy_option_relabels)||pack.legacy_option_relabels.length!==2||
+   [...expected.keys()].some(key=>actual.has(key))||!lowerGlume)
+   throw Error("Final-four historical evidence baseline is not intact");
+ const validated=[],seen=new Set();
+ for(const row of pack.evidence){
+  const species=state.species.find(x=>x.id===row.id);
+  const states=optionGroups.get(row.character)?.options.map(o=>o.id)||[];
+  if(!species||species.trial||species.scientific!==row.scientific||
+     row.decision!=="READY_ORGAN_SPECIFIC_POSITIVE_ONLY"||
+     row.hays_local_voucher!=="NOT_CERTIFIED"||
+     !row.organ_scope||!row.note||row.note.length<65||
+     !row.source_url?.startsWith("https://")||!row.source||
+     !Array.isArray(row.states)||row.states.length!==1||!states.includes(row.states[0]))
+    throw Error("Final-four structure/source is unsupported: "+row.id+" / "+row.character);
+  const key=row.character+":"+row.states[0];
+  if(seen.has(key)||expected.get(key)!==row.id)
+    throw Error("Exact-organ species mapping changed: "+key);
+  seen.add(key);validated.push(row);
+ }
+ if(seen.size!==4)throw Error("Final four missing an exact species character");
+ const replaceNames=new Map([
+  ["central_glume_glabrous","Lower glume midnerve smooth (not roughened)"],
+  ["central_glume_scabrous","Lower glume midnerve rough (scabrous)"]
+ ]);
+ for(const change of pack.legacy_option_relabels){
+  const original=lowerGlume.options.find(o=>o.id===change.id);
+  if(!original||!replaceNames.has(change.id)||
+     replaceNames.get(change.id)!==change.display_label||
+     !change.display_hint?.includes("LOWER")||
+     !change.new_anatomical_interpretation?.includes("lower glume midnerve"))
+   throw Error("Botanically invalid lower glume renaming");
+  replaceNames.delete(change.id);
+ }
+ if(replaceNames.size)throw Error("Both invalid central-glume options not corrected");
+ // All checks passed; apply only additive evidence or human-readable labels.
+ for(const row of validated){
+  const records=state.refineEvidenceMap[row.id]??=[];
+  const prior=records.find(r=>r.character===row.character);
+  if(prior){
+    prior.states=[...new Set([...prior.states,...row.states])];
+    const sources=prior.additional_state_sources??={};
+    sources[row.states[0]]={source:row.source,source_url:row.source_url,
+      note:row.note,organ_scope:row.organ_scope,conditional:row.conditional};
+    prior.source_scope_caution=(prior.source_scope_caution||"")+
+      " Additional exact-organ positive report; absence in other species NOT shown.";
+  }else records.push(row);
+ }
+ for(const change of pack.legacy_option_relabels){
+  const option=lowerGlume.options.find(o=>o.id===change.id);
+  option.label=change.display_label;option.hint=change.display_hint;
+  option.evidence_pending=false;
+ }
+}catch(err){console.warn("Final four advanced states held safely; earlier source evidence preserved",err)}
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
  rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
