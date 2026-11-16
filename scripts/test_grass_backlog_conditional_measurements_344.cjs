@@ -214,7 +214,13 @@ for(const [key,want] of Object.entries(expected)){
  assert(e.original_source_citation?.includes(want.url)&&e.note?.trim(),'Lost source/note '+key);
  assert(e.states.every(v=>options.get(e.character)?.has(v)),'Unrecognized UI state '+key);
 }
-assert(!rows.has('sporobolus-vaginiflorus|blade_width'),'Held exactly 2 mm boundary was released');
+// Lane D12 supplies a documented 1–2 mm range. Only the 1–<2 mm
+// subset qualifies for 'thread'; exactly 2 mm is NOT reclassified 'narrow'.
+const sporo=rows.get('sporobolus-vaginiflorus|blade_width');
+assert(sporo,'D12 source-qualified positive thread observation missing');
+assert.deepEqual(sporo.states,['thread'],'2 mm strict boundary falsely assigned another width bin');
+assert.deepEqual(sporo.width_mm,[1,2],'Original 1–2 mm width source bounds changed');
+assert(sporo.note.includes('Exactly 2 mm'),'Missing strict 2 mm caveat');
 assert(!rows.has('dichanthium-sericeum|ligule_length'),'1 mm threshold-only mismatch released');
 assert(![...rows.keys()].some(k=>k.startsWith('lolium-x-boucheanum|')),'Hybrid hold released');
 console.log('PASS: 24 supplemental measured traits, threshold QA and excluded uncertain boundary cases');
