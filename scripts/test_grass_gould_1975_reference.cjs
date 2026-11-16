@@ -170,4 +170,43 @@ assert.equal(barleyCandidate.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
 assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).some(x=>x.id==="hordeum-murinum"));
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing source-specific display must support hare barley");
 
-console.log("PASS: Gould little bluestem, Virginia wildrye, buffelgrass, perennial ryegrass, and subspecies-scoped hare barley saved; scoring untouched");
+
+// Gould, The Grasses of Texas, printed p.173: Triticum aestivum, old genus key, and unit discrepancy.
+const wheat=source.additional_species_treatments?.find(x=>x.species_id==="triticum-aestivum");
+assert(wheat,"Source register must retain Gould wheat p.173");
+assert.equal(wheat.printed_page,173);
+assert.equal(wheat.taxon,"Triticum aestivum");
+assert.equal(wheat.observations.length,22);
+assert.equal(wheat.learner_diagnostic_checks.length,3);
+assert.equal(wheat.genus_context.historical_two_choice_key.length,2);
+assert.equal(wheat.genus_context.historical_two_choice_key[1].modern_name,"Aegilops cylindrica Host");
+assert.equal(wheat.genus_context.historical_two_choice_key[1].modern_species_id,"aegilops-cylindrica");
+assert.equal(wheat.genus_context.modern_name_crosswalk.accepted_name,"Aegilops cylindrica Host");
+assert.equal(wheat.classification_decision.action,"PRESERVE_PROVISIONAL_IDENTIFICATION_STATES_AND_UNCERTAINTY");
+const wheatObs=new Map(wheat.observations.map(x=>[x.character,x]));
+assert.deepEqual(wheatObs.get("culm_height").height_cm_mostly,[60,100]);
+assert.deepEqual(wheatObs.get("blade_width_and_surface").width_mm_equivalent,[7,20]);
+assert.deepEqual(wheatObs.get("inflorescence_spike").length_cm,[5,12]);
+assert.deepEqual(wheatObs.get("spikelet_length").length_mm,[10,15]);
+assert.deepEqual(wheatObs.get("spikelet_florets").florets_per_spikelet,[2,5]);
+assert.deepEqual(wheatObs.get("chromosome_number").reported_2n,42);
+assert.deepEqual(wheatObs.get("embryo_relative_length").embryo_fraction_of_endosperm,[0.25,1/3]);
+assert.equal(wheatObs.get("ligule").literal_source_length,"1–3 cm");
+assert.equal(wheatObs.get("ligule").status,"PUBLISHED_UNIT_DISCREPANCY_HOLD");
+assert(wheatObs.get("ligule").comparison_sources.some(x=>x.reported_length==="2–3 mm"));
+assert.equal(wheatObs.get("glume_awn").reported_maximum,"6 cm or more");
+assert.equal(wheatObs.get("lemma_awn").reported_maximum,"15 cm or more");
+assert(wheat.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url?.startsWith("https://")));
+const wheatTrial=read("provisional-trial-batch3.json").profiles.find(x=>x.id==="triticum-aestivum");
+const wheatCandidate=read("hays-candidates.json").candidates.find(x=>x.id==="triticum-aestivum");
+assert(wheatTrial&&wheatCandidate);
+assert.equal(wheatTrial.admission_status,"RESEARCH_TRIAL_NOT_ADMITTED");
+assert.deepEqual(wheatTrial.traits,{head:["spike"],habit:[],ligule:["membrane"],awns:[]});
+assert.equal(wheatCandidate.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
+assert(!["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).some(x=>x.id==="triticum-aestivum"));
+const goatTrial=read("provisional-trial-batch2.json").profiles.find(x=>x.id==="aegilops-cylindrica");
+assert.equal(goatTrial.admission_status,"RESEARCH_TRIAL_NOT_ADMITTED");
+assert.deepEqual(goatTrial.traits,{head:["spike"],habit:[],ligule:["membrane"],awns:["long"]});
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Wheat source-only diagnostic text requires existing display route");
+
+console.log("PASS: Gould source intake including wheat p.173 retained; protected grass scoring and taxonomy unchanged");
