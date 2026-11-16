@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "project": "Hays Grass ID Lab — source-backed species intake (non-scoring)",
+  "source": {
+    "id": "gould-1975-grasses-of-texas",
+    "title": "The Grasses of Texas",
+    "author": "Frank W. Gould",
+    "first_publication_year": 1975,
+    "original_illustrations": "Valloo Kapadia and others",
+    "publisher": "Texas A&M University Press",
+    "companion_source_file": "site/visual-key-lab/source-reference-gould-1975.json",
+    "status": "ACCEPTED_AUTHORITATIVE_TEXAS_GRASS_FLORA"
+  },
+  "source_intake": {
+    "received_on": "2026-11-16",
+    "material": "User photograph of printed book page 166, Elymus virginicus account and Figure 84",
+    "taxon": "Elymus virginicus",
+    "species_id": "elymus-virginicus",
+    "printed_page": 166,
+    "account_number": 3,
+    "figure_number": 84,
+    "figure_caption_attribution": "Gould and Box (1965), as printed in book caption",
+    "exact_copy_edition": "UNVERIFIED",
+    "note": "Only legible text from the photographed left page was entered; adjacent right-page continuation is not sufficiently visible to extract. Do not assert complete treatment or flowering period from this image."
+  },
+  "source_use_policy": "Texas-specific historical published observations. Cite Gould p. 166, preserve measurement and organ specificity; do not infer BONAP county nativity or verify a local specimen. No automatic changes to scored key or 1,815-record advanced master. Gould's glume/lemma wording remains organ-specific and may differ from Kew/FNA ranges or taxon concepts.",
+  "classification_decision": {
+    "score_character": "head",
+    "existing_state": "spike",
+    "action": "KEEP_EXISTING_STATE",
+    "explanation": "A stiffly erect, densely awned Elymus spike can appear like a bristly cylinder, but its awns originate from glumes/lemmas on spikelets along a central axis. Setaria foxtail bristles are separate sterile branchlets around a dense spikelike panicle. This is a presentation clarification, not grounds to score Elymus as foxtail.",
+    "avoid_states": [
+      "foxtail",
+      "sparse_bristles"
+    ],
+    "source_scope": "Gould printed p. 166 with independent TAMU and existing Diggs source corroboration"
+  },
+  "observations": [
+    {
+      "character": "growth_form",
+      "status": "CORROBORATES_EXISTING",
+      "details": "Culms tufted, typically upright, possibly decumbent at their base. Not an automatically creeping or stoloniferous grass."
+    },
+    {
+      "character": "culm_height",
+      "status": "RETAIN_MEASUREMENT_NONSCORING",
+      "range_cm": [
+        60,
+        120
+      ],
+      "details": "Mostly 60–120 cm tall, green or sometimes glaucous (bluish waxy)."
+    },
+    {
+      "character": "sheath_surface",
+      "status": "CORROBORATES_VARIABLE_REPORTS",
+      "details": "Leaf sheaths glabrous in Gould's description; H&L and other sources allow some variation. Do not overwrite conditional hair states."
+    },
+    {
+      "character": "ligule",
+      "status": "CORROBORATES_EXISTING",
+      "details": "A minute, truncate true membrane at inner blade–sheath junction, not the falcate auricles."
+    },
+    {
+      "character": "blade_width",
+      "status": "CORROBORATES_EXISTING",
+      "width_mm": [
+        5,
+        15
+      ],
+      "details": "Leaves flat, width mostly 5–15 mm; surfaces smooth, rough or with very fine pubescence."
+    },
+    {
+      "character": "inflorescence",
+      "status": "DIRECT_HEAD_ARCHITECTURE_KEEP_SPIKE",
+      "details": "Flowering spike commonly stiffly erect, often partially enclosed at its base by the uppermost leaf sheath. Figure 84 illustrates an upright bristly head but does not prove presence of separate Setaria-like bristles."
+    },
+    {
+      "character": "glume_structure",
+      "status": "RETAIN_ANATOMY_NONSCORING",
+      "details": "Glumes hard (indurate), yellowish, bowed outward at the base; apex often curved and prolonged into a straight awn whose length may be shorter or longer than the glume body. The text's juxtaposition of vein terminology requires anatomy-aware checking before any vein-score assignment."
+    },
+    {
+      "character": "lemma_surface",
+      "status": "NEW_SOURCE_DETAIL_NONSCORING",
+      "details": "Lemmas glabrous or sparsely hirsute (with a few relatively coarse hairs). Variation retained rather than scored as always hairy/always hairless."
+    },
+    {
+      "character": "lemma_awn",
+      "status": "EXISTING_RANGE_CORROBORATION_NOT_NEW_HEAD_BRISTLES",
+      "length_mm": [
+        5,
+        25
+      ],
+      "details": "Gould explicitly places the straight to slightly curved 5–25 mm awn on the lemma. Awn projection length is variable; do not claim every individual has short awns, or that the spikelet is awnless."
+    },
+    {
+      "character": "chromosome_number",
+      "status": "NONSCORING_CYTOLOGY_REPORT",
+      "reported_2n": 28,
+      "details": "Gould reports chromosome number 2n=28; not specimen cytotyping."
+    },
+    {
+      "character": "texas_historical_distribution",
+      "status": "HISTORICAL_NOT_BONAP_PROOF",
+      "details": "Gould reports Texas region occurrence except regions 9 and 10, predominantly in the eastern half of the state. Source regional bins are historical and do not establish county nativity."
+    },
+    {
+      "character": "habitat",
+      "status": "NONSCORING_CONTEXT",
+      "details": "Reported in shaded banks, fence rows, and open woodlands."
+    },
+    {
+      "character": "general_historical_distribution",
+      "status": "HISTORICAL_REPORT_NOT_CURRENT_COVERAGE",
+      "details": "Gould reports widespread U.S. occurrence except extreme southwestern areas and notes older non-reporting from Oregon, Nevada and California. Do not interpret this as a current exhaustive distribution assessment."
+    },
+    {
+      "character": "figure",
+      "status": "SOURCE_ILLUSTRATION_NOT_REHOSTED",
+      "details": "Fig. 84 shows a rigid, narrow, apparently bristly spike; original printed caption credits Gould and Box (1965). Source page photo is not copied to the public gallery."
+    },
+    {
+      "character": "page_continuation",
+      "status": "HOLD_NOT_VISIBLE_IN_SUBMITTED_PHOTO",
+      "details": "Adjacent right-page flowering period and longer notes are partly obscured and out of scope; do not supply dates or varietal criteria from them."
+    }
+  ],
+  "learner_diagnostic_checks": [
+    {
+      "look": "Look at the true upright, awned spike (Gould, p. 166)",
+      "check": "The head is normally stiffly erect, narrow and wheat/rye-like, and its base may sit partly inside the upper leaf sheath. It can LOOK like a bristly cylinder: these projections are glume and lemma awns on attached spikelets, not independent foxtail bristles from sterile branches. Select 'Long upright or nodding spike,' not the Setaria foxtail button.",
+      "compare": "Foxtail bristlegrass has separate bristles below individual spikelets on a dense spikelike panicle; Canada wildrye more often droops, with longer spreading awns.",
+      "certainty": "Gould (1975) p. 166 and Texas A&M published descriptions agree on the rigid erect awned spike; no new specimen photographed.",
+      "source": "Gould (1975), The Grasses of Texas, printed p. 166",
+      "url": "https://rangeplants.tamu.edu/plant/virginia-wildrye/"
+    },
+    {
+      "look": "Measure the lemma awns, glumes and leaf blade (Gould)",
+      "check": "Gould describes lemma awns 5–25 mm long, usually straight or only slightly curved, glumes hard and bowed at the base, and flat blades about 5–15 mm wide. Look for actual spikelets and intact lemmas under a hand lens, not simply how dense the head looks.",
+      "compare": "Canada wildrye often shows longer divergent awns and less rigid spikes; the glume bases also differ, although hybridization can blur these distinctions.",
+      "certainty": "Published measurements and character descriptions, not verified for one Hays County plant.",
+      "source": "Gould (1975), The Grasses of Texas, printed p. 166",
+      "url": "https://rangeplants.tamu.edu/plant/virginia-wildrye/"
+    },
+    {
+      "look": "Check the leaf collar and upper sheath (Gould)",
+      "check": "Virginia wildrye has a minute truncate membranous ligule, flat variable-texture leaves and usually smooth sheaths. The upper sheath may partly envelop the base of the flowering spike. Gould reports mostly 60–120 cm tall culms and 2n=28; the chromosome count is not a field identifier.",
+      "compare": "Do not mistake clasping auricles for the true ligule, or interpret one tall or stunted plant as an exclusive identification feature.",
+      "certainty": "Additional Gould p. 166 teaching details; no new key-score assignments.",
+      "source": "Gould (1975), The Grasses of Texas, printed p. 166",
+      "url": "https://www.wildflower.org/plants/result.php?id_plant=elvi3"
+    }
+  ]
+}
