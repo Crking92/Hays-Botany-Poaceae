@@ -131,8 +131,11 @@ def check_view(browser, name, width, height):
                 detail_page.wait_for_function(
                     "() => document.querySelector('#species-detail .subtitle')?.textContent.includes('Bothriochloa longipaniculata')",
                     timeout=60000)
-                assert detail_page.evaluate("document.activeElement.id") == "species-detail", (
-                    "Deep-linked profile was loaded but stayed unfocused below the catalog")
+                # The title appears during select(), just before its awaited
+                # deep-link scroll/focus action finishes. Wait for that action.
+                detail_page.wait_for_function(
+                    "() => document.activeElement?.id === 'species-detail'",
+                    timeout=15000)
                 assert detail_page.locator("#species-detail").is_visible()
             finally:
                 detail_page.close()
