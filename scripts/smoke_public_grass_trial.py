@@ -11,7 +11,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 LAB = ROOT / "site" / "visual-key-lab"
 BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
-FILES = ["index.html", "promotion-review-37-20261116.json", "source-scored-admissions.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
+FILES = ["index.html", "promotion-review-37-20261116.json", "source-scored-admissions.json", "ready-core-gap-assignments.json", "source-scored-gould-followup-20261116.json", "focused-identity-review-20261116.json", "source-scored-bromus-brevis-20261116.json", "provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
 ATTEMPTS = 12
 DELAY_SECONDS = 5
 
@@ -94,6 +94,11 @@ def http_check():
     assert "cenchrus-ciliaris" in added_ids
     assert set(followup["unresolved_species_holds"]) - focused_ids == set(focused["remaining_holds"])
     assert not set(focused["remaining_holds"]).intersection(promoted_ids)
+    brome = delivered["source-scored-bromus-brevis-20261116.json"]
+    assert brome["schema"] == "HAYS_GRASS_BROMUS_BREVIS_TARGETED_ADMISSION_V1"
+    assert brome["admission"]["id"] == "bromus-brevis"
+    assert brome["total_source_scored_after_release"] == 165
+    assert set(focused["remaining_holds"]) - {"bromus-brevis"} == set(brome["remaining_holds"])
     gaps = delivered["ready-core-gap-assignments.json"]
     assert gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
     assert len(gaps["rows"]) == 28 and len(gaps["held_unknown"]) == 13
@@ -110,10 +115,10 @@ def browser_check(groups,promoted_ids):
                 "() => document.querySelectorAll('#results .result').length === 169",
                 timeout=45000)
             labels = page.locator("#results .result .tag").all_text_contents()
-            assert sum("Research trial" in x and "unverified" in x for x in labels) == 5, (
-                "Unified 169 key missing one broad taxonomic hold and four manifest-only research labels")
-            assert sum("Source-scored" in x for x in labels) == 52, (
-                "Fifty-two literature-scored profiles not labeled separately from source trials")
+            assert sum("Research trial" in x and "unverified" in x for x in labels) == 4, (
+                "Unified 169 key missing one broad taxonomic hold and three manifest-only research labels")
+            assert sum("Source-scored" in x for x in labels) == 53, (
+                "Fifty-three literature-scored profiles not labeled separately from source trials")
             matches = []
             for x in groups:
                 scientific=x["scientific"]
@@ -147,6 +152,15 @@ def browser_check(groups,promoted_ids):
                         f"{scientific}: source photo page missing")
                 matches.append(scientific)
                 page.get_by_role("button",name="Close species detail").click()
+            page.locator("#species-search").fill("Bromus brevis")
+            brome_row=page.locator("#results .result")
+            assert brome_row.count() == 1 and "Source-scored" in brome_row.first.inner_text()
+            brome_row.first.click()
+            brome_detail=page.locator("#detail-dialog")
+            assert "NOT a Hays County specimen voucher" in brome_detail.inner_text()
+            assert "Harry Rose" in brome_detail.inner_text()
+            assert brome_detail.locator(".detail-grid img").count() == 3
+            page.get_by_role("button",name="Close species detail").click()
             return matches
         finally:
             browser.close()
@@ -161,8 +175,8 @@ def check():
         "files_verified": FILES,
         "original_scored_count_unchanged": 112,
         "historical_source_trial_packets_preserved": len(groups),
-        "source_scored_admissions_displayed": len(promoted_ids),
-        "research_only_including_four_manifest_holds": 57 - len(promoted_ids),
+        "source_scored_admissions_displayed": len(promoted_ids) + 1,
+        "research_only_including_four_manifest_holds": 57 - len(promoted_ids) - 1,
         "total_normal_key_results": 169,
         "total_learner_species": 169,
         "photo_held_research_profiles_in_key": 4,
