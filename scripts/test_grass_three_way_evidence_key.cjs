@@ -74,6 +74,44 @@ state.selected.head="fingers";
 assert(vm.runInContext("currentResults()",sandbox).length<112,"original four-question conflicting-character exclusions must remain active");
 state.selected.head=null;
 assert(sum(inspect())===112,"clear both core and advanced observations restores all originals");
+// The three rhizome descriptions are conflicting SOURCE reports, not
+// verified absences or fully confirmed regional habit matches. Keep the
+// underlying literature states available, but keep their rhizome results
+// reviewable under Still possible until the owner rechecks their book.
+state.refineSelected={};state.selected={head:null,habit:"rhizome",ligule:null,awns:null};
+const disputed=["bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"];
+groups=inspect();
+for(const id of disputed){
+ assert(groups.unresolved.some(x=>x.s.id===id&&x.rhizomeSourceHold),
+   id+": source-disputed rhizome wrongly presented as confirmed or excluded");
+ assert(!groups.confirmed.some(x=>x.s.id===id),
+   id+": conflicting rhizome reports called confirmed");
+ assert(!groups.excluded.some(x=>x.s.id===id),
+   id+": source uncertainty mislabeled as evidence of absence");
+}
+assert(sum(groups)===vm.runInContext("currentResults().length",sandbox),
+ "Rhizome review hold silently removes a grass");
+state.selected={head:null,habit:null,ligule:null,awns:null};
+assert(inspect().confirmed.length===112,"Clearing rhizome restores all 112 scored base grasses");
+
+// Repeated observation of the SAME pale central vein or node gland ring
+// deserves only ONE positive ranking point despite two available UI labels.
+// Independent anatomy remains separately selectable.
+function matchCount(id){return vm.runInContext(
+ "refinementMatches(state.species.find(s=>s.id==="+JSON.stringify(id)+")).length",sandbox);}
+state.refineSelected={blade_midnerve:"pale_center"};
+assert.equal(matchCount("sorghum-halepense"),1,"Pale midrib source record missing");
+state.refineSelected={blade_venation:"pale_midvein"};
+assert.equal(matchCount("sorghum-halepense"),1,"Venation midrib source record missing");
+state.refineSelected={blade_midnerve:"pale_center",blade_venation:"pale_midvein"};
+assert.equal(matchCount("sorghum-halepense"),1,"One pale midrib counted twice");
+state.refineSelected={stem_nodes:"gland_ring"};
+assert.equal(matchCount("eragrostis-cilianensis"),1,"Node gland source record missing");
+state.refineSelected={stem_special:"node_gland_ring"};
+assert.equal(matchCount("eragrostis-cilianensis"),1,"Special node gland source record missing");
+state.refineSelected={stem_nodes:"gland_ring",stem_special:"node_gland_ring"};
+assert.equal(matchCount("eragrostis-cilianensis"),1,"One culm-node gland ring counted twice");
+state.refineSelected={};
 assert(html.includes('const advancedExcluded=groups.excluded.map('),"advanced exclusions must appear in visitor review section");
 assert(html.includes('Published evidence: '),"published source links must accompany exclusions");
 assert(html.includes("const excludedIds=new Set(groups.excluded.map("),"excluded matches should not remain in main results");
