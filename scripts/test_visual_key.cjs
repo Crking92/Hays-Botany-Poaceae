@@ -20,18 +20,20 @@ const root=path.resolve(__dirname,'..');
   await route.fulfill({body,contentType:file.endsWith('.html')?'text/html':file.endsWith('.json')?'application/json':'application/octet-stream'});}catch{await route.fulfill({status:404,body:'missing'});}
  });
  await page.goto('https://key.test/site/visual-key-lab/index.html');
- await page.waitForFunction(()=>window.review?.state.species.length>=112 && document.querySelectorAll('.result').length>0);
- const result=await page.evaluate(()=>{
+ await page.waitForFunction(()=>window.review?.state.species.length===169 && window.review.state.species.filter(s=>s.source_scored).length===4 && document.querySelectorAll('.result').length>0);
+ const result=await page.evaluate(({originalIds})=>{
   const {qs,headIcon,characterIcon,flowerheadSections,state,currentResults}=review;
   const options=qs.flatMap(q=>q.options.map(o=>({kind:q.id,key:o[0]})));
   const placements=[...options,...flowerheadSections.map(g=>({kind:'head',key:g.icon})),...qs.map(q=>({kind:q.id,key:({head:'airy',habit:'tuft',ligule:'membrane',awns:'three'})[q.id]}))];
   const out=[];for(const item of placements){const svg=item.kind==='head'?headIcon(item.key):characterIcon(item.kind,item.key);document.body.append(svg);const b=svg.getBBox();if(!b.width||!b.height||b.x<1||b.y<1||b.x+b.width>109||b.y+b.height>109)out.push({...item,box:[b.x,b.y,b.width,b.height]});svg.remove();}
-  const official=state.species.filter(s=>!s.trial);if(official.length!==112)throw Error('Original scored population changed');
-  const provisional=state.species.filter(s=>s.trial);if(provisional.length<6||provisional.some(s=>s.admission_status!=='RESEARCH_TRIAL_NOT_ADMITTED'))throw Error('Existing unverified research trials missing or silently admitted');
+  const originalIdsSet=new Set(originalIds);
+  const official=state.species.filter(s=>originalIdsSet.has(s.id));if(official.length!==112||official.some(s=>s.trial||s.source_scored))throw Error('Original scored population changed');
+  const promoted=state.species.filter(s=>s.source_scored);if(promoted.length!==4||promoted.some(s=>s.trial||s.admission_status!=='SOURCE_SCORED_NOT_LOCAL_VOUCHER'))throw Error('Source-scored literature admissions missing or mislabeled');
+  const provisional=state.species.filter(s=>s.trial);if(provisional.length!==53||provisional.some(s=>s.admission_status!=='RESEARCH_TRIAL_NOT_ADMITTED'))throw Error('Remaining 53 research trials missing or silently admitted');
   let paths=0;for(const s of official){let combinations=[{}];for(const q of qs){const vals=s.traits[q.id]?.length?s.traits[q.id]:[null];combinations=combinations.flatMap(c=>vals.map(v=>({...c,[q.id]:v})));}for(const c of combinations){state.selected=c;if(!currentResults().some(r=>r.s.id===s.id))throw Error('False exclusion: '+s.id+JSON.stringify(c));paths++;}}
   state.selected={head:null,habit:null,ligule:null,awns:null};
   const grouped=flowerheadSections.flatMap(g=>g.keys);return {placements:placements.length,options:options.length,groupCount:flowerheadSections.length,out,paths,grouped,heads:qs[0].options.map(o=>o[0])};
- });
+ },{originalIds:species.map(s=>s.id)});
  assert.deepEqual(result.out,[]);assert.equal(result.placements,result.options+result.groupCount+4);assert.ok(result.options>=38,'Missing formerly supported visual choices');assert.deepEqual([...result.grouped].sort(),[...result.heads].sort());
  for(const [width,height]of [[1366,900],[390,844],[320,740]]){
   await page.setViewportSize({width,height});await page.evaluate(()=>{review.state.question=0;review.render()});
