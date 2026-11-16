@@ -628,7 +628,13 @@ function status(s){if(s.source_scored)return["Source-scored · local status unve
 
 /* Source-backed refinements rank positive literature matches only; no new exclusions. */
 function refinementEvidence(s,character){
- return (state.refineEvidenceMap[s.id]||[]).find(e=>e.character===character)||null;
+ const record=(state.refineEvidenceMap[s.id]||[]).find(e=>e.character===character)||null;
+ if(!record)return null;
+ // When a supplementary plant-organ state is selected, link to THAT exact
+ // state's source instead of the original record's unrelated character source.
+ const selected=selectedRefinementStates(character);
+ const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -671,7 +677,7 @@ function verifiedAdvancedConflict(s){
   if(!observed.length)continue;
   const evidence=refinementEvidence(s,character.id);
   if(!evidence?.states?.length||observed.some(value=>evidence.states.includes(value)))continue;
-  if(character.options.some(o=>observed.includes(o.id)&&o.evidence_pending))continue;
+  if(observed.some(v=>!state.refineEvidenceOptionKeys?.has(character.id+":"+v)))continue;
   const policy=advancedExclusionPolicy[character.id];
   if(!policy||evidence.source_disagreement||evidence.conflicting_source||evidence.source_scope_caution)continue;
   if(evidence.source_status==="HOLD"||evidence.source_status==="READY_SUPPLEMENTAL_CONDITIONAL"||
@@ -1228,7 +1234,7 @@ function renderOptionalCharacters(){
  for(const rows of Object.values(state.refineEvidenceMap))for(const e of rows)for(const value of e.states){
   const key=e.character+":"+value;optionCounts.set(key,(optionCounts.get(key)||0)+1);
  }
- const isPendingChoice=(group,option)=>Boolean(option.evidence_pending||!optionCounts.has(group.id+":"+option.id));
+ const isPendingChoice=(group,option)=>!optionCounts.has(group.id+":"+option.id);
  for(const c of state.refineCharacters.filter(c=>refinementSection(c.id)===state.refineSection)){
    const group=node("details","optional-group"),summary=node("summary","",c.label);
    const content=node("div","optional-group-body");
@@ -2288,7 +2294,7 @@ renderCompareControls(possibleRows,n+Object.values(state.refineSelected).filter(
 const sourced=rows.filter(x=>!x.s.trial&&!x.unknown).length;const stillChecking=rows.filter(x=>x.s.trial).length;
 const extraChosen=Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length);
 $("count").textContent=focusing?groups.confirmed.length+" documented matches":groups.active?(groups.confirmed.length+groups.unresolved.length)+" possible":rows.length+" possible";
-const pendingChoice=state.refineCharacters.some(c=>c.options.some(o=>o.evidence_pending&&selectedRefinementStates(c.id).includes(o.id)));
+const pendingChoice=state.refineCharacters.some(c=>selectedRefinementStates(c.id).some(v=>!state.refineEvidenceOptionKeys?.has(c.id+":"+v)));
 $("results-note").textContent=focusing?"Only fully source-documented matches are currently shown. Missing evidence is NOT proof that a grass conflicts with your observation.":state.refineOnlyDocumented&&extraChosen?
  (pendingChoice?"A selected detail is research-pending. No complete documented match is possible yet; this does not prove absence. Switch off evidence-only view to restore other possibilities.":"Showing grasses with published records matching every selected advanced detail. Other unknown descriptions are hidden by your evidence-only choice."):
  groups.active?"Source-backed matches stay in the main results. Missing or nonexclusive evidence remains under Still possible; documented measured or exact-floret contradictions move into the reviewable Ruled out section. Other advanced features rank matches until source-audited.":"Choose any photo or detailed character to start narrowing 169 possibilities. "+state.species.filter(s=>!s.trial).length+" source-scored profiles; "+state.species.filter(s=>s.trial).length+" research-only.";
@@ -2940,8 +2946,22 @@ try{
  if(seen.size!==9||[...expectedKeys].some(v=>!seen.has(v))||
     [...remained].some(v=>originalKnown.has(v)||seen.has(v)))
     throw Error("Targeted nine supported / four pending advanced states are not exact");
- for(const e of validated)(state.refineEvidenceMap[e.id]??=[]).push(e);
+ for(const e of validated){
+  const bucket=state.refineEvidenceMap[e.id]??=[];
+  const existing=bucket.find(r=>r.character===e.character);
+  if(existing){
+    // Preserve original evidence text and source, but union additional
+    // independently sourced states for the SAME species/character.
+    existing.states=[...new Set([...existing.states,...e.states])];
+    const extra=existing.additional_state_sources??={};
+    for(const value of e.states)
+      extra[value]={source:e.source,source_url:e.source_url,note:e.note,organ_scope:e.organ_scope,conditional:e.conditional};
+    existing.source_scope_caution=(existing.source_scope_caution||"")+" Added conditional organ-specific positive evidence; not a negative exclusion.";
+  }else bucket.push(e);
+}
 }catch(err){console.warn("Targeted optional evidence failed safely; original 1,815 advanced records retained",err)}
+state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
+ rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
  $("focus-confirmed").addEventListener("click",()=>{
   state.focusConfirmed=!state.focusConfirmed;
