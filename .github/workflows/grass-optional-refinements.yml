@@ -15,6 +15,7 @@ on:
       - 'scripts/test_grass_backlog_conditional_measurements_344.cjs'
       - 'scripts/test_grass_backlog_organs_344.cjs'
       - 'scripts/test_grass_backlog_b18_344.cjs'
+      - 'scripts/test_grass_backlog_final_primary_344.cjs'
       - 'scripts/test_optional_grass_refinement.cjs'
       - 'scripts/test_grass_venation_field_guide.cjs'
       - 'scripts/test_grass_leaf_detail_field_guide.cjs'
@@ -57,6 +58,8 @@ jobs:
         run: node scripts/test_grass_backlog_organs_344.cjs
       - name: Protect Lane B18 sterile-versus-fertile lemma hairs and blocked awns
         run: node scripts/test_grass_backlog_b18_344.cjs
+      - name: Validate final A/C/D primary records, source conflicts and protected holds
+        run: node scripts/test_grass_backlog_final_primary_344.cjs
       - name: Check 24 supplemental measured attributes and boundary holds
         run: node scripts/test_grass_backlog_conditional_measurements_344.cjs
       - name: Verify 149 supplemental reproductive citations and anatomy holds
