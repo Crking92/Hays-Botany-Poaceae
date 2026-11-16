@@ -139,5 +139,124 @@
       "source": "Frank W. Gould (1975), The Grasses of Texas, Schizachyrium scoparium account (photographed page number not visible)",
       "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
     }
+  ],
+  "additional_species_treatments": [
+    {
+      "taxon": "Elymus virginicus",
+      "common_name": "Virginia wildrye",
+      "species_id": "elymus-virginicus",
+      "printed_page": 166,
+      "illustration": "Fig. 84, Elymus virginicus inflorescence; credited in Gould to Gould and Box (1965)",
+      "material": "Owner photograph showing printed page 166 and attached engraving, not an independently measured wild specimen",
+      "added_on": "2026-11-16",
+      "evidence_level": "AUTHORITATIVE_PUBLISHED_SPECIES_DESCRIPTION_NOT_LOCAL_VOUCHER",
+      "head_decision": {
+        "valid_existing_core_state": "spike",
+        "invalid_lookalike_core_state": "foxtail",
+        "rationale": "Elymus spikelets sit directly along one unbranched inflorescence axis and their straight/weakly curved lemma awns make the whole spike appear bristly. This is NOT the foxtail/Setaria type of bristles from sterile branchlets below spikelets; compact bristly appearance alone is not evidence of a foxtail panicle.",
+        "visual_qualifier": "Typically stiffly erect even at maturity; the existing 'upright or nodding' category describes the broader single-spike group, not nodding Virginia wildrye specifically.",
+        "scoring_action": "NO_NEW_STATE_OR_FILTER_EXCLUSIONS"
+      },
+      "observations": [
+        {
+          "character": "growth_habit_and_height",
+          "source_statement": "Tufted culms, strictly erect or decumbent at base, mostly 60–120 cm tall; green to glaucous.",
+          "details": "Habit and culm posture were already characterized in existing evidence. Gould independently corroborates the overall range; a decumbent basal culm does not mean the inflorescence nods.",
+          "status": "CORROBORATION_NO_SCORING_CHANGE",
+          "culm_height_cm": [
+            60,
+            120
+          ]
+        },
+        {
+          "character": "leaf_sheaths",
+          "source_statement": "Sheaths glabrous.",
+          "details": "Gould gives a glabrous condition; H&L permits occasional hairiness. Retain source-specific variation rather than erase the previous conditional character.",
+          "status": "SOURCE_SPECIFIC_VARIATION_HELD_NO_NEGATIVE_FILTER"
+        },
+        {
+          "character": "ligule",
+          "source_statement": "Minute, truncate membrane.",
+          "details": "Consistent with the existing membranous-ligule core state; H&L gives a more specific 0.5–1-mm range and possible fine marginal cilia.",
+          "status": "CORROBORATES_EXISTING_CORE"
+        },
+        {
+          "character": "blades",
+          "source_statement": "Flat, glabrous, scabrous, or minutely pubescent; mostly 5–15 mm broad.",
+          "details": "Matches existing flat blade and measured 5–15-mm width. Skin roughness and fine hairs are variable, not obligatorily absent.",
+          "status": "CORROBORATES_EXISTING_REFINEMENTS",
+          "blade_width_mm": [
+            5,
+            15
+          ]
+        },
+        {
+          "character": "inflorescence_architecture",
+          "source_statement": "Spike usually stiffly erect, often partially enclosed by the upper leaf sheath.",
+          "details": "Primary basis for keeping 'spike' and clarifying that wheat/rye-like spikes can appear bristly due to awns. This is a single unbranched main axis, not a foxtail panicle.",
+          "status": "EXISTING_CORE_SPIKE_CONFIRMED"
+        },
+        {
+          "character": "glume_bases",
+          "source_statement": "Strongly nerved, indurate, yellowish glumes bowed outward at a nerveless base, with often somewhat curved apex.",
+          "details": "Hardened, pale U-like expanded glume bases are diagnostic comparative anatomy; a single node alone does not establish species identity where hybrids may occur.",
+          "status": "SOURCE_DETAIL_SAVED_NOT_NEW_CORE_OPTION"
+        },
+        {
+          "character": "glume_awns",
+          "source_statement": "Glume apex tapers to a straight awn shorter to longer than the glume body.",
+          "details": "GLUME awn, not lemma awn; do not conflate their measurement or infer a fixed awn/body ratio.",
+          "status": "SOURCE_DETAIL_SAVED_ORGAN_SPECIFIED"
+        },
+        {
+          "character": "lemma_hairiness",
+          "source_statement": "Lemmas glabrous or sparsely hirsute.",
+          "details": "Variable smooth-to-sparsely-hairy lemma, not necessarily a conspicuously hairy lemma.",
+          "status": "SOURCE_VARIATION_SAVED_NO_EXCLUSIVE_FILTER"
+        },
+        {
+          "character": "lemma_awn",
+          "source_statement": "Straight or slightly curved lemma awn 5–25 mm long.",
+          "details": "These are TRUE lemma awns, not foxtail's separate sterile branchlet bristles. Relatively shorter/straighter than typical Canada wildrye, but can still be conspicuous. Existing 5–25-mm score evidence preserved.",
+          "status": "CORROBORATES_EXISTING_REPRODUCTIVE_EVIDENCE",
+          "lemma_awn_length_mm": [
+            5,
+            25
+          ]
+        },
+        {
+          "character": "chromosome_number",
+          "source_statement": "Chromosome number 2n = 28.",
+          "details": "Published cytological number; not field-identification evidence or proof for a particular Hays specimen.",
+          "status": "NEW_NONSCORING_CYTOLOGY",
+          "value_2n": 28
+        },
+        {
+          "character": "historical_distribution_habitat",
+          "source_statement": "In Gould's 1975 region scheme, occasional in Texas regions except 9 and 10 and more abundant in the eastern half; shaded banks, fence rows and open woodlands.",
+          "details": "Historical broad distribution/habitat only; NOT modern BONAP Hays County nativity or a local voucher.",
+          "status": "HISTORICAL_CONTEXT_NOT_COUNTY_CERTIFICATION"
+        }
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Is it a true erect bristly spike or a foxtail?",
+          "check": "Gould describes a stiffly erect spike, often partly tucked into the upper leaf sheath. Follow the actual head axis: Elymus spikelets attach directly to it, with straight or slightly curved lemma awns giving the bristly outline. This is not the separate sterile branchlet bristles of a Setaria foxtail.",
+          "compare": "Setaria foxtails (separate bristles beneath spikelets) and Canada wildrye (often nodding spikes and longer divergent awns)",
+          "certainty": "Published Texas flora p. 166 plus Texas A&M and USDA descriptions; no identification of a new local specimen.",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus treatment, printed p. 166",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Check the U-shaped glume bases and straight awns",
+          "check": "At mature spikelet nodes, inspect the firm, often yellowish, strongly veined glumes; their bases bow outward and lack veins. Gould reports the true lemma awns as straight or slightly curved, 5–25 mm long, with lemmas hairless or sparsely hairy.",
+          "compare": "Canada wildrye often has sharper V-shaped glumes and longer, outward-curving lemma awns; hybrids can be intermediate.",
+          "certainty": "Source-specific diagnostic features, not a specimen-vouchered determination.",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus treatment, printed p. 166",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        }
+      ],
+      "audit_hold": "Do not map bristly silhouette to foxtail; retain original head='spike', original awn classifications, photo credits and saved conditional variation. No original printed page photograph is rehosted."
+    }
   ]
 }
