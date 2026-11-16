@@ -17,7 +17,7 @@ BASE = "https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/"
 RELEASE_REF = os.environ.get("GITHUB_SHA", "manual-local-check")
 SHARDS = ["a", "b", "c1", "c2", "c3", "d1", "d2", "d3", "d4"]
 TRIAL_FILES = ["provisional-trial-profiles.json", "provisional-trial-batch2.json", "provisional-trial-batch3.json", "provisional-trial-batch4.json", "provisional-trial-batch5-a.json", "provisional-trial-batch5-b.json", "provisional-trial-batch5-c.json"]
-FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "ready-core-gap-assignments.json", "index.html"]
+FILES = ["species-" + x + ".json" for x in SHARDS] + ["hays-candidates.json"] + TRIAL_FILES + ["source-scored-admissions.json", "promotion-review-37-20261116.json", "ready-core-gap-assignments.json", "index.html"]
 
 
 def read_public(name):
@@ -61,9 +61,14 @@ def verify():
     promotions = public["source-scored-admissions.json"]["admissions"]
     assert public["source-scored-admissions.json"]["schema"] == "HAYS_GRASS_SOURCE_SCORED_ADMISSIONS_V1"
     promoted_ids = {p["id"] for p in promotions}
-    assert len(promotions) == len(promoted_ids) == 4
+    assert len(promotions) == len(promoted_ids) == 37
     assert promoted_ids <= {p["id"] for p in trials}, "Source scored admission lacks trial source packet"
     assert all(p["admission_level"] == "SOURCE_SCORED_NOT_LOCAL_VOUCHER" for p in promotions)
+    review = public["promotion-review-37-20261116.json"]
+    assert review["schema"] == "HAYS_GRASS_PROMOTION_REVIEW_37_20261116_V1"
+    assert review["review_count"] == 37 and review["approved_count"] == 33 and review["hold_count"] == 4
+    assert review["total_source_scored_after_release"] == 149 and review["total_research_only_after_release"] == 20
+    assert {x["id"] for x in review["reviewed"] if x["decision"].startswith("HOLD_")}.isdisjoint(promoted_ids)
     core_gaps = public["ready-core-gap-assignments.json"]
     assert core_gaps["schema"] == "HAYS_GRASS_READY_CORE_GAPS_V1"
     assert core_gaps["integration_count"] == len(core_gaps["rows"]) == 28
