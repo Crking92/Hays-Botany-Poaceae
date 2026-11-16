@@ -1542,3 +1542,24 @@ state.refineSelected={};if(run().length!==169)throw Error("D23 altered unified 1
 
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
+
+
+ 
+// Little bluestem: show full source-backed ligule texture in the learner,
+// retain existing 'membrane' core classification and exact optional scored states,
+// and link but do not rehost a third-party anatomy photo.
+{
+ const little=species.find(x=>x.id==="schizachyrium-scoparium");
+ const detail=little.diagnostic_checks.find(x=>/ligule/.test(x.look));
+ const length=pack.evidence.find(x=>x.id===little.id&&x.character==="ligule_length");
+ const edge=pack.evidence.find(x=>x.id===little.id&&x.character==="ligule_edge");
+ if(!little.traits.ligule.includes("membrane")||!detail||
+    !/firm-textured/.test(detail.check)||!/1–3 mm/.test(detail.check)||
+    !/obtuse/.test(detail.check)||!/erose/.test(detail.check)||
+    !/Hagenbuch/.test(detail.source)||!detail.url.endsWith("#page=60")||
+    !detail.photo_reference_url?.includes("biosci.utexas.edu/prc/DigFlora/KR/SCSC.html")||
+    !html.includes('Photo reference: '))throw Error("Little bluestem ligule field clue or external image link missing");
+ if(length.states.join()!=="short"||edge.states.join()!=="erose"||
+    !/FIRM-TEXTURED/.test(length.note)||!/FIRM-TEXTURED/.test(edge.note))
+  throw Error("Little bluestem ligule evidence changed or texture not documented");
+}
