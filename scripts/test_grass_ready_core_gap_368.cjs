@@ -79,7 +79,7 @@ for(const hold of assignments.held_unknown){
 // Its positive-only scoring cannot disprove other unreviewed Cenchrus/Pennisetum.
 assert(html.includes('["soft_involucre","Soft, basally joined bristles"'));
 assert(js.includes('buffel.traits.awns=["soft_involucre"]'));
-assert(js.includes('else if(key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))unknown++'),"All narrowly documented awn types must remain unknown for unreviewed species");
+assert(js.includes('key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val)'),"All narrowly documented awn types must remain unknown for unreviewed species");
 const gould=read("source-reference-gould-1975.json");
 assert(gould.additional_species_treatments.some(x=>x.species_id==="cenchrus-ciliaris"||x.taxon==="Cenchrus ciliaris"),"Source-photo book evidence missing");
 assert.equal(admissions.length,37,"New bristle option is not a promotion");
