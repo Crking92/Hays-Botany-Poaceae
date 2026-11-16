@@ -73,6 +73,52 @@ def choose_extra(page, section: str, character: str, choice: str):
     assert button.get_attribute("aria-pressed") == "true", f"{character}/{choice}: not selected"
 
 
+def sweep_all_optional_options(page, name):
+    """Exercise every rendered advanced control, without choosing botanical answers."""
+    wrapper = page.locator("#optional-character-wrap")
+    if not wrapper.evaluate("(element) => element.open"):
+        wrapper.locator("summary").first.click()
+    inspected_groups = inspected_choices = 0
+    for section in ("Leaf blades", "Collars / sheaths", "Stems / roots", "Flowers / spikelets"):
+        page.locator("#optional-section-tabs button").filter(has_text=section).first.click()
+        groups = page.locator("#optional-character-groups .optional-group")
+        for group_index in range(groups.count()):
+            group = groups.nth(group_index)
+            character = group.get_attribute("data-character")
+            assert character, f"{name}: rendered advanced group without character id"
+            inspected_groups += 1
+            if not group.evaluate("(element) => element.open"):
+                group.locator("summary").first.click()
+            buttons = group.locator("button[data-option]")
+            for option_index in range(buttons.count()):
+                button = buttons.nth(option_index)
+                option = button.get_attribute("data-option")
+                assert option, f"{name}/{character}: option missing ID"
+                assert button.get_attribute("aria-pressed") == "false", (
+                    f"{name}/{character}/{option}: stale or leaked selection")
+                button.click()
+                assert button.get_attribute("aria-pressed") == "true", (
+                    f"{name}/{character}/{option}: click did not activate option")
+                assert f"more_{character}={option}" in page.url, (
+                    f"{name}/{character}/{option}: state not written into share URL")
+                m, u, e = buckets(page)
+                assert m + u + e == 169, (
+                    f"{name}/{character}/{option}: {m,u,e} silently lost a grass")
+                assert page.locator("#count").inner_text() == f"{m+u} possible", (
+                    f"{name}/{character}/{option}: displayed count disagrees with candidates")
+                button.click()
+                assert button.get_attribute("aria-pressed") == "false", (
+                    f"{name}/{character}/{option}: clicking again did not clear")
+                assert f"more_{character}=" not in page.url, (
+                    f"{name}/{character}/{option}: cleared URL still retains selection")
+                assert page.locator("#count").inner_text() == "169 possible", (
+                    f"{name}/{character}/{option}: clearing did not restore every grass")
+                inspected_choices += 1
+    assert (inspected_groups, inspected_choices) == (24, 111), (
+        f"{name}: expected all 24 groups and 111 options, got {inspected_groups}/{inspected_choices}")
+    return {"groups": inspected_groups, "options_clicked_and_cleared": inspected_choices}
+
+
 def check_view(browser, name, width, height):
     ctx = browser.new_context(viewport={"width": width, "height": height})
     page = ctx.new_page()
@@ -403,13 +449,16 @@ def check_view(browser, name, width, height):
     assert not errors, f"{name}: browser JS exceptions {errors}"
     page.locator("#species-search").fill("")
     page.locator("#reset-field-key").click()
+    advanced_sweep = sweep_all_optional_options(page, name)
+    page.locator("#reset-field-key").click()
     page.screenshot(path=str(REPORT / f"grass-key-visitor-{name}.png"), full_page=False)
     ctx.close()
     return {"device":name,"viewport":[width,height],"broad_leaf_buckets":broad_buckets,
             "core_and_advanced_reset":"PASS","pending_glume":"PASS",
             "source_links":"PRESENT","comparison":"PASS",
             "multi_select_link":"PASS","real_photo_dimensions":natural,
-            "photo_credit":"PRESENT","browser_errors":errors,"overflow_px":overflow}
+            "photo_credit":"PRESENT","browser_errors":errors,"overflow_px":overflow,
+            "full_advanced_option_click_sweep":advanced_sweep}
 
 
 if __name__ == "__main__":
