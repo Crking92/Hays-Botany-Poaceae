@@ -2291,10 +2291,12 @@ if(s.source_scored&&s.source_admission){
     for(const warning of s.source_admission.remaining_cautions)panel.append(node("p","smallmuted","Identification caution: "+warning));
   copy.append(panel);
 }
-if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
+const extraChecks=(s.id==="schizachyrium-scoparium"&&state.gouldSource?.source_intake?.taxon===s.scientific&&Array.isArray(state.gouldSource.learner_diagnostic_checks))?state.gouldSource.learner_diagnostic_checks:[];
+const displayedChecks=[...(s.diagnostic_checks||[]),...extraChecks];
+if(displayedChecks.length){
   const panel=node("section","detail-botany");
   panel.append(node("h3","","Look here next — diagnostic checks"),node("p","smallmuted","Look for these structures on your plant. Some details may not be visible in the photographs yet."));
-  for(const c of s.diagnostic_checks){
+  for(const c of displayedChecks){
     const block=node("div","diagnostic-check");
     block.append(node("h4","",c.look),node("p","",c.check),node("p","check-compare","Compare with: "+c.compare),node("p","check-status",c.certainty));
     if(c.url&&c.url.startsWith("https://")){const link=node("a","mini-credit","Botanical source: "+c.source);link.href=c.url;link.target="_blank";link.rel="noopener noreferrer";block.append(link);}
@@ -2305,6 +2307,9 @@ if(Array.isArray(s.diagnostic_checks)&&s.diagnostic_checks.length){
 }copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal()}
 function render(){renderTabs();renderQuestion();renderResults()}
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
+// Gould's Texas-grass reference remains separate from immutable production profiles and scoring.
+try{const res=await fetch("source-reference-gould-1975.json",{cache:"no-store"});if(res.ok){const ref=await res.json();if(ref.source?.id==="gould-1975-grasses-of-texas"&&Array.isArray(ref.learner_diagnostic_checks))state.gouldSource=ref;}}
+catch(_e){ /* Missing supplementary literature never blocks the grass key. */ }
 // Separately approved general photographs enrich the visitor view, never the scored records.
 // If this optional manifest is unavailable, the 112 original galleries still work.
 try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
