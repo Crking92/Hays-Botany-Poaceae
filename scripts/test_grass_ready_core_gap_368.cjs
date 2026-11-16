@@ -31,7 +31,14 @@ for(const r of assignments.rows){
 for(const hold of assignments.held_unknown){const key=hold.id+"|"+hold.character;assert(expectedMissing.has(key),key+": not an originally blank option");assert(!seen.has(key),key+": a source hold was filled");seen.add(key)}
 assert.equal(seen.size,41,"One or more previous missing assignments were silently dropped");
 assert(seen.has("polypogon-viridis|habit")&&selected.get("polypogon-viridis|habit").states.includes("mat"),"Lane C omitted Water bentgrass gap not recovered");
-const species=[...base,...trials.map(s=>structuredClone(s))];
+const trialIds=new Set(trials.map(s=>s.id));
+const heldProfiles=manifest.filter(s=>!trialIds.has(s.id)).map(s=>({
+ id:s.id,common:s.common||s.scientific,scientific:s.scientific,
+ trial:true,admission_status:"RESEARCH_TRIAL_NOT_ADMITTED",range:"UNVERIFIED",
+ traits:{head:[],habit:[],ligule:[],awns:[]},photos:[]
+}));
+assert.equal(heldProfiles.length,4,"Four original manifest-only identity holds must remain visible");
+const species=[...base,...trials.map(s=>structuredClone(s)),...heldProfiles];
 const bySpecies=new Map(species.map(s=>[s.id,s]));
 for(const r of assignments.rows){
  const s=bySpecies.get(r.id);assert(s&&s.trial);assert.equal(s.traits[r.character].length,0);
