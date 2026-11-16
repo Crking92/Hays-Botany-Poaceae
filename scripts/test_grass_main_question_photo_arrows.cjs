@@ -40,7 +40,11 @@ for(const x of batch.placements){
    const k={expected_source:"source_page",expected_creator:"creator",expected_license:"license",expected_src:"src"}[f];
    assert.equal(x[f],photo[k],key+" original photo metadata changed");
  }
- assert(photo.license_url?.startsWith("https://")&&photo.source_page?.startsWith("https://"));
+ assert(photo.source_page?.startsWith("https://"));
+ if(photo.license_url)assert(photo.license_url.startsWith("https://"));
+ else assert(photo.source_page.startsWith("https://commons.wikimedia.org/wiki/File:")&&
+   /^CC BY(?:-SA)? (?:2\.0|4\.0)$/.test(photo.license),
+   "Exact Commons-file reused photo with named CC license may lack old license URL");
  assert(!/Copyright.*reserved|unknown rights|not verified/i.test(photo.license));
  assert.equal(x.annotation_provenance,"EXISTING_LEARNER_TARGET_SPECIES_PHOTO_MARKERS_NOT_NEW_LOCATION_CLAIM");
  assert(x.visible.length>=35&&x.not_proven.length>=35);
