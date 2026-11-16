@@ -1494,5 +1494,23 @@ for(const [id,ch,choice] of [["poa-annua","true_lemma_awn","none"],["poa-arachni
 }
 state.refineSelected={};if(run().length!==169)throw Error("D04 changed the 169-inventory");
 
+
+// Phase 2 Issue336 Lane D02/D03: 14 conservative, primary-source-flora reproductive records.
+const phase2d23={"bromus-pubescens|florets_per_spikelet":["several"],"bromus-pubescens|glume_marks":["one_vein"],"bromus-tectorum|florets_per_spikelet":["several"],"bromus-tectorum|floral_hair_position":["lemma"],"tridens-flavus|florets_per_spikelet":["several"],"tridens-flavus|glume_marks":["one_vein"],"tridens-texanus|glume_marks":["one_vein"],"dichanthium-annulatum|spikelet_position":["paired"],"dichanthium-annulatum|true_lemma_awn":["long"],"digitaria-californica|florets_per_spikelet":["two"],"digitaria-californica|glume_marks":["lower_reduced"],"digitaria-ciliaris|florets_per_spikelet":["two"],"digitaria-ciliaris|glume_marks":["lower_reduced"],"digitaria-cognata|florets_per_spikelet":["two"]};
+if(pack.evidence.length<1211||new Set(pack.evidence.map(x=>x.id+"|"+x.character)).size!==pack.evidence.length||new Set(pack.evidence.map(x=>x.id)).size!==168)throw Error("Phase2 D23 uniqueness/inventory regression");
+for(const [key,values] of Object.entries(phase2d23)){
+ const [id,ch]=key.split("|"),e=pack.evidence.find(x=>x.id===id&&x.character===ch);
+ if(!e||e.review_lane!=="D"||e.coordination_issue!==336||e.pdf_document!=="Flora of North Central Texas-monocots-Acor-Zanni.pdf"||!Number.isInteger(e.pdf_printed_page)||!e.source.includes("printed p. "+e.pdf_printed_page)||!e.note?.trim()||!values.every(v=>e.states.includes(v)))throw Error("Phase2 D23 citation/option mapping "+key);
+}
+for(const [id,ch] of [["tridens-flavus","true_lemma_awn"],["tridens-texanus","true_lemma_awn"],["digitaria-ciliaris","lemma_texture"],["digitaria-californica","lemma_texture"]]){
+ if(pack.evidence.some(e=>e.id===id&&e.character===ch))throw Error("D23 genus-absence or lower lemma-specific texture hold incorrectly forced "+id+"/"+ch);
+}
+for(const [id,ch,choice] of [["bromus-tectorum","floral_hair_position","lemma"],["tridens-flavus","glume_marks","one_vein"],["dichanthium-annulatum","spikelet_position","paired"],["digitaria-californica","florets_per_spikelet","two"],["digitaria-cognata","florets_per_spikelet","two"]]){
+ state.refineSelected={[ch]:choice};
+ const result=run();
+ if(result.length!==169||!result.some(x=>x.id===id&&x.extras>=1))throw Error("D23 positive-only ranking "+id+"/"+ch);
+}
+state.refineSelected={};if(run().length!==169)throw Error("D23 altered unified 169 inventory");
+
 console.log("PASS: 112 original species retained for all extra choices; 24 groups, "+
   pack.evidence.length+" cited clues, multistate/unknown-safe ranking and comparisons preserved.");
