@@ -87,4 +87,32 @@ if(!script.includes('choices.querySelectorAll("button[data-option]")')||
    !script.includes('const makeButton=o=>')||
    !script.includes('if(Array.isArray(c.subgroups))'))
  throw Error("Scoped clickable suboptions absent from visitor HTML");
+// All 111 exposed options must have an evidence count, or explicitly be research-pending.
+const optionCounts=new Map();
+for(const evidence of bundle.evidence)for(const id of evidence.states){
+ const key=evidence.character+":"+id;optionCounts.set(key,(optionCounts.get(key)||0)+1);
+}
+const allOptions=bundle.characters.flatMap(c=>c.options.map(o=>[c.id,o]));
+if(allOptions.length!==111||optionCounts.size!==98)throw Error("Menu/evidence coverage changed; re-audit options");
+for(const [id,o] of allOptions){
+ const backed=optionCounts.has(id+":"+o.id);
+ if(backed===Boolean(o.evidence_pending))throw Error("Incorrect evidence-pending state: "+id+"/"+o.id);
+}
+if(!script.includes('n+" source-documented grass"')||!script.includes('id="optional-documented-only"'))throw Error("No evidence counts / documented-only control visible");
+state.refineSelected={glume_marks:["lower_reduced","one_vein"]};
+state.refineOnlyDocumented=true;
+if(!current().some(x=>x.s.id==="cenchrus-setaceus")||current().length>=n0)throw Error("Evidence-only mode failed to narrow source-backed grasses");
+state.refineSelected={glume_marks:["upper_one_vein"]};
+if(current().length!==0)throw Error("Pending glume detail must not yield fabricated species matches");
+state.refineOnlyDocumented=false;
+if(current().length!==n0)throw Error("Unknown-safe baseline was not restored");
+const compareStart=script.indexOf("function comparisonFeatureRows(species){");
+const compareEnd=script.indexOf("function inspectComparisonFeature(feature){");
+if(compareStart<0||compareEnd<=compareStart)throw Error("Comparison source unavailable");
+vm.runInContext(script.slice(compareStart,compareEnd),sandbox);
+state.refineSelected={glume_marks:["lower_reduced","one_vein"]};
+const comp=Array.from(vm.runInContext('comparisonFeatureRows([{id:"cenchrus-setaceus",traits:{}}])',sandbox));
+if(Array.from(comp.find(x=>x.id==="glume_marks").selectedValues).join(",")!=="lower_reduced,one_vein")throw Error("Comparison lost one multi-option selection");
+if(!script.includes("const matches=chosen.filter(v=>feature.values[i].includes(v))"))throw Error("Comparison still checks a joined option string");
+
 console.log("PASS: 24 character groups, 10 pending anatomically scoped options, 1815 unchanged evidence records, 112 scored grasses protected, independent multi-picks count once and survive URL sharing.");
