@@ -2587,7 +2587,7 @@ try{
      const states=a.core_traits?.[q.id],note=a.core_notes?.[q.id];
      if(!Array.isArray(states)||states.some(v=>!allowed.get(q.id).has(v)))
        throw Error("Unknown main-key option: "+a.id+"|"+q.id);
-     if(states.length){supported++;if(!note||note.length<24)throw Error("No named evidence: "+a.id+"|"+q.id)}
+     if(states.length){supported++;if(!note||note.length<24||!a.core_sources?.[q.id]?.source_url?.startsWith("https://")||!a.core_sources[q.id].reference)throw Error("No named evidence: "+a.id+"|"+q.id)}
      else if(!a.held_unknown_core?.[q.id])throw Error("Unknown field not disclosed: "+a.id+"|"+q.id);
    }
    if(supported<3||!a.field_rule||!a.remaining_cautions?.length)
@@ -2601,9 +2601,7 @@ try{
    s.source_scored=true;s.trial=false;s.admission_status=a.admission_level;
    s.source_admission={
      core_traits:a.core_traits,
-     core_sources:Object.fromEntries(Object.entries(a.core_notes).map(([key,note])=>[
-       key,{reference:"Named species source review: "+a.scientific,source_url:a.source_url,note}
-     ])),
+     core_sources:a.core_sources,
      held_unknown_core:a.held_unknown_core,
      remaining_cautions:a.remaining_cautions
    };
