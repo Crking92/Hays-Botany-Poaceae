@@ -326,7 +326,7 @@ assert(newRefs.every(Boolean),"Gould five photo page treatments all present");
 assert.equal(new Set(source.additional_species_treatments.map(x=>x.species_id)).size,source.additional_species_treatments.length,"No duplicate Gould species links");
 assert.deepEqual(newRefs.map(r=>r.observations.length),[20,11,16,14,16,8]);
 assert.deepEqual(newRefs.map(r=>r.learner_diagnostic_checks.length),[2,0,2,0,2,0]);
-assert.equal(source.additional_species_treatments.length,19);
+assert.equal(source.additional_species_treatments.length,22); // 19 prior treatments plus the three new photographed Gould species
 const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
@@ -384,4 +384,51 @@ assert(!scoredInventory.some(x=>latestNames.includes(x.id)),"Gould literature sa
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Existing future Gould source-side field checks not wired");
 assert([...canterae.learner_diagnostic_checks,...interrupta.learner_diagnostic_checks,...hians.learner_diagnostic_checks].every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
 
-console.log("PASS: Gould original + six final historic-name taxon treatments saved; original scored inventory and 57-species roster unchanged");
+
+// Gould pp.213,542,469: NEW historical-name crosswalks, distinct morphology, and duplicate-page guard.
+const tri=source.additional_species_treatments.find(x=>x.species_id==="tridentopsis-elongata");
+const nat=source.additional_species_treatments.find(x=>x.species_id==="melinis-repens");
+const gui=source.additional_species_treatments.find(x=>x.species_id==="megathyrsus-maximus");
+assert(tri && nat && gui,"New Gould Tridentopsis, Melinis and Megathyrsus intakes missing");
+assert.equal(source.additional_species_treatments.filter(x=>["tridentopsis-elongata","melinis-repens","megathyrsus-maximus"].includes(x.species_id)).length,3);
+assert.equal(tri.printed_page,213);
+assert.equal(nat.printed_page,542);
+assert.equal(gui.printed_page,469);
+assert.deepEqual([tri.observations.length,nat.observations.length,gui.observations.length],[9,13,18]);
+assert.deepEqual([tri.learner_diagnostic_checks.length,nat.learner_diagnostic_checks.length,gui.learner_diagnostic_checks.length],[2,2,2]);
+assert.equal(tri.taxonomy.current_accepted_name,"Tridentopsis elongata (Buckley) Wipff & Weakley");
+assert(tri.taxonomy.status.includes("KEW_ACCEPTS_SEPARATE_SPECIES"));
+assert.equal(tri.historical_couplet_comparison.typical_variety.second_glume_veins,1);
+assert.deepEqual(tri.historical_couplet_comparison.elongatus_variety.second_glume_veins,[3,7]);
+assert.deepEqual(tri.historical_couplet_comparison.elongatus_variety.account_second_glume_mm,[5.5,10]);
+assert.equal(tri.historical_couplet_comparison.typical_variety.modern_concept,"Tridentopsis mutica (Torr.) P.M.Peterson");
+assert.equal(nat.taxonomy.accepted_name,"Melinis repens (Willd.) Zizka");
+assert.equal(nat.taxon,"Rhynchelytrum repens (Willd.) C.E.Hubb.");
+const natObs=new Map(nat.observations.map(o=>[o.character,o]));
+assert.deepEqual(natObs.get("ligule").hair_length_mm,[0.5,1]);
+assert.deepEqual(natObs.get("panicle_shape").length_cm,[6,20]);
+assert.equal(nat.adjacent_genus_context.taxon,"Setaria P.Beauv.");
+assert(nat.adjacent_genus_context.caution.includes("Setaria"));
+assert.equal(gui.taxonomy.accepted_name,"Megathyrsus maximus (Jacq.) B.K.Simon & S.W.L.Jacobs");
+assert.equal(gui.taxon,"Panicum maximum Jacq.");
+const guiObs=new Map(gui.observations.map(o=>[o.character,o]));
+assert.deepEqual(guiObs.get("culm_height").height_m,[1,2.5]);
+assert.deepEqual(guiObs.get("panicle_length_architecture").length_cm,[20,50]);
+assert.deepEqual(guiObs.get("spikelet_length").length_mm,[3,3.5]);
+assert.deepEqual(guiObs.get("ligule").marginal_hair_length_mm,[3,4]);
+assert.deepEqual(guiObs.get("chromosome_reports").other_reported_2n,[18,36,44,48]);
+assert.equal(guiObs.get("chromosome_reports").frequent_2n,32);
+assert(guiObs.get("historical_Texas_introduction").details.includes("Kew now"));
+assert.equal(gui.adjacent_partial_note.taxon_as_printed,"Panicum diffusum Sw.");
+assert.equal(gui.adjacent_partial_note.status,"PARTIAL_ADJACENT_TREATMENT_ONLY_NOT_MEGATHYRSUS");
+assert(source.additional_source_image_notes.some(x=>x.note.includes("NOT duplicated")));
+const candidateSet=new Set(read("hays-candidates.json").candidates.filter(x=>x.status==="RESEARCH_CANDIDATE_NOT_RELEASED").map(x=>x.id));
+for(const id of ["tridentopsis-elongata","melinis-repens","megathyrsus-maximus"])assert(candidateSet.has(id),"Gould source-only record cannot promote: "+id);
+assert(!candidateSet.has("panicum-diffusum"),"Partial neighbor must not be added from one image");
+const scoredFinal=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json"));
+assert.equal(scoredFinal.length,112);
+assert(!scoredFinal.some(x=>["tridentopsis-elongata","melinis-repens","megathyrsus-maximus"].includes(x.id)),"Cannot silently promote Gould new evidence");
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"));
+for(const e of [tri,nat,gui])assert(e.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
+
+console.log("PASS: Gould p.213 Tridentopsis elongata, p.542 Melinis repens and p.469 Megathyrsus maximus saved, preserving protected key scoring");
