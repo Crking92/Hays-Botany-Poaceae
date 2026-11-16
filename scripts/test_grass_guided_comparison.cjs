@@ -76,4 +76,16 @@ assert.ok(html.includes('Helpful next check: '));
 assert.ok(html.includes('p?.source_page?.startsWith("https://")'));
 assert.ok(html.includes("s.field_rule"));
 assert.ok(html.includes("b.refinementMatches.length-a.refinementMatches.length"));
-console.log("PASS: documented comparisons never use unknowns as contrasts; mobile, source links, light/dark themes and scoring remain intact.");
+// Work browser QA found optional diagnostic checks without a compare field
+// producing "Compare with: undefined". Only render a real non-empty value.
+assert.ok(html.includes('const comparisons=Array.isArray(c.compare)?'));
+assert.ok(html.includes('if(comparisons)block.append(node("p","check-compare","Compare with: "+comparisons))'));
+assert.ok(!html.includes('node("p","check-compare","Compare with: "+c.compare)'));
+assert.ok(html.includes('a.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail"'));
+assert.ok(html.includes('lesson.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail"'));
+const learner=fs.readFileSync(path.join(root,"..","app.js"),"utf8");
+new Function(learner);
+assert.ok(learner.includes('const wanted=new URLSearchParams(location.search).get("species")'));
+assert.ok(learner.includes('selected.scrollIntoView({behavior:"auto",block:"start"})'));
+assert.ok(learner.includes('selected.focus({preventScroll:true})'));
+console.log("PASS: documented comparisons safe, undefined lookalikes hidden, deep-linked lessons visibly focused, source/photo and mobile behaviors preserved.");

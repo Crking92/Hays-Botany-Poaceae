@@ -118,6 +118,33 @@ def check_view(browser, name, width, height):
         modal=page.locator("#detail-dialog")
         assert "NOT a Hays County specimen voucher" in modal.inner_text()
         assert modal.locator("section.detail-botany a[href^='https://']").count() >= 4
+        assert "Compare with: undefined" not in modal.inner_text(), (
+            scientific + ": missing optional comparison data displayed as undefined")
+        # Follow the actual link used by the Lab: the destination must show
+        # THIS specific grass, not merely the 169-species catalog heading.
+        if scientific == "Bothriochloa longipaniculata":
+            lesson_url = modal.get_by_role("link",name="Open full Hays Botany lesson").get_attribute("href")
+            assert "species=bothriochloa-longipaniculata#species-detail" in lesson_url
+            # The link is the future public URL, but a PR cannot yet serve
+            # unmerged site/app.js on public Pages. Exercise the corresponding
+            # local Learner during PR QA, then the real link on main deploy.
+            check_url = lesson_url if LIVE else URL.replace(
+                "/visual-key-lab/index.html", "/index.html").split("?")[0] + (
+                "?species=bothriochloa-longipaniculata#species-detail")
+            detail_page = ctx.new_page()
+            try:
+                detail_page.goto(check_url,wait_until="domcontentloaded",timeout=65000)
+                detail_page.wait_for_function(
+                    "() => document.querySelector('#species-detail .subtitle')?.textContent.includes('Bothriochloa longipaniculata')",
+                    timeout=60000)
+                # The title appears during select(), just before its awaited
+                # deep-link scroll/focus action finishes. Wait for that action.
+                detail_page.wait_for_function(
+                    "() => document.activeElement?.id === 'species-detail'",
+                    timeout=15000)
+                assert detail_page.locator("#species-detail").is_visible()
+            finally:
+                detail_page.close()
         modal.get_by_role("button",name="Close species detail").click()
     page.locator("#species-search").fill("Dichanthelium acuminatum")
     page.wait_for_function("document.querySelectorAll(\'#results .result\').length === 1",timeout=15000)
