@@ -33,4 +33,31 @@ assert.equal(source.learner_diagnostic_checks.filter(d=>d.source.includes("Gould
 assert(little.diagnostic_checks.every(d=>d.url?.startsWith("https://")));
 const html=fs.readFileSync(path.join(root,"index.html"),"utf8");
 assert(html.includes("for(const c of displayedChecks)")&&html.includes("node(\"h4\",\"\",c.look)"));
-console.log("Gould 1975 little bluestem source intake, explicit holds and unchanged core scoring OK");
+// Gould p. 166: preserve source-scoped Virginia wildrye anatomy without modifying scored key files.
+const virginia=read("species-d1.json").find(s=>s.id==="elymus-virginicus");
+const virginiaGould=source.additional_species_treatments?.find(t=>t.species_id===virginia.id);
+assert(virginiaGould,"Gould Virginia wildrye literature treatment missing");
+assert.equal(virginiaGould.printed_page,166);
+assert.equal(virginiaGould.illustration.includes("Fig. 84"),true);
+assert.equal(virginiaGould.observations.length,11);
+assert.equal(virginiaGould.learner_diagnostic_checks.length,2);
+assert.equal(virginiaGould.head_decision.valid_existing_core_state,"spike");
+assert.equal(virginiaGould.head_decision.invalid_lookalike_core_state,"foxtail");
+assert.equal(virginiaGould.head_decision.scoring_action,"NO_NEW_STATE_OR_FILTER_EXCLUSIONS");
+const virginiaObs=new Map(virginiaGould.observations.map(o=>[o.character,o]));
+assert.deepEqual(virginiaObs.get("lemma_awn").lemma_awn_length_mm,[5,25]);
+assert.deepEqual(virginiaObs.get("blades").blade_width_mm,[5,15]);
+assert.deepEqual(virginiaObs.get("growth_habit_and_height").culm_height_cm,[60,120]);
+assert.equal(virginiaObs.get("chromosome_number").value_2n,28);
+assert.deepEqual(virginia.traits.head,["spike"]);
+assert(!virginia.traits.head.includes("foxtail"));
+assert.deepEqual(virginia.traits.awns,["long","none_obvious"]);
+assert.equal(virginia.photos.length,3);
+assert.equal(virginia.photos[1].creator,"Matt Lavin");
+assert(html.includes('["spike","Wheat-like upright or nodding spike"'));
+assert(html.includes('["foxtail","Foxtail-like bristly cylinder"'));
+assert(html.includes('"elymus-virginicus",1]'),"Previously credited Virginia flowering spike should teach the spike option");
+assert(html.includes("gouldAdditional?.learner_diagnostic_checks"),"Source-specific field checks not displayed");
+assert(!html.includes('["foxtail","A dense bristly cylinder"'));
+
+console.log("Gould 1975 little bluestem + Virginia wildrye source intake, explicit holds and unchanged core scoring OK");
