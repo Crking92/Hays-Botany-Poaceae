@@ -476,7 +476,7 @@ function syncPreviewToggle(){const simple=document.documentElement.classList.con
 previewToggle.addEventListener("click",()=>{const simple=document.documentElement.classList.toggle("guest-preview");const url=new URL(location.href);if(simple)url.searchParams.set("demo","1");else url.searchParams.delete("demo");history.replaceState(null,"",url.toString());syncPreviewToggle()});
 syncPreviewToggle();
 function node(tag,cl,txt){const e=document.createElement(tag);if(cl)e.className=cl;if(txt!==undefined)e.textContent=txt;return e}
-function image(p,alt,markers=null){
+function image(p,alt,markers=null,markerLabels=null){
  const f=node("div","photo-frame");
  if(!p){f.append(node("div","photo-bad","Photograph pending verification"));return f}
  const img=document.createElement("img");
@@ -490,7 +490,7 @@ function image(p,alt,markers=null){
   svg.classList.add("field-photo-arrows");
   svg.setAttribute("preserveAspectRatio","xMidYMid meet");
   svg.setAttribute("role","img");
-  svg.setAttribute("aria-label","Previously positioned photo arrows; numbered descriptions follow below the image.");
+  svg.setAttribute("aria-label","Photo labels: "+markers.map((m,n)=>(n+1)+". "+(markerLabels?.[n]||m.label)).join("; "));
   const el=(tag,attrs)=>{
     const out=document.createElementNS(ns,tag);
     for(const [k,v] of Object.entries(attrs))out.setAttribute(k,String(v));
@@ -513,6 +513,25 @@ function image(p,alt,markers=null){
     const txt=el("text",{x:sx,y:sy,fill:"#fff","text-anchor":"middle","dominant-baseline":"central",
       "font-size":radius*1.45,"font-weight":"800"});
     txt.textContent=String(n+1);
+    // Keep the anatomical label beside its numbered arrow, instead of
+    // requiring a beginner to scan a separate caption beneath the card.
+    // The recorded marker endpoints and source photographs are unchanged.
+    const short=markerLabels?.[n];
+    if(short){
+     const fontSize=Math.max(18,w*.047); // readable even when high-resolution photos scale down
+     const boxW=Math.min(w*.72,short.length*fontSize*.57+fontSize*.85);
+     const boxH=fontSize*1.48,spacing=radius+fontSize*.3;
+     const right=sx+spacing,left=sx-spacing-boxW;
+     const bx=right+boxW<=w-fontSize*.15?right:
+       left>=fontSize*.15?left:Math.max(fontSize*.15,Math.min(w-boxW-fontSize*.15,right));
+     const by=Math.max(fontSize*.15,Math.min(h-boxH-fontSize*.15,sy-boxH/2));
+     el("rect",{x:bx,y:by,width:boxW,height:boxH,rx:fontSize*.35,
+       fill:"#143e2a",stroke:"#fff","stroke-width":Math.max(1,thick*.45),opacity:".96"});
+     const tag=el("text",{x:bx+boxW/2,y:by+boxH/2,fill:"#fff",
+       "text-anchor":"middle","dominant-baseline":"central",
+       "font-size":fontSize,"font-weight":"700"});
+     tag.textContent=short;
+    }
    });
   };
   img.addEventListener("load",setGeometry,{once:true});
@@ -2544,6 +2563,19 @@ function renderLiguleSections(area,q,buildChoice){
  partB.append(links);area.append(partB);
 }
 
+// Short, human-readable labels placed directly beside previously reviewed
+// arrow locations. They explain visible organs without changing image assets,
+// arrows, source rights, or the full annotation manifest. The basic tuft
+// picture needs no arrow: the card title already explains its visible habit.
+const mainPhotoShortLabels={
+ "head:side_oats":["Main flower axis","Side raceme"],
+ "head:whorls":["Branch junction","Flowering raceme"],
+ "head:spike":["Upright spike","Spikelets"],
+ "ligule:hairs":["Hair-fringe ligule","Leaf sheath"],
+ "ligule:membrane":["Membranous ligule","Leaf sheath"],
+ "awns:bristles":["Bristle","Stigmas (not bristles)"],
+ "awns:three":["Lemma awns"]
+};
 function renderQuestion(){
  if(state.question>=qs.length){
    const tab=mainQuestionTabs()[state.question];
@@ -2558,26 +2590,18 @@ const reviewed=state.mainPhotoArrows.get(q.id+":"+key);
 const validReviewed=reviewed&&refId===reviewed.species_id&&i===reviewed.photo_i&&p&&
  p.src===reviewed.expected_src&&p.source_page===reviewed.expected_source&&
  p.creator===reviewed.expected_creator&&p.license===reviewed.expected_license?reviewed:null;
-const f=image(p,title+" — "+(validReviewed?"annotated reference photo":"general photo example"),
- validReviewed?.markers);
+const shownMarkers=validReviewed&&!(q.id==="habit"&&key==="tuft")?validReviewed.markers:null;
+const f=image(p,title+" — "+(shownMarkers?"labeled reference photo":"general photo example"),
+ shownMarkers,shownMarkers?mainPhotoShortLabels[q.id+":"+key]:null);
 if(q.id==="head")f.classList.add("whole-head");
 f.append(node("span","tick","✓"));b.append(f);
 const body=node("div","answer-body");
 const label=node("div","head-card-label");label.append(q.id==="head"?headIcon(key):characterIcon(q.id,key),node("div","answer-title",title));body.append(label);
 body.append(node("span","answer-note",note));
-if(validReviewed){
- const legend=node("ol","photo-arrow-legend");
- validReviewed.markers.forEach((m,n)=>{
-  const li=node("li","");
-  li.append(node("strong","",String(n+1)+"."),node("span","",m.label));
-  legend.append(li);
- });
- body.append(legend,node("span","photo-truth-note annotated","In this source-matched photo: "+validReviewed.visible),
-   node("span","photo-truth-note","Not proven here: "+validReviewed.not_proven));
-}else{
- body.append(node("span","photo-truth-note","General reference photo; the drawing explains the structure. No arrow target has been verified for this card."));
-}
-body.append(node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
+// The main choices need a clean photograph and one simple teaching sentence.
+ // Full visible/not-proven limitations remain in the reviewed manifest,
+ // rather than repeating technical review notes on every beginner card.
+ body.append(node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
 b.append(body);b.addEventListener("click",()=>choose(q.id,key));return b;
 }
 // Use already-published, source-identified Learner photos for THREE distinct

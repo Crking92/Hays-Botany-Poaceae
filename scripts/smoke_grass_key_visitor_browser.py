@@ -265,17 +265,17 @@ def check_view(browser, name, width, height):
         assert fig.locator("svg.field-photo-arrows").count()==0, (
             f"{name}: photo has no independently verified numbered arrow")
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
-    # Main-question photographs are reused from ORIGINAL credited Learner
-    # photo records, with the exact historic coordinates and no image crop.
-    for q_index, label, pointer_count in [
-        (0, "Many little hanging side branches", 2),
-        (1, "A bunch or tuft", 1),
-        (2, "Mostly a fringe of hairs", 2),
-        (3, "Separate bristles under spikelets", 2)
+    # Main question photo labels must be printed DIRECTLY on approved marker
+    # positions. The redundant tuft arrow is hidden on the simple option card.
+    # Historical 8-photo / 14-marker provenance stays in the original manifest.
+    for q_index, label, short_labels in [
+        (0, "Many little hanging side branches", ["Main flower axis", "Side raceme"]),
+        (2, "Mostly a fringe of hairs", ["Hair-fringe ligule", "Leaf sheath"]),
+        (3, "Separate bristles under spikelets", ["Bristle", "Stigmas (not bristles)"])
     ]:
         page.locator("#steps button.step").nth(q_index).click()
         card = page.locator("#question .answer").filter(has_text=label)
-        assert card.count() == 1, f"{name}: annotated photo answer missing: {label}"
+        assert card.count() == 1, f"{name}: approved labeled answer missing: {label}"
         frame = card.locator(".photo-frame.with-reviewed-arrows")
         assert frame.count() == 1, f"{name}: missing approved arrow overlay: {label}"
         photo = frame.locator("img")
@@ -283,12 +283,16 @@ def check_view(browser, name, width, height):
         photo.evaluate("(img) => {img.loading='eager'}")
         frame.locator("svg.field-photo-arrows circle").first.wait_for(
             state="attached", timeout=50000)
-        assert frame.locator("svg.field-photo-arrows circle").count() == pointer_count*2, (
-            f"{name}: image arrow overlay does not match source marker count: {label}")
-        assert card.locator("ol.photo-arrow-legend li").count() == pointer_count, (
-            f"{name}: marker numbers have no corresponding structure labels: {label}")
-        assert "Not proven here:" in card.inner_text(), (
-            f"{name}: annotation is implying undocumented plant anatomy: {label}")
+        assert frame.locator("svg.field-photo-arrows circle").count() == len(short_labels)*2, (
+            f"{name}: source marker count changed: {label}")
+        overlay_texts = frame.locator("svg.field-photo-arrows text").all_text_contents()
+        for index, tag in enumerate(short_labels, start=1):
+            assert tag in overlay_texts and str(index) in overlay_texts, (
+                f"{name}: a numbered anatomical pointer lacks a direct label: {label} / {tag}")
+        assert card.locator(".photo-credit").count() == 1, (
+            f"{name}: photographer and licensing credit lost: {label}")
+        assert "Not proven here:" not in card.inner_text(), (
+            f"{name}: verbose research note leaked back onto beginner card: {label}")
         actual = photo.evaluate("(img) => [img.naturalWidth,img.naturalHeight]")
         assert min(actual) > 40, f"{name}: source image did not visibly decode: {label}"
         viewbox = frame.locator("svg.field-photo-arrows").get_attribute("viewBox")
@@ -296,11 +300,20 @@ def check_view(browser, name, width, height):
             f"{name}: arrow overlay proportions differ from actual photo: {label}")
         assert photo.evaluate("(img) => getComputedStyle(img).objectFit") == "contain", (
             f"{name}: diagnostic photo was cropped underneath a marker: {label}")
-    # A photo without reviewed arrows must say it is a GENERAL example.
+    page.locator("#steps button.step").nth(1).click()
+    tuft = page.locator("#question .answer").filter(has_text="A bunch or tuft")
+    assert tuft.count() == 1
+    assert tuft.locator("svg.field-photo-arrows").count() == 0, (
+        f"{name}: redundant tuft photo pointer should be hidden on the beginner card")
+    assert tuft.locator(".photo-credit").count() == 1, (
+        f"{name}: removing the redundant tuft pointer must retain photographer credit")
+    # Unannotated source examples still have photographs and credit, not a
+    # repeated wall of unverified anatomy notes.
     page.locator("#steps button.step").nth(2).click()
     unknown = page.locator("#question .answer").filter(has_text="No ligule visible")
     assert unknown.locator("svg.field-photo-arrows").count() == 0
-    assert "General reference photo" in unknown.inner_text()
+    assert unknown.locator(".photo-credit").count() == 1
+    assert "General reference photo" not in unknown.inner_text()
     # New collar page: two sections within ONE of the same nine tabs.
     # Edge buttons reuse the detailed ligule_edge records; picking one without
     # a type cannot silently exclude grasses with undocumented membrane rims.
