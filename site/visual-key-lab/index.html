@@ -675,6 +675,32 @@ const reviewedCharacterPhotoExamples={
 // advanced character group. This prevents Setaria bristles from illustrating
 // the unrelated callus hairs or sterile/fertile lemma hair options.
 const choiceSpecificPhotoExamples={
+ // Reference-only close-ups MUST NOT be counted as positive evidence for the
+ // actual user-selected vein/awn suboption; they teach which organ to examine.
+ "glume_marks:upper_one_vein":{
+   species_id:"eleusine-indica",photo_i:2,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg",
+   expected_creator:"Harry Rose (Macleay Grass Man)",expected_license:"CC BY 2.0",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eleusine/eleusine-indica/images/harry-rose-eleusine-indica-spikelet2-annotated.jpg",
+   visible:"Original photographer labels glumes, lemmas and paleas in an opened goosegrass spikelet. Identify the outer UPPER glume before checking its own median vein.",
+   limit:"This anatomical reference does NOT prove a ONE-VEIN UPPER glume or that goosegrass matches the selected character. The image is not a substitute for vein counts on a verified species."
+ },
+ "glume_marks:lower_one_vein":{
+   species_id:"eleusine-indica",photo_i:2,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg",
+   expected_creator:"Harry Rose (Macleay Grass Man)",expected_license:"CC BY 2.0",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eleusine/eleusine-indica/images/harry-rose-eleusine-indica-spikelet2-annotated.jpg",
+   visible:"Original photographer labels glumes, lemmas and paleas in an opened goosegrass spikelet. Find the basal LOWER glume before examining its vein or veins.",
+   limit:"This anatomical reference does NOT prove a ONE-VEIN LOWER glume or that goosegrass matches the selected character. The lower glume must be distinguished from a lemma."
+ },
+ "true_lemma_awn:straight_or_bent":{
+   species_id:"bromus-japonicus",photo_i:1,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Bromus_japonicus_sl25.jpg",
+   expected_creator:"Stefan.lefnaer",expected_license:"CC BY-SA 4.0",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-lemma-awn.jpg",
+   visible:"The photographer's dissected Japanese brome image shows actual lemmas with their awns and membranous margins. Trace an awn to its lemma, not to a glume or subtending bristle.",
+   limit:"This close-up does NOT establish a developmental change from straight to bent, a 2–5 mm measurement, or which floret is fertile. It is an attachment-location teaching reference, not species evidence for the selected button."
+ },
  "floral_hair_position:below_spikelet":{
    species_id:"setaria-parviflora",
    photo_i:3,
@@ -697,7 +723,7 @@ function characterPhotoExample(id,selectedOption){
  const figure=node("figure","character-photo-example");
  figure.append(image(p,"Photo of "+specimen.common+": "+x.visible));
  const caption=node("figcaption");
- caption.append(node("strong","","Real photo · "+specimen.common),
+ caption.append(node("strong","",x.reference_only?"Anatomy reference only · "+specimen.common:"Real photo · "+specimen.common),
    node("p","","Look for: "+x.visible),
    node("p","character-photo-limit","Not proven: "+x.limit),
    node("span","photo-credit","Photo: "+credit(p)));
