@@ -690,7 +690,7 @@ def check_view(browser, name, width, height):
     assert page.locator("#count").inner_text() == "169 possible"
     assert "more_blade_width" not in page.url
     assert page.locator("#caution-details").is_hidden()
-    assert page.locator("#progress-label").inner_text().startswith("0 of 4")
+    assert page.locator("#progress-label").inner_text().startswith("0 of 9")
 
     # Upper ONE-veined glume now has an exact named species source:
     # Eragrostis spectabilis, Kew GrassBase. Other grasses remain unknown.
@@ -744,9 +744,9 @@ def check_view(browser, name, width, height):
     # Core photo questions still eliminate only documented conflicts; reset works.
     page.locator("#steps button.step").first.click()
     page.locator("#question button.answer").first.click()
-    assert page.locator("#progress-label").inner_text().startswith("1 of 4")
+    assert page.locator("#progress-label").inner_text().startswith("1 of 9")
     page.locator("#reset-field-key").click()
-    assert page.locator("#progress-label").inner_text().startswith("0 of 4")
+    assert page.locator("#progress-label").inner_text().startswith("0 of 9")
     assert page.locator("#count").inner_text() == "169 possible"
 
     # One previously credited real photo must be visibly decoded in a normal result,
