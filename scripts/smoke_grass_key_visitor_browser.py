@@ -314,33 +314,63 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text()=="169 possible"
 
-    # The goosegrass image is an anatomy-of-a-glume plate for the whole
-    # group, never a species-positive photograph of a one-veined upper/lower
-    # glume. It must be visible even before choosing an advanced button.
+    # Both already-hosted labeled glume macros are GENERAL organ references,
+    # not evidence that either first/second glume has exactly one vein.
     choose_extra(page,"Flowers / spikelets","glume_marks","upper_one_vein")
     glume_group=page.locator('#optional-character-groups .optional-group[data-character="glume_marks"]')
     refphoto=glume_group.locator("figure.character-photo-example")
-    assert refphoto.count()==1, f"{name}: glume reference plate not visible"
-    txt=refphoto.inner_text()
-    assert "Anatomy reference only" in txt and "does NOT demonstrate the number of veins" in txt, (
-        f"{name}: an exact one-vein state was falsely proved from general photo")
-    assert "Harry Rose" in txt and "CC BY 2.0" in txt
-    assert refphoto.locator(
-        'a[href="https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg"]').count()==1
-    assert refphoto.locator('a[href="https://creativecommons.org/licenses/by/2.0/"]').count()==1
-    img=refphoto.locator("img")
-    img.scroll_into_view_if_needed()
-    img.evaluate("(im)=>{im.loading='eager'}")
-    img.evaluate("(im)=>im.decode()")
-    assert min(img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100
-    assert img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
-    assert refphoto.locator("svg.field-photo-arrows").count()==0
+    assert refphoto.count()==2, f"{name}: BOTH labeled glume reference photographs must be visible"
+    txt=glume_group.locator(".character-photo-reference-gallery").inner_text()
+    assert "does NOT demonstrate the number of veins" in txt and "NOT whether either glume has exactly one vein" in txt, (
+        f"{name}: general glume orientation photos must never claim diagnostic one-vein proof")
+    assert "Harry Rose" in txt and "Stefan.lefnaer" in txt
+    assert "CC BY 2.0" in txt and "CC BY-SA 4.0" in txt
+    for url in [
+        "https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg",
+        "https://commons.wikimedia.org/wiki/File:Sporobolus_vaginiflorus_sl125.jpg",
+        "https://creativecommons.org/licenses/by/2.0/",
+        "https://creativecommons.org/licenses/by-sa/4.0/"
+    ]:
+        assert glume_group.locator('a[href="'+url+'"]').count()==1, f"{name}: glume source/license missing: {url}"
+    for fig in refphoto.all():
+        img=fig.locator("img")
+        img.scroll_into_view_if_needed()
+        img.evaluate("(im)=>{im.loading='eager'}")
+        img.evaluate("(im)=>im.decode()")
+        assert min(img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100
+        assert img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
+        assert fig.locator("svg.field-photo-arrows").count()==0
     for next_opt in ["lower_one_vein","glabrous"]:
         choose_extra(page,"Flowers / spikelets","glume_marks",next_opt)
-        assert glume_group.locator("figure.character-photo-example").count()==1, (
-            f"{name}: organ teaching photo disappeared or duplicated when changing glume state")
+        assert glume_group.locator("figure.character-photo-example").count()==2, (
+            f"{name}: general glume photo pair incorrectly changed with selected vein state")
         assert glume_group.locator(".choice-specific-photo-slot figure").count()==0, (
-            f"{name}: generic glume plate incorrectly treated as diagnostic one-vein photo")
+            f"{name}: general glume photo incorrectly treated as exact diagnostic state")
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text()=="169 possible"
+
+    # The source photographer explicitly identifies floret CALLUS and
+    # rachilla hairs in an existing Avena fatua photo; still NO guessed arrow.
+    choose_extra(page,"Flowers / spikelets","floral_hair_position","spikelet_callus_hairs")
+    callus_group=page.locator('#optional-character-groups .optional-group[data-character="floral_hair_position"]')
+    callus_photo=callus_group.locator(".choice-specific-photo-slot figure.character-photo-example")
+    assert callus_photo.count()==1, f"{name}: wild-oat callus photo not visible"
+    callus_txt=callus_photo.inner_text()
+    assert "Anatomy reference only" in callus_txt and "callus and rachilla hairs" in callus_txt
+    assert "Matt Lavin" in callus_txt and "CC BY-SA 2.0" in callus_txt
+    assert callus_photo.locator('a[href="https://commons.wikimedia.org/wiki/File:Avena_fatua_(3885254148).jpg"]').count()==1
+    assert callus_photo.locator('a[href="https://creativecommons.org/licenses/by-sa/2.0/"]').count()==1
+    callus_img=callus_photo.locator("img")
+    callus_img.scroll_into_view_if_needed()
+    callus_img.evaluate("(im)=>{im.loading='eager'}")
+    callus_img.evaluate("(im)=>im.decode()")
+    assert min(callus_img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100
+    assert callus_img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
+    assert callus_photo.locator("svg.field-photo-arrows").count()==0
+    choose_extra(page,"Flowers / spikelets","floral_hair_position","below_spikelet")
+    assert callus_group.locator(".choice-specific-photo-slot figure").count()==1, (
+        f"{name}: source-labeled Setaria bristle example should replace wild-oat callus example")
+    assert "Matt Lavin" not in callus_group.locator(".choice-specific-photo-slot").inner_text()
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text()=="169 possible"
 
