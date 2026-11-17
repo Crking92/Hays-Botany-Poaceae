@@ -451,6 +451,19 @@ for(const ref of [buffalo,plains,vine]){
  const scored=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).find(x=>x.id===ref.species_id);
  assert(scored?.traits.habit.includes("rhizome"),ref.species_id+": conflict source preserved without blind scoring changes");
 }
+// Owner's preferred Gould + Diggs resolution is a NEW scoring policy note;
+// do not mutate the original photographs, book-paraphrase hold history, or
+// 112 source taxa just to change how Still possible vs match is presented.
+const newer=source.current_source_priority_rhizome_review;
+assert.equal(newer.adopted_on,"2026-11-16");
+assert.deepEqual(newer.decisions.map(x=>x.species_id),
+ ["bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"]);
+assert.deepEqual(newer.decisions.map(x=>x.current_key_status),
+ ["UNRESOLVED_STILL_POSSIBLE","UNRESOLVED_STILL_POSSIBLE","PRIMARY_SOURCE_CONFIRMED_BASAL_RHIZOME"]);
+assert(newer.decisions[2].flora.includes("p.1300")&&newer.decisions[2].flora.includes("rhizomatous"));
+assert(newer.decisions[0].gould.includes("p.355"));
+assert(newer.decisions[1].gould.includes("p.182"));
+assert(html.includes("Diggs et al., Flora of North Central Texas (1999), printed p.1300"));
 assert(html.includes("easternGamagrassSexPhotoComparison"),"Three-photo sex anatomy gallery missing from field key");
 console.log("PASS: three new Gould photographed passages source-pinned, page holds intact and no false rhizome conclusions");
 console.log("PASS: Gould p.213 Tridentopsis elongata, p.542 Melinis repens and p.469 Megathyrsus maximus saved, preserving protected key scoring");
