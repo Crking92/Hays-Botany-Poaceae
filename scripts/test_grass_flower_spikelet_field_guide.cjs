@@ -79,7 +79,7 @@ for(const [character,ids] of Object.entries(original)){
     if(option.id==="upper_fertile_lemma_hairs")
      assert.match(textLabels,/FEMALE ONLY/,"Pampas reproductive sex caveat must be on the drawing");
     if(option.id==="spikelet_callus_hairs")
-     assert.match(textLabels,/FLORET CALLUS BASE/,"Callus hairs must point to the actual floret base");
+     assert.match(textLabels,/BASAL CALLUS HAIRS/,"Callus hairs must be identified by their basal callus attachment");
     if(["upper_one_vein","lower_one_vein","fertile_awn_2_to_5mm",
       "lower_sterile_awn_variable","lower_sterile_lemma_hairs",
       "upper_fertile_lemma_hairs","spikelet_callus_hairs"].includes(option.id))
