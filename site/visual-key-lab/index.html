@@ -3584,6 +3584,13 @@ try{
   option.evidence_pending=false;
  }
 }catch(err){console.warn("Final four advanced states held safely; earlier source evidence preserved",err)}
+/* Gould p.166: additive options/evidence, after historical 111-option validators.
+   Validate a complete copy first; a failed supplement leaves the existing lab intact. */
+try{
+ const response=await fetch("gould-virginia-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Virginia Gould supplement unavailable");
+ applyVirginiaGouldSupplement(await response.json());
+}catch(err){console.warn("Virginia Gould character supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3617,13 +3624,6 @@ try{
     " Corrected legacy below_spikelet bristle mapping: true callus pubescence; no negative exclusion.";
  }
 }catch(err){console.warn("Callus organ remap held; unverified evidence left unchanged",err)}
-/* Gould p.166: additive options/evidence, after historical 111-option validators.
-   Validate a complete copy first; a failed supplement leaves the existing lab intact. */
-try{
- const response=await fetch("gould-virginia-character-supplement.json",{cache:"no-store"});
- if(!response.ok)throw Error("Virginia Gould supplement unavailable");
- applyVirginiaGouldSupplement(await response.json());
-}catch(err){console.warn("Virginia Gould character supplement held; prior evidence preserved",err)}
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
  rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";

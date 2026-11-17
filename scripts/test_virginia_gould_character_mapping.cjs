@@ -44,5 +44,5 @@ const before=JSON.stringify([state.refineCharacters,state.refineEvidenceMap]);
 context.pack={...pack,evidence:pack.evidence.map((row,i)=>i?row:{...row,id:'elymus-canadensis'})};
 assert.throws(()=>vm.runInContext('applyVirginiaGouldSupplement(pack)',context));
 assert.equal(JSON.stringify([state.refineCharacters,state.refineEvidenceMap]),before,'malformed supplement must be atomic');
-assert(html.indexOf('applyVirginiaGouldSupplement(await response.json())')>html.indexOf('Original exact-species callus source missing'),'historical evidence validators must run before extension');
+assert(html.indexOf('applyVirginiaGouldSupplement(await response.json())')>html.indexOf('Final four advanced states held safely; earlier source evidence preserved'),'historical evidence validators must run before extension');
 console.log('PASS: 13 new positive-only options, 10 Gould groups; smooth/sparse lemmas supported; Virginia documented with bowed glumes; Canada remains possible; photos and old evidence preserved; malformed supplement is atomic.');
