@@ -837,7 +837,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -3107,6 +3107,14 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyBigBluestemGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Andropogon gerardii"||pack.core_awn_addition!=="short_single"||!Array.isArray(pack.variety_key)||pack.variety_key.length!==3||pack.variety_key.map(v=>v.taxon_as_printed).join("|")!=="A. gerardii var. chrysocomus|A. gerardii var. gerardii|A. gerardii var. paucipilus"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid big bluestem variety scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_BIG_BLUESTEM_SUPPLEMENT_V1",id:"andropogon-gerardi",scientific:"Andropogon gerardi",page:550});
+ const s=state.species.find(s=>s.id==="andropogon-gerardi");s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.gould_variety_key=structuredClone(pack.variety_key);
+ s.field_rule="Gould p.550: perennial with or without rhizomes; sessile spikelets 7–11 mm with a usually equally large awnless staminate pedicelled companion. Short or absent sessile awns are permitted in historical var. paucipilus. Flowering rachis-node tufts are not culm-node hairs, and a single glume keel is not a vein count. Keep historical variety differences separate from Diggs subspecies/hybrid treatment.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3827,6 +3835,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-big-bluestem-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Big bluestem Gould supplement unavailable");
+ applyBigBluestemGouldSupplement(await response.json());
+}catch(err){console.warn("Big bluestem Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3925,3 +3938,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+

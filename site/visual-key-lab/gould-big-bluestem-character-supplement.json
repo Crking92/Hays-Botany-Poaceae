@@ -1,0 +1,372 @@
+{
+  "schema": "HAYS_GOULD_BIG_BLUESTEM_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "andropogon-gerardi",
+  "scientific": "Andropogon gerardi",
+  "taxon_as_printed": "Andropogon gerardii",
+  "printed_page": 550,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "source_material": "Owner supplied printed p.550 species account and three-variety key. Partial facing-page distribution and neighboring species are not assigned to this record; no scans/figures republished.",
+  "core_awn_addition": "short_single",
+  "option_additions": [
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_concave",
+        "label": "Sessile FIRST glume concave, with two keels",
+        "detail": "Inspect the first outer glume of the stalkless spikelet. Gould calls it concave and two-keeled. Two keels do not establish two veins, and concavity is not a glandular pit or proof of hairlessness."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_second_glume_single_keel",
+        "label": "Sessile SECOND glume has one keel",
+        "detail": "Locate the second outer glume. Gould says single-keeled; one keel is NOT evidence of one vein."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lower_lemma_thin_hyaline",
+        "label": "LOWER lemma thin and mostly translucent",
+        "detail": "Open one spikelet and locate the lower inner lemma, not a glume. Gould calls it thin and mostly hyaline. This is not the upper fertile lemma."
+      },
+      "subgroup": "Lower versus upper lemma"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "upper_lemma_deep_two_lobes",
+        "label": "UPPER lemma deeply two-lobed",
+        "detail": "Inspect the upper fertile lemma: Gould describes two deep lobes with the awn arising from between them. Do not transfer the lobes to a glume."
+      },
+      "subgroup": "Lower versus upper lemma"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "awn_between_upper_lemma_lobes",
+        "label": "Awn emerges between upper lemma lobes",
+        "detail": "Trace a real awn to the notch between the upper fertile lemma lobes; the lower lemma is separately thin/hyaline."
+      },
+      "subgroup": "Precisely located awn or mucro"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "twisted_lower_awn",
+        "label": "Lower segment of lemma awn twisted",
+        "detail": "Inspect the awn below its free upper portion. Gould describes twisting below; this alone does not establish a bent/kneed awn."
+      },
+      "subgroup": "General awn count and appearance"
+    },
+    {
+      "character": "floral_hair_position",
+      "option": {
+        "id": "rachis_node_hair_tuft",
+        "label": "Hair tuft at FLOWERING rachis node",
+        "detail": "Find a node of the flowering branch rachis, not a culm joint or floret callus. Gould reports a tuft of hairs at these rachis nodes."
+      },
+      "subgroup": "Flowering axis and pedicel margins"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "pedicelled_similar_size",
+        "label": "Stalked companion spikelet about as large",
+        "detail": "Compare a sessile spikelet and its attached pedicelled companion. Gould describes a usually equally large, awnless staminate companion, not a rudimentary stalk-only partner."
+      },
+      "subgroup": "Spikelet pairs and terminal groups"
+    },
+    {
+      "character": "underground_stems",
+      "option": {
+        "id": "well_developed_rhizomes",
+        "label": "Well-developed rhizomes",
+        "detail": "Confirm attached underground stems. Gould reports developed rhizomes in historical var. chrysocomus and var. paucipilus; var. gerardii can have short or absent rhizomes. This does not prove every tuft has long scaly runners."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "floral_hair_position",
+      "option": {
+        "id": "rachis_hairs_gold_long",
+        "label": "Copious golden rachis-joint hairs, about 3–5 mm",
+        "detail": "Measure hairs on flowering rachis INTERNODES. Gould assigns copious usually yellow/golden 3–5 mm hairs to historical var. chrysocomus; other varieties differ. Not hairs on culm nodes or glumes."
+      },
+      "subgroup": "Flowering axis and pedicel margins"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "note": "Gould gives blades mostly 5–10 mm broad. The approximate narrow band includes the 5-mm boundary; medium is supported. Retain H&L 2–10 mm range separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent.",
+      "width_mm": [
+        5,
+        10
+      ]
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "note": "Leaves flat, long linear and rather firm; earlier H&L folded variation is preserved.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "ligule_edge",
+      "states": [
+        "erose"
+      ],
+      "note": "Ligule short, stiff and fringed-membraned with an erose rim. Do not turn erose fringe into a mandatory hair-only ligule or invent a Gould ligule measurement; H&L occasional ciliation remains separate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "underground_stems",
+      "states": [
+        "rhizome_present",
+        "short_rhizome",
+        "well_developed_rhizomes"
+      ],
+      "note": "Species perennial with OR without rhizomes. Historical var. gerardii has rhizomes absent or short; var. chrysocomus and var. paucipilus well-developed. These are alternatives, not all states of every specimen. No scales or knotty crown are stated.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent.",
+      "taxon_scope": "Species aggregate; short state specifically var. gerardii, developed state var. chrysocomus or var. paucipilus."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "spikelet_position",
+      "states": [
+        "paired",
+        "pedicelled_similar_size"
+      ],
+      "note": "Sessile spikelets 7–11 mm; pedicelled companion usually about as large, awnless and staminate. Head has 2–7 spicate branches, typically 4–11 cm long and unbranched. Terminal whole-head architecture is not a floret count.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "glume_marks",
+      "states": [
+        "sessile_first_glume_concave",
+        "sessile_second_glume_single_keel"
+      ],
+      "note": "The sessile spikelet is usually scabrous and often glaucous, with two-keeled concave FIRST glume and single-keeled SECOND glume of equal length. A keel is not a vein, and concavity is not a glandular pit. Gould does not establish the KR exact pit/hispid states.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "lemma_texture",
+      "states": [
+        "lower_lemma_thin_hyaline",
+        "upper_lemma_deep_two_lobes"
+      ],
+      "note": "LOWER lemma thin and mostly hyaline. UPPER fertile lemma deeply cleft, bearing awn between its two lobes. Neither state describes the outer glumes.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "true_lemma_awn",
+      "states": [
+        "long",
+        "short",
+        "none",
+        "pedicelled_awnless",
+        "awn_between_upper_lemma_lobes",
+        "twisted_lower_awn"
+      ],
+      "note": "Species account: awn arises between two upper-lemma lobes and twists below. Variety key permits awnless or short-awned sessile spikelets in var. paucipilus, rarely >5 mm; var. gerardii has 8–20 mm awns. Pedicelled staminate spikelet awnless. Short fertile awns are source-permitted; no universal absence or invented 1–1.5-mm species limit.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent.",
+      "taxon_scope": "Long sessile awns var. gerardii; short/absent sessile awns var. paucipilus; pedicelled awnlessness separate. Var. chrysocomus awn interval not specified in this key."
+    },
+    {
+      "id": "andropogon-gerardi",
+      "scientific": "Andropogon gerardi",
+      "character": "floral_hair_position",
+      "states": [
+        "rachis_margin_cilia",
+        "rachis_node_hair_tuft",
+        "rachis_hairs_gold_long"
+      ],
+      "note": "Species flowering rachis internodes ciliate with usually long hairs, rachis nodes with a hair tuft. Var. chrysocomus: copious usually golden/yellow hairs 3–5 mm. Var. gerardii: sparse to copious mostly 1–2 mm hairs. Var. paucipilus: variable typically short sparse internode hairs. None of these are automatically culm-node or glume hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 550,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive species-aggregate evidence with variety alternatives; not universal co-occurrence, exact-variety certification, Hays voucher or proof that undocumented states are absent.",
+      "taxon_scope": "Golden 3–5 mm state specific to historical var. chrysocomus; other alternatives retained."
+    }
+  ],
+  "learner_diagnostic_checks": [
+    {
+      "look": "Measure a sessile spikelet and compare its companion",
+      "check": "Gould gives sessile spikelets 7–11 mm, with a staminate awnless pedicelled companion usually about as large. The first glume is concave and two-keeled; the second has one keel and is equally long.",
+      "compare": "KR Gould sessile spikelets are 3–4.5 mm. Measure an actual spikelet, not the awn or entire flowering branch; current size context is not a new exclusion button.",
+      "certainty": "Exact source comparison, not a local voucher or automatic exclusion from head shape.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Inspect both lemmas and the awn attachment",
+      "check": "The lower lemma is thin and mostly hyaline. The upper is deeply two-lobed with an awn between lobes, twisted below. Big bluestem cannot be universally rejected for a short or absent awn: Gould var. paucipilus permits those states.",
+      "compare": "Twisted below is not enough to claim bent AND twisted. The awnless stalked companion is a different spikelet from a short-awned or awnless sessile floret.",
+      "certainty": "Gould p.550 variety distinctions retained; no assumed exact 1–1.5-mm limit.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Keep flowering-axis hairs and rhizomes tied to the variety",
+      "check": "Gould var. chrysocomus has copious usually golden 3–5 mm rachis-internode hairs and developed rhizomes; var. gerardii has mostly 1–2 mm hairs and absent/short rhizomes; var. paucipilus has typically short sparse variable hairs and developed rhizomes. Rachis nodes have hair tufts, separate from culm nodes.",
+      "compare": "Diggs uses two subspecies and treats chrysocomus as a hybrid, so the two books are not a one-to-one variety map. Do not combine all variety characters as a required description of one plant.",
+      "certainty": "Historical variety key and later subspecies concepts preserved separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "variety_key": [
+    {
+      "taxon_as_printed": "A. gerardii var. chrysocomus",
+      "rachis_internode_hairs_mm": [
+        3,
+        5
+      ],
+      "hair_abundance": "copious",
+      "hair_color": "usually yellow/golden",
+      "rhizomes": "well-developed",
+      "sessile_awn_mm": "NOT_STATED_HERE"
+    },
+    {
+      "taxon_as_printed": "A. gerardii var. gerardii",
+      "rachis_internode_hairs_mm": [
+        1,
+        2
+      ],
+      "hair_abundance": "sparse to copious",
+      "rhizomes": "absent or short",
+      "sessile_awn_mm": [
+        8,
+        20
+      ]
+    },
+    {
+      "taxon_as_printed": "A. gerardii var. paucipilus",
+      "rachis_internode_hairs": "variable, typically short and sparse",
+      "rhizomes": "well-developed",
+      "sessile_awn": "absent or rarely >5 mm"
+    }
+  ],
+  "secondary_reference_review": {
+    "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+    "pages": [
+      1238,
+      1239
+    ],
+    "access": "Directly read owner-connected reference PDF text",
+    "corroborates": "2–7 digitate branches, 4–11 cm; large 7–11 mm sessile and comparable awnless pedicellate spikelets; awned/awnless variation; membranous ligules.",
+    "subspecies": [
+      {
+        "taxon": "subsp. gerardii",
+        "awn_mm": "(7.5–)10–25",
+        "rhizomes": "short/absent, internodes usually <=2 mm",
+        "ligule_mm": [
+          0.4,
+          2.5
+        ]
+      },
+      {
+        "taxon": "subsp. hallii",
+        "awn_mm": "absent or to 8(–11)",
+        "rhizomes": "well-developed creeping, internodes often >20 mm",
+        "ligule_mm": "(0.9–)3–4.5"
+      }
+    ],
+    "taxon_caution": "Diggs includes historical var. paucipilus in subsp. hallii and describes chrysocomus as a hybrid of the two subspecies. Do not collapse Gould three-variety key into a one-to-one Diggs subspecies mapping. Source ranges remain alongside, not merged into one compulsory interval."
+  },
+  "non_scoring_context": {
+    "culm_height_m": [
+      0.8,
+      2
+    ],
+    "culms": "glabrous, often glaucous; not evidence of hairless culm nodes",
+    "leaf_color": "green or glaucous",
+    "blade_width_mm_usual": [
+      5,
+      10
+    ],
+    "branches": [
+      2,
+      7
+    ],
+    "branch_length_cm_usual": [
+      4,
+      11
+    ],
+    "sessile_spikelet_mm": [
+      7,
+      11
+    ],
+    "chromosome_2n": 60,
+    "distribution": "Partial facing-page continuation not transcribed; no county nativity inference."
+  },
+  "omissions_not_absences": [
+    "No measured Gould ligule length.",
+    "No ordinary culm-node hair state inferred from flowering rachis-node tufts.",
+    "No first-glume vein count inferred from two keels; no upper one-vein state from a single keel.",
+    "No bent/kneed awn inferred solely from lower-segment twisting.",
+    "No universal rhizome presence or absence.",
+    "No full-variety identity or local specimen certification."
+  ]
+}
+
