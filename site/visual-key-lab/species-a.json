@@ -748,7 +748,9 @@
     "hero_i": 1,
     "traits": {
       "head": [
-        "side_oats"
+        "side_oats",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -784,6 +786,21 @@
     ],
     "genus": "Bouteloua",
     "character_evidence": {
+      "head_unilateral_field_alias_20261116": {
+        "role": "reproductive",
+        "source": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed pp. 1247–1248; Kew GrassBase exact Bouteloua curtipendula species treatment; Flora of North America species treatment",
+        "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1198286-2/general-information",
+        "secondary_source_url": "https://www.burkeherbarium.org/imagecollection/taxon.php?Taxon=Bouteloua+curtipendula",
+        "reference": "Intact flowering heads have numerous (usually 35–80 in Kew) short reflexed UNILATERAL racemes along a long axis, with spikelets packed on one side of each branch. The specific side_oats field answer stays most diagnostic; broader one_sided and many_one_sided (seven or more one-sided branches) answers also describe observable positive states and must not falsely exclude this grass. These alternatives are not exclusive species diagnoses. Shed or immature heads may not reveal branch counts; use Unknown rather than a negative. No photograph, regional voucher or glume/lemma anatomy is certified by these field aliases.",
+        "reported_states": [
+          "many short pendent side racemes along central axis",
+          "spikelets on one side of each short raceme",
+          "typically at least seven unilateral racemes on an intact mature head"
+        ],
+        "status": "REGIONAL_AND_EXACT_SPECIES_POSITIVE_ONLY_BROAD_HEAD_ALIASES",
+        "review_date": "2026-11-16",
+        "photo_voucher_support": "Source-scored broad observer categories only; original photo files, credits and annotations unchanged."
+      },
       "habit": {
         "source": "Diggs et al. Illustrated Flora of North Central Texas, 1999, user-provided monocots PDF",
         "reference": "p.172 (printed 1248): both tufted and rhizomatous forms; existing Hays/FNA record says short ciliate membrane",
