@@ -1186,6 +1186,8 @@ const flowerFieldTips={
   first_enclosing:["Compare the two outer glumes","The first, lower glume partly wraps around or encloses the second. Check the relative margins rather than simply comparing lengths."],
   lower_reduced:["Find the lower glume at the spikelet base","The first glume is very small or absent. Do not mistake it for a tiny floret or conclude that both glumes are missing."],
   glabrous:["Inspect the glume faces and margins","A glabrous glume has no hairs on the examined surface. A smooth glume may still have veins; check under magnification."],
+  upper_one_vein:["Separate the UPPER (second) glume","At the spikelet base, identify the lower outer glume first, then the upper/second glume nearer the florets. On the UPPER glume, follow exactly one lengthwise median vein. Do not count the lower glume's vein or veins on the lemma. The drawing isolates the two glumes; it is not a specimen photo."],
+  lower_one_vein:["Separate the LOWER (first) glume","Find the first outer bract at the base of one spikelet; examine the LOWER glume for its single lengthwise median vein. Do not substitute the upper glume or the lemma. Both glumes can be one-veined in a species; this choice documents only the lower one, and the diagram is a simplified orientation drawing."],
   central_glume_glabrous:["Examine the FIRST (lower) glume","Inspect its median vein, not a third central glume. Smooth/not rough is the observed state; a hairless surface can still be scabrous."],
   central_glume_scabrous:["Examine the FIRST (lower) glume","Inspect its median vein for tiny rough points using a hand lens. Do not confuse them with lemma hairs."]
  },
@@ -1203,13 +1205,18 @@ const flowerFieldTips={
   bent_twisted:["Inspect the base and bend of the awn","The lemma awn has a twisted section and a clear elbow. A bent grass stem or bent spikelet stalk is not an awn."],
   none:["Look carefully for any attached awn","The lemma is awnless. Fine hairs and bristles outside the spikelet do not count as lemma awns."],
   straight_or_bent:["Compare young and mature awns","A lemma awn may appear straight or bend with development. The sketch shows both appearances, not two awns on one floret."],
+  fertile_awn_2_to_5mm:["Isolate the FERTILE lemma and measure its awn","In a mature spikelet, separate the upper fertile floret from the lower sterile one. Trace the projection to the FERTILE lemma itself; the recorded awn is about 2–5 mm. An awn on the lower sterile floret is a different observation. Use a ruler or hand lens; the two-lemma drawing is not to scale."],
+  lower_sterile_awn_variable:["Inspect the LOWER STERILE lemma separately","The lower sterile floret may carry a small lemma awn, but the awn is VARIABLE and can be absent. Locate the awn base on the lower sterile lemma; do not count an awn on an upper fertile floret or the pink hairs on a flowering panicle. A missing awn on one specimen does not rule this condition out."],
   apical_mucro:["Use a hand lens on a mature fertile lemma","A mucro is a very small, abrupt point at the lemma tip. It is not one of the foxtail bristles below the spikelet and not an awn on the glume."]
  },
  floral_hair_position:{
   below_spikelet:["Trace a bristle to its attachment","The bristle begins below or beside the spikelet on the flowering branch. It does not originate from the lemma tip as a true awn."],
   rachilla:["Open the spikelet to find its short axis","Long hairs arise from the rachilla, the small axis between successive florets. They are not hairs attached to a lemma surface."],
   lemma:["Inspect the surface of one floret's lemma","Fine hairs attach directly to the lemma, the lower of the two floret bracts. Separate them from hairs on the outer glumes."],
-  partner_stalk:["Look at the stalk of the reduced spikelet","Hairs line the pedicel supporting a neighboring reduced or stalked spikelet. They do not arise from the sessile spikelet's lemma."]
+  partner_stalk:["Look at the stalk of the reduced spikelet","Hairs line the pedicel supporting a neighboring reduced or stalked spikelet. They do not arise from the sessile spikelet's lemma."],
+  lower_sterile_lemma_hairs:["Open the lower STERILE floret","The fine hairs are attached to the surface or margin of the LOWER STERILE lemma. Identify the upper fertile floret separately before naming the hair position. A pink-looking entire seedhead is not evidence that hairs attach to this particular lemma; use a mature opened spikelet or a verified close-up."],
+  upper_fertile_lemma_hairs:["Check the upper FERTILE lemma and the flower's sex","This state is documented on the UPPER FERTILE lemma of FEMALE pampasgrass florets. Do not transfer the observation to male florets, the lower sterile lemma, or the showy panicle plume. Confirm the floret's position and sex under magnification; the diagram is symbolic."],
+  spikelet_callus_hairs:["Locate hairs on the basal CALLUS, not a free bristle","Inspect the actual point where hairs enter the callus at the base of a floret or a sessile spikelet (the precise organ varies by grass). This may look like a beard, but it is NOT an independent Setaria-type sterile branchlet bristle, a hairy partner stalk, or broad lemma pubescence. The sketch is one simplified basal example, not a proof photo or universal spikelet architecture."]
  }
 };
 function flowerFieldSketch(character,choice){
@@ -1224,6 +1231,13 @@ function flowerFieldSketch(character,choice){
  const dot=(x,y,r=2,color="#58845e")=>{
   const el=document.createElementNS(ns,"circle");
   for(const [k,v]of Object.entries({cx:x,cy:y,r,fill:color}))el.setAttribute(k,String(v));svg.append(el);
+ };
+ // Vector-only anatomical labels. These identify a drawn organ, never an
+ // unverified tissue position in a published photograph.
+ const note=(x,y,value,color="#315c43")=>{
+  const el=document.createElementNS(ns,"text");
+  for(const [k,v]of Object.entries({x,y,fill:color,"font-size":"8","font-weight":"600","text-anchor":"middle"}))el.setAttribute(k,String(v));
+  el.textContent=value;svg.append(el);
  };
  const glume=(x,y,side=1,size=1)=>p("M"+x+" "+y+" Q"+(x+side*14*size)+" "+(y-13*size)+" "+(x+side*5*size)+" "+(y-32*size)+" Q"+(x+side*3*size)+" "+(y-16*size)+" "+x+" "+y,"#78975d",2.3,"#edf2d6");
  const floret=(x,y,s=1)=>{p("M"+x+" "+y+" Q"+(x-10*s)+" "+(y-11*s)+" "+(x-3*s)+" "+(y-28*s)+" Q"+(x+10*s)+" "+(y-9*s)+" "+x+" "+y,"#376f52",2.4,"#c6dba6");p("M"+x+" "+y+" L"+(x-2*s)+" "+(y-23*s),"#5c895d",1.1);};
@@ -1250,8 +1264,21 @@ function flowerFieldSketch(character,choice){
    for(const [x,y] of [[91,59],[96,40],[101,21]]){p("M"+(x-6)+" "+(y+15)+" l17 -1","#67925c",1.6);seed(x+18,y+4,.48);}
   }
  }else if(character==="glume_marks"){
-  p("M84 82 V17","#4d7653",2);
-  if(choice==="lower_reduced"){
+  if(choice==="upper_one_vein"||choice==="lower_one_vein"){
+   // These are SEPARATED glumes for teaching, not two florets. Highlight
+   // only the single median nerve of the explicitly selected FIRST/SECOND glume.
+   const focusLower=choice==="lower_one_vein";
+   for(const [x,selected] of [[46,focusLower],[120,!focusLower]]){
+    p("M"+x+" 66 Q"+(x-20)+" 40 "+(x+1)+" 12 Q"+(x+22)+" 40 "+x+" 66 Z",
+      selected?"#a98145":"#78975d",2.2,selected?"#fff0c2":"#e4eedb");
+    p("M"+x+" 63 Q"+(x+4)+" 38 "+(x+1)+" 16",
+      selected?"#b66b29":"#b0beab",selected?3:1.4);
+   }
+   note(46,85,"1 LOWER",focusLower?"#a15f23":"#58745e");
+   note(120,85,"2 UPPER",focusLower?"#58745e":"#a15f23");
+  }else{
+   p("M84 82 V17","#4d7653",2);
+   if(choice==="lower_reduced"){
    glume(87,78,1,1.3);p("M77 77 l-5 -6 l8 3","#7b945e",2.4);floret(85,63,.55);
   }else if(choice==="first_enclosing"){
    glume(84,82,-1,1.55);glume(86,73,1,.93);floret(83,57,.49);
@@ -1268,9 +1295,10 @@ function flowerFieldSketch(character,choice){
     for(const [x,y] of [[73,64],[72,56],[75,48],[78,40]])
      p("M"+x+" "+y+" l-7 -3","#986f44",1.5);
    }
-  }else{
-   glume(81,79,-1,1.1);glume(87,79,1,1.1);floret(84,59,.45);
-   p("M113 31 Q127 19 141 30 M113 37 Q127 49 141 37","#7ca76d",1.5);
+   }else{
+    glume(81,79,-1,1.1);glume(87,79,1,1.1);floret(84,59,.45);
+    p("M113 31 Q127 19 141 30 M113 37 Q127 49 141 37","#7ca76d",1.5);
+   }
   }
  }else if(character==="lemma_texture"){
   seed(84,45,1.75);
@@ -1280,7 +1308,23 @@ function flowerFieldSketch(character,choice){
   if(choice==="shiny_hard"){p("M76 52 Q65 30 85 18","#f9faf3",5);p("M109 23 l7 -7 M117 31 l10 -1","#b7a155",2.3);}
   if(choice==="smooth")p("M105 20 L111 14 M113 22 L122 21","#7b9e6c",1.5);
  }else if(character==="true_lemma_awn"){
-  if(choice==="straight_or_bent"){
+  if(choice==="fertile_awn_2_to_5mm"||choice==="lower_sterile_awn_variable"){
+   const upperSelected=choice==="fertile_awn_2_to_5mm";
+   seed(50,55,.85);seed(119,55,.85);
+   // The two lemmas are separated so their awn ATTACHMENTS cannot be confused.
+   // Neither projection length is a scale measurement.
+   if(upperSelected){
+    p("M119 39 L125 20","#b77b32",3);
+    dot(119,39,3,"#b77b32");
+    note(119,13,"2-5 mm", "#9b632f");
+   }else{
+    p("M50 39 L41 24","#b77b32",2.7);
+    dot(50,39,3,"#b77b32");
+    note(46,13,"VARIABLE","#9b632f");
+   }
+   note(50,86,"LOWER STERILE",upperSelected?"#58745e":"#9b632f");
+   note(119,86,"UPPER FERTILE",upperSelected?"#9b632f":"#58745e");
+  }else if(choice==="straight_or_bent"){
    seed(48,58,.85);seed(117,58,.85);
    p("M48 42 L42 12 M117 42 L117 29 L137 10","#af8d54",2.4);
    p("M24 82 H145","#cad5ba",1.4);
@@ -1294,7 +1338,27 @@ function flowerFieldSketch(character,choice){
    if(choice==="apical_mucro")p("M84 42 l3 -5","#b48c4e",2.6);
   }
  }else if(character==="floral_hair_position"){
-  if(choice==="below_spikelet"){
+  if(choice==="lower_sterile_lemma_hairs"||choice==="upper_fertile_lemma_hairs"){
+   const lowerSelected=choice==="lower_sterile_lemma_hairs";
+   seed(49,52,.88);seed(118,52,.88);
+   const x=lowerSelected?49:118;
+   for(const y of [31,42,53]){
+    hair(x-8,y,-11,-7);hair(x+8,y,11,-7);
+   }
+   note(49,83,"LOWER STERILE",lowerSelected?"#95612d":"#58745e");
+   note(118,83,"UPPER FERTILE",lowerSelected?"#58745e":"#95612d");
+   if(!lowerSelected)note(117,13,"FEMALE ONLY","#95612d");
+  }else if(choice==="spikelet_callus_hairs"){
+   // Simplified basal CALLUS hair example (floret OR sessile spikelet by
+   // taxon), not independent sterile branchlet bristles below spikelets.
+   glume(80,80,-1,1.05);glume(88,80,1,1.05);
+   seed(84,46,1);
+   dot(84,56,3,"#ad7a45");
+   for(const [dx,dy] of [[-20,-13],[-13,-23],[13,-23],[20,-13]])
+    hair(84,56,dx,dy);
+   p("M84 58 L84 69","#aa7a42",1.5);
+   note(84,84,"BASAL CALLUS HAIRS","#95612d");
+  }else if(choice==="below_spikelet"){
    p("M84 84 V61","#447b55",3);seed(84,45,.95);
    for(const x of [47,58,110,123])p("M84 64 Q"+x+" 40 "+x+" "+(x<84?15:11),"#ac8856",2);
   }else if(choice==="rachilla"){
