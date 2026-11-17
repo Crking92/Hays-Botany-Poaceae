@@ -33,7 +33,7 @@ def test(browser, width, height):
             route.abort("failed")
     page.route(HOSTED + "**", route_original)
     page.goto(URL, wait_until="domcontentloaded", timeout=30000)
-    page.wait_for_function("window.HaysGrassGlossary && window.HaysGrassGlossary.available() === 173", timeout=25000)
+    page.wait_for_function("window.HaysGrassGlossary && window.HaysGrassGlossary.available() === 178", timeout=25000)
     page.wait_for_function("window.HaysGrassGlossary.approvedPhotos() === 26", timeout=25000)
     page.wait_for_selector("#question .answer", timeout=25000)
     check(page.locator("#coded-total").inner_text() == "165" or int(page.locator("#coded-total").inner_text()) >= 112,
@@ -43,7 +43,7 @@ def test(browser, width, height):
     check(page.locator('#question [data-grass-term="panicle"]').count() >= 1, "Panicle definition link missing")
     page.locator("#grass-glossary-launch").click()
     check(page.locator("#grass-glossary-dialog").evaluate("(d)=>d.open"), "Glossary did not open")
-    check("173 terms available" in page.locator("#grass-glossary-content").inner_text(),
+    check("178 terms available" in page.locator("#grass-glossary-content").inner_text(),
           "The shared glossary fallback was not loaded")
     page.locator("#grass-glossary-search").fill("stolon")
     page.locator('#grass-glossary-results [data-grass-term="stolon"]').click()
@@ -119,7 +119,7 @@ def test(browser, width, height):
     page.locator(".grass-glossary-close").click()
     check(not page_errors, "JS errors: " + repr(page_errors))
     result = {"device": "mobile" if width < 500 else "desktop", "viewport": [width, height],
-              "glossary_terms": 173, "remote_glossary": "intentionally blocked",
+              "glossary_terms": 178, "remote_glossary": "intentionally blocked",
               "source_photo_credit": "PASS", "rights_hold": "PASS", "dark_mode": "PASS",
               "scoring_state_preserved": "PASS", "js_errors": page_errors}
     context.close()
