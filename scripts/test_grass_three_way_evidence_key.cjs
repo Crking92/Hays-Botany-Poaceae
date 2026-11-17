@@ -74,23 +74,27 @@ state.selected.head="fingers";
 assert(vm.runInContext("currentResults()",sandbox).length<112,"original four-question conflicting-character exclusions must remain active");
 state.selected.head=null;
 assert(sum(inspect())===112,"clear both core and advanced observations restores all originals");
-// The three rhizome descriptions are conflicting SOURCE reports, not
-// verified absences or fully confirmed regional habit matches. Keep the
-// underlying literature states available, but keep their rhizome results
-// reviewable under Still possible until the owner rechecks their book.
+// Owner-confirmed priority: Gould and Diggs FLORA first in source conflicts.
+// Both are silent on buffalograss/plains lovegrass rhizomes, so don't infer
+// absent from tuft/stolons or prematurely resolve the opposing secondary
+// literature. Diggs p.1300 explicitly confirms RHIZOMATOUS BASE for Hopia.
 state.refineSelected={};state.selected={head:null,habit:"rhizome",ligule:null,awns:null};
-const disputed=["bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"];
+const disputed=["bouteloua-dactyloides","eragrostis-intermedia"];
 groups=inspect();
 for(const id of disputed){
  assert(groups.unresolved.some(x=>x.s.id===id&&x.rhizomeSourceHold),
-   id+": source-disputed rhizome wrongly presented as confirmed or excluded");
+   id+": top-priority source silence must remain Still possible");
  assert(!groups.confirmed.some(x=>x.s.id===id),
-   id+": conflicting rhizome reports called confirmed");
+   id+": unsupported documentary rhizome match presented as confirmed");
  assert(!groups.excluded.some(x=>x.s.id===id),
    id+": source uncertainty mislabeled as evidence of absence");
 }
+assert(groups.confirmed.some(x=>x.s.id==="hopia-obtusa"),
+ "Diggs Flora p.1300 rhizomatous Hopia base not shown as source-confirmed");
+assert(!groups.unresolved.some(x=>x.s.id==="hopia-obtusa"),
+ "Hopia cannot remain on literature hold after preferred Flora affirmative evidence");
 assert(sum(groups)===vm.runInContext("currentResults().length",sandbox),
- "Rhizome review hold silently removes a grass");
+ "Rhizome decision silently removes a possible grass");
 state.selected={head:null,habit:null,ligule:null,awns:null};
 assert(inspect().confirmed.length===112,"Clearing rhizome restores all 112 scored base grasses");
 
