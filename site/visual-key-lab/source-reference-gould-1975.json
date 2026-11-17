@@ -3866,6 +3866,288 @@
         "url": "https://powo.science.kew.org/taxon/1198286-2",
         "note": "Kew accepts varieties curtipendula and caespitosa and also lists var. tenuis. No treatment of tenuis appears on the photographed page; make no new tenuis morphology claims."
       }
+    },
+    {
+      "added_on": "2026-11-16",
+      "species_id": "polypogon-monspeliensis",
+      "taxon": "Polypogon monspeliensis (L.) Desf.",
+      "current_taxon": "Polypogon monspeliensis",
+      "common_name": "Rabbitfoot grass / Annual beardgrass",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "printed_page": 145,
+      "continuation_page": 147,
+      "citation": "Gould, F. W. (1975), The Grasses of Texas, printed pp. 145 and 147 (owner photographed; p. 146 not supplied)",
+      "source_images": "Owner supplied photographs of printed pages 145 and 147; printed p. 146 was NOT supplied. Only visibly provided material paraphrased; no unshown missing text inferred.",
+      "evidence_level": "EXACT_PHOTOGRAPHED_PUBLISHED_SPECIES_ACCOUNT_NOT_LOCAL_VOUCHER",
+      "copyright_status": "Paraphrased observations; book page images not republished.",
+      "observations": [
+        {
+          "character": "life_history_growth",
+          "details": "Tufted annual, relatively thick weak stems, generally bent upward (geniculate-erect), often rooting at lower nodes; culms about 8–70 cm or sometimes longer.",
+          "height_cm": [
+            8,
+            70
+          ],
+          "variation": "May be taller than 70 cm; lower-node rooting does NOT itself demonstrate true stolons."
+        },
+        {
+          "character": "herbage",
+          "details": "Plants may be smooth or scabrous (rough). This variable overall roughness does not establish leaf hairs."
+        },
+        {
+          "character": "ligule",
+          "details": "Noticeable many-veined scabrous ligule 4–10 mm long. This page does not explicitly distinguish membrane versus hairs in the quoted phrase; H&L and earlier regional evidence already support a membrane.",
+          "length_mm": [
+            4,
+            10
+          ],
+          "source_specific_note": "Save the 4–10 mm reported range without narrowing earlier sources; overlaps current UI medium (3–8) and long (>8) categories."
+        },
+        {
+          "character": "leaf_blade",
+          "details": "Flat leaves, often sharply rough on either or both faces, variable length, mostly 2–8 mm across.",
+          "width_mm_mostly": [
+            2,
+            8
+          ],
+          "blade_shape": "flat",
+          "blade_texture": "scabrous",
+          "blade_hair_presence": "NOT_ESTABLISHED_BY_ROUGHNESS_DESCRIPTION"
+        },
+        {
+          "character": "inflorescence",
+          "details": "Very crowded, bristly panicle with yellowish awns; frequently lobed but seldom strongly interrupted; roughly 2–15 cm or longer, 1–2.5 cm wide.",
+          "length_cm_typical": [
+            2,
+            15
+          ],
+          "can_be_longer": true,
+          "width_cm": [
+            1,
+            2.5
+          ],
+          "architecture": [
+            "dense contracted panicle",
+            "often lobed",
+            "seldom interrupted"
+          ],
+          "note": "Dense fuzzy head should remain different from S. elliottii's sparse open panicle even when both are elongated."
+        },
+        {
+          "character": "spikelets_glumes",
+          "details": "Spikelets on short stalks, crowded on short rough branches. Thin narrow glumes with fine rough hairs; glume body about 1.5–2 mm and usually with small apical lobes.",
+          "glume_body_mm": [
+            1.5,
+            2
+          ],
+          "note": "No length for the visually prominent glume awns is quantified in these supplied excerpts; retain earlier independently sourced values without attributing them to Gould."
+        },
+        {
+          "character": "lemma_palea",
+          "details": "Lemma and palea are delicate, translucent, and much shorter than the glumes. The lemma generally carries a fine, easily shed awn around 1 mm.",
+          "lemma_awn_mm_approx": 1,
+          "awn_variability": "Fine short lemma awn usually present; do not mistake it for conspicuous long glume-awn beard."
+        },
+        {
+          "character": "caryopsis",
+          "details": "Grain brownish with very finely wrinkled surface, about 1 mm or smaller.",
+          "length_mm_max": 1
+        },
+        {
+          "character": "chromosome_report",
+          "details": "Published counts include 2n=14 and 28.",
+          "counts_2n": [
+            14,
+            28
+          ]
+        },
+        {
+          "character": "habitat_and_range",
+          "details": "Historic account reports it occasionally across Texas on sandy stream margins, swales, wet ditches and disturbed sites. Described as European in origin and widespread as a weed in North America; this is not BONAP county nativity evidence.",
+          "origin": "Europe according to photographed flora",
+          "texas_habitat": [
+            "stream edges",
+            "swales",
+            "moist ditches",
+            "waste ground",
+            "often sandy soil"
+          ]
+        },
+        {
+          "character": "flowering",
+          "details": "Main flowering period reported March–July in Texas; climate/year variation still possible.",
+          "months": [
+            "March",
+            "April",
+            "May",
+            "June",
+            "July"
+          ]
+        }
+      ],
+      "nine_main_question_guidance": {
+        "head": "compact is directly typical; long_narrow_panicle can represent an unusually elongated narrow contracted panicle, but the dense bristly habit must be stressed. Not a true simple spike.",
+        "habit": "tuft typical; geniculate lower stems that root at nodes support conditional mat view, not true stolons or creeping rhizomes.",
+        "ligule": "Existing membrane state supported by prior H&L/Flora; Gould reports scabrous many-nerved 4–10 mm ligule.",
+        "awns": "long obvious bristles on head mostly originate from GLUMES per prior Flora/FNA; Gould specifically reports tiny usually deciduous ~1 mm lemma awn as a separate structure.",
+        "blade_width": "2–8 mm spans narrow 2–5 and medium 5–10; choose measured width, never force one range.",
+        "blade_shape": "Flat blades supported; scabrous leaf surface does not mean rolled or folded.",
+        "blade_venation": "Many-nerved LIGULE reported, not a specific vein pattern of the BLADE; blade vein state remains unknown from this page.",
+        "blade_hairs": "Scabrous (rough) blade does not establish macro hair groups; skip/unknown.",
+        "ligule_length": "4–10 mm, spanning medium 3–8 and long >8 choices; specimen-dependent."
+      },
+      "compare_to_sorghastrum_elliottii": "Both may match tuft, membrane, long-awns and elongated narrow head at a broad level. P. monspeliensis is an ANNUAL with very dense bristly 2–15+ cm panicle, small glumes (~1.5–2 mm) and major bristles from glumes; S. elliottii a PERENNIAL with loose 15–25 cm panicle, larger 5.5–7 mm spikelets and long twice-bent LEMMA awn (23–35 mm). Spring vs autumn phenology supports, not proves, comparison.",
+      "classification_decision": {
+        "action": "SAVE_SOURCE_EVIDENCE_AND_SPECIES_LINK; NO_SCORE_OR_PHOTO_CHANGE",
+        "source_authority": "Gould specific species treatment; prior H&L regional vegetative and Diggs reproductive retained for source reconciliation",
+        "local_nativity": "UNRESOLVED_UNCHANGED",
+        "photos": "NOT_TOUCHED"
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Look past overall head length: dense fuzzy vs sparse open?",
+          "check": "Rabbitfoot forms a dense often lobed bristly head, approximately 2–15+ cm. A long narrow silhouette alone overlaps slender Indiangrass, which has a much looser 15–25 cm panicle.",
+          "source": "Gould, F. W. (1975), The Grasses of Texas, printed pp. 145 and 147 (owner photographed; p. 146 not supplied)",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+          "certainty": "Published comparison; measure and examine a mature head."
+        },
+        {
+          "look": "Check annual base, scabrous flat blade and tall ligule",
+          "check": "An annual tuft with lower-node rooting, mostly 2–8 mm rough flat blades, and a 4–10 mm ligule favors P. monspeliensis. A perennial non-rhizomatous tuft with 2–4 mm membrane favors slender Indiangrass, though ranges overlap.",
+          "source": "Gould, F. W. (1975), The Grasses of Texas, printed pp. 145 and 147 (owner photographed; p. 146 not supplied)",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+          "certainty": "Gould author measurements, not a verified local specimen."
+        }
+      ]
+    },
+    {
+      "added_on": "2026-11-16",
+      "species_id": "polypogon-interruptus",
+      "taxon": "Polypogon interruptus Kunth",
+      "common_name": "Ditch polypogon",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "printed_page": 147,
+      "citation": "Gould, F. W. (1975), The Grasses of Texas, p. 147, Polypogon interruptus account.",
+      "evidence_level": "PUBLISHED_ADJACENT_TAXON_DESCRIPTION_SEPARATE_FROM_P_MONSPELIENSIS",
+      "observations": [
+        {
+          "character": "life_cycle",
+          "details": "Perennial, unlike typically annual P. monspeliensis."
+        },
+        {
+          "character": "flowerhead",
+          "details": "Usually more deeply lobed and interrupted panicle than P. monspeliensis; Gould warns these traits vary and poor, short-awned P. monspeliensis can be difficult to separate."
+        },
+        {
+          "character": "spikelet_glumes",
+          "details": "Glume body 2–3 mm long, on average a bit longer than P. monspeliensis, but glume awns shorter.",
+          "glume_body_mm": [
+            2,
+            3
+          ]
+        },
+        {
+          "character": "chromosome_report",
+          "details": "Reported 2n=28.",
+          "chromosome_2n": 28
+        },
+        {
+          "character": "texas_history",
+          "details": "Gould placed Texas report in region 7 based on a historical Devil's River bridge collection in Val Verde County; locality reportedly submerged beneath Amistad Reservoir. A county voucher and current occurrence require separate verification."
+        },
+        {
+          "character": "wide_distribution",
+          "details": "Gould reports broad western North America to South America range."
+        },
+        {
+          "character": "flowering",
+          "details": "Reported April–May.",
+          "months": [
+            "April",
+            "May"
+          ]
+        }
+      ],
+      "classification_decision": {
+        "action": "REFERENCE_ONLY_NO_NEW_SPECIES_PROFILE_OR_TRAITS",
+        "note": "Species was adjacent on photographed page, not an alternative character state to assign to annual beardgrass."
+      }
+    },
+    {
+      "added_on": "2026-11-16",
+      "species_id": "gastridium-ventricosum",
+      "taxon": "Gastridium ventricosum (Gouan) Schinz & Thell.",
+      "common_name": "Nitgrass",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "printed_page": 147,
+      "citation": "Gould, F. W. (1975), The Grasses of Texas, p. 147, Gastridium ventricosum account.",
+      "evidence_level": "INCIDENTAL_SEPARATE_TAXON_ON_OWNER_PAGE_RECORDED_AS_REFERENCE_ONLY",
+      "observations": [
+        {
+          "character": "life_cycle",
+          "details": "Tufted annual with slender weak culms; herbage smooth or nearly so."
+        },
+        {
+          "character": "ligule_and_blade",
+          "details": "Thin membranous ligule usually 3–4 mm. Flat blade mostly 2–6 mm wide and 3–10 cm long; blade surface smooth or scabrous.",
+          "ligule_mm": [
+            3,
+            4
+          ],
+          "blade_width_mm": [
+            2,
+            6
+          ],
+          "blade_length_cm": [
+            3,
+            10
+          ]
+        },
+        {
+          "character": "flowerhead",
+          "details": "Pale-green narrow tightly contracted panicle mostly 5–8 cm with closely packed one-flowered spikelets bearing awns.",
+          "panicle_length_cm": [
+            5,
+            8
+          ]
+        },
+        {
+          "character": "spikelet_glumes",
+          "details": "Disarticulation above glumes; thin lance-shaped, single-veined glumes, longer one about 3–5 mm excluding any awn; other roughly a quarter shorter; glume tips narrow to straight awnlike projections.",
+          "first_glume_body_mm": [
+            3,
+            5
+          ]
+        },
+        {
+          "character": "lemma_and_rachilla",
+          "details": "Lemma and palea approximately 1 mm; lemma somewhat rough/hispid with a 4–5 mm straight or bent awn just below apex; rachilla prolonged behind palea as minute bristle.",
+          "lemma_awn_mm": [
+            4,
+            5
+          ]
+        },
+        {
+          "character": "chromosomes",
+          "details": "Counts reported 2n=14 or 28.",
+          "counts_2n": [
+            14,
+            28
+          ]
+        },
+        {
+          "character": "range",
+          "details": "Gould reported rare casual occurrence in Texas region 10, exotic from Mediterranean region and scattered in the United States, especially parts of California."
+        },
+        {
+          "character": "flowering",
+          "details": "Spring."
+        }
+      ],
+      "classification_decision": {
+        "action": "REFERENCE_ONLY_NO_NEW_SPECIES_PROFILE_OR_TRAITS",
+        "note": "Neighboring genus and species cannot be used as Polypogon characteristics."
+      }
     }
   ],
   "additional_source_image_notes": [
@@ -3883,6 +4165,11 @@
       "received_on": "2026-11-16",
       "subject": "Gould The Grasses of Texas p.579, Sorghastrum elliottii",
       "note": "Captured measurements, ligule auricles, narrow/sparse panicle, long twisted awns, habitat and flowering period as paraphrased species evidence. The lower Andropogon generic description and separate S. secundum historical note are not assigned as elliottii traits. Photos frozen; nine-question scoring unchanged pending dedicated QA."
+    },
+    {
+      "received_on": "2026-11-16",
+      "subject": "Gould, The Grasses of Texas, Polypogon monspeliensis p.145 and continuation p.147, with separate P. interruptus and Gastridium ventricosum p.147",
+      "note": "Paraphrased annual beardgrass description and saved separately displayed neighbors. Printed p.146 not supplied; do not infer omissions. Compared the overlapping beginner field choices to slender Indiangrass; no photos, credits or scores changed."
     }
   ],
   "current_source_priority_rhizome_review": {
