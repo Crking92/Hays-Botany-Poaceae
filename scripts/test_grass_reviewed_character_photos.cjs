@@ -82,7 +82,12 @@ for(const [id,i,creator,license,url] of teaching){
  assert(p,"Existing cited picture missing from Learner: "+id+"/"+i);
  assert.equal(p.creator,creator);assert.equal(p.license,license);
  assert.equal(p.source_page,url);
- assert(p.license_url.startsWith("https://creativecommons.org/licenses/"));
+ if(id==="sporobolus-vaginiflorus"){
+   // Immutable original scored shard is intentionally missing the link;
+   // verified exact-original Commons license is pinned only in display.
+   assert(!p.license_url,"Original archived species/photo metadata must remain unmodified");
+   assert(html.includes('expected_license_url:"https://creativecommons.org/licenses/by-sa/4.0/"'));
+ }else assert(p.license_url.startsWith("https://creativecommons.org/licenses/"));
  assert(html.includes('expected_src:"'+p.src+'"'),"Published photo must use existing exact gallery URL: "+id);
 }
 assert(html.includes('const generalOrganPhotoExamples={')&&html.includes(" glume_marks:[{"),
