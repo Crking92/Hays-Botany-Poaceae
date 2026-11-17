@@ -1,0 +1,512 @@
+{
+  "schema": "HAYS_GOULD_KR_CHARACTER_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "bothriochloa-ischaemum",
+  "scientific": "Bothriochloa ischaemum",
+  "taxon_as_printed": "Bothriochloa ischaemum var. songarica",
+  "historical_synonym": "Andropogon ischaemum var. songaricus",
+  "printed_page": 602,
+  "source_pages": [
+    602,
+    604
+  ],
+  "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "source_material": "Owner photographs of treatment beginning p.602 and continuation p.604; p.603 shows figure captions. No copyrighted page images are republished.",
+  "option_additions": [
+    {
+      "character": "blade_hairs",
+      "option": {
+        "id": "papilla_based_hairs",
+        "label": "Blade hairs arise from small raised bases",
+        "detail": "Inspect the long stiff hairs and their raised papilla-like bases, especially near the ligule. These are blade hairs, not the ligule itself."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "stem_nodes",
+      "option": {
+        "id": "glabrate_aging",
+        "label": "Stem joints lose hairs with age",
+        "detail": "Compare young and older culm nodes on one plant. A formerly bearded node may become nearly hairless; this does not mean every young node is hairless."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "surface_runners",
+      "option": {
+        "id": "management_stolons",
+        "label": "Stolons after close grazing or cutting",
+        "detail": "Gould reports that this tufted historical variety can become somewhat stoloniferous under close grazing or cutting. Confirm an actual surface stem; a low-lying culm alone is insufficient."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "underground_stems",
+      "option": {
+        "id": "management_rhizomes",
+        "label": "Rhizomes after close grazing or cutting",
+        "detail": "Gould permits some rhizomatous growth under close grazing or cutting. Confirm an underground stem; this does not claim every untreated tuft has rhizomes or an extensive Johnsongrass-like network."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "terete_branch_base",
+        "label": "Flowering branches round below spikelets",
+        "detail": "Inspect the slender flowering branch just BELOW its spikelets. Terete describes its round cross-section, not the shape of the culm or glume."
+      },
+      "subgroup": "Flowering branch axis"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "terminal_medial_groove",
+        "label": "Medial groove on terminal rachis joints / pedicels",
+        "detail": "Use magnification on terminal flowering-axis internodes and spikelet pedicels. Gould describes a narrow central groove there, not a pit in a glume."
+      },
+      "subgroup": "Flowering branch axis"
+    },
+    {
+      "character": "floral_hair_position",
+      "option": {
+        "id": "rachis_margin_cilia",
+        "label": "Hairs along flowering rachis-joint margins",
+        "detail": "Trace the hairs to the edges of a flowering branch rachis internode. These are not hairs on the lemma, callus or outer glume."
+      },
+      "subgroup": "Flowering axis and pedicel margins"
+    },
+    {
+      "character": "floral_hair_position",
+      "option": {
+        "id": "pedicel_margin_cilia",
+        "label": "Hairs along spikelet-pedicel margins",
+        "detail": "Inspect the margins of the stalk supporting the pedicelled spikelet. Do not transfer its hairs to the spikelet surface or the culm node."
+      },
+      "subgroup": "Flowering axis and pedicel margins"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_unpitted",
+        "label": "Sessile FIRST glume lacks glandular pit",
+        "detail": "Locate the FIRST (lower) glume of the sessile spikelet. Gould explicitly says no glandular pit or depression; a narrow groove on the rachis is a different organ."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_scabrous_margins",
+        "label": "Sessile FIRST glume has rough margins",
+        "detail": "Inspect the margins of the sessile spikelet's first glume. Roughness is not a claim that every outer glume has the same surface."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_hispid_back",
+        "label": "Sessile FIRST glume has stiff hairs below middle",
+        "detail": "Inspect the back of the lower glume of the stalkless spikelet, below its midpoint. Do not confuse these hairs with the pedicel fringe."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_acute_apex",
+        "label": "Sessile FIRST glume has a pointed apex",
+        "detail": "Follow the lower glume to its acute tip. The glume tip and the true lemma awn are separate structures."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "pedicelled_first_glume_hairless",
+        "label": "Stalked FIRST glume without hairs",
+        "detail": "Find the lower glume of the stalked companion spikelet. Hairless and hairy-below-middle variants are both permitted; this does not assert all sessile glumes are hairless."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "pedicelled_first_glume_hairy_lower",
+        "label": "Stalked FIRST glume hairy below middle",
+        "detail": "Inspect the lower half of the first glume of the stalked companion. This is a variable state, separate from hairs on the pedicel and sessile glume."
+      },
+      "subgroup": "First glume: sessile versus stalked spikelet"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "blade_width",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "narrow"
+      ],
+      "note": "Gould reports blades mostly 2–4 mm broad and 4–20 cm long; uppermost blades greatly reduced. This source-specific usual interval does not erase H&L's 2–5 mm broader account.",
+      "width_mm": [
+        2,
+        4
+      ],
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "blade_hairs",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "base_hairs",
+        "papilla_based_hairs"
+      ],
+      "note": "Blades usually have sparse stiff hairs with long papilla-based hairs, at least near the ligule. Do not call these ligule cilia or assume all blade surfaces are uniformly hairy.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "ligule_length",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "tiny"
+      ],
+      "note": "True ligule is a short truncate membrane, usually 1 mm or less. The page supplies no precise lower endpoint; do not invent one or reject the approximately 1-mm boundary.",
+      "length_mm": [
+        null,
+        1
+      ],
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "ligule_edge",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "truncate"
+      ],
+      "note": "Gould describes a truncate membrane for KR var. songarica, without asserting ciliation here. The separate pitted-bluestem entry below says ciliate; that wording must not be transferred. Existing H&L erose-margin evidence is retained.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "sheath_surface",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "glabrous"
+      ],
+      "note": "Leaf sheaths are hairless. This does not contradict bearded stem nodes or stiff hairs on the blade near the ligule.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "culm_posture",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "erect",
+        "decumbent"
+      ],
+      "note": "Culms may be strictly erect or decumbent, with some long basal trailing shoots. Trailing alone does not prove rooting or a true stolon.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "stem_nodes",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "hairy_nodes",
+        "glabrous_nodes",
+        "glabrate_aging"
+      ],
+      "note": "Culm joints have short beards, losing hairs with age. The hairless state applies to older glabrate nodes, not a universal absence of node hairs.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "surface_runners",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 602,
+      "states": [
+        "management_stolons"
+      ],
+      "condition": "UNDER_CLOSE_GRAZING_OR_CUTTING",
+      "note": "The sentence beginning on p.602 and continuing with cutting on p.604 explicitly permits some stoloniferous growth under close grazing or cutting. Preserve H&L p.37 no-stolon report as a differently scoped/source-specific alternative, not a universal veto.",
+      "source_disagreement": "Gould exact var. songarica permits management-conditioned stolons; H&L's broader account reports none. Retain both reports, taxon and management scope.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "underground_stems",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 602,
+      "states": [
+        "management_rhizomes"
+      ],
+      "condition": "UNDER_CLOSE_GRAZING_OR_CUTTING",
+      "note": "Gould exact historical variety may become somewhat rhizomatous after close grazing or cutting. This supports an observed conditional underground-stem state, not a long scaly rhizome or its universal presence.",
+      "source_disagreement": "Gould permits management-conditioned rhizomes; existing H&L reports none. Primary evidence is conditional and does not certify rhizomes on an untreated tuft.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "spikelet_position",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "terete_branch_base",
+        "terminal_medial_groove"
+      ],
+      "note": "Slender flowering branches are terete below the spikelets. At least terminal rachis internodes and pedicels have a narrow medial groove. Neither groove is a glandular pit in a glume or a culm feature.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "floral_hair_position",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "rachis_margin_cilia",
+        "pedicel_margin_cilia"
+      ],
+      "note": "Flowering branch rachis internodes and pedicels are ciliate on their margins. Exact hair attachment matters: do not count these as lemma, glume or callus hairs.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "glume_marks",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "sessile_first_glume_unpitted",
+        "sessile_first_glume_scabrous_margins",
+        "sessile_first_glume_hispid_back",
+        "sessile_first_glume_acute_apex",
+        "pedicelled_first_glume_hairless",
+        "pedicelled_first_glume_hairy_lower"
+      ],
+      "note": "In the sessile spikelet the FIRST glume lacks a glandular pit/depression, is usually rough at the margins and stiff-hairy on the back below midlength, with an acute apex. The pedicelled FIRST glume may be hairless or hairy below the middle. These alternatives are organ-specific, not all observations on every individual.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    },
+    {
+      "id": "bothriochloa-ischaemum",
+      "scientific": "Bothriochloa ischaemum",
+      "character": "true_lemma_awn",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 604,
+      "states": [
+        "short",
+        "bent_twisted",
+        "fertile_awn_1_to_1_5mm",
+        "pedicelled_awnless"
+      ],
+      "awn_length_mm": [
+        1,
+        1.5
+      ],
+      "note": "Gould prints mostly 1–1.5 mm for the geniculate and twisted lemma awn. The staminate pedicelled spikelet is awnless. Retain the inherited FNA 9–17-mm report as an unresolved alternative; do not silently convert mm to cm or infer the KR awn falls off from the Johnsongrass account.",
+      "source_disagreement": "Gould pp.602/604 and Diggs p.1246 print 1–1.5 mm for historical var. songarica; the inherited FNA-backed review gives 9–17 mm. Preserve source/taxon scope and both units as reported; no awn-length exclusion is introduced.",
+      "source_pages": [
+        602,
+        604
+      ],
+      "taxon_scope": "Gould exact Bothriochloa ischaemum var. songarica; mapped positively into existing species aggregate, not asserted of every variety or every plant.",
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Positive, variety- and condition-scoped morphology. Unrecorded taxa, variants and management conditions remain possible; not a Hays voucher."
+    }
+  ],
+  "core_awn_addition": "short_single",
+  "learner_diagnostic_checks": [
+    {
+      "look": "Check the tuft and its grazing/cutting history",
+      "check": "Gould's var. songarica is tufted, with erect or basally decumbent culms, and can become somewhat stoloniferous or rhizomatous under close grazing or cutting. Do not infer either structure from a low culm alone. Nodes are shortly bearded and become glabrate with age; sheaths are hairless.",
+      "compare": "H&L p.37 reports no stolons/rhizomes for its account. Preserve the source and management distinction rather than rejecting a source-permitted growth form.",
+      "certainty": "Exact historical-variety treatment, pp.602/604; no verified local specimen or universal management response.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Separate the sessile and stalked FIRST glumes",
+      "check": "The sessile spikelet is mostly 3–4.5 mm. Its first glume lacks a glandular pit/depression, usually has rough margins and stiff hairs below the middle of its back, and ends in an acute tip. The stalked staminate partner is similar in length but narrower; its first glume may be hairless or hairy below the middle.",
+      "compare": "The adjacent B. pertusa description has a deep medial glandular pit in the sessile first glume. Do not transfer pitted-bluestem traits into KR or confuse a rachis groove with a glume pit.",
+      "certainty": "Gould p.604; exact organs and historical variety preserved, not a photo-based species verification.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Trace margin hairs and the tiny bent lemma awn",
+      "check": "Branch rachis internodes and pedicels have marginal cilia, with a narrow central groove at least on the terminal units. Gould gives a geniculate twisted lemma awn mostly 1–1.5 mm; the stalked staminate spikelet is awnless. Blade papilla-based hairs near the ligule are a separate feature.",
+      "compare": "The inherited FNA-backed record gives 9–17 mm for lemma awns. Gould/Diggs are preferred for the scoped description; keep the larger report visible and do not recode units or call awns deciduous without evidence.",
+      "certainty": "Published source discrepancy retained; photographs and measured local spikelets not reverified.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa ischaemum var. songarica, printed pp. 602 and 604",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "non_scoring_context": {
+    "usual_culm_height_cm": [
+      30,
+      50
+    ],
+    "occasional_culm_length_cm": "Over 100 when basally decumbent or trailing; length is not necessarily erect height.",
+    "blade_length_cm": [
+      4,
+      20
+    ],
+    "blade_width_mm_usual": [
+      2,
+      4
+    ],
+    "uppermost_blade": "Greatly reduced.",
+    "inflorescence_length_cm": [
+      4,
+      10
+    ],
+    "exsertion": "Inflorescence well above the uppermost leaf.",
+    "primary_branches": "Usually about 2–8; a parenthetical 1 is also printed. No mandatory branch-count minimum is introduced.",
+    "branch_length_cm": [
+      3,
+      9
+    ],
+    "rebranching": "Primary branches infrequently rebranched.",
+    "sessile_spikelet_length_mm": [
+      3,
+      4.5
+    ],
+    "sessile_spikelet_shape": "Narrowly ovate.",
+    "pedicelled_spikelet": "Staminate, awnless, about as long as sessile companion but usually narrower.",
+    "chromosome_2n": [
+      40,
+      50,
+      60
+    ],
+    "historical_distribution": "Texas regions 2–7; introduced roadside and pasture grass in the account. Not a county-nativity finding.",
+    "historical_phenology": "Mostly July–November, potentially throughout the year under favorable growing conditions.",
+    "separate_taxon": "The B. pertusa entry below describes pitted bluestem, a different taxon. Its ciliate ligule, deep glume pit and other measurements are not assigned to KR."
+  },
+  "omissions_not_absences": [
+    "Gould does not say the KR ligule is ciliate here.",
+    "No measured width may be inferred for the greatly reduced top leaf.",
+    "Conditional underground stems are not proof of their presence on every tuft.",
+    "No evidence here of deciduous KR awns, unlike the Johnsongrass passage.",
+    "No floret count inside a single spikelet is supplied here."
+  ]
+}
