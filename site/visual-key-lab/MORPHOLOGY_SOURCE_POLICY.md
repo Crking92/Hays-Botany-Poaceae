@@ -1,3 +1,16 @@
+# Owner reconfirmation — 2026-11-17: two controlling books while field data are checked
+
+**Authoritative starting pair for EVERY grass-character decision (reproductive and vegetative):**
+
+1. **Frank W. Gould (1975), *The Grasses of Texas* — FIRST authority.** Preserve the exact printed species or variety account, page(s), measurements, organ and historical name; never borrow a neighboring treatment.
+2. **Diggs, Lipscomb & O'Kennon (1999), *Illustrated Flora of North Central Texas* — SECOND authority.** Consult the exact taxon/organ treatment to confirm Gould or fill gaps. An explicit Gould statement about the same organ and taxon concept has precedence until duly reconciled with **verified local evidence**.
+
+**Supplementary, NOT coequal authorities:** Hagenbuch & Lemke (2015) and FNA/Kew/UT/other exact-species sources remain useful for what the two books do not cover and for documenting contradictions; they do not silently override either book. The owner is **still verifying the data**. A locally collected or documented, correctly identified Hays County / nearby western-northern specimen or herbarium voucher—with actual observable organ, date/place and provenance—may justify a qualified local character state or carefully reviewed departure, **not** rewriting all specimens or treating a claimed occurrence as automatically native. BONAP county nativity and photo rights have their own independent checks.
+
+**Current workflow:** botanical descriptions, synonyms, option/suboption mapping, unknowns, differential diagnoses and test regressions are active. **No searches, downloads, new uploads, gallery replacement, image caption/credit edits, anatomy arrows or diagrams until the owner explicitly reauthorizes photo work.** Retain photos, rights decisions, source links and earlier QA. Book screenshots are usable *as scientific evidence* with printed-page attribution, but do not rehost the copyrighted scans or figures. Preserve genuinely unresolved book disagreements (e.g. King Ranch bluestem awn length) instead of fabricating certainty. All historical source-role guidance lower in this file is **superseded** when it conflicts with this current directive.
+
+---
+
 # Owner's current high-priority flora rule — 2026-11-16
 
 **Use the following priority order for EVERY new grass-character decision throughout the Poaceae project, whether vegetative or reproductive:**
