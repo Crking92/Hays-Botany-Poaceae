@@ -695,7 +695,29 @@ const generalOrganPhotoExamples={
    visible:"The photographer directly labels the FIRST (lower) and SECOND (upper) glumes, lemma and palea on two views of the same spikelet, with a 3-mm scale. This is a nonlocal Austrian reference specimen, not a Hays County voucher.",
    limit:"The photographed labels establish the organs, NOT whether either glume has exactly one vein. Do not use this plate as a positive example for either one-vein button or to identify a Texas field specimen without further evidence."
  }
- ]
+ ],
+ // These are reference photographs of distinct REAL florets, not species
+ // matches for any exact awn length, sterile-awn state, or change of curvature.
+ // Kleberg reveals a true awned fertile floret; Vaseygrass separates sterile
+ // from fertile lemmas so novices don't mistake every bract for a glume.
+ true_lemma_awn:[{
+   species_id:"dichanthium-annulatum",photo_i:2,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Dichanthium_annulatum_spikelet_fertile1_(7101178725).jpg",
+   expected_creator:"Harry Rose (Macleay Grass Man)",expected_license:"CC BY 2.0",
+   expected_license_url:"https://creativecommons.org/licenses/by/2.0/",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Dichanthium/dichanthium-annulatum/images/harry-rose-ccby-kleberg-dissected-fertile-floret.jpg",
+   visible:"This partially opened Kleberg bluestem fertile spikelet shows the outer glumes spread away from the tiny inner floret and a long dark projecting lemma awn. It illustrates that an awn can belong to the FERTILE lemma rather than to a glume or the accompanying awnless spikelet.",
+   limit:"The narrow exact awn insertion and floret-base callus are not exposed well enough for a numbered pixel arrow. This photo does NOT show a 2–5 mm awn: Kleberg bluestem awns are much longer. It does NOT establish a sterile-floret awn or a Hays wild voucher."
+ },
+ {
+   species_id:"paspalum-urvillei",photo_i:1,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File%3APaspalum_urvillei_spikelet3_annotated_%287391787304%29.jpg",
+   expected_creator:"Harry Rose",expected_license:"CC BY 2.0",
+   expected_license_url:"https://creativecommons.org/licenses/by/2.0/",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Paspalum/paspalum-urvillei/images/harry-rose-spikelet-annotated.jpg",
+   visible:"The original photographer labels the LOWER STERILE LEMMA separately from the shiny UPPER FERTILE LEMMA and palea, plus the upper glume and dark stigmas. Compare the soft outer sterile lemma against the smooth, inner fertile lemma.",
+   limit:"The photographer states that the lower glume is missing from this spikelet. Vaseygrass is an awnless organ-comparison example: it does NOT demonstrate any 2–5 mm awn, a sterile-lemma awn, or an awn changing from straight to bent."
+ }]
 };
 // Option-specific examples must actually show the selected anatomical feature.
 const choiceSpecificPhotoExamples={

@@ -377,6 +377,42 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text()=="169 possible"
 
+    # First show TRUE sterile-vs-fertile lemma anatomy with two separate,
+    # already-hosted photographer-labeled organ photographs. This general
+    # comparison is NOT evidence for an exact 2-5mm awn or sterile awn state.
+    choose_extra(page,"Flowers / spikelets","true_lemma_awn","fertile_awn_2_to_5mm")
+    lemma_group=page.locator('#optional-character-groups .optional-group[data-character="true_lemma_awn"]')
+    lesson=lemma_group.locator(".character-photo-reference-gallery")
+    labeled=lesson.locator("figure.character-photo-example")
+    assert labeled.count()==2, f"{name}: two fertile/sterile lemma anatomy references missing"
+    captions=lesson.inner_text()
+    assert "Kleberg bluestem" in captions and "Vaseygrass" in captions
+    assert "LOWER STERILE LEMMA" in captions and "UPPER FERTILE LEMMA" in captions
+    assert "does NOT show a 2–5 mm awn" in captions and "does NOT demonstrate any 2–5 mm awn" in captions, (
+        f"{name}: teaching references falsely claim a diagnostic short awn")
+    for source in [
+        "https://commons.wikimedia.org/wiki/File:Dichanthium_annulatum_spikelet_fertile1_(7101178725).jpg",
+        "https://commons.wikimedia.org/wiki/File%3APaspalum_urvillei_spikelet3_annotated_%287391787304%29.jpg"
+    ]:
+        assert lesson.locator('a[href="'+source+'"]').count()==1, f"{name}: original anatomy source not linked"
+    assert lesson.locator('a[href="https://creativecommons.org/licenses/by/2.0/"]').count()==2
+    for fig in labeled.all():
+        assert "Anatomy reference only" in fig.inner_text() and "Harry Rose" in fig.inner_text()
+        assert fig.locator("svg.field-photo-arrows").count()==0
+        img=fig.locator("img")
+        img.scroll_into_view_if_needed()
+        img.evaluate("(im)=>{im.loading='eager'}")
+        img.evaluate("(im)=>im.decode()")
+        assert min(img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100
+        assert img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
+    assert lemma_group.locator(".choice-specific-photo-slot figure").count()==0, (
+        f"{name}: general lemma anatomy falsely placed as positive 2-5mm evidence")
+    for choice in ["lower_sterile_awn_variable","straight_or_bent"]:
+        choose_extra(page,"Flowers / spikelets","true_lemma_awn",choice)
+        assert lesson.locator("figure.character-photo-example").count()==2
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text()=="169 possible"
+
     # Japanese brome is a source-author-labeled picture of real LEMMAS and
     # attached awns. It does not establish whether a particular awn bends
     # with maturity or its length, and never stays visible for sterile awns.
