@@ -1554,7 +1554,7 @@ function renderOptionalCharacters(){
        if(next.length)state.refineSelected[c.id]=c.multi_select?next:next[0];
        else delete state.refineSelected[c.id];
        choices.querySelectorAll("button[data-option]").forEach(x=>x.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(x.dataset.option))));
-       updateChosen();updateUrl();renderBeginnerChecks();renderResults();refreshVeinGuide();
+       updateChosen();updateUrl();renderResults();refreshVeinGuide();renderBeginnerChecks();
        tabs.querySelectorAll("button").forEach((x,i)=>{const section=sections[i][0];const count=state.refineCharacters.filter(k=>refinementSection(k.id)===section&&selectedRefinementStates(k.id).length).length;x.textContent=sections[i][1]+(count?" ("+count+")":"")});
      });
      return b;
