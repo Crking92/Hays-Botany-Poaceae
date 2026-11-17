@@ -2931,9 +2931,24 @@ function appendPublishedChoiceGuide(character,option,guide){
 }
 
 function applyVirginiaGouldSupplement(pack){
- if(pack.schema!=="HAYS_GOULD_VIRGINIA_CHARACTER_SUPPLEMENT_V1"||
-    pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!=="elymus-virginicus"||
-    pack.printed_page!==166||!Array.isArray(pack.option_additions)||!Array.isArray(pack.evidence)||
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_VIRGINIA_CHARACTER_SUPPLEMENT_V1",id:"elymus-virginicus",scientific:"Elymus virginicus",page:166});
+}
+function applyJohnsongrassGouldSupplement(pack){
+ if(pack.core_awn_addition!=="short_single"||!Array.isArray(pack.learner_diagnostic_checks)||
+    pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>
+     !c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))
+  throw Error("Invalid Johnsongrass core/lesson source");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_JOHNSONGRASS_CHARACTER_SUPPLEMENT_V1",id:"sorghum-halepense",scientific:"Sorghum halepense",page:575});
+ const species=state.species.find(s=>s.id==="sorghum-halepense");
+ species.traits.awns=[...new Set([...species.traits.awns,pack.core_awn_addition])];
+ species.gould_character_source={source:pack.source,printed_page:575,
+  note:"Gould short/absent awn path; existing FNA longer-awn variation retained as a source disagreement."};
+ species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
+}
+function applyGouldCharacterSupplement(pack,expected){
+ if(pack.schema!==expected.schema||
+    pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
+    pack.printed_page!==expected.page||!Array.isArray(pack.option_additions)||!Array.isArray(pack.evidence)||
     !state.species.some(s=>s.id===pack.species_id&&!s.trial))throw Error("Invalid Virginia source supplement");
  const characters=structuredClone(state.refineCharacters),records=structuredClone(state.refineEvidenceMap);
  const groups=new Map(characters.map(c=>[c.id,c])),newKeys=new Set();
@@ -2955,8 +2970,8 @@ function applyVirginiaGouldSupplement(pack){
  const covered=new Set(),seen=new Set();
  for(const row of pack.evidence){
   const group=groups.get(row.character);
-  if(row.id!==pack.species_id||row.scientific!=="Elymus virginicus"||!group||seen.has(row.character)||
-     row.pdf_printed_page!==166||row.source_status!=="READY_PRIMARY"||!row.source?.includes("Gould")||
+  if(row.id!==pack.species_id||row.scientific!==expected.scientific||!group||seen.has(row.character)||
+     row.pdf_printed_page!==expected.page||row.source_status!=="READY_PRIMARY"||!row.source?.includes("Gould")||
      !row.source_url?.startsWith("https://")||!row.note||!row.source_scope_caution||
      !Array.isArray(row.states)||!row.states.length||row.states.some(v=>!group.options.some(o=>o.id===v)))
    throw Error("Invalid exact-species Gould evidence");
@@ -3638,6 +3653,12 @@ try{
  if(!response.ok)throw Error("Virginia Gould supplement unavailable");
  applyVirginiaGouldSupplement(await response.json());
 }catch(err){console.warn("Virginia Gould character supplement held; prior evidence preserved",err)}
+// Gould p.575 follows the preserved Virginia supplement and earlier historical validators.
+try{
+ const response=await fetch("gould-johnsongrass-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Johnsongrass Gould supplement unavailable");
+ applyJohnsongrassGouldSupplement(await response.json());
+}catch(err){console.warn("Johnsongrass Gould character supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
