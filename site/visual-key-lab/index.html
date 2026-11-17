@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -919,6 +919,8 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ const proof=s.exact_ungrooved_proof;
+ if(s.id==="dichanthium-annulatum"&&proof?.schema==="EXACT_KLEBERG_UNGROOVED_V1"&&proof.pdf_printed_page===1263&&selectedRefinementStates("spikelet_position").includes("terminal_medial_groove"))conflicts.push({character:"spikelet_position",label:"Flowering branch / pedicel groove",reported:"Branches and pedicels without groove or membranous area",source:proof.source,source_url:proof.source_url,note:proof.note,policy:"EXACT_KLEBERG_EXPLICIT_UNGROOVED"});
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
@@ -3131,6 +3133,34 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyDichanthiumGouldSupplement(pack){
+ const p=pack.exact_ungrooved_proof;
+ if(pack.schema!=="HAYS_GOULD_DICHANTHIUM_PAIR_V1"||pack.printed_page!==559||p?.schema!=="EXACT_KLEBERG_UNGROOVED_V1"||p.species_id!=="dichanthium-annulatum"||p.character!=="spikelet_position"||p.conflicting_state!=="terminal_medial_groove"||p.pdf_printed_page!==1263||!p.source?.includes("exact Dichanthium annulatum")||!p.source?.includes("Diggs")||!p.source_url?.startsWith("https://")||!p.note||!Array.isArray(pack.secondary_evidence)||pack.secondary_evidence.length!==3)throw Error("Invalid Dichanthium exact-source proof");
+ for(const b of [pack.angleton,pack.kleberg])if(!Array.isArray(b?.learner_diagnostic_checks)||b.learner_diagnostic_checks.length!==3)throw Error("Invalid pair diagnostics");
+ const chars=state.refineCharacters,records=state.refineEvidenceMap;
+ try{
+ applyGouldCharacterSupplement(pack.angleton,{schema:"HAYS_GOULD_ANGLETON_SUPPLEMENT_V1",id:"dichanthium-aristatum",scientific:"Dichanthium aristatum",page:559});
+ applyGouldCharacterSupplement(pack.kleberg,{schema:"HAYS_GOULD_KLEBERG_SUPPLEMENT_V1",id:"dichanthium-annulatum",scientific:"Dichanthium annulatum",page:559});
+ if(!Array.isArray(pack.secondary_option_additions)||pack.secondary_option_additions.length!==3)throw Error("Invalid secondary option count");
+ for(const a of pack.secondary_option_additions){
+  const c=state.refineCharacters.find(c=>c.id===a.character),o=a.option;
+  if(!c||!o?.id||!o.label||!o.detail||c.options.some(x=>x.id===o.id)||!pack.secondary_evidence.some(r=>r.character===c.id&&r.states.includes(o.id)))throw Error("Invalid secondary option source");
+  c.options.push(structuredClone(o));c.multi_select=true;
+  if(Array.isArray(c.subgroups)){if(!a.subgroup)throw Error("Missing secondary subgroup");let group=c.subgroups.find(g=>g.label===a.subgroup);if(!group){group={label:a.subgroup,options:[]};c.subgroups.push(group)}group.options.push(o.id)}
+ }
+ for(const r of pack.secondary_evidence){
+  const c=state.refineCharacters.find(c=>c.id===r.character);
+  if(r.id!=="dichanthium-annulatum"||r.scientific!=="Dichanthium annulatum"||r.pdf_printed_page!==1263||!r.source?.includes("Diggs")||!r.source?.includes("exact Dichanthium annulatum")||!r.source_url?.startsWith("https://")||r.source_status!=="READY_PRIMARY"||!r.note||!r.source_scope_caution||!c||!Array.isArray(r.states)||!r.states.length||r.states.some(v=>!c.options.some(o=>o.id===v)))throw Error("Invalid Kleberg secondary evidence");
+  const bucket=state.refineEvidenceMap[r.id]??=[],old=bucket.find(e=>e.character===r.character);
+  if(old){old.states=[...new Set([...old.states,...r.states])];old.additional_state_sources??={};for(const v of r.states)old.additional_state_sources[v]=structuredClone(r)}else bucket.push(structuredClone(r));
+ }
+ }catch(e){state.refineCharacters=chars;state.refineEvidenceMap=records;throw e;}
+ for(const [id,b]of [["dichanthium-aristatum",pack.angleton],["dichanthium-annulatum",pack.kleberg]]){
+  const s=state.species.find(s=>s.id===id);s.diagnostic_checks=[...b.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+  s.field_rule="Gould p.559: "+(id==="dichanthium-aristatum"?"Angleton has pubescent flowering axis/branch bases and often becomes hairless at culm nodes with age. Do not borrow Kleberg’s explicit groove absence.":"Kleberg has hairless flowering axis/branch bases. Diggs exact text p.1263 explicitly reports ungrooved branches/pedicels; a verified KR groove conflicts. Basal pairs and upper fertile spikelets differ in awns.")+"\n\n"+s.field_rule;
+ }
+ state.species.find(s=>s.id==="dichanthium-annulatum").exact_ungrooved_proof=structuredClone(p);
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3881,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-dichanthium-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Dichanthium Gould supplement unavailable");
+ applyDichanthiumGouldSupplement(await response.json());
+}catch(err){console.warn("Dichanthium pair held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3984,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
