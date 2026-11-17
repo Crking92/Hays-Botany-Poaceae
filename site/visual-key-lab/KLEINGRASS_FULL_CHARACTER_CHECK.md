@@ -37,7 +37,7 @@ Snapshot: main `d2ae1a893df4d347b2cbe1578ad59813416bebe0` plus this supplement. 
 
 The initial live rhizome + short-knotty-underground-stem route showed Kleingrass as one of three supported matches. That is too certain after the owner's preferred Gould source explicitly says rhizomes are not developed. The source data and older diagnostic text remain stored; the main rhizome state and advanced rhizome variants now remain **possible/unresolved**, award no held-trait ranking point and receive an explicit source-disagreement notice. A knotty crown no longer serves as proof of a rhizome. No hard deletion/exclusion of broader regional or overseas variety evidence is introduced.
 
-The existing `lower_reduced` record came from a generic Diggs key using about a quarter-length first glume. Gould's exact account gives a present 1–1.5-mm first glume against 2.8–3.2-mm spikelets. New precise present/shorter and shape choices are supported; the ambiguous “tiny or missing” route remains held, without erasing its older citation.
+The existing `lower_reduced` record came from the Diggs p.1293 Panicum key couplet specifically identifying P. coloratum using about a quarter-length first glume. Gould's exact account gives a present 1–1.5-mm first glume against 2.8–3.2-mm spikelets. New precise present/shorter and shape choices are supported; the ambiguous “tiny or missing” route remains held, without erasing its older citation.
 
 Fourteen new choices and thirteen primary evidence groups are added in `gould-kleingrass-character-supplement.json`. Three exact-source diagnostic checks lead the Kleingrass detail panel. The source's node, sheath and blade hair variants remain alternatives. Its 0.5–2-mm ligule range includes hairs. Morphological facts omitted by Gould remain unknown or separately attributed to existing lower-priority sources.
 
@@ -52,3 +52,7 @@ Height mostly 60–135 cm, panicle mostly 8–25 cm, spikelet and first-glume me
 - New male-floret/palea observations cannot accidentally trigger numeric floret-count exclusions.
 - Virginia, Johnsongrass and KR regressions pass; original photos, credits, diagrams, source-history and neighboring switchgrass data are unchanged.
 - Preview full book combination: **1 supported Kleingrass match, 28 unresolved**. Preview disputed rhizome combination: **2 other supported matches, 21 unresolved including Kleingrass**. All 169 are accounted for. Live deployment is verified separately after CI and merge.
+
+## Direct Diggs cross-check
+
+The owner-connected official monocot excerpt was read for the exact P. coloratum entry on printed p.1296 and its genus-key couplet on p.1293. The named entry corroborates the knotty tuft, source height, 0.5–2-mm fringed membrane including hairs, variable sheath/blade pubescence and historical forage/phenology account. It does not state rhizome presence or absence, so no absence is inferred from silence. The p.1293 key describes a reduced PRESENT first glume, not a missing one. Both sources remain preserved beside the precise Gould measurements and the UI mapping hold. No book pages or figures are rehosted.
