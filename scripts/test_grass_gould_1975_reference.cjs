@@ -524,6 +524,22 @@ assert(html.includes('ligule_edge:["entire"')===false,
  "Existing detailed ligule option IDs must remain runtime-driven rather than a new scoring table");
 assert.equal(read("species-c3.json").find(x=>x.id==="tripsacum-dactyloides").traits.ligule.includes("membrane"),true);
 
+// Owner-photographed Gould p.321 Chloris verticillata source intake.
+const tumbleGould=source.additional_species_treatments.find(x=>x.species_id==="chloris-verticillata");
+const tumbleCard=read("species-a.json").find(x=>x.id==="chloris-verticillata");
+assert(tumbleGould&&tumbleGould.printed_page===321,"Exact owner-supplied p.321 record must remain");
+assert(tumbleCard?.character_evidence?.gould_1975_page_321,"Gould evidence linked to correct Learner species");
+assert.equal(tumbleGould.observations.find(x=>x.character==="ligule").cilia_max_mm,2,
+ "2mm hair length belongs to cilia, not membrane-height score");
+assert.equal(tumbleGould.observations.find(x=>x.character==="ligule").membrane_mm_from_Gould,"NOT_REPORTED");
+assert.deepEqual(tumbleGould.observations.find(x=>x.character==="flowerhead").whorls,[2,5]);
+assert.deepEqual(tumbleGould.observations.find(x=>x.character==="lower_fertile_floret_lemma").awn_length_mm,[4.8,9]);
+assert.deepEqual(tumbleGould.observations.find(x=>x.character==="sterile_floret").awn_length_mm,[3.2,7]);
+assert(tumbleGould.observations.find(x=>x.character==="hybridization").other_taxon==="Chloris cucullata");
+assert.deepEqual(tumbleCard.traits,{head:["whorls","one_sided","many_one_sided"],habit:["tuft","mat"],ligule:["membrane","hairs"],awns:["long"]},"No unintended four-core score change");
+assert.equal(tumbleCard.range,"UNRESOLVED");
+assert.equal(tumbleCard.photos.length,8,"Existing photo gallery unchanged");
+
 console.log("PASS: three new Gould photographed passages source-pinned, page holds intact and no false rhizome conclusions");
 console.log("PASS: Gould p.213 Tridentopsis elongata, p.542 Melinis repens and p.469 Megathyrsus maximus saved, preserving protected key scoring");
 

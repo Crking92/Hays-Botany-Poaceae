@@ -1988,6 +1988,52 @@
         "status": "EXACT_SPECIES_FNA_KEW_UNILATERAL_RACEMES_AND_COUNTS_ADDITIVE_HEAD_MATCH",
         "review_date": "2026-11-13",
         "photo_voucher_support": "Literature-scored field-choice aliases only. No new specimen, exact image or spikelet re-identification."
+      },
+      "gould_1975_page_321": {
+        "source": "Gould, F. W. (1975), The Grasses of Texas, printed p. 321, Chloris verticillata",
+        "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "source_record": "source-reference-gould-1975.json additional_species_treatments species_id=chloris-verticillata printed_page=321",
+        "category": "owner_photographed_species_treatment",
+        "recorded_on": "2026-11-17",
+        "status": "SOURCE_INTAKE_COMPLETE_NO_NINE_TAB_OR_ADVANCED_SCORE_CHANGE",
+        "source_summary": {
+          "culm": "perennial 15–40 cm erect to decumbent, glabrous",
+          "sheaths": "glabrous",
+          "ligule": "ciliate crown with hairs up to 2 mm (not measured membrane height)",
+          "blades": "up to 15 cm long, 2–3 mm wide, glabrous to scabrous",
+          "head": "10–16 branches in 2–5 spaced whorls, 5–15 cm racemes, spikelets 4–7 per cm",
+          "glumes": "lower 2–3 mm, upper 2.8–3.5 mm",
+          "fertile_lemma": "lower 2–3.5 mm, appressed-pubescent margins, glabrous keel, awn 4.8–9 mm",
+          "sterile_floret": "one oblong inflated 1.1–2.3 mm, awn 3.2–7 mm",
+          "chromosomes": "2n=40",
+          "flowering": "May–September",
+          "gould_regions": [
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "hybrid_warning": "C. cucullata intermediates where both parents coexist"
+        },
+        "nine_tab_review": {
+          "flowerhead": "`whorls` strongly supported: 10–16 racemes in 2–5 separated whorls, 5–15 cm long. `one_sided` and `many_one_sided` are supported by previously saved Diggs/FNA; do NOT infer one-sided spikelet insertion from Gould's 'appressed' alone. Keep multiple broad alternatives valid.",
+          "growth_form": "Erect to decumbent perennial supported. Existing tuft/mat states come from other verified vegetative and growth evidence; Gould p.321 does not establish true stolons from 'decumbent' alone.",
+          "leaf_collar": "Gould's ciliate crown (cilia to 2 mm) is a published appearance. The existing short ciliate MEMBRANE type is documented in H&L p.42. The new Part A should recognize visible hairs without converting a ciliate rim into a pure hair-only anatomical claim.",
+          "awns": "Long conspicuous true awns: lower fertile lemma 4.8–9 mm, upper sterile floret 3.2–7 mm. Trace attachment separately; keep 'long' main state.",
+          "leaf_width": "Most blades 2–3 mm per Gould, agreeing within H&L published 1–3 mm. Because the 2-mm threshold overlaps `thread` and `narrow`, do not force single bin.",
+          "leaf_shape": "No folded/flat cross-section stated on this page. Existing H&L folded character stays as separate regional evidence, not overridden.",
+          "leaf_veins": "No blade vein character from this page; glume scabrous midnerve is NOT a leaf midrib trait.",
+          "leaf_hairs": "Gould says glabrous to scabrous; roughness does not equal true hair. Keep no forced hairy blade choice.",
+          "ligule_length": "Gould reports HAIRS up to 2 mm, not membrane height. Existing H&L membrane 1–2 mm remains separate measured evidence; do not change numeric filter from Gould."
+        },
+        "open_questions": [
+          "Compare lower fertile lemma smooth-keel vs pubescent margins and existing conditional smooth whole-lemma option",
+          "Check ciliate membrane vs Gould ciliate crown in true inner ligule photographs; do not hard-exclude from new edge selection",
+          "No blade vein or new blade hair score from this page"
+        ],
+        "no_score_or_photo_change": true,
+        "locality": "BONAP COUNTY LEVEL NOT VALIDATED_FROM_GOULD"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -2023,6 +2069,33 @@
         "certainty": "Primary regional vegetative ligule text and FNA checked, no direct new voucher/photo",
         "source": "Hagenbuch & Lemke (2015), p.42; FNA Chloris verticillata",
         "url": "https://biorepo.neonscience.org/portal/taxa/index.php?taxon=17600"
+      },
+      {
+        "look": "Count the separated windmill whorls",
+        "check": "Gould p.321 describes 10–16 spreading racemes, 5–15 cm each, in 2–5 whorls separated by at least about 5 mm, usually ending in an erect upper branch.",
+        "compare": "Hooded windmillgrass (*Chloris cucullata*) often has shorter, more crowded branches, but hybrids can have intermediate forms.",
+        "certainty": "Gould printed p.321; a head silhouette or presumed hybrid alone never certifies species identity.",
+        "source": "Gould, F. W. (1975), The Grasses of Texas, printed p. 321, Chloris verticillata",
+        "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "source_intake": "Gould p.321 owner photograph"
+      },
+      {
+        "look": "Separate awns of fertile and sterile florets",
+        "check": "The lower fertile lemma is 2–3.5 mm with an awn about 4.8–9 mm; one oblong somewhat inflated upper sterile floret is 1.1–2.3 mm with a 3.2–7 mm awn. A hairy margin on the fertile lemma can coexist with a hairless keel.",
+        "compare": "Compare hooded windmillgrass's more rounded hood-like sterile lemma and generally shorter awns; verify an intact mature floret before naming a specimen.",
+        "certainty": "Gould p.321; no new dissection photo or ruler verified.",
+        "source": "Gould, F. W. (1975), The Grasses of Texas, printed p. 321, Chloris verticillata",
+        "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "source_intake": "Gould p.321 owner photograph"
+      },
+      {
+        "look": "Check what Gould means by a ciliate ligule crown",
+        "check": "The page reports cilia to 2 mm but no distinct membrane-height measurement. H&L p.42 describes a 1–2 mm membrane with a ciliate rim. Use the Leaf collar Part A and B separately and don't label the 2 mm cilia as membrane height.",
+        "compare": "Ligule character can be shared by *C. cucullata* and windmillgrass intermediates; whorled head and mature floral organs still matter.",
+        "certainty": "Published Gould and H&L descriptions; inner leaf-collar photo currently not independently isolated.",
+        "source": "Gould, F. W. (1975), The Grasses of Texas, printed p. 321, Chloris verticillata; Hagenbuch & Lemke (2015) p.42",
+        "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "source_intake": "Gould p.321 owner photograph"
       }
     ],
     "diagnostic_review": {
