@@ -300,6 +300,38 @@ def check_view(browser, name, width, height):
             f"{name}: arrow overlay proportions differ from actual photo: {label}")
         assert photo.evaluate("(img) => getComputedStyle(img).objectFit") == "contain", (
             f"{name}: diagnostic photo was cropped underneath a marker: {label}")
+    # Crowded windmillgrass rays meet near the photo center. The short
+    # Junction / Raceme tags must fit without overlapping either badge or
+    # each other at desktop or narrow phone widths.
+    page.locator("#steps button.step").nth(0).click()
+    windmill = page.locator("#question .answer").filter(has_text="Windmill spokes in tiers")
+    assert windmill.count() == 1
+    windmill_frame = windmill.locator(".photo-frame.with-reviewed-arrows")
+    windmill_img = windmill_frame.locator("img")
+    windmill_img.scroll_into_view_if_needed()
+    windmill_img.evaluate("(img) => {img.loading='eager'}")
+    windmill_frame.locator("svg.field-photo-arrows rect").first.wait_for(
+        state="attached", timeout=50000)
+    layout = windmill_frame.locator("svg.field-photo-arrows").evaluate("""(svg) => {
+      const boxes=[...svg.querySelectorAll('rect')].map(x=>x.getBBox());
+      const circles=[...svg.querySelectorAll('circle')].filter((_,i)=>i%2===1)
+        .map(x=>x.getBBox());
+      const collide=(a,b)=>a.x<b.x+b.width&&a.x+a.width>b.x&&
+        a.y<b.y+b.height&&a.y+a.height>b.y;
+      const limits=svg.viewBox.baseVal;
+      return {labels:[...svg.querySelectorAll('rect + text')].map(x=>x.textContent),
+        inFrame:boxes.every(b=>b.x>=0&&b.y>=0&&
+          b.x+b.width<=limits.width&&b.y+b.height<=limits.height),
+        selfOverlap:boxes.length===2&&collide(boxes[0],boxes[1]),
+        overlapsOtherMarker:boxes.length===2&&circles.length===2&&
+          (collide(boxes[0],circles[1])||collide(boxes[1],circles[0]))};
+    }""")
+    assert layout["labels"] == ["Junction", "Raceme"], (
+        f"{name}: windmill annotation labels are not short and specific")
+    assert layout["inFrame"] and not layout["selfOverlap"] and not layout["overlapsOtherMarker"], (
+        f"{name}: windmill annotation pills overlap labels/numbers or leave image: {layout}")
+    assert windmill.locator(".photo-credit").count() == 1
+
     page.locator("#steps button.step").nth(1).click()
     tuft = page.locator("#question .answer").filter(has_text="A bunch or tuft")
     assert tuft.count() == 1
