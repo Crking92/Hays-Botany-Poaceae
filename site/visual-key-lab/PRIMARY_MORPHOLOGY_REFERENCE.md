@@ -2,7 +2,7 @@
 
 **Project:** Hays Grass ID Lab / active Hays-Botany-Poaceae family repo  
 **Established:** 2026-11-10, reconfirmed with uploaded PDF in conversation on 2026-11-10  
-**Priority (updated 2026-11-11):** **Hagenbuch & Lemke (2015) is first for Hill Country vegetative grass identification; this Flora is first for reproductive/spikelet identification.** Neither source silently overrides the other outside its main specialty. See the [active governing policy](MORPHOLOGY_SOURCE_POLICY.md).  
+**Priority (updated 2026-11-16):** **For ALL grass character decisions use (1) Gould (1975), *The Grasses of Texas*; (2) Diggs et al. (1999), this *Illustrated Flora of North Central Texas*; (3) Hagenbuch & Lemke (2015), the Hill Country vegetative study; (4) FNA, Kew GrassBase and other species-level supplements.** Verify historical names and the actual organ and printed page. Silence never proves absence. This file preserves bibliographic details from the older two-book workflow; [the current governing policy](MORPHOLOGY_SOURCE_POLICY.md) takes precedence.  
 **Outside scope:** Taxonomy may have changed since publication; BONAP NAPA and appropriate vouchers determine target-county nativity independently.
 
 ## Primary vegetative source — Hagenbuch & Lemke (2015)
