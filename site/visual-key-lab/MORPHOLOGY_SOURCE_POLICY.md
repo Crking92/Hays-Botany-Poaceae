@@ -1,3 +1,12 @@
+# Owner's current high-priority flora rule — 2026-11-16
+
+**For conflicting species-level morphology, treat Frank W. Gould (1975), *The Grasses of Texas*, and Diggs, Lipscomb & O'Kennon (1999), *Illustrated Flora of North Central Texas*, as the preferred botanical accounts over other floras.** Retain Hagenbuch & Lemke (2015) as the regional Hill Country vegetative research reference, but its differing statement is subordinate when Gould or Diggs directly addresses the same organ and species. This supersedes the older role-specific tie-break when a direct contradiction occurs, without automatically rewriting every scored grass.
+
+**Silence is not an absence claim.** If Gould and Diggs describe only stolons or a tuft and do not explicitly state rhizomes absent/present, they cannot by themselves settle a contradiction between lower-priority detailed treatments. The Lab must retain UNKNOWN / Still possible rather than invent a negative. When a preferred source explicitly says `rhizomatous base`, the *basal* rhizome state is supported, but do not infer long scaly underground runners. The original lower-priority citation, regional/taxon differences and stage/sex conditions remain recorded. A source decision is not a Hays County voucher.
+
+**Current exact three-taxon example:** Gould p.355 / Diggs p.1254 are silent on buffalograss rhizomes; Gould p.182 / Diggs pp.1270–72 are silent on plains lovegrass rhizomes, leaving both under Still possible. Diggs p.1300 explicitly describes the knotty rhizomatous base of historical *Panicum obtusum* (now *Hopia obtusa*), consistent with Gould Fig.241's conditional wording, so vine mesquite is a documented basal rhizome match. See `source-reference-gould-1975.json` → `current_source_priority_rhizome_review` for exact crosswalk and preserved dissent. Decisions apply to the current user's project rule and can be revised after an authoritative specimen/source review.
+
+---
 # Visual Grass ID Key — morphology-source and character decision rules
 
 ## Temporary owner decision for directly conflicting sources — 2026-11-15
