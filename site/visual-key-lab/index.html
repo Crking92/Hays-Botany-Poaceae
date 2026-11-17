@@ -690,6 +690,7 @@ const generalOrganPhotoExamples={
    species_id:"sporobolus-vaginiflorus",photo_i:0,reference_only:true,
    expected_source:"https://commons.wikimedia.org/wiki/File:Sporobolus_vaginiflorus_sl125.jpg",
    expected_creator:"Stefan.lefnaer",expected_license:"CC BY-SA 4.0",
+   expected_license_url:"https://creativecommons.org/licenses/by-sa/4.0/",
    expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sporobolus/sporobolus-vaginiflorus/images/stefan-lefnaer-sl125-spikelet-labels.jpg",
    visible:"The photographer directly labels the FIRST (lower) and SECOND (upper) glumes, lemma and palea on two views of the same spikelet, with a 3-mm scale. This is a nonlocal Austrian reference specimen, not a Hays County voucher.",
    limit:"The photographed labels establish the organs, NOT whether either glume has exactly one vein. Do not use this plate as a positive example for either one-vein button or to identify a Texas field specimen without further evidence."
@@ -730,10 +731,15 @@ function characterPhotoExample(id,selectedOption){
  if(!x)return null;
  const makeFigure=(x)=>{
  const specimen=byId(x.species_id),p=specimen?.photos?.find(p=>p.i===x.photo_i);
+ // A single missing legacy license URL may be safely completed from an
+ // individually checked ORIGINAL, but only if this exact photo's creator,
+ // source URL, CC license and hosted image still match the pinned record.
+ // Never mutate protected historic species/photo metadata.
+ const licenseUrl=p?.license_url||x.expected_license_url;
  if(!p||p.source_page!==x.expected_source||p.creator!==x.expected_creator||
     p.license!==x.expected_license||(x.hosted_sha&&p.hosted_git_blob_sha!==x.hosted_sha)||
     (x.expected_src&&p.src!==x.expected_src)||
-    !p.src?.startsWith("https://")||!p.license_url?.startsWith("https://"))return null;
+    !p.src?.startsWith("https://")||!licenseUrl?.startsWith("https://"))return null;
  const figure=node("figure","character-photo-example");
  figure.append(image(p,"Photo of "+specimen.common+": "+x.visible));
  const caption=node("figcaption");
@@ -742,7 +748,7 @@ function characterPhotoExample(id,selectedOption){
    node("p","character-photo-limit","Not proven: "+x.limit),
    node("span","photo-credit","Photo: "+credit(p)));
  const links=node("div","character-photo-links");
- for(const [url,label] of [[p.source_page,"Original photo"],[p.license_url,"License"],["photo-review.html?species="+encodeURIComponent(specimen.id),"More views"]]){
+ for(const [url,label] of [[p.source_page,"Original photo"],[licenseUrl,"License"],["photo-review.html?species="+encodeURIComponent(specimen.id),"More views"]]){
    if(!url.startsWith("https://")&&!url.startsWith("photo-review.html?"))continue;
    const a=node("a","",label);a.href=url;
    if(url.startsWith("https://")){a.target="_blank";a.rel="noopener noreferrer";}
