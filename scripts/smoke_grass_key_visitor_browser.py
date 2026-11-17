@@ -182,7 +182,7 @@ def check_beginner_field_checks(page, name):
     for character,choice in [
         ("ligule_length","short"),("blade_venation","raised_midvein"),
         ("blade_width","narrow"),("blade_shape","folded"),("blade_hairs","base_hairs")]:
-        tabs.locator(f'[data-character="{character}"]').click()
+        page.locator(f'#steps .step[data-character="{character}"]').click()
         page.locator(f'#question .diagram-answer[data-character="{character}"]'
                      f'[data-option="{choice}"]').click()
     assert page.locator("#progress-label").inner_text()=="5 of 9 main questions answered"
@@ -199,7 +199,7 @@ def check_beginner_field_checks(page, name):
         group.locator("summary").click()
     assert group.locator('button[data-option="narrow"]').get_attribute("aria-pressed")=="true"
     group.locator('button[data-option="broad"]').click()
-    tabs.locator('[data-character="blade_width"]').click()
+    page.locator('#steps .step[data-character="blade_width"]').click()
     assert page.locator('#question .diagram-answer[data-option="broad"]').get_attribute(
         "aria-pressed")=="true"
     assert page.locator('#question .diagram-answer[data-option="narrow"]').get_attribute(
@@ -208,10 +208,10 @@ def check_beginner_field_checks(page, name):
 
     # All photo-era main questions remain functional and every new illustrated
     # page is reachable by Next, Skip, or direct tab selection.
-    tabs.locator('[data-character="awns"]').click()
+    page.locator('#steps .step[data-character="awns"]').click()
     page.locator("#question .question-actions button.btn-primary").click()
     assert page.locator("#question h3").inner_text()=="How wide is a leaf?"
-    tabs.locator('[data-character="ligule_length"]').click()
+    page.locator('#steps .step[data-character="ligule_length"]').click()
     page.locator("#question .question-actions button.btn-primary").click()
     assert page.locator("#question h3").inner_text().startswith("What does the flowering")
 
