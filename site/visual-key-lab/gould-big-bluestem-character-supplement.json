@@ -99,6 +99,15 @@
         "detail": "Measure hairs on flowering rachis INTERNODES. Gould assigns copious usually yellow/golden 3–5 mm hairs to historical var. chrysocomus; other varieties differ. Not hairs on culm nodes or glumes."
       },
       "subgroup": "Flowering axis and pedicel margins"
+    },
+    {
+      "character": "ligule_edge",
+      "option": {
+        "id": "stiff_fringed_membrane",
+        "label": "Stiff membrane with a fringed rim",
+        "detail": "Gould calls the ligule a short stiff fringed membrane. This wording alone does not resolve whether the fringe consists of hairs or an irregular membrane edge. Preserve the membrane and inspect its actual rim."
+      },
+      "subgroup": null
     }
   ],
   "evidence": [
@@ -140,9 +149,9 @@
       "scientific": "Andropogon gerardi",
       "character": "ligule_edge",
       "states": [
-        "erose"
+        "stiff_fringed_membrane"
       ],
-      "note": "Ligule short, stiff and fringed-membraned with an erose rim. Do not turn erose fringe into a mandatory hair-only ligule or invent a Gould ligule measurement; H&L occasional ciliation remains separate.",
+      "note": "Gould describes a short stiff fringed membrane, without resolving the fringe as erose tears versus cilia. Do not infer a hair-only ligule or a measured length. H&L erose/occasionally ciliate alternatives remain separately documented.",
       "source": "Frank W. Gould (1975), The Grasses of Texas, exact Andropogon gerardii and variety key, printed p.550",
       "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
       "pdf_printed_page": 550,

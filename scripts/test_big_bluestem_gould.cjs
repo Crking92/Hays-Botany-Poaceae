@@ -12,7 +12,7 @@ ctx.bad=structuredClone(ctx.pack);ctx.bad.evidence[0].pdf_printed_page=551;asser
 vm.runInContext('applyBigBluestemGouldSupplement(pack)',ctx);
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>rows.flatMap(e=>e.states.map(v=>e.character+':'+v))));
 const run=()=>vm.runInContext('progressiveResultGroups(currentResults())',ctx),has=(g,k)=>g[k].some(x=>x.s.id===id);
-assert.equal(state.refineCharacters.length,24);assert.equal(state.refineCharacters.reduce((n,c)=>n+c.options.length,0),158);assert.equal(JSON.stringify(species.map(s=>s.photos)),photos);assert.equal(JSON.stringify(s.character_evidence),characterEvidence);
+assert.equal(state.refineCharacters.length,24);assert.equal(state.refineCharacters.reduce((n,c)=>n+c.options.length,0),159);assert.equal(JSON.stringify(species.map(s=>s.photos)),photos);assert.equal(JSON.stringify(s.character_evidence),characterEvidence);
 assert(s.traits.awns.includes('long')&&s.traits.awns.includes('none_obvious')&&s.traits.awns.includes('short_single'));
 for(const row of ctx.pack.evidence)for(const v of row.states){state.refineSelected={[row.character]:[v]};assert(has(run(),'confirmed'),row.character+':'+v);}
 state.refineSelected={lemma_texture:['lower_lemma_thin_hyaline','upper_lemma_deep_two_lobes']};assert.equal(run().confirmed.find(x=>x.s.id===id).refinementMatches.length,1,'one point per organ group');
@@ -30,5 +30,5 @@ for(const c of ctx.core)for(const o of c.options){state.selected={head:null,habi
 assert.equal(audit.core.length,45);
 state.selected={head:'fingers',habit:'tuft',ligule:'membrane',awns:'long'};state.refineSelected={};for(const r of ctx.pack.evidence)state.refineSelected[r.character]=r.states;assert(has(run(),'confirmed'),'aggregate source-supported states positive without universal co-occurrence claim');
 if(process.argv.includes('--write-audit'))fs.writeFileSync(d+'/big-bluestem-full-option-audit.json',JSON.stringify(audit,null,2)+'\n');
-console.log('PASS: 45 core / 24 groups / 158 advanced; short/absent/long awns, variety rhizomes/hairs; full KR keeps big bluestem possible; one-keel not one-vein, rachis-node not culm-node, twisted not necessarily bent; photos/evidence preserved.');
+console.log('PASS: 45 core / 24 groups / 159 advanced; short/absent/long awns, variety rhizomes/hairs; full KR keeps big bluestem possible; one-keel not one-vein, rachis-node not culm-node, twisted not necessarily bent; photos/evidence preserved.');
 
