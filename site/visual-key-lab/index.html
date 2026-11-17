@@ -14,24 +14,22 @@
 .notice{margin:0 0 20px;padding:13px 16px;background:#f2efde;border:1px solid #e1dcc1;border-radius:11px;font-size:.88rem;color:#655b3c}
 .workspace{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,.92fr);gap:23px;align-items:start;padding-bottom:35px}.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:22px 22px 10px}.section-kicker{text-transform:uppercase;color:#648673;letter-spacing:.14em;font-size:.72rem;font-weight:800}.panel h2{font-family:Georgia,serif;line-height:1.2;font-size:1.62rem;margin:6px 0 8px}.sub{color:var(--muted);font-size:.92rem;margin:0}.progress-track{height:8px;background:#e5ede4;border-radius:30px;overflow:hidden;margin:15px 0 7px}.progress-fill{height:100%;width:0%;background:#599e75;border-radius:30px;transition:width .2s}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem}
 .steps{display:flex;gap:8px;overflow:auto;padding:15px 20px;border-bottom:1px solid var(--line)}.step{white-space:nowrap;border:1px solid #d4e0d2;background:#f8faf6;color:#486151;border-radius:25px;padding:9px 14px;font-size:.85rem;font-weight:700}.step[aria-current=true]{background:var(--forest);color:white;border-color:var(--forest)}.step.done:before{content:"✓ ";font-weight:900}
-/* Beginner-friendly shortcut controls re-use ORIGINAL advanced source evidence and never touch photos. */
-.beginner-checks{margin:12px 19px 18px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--pale)}
-.beginner-checks-head{display:flex;gap:12px;justify-content:space-between;align-items:start;margin-bottom:13px}
-.beginner-checks-head h3{font-family:Georgia,serif;margin:0 0 3px;font-size:1.25rem;line-height:1.2}
-.beginner-checks-head p,.beginner-help{color:var(--muted);font-size:.79rem;line-height:1.45;margin:0}
-.beginner-count{flex-shrink:0;border:1px solid var(--line);background:var(--white);padding:5px 9px;border-radius:30px;color:var(--ink);font-weight:750;font-size:.74rem}
-.beginner-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.beginner-check-card{border:1px solid var(--line);background:var(--white);border-radius:11px;padding:12px;min-width:0}
-.beginner-check-card h4{margin:0 0 4px;font-size:.95rem;color:var(--ink)}
-.beginner-check-card p{font-size:.75rem;color:var(--muted);line-height:1.45;margin:0 0 10px}
-.beginner-check-options{display:flex;gap:7px;flex-wrap:wrap}
-.beginner-check-options button{border:1px solid var(--line);background:var(--pale);color:var(--ink);font-size:.79rem;font-weight:650;padding:8px 11px;min-height:42px;border-radius:10px;text-align:left}
-.beginner-check-options button[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:white}
-.beginner-check-options button:hover{border-color:#6f987d}
-.beginner-check-hint{margin:8px 0 0!important;font-size:.73rem!important}
-.beginner-help{margin-top:11px}
-html[data-theme="dark"] .beginner-check-options button[aria-pressed=true]{background:#326e50;color:#fff}
-@media(max-width:680px){.beginner-check-grid{grid-template-columns:1fr}.beginner-checks{margin:10px 12px 14px;padding:12px}.beginner-checks-head{align-items:start}.beginner-count{white-space:nowrap}}
+/* Full main illustrated questions, using existing verified field sketches, never photos. */
+.steps{flex-wrap:wrap;overflow:visible;gap:7px;padding:12px 16px}
+.steps .step{display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:1 1 125px;min-height:46px;white-space:normal;text-align:center;line-height:1.25}
+.steps .step .step-sketch{display:inline-flex;align-items:center;justify-content:center;width:31px;height:26px;flex-shrink:0}
+.steps .step .step-sketch svg{width:100%;height:100%;max-height:26px}
+.answer-grid.diagram-answer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.diagram-answer .diagram-frame{aspect-ratio:4/3;background:var(--pale);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:14px 12px 6px;min-height:170px;position:relative}
+.diagram-answer .diagram-frame svg{width:100%;height:133px;max-width:275px;display:block;overflow:visible}
+.diagram-answer .diagram-caption{color:var(--muted);font-size:.7rem;margin-top:5px;font-weight:650}
+.diagram-answer .answer-body{display:flex;flex-direction:column;gap:5px}
+.diagram-answer .answer-note{margin-top:0}
+.diagram-answer .literature-example{margin-top:auto;padding-top:8px;font-size:.73rem;color:var(--muted);line-height:1.4}
+.diagram-answer .evidence-pending{color:#916037;font-size:.73rem;font-weight:700}
+.diagram-question-note{font-size:.82rem;color:var(--muted);margin:9px 0 16px;line-height:1.45}
+html[data-theme="dark"] .diagram-answer .evidence-pending{color:#efc286}
+@media(max-width:560px){.steps{gap:6px;padding:11px 12px}.steps .step{flex:1 1 calc(50% - 8px);min-width:0;font-size:.78rem;padding:9px 7px}.steps .step .step-sketch{width:27px;height:23px}.answer-grid.diagram-answer-grid{grid-template-columns:1fr}.diagram-answer .diagram-frame{min-height:145px}.diagram-answer .diagram-frame svg{height:118px}}
 .question{padding:22px}.question h3{font-family:Georgia,serif;font-size:1.55rem;line-height:1.22;margin:0 0 8px}.help{color:#566e5f;font-size:.95rem;margin:0 0 18px}.answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .answer{background:#fff;border:2px solid #dbe5da;border-radius:14px;text-align:left;padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .15s,transform .15s}.answer:hover{border-color:#71987c;transform:translateY(-1px)}.answer[aria-pressed=true]{border-color:#17693c;box-shadow:0 0 0 3px #d6ecd8}.photo-frame{aspect-ratio:4/3;background:#d7dfd4;position:relative;overflow:hidden}.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.photo-bad{display:flex;align-items:center;justify-content:center;height:100%;padding:10px;text-align:center;color:var(--muted);font-size:.82rem}.tick{position:absolute;top:10px;right:10px;border-radius:50%;background:#17583a;color:white;display:none;width:30px;height:30px;align-items:center;justify-content:center;font-weight:800}.answer[aria-pressed=true] .tick{display:flex}.sex-photo-comparison{margin:12px 0 18px;padding:13px;border:1px solid #c4d7c3;border-radius:13px;background:#f7faf5}
 .sex-photo-comparison h5{font-size:1rem;margin:0 0 5px;color:#214a36}
@@ -342,7 +340,7 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="photo-review.html">Review photos</a><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
 <main class="wrap">
-  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
+  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs or illustrated traits that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
   <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
   <details class="source-decision-note" id="source-disagreement-policy">
     <summary>Botanical source note: how disagreements are handled</summary>
@@ -351,13 +349,9 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
   </details>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
-      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions, plus easy leaf, vein and ligule checks below. More detailed characteristics stay in the optional section. Answer in any order and skip anything uncertain.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
+      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Nine equally accessible questions: the original four photo questions plus five illustrated leaf, vein, and ligule questions. Open any tab in any order, and skip anything uncertain.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Choose any question</span></div></div>
       <nav class="steps" id="steps" aria-label="Choose a character"></nav>
-      <section class="beginner-checks" id="beginner-checks" aria-label="Easy field observations" hidden>
-        <div class="beginner-checks-head"><div><h3>Easy field checks</h3><p>Try any of these with a leaf in your hand. Use a small ruler for widths. No need to guess—skip what you can't see.</p></div><span class="beginner-count" id="beginner-count">0 selected</span></div>
-        <div class="beginner-check-grid" id="beginner-check-grid"></div>
-        <p class="beginner-help">These are the same choices found under detailed characteristics. Unknown descriptions stay possible; only source-checked evidence can narrow results. Your observations update both places.</p>
-      </section>
+      <div class="question" id="question"></div>
       <details class="optional-features" id="optional-character-wrap" hidden>
         <summary>All detailed characteristics (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
         <div class="optional-inner">
@@ -368,7 +362,6 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
            <button type="button" class="optional-reset" id="optional-clear">Clear extra details</button>
         </div>
       </details>
-      <div class="question" id="question"></div>
     </section>
     <aside class="panel results" aria-label="Candidate grasses">
       <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">169 grasses</span></div><p id="results-note">All 169 grasses appear together. Newer profiles are labeled when their identity or traits still need verification.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><button type="button" class="btn btn-secondary key-reset" id="reset-field-key" aria-label="Clear all grass observations, search, and filters">Start over</button><button type="button" class="btn btn-secondary evidence-focus" id="focus-confirmed" aria-pressed="false" aria-label="Show only fully documented grass matches for selected characteristics">Show documented matches only</button><p id="focus-note" class="smallmuted">Unknown evidence stays possible. Use the documented-only view to focus your comparisons without ruling out unstudied grasses.</p><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
