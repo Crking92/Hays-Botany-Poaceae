@@ -14,6 +14,24 @@
 .notice{margin:0 0 20px;padding:13px 16px;background:#f2efde;border:1px solid #e1dcc1;border-radius:11px;font-size:.88rem;color:#655b3c}
 .workspace{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,.92fr);gap:23px;align-items:start;padding-bottom:35px}.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:22px 22px 10px}.section-kicker{text-transform:uppercase;color:#648673;letter-spacing:.14em;font-size:.72rem;font-weight:800}.panel h2{font-family:Georgia,serif;line-height:1.2;font-size:1.62rem;margin:6px 0 8px}.sub{color:var(--muted);font-size:.92rem;margin:0}.progress-track{height:8px;background:#e5ede4;border-radius:30px;overflow:hidden;margin:15px 0 7px}.progress-fill{height:100%;width:0%;background:#599e75;border-radius:30px;transition:width .2s}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem}
 .steps{display:flex;gap:8px;overflow:auto;padding:15px 20px;border-bottom:1px solid var(--line)}.step{white-space:nowrap;border:1px solid #d4e0d2;background:#f8faf6;color:#486151;border-radius:25px;padding:9px 14px;font-size:.85rem;font-weight:700}.step[aria-current=true]{background:var(--forest);color:white;border-color:var(--forest)}.step.done:before{content:"✓ ";font-weight:900}
+/* Beginner-friendly shortcut controls re-use ORIGINAL advanced source evidence and never touch photos. */
+.beginner-checks{margin:12px 19px 18px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--pale)}
+.beginner-checks-head{display:flex;gap:12px;justify-content:space-between;align-items:start;margin-bottom:13px}
+.beginner-checks-head h3{font-family:Georgia,serif;margin:0 0 3px;font-size:1.25rem;line-height:1.2}
+.beginner-checks-head p,.beginner-help{color:var(--muted);font-size:.79rem;line-height:1.45;margin:0}
+.beginner-count{flex-shrink:0;border:1px solid var(--line);background:var(--white);padding:5px 9px;border-radius:30px;color:var(--ink);font-weight:750;font-size:.74rem}
+.beginner-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.beginner-check-card{border:1px solid var(--line);background:var(--white);border-radius:11px;padding:12px;min-width:0}
+.beginner-check-card h4{margin:0 0 4px;font-size:.95rem;color:var(--ink)}
+.beginner-check-card p{font-size:.75rem;color:var(--muted);line-height:1.45;margin:0 0 10px}
+.beginner-check-options{display:flex;gap:7px;flex-wrap:wrap}
+.beginner-check-options button{border:1px solid var(--line);background:var(--pale);color:var(--ink);font-size:.79rem;font-weight:650;padding:8px 11px;min-height:42px;border-radius:10px;text-align:left}
+.beginner-check-options button[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:white}
+.beginner-check-options button:hover{border-color:#6f987d}
+.beginner-check-hint{margin:8px 0 0!important;font-size:.73rem!important}
+.beginner-help{margin-top:11px}
+html[data-theme="dark"] .beginner-check-options button[aria-pressed=true]{background:#326e50;color:#fff}
+@media(max-width:680px){.beginner-check-grid{grid-template-columns:1fr}.beginner-checks{margin:10px 12px 14px;padding:12px}.beginner-checks-head{align-items:start}.beginner-count{white-space:nowrap}}
 .question{padding:22px}.question h3{font-family:Georgia,serif;font-size:1.55rem;line-height:1.22;margin:0 0 8px}.help{color:#566e5f;font-size:.95rem;margin:0 0 18px}.answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .answer{background:#fff;border:2px solid #dbe5da;border-radius:14px;text-align:left;padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .15s,transform .15s}.answer:hover{border-color:#71987c;transform:translateY(-1px)}.answer[aria-pressed=true]{border-color:#17693c;box-shadow:0 0 0 3px #d6ecd8}.photo-frame{aspect-ratio:4/3;background:#d7dfd4;position:relative;overflow:hidden}.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.photo-bad{display:flex;align-items:center;justify-content:center;height:100%;padding:10px;text-align:center;color:var(--muted);font-size:.82rem}.tick{position:absolute;top:10px;right:10px;border-radius:50%;background:#17583a;color:white;display:none;width:30px;height:30px;align-items:center;justify-content:center;font-weight:800}.answer[aria-pressed=true] .tick{display:flex}.sex-photo-comparison{margin:12px 0 18px;padding:13px;border:1px solid #c4d7c3;border-radius:13px;background:#f7faf5}
 .sex-photo-comparison h5{font-size:1rem;margin:0 0 5px;color:#214a36}
@@ -333,8 +351,13 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
   </details>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
-      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions first, plus 24 detailed characteristic groups below. Answer in any order and skip what you cannot check. Results narrow after every observation.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
+      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions, plus easy leaf, vein and ligule checks below. More detailed characteristics stay in the optional section. Answer in any order and skip anything uncertain.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
       <nav class="steps" id="steps" aria-label="Choose a character"></nav>
+      <section class="beginner-checks" id="beginner-checks" aria-label="Easy field observations" hidden>
+        <div class="beginner-checks-head"><div><h3>Easy field checks</h3><p>Try any of these with a leaf in your hand. Use a small ruler for widths. No need to guess—skip what you can't see.</p></div><span class="beginner-count" id="beginner-count">0 selected</span></div>
+        <div class="beginner-check-grid" id="beginner-check-grid"></div>
+        <p class="beginner-help">These are the same choices found under detailed characteristics. Unknown descriptions stay possible; only source-checked evidence can narrow results. Your observations update both places.</p>
+      </section>
       <details class="optional-features" id="optional-character-wrap" hidden>
         <summary>All detailed characteristics (24 groups)<small>Leaf blades · Collars / sheaths · Stems / roots · Flowers / spikelets</small></summary>
         <div class="optional-inner">
@@ -1531,7 +1554,7 @@ function renderOptionalCharacters(){
        if(next.length)state.refineSelected[c.id]=c.multi_select?next:next[0];
        else delete state.refineSelected[c.id];
        choices.querySelectorAll("button[data-option]").forEach(x=>x.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(x.dataset.option))));
-       updateChosen();updateUrl();renderResults();refreshVeinGuide();
+       updateChosen();updateUrl();renderResults();refreshVeinGuide();renderBeginnerChecks();
        tabs.querySelectorAll("button").forEach((x,i)=>{const section=sections[i][0];const count=state.refineCharacters.filter(k=>refinementSection(k.id)===section&&selectedRefinementStates(k.id).length).length;x.textContent=sections[i][1]+(count?" ("+count+")":"")});
      });
      return b;
@@ -1650,7 +1673,7 @@ function renderOptionalCharacters(){
    if(c.options.some(o=>isPendingChoice(c,o)))content.append(node("p","optional-need-note","Research-pending choices can be recorded, but won't yet rank any grass. All candidates stay possible."));
    group.append(summary,content);root.append(group);
  }
- $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderResults()};
+ $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderBeginnerChecks();renderResults()};
  const evidenceToggle=$("optional-documented-only");
  evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));
  evidenceToggle.onclick=()=>{state.refineOnlyDocumented=!state.refineOnlyDocumented;evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));updateUrl();renderResults()};
@@ -1706,6 +1729,54 @@ function progressiveResultGroups(rows){
     disputedRhizome?{...row,rhizomeSourceHold:true}:row);
  }
  return {active:true,confirmed,unresolved,excluded};
+}
+/* Surface FOUR easy existing advanced groups alongside the four photo questions.
+   No new scores/options/photos. One shared state/URL and conservative evidence policy. */
+const beginnerCheckGroups=[
+ {id:"blade_width",title:"How wide is a leaf?",hint:"Measure the widest part of a fresh, opened blade. The ranges are approximate.",labels:{thread:"Thread-thin · under 2 mm",narrow:"Narrow · 2–5 mm",medium:"Medium · 5–10 mm",broad:"Broad · over 10 mm"}},
+ {id:"blade_shape",title:"Flat, folded, or rolled?",hint:"Look across a fresh blade, not a drought-curled or dried leaf.",labels:{flat:"Mostly flat",folded:"V-shaped fold",inrolled:"Rolled inward"}},
+ {id:"blade_venation",title:"What do the veins look like?",hint:"Hold a fresh leaf toward the light, then look across it. A pale line is different from a raised ridge. Pick only what you can clearly see.",optionIds:["pale_midvein","prominent_midvein","raised_midvein","raised_ribs"],labels:{pale_midvein:"Pale center line",prominent_midvein:"Obvious center vein",raised_midvein:"Raised center ridge",raised_ribs:"Several raised parallel ribs"}},
+ {id:"blade_hairs",title:"Hairs on the leaf?",hint:"Inspect the blade, not the stem or the sheath below it. No hairs noticed? Just skip.",labels:{base_hairs:"Near the leaf base",blade_hairy:"Along the blade"}},
+ {id:"ligule_length",title:"How tall is the ligule?",hint:"Optional: open the inside leaf collar. First use the Leaf collar question for hairs or membrane; use a ruler/hand lens to measure.",labels:{tiny:"Tiny · under 1 mm",short:"Short · 1–3 mm",medium:"Medium · 3–8 mm",long:"Long · over 8 mm"}}
+];
+function renderBeginnerChecks(){
+ const wrap=$("beginner-checks"),grid=$("beginner-check-grid");
+ grid.replaceChildren();
+ if(!state.refineCharacters.length){wrap.hidden=true;return}
+ const groups=beginnerCheckGroups.map(cfg=>({cfg,character:state.refineCharacters.find(c=>c.id===cfg.id)})).filter(x=>x.character);
+ if(!groups.length){wrap.hidden=true;return}
+ wrap.hidden=false;
+ const selectedCount=groups.filter(({cfg})=>selectedRefinementStates(cfg.id).length).length;
+ $("beginner-count").textContent=selectedCount+" of "+groups.length+" checked";
+ for(const {cfg,character:c} of groups){
+   const card=node("div","beginner-check-card");card.dataset.character=c.id;
+   card.append(node("h4","",cfg.title),node("p","",cfg.hint));
+   const choices=node("div","beginner-check-options");choices.setAttribute("role","group");choices.setAttribute("aria-label",cfg.title);
+   for(const o of c.options){
+     if(cfg.optionIds&&!cfg.optionIds.includes(o.id))continue;
+     const b=node("button","",cfg.labels[o.id]||o.label);
+     b.type="button";b.dataset.option=o.id;
+     b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
+     b.addEventListener("click",()=>{
+       const old=selectedRefinementStates(c.id);
+       const next=c.multi_select?(old.includes(o.id)?old.filter(v=>v!==o.id):[...old,o.id]):(old.includes(o.id)?[]:[o.id]);
+       if(next.length)state.refineSelected[c.id]=c.multi_select?next:next[0];
+       else delete state.refineSelected[c.id];
+       updateUrl();renderBeginnerChecks();renderOptionalCharacters();renderResults();
+     });
+     choices.append(b);
+   }
+   card.append(choices);
+   if(cfg.optionIds&&selectedRefinementStates(c.id).some(v=>!cfg.optionIds.includes(v))){
+     card.append(node("p","beginner-check-hint","A more detailed vein option is also selected in the advanced section."));
+   }
+   if(selectedRefinementStates(c.id).length && !selectedRefinementStates(c.id).some(v=>
+       (state.refineEvidenceOptionKeys||new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
+          rows.flatMap(e=>e.states.map(v=>e.character+":"+v))))).has(c.id+":"+v))){
+     card.append(node("p","beginner-check-hint","Recorded for comparison; this detail still needs a linked source before it can rank a grass."));
+   }
+   grid.append(card);
+ }
 }
 function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
 
@@ -2799,7 +2870,7 @@ if(displayedChecks.length){
   }
   copy.append(panel);
 }copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail";a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal()}
-function render(){renderTabs();renderQuestion();renderResults()}
+function render(){renderTabs();renderBeginnerChecks();renderQuestion();renderResults()}
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
 // Supplementary Gould text augments the displayed species lessons without mutating scored records.
 try{const res=await fetch("source-reference-gould-1975.json",{cache:"no-store"});if(res.ok){const ref=await res.json();if(ref.source?.id==="gould-1975-grasses-of-texas"&&Array.isArray(ref.learner_diagnostic_checks))state.gouldSource=ref;}}

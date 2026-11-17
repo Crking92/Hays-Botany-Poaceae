@@ -119,6 +119,78 @@ def sweep_all_optional_options(page, name):
     return {"groups": inspected_groups, "options_clicked_and_cleared": inspected_choices}
 
 
+
+def check_beginner_field_checks(page, name):
+    """Four beginner groups mirror the SAME 111 advanced source-backed choices."""
+    box=page.locator("#beginner-checks")
+    assert box.is_visible(), f"{name}: easy field choices not visible on main key"
+    wanted={
+        "blade_width": ["thread","narrow","medium","broad"],
+        "blade_shape": ["flat","folded","inrolled"],
+        "blade_venation": ["pale_midvein","prominent_midvein","raised_midvein","raised_ribs"],
+        "blade_hairs": ["base_hairs","blade_hairy"],
+        "ligule_length": ["tiny","short","medium","long"],
+    }
+    assert box.locator(".beginner-check-card").count()==5, (
+        f"{name}: expected 5 easy leaf/vein/collar question groups")
+    assert box.locator("#beginner-count").inner_text()=="0 of 5 checked"
+    assert box.locator("img, svg, .photo-frame").count()==0, (
+        f"{name}: new beginner controls unexpectedly altered photographic material")
+    for character, options in wanted.items():
+        card=box.locator(f'.beginner-check-card[data-character="{character}"]')
+        assert card.count()==1, f"{name}: missing {character} shortcut"
+        assert card.locator("button[data-option]").count()==len(options)
+        for choice in options:
+            button=card.locator(f'button[data-option="{choice}"]')
+            assert button.count()==1
+            button.click()
+            assert button.get_attribute("aria-pressed")=="true"
+            assert f"more_{character}={choice}" in page.url, (
+                f"{name}: beginner selection not shared with existing advanced URL")
+            m,u,e=buckets(page)
+            assert m+u+e==169, f"{name}: easy {character}/{choice} lost an unknown species"
+            assert page.locator("#count").inner_text()==f"{m+u} possible"
+            button.click()
+            assert button.get_attribute("aria-pressed")=="false"
+            assert f"more_{character}=" not in page.url
+            assert page.locator("#count").inner_text()=="169 possible"
+
+    # Combined simple field choices share exactly the advanced data and can
+    # all be cleared with the existing one-tap reset.
+    for character, choice in [
+        ("blade_width","narrow"),("blade_shape","folded"),
+        ("blade_venation","raised_midvein"),
+        ("blade_hairs","base_hairs"),("ligule_length","short")
+    ]:
+        box.locator(f'.beginner-check-card[data-character="{character}"] '
+                    f'button[data-option="{choice}"]').click()
+    assert box.locator("#beginner-count").inner_text()=="5 of 5 checked"
+    m,u,e=buckets(page)
+    assert m+u+e==169, f"{name}: combined easy field checks falsely lost species"
+
+    # The existing detailed picker must show the same selection and changing
+    # it from there must immediately update the main beginner card.
+    wrapper=page.locator("#optional-character-wrap")
+    if not wrapper.evaluate("(element)=>element.open"):
+        wrapper.locator("summary").first.click()
+    page.locator("#optional-section-tabs button").filter(has_text="Leaf blades").first.click()
+    group=page.locator('#optional-character-groups .optional-group[data-character="blade_width"]')
+    if not group.evaluate("(element)=>element.open"):
+        group.locator("summary").click()
+    assert group.locator('button[data-option="narrow"]').get_attribute("aria-pressed")=="true"
+    group.locator('button[data-option="broad"]').click()
+    assert box.locator('.beginner-check-card[data-character="blade_width"] '
+                       'button[data-option="broad"]').get_attribute("aria-pressed")=="true"
+    assert box.locator('.beginner-check-card[data-character="blade_width"] '
+                       'button[data-option="narrow"]').get_attribute("aria-pressed")=="false"
+    assert "more_blade_width=broad" in page.url
+    assert box.locator("#beginner-count").inner_text()=="5 of 5 checked"
+    page.locator("#reset-field-key").click()
+    assert box.locator("#beginner-count").inner_text()=="0 of 5 checked"
+    assert box.locator('button[aria-pressed="true"]').count()==0
+    assert page.locator("#count").inner_text()=="169 possible"
+
+
 def check_view(browser, name, width, height):
     ctx = browser.new_context(viewport={"width": width, "height": height})
     page = ctx.new_page()
@@ -133,6 +205,7 @@ def check_view(browser, name, width, height):
         timeout=75000,
     )
     assert page.locator("#count").inner_text() == "169 possible"
+    check_beginner_field_checks(page, name)
     # The existing credited Jim Conrad Learner galleries, not external
     # search-image replacements, must be actually visible and decode in both
     # visitor layouts. They show independent male, female, mature structures.
