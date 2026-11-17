@@ -901,7 +901,7 @@ const advancedExclusionPolicy={
 function verifiedAdvancedConflict(s){
  const conflicts=[];
  const proof=s.exact_lemma_awn_absence;
- if(s.id==="eleusine-indica"&&proof?.schema==="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"&&proof.pdf_printed_page===1268&&selectedRefinementStates("true_lemma_awn").some(v=>proof.conflicting_states.includes(v)))
+ if(s.id==="eleusine-indica"&&proof?.schema==="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"&&proof.pdf_printed_page===1269&&selectedRefinementStates("true_lemma_awn").some(v=>proof.conflicting_states.includes(v)))
   conflicts.push({character:"true_lemma_awn",label:"True lemma awn",reported:"Awnless; a minute mucro permitted",source:proof.source,source_url:proof.source_url,note:proof.note+" "+proof.stage_caution,policy:"EXACT_SPECIES_EXPLICIT_AWNLESS"});
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
@@ -3113,11 +3113,11 @@ function applyKRGouldSupplement(pack){
 function applyGoosegrassGouldSupplement(pack){
  const proof=pack.exact_awn_absence;
  const expected=["three","long","short","bent_twisted","straight_or_bent","fertile_awn_2_to_5mm","fertile_awn_1_to_1_5mm"];
- if(!proof||proof.schema!=="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"||proof.species_id!=="eleusine-indica"||proof.organ!=="true_lemma_awn"||proof.pdf_printed_page!==1268||!proof.source?.includes("Diggs")||!proof.source?.includes("exact Eleusine indica")||proof.conflicting_states?.join(",")!==expected.join(",")||!proof.source_url?.startsWith("https://")||!proof.note||!proof.stage_caution||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid goosegrass explicit absence proof");
+ if(!proof||proof.schema!=="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"||proof.species_id!=="eleusine-indica"||proof.organ!=="true_lemma_awn"||proof.pdf_printed_page!==1269||!proof.source?.includes("Diggs")||!proof.source?.includes("exact Eleusine indica")||proof.conflicting_states?.join(",")!==expected.join(",")||!proof.source_url?.startsWith("https://")||!proof.note||!proof.stage_caution||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid goosegrass explicit absence proof");
  applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_GOOSEGRASS_SUPPLEMENT_V1",id:"eleusine-indica",scientific:"Eleusine indica",page:222,pages:[222,223]});
  const s=state.species.find(s=>s.id==="eleusine-indica");s.exact_lemma_awn_absence=structuredClone(proof);
  s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
- s.field_rule="Gould pp.222–223 / Diggs p.1268: leafy tufted ANNUAL, occasionally with basal stolons; flattened winged flowering axes, several florets per spikelet and awnless lemmas that may have a tiny mucro. A verified true lemma awn conflicts with goosegrass; a minute pointed tip does not.\n\n"+s.field_rule;
+ s.field_rule="Gould pp.222–223 / Diggs p.1269: leafy tufted ANNUAL, occasionally with basal stolons; flattened winged flowering axes, several florets per spikelet and awnless lemmas that may have a tiny mucro. A verified true lemma awn conflicts with goosegrass; a minute pointed tip does not.\n\n"+s.field_rule;
 }
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||

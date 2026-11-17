@@ -20,7 +20,7 @@ state.refineSelected={};state.selected={head:'fingers',habit:'tuft',ligule:'memb
 state.refineSelected={true_lemma_awn:['fertile_awn_1_to_1_5mm']};assert(has(run(),'excluded'),'precise KR awn rules goosegrass out');assert(run().confirmed.some(x=>x.s.id==='bothriochloa-ischaemum'));
 for(const row of read('gould-kr-character-supplement.json').evidence)state.refineSelected[row.character]=row.states;
 const kr=run();assert(has(kr,'excluded'));assert(kr.confirmed.some(x=>x.s.id==='bothriochloa-ischaemum'));assert(kr.unresolved.some(x=>x.s.id==='chloris-virgata'),'no absence rule leaked into Chloris');
-const audit={source:'Gould pp.222–223 and exact Diggs p.1268; supplied screenshot',kr_result:{goosegrass:'ruled_out',reason:'Verified true lemma awn conflicts with explicit awnless spikelets',supported:kr.confirmed.map(x=>x.s.id)},advanced:[],core:[]};
+const audit={source:'Gould pp.222–223 and exact Diggs p.1269; supplied screenshot',kr_result:{goosegrass:'ruled_out',reason:'Verified true lemma awn conflicts with explicit awnless spikelets',supported:kr.confirmed.map(x=>x.s.id)},advanced:[],core:[]};
 state.selected={head:null,habit:null,ligule:null,awns:null};
 for(const c of state.refineCharacters)for(const o of c.options){state.refineSelected={[c.id]:[o.id]};const g=run();audit.advanced.push({group:c.id,option:o.id,label:o.label,status:has(g,'confirmed')?'supported':has(g,'excluded')?'source-conflict':'unresolved'});assert.equal(g.confirmed.length+g.unresolved.length+g.excluded.length,112);}
 state.refineSelected={};ctx.core=vm.runInContext('qs.map(q=>({id:q.id,options:q.options.map(o=>({id:o.id,label:o.label}))}))',ctx);
