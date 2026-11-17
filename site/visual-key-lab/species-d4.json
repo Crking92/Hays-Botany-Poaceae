@@ -358,6 +358,38 @@
         "reference": "This grass's panicle can be open, but attached spikelets are much larger or differently arranged than the tiny-spikelet cloud shown by the actual ID Lab choice. Remove head=airy while preserving its botanically appropriate existing head states; do not erase morphology or rights history.",
         "status": "REJECTED_OVERBROAD_FIELD_CHOICE_NOT_SPECIMEN_EXCLUSION",
         "review_date": "2026-11-12"
+      },
+      "gould_1975_page_579": {
+        "source": "Gould, F. W. (1975), The Grasses of Texas, printed p. 579 — owner supplied photo of Sorghastrum elliottii treatment",
+        "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "category": "regional_species_treatment",
+        "status": "EXACT_PUBLISHED_SPECIES_TEXT_CAPTURED_NOT_LOCAL_SPECIMEN_VERIFIED",
+        "review_date": "2026-11-16",
+        "source_intake": "source-reference-gould-1975.json additional_species_treatments species_id=sorghastrum-elliottii printed_page=579",
+        "facts": {
+          "habit": "Tufted perennial, base expressly non-rhizomatous; culms mostly 0.8–1.8 m",
+          "collar": "Firm 2–4 mm membranous ligule, truncate or lobed; stiff lateral sheath auricles",
+          "leaves": "Long blades flat or folded, 3–8 mm wide; basal narrowing, tapered tip",
+          "head": "Narrow, loose, sparse panicle 15–25 cm long, with dark brown spikelets",
+          "spikelets": "5.5–7 mm long, glumes and reduced-spikelet pedicels hairy with brownish hairs",
+          "awns": "Dark 23–35 mm lemma awn twisted, usually with two bends",
+          "distribution": "Historic Texas regions 1, 2, and eastern part 3, sandy soil/woodland margins; not county voucher proof",
+          "flowering": "September–November reported in Texas account"
+        },
+        "nine_tab_review": {
+          "flowerhead": "long_narrow_panicle directly supported; golden_plume needs dense/golden wording review; retain current choice pending key QA",
+          "growth_form": "tuft supported; no rhizomatous base",
+          "leaf_collar": "membrane with lateral auricles",
+          "awns": "long",
+          "leaf_width": "3–8 mm overlaps narrow and medium; no fixed bin assigned",
+          "leaf_shape": "flat or folded; both documented",
+          "leaf_veins": "NOT_REPORTED",
+          "leaf_hairs": "NOT_REPORTED_ON_BLADE",
+          "ligule_length": "2–4 mm spans short and medium UI bins; inspect measured specimen"
+        },
+        "photos": "NOT_TOUCHED",
+        "scoring": "NOT_TOUCHED",
+        "range": "UNRESOLVED_UNCHANGED"
       }
     },
     "diagnostic_checks": [
@@ -384,6 +416,22 @@
         "certainty": "Kew GrassBase-backed; separate collar and spikelet-pair photos required",
         "source": "Kew GrassBase — Sorghastrum elliottii",
         "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:240815-2/general-information"
+      },
+      {
+        "look": "Beginner field check with Gould's measured traits",
+        "check": "In a flower-bearing plant, look for a loose narrow panicle 15–25 cm long, a tufted non-rhizomatous base, 3–8 mm flat or folded blades, and a firm 2–4 mm membranous ligule with stiff lateral auricles. Do not guess veins or leaf hairs from hairs on glumes.",
+        "compare": "The dense golden plume typical of S. nutans may not depict the sparse dark-brown S. elliottii head accurately. Compare the real awn and base before deciding.",
+        "certainty": "User-supplied Gould printed p.579; historical species treatment only, no local specimen confirmation or visual-arrow approval.",
+        "source": "Gould (1975), The Grasses of Texas, p.579",
+        "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+      },
+      {
+        "look": "Inspect an attached mature fertile spikelet and the reduced companion pedicel",
+        "check": "The 5.5–7 mm dark spikelet has a usually twice-bent twisted 23–35 mm awn, and the glumes and reduced-spikelet pedicels bear brownish hairs; these reproductive hairs cannot be used to score blade hairs.",
+        "compare": "S. nutans differs especially in panicle density, its often short scaly rhizomes and generally shorter/less bent awns, but length can overlap; confirm multiple characters.",
+        "certainty": "Gould photographed p.579 measurements; annotated photo validation still pending.",
+        "source": "Gould (1975), The Grasses of Texas, p.579",
+        "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
       }
     ],
     "diagnostic_review": {
