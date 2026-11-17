@@ -498,6 +498,32 @@ assert(newer.decisions[0].gould.includes("p.355"));
 assert(newer.decisions[1].gould.includes("p.182"));
 assert(html.includes("Diggs et al., Flora of North Central Texas (1999), printed p.1300"));
 assert(html.includes("easternGamagrassSexPhotoComparison"),"Three-photo sex anatomy gallery missing from field key");
+// Beginner ligule UI: extra edge illustrations may refine ranking, but
+// never become a tenth question, a new species score or an exclusion rule.
+const liguleGlossary=read("grass-glossary-terms.json").terms;
+for(const key of ["membranous-ligule","hair-fringe-ligule","ciliate","erose","lacerate","entire-ligule-edge"]){
+ assert(liguleGlossary[key]?.plain&&liguleGlossary[key]?.where,"Missing collar definition: "+key);
+}
+assert(html.includes('function renderLiguleSections(area,q,buildChoice)'));
+assert(html.includes('function collarOrientationSketch()'));
+assert(html.includes('q.id==="ligule"'));
+assert(html.includes('["hairs","Mostly a fringe of hairs"'));
+assert(html.includes('["membrane","Papery membrane (edge may have hairs)"'));
+assert(html.includes('["absent","No ligule visible"'));
+assert(html.includes('edge.multi_select?'));
+assert(html.includes('state.refineSelected.ligule_edge'));
+assert(html.includes('hit.character==="ligule_edge"&&state.selected.ligule'),
+ "Membrane and edge must not double-count the same collar as separate score points");
+assert(html.includes('function supportedLiguleEdge(s)'),
+ "Published edge detail should be available as an unweighted tie-break");
+assert(html.includes('One membrane can be both')===false,
+ "Single-select edge picker must not promise simultaneous choices");
+const exclusionBlock=html.slice(html.indexOf("const advancedExclusionPolicy="),html.indexOf("function verifiedAdvancedConflict("));
+assert(!exclusionBlock.includes("ligule_edge"),"An uncertain ligule-edge choice must never become a hard negative exclusion");
+assert(html.includes('ligule_edge:["entire"')===false,
+ "Existing detailed ligule option IDs must remain runtime-driven rather than a new scoring table");
+assert.equal(read("species-c3.json").find(x=>x.id==="tripsacum-dactyloides").traits.ligule.includes("membrane"),true);
+
 console.log("PASS: three new Gould photographed passages source-pinned, page holds intact and no false rhizome conclusions");
 console.log("PASS: Gould p.213 Tridentopsis elongata, p.542 Melinis repens and p.469 Megathyrsus maximus saved, preserving protected key scoring");
 
