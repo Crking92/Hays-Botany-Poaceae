@@ -33,7 +33,14 @@ const pending={
  true_lemma_awn:["fertile_awn_2_to_5mm","lower_sterile_awn_variable","apical_mucro"],
  floral_hair_position:["lower_sterile_lemma_hairs","upper_fertile_lemma_hairs","spikelet_callus_hairs"]
 };
-const nowSupportedAndIllustrated=new Set(["glume_marks:central_glume_glabrous","glume_marks:central_glume_scabrous","true_lemma_awn:apical_mucro"]);
+const nowSupportedAndIllustrated=new Set([
+ "glume_marks:central_glume_glabrous","glume_marks:central_glume_scabrous",
+ "true_lemma_awn:apical_mucro",
+ "glume_marks:upper_one_vein","glume_marks:lower_one_vein",
+ "true_lemma_awn:fertile_awn_2_to_5mm","true_lemma_awn:lower_sterile_awn_variable",
+ "floral_hair_position:lower_sterile_lemma_hairs","floral_hair_position:upper_fertile_lemma_hairs",
+ "floral_hair_position:spikelet_callus_hairs"
+]);
 let count=0,added=0,illustratedNew=0;
 for(const [character,ids] of Object.entries(original)){
  const group=pack.characters.find(c=>c.id===character);
@@ -53,6 +60,30 @@ for(const [character,ids] of Object.entries(original)){
     assert(tip[1].length>=65);
     const drawing=vm.runInContext("flowerFieldSketch("+JSON.stringify(character)+","+JSON.stringify(option.id)+")",sandbox);
     assert(drawing.children.length>=3,"Now-supported plant anatomy illustration absent");
+    // Precisely identified glume/lemma/callus organ choices require a
+    // distinct VISUAL location and accessible instruction, not a generic
+    // two-glume/spikelet fallback. Existing stable answer IDs are preserved.
+    const textLabels=drawing.children.filter(x=>x.tag==="text").map(x=>x.textContent).join(" | ");
+    if(["upper_one_vein","lower_one_vein"].includes(option.id)){
+     assert.match(textLabels,/1 LOWER/);
+     assert.match(textLabels,/2 UPPER/);
+    }
+    if(["fertile_awn_2_to_5mm","lower_sterile_awn_variable"].includes(option.id)){
+     assert.match(textLabels,/LOWER STERILE/);
+     assert.match(textLabels,/UPPER FERTILE/);
+    }
+    if(["lower_sterile_lemma_hairs","upper_fertile_lemma_hairs"].includes(option.id)){
+     assert.match(textLabels,/LOWER STERILE/);
+     assert.match(textLabels,/UPPER FERTILE/);
+    }
+    if(option.id==="upper_fertile_lemma_hairs")
+     assert.match(textLabels,/FEMALE ONLY/,"Pampas reproductive sex caveat must be on the drawing");
+    if(option.id==="spikelet_callus_hairs")
+     assert.match(textLabels,/FLORET CALLUS BASE/,"Callus hairs must point to the actual floret base");
+    if(["upper_one_vein","lower_one_vein","fertile_awn_2_to_5mm",
+      "lower_sterile_awn_variable","lower_sterile_lemma_hairs",
+      "upper_fertile_lemma_hairs","spikelet_callus_hairs"].includes(option.id))
+     assert(drawing.children.filter(x=>x.tag==="text").length>=1,"Missing anatomical position labels");
     illustratedNew++;
   }else assert.equal(tip,undefined,
     "Historical source-pending suboptions without a custom drawing should stay text-only");
@@ -77,7 +108,7 @@ for(const [character,ids] of Object.entries(original)){
 }
 assert.equal(count,26);
 assert.equal(added,10,"Original historical 10 anatomy additions must remain immutable");
-assert.equal(illustratedNew,3,"Two lower-glume midnerve variants and fertile lemma mucro must have distinct instructional diagrams");
+assert.equal(illustratedNew,10,"All ten precise organ options, including seven new photo-independent guides, must have a custom illustration");
 assert.ok(html.includes('Anatomically specific observation only; no verified species-level match yet.'));
 assert.ok(html.includes('const [where,tip]=flowerFieldTips[c.id][selected.id]||[];'));
 
@@ -92,4 +123,4 @@ for(const f of ["venationSketch","leafDetailSketch","collarFieldSketch","stemFie
  assert.ok(html.includes("function "+f+"("),"Prior illustration missing: "+f);
 assert.ok(html.includes("const picks=Object.entries(state.selected)")&&html.includes(".filter(x=>!x.conflict)"));
 assert.ok(html.includes("b.refinementMatches.length-a.refinementMatches.length"));
-console.log("PASS: original 26 floral diagrams, immutable 10 historic raw pending flags, 3 newly verified precise anatomy diagrams, zero fabricated specimen identifications");
+console.log("PASS: original 26 floral diagrams, immutable 10 historic raw pending flags, 10 source-verified precise diagrams (7 new glume/lemma/callus guides), zero fabricated specimen identifications");
