@@ -321,7 +321,7 @@ def check_view(browser, name, width, height):
         f"{name}: detailed edge state not saved to URL")
     assert sum(buckets(page))==169, (
         f"{name}: ciliate membrane edge falsely eliminated unstudied grasses")
-    page.locator('#question .answer').filter(has_text="Papery membrane").click()
+    page.locator('#question .answer').filter(has_text="Papery membrane (edge may have hairs)").click()
     assert page.locator('#question .ligule-edge-choice[data-option="ciliate"]').get_attribute(
         "aria-pressed")=="true"
     page.locator('#question .ligule-edge-reset').click()
