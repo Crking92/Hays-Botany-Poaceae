@@ -97,6 +97,8 @@ const positives = [
   ['Hairy grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'three_short'},['bouteloua-hirsuta']],
   ['Tall grama unilateral combs',{head:'one_sided',habit:'tuft',ligule:'hairs',awns:'none_obvious'},['bouteloua-pectinata']],
   ['Red grama unilateral combs',{head:'one_sided',habit:'rhizome',ligule:'hairs',awns:'three_short'},['bouteloua-trifida']],
+  ['Sideoats grama retained for one-sided short racemes',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['bouteloua-curtipendula']],
+  ['Sideoats grama retained for seven-plus one-sided branches',{head:'many_one_sided',habit:'rhizome',ligule:'hairs',awns:'none_obvious'},['bouteloua-curtipendula']],
   ['Tumble windmillgrass unilateral branches',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['chloris-verticillata']],
   ['Tumble windmillgrass 7+ one-sided branches',{head:'many_one_sided',habit:'mat',ligule:'hairs',awns:'long'},['chloris-verticillata']],
   ['Feather fingergrass unilateral branches',{head:'one_sided',habit:'tuft',ligule:'membrane',awns:'long'},['chloris-virgata']],
