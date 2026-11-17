@@ -78,7 +78,7 @@ assert.equal(Object.values(len).reduce((n,m)=>n+m,0),14);
 // direct short label; the redundant "Basal foliage tuft" pointer is hidden.
 const expectedLabels={
  "head:side_oats":["Main flower axis","Side raceme"],
- "head:whorls":["Branch junction","Flowering raceme"],
+ "head:whorls":["Junction","Raceme"],
  "head:spike":["Upright spike","Spikelets"],
  "ligule:hairs":["Hair-fringe ligule","Leaf sheath"],
  "ligule:membrane":["Membranous ligule","Leaf sheath"],
