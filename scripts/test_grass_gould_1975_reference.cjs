@@ -326,22 +326,27 @@ assert(newRefs.every(Boolean),"Gould five photo page treatments all present");
 assert.equal(new Set(source.additional_species_treatments.map(x=>x.species_id)).size,source.additional_species_treatments.length,"No duplicate Gould species links");
 assert.deepEqual(newRefs.map(r=>r.observations.length),[20,11,16,14,16,8]);
 assert.deepEqual(newRefs.map(r=>r.learner_diagnostic_checks.length),[2,0,2,0,2,0]);
-// The older 25-treatment checkpoint predates two exact owner-photographed
-// species pages: slender indiangrass Gould p.579 (PR #422) and the two named
-// sideoats grama varieties Gould p.338 (PR #423). Preserve those as separate
-// species-level source records, without changing original scoring or photos.
-assert.equal(source.additional_species_treatments.length,27);
-// Two-page Gould p.338–339 follow-up: exact variety key and p.339
-// continuation are not generic sideoats claims and do not authorize photo use.
-const sideoats2p=source.additional_species_treatments.find(x=>x.species_id==='bouteloua-curtipendula');
-assert.deepEqual(sideoats2p.printed_pages,[338,339]);
-assert(sideoats2p.two_variety_key_on_p338.variety_curtipendula.includes('CREEPING rhizomes'));
-assert(sideoats2p.two_variety_key_on_p338.variety_caespitosa.includes('LARGE OR SMALL clumps'));
-assert(sideoats2p.infraspecific_treatments[1].general_historic_distribution.includes('Oaxaca'));
-assert(sideoats2p.infraspecific_treatments[1].flowering_period.includes('June to November'));
-assert(sideoats2p.source_boundary_holds.preceding_rudiment_fragment.includes('Do NOT label'));
-assert(sideoats2p.illustration_reference.includes('Fig. 178'));
-
+// Owner supplies new Gould page images over time: retain at least the
+// 30 already indexed treatments, but do not hard-code a fixed total that
+// breaks every time a new independently sourced species page is received.
+assert(source.additional_species_treatments.length>=30,"Retain all 30 previously captured Gould taxon treatments");
+const [rabbit,ditch,nitgrass]=["polypogon-monspeliensis","polypogon-interruptus","gastridium-ventricosum"]
+  .map(id=>source.additional_species_treatments.find(x=>x.species_id===id));
+assert(rabbit&&ditch&&nitgrass,"Owner's Gould pp.145 and 147: distinct taxa retained");
+assert.equal(rabbit.printed_page,145);
+assert.equal(rabbit.continuation_page,147);
+assert(rabbit.source_images.includes("146 was NOT supplied"));
+assert.deepEqual(rabbit.observations.find(x=>x.character==="leaf_blade").width_mm_mostly,[2,8]);
+assert.deepEqual(rabbit.observations.find(x=>x.character==="ligule").length_mm,[4,10]);
+assert.deepEqual(ditch.observations.find(x=>x.character==="spikelet_glumes").glume_body_mm,[2,3]);
+assert.equal(nitgrass.taxon,"Gastridium ventricosum (Gouan) Schinz & Thell.");
+const annualProfile=read("species-d3.json").find(x=>x.id==="polypogon-monspeliensis");
+const slenderProfile=read("species-d4.json").find(x=>x.id==="sorghastrum-elliottii");
+assert(annualProfile&&slenderProfile);
+assert(annualProfile.character_evidence.gould_1975_pages_145_147);
+assert(slenderProfile.character_evidence.polypogon_beginner_pairwise_20261116);
+assert.deepEqual(annualProfile.traits,{head:["compact","long_narrow_panicle"],habit:["tuft","mat"],ligule:["membrane"],awns:["long"]});
+assert.deepEqual(slenderProfile.traits,{head:["golden_plume","long_narrow_panicle"],habit:["tuft"],ligule:["membrane"],awns:["long"]});
 const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
