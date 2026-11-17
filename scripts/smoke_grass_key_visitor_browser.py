@@ -270,7 +270,7 @@ def check_view(browser, name, width, height):
     for q_index, label, pointer_count in [
         (0, "Many little hanging side branches", 2),
         (1, "A bunch or tuft", 1),
-        (2, "A fringe of hairs", 2),
+        (2, "Mostly a fringe of hairs", 2),
         (3, "Separate bristles under spikelets", 2)
     ]:
         page.locator("#steps button.step").nth(q_index).click()
@@ -298,9 +298,36 @@ def check_view(browser, name, width, height):
             f"{name}: diagnostic photo was cropped underneath a marker: {label}")
     # A photo without reviewed arrows must say it is a GENERAL example.
     page.locator("#steps button.step").nth(2).click()
-    unknown = page.locator("#question .answer").filter(has_text="No true ligule apparent")
+    unknown = page.locator("#question .answer").filter(has_text="No ligule visible")
     assert unknown.locator("svg.field-photo-arrows").count() == 0
     assert "General reference photo" in unknown.inner_text()
+    # New collar page: two sections within ONE of the same nine tabs.
+    # Edge buttons reuse the detailed ligule_edge records; picking one without
+    # a type cannot silently exclude grasses with undocumented membrane rims.
+    assert page.locator("#question .ligule-part").count()==2, (
+        f"{name}: collar was not split into two beginner-friendly parts")
+    diagram=page.locator("#question .ligule-orientation svg")
+    assert diagram.count()==1
+    assert "leaf blade" in (diagram.get_attribute("aria-label") or "").lower()
+    for term in ["Membranous", "Hair-fringe ligule", "Cilia", "Erose", "Lacerate"]:
+        assert page.locator("#question").get_by_text(term, exact=False).count()>=1, (
+            f"{name}: missing visible collar definition {term}")
+    edge=page.locator('#question .ligule-edge-choice[data-option="ciliate"]')
+    assert page.locator("#question .ligule-edge-choice").count()==4
+    edge.click()
+    assert edge.get_attribute("aria-pressed")=="true", (
+        f"{name}: ciliate edge did not select")
+    assert "more_ligule_edge=ciliate" in page.url, (
+        f"{name}: detailed edge state not saved to URL")
+    assert sum(buckets(page))==169, (
+        f"{name}: ciliate membrane edge falsely eliminated unstudied grasses")
+    page.locator('#question .answer').filter(has_text="Papery membrane").click()
+    assert page.locator('#question .ligule-edge-choice[data-option="ciliate"]').get_attribute(
+        "aria-pressed")=="true"
+    page.locator('#question .ligule-edge-reset').click()
+    assert "more_ligule_edge" not in page.url
+    page.locator("#question .question-actions button").first.click()
+    assert page.locator("#progress-label").inner_text().startswith("0 of 9")
     page.locator("#steps button.step").first.click()
 
     # The source-backed Pappophorum option should lead to a real documented
