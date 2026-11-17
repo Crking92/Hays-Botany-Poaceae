@@ -678,14 +678,23 @@ const reviewedCharacterPhotoExamples={
 // state. A reference glume anatomy plate must remain outside specific one-
 // vein answer slots, since the image does not demonstrate a vein COUNT.
 const generalOrganPhotoExamples={
- glume_marks:{
+ glume_marks:[{
    species_id:"eleusine-indica",photo_i:2,reference_only:true,
    expected_source:"https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg",
    expected_creator:"Harry Rose (Macleay Grass Man)",expected_license:"CC BY 2.0",
    expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Eleusine/eleusine-indica/images/commons-goosegrass-b7cdd9a027b6.jpg",
    visible:"Original photographer's annotated opened goosegrass spikelet identifies the outer glumes, inner lemmas and paleas. Use the labeled parts to locate the FIRST (lower) and SECOND (upper) glumes before following a vein.",
    limit:"This general anatomy plate does NOT demonstrate the number of veins in either glume, and is NOT evidence that goosegrass matches any individual one-vein button. Use the selected option's specific drawing and a hand lens for actual vein counts."
+ },
+ {
+   species_id:"sporobolus-vaginiflorus",photo_i:0,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Sporobolus_vaginiflorus_sl125.jpg",
+   expected_creator:"Stefan.lefnaer",expected_license:"CC BY-SA 4.0",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Sporobolus/sporobolus-vaginiflorus/images/stefan-lefnaer-sl125-spikelet-labels.jpg",
+   visible:"The photographer directly labels the FIRST (lower) and SECOND (upper) glumes, lemma and palea on two views of the same spikelet, with a 3-mm scale. This is a nonlocal Austrian reference specimen, not a Hays County voucher.",
+   limit:"The photographed labels establish the organs, NOT whether either glume has exactly one vein. Do not use this plate as a positive example for either one-vein button or to identify a Texas field specimen without further evidence."
  }
+ ]
 };
 // Option-specific examples must actually show the selected anatomical feature.
 const choiceSpecificPhotoExamples={
@@ -696,6 +705,14 @@ const choiceSpecificPhotoExamples={
    expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Bromus/bromus-japonicus/images/stefan-lefnaer-bromus-japonicus-lemma-awn.jpg",
    visible:"The photographer's dissected Japanese brome image shows actual lemmas with their awns and membranous margins. Trace an awn to its lemma, not to a glume or subtending bristle.",
    limit:"This close-up does NOT establish a developmental change from straight to bent, a 2–5 mm measurement, or which floret is fertile. It is an attachment-location teaching reference, not species evidence for the selected button."
+ },
+ "floral_hair_position:spikelet_callus_hairs":{
+   species_id:"avena-fatua",photo_i:2,reference_only:true,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Avena_fatua_(3885254148).jpg",
+   expected_creator:"Matt Lavin",expected_license:"CC BY-SA 2.0",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Avena/avena-fatua/images/commons-archive-f82fef27e129a407.jpg",
+   visible:"The pale hairs at the basal (right-hand) end of the detached wild-oat floret and adjoining short rachilla are explicitly identified by photographer Matt Lavin as callus and rachilla hairs. Follow the floret to its base, not the long dark lemma awn.",
+   limit:"No exact hair-insertion pixel has been independently verified for an arrow. This is a clearly scoped callus-hair anatomy reference for wild oat, NOT a photo of Setaria bristles, female Poa hairs, or hairs specifically on a sterile/fertile lemma."
  },
  "floral_hair_position:below_spikelet":{
    species_id:"setaria-parviflora",
@@ -711,6 +728,7 @@ const choiceSpecificPhotoExamples={
 function characterPhotoExample(id,selectedOption){
  const x=selectedOption?choiceSpecificPhotoExamples[id+":"+selectedOption]:(reviewedCharacterPhotoExamples[id]||generalOrganPhotoExamples[id]);
  if(!x)return null;
+ const makeFigure=(x)=>{
  const specimen=byId(x.species_id),p=specimen?.photos?.find(p=>p.i===x.photo_i);
  if(!p||p.source_page!==x.expected_source||p.creator!==x.expected_creator||
     p.license!==x.expected_license||(x.hosted_sha&&p.hosted_git_blob_sha!==x.hosted_sha)||
@@ -731,6 +749,13 @@ function characterPhotoExample(id,selectedOption){
    links.append(a);
  }
  caption.append(links);figure.append(caption);return figure;
+ };
+ if(Array.isArray(x)){
+   const gallery=node("div","character-photo-reference-gallery");
+   for(const item of x){const figure=makeFigure(item);if(figure)gallery.append(figure);}
+   return gallery.childElementCount?gallery:null;
+ }
+ return makeFigure(x);
 }
 
 function status(s){if(s.source_scored)return["Source-scored · local status unverified","review"];if(s.trial)return["Research trial · unverified","warn"];if(s.range==="PASS")return["Regional native set",""];if(s.range==="FAIL"||s.range==="INTRODUCED_NOT_NATIVE"||s.range==="COMPARISON_NON_NATIVE")return["Introduced / comparison","bad"];return["Range status to verify","review"]}
