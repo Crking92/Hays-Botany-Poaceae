@@ -12,7 +12,7 @@ Gould describes one sterile floret, rarely two: total two, occasionally three in
 
 ## Secondary reference review
 
-Directly read Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p.1258 named species account and p.1256 species key through the owner's connected reference PDF. The account corroborates annuality, 4–20 branches, 5–10 cm branch length, gibbous 2.5–4.2 mm fertile lemma, and one smaller sterile floret. The key gives 5–15 mm fertile awns and upper-margin hair tufts to approximately 2–3 mm. These do not erase Gould's occasional second sterile floret. Existing H&L and supplemental evidence is preserved.
+Directly read Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p.1259 named species account and p.1257 species key through the owner's connected reference PDF. The account corroborates annuality, 4–20 branches, 5–10 cm branch length, gibbous 2.5–4.2 mm fertile lemma, and one smaller sterile floret. The key gives 5–15 mm fertile awns and upper-margin hair tufts to approximately 2–3 mm. These do not erase Gould's occasional second sterile floret. Existing H&L and supplemental evidence is preserved.
 
 ## Update and checks
 
