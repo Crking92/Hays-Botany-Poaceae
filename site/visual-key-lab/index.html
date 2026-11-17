@@ -351,7 +351,7 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
   </details>
   <div class="workspace">
     <section class="panel" aria-label="Photo-guided questions">
-      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions, plus easy leaf and ligule checks below. More detailed characteristics stay in the optional section. Answer in any order and skip anything uncertain.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
+      <div class="panel-head"><div class="section-kicker">Your field observations</div><h2>Choose what you can see</h2><p class="sub">Four photo-based questions, plus easy leaf, vein and ligule checks below. More detailed characteristics stay in the optional section. Answer in any order and skip anything uncertain.</p><div class="progress-track"><div class="progress-fill" id="progress"></div></div><div class="progress-label"><span id="progress-label">0 of 4 characters selected</span><span>Tap a photograph</span></div></div>
       <nav class="steps" id="steps" aria-label="Choose a character"></nav>
       <section class="beginner-checks" id="beginner-checks" aria-label="Easy field observations" hidden>
         <div class="beginner-checks-head"><div><h3>Easy field checks</h3><p>Try any of these with a leaf in your hand. Use a small ruler for widths. No need to guess—skip what you can't see.</p></div><span class="beginner-count" id="beginner-count">0 selected</span></div>
@@ -1735,6 +1735,7 @@ function progressiveResultGroups(rows){
 const beginnerCheckGroups=[
  {id:"blade_width",title:"How wide is a leaf?",hint:"Measure the widest part of a fresh, opened blade. The ranges are approximate.",labels:{thread:"Thread-thin · under 2 mm",narrow:"Narrow · 2–5 mm",medium:"Medium · 5–10 mm",broad:"Broad · over 10 mm"}},
  {id:"blade_shape",title:"Flat, folded, or rolled?",hint:"Look across a fresh blade, not a drought-curled or dried leaf.",labels:{flat:"Mostly flat",folded:"V-shaped fold",inrolled:"Rolled inward"}},
+ {id:"blade_venation",title:"What do the veins look like?",hint:"Hold a fresh leaf toward the light, then look across it. A pale line is different from a raised ridge. Pick only what you can clearly see.",optionIds:["pale_midvein","prominent_midvein","raised_midvein","raised_ribs"],labels:{pale_midvein:"Pale center line",prominent_midvein:"Obvious center vein",raised_midvein:"Raised center ridge",raised_ribs:"Several raised parallel ribs"}},
  {id:"blade_hairs",title:"Hairs on the leaf?",hint:"Inspect the blade, not the stem or the sheath below it. No hairs noticed? Just skip.",labels:{base_hairs:"Near the leaf base",blade_hairy:"Along the blade"}},
  {id:"ligule_length",title:"How tall is the ligule?",hint:"Optional: open the inside leaf collar. First use the Leaf collar question for hairs or membrane; use a ruler/hand lens to measure.",labels:{tiny:"Tiny · under 1 mm",short:"Short · 1–3 mm",medium:"Medium · 3–8 mm",long:"Long · over 8 mm"}}
 ];
@@ -1752,6 +1753,7 @@ function renderBeginnerChecks(){
    card.append(node("h4","",cfg.title),node("p","",cfg.hint));
    const choices=node("div","beginner-check-options");choices.setAttribute("role","group");choices.setAttribute("aria-label",cfg.title);
    for(const o of c.options){
+     if(cfg.optionIds&&!cfg.optionIds.includes(o.id))continue;
      const b=node("button","",cfg.labels[o.id]||o.label);
      b.type="button";b.dataset.option=o.id;
      b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
@@ -1765,6 +1767,9 @@ function renderBeginnerChecks(){
      choices.append(b);
    }
    card.append(choices);
+   if(cfg.optionIds&&selectedRefinementStates(c.id).some(v=>!cfg.optionIds.includes(v))){
+     card.append(node("p","beginner-check-hint","A more detailed vein option is also selected in the advanced section."));
+   }
    if(selectedRefinementStates(c.id).length && !selectedRefinementStates(c.id).some(v=>
        (state.refineEvidenceOptionKeys||new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
           rows.flatMap(e=>e.states.map(v=>e.character+":"+v))))).has(c.id+":"+v))){
