@@ -73,13 +73,38 @@ for(const x of batch.placements){
 }
 assert.equal(keys.size,8);
 assert.equal(Object.values(len).reduce((n,m)=>n+m,0),14);
+// The underlying 8 source-matched images / 14 old markers remain intact.
+// Visitor-facing cards only draw the 13 useful anatomical pointers with a
+// direct short label; the redundant "Basal foliage tuft" pointer is hidden.
+const expectedLabels={
+ "head:side_oats":["Main flower axis","Side raceme"],
+ "head:whorls":["Branch junction","Flowering raceme"],
+ "head:spike":["Upright spike","Spikelets"],
+ "ligule:hairs":["Hair-fringe ligule","Leaf sheath"],
+ "ligule:membrane":["Membranous ligule","Leaf sheath"],
+ "awns:bristles":["Bristle","Stigmas (not bristles)"],
+ "awns:three":["Lemma awns"]
+};
+const labels=html.match(/const mainPhotoShortLabels=({[\\s\\S]*?});\\s*function renderQuestion/);
+assert(labels,"Main-card direct label mapping missing");
+const mapped=vm.runInNewContext("("+labels[1]+")");
+assert.deepEqual(JSON.parse(JSON.stringify(mapped)),expectedLabels);
+assert.equal(Object.values(mapped).reduce((n,row)=>n+row.length,0),13);
+assert(!mapped["habit:tuft"],"Redundant tuft callout must not be drawn on main card");
+for(const [k,v] of Object.entries(mapped)){
+ assert.equal(v.length,len[k],"Photo labels must match known source-target arrows "+k);
+ assert(v.every(label=>label.length>3&&label.length<=23));
+}
 for(const k of ["main-question-existing-arrows-batch1.json","state.mainPhotoArrows=staged",
 "f.classList.add(\"with-reviewed-arrows\")","svg.setAttribute(\"preserveAspectRatio\",\"xMidYMid meet\")",
 "svg.setAttribute(\"viewBox\",\"0 0 \"+w+\" \"+h)",
-"validReviewed?.markers","photo-arrow-legend","General reference photo; the drawing explains the structure",
-"Not proven here: "])
-  assert(js.includes(k),"Main card lacks safely matched visible pointers: "+k);
+"shownMarkers,shownMarkers?mainPhotoShortLabels[q.id+\":\"+key]:null",
+"q.id===\"habit\"&&key===\"tuft\"",
+"tag.textContent=short","body.append(node(\"span\",\"photo-credit\""])
+ assert(js.includes(k),"Main-card label/credit safety rule missing: "+k);
+assert(!js.includes("In this source-matched photo: "),"Verbose proof text should stay in the underlying manifest");
+assert(!js.includes("General reference photo; the drawing explains the structure"),"Cluttering generic photo disclaimer should not be displayed on each option");
 assert.equal(JSON.stringify(source).includes("main-question-existing-arrows-batch1"),false);
 console.log(JSON.stringify({result:"PASS",mainQuestionGroups:4,annotatedMainOptions:8,
- existingPhotoPointers:14,rightsAndSourcePinned:true,sourcePhotosRehosted:0,
+ existingPhotoPointers:14,visibleLabeledPointers:13,rightsAndSourcePinned:true,sourcePhotosRehosted:0,
  original112Unchanged:true,unknownPhotoAnatomyDisclosed:true,matchingProof:"same source+creator+license+filename"}));
