@@ -306,11 +306,14 @@ def check_view(browser, name, width, height):
         f"{name}: source-approved bristle closeup failed to decode")
     assert img.evaluate("(img)=>getComputedStyle(img).objectFit")=="contain"
     assert panel.locator("svg.field-photo-arrows").count()==0
-    # Option switch must immediately clear the old reference, since Setaria's
-    # sterile branchlets are NOT callus hairs on a floret.
+    # Switching organs must REMOVE the Setaria bristles and show the
+    # separately source-verified wild-oat FLORET callus hairs instead.
     choose_extra(page,"Flowers / spikelets","floral_hair_position","spikelet_callus_hairs")
-    assert hairgroup.locator(".choice-specific-photo-slot figure").count()==0, (
-        f"{name}: Setaria bristle photo misleadingly survived when callus selected")
+    callus_slot=hairgroup.locator(".choice-specific-photo-slot")
+    assert callus_slot.locator("figure").count()==1, (
+        f"{name}: correctly scoped wild-oat callus photograph did not replace Setaria bristles")
+    assert "Matt Lavin" in callus_slot.inner_text() and "Stefan.lefnaer" not in callus_slot.inner_text(), (
+        f"{name}: Setaria bristle photo misleadingly survived after switching to floret callus")
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text()=="169 possible"
 
