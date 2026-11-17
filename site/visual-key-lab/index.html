@@ -2491,7 +2491,7 @@ function renderLiguleSections(area,q,buildChoice){
  partA.append(learn);area.append(partA);
  const partB=node("section","ligule-part");
  partB.append(node("h4","","Part B — If there's a membrane, what is its edge like?"),
-  node("p","ligule-part-note","Optional: choose a detail you can actually see. One membrane may be both uneven and hairy. These choices reuse the existing detailed-character evidence; an unstudied edge will not eliminate a species."));
+  node("p","ligule-part-note","Optional: choose the clearest edge feature you can see. A membrane can have both notches and edge hairs; if so, pick the more distinctive one for now. An unstudied edge never eliminates a grass."));
  const edge=state.refineCharacters.find(x=>x.id==="ligule_edge");
  const types={entire:["Entire (smooth)","Rim mostly unbroken; avoid torn older leaves."],
   erose:["Erose (tiny notches)","Small irregular nicks in the membrane edge."],
