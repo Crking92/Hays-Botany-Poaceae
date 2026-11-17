@@ -40,7 +40,7 @@ assert.deepEqual(littleVar.infraspecific_key.map(x=>x.code),["4B","4D","4E","4A"
 const freq=littleVar.infraspecific_key.find(x=>x.code==="4A");
 assert.deepEqual(freq.pedicelled_spikelet_mm,[1.5,5]);
 assert(freq.distinguishing_characters.includes("Does not produce creeping rhizomes"));
-assert(littleVar.nine_main_question_guidance.habit.includes("does not"));
+assert(littleVar.nine_main_question_guidance.habit.includes("Do not require rhizomes"));
 assert(little.character_evidence.gould_1975_pages_608_609);
 assert(little.character_evidence.gould_1975_pages_608_609.photo_policy==="NO_MEDIA_OR_CREDIT_EDITS");
 assert.deepEqual(little.traits,{head:["short_racemes"],habit:["tuft","rhizome"],ligule:["membrane"],awns:["long","none_obvious"]});
