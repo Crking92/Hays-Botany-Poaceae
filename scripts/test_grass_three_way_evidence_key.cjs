@@ -18,7 +18,7 @@ const state={selected:{head:null,habit:null,ligule:null,awns:null},refineSelecte
 const sandbox={state};
 vm.createContext(sandbox);
 const section=script.slice(script.indexOf("function refinementEvidence("),script.indexOf("function renderOptionalCharacters(){"));
-const results=script.slice(script.indexOf("function currentResults(){"),script.indexOf("function renderTabs(){"));
+const results=script.slice(script.indexOf("function coreChoiceStatus("),script.indexOf("function renderTabs(){"));
 assert(section&&results,"key code boundaries missing");
 vm.runInContext(section+"\n"+results,sandbox);
 const inspect=()=>vm.runInContext("progressiveResultGroups(currentResults())",sandbox);
