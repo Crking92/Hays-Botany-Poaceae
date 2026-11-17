@@ -1,0 +1,403 @@
+{
+  "schema": "HAYS_GOULD_GREEN_SPRANGLETOP_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "disakisperma-dubium",
+  "scientific": "Disakisperma dubium",
+  "taxon_as_printed": "Leptochloa dubia",
+  "printed_page": 226,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "source_material": "Owner screenshot: complete Leptochloa dubia p.226 treatment. Previous key fragment and following L. virgata treatment excluded. No scans/figures republished.",
+  "option_additions": [
+    {
+      "character": "basal_crown",
+      "option": {
+        "id": "firm_base",
+        "label": "Firm perennial base",
+        "detail": "Confirm the crown/base is firm. Gould does not call it knotty or equate firmness with underground rhizomes."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "basal_crown",
+      "option": {
+        "id": "without_stolons_rhizomes",
+        "label": "No stolons or rhizomes",
+        "detail": "Gould explicitly describes this species without either organ. Verify the attached crown, underground stems and surface stems; an unexamined structure is unknown, not absent."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "solitary_subsessile_at_nodes",
+        "label": "One nearly sessile spikelet per branch node",
+        "detail": "Inspect attachment at one flowering-branch node. Gould describes solitary, subsessile spikelets; do not count florets inside a spikelet as separate spikelets."
+      },
+      "subgroup": "Spikelet attachment"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "lower_sheath_cleistogamous_spikelets",
+        "label": "Hidden closed-flowering spikelets in lower sheaths",
+        "detail": "Inspect lower sheath axils for separate perfect cleistogamous spikelets. Closed flowers on the same plant are not a second species or a normal exposed terminal branch."
+      },
+      "subgroup": "Hidden lower-sheath flowering"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "lanceolate_awnless_glumes",
+        "label": "Lance-shaped outer glumes, awnless",
+        "detail": "Locate both OUTER glumes. Gould describes them as lanceolate and awnless; second usually 4–5 mm, first slightly shorter. This is separate from lemma awn evidence."
+      },
+      "subgroup": "Glume shape and awns"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "rounded_back_notched_apex",
+        "label": "Lemma rounded on back, blunt and usually notched",
+        "detail": "Inspect an INNER lemma: broad, rounded on back, truncate and usually notched at apex. A notch is not evidence of an awn, glume keel or gland pit."
+      },
+      "subgroup": "Lemma shape"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lemma_margin_puberulence",
+        "label": "Fine short hairs on lemma margins",
+        "detail": "Gould permits a hairless lemma OR fine marginal puberulence. Do not require a conspicuous hair tuft or transfer these hairs to a glume."
+      },
+      "subgroup": "Lemma hairs"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "note": "Blades mostly 2–6(–8) mm wide; preserve usual and parenthetical endpoints. Width bands overlap at their boundaries.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown.",
+      "width_mm": [
+        2,
+        8
+      ],
+      "usual_width_mm": [
+        2,
+        6
+      ]
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "blade_shape",
+      "states": [
+        "inrolled"
+      ],
+      "note": "Blades often inroll ON DRYING. Do not present a dried curl as a required fresh-leaf state; regional fresh flat evidence is preserved.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown.",
+      "condition": "INROLLED_ON_DRYING"
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "blade_hairs",
+      "states": [
+        "hairless",
+        "blade_hairy"
+      ],
+      "note": "Blades hairless, rough or sparsely pilose. Roughness is not ordinary pubescence, and no papilla bases/basal-only hairs are stated.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "leaf_base",
+      "states": [
+        "compressed_sheath"
+      ],
+      "note": "Lower sheaths, especially sterile-shoot sheaths, often laterally flattened and sharply keeled. Not every upper sheath is asserted compressed.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "sheath_surface",
+      "states": [
+        "glabrous",
+        "sometimes_hairy",
+        "keeled_lower",
+        "lower_compressed"
+      ],
+      "note": "Sheaths glabrous or lower ones pilose; lower sheaths often compressed/sharply keeled, especially sterile shoots. Keep organ/position scope.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "ligule_length",
+      "states": [
+        "tiny"
+      ],
+      "note": "Gould: fringed MEMBRANE about 0.5 mm. Diggs dense cilia 0.3–1.2 mm describes hairs, not necessarily measured membrane height; ranges are not silently substituted.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown.",
+      "length_mm": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "basal_crown",
+      "states": [
+        "firm_base",
+        "without_stolons_rhizomes"
+      ],
+      "note": "Tufted perennial with firm base explicitly WITHOUT stolons or rhizomes. Firm is not knotty and no running underground stem is implied.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "spikelet_position",
+      "states": [
+        "solitary_subsessile_at_nodes",
+        "lower_sheath_cleistogamous_spikelets"
+      ],
+      "note": "Branches 2–15, unbranched, mostly 4–12 cm, flexuous, loosely erect/spreading, well spaced on upper 5–20 cm culm. Spikelets solitary/subsessile at nodes. Perfect cleistogamous spikelets regularly develop in LOWER sheath axils.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "florets_per_spikelet",
+      "states": [
+        "two",
+        "several"
+      ],
+      "note": "Gould gives usually 3–8 florets with occasional 2 (printed 3–(2–)8). Preserve that rare two and Diggs usually 3–8; broader supplementary reports remain separate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown.",
+      "floret_count_usual": [
+        3,
+        8
+      ],
+      "occasional_floret_count": 2
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "glume_marks",
+      "states": [
+        "lanceolate_awnless_glumes"
+      ],
+      "note": "Glumes lanceolate, awnless; second usually 4–5 mm, first slightly shorter. No vein count, gland pit or sessile/pedicelled companion state is stated here.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "lemma_texture",
+      "states": [
+        "smooth",
+        "rounded_back_notched_apex",
+        "lemma_margin_puberulence"
+      ],
+      "note": "Lemmas broad, rounded on back, truncate and usually notched; hairless OR puberulent on margins. Lowest lemma 3.5–5 mm. Hairless is not necessarily shiny/polished.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    },
+    {
+      "id": "disakisperma-dubium",
+      "scientific": "Disakisperma dubium",
+      "character": "floral_hair_position",
+      "states": [
+        "lemma"
+      ],
+      "note": "Any fine puberulence is located on lemma margins; not transferred to glumes, pedicels, callus or rachilla.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 226,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive synonym-crosswalk evidence with age/organ/rare-form scope. Explicit root and lemma-awn absences separately validated; missing traits stay unknown."
+    }
+  ],
+  "secondary_evidence": {
+    "id": "disakisperma-dubium",
+    "scientific": "Disakisperma dubium",
+    "character": "true_lemma_awn",
+    "states": [
+      "none"
+    ],
+    "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, exact Leptochloa dubia, printed p.1282",
+    "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+    "pdf_printed_page": 1282,
+    "source_status": "READY_PRIMARY",
+    "source_scope_caution": "Exact historical synonym treatment; preserve a tiny supplementary mucro as distinct from a true awn.",
+    "note": "Named Leptochloa dubia account explicitly says glumes AND lemmas awnless. Earlier p.1281 labels remain historical originals; named text is on p.1282, verified at following LEPTOCHLOA/POACEAE footer."
+  },
+  "absence_proof": {
+    "schema": "EXACT_GREEN_SPRANGLETOP_ABSENCES_V1",
+    "id": "disakisperma-dubium",
+    "root_source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+    "root_page": 226,
+    "root_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+    "root_states": {
+      "underground_stems": [
+        "long_scaly",
+        "slender_long",
+        "short_knotty",
+        "short_rhizome",
+        "long_rhizome",
+        "short_scaly",
+        "thick_rhizome",
+        "scaly_rhizome",
+        "rhizome_present",
+        "creeping_rhizomes",
+        "management_rhizomes"
+      ],
+      "surface_runners": [
+        "stolon",
+        "wiry_stolon",
+        "management_stolons"
+      ]
+    },
+    "awn_source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, exact Leptochloa dubia, printed p.1282",
+    "awn_page": 1282,
+    "awn_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+    "awn_states": [
+      "three",
+      "long",
+      "short",
+      "bent_twisted",
+      "straight_or_bent",
+      "fertile_awn_2_to_5mm",
+      "fertile_awn_1_to_1_5mm"
+    ]
+  },
+  "learner_diagnostic_checks": [
+    {
+      "look": "Confirm the firm base and actual stem organs",
+      "check": "Gould explicitly describes a tufted perennial with a firm base but without stolons or rhizomes. Confirm any claimed runner is a connected stem rather than a root or lower flowering culm.",
+      "compare": "A verified stolon or rhizome conflicts with this primary account. An unexamined underground structure remains unknown.",
+      "certainty": "Explicit Gould p.226 absence, not inference from tufting or source silence.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Separate a true lemma awn from a tiny point or notch",
+      "check": "Gould describes lanceolate awnless glumes and broad blunt/notched lemmas. Diggs explicitly says both glumes and lemmas are awnless. A verified true lemma awn conflicts; a minute tip, notch or uncertain beginner short-bristle observation does not.",
+      "compare": "Use the attached inner lemma. Do not infer an awn from a sharp glume, grass branch or a different plant.",
+      "certainty": "Exact Diggs text p.1282; tiny supplementary mucronate reports are not treated as true awns.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Inspect separate lower-sheath spikelets and count florets",
+      "check": "Gould reports solitary nearly sessile spikelets on the branches, usually 3–8 florets with occasional 2, plus regularly produced perfect cleistogamous spikelets hidden in lower sheath axils. Lower sterile-shoot sheaths can be compressed/keeled and pilose.",
+      "compare": "These hidden closed flowers are on the same species. Drying-induced leaf roll, lower-sheath hairs and membrane versus cilia measurements retain their own context.",
+      "certainty": "Gould p.226; next Leptochloa virgata entry excluded; no new voucher certification.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Leptochloa dubia, printed p.226",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "secondary_reference_review": {
+    "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, exact Leptochloa dubia, printed p.1282",
+    "access": "Directly read owner-connected PDF text; footer LEPTOCHLOA/POACEAE1282 follows named account and L. mucronata.",
+    "corroborates": "Tufted erect perennial, unbranched above base; 2–15 flexuous loosely erect/spreading branches; usually 3–8 florets; glumes and lemmas awnless.",
+    "ligule_scope": "Diggs dense cilia 0.3–1.2 mm versus Gould fringed membrane about 0.5 mm, retained as different measured parts.",
+    "citation_correction": "Historical optional records say1281; exact species text verified1282."
+  },
+  "non_scoring_context": {
+    "culm_height_cm": [
+      30,
+      110
+    ],
+    "blade_length_cm": [
+      5,
+      30
+    ],
+    "usual_blade_width_mm": [
+      2,
+      6
+    ],
+    "occasional_width_max_mm": 8,
+    "branches": [
+      2,
+      15
+    ],
+    "branch_length_cm": [
+      4,
+      12
+    ],
+    "branch_distribution_cm_on_upper_culm": [
+      5,
+      20
+    ],
+    "second_glume_mm": [
+      4,
+      5
+    ],
+    "lowest_lemma_mm": [
+      3.5,
+      5
+    ],
+    "chromosome_2n": [
+      40,
+      60,
+      80
+    ],
+    "flowering": "May–November",
+    "county_nativity": "Existing status untouched; historical Texas regional occurrence is not new county evidence."
+  }
+}
+

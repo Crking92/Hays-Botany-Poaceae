@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -919,6 +919,11 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ const p=s.green_sprangletop_absences;
+ if(s.id==="disakisperma-dubium"&&p?.schema==="EXACT_GREEN_SPRANGLETOP_ABSENCES_V1"){
+  for(const [id,values]of Object.entries(p.root_states))if(selectedRefinementStates(id).some(v=>values.includes(v)))conflicts.push({character:id,label:id==="underground_stems"?"Underground stems":"Surface stolons",reported:"Without stolons or rhizomes",source:p.root_source,source_url:p.root_url,note:"Explicit Gould absence. Confirm an actual connected stem, not a root or reclining culm.",policy:"EXACT_GREEN_ROOT_ABSENCE"});
+  if(selectedRefinementStates("true_lemma_awn").some(v=>p.awn_states.includes(v)))conflicts.push({character:"true_lemma_awn",label:"True lemma awn",reported:"Glumes and lemmas awnless",source:p.awn_source,source_url:p.awn_url,note:"Exact Diggs species account; minute mucro or notch is not a true awn.",policy:"EXACT_GREEN_LEMMA_AWN_ABSENCE"});
+ }
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
@@ -3131,6 +3136,15 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyGreenSprangletopGouldSupplement(pack){
+ const p=pack.absence_proof,r=pack.secondary_evidence;
+ const roots={"underground_stems":["long_scaly","slender_long","short_knotty","short_rhizome","long_rhizome","short_scaly","thick_rhizome","scaly_rhizome","rhizome_present","creeping_rhizomes","management_rhizomes"],"surface_runners":["stolon","wiry_stolon","management_stolons"]},awns=["three","long","short","bent_twisted","straight_or_bent","fertile_awn_2_to_5mm","fertile_awn_1_to_1_5mm"];
+ if(pack.taxon_as_printed!=="Leptochloa dubia"||p?.schema!=="EXACT_GREEN_SPRANGLETOP_ABSENCES_V1"||p.id!=="disakisperma-dubium"||p.root_page!==226||!p.root_source?.includes("Gould")||p.awn_page!==1282||!p.awn_source?.includes("exact Leptochloa dubia")||!p.awn_source?.includes("Diggs")||!p.root_url?.startsWith("https://")||!p.awn_url?.startsWith("https://")||JSON.stringify(p.root_states)!==JSON.stringify(roots)||JSON.stringify(p.awn_states)!==JSON.stringify(awns)||r?.id!==p.id||r.character!=="true_lemma_awn"||r.states?.join(",")!=="none"||r.pdf_printed_page!==1282||r.source!==p.awn_source||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid green sprangletop explicit source proof");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_GREEN_SPRANGLETOP_SUPPLEMENT_V1",id:"disakisperma-dubium",scientific:"Disakisperma dubium",page:226});
+ const prior=state.refineEvidenceMap[p.id].find(e=>e.character==="true_lemma_awn");if(prior){prior.states=[...new Set([...prior.states,...r.states])];prior.additional_state_sources??={};prior.additional_state_sources.none=structuredClone(r)}else state.refineEvidenceMap[p.id].push(structuredClone(r));
+ const s=state.species.find(s=>s.id===p.id);s.green_sprangletop_absences=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.226, Leptochloa dubia: firm-based tufted perennial WITHOUT stolons or rhizomes; solitary nearly sessile spikelets and hidden closed-flowering spikelets in lower sheath axils. Diggs exact text p.1282 explicitly reports awnless lemmas. Actual runners or true lemma awns conflict; a tiny tip or unexamined structure does not.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3865,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-green-sprangletop-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Green sprangletop Gould supplement unavailable");
+ applyGreenSprangletopGouldSupplement(await response.json());
+}catch(err){console.warn("Green sprangletop source supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3968,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
