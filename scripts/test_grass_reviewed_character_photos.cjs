@@ -2,7 +2,7 @@
 const fs=require("node:fs"),assert=require("node:assert/strict");
 const read=p=>fs.readFileSync(p,"utf8");
 const html=read("site/visual-key-lab/index.html");
-const match=html.match(/const reviewedCharacterPhotoExamples=(\{[\s\S]*?\});\s*function characterPhotoExample\(/);
+const match=html.match(/const reviewedCharacterPhotoExamples=(\{[\s\S]*?\});\s*\/\/ A photo belongs/);
 assert(match,"reviewed example manifest missing");
 const examples=JSON.parse(match[1]);
 const shards=["a","b","c1","c2","c3","d1","d2","d3","d4"];
@@ -49,4 +49,19 @@ for(const [id,x] of Object.entries(examples)){
  }
 }
 assert.equal(archiveCount,6);assert.equal(scoredCount,2);
+// Choice-specific photo must be source pinned to the EXACT advanced option;
+// never appear as a generic illustration for lemma or callus pubescence.
+const bristleHost=scored.find(s=>s.id==="setaria-parviflora");
+const bristle=bristleHost?.photos.find(p=>p.i===3);
+assert(bristle&&bristle.license==="CC BY-SA 4.0");
+assert.equal(bristle.creator,"Stefan.lefnaer");
+assert.equal(bristle.source_page,"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg");
+assert.equal(bristle.license_url,"https://creativecommons.org/licenses/by-sa/4.0/");
+assert(html.includes('"floral_hair_position:below_spikelet":{'),"Exact bristle choice missing source-pinned illustration");
+assert(html.includes('photo_i:3,')&&html.includes(bristle.src));
+assert(html.includes('const chosenPhoto=characterPhotoExample(c.id,selected.id);'),
+ "Photo must update when selected option changes, not appear for all hair positions");
+assert(html.includes('choicePhotoSlot.replaceChildren()'),"Stale bristle photo could leak onto callus hairs after selecting another option");
+assert(html.includes("if(chosenPhoto)choicePhotoSlot.append(chosenPhoto);"));
+assert(!html.includes("bristleBaseArrow"),"No unverified bristle insertion pointer may be invented");
 console.log("PASS: 8 previously hosted source-pinned character photographs (6 archived approved + 2 original CC), credit/source/limits intact; original 112 unchanged");

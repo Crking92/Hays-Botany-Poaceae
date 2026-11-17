@@ -285,6 +285,35 @@ def check_view(browser, name, width, height):
         page.locator("#reset-field-key").click()
         assert page.locator("#count").inner_text() == "169 possible"
 
+    # The already-approved Stefan Lefnaer spikelet closeup may ONLY appear
+    # for separate Setaria bristles beneath spikelets, not for unrelated
+    # hairs attached to the lemma or to a basal floret callus.
+    choose_extra(page,"Flowers / spikelets","floral_hair_position","below_spikelet")
+    hairgroup=page.locator('#optional-character-groups .optional-group[data-character="floral_hair_position"]')
+    panel=hairgroup.locator(".choice-specific-photo-slot figure.character-photo-example")
+    assert panel.count()==1, f"{name}: the existing Setaria bristle macro isn't shown for the correct choice"
+    assert "Stefan.lefnaer" in panel.inner_text() and "CC BY-SA 4.0" in panel.inner_text(), (
+        f"{name}: reused image lost source photographer or share-alike credit")
+    assert "Not proven:" in panel.inner_text(), (
+        f"{name}: source image must not claim an exact arrow/photo-only floret insertion")
+    assert panel.locator('a[href="https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg"]').count()==1
+    assert panel.locator('a[href="https://creativecommons.org/licenses/by-sa/4.0/"]').count()==1
+    img=panel.locator("img")
+    img.scroll_into_view_if_needed()
+    img.evaluate("(img)=>{img.loading='eager'}")
+    img.evaluate("(img)=>img.decode()")
+    assert min(img.evaluate("(img)=>[img.naturalWidth,img.naturalHeight]"))>100, (
+        f"{name}: source-approved bristle closeup failed to decode")
+    assert img.evaluate("(img)=>getComputedStyle(img).objectFit")=="contain"
+    assert panel.locator("svg.field-photo-arrows").count()==0
+    # Option switch must immediately clear the old reference, since Setaria's
+    # sterile branchlets are NOT callus hairs on a floret.
+    choose_extra(page,"Flowers / spikelets","floral_hair_position","spikelet_callus_hairs")
+    assert hairgroup.locator(".choice-specific-photo-slot figure").count()==0, (
+        f"{name}: Setaria bristle photo misleadingly survived when callus selected")
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text()=="169 possible"
+
     # Final four advanced choices must actually rank a known exact species,
     # use corrected FIRST-GLUME anatomy and retain nonmatching unknown grasses.
     for section, character, choice, scientific in [

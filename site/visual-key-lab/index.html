@@ -671,11 +671,28 @@ const reviewedCharacterPhotoExamples={
     "limit": "The complete stem base and its lifetime growth angle are not shown."
   }
 };
-function characterPhotoExample(id){
- const x=reviewedCharacterPhotoExamples[id];if(!x)return null;
+// A photo belongs to a SPECIFIC selected anatomical option, not its entire
+// advanced character group. This prevents Setaria bristles from illustrating
+// the unrelated callus hairs or sterile/fertile lemma hair options.
+const choiceSpecificPhotoExamples={
+ "floral_hair_position:below_spikelet":{
+   species_id:"setaria-parviflora",
+   photo_i:3,
+   expected_source:"https://commons.wikimedia.org/wiki/File:Setaria_parviflora_sl24.jpg",
+   expected_creator:"Stefan.lefnaer",
+   expected_license:"CC BY-SA 4.0",
+   expected_src:"https://crking92.github.io/Hays-Botany-Poaceae/content/taxa/Poaceae/Setaria/setaria-parviflora/images/stefan-lefnaer-bristle-base-sl24.jpg",
+   visible:"Two green spikelet units surrounded by several thin bristles; the original author describes bristles at the spikelet base. A 3-mm scale helps show their relative size.",
+   limit:"This photograph does not label a single exact bristle insertion pixel. Purple feathery stigmas are NOT bristles, and callus hairs on an individual floret are NOT the same organ."
+ }
+};
+function characterPhotoExample(id,selectedOption){
+ const x=selectedOption?choiceSpecificPhotoExamples[id+":"+selectedOption]:reviewedCharacterPhotoExamples[id];
+ if(!x)return null;
  const specimen=byId(x.species_id),p=specimen?.photos?.find(p=>p.i===x.photo_i);
  if(!p||p.source_page!==x.expected_source||p.creator!==x.expected_creator||
     p.license!==x.expected_license||(x.hosted_sha&&p.hosted_git_blob_sha!==x.hosted_sha)||
+    (x.expected_src&&p.src!==x.expected_src)||
     !p.src?.startsWith("https://")||!p.license_url?.startsWith("https://"))return null;
  const figure=node("figure","character-photo-example");
  figure.append(image(p,"Photo of "+specimen.common+": "+x.visible));
@@ -1530,9 +1547,10 @@ function renderOptionalCharacters(){
 
    if(Object.prototype.hasOwnProperty.call(flowerFieldTips,c.id)){
      const guide=node("div","venation-field-guide leaf-detail-guide flower-field-guide");
+     const choicePhotoSlot=node("div","choice-specific-photo-slot");
      guide.setAttribute("aria-live","polite");
      refreshVeinGuide=()=>{
-       guide.replaceChildren();
+       guide.replaceChildren();choicePhotoSlot.replaceChildren();
        const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a flower or spikelet detail for a diagram and a closer-look tip. No flowerhead? Skip this section."));return;}
        const [where,tip]=flowerFieldTips[c.id][selected.id]||[];
@@ -1548,8 +1566,10 @@ function renderOptionalCharacters(){
        info.append(node("strong","",where),node("p","",tip),
          node("p","venation-field-source",count?("Source-backed matching detail recorded for "+count+" grass"+(count===1?"":"es")+". Grasses with unknown spikelet descriptions remain possible."):"Species-level published evidence is not linked for this choice yet. You can record it, but it cannot rank or exclude a grass."));
        guide.append(flowerFieldSketch(c.id,selected.id),info);
+       const chosenPhoto=characterPhotoExample(c.id,selected.id);
+       if(chosenPhoto)choicePhotoSlot.append(chosenPhoto);
      };
-     refreshVeinGuide();content.append(guide);
+     refreshVeinGuide();content.append(guide,choicePhotoSlot);
    }
 
    if(c.options.some(o=>isPendingChoice(c,o)))content.append(node("p","optional-need-note","Research-pending choices can be recorded, but won't yet rank any grass. All candidates stay possible."));
