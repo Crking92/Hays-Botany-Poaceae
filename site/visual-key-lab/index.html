@@ -334,6 +334,31 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
 .evidence-focus[aria-pressed="true"]{border:2px solid var(--accent,#315b48);font-weight:800}
 #focus-note{margin:5px 0 10px;line-height:1.5;font-size:.76rem;opacity:.88}
 @media(max-width:440px){.evidence-focus{width:100%;min-height:44px}}
+/* Beginner collar anatomy uses the existing ligule and ligule_edge records;
+   all illustrations below are drawings, not new photos or anatomical arrows. */
+.ligule-part{margin:17px 0 21px;padding:15px;border:1px solid var(--line);border-radius:14px;background:var(--pale)}
+.ligule-part h4{font-family:Georgia,serif;font-size:1.17rem;margin:0 0 5px;color:var(--ink)}
+.ligule-part .answer-grid{margin-top:10px}
+.ligule-part-note{font-size:.83rem;line-height:1.5;color:var(--muted);margin:4px 0 10px}
+.ligule-orientation{margin:11px 0 6px;padding:11px;border:1px solid var(--line);background:var(--white);border-radius:12px}
+.ligule-orientation svg{display:block;width:100%;max-height:245px;height:auto}
+.ligule-orientation figcaption{font-size:.77rem;color:var(--muted);line-height:1.45;margin-top:5px}
+.ligule-edge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:10px 0}
+.ligule-edge-choice{background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:11px;text-align:left;display:flex;align-items:center;gap:10px;min-height:112px}
+.ligule-edge-choice svg{width:88px;height:72px;flex:0 0 88px;background:#e8f2db;border-radius:8px}
+.ligule-edge-choice strong{display:block;font-size:.89rem;margin-bottom:3px}
+.ligule-edge-choice small{display:block;font-size:.77rem;line-height:1.38;color:var(--muted)}
+.ligule-edge-choice[aria-pressed="true"]{border:2px solid #427e59;background:#e4f0df}
+.ligule-edge-choice:disabled{opacity:.53;cursor:not-allowed}
+.ligule-key-terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 12px;margin:13px 0 0}
+.ligule-definition{font-size:.8rem;line-height:1.43;color:var(--ink);margin:0}
+.ligule-definition b{color:var(--ink)}
+.ligule-term-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;align-items:center}
+.ligule-term-actions .grass-term-chip{font-size:.76rem}
+.ligule-edge-reset{font-size:.8rem;background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--ink);padding:7px 10px}
+html[data-theme="dark"] .ligule-edge-choice[aria-pressed="true"]{background:#2b5239;border-color:#a3d9b2}
+html[data-theme="dark"] .ligule-edge-choice svg{background:#dcebd7}
+@media(max-width:530px){.ligule-part{padding:11px}.ligule-edge-grid,.ligule-key-terms{grid-template-columns:1fr}.ligule-edge-choice{min-height:90px}.ligule-edge-choice svg{width:78px;height:64px;flex-basis:78px}}
 </style>
 <link rel="stylesheet" href="grass-glossary.css?v=2">
 </head>
@@ -415,9 +440,9 @@ const qs=[
 ["aquatic_rooted","Rooted in running water, leaves trail downstream","A fully aquatic grass whose long submerged ribbons flow with the current; observe only, do not touch protected wild-rice.","zizania-texana",2]
 ]},
 {id:"ligule",short:"Leaf collar",title:"What does the true ligule look like?",hint:"Open a leaf where the blade joins the sheath. A tiny membrane with cilia may look like only hairs; check beneath the hair tips. Ignore hairs on a distant stem node.",options:[
-["hairs","A fringe of hairs","The inner blade–sheath junction shows short hairlike structures.","panicum-hallii",5],
-["membrane","A thin membrane","A small papery flap rises at the inner blade–sheath junction.","dichanthium-sericeum",4],
-["absent","No true ligule apparent","No membrane or hair fringe at the inner blade–sheath junction.","echinochloa-crus-galli",1]
+["hairs","Mostly a fringe of hairs","Hairs themselves form the ligule. Look for a hidden papery base first: a membrane with hairs along its rim belongs under Papery membrane.","panicum-hallii",5],
+["membrane","Papery membrane (edge may have hairs)","A thin flap rises inside the blade–sheath junction. Its rim may be smooth, notched, deeply split, or fringed with cilia.","dichanthium-sericeum",4],
+["absent","No ligule visible","Select only after clearly exposing the inner leaf junction and seeing neither a flap nor a fringe. If unsure, skip.","echinochloa-crus-galli",1]
 ]},
 {id:"awns",short:"Awns / bristles",title:"What projections surround the spikelet?",hint:"Awns arise from the lemma or glume. Three SHORT grama awns are not the three LONG awns of Aristida. Setaria bristles are separate sterile branchlets; Cenchrus bur spines are fused bristles. Long hairs and feathery stigmas are neither. If awns are broken or missing, skip this question rather than guessing no awns. A hand lens and an intact floret help.",options:[
 ["three","Three long awns","Three threadlike awns extend from one fertile floret.","aristida-purpurea",1],
@@ -840,6 +865,7 @@ function refinementMatches(s){
  };
  const counted=new Set();
  return supported.filter(hit=>{
+  if(hit.character==="ligule_edge"&&state.selected.ligule)return false;
   const overlapping=hit.matched.map(v=>sharedOrgan[hit.character+":"+v]).find(Boolean);
   const key=overlapping||hit.character;
   if(counted.has(key))return false;
@@ -848,6 +874,13 @@ function refinementMatches(s){
 }
 
 // Evidence-only view is optional and reversible; unknown traits remain botanically possible.
+function supportedLiguleEdge(s){
+ const selected=selectedRefinementStates("ligule_edge");
+ if(!selected.length)return false;
+ const evidence=refinementEvidence(s,"ligule_edge");
+ return Boolean(evidence&&!evidence.source_disagreement&&!evidence.conflicting_source&&
+  evidence.source_status!=="HOLD"&&selected.some(x=>evidence.states?.includes(x)));
+}
 function hasAllDocumentedRefinements(s){
  return Object.keys(state.refineSelected).every(id=>{
   const values=selectedRefinementStates(id);
@@ -1672,7 +1705,20 @@ function renderOptionalCharacters(){
  evidenceToggle.onclick=()=>{state.refineOnlyDocumented=!state.refineOnlyDocumented;evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));updateUrl();renderResults()};
 }
 function updateUrl(){const u=new URL(location.href);qs.forEach(q=>{if(state.selected[q.id])u.searchParams.set(q.id,state.selected[q.id]);else u.searchParams.delete(q.id)});state.refineCharacters.forEach(c=>{const key="more_"+c.id,values=selectedRefinementStates(c.id);if(values.length)u.searchParams.set(key,values.join(","));else u.searchParams.delete(key)});if(state.refineOnlyDocumented)u.searchParams.set("more_mode","documented");else u.searchParams.delete("more_mode");if(state.focusConfirmed)u.searchParams.set("focus","documented");else u.searchParams.delete("focus");history.replaceState(null,"",u.toString())}
-function choose(qid,choice){state.selected[qid]=state.selected[qid]===choice?null:choice;updateUrl();render()}
+function choose(qid,choice){
+ const next=state.selected[qid]===choice?null:choice;
+ state.selected[qid]=next;
+ if(qid==="ligule"&&next){
+  const edge=state.refineCharacters.find(c=>c.id==="ligule_edge");
+  const allowed=next==="membrane"?["entire","erose","lacerate","ciliate"]:
+   next==="hairs"?["hair_fringe"]:[];
+  const kept=selectedRefinementStates("ligule_edge").filter(id=>allowed.includes(id));
+  if(kept.length)state.refineSelected.ligule_edge=edge?.multi_select?kept:kept[0];
+  else delete state.refineSelected.ligule_edge;
+  renderOptionalCharacters();
+ }
+ updateUrl();render();
+}
 /* Mirror currentResults()'s conservative core-match semantics when populating
    "Ruled out". Evidence-only mode may hide an unknown species, but must not
    promote that omission into a documented contradiction. Keep these cases in
@@ -2404,6 +2450,100 @@ habit:"Follow a living stem to the base. Look for a true surface runner with roo
 ligule:"Peel the blade gently away from the stem and examine the INNER junction. Separate a membrane with hairlike cilia from hairs arising on the collar or sheath.",
 awns:"Use intact, mature spikelets and a hand lens. Count true awns per floret; do not mistake separate foxtail bristles, bur spines, or feathery stigmas for lemma awns."
 };
+/* The two collar sections reuse the existing IDs: core ligule for Part A,
+   optional ligule_edge for Part B. This is not a tenth main question. */
+function collarOrientationSketch(){
+ const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
+ svg.setAttribute("viewBox","0 0 600 240");
+ svg.setAttribute("role","img");
+ svg.setAttribute("aria-label","Labeled grass leaf collar diagram: leaf blade, leaf sheath, ligule membrane and cilia along the upper membrane edge");
+ svg.innerHTML=`<title>Inside the grass leaf collar — ciliate membranous ligule</title>
+ <defs><marker id="ligule-tip" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="none" stroke="#916f31" stroke-width="1.4"/></marker></defs>
+ <path d="M222 213 L222 102 Q230 48 269 18 Q290 52 293 102 L293 213 Z" fill="#bad798" stroke="#366f4d" stroke-width="3"/>
+ <path d="M206 235 L206 124 Q260 109 313 124 L313 235 Z" fill="#8bb890" stroke="#376b4b" stroke-width="3"/>
+ <path d="M215 235 L215 150 Q263 144 305 150 L305 235" fill="none" stroke="#538766" stroke-width="3"/>
+ <path d="M240 150 L240 117 Q261 105 279 117 L279 150 Z" fill="#ffe7a2" stroke="#836e3e" stroke-width="2.5"/>
+ <g stroke="#527d58" stroke-width="2" stroke-linecap="round"><path d="M244 116 l-4 -14 M252 112 l-1 -17 M260 111 v-17 M269 113 l3 -17 M277 116 l7 -15"/></g>
+ <g stroke="#916f31" stroke-width="2.2" fill="none" marker-end="url(#ligule-tip)"><path d="M145 48 Q193 42 243 71"/><path d="M134 198 Q172 202 222 197"/><path d="M455 175 Q402 164 281 132"/><path d="M453 49 Q385 53 272 104"/></g>
+ <g fill="#234b38" font-size="16" font-family="system-ui, sans-serif" font-weight="700"><text x="21" y="46">Leaf blade</text><text x="18" y="201">Leaf sheath</text><text x="457" y="174">Ligule</text><text x="457" y="192" font-size="12" font-weight="500">membrane</text><text x="460" y="48">Cilia</text><text x="460" y="65" font-size="12" font-weight="500">edge hairs</text></g>`;
+ return svg;
+}
+function renderLiguleSections(area,q,buildChoice){
+ const intro=node("figure","ligule-orientation");
+ intro.append(collarOrientationSketch(),node("figcaption","","Teaching diagram of ONE membrane with hairlike cilia along its edge. It is not a photo, a scale drawing, or a claim about every grass. Open the INSIDE collar between the leaf blade and the leaf sheath."));
+ area.append(intro);
+ const partA=node("section","ligule-part");
+ partA.append(node("h4","","Part A — What forms the ligule?"),
+   node("p","ligule-part-note","Find the inside leaf junction first. A papery flap WITH edge hairs is still a membranous ligule. If you cannot see the base clearly, use Skip below."));
+ const typeGrid=node("div","answer-grid");
+ q.options.forEach(o=>typeGrid.append(buildChoice(o)));
+ partA.append(typeGrid);
+ const learn=node("div","ligule-key-terms");
+ for(const [name,definition] of [
+  ["Ligule","The structure just inside the leaf blade–sheath junction."],
+  ["Membranous","Made of a thin, papery flap; it can have hairs on its rim."],
+  ["Hair-fringe ligule","The ligule is mostly hairs rather than a visible flap."],
+  ["Cilia","Fine hairs that grow from an edge, not just nearby sheath hairs."]
+ ]){
+  const el=node("p","ligule-definition");
+  el.append(node("b","",name+": "),node("span","",definition));learn.append(el);
+ }
+ partA.append(learn);area.append(partA);
+ const partB=node("section","ligule-part");
+ partB.append(node("h4","","Part B — If there's a membrane, what is its edge like?"),
+  node("p","ligule-part-note","Optional: choose the clearest edge feature you can see. A membrane can have both notches and edge hairs; if so, pick the more distinctive one for now. An unstudied edge never eliminates a grass."));
+ const edge=state.refineCharacters.find(x=>x.id==="ligule_edge");
+ const types={entire:["Entire (smooth)","Rim mostly unbroken; avoid torn older leaves."],
+  erose:["Erose (tiny notches)","Small irregular nicks in the membrane edge."],
+  lacerate:["Lacerate (deep splits)","Deep irregular cuts or lobes in the papery edge."],
+  ciliate:["Ciliate (edge hairs)","Fine hairs grow from the visible membrane rim."]};
+ const blocked=state.selected.ligule==="hairs"||state.selected.ligule==="absent";
+ if(blocked)partB.append(node("p","ligule-part-note","Your Part A choice does not have a clear membrane. To inspect its membrane edge, choose Papery membrane or clear Part A first."));
+ if(edge){
+  const choices=node("div","ligule-edge-grid");
+  for(const [id,[label,help]] of Object.entries(types)){
+   if(!edge.options.some(o=>o.id===id))continue;
+   const button=node("button","ligule-edge-choice");button.type="button";button.dataset.character="ligule_edge";button.dataset.option=id;button.disabled=blocked;
+   button.setAttribute("aria-pressed",String(selectedRefinementStates("ligule_edge").includes(id)));
+   const explanation=node("span","");
+   explanation.append(node("strong","",label),node("small","",help));
+   button.append(collarFieldSketch("ligule_edge",id),explanation);
+   button.addEventListener("click",()=>{
+    const old=selectedRefinementStates("ligule_edge").filter(x=>x!=="hair_fringe");
+    const next=edge.multi_select?(old.includes(id)?old.filter(x=>x!==id):[...old,id]):
+      (old.includes(id)?[]:[id]);
+    if(next.length)state.refineSelected.ligule_edge=edge.multi_select?next:next[0];
+    else delete state.refineSelected.ligule_edge;
+    updateUrl();renderOptionalCharacters();render();
+   });
+   choices.append(button);
+  }
+  partB.append(choices);
+  const active=selectedRefinementStates("ligule_edge");
+  if(active.length){
+   const clear=node("button","ligule-edge-reset","Clear edge description");clear.type="button";
+   clear.addEventListener("click",()=>{delete state.refineSelected.ligule_edge;updateUrl();renderOptionalCharacters();render();});
+   partB.append(clear);
+  }
+  if(active.includes("hair_fringe"))partB.append(node("p","ligule-part-note","A hair-fringe ligule is recorded in Detailed characteristics. It describes Part A's mostly-hairs form, not a membrane rim."));
+ }else partB.append(node("p","ligule-part-note","Detailed ligule-edge evidence is temporarily unavailable. The original Leaf collar answers still work; no new exclusions are made."));
+ const defs=node("div","ligule-key-terms");
+ for(const [word,meaning] of [
+  ["Entire","A smooth, mostly unbroken edge."],
+  ["Erose","A slightly jagged edge with shallow notches."],
+  ["Lacerate","Deeply torn, irregular lobes or splits."],
+  ["Ciliate","Having true hairs (cilia) attached along the edge."]
+ ]){
+  const row=node("p","ligule-definition");row.append(node("b","",word+": "),node("span","",meaning));defs.append(row);
+ }
+ partB.append(defs);
+ const links=node("div","ligule-term-actions");links.append(node("span","ligule-part-note","Open full definitions: "));
+ for(const [term,key] of [["Ligule","ligule"],["Membranous ligule","membranous-ligule"],["Hair-fringe ligule","hair-fringe-ligule"],["Ciliate","ciliate"],["Erose","erose"],["Lacerate","lacerate"],["Entire edge","entire-ligule-edge"]]){
+  const chip=node("button","grass-term-chip",term);chip.type="button";chip.dataset.grassTerm=key;chip.setAttribute("aria-label","Define "+term);links.append(chip);
+ }
+ partB.append(links);area.append(partB);
+}
+
 function renderQuestion(){
  if(state.question>=qs.length){
    const tab=mainQuestionTabs()[state.question];
@@ -2486,6 +2626,8 @@ sections.push(part);
 const jump=node("button","head-jump");jump.append(headIcon(group.icon),node("span","",group.title));jump.type="button";jump.addEventListener("click",()=>part.scrollIntoView({behavior:"smooth",block:"start"}));jumps.append(jump);
 }
 area.append(jumps,node("p","head-illustration-note","The little drawings show simplified flowerhead shapes. Compare them with the real, credited photographs below; drawings are not to scale, and plant age can change the outline. These shapes alone are not enough to identify a species."),...sections);
+}else if(q.id==="ligule"){
+ renderLiguleSections(area,q,buildChoice);
 }else{
 const grid=node("div","answer-grid");q.options.forEach(o=>grid.append(buildChoice(o)));area.append(node("p","head-illustration-note","Simplified teaching drawings appear with each photo. Look for the real structure on your plant before choosing."),grid);
 }
@@ -2757,6 +2899,11 @@ $("compare-toggle").addEventListener("click",()=>{state.comparing=!state.compari
 $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
+// Edge evidence is a display-only tie-break when a core collar answer already
+// counts. Keep the independently tested currentResults() scorer unchanged.
+if(state.selected.ligule&&selectedRefinementStates("ligule_edge").length){
+ rows.sort((a,b)=>Number(supportedLiguleEdge(b.s))-Number(supportedLiguleEdge(a.s)));
+}
 const groups=progressiveResultGroups(rows);
 const focusing=state.focusConfirmed&&groups.active;
 const possibleRows=focusing?[...groups.confirmed]:[...groups.confirmed,...groups.unresolved];
@@ -2802,6 +2949,7 @@ const disputedRhizome=state.selected.habit==="rhizome"&&[
 if(disputedRhizome)info.append(node("div","smallmuted",
  "Rhizome status unresolved — regional references disagree. Keep possible until the book and a connected underground stem are checked."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
+if(state.selected.ligule&&supportedLiguleEdge(s))info.append(node("div","smallmuted","Source-supported ligule edge (same collar observation, not another score)."));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
 if(groups.active&&unresolvedIds.has(s.id))unknownRoot.append(row);
@@ -3738,6 +3886,12 @@ window.HaysGrassGlossarySketches={
    "rachilla":["flower","floral_hair_position","rachilla"],
    "floret":["flower","florets_per_spikelet","one"],
    "auricle":["collar","leaf_base","pointed_auricles"],
+   "membranous-ligule":["collar","ligule_edge","entire"],
+   "hair-fringe-ligule":["collar","ligule_edge","hair_fringe"],
+   "ciliate":["collar","ligule_edge","ciliate"],
+   "erose":["collar","ligule_edge","erose"],
+   "lacerate":["collar","ligule_edge","lacerate"],
+   "entire-ligule-edge":["collar","ligule_edge","entire"],
    "raised-ribs":["venation","raised_ribs"],
    "midrib":["venation","raised_midvein"],
    "venation":["venation","rough_vein_lines"],

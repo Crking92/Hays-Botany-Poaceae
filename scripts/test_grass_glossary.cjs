@@ -35,10 +35,10 @@ assert.ok(!/real_photo\\.annotations|\\bitem\\.annotations\\b/.test(helper),
 assert.ok(helper.includes('key==="collar"') && helper.includes('jim-conrad-uvalde-kr-bulbous-based-collar-hairs.jpg'),
   'Corrected collar image not wired in');
 
-assert.equal(Object.keys(ext.terms).length,26);
+assert.equal(Object.keys(ext.terms).length,31);
 assert.equal(Object.keys(approved).length,26,'verified Commons source recovery count');
 assert.ok(media.held_photos.coriaceous,'do not publish unverified coriaceous photo');
-assert.equal(new Set([...Object.keys(mirrored.terms),...Object.keys(ext.terms)]).size,173);
+assert.equal(new Set([...Object.keys(mirrored.terms),...Object.keys(ext.terms)]).size,178);
 for(const [name,item] of Object.entries({...mirrored.terms,...ext.terms})){
  assert.ok(item.term&&item.plain,name+': missing definition');
  assert.ok(item.pronunciation,name+': missing pronunciation');
