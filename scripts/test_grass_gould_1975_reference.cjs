@@ -28,9 +28,22 @@ assert.deepEqual(data.get("ligule").length_mm,[1,3]);
 assert.equal(data.get("chromosome_number").value_2n,40);
 assert.equal(data.get("lemma_length_wording").status,"HOLD_ANATOMICAL_INTERPRETATION");
 assert.equal(data.get("infraspecific_key").status,"HOLD_INCOMPLETE_SOURCE_PAGE");
-assert.equal(little.diagnostic_checks.filter(d=>d.source?.includes("Gould")).length,0);
+assert.equal(little.diagnostic_checks.filter(d=>d.source?.includes("Gould")).length,1);
 assert.equal(source.learner_diagnostic_checks.filter(d=>d.source.includes("Gould")).length,3);
 assert(little.diagnostic_checks.every(d=>d.url?.startsWith("https://")));
+// Later owner photos identify the originally unnumbered little bluestem species
+// treatment as Gould p. 608 and include the p. 609 variety key. Preserve
+// historical first-intake wording and NEVER auto-select a Hays variety.
+const littleVar=source.additional_species_treatments.find(x=>x.species_id==="schizachyrium-scoparium");
+assert(littleVar&&littleVar.printed_pages[0]===608&&littleVar.printed_pages[1]===609);
+assert.deepEqual(littleVar.infraspecific_key.map(x=>x.code),["4B","4D","4E","4A","4C"]);
+const freq=littleVar.infraspecific_key.find(x=>x.code==="4A");
+assert.deepEqual(freq.pedicelled_spikelet_mm,[1.5,5]);
+assert(freq.distinguishing_characters.includes("Does not produce creeping rhizomes"));
+assert(littleVar.nine_main_question_guidance.habit.includes("does not"));
+assert(little.character_evidence.gould_1975_pages_608_609);
+assert(little.character_evidence.gould_1975_pages_608_609.photo_policy==="NO_MEDIA_OR_CREDIT_EDITS");
+assert.deepEqual(little.traits,{head:["short_racemes"],habit:["tuft","rhizome"],ligule:["membrane"],awns:["long","none_obvious"]});
 const html=fs.readFileSync(path.join(root,"index.html"),"utf8");
 assert(html.includes("for(const c of displayedChecks)")&&html.includes("node(\"h4\",\"\",c.look)"));
 // Gould p. 166: preserve source-scoped Virginia wildrye anatomy without modifying scored key files.
