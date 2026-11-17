@@ -232,7 +232,7 @@ def check_view(browser, name, width, height):
         ("floral_hair_position","upper_fertile_lemma_hairs",
          ("LOWER STERILE","UPPER FERTILE","FEMALE ONLY"),"FEMALE"),
         ("floral_hair_position","spikelet_callus_hairs",
-         ("FLORET CALLUS BASE",),"callus")
+         ("BASAL CALLUS HAIRS",),"callus")
     ]:
         choose_extra(page,"Flowers / spikelets",character,choice)
         group = page.locator(
