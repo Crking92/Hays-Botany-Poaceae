@@ -1,7 +1,7 @@
 # Hays Grass ID Lab — regional references comparison & cross-chat handoff
 
 **Prepared:** 2026-11-11  
-**Purpose:** Durable research handoff from comparison of Hagenbuch & Lemke (2015) with Diggs, Lipscomb & O'Kennon (1999) for Hays County grass ID. This is **research**, not a species-character import, scored-key release, photo approval or claim of line-by-line certification.  
+**CURRENT SOURCE RULE (2026-11-16):** This file is a **historical comparative handoff**, not the active source priority. For any new vegetation OR reproduction decision, use **Gould (1975) first, Diggs et al. (1999) second, Hagenbuch & Lemke (2015) third, species-level FNA/GrassBase/etc. fourth**; see [MORPHOLOGY_SOURCE_POLICY.md](MORPHOLOGY_SOURCE_POLICY.md). The historical comparisons below remain evidence leads, not authority to override the new owner order. Silence about a character is not its absence.\n\n**Purpose:** Durable research handoff from comparison of Hagenbuch & Lemke (2015) with Diggs, Lipscomb & O'Kennon (1999) for Hays County grass ID. This is **research**, not a species-character import, scored-key release, photo approval or claim of line-by-line certification.  
 **Owner direction:** Future batch work should use the primary source by **character role**: H&L first for vegetative; Flora first for reproductive; GrassBase/PolyClave third for supplementary morphological measurements; FNA/local vouchers for range or uncertainty; POWO taxonomy separate from morphology; BONAP NAPA/county nativity separate/later.  
 **Governing rules:** [MORPHOLOGY_SOURCE_POLICY.md](MORPHOLOGY_SOURCE_POLICY.md) | [PRIMARY_MORPHOLOGY_REFERENCE.md](PRIMARY_MORPHOLOGY_REFERENCE.md) | [PROGRESS_TRACKER.md](PROGRESS_TRACKER.md).
 
