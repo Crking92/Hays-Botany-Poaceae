@@ -89,10 +89,23 @@ for(const id of disputed){
  assert(!groups.excluded.some(x=>x.s.id===id),
    id+": source uncertainty mislabeled as evidence of absence");
 }
+// Preserve old citations in immutable shards without letting those two old
+// rhizome labels artificially improve the source-priority score/rank.
+for(const id of disputed){
+ const row=Array.from(vm.runInContext("currentResults()",sandbox)).find(x=>x.s.id===id);
+ assert(row&&row.unknown===1&&row.confirmed===0,
+   id+": lower-priority historical positive should count as UNKNOWN, not 1 confirmed hit");
+ assert(vm.runInContext("coreChoiceStatus(state.species.find(s=>s.id==="+JSON.stringify(id)+"),'habit','rhizome')",sandbox)==="unknown",
+   id+": review-panel core conflict must mirror source-priority uncertainty");
+}
 assert(groups.confirmed.some(x=>x.s.id==="hopia-obtusa"),
  "Diggs Flora p.1300 rhizomatous Hopia base not shown as source-confirmed");
 assert(!groups.unresolved.some(x=>x.s.id==="hopia-obtusa"),
  "Hopia cannot remain on literature hold after preferred Flora affirmative evidence");
+const hopia=Array.from(vm.runInContext("currentResults()",sandbox)).find(x=>x.s.id==="hopia-obtusa");
+assert(hopia&&hopia.confirmed===1&&hopia.unknown===0,
+ "Rhizomatous BASE documented by Diggs must award Hopia exactly one positive core score");
+assert(vm.runInContext("coreChoiceStatus(state.species.find(s=>s.id==='hopia-obtusa'),'habit','rhizome')",sandbox)==="match");
 assert(sum(groups)===vm.runInContext("currentResults().length",sandbox),
  "Rhizome decision silently removes a possible grass");
 state.selected={head:null,habit:null,ligule:null,awns:null};
