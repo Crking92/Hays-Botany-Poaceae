@@ -3598,6 +3598,173 @@
           "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
         }
       ]
+    },
+    {
+      "added_on": "2026-11-16",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "evidence_level": "USER_PHOTOGRAPHED_EXACT_PUBLISHED_SPECIES_TREATMENT_NOT_IDENTIFIED_LOCAL_SPECIMEN",
+      "preservation": "Owner's photographed book page is retained as a paraphrased botanical source record; copyrighted book image is not republished. Measurements describe species account, not a verified Hays specimen.",
+      "species_id": "sorghastrum-elliottii",
+      "taxon": "Sorghastrum elliottii (Mohr) Nash",
+      "current_taxon": "Sorghastrum elliottii (Mohr) Nash",
+      "common_name": "Slender Indiangrass",
+      "printed_page": 579,
+      "illustration_reference": "No species illustration visible on photographed page",
+      "citation": "Gould, F. W. (1975). The Grasses of Texas, p. 579, Sorghastrum elliottii account.",
+      "observations": [
+        {
+          "character": "habit",
+          "details": "Tuft-forming perennial from a non-rhizomatous base. This account explicitly says the base is not rhizomatous.",
+          "state": "TUFT_PRESENT_RHIZOMATOUS_BASE_ABSENT"
+        },
+        {
+          "character": "culms",
+          "details": "Slender culms, mostly 0.8–1.8 m tall.",
+          "height_m_mostly": [
+            0.8,
+            1.8
+          ]
+        },
+        {
+          "character": "ligule",
+          "details": "Firm membranous ligule, truncate or irregularly lobed, 2–4 mm long; lateral thickening forms stiff sheath auricles. Do not treat auricles as a separate hair-only ligule.",
+          "length_mm": [
+            2,
+            4
+          ],
+          "tip_shapes": [
+            "truncate",
+            "variously_lobed"
+          ],
+          "lateral_structure": "stiff sheath auricles"
+        },
+        {
+          "character": "leaf_blades",
+          "details": "Long, narrow blades, flat or folded, mostly 3–8 mm wide; narrowed at the base, tapering to the tip.",
+          "width_mm_mostly": [
+            3,
+            8
+          ],
+          "shape_states": [
+            "flat",
+            "folded"
+          ],
+          "base": "narrowed",
+          "tip": "attenuate"
+        },
+        {
+          "character": "flowerhead",
+          "details": "Narrow, loosely and sparsely flowered panicle, 15–25 cm long. Gould does not describe it as a dense golden plume.",
+          "panicle_length_cm": [
+            15,
+            25
+          ],
+          "architecture": [
+            "narrow",
+            "loose",
+            "sparse"
+          ]
+        },
+        {
+          "character": "spikelet_color_and_pedicels",
+          "details": "Dark-brown spikelets on slender, flexuous (wavy), commonly recurved pedicels. Glumes and pedicels of reduced spikelets have brownish hairs.",
+          "color": "dark brown",
+          "pedicels": [
+            "slender",
+            "flexuous",
+            "often recurved"
+          ],
+          "hair_position": [
+            "glumes",
+            "pedicels of reduced spikelets"
+          ],
+          "hair_color": "brownish"
+        },
+        {
+          "character": "spikelet_length",
+          "details": "Spikelets mostly 5.5–7 mm long.",
+          "length_mm_mostly": [
+            5.5,
+            7
+          ]
+        },
+        {
+          "character": "lemma_awn",
+          "details": "Dark-brown lemma awn 23–35 mm long, twisted and usually twice-geniculate (two bends or knees). Check an intact mature spikelet with a lens.",
+          "length_mm": [
+            23,
+            35
+          ],
+          "color": "dark brown",
+          "shape": [
+            "twisted",
+            "usually twice-geniculate"
+          ]
+        },
+        {
+          "character": "flowering_period",
+          "details": "Published Texas account says flowering September through November; not a guaranteed local timing.",
+          "months": [
+            "September",
+            "October",
+            "November"
+          ]
+        },
+        {
+          "character": "historical_distribution",
+          "details": "Gould reports Texas regions 1, 2 and eastern region 3, generally in sandy soils or woodland margins; wider range from Maryland, Tennessee and Oklahoma to the Gulf Coast and east Texas. These broad historic regions do not prove current Hays County occurrence or county BONAP nativity.",
+          "texas_regions": [
+            "1",
+            "2",
+            "eastern part of 3"
+          ],
+          "habitat": [
+            "sandy soils",
+            "woodland margins"
+          ]
+        },
+        {
+          "character": "adjacent_taxon_distinction",
+          "details": "The paragraph immediately below discusses S. secundum and possible eastern Texas reports; Gould says he had not seen Texas collections of that other species. Do not incorporate the S. secundum statement into S. elliottii traits.",
+          "adjacent_taxon": "Sorghastrum secundum",
+          "state": "SEPARATE_TAXON_NOT_ATTRIBUTE_OF_ELLIOTTII"
+        }
+      ],
+      "nine_main_question_guidance": {
+        "head": "Long, narrow panicle is directly supported; the dense golden-plume presentation is not supported by this photographed treatment and should be reviewed rather than automatically deleted.",
+        "habit": "Tuft supported; non-rhizomatous base expressly supported.",
+        "ligule": "Membrane supported; lateral auricles present.",
+        "awns": "Long (23–35 mm), twisted, usually twice-bent awn directly supported.",
+        "blade_width": "3–8 mm overlaps narrow (2–5 mm) and medium (5–10 mm). Measure the specific plant; never force a single species-wide category.",
+        "blade_shape": "Flat OR folded; select what the fresh leaf actually displays.",
+        "blade_venation": "No vein or rib description in provided species account; skip/unknown.",
+        "blade_hairs": "Glumes and sterile pedicels hairy, not evidence of leaf blade hairs; skip/unknown.",
+        "ligule_length": "2–4 mm crosses UI short (1–3 mm) and medium (3–8 mm), dependent on specimen. Membrane measurement, not auricle width."
+      },
+      "classification_decision": {
+        "action": "SAVE_PARAPHRASED_SOURCE_AND_SPECIES_EVIDENCE_NO_AUTO_SCORE_CHANGE",
+        "status": "REFERENCE_CAPTURED_WITH_CORE_HEAD_CHOICE_REVIEW_PENDING",
+        "photo_policy": "NO_PHOTOS_OR_ARROWS_CHANGED",
+        "not_evidence_of": "Hays County nativity, county specimen identity, or leaf vein/hair states"
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Trace the base and inspect an opened leaf collar",
+          "check": "The photographed Gould account supports a tufted, non-rhizomatous base, a firm 2–4 mm membrane and stiff lateral auricles. A 3–8 mm leaf may be flat or folded.",
+          "compare": "A broad growth silhouette alone will not distinguish slender Indiangrass; record each visible collar and panicle feature.",
+          "certainty": "Published treatment; owner screenshot Gould p.579, not a local voucher.",
+          "source": "Gould (1975), The Grasses of Texas, p.579",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Check a mature awned spikelet against the sparse flowering head",
+          "check": "Narrow loose 15–25 cm panicle with dark spikelets 5.5–7 mm, usually 23–35 mm dark twisted twice-bent lemma awns, and brownish hairs on glumes and reduced companion pedicels.",
+          "compare": "Distinguish from S. nutans using panicle looseness, tufted non-rhizomatous base and actual awn attachment/shape; head color alone is unreliable.",
+          "certainty": "Gould p.579 measurements; specimen matching and precise photographs remain unverified.",
+          "source": "Gould (1975), The Grasses of Texas, p.579",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        }
+      ]
     }
   ],
   "additional_source_image_notes": [
@@ -3610,6 +3777,11 @@
       "received_on": "2026-11-16",
       "subject": "Three user-supplied Gould pages: Buchloë dactyloides p.355, Eragrostis intermedia p.182, Panicum obtusum Fig.241 page number not visible",
       "note": "Added source-specific paraphrases of directly visible text. Gould supports buffalograss stolons and ciliate membrane, plains lovegrass tuft + 5–11 florets, vine mesquite long stolons and hard knotty or rhizomatous base. None independently resolves the regional underground-rhizome contradiction. No book-page image publicly republished or any scoring/rights change."
+    },
+    {
+      "received_on": "2026-11-16",
+      "subject": "Gould The Grasses of Texas p.579, Sorghastrum elliottii",
+      "note": "Captured measurements, ligule auricles, narrow/sparse panicle, long twisted awns, habitat and flowering period as paraphrased species evidence. The lower Andropogon generic description and separate S. secundum historical note are not assigned as elliottii traits. Photos frozen; nine-question scoring unchanged pending dedicated QA."
     }
   ],
   "current_source_priority_rhizome_review": {
@@ -3642,5 +3814,9 @@
         "scoring_note": "Positive 'Underground rhizomes — short or long' match supported by basal rhizomatous structure; no proof of long, scaly underground runners or mandatory rhizomes on each individual."
       }
     ]
+  },
+  "screenshot_intake_rule": {
+    "instruction": "For each newly supplied owner screenshot of The Grasses of Texas: check the species identity and printed page; paraphrase the botanical facts and measurements into the matching additional_species_treatments species record, noting any historical synonym/name differences. Also link page-specific facts in that exact species' character_evidence/diagnostic_checks when practical. Keep unreported characters unknown, do not apply neighboring treatment text to the wrong species, preserve alternative or overlapping states without forcing one selection, and do not silently change source-scored key filters. Record the source and page. Never republish copyrighted page photos. Do not change photographs or credits while photo work is paused.",
+    "status": "PROJECT_WORKFLOW_OWNER_REQUESTED_2026-11-16"
   }
 }
