@@ -326,7 +326,11 @@ assert(newRefs.every(Boolean),"Gould five photo page treatments all present");
 assert.equal(new Set(source.additional_species_treatments.map(x=>x.species_id)).size,source.additional_species_treatments.length,"No duplicate Gould species links");
 assert.deepEqual(newRefs.map(r=>r.observations.length),[20,11,16,14,16,8]);
 assert.deepEqual(newRefs.map(r=>r.learner_diagnostic_checks.length),[2,0,2,0,2,0]);
-assert.equal(source.additional_species_treatments.length,25); // 22 prior plus the three Gould rhizome-review photo passages
+// The older 25-treatment checkpoint predates two exact owner-photographed
+// species pages: slender indiangrass Gould p.579 (PR #422) and the two named
+// sideoats grama varieties Gould p.338 (PR #423). Preserve those as separate
+// species-level source records, without changing original scoring or photos.
+assert.equal(source.additional_species_treatments.length,27);
 const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
