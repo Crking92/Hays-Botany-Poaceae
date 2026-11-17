@@ -326,7 +326,7 @@ assert(newRefs.every(Boolean),"Gould five photo page treatments all present");
 assert.equal(new Set(source.additional_species_treatments.map(x=>x.species_id)).size,source.additional_species_treatments.length,"No duplicate Gould species links");
 assert.deepEqual(newRefs.map(r=>r.observations.length),[20,11,16,14,16,8]);
 assert.deepEqual(newRefs.map(r=>r.learner_diagnostic_checks.length),[2,0,2,0,2,0]);
-assert.equal(source.additional_species_treatments.length,22); // 19 prior treatments plus the three new photographed Gould species
+assert.equal(source.additional_species_treatments.length,25); // 22 prior plus the three Gould rhizome-review photo passages
 const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
@@ -431,4 +431,26 @@ assert(!scoredFinal.some(x=>["tridentopsis-elongata","melinis-repens","megathyrs
 assert(html.includes("gouldAdditional?.learner_diagnostic_checks"));
 for(const e of [tri,nat,gui])assert(e.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
 
+// Owner's new Gould photos are source-specific but cannot settle the three
+// H&L underground rhizome conflicts from silence / alternative basal wording.
+const rhizomeIds=["bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"];
+const [buffalo,plains,vine]=rhizomeIds.map(id=>source.additional_species_treatments.find(t=>t.species_id===id));
+assert.deepEqual([buffalo.printed_page,plains.printed_page,vine.printed_page],
+ [355,182,"NOT_VISIBLE_IN_USER_PHOTO"]);
+assert.equal(buffalo.taxon,"Buchloë dactyloides (Nutt.) Engelm.");
+assert.deepEqual(buffalo.observations.find(x=>x.character==="blade").width_mm_mostly,[1,2.5]);
+assert.equal(buffalo.observations.find(x=>x.character==="ligule").membrane_length_mm_approx,0.5);
+assert.equal(plains.observations.find(x=>x.character==="spikelet_florets").florets[0],5);
+assert.equal(vine.taxon,"Panicum obtusum H.B.K.");
+assert(vine.observations.find(x=>x.character==="habit").source_wording.includes("or rhizomatous base"));
+for(const ref of [buffalo,plains,vine]){
+ assert(ref.observations.find(x=>x.character==="rhizome_review").decision==="KEEP_RHIZOME_HOLD");
+ assert(ref.preservation.includes("NOT rehosted"));
+ assert(ref.classification_decision.action.includes("HOLD"));
+ assert(ref.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
+ const scored=["a","b","c1","c2","c3","d1","d2","d3","d4"].flatMap(k=>read("species-"+k+".json")).find(x=>x.id===ref.species_id);
+ assert(scored?.traits.habit.includes("rhizome"),ref.species_id+": conflict source preserved without blind scoring changes");
+}
+assert(html.includes("easternGamagrassSexPhotoComparison"),"Three-photo sex anatomy gallery missing from field key");
+console.log("PASS: three new Gould photographed passages source-pinned, page holds intact and no false rhizome conclusions");
 console.log("PASS: Gould p.213 Tridentopsis elongata, p.542 Melinis repens and p.469 Megathyrsus maximus saved, preserving protected key scoring");
