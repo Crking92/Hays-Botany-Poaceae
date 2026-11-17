@@ -3112,14 +3112,14 @@ function applyChlorisVirgataGouldSupplement(pack){
  applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CHLORIS_VIRGATA_SUPPLEMENT_V1",id:"chloris-virgata",scientific:"Chloris virgata",page:321});
  const s=state.species.find(s=>s.id==="chloris-virgata");
  s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
- s.field_rule="Gould p.321: tufted ANNUAL, with 4–20 upright terminal fingers; the lower fertile lemma has long upper-margin hairs and an awn usually 5–15 mm. Its upper sterile floret is blunt/hoodlike and separately awned. Shared tuft, ligule and basal hair observations do not distinguish KR. Missing KR-specific organ evidence keeps this species possible, not confirmed.\n\n"+s.field_rule;
+ s.field_rule="Gould p.321: tufted ANNUAL, with 4–20 upright terminal fingers; the lower fertile lemma has long upper-margin hairs and an awn usually 5–15 mm. Its upper sterile floret is similar in shape but smaller and separately awned. Shared tuft, ligule and basal hair observations do not distinguish KR. Missing KR-specific organ evidence keeps this species possible, not confirmed.\n\n"+s.field_rule;
 }
 function applyChlorisVirgataGouldSupplement(pack){
  if(!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid Chloris diagnostics");
  applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CHLORIS_VIRGATA_SUPPLEMENT_V1",id:"chloris-virgata",scientific:"Chloris virgata",page:321});
  const s=state.species.find(s=>s.id==="chloris-virgata");
  s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
- s.field_rule="Gould p.321: tufted ANNUAL, with 4–20 upright terminal fingers; the lower fertile lemma has long upper-margin hairs and an awn usually 5–15 mm. Its upper sterile floret is blunt/hoodlike and separately awned. Shared tuft, ligule and basal hair observations do not distinguish KR. Missing KR-specific organ evidence keeps this species possible, not confirmed.\n\n"+s.field_rule;
+ s.field_rule="Gould p.321: tufted ANNUAL, with 4–20 upright terminal fingers; the lower fertile lemma has long upper-margin hairs and an awn usually 5–15 mm. Its upper sterile floret is similar in shape but smaller and separately awned. Shared tuft, ligule and basal hair observations do not distinguish KR. Missing KR-specific organ evidence keeps this species possible, not confirmed.\n\n"+s.field_rule;
 }
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
