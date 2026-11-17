@@ -2548,6 +2548,12 @@ function inspectComparisonFeature(feature){
   target?.scrollIntoView({behavior:"smooth",block:"start"});
   target?.querySelector("button")?.focus({preventScroll:true});
  }else{
+  const mainIndex=mainQuestionTabs().findIndex(t=>t.kind==="illustrated"&&t.id===feature.id);
+  if(mainIndex>=0){
+    state.question=mainIndex;render();
+    $("question").scrollIntoView({behavior:"smooth",block:"start"});
+    return;
+  }
   state.refineSection=refinementSection(feature.id);
   renderOptionalCharacters();
   const holder=$("optional-character-wrap");holder.open=true;
@@ -2770,7 +2776,7 @@ const pendingChoice=state.refineCharacters.some(c=>selectedRefinementStates(c.id
 $("results-note").textContent=focusing?"Only fully source-documented matches are currently shown. Missing evidence is NOT proof that a grass conflicts with your observation.":state.refineOnlyDocumented&&extraChosen?
  (pendingChoice?"A selected detail is research-pending. No complete documented match is possible yet; this does not prove absence. Switch off evidence-only view to restore other possibilities.":"Showing grasses with published records matching every selected advanced detail. Other unknown descriptions are hidden by your evidence-only choice."):
  groups.active?"Source-backed matches stay in the main results. Missing or nonexclusive evidence remains under Still possible; documented measured or exact-floret contradictions move into the reviewable Ruled out section. Other advanced features rank matches until source-audited.":"Choose any photo or detailed character to start narrowing 169 possibilities. "+state.species.filter(s=>!s.trial).length+" source-scored profiles; "+state.species.filter(s=>s.trial).length+" research-only.";
-$("progress").style.width=(n/qs.length*100)+"%";$("progress-label").textContent=n+" of "+qs.length+" characters selected";
+const mainProgress=mainQuestionCount();$("progress").style.width=(mainProgress.answered/mainProgress.total*100)+"%";$("progress-label").textContent=mainProgress.answered+" of "+mainProgress.total+" main questions answered";
 const root=$("results"),wasUnresolvedOpen=$("unresolved-candidates")?.open===true;
 root.replaceChildren();
 const unknownRoot=node("div","unresolved-cards");
