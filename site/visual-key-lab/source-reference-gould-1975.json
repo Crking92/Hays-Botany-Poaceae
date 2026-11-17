@@ -3611,5 +3611,36 @@
       "subject": "Three user-supplied Gould pages: Buchloë dactyloides p.355, Eragrostis intermedia p.182, Panicum obtusum Fig.241 page number not visible",
       "note": "Added source-specific paraphrases of directly visible text. Gould supports buffalograss stolons and ciliate membrane, plains lovegrass tuft + 5–11 florets, vine mesquite long stolons and hard knotty or rhizomatous base. None independently resolves the regional underground-rhizome contradiction. No book-page image publicly republished or any scoring/rights change."
     }
-  ]
+  ],
+  "current_source_priority_rhizome_review": {
+    "adopted_on": "2026-11-16",
+    "owner_rule": "For competing precise species-level character reports, prioritize Frank W. Gould (1975) and Diggs, Lipscomb & O'Kennon (1999), Flora of North Central Texas, before other descriptions. Silence in either is not proof of absence; when both are silent, preserve actual secondary-source disagreement.",
+    "policy_scope": "Hays Grass ID Lab source-based rhizome answers only; not universal truth, nativity, county voucher or identification of photographed underground stems.",
+    "decisions": [
+      {
+        "species_id": "bouteloua-dactyloides",
+        "current_key_status": "UNRESOLVED_STILL_POSSIBLE",
+        "gould": "Buchloë dactyloides p.355 documents extensive stolons, does not explicitly address rhizomes.",
+        "flora": "Buchloe dactyloides, Diggs et al. p.1254: stoloniferous sod-former; rhizomes not explicitly resolved.",
+        "secondary_conflict": "Hagenbuch & Lemke p.40 says rhizomes absent; secondary reports occasional rhizomes.",
+        "scoring_note": "Do not change existing preserved source states, but don't call rhizome selection a fully documented match or source-proven contradiction."
+      },
+      {
+        "species_id": "eragrostis-intermedia",
+        "current_key_status": "UNRESOLVED_STILL_POSSIBLE",
+        "gould": "Eragrostis intermedia p.182 describes tufted culms; rhizomes not expressly addressed.",
+        "flora": "Diggs et al. pp.1270–1272 describes tufted perennial and floral characters; rhizomes not expressly addressed.",
+        "secondary_conflict": "Hagenbuch & Lemke p.48 says rhizomes and stolons absent; UT regional account reports rhizomatous basal structures.",
+        "scoring_note": "Do not infer absence from tufting or eliminate possible grasses on inconclusive source hierarchy."
+      },
+      {
+        "species_id": "hopia-obtusa",
+        "current_key_status": "PRIMARY_SOURCE_CONFIRMED_BASAL_RHIZOME",
+        "gould": "Historical Panicum obtusum, Fig.241 (printed page number not visible): hard knotty OR rhizomatous base, long surface stolons.",
+        "flora": "Diggs et al., Flora of North Central Texas p.1300: perennial from knotty, rhizomatous base, long stolons.",
+        "secondary_conflict": "Hagenbuch & Lemke p.51 states rhizomes absent, hard knotty base; preserve as lower-priority source disagreement.",
+        "scoring_note": "Positive 'Underground rhizomes — short or long' match supported by basal rhizomatous structure; no proof of long, scaly underground runners or mandatory rhizomes on each individual."
+      }
+    ]
+  }
 }
