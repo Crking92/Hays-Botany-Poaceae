@@ -19,6 +19,10 @@ state.refineSelected={florets_per_spikelet:['two','several'],glume_marks:['glabr
 state.selected={head:'fingers',habit:'tuft',ligule:'membrane',awns:'short_single'};
 state.refineSelected={blade_width:'narrow',blade_hairs:['base_hairs','papilla_based_hairs'],ligule_length:'tiny',ligule_edge:['truncate'],sheath_surface:['glabrous'],true_lemma_awn:['fertile_awn_1_to_1_5mm','bent_twisted','pedicelled_awnless'],glume_marks:['sessile_first_glume_unpitted','sessile_first_glume_scabrous_margins','sessile_first_glume_hispid_back']};
 const kr=run();assert(kr.confirmed.some(x=>x.s.id==='bothriochloa-ischaemum'));assert(kr.unresolved.some(x=>x.s.id===id),'unknown KR-specific traits must remain possible');assert(!kr.excluded.some(x=>x.s.id===id));
+// Exhaustive species-record stress check includes conditional and age variants.
+// These are literature alternatives, not instructions to observe them on one plant.
+for(const row of read('gould-kr-character-supplement.json').evidence)state.refineSelected[row.character]=row.states;
+const allKR=run();assert(allKR.confirmed.some(x=>x.s.id==='bothriochloa-ischaemum'),'all Gould KR source states');assert(allKR.unresolved.some(x=>x.s.id===id),'all KR source states keep undocumented Chloris possible');
 const evidence=state.refineEvidenceMap[id];
 assert(!evidence.some(e=>e.states.some(v=>['papilla_based_hairs','bent_twisted','sessile_first_glume_hispid_back','pedicelled_awnless'].includes(v))),'no fabricated KR organ states');
 const audit={source:'Gould p.321; supplied image',kr_combination:state.refineSelected,kr_result:{supported:kr.confirmed.map(x=>x.s.id),chloris:'unresolved'},advanced:[]};
