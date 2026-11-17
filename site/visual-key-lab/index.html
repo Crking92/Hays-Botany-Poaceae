@@ -1673,7 +1673,7 @@ function renderOptionalCharacters(){
    if(c.options.some(o=>isPendingChoice(c,o)))content.append(node("p","optional-need-note","Research-pending choices can be recorded, but won't yet rank any grass. All candidates stay possible."));
    group.append(summary,content);root.append(group);
  }
- $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderResults()};
+ $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderBeginnerChecks();renderResults()};
  const evidenceToggle=$("optional-documented-only");
  evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));
  evidenceToggle.onclick=()=>{state.refineOnlyDocumented=!state.refineOnlyDocumented;evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));updateUrl();renderResults()};
