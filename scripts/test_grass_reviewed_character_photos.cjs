@@ -68,6 +68,10 @@ assert(!html.includes("bristleBaseArrow"),"No unverified bristle insertion point
 // its truthful teaching scope. Goosegrass is a GROUP-LEVEL glume organ guide,
 // not any selected one-vein state. Brome illustrates real lemma+awn anatomy.
 const teaching=[
+ ["dichanthium-annulatum",2,"Harry Rose (Macleay Grass Man)","CC BY 2.0",
+  "https://commons.wikimedia.org/wiki/File:Dichanthium_annulatum_spikelet_fertile1_(7101178725).jpg"],
+ ["paspalum-urvillei",1,"Harry Rose","CC BY 2.0",
+  "https://commons.wikimedia.org/wiki/File%3APaspalum_urvillei_spikelet3_annotated_%287391787304%29.jpg"],
  ["avena-fatua",2,"Matt Lavin","CC BY-SA 2.0",
   "https://commons.wikimedia.org/wiki/File:Avena_fatua_(3885254148).jpg"],
  ["sporobolus-vaginiflorus",0,"Stefan.lefnaer","CC BY-SA 4.0",
@@ -82,11 +86,12 @@ for(const [id,i,creator,license,url] of teaching){
  assert(p,"Existing cited picture missing from Learner: "+id+"/"+i);
  assert.equal(p.creator,creator);assert.equal(p.license,license);
  assert.equal(p.source_page,url);
- if(id==="sporobolus-vaginiflorus"){
+ if(["sporobolus-vaginiflorus","dichanthium-annulatum","paspalum-urvillei"].includes(id)){
    // Immutable original scored shard is intentionally missing the link;
    // verified exact-original Commons license is pinned only in display.
    assert(!p.license_url,"Original archived species/photo metadata must remain unmodified");
-   assert(html.includes('expected_license_url:"https://creativecommons.org/licenses/by-sa/4.0/"'));
+   const expected=id==="sporobolus-vaginiflorus"?"https://creativecommons.org/licenses/by-sa/4.0/":"https://creativecommons.org/licenses/by/2.0/";
+   assert(html.includes('expected_license_url:"'+expected+'"'));
  }else assert(p.license_url.startsWith("https://creativecommons.org/licenses/"));
  assert(html.includes('expected_src:"'+p.src+'"'),"Published photo must use existing exact gallery URL: "+id);
 }
@@ -98,9 +103,13 @@ assert(html.includes('"floral_hair_position:spikelet_callus_hairs":{'),
  "The source-labeled wild-oat callus photo must appear only for real callus-hair choice");
 assert(html.includes('character-photo-reference-gallery'),
  "Glume orientation must support TWO different honest general reference photos");
+assert(html.includes(' true_lemma_awn:[{')&&html.includes('species_id:"paspalum-urvillei",photo_i:1'),
+ "Awn anatomy requires two honest general comparison images of fertile versus sterile lemmas");
+assert(!html.includes('"true_lemma_awn:fertile_awn_2_to_5mm":{')&&!html.includes('"true_lemma_awn:lower_sterile_awn_variable":{'),
+ "No falsely diagnostic photo of exact fertile awn length or variable sterile awn");
 assert(html.includes('"true_lemma_awn:straight_or_bent":{'),
  "The source-annotated lemma awn should appear only under its valid reference choice");
 assert(html.includes('x.reference_only?"Anatomy reference only'),
  "Photos must disclose that they are examples of an organ, not positive source evidence");
 assert(html.includes('choicePhotoSlot.replaceChildren()'),"Stale anatomy photo must clear after option change");
-console.log("PASS: 10 previously hosted source-pinned character photographs (6 archived approved + 4 original CC), credit/source/limits intact; original 112 unchanged");
+console.log("PASS: 12 previously hosted source-pinned character photographs (6 archived approved + 6 original CC), credit/source/limits intact; original 112 unchanged");
