@@ -15,7 +15,22 @@
 .workspace{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,.92fr);gap:23px;align-items:start;padding-bottom:35px}.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:22px 22px 10px}.section-kicker{text-transform:uppercase;color:#648673;letter-spacing:.14em;font-size:.72rem;font-weight:800}.panel h2{font-family:Georgia,serif;line-height:1.2;font-size:1.62rem;margin:6px 0 8px}.sub{color:var(--muted);font-size:.92rem;margin:0}.progress-track{height:8px;background:#e5ede4;border-radius:30px;overflow:hidden;margin:15px 0 7px}.progress-fill{height:100%;width:0%;background:#599e75;border-radius:30px;transition:width .2s}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem}
 .steps{display:flex;gap:8px;overflow:auto;padding:15px 20px;border-bottom:1px solid var(--line)}.step{white-space:nowrap;border:1px solid #d4e0d2;background:#f8faf6;color:#486151;border-radius:25px;padding:9px 14px;font-size:.85rem;font-weight:700}.step[aria-current=true]{background:var(--forest);color:white;border-color:var(--forest)}.step.done:before{content:"✓ ";font-weight:900}
 .question{padding:22px}.question h3{font-family:Georgia,serif;font-size:1.55rem;line-height:1.22;margin:0 0 8px}.help{color:#566e5f;font-size:.95rem;margin:0 0 18px}.answer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.answer{background:#fff;border:2px solid #dbe5da;border-radius:14px;text-align:left;padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .15s,transform .15s}.answer:hover{border-color:#71987c;transform:translateY(-1px)}.answer[aria-pressed=true]{border-color:#17693c;box-shadow:0 0 0 3px #d6ecd8}.photo-frame{aspect-ratio:4/3;background:#d7dfd4;position:relative;overflow:hidden}.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.photo-bad{display:flex;align-items:center;justify-content:center;height:100%;padding:10px;text-align:center;color:var(--muted);font-size:.82rem}.tick{position:absolute;top:10px;right:10px;border-radius:50%;background:#17583a;color:white;display:none;width:30px;height:30px;align-items:center;justify-content:center;font-weight:800}.answer[aria-pressed=true] .tick{display:flex}.answer-body{padding:12px 13px 13px;flex:1}.answer-title{font-weight:800;font-size:.94rem;line-height:1.25}.answer-note{display:block;font-size:.81rem;line-height:1.35;color:#597064;margin-top:6px}.photo-credit{display:block;font-size:.67rem;line-height:1.35;color:#64796c;margin-top:9px}.head-group{margin:20px 0 26px}.head-group-title{font-family:Georgia,serif;font-size:1.3rem;margin:0 0 3px;color:#214a36}.head-group-help{font-size:.81rem;color:#61776a;margin:0 0 11px}.head-jumps{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}.head-jumps button{background:#eef4ed;border:1px solid #c9decf;color:#315c40;border-radius:100px;padding:7px 10px;font-size:.78rem;font-weight:700}.head-jumps button:hover{background:#dcebdd}.caution-list{padding-top:9px}.caution-list button{width:100%;background:transparent;border:0;border-radius:6px;padding:8px 5px;cursor:pointer;text-align:left;color:#345441;font-size:.8rem}.caution-list button:hover{background:#edf4ed}.caution-list small{display:block;color:#788779;font-size:.73rem}.question-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:20px}.btn{border-radius:11px;padding:11px 16px;font-weight:750;font-size:.91rem}.btn-primary{background:#18513a;border:1px solid #18513a;color:#fff}.btn-primary:hover{background:#267351}.btn-secondary{background:#fff;border:1px solid #cbdace;color:#3c5948}.btn-secondary:hover{background:#edf4ea}.statusline{font-size:.82rem;color:#63796e}
+.answer{background:#fff;border:2px solid #dbe5da;border-radius:14px;text-align:left;padding:0;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:border-color .15s,transform .15s}.answer:hover{border-color:#71987c;transform:translateY(-1px)}.answer[aria-pressed=true]{border-color:#17693c;box-shadow:0 0 0 3px #d6ecd8}.photo-frame{aspect-ratio:4/3;background:#d7dfd4;position:relative;overflow:hidden}.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}.photo-bad{display:flex;align-items:center;justify-content:center;height:100%;padding:10px;text-align:center;color:var(--muted);font-size:.82rem}.tick{position:absolute;top:10px;right:10px;border-radius:50%;background:#17583a;color:white;display:none;width:30px;height:30px;align-items:center;justify-content:center;font-weight:800}.answer[aria-pressed=true] .tick{display:flex}.sex-photo-comparison{margin:12px 0 18px;padding:13px;border:1px solid #c4d7c3;border-radius:13px;background:#f7faf5}
+.sex-photo-comparison h5{font-size:1rem;margin:0 0 5px;color:#214a36}
+.sex-photo-comparison .sex-photo-note{font-size:.78rem;line-height:1.4;color:#47634d;margin:0 0 10px}
+.sex-photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.sex-photo-gallery figure{margin:0;padding:7px;border:1px solid #d8e4d8;border-radius:10px;background:#fff;min-width:0}
+.sex-photo-gallery img{display:block;width:100%;height:148px;object-fit:contain;background:#edf2e9;border-radius:6px}
+.sex-photo-gallery figcaption{font-size:.7rem;line-height:1.36;color:#42634e;margin:7px 0 3px}
+.sex-photo-gallery figcaption strong{display:block;font-size:.78rem;color:#204f36}
+.sex-photo-gallery a{display:inline-block;margin-top:5px;font-size:.71rem;color:#205b3d;text-decoration:underline}
+@media(max-width:480px){.sex-photo-gallery{grid-template-columns:1fr}.sex-photo-gallery img{height:220px}}
+html[data-theme="dark"] .sex-photo-comparison{background:#11291f;border-color:#426b51}
+html[data-theme="dark"] .sex-photo-comparison h5,html[data-theme="dark"] .sex-photo-gallery figcaption strong{color:#ecf3e5}
+html[data-theme="dark"] .sex-photo-comparison .sex-photo-note,html[data-theme="dark"] .sex-photo-gallery figcaption{color:#d2ded0}
+html[data-theme="dark"] .sex-photo-gallery figure{background:#183226;border-color:#45614f}
+html[data-theme="dark"] .sex-photo-gallery a{color:#b1ddba}
+.answer-body{padding:12px 13px 13px;flex:1}.answer-title{font-weight:800;font-size:.94rem;line-height:1.25}.answer-note{display:block;font-size:.81rem;line-height:1.35;color:#597064;margin-top:6px}.photo-credit{display:block;font-size:.67rem;line-height:1.35;color:#64796c;margin-top:9px}.head-group{margin:20px 0 26px}.head-group-title{font-family:Georgia,serif;font-size:1.3rem;margin:0 0 3px;color:#214a36}.head-group-help{font-size:.81rem;color:#61776a;margin:0 0 11px}.head-jumps{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 18px}.head-jumps button{background:#eef4ed;border:1px solid #c9decf;color:#315c40;border-radius:100px;padding:7px 10px;font-size:.78rem;font-weight:700}.head-jumps button:hover{background:#dcebdd}.caution-list{padding-top:9px}.caution-list button{width:100%;background:transparent;border:0;border-radius:6px;padding:8px 5px;cursor:pointer;text-align:left;color:#345441;font-size:.8rem}.caution-list button:hover{background:#edf4ed}.caution-list small{display:block;color:#788779;font-size:.73rem}.question-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:20px}.btn{border-radius:11px;padding:11px 16px;font-weight:750;font-size:.91rem}.btn-primary{background:#18513a;border:1px solid #18513a;color:#fff}.btn-primary:hover{background:#267351}.btn-secondary{background:#fff;border:1px solid #cbdace;color:#3c5948}.btn-secondary:hover{background:#edf4ea}.statusline{font-size:.82rem;color:#63796e}
 .results{position:sticky;top:18px;max-height:calc(100vh - 35px);display:flex;flex-direction:column}.results-head{padding:20px 18px 12px;border-bottom:1px solid var(--line)}.results-title{display:flex;align-items:center;justify-content:space-between;gap:10px}.results-title h2{font-size:1.55rem;margin:0}.count{background:#dfece1;color:#215238;border-radius:20px;padding:4px 11px;font-size:.79rem;font-weight:800}.results-head p{font-size:.83rem;margin:7px 0;color:var(--muted)}.filterline{display:flex;gap:7px;flex-wrap:wrap;padding:10px 0 0}.filterline button{background:#f7faf5;border:1px solid #d6e2d7;border-radius:20px;font-size:.74rem;padding:6px 10px;color:#4b6655}.filterline button[aria-pressed=true]{background:#205842;color:#fff;border-color:#205842}.search{margin-top:11px;width:100%;padding:10px 12px;border:1px solid #cbdccc;border-radius:10px;outline-offset:3px}
 .results-list{padding:12px;overflow-y:auto;min-height:120px}
 .progressive-status{margin:0 0 12px;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:var(--pale);color:var(--ink);font-size:.8rem;font-weight:750}
@@ -2210,13 +2225,49 @@ if(validReviewed){
 body.append(node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
 b.append(body);b.addEventListener("click",()=>choose(q.id,key));return b;
 }
+// Use already-published, source-identified Learner photos for THREE distinct
+// reproductive stages of eastern gamagrass. These are photos of real organs,
+// not new photo arrows or proof that a single plant displayed them at once.
+function easternGamagrassSexPhotoComparison(){
+ const spec=byId("tripsacum-dactyloides");
+ const refs=[
+  [2,"Pollen-bearing male anthers","Staminate section: hanging anthers release pollen."],
+  [3,"Female feathery stigmas","Pistillate section: stigma branches receive pollen."],
+  [4,"Maturing female joints","Female spike segments swell and ripen after fertilization; hardness cannot be confirmed from pixels."]
+ ];
+ if(!spec||!Array.isArray(spec.photos))return null;
+ const matches=refs.map(([i,title,lesson])=>({i,title,lesson,p:spec.photos.find(p=>p.i===i)}));
+ if(!matches.every(({p})=>p&&p.source_page==="https://www.backyardnature.net/n/h/gama.htm"&&
+      p.creator==="Jim Conrad"&&p.license==="Public domain — original photograph by Jim Conrad"&&
+      p.src.startsWith("https://crking92.github.io/Hays-Botany-Poaceae/")))return null;
+ const part=node("section","sex-photo-comparison");
+ part.append(node("h5","","Compare real eastern gamagrass flower parts"),
+   node("p","sex-photo-note","These are three already-published Jim Conrad Learner photos from one regional account, showing male flowers, female flowers and later female fruiting. Use the complete flowering head to check the upper-male/lower-female arrangement; these close-ups are not an annotated continuous spike."));
+ const gallery=node("div","sex-photo-gallery");
+ for(const {i,title,lesson,p} of matches){
+  const fig=node("figure","");fig.dataset.photoIndex=String(i);
+  const img=document.createElement("img");img.src=p.src;img.loading="lazy";img.decoding="async";
+  img.alt="Eastern gamagrass — "+title+"; "+lesson;
+  const caption=node("figcaption","");caption.append(node("strong","",title),
+    node("span","",lesson),node("span","", " Photo: "+credit(p)));
+  const source=document.createElement("a");source.href=p.source_page;
+  source.textContent="Original photo context";source.target="_blank";source.rel="noopener noreferrer";
+  caption.append(source);fig.append(img,caption);gallery.append(fig);
+ }
+ part.append(gallery);return part;
+}
 if(q.id==="head"){
 const sections=[];const jumps=node("div","head-jumps");
 for(let i=0;i<flowerheadSections.length;i++){
 const group=flowerheadSections[i],part=node("section","head-group"),heading=node("h4","head-group-title",group.title),help=node("p","head-group-help",group.help);
 const grid=node("div","answer-grid");
 for(const option of q.options.filter(o=>group.keys.includes(o[0])))grid.append(buildChoice(option));
-part.append(heading,help,grid);sections.push(part);
+part.append(heading,help,grid);
+if(group.keys.includes("mixed_gender")){
+ const comparison=easternGamagrassSexPhotoComparison();
+ if(comparison)part.append(comparison);
+}
+sections.push(part);
 const jump=node("button","head-jump");jump.append(headIcon(group.icon),node("span","",group.title));jump.type="button";jump.addEventListener("click",()=>part.scrollIntoView({behavior:"smooth",block:"start"}));jumps.append(jump);
 }
 area.append(jumps,node("p","head-illustration-note","The little drawings show simplified flowerhead shapes. Compare them with the real, credited photographs below; drawings are not to scale, and plant age can change the outline. These shapes alone are not enough to identify a species."),...sections);

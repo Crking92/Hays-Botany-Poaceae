@@ -133,6 +133,33 @@ def check_view(browser, name, width, height):
         timeout=75000,
     )
     assert page.locator("#count").inner_text() == "169 possible"
+    # The existing credited Jim Conrad Learner galleries, not external
+    # search-image replacements, must be actually visible and decode in both
+    # visitor layouts. They show independent male, female, mature structures.
+    comparison=page.locator("#question .sex-photo-comparison")
+    assert comparison.count()==1, f"{name}: source-pinned eastern gamagrass sex gallery missing"
+    figures=comparison.locator("figure")
+    assert figures.count()==3, f"{name}: expected three reproduction-stage source photos"
+    for index, (photo_i, role) in enumerate([
+        ("2","Pollen-bearing male anthers"),("3","Female feathery stigmas"),
+        ("4","Maturing female joints")
+    ]):
+        fig=figures.nth(index)
+        assert fig.get_attribute("data-photo-index")==photo_i
+        assert role in fig.inner_text(), f"{name}: unexpected reproductive photo caption"
+        assert "Jim Conrad" in fig.inner_text() and "Public domain" in fig.inner_text(), (
+            f"{name}: photographer/license missing for photo {photo_i}")
+        assert fig.locator('a[href="https://www.backyardnature.net/n/h/gama.htm"]').count()==1
+        img=fig.locator("img")
+        img.scroll_into_view_if_needed()
+        img.evaluate("(img) => {img.loading='eager'}")
+        img.evaluate("(img) => img.decode()")
+        assert min(img.evaluate("(img) => [img.naturalWidth,img.naturalHeight]"))>50, (
+            f"{name}: actual regional image failed to decode")
+        assert img.evaluate("(img) => getComputedStyle(img).objectFit")=="contain", (
+            f"{name}: cropped organ photograph in teaching strip")
+        assert fig.locator("svg.field-photo-arrows").count()==0, (
+            f"{name}: photo has no independently verified numbered arrow")
     assert page.locator("#reset-field-key").is_visible(), "One-click reset missing"
     # Main-question photographs are reused from ORIGINAL credited Learner
     # photo records, with the exact historic coordinates and no image crop.
