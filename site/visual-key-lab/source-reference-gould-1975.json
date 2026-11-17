@@ -4166,6 +4166,193 @@
         "action": "REFERENCE_ONLY_NO_NEW_SPECIES_PROFILE_OR_TRAITS",
         "note": "Neighboring genus and species cannot be used as Polypogon characteristics."
       }
+    },
+    {
+      "added_on": "2026-11-16",
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "species_id": "schizachyrium-scoparium",
+      "taxon": "Schizachyrium scoparium (Michx.) Nash",
+      "historical_name": "Andropogon scoparius Michx.",
+      "common_name": "Little bluestem",
+      "printed_pages": [
+        608,
+        609
+      ],
+      "citation": "Gould (1975), The Grasses of Texas, printed pp. 608–609, Schizachyrium scoparium general treatment and varieties key",
+      "evidence_level": "OWNER_PHOTOGRAPHED_EXACT_PUBLISHED_PAGES_NOT_IDENTIFIED_LOCAL_VARIETY",
+      "source_images": "Printed pp.608–609 were photographed by project owner; no copyrighted page images republished. P.609 only starts var. virile treatment at the bottom, and subsequent continuation page not supplied.",
+      "previously_preserved_general_account": "Existing source-reference-gould-1975.json top-level observations captured the general Schizachyrium scoparium species description from an earlier owner screenshot of page number then unknown; these photographed pages now establish printed p.608 and complete the key through the var. virile couplet, without erasing earlier historical intake.",
+      "general_species_treatment": [
+        {
+          "character": "habit_and_culms",
+          "details": "Cespitose (bunch-forming) perennial; rhizomes present or absent across the species concept, depending on infraspecific form. Culms 50–200 cm, green or glaucous, freely branching above with numerous flowering lateral branches.",
+          "height_cm": [
+            50,
+            200
+          ],
+          "important": "Do not imply every little bluestem plant is rhizomatous."
+        },
+        {
+          "character": "sheath",
+          "details": "Strongly keeled laterally compressed sheaths, occasionally up to 10 mm broad, usually narrower. Surfaces smooth to sparsely hairy or villous, varying by form.",
+          "width_mm_max": 10
+        },
+        {
+          "character": "ligule",
+          "details": "Firm ligules measuring 1–3 mm; membrane character corroborated by existing Hill Country and regional flora observations, but Gould does not restate membrane explicitly on these pages.",
+          "length_mm": [
+            1,
+            3
+          ]
+        },
+        {
+          "character": "blades",
+          "details": "Linear-acuminate blades; basal blades mostly 1.5–4 mm broad (rarely 6 mm) and at least 25 cm long. Hairless, sparsely hispid, or villous depending on plant/form.",
+          "basal_width_mm_common": [
+            1.5,
+            4
+          ],
+          "width_mm_rare_max": 6,
+          "basal_length_cm_min": 25
+        },
+        {
+          "character": "flowering_branches",
+          "details": "Numerous short racemes mostly 2.5–5 cm; rachis joints and pedicels conspicuously ciliate with silvery hairs over upper two-thirds (hairs may be denser in certain varieties).",
+          "raceme_cm": [
+            2.5,
+            5
+          ]
+        },
+        {
+          "character": "paired_spikelets",
+          "details": "Sessile spikelets mostly 6–8 mm; first glume smooth or scabrous. Pedicelled partner staminate or neuter, equal-length to much shorter, usually awnless or with short straight awn; var. frequens and var. virile differ in pedicelled partner structure.",
+          "sessile_spikelet_mm": [
+            6,
+            8
+          ]
+        },
+        {
+          "character": "lemma_printing_caution",
+          "printed_words": "lemma 8–15 mm long",
+          "details": "The printed line is retained verbatim only as a short measurement quote from the provided photo; organ attribution needs separate verification. Earlier source held this as a potential confusing lemma vs awn wording. Do NOT recode as fertile lemma or awn length solely from the photograph.",
+          "status": "ANATOMICAL_INTERPRETATION_HOLD"
+        },
+        {
+          "character": "chromosome",
+          "details": "Reported chromosome number 2n=40, not a diagnostic field trait.",
+          "number_2n": 40
+        }
+      ],
+      "infraspecific_key": [
+        {
+          "variety_as_printed": "Schizachyrium scoparium var. divergens",
+          "code": "4B",
+          "distinguishing_characters": "Lower sheaths and blades densely villous, with long shaggy hairs. Pedicelled spikelets developed, frequently about as long as sessile ones, with two well-developed glumes.",
+          "distribution_as_printed": "Eastern/southeastern Texas; Gould regions 1–2",
+          "flowering_period": "August–December reported in the shown variety treatment",
+          "local_Hays_status": "UNVERIFIED_NOT_AUTOMATIC_HAYS_ASSIGNMENT",
+          "status": "KEY_AND_TREATMENT_PARTLY_VISIBLE"
+        },
+        {
+          "variety_as_printed": "Schizachyrium scoparium var. littoralis",
+          "code": "4D",
+          "distinguishing_characters": "Creeping rhizomes present; stems and sheaths strongly flattened and sharply keeled; rachis joints and pedicels more or less densely villous.",
+          "distribution_as_printed": "Southeastern and southern Texas",
+          "local_Hays_status": "UNVERIFIED_NOT_AUTOMATIC_HAYS_ASSIGNMENT",
+          "taxonomy_note": "This is Gould's historical key name; Kew treats littorale as a name associated with separate Schizachyrium littorale (dune bluestem). Verify spelling and concept before crosswalking."
+        },
+        {
+          "variety_as_printed": "Schizachyrium scoparium var. neomexicanum",
+          "code": "4E",
+          "distinguishing_characters": "Non-rhizomatous; moderately compressed sheaths, often less sharply keeled; flowering rachis joints and pedicels villous and almost straight at maturity.",
+          "distribution_as_printed": "Western Texas",
+          "local_Hays_status": "POTENTIAL_WESTERN_REGION_BUT_NO_COUNTY_VAR_VOUCHER"
+        },
+        {
+          "variety_as_printed": "Schizachyrium scoparium var. frequens",
+          "code": "4A",
+          "common_name_in_Gould": "Little bluestem",
+          "distinguishing_characters": "Does not produce creeping rhizomes; sheaths and blades hairless or sparsely stiff-hairy; flowering rachis joints and pedicels ciliate but not densely villous; rachis more zigzag and pedicels spreading at maturity. Narrow pedicelled spikelet 1.5–5 mm consisting of a single empty glume.",
+          "pedicelled_spikelet_mm": [
+            1.5,
+            5
+          ],
+          "distribution_as_printed": "Central, western and southern Texas; statewide except Gould region 1. Particularly in tallgrass prairie openings, rocky slopes, moderate/lightly grazed pastures and rangeland.",
+          "flowering_period": "August–December (Gould Texas account)",
+          "local_Hays_status": "BEST_GEOGRAPHIC_CANDIDATE_FROM_GOULD_NOT_LOCAL_VARIETY_PROOF",
+          "external_note": "Texas A&M Rangelands uses var. frequens for little bluestem across the Edwards Plateau; Kew POWO and ITIS synonymize the name under Schizachyrium scoparium."
+        },
+        {
+          "variety_as_printed": "Schizachyrium scoparium var. virile",
+          "code": "4C",
+          "distinguishing_characters": "Non-rhizomatous; flowering rachis ciliate not villous, zigzag with spreading pedicels at maturity; pedicelled spikelets 4.5–7 mm, at least some containing two glumes and often lemma and stamens.",
+          "pedicelled_spikelet_mm": [
+            4.5,
+            7
+          ],
+          "distribution_as_printed": "Eastern Texas, pine/oak woodlands",
+          "local_Hays_status": "UNVERIFIED_NOT_AUTOMATIC_HAYS_ASSIGNMENT",
+          "source_completeness": "The p.609 image shows the heading for the separate variety treatment but NOT its body; retain only characters from the couplet."
+        }
+      ],
+      "taxonomy_crosswalk": {
+        "status": "TAXONOMY_AUTHORITIES_DISAGREE_RETAIN_GOULD_ORIGINAL_NAMES",
+        "kew_powo": "Kew Plants of the World Online treats S. scoparium as accepted and var. frequens and var. neomexicanum as synonyms under the species; Kew treats var. virile as synonym of Schizachyrium divergens and var. littorale as synonym of Schizachyrium littorale.",
+        "itis": "ITIS synonymizes var. frequens to the species but accepts var. neomexicanum and var. virile at variety rank; do not force a single agreed variety taxonomy.",
+        "original_pages": [
+          608,
+          609
+        ],
+        "urls": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:420956-1",
+          "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=540434",
+          "https://rangeplants.tamu.edu/plant/little-bluestem/"
+        ]
+      },
+      "native_locality": {
+        "species": "Native little bluestem occurs in northern Hays County per UT Austin Plant Resources Center field account; BONAP county-level species map also available.",
+        "northern_hays_source": "https://w3.biosci.utexas.edu/prc/DigFlora/KR/SCSC.html",
+        "bonap_county_species_map": "https://bonap.net/TDC/Image/Map?locationType=County&mapType=Normal&taxonId=18975&taxonType=Species",
+        "variety_assessment": "Neither the provided pages nor a species-level county map establishes which Gould variety is native to a particular Hays County site. Do not infer variety-specific local nativity from statewide or ecoregion occurrence.",
+        "planting_notes": "No commercial cultivar, source provenance or nursery plant variety certified by these pages."
+      },
+      "nine_main_question_guidance": {
+        "head": "short_racemes (2.5–5 cm) supported; distinguish short lateral silky racemes from one terminal finger cluster.",
+        "habit": "tuft supported; rhizome alternative exists in Gould species concept but creeping rhizomes belong to his var. littoralis. Other listed regional forms may lack creeping rhizomes. Do not require rhizomes for Hays grass.",
+        "ligule": "firm 1–3 mm, membrane status confirmed by existing Diggs and Hagenbuch & Lemke descriptions.",
+        "awns": "Gould 8–15 mm 'lemma' is unresolved organ wording; preserve existing awn observations sourced elsewhere. Pedicelled partner awnless or short-awened does not imply sessile fertile floret awnless.",
+        "blade_width": "Basal 1.5–4 mm typically, rarely 6; crosses thread (<2), narrow 2–5, occasionally medium 5–10. Do not exclude a measured genuine specimen for species-wide typical value.",
+        "blade_shape": "Linear-acuminate is outline, not proof of V-folding or inrolling; retain unknown where those blade states were not directly described.",
+        "blade_venation": "Blade vein/rib category not reported on these pages; leave unknown.",
+        "blade_hairs": "May be hairless, sparse stiff hairs or villous especially eastern varieties. Do not score fixed universal blade hair state or transfer inflorescence hairs to blades.",
+        "ligule_length": "1–3 mm mostly short, 3 mm measurement boundary overlaps medium. Retain approximate boundary, do not claim long ligule."
+      },
+      "classification_decision": {
+        "action": "SOURCE_AND_SPECIES_EVIDENCE_ONLY_NO_AUTOMATIC_KEY_RECODING",
+        "species_id": "schizachyrium-scoparium",
+        "variety_auto_assignment": "NONE",
+        "range": "PASS_SPECIES_LEVEL_UNCHANGED",
+        "photos": "NO_CHANGES",
+        "source_order": "Gould (1975) > Diggs (1999) > Hagenbuch & Lemke (2015), with lower authorities for corroboration; preserve disagreements"
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "First recognize little bluestem, not a particular variety",
+          "check": "Look for tufted growth, short 2.5–5 cm silky racemes at ends of leafy upper branches, paired spikelets and a 1–3 mm firm membranous ligule.",
+          "compare": "Broader species ID does not establish Gould var. frequens or another variety.",
+          "certainty": "Gould p.608, plus existing regional flora for membranous ligule; Hays specimen/variety unverified.",
+          "source": "Gould (1975), The Grasses of Texas, p.608; Diggs (1999), ligule reference",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "For a possible central-Texas var. frequens, examine rachis and pedicel hairs",
+          "check": "Gould's var. frequens key reports a non-creeping base, ciliate but NOT densely villous flowering rachis and pedicels, a more zigzag rachis, and 1.5–5 mm narrow pedicelled units that are a single empty glume. Compare with dense villous nearly straight western var. neomexicanum.",
+          "compare": "Requires mature attached racemes and separation of sessile vs pedicelled spikelets. Species-level learner should not force this variety.",
+          "certainty": "Historic Gould key pp.608–609; taxonomic rank not uniformly recognized and Hays voucher unverified.",
+          "source": "Gould (1975), The Grasses of Texas, pp.608–609",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        }
+      ]
     }
   ],
   "additional_source_image_notes": [
@@ -4188,6 +4375,11 @@
       "received_on": "2026-11-16",
       "subject": "Gould, The Grasses of Texas, Polypogon monspeliensis p.145 and continuation p.147, with separate P. interruptus and Gastridium ventricosum p.147",
       "note": "Paraphrased annual beardgrass description and saved separately displayed neighbors. Printed p.146 not supplied; do not infer omissions. Compared the overlapping beginner field choices to slender Indiangrass; no photos, credits or scores changed."
+    },
+    {
+      "received_on": "2026-11-16",
+      "subject": "Gould The Grasses of Texas pp.608-609, Schizachyrium scoparium species and five historical varieties",
+      "note": "P.608 and p.609 reconcile earlier page-unlabeled general species intake and add the full five-choice variety key (frequens, neomexicanum, divergens, littoralis, virile), while the var. virile descriptive treatment continues beyond the supplied photo. All statements paraphrased; no photo or score edits, no Hays variety assigned."
     }
   ],
   "current_source_priority_rhizome_review": {

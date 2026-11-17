@@ -89,6 +89,64 @@
         "status": "TWO_PUBLISHED_SPECIES_RECORDS_AWN_RANGE_SHORT_VISUAL_COARSE_ALTERNATE_NO_AWNLESS_CLAIM",
         "review_date": "2026-11-13",
         "photo_voucher_support": "Source-supported visual-option ambiguity; no exact local mature attached spikelet measured or independently verified."
+      },
+      "gould_1975_pages_608_609": {
+        "source": "Gould, The Grasses of Texas, pp. 608–609",
+        "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "category": "owner_photographed_exact_species_and_variety_treatment",
+        "status": "COMPLETE_VISIBLE_VARIETY_KEY_RECORDED_FOLLOWING_TREATMENT_PARTIAL",
+        "review_date": "2026-11-16",
+        "source_intake": "source-reference-gould-1975.json additional_species_treatments species_id=schizachyrium-scoparium printed_pages=608,609",
+        "fact_summary": {
+          "species_habit": "tufted perennial may be rhizomatous or not, depending on form",
+          "culms_cm": [
+            50,
+            200
+          ],
+          "firm_ligule_mm": [
+            1,
+            3
+          ],
+          "basal_blade_mm_usually": [
+            1.5,
+            4
+          ],
+          "basal_blade_mm_rarely_to": 6,
+          "racemes_cm": [
+            2.5,
+            5
+          ],
+          "sessile_spikelet_mm": [
+            6,
+            8
+          ],
+          "rachis_pedicel_cilia": "long silvery at least upper two thirds",
+          "chromosomes_2n": 40
+        },
+        "variety_key_regions": {
+          "frequens": "central, western, southern Texas, no creeping rhizomes, ciliate non-villous zigzag rachis, pedicelled 1.5–5 mm single empty glume",
+          "neomexicanum": "western Texas, no rhizomes, villous straight flowering rachis",
+          "divergens": "east/southeastern Texas, hairy basal sheaths/blades",
+          "littoralis": "south/southeastern Texas, creeping rhizomes, sharply flattened keeled sheaths",
+          "virile": "eastern Texas pine oak, pedicelled 4.5–7 mm with additional developed floral organs"
+        },
+        "priority_note": "Gould's species-level 'with/without rhizomes' is infraspecific variation. Var. frequens specifically lacks creeping rhizomes. Existing main growth form choice 'rhizome' stays a valid possible alternative at broad species level but MUST NOT be required for Hays little bluestem.",
+        "range_note": "Gould geographic descriptions do not independently verify Hays County variety occurrence or variety-specific BONAP county nativity.",
+        "taxonomy_note": "Kew synonymizes var. frequens and neomexicanum under Schizachyrium scoparium; ITIS differs for neomexicanum; keep distinct historical names as source-labeled aliases, not five independent species.",
+        "nine_tab_review": {
+          "head": "short_racemes (2.5–5 cm) supported; distinguish short lateral silky racemes from one terminal finger cluster.",
+          "habit": "tuft supported; rhizome alternative exists in Gould species concept but creeping rhizomes belong to his var. littoralis. Other listed regional forms may lack creeping rhizomes. Do not require rhizomes for Hays grass.",
+          "ligule": "firm 1–3 mm, membrane status confirmed by existing Diggs and Hagenbuch & Lemke descriptions.",
+          "awns": "Gould 8–15 mm 'lemma' is unresolved organ wording; preserve existing awn observations sourced elsewhere. Pedicelled partner awnless or short-awened does not imply sessile fertile floret awnless.",
+          "blade_width": "Basal 1.5–4 mm typically, rarely 6; crosses thread (<2), narrow 2–5, occasionally medium 5–10. Do not exclude a measured genuine specimen for species-wide typical value.",
+          "blade_shape": "Linear-acuminate is outline, not proof of V-folding or inrolling; retain unknown where those blade states were not directly described.",
+          "blade_venation": "Blade vein/rib category not reported on these pages; leave unknown.",
+          "blade_hairs": "May be hairless, sparse stiff hairs or villous especially eastern varieties. Do not score fixed universal blade hair state or transfer inflorescence hairs to blades.",
+          "ligule_length": "1–3 mm mostly short, 3 mm measurement boundary overlaps medium. Retain approximate boundary, do not claim long ligule."
+        },
+        "photo_policy": "NO_MEDIA_OR_CREDIT_EDITS",
+        "scores": "UNCHANGED_PEND_SOURCE_BY_SOURCE_FILTER_QA",
+        "anatomical_hold": "printed lemma 8–15 mm length remains unresolved, not assigned as awn length"
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
@@ -118,6 +176,14 @@
         "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p. 60; Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, p. 1316",
         "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=60",
         "certainty": "Regional text reviewed; local specimen and source reconciliation remain open"
+      },
+      {
+        "look": "Use Gould's central-Texas variety key only after species identification",
+        "check": "For Gould's var. frequens, look for no creeping rhizomes, ciliate but not shaggy flowering rachis joints and pedicels, zigzag rachis at maturity, and small 1.5–5 mm pedicelled units consisting of a single empty glume. Compare to the more villous straight-axis western var. neomexicanum.",
+        "compare": "Named historical varieties are NOT automatically county-verified, nor five extra Learner species. Keep the broad Schizachyrium scoparium answer for field users.",
+        "certainty": "Gould 1975 pp.608–609, owner page photographs. Exact Hays variety and mature flowerhead photo validation pending.",
+        "source": "Gould (1975), The Grasses of Texas, pp.608–609",
+        "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
       }
     ],
     "diagnostic_review": {
