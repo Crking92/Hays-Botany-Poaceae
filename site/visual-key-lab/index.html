@@ -1592,12 +1592,14 @@ function progressiveResultGroups(rows){
  for(const row of rows){
   const contradictions=extraChosen?verifiedAdvancedConflict(row.s):[];
   if(contradictions.length){excluded.push({...row,contradictions});continue;}
-  // Hill Country rhizome-absence versus other published rhizome-presence
-  // accounts are unresolved for these three taxa (Issue #368). A selected
-  // rhizome must NOT count as a fully confirmed regional key match until the
-  // book/specimen scope is rechecked; never mislabel it as an absence either.
+  // Gould and Diggs are top-priority literature for this Lab. They do
+  // not expressly settle rhizome presence/absence for buffalograss or
+  // plains lovegrass: preserve their H&L vs supplementary contradiction as
+  // Still possible. But Diggs p.1300 explicitly affirms the knotty,
+  // RHIZOMATOUS BASE of vine mesquite (Gould Fig.241 is consistent), so
+  // Hopia can be a documented RHIZOME match without assuming long rhizomes.
   const disputedRhizome=state.selected.habit==="rhizome"&&[
-   "bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"
+   "bouteloua-dactyloides","eragrostis-intermedia"
   ].includes(row.s.id);
   (row.unknown===0&&!disputedRhizome&&hasAllDocumentedRefinements(row.s)?confirmed:unresolved).push(
     disputedRhizome?{...row,rhizomeSourceHold:true}:row);
@@ -2576,7 +2578,7 @@ const [label,cl]=status(s);info.append(node("span","tag "+cl,label));
 if(s.trial)info.append(node("div","smallmuted","Still under verification · not a confirmed identification. Unverified traits should be checked against other species."));if(s.source_scored)info.append(node("div","smallmuted","Literature-supported identification profile. Local occurrence, nativity and specimen identity are not certified."));
 if(s.promotion_hold)info.append(node("div","smallmuted","Promotion hold: "+s.promotion_hold.code.replace(/_/g," ").toLowerCase()+". See profile for the exact blocker."));if(s.gapEvidence?.length)info.append(node("div","smallmuted",s.gapEvidence.length+" newly verified field detail"+(s.gapEvidence.length===1?"":"s")+" (positive-only; not evidence for exclusion)."));
 const disputedRhizome=state.selected.habit==="rhizome"&&[
- "bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"
+ "bouteloua-dactyloides","eragrostis-intermedia"
 ].includes(s.id);
 if(disputedRhizome)info.append(node("div","smallmuted",
  "Rhizome status unresolved — regional references disagree. Keep possible until the book and a connected underground stem are checked."));
@@ -2623,9 +2625,12 @@ const box=$("pending-items");box.replaceChildren();
 for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";box.append(a)}
 }
 function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photo.license_url?.startsWith("https://")){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photo.license_url;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));
-if(["bouteloua-dactyloides","eragrostis-intermedia","hopia-obtusa"].includes(s.id))
+if(["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id))
  copy.append(node("p","smallmuted",
- "Rhizome status unresolved — the regional Hill Country description conflicts with other published rhizome reports. This is a literature hold, not proof of rhizome absence or presence. Inspect connected underground stems and recheck the regional book before scoring this habit as confirmed."));
+ "Rhizome status unresolved under Gould/Flora source priority: neither top-priority exact species treatment explicitly establishes rhizome absence or presence. Hagenbuch & Lemke describe absence, while other accounts report occurrence. Keep the plant Still possible when choosing rhizomes; verify a connected underground stem."));
+if(s.id==="hopia-obtusa")
+ copy.append(node("p","smallmuted",
+ "Source-priority decision for rhizomes: Diggs et al., Flora of North Central Texas (1999), printed p.1300, explicitly describes a knotty RHIZOMATOUS BASE; Gould (1975), Panicum obtusum, Fig.241 describes a hard knotty OR rhizomatous base. This supports the basal-rhizome choice, not a claim of long scaly underground runners. Hagenbuch & Lemke (2015), p.51 describes rhizomes as absent; that lower-priority conflicting account remains documented."));
 copy.append(node("h3","","What to check in the field"));copy.append(node("p","",s.field_rule||"Review the complete Hays Botany species lesson for diagnostic parts and look-alikes."));
 if(s.source_scored&&s.source_admission){
   const panel=node("section","detail-botany");
