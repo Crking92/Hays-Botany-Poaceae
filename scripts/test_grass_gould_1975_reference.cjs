@@ -500,3 +500,16 @@ assert(html.includes("Diggs et al., Flora of North Central Texas (1999), printed
 assert(html.includes("easternGamagrassSexPhotoComparison"),"Three-photo sex anatomy gallery missing from field key");
 console.log("PASS: three new Gould photographed passages source-pinned, page holds intact and no false rhizome conclusions");
 console.log("PASS: Gould p.213 Tridentopsis elongata, p.542 Melinis repens and p.469 Megathyrsus maximus saved, preserving protected key scoring");
+
+// Exact owner-supplied Gould p.622 Tripsacum record: source-only, no silent
+// acceptance of adjacent incomplete Zea mays or contradictory female glume
+// developmental texture as an exclusion score.
+const gamagrass622=source.additional_species_treatments.find(x=>x.species_id==='tripsacum-dactyloides'&&x.printed_page===622);
+assert(gamagrass622,'Gould p.622 eastern gamagrass source intake missing');
+assert.equal(gamagrass622.observations.find(x=>x.character==='leaf_blades').usual_width_mm[1],25);
+assert.equal(gamagrass622.observations.find(x=>x.character==='ligule').states[0],'membrane_with_cilia');
+assert.equal(gamagrass622.observations.find(x=>x.character==='inflorescence').sex_position,'staminate_above_pistillate');
+assert.equal(gamagrass622.observations.find(x=>x.character==='female_glume_texture_internal_source_tension').status,'SOURCE_INTERNAL_TEXTURE_SCOPE_HOLD_NO_SCORING_CHANGE');
+assert.equal(gamagrass622.adjacent_account_boundary.taxon,'Zea mays L.');
+assert.equal(gamagrass622.learner_diagnostic_checks.length,2);
+assert(source.additional_species_treatments.length>=31,'Gould source records unexpectedly lost');

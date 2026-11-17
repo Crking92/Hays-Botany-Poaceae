@@ -4353,6 +4353,189 @@
           "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
         }
       ]
+    },
+    {
+      "added_on": "2026-11-16",
+      "species_id": "tripsacum-dactyloides",
+      "taxon": "Tripsacum dactyloides (L.) L.",
+      "current_taxon": "Tripsacum dactyloides (L.) L.",
+      "common_name": "Eastern gamagrass",
+      "printed_page": 622,
+      "source": "Frank W. Gould (1975), The Grasses of Texas",
+      "citation": "Gould, F. W. (1975). The Grasses of Texas, printed p.622, Tripsacum dactyloides under genus Tripsacum L.",
+      "evidence_level": "OWNER_PHOTOGRAPHED_EXACT_SPECIES_TREATMENT_NOT_IDENTIFIED_LOCAL_SPECIMEN",
+      "preservation": "All observations paraphrased from the user-uploaded photographed book page. The copyrighted page photo/text and any figures are NOT rehosted; this is a source citation and evidence record, not individual-image rights approval.",
+      "observations": [
+        {
+          "character": "habit_and_culms",
+          "details": "Perennial forming large clumps from thick, knotted rhizomes; stems about 1.5–3 m tall or taller; culms and leaves described as glabrous.",
+          "culm_height_m_mostly": [
+            1.5,
+            3
+          ],
+          "states": [
+            "tuft",
+            "rhizome"
+          ],
+          "source_scope": "published species description, not authenticated excavated Hays specimens"
+        },
+        {
+          "character": "sheaths",
+          "details": "Rounded, smooth and shiny leaf sheaths; glabrous foliage reported."
+        },
+        {
+          "character": "ligule",
+          "details": "Short MEMBRANOUS ligule with a ciliate (fringed) or lacerate (torn/irregular) edge. The hairs are a membrane edge characteristic; this does not establish a hair-only ligule lacking membrane.",
+          "states": [
+            "membrane_with_cilia",
+            "membrane_lacerate"
+          ],
+          "length_mm": "NOT_REPORTED_BY_GOULD_P622"
+        },
+        {
+          "character": "leaf_blades",
+          "details": "Thin, mostly flat leaves, usually 10–25 mm wide and 30–75 cm or longer. Numeric range is MOSTLY, not a hard universal min/max; does not exclude anomalous specimens.",
+          "usual_width_mm": [
+            10,
+            25
+          ],
+          "length_cm_usually": [
+            30,
+            75
+          ],
+          "length_upper_bound": "may exceed 75 cm",
+          "relevant_main_choices": [
+            "blade_shape:flat",
+            "blade_width:broad_over_10mm"
+          ]
+        },
+        {
+          "character": "inflorescence",
+          "details": "Either a single 12–25-cm spicate raceme (spike-like flowering axis) or 2–3 erect spike-like racemose branches, with male (staminate) spikelets above female (pistillate) spikelets.",
+          "length_cm": [
+            12,
+            25
+          ],
+          "branches": [
+            "single",
+            "two_or_three"
+          ],
+          "sex_position": "staminate_above_pistillate",
+          "relevant_main_head_choices": [
+            "mixed_gender",
+            "spike",
+            "fingers"
+          ]
+        },
+        {
+          "character": "staminate_spikelets",
+          "details": "Upper male spikelets awnless, 2-flowered, usually 6–10 mm long, occurring in pairs on one side of a continuous rachis.",
+          "length_mm_mostly": [
+            6,
+            10
+          ],
+          "florets": 2,
+          "awn": "absent",
+          "attachment": "paired_and_one_sided_on_continuous_axis"
+        },
+        {
+          "character": "pistillate_spikelets_and_joints",
+          "details": "Lower female spikelets usually solitary, subsessile, awnless, usually 6–8 mm. Gould describes hard bony enclosing glumes that become indurate/fused with the rachis, producing distinctive hard shiny jointed units.",
+          "length_mm_mostly": [
+            6,
+            8
+          ],
+          "pedicel": "subsessile",
+          "awn": "absent",
+          "fruiting_rachis": "nodally_dissecting_hard_shiny_beads"
+        },
+        {
+          "character": "female_glume_texture_internal_source_tension",
+          "details": "On the same p.622 Gould describes glumes of pistillate spikelets first as flat, several-nerved and membranous, then describes their hard/bony indurate condition fused to the rachis. Timing/organ distinction is not explained in the supplied passage; retain both reported descriptions and HOLD exact developmental texture scoring.",
+          "status": "SOURCE_INTERNAL_TEXTURE_SCOPE_HOLD_NO_SCORING_CHANGE"
+        },
+        {
+          "character": "female_lemma",
+          "details": "Sterile and fertile female floret lemmas thin, hyaline and often reduced; female pedicels/pedicelled spikelets generally absent, occasionally a rudiment."
+        },
+        {
+          "character": "disarticulation",
+          "details": "Upper staminate portion sheds as a unit; lower pistillate portion separates at the nodes into hard beadlike units. Visual hardness cannot be proven from a photograph alone."
+        },
+        {
+          "character": "gould_historical_distribution",
+          "details": "Reports Texas throughout but particularly eastern Texas, in low moist relatively little-disturbed grasslands; general eastern-half US distribution west to Nebraska, Kansas, Oklahoma and Texas, plus the West Indies and northern Mexico. Historic state/general range is not a BONAP Hays-county nativity check."
+        },
+        {
+          "character": "flowering_period",
+          "details": "Gould reports April–November in Texas; published interval is not an authenticated current Hays site flowering calendar.",
+          "months": [
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November"
+          ]
+        },
+        {
+          "character": "chromosome_numbers",
+          "details": "Reports 2n=36, 54, 72, 90, 108 and aneuploid variants in published material; not a routine field identification criterion.",
+          "two_n": [
+            36,
+            54,
+            72,
+            90,
+            108
+          ]
+        }
+      ],
+      "nine_main_question_guidance": {
+        "head": "`mixed_gender` decisively teaches upper male and lower female organs on the same branch. Both single spike-like axis (`spike`) and 2–3 erect terminal branches (`fingers`) are documented positive alternatives, not simultaneously required on each specimen.",
+        "habit": "Tufted large clumps AND thick knotty rhizomes are source-backed for this species; however a photo of a clump does not prove subterranean rhizome identity.",
+        "ligule": "Gould supports ciliate OR lacerate MEMBRANE. Retain existing broad visible membrane/hairs answers provisionally but label any hairlike edge as cilia on a membrane rather than confidently calling it hair-only; inspect exact organ/photo before modifying the broad key.",
+        "blade_width": "Published mostly 10–25 mm supports broad (>10 mm) main picker. The text is MOSTLY, so do not hard-exclude an authentic specimen measured at a boundary or atypical width.",
+        "blade_shape": "Mostly flat blades supported; no claim about rolled/folded variants on this page.",
+        "blade_venation": "No explicit leaf vein or ridge observation in this treatment; do not invent.",
+        "blade_hairs": "Leaves described as glabrous, but no degree-of-hair option should be forced from an isolated head photo or unverified leaf photo.",
+        "ligule_length": "Only SHORT is written; no millimeters supplied here. Do not assign an exact UI measurement bin from this page alone.",
+        "awns": "Both male and female spikelets explicitly awnless. Existing `none_obvious` positive state remains valid."
+      },
+      "classification_decision": {
+        "action": "PRESERVE_GOULD_P622_EXACT_TRIPSACUM_EVIDENCE_NO_NEW_SCORE_OR_PHOTO_CHANGE",
+        "scoring": "Existing core head, growth, ligule and awn states retained; advanced numeric evidence requires safe non-exclusive interval treatment.",
+        "staged_female_glume_hold": "Same page uses membranous and later indurate/glume-fused language for female spikelets; exact maturity/texture distinction unresolved in photographed passage.",
+        "no_county_claim": "Gould's historic Texas range does not establish BONAP Hays County nativity or a county voucher.",
+        "photo_policy": "PAUSE_PHOTO_ARROW_GALLERY_CREDIT_WORK_OWNER_RULE_20261116"
+      },
+      "adjacent_account_boundary": {
+        "taxon": "Zea mays L.",
+        "common_name": "Maize/corn",
+        "adjacent_printed_page": 622,
+        "status": "PARTIAL_ADJACENT_TAXON_ACCOUNT_NOT_IN_CURRENT_169_LAB_DO_NOT_AUTO_ADMIT",
+        "evidence": "Page begins separate genus Zea and Zea mays treatment describing cultivated monoecious maize, male terminal and female lateral reproductive heads; the species account is visibly cut off mid-sentence at bottom of supplied page.",
+        "strict_scope": "Do not transfer maize morphology to Tripsacum or treat Gould's historical Zea genus-count assertion as modern accepted taxonomy."
+      },
+      "learner_diagnostic_checks": [
+        {
+          "look": "Compare upper male spikelets and lower female segmented rachis",
+          "check": "Gould p.622: upper staminate spikelets are awnless and 2-flowered, mainly 6–10 mm, paired to one side of a continuous axis; lower female spikelets are generally single and subsessile, 6–8 mm, and the lower rachis breaks into hard beadlike nodes.",
+          "compare": "Do not call the male paired spikelets female fruits; do not interpret mature bead hardness from photo color alone.",
+          "certainty": "Exact Gould 1975 p.622 morphology, not a local specimen or certified photograph.",
+          "source": "Gould (1975), The Grasses of Texas, p.622",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        },
+        {
+          "look": "Check leaf width and the inside collar",
+          "check": "Gould p.622 records mostly flat 10–25 mm blades and a short ciliate or lacerate MEMBRANOUS ligule. Inspect the membrane base: its hairs, if present, are on an edge.",
+          "compare": "Do not mistake blade hairs for ligule cilia; the published range does not give exact ligule length in mm.",
+          "certainty": "Exact species literature source, no specimen-specific measurement or photograph validation.",
+          "source": "Gould (1975), The Grasses of Texas, p.622",
+          "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+        }
+      ]
     }
   ],
   "additional_source_image_notes": [
