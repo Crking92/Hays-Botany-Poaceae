@@ -812,8 +812,11 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ // A new exact-state citation must not erase other preserved states in the same group.
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
+// Preserve published alternatives while withholding source-conflicted states from confirmed ranking.
+function heldRefinementStates(s,character){return s.gould_character_holds?.[character]||[]}
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
 // Old one-value share links are still accepted.
@@ -825,7 +828,7 @@ function refinementMatches(s){
  const supported=Object.keys(state.refineSelected).flatMap(id=>{
    const observed=selectedRefinementStates(id),evidence=refinementEvidence(s,id);
    if(!observed.length||!evidence)return[];
-   const matched=observed.filter(value=>evidence.states.includes(value));
+   const matched=observed.filter(value=>evidence.states.includes(value)&&!heldRefinementStates(s,id).includes(value));
    return matched.length?[{character:id,value:matched[0],matched}]:[];
  });
  // Two separate UI buttons must not award two points for one physical organ.
@@ -853,7 +856,7 @@ function hasAllDocumentedRefinements(s){
   const values=selectedRefinementStates(id);
   if(!values.length)return true;
   const evidence=refinementEvidence(s,id);
-  return Boolean(evidence&&values.every(value=>evidence.states.includes(value)));
+  return Boolean(evidence&&values.every(value=>evidence.states.includes(value)&&!heldRefinementStates(s,id).includes(value)));
  });
 }
 
@@ -870,6 +873,7 @@ function verifiedAdvancedConflict(s){
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
+  if(observed.some(v=>heldRefinementStates(s,character.id).includes(v)))continue;
   const evidence=refinementEvidence(s,character.id);
   if(!evidence?.states?.length||observed.some(value=>evidence.states.includes(value)))continue;
   if(observed.some(v=>state.refineEvidenceOptionKeys?
@@ -898,6 +902,8 @@ function verifiedAdvancedConflict(s){
    });
    if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   // Sex and palea anatomy share this group but are not numerical floret counts.
+   if(observed.some(v=>!["one","two","several"].includes(v)))continue;
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||
       !/exact/i.test(evidence.source||"")||
@@ -1695,6 +1701,7 @@ function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){
+ if(s.gould_core_holds?.[key]?.includes(val)){unknown++;continue}
  if(key==="habit"&&val==="rhizome"&&["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id)){unknown++;continue}
  const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if((key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))||
        (key==="head"&&val==="pampas_plume")||(key==="habit"&&val==="woody_canes"))unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
@@ -2801,7 +2808,9 @@ const disputedRhizome=state.selected.habit==="rhizome"&&[
 ].includes(s.id);
 if(disputedRhizome)info.append(node("div","smallmuted",
  "Rhizome status unresolved — regional references disagree. Keep possible until the book and a connected underground stem are checked."));
-if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
+const selectedSourceHold=Object.entries(state.selected).some(([key,value])=>value&&s.gould_core_holds?.[key]?.includes(value))||Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).some(v=>heldRefinementStates(s,id).includes(v)));
+if(selectedSourceHold)info.append(node("div","smallmuted","Source disagreement — selected rhizome or lower-glume evidence is unresolved. Open details to compare Gould with the preserved older accounts."));
+if(x.unknown&&!selectedSourceHold)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
 if(groups.active&&unresolvedIds.has(s.id))unknownRoot.append(row);
@@ -2958,6 +2967,24 @@ function applyKRGouldSupplement(pack){
   note:"Conditional stolons/rhizomes and short-awns scoped to Gould's historical variety; old source disagreements retained."};
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
+}
+function applyKleingrassGouldSupplement(pack){
+ const expectedHolds={core:{habit:["rhizome"]},refinements:{underground_stems:["short_knotty","short_rhizome","rhizome_present","long_scaly","slender_long","long_rhizome","short_scaly","thick_rhizome","scaly_rhizome","creeping_rhizomes","management_rhizomes"],glume_marks:["lower_reduced"]}};
+ if(pack.taxon_as_printed!=="Panicum coloratum L."||JSON.stringify(pack.holds?.core)!==JSON.stringify(expectedHolds.core)||
+    JSON.stringify(pack.holds?.refinements)!==JSON.stringify(expectedHolds.refinements)||!pack.preferred_field_rule||
+    !Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||
+    pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid Kleingrass taxon/source-hold scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_KLEINGRASS_CHARACTER_SUPPLEMENT_V1",id:"panicum-coloratum",scientific:"Panicum coloratum",page:452,pages:[452,453]});
+ const species=state.species.find(s=>s.id==="panicum-coloratum");
+ species.gould_core_holds=structuredClone(pack.holds.core);
+ species.gould_character_holds=structuredClone(pack.holds.refinements);
+ species.gould_prior_field_rule=species.field_rule;
+ species.field_rule=pack.preferred_field_rule;
+ species.gould_character_source={source:pack.source,printed_pages:[452,453],holds:pack.holds.reasons};
+ const earlier=(species.diagnostic_checks||[]).map(c=>/rhizom/i.test(c.check||"")?
+   {...c,certainty:"SOURCE DISAGREEMENT — Gould says rhizomes not developed; older rhizome report retained below. "+c.certainty}:c);
+ species.diagnostic_checks=[...pack.learner_diagnostic_checks,...earlier];
+ state.refineCharacters.find(c=>c.id==="florets_per_spikelet").label="Florets / palea within one spikelet";
 }
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
@@ -3679,6 +3706,12 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+// Kleingrass: precise Gould organs and explicit rhizome disagreement; adjacent switchgrass excluded.
+try{
+ const response=await fetch("gould-kleingrass-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Kleingrass Gould supplement unavailable");
+ applyKleingrassGouldSupplement(await response.json());
+}catch(err){console.warn("Kleingrass Gould character supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.

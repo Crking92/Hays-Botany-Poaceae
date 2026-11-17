@@ -1,0 +1,21 @@
+name: Kleingrass full Gould character audit
+on:
+  push:
+    branches: [main]
+    paths: ['site/visual-key-lab/index.html', 'site/visual-key-lab/gould-kleingrass-character-supplement.json', 'scripts/test_kleingrass_gould_character_mapping.cjs', '.github/workflows/kleingrass-gould-character-mapping.yml']
+  pull_request:
+    paths: ['site/visual-key-lab/index.html', 'site/visual-key-lab/gould-kleingrass-character-supplement.json', 'scripts/test_kleingrass_gould_character_mapping.cjs', '.github/workflows/kleingrass-gould-character-mapping.yml']
+permissions: {contents: read}
+jobs:
+  klein-full-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: node scripts/test_kleingrass_gould_character_mapping.cjs
+      - run: node scripts/test_kr_gould_character_mapping.cjs
+      - run: node scripts/test_johnsongrass_gould_character_mapping.cjs
+      - run: node scripts/test_virginia_gould_character_mapping.cjs
+      - run: node scripts/test_grass_three_way_evidence_key.cjs
+      - run: node scripts/test_optional_grass_refinement.cjs
