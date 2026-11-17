@@ -1,0 +1,391 @@
+{
+  "schema": "HAYS_GOULD_STINKGRASS_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "eragrostis-cilianensis",
+  "scientific": "Eragrostis cilianensis",
+  "taxon_as_printed": "Eragrostis cilianensis (All.) E. Mosher",
+  "historical_synonym_as_printed": "Eragrostis megastachya Link",
+  "printed_page": 200,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "source_material": "Owner supplied printed p.200 exact species treatment. Figure caption under E. megastachya is retained as historical synonym context; scan/figure not republished.",
+  "option_additions": [
+    {
+      "character": "blade_venation",
+      "option": {
+        "id": "midrib_gland_pits",
+        "label": "Gland pits along the blade midrib",
+        "detail": "Inspect the midrib for glandular pits. A gland on a midrib does not establish a pale, raised or rough midvein."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "blade_hairs",
+      "option": {
+        "id": "lower_blade_gland_pits",
+        "label": "Gland pits on the LOWER blade surface",
+        "detail": "Turn the blade over. Gould describes gland pits on the midrib or lower surface; do not transfer sheath or glume glands to the blade."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "sheath_surface",
+      "option": {
+        "id": "pilose_sheath_throat",
+        "label": "Long hairs at the sheath throat",
+        "detail": "Inspect the upper opening of the sheath. Gould describes an otherwise hairless sheath with a pilose throat. These throat hairs do not by themselves identify the actual inner ligule."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "sheath_surface",
+      "option": {
+        "id": "sheath_keel_gland_pits",
+        "label": "Gland pits on the sheath keel",
+        "detail": "Trace the gland pits to the raised keel of the sheath, not a blade midrib, culm gland ring or lemma keel. Gould says usually, not always."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "sheath_surface",
+      "option": {
+        "id": "sheath_upper_nerve_gland_pits",
+        "label": "Gland pits on upper sheath nerves",
+        "detail": "Inspect nerves near the top of the sheath. Gould says glands sometimes occur there; absence at this position does not exclude the species."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "pedicellate_spikelets",
+        "label": "Spikelets carried on pedicels",
+        "detail": "Check attachment of one spikelet to the panicle. A pedicellate spikelet is not automatically a bluestem-style paired sessile/stalked unit."
+      },
+      "subgroup": "Spikelet attachment"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "glume_keel_gland_pits",
+        "label": "Gland pits on the OUTER glume keels",
+        "detail": "Locate the two OUTER glumes before examining their keels. These glands are not lemma-keel glands, nor proof of any one-vein count."
+      },
+      "subgroup": "Glume surface and glands"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lemma_keel_gland_pits",
+        "label": "Gland pits on the INNER lemma keel",
+        "detail": "Open the glumes and locate the inner lemma. Gould says usually glandular-pitted on its keel; Diggs independently describes minute raised glandular dots on this keel."
+      },
+      "subgroup": "Lemma surface marks"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lemma_membranous_dull",
+        "label": "Lemma membranous and dull",
+        "detail": "Inspect the INNER lemma, not an outer glume. Gould describes closely overlapping membranous, dull gray-green lemmas; no shiny hard lemma is inferred."
+      },
+      "subgroup": "Lemma surface marks"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "note": "Blades 2.5–7 mm wide and 10–20 cm long; both approximate narrow/medium bands apply.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference.",
+      "width_mm": [
+        2.5,
+        7
+      ]
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "blade_shape",
+      "states": [
+        "flat",
+        "folded"
+      ],
+      "note": "Blades lanceolate, flat or sometimes folded.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "blade_hairs",
+      "states": [
+        "hairless",
+        "lower_blade_gland_pits"
+      ],
+      "note": "Blades glabrous, with glandular pits on midrib or LOWER surface. A pit is not a hair or papilla-based hair.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "blade_venation",
+      "states": [
+        "midrib_gland_pits"
+      ],
+      "note": "Midrib may bear glandular pits; no pale color, raised ridge or roughness inferred from that statement. Prior H&L white-midnerve evidence remains separate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "sheath_margins",
+      "states": [
+        "overlapping"
+      ],
+      "note": "Gould explicitly describes overlapping sheaths. Prior H&L open margins remain; open margins can overlap without forming a closed tube.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "sheath_surface",
+      "states": [
+        "glabrous",
+        "glanded",
+        "pilose_sheath_throat",
+        "sheath_keel_gland_pits",
+        "sheath_upper_nerve_gland_pits"
+      ],
+      "note": "Sheaths glabrous except at pilose throat, usually with pits in keel and sometimes upper nerves. Keep body hairlessness, throat hairs and organ-specific gland positions separate. Usually/sometimes are not universal requirements.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "culm_posture",
+      "states": [
+        "geniculate"
+      ],
+      "note": "Culms branched at base and frequently geniculate. Earlier H&L erect posture remains supported separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "stem_nodes",
+      "states": [
+        "gland_ring"
+      ],
+      "note": "Usually a ring of glands BELOW culm nodes. This is not proof of glandular nodes, hairs on nodes or a flowering-rachis groove.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "stem_special",
+      "states": [
+        "basal_branching",
+        "node_gland_ring"
+      ],
+      "note": "Culms branched at base, usually with gland ring just below nodes. Basal branching alone is not a stolon/rhizome.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "spikelet_position",
+      "states": [
+        "pedicellate_spikelets"
+      ],
+      "note": "Pedicellate spikelets in an ovate-oblong dense-flowered to open panicle; branches stiffly ascending to spreading, 2.5–5 cm long. No digitate-finger architecture or bluestem sessile/stalked pair is assigned.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "florets_per_spikelet",
+      "states": [
+        "several"
+      ],
+      "note": "Gould reports 12–40 florets inside ONE 6–20 mm long, 2–4 mm wide, slightly compressed spikelet; rachilla persistent. Preserve broader supplementary 5–60 range rather than counting panicle branches as florets.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference.",
+      "floret_count": [
+        12,
+        40
+      ]
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "glume_marks",
+      "states": [
+        "glume_keel_gland_pits"
+      ],
+      "note": "Glumes membranous, broadly to narrowly ovate, acute to subacute, with glandular-pitted keels. First 1.2–2.2 mm, second 1.2–2.5 mm. Gould gives no vein count here; inherited Kew conditional 1–3-vein report remains separate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    },
+    {
+      "id": "eragrostis-cilianensis",
+      "scientific": "Eragrostis cilianensis",
+      "character": "lemma_texture",
+      "states": [
+        "lemma_keel_gland_pits",
+        "lemma_membranous_dull"
+      ],
+      "note": "Lemmas membranous, closely overlapping, dull gray-green, ovate, acute to obtuse, 2.2–2.8 mm long and about 1.2 mm wide, with conspicuous lateral nerves and usually glandular-pitted keels. Glume glands and lemma glands are distinct observations.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 200,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species source mapping. Usually/sometimes and unrecorded alternatives are not universal presence/absence; no local voucher, glandless exclusion or county nativity inference."
+    }
+  ],
+  "learner_diagnostic_checks": [
+    {
+      "look": "Locate each gland on its actual organ",
+      "check": "Gould describes a gland ring below culm nodes; usually gland pits on the sheath keel, sometimes upper sheath nerves; blade midrib or lower-surface pits; glume-keel pits; and usually lemma-keel pits. Diggs corroborates minute raised glandular dots on the lemma keel.",
+      "compare": "A gland on a culm, sheath or lemma cannot certify the gland state of KR’s sessile first glume. Glands may vary by position.",
+      "certainty": "Exact Gould p.200; Diggs named species p.1271; no local gland-bearing specimen certified.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Count the many florets inside one spikelet",
+      "check": "Gould reports 12–40 florets within a 6–20 mm spikelet, 2–4 mm wide. The panicle is dense to open, with pedicellate spikelets. Persistent rachilla and paleas are separately described.",
+      "compare": "These are many florets inside one spikelet, not KR’s sessile/stalked spikelet pair or finger count. Broader supplementary floret ranges remain documented.",
+      "certainty": "Exact Gould measurement; no new exclusion rule based on a usual or missing trait.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Separate the hairy sheath throat from the true ligule",
+      "check": "Gould calls the sheath hairless except at its pilose throat, with overlapping sheaths and hairless flat or folded blades. This page does not describe the true ligule. The existing tiny hair-fringe ligule comes from separate regional evidence.",
+      "compare": "Do not turn long throat hairs into KR’s membranous ligule or blade-base papilla hairs. Tufted annual growth and odor alone do not certify identification.",
+      "certainty": "Gould silence on ligule is not absence or a new ligule type; prior H&L evidence preserved.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Eragrostis cilianensis, printed p.200",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "secondary_reference_review": {
+    "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas, exact Eragrostis cilianensis account",
+    "printed_page": 1271,
+    "access": "Directly read owner-connected reference PDF text; page footer 1271 verified after named treatment.",
+    "corroborates": "Annual, often strong odor; lemmas 2.2–2.8 mm with minute raised glandular dots on keel; disturbed sites; mostly August–October.",
+    "limits": "Exact named account does not specify every gland position or a ligule measurement. Do not misattribute genus-wide statements or supplementary ranges as named-species measurements."
+  },
+  "non_scoring_context": {
+    "culm_height_cm": [
+      10,
+      60
+    ],
+    "blade_length_cm": [
+      10,
+      20
+    ],
+    "blade_width_mm": [
+      2.5,
+      7
+    ],
+    "panicle_length_cm": [
+      5.5,
+      16
+    ],
+    "panicle_width_cm": [
+      2.8,
+      5
+    ],
+    "panicle_shape": "ovate to oblong, densely flowered to open",
+    "spikelet_length_mm": [
+      6,
+      20
+    ],
+    "spikelet_width_mm": [
+      2,
+      4
+    ],
+    "florets_per_spikelet": [
+      12,
+      40
+    ],
+    "first_glume_mm": [
+      1.2,
+      2.2
+    ],
+    "second_glume_mm": [
+      1.2,
+      2.5
+    ],
+    "lemma_length_mm": [
+      2.2,
+      2.8
+    ],
+    "lemma_width_mm": 1.2,
+    "paleas": "Hyaline, ciliate on keels, persistent.",
+    "rachilla": "Persistent.",
+    "grain": "Ellipsoidal, 0.5–0.8 mm long.",
+    "chromosome_2n": 20,
+    "historical_flowering": "Mostly August–October.",
+    "historical_distribution": "Texas all regions, disturbed ground; reported native Europe. Not a new BONAP/county determination."
+  },
+  "omissions_not_absences": [
+    "Gould p.200 does not describe the ligule.",
+    "No new rhizome/stolon state inferred from basal branches or annuality.",
+    "No new vein counts inferred from conspicuous nerves without a number.",
+    "No papilla-based hairs inferred from gland pits.",
+    "Not every gland position must be expressed on every specimen."
+  ]
+}
+

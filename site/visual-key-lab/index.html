@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -1627,12 +1627,13 @@ function renderOptionalCharacters(){
        guide.replaceChildren();
        const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a vein or rib detail to see a simplified diagram and what to examine."));return;}
-       const tip=venationFieldTips[selected.id];
+       const tip=venationFieldTips[selected.id]||{where:selected.label,tip:selected.detail||"Inspect the selected blade feature and its source description."};
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
        const info=node("div","venation-field-text");
        info.append(node("strong","",tip.where),node("p","",tip.tip),
          node("p","venation-field-source",count?("Recorded in "+count+" published grass description"+(count===1?"":"s")+". Other grasses with unknown vein data remain possible."):"No species-level ranking evidence linked yet. The selection is saved, but cannot favor or exclude any grass."));
-       guide.append(venationSketch(selected.id),info);
+       if(venationFieldTips[selected.id])guide.append(venationSketch(selected.id));
+       guide.append(info);
      };
      refreshVeinGuide();content.append(guide);
    }
@@ -3131,6 +3132,12 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyStinkgrassGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Eragrostis cilianensis (All.) E. Mosher"||pack.historical_synonym_as_printed!=="Eragrostis megastachya Link"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid stinkgrass source identity");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_STINKGRASS_SUPPLEMENT_V1",id:"eragrostis-cilianensis",scientific:"Eragrostis cilianensis",page:200});
+ const s=state.species.find(s=>s.id==="eragrostis-cilianensis");s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.200: tufted ANNUAL with dense-to-open ovate/oblong panicle, pedicellate spikelets containing 12–40 florets, and separately located gland pits on vegetative and floral parts. The pilose sheath throat is not proof of ligule type; usually/sometimes glands are not universal requirements.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3858,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-stinkgrass-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Stinkgrass Gould supplement unavailable");
+ applyStinkgrassGouldSupplement(await response.json());
+}catch(err){console.warn("Stinkgrass Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3961,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
