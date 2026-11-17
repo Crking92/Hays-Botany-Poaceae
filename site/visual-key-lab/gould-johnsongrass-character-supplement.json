@@ -1,0 +1,310 @@
+{
+  "schema": "HAYS_GOULD_JOHNSONGRASS_CHARACTER_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "sorghum-halepense",
+  "scientific": "Sorghum halepense",
+  "printed_page": 575,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "source_material": "Owner photograph of printed page 575; the page image is not redistributed.",
+  "option_additions": [
+    {
+      "character": "stem_nodes",
+      "option": {
+        "id": "glabrous_nodes",
+        "label": "Stem joints without hairs",
+        "detail": "Inspect the actual culm node, separately from the hairy ligule rim. Hairless and finely pubescent nodes are both reported."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "underground_stems",
+      "option": {
+        "id": "creeping_rhizomes",
+        "label": "Extensive creeping rhizomes",
+        "detail": "Follow an attached underground STEM, not a root. Gould describes extensive creeping rhizomes; their scale leaves are supported separately by other references."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "terminal_triplet",
+        "label": "Branch tip: one sessile + two stalked spikelets",
+        "detail": "Inspect the END of a flowering branch. The terminal sessile spikelet can have two pedicelled companions; ordinary positions have one companion. This is not a count of florets inside one spikelet."
+      },
+      "subgroup": "Spikelet pairs and terminal groups"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_glume_nerveless",
+        "label": "Sessile spikelet: glumes without veins",
+        "detail": "Locate the stalkless, fertile spikelet before inspecting its outer glumes. Do not transfer this nerveless state to the visibly veined glumes of its stalked partner."
+      },
+      "subgroup": "Sessile versus stalked spikelet glumes"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_glume_leathery_shiny",
+        "label": "Sessile spikelet: leathery, shiny glumes",
+        "detail": "Examine the broad outer glumes of the stalkless spikelet. Gould describes a leathery texture and shiny surface except at the tip; this is not a shiny lemma."
+      },
+      "subgroup": "Sessile versus stalked spikelet glumes"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_glume_margin_hairs",
+        "label": "Sessile spikelet: glume hairs at least on margins",
+        "detail": "Inspect the edges of the OUTER GLUMES of the stalkless spikelet. These hairs are not lemma hairs, independent bristles or node pubescence."
+      },
+      "subgroup": "Sessile versus stalked spikelet glumes"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "pedicelled_glume_veined",
+        "label": "Stalked spikelet: conspicuously veined glumes",
+        "detail": "Find the companion spikelet on its pedicel. Its thinner glumes are more conspicuously veined than those of the sessile spikelet."
+      },
+      "subgroup": "Sessile versus stalked spikelet glumes"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "deciduous_awn",
+        "label": "Lemma awn readily falls off",
+        "detail": "Trace an intact awn to its lemma. An easily detached awn can be missing later; a broken or hidden awn alone does not prove a naturally awnless floret."
+      },
+      "subgroup": "Awn attachment, length and persistence"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "fertile_awn_1_to_1_5mm",
+        "label": "Sessile fertile lemma awn about 1–1.5 mm",
+        "detail": "Measure the true lemma awn, not the 4.5–5.5-mm sessile spikelet. Gould and Diggs give 1–1.5 mm; FNA permits longer variants, retained as a source disagreement."
+      },
+      "subgroup": "Awn attachment, length and persistence"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "pedicelled_awnless",
+        "label": "Stalked companion spikelet awnless",
+        "detail": "Inspect the STALKED companion, usually staminate. Do not use its awnlessness to infer the sessile fertile lemma has no awn."
+      },
+      "subgroup": "Awn attachment, length and persistence"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "underground_stems",
+      "states": [
+        "creeping_rhizomes"
+      ],
+      "note": "A coarse perennial with extensive creeping rhizomes. Gould does not call these surface stolons; attached underground stems must be distinguished from roots. Existing long-scaly-rhizome evidence from H&L is retained separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "stem_nodes",
+      "states": [
+        "glabrous_nodes",
+        "hairy_nodes"
+      ],
+      "note": "Culm nodes are hairless or finely pubescent. Node hairs are separate from a ciliate ligule, blade hairs and floral hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "blade_width",
+      "states": [
+        "medium",
+        "broad"
+      ],
+      "width_mm": [
+        8,
+        20
+      ],
+      "usual_width_mm": [
+        8,
+        15
+      ],
+      "note": "Linear blades are mostly 0.8–1.5 cm wide, occasionally 2 cm: 8–15(20) mm. The occasional 20-mm maximum is not silently discarded. Height and drought effects do not identify width by themselves.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "blade_hairs",
+      "states": [
+        "hairless"
+      ],
+      "note": "Large linear blades are usually hairless. This does not negate H&L basal pubescence near the ligule or establish that every plant lacks hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "ligule_edge",
+      "states": [
+        "truncate",
+        "ciliate"
+      ],
+      "note": "The true ligule is a truncate membrane with ciliate margins. A truncate outline can coexist with marginal hairs; it is not a hair-only ligule or proof of an entirely smooth edge. No numerical ligule length is given here.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "spikelet_position",
+      "states": [
+        "paired",
+        "terminal_triplet"
+      ],
+      "note": "Ordinary units pair a sessile bisexual spikelet with a pedicelled staminate or neuter partner. At branch tips, the sessile spikelet is accompanied by TWO stalked spikelets. These are spikelets, not florets within one spikelet.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "glume_marks",
+      "states": [
+        "sessile_glume_nerveless",
+        "sessile_glume_leathery_shiny",
+        "sessile_glume_margin_hairs",
+        "pedicelled_glume_veined"
+      ],
+      "note": "Gould describes the sessile spikelet glumes as broad, leathery, nerveless and shiny except at the apex, with hairs at least along their margins. The pedicelled glumes are thinner, narrower and more conspicuously veined. Preserve UT Gibson/Prigge glume venation/size reports as source-specific alternatives; never apply one partner's venation or texture to the other.",
+      "source_disagreement": "Gould p.575 calls sessile glumes nerveless; the existing conditional UT account reports many veins. Prefer Gould for this exact state while retaining the previous citation and taxon/organ scope for review.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    },
+    {
+      "id": "sorghum-halepense",
+      "scientific": "Sorghum halepense",
+      "character": "true_lemma_awn",
+      "states": [
+        "short",
+        "none",
+        "bent_twisted",
+        "deciduous_awn",
+        "fertile_awn_1_to_1_5mm",
+        "pedicelled_awnless"
+      ],
+      "awn_length_mm": [
+        1,
+        1.5
+      ],
+      "note": "The sessile fertile lemma may lack an awn or bear a delicate geniculate awn with a twisted lower portion; it detaches readily. Gould gives 1–1.5 mm. The usually staminate stalked companion is awnless. Preserve FNA's longer-awn report rather than treating Gould's regional measurement as a universal exclusion.",
+      "source_disagreement": "Gould p.575 and Diggs p.1324 give 1–1.5 mm; the existing FNA-backed lesson permits awns to about 13 mm. The regional preference is retained beside the broader alternative, without excluding a plant from awn length alone.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 575,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "source_scope_caution": "Source-specific positive evidence, not absence in unrecorded taxa or a local specimen certification."
+    }
+  ],
+  "core_awn_addition": "short_single",
+  "learner_diagnostic_checks": [
+    {
+      "look": "Check the connected creeping rhizomes and ciliate membrane",
+      "check": "Gould describes a robust perennial with extensive underground rhizomes, usually hairless linear blades, and a truncate membrane fringed with hairs at the leaf collar. Culm joints may be hairless or finely hairy.",
+      "compare": "Grain sorghum does not normally have this extensive persistent rhizome system; the separate S. almum account on the page describes a less extensive system and usually larger sessile spikelets.",
+      "certainty": "Exact named-species published description; no new Hays voucher or grazing-safety finding.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Keep sessile and stalked spikelet glumes separate",
+      "check": "The sessile fertile spikelet is mostly 4.5–5.5 mm; its outer glumes are broad, leathery, nerveless and shiny except at the apex, with hairs at least on their edges. The stalked partner is thinner and narrower, with more conspicuously veined glumes. Ordinary pairs become a terminal group of one sessile plus two stalked spikelets.",
+      "compare": "A stalked partner with veins does not contradict nerveless glumes on the sessile partner. Do not count the three spikelets as three florets in one spikelet.",
+      "certainty": "Gould p.575; existing conditional UT venation/size differences remain linked for review.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Check a tiny, bent lemma awn before it falls off",
+      "check": "Gould allows awnless sessile spikelets or a delicate bent awn with a twisted lower part, 1–1.5 mm when present, readily shed. The stalked companion is usually staminate and awnless. Measure each organ separately.",
+      "compare": "The existing FNA account permits longer lemma awns to about 13 mm. Gould and Diggs take priority for the regional description, but the broader report is preserved without a hard exclusion.",
+      "certainty": "Published source disagreement retained; a missing or damaged awn is not a specimen determination.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Sorghum halepense, printed p. 575",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "non_scoring_context": {
+    "life_history": "Coarse rhizomatous perennial.",
+    "height_m": [
+      1,
+      2
+    ],
+    "height_qualifier": "Often much shorter at dry or otherwise unfavorable sites.",
+    "panicle_length_cm": [
+      15,
+      35
+    ],
+    "panicle": "Typically large, open and freely branched, but highly variable.",
+    "sessile_spikelet_length_mm": [
+      4.5,
+      5.5
+    ],
+    "pedicelled_spikelet": "Usually staminate; awnless, lanceolate, as long as or longer than the sessile spikelet but narrower and thinner.",
+    "caryopsis_length_mm": [
+      2,
+      3
+    ],
+    "chromosome_2n": 40,
+    "historical_habitat": "Low roadsides and ditches; cultivated forage and widespread weed in the historical Texas account.",
+    "historical_phenology": "Can flower throughout the year in favorable conditions; Gould reports spring smut infection.",
+    "historical_safety_note": "Gould discusses cyanogenic compounds and livestock poisoning under some growing conditions. This is source context, not a grazing-safety assessment.",
+    "separate_next_taxon": "The S. almum account below is a DIFFERENT taxon: less extensive rhizomes, often taller, sessile spikelets usually 5–6.5 mm and caryopses 3–3.8 mm. No S. almum profile or matching evidence is created."
+  },
+  "omissions_not_absences": [
+    "No numeric ligule height on this page.",
+    "No floret count inside a spikelet is stated here.",
+    "No sheath-surface statement on this page.",
+    "Do not treat pedicelled awnlessness as fertile sessile awnlessness."
+  ]
+}
