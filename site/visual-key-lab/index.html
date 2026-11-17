@@ -1732,46 +1732,89 @@ const beginnerCheckGroups=[
  {id:"blade_hairs",title:"Hairs on the leaf?",hint:"Inspect the blade, not the stem or the sheath below it. No hairs noticed? Just skip.",labels:{base_hairs:"Near the leaf base",blade_hairy:"Along the blade"}},
  {id:"ligule_length",title:"How tall is the ligule?",hint:"Optional: open the inside leaf collar. First use the Leaf collar question for hairs or membrane; use a ruler/hand lens to measure.",labels:{tiny:"Tiny · under 1 mm",short:"Short · 1–3 mm",medium:"Medium · 3–8 mm",long:"Long · over 8 mm"}}
 ];
-function renderBeginnerChecks(){
- const wrap=$("beginner-checks"),grid=$("beginner-check-grid");
- grid.replaceChildren();
- if(!state.refineCharacters.length){wrap.hidden=true;return}
- const groups=beginnerCheckGroups.map(cfg=>({cfg,character:state.refineCharacters.find(c=>c.id===cfg.id)})).filter(x=>x.character);
- if(!groups.length){wrap.hidden=true;return}
- wrap.hidden=false;
- const selectedCount=groups.filter(({cfg})=>selectedRefinementStates(cfg.id).length).length;
- $("beginner-count").textContent=selectedCount+" of "+groups.length+" checked";
- for(const {cfg,character:c} of groups){
-   const card=node("div","beginner-check-card");card.dataset.character=c.id;
-   card.append(node("h4","",cfg.title),node("p","",cfg.hint));
-   const choices=node("div","beginner-check-options");choices.setAttribute("role","group");choices.setAttribute("aria-label",cfg.title);
-   for(const o of c.options){
-     if(cfg.optionIds&&!cfg.optionIds.includes(o.id))continue;
-     const b=node("button","",cfg.labels[o.id]||o.label);
-     b.type="button";b.dataset.option=o.id;
-     b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
-     b.addEventListener("click",()=>{
-       const old=selectedRefinementStates(c.id);
-       const next=c.multi_select?(old.includes(o.id)?old.filter(v=>v!==o.id):[...old,o.id]):(old.includes(o.id)?[]:[o.id]);
-       if(next.length)state.refineSelected[c.id]=c.multi_select?next:next[0];
-       else delete state.refineSelected[c.id];
-       updateUrl();renderBeginnerChecks();renderOptionalCharacters();renderResults();
-     });
-     choices.append(b);
-   }
-   card.append(choices);
-   if(cfg.optionIds&&selectedRefinementStates(c.id).some(v=>!cfg.optionIds.includes(v))){
-     card.append(node("p","beginner-check-hint","A more detailed vein option is also selected in the advanced section."));
-   }
-   if(selectedRefinementStates(c.id).length && !selectedRefinementStates(c.id).some(v=>
-       (state.refineEvidenceOptionKeys||new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
-          rows.flatMap(e=>e.states.map(v=>e.character+":"+v))))).has(c.id+":"+v))){
-     card.append(node("p","beginner-check-hint","Recorded for comparison; this detail still needs a linked source before it can rank a grass."));
-   }
-   grid.append(card);
- }
+// Full nine-tab main key: four existing photo questions plus five illustrated
+// questions using the SAME source-backed advanced character IDs and evidence.
+function mainQuestionTabs(){
+ return [...qs.map(q=>({kind:"core",id:q.id,short:q.short})),
+ ...beginnerCheckGroups.filter(c=>state.refineCharacters.some(x=>x.id===c.id))
+   .map(c=>({kind:"illustrated",id:c.id,cfg:c,short:({
+      blade_width:"Leaf width",blade_shape:"Leaf shape",blade_venation:"Leaf veins",
+      blade_hairs:"Leaf hairs",ligule_length:"Ligule length"})[c.id]}))];
 }
-function renderTabs(){const steps=$("steps");steps.replaceChildren();qs.forEach((q,i)=>{const b=node("button","step"+(state.selected[q.id]?" done":""));b.append(q.id==="head"?headIcon("airy"):characterIcon(q.id,({habit:"tuft",ligule:"membrane",awns:"three"})[q.id]),node("span","",q.short));b.type="button";b.setAttribute("aria-current",String(state.question===i));b.addEventListener("click",()=>{state.question=i;render()});steps.append(b)})}
+function mainQuestionSelected(t){return t.kind==="core"?!!state.selected[t.id]:selectedRefinementStates(t.id).length>0;}
+function mainQuestionCount(){const tabs=mainQuestionTabs();return {total:tabs.length,answered:tabs.filter(mainQuestionSelected).length};}
+function mainSketch(id,choice){
+ return id==="blade_venation"?venationSketch(choice):id==="ligule_length"?
+   collarFieldSketch(id,choice):leafDetailSketch(id,choice);
+}
+function renderIllustratedQuestion(cfg){
+ const area=$("question"),c=state.refineCharacters.find(x=>x.id===cfg.id);
+ if(!c){area.replaceChildren(node("p","help","This detailed character is unavailable."));return;}
+ area.replaceChildren(node("h3","",cfg.title),node("p","help",cfg.hint));
+ const tip=node("details","field-precision");
+ tip.append(node("summary","","Field tip: where to look"),node("p","",c.hint||cfg.hint));
+ area.append(tip,node("p","diagram-question-note",
+   "Each card shows an existing field diagram, not a photograph, an exact scale, or proof of a local specimen. Skip any feature you cannot observe."));
+ const grid=node("div","answer-grid diagram-answer-grid");
+ for(const o of c.options.filter(o=>!cfg.optionIds||cfg.optionIds.includes(o.id))){
+   const b=node("button","answer diagram-answer");
+   b.type="button";b.dataset.character=cfg.id;b.dataset.option=o.id;
+   b.setAttribute("aria-pressed",String(selectedRefinementStates(cfg.id).includes(o.id)));
+   const frame=node("div","diagram-frame");
+   frame.append(mainSketch(cfg.id,o.id),node("span","diagram-caption","Field diagram · not to scale"),
+       node("span","tick","✓"));
+   const explain=cfg.id==="blade_venation"?venationFieldTips[o.id]?.tip:
+        (leafDetailGuides[cfg.id]?.[o.id]||collarFieldTips[cfg.id]?.[o.id])?.[1];
+   const description=node("div","answer-body");
+   description.append(node("div","answer-title",cfg.labels[o.id]||o.label),
+     node("span","answer-note",explain||c.hint||cfg.hint));
+   const example=state.species.find(sp=>(state.refineEvidenceMap[sp.id]||[]).some(e=>
+      e.character===cfg.id&&e.states.includes(o.id)&&
+      e.source_status!=="HOLD"&&!e.source_disagreement&&!e.conflicting_source));
+   description.append(example?
+     node("span","literature-example","Literature example: "+example.common+
+       " ("+example.scientific+"). This is a literature record, not a local specimen photo."):
+     node("span","evidence-pending","No verified species-specific example yet; unknown grasses stay possible."));
+   b.append(frame,description);
+   b.addEventListener("click",()=>{
+     const old=selectedRefinementStates(cfg.id);
+     const next=c.multi_select?(old.includes(o.id)?old.filter(v=>v!==o.id):[...old,o.id]):
+        (old.includes(o.id)?[]:[o.id]);
+     if(next.length)state.refineSelected[cfg.id]=c.multi_select?next:next[0];
+     else delete state.refineSelected[cfg.id];
+     updateUrl();renderOptionalCharacters();render();
+   });
+   grid.append(b);
+ }
+ area.append(grid);
+ if(cfg.optionIds&&selectedRefinementStates(cfg.id).some(v=>!cfg.optionIds.includes(v)))
+   area.append(node("p","diagram-question-note","A more technical vein option is also selected in Detailed characteristics."));
+ const actions=node("div","question-actions");
+ const skip=node("button","btn btn-secondary",selectedRefinementStates(cfg.id).length?
+    "Clear this question":"I can't tell / skip");
+ const next=node("button","btn btn-primary",state.question===mainQuestionTabs().length-1?
+    "Back to first question":"Next character →");
+ skip.type=next.type="button";
+ skip.addEventListener("click",()=>{delete state.refineSelected[cfg.id];updateUrl();renderOptionalCharacters();render();});
+ next.addEventListener("click",()=>{state.question=(state.question+1)%mainQuestionTabs().length;render();
+   window.scrollTo({top:Math.min(window.scrollY,document.querySelector(".workspace").offsetTop-15),behavior:"smooth"});});
+ actions.append(skip,next);area.append(actions);
+}
+function renderTabs(){
+ const steps=$("steps");steps.replaceChildren();
+ mainQuestionTabs().forEach((tab,i)=>{
+   const b=node("button","step"+(mainQuestionSelected(tab)?" done":""));b.type="button";
+   b.dataset.character=tab.id;b.dataset.kind=tab.kind;
+   b.setAttribute("aria-current",String(state.question===i));
+   const graphic=tab.kind==="core"?(tab.id==="head"?headIcon("airy"):
+      characterIcon(tab.id,({habit:"tuft",ligule:"membrane",awns:"three"})[tab.id])):
+      mainSketch(tab.id,tab.cfg.optionIds?.[0]||Object.keys(tab.cfg.labels)[0]);
+   if(graphic){const h=node("span","step-sketch");h.append(graphic);b.append(h);}
+   b.append(node("span","",tab.short));
+   b.addEventListener("click",()=>{state.question=i;render();});
+   steps.append(b);
+ });
+}
 
 /* Original outline diagrams for beginners; these are shapes, NOT photographs or species-level determinations. */
 function headIcon(key){
