@@ -121,9 +121,7 @@ def sweep_all_optional_options(page, name):
 
 
 def check_beginner_field_checks(page, name):
-    """Four beginner groups mirror the SAME 111 advanced source-backed choices."""
-    box=page.locator("#beginner-checks")
-    assert box.is_visible(), f"{name}: easy field choices not visible on main key"
+    """Exercise 9 equal main question tabs, including all 17 SVG diagram cards."""
     wanted={
         "blade_width": ["thread","narrow","medium","broad"],
         "blade_shape": ["flat","folded","inrolled"],
@@ -131,45 +129,67 @@ def check_beginner_field_checks(page, name):
         "blade_hairs": ["base_hairs","blade_hairy"],
         "ligule_length": ["tiny","short","medium","long"],
     }
-    assert box.locator(".beginner-check-card").count()==5, (
-        f"{name}: expected 5 easy leaf/vein/collar question groups")
-    assert box.locator("#beginner-count").inner_text()=="0 of 5 checked"
-    assert box.locator("img, svg, .photo-frame").count()==0, (
-        f"{name}: new beginner controls unexpectedly altered photographic material")
-    for character, options in wanted.items():
-        card=box.locator(f'.beginner-check-card[data-character="{character}"]')
-        assert card.count()==1, f"{name}: missing {character} shortcut"
-        assert card.locator("button[data-option]").count()==len(options)
+    tabs=page.locator("#steps button.step")
+    assert tabs.count()==9, f"{name}: expected 9 FULL main tabs, not separate quick controls"
+    assert [tabs.nth(i).get_attribute("data-character") for i in range(4)]==[
+        "head","habit","ligule","awns"], f"{name}: original four main questions changed"
+    assert [tabs.nth(i).get_attribute("data-character") for i in range(4,9)]==list(wanted)
+    assert page.locator("#beginner-checks").count()==0, (
+        f"{name}: obsolete quick-picker section still present")
+    assert page.locator("#progress-label").inner_text()=="0 of 9 main questions answered"
+    assert page.locator("#optional-character-wrap").count()==1, (
+        f"{name}: original advanced panel was removed")
+
+    for i,(character,options) in enumerate(wanted.items(),start=4):
+        tabs.nth(i).click()
+        assert tabs.nth(i).get_attribute("aria-current")=="true"
+        assert page.locator("#question .answer-grid.diagram-answer-grid").count()==1, (
+            f"{name}: {character} is not rendered as a FULL main question")
+        buttons=page.locator(f'#question .diagram-answer[data-character="{character}"]')
+        assert buttons.count()==len(options), (
+            f"{name}: {character} expected {len(options)} full illustrated example cards")
+        assert page.locator("#question .question-actions button").count()==2, (
+            f"{name}: illustrated question lacks skip and next controls")
         for choice in options:
-            button=card.locator(f'button[data-option="{choice}"]')
+            button=page.locator(f'#question .diagram-answer[data-character="{character}"]'
+                                f'[data-option="{choice}"]')
             assert button.count()==1
+            svg=button.locator(".diagram-frame svg")
+            assert svg.count()==1 and svg.get_attribute("role")=="img", (
+                f"{name}: {character}/{choice} missing existing educational SVG diagram")
+            assert svg.locator("path, circle").count()>=2, (
+                f"{name}: {character}/{choice} example diagram empty")
+            assert button.locator("img, .photo-frame").count()==0, (
+                f"{name}: new main diagram cards unexpectedly changed or sourced photographs")
+            assert button.locator(".answer-note").inner_text().strip()
             button.click()
             assert button.get_attribute("aria-pressed")=="true"
+            assert tabs.nth(i).get_attribute("class").find("done")>=0
             assert f"more_{character}={choice}" in page.url, (
-                f"{name}: beginner selection not shared with existing advanced URL")
+                f"{name}: illustrated main choice not shared with advanced filters")
             m,u,e=buckets(page)
-            assert m+u+e==169, f"{name}: easy {character}/{choice} lost an unknown species"
+            assert m+u+e==169, f"{name}: illustrated choice {character}/{choice} lost a grass"
             assert page.locator("#count").inner_text()==f"{m+u} possible"
+            assert page.locator("#progress-label").inner_text()=="1 of 9 main questions answered"
             button.click()
             assert button.get_attribute("aria-pressed")=="false"
             assert f"more_{character}=" not in page.url
             assert page.locator("#count").inner_text()=="169 possible"
+            assert page.locator("#progress-label").inner_text()=="0 of 9 main questions answered"
 
-    # Combined simple field choices share exactly the advanced data and can
-    # all be cleared with the existing one-tap reset.
-    for character, choice in [
-        ("blade_width","narrow"),("blade_shape","folded"),
-        ("blade_venation","raised_midvein"),
-        ("blade_hairs","base_hairs"),("ligule_length","short")
-    ]:
-        box.locator(f'.beginner-check-card[data-character="{character}"] '
-                    f'button[data-option="{choice}"]').click()
-    assert box.locator("#beginner-count").inner_text()=="5 of 5 checked"
+    # Tabs may be selected in ANY order; these use identical source evidence
+    # and combined results as the original advanced detail panel.
+    for character,choice in [
+        ("ligule_length","short"),("blade_venation","raised_midvein"),
+        ("blade_width","narrow"),("blade_shape","folded"),("blade_hairs","base_hairs")]:
+        page.locator(f'#steps .step[data-character="{character}"]').click()
+        page.locator(f'#question .diagram-answer[data-character="{character}"]'
+                     f'[data-option="{choice}"]').click()
+    assert page.locator("#progress-label").inner_text()=="5 of 9 main questions answered"
     m,u,e=buckets(page)
-    assert m+u+e==169, f"{name}: combined easy field checks falsely lost species"
+    assert m+u+e==169, f"{name}: combining five main diagram questions lost species"
 
-    # The existing detailed picker must show the same selection and changing
-    # it from there must immediately update the main beginner card.
+    # Advanced picker and main illustrated tab must be ONE shared selection.
     wrapper=page.locator("#optional-character-wrap")
     if not wrapper.evaluate("(element)=>element.open"):
         wrapper.locator("summary").first.click()
@@ -179,15 +199,26 @@ def check_beginner_field_checks(page, name):
         group.locator("summary").click()
     assert group.locator('button[data-option="narrow"]').get_attribute("aria-pressed")=="true"
     group.locator('button[data-option="broad"]').click()
-    assert box.locator('.beginner-check-card[data-character="blade_width"] '
-                       'button[data-option="broad"]').get_attribute("aria-pressed")=="true"
-    assert box.locator('.beginner-check-card[data-character="blade_width"] '
-                       'button[data-option="narrow"]').get_attribute("aria-pressed")=="false"
+    page.locator('#steps .step[data-character="blade_width"]').click()
+    assert page.locator('#question .diagram-answer[data-option="broad"]').get_attribute(
+        "aria-pressed")=="true"
+    assert page.locator('#question .diagram-answer[data-option="narrow"]').get_attribute(
+        "aria-pressed")=="false"
     assert "more_blade_width=broad" in page.url
-    assert box.locator("#beginner-count").inner_text()=="5 of 5 checked"
+
+    # All photo-era main questions remain functional and every new illustrated
+    # page is reachable by Next, Skip, or direct tab selection.
+    page.locator('#steps .step[data-character="awns"]').click()
+    page.locator("#question .question-actions button.btn-primary").click()
+    assert page.locator("#question h3").inner_text()=="How wide is a leaf?"
+    page.locator('#steps .step[data-character="ligule_length"]').click()
+    page.locator("#question .question-actions button.btn-primary").click()
+    assert page.locator("#question h3").inner_text().startswith("What does the flowering")
+
     page.locator("#reset-field-key").click()
-    assert box.locator("#beginner-count").inner_text()=="0 of 5 checked"
-    assert box.locator('button[aria-pressed="true"]').count()==0
+    assert page.locator("#progress-label").inner_text()=="0 of 9 main questions answered"
+    assert page.locator("#steps .step.done").count()==0
+    assert "more_blade_width=" not in page.url
     assert page.locator("#count").inner_text()=="169 possible"
 
 
@@ -659,7 +690,7 @@ def check_view(browser, name, width, height):
     assert page.locator("#count").inner_text() == "169 possible"
     assert "more_blade_width" not in page.url
     assert page.locator("#caution-details").is_hidden()
-    assert page.locator("#progress-label").inner_text().startswith("0 of 4")
+    assert page.locator("#progress-label").inner_text().startswith("0 of 9")
 
     # Upper ONE-veined glume now has an exact named species source:
     # Eragrostis spectabilis, Kew GrassBase. Other grasses remain unknown.
@@ -713,9 +744,9 @@ def check_view(browser, name, width, height):
     # Core photo questions still eliminate only documented conflicts; reset works.
     page.locator("#steps button.step").first.click()
     page.locator("#question button.answer").first.click()
-    assert page.locator("#progress-label").inner_text().startswith("1 of 4")
+    assert page.locator("#progress-label").inner_text().startswith("1 of 9")
     page.locator("#reset-field-key").click()
-    assert page.locator("#progress-label").inner_text().startswith("0 of 4")
+    assert page.locator("#progress-label").inner_text().startswith("0 of 9")
     assert page.locator("#count").inner_text() == "169 possible"
 
     # One previously credited real photo must be visibly decoded in a normal result,
