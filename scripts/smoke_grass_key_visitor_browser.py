@@ -127,12 +127,13 @@ def check_beginner_field_checks(page, name):
     wanted={
         "blade_width": ["thread","narrow","medium","broad"],
         "blade_shape": ["flat","folded","inrolled"],
+        "blade_venation": ["pale_midvein","prominent_midvein","raised_midvein","raised_ribs"],
         "blade_hairs": ["base_hairs","blade_hairy"],
         "ligule_length": ["tiny","short","medium","long"],
     }
-    assert box.locator(".beginner-check-card").count()==4, (
-        f"{name}: expected 4 simple leaf/collar question groups")
-    assert box.locator("#beginner-count").inner_text()=="0 of 4 checked"
+    assert box.locator(".beginner-check-card").count()==5, (
+        f"{name}: expected 5 easy leaf/vein/collar question groups")
+    assert box.locator("#beginner-count").inner_text()=="0 of 5 checked"
     assert box.locator("img, svg, .photo-frame").count()==0, (
         f"{name}: new beginner controls unexpectedly altered photographic material")
     for character, options in wanted.items():
@@ -158,11 +159,12 @@ def check_beginner_field_checks(page, name):
     # all be cleared with the existing one-tap reset.
     for character, choice in [
         ("blade_width","narrow"),("blade_shape","folded"),
+        ("blade_venation","raised_midvein"),
         ("blade_hairs","base_hairs"),("ligule_length","short")
     ]:
         box.locator(f'.beginner-check-card[data-character="{character}"] '
                     f'button[data-option="{choice}"]').click()
-    assert box.locator("#beginner-count").inner_text()=="4 of 4 checked"
+    assert box.locator("#beginner-count").inner_text()=="5 of 5 checked"
     m,u,e=buckets(page)
     assert m+u+e==169, f"{name}: combined easy field checks falsely lost species"
 
@@ -182,9 +184,9 @@ def check_beginner_field_checks(page, name):
     assert box.locator('.beginner-check-card[data-character="blade_width"] '
                        'button[data-option="narrow"]').get_attribute("aria-pressed")=="false"
     assert "more_blade_width=broad" in page.url
-    assert box.locator("#beginner-count").inner_text()=="4 of 4 checked"
+    assert box.locator("#beginner-count").inner_text()=="5 of 5 checked"
     page.locator("#reset-field-key").click()
-    assert box.locator("#beginner-count").inner_text()=="0 of 4 checked"
+    assert box.locator("#beginner-count").inner_text()=="0 of 5 checked"
     assert box.locator('button[aria-pressed="true"]').count()==0
     assert page.locator("#count").inner_text()=="169 possible"
 
