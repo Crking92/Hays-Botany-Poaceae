@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -919,6 +919,8 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ const p=s.exact_hooded_glume_hair_absence;
+ if(s.id==="chloris-cucullata"&&p?.schema==="EXACT_HOODED_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===325&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Glumes hairless except rough midnerve",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_HOODED_GLUME_HAIR_ABSENCE"});
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
@@ -950,6 +952,7 @@ function verifiedAdvancedConflict(s){
    });
    if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(observed.some(v=>!["one","two","several"].includes(v)))continue; // sterile anatomy is not a numeric count
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||
       !/exact/i.test(evidence.source||"")||
@@ -3131,6 +3134,14 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyHoodedWindmillGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence,r=pack.secondary_floret_evidence;
+ if(pack.core_awn_addition!=="short_single"||pack.source_pages?.join(",")!=="324,325"||p?.schema!=="EXACT_HOODED_GLUME_HAIR_ABSENCE_V1"||p.id!=="chloris-cucullata"||p.printed_page!==325||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.note||r?.id!==p.id||r.character!=="florets_per_spikelet"||r.states?.join(",")!=="two"||r.pdf_printed_page!==1257||!r.source?.includes("exact Chloris cucullata")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid hooded windmill source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_HOODED_WINDMILL_SUPPLEMENT_V1",id:"chloris-cucullata",scientific:"Chloris cucullata",page:324,pages:[324,325]});
+ const prior=state.refineEvidenceMap[p.id].find(e=>e.character==="florets_per_spikelet");prior.additional_state_sources??={};prior.additional_state_sources.two=structuredClone(r);
+ const s=state.species.find(s=>s.id===p.id);s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];s.exact_hooded_glume_hair_absence=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould pp.324–325: HOOD is the inflated UPPER sterile floret, not a glume. LOWER fertile lemma awn0.3–1.5 mm overlaps short KR awns; glumes are hairless except a rough midnerve. Verify ordinary glume hairs separately from inner-lemma hairs. Hybrid intermediates and differing whorl accounts require review.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3862,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-hooded-windmill-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Hooded windmill Gould supplement unavailable");
+ applyHoodedWindmillGouldSupplement(await response.json());
+}catch(err){console.warn("Hooded windmill Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3965,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+

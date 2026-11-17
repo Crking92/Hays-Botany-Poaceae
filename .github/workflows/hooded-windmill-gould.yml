@@ -1,0 +1,19 @@
+name: Hooded windmillgrass Gould comparison
+on:
+  pull_request:
+    paths: ['site/visual-key-lab/index.html', 'site/visual-key-lab/gould-hooded-windmill-character-supplement.json', 'scripts/test_hooded_windmill_gould.cjs', '.github/workflows/hooded-windmill-gould.yml']
+  push:
+    branches: [main]
+    paths: ['site/visual-key-lab/index.html', 'site/visual-key-lab/gould-hooded-windmill-character-supplement.json', 'scripts/test_hooded_windmill_gould.cjs', '.github/workflows/hooded-windmill-gould.yml']
+permissions: {contents: read}
+jobs:
+  hooded-windmill-comparison:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - run: node scripts/test_hooded_windmill_gould.cjs
+      - run: node scripts/test_kr_gould_character_mapping.cjs
+      - run: node scripts/test_grass_three_way_evidence_key.cjs
+
