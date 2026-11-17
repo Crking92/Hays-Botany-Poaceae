@@ -1744,7 +1744,7 @@ for(const [key,val] of picks){
  if(key==="habit"&&val==="rhizome"&&["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id)){unknown++;continue}
  const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if((key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))||
        (key==="head"&&val==="pampas_plume")||(key==="habit"&&val==="woody_canes"))unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
-return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||Number(supportedLiguleEdge(b.s))-Number(supportedLiguleEdge(a.s))||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
+return{s,unknown,confirmed,conflict,refinementMatches:(typeof refinementMatches==="function"?refinementMatches(s):[])}}).filter(x=>!x.conflict).filter(x=>!state.refineOnlyDocumented||!Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).length)||hasAllDocumentedRefinements(x.s)).filter(x=>state.range==="all"||(state.range==="native"?x.s.range==="PASS":(x.s.range==="FAIL"||x.s.range==="INTRODUCED_NOT_NATIVE"||x.s.range==="COMPARISON_NON_NATIVE"))).filter(x=>(x.s.common+" "+x.s.scientific).toLowerCase().includes(state.query)).sort((a,b)=>b.refinementMatches.length-a.refinementMatches.length||b.confirmed-a.confirmed||a.unknown-b.unknown||a.s.common.localeCompare(b.s.common))}
 // Progressive key display: group fully documented matches separately from
 // evidence gaps, without treating an unstudied character as an absent structure.
 function progressiveResultGroups(rows){
@@ -2899,6 +2899,11 @@ $("compare-toggle").addEventListener("click",()=>{state.comparing=!state.compari
 $("compare-open").addEventListener("click",compareCandidates);
 function renderResults(){
 const rows=currentResults(),n=Object.values(state.selected).filter(Boolean).length;
+// Edge evidence is a display-only tie-break when a core collar answer already
+// counts. Keep the independently tested currentResults() scorer unchanged.
+if(state.selected.ligule&&selectedRefinementStates("ligule_edge").length){
+ rows.sort((a,b)=>Number(supportedLiguleEdge(b.s))-Number(supportedLiguleEdge(a.s)));
+}
 const groups=progressiveResultGroups(rows);
 const focusing=state.focusConfirmed&&groups.active;
 const possibleRows=focusing?[...groups.confirmed]:[...groups.confirmed,...groups.unresolved];
