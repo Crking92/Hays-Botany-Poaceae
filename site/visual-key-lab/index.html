@@ -1753,7 +1753,8 @@ function renderBeginnerChecks(){
    card.append(node("h4","",cfg.title),node("p","",cfg.hint));
    const choices=node("div","beginner-check-options");choices.setAttribute("role","group");choices.setAttribute("aria-label",cfg.title);
    for(const o of c.options){
-     if(cfg.optionIds&&!cfg.optionIds.includes(o.id))continue;
+     // Keep the owner's promoted beginner choices stable as advanced evidence grows.
+     if(!Object.hasOwn(cfg.labels,o.id)||(cfg.optionIds&&!cfg.optionIds.includes(o.id)))continue;
      const b=node("button","",cfg.labels[o.id]||o.label);
      b.type="button";b.dataset.option=o.id;
      b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
