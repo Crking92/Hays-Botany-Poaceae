@@ -331,6 +331,17 @@ assert.deepEqual(newRefs.map(r=>r.learner_diagnostic_checks.length),[2,0,2,0,2,0
 // sideoats grama varieties Gould p.338 (PR #423). Preserve those as separate
 // species-level source records, without changing original scoring or photos.
 assert.equal(source.additional_species_treatments.length,27);
+// Two-page Gould p.338–339 follow-up: exact variety key and p.339
+// continuation are not generic sideoats claims and do not authorize photo use.
+const sideoats2p=source.additional_species_treatments.find(x=>x.species_id==='bouteloua-curtipendula');
+assert.deepEqual(sideoats2p.printed_pages,[338,339]);
+assert(sideoats2p.two_variety_key_on_p338.variety_curtipendula.includes('CREEPING rhizomes'));
+assert(sideoats2p.two_variety_key_on_p338.variety_caespitosa.includes('LARGE OR SMALL clumps'));
+assert(sideoats2p.infraspecific_treatments[1].general_historic_distribution.includes('Oaxaca'));
+assert(sideoats2p.infraspecific_treatments[1].flowering_period.includes('June to November'));
+assert(sideoats2p.source_boundary_holds.preceding_rudiment_fragment.includes('Do NOT label'));
+assert(sideoats2p.illustration_reference.includes('Fig. 178'));
+
 const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
