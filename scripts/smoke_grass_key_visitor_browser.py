@@ -216,6 +216,48 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text() == "169 possible"
 
+    # Seven pre-existing source-backed anatomy choices needed seven distinct
+    # diagrams, not the generic spikelet fallback. Test the actual selected
+    # rendered SVG, labelled target organ, field tip, result status and reset
+    # on both desktop and mobile. No diagram implies a reviewed photo arrow.
+    for character, choice, labels, clue in [
+        ("glume_marks","upper_one_vein",("1 LOWER","2 UPPER"),"UPPER"),
+        ("glume_marks","lower_one_vein",("1 LOWER","2 UPPER"),"LOWER"),
+        ("true_lemma_awn","fertile_awn_2_to_5mm",
+         ("LOWER STERILE","UPPER FERTILE"),"FERTILE"),
+        ("true_lemma_awn","lower_sterile_awn_variable",
+         ("LOWER STERILE","UPPER FERTILE"),"VARIABLE"),
+        ("floral_hair_position","lower_sterile_lemma_hairs",
+         ("LOWER STERILE","UPPER FERTILE"),"STERILE"),
+        ("floral_hair_position","upper_fertile_lemma_hairs",
+         ("LOWER STERILE","UPPER FERTILE","FEMALE ONLY"),"FEMALE"),
+        ("floral_hair_position","spikelet_callus_hairs",
+         ("FLORET CALLUS BASE",),"callus")
+    ]:
+        choose_extra(page,"Flowers / spikelets",character,choice)
+        group = page.locator(
+            f'#optional-character-groups .optional-group[data-character="{character}"]')
+        chosen = group.locator(f'button[data-option="{choice}"]')
+        assert "source-documented" in chosen.inner_text(), (
+            f"{name}/{character}/{choice}: source-backed option still shown as pending")
+        guide = group.locator(".flower-field-guide")
+        drawing = guide.locator("svg")
+        assert drawing.count() == 1, (
+            f"{name}/{character}/{choice}: missing custom botanical drawing")
+        assert "not a specimen photograph" in drawing.get_attribute("aria-label")
+        for label in labels:
+            assert label in drawing.locator("text").all_text_contents(), (
+                f"{name}/{character}/{choice}: missing separate target organ label {label}")
+        assert clue.lower() in guide.inner_text().lower(), (
+            f"{name}/{character}/{choice}: beginner clue not displayed")
+        assert "no verified species-level match yet" not in guide.inner_text().lower(), (
+            f"{name}/{character}/{choice}: source-linked teaching choice fell back")
+        m,u,e=buckets(page)
+        assert m >= 1 and u > 0 and e == 0 and m+u+e == 169, (
+            f"{name}/{character}/{choice}: positive-only evidence or unknowns changed")
+        page.locator("#reset-field-key").click()
+        assert page.locator("#count").inner_text() == "169 possible"
+
     # Final four advanced choices must actually rank a known exact species,
     # use corrected FIRST-GLUME anatomy and retain nonmatching unknown grasses.
     for section, character, choice, scientific in [
