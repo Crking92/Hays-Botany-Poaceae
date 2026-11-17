@@ -1216,7 +1216,7 @@ const flowerFieldTips={
   partner_stalk:["Look at the stalk of the reduced spikelet","Hairs line the pedicel supporting a neighboring reduced or stalked spikelet. They do not arise from the sessile spikelet's lemma."],
   lower_sterile_lemma_hairs:["Open the lower STERILE floret","The fine hairs are attached to the surface or margin of the LOWER STERILE lemma. Identify the upper fertile floret separately before naming the hair position. A pink-looking entire seedhead is not evidence that hairs attach to this particular lemma; use a mature opened spikelet or a verified close-up."],
   upper_fertile_lemma_hairs:["Check the upper FERTILE lemma and the flower's sex","This state is documented on the UPPER FERTILE lemma of FEMALE pampasgrass florets. Do not transfer the observation to male florets, the lower sterile lemma, or the showy panicle plume. Confirm the floret's position and sex under magnification; the diagram is symbolic."],
-  spikelet_callus_hairs:["Look at the BASE (callus) of one floret","Short hairs arise directly from the floret's narrow basal callus, below its lemma body. Separate them from hairs across a lemma, from a stalked partner's pedicel, and from the INDEPENDENT branchlet bristles that surround Setaria spikelets. A whole-head photograph cannot prove this tiny attachment point."]
+  spikelet_callus_hairs:["Locate hairs on the basal CALLUS, not a free bristle","Inspect the actual point where hairs enter the callus at the base of a floret or a sessile spikelet (the precise organ varies by grass). This may look like a beard, but it is NOT an independent Setaria-type sterile branchlet bristle, a hairy partner stalk, or broad lemma pubescence. The sketch is one simplified basal example, not a proof photo or universal spikelet architecture."]
  }
 };
 function flowerFieldSketch(character,choice){
@@ -1349,14 +1349,15 @@ function flowerFieldSketch(character,choice){
    note(118,83,"UPPER FERTILE",lowerSelected?"#58745e":"#95612d");
    if(!lowerSelected)note(117,13,"FEMALE ONLY","#95612d");
   }else if(choice==="spikelet_callus_hairs"){
-   // Hairs emerge at the floret CALLUS, not as free bristles below a spikelet.
+   // Simplified basal CALLUS hair example (floret OR sessile spikelet by
+   // taxon), not independent sterile branchlet bristles below spikelets.
    glume(80,80,-1,1.05);glume(88,80,1,1.05);
    seed(84,46,1);
    dot(84,56,3,"#ad7a45");
    for(const [dx,dy] of [[-20,-13],[-13,-23],[13,-23],[20,-13]])
     hair(84,56,dx,dy);
    p("M84 58 L84 69","#aa7a42",1.5);
-   note(84,84,"FLORET CALLUS BASE","#95612d");
+   note(84,84,"BASAL CALLUS HAIRS","#95612d");
   }else if(choice==="below_spikelet"){
    p("M84 84 V61","#447b55",3);seed(84,45,.95);
    for(const x of [47,58,110,123])p("M84 64 Q"+x+" 40 "+x+" "+(x<84?15:11),"#ac8856",2);
