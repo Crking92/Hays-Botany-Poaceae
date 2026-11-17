@@ -314,53 +314,60 @@ def check_view(browser, name, width, height):
     page.locator("#reset-field-key").click()
     assert page.locator("#count").inner_text()=="169 possible"
 
-    # Already-hosted glume/lemma close-ups must be visible, licensed, and
-    # scoped as ANATOMY-ONLY references. A pictured glume does NOT establish
-    # one-venation and a photographed awn does NOT prove 2–5 mm or maturity.
-    for char,choice,expected_species,creator,license,source in [
-        ("glume_marks","upper_one_vein","Goosegrass","Harry Rose","CC BY 2.0",
-         "https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg"),
-        ("glume_marks","lower_one_vein","Goosegrass","Harry Rose","CC BY 2.0",
-         "https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg"),
-        ("true_lemma_awn","straight_or_bent","Japanese brome","Stefan.lefnaer","CC BY-SA 4.0",
-         "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_sl25.jpg")
-    ]:
-        choose_extra(page,"Flowers / spikelets",char,choice)
-        grp=page.locator(f'#optional-character-groups .optional-group[data-character="{char}"]')
-        photo=grp.locator(".choice-specific-photo-slot figure.character-photo-example")
-        assert photo.count()==1, f"{name}: missing organ-identification anatomy example for {char}/{choice}"
-        visible=photo.inner_text()
-        assert "Anatomy reference only" in visible and "Not proven:" in visible, (
-            f"{name}: photo falsely presented as a verified source-positive trait")
-        assert creator in visible and license in visible and "Original photo" in visible, (
-            f"{name}: original photo creator/license/source not credited")
-        assert photo.locator('a[href="'+source+'"]').count()==1
-        assert "Glume" in visible or "glume" in visible or "lemma" in visible or "awn" in visible
-        img=photo.locator("img")
-        img.scroll_into_view_if_needed()
-        img.evaluate("(im)=>{im.loading='eager'}")
-        img.evaluate("(im)=>im.decode()")
-        assert min(img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100, (
-            f"{name}: approved anatomy photograph not actually decoded")
-        assert img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
-        assert photo.locator("svg.field-photo-arrows").count()==0, (
-            f"{name}: no pixel-verified arrow exists in this reference")
-        page.locator("#reset-field-key").click()
-        assert page.locator("#count").inner_text()=="169 possible"
-    # Switch to a DIFFERENT glume or awn character: former teaching photos
-    # must clear immediately rather than masquerade as evidence for that state.
-    for char,with_photo,without_photo in [
-        ("glume_marks","lower_one_vein","glabrous"),
-        ("true_lemma_awn","straight_or_bent","lower_sterile_awn_variable")
-    ]:
-        choose_extra(page,"Flowers / spikelets",char,with_photo)
-        group=page.locator(f'#optional-character-groups .optional-group[data-character="{char}"]')
-        assert group.locator(".choice-specific-photo-slot figure").count()==1
-        choose_extra(page,"Flowers / spikelets",char,without_photo)
-        assert group.locator(".choice-specific-photo-slot figure").count()==0, (
-            f"{name}: stale reference image remains for unrelated anatomy")
-        page.locator("#reset-field-key").click()
-        assert page.locator("#count").inner_text()=="169 possible"
+    # The goosegrass image is an anatomy-of-a-glume plate for the whole
+    # group, never a species-positive photograph of a one-veined upper/lower
+    # glume. It must be visible even before choosing an advanced button.
+    choose_extra(page,"Flowers / spikelets","glume_marks","upper_one_vein")
+    glume_group=page.locator('#optional-character-groups .optional-group[data-character="glume_marks"]')
+    refphoto=glume_group.locator("figure.character-photo-example")
+    assert refphoto.count()==1, f"{name}: glume reference plate not visible"
+    txt=refphoto.inner_text()
+    assert "Anatomy reference only" in txt and "does NOT demonstrate the number of veins" in txt, (
+        f"{name}: an exact one-vein state was falsely proved from general photo")
+    assert "Harry Rose" in txt and "CC BY 2.0" in txt
+    assert refphoto.locator(
+        'a[href="https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg"]').count()==1
+    assert refphoto.locator('a[href="https://creativecommons.org/licenses/by/2.0/"]').count()==1
+    img=refphoto.locator("img")
+    img.scroll_into_view_if_needed()
+    img.evaluate("(im)=>{im.loading='eager'}")
+    img.evaluate("(im)=>im.decode()")
+    assert min(img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100
+    assert img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
+    assert refphoto.locator("svg.field-photo-arrows").count()==0
+    for next_opt in ["lower_one_vein","glabrous"]:
+        choose_extra(page,"Flowers / spikelets","glume_marks",next_opt)
+        assert glume_group.locator("figure.character-photo-example").count()==1, (
+            f"{name}: organ teaching photo disappeared or duplicated when changing glume state")
+        assert glume_group.locator(".choice-specific-photo-slot figure").count()==0, (
+            f"{name}: generic glume plate incorrectly treated as diagnostic one-vein photo")
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text()=="169 possible"
+
+    # Japanese brome is a source-author-labeled picture of real LEMMAS and
+    # attached awns. It does not establish whether a particular awn bends
+    # with maturity or its length, and never stays visible for sterile awns.
+    choose_extra(page,"Flowers / spikelets","true_lemma_awn","straight_or_bent")
+    awn_group=page.locator('#optional-character-groups .optional-group[data-character="true_lemma_awn"]')
+    awn_panel=awn_group.locator(".choice-specific-photo-slot figure.character-photo-example")
+    assert awn_panel.count()==1, f"{name}: source-pinned Bromus lemma awn macro missing"
+    text_awn=awn_panel.inner_text()
+    assert "Anatomy reference only" in text_awn and "Not proven:" in text_awn
+    assert "Stefan.lefnaer" in text_awn and "CC BY-SA 4.0" in text_awn
+    assert awn_panel.locator('a[href="https://commons.wikimedia.org/wiki/File:Bromus_japonicus_sl25.jpg"]').count()==1
+    assert awn_panel.locator('a[href="https://creativecommons.org/licenses/by-sa/4.0/"]').count()==1
+    awn_img=awn_panel.locator("img")
+    awn_img.scroll_into_view_if_needed()
+    awn_img.evaluate("(im)=>{im.loading='eager'}")
+    awn_img.evaluate("(im)=>im.decode()")
+    assert min(awn_img.evaluate("(im)=>[im.naturalWidth,im.naturalHeight]"))>100
+    assert awn_img.evaluate("(im)=>getComputedStyle(im).objectFit")=="contain"
+    assert awn_panel.locator("svg.field-photo-arrows").count()==0
+    choose_extra(page,"Flowers / spikelets","true_lemma_awn","lower_sterile_awn_variable")
+    assert awn_group.locator(".choice-specific-photo-slot figure").count()==0, (
+        f"{name}: wrong lemma-awn picture survived switch to conditional sterile awn")
+    page.locator("#reset-field-key").click()
+    assert page.locator("#count").inner_text()=="169 possible"
 
     # Final four advanced choices must actually rank a known exact species,
     # use corrected FIRST-GLUME anatomy and retain nonmatching unknown grasses.
