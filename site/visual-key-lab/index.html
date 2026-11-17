@@ -518,7 +518,7 @@ function image(p,alt,markers=null,markerLabels=null){
     // The recorded marker endpoints and source photographs are unchanged.
     const short=markerLabels?.[n];
     if(short){
-     const fontSize=Math.min(38,Math.max(18,scale*.041));
+     const fontSize=Math.max(18,w*.047); // readable even when high-resolution photos scale down
      const boxW=Math.min(w*.72,short.length*fontSize*.57+fontSize*.85);
      const boxH=fontSize*1.48,spacing=radius+fontSize*.3;
      const right=sx+spacing,left=sx-spacing-boxW;
