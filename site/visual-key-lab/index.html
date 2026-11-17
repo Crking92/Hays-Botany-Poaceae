@@ -856,7 +856,9 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ const result=newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
+ if(s.gould_hairy_rachilla_hold&&character==="floral_hair_position")return {...result,states:result.states.filter(v=>v!=="rachilla"),source_disagreement:s.gould_hairy_rachilla_hold};
+ return result;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -950,6 +952,7 @@ function verifiedAdvancedConflict(s){
    });
    if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(observed.some(v=>!["one","two","several"].includes(v)))continue; // rudimentary-floret anatomy is not a numeric count
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||
       !/exact/i.test(evidence.source||"")||
@@ -2973,6 +2976,7 @@ const disputedRhizome=state.selected.habit==="rhizome"&&[
 if(disputedRhizome)info.append(node("div","smallmuted",
  "Rhizome status unresolved — regional references disagree. Keep possible until the book and a connected underground stem are checked."));
 if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
+if(s.gould_hairy_rachilla_hold&&selectedRefinementStates("floral_hair_position").includes("rachilla"))info.append(node("div","smallmuted","Rachilla hairs unresolved — Gould and the broader FNA account differ; inspect the exact segment."));
 if(state.selected.ligule&&supportedLiguleEdge(s))info.append(node("div","smallmuted","Source-supported ligule edge (same collar observation, not another score)."));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
@@ -3130,6 +3134,13 @@ function applyKRGouldSupplement(pack){
   note:"Conditional stolons/rhizomes and short-awns scoped to Gould's historical variety; old source disagreements retained."};
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
+}
+function applyHairyGramaGouldSupplement(pack){
+ if(!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.evidence?.some(r=>r.character==="true_lemma_awn"))throw Error("Invalid hairy grama organ scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_HAIRY_GRAMA_SUPPLEMENT_V1",id:"bouteloua-hirsuta",scientific:"Bouteloua hirsuta",page:353});
+ const group=state.refineCharacters.find(c=>c.id==="florets_per_spikelet");group.hint+=" Count florets first; lower/upper rudiment details are separate observations. Three awns do not mean three florets.";
+ const s=state.species.find(s=>s.id==="bouteloua-hirsuta");s.gould_hairy_rachilla_hold="Gould p.353: rachilla below lower rudiment not hairy; broader FNA report allows hairs. Segment/taxon scope unresolved; original report retained.";s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.353: hairy grama has a projecting bare branch rachis, hairless culm nodes, long papilla-based hairs on SECOND-glume midnerve, and one perfect plus two rudimentary florets. Three rough awns belong to the LOWER rudiment; rachilla below it is described as hairless, with broader FNA variation preserved separately.\n\n"+s.field_rule;
 }
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
@@ -3851,6 +3862,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-hairy-grama-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Hairy grama Gould supplement unavailable");
+ applyHairyGramaGouldSupplement(await response.json());
+}catch(err){console.warn("Hairy grama Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3965,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
