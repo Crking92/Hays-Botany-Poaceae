@@ -1,0 +1,22 @@
+name: Virginia wildrye Gould character mapping
+on:
+  push:
+    branches: [main]
+    paths: ['site/visual-key-lab/index.html', 'site/visual-key-lab/gould-virginia-character-supplement.json', 'scripts/test_virginia_gould_character_mapping.cjs', '.github/workflows/virginia-gould-character-mapping.yml']
+  pull_request:
+    paths: ['site/visual-key-lab/index.html', 'site/visual-key-lab/gould-virginia-character-supplement.json', 'scripts/test_virginia_gould_character_mapping.cjs', '.github/workflows/virginia-gould-character-mapping.yml']
+permissions: {contents: read}
+jobs:
+  mapping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Verify Gould mapping and preserve earlier evidence
+        run: |
+          node scripts/test_virginia_gould_character_mapping.cjs
+          node scripts/test_optional_grass_refinement.cjs
+          node scripts/test_grass_gould_1975_reference.cjs
+          node scripts/test_grass_final_four_advanced_options.cjs
+          node scripts/test_grass_targeted_advanced_evidence.cjs
