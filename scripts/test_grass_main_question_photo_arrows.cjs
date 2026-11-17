@@ -85,7 +85,7 @@ const expectedLabels={
  "awns:bristles":["Bristle","Stigmas (not bristles)"],
  "awns:three":["Lemma awns"]
 };
-const labels=html.match(/const mainPhotoShortLabels=({[\\s\\S]*?});\\s*function renderQuestion/);
+const labels=html.match(/const mainPhotoShortLabels=({[\s\S]*?});\s*function renderQuestion/);
 assert(labels,"Main-card direct label mapping missing");
 const mapped=vm.runInNewContext("("+labels[1]+")");
 assert.deepEqual(JSON.parse(JSON.stringify(mapped)),expectedLabels);
