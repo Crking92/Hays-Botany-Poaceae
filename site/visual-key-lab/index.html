@@ -1537,7 +1537,7 @@ function renderOptionalCharacters(){
    let refreshVeinGuide=()=>{};
    const makeButton=o=>{
      const pending=isPendingChoice(c,o),b=node("button",pending?"evidence-pending":"",o.label);
-     b.type="button";b.dataset.option=o.id;
+     b.type="button";b.dataset.option=o.id;if(o.detail)b.title=o.detail;
      b.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(o.id)));
      if(pending){b.title="Record what you saw; species-level scoring evidence is not available for this detail yet.";b.append(node("span","option-evidence-label","Reference data pending"));}
      else{const n=optionCounts.get(c.id+":"+o.id);b.append(node("span","option-evidence-label",n+" source-documented grass"+(n===1?"":"es")));}
@@ -1592,7 +1592,7 @@ function renderOptionalCharacters(){
        const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a leaf detail to see what to examine and a simplified diagram."));return;}
        const [where,tip]=leafDetailGuides[c.id][selected.id]||[];
-       if(!where)return;
+       if(!where){appendPublishedChoiceGuide(c,selected,guide);return;}
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
        const info=node("div","venation-field-text");
        info.append(node("strong","",where),node("p","",tip),
@@ -1609,7 +1609,7 @@ function renderOptionalCharacters(){
        const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a collar or sheath detail to see a diagram and where to examine your plant."));return;}
        const [where,tip]=collarFieldTips[c.id][selected.id]||[];
-       if(!where)return;
+       if(!where){appendPublishedChoiceGuide(c,selected,guide);return;}
        const matching=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
        const info=node("div","venation-field-text");
        info.append(node("strong","",where),node("p","",tip),
@@ -1626,7 +1626,7 @@ function renderOptionalCharacters(){
        const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a stem or root detail for a simplified sketch and what to inspect."));return;}
        const [where,tip]=stemFieldTips[c.id][selected.id]||[];
-       if(!where)return;
+       if(!where){appendPublishedChoiceGuide(c,selected,guide);return;}
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
        const info=node("div","venation-field-text");
        info.append(node("strong","",where),node("p","",tip),
@@ -1649,7 +1649,7 @@ function renderOptionalCharacters(){
          const info=node("div","venation-field-text");
          info.append(node("strong","",selected.label),
            node("p","",selected.detail||"Confirm the exact spikelet organ with a hand lens before using this observation."),
-           node("p","venation-field-source","Anatomically specific observation only; no verified species-level match yet. Other grasses remain possible. A diagram is not shown until its structure is verified."));
+           node("p","venation-field-source",Object.values(state.refineEvidenceMap).some(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id)))?"Published matching evidence is linked for this observation. Other grasses without recorded evidence remain possible.":"Anatomically specific observation only; no verified species-level match yet. Other grasses remain possible. A diagram is not shown until its structure is verified."));
          guide.append(info);return;
        }
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
@@ -1756,7 +1756,7 @@ function renderIllustratedQuestion(cfg){
  area.append(tip,node("p","diagram-question-note",
    "Each card shows an existing field diagram, not a photograph, an exact scale, or proof of a local specimen. Skip any feature you cannot observe."));
  const grid=node("div","answer-grid diagram-answer-grid");
- for(const o of c.options.filter(o=>!cfg.optionIds||cfg.optionIds.includes(o.id))){
+ for(const o of c.options.filter(o=>Object.hasOwn(cfg.labels,o.id)&&(!cfg.optionIds||cfg.optionIds.includes(o.id)))){
    const b=node("button","answer diagram-answer");
    b.type="button";b.dataset.character=cfg.id;b.dataset.option=o.id;
    b.setAttribute("aria-pressed",String(selectedRefinementStates(cfg.id).includes(o.id)));
@@ -2918,6 +2918,65 @@ if(displayedChecks.length){
   copy.append(panel);
 }copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail";a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal()}
 function render(){renderTabs();renderQuestion();renderResults()}
+function appendPublishedChoiceGuide(character,option,guide){
+ if(!option.detail)return;
+ const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>
+  e.character===character.id&&e.states.includes(option.id))).length;
+ const info=node("div","venation-field-text");
+ info.append(node("strong","",option.label),node("p","",option.detail),
+  node("p","venation-field-source",count?"Published matching evidence linked for "+count+
+   " grass"+(count===1?"":"es")+". Missing evidence never proves absence.":
+   "No species-specific evidence linked yet; other grasses remain possible."));
+ guide.append(info);
+}
+
+function applyVirginiaGouldSupplement(pack){
+ if(pack.schema!=="HAYS_GOULD_VIRGINIA_CHARACTER_SUPPLEMENT_V1"||
+    pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!=="elymus-virginicus"||
+    pack.printed_page!==166||!Array.isArray(pack.option_additions)||!Array.isArray(pack.evidence)||
+    !state.species.some(s=>s.id===pack.species_id&&!s.trial))throw Error("Invalid Virginia source supplement");
+ const characters=structuredClone(state.refineCharacters),records=structuredClone(state.refineEvidenceMap);
+ const groups=new Map(characters.map(c=>[c.id,c])),newKeys=new Set();
+ for(const addition of pack.option_additions){
+  const group=groups.get(addition.character),option=addition.option;
+  if(!group||!option?.id||!option.label||!option.detail||group.options.some(o=>o.id===option.id)||
+     newKeys.has(group.id+":"+option.id))throw Error("Duplicate/invalid Virginia option");
+  newKeys.add(group.id+":"+option.id);group.options.push(option);group.multi_select=true;
+  if(Array.isArray(group.subgroups)){
+   if(!addition.subgroup)throw Error("Missing option subgroup");
+   let subgroup=group.subgroups.find(g=>g.label===addition.subgroup);
+   if(!subgroup){subgroup={label:addition.subgroup,options:[]};group.subgroups.push(subgroup)}
+   subgroup.options.push(option.id);
+  }else if(addition.subgroup){
+   group.subgroups=[{label:"Spikelet attachment",options:group.options.filter(o=>o.id!==option.id).map(o=>o.id)},
+                   {label:addition.subgroup,options:[option.id]}];
+  }
+ }
+ const covered=new Set(),seen=new Set();
+ for(const row of pack.evidence){
+  const group=groups.get(row.character);
+  if(row.id!==pack.species_id||row.scientific!=="Elymus virginicus"||!group||seen.has(row.character)||
+     row.pdf_printed_page!==166||row.source_status!=="READY_PRIMARY"||!row.source?.includes("Gould")||
+     !row.source_url?.startsWith("https://")||!row.note||!row.source_scope_caution||
+     !Array.isArray(row.states)||!row.states.length||row.states.some(v=>!group.options.some(o=>o.id===v)))
+   throw Error("Invalid exact-species Gould evidence");
+  seen.add(row.character);row.states.forEach(v=>covered.add(row.character+":"+v));
+  const bucket=records[row.id]??=[],prior=bucket.find(e=>e.character===row.character);
+  if(prior){
+   prior.states=[...new Set([...prior.states,...row.states])];
+   prior.additional_state_sources??={};
+   // Keep prior authors, notes and measurement ranges intact beside the preferred source.
+   for(const value of row.states)prior.additional_state_sources[value]=structuredClone(row);
+  }else bucket.push(structuredClone(row));
+ }
+ if([...newKeys].some(k=>!covered.has(k)))throw Error("New Virginia option lacks its source");
+ // Separate shape from rim texture; keep existing IDs and selections compatible.
+ groups.get("ligule_edge").label="Ligule edge / outline";
+ groups.get("blade_hairs").label="Leaf blade surface / hairs";
+ groups.get("spikelet_position").label="Spikelet attachment / spike position";
+ state.refineCharacters=characters;state.refineEvidenceMap=records;
+}
+
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
 // Supplementary Gould text augments the displayed species lessons without mutating scored records.
 try{const res=await fetch("source-reference-gould-1975.json",{cache:"no-store"});if(res.ok){const ref=await res.json();if(ref.source?.id==="gould-1975-grasses-of-texas"&&Array.isArray(ref.learner_diagnostic_checks))state.gouldSource=ref;}}
@@ -3572,6 +3631,13 @@ try{
   option.evidence_pending=false;
  }
 }catch(err){console.warn("Final four advanced states held safely; earlier source evidence preserved",err)}
+/* Gould p.166: additive options/evidence, after historical 111-option validators.
+   Validate a complete copy first; a failed supplement leaves the existing lab intact. */
+try{
+ const response=await fetch("gould-virginia-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Virginia Gould supplement unavailable");
+ applyVirginiaGouldSupplement(await response.json());
+}catch(err){console.warn("Virginia Gould character supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.

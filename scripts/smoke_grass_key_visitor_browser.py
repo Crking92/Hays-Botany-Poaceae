@@ -114,8 +114,8 @@ def sweep_all_optional_options(page, name):
                 assert page.locator("#count").inner_text() == "169 possible", (
                     f"{name}/{character}/{option}: clearing did not restore every grass")
                 inspected_choices += 1
-    assert (inspected_groups, inspected_choices) == (24, 111), (
-        f"{name}: expected all 24 groups and 111 options, got {inspected_groups}/{inspected_choices}")
+    assert (inspected_groups, inspected_choices) == (24, 124), (
+        f"{name}: expected all 24 groups and 124 options, got {inspected_groups}/{inspected_choices}")
     return {"groups": inspected_groups, "options_clicked_and_cleared": inspected_choices}
 
 

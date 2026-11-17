@@ -1,0 +1,322 @@
+{
+  "schema": "HAYS_GOULD_VIRGINIA_CHARACTER_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "elymus-virginicus",
+  "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "printed_page": 166,
+  "source_material": "Owner-supplied readable photograph of printed p. 166; page image is not republished.",
+  "source_reference": "source-reference-gould-1975.json#additional_species_treatments",
+  "scope": "Character options and exact-species evidence only; preserve all 169 profiles, admissions, source alternatives, photographs and annotations.",
+  "option_additions": [
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "bowed_nerveless_base",
+        "label": "Glume bases bow outward and lack veins",
+        "detail": "Inspect the BASE of each outer glume: it bows away from the spikelet. Veins on the upper glume body do not imply veins continue through its base."
+      },
+      "subgroup": "Glume body, base and awn"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "hardened_yellowish",
+        "label": "Firm, yellowish glumes",
+        "detail": "Check mature outer glumes for a hardened texture and pale yellowish color; color alone does not establish identity."
+      },
+      "subgroup": "Glume body, base and awn"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "strongly_veined",
+        "label": "Strongly veined glume body",
+        "detail": "Trace the prominent veins on the glume BODY. This does not specify a vein count or claim that the base is veined."
+      },
+      "subgroup": "Glume body, base and awn"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "curved_apex",
+        "label": "Glume apex somewhat curved",
+        "detail": "Examine the top of the outer glume, separately from the awn and the basal bow. This feature is variable."
+      },
+      "subgroup": "Glume body, base and awn"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "straight_glume_awn",
+        "label": "Glume tapers into a straight awn",
+        "detail": "Trace this awn to an OUTER GLUME, not a lemma. Its length may be shorter or longer than the glume body."
+      },
+      "subgroup": "Glume body, base and awn"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "erect_spike",
+        "label": "Stiffly upright spike",
+        "detail": "Check the whole unbranched flowering spike. An erect flowering head is separate from an erect or basally decumbent culm."
+      },
+      "subgroup": "Whole spike position"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "sheath_enclosed_spike",
+        "label": "Spike partly enclosed by upper leaf sheath",
+        "detail": "Follow the upper leaf sheath to see whether it still surrounds the base of the attached spike. Often present, not obligatory."
+      },
+      "subgroup": "Whole spike position"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "sparsely_hairy",
+        "label": "Sparse stiff hairs on lemma",
+        "detail": "Inspect a true lemma for scattered stiff hairs. Sparse hirsute hairs do not require a conspicuously fuzzy lemma."
+      },
+      "subgroup": "Hairs / smoothness of the lemma"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "straight_slight_curve",
+        "label": "Lemma awn straight or slightly curved",
+        "detail": "Trace the awn to its lemma. Gould gives 5–25 mm; compare its straight or weakly curved shape without assuming an age-related bend."
+      },
+      "subgroup": "General awn count and appearance"
+    },
+    {
+      "character": "ligule_edge",
+      "option": {
+        "id": "truncate",
+        "label": "Ligule top cut straight across (truncate)",
+        "detail": "Inspect the overall top outline of the tiny inner membrane. A truncate outline does not prove its edge lacks fine teeth or cilia."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "sheath_surface",
+      "option": {
+        "id": "glabrous",
+        "label": "Sheath without hairs",
+        "detail": "Inspect the sheath around the stem, separately from the blade and collar. A source may allow hairy variants; this observation never proves another variant absent."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "blade_hairs",
+      "option": {
+        "id": "hairless",
+        "label": "Leaf blade without hairs",
+        "detail": "Use magnification on the blade faces; hairless does not necessarily mean free of rough projections."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "blade_hairs",
+      "option": {
+        "id": "rough_surface",
+        "label": "Leaf blade rough (scabrous)",
+        "detail": "Check the blade SURFACE, not just its edge. Minute rough projections and fine hairs are different and can occur variably."
+      },
+      "subgroup": null
+    }
+  ],
+  "evidence": [
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "decumbent"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Tufted culms stand erect or lie low at the base before rising. This does not make the flowering spike nodding. Earlier H&L geniculate records remain as supplementary variation.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "blade_shape",
+      "states": [
+        "flat"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Expanded blades are flat. This describes adult blades rather than vernation or drought-induced curling.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "blade_width",
+      "states": [
+        "medium",
+        "broad"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Blades are mostly 5–15 mm wide; 5-mm boundary overlaps the approximate narrow band and must never cause a false exclusion. Select an actual measured width, not every bin in the species range.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification.",
+      "width_mm": [
+        5,
+        15
+      ]
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "blade_hairs",
+      "states": [
+        "hairless",
+        "rough_surface",
+        "blade_hairy"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Blade faces may be hairless, rough or minutely pubescent. These are source-permitted variants, not a claim that one individual shows every condition.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "sheath_surface",
+      "states": [
+        "glabrous"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Gould describes hairless sheaths; H&L p. 47 additionally permits occasional pilose sheaths. Preserve both reports and score hairlessness positively without excluding hairy variants.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "ligule_edge",
+      "states": [
+        "truncate"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "The ligule is a minute membrane with a truncate top. Gould gives no numerical length here. H&L p. 47 supplies 0.5–1 mm and erose/ciliolate margins; truncate outline does not contradict fine marginal details.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "spikelet_position",
+      "states": [
+        "erect_spike",
+        "sheath_enclosed_spike"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "The flowering spike is usually stiffly erect and often held partly within the upper leaf sheath. Neither condition is universal; neither proves the number of florets or the sessile-plus-stalked pair option.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "glume_marks",
+      "states": [
+        "bowed_nerveless_base",
+        "hardened_yellowish",
+        "strongly_veined",
+        "curved_apex",
+        "straight_glume_awn"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Outer glumes have strongly veined bodies, a hardened yellowish texture, and outward-bowed bases without veins. Their apex is often somewhat curved and narrows to a straight awn, whose length varies relative to the glume body. Do not infer an exact vein count.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "lemma_texture",
+      "states": [
+        "smooth",
+        "sparsely_hairy"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "Lemmas may lack hairs or have sparse stiff hairs. The sparse variant is distinct from the conspicuously hairy option; a hairless lemma is not necessarily polished or shiny.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification."
+    },
+    {
+      "id": "elymus-virginicus",
+      "scientific": "Elymus virginicus",
+      "character": "true_lemma_awn",
+      "states": [
+        "long",
+        "short",
+        "straight_slight_curve"
+      ],
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Elymus virginicus, printed p. 166",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 166,
+      "source_status": "READY_PRIMARY",
+      "evidence_level": "PUBLISHED_CHARACTER_NOT_SPECIMEN_CERTIFIED",
+      "note": "True lemma awns measure 5–25 mm and are straight or slightly curved. Both short and conspicuously long observations are possible within this range. The source does not describe twisting or bending with age; glume awns are recorded separately.",
+      "source_scope_caution": "Positive published morphology only. Unrecorded taxa and unobserved variants remain possible; no Hays voucher or photo certification.",
+      "awn_length_mm": [
+        5,
+        25
+      ]
+    }
+  ],
+  "non_scoring_context": {
+    "height_cm": [
+      60,
+      120
+    ],
+    "culm_color": [
+      "green",
+      "glaucous"
+    ],
+    "ligule": "Minute truncate membrane; no numeric length on this page.",
+    "chromosome_2n": 28,
+    "habitat": "Shaded banks, fence rows and open woodlands.",
+    "distribution": "Historical Texas regional account; not modern county nativity or a local voucher."
+  },
+  "omissions_not_absences": [
+    "No floret count stated on supplied page.",
+    "No exact glume vein count.",
+    "No rhizome or stolon absence claim.",
+    "No smooth ligule-margin claim from truncate outline."
+  ]
+}
