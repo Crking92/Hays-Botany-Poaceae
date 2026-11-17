@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -3131,6 +3131,15 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyCrowfootgrassGouldSupplement(pack){
+ const r=pack.secondary_evidence;
+ if(r?.id!=="dactyloctenium-aegyptium"||r.character!=="spikelet_position"||r.states?.join(",")!=="one_side"||r.pdf_printed_page!==1260||!r.source?.includes("exact Dactyloctenium aegyptium")||!r.source?.includes("Diggs")||!r.source_url?.startsWith("https://"))throw Error("Invalid crowfootgrass secondary source");
+ if(pack.core_awn_addition!=="short_single"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid crowfootgrass source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CROWFOOTGRASS_SUPPLEMENT_V1",id:"dactyloctenium-aegyptium",scientific:"Dactyloctenium aegyptium",page:223});
+ const prior=state.refineEvidenceMap["dactyloctenium-aegyptium"].find(e=>e.character==="spikelet_position");prior.states=[...new Set([...prior.states,...r.states])];prior.additional_state_sources??={};prior.additional_state_sources.one_side=structuredClone(r);
+ const s=state.species.find(s=>s.id==="dactyloctenium-aegyptium");s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.223: annual with often-rooting lower culms, 3–5-flowered comb-like spikelets on fingerlike branches, and bare sharp branch tips. Glume awns, usually short crooked lemma awns and bare rachis points are different structures. No exact KR awn length, lower-segment twist or medial groove absence is inferred.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3860,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-crowfootgrass-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Crowfootgrass Gould supplement unavailable");
+ applyCrowfootgrassGouldSupplement(await response.json());
+}catch(err){console.warn("Crowfootgrass Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3963,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
