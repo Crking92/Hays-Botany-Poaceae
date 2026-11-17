@@ -64,4 +64,30 @@ assert(html.includes('const chosenPhoto=characterPhotoExample(c.id,selected.id);
 assert(html.includes('choicePhotoSlot.replaceChildren()'),"Stale bristle photo could leak onto callus hairs after selecting another option");
 assert(html.includes("if(chosenPhoto)choicePhotoSlot.append(chosenPhoto);"));
 assert(!html.includes("bristleBaseArrow"),"No unverified bristle insertion pointer may be invented");
+// TWO additional unique EXISTING gallery photos, each referenced only at
+// its truthful teaching scope. Goosegrass is a GROUP-LEVEL glume organ guide,
+// not any selected one-vein state. Brome illustrates real lemma+awn anatomy.
+const teaching=[
+ ["eleusine-indica",2,"Harry Rose (Macleay Grass Man)","CC BY 2.0",
+  "https://commons.wikimedia.org/wiki/File:Eleusine_indica_spikelet2_annotated_(6974711762).jpg"],
+ ["bromus-japonicus",1,"Stefan.lefnaer","CC BY-SA 4.0",
+  "https://commons.wikimedia.org/wiki/File:Bromus_japonicus_sl25.jpg"]
+];
+for(const [id,i,creator,license,url] of teaching){
+ const species=scored.find(x=>x.id===id),p=species?.photos.find(x=>x.i===i);
+ assert(p,"Existing cited picture missing from Learner: "+id+"/"+i);
+ assert.equal(p.creator,creator);assert.equal(p.license,license);
+ assert.equal(p.source_page,url);
+ assert(p.license_url.startsWith("https://creativecommons.org/licenses/"));
+ assert(html.includes('expected_src:"'+p.src+'"'),"Published photo must use existing exact gallery URL: "+id);
+}
+assert(html.includes('const generalOrganPhotoExamples={')&&html.includes(" glume_marks:{"),
+ "Glume reference should be a GROUP-LEVEL anatomical plate, not an exact one-vein proof");
+assert(!html.includes('"glume_marks:upper_one_vein":{')&&!html.includes('"glume_marks:lower_one_vein":{'),
+ "Undemonstrated one-venation must not be labeled as direct photographic evidence");
+assert(html.includes('"true_lemma_awn:straight_or_bent":{'),
+ "The source-annotated lemma awn should appear only under its valid reference choice");
+assert(html.includes('x.reference_only?"Anatomy reference only'),
+ "Photos must disclose that they are examples of an organ, not positive source evidence");
+assert(html.includes('choicePhotoSlot.replaceChildren()'),"Stale anatomy photo must clear after option change");
 console.log("PASS: 8 previously hosted source-pinned character photographs (6 archived approved + 2 original CC), credit/source/limits intact; original 112 unchanged");
