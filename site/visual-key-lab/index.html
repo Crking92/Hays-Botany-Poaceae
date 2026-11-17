@@ -1547,7 +1547,7 @@ function renderOptionalCharacters(){
        if(next.length)state.refineSelected[c.id]=c.multi_select?next:next[0];
        else delete state.refineSelected[c.id];
        choices.querySelectorAll("button[data-option]").forEach(x=>x.setAttribute("aria-pressed",String(selectedRefinementStates(c.id).includes(x.dataset.option))));
-       updateChosen();updateUrl();renderResults();refreshVeinGuide();renderBeginnerChecks();
+       updateChosen();updateUrl();renderResults();refreshVeinGuide();renderTabs();renderQuestion();
        tabs.querySelectorAll("button").forEach((x,i)=>{const section=sections[i][0];const count=state.refineCharacters.filter(k=>refinementSection(k.id)===section&&selectedRefinementStates(k.id).length).length;x.textContent=sections[i][1]+(count?" ("+count+")":"")});
      });
      return b;
@@ -1666,7 +1666,7 @@ function renderOptionalCharacters(){
    if(c.options.some(o=>isPendingChoice(c,o)))content.append(node("p","optional-need-note","Research-pending choices can be recorded, but won't yet rank any grass. All candidates stay possible."));
    group.append(summary,content);root.append(group);
  }
- $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();renderBeginnerChecks();renderResults()};
+ $("optional-clear").onclick=()=>{state.refineSelected={};updateUrl();renderOptionalCharacters();render()};
  const evidenceToggle=$("optional-documented-only");
  evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));
  evidenceToggle.onclick=()=>{state.refineOnlyDocumented=!state.refineOnlyDocumented;evidenceToggle.setAttribute("aria-pressed",String(state.refineOnlyDocumented));updateUrl();renderResults()};
@@ -2405,6 +2405,11 @@ ligule:"Peel the blade gently away from the stem and examine the INNER junction.
 awns:"Use intact, mature spikelets and a hand lens. Count true awns per floret; do not mistake separate foxtail bristles, bur spines, or feathery stigmas for lemma awns."
 };
 function renderQuestion(){
+ if(state.question>=qs.length){
+   const tab=mainQuestionTabs()[state.question];
+   if(tab?.kind==="illustrated")return renderIllustratedQuestion(tab.cfg);
+   state.question=0;
+ }
 const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));const precision=node("details","field-precision");precision.append(node("summary","","Field tip: where to look"),node("p","",precisionNotes[q.id]));area.append(precision);
 function buildChoice([key,title,note,refId,i]){
 const specimen=byId(refId),p=selectedPhotoOverrides[q.id+":"+key]||pic(specimen,i);
@@ -2484,9 +2489,9 @@ area.append(jumps,node("p","head-illustration-note","The little drawings show si
 }else{
 const grid=node("div","answer-grid");q.options.forEach(o=>grid.append(buildChoice(o)));area.append(node("p","head-illustration-note","Simplified teaching drawings appear with each photo. Look for the real structure on your plant before choosing."),grid);
 }
-const actions=node("div","question-actions"),skip=node("button","btn btn-secondary",state.selected[q.id]?"Clear this choice":"I can't tell / skip"),next=node("button","btn btn-primary",state.question===qs.length-1?"Back to first question":"Next character →");skip.type=next.type="button";
+const actions=node("div","question-actions"),skip=node("button","btn btn-secondary",state.selected[q.id]?"Clear this choice":"I can't tell / skip"),next=node("button","btn btn-primary",state.question===mainQuestionTabs().length-1?"Back to first question":"Next character →");skip.type=next.type="button";
 skip.addEventListener("click",()=>{state.selected[q.id]=null;updateUrl();render()});
-next.addEventListener("click",()=>{state.question=(state.question+1)%qs.length;render();window.scrollTo({top:Math.min(window.scrollY,document.querySelector(".workspace").offsetTop-15),behavior:"smooth"})});
+next.addEventListener("click",()=>{state.question=(state.question+1)%mainQuestionTabs().length;render();window.scrollTo({top:Math.min(window.scrollY,document.querySelector(".workspace").offsetTop-15),behavior:"smooth"})});
 actions.append(skip,next);area.append(actions);
 }
 
@@ -2906,7 +2911,7 @@ if(displayedChecks.length){
   }
   copy.append(panel);
 }copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail";a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal()}
-function render(){renderTabs();renderBeginnerChecks();renderQuestion();renderResults()}
+function render(){renderTabs();renderQuestion();renderResults()}
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
 // Supplementary Gould text augments the displayed species lessons without mutating scored records.
 try{const res=await fetch("source-reference-gould-1975.json",{cache:"no-store"});if(res.ok){const ref=await res.json();if(ref.source?.id==="gould-1975-grasses-of-texas"&&Array.isArray(ref.learner_diagnostic_checks))state.gouldSource=ref;}}
