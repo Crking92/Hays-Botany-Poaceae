@@ -88,6 +88,28 @@ for(const s of species) {
   };
   visit(Object.entries(s.traits).filter(([,v]) => v.length > 0));
 }
+// Owner-provided Gould (1975) p. 338: sideoats has two documented variety-level
+// growth architectures. They coexist as species-level ALTERNATIVES, and the
+// many-branch choice is NOT a universal requirement of var. caespitosa.
+const sideoatsRow=species.find(s=>s.id==='bouteloua-curtipendula');
+const p338=sideoatsRow?.character_evidence?.gould_1975_p338_infraspecific_review;
+assert(p338?.status==='EXACT_GIVEN_TWO_VARIETY_TREATMENTS_REVIEWED_NO_SCORING_CHANGE',
+ 'Sideoats Gould exact two-variety page review missing');
+assert(sideoatsRow.traits.head.includes('side_oats')&&
+ sideoatsRow.traits.head.includes('one_sided')&&
+ sideoatsRow.traits.head.includes('many_one_sided')&&
+ sideoatsRow.traits.habit.includes('tuft')&&sideoatsRow.traits.habit.includes('rhizome'),
+ 'Sideoats source-backed broad flowerhead or alternative growth-state lost');
+const gouldTreatments=JSON.parse(read('source-reference-gould-1975.json')).additional_species_treatments;
+const sideoatsGould=gouldTreatments.find(e=>e.species_id==='bouteloua-curtipendula'&&e.printed_page===338);
+assert(sideoatsGould&&sideoatsGould.infraspecific_treatments?.length===2,
+ 'Missing exact Gould p.338 two-variety treatment');
+assert(sideoatsGould.infraspecific_treatments[0].rhizome==='CREEPING_RHIZOMES_EXPLICITLY_PRESENT'&&
+ sideoatsGould.infraspecific_treatments[1].rhizome.startsWith('CREEPING_RHIZOMES_NOT_DEVELOPED'),
+ 'Do not collapse sideoats two variety-specific rhizome conditions');
+assert(sideoatsGould.classification_decision.action==='SAVE_PARAPHRASED_TWO_VARIETY_TREATMENT_WITH_NO_CORE_SCORE_CHANGE',
+ 'Sideoats Gould description must not silently change scored states');
+
 const positives = [
   ['Virginia wildrye short mature lemma awn, not conspicuously long',{head:'spike',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['elymus-virginicus']],
   ['Little bluestem short fertile awn, no obvious long projection',{head:'short_racemes',habit:'tuft',ligule:'membrane',awns:'none_obvious'},['schizachyrium-scoparium']],
