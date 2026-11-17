@@ -241,7 +241,13 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // true stolon) visual pathway alongside its typical tuft/rhizome states.
 // 1 head × 1 new habit × 2 ligule views × 1 awn state = +2 combinations.
 // Existing 502 + 2 = 504, with no additional admission or rights changes.
-assert.equal(scoredPaths,504,'Reviewed scored character-combination total changed');
+// Species-specific source correction (2026-11-16): sideoats grama's exact
+// Kew/Diggs unilateral side racemes also match BOTH broad main head choices
+// one_sided and many_one_sided. The existing 1 side_oats head × 2 habit
+// choices × 2 ligule choices × 1 awn choice expands from 4 to 12 paths:
+// an additive +8 combinations, not a changed species/photo inventory.
+// 504 + 8 = 512. See PR #421 and its exact positive integration cases.
+assert.equal(scoredPaths,512,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
