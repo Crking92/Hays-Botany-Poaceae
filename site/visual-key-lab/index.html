@@ -942,6 +942,32 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Texas cupgrass field follow-up 2026-11-18: Gould 1975 p.433
+    describes Eriochloa sericea but does NOT report a ligule length.
+    Independent vegetative source H&L (2015), exact species p.50,
+    explicitly states a ciliate TRUE ligule UP TO 1 mm, with a minute
+    membranous base. Thus >8 mm contradicts the published upper bound.
+    Its saved numeric range [null,1] has no measured lower limit, so
+    generic closed-interval exclusion rightly treats it as unknown.
+    This narrow exact-species/long-choice source rule does not broaden
+    the upper bound, change the master evidence or conflate hairs on
+    the flowering axis with true ligule hairs or awns. */
+ if(s.id==="eriochloa-sericea"&&selectedRefinementStates("ligule_length").includes("long")){
+   const ligule=refinementEvidence(s,"ligule_length");
+   if(ligule?.length_mm?.[0]===null&&ligule.length_mm[1]===1&&
+      ligule.states?.includes("tiny")&&
+      ligule.source?.includes("Hagenbuch & Lemke")&&
+      ligule.pdf_printed_page===50){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Ciliate ligule to 1 mm, with a minute membranous base",
+       source:"Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p.50; Gould (1975), Eriochloa sericea p.433 (ligule unreported)",
+       source_url:"https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+       note:"Texas cupgrass has a true ligule no longer than about 1 mm by the regional exact-species vegetative source. A correctly examined true ligule longer than 8 mm is incompatible. The photographed Gould p.433 gives other morphology but does not itself describe the ligule. The tiny membranous base can be hair-ciliate and should not be mistaken for an 8+ mm flap.",
+       policy:"EXACT_ERIOCHLOA_MAX_1MM_LIGULE_VS_LONG"
+     });
+   }
+ }
  /* Lindheimer's muhly 2026-11-18 field pilot: the owner's Gould
     (1975) p.127 Koeleria gerardii account (now Rostraria cristata)
     gives a ligule ABOUT 1 mm long. Independent exact-species NSW/Vic
