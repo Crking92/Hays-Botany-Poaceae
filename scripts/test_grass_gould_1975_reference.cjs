@@ -600,6 +600,41 @@ assert(source.additional_species_treatments.length>=31,'Gould source records une
 }
 console.log("PASS: Gould p261 Lindheimer blade hairs, dimensions, flora provenance and unknown veins recorded");
 
+// Gould p.127 historical Koeleria treatment is accepted Rostraria cristata.
+// Sphenopholis genus follows lower on the PAGE but is NOT this taxon's
+// floral description or key. Preserve historical anther anomaly as HOLD.
+{
+ const rows=source.additional_species_treatments.filter(x=>x.species_id==="rostraria-cristata");
+ assert.equal(rows.length,1,"Rostraria Gould intake duplicated");
+ const row=rows[0];
+ assert.deepEqual(row.printed_pages,[127]);
+ assert.equal(row.taxon,"Koeleria gerardii (Vill.) Shinners");
+ assert.equal(row.accepted_current_taxon,"Rostraria cristata (L.) Tzvelev");
+ assert.deepEqual(row.synonyms_as_printed,[
+  "Koeleria gerardii (Vill.) Shinners","Koeleria phleoides (Vill.) Pers."
+ ]);
+ assert.equal(row.common_name_as_printed,"ANNUAL KOELERIA");
+ assert.equal(row.intake_batch,"20261118");
+ assert.equal(row.observations.length,9);
+ const byChar=new Map(row.observations.map(x=>[x.character,x]));
+ assert.deepEqual(byChar.get("panicle").length_cm_mostly,[2,7]);
+ assert.deepEqual(byChar.get("spikelets_florets").florets_per_spikelet,[4,6]);
+ assert.deepEqual(byChar.get("ligule_blade").blade_width_mm,[1,5]);
+ assert.equal(byChar.get("glumes_lemmas_awns").lemma_awn_max_mm,2);
+ assert.deepEqual(byChar.get("anthers_chromosome").anther_length_mm_as_printed,[5,8]);
+ assert.equal(byChar.get("anthers_chromosome").anther_measurement_status,
+  "HOLD_IMPLAUSIBLE_RELATIVE_TO_SPIKELET_VERIFY_SOURCE");
+ assert(row.cautions.some(x=>x.includes("Sphenopholis")&&x.includes("NOT")));
+ const candidate=read("hays-candidates.json").candidates.find(x=>x.id==="rostraria-cristata");
+ assert(candidate,"Rostraria research candidate missing");
+ assert(candidate.aliases.some(x=>x.includes("Koeleria gerardii")));
+ assert(candidate.aliases.some(x=>x.includes("Koeleria phleoides")));
+ assert(candidate.source_refs.some(x=>x.includes("printed p.127")));
+ assert.equal(candidate.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
+ assert(row.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
+}
+console.log("PASS: Gould p127 old Koeleria names mapped to Rostraria, Sphenopholis separated, anther held");
+
 // Texas grama Gould pp.342–343: preserve printed unit conflict and proper adjacent account boundary.
 const texasGramaGould342=source.additional_species_treatments.find(x=>x.species_id==="bouteloua-rigidiseta");
 const texasGramaCard342=read("species-c1.json").find(x=>x.id==="bouteloua-rigidiseta");
