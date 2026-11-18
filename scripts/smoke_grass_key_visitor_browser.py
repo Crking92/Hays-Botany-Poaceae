@@ -269,7 +269,7 @@ def check_view(browser, name, width, height):
     # positions. The redundant tuft arrow is hidden on the simple option card.
     # Historical 8-photo / 14-marker provenance stays in the original manifest.
     for q_index, label, short_labels in [
-        (0, "Many little hanging side branches", ["Main flower axis", "Side raceme"]),
+        (0, "Dangling oat-like branches along a long stalk", ["Main flower axis", "Side raceme"]),
         (2, "Mostly a fringe of hairs", ["Hair-fringe ligule", "Leaf sheath"]),
         (3, "Separate bristles under spikelets", ["Bristle", "Stigmas (not bristles)"])
     ]:
