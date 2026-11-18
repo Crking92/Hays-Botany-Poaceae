@@ -364,7 +364,9 @@ const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
 assert.equal(canterae.taxonomy.original_corrected_spelling,"Chloris canterae Arechav.");
-assert.equal(canterae.printed_page,"NOT_VISIBLE_IN_USER_PHOTO");
+assert.equal(canterae.printed_page,328);
+assert.equal(canterae.original_unconfirmed_page_status,"NOT_VISIBLE_IN_USER_PHOTO");
+assert.equal(canterae.current_verified_printed_page,328);
 assert(canterae.adjacent_page_material.some(x=>x.taxon==="Chloris ciliata"&&x.description.includes("NOT")));
 const co=new Map(canterae.observations.map(x=>[x.character,x]));
 assert.equal(co.get("ligule").hair_length_mm_max,7);
@@ -555,3 +557,4 @@ assert.equal(gamagrass622.observations.find(x=>x.character==='female_glume_textu
 assert.equal(gamagrass622.adjacent_account_boundary.taxon,'Zea mays L.');
 assert.equal(gamagrass622.learner_diagnostic_checks.length,2);
 assert(source.additional_species_treatments.length>=31,'Gould source records unexpectedly lost');
+

@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -919,6 +919,8 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ const p=s.exact_canter_glume_hair_absence;
+ if(s.id==="stapfochloa-canterae"&&p?.schema==="EXACT_CANTER_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===328&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Glumes hairless except rough midnerve",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_CANTER_GLUME_HAIR_ABSENCE"});
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
@@ -950,6 +952,7 @@ function verifiedAdvancedConflict(s){
    });
    if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(observed.some(v=>!["one","two","several"].includes(v)))continue; // sterile details are not numeric counts
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||
       !/exact/i.test(evidence.source||"")||
@@ -3131,6 +3134,13 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyCanterWindmillGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence;
+ if(pack.taxon_as_printed!=="Chloris canterai"||p?.schema!=="EXACT_CANTER_GLUME_HAIR_ABSENCE_V1"||p.id!=="stapfochloa-canterae"||p.printed_page!==328||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.note||pack.evidence?.some(r=>r.character==="ligule_length")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid Canter source/name/organ scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CANTER_WINDMILL_SUPPLEMENT_V1",id:"stapfochloa-canterae",scientific:"Stapfochloa canterae",page:328});
+ const s=state.species.find(s=>s.id===p.id);s.exact_canter_glume_hair_absence=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.328, Chloris canterai: long ligule CILIA to7 mm, not membrane height. Lower fertile awn2.4–5.5 mm and lowest sterile awn1.5–3.5 mm are distinct. Outer glumes hairless except rough midnerve; inner fertile keel densely ciliate. Fig173 above is C.ciliata, not this species.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3861,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-canter-windmill-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Canter windmill Gould supplement unavailable");
+ applyCanterWindmillGouldSupplement(await response.json());
+}catch(err){console.warn("Canter windmill Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3964,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
