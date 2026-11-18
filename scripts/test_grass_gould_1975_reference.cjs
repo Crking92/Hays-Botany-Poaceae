@@ -555,3 +555,20 @@ assert.equal(gamagrass622.observations.find(x=>x.character==='female_glume_textu
 assert.equal(gamagrass622.adjacent_account_boundary.taxon,'Zea mays L.');
 assert.equal(gamagrass622.learner_diagnostic_checks.length,2);
 assert(source.additional_species_treatments.length>=31,'Gould source records unexpectedly lost');
+
+// Texas grama Gould pp.342–343: preserve printed unit conflict and proper adjacent account boundary.
+const texasGramaGould342=source.additional_species_treatments.find(x=>x.species_id==="bouteloua-rigidiseta");
+const texasGramaCard342=read("species-c1.json").find(x=>x.id==="bouteloua-rigidiseta");
+assert.deepEqual(texasGramaGould342.printed_pages,[342,343]);
+assert.equal(texasGramaGould342.observations.find(x=>x.character==="habit_culms").rhizomes,"NOT_EXPLICITLY_ADDRESSED_ON_PP342_343");
+assert.deepEqual(texasGramaGould342.observations.find(x=>x.character==="leaf_blades").width_mm,[1,2]);
+assert.equal(texasGramaGould342.observations.find(x=>x.character==="ligule").states[0],"hair_fringe");
+assert.equal(texasGramaGould342.observations.find(x=>x.character==="branch_length_printed_unit_conflict").status,"INTERNAL_SOURCE_UNIT_CONFLICT_HOLD_NO_NUMERIC_BRANCH_SCORE");
+assert.deepEqual(texasGramaGould342.observations.find(x=>x.character==="branch_rachis").length_mm,[4,7]);
+assert.deepEqual(texasGramaGould342.observations.find(x=>x.character==="reduced_upper_floret").awn_length_mm,[5,10]);
+assert.equal(texasGramaGould342.source_boundary_holds[0].taxon,"Bouteloua aristidoides");
+assert(texasGramaCard342.character_evidence.gould_1975_pages_342_343);
+assert.equal(texasGramaCard342.photos.length,3);
+assert(texasGramaCard342.traits.head.includes("short_side_racemes"));
+assert(texasGramaCard342.traits.habit.includes("tuft"));
+assert(texasGramaCard342.traits.ligule.includes("hairs"));
