@@ -743,6 +743,70 @@ console.log("PASS: exact Rostraria 1-mm ligule excludes only >8 mm, without chan
 }
 console.log("PASS: Gould pine p265 overlap, shared 2-mm endpoint, metcalfei taxonomy hold and no false exclusion");
 
+// Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
+// H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
+// state the ligule length. The neighboring Panicum genus starts lower
+// on p.433; preserve source and anatomical scopes. Execute actual
+// advanced source scorer rather than assuming saved Gould text scores.
+{
+ const rows=source.additional_species_treatments.filter(x=>x.species_id==="eriochloa-sericea");
+ assert.equal(rows.length,1,"Duplicate Gould Eriochloa sericea p.433 intake");
+ const row=rows[0];
+ assert.deepEqual(row.printed_pages,[433]);
+ assert.equal(row.printed_figure,232);
+ assert.equal(row.common_name_as_printed,"TEXAS CUPGRASS");
+ assert.equal(row.intake_batch,"20261118");
+ const get=k=>row.observations.find(x=>x.character===k);
+ assert.deepEqual(get("growth").height_cm,[50,100]);
+ assert.deepEqual(get("leaf_blades").width_mm,[2,3]);
+ assert.deepEqual(get("flowering_branches").branch_count,[4,10]);
+ assert.deepEqual(get("flowering_branches").branch_length_cm,[1.5,3]);
+ assert.deepEqual(get("inflorescence_axis_hairs").hair_length_mm,[2,4]);
+ assert.deepEqual(get("spikelet_floral").spikelet_length_mm,[3.6,4.2]);
+ assert.equal(get("chromosome").chromosome_2n,54);
+ assert.equal(get("true_ligule").source_separation,"GOULD_UNREPORTED_HAGENBUCH_LEMKE_VERIFIED_INDEPENDENT_SOURCE");
+ assert(row.cautions.some(x=>x.includes("Panicum")&&x.includes("do not belong")));
+ assert(row.cautions.some(x=>x.includes("not described by Gould")||x.includes("No ligule length is described by Gould")));
+ const cupgrass=read("species-d2.json").find(x=>x.id==="eriochloa-sericea");
+ assert(cupgrass);
+ assert.equal(cupgrass.character_evidence.gould_1975_p433.status,
+  "EXACT_OWNER_PHOTOGRAPHED_PRIMARY_SPECIES_TREATMENT_NOT_SPECIMEN_VOUCHER");
+ assert.equal(cupgrass.photos.length,4,"Preserve prior cupgrass gallery");
+ const master=read("optional-refinement-evidence.json");
+ const original=master.evidence.find(x=>x.id===cupgrass.id&&x.character==="ligule_length");
+ const lindheimer=master.evidence.find(x=>x.id==="muhlenbergia-lindheimeri"&&x.character==="ligule_length");
+ assert(original&&lindheimer);
+ assert.deepEqual(original.length_mm,[null,1]);
+ assert.deepEqual(original.states,["tiny"]);
+ assert.equal(original.pdf_printed_page,50);
+ assert(original.source.includes("Hagenbuch & Lemke"));
+ const vm=require("node:vm");
+ const state={
+   refineEvidenceMap:{[cupgrass.id]:[structuredClone(original)],
+     "muhlenbergia-lindheimeri":[structuredClone(lindheimer)]},
+   refineSelected:{},refineCharacters:master.characters,selected:{},refineEvidenceOptionKeys:new Set()
+ };
+ const helperStart=html.indexOf("function refinementEvidence(");
+ const helperEnd=html.indexOf("function refinementSection(",helperStart);
+ assert(helperStart>0&&helperEnd>helperStart);
+ const ctx=vm.createContext({state});
+ vm.runInContext(html.slice(helperStart,helperEnd),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+  state.refineSelected.ligule_length=choice;
+  const conflicts=vm.runInContext("verifiedAdvancedConflict({id:'eriochloa-sericea'})",ctx);
+  assert.equal(conflicts.length,choice==="long"?1:0,"Cupgrass ligule "+choice);
+  if(choice==="long")assert.equal(conflicts[0].policy,"EXACT_ERIOCHLOA_MAX_1MM_LIGULE_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'muhlenbergia-lindheimeri'}).length",ctx),0,
+  "Correct Lindheimer long ligule must stay eligible");
+ state.refineEvidenceMap[cupgrass.id][0].pdf_printed_page=null;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'eriochloa-sericea'}).length",ctx),0,
+  "Missing exact source provenance cannot prove cupgrass exclusion");
+ assert.deepEqual(original.length_mm,[null,1],"Historical numeric source interval retained");
+}
+console.log("PASS: Gould p433 Eriochloa anatomy and H&L p50 short ligule excludes only the >8 mm match");
+
 // Texas grama Gould pp.342–343: preserve printed unit conflict and proper adjacent account boundary.
 const texasGramaGould342=source.additional_species_treatments.find(x=>x.species_id==="bouteloua-rigidiseta");
 const texasGramaCard342=read("species-c1.json").find(x=>x.id==="bouteloua-rigidiseta");
