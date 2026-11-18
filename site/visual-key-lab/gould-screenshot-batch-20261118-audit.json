@@ -1,6 +1,6 @@
 {
   "schema": "HAYS_GOULD_BATCH_OPTION_AUDIT_V1",
-  "base_commit": "163434160cad6a3ddc2b89d363697613cbe4a221",
+  "base_commit": "60c15a262f7bc155093c516f2fbcd150abe1c8bf",
   "species": [
     {
       "id": "munroa-pulchella",
@@ -7245,6 +7245,4171 @@
           ],
           "gould_states": [
             "long"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        }
+      ]
+    },
+    {
+      "id": "sclerochloa-dura",
+      "scientific": "Sclerochloa dura",
+      "printed_pages": [
+        108,
+        109
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "compact"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "none_obvious"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "thread",
+            "narrow"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless",
+            "rough_surface"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "short"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [
+            "glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [
+            "basal_branching"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "several"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "glabrous",
+            "upper_glume_five_to_seven_veins"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "smooth"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [
+            "none"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        }
+      ]
+    },
+    {
+      "id": "catapodium-rigidum",
+      "scientific": "Catapodium rigidum",
+      "printed_pages": [
+        109
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "compact",
+            "long_narrow_panicle"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "none_obvious"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "thread",
+            "narrow"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "short",
+            "medium"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [
+            "lacerate"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [
+            "glabrous",
+            "hyaline_margins"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [
+            "culm_branches"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "several"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [
+            "short_pedicelled_spikelets"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "lower_one_vein",
+            "unequal_glumes_both_present"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "wrinkled"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [
+            "none"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        }
+      ]
+    },
+    {
+      "id": "poa-annua",
+      "scientific": "Poa annua",
+      "printed_pages": [
+        112,
+        113
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "airy",
+            "compact"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft",
+            "mat"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "none_obvious"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "thread",
+            "narrow"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "short",
+            "medium"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [
+            "geniculate"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "unequal_glumes_both_present",
+            "lower_one_vein"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "hairy",
+            "smooth"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [
+            "lemma"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        }
+      ]
+    },
+    {
+      "id": "poa-arachnifera",
+      "scientific": "Poa arachnifera",
+      "printed_pages": [
+        120
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "compact",
+            "long_narrow_panicle"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft",
+            "rhizome"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "none_obvious"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat",
+            "inrolled"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "thread",
+            "narrow"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "tiny"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [
+            "erect"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [
+            "slender_long"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "several",
+            "separate_male_female_spikelets"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [
+            "lemma",
+            "rachilla"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        }
+      ]
+    },
+    {
+      "id": "briza-minor",
+      "scientific": "Briza minor",
+      "printed_pages": [
+        122
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "airy"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "none_obvious"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "narrow",
+            "medium"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "medium",
+            "long"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [
+            "glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "several"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [
+            "pedicellate_spikelets"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "shiny_hard",
+            "wrinkled"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [
+            "none"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [
+            "whole_spikelet_glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        }
+      ]
+    },
+    {
+      "id": "sphenopholis-obtusata",
+      "scientific": "Sphenopholis obtusata",
+      "printed_pages": [
+        128
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "compact",
+            "long_narrow_panicle"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane",
+            "hairs"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "none_obvious"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "narrow",
+            "medium"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless",
+            "rough_surface",
+            "blade_hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "short"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [
+            "ciliate"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [
+            "glabrous",
+            "rough_surface",
+            "sometimes_hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "two",
+            "several"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [
+            "short_pedicelled_spikelets"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "smooth"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        }
+      ]
+    },
+    {
+      "id": "avena-fatua",
+      "scientific": "Avena fatua",
+      "printed_pages": [
+        132
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "branched_oat"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "long"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless",
+            "blade_hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "short",
+            "medium"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [
+            "glabrous",
+            "sometimes_hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [
+            "succulent_stems"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [
+            "glabrous_nodes"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "two",
+            "several"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [
+            "pedicellate_spikelets"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "glabrous",
+            "hyaline_glume_margins"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "floral_hair_position",
+          "all_options_reviewed": [
+            "below_spikelet",
+            "rachilla",
+            "lemma",
+            "partner_stalk",
+            "lower_sterile_lemma_hairs",
+            "upper_fertile_lemma_hairs",
+            "spikelet_callus_hairs",
+            "rachis_margin_cilia",
+            "pedicel_margin_cilia",
+            "whole_spikelet_glabrous",
+            "lower_fertile_upper_margin_tuft",
+            "rachis_node_hair_tuft",
+            "rachis_hairs_gold_long",
+            "rachis_pedicels_hispid",
+            "branch_attachment_hispid",
+            "rachilla_below_lower_rudiment_glabrous",
+            "rachis_pedicels_densely_villous"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        }
+      ]
+    },
+    {
+      "id": "limnodea-arkansana",
+      "scientific": "Limnodea arkansana",
+      "printed_pages": [
+        135,
+        136
+      ],
+      "core_review": [
+        {
+          "character": "head",
+          "existing": [
+            "long_narrow_panicle"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "habit",
+          "existing": [
+            "tuft"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "ligule",
+          "existing": [
+            "membrane"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        },
+        {
+          "character": "awns",
+          "existing": [
+            "long"
+          ],
+          "decision": "Existing core states retained; exact supplementary diagnosis displayed in lesson. No negative state inferred."
+        }
+      ],
+      "advanced_review": [
+        {
+          "character": "blade_shape",
+          "all_options_reviewed": [
+            "flat",
+            "folded",
+            "inrolled"
+          ],
+          "gould_states": [
+            "flat"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_width",
+          "all_options_reviewed": [
+            "thread",
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "gould_states": [
+            "narrow",
+            "medium"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "blade_tip",
+          "all_options_reviewed": [
+            "boat_tipped",
+            "hardened_tip",
+            "tiny_point"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_edge",
+          "all_options_reviewed": [
+            "serrate",
+            "whitish",
+            "long_margin_hairs",
+            "marginal_papilla_hairs",
+            "lower_margin_papilla_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_midnerve",
+          "all_options_reviewed": [
+            "pale_center"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_venation",
+          "all_options_reviewed": [
+            "median_lines",
+            "pale_midvein",
+            "prominent_midvein",
+            "raised_midvein",
+            "rough_midrib_below",
+            "rough_vein_lines",
+            "raised_ribs",
+            "midrib_gland_pits",
+            "midnerve_stout_spicules"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "blade_hairs",
+          "all_options_reviewed": [
+            "base_hairs",
+            "blade_hairy",
+            "hairless",
+            "rough_surface",
+            "papilla_based_hairs",
+            "lower_blade_gland_pits",
+            "both_blade_surfaces_villous"
+          ],
+          "gould_states": [
+            "hairless",
+            "blade_hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "leaf_base",
+          "all_options_reviewed": [
+            "pointed_auricles",
+            "clasping_auricles",
+            "compressed_sheath"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "ligule_length",
+          "all_options_reviewed": [
+            "tiny",
+            "short",
+            "medium",
+            "long"
+          ],
+          "gould_states": [
+            "short"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "ligule_edge",
+          "all_options_reviewed": [
+            "entire",
+            "erose",
+            "lacerate",
+            "ciliate",
+            "hair_fringe",
+            "truncate",
+            "stiff_fringed_membrane",
+            "long_cilia_to_7mm",
+            "absent_or_short_ciliate_crown",
+            "fringed_ligule_1_5_to_3mm_including_hairs"
+          ],
+          "gould_states": [
+            "lacerate"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "sheath_margins",
+          "all_options_reviewed": [
+            "open",
+            "overlapping",
+            "closed",
+            "upper_sheath_margin_long_hairs"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "sheath_surface",
+          "all_options_reviewed": [
+            "keeled_lower",
+            "lower_compressed",
+            "weak_keel",
+            "glanded",
+            "rough_surface",
+            "sometimes_hairy",
+            "hyaline_margins",
+            "glabrous",
+            "sheath_papilla_hairs",
+            "pilose_sheath_throat",
+            "sheath_keel_gland_pits",
+            "sheath_upper_nerve_gland_pits",
+            "spreading_villous_sheath",
+            "broad_rounded_smooth_sheath",
+            "collar_hair_ring",
+            "lower_sheaths_felty",
+            "sheath_pustulate_hispid"
+          ],
+          "gould_states": [
+            "sometimes_hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "culm_posture",
+          "all_options_reviewed": [
+            "erect",
+            "geniculate",
+            "decumbent",
+            "prostrate"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "surface_runners",
+          "all_options_reviewed": [
+            "stolon",
+            "wiry_stolon",
+            "rooted_nodes",
+            "hairy_runner_nodes",
+            "management_stolons"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "underground_stems",
+          "all_options_reviewed": [
+            "long_scaly",
+            "slender_long",
+            "short_knotty",
+            "short_rhizome",
+            "long_rhizome",
+            "short_scaly",
+            "thick_rhizome",
+            "scaly_rhizome",
+            "rhizome_present",
+            "creeping_rhizomes",
+            "management_rhizomes",
+            "rhizomes_not_developed",
+            "well_developed_rhizomes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "basal_crown",
+          "all_options_reviewed": [
+            "hard_knotty",
+            "stout_base",
+            "large_cane",
+            "knotty_base",
+            "firm_base",
+            "without_stolons_rhizomes",
+            "pubescent_basal_scale_leaves"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_special",
+          "all_options_reviewed": [
+            "node_gland_ring",
+            "basal_branching",
+            "prop_roots",
+            "giant_canes",
+            "culm_branches",
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "stem_nodes",
+          "all_options_reviewed": [
+            "hairy_nodes",
+            "backward_hairs",
+            "gland_ring",
+            "hairy_stolon_nodes",
+            "glabrous_nodes",
+            "glabrate_aging",
+            "long_white_node_beard",
+            "silvery_spreading_node_beard",
+            "node_beard_erect_1_to_3mm"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "all_options_reviewed": [
+            "one",
+            "two",
+            "several",
+            "lower_floret_staminate",
+            "lower_palea_broad_thin_long",
+            "lower_rudiment_three_hispid_awns",
+            "upper_rudiment_minute_scale",
+            "upper_sterile_inflated_inrolled",
+            "upper_sterile_awn_variable_short",
+            "two_to_three_upper_sterile",
+            "sterile_turbinate_flat_glabrous",
+            "lowest_sterile_awn_1_5_to_3_5mm",
+            "upper_steriles_smaller_enclosed",
+            "two_upper_sterile_florets",
+            "lower_sterile_truncate_glabrous_enclosing",
+            "lower_sterile_awn_0_9_to_1_4mm",
+            "upper_sterile_smaller_awnless"
+          ],
+          "gould_states": [
+            "one"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "spikelet_position",
+          "all_options_reviewed": [
+            "paired",
+            "reduced_partner",
+            "two_rows",
+            "one_side",
+            "erect_spike",
+            "sheath_enclosed_spike",
+            "terminal_triplet",
+            "terete_branch_base",
+            "terminal_medial_groove",
+            "short_pedicelled_spikelets",
+            "spreading_rebranched_panicle",
+            "digitate_erect_fingers",
+            "flattened_winged_rachis",
+            "pedicelled_similar_size",
+            "pedicellate_spikelets",
+            "axis_branch_bases_hairy",
+            "axis_branch_bases_glabrous",
+            "pedicels_branches_ungrooved",
+            "naked_pointed_branch_tip",
+            "solitary_subsessile_at_nodes",
+            "lower_sheath_cleistogamous_spikelets",
+            "branch_rachis_extended_point",
+            "close_radiating_whorls",
+            "dense_erect_villous_branch_cluster",
+            "digitate_erect_arcuate_branches",
+            "narrow_dense_appressed_branches",
+            "numerous_branches_straight_axis",
+            "broad_membranous_axis_center",
+            "few_digitate_flexuous_branches",
+            "panicle_branches_not_strongly_spreading",
+            "branch_axils_glabrous_no_pulvini"
+          ],
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+        },
+        {
+          "character": "glume_marks",
+          "all_options_reviewed": [
+            "one_vein",
+            "first_enclosing",
+            "lower_reduced",
+            "glabrous",
+            "upper_one_vein",
+            "lower_one_vein",
+            "central_glume_glabrous",
+            "central_glume_scabrous",
+            "bowed_nerveless_base",
+            "hardened_yellowish",
+            "strongly_veined",
+            "curved_apex",
+            "straight_glume_awn",
+            "sessile_glume_nerveless",
+            "sessile_glume_leathery_shiny",
+            "sessile_glume_margin_hairs",
+            "pedicelled_glume_veined",
+            "sessile_first_glume_unpitted",
+            "sessile_first_glume_scabrous_margins",
+            "sessile_first_glume_hispid_back",
+            "sessile_first_glume_acute_apex",
+            "pedicelled_first_glume_hairless",
+            "pedicelled_first_glume_hairy_lower",
+            "lower_glume_present_shorter",
+            "lower_glume_broad_base_acute",
+            "upper_glume_lower_lemma_subequal",
+            "upper_glume_longer_lower_lemma",
+            "unequal_lanceolate_glumes",
+            "smooth_glume_rough_midnerve",
+            "upper_glume_five_to_seven_veins",
+            "sessile_first_glume_concave",
+            "sessile_second_glume_single_keel",
+            "glume_keel_gland_pits",
+            "sessile_first_glume_winged_margins",
+            "sessile_first_glume_broad_obtuse",
+            "sessile_first_glume_papilla_hairs",
+            "first_glume_minute_straight_awn",
+            "second_glume_short_crooked_awn",
+            "lanceolate_awnless_glumes",
+            "first_glume_minutely_hispid",
+            "second_glume_midnerve_papilla_hairs",
+            "second_glume_minute_apical_awn",
+            "glume_glabrous_rough_midnerve",
+            "unequal_glumes_both_present",
+            "outer_sessile_glume_thin_rounded_apex",
+            "outer_sessile_glume_apical_hair_line",
+            "outer_sessile_glume_dorsal_side_hairs",
+            "outer_pedicelled_glume_tip_side_hairs",
+            "thin_narrow_attenuate_glumes",
+            "hyaline_glume_margins",
+            "upper_glume_silky_2_to_4mm",
+            "sessile_first_glume_sparse_hairs_below_middle",
+            "sessile_first_glume_pitted",
+            "upper_glume_1_6_to_2_7mm",
+            "lower_glume_five_veins",
+            "upper_glume_usually_nine_veins",
+            "lower_glume_half_to_three_quarters"
+          ],
+          "gould_states": [
+            "glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "lemma_texture",
+          "all_options_reviewed": [
+            "hairy",
+            "smooth",
+            "wrinkled",
+            "reddish_spotted",
+            "shiny_hard",
+            "sparsely_hairy",
+            "upper_lemma_smooth_shiny",
+            "upper_lemma_slight_beak",
+            "sterile_floret_smaller_similar",
+            "lemma_three_veins",
+            "lemma_compressed_keel",
+            "lower_lemma_thin_hyaline",
+            "upper_lemma_deep_two_lobes",
+            "lemma_keel_gland_pits",
+            "lemma_membranous_dull",
+            "rounded_back_notched_apex",
+            "lemma_margin_puberulence",
+            "fertile_lemma_puberulent_back",
+            "lower_fertile_appressed_keel_margin_hairs",
+            "lower_fertile_broad_elliptic_obtuse",
+            "lemma_attenuate_awnlike_tip",
+            "pistillate_lemma_silky_back_base",
+            "staminate_lemma_glabrous",
+            "lower_fertile_flat_ovate_ciliate_keel",
+            "lower_lemma_silky_margins",
+            "lower_lemma_glabrous_back",
+            "upper_lemma_ovate_lanceolate",
+            "lower_lemma_lateral_nerves_smooth",
+            "lower_fertile_flat_elliptic_ciliate_edges_keel",
+            "lower_lemma_usually_nine_veins",
+            "upper_lemma_smooth_shiny_colored"
+          ],
+          "gould_states": [
+            "smooth",
+            "wrinkled"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
+        },
+        {
+          "character": "true_lemma_awn",
+          "all_options_reviewed": [
+            "three",
+            "long",
+            "short",
+            "bent_twisted",
+            "none",
+            "straight_or_bent",
+            "fertile_awn_2_to_5mm",
+            "lower_sterile_awn_variable",
+            "apical_mucro",
+            "straight_slight_curve",
+            "deciduous_awn",
+            "fertile_awn_1_to_1_5mm",
+            "pedicelled_awnless",
+            "awn_between_upper_lemma_lobes",
+            "twisted_lower_awn",
+            "basal_pairs_awnless",
+            "short_crooked_lemma_awn",
+            "upper_lemma_short_awn_tip",
+            "fertile_awn_at_least_20mm",
+            "lower_fertile_awn_0_9_to_2_7mm"
+          ],
+          "gould_states": [
+            "long",
+            "bent_twisted"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },

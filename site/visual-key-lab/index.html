@@ -445,7 +445,7 @@ const qs=[
 ["spike","Wheat-like upright or nodding spike","A single axis with directly attached spikelets; awns can make it look densely bristly. Virginia wildrye typically stays stiffly upright; Canada wildrye often nods. Awns are not separate foxtail bristles.","elymus-virginicus",1],
 ["tangled_awns","Dark awns twisted into a tangle","A narrow flowering raceme whose long dark awns twist together at maturity (tanglehead example).","heteropogon-contortus",0],
 ["long_narrow_panicle","Long, narrow panicle","A relatively contracted and elongated head, not a broad cloud.","sporobolus-compositus",0],
-["golden_plume","Golden or bronze brushlike plume","Short, crowded ascending flowering branches form a dense brushlike head, often golden or bronze (Indiangrass-like). Compare with a long, narrow panicle; color alone is not a reliable identification.","sorghastrum-nutans",2],
+["golden_plume","Narrow upright plume","Crowded ascending branches form a dense golden or bronze plume; compare the broader, openly branched reed plume.","sorghastrum-nutans",2],
 ["pampas_plume","Very large silvery, feathery plume","A tall, dense, pale silvery-white to pinkish plume over broad arching basal leaves, usually many tens of centimeters long. Compare true Cortaderia spikelets against other ornamental plumes.","cortaderia-selloana",1],
 ["paired_spikes","Two spreading flower branches in a V","Usually two near-terminal racemes, sometimes a third below (knotgrass). Check the insertion points.","paspalum-distichum",1],
 ["mixed_gender","Upper male / lower female sections","One flowering branch with light upper male and thick lower female units.","tripsacum-dactyloides",1],
@@ -2595,7 +2595,7 @@ function renderLiguleSections(area,q,buildChoice){
  partA.append(learn);area.append(partA);
  const partB=node("section","ligule-part");
  partB.append(node("h4","","Part B — If there's a membrane, what is its edge like?"),
-  node("p","ligule-part-note","Optional: look at the membrane's rim, not how long or pointed its tip is. A long pointed ligule can still have a smooth edge; choose Lacerate only when you see actual deep splits, Erose for tiny notches, or Ciliate for edge hairs. Ligule length is a separate question. If the edge is unclear, skip it: an unstudied edge never eliminates a grass."));
+  node("p","ligule-part-note","Optional: choose the clearest edge feature you can see. A membrane can have both notches and edge hairs; if so, pick the more distinctive one for now. An unstudied edge never eliminates a grass."));
  const edge=state.refineCharacters.find(x=>x.id==="ligule_edge");
  const types={entire:["Entire (smooth)","Rim mostly unbroken; avoid torn older leaves."],
   erose:["Erose (tiny notches)","Small irregular nicks in the membrane edge."],
@@ -3527,7 +3527,7 @@ function applyGouldCharacterSupplement(pack,expected){
 
 
 function applyGouldScreenshotBatch(pack){
- if(pack.schema!=="HAYS_GOULD_SCREENSHOT_BATCH_20261118_V1"||pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||!Array.isArray(pack.species)||pack.species.length!==14)throw Error("Invalid Gould screenshot batch");
+ if(pack.schema!=="HAYS_GOULD_SCREENSHOT_BATCH_20261118_V1"||pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||!Array.isArray(pack.species)||pack.species.length!==22)throw Error("Invalid Gould screenshot batch");
  // Validate everything before changing hydrated options or evidence.
  const known=new Map(state.refineCharacters.map(g=>[g.id,new Set(g.options.map(o=>o.id))]));
  for(const a of pack.option_additions){if(!known.has(a.character)||!a.option?.id||!a.option.label||!a.option.detail||!a.subgroup)throw Error("Invalid batch option");known.get(a.character).add(a.option.id)}
@@ -4270,27 +4270,6 @@ try{
    organ_scope:"fresh expanded leaf blade",conditional:true
   };
   width.width_mm=[1,2];
- }
-}
-/* Lindheimer's muhly field pilot (2026-11-18): H&L 2015 p.54 documents
-   blades usually 2–3 mm, occasionally about 5 mm. The 5 mm endpoint is
-   shared by the approximate 2–5 and 5–10 mm beginner answer bands.
-   Credit BOTH options at that single boundary, not a general 6–10 mm
-   width claim. Keep the historical master evidence unchanged. */
-{
- const width=(state.refineEvidenceMap["muhlenbergia-lindheimeri"]||[]).find(e=>e.character==="blade_width");
- if(width?.states?.includes("narrow")&&Array.isArray(width.width_mm)&&
-    width.width_mm[0]===2&&width.width_mm[1]===5&&
-    width.source?.includes("Hagenbuch")){
-  width.states=[...new Set([...width.states,"medium"])];
-  width.additional_state_sources??={};
-  width.additional_state_sources.medium={
-   source:width.source,
-   source_url:width.source_url,
-   note:"Usually 2–3 mm, occasionally about 5 mm (Hagenbuch & Lemke 2015 p.54). The medium 5–10 mm option is compatible ONLY at the shared 5 mm endpoint, not as evidence of 6–10 mm blades.",
-   organ_scope:"fresh opened blade measured at its widest point",
-   conditional:true
-  };
  }
 }
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
