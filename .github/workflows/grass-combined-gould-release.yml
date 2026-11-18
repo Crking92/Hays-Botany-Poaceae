@@ -26,6 +26,8 @@ jobs:
           node-version: '22'
       - name: Test production hydration and every combined option
         run: node scripts/test_grass_combined_gould_release.cjs
+      - name: Test newly supplied Gould screenshot accounts
+        run: node scripts/test_grass_gould_screenshot_batch.cjs
       - name: Test all reviewed species independently
         run: |
           for test in scripts/test_{kleingrass_gould_character_mapping,chloris_virgata_gould,goosegrass_gould,big_bluestem_gould,stinkgrass_gould,dichanthium_gould,crowfootgrass_gould,green_sprangletop_gould,hairy_grama_gould,hooded_windmill_gould,silky_bluestem_gould,pampasgrass_gould,canter_windmill_gould,california_cottontop_gould,cane_bluestem_gould,southern_crabgrass_gould,fringed_chloris_gould,broomcorn_millet_gould}.cjs; do
@@ -39,4 +41,3 @@ jobs:
           node scripts/test_grass_gould_1975_reference.cjs
           node scripts/test_grass_glossary.cjs
           node scripts/test_grass_main_question_photo_arrows.cjs
-

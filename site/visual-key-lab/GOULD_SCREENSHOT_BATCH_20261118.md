@@ -1,0 +1,11 @@
+# Gould screenshot batch — November 18, 2026
+
+Fourteen owner-supplied species descriptions now enrich the existing Lab profiles and diagnostic lessons: fluffgrass; Texas wildrice; southern wildrice; rice cutgrass; inland sea oats; giant reed; common reed; melicgrass; Texas wintergrass; rescue brome; Texas brome; hairy woodland brome; downy brome; Japanese brome.
+
+The batch adds 137 organ-specific evidence rows (197 positive state assignments) and eight detailed choices. All four existing core question states and all media, source admissions, range labels and research-only profiles are preserved. No new hard exclusions are enabled. Every existing detail choice and suboption was reviewed for applicable source statements; silence remains unknown. Full audit: `gould-screenshot-batch-20261118-audit.json`.
+
+Gould accounts appear before older supplementary lesson checks. Explicit source conflict notices retain competing descriptions for southern wildrice sex order/awns, the Texas wildrice comparison, woodland brome lemma hairs/awn length and fluffgrass ligule tissue. Existing Diggs/Hagenbuch/FNA source records remain attached; this batch does not claim new direct rereads of all secondary treatments. Common reed's historical species account cannot identify North American lineages.
+
+Texas wildrice is directly confirmed on printed pp.48–49, southern wildrice on49; the earlier page45/50 collection leads were incorrect. Fluffgrass's crop has no footer, so its page remains unconfirmed. Historical Erioneuron pulchellum, Stipa leucotricha and Bromus unioloides source names are preserved. Miscanthus and fishpole bamboo have no newly supplied account and receive no invented Gould evidence. No book-page images are redistributed.
+
+Validation: production boot without warnings; 169 profiles /168 source-scored /one research-only; 24 detail groups /296 choices; all197 new state assignments match their own profiles; existing species records and core/media/admissions unchanged; all previous evidence states, source strings and notes retained; original source/archive and 169-choice regression checks pass. Combined KR regression remains one supported match and11 unresolved. Local browser verified the new wildrice choice and Gould lesson. No claim that source intake certifies a local specimen, photo identity, county nativity or complete two-book audit.

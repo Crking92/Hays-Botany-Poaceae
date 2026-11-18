@@ -3246,7 +3246,7 @@ if(s.gapEvidence?.length){
 const gouldPrimaryChecks=(s.id==="schizachyrium-scoparium"&&state.gouldSource?.source_intake?.taxon===s.scientific&&Array.isArray(state.gouldSource.learner_diagnostic_checks))?state.gouldSource.learner_diagnostic_checks:[];
 const gouldAdditional=state.gouldSource?.additional_species_treatments?.find(t=>t.species_id===s.id);
 const extraChecks=[...gouldPrimaryChecks,...(gouldAdditional?.learner_diagnostic_checks||[])];
-const displayedChecks=[...(s.diagnostic_checks||[]),...extraChecks];
+const displayedChecks=gouldAdditional?.intake_batch==="20261118"?[...extraChecks,...(s.diagnostic_checks||[]).map(c=>gouldAdditional.source_conflict_note?{...c,certainty:gouldAdditional.source_conflict_note+" Earlier-source record retained: "+(c.certainty||"")}:c)]:[...(s.diagnostic_checks||[]),...extraChecks];
 if(displayedChecks.length){
   const panel=node("section","detail-botany");
   panel.append(node("h3","","Look here next — diagnostic checks"),node("p","smallmuted","Look for these structures on your plant. Some details may not be visible in the photographs yet."));
@@ -3522,6 +3522,19 @@ function applyGouldCharacterSupplement(pack,expected){
  groups.get("ligule_edge").label="Ligule edge / outline";
  groups.get("blade_hairs").label="Leaf blade surface / hairs";
  groups.get("spikelet_position").label="Spikelet attachment / spike position";
+ state.refineCharacters=characters;state.refineEvidenceMap=records;
+}
+
+
+function applyGouldScreenshotBatch(pack){
+ if(pack.schema!=="HAYS_GOULD_SCREENSHOT_BATCH_20261118_V1"||pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||!Array.isArray(pack.species)||pack.species.length!==14)throw Error("Invalid Gould screenshot batch");
+ // Validate everything before changing hydrated options or evidence.
+ const known=new Map(state.refineCharacters.map(g=>[g.id,new Set(g.options.map(o=>o.id))]));
+ for(const a of pack.option_additions){if(!known.has(a.character)||!a.option?.id||!a.option.label||!a.option.detail||!a.subgroup)throw Error("Invalid batch option");known.get(a.character).add(a.option.id)}
+ const ids=new Set();for(const item of pack.species){const s=state.species.find(s=>s.id===item.id&&!s.trial);if(!s||s.scientific!==item.scientific||ids.has(item.id))throw Error("Invalid batch taxon");ids.add(item.id);const seen=new Set();for(const r of item.evidence){if(seen.has(r.character)||!known.has(r.character)||!r.note||!r.states.length||r.states.some(v=>!known.get(r.character).has(v)))throw Error("Invalid batch character");seen.add(r.character)}}
+ const characters=structuredClone(state.refineCharacters),records=structuredClone(state.refineEvidenceMap);
+ for(const a of pack.option_additions){const g=characters.find(g=>g.id===a.character);if(!g.options.some(o=>o.id===a.option.id)){g.options.push(a.option);g.multi_select=true;if(g.subgroups){let sub=g.subgroups.find(x=>x.label===a.subgroup);if(!sub){sub={label:a.subgroup,options:[]};g.subgroups.push(sub)}sub.options.push(a.option.id)}}}
+ for(const item of pack.species){const bucket=records[item.id]??=[];for(const r of item.evidence){const row={...r,id:item.id,scientific:item.scientific,source:pack.source+", "+item.taxon_as_printed+", printed "+(item.printed_pages.length?item.printed_pages.join("–"):"page not visible"),source_url:pack.source_url,pdf_printed_page:item.printed_pages[0]??null,source_status:item.printed_pages.length?"READY_PRIMARY":"PAGE_UNCONFIRMED",source_scope_caution:"Positive-only exact supplied account; retain sex, maturity, historical name and competing source scopes. No new hard exclusion, local voucher or media certification."};const prior=bucket.find(e=>e.character===r.character);if(prior){prior.states=[...new Set([...prior.states,...r.states])];prior.additional_state_sources??={};for(const v of r.states)prior.additional_state_sources[v]=structuredClone(row)}else bucket.push(row)}}
  state.refineCharacters=characters;state.refineEvidenceMap=records;
 }
 
@@ -4207,6 +4220,7 @@ for(const entry of reviewedGouldSupplements){
   apply(await response.json());state.reviewedGouldLoadStatus.push({file:entry.file,loaded:true});
  }catch(err){state.reviewedGouldLoadStatus.push({file:entry.file,loaded:false});console.warn("Reviewed Gould supplement held; earlier evidence preserved",entry.file,err)}
 }
+try{const response=await fetch("gould-screenshot-batch-20261118.json",{cache:"no-store"});if(!response.ok)throw Error("Gould batch unavailable");applyGouldScreenshotBatch(await response.json())}catch(err){console.warn("Gould screenshot batch held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -4323,4 +4337,3 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
-
