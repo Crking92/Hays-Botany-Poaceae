@@ -1742,7 +1742,25 @@ function choose(qid,choice){
    "Ruled out". Evidence-only mode may hide an unknown species, but must not
    promote that omission into a documented contradiction. Keep these cases in
    sync with the independent scorer test harnesses. */
+/* Field-pilot structural contradiction: these named flowerheads cannot be
+   Texas grama's MULTIPLE separate short wedge/bell-shaped BRISTLY branches.
+   Exact taxon / organ scope:
+   - Cortaderia selloana: huge 25–100 cm feathery PANICLE, Diggs 1999 p.1258;
+     NSW PlantNET exact C. selloana; existing 2026-11-16 final admission.
+   - Panicum miliaceum: open/contracted PANICLE with pedicelled spikelets,
+     Diggs 1999 p.1300 and FNA species account; focused admission 2026-11-16.
+   - Lolium × boucheanum: single two-ranked Lolium SPIKE by genus architecture
+     (Kew GrassBase Lolium, Flora Zambesiaca), under either named hybrid
+     parentage; taxon identity / Hays voucher is STILL RESEARCH-ONLY.
+   Apply ONLY when the distinct short grama-branch answer was actually selected.
+   Do not make any generic panicle, spike, awn, ligule, or measured-leaf
+   choices exclusive; preserve positive-only and unknown safeguards elsewhere.
+   Record source material remains unchanged; this is a cross-taxon field
+   architecture contrast, not proof of a specimen or hybrid parentage. */
 function coreChoiceStatus(s,key,val){
+ if(key==="head"&&val==="short_side_racemes"&&
+  !s.traits?.head?.includes(val)&&
+  ["cortaderia-selloana","panicum-miliaceum","lolium-x-boucheanum"].includes(s.id))return "conflict";
  // Two top-priority books omit an explicit rhizome yes/no for these species.
  // A preserved historical rhizome report is NOT a current source-confirmed match.
  if(key==="habit"&&val==="rhizome"&&["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id))
@@ -1760,6 +1778,9 @@ function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){
+ if(key==="head"&&val==="short_side_racemes"&&
+  !s.traits?.head?.includes(val)&&
+  ["cortaderia-selloana","panicum-miliaceum","lolium-x-boucheanum"].includes(s.id)){conflict++;continue;}
  if(key==="habit"&&val==="rhizome"&&["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id)){unknown++;continue}
  const vals=s.traits[key]||[];if(!vals.length)unknown++;else if(vals.includes(val))confirmed++;else if((key==="awns"&&["soft_involucre","short_single","bent_dorsal","many_feathery"].includes(val))||
        (key==="head"&&val==="pampas_plume")||(key==="habit"&&val==="woody_canes"))unknown++;else if(s.positiveOnlyCoreKeys?.includes(key))unknown++;else conflict++}
