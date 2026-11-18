@@ -6670,6 +6670,239 @@
         }
       ],
       "intake_batch": "20261118"
+    },
+    {
+      "taxon": "Muhlenbergia dubia Fourn. ex Hemsley",
+      "species_id": "muhlenbergia-dubia",
+      "common_name_as_printed": "PINE MUHLY",
+      "printed_pages": [
+        265
+      ],
+      "added_on": "2026-11-18",
+      "evidence_level": "AUTHORITATIVE_PUBLISHED_SPECIES_DESCRIPTION_NOT_LOCAL_VOUCHER",
+      "material": "Owner-supplied photographed Gould book page, morphology paraphrased; scan not republished",
+      "observations": [
+        {
+          "character": "habit_culms",
+          "source_statement": "Densely cespitose perennial; erect culms 30–100 cm, minutely puberulent to scaberulous below nodes.",
+          "height_cm": [
+            30,
+            100
+          ],
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "sheath",
+          "source_statement": "Sheaths rounded, glabrous or scaberulous.",
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "ligule",
+          "source_statement": "Ligules firmer below, membranous toward upper portion, 4–12 mm long; ligules of lowermost blades shorter.",
+          "length_mm": [
+            4,
+            12
+          ],
+          "status": "SOURCE_MEASURED_POSITIVE_ONLY"
+        },
+        {
+          "character": "blade",
+          "source_statement": "Blades elongated gray-green, 25–60 cm long, 1–2 mm wide, involute (rolled inward), scabrous (rough). Scabrous is NOT automatic proof of visible blade hairs.",
+          "length_cm": [
+            25,
+            60
+          ],
+          "width_mm": [
+            1,
+            2
+          ],
+          "blade_shape": "involute",
+          "surface": "scabrous",
+          "status": "SOURCE_MEASURED_POSITIVE_ONLY"
+        },
+        {
+          "character": "panicle",
+          "source_statement": "Dense narrow-contracted panicle 10–30 cm long, about 1 cm across, often interrupted toward base; branches mostly 1–2 cm, closely appressed or ascending.",
+          "length_cm": [
+            10,
+            30
+          ],
+          "width_cm_approx": 1,
+          "branch_length_cm_mostly": [
+            1,
+            2
+          ],
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "spikelet_glumes",
+          "source_statement": "Spikelets 4–5 mm; glumes obtuse, slightly rough, 2–3 mm.",
+          "spikelet_length_mm": [
+            4,
+            5
+          ],
+          "glume_length_mm": [
+            2,
+            3
+          ],
+          "status": "SOURCE_MEASURED_POSITIVE_ONLY"
+        },
+        {
+          "character": "lemma_awn_and_callus",
+          "source_statement": "Lemmas 4–5 mm, rough above, with a few short closely appressed hairs on the CALLUS; usually awnless or awn to 4 mm, rarely longer. Callus hairs are NOT leaf-blade hairs.",
+          "lemma_length_mm": [
+            4,
+            5
+          ],
+          "awn_length_mm_usually": [
+            0,
+            4
+          ],
+          "rare_longer_awn": true,
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "anther_chromosome",
+          "source_statement": "Anthers about 2 mm; chromosome number not reported.",
+          "anther_length_mm_approx": 2,
+          "chromosome_status": "NOT_REPORTED",
+          "status": "PUBLISHED_SOURCE"
+        },
+        {
+          "character": "historical_range_season",
+          "source_statement": "Gould records Texas Region 10, Guadalupe Mountains, higher-elevation rocky hills/canyons; Western Texas/New Mexico to northern Mexico; flowering September–November. This is NOT a Hays County locality or BONAP county confirmation.",
+          "flowering_months": [
+            "September",
+            "October",
+            "November"
+          ],
+          "status": "HISTORICAL_RANGE_NOT_COUNTY_VOUCHER"
+        },
+        {
+          "character": "historical_lookalike",
+          "source_statement": "Gould compares M. metcalfei as a distinct species in this treatment: purplish panicles; branches to 5 cm; glumes 1.5–2 mm; usually 5–10 mm lemma awns. These figures belong to M. metcalfei, not M. dubia.",
+          "status": "COMPARISON_OTHER_TAXON_ONLY"
+        }
+      ],
+      "cautions": [
+        "4–12 mm ligule overlaps Lindheimer's muhly's 8–15 mm and the selected >8 mm class: do NOT exclude pine muhly from that beginner answer.",
+        "Pine muhly has thin involute 1–2 mm blades, whereas Lindheimer's muhly typically has 2–3(–5) mm folded blades. Narrow 2–5 mm beginner answer overlaps pine at exactly 2 mm, and without an accurately measured opened blade or exclusive verified cross-taxon blade shape do NOT treat the user's visual field estimate of ~5 mm as a hard exclusion.",
+        "Scabrous blade describes roughness, not necessarily long detectable hairs; another source's adaxial hispidulous description is separate.",
+        "Printed p.265 also contains a separate numbered Muhlenbergia metcalfei treatment and opening of M. pauciflora. Do not attach their traits to M. dubia.",
+        "Gould cites a 1970 treatment synonymizing M. metcalfei with M. dubia, but current Kew POWO (2026) lists M. metcalfei as a synonym of M. rigida; preserve historical disagreement rather than synonymizing automatically.",
+        "No Hays County native-range certification or local voucher inferred; photographed source page not republished."
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Unroll and measure the blade before choosing width or shape",
+          "check": "Gould p.265 gives pine muhly blades 1–2 mm wide, rolled inward (involute), 25–60 cm long. The 2-mm endpoint overlaps the beginner 2–5 mm band; if the fully opened blade is genuinely 3–5 mm, that is incompatible with this account. Do not infer such a measurement from a visual guess.",
+          "compare": "Lindheimer's muhly is typically folded lengthwise and 2–3 mm, sometimes 5 mm. A V-fold and inward-curled margins are structurally different, but shapes can be difficult to see on dry or damaged blades.",
+          "certainty": "Exact owner-photographed Gould 1975 p.265; field specimen unmeasured",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, printed p.265",
+          "url": "https://archive.org/details/grassesoftexas0000goul"
+        },
+        {
+          "look": "Measure the actual inside collar membrane, not a sheath point",
+          "check": "Pine muhly true membranous ligule 4–12 mm, sometimes shorter on lowermost leaves. Overlaps Lindheimer 8–15 mm; the >8-mm field answer alone does NOT distinguish them.",
+          "compare": "Compare several mature leaves, true upper blade width and whole-panicle traits instead of making a ligule-only ID.",
+          "certainty": "Exact Gould 1975 p.265; FNA previously reported 4–10 mm and remains preserved as secondary range",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, printed p.265",
+          "url": "https://archive.org/details/grassesoftexas0000goul"
+        },
+        {
+          "look": "Compare the full narrow panicle and true lemma",
+          "check": "Panicle 10–30 cm, densely flowered, appressed/ascending branches mainly 1–2 cm, interrupted below; spikelets 4–5 mm, glumes 2–3 mm, lemmas 4–5 mm usually awnless or with short awn to ~4 mm (rarely longer). Few appressed hairs are on callus, not blade.",
+          "compare": "Gould's neighboring M. metcalfei has longer branches and commonly longer awns; modern Kew treats M. metcalfei as a synonym of M. rigida, not of M. dubia.",
+          "certainty": "Exact owner photographed Gould 1975 p.265; taxonomy conflict checked separately against POWO",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, printed p.265",
+          "url": "https://archive.org/details/grassesoftexas0000goul"
+        }
+      ],
+      "intake_batch": "20261118"
+    },
+    {
+      "taxon": "Muhlenbergia metcalfei M.E. Jones",
+      "species_id": "muhlenbergia-metcalfei",
+      "current_taxonomy": "Kew POWO 2026: synonym of Muhlenbergia rigida; Gould (1975) follows separate species account, cites Correll & Johnston (1970) synonymizing with M. dubia",
+      "current_taxonomy_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:164825-2",
+      "printed_pages": [
+        265
+      ],
+      "added_on": "2026-11-18",
+      "evidence_level": "AUTHORITATIVE_HISTORICAL_SPECIES_ACCOUNT_TAXONOMIC_SCOPE_CONFLICT_HOLD",
+      "material": "Separate owner-photographed Gould p.265 species treatment; not linked to pine muhly's active scored characters",
+      "observations": [
+        {
+          "character": "habit_and_culms",
+          "source_statement": "Dense tuft; culms 40–50 cm, puberulent below nodes.",
+          "height_cm": [
+            40,
+            50
+          ],
+          "status": "HISTORICAL_TAXON_SPECIFIC"
+        },
+        {
+          "character": "sheath_and_ligule",
+          "source_statement": "Rounded scaberulous sheaths; ligules firmer below and membranous toward apex, 4–15 mm, with shorter ligules lower on culms.",
+          "ligule_length_mm": [
+            4,
+            15
+          ],
+          "status": "HISTORICAL_TAXON_SPECIFIC"
+        },
+        {
+          "character": "panicle",
+          "source_statement": "Purplish, narrow-contracted, densely flowered, 20–40 cm long by about 2 cm wide; branches appressed or stiffly ascending, to 5 cm.",
+          "length_cm": [
+            20,
+            40
+          ],
+          "width_cm_approx": 2,
+          "branch_length_cm_max": 5,
+          "status": "HISTORICAL_TAXON_SPECIFIC"
+        },
+        {
+          "character": "spikelets_and_awns",
+          "source_statement": "Glumes 1.5–2 mm with rough obtuse tips. Lemmas 4–5 mm, rough toward tip, some appressed short hairs on callus; lemma awns 5–10 mm, rarely 3 mm; anthers about 2–2.2 mm; chromosome number not reported.",
+          "glume_length_mm": [
+            1.5,
+            2
+          ],
+          "lemma_length_mm": [
+            4,
+            5
+          ],
+          "awn_mm_mostly": [
+            5,
+            10
+          ],
+          "awn_mm_rare_min": 3,
+          "anther_mm": [
+            2,
+            2.2
+          ],
+          "chromosome_status": "NOT_REPORTED",
+          "status": "HISTORICAL_TAXON_SPECIFIC"
+        },
+        {
+          "character": "range_flowering",
+          "source_statement": "Gould Texas Region 10, Davis and Guadalupe Mountains rocky hillsides, type from Santa Rita Mountains of New Mexico, September–November flowers.",
+          "status": "HISTORICAL_RANGE_NOT_HAYS_LOCALITY"
+        },
+        {
+          "character": "taxonomy_note",
+          "source_statement": "Gould states Correll & Johnston (1970) regarded M. metcalfei as a synonym of M. dubia. That is HISTORICAL; Kew POWO currently assigns M. metcalfei to synonymy of M. rigida.",
+          "status": "MODERN_TAXON_CONFLICT_HOLD_DO_NOT_TRANSFER_TO_DUBIA"
+        }
+      ],
+      "cautions": [
+        "Never transfer these more purple 20–40 cm panicles, to-5 cm branches, 5–10 mm awns or glume range into the Gould M. dubia record.",
+        "Gould p.265's next partial M. pauciflora account also belongs to a different taxon.",
+        "Do not admit as a separate 170th scored Learner species or reinterpret M. rigida without taxonomic review.",
+        "Historical Gould/C&J synonym opinion is distinct from present POWO backbone."
+      ],
+      "learner_diagnostic_checks": [],
+      "intake_batch": "20261118"
     }
   ],
   "additional_source_image_notes": [
