@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -919,6 +919,8 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ const p=s.exact_cane_fertile_awn_minimum;
+ if(s.id==="bothriochloa-barbinodis"&&p?.schema==="EXACT_CANE_FERTILE_AWN_MINIMUM_V1"&&p.minimum_mm===20&&p.printed_page===600&&selectedRefinementStates("true_lemma_awn").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"true_lemma_awn",label:"Measured fertile lemma awn",reported:"20–30 mm or longer (minimum20mm)",source:p.source,source_url:p.source_url,note:p.note+" "+p.confirmation,policy:"EXACT_CANE_FERTILE_AWN_MINIMUM"});
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
@@ -3131,6 +3133,14 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyCaneBluestemGouldSupplement(pack){
+ const p=pack.exact_fertile_awn_minimum;
+ if(pack.taxon_as_printed!=="Bothriochloa barbinodis"||pack.source_pages?.join(",")!=="600,601"||p?.schema!=="EXACT_CANE_FERTILE_AWN_MINIMUM_V1"||p.id!=="bothriochloa-barbinodis"||p.printed_page!==600||p.minimum_mm!==20||p.maximum_mm!==null||p.conflicting_states?.join(",")!=="fertile_awn_1_to_1_5mm,fertile_awn_2_to_5mm"||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||!p.confirmation?.includes("1247")||!p.note||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid cane source/awn/variety scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CANE_BLUESTEM_SUPPLEMENT_V1",id:"bothriochloa-barbinodis",scientific:"Bothriochloa barbinodis",page:600,pages:[600,601]});
+ const s=state.species.find(s=>s.id===p.id);s.exact_cane_fertile_awn_minimum=structuredClone(p);
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould pp.600–601: cane fertile lemma awn20–30mm OR LONGER, bent and twisted; not the hairs or spikelet body. Broad B.barbinodis retains BOTH unpitted typical variety and pitted var.perforata. Node hairs mostly1–3mm, occasionally longer, typically erect; Diggs1247 says spreading and remains recorded.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3861,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-cane-bluestem-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Cane bluestem Gould supplement unavailable");
+ applyCaneBluestemGouldSupplement(await response.json());
+}catch(err){console.warn("Cane bluestem Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3964,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
