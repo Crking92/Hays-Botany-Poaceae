@@ -1,0 +1,30 @@
+name: Southern crabgrass Gould comparison
+on:
+  pull_request:
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/gould-southern-crabgrass-character-supplement.json'
+      - 'scripts/test_southern_crabgrass_gould.cjs'
+      - '.github/workflows/southern-crabgrass-gould.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'site/visual-key-lab/index.html'
+      - 'site/visual-key-lab/gould-southern-crabgrass-character-supplement.json'
+      - 'scripts/test_southern_crabgrass_gould.cjs'
+      - '.github/workflows/southern-crabgrass-gould.yml'
+permissions:
+  contents: read
+jobs:
+  southern-crabgrass-comparison:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test_southern_crabgrass_gould.cjs
+      - run: node scripts/test_grass_169_all_option_functionality.cjs
+      - run: node scripts/test_grass_three_way_evidence_key.cjs
+      - run: node scripts/test_kr_gould_character_mapping.cjs
+
