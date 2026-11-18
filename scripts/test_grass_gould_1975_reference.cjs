@@ -629,7 +629,7 @@ assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
  assert.deepEqual(proso.core_traits.head,["compact","airy"]);
  assert.equal(hybrid.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
  assert(/TAXONOMIC CONCEPT HOLD/.test(hybrid.unresolved),"Hybrid taxonomic hold must remain");
- const begin=html.indexOf("const texasGramaShortBranchContrasts=");
+ const begin=html.indexOf("function coreChoiceStatus(s,key,val){");
  const finish=html.indexOf("// Progressive key display:",begin);
  assert(begin>=0&&finish>begin,"Exact-source contrast runtime not found");
  const make=new Function("state","refinementMatches",
