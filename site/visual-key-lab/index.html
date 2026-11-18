@@ -942,6 +942,30 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Gould 1975 Panicum hians (=Steinchisma hians), printed p.458
+    and continuation, reports a fringed true ligule about 0.5 mm.
+    Independent H&L 2015 p.65 reports an upper limit of 0.5 mm.
+    Apply ONLY to a verified true ligule >8 mm, not other blade or
+    ligule-type choices. Both species-specific records must exist. */
+ if(s.id==="steinchisma-hians"&&selectedRefinementStates("ligule_length").includes("long")){
+   const gould=state.gouldSource?.additional_species_treatments?.find(x=>
+     x.species_id==="steinchisma-hians"&&x.printed_page===458&&
+     x.taxon_as_printed?.startsWith("Panicum hians")&&
+     x.observations?.some(o=>o.character==="ligule"&&
+       o.height_mm_approx===0.5&&o.structure==="fringed scale"));
+   const hill=state.candidateManifest?.find(x=>x.id==="steinchisma-hians")
+     ?.details?.find(o=>o.part==="ligule"&&
+       o.source?.includes("Hagenbuch & Lemke 2015")&&
+       o.description?.includes("no more than 0.5 mm"));
+   if(gould&&hill)conflicts.push({
+     character:"ligule_length",label:"True ligule length",
+     reported:"Fringed scale approximately 0.5 mm, with minute membranous base",
+     source:"Gould (1975), The Grasses of Texas, Panicum hians p.458 and continuation; Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p.65",
+     source_url:"https://archive.org/details/grassesoftexas0000goul",
+     note:"Gaping panicum's approximately 0.5-mm true ligule contradicts a measured true membrane >8 mm. Inspect the inside collar with a hand lens; do not mistake cilia, pointed sheath tissue, or the leaf blade for a long ligule.",
+     policy:"EXACT_STEINCHISMA_TINY_LIGULE_VS_LONG"
+   });
+ }
  /* Texas cupgrass field follow-up 2026-11-18: Gould 1975 p.433
     describes Eriochloa sericea but does NOT report a ligule length.
     Independent vegetative source H&L (2015), exact species p.50,

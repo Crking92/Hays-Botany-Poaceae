@@ -743,6 +743,44 @@ console.log("PASS: exact Rostraria 1-mm ligule excludes only >8 mm, without chan
 }
 console.log("PASS: Gould pine p265 overlap, shared 2-mm endpoint, metcalfei taxonomy hold and no false exclusion");
 
+// Gaping panicum exact-source test: Gould photographed p.458 and
+// species continuation, independently corroborated by H&L p.65.
+{
+ const hians=source.additional_species_treatments.filter(x=>x.species_id==="steinchisma-hians");
+ assert.equal(hians.length,1,"Do not duplicate existing Gould gaping panicum intake");
+ assert.equal(hians[0].printed_page,458);
+ assert(hians[0].taxon_as_printed.startsWith("Panicum hians"));
+ assert.equal(hians[0].observations.find(x=>x.character==="ligule").height_mm_approx,0.5);
+ const candidate=read("hays-candidates.json").candidates.find(x=>x.id==="steinchisma-hians");
+ assert(candidate);
+ const regional=candidate.details.find(x=>x.part==="ligule");
+ assert(regional.source.includes("Hagenbuch & Lemke 2015"));
+ assert(regional.description.includes("no more than 0.5 mm"));
+ const vm=require("node:vm");
+ const state={gouldSource:source,candidateManifest:[candidate],refineEvidenceMap:{},
+   refineCharacters:[],refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const start=html.indexOf("function refinementEvidence(");
+ const finish=html.indexOf("function refinementSection(",start);
+ assert(start>0&&finish>start);
+ const ctx=vm.createContext({state});
+ vm.runInContext(html.slice(start,finish),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+  state.refineSelected.ligule_length=choice;
+  const conflicts=vm.runInContext("verifiedAdvancedConflict({id:'steinchisma-hians'})",ctx);
+  assert.equal(conflicts.length,choice==="long"?1:0,"Steinchisma ligule contrast "+choice);
+  if(choice==="long")assert.equal(conflicts[0].policy,"EXACT_STEINCHISMA_TINY_LIGULE_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ state.candidateManifest=[];
+ assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'steinchisma-hians'}).length",ctx),0,
+  "Missing regional corroboration cannot exclude");
+ state.candidateManifest=[candidate];
+ state.gouldSource={additional_species_treatments:[]};
+ assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'steinchisma-hians'}).length",ctx),0,
+  "Missing photographed Gould p458 cannot exclude");
+}
+console.log("PASS: Steinchisma 0.5-mm true ligule excludes long-only with preserved source provenance");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
