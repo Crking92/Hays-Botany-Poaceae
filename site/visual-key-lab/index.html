@@ -61,6 +61,21 @@ html[data-theme="dark"] .progressive-status,html[data-theme="dark"] .unresolved-
 dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-height:88vh;overflow:auto;box-shadow:0 25px 70px rgba(13,43,28,.32);padding:0;color:var(--ink)}dialog::backdrop{background:rgba(18,35,25,.6)}.detail-head{padding:22px 22px 5px;display:flex;justify-content:space-between;gap:10px}.detail-head h2{font-family:Georgia,serif;font-size:1.85rem;margin:4px 0 0}.close{border-radius:20px;background:#ecf2eb;border:0;width:38px;height:38px;font-size:1.25rem}.detail-grid{padding:16px 22px 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.detail-grid .photo-frame{aspect-ratio:4/3;border-radius:10px}.detail-grid .photo-frame img{object-fit:contain;background:var(--pale)}.detail-copy{padding:0 22px 24px;font-size:.95rem}.detail-copy p{color:#42594b}.mini-credit{font-size:.7rem;color:#6d8271;margin:4px 0 0}.detail-botany{margin:18px 0 20px;padding:15px;border:1px solid #dbe5da;border-radius:13px;background:#f8faf6}.detail-botany h3{margin:0 0 6px;font-family:Georgia,serif;font-size:1.2rem}.diagnostic-check{border-top:1px solid #dce6da;margin-top:12px;padding-top:12px}.diagnostic-check h4{margin:0 0 5px;font-size:.99rem;color:#264e38}.diagnostic-check p{margin:5px 0;font-size:.89rem}.diagnostic-check .check-compare{font-weight:650;color:#315f49}.diagnostic-check .check-status{font-size:.78rem;color:#7b5927}.diagnostic-check a{display:inline-block;margin-top:5px;overflow-wrap:anywhere}.linkbutton{display:inline-block;background:#1b5b40;color:white;text-decoration:none;border-radius:9px;padding:10px 15px;font-weight:700;font-size:.87rem}.linkbutton:hover{background:#247853}
 @media(min-width:1040px){.answer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:830px){.workspace{grid-template-columns:1fr}.results{position:static;max-height:none}.results-list{max-height:480px}.hero{grid-template-columns:1fr}.hero-stamp{justify-self:start;padding:9px 17px}.hero-stamp b{display:inline;font-size:1.45rem;margin-right:8px}.results .result{grid-template-columns:95px 1fr}}@media(max-width:480px){.wrap{width:calc(100% - 24px)}.sitebar{padding:13px}.sitebar a{font-size:.75rem}.hero{padding-top:24px}.panel-head{padding:17px 15px 8px}.steps{padding:12px}.question{padding:14px}.answer-grid{gap:9px}.answer-body{padding:9px 10px 11px}.answer-title{font-size:.85rem}.answer-note{font-size:.76rem}.photo-credit{font-size:.63rem}.detail-grid{grid-template-columns:1fr}.question-actions{flex-wrap:wrap}}
 
+/* Optional photo comparisons sit outside answer buttons, so opening examples
+   never chooses a trait or changes the candidate list. */
+.head-choice-wrap{min-width:0;display:flex;flex-direction:column}
+.head-choice-wrap>.answer{width:100%;flex:1}
+.head-extra-examples{border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;background:var(--white);padding:8px 11px}
+.head-extra-examples>summary{cursor:pointer;color:var(--forest2);font-size:.8rem;font-weight:750;list-style-position:inside}
+.head-extra-examples>summary:focus-visible{outline:3px solid #dea94e;outline-offset:3px}
+.head-extra-intro{font-size:.78rem;color:var(--muted);line-height:1.5;margin:10px 0}
+.head-extra-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:9px 0}
+.head-extra-item{margin:0;min-width:0}
+.head-extra-item img{width:100%;height:145px;object-fit:contain;background:var(--pale);border-radius:8px}
+.head-extra-item figcaption{display:grid;gap:3px;font-size:.73rem;line-height:1.35;overflow-wrap:anywhere}
+.head-extra-item figcaption span,.head-extra-item figcaption small{color:var(--muted)}
+html[data-theme="dark"] .head-extra-examples{background:#1a2a21}
+html[data-theme="dark"] .head-extra-examples>summary{color:#b9e5c7}
 /* Flowerhead line drawings supplement, never replace, credited real-world photographs. */
 .head-jumps .head-jump{display:inline-flex;align-items:center;gap:7px;padding:3px 12px 3px 5px;min-height:48px;text-align:left;line-height:1.2}
 .head-jump .head-shape{width:45px;height:44px;flex:0 0 45px}
@@ -2604,6 +2619,60 @@ function renderQuestion(){
    state.question=0;
  }
 const q=qs[state.question],area=$("question");area.replaceChildren(node("h3","",q.title),node("p","help",q.hint));const precision=node("details","field-precision");precision.append(node("summary","","Field tip: where to look"),node("p","",precisionNotes[q.id]));area.append(precision);
+/* Beginner-only flowerhead example galleries. The specimen-photo library is
+   already published; these examples do not add or change trait evidence. */
+function flowerheadExampleGallery(key,title,refId,primaryPhoto){
+ const wrap=node("details","head-extra-examples");
+ const summary=node("summary","","See more flowerhead examples");
+ wrap.append(summary);
+ const intro=node("p","head-extra-intro","Compare the branching and overall outline, not just the amount of fluff. Different species and growth stages can look similar. Photos are examples, not proof of an identification.");
+ wrap.append(intro);
+ const candidates=[];
+ const seen=new Set();
+ function add(spec,p,primary=false){
+  if(!spec||!p?.src||!p.creator||!p.license||!p.source_page||seen.has(p.src))return;
+  seen.add(p.src);candidates.push({spec,p,primary});
+ }
+ const first=byId(refId);
+ add(first,primaryPhoto,true);
+ // Prefer captions explicitly indicating flowering structures, rather than
+ // automatically treating every habit or foliage image as a head photograph.
+ const headWords=/flower|inflorescen|panicle|raceme|spike|seedhead|seed head|awn|bloom|fruiting head/i;
+ function addHeadPhotos(spec){
+  if(!Array.isArray(spec?.photos))return;
+  for(const photo of spec.photos){
+   if(candidates.length>=6)break;
+   if(headWords.test(photo.label||""))add(spec,photo);
+  }
+ }
+ addHeadPhotos(first);
+ // Compare another already-published matching species when its scored record
+ // positively supports this state. Never use a missing state as exclusion.
+ for(const spec of state.species){
+  if(candidates.length>=6)break;
+  if(spec.id===refId||spec.trial||!Array.isArray(spec.traits?.head)||!spec.traits.head.includes(key))continue;
+  addHeadPhotos(spec);
+ }
+ const gallery=node("div","head-extra-grid");
+ for(const {spec,p,primary} of candidates){
+  const fig=node("figure","head-extra-item");
+  const img=document.createElement("img");img.src=p.src;img.loading="lazy";img.decoding="async";
+  img.alt=(spec.common||spec.scientific||"Grass")+" — "+(p.label||"published reference photo");
+  img.addEventListener("error",()=>fig.remove());
+  const caption=node("figcaption","");
+  caption.append(node("strong","",spec.common||spec.scientific||"Grass"),
+    node("span","",primary?"Card reference view":(p.label||"Additional photographed view")),
+    node("small","","Photo: "+credit(p)));
+  const source=document.createElement("a");source.href=p.source_page;source.textContent="Photo source";
+  source.target="_blank";source.rel="noopener noreferrer";caption.append(source);
+  fig.append(img,caption);gallery.append(fig);
+ }
+ wrap.append(gallery);
+ if(candidates.length<2){
+  wrap.append(node("p","head-extra-intro","Only one clearly captioned example is available here. For more angles, open the example species in the Learner gallery; do not assume a foliage photo shows this flowerhead shape."));
+ }
+ return wrap;
+}
 function buildChoice([key,title,note,refId,i]){
 const specimen=byId(refId),p=selectedPhotoOverrides[q.id+":"+key]||pic(specimen,i);
 const b=node("button","answer");b.type="button";b.setAttribute("aria-pressed",String(state.selected[q.id]===key));
@@ -2623,7 +2692,13 @@ body.append(node("span","answer-note",note));
  // Full visible/not-proven limitations remain in the reviewed manifest,
  // rather than repeating technical review notes on every beginner card.
  body.append(node("span","photo-credit","Photo: "+(p?.label||specimen?.common||"Grass")+" · "+credit(p)));
-b.append(body);b.addEventListener("click",()=>choose(q.id,key));return b;
+b.append(body);b.addEventListener("click",()=>choose(q.id,key));
+if(q.id==="head"){
+ const container=node("div","head-choice-wrap");
+ container.append(b,flowerheadExampleGallery(key,title,refId,p));
+ return container;
+}
+return b;
 }
 // Use already-published, source-identified Learner photos for THREE distinct
 // reproductive stages of eastern gamagrass. These are photos of real organs,
