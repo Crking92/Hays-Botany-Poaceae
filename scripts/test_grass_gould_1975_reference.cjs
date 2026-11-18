@@ -558,6 +558,47 @@ assert.equal(gamagrass622.adjacent_account_boundary.taxon,'Zea mays L.');
 assert.equal(gamagrass622.learner_diagnostic_checks.length,2);
 assert(source.additional_species_treatments.length>=31,'Gould source records unexpectedly lost');
 
+// Lindheimer's muhly field specimen: Gould (1975) p.261 was supplied as a
+// photograph by the owner. Preserve the exact species organ distinction
+// (UPPER leaf-blade pubescence versus possible lemma puberulence), measurements
+// and venation UNKNOWN. This is a source test, not a specimen/rights clearance.
+{
+ const gould=source.additional_species_treatments.filter(x=>x.species_id==="muhlenbergia-lindheimeri");
+ assert.equal(gould.length,1,"Do not create duplicate Lindheimer Gould intakes");
+ const row=gould[0],card=read("species-c3.json").find(x=>x.id===row.species_id);
+ assert(card,"Lindheimer card not found");
+ assert.deepEqual(row.printed_pages,[261]);
+ assert.equal(row.printed_figure,137);
+ assert.equal(row.taxon,"Muhlenbergia lindheimeri Hitchc.");
+ assert.match(row.protologue_as_printed,/1934/);
+ assert.equal(row.intake_batch,"20261118");
+ assert.equal(row.observations.length,9);
+ const blade=row.observations.find(x=>x.character==="leaf_blade");
+ const membrane=row.observations.find(x=>x.character==="ligule");
+ const head=row.observations.find(x=>x.character==="panicle");
+ const awns=row.observations.find(x=>x.character==="lemmas_and_awns");
+ assert.deepEqual(blade.width_mm_typical,[2,3]);
+ assert.deepEqual(blade.width_mm_extended,[2,5]);
+ assert.deepEqual(blade.length_cm_typical,[10,45]);
+ assert.equal(blade.length_cm_max,50);
+ assert(/upper\/(adaxial|UPPER)|upper/i.test(blade.surface));
+ assert.deepEqual(membrane.length_mm,[8,15]);
+ assert.deepEqual(head.length_cm_extended,[15,50]);
+ assert.deepEqual(head.width_cm_extended,[0.6,3]);
+ assert.equal(awns.awn_mm_max_rare,4);
+ assert.equal(row.observations.find(x=>x.character==="palea_anther_chromosome").chromosome_2n,20);
+ assert.equal(card.character_evidence.blade_hairs.status,"DIRECT_OWNER_PHOTOGRAPHED_EXACT_SPECIES_SOURCE_POSITIVE_ONLY");
+ assert.equal(card.gould_1975_p261.vein_pattern,"NOT_DESCRIBED_IN_SOURCE");
+ assert(card.traits.habit.includes("tuft"));
+ assert(card.traits.ligule.includes("membrane"));
+ const master=read("optional-refinement-evidence.json");
+ assert.deepEqual(master.evidence.find(x=>x.id===card.id&&x.character==="blade_hairs").states,["blade_hairy"]);
+ assert(!master.evidence.some(x=>x.id===card.id&&x.character==="blade_venation"),
+   "A user page without venation cannot create invented vein evidence");
+ assert(row.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
+}
+console.log("PASS: Gould p261 Lindheimer blade hairs, dimensions, flora provenance and unknown veins recorded");
+
 // Texas grama Gould pp.342–343: preserve printed unit conflict and proper adjacent account boundary.
 const texasGramaGould342=source.additional_species_treatments.find(x=>x.species_id==="bouteloua-rigidiseta");
 const texasGramaCard342=read("species-c1.json").find(x=>x.id==="bouteloua-rigidiseta");
