@@ -1,0 +1,1305 @@
+{
+  "schema": "HAYS_GOULD_SCREENSHOT_BATCH_20261118_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "base_commit": "163434160cad6a3ddc2b89d363697613cbe4a221",
+  "source": "Frank W. Gould (1975), The Grasses of Texas",
+  "source_url": "https://archive.org/details/grassesoftexas0000goul",
+  "option_additions": [
+    {
+      "character": "florets_per_spikelet",
+      "option": {
+        "id": "separate_male_female_spikelets",
+        "label": "Male and female flowers in separate spikelets",
+        "detail": "Check each spikelet, not just whether the entire plant bears both sexes."
+      },
+      "subgroup": "Sex of florets"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "male_below_female_above",
+        "label": "LOWER branches male; UPPER branches female",
+        "detail": "Texas wildrice: lower branches have awnless male spikelets; upper branches long-awned female spikelets."
+      },
+      "subgroup": "Sex along flowering branches"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "male_below_female_same_branch",
+        "label": "On SAME branch: male below, female above",
+        "detail": "Southern wildrice has both sexes on one branch/branchlet, male spikelets below female."
+      },
+      "subgroup": "Sex along flowering branches"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "glumes_absent_irregular_cup",
+        "label": "True glumes absent; irregular basal cup may remain",
+        "detail": "Texas wildrice has no conventional paired glumes; distinguish any irregular disarticulation cup from glumes."
+      },
+      "subgroup": "Glume presence"
+    },
+    {
+      "character": "floral_hair_position",
+      "option": {
+        "id": "rachilla_glabrous",
+        "label": "Rachilla joints without hairs",
+        "detail": "Inspect the small axis between florets. Giant reed has silky lemma-base hairs but a hairless rachilla."
+      },
+      "subgroup": "Rachilla between florets"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "rough_lemma_nerves",
+        "label": "Lemma nerves or surface rough (not necessarily hairy)",
+        "detail": "Scabrous nerves are not proof of conspicuous long hairs."
+      },
+      "subgroup": "Lemma surface"
+    }
+  ],
+  "species": [
+    {
+      "id": "munroa-pulchella",
+      "scientific": "Munroa pulchella",
+      "taxon_as_printed": "Erioneuron pulchellum; synonym Tridens pulchellus",
+      "printed_pages": [],
+      "observations": {
+        "habit": "Tufted perennial, sometimes appearing annual, with or without slender stolons. Numerous culms 2–15 cm, rough below nodes; leaves fascicled at all culm nodes.",
+        "collar_blade": "Short broad sheaths often tufted with long basal hairs; ciliate membrane about 0.5 mm. Short stiff needle-like blades tightly inrolled, 1 mm or less wide.",
+        "flowers": "Sessile or short-stalked spikelets in headlike clusters or short racemes, overtopped by fascicle leaves. Spikelets mostly 7–13 mm with 6–12 florets. Glumes nearly equal, pointed or shortly awned, papery, about as long as spikelet. Lemmas mostly 3–5 mm, long-ciliate on nerves, deeply cleft to just above middle; stout straight/curved awn slightly shorter to slightly longer than apical lobes. Paleas hairy on margins and between nerves, finely hairy on nerves.",
+        "context": "June–November. Footer absent; printed page not asserted."
+      },
+      "evidence": [
+        {
+          "character": "sheath_surface",
+          "states": [
+            "sometimes_hairy"
+          ],
+          "note": "Sheaths often long-hairy at base."
+        },
+        {
+          "character": "ligule_edge",
+          "states": [
+            "ciliate"
+          ],
+          "note": "Very short ciliate membrane; keep existing hair-fringe interpretation as separately sourced."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "tiny"
+          ],
+          "note": "Approximately 0.5 mm."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "6–12 florets per spikelet."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "inrolled"
+          ],
+          "note": "Tightly involute needle-like blades."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "thread"
+          ],
+          "note": "1 mm or less."
+        },
+        {
+          "character": "surface_runners",
+          "states": [
+            "stolon"
+          ],
+          "note": "With OR without slender stolons; optional."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "hairy"
+          ],
+          "note": "Long-ciliate lemma nerves."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "short"
+          ],
+          "note": "Stout straight/curved lemma awn slightly shorter to slightly longer than the apical lobes."
+        }
+      ],
+      "cautions": [
+        "Printed page not visible; evidence kept as page-unconfirmed and non-excluding. Existing current-name crosswalk retained, not reclassified from an image.",
+        "SOURCE DIFFERENCE / PAGE HOLD: Gould describes an approximately 0.5-mm finely ciliate membrane; earlier sources differ over hair fringe versus membrane and ligule length. The supplied crop lacks its footer. Preserve these distinctions and do not create a new exclusion."
+      ]
+    },
+    {
+      "id": "zizania-texana",
+      "scientific": "Zizania texana",
+      "taxon_as_printed": "Zizania texana",
+      "printed_pages": [
+        48,
+        49
+      ],
+      "observations": {
+        "habit": "Aquatic fleshy perennial; decumbent or stolon-like basal stems root at lower nodes, with erect portions mostly 1–1.7 m; stems hairless.",
+        "collar_blade": "Membranous ligules 5–15 mm. Leaves glabrous; blades thin, flat and elongate, mostly 1–4 cm wide.",
+        "flowers": "Panicle mostly 20–30 cm, spreading lower branches bearing awnless one-flowered male spikelets, becoming pendent at maturity; stiffly erect upper branches bearing long-awned one-flowered female spikelets. Male spikelets mostly 7–9 mm, with thin papery awnless 5-nerved lemma, similar nearly equal 3-nerved palea and six stamens. Female spikelets apparently glumeless but with irregular membranous cup/disc below lemma at disarticulation; narrow 3-nerved lemma body about 1 cm, clasping palea and tapering into stout 1–2 cm awn; palea faintly 3-nerved.",
+        "context": "Gould restricts known occurrence to spring-fed, fast clear fresh water of the San Marcos River near its source. April–November, irregular flowering. This historical account does not establish present range or a new voucher."
+      },
+      "evidence": [
+        {
+          "character": "culm_posture",
+          "states": [
+            "decumbent",
+            "erect"
+          ],
+          "note": "Distinguish basal posture from erect flowering portion."
+        },
+        {
+          "character": "stem_special",
+          "states": [
+            "succulent_stems",
+            "rooting_lower_nodes"
+          ],
+          "note": "Fleshy aquatic stems root below."
+        },
+        {
+          "character": "surface_runners",
+          "states": [
+            "rooted_nodes"
+          ],
+          "note": "Rooting lower nodes explicitly given."
+        },
+        {
+          "character": "stem_nodes",
+          "states": [
+            "glabrous_nodes"
+          ],
+          "note": "Culms hairless in account."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "flat"
+          ],
+          "note": "Flat thin blades."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "medium",
+            "long"
+          ],
+          "note": "Membrane 5–15 mm."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "one",
+            "separate_male_female_spikelets"
+          ],
+          "note": "Each sex has separate one-flowered spikelets."
+        },
+        {
+          "character": "spikelet_position",
+          "states": [
+            "male_below_female_above"
+          ],
+          "note": "Lower branches male; upper branches female."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "glumes_absent_irregular_cup"
+          ],
+          "note": "Do not confuse the irregular basal cup with conventional glumes."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "long",
+            "none"
+          ],
+          "note": "Long female lemma awn; male lemma awnless. Never require both on one spikelet."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "medium",
+            "broad"
+          ],
+          "note": "Mostly 10–40 mm; 10-mm category boundary retained."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "zizaniopsis-miliacea",
+      "scientific": "Zizaniopsis miliacea",
+      "taxon_as_printed": "Zizaniopsis miliacea",
+      "printed_pages": [
+        49
+      ],
+      "observations": {
+        "habit": "Coarse perennial with rhizomes and thick glabrous stems, generally 2–3 m.",
+        "collar_blade": "Membranous ligules with many fine nerves, mostly 6–20 mm; hairless blades mostly 8–22 mm wide and 1 m or longer.",
+        "flowers": "Panicle 30–60 cm, freely rebranched erect-spreading branches bearing male and female spikelets on the same branch/branchlet, MALE BELOW FEMALE. Both sexes one-flowered, 6–8 mm, with thin 7-nerved lemma and thin 3-nerved palea, WITHOUT GLUMES. Disarticulation immediately below spikelet. Male spikelets awnless with six stamens; female lemma mucronate or short-awned. Ovary has single style/stigma, style not centrally located and more-or-less persistent. Mature globose grain about 3 mm, loosely enclosed by lemma and palea; embryo about 1 mm.",
+        "context": "Shallow water at stream/lake margins; mostly April–July, occasionally later. Keep historical range and sex/disarticulation wording source-specific."
+      },
+      "evidence": [
+        {
+          "character": "underground_stems",
+          "states": [
+            "rhizome_present"
+          ],
+          "note": "Rhizomatous without a stated runner length."
+        },
+        {
+          "character": "stem_nodes",
+          "states": [
+            "glabrous_nodes"
+          ],
+          "note": "Thick culms glabrous."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless"
+          ],
+          "note": "Hairless blades."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "medium",
+            "broad"
+          ],
+          "note": "Blade width 8–22 mm."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "medium",
+            "long"
+          ],
+          "note": "Ligule 6–20 mm."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "one",
+            "separate_male_female_spikelets"
+          ],
+          "note": "One-flowered male and female spikelets; organs differ by sex."
+        },
+        {
+          "character": "spikelet_position",
+          "states": [
+            "male_below_female_same_branch"
+          ],
+          "note": "Male spikelets below female on SAME branch/branchlet."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "none",
+            "apical_mucro",
+            "short"
+          ],
+          "note": "Male awnless; female mucronate or short-awned."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "glumes_absent_irregular_cup"
+          ],
+          "note": "Both sexes glumeless; irregular cup qualification pertains specifically to Texas wildrice."
+        },
+        {
+          "character": "blade_edge",
+          "states": [
+            "serrate"
+          ],
+          "note": "Blade margins coarsely serrate."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "leersia-oryzoides",
+      "scientific": "Leersia oryzoides",
+      "taxon_as_printed": "Leersia oryzoides",
+      "printed_pages": [
+        46,
+        47
+      ],
+      "observations": {
+        "habit": "Slender rhizomatous perennial, stems mostly 80–150 cm, often decumbent or stolon-like. Nodes point-hairy; sheaths usually strongly rough.",
+        "collar_blade": "Short firm truncate ligule. Thin firm blades mostly 7–10 mm broad; blade and sheath strongly backward-roughened, blade margin and midnerve sharply serrate.",
+        "flowers": "Loose drooping panicle mostly 10–20 cm, often partly enclosed by upper sheath; slender lower branches bare of spikelets for basal 1.5–4 cm. Spikelets narrowly oblong and asymmetric. Lemma and palea short-hispid or rough, keels bristly-ciliate with stiff hairs.",
+        "context": "May–November, mostly autumn; shallow lakes, rivers and marshes. No rhizome length inferred."
+      },
+      "evidence": [
+        {
+          "character": "underground_stems",
+          "states": [
+            "rhizome_present"
+          ],
+          "note": "Creeping rhizomes, dimensions unspecified."
+        },
+        {
+          "character": "culm_posture",
+          "states": [
+            "decumbent"
+          ],
+          "note": "Culms often decumbent at base."
+        },
+        {
+          "character": "stem_nodes",
+          "states": [
+            "hairy_nodes",
+            "backward_hairs"
+          ],
+          "note": "Nodes retrorsely hispid."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "rough_surface"
+          ],
+          "note": "Sheaths usually strongly scabrous."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "medium"
+          ],
+          "note": "Mostly 7–10 mm."
+        },
+        {
+          "character": "blade_edge",
+          "states": [
+            "serrate"
+          ],
+          "note": "Sharp serration on blade margin."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "rough_surface"
+          ],
+          "note": "Rough blade surface."
+        },
+        {
+          "character": "ligule_edge",
+          "states": [
+            "truncate"
+          ],
+          "note": "Short firm truncate membrane."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "sparsely_hairy"
+          ],
+          "note": "Lemma/palea short-hairy or scabrous; do not replace roughness with mandatory long hairs."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "chasmanthium-latifolium",
+      "scientific": "Chasmanthium latifolium",
+      "taxon_as_printed": "Chasmanthium latifolium; synonym Uniola latifolia",
+      "printed_pages": [
+        52
+      ],
+      "observations": {
+        "habit": "Rhizomatous perennial; largely unbranched culms up to 1.5 m, leaves along most of stem.",
+        "collar_blade": "Nodes glabrous, often reddish-purple. Leaf sheaths and collar glabrous. Ciliate membrane 1 mm or shorter. Thin flat blades glabrous or slightly hairy near ligule, mostly 1–2 cm wide and tapering at both ends.",
+        "flowers": "Usually a panicle, occasionally a raceme; large flat many-flowered awnless spikelets on slender pedicels. Main axis, branches and pedicels often droop. Spikelets 6–17(–26)-flowered, mostly 0.6–1.6(–2) cm broad and 2–5 cm long; glumes/lemmas sharply keeled and laterally compressed. Lower 1–2 florets neuter. Glumes 0.5–0.7 mm, nearly equal, pointed, 5–7-nerved. Lemmas entire or bifid, 11–15-nerved; paleas entire/bifid and shorter than lemmas. Anthers yellow to 4 mm; grains 2–2.5 mm wide and 3–5 mm long, brown to reddish-black/black.",
+        "context": "June–October; shaded wooded banks and stream bottoms. Only terminal portion of genus key is in this image."
+      },
+      "evidence": [
+        {
+          "character": "underground_stems",
+          "states": [
+            "rhizome_present"
+          ],
+          "note": "Rhizomatous, no length specified."
+        },
+        {
+          "character": "ligule_edge",
+          "states": [
+            "ciliate"
+          ],
+          "note": "Short ciliate membrane."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "tiny",
+            "short"
+          ],
+          "note": "About 1 mm or less, boundary retained."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "flat"
+          ],
+          "note": "Thin flat blades."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "medium",
+            "broad"
+          ],
+          "note": "Mostly 10–20 mm; boundary 10 mm retained."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless",
+            "base_hairs"
+          ],
+          "note": "Blades glabrous or slightly pilose near ligule."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "Many florets; lower 1–2 neuter."
+        },
+        {
+          "character": "spikelet_position",
+          "states": [
+            "pedicellate_spikelets"
+          ],
+          "note": "Spikelets on slender pedicels."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "upper_glume_five_to_seven_veins"
+          ],
+          "note": "Both glumes 5–7-nerved; existing upper-specific choice valid."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "lemma_compressed_keel"
+          ],
+          "note": "Sharply keeled compressed lemmas."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "none"
+          ],
+          "note": "Awnless spikelets."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "glabrous"
+          ],
+          "note": "Sheath and collar glabrous, not the pubescent neighboring species."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "arundo-donax",
+      "scientific": "Arundo donax",
+      "taxon_as_printed": "Arundo donax",
+      "printed_pages": [
+        54
+      ],
+      "observations": {
+        "habit": "Perennial reed with stout stems commonly 2–6 m from thick knotty rhizomes; culms and leaves glabrous.",
+        "collar_blade": "Leaves uniformly spaced on stem; rounded sheaths. Ciliate membrane about 1 mm or less. Thick flat elongate sharply tapering blades mostly 4–7 cm wide, rough at margins.",
+        "flowers": "Dense contracted many-flowered panicle typically 30–60 cm; numerous stiffly erect primary branches 15–25 cm or longer. Branches/branchlets hairless or nearly so. Spikelets mostly 2–4-flowered, 10–15 mm; short hairless rachilla joints. Broad thin nearly equal glumes, irregularly 3–several-nerved, pointed. Lemmas 3–5-nerved, 5–10 mm, densely pilose with soft hairs 6–9 mm; apex tapering, often shortly awned, sometimes notched beside awn. Paleas broad, much shorter, finely ciliate on nerves.",
+        "context": "Mostly September–November. Keep lemma basal hairs distinct from the hairless rachilla; no species/lineage diagnosis inferred from reed silhouette alone."
+      },
+      "evidence": [
+        {
+          "character": "basal_crown",
+          "states": [
+            "large_cane"
+          ],
+          "note": "Large reed culms."
+        },
+        {
+          "character": "stem_special",
+          "states": [
+            "giant_canes"
+          ],
+          "note": "Stems 2–6 m."
+        },
+        {
+          "character": "underground_stems",
+          "states": [
+            "thick_rhizome"
+          ],
+          "note": "Thick knotty rhizomes."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "glabrous"
+          ],
+          "note": "Hairless sheaths."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "flat"
+          ],
+          "note": "Broad flat blades."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "broad"
+          ],
+          "note": "Mostly 40–70 mm."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless"
+          ],
+          "note": "Leaves glabrous, margins rough."
+        },
+        {
+          "character": "ligule_edge",
+          "states": [
+            "ciliate"
+          ],
+          "note": "Very short ciliate membrane."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "tiny",
+            "short"
+          ],
+          "note": "Approximately 1 mm or shorter."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "two",
+            "several"
+          ],
+          "note": "Mostly 2–4 florets."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "hairy"
+          ],
+          "note": "Lemma densely pilose with soft 6–9 mm hairs."
+        },
+        {
+          "character": "floral_hair_position",
+          "states": [
+            "lemma",
+            "rachilla_glabrous"
+          ],
+          "note": "Lemma densely hairy, rachilla joints hairless."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "short",
+            "apical_mucro"
+          ],
+          "note": "Short-awned or pointed apex; retain conditional distinction."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "phragmites-australis",
+      "scientific": "Phragmites australis",
+      "taxon_as_printed": "Phragmites australis; synonym P. communis",
+      "printed_pages": [
+        54,
+        55,
+        56
+      ],
+      "observations": {
+        "habit": "Stout perennial; culms 2–4 m from thick creeping rhizomes, with stolons also often produced. Culms/leaves glabrous.",
+        "collar_blade": "Smooth rounded sheaths; minute ciliate ligules, hairs longer than membranous base. Flat elongate blades with finely rough margins, main-culm blades mostly 1.5–5 cm wide.",
+        "flowers": "Dense contracted much-branched panicle; spikelets on slender wiry pedicels/branchlets. Disarticulation above glumes and between florets. Spikelets 10–15 mm, mostly 4–8-flowered. Rachilla hairs 1 cm OR LONGER; glumes, lemmas and paleas glabrous. First glume 3-nerved, half to two-thirds second. Second glume 3–5-nerved, mostly 6–8 mm, acute/mucronate. Lower floret infertile; its 3-nerved pointed lemma mostly 11–14 mm, much longer than upper lemmas.",
+        "context": "July–November, sometimes throughout year. Gould describes the broad historical species and notes competing communis/australis usage. This does not identify native/introduced North American lineage."
+      },
+      "evidence": [
+        {
+          "character": "stem_special",
+          "states": [
+            "giant_canes"
+          ],
+          "note": "Culms 2–4 m."
+        },
+        {
+          "character": "underground_stems",
+          "states": [
+            "thick_rhizome"
+          ],
+          "note": "Thick creeping rhizomes."
+        },
+        {
+          "character": "surface_runners",
+          "states": [
+            "stolon"
+          ],
+          "note": "Stolons often produced, not mandatory."
+        },
+        {
+          "character": "stem_nodes",
+          "states": [
+            "glabrous_nodes"
+          ],
+          "note": "Culms glabrous."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "flat"
+          ],
+          "note": "Flat blades."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless"
+          ],
+          "note": "Hairless leaves with rough margins."
+        },
+        {
+          "character": "ligule_edge",
+          "states": [
+            "ciliate"
+          ],
+          "note": "Ciliate membrane; cilia longer than base."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "Mostly 4–8 florets."
+        },
+        {
+          "character": "floral_hair_position",
+          "states": [
+            "rachilla"
+          ],
+          "note": "Long hairs on rachilla joints, not lemma."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "smooth"
+          ],
+          "note": "Lemmas and paleas glabrous."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "lower_glume_present_shorter"
+          ],
+          "note": "First glume 1/2–2/3 second."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "broad"
+          ],
+          "note": "Mostly 15–50 mm on main culms."
+        }
+      ],
+      "cautions": [
+        "Do not assign lineage, county nativity or invasive status from this broad account."
+      ]
+    },
+    {
+      "id": "melica-nitens",
+      "scientific": "Melica nitens",
+      "taxon_as_printed": "Melica nitens",
+      "printed_pages": [
+        63
+      ],
+      "observations": {
+        "habit": "Perennial with a firm, often woody rhizomatous base; culms mostly 50–120 cm, tufted.",
+        "collar_blade": "Sheaths glabrous, rough or short-hairy, closed nearly to apex; ligules mostly 3–6 mm. Flat blades glabrous, rough or short-hairy, 3–10(–15) mm wide.",
+        "flowers": "Panicles mostly 10–26 cm, occasionally shorter; lower branches usually compound, spreading or ascending. Spikelets 8–15 mm, much longer than broad, 1–4 usually 2–3 perfect florets. Florets not or only slightly spreading at maturity; second floret apex exceeds first by 1–2 mm. Disarticulation below spikelet. Glumes shorter than spikelet, membranous, rough at margins/apex; first broad 5–7 mm, second narrow 7–9 mm. Striate minutely wrinkled/rough lemmas with narrow translucent margins and acute/obtuse translucent apex; lower lemma 8–11 mm. Paleas broad, ciliate on nerves; anthers about 3 mm. Rudiment oblong/obovate, usually broadest near apex, erect, not spreading away from rachilla.",
+        "context": "Mostly April–June; rocky slopes, open woodland and stream banks."
+      },
+      "evidence": [
+        {
+          "character": "underground_stems",
+          "states": [
+            "rhizome_present"
+          ],
+          "note": "Woody rhizomatous base, not proof of long runners."
+        },
+        {
+          "character": "sheath_margins",
+          "states": [
+            "closed"
+          ],
+          "note": "Sheaths closed nearly to apex."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "glabrous",
+            "rough_surface",
+            "sometimes_hairy"
+          ],
+          "note": "Three stated surface conditions."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "short",
+            "medium"
+          ],
+          "note": "Mostly 3–6 mm; 3-mm boundary overlaps categories."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "flat"
+          ],
+          "note": "Flat blades."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "narrow",
+            "medium",
+            "broad"
+          ],
+          "note": "3–10(–15) mm."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless",
+            "rough_surface",
+            "blade_hairy"
+          ],
+          "note": "Blade surface variable."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "one",
+            "two",
+            "several"
+          ],
+          "note": "1–4 fertile florets, usually 2–3, plus distal rudiment."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "wrinkled"
+          ],
+          "note": "Minutely rugose/rough, not invented hairs."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "nassella-leucotricha",
+      "scientific": "Nassella leucotricha",
+      "taxon_as_printed": "Stipa leucotricha",
+      "printed_pages": [
+        71
+      ],
+      "observations": {
+        "habit": "Tufted perennial; stems mostly 30–70(–90) cm, often knee-bent and spreading at base. Nodes usually pressed-hairy, losing hairs with age.",
+        "collar_blade": "Sheaths hairy to nearly hairless; long collar hairs at least on sides. Ligules variable from absent/minute to thin truncate membrane as long as 1 mm. Blades 10–30(5–40) cm, 1–4(–5) mm broad, usually short stiff hairs on one/both faces, flat or closely inrolled.",
+        "flowers": "Panicle mostly 6–25 cm, usually with long slender flexuous lower branches. Thin glabrous tapering glumes about equal or FIRST LONGER, mostly 14–18 mm; first 5-nerved, second 3–5-nerved. Sharp densely hairy callus. Lemma 9–12 mm, light brown, densely hairy at base, rough above; rounded whitish neck 0.6–1 mm, stiff fringe at top but otherwise glabrous. Fertile awn stout, coarsely once/twice bent, rough-hairy on twisted lower segment, 4.5–10 cm.",
+        "context": "Mostly March–May, occasionally later in cool sites. Ligule absence is explicit variation, not absence inferred from silence."
+      },
+      "evidence": [
+        {
+          "character": "culm_posture",
+          "states": [
+            "geniculate",
+            "decumbent"
+          ],
+          "note": "Often bent/spreading basally."
+        },
+        {
+          "character": "stem_nodes",
+          "states": [
+            "hairy_nodes",
+            "glabrate_aging"
+          ],
+          "note": "Appressed pubescence, becoming glabrate."
+        },
+        {
+          "character": "ligule_length",
+          "states": [
+            "tiny",
+            "short"
+          ],
+          "note": "Present membranes reach 1 mm; absence retained separately in existing core."
+        },
+        {
+          "character": "blade_shape",
+          "states": [
+            "flat",
+            "inrolled"
+          ],
+          "note": "Flat or strongly inrolled."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "glabrous"
+          ],
+          "note": "Thin hairless glumes."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "hairy"
+          ],
+          "note": "Hairy lemma below, rougher distally."
+        },
+        {
+          "character": "floral_hair_position",
+          "states": [
+            "spikelet_callus_hairs",
+            "lemma"
+          ],
+          "note": "Dense callus hairs are not a rachilla beard."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "long",
+            "bent_twisted"
+          ],
+          "note": "Awn 45–100 mm, lower segment twisted, commonly twice bent."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "thread",
+            "narrow"
+          ],
+          "note": "1–4(–5) mm; no >5-mm state added from this source."
+        },
+        {
+          "character": "ligule_edge",
+          "states": [
+            "truncate"
+          ],
+          "note": "Absent/minute or thin truncate membrane; erose not asserted here."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "sometimes_hairy",
+            "glabrous"
+          ],
+          "note": "Sheath pubescence variable; long collar hairs are recorded separately, not assigned to sheath throat."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "blade_hairy"
+          ],
+          "note": "Usually short stiff hairs on one or both blade faces."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "bromus-catharticus",
+      "scientific": "Bromus catharticus",
+      "taxon_as_printed": "Bromus unioloides; Gould discussion compares B. catharticus",
+      "printed_pages": [
+        84,
+        85
+      ],
+      "observations": {
+        "habit": "Annual in Texas, tufted, mostly 50–80 cm, tending to flatten laterally and with some keel.",
+        "collar_blade": "Sheaths nearly glabrous to densely short-hairy with fine straight spreading hairs. Ligule large and developed, but no numeric ligule length in this account. Blades mostly 5–12 mm, glabrous or hirsute with spreading hairs, yellowish band just above ligule.",
+        "flowers": "Open drooping panicle with large flattened spikelets, usually 6–12 florets. Glumes awnless: first usually 5–7-nerved, second usually 7–9-nerved. Lemmas 7–11-nerved, laterally flattened and sharply keeled, glabrous or variously pubescent, awnless or awn 1–3 mm.",
+        "context": "Early spring–early summer. Gould reports plants called B. unioloides and distinguishes older B. catharticus nomenclature. Kew POWO lists Bromus unioloides Kunth as a synonym of B. catharticus; Gould also explicitly discusses the Hitchcock name usage. Retain historical concept warning."
+      },
+      "evidence": [
+        {
+          "character": "sheath_surface",
+          "states": [
+            "glabrous",
+            "sometimes_hairy"
+          ],
+          "note": "Sheath pubescence variable."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "medium",
+            "broad"
+          ],
+          "note": "Mostly 5–12 mm."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless",
+            "blade_hairy"
+          ],
+          "note": "Glabrous/hirsute blades."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "6–12 florets."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "strongly_veined"
+          ],
+          "note": "First 5–7 veins; second 7–9, not upper 5–7."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "lemma_compressed_keel",
+            "smooth",
+            "sparsely_hairy"
+          ],
+          "note": "Flattened keeled lemma, variably glabrous/pubescent."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "short",
+            "none"
+          ],
+          "note": "Awn 1–3 mm or absent."
+        }
+      ],
+      "cautions": [
+        "Historical B. unioloides crosswalk supported by Kew POWO https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:315500-2 and Gould discussion; no merger with other brome species."
+      ]
+    },
+    {
+      "id": "bromus-texensis",
+      "scientific": "Bromus texensis",
+      "taxon_as_printed": "Bromus texensis",
+      "printed_pages": [
+        86
+      ],
+      "observations": {
+        "habit": "Short-lived annual with culms usually 40–75 cm, laterally compressed, fine soft spreading hairs, becoming glabrate with age.",
+        "collar_blade": "Soft thin blades 3–7 mm, uniformly short-hairy on both surfaces. No sheath or ligule measurement asserted from this supplied account.",
+        "flowers": "Narrow panicle or raceme commonly 10–15 cm; short lateral branches stiffly erect or more often widely spreading. Spikelets about 2 cm excluding awns, usually 6–8 florets. First glume 1-nerved; second 3-nerved, broad membranous margins. Lemmas finely to conspicuously rough or rough-pubescent, mostly 9–12 mm, awn 6–10 mm. Palea about as long as lemma.",
+        "context": "Spring. Sticky/bluish mold on seedheads is reported context, not a mandatory identification character."
+      },
+      "evidence": [
+        {
+          "character": "blade_width",
+          "states": [
+            "narrow",
+            "medium"
+          ],
+          "note": "3–7 mm."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "blade_hairy"
+          ],
+          "note": "Short hairs on both faces."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "6–8 florets."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "short"
+          ],
+          "note": "True lemma awn 6–10 mm; generic short option has no fixed threshold."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "lower_one_vein"
+          ],
+          "note": "First 1-nerved; second 3-nerved. No hairlessness asserted from silence."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "bromus-pubescens",
+      "scientific": "Bromus pubescens",
+      "taxon_as_printed": "Bromus pubescens",
+      "printed_pages": [
+        87
+      ],
+      "observations": {
+        "habit": "Perennial; culms mostly 70–140 cm. Lower sheaths densely pilose, with spreading hairs; upper sheaths short-hairy or glabrous.",
+        "collar_blade": "Blades mostly 5–10 mm broad, glabrous or less often sparsely hirsute.",
+        "flowers": "Panicles usually 10–25 cm, branches erect, spreading or reflexed, lowest to 8 cm. Spikelets mostly 2–3.5 cm, 5–12 florets. Glumes sparse-hirsute, first 1-nerved, second 3–5-nerved. Lemmas rounded on back, UNIFORMLY PUBESCENT or less often glabrous in MIDSECTION; awn 5–11 mm. Palea nearly as long as lemma.",
+        "context": "Spring. Gould discusses B. nottowayanus separation as not justified for the Texas material; this historical remark does not automatically merge unrelated current profiles."
+      },
+      "evidence": [
+        {
+          "character": "sheath_surface",
+          "states": [
+            "sometimes_hairy",
+            "glabrous"
+          ],
+          "note": "Dense spreading hairs on lower sheaths; upper sheaths short-hairy or glabrous."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "narrow",
+            "medium"
+          ],
+          "note": "Mostly 5–10 mm."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "hairless",
+            "blade_hairy"
+          ],
+          "note": "Usually glabrous, occasionally sparse hirsute."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "5–12 florets."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "lower_one_vein"
+          ],
+          "note": "First glume one vein, second 3–5."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "short"
+          ],
+          "note": "Awn 5–11 mm."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "hairy",
+            "smooth"
+          ],
+          "note": "Uniform pubescence or less frequently glabrous midsection; localized hairlessness is not entire lemma glabrous."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "bromus-tectorum",
+      "scientific": "Bromus tectorum",
+      "taxon_as_printed": "Bromus tectorum, including var. tectorum and var. glabratus",
+      "printed_pages": [
+        90
+      ],
+      "observations": {
+        "habit": "Annual with weak erect/spreading culms, usually 25–60 cm.",
+        "collar_blade": "Sheaths/blades usually softly hairy, occasionally glabrous or nearly so; blades typically 2.5–6 mm.",
+        "flowers": "Narrow loosely contracted panicle with slender flexuous often S-curved branches/pedicels. Spikelets mostly 1.2–2 cm excluding awns, usually 4–6 florets. Unequal thin glumes with broad translucent margins: FIRST 1–3-NERVED, second 3-nerved. Lemmas mostly 9–12 mm, thin membranous margins and slender apical teeth 2–3 mm. Lemma awns 12–18 mm. Paleas slightly shorter, ciliate on nerves. Var. tectorum soft-pubescent lemmas; var. glabratus glabrous/scabrous.",
+        "context": "Spring–early summer; varieties not separate current profiles. Do not make hairy lemmas mandatory across both varieties."
+      },
+      "evidence": [
+        {
+          "character": "culm_posture",
+          "states": [
+            "erect"
+          ],
+          "note": "Weak erect-spreading culms."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "sometimes_hairy",
+            "glabrous"
+          ],
+          "note": "Soft-hairy or nearly glabrous."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "blade_hairy",
+            "hairless"
+          ],
+          "note": "Hair variation explicit."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "Usually 4–6."
+        },
+        {
+          "character": "spikelet_position",
+          "states": [
+            "pedicellate_spikelets"
+          ],
+          "note": "Slender flexuous pedicels."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "hairy",
+            "smooth",
+            "rough_lemma_nerves"
+          ],
+          "note": "Variety-specific pubescence; both variants retained."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "narrow",
+            "medium"
+          ],
+          "note": "Typically 2.5–6 mm."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "lower_one_vein",
+            "unequal_glumes_both_present"
+          ],
+          "note": "First 1–3 nerves, not invariably one; second 3-nerved."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "long"
+          ],
+          "note": "Lemma awn 12–18 mm."
+        }
+      ],
+      "cautions": []
+    },
+    {
+      "id": "bromus-japonicus",
+      "scientific": "Bromus japonicus",
+      "taxon_as_printed": "Bromus japonicus",
+      "printed_pages": [
+        91
+      ],
+      "observations": {
+        "habit": "Annual; slender spreading culms mostly 30–60 cm.",
+        "collar_blade": "Lowermost sheaths usually shaggy-pilose with spreading or reflexed hairs; blades usually pilose or short-hairy, 2–7 mm.",
+        "flowers": "Panicles 8–20 cm; slender flexuous kinked branches/pedicels spreading and curving erect at maturity. Spikelets 1.5–3 cm, averaging 2 cm, excluding awns, with 6–11 florets. Broad glabrous awnless glumes: first 3–5-nerved, second 5–9-nerved. Glabrous lemmas mostly 7–9 mm, rounded on back with thin flat margins NOT becoming inrolled at maturity. Apical teeth mostly 1.5–2 mm; slender straight/flexuous awn 8–13 mm on upper florets, lemma relatively thin and margins not inrolled at maturity. Paleas ciliate on nerves, usually 1–2 mm shorter.",
+        "context": "Spring. Page 92–93 discussion distinguishes it from B. secalinus using hairs, lemma-tooth shape and mature awn spread. Do not apply the neighboring secalinus description to japonicus."
+      },
+      "evidence": [
+        {
+          "character": "sheath_surface",
+          "states": [
+            "sometimes_hairy"
+          ],
+          "note": "Lowermost sheaths densely soft-pilose."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "narrow",
+            "medium"
+          ],
+          "note": "Mostly 2–7 mm."
+        },
+        {
+          "character": "florets_per_spikelet",
+          "states": [
+            "several"
+          ],
+          "note": "6–11 florets."
+        },
+        {
+          "character": "spikelet_position",
+          "states": [
+            "pedicellate_spikelets"
+          ],
+          "note": "Long flexuous pedicels."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "blade_hairy"
+          ],
+          "note": "Usually pilose/puberulent blades."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "long"
+          ],
+          "note": "Upper floret awns 8–13 mm, straight or flexuous. Do not borrow contorted/inrolled characters from neighboring B. secalinus."
+        },
+        {
+          "character": "lemma_texture",
+          "states": [
+            "smooth"
+          ],
+          "note": "Glabrous lemma."
+        },
+        {
+          "character": "glume_marks",
+          "states": [
+            "glabrous"
+          ],
+          "note": "Broad glabrous awnless glumes."
+        }
+      ],
+      "cautions": []
+    }
+  ],
+  "secondary_review": "Existing Diggs/Hagenbuch/FNA evidence remains attached. This batch directly rereads supplied Gould accounts; it does not claim new direct rereads of unavailable secondary pages. All state additions are positive-only; disagreements retain earlier sources.",
+  "holds": [
+    "Miscanthus sinensis: no confirmed account supplied; earlier page leads withdrawn.",
+    "Phyllostachys aurea: no confirmed species account supplied.",
+    "Munroa pulchella: printed footer/page absent; hold hard exclusion and page claim.",
+    "Historical Bromus unioloides crosswalk checked against Kew POWO synonym entry 315500-2; retain historical scope."
+  ]
+}
