@@ -1536,10 +1536,12 @@
         "photo_role": "TARGET_SPECIES_SOURCE"
       }
     ],
-    "field_rule": "B. rigidiseta typically has several (often about 5–9) SHORT bristly/awned units near the top. Blue grama has only about 1–3 long curved combs. Sideoats grama carries many short pendant oats down a much longer axis. Red grama has narrower, more appressed, often purplish branches and awned spikelets; color alone is not sufficient. If an entire culm/branch cannot be resolved, keep Bouteloua sp.\n\nRootstock and collar caveat: the Hill Country description calls Texas grama a tufted non-rhizomatous perennial with a hair-fringe ligule, and Flora of North America agrees on the missing rhizomes but instead describes a tiny ciliate membrane. The UT Austin Williamson County account documents very short, shallow rhizomes and a membranous-ciliate ligule. A verified node-bearing underground stem or a visible membranous ligule base should therefore keep this candidate in the key, but neither observation alone confirms its identification. The present gallery lacks a rootstock or ligule view.",
+    "field_rule": "B. rigidiseta typically has several (often about 5–9) SHORT bristly/awned units near the top. Blue grama has only about 1–3 long curved combs. Sideoats grama carries many short pendant oats down a much longer axis. Red grama has narrower, more appressed, often purplish branches and awned spikelets; color alone is not sufficient. If an entire culm/branch cannot be resolved, keep Bouteloua sp.\n\nRootstock and collar caveat: the Hill Country description calls Texas grama a tufted non-rhizomatous perennial with a hair-fringe ligule, and Flora of North America agrees on the missing rhizomes but instead describes a tiny ciliate membrane. The UT Austin Williamson County account documents very short, shallow rhizomes and a membranous-ciliate ligule. A verified node-bearing underground stem or a visible membranous ligule base should therefore keep this candidate in the key, but neither observation alone confirms its identification. The present gallery lacks a rootstock or ligule view.\n\nField-pilot refinement (2026-11-17): Prefer the short, bristly, bell-shaped branch pattern; Texas grama also qualifies for the broader unilateral raceme choices when the spikelets on each branch and the number of attached branches are observable. Kew reports 7–10 unilateral branches in the exact species; Diggs reports 6–8(–10), and Gould pp.342–343 shows the wedge-shaped pattern. Count branches, not individual spikelets. The distinct dangling oat-like choice is not a generic lateral-branch option.",
     "traits": {
       "head": [
-        "short_side_racemes"
+        "short_side_racemes",
+        "one_sided",
+        "many_one_sided"
       ],
       "habit": [
         "tuft",
@@ -1660,6 +1662,25 @@
         },
         "photo_policy": "All existing 3 images and credit metadata unchanged",
         "field_pilot": "Observed first-choice failure with side_oats vs short_side_racemes. Proposed clear label distinction and separate unilateral-raceme evidence check."
+      },
+      "flowerhead_field_pilot_20261117": {
+        "source": "Gould (1975), The Grasses of Texas, printed pp.342–343 and Fig.180; Diggs et al. (1999), Illustrated Flora of North Central Texas, printed p.1248; Kew GrassBase exact B. rigidiseta account",
+        "source_url": "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A35641-2/general-information",
+        "regional_source_url": "https://rangeplants.tamu.edu/plant/texas-grama/",
+        "review_date": "2026-11-17",
+        "status": "DIRECT_SOURCE_SUPPORTED_ADDITIVE_HEAD_CHOICES_AND_LABEL_CLARIFICATION",
+        "reference": "Gould describes short wedge-shaped branch units on 3–6 cm axis; Diggs 6–8(–10) branches; Kew explicitly reports 7–10 spreading, cuneate, unilateral racemes of 0.8–1.6 cm. The `one_sided` choice means spikelets along one side of each individual raceme, not simply all racemes on the same side of the main axis. `many_one_sided` is a legitimate optional positive for a specimen with at least seven such branches; not required of all plants. Keep `short_side_racemes` as the best direct head pattern. Do NOT add `side_oats`: clarified to require pendant oat-like units along long axis. Preserve Gould printed mm inconsistency separately; Kew cm measurement is independent supplemental evidence, not a correction of the supplied book.",
+        "previous_states": [
+          "short_side_racemes"
+        ],
+        "added_states": [
+          "one_sided",
+          "many_one_sided"
+        ],
+        "conditional_states": [
+          "many_one_sided if seven or more attached branches actually observed"
+        ],
+        "photo_policy": "No gallery or annotations changed."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
