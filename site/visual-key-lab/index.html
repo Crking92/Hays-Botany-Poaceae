@@ -2595,7 +2595,7 @@ function renderLiguleSections(area,q,buildChoice){
  partA.append(learn);area.append(partA);
  const partB=node("section","ligule-part");
  partB.append(node("h4","","Part B — If there's a membrane, what is its edge like?"),
-  node("p","ligule-part-note","Optional: choose the clearest edge feature you can see. A membrane can have both notches and edge hairs; if so, pick the more distinctive one for now. An unstudied edge never eliminates a grass."));
+  node("p","ligule-part-note","Optional: look at the membrane's rim, not how long or pointed its tip is. A long pointed ligule can still have a smooth edge; choose Lacerate only when you see actual deep splits, Erose for tiny notches, or Ciliate for edge hairs. Ligule length is a separate question. If the edge is unclear, skip it: an unstudied edge never eliminates a grass."));
  const edge=state.refineCharacters.find(x=>x.id==="ligule_edge");
  const types={entire:["Entire (smooth)","Rim mostly unbroken; avoid torn older leaves."],
   erose:["Erose (tiny notches)","Small irregular nicks in the membrane edge."],
