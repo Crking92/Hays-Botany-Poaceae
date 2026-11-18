@@ -588,7 +588,8 @@ assert(source.additional_species_treatments.length>=31,'Gould source records une
  assert.equal(awns.awn_mm_max_rare,4);
  assert.equal(row.observations.find(x=>x.character==="palea_anther_chromosome").chromosome_2n,20);
  assert.equal(card.character_evidence.blade_hairs.status,"DIRECT_OWNER_PHOTOGRAPHED_EXACT_SPECIES_SOURCE_POSITIVE_ONLY");
- assert.equal(card.gould_1975_p261.vein_pattern,"NOT_DESCRIBED_IN_SOURCE");
+ assert.equal(card.character_evidence.blade_hairs.vein_pattern,"NOT_DESCRIBED_IN_SOURCE");
+ assert(/p\.261/.test(card.character_evidence.blade_hairs.gould_source_record));
  assert(card.traits.habit.includes("tuft"));
  assert(card.traits.ligule.includes("membrane"));
  const master=read("optional-refinement-evidence.json");
