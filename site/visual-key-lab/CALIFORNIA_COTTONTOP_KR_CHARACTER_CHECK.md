@@ -1,0 +1,14 @@
+# California cottontop: complete option comparison
+
+Gould pp.411–412 provide the continuous Digitaria californica account, with historical combination Trichachne californica. Fig221 on p.413 belongs to this species; the adjacent Fig219 D.ischaemum and Fig220 D.insularis are not its evidence. No images were copied or changed. The existing Lab name is Arizona cottontop.
+
+Eight precise choices cover pubescent basal scale leaves, felted lower sheaths, appressed mostly simple flowering branches, second-glume silky hairs, lower lemma hairy margins and glabrous back, upper lemma shape and its short awn tip. Ten primary evidence groups retain organ, location and measurement scope. Blades mostly2–5mm, occasionally7mm, support narrow and the overlapping occasional portion of medium. No underground runner, node beard, first-glume pit/vein, measured fertile awn or bent/twisted awn state is invented.
+
+The long2–4mm silky hairs belong to the second glume and lower lemma margins. Gould separately describes the upper lemma narrowing into a short awn tip, without giving its length. The main short_single choice is added while existing none_obvious and older awnless source reports remain recorded. This does not equate silk hairs with awns or a short awn tip with an apical mucro.
+
+Diggs named account/key is on printed1264, genus on1263, as confirmed by successive page footers in the reference excerpt. Existing1263 named-species labels remain as history; new supplement documents the correction. Diggs confirms long hairs, erect perennial and dense appressed branches. Genus evidence for two florets, reduced first glume and membranous ligule remains. Existing Hagenbuch & Lemke p.44 vegetative evidence and inability to reliably separate D.californica/D.insularis/D.patens vegetatively are preserved. Flowering dates remain source-specific (Gould July–November; Diggs May–September).
+
+Validation: dedicated test checks all45 actual core choice IDs and all156 advanced options in24 groups, source/organ scope, atomic bad-source rejection, own-source supported paths, and unchanged media/admission. Existing169-universe, optional-refinement, three-way evidence and KR/Johnsongrass/Virginia regressions pass. Browser shows one supported California cottontop for its own characters (37 possible,132 ruled out) and one supported KR for the full KR selection (20 possible,149 ruled out). Cottontop remains unresolved under KR: these sources do not explicitly provide contrary states for every KR observation, so silence is not used as an exclusion.
+
+Prepared independently against main2b70ae09865e2a510fab409731f657ebe2714e58; not merged or deployed. Integrate shared options/loaders and cumulative counts with other pending species proposals before publication. All169 runtime candidates remain present; local occurrence, nativity, voucher identity and photo certification are not changed.
+
