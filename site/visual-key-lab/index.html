@@ -3527,7 +3527,7 @@ function applyGouldCharacterSupplement(pack,expected){
 
 
 function applyGouldScreenshotBatch(pack){
- if(pack.schema!=="HAYS_GOULD_SCREENSHOT_BATCH_20261118_V1"||pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||!Array.isArray(pack.species)||pack.species.length!==14)throw Error("Invalid Gould screenshot batch");
+ if(pack.schema!=="HAYS_GOULD_SCREENSHOT_BATCH_20261118_V1"||pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||!Array.isArray(pack.species)||pack.species.length!==22)throw Error("Invalid Gould screenshot batch");
  // Validate everything before changing hydrated options or evidence.
  const known=new Map(state.refineCharacters.map(g=>[g.id,new Set(g.options.map(o=>o.id))]));
  for(const a of pack.option_additions){if(!known.has(a.character)||!a.option?.id||!a.option.label||!a.option.detail||!a.subgroup)throw Error("Invalid batch option");known.get(a.character).add(a.option.id)}
