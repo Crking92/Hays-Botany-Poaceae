@@ -668,6 +668,81 @@ console.log("PASS: Gould p127 old Koeleria names mapped to Rostraria, Sphenophol
 console.log("PASS: exact Rostraria 1-mm ligule excludes only >8 mm, without changing source master");
 
 
+// 2026-11-18 pine muhly field pilot: photographed Gould exact species
+// account printed p.265, separated from adjacent M. metcalfei (currently
+// considered M. rigida by Kew) and following M. pauciflora. Test that
+// source-documented overlap does NOT manufacture a false exclusion.
+{
+ const pine=source.additional_species_treatments.filter(x=>x.species_id==="muhlenbergia-dubia");
+ const met=source.additional_species_treatments.filter(x=>x.species_id==="muhlenbergia-metcalfei");
+ assert.equal(pine.length,1,"Gould pine muhly account duplicated");
+ assert.equal(met.length,1,"Gould Metcalfe historical account duplicated");
+ assert.deepEqual(pine[0].printed_pages,[265]);
+ assert.deepEqual(met[0].printed_pages,[265]);
+ assert.equal(pine[0].common_name_as_printed,"PINE MUHLY");
+ const pineObs=Object.fromEntries(pine[0].observations.map(x=>[x.character,x]));
+ const metObs=Object.fromEntries(met[0].observations.map(x=>[x.character,x]));
+ assert.deepEqual(pineObs.blade.width_mm,[1,2]);
+ assert.equal(pineObs.blade.blade_shape,"involute");
+ assert.deepEqual(pineObs.ligule.length_mm,[4,12]);
+ assert.deepEqual(pineObs.panicle.length_cm,[10,30]);
+ assert.deepEqual(pineObs.lemma_awn_and_callus.awn_length_mm_usually,[0,4]);
+ assert.deepEqual(metObs.sheath_and_ligule.ligule_length_mm,[4,15]);
+ assert.deepEqual(metObs.spikelets_and_awns.awn_mm_mostly,[5,10]);
+ assert(/rigida/i.test(met[0].current_taxonomy));
+ assert(pine[0].cautions.some(x=>x.includes("DO NOT exclude")||x.includes("do NOT exclude")));
+ assert(pine[0].cautions.some(x=>x.includes("metcalfei")));
+ const card=read("species-d2.json").find(x=>x.id==="muhlenbergia-dubia");
+ assert(card);
+ assert.deepEqual(card.traits.head,["long_narrow_panicle"]);
+ assert.equal(card.character_evidence.gould_1975_p265.documented_blade_shape,"involute (rolled inward)");
+ assert.deepEqual(card.character_evidence.gould_1975_p265.documented_ligule_mm,[4,12]);
+ assert.equal(card.photos.length,2,"Never alter existing pine muhly photos during key QA");
+ const vm=require("node:vm");
+ const master=read("optional-refinement-evidence.json");
+ const srcWidth=master.evidence.find(x=>x.id===card.id&&x.character==="blade_width");
+ const srcLigule=master.evidence.find(x=>x.id===card.id&&x.character==="ligule_length");
+ const srcShape=master.evidence.find(x=>x.id===card.id&&x.character==="blade_shape");
+ assert.deepEqual(srcWidth.width_mm,[1,2]);
+ assert.deepEqual(srcLigule.length_mm,[4,10]);
+ assert.deepEqual(srcShape.states,["flat","inrolled"]);
+ const state={
+  gouldSource:source,
+  refineEvidenceMap:{[card.id]:[structuredClone(srcWidth),structuredClone(srcLigule),structuredClone(srcShape)]},
+  refineSelected:{},refineCharacters:master.characters,selected:{}
+ };
+ const begin=html.indexOf("/* Texas grama field pilot: Gould 1975 pp.342–343");
+ const end=html.indexOf("state.refineEvidenceOptionKeys=new Set",begin);
+ const hs=html.indexOf("function refinementEvidence(");
+ const he=html.indexOf("function refinementSection(",hs);
+ assert(begin>=0&&end>begin&&he>hs,"Need runtime Gould overlays and source helpers");
+ const ctx=vm.createContext({state});
+ vm.runInContext(html.slice(begin,end)+html.slice(hs,he),ctx);
+ const pineWidth=state.refineEvidenceMap[card.id][0];
+ const pineLigule=state.refineEvidenceMap[card.id][1];
+ assert.deepEqual(Array.from(pineWidth.states),["thread","narrow"]);
+ assert.deepEqual(Array.from(pineLigule.length_mm),[4,12]);
+ assert(/ONLY at the shared 2 mm/.test(pineWidth.additional_state_sources.narrow.note));
+ for(const [choice,supported,excluded] of [["thread",true,false],["narrow",true,false],["medium",false,true],["broad",false,true]]){
+  state.refineSelected={blade_width:choice};
+  assert.equal(vm.runInContext("hasAllDocumentedRefinements({id:'muhlenbergia-dubia'})",ctx),supported,"pine width "+choice);
+  assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'muhlenbergia-dubia'}).length",ctx),excluded?1:0,"pine width conflict "+choice);
+ }
+ for(const [choice,supported,excluded] of [["tiny",false,true],["short",false,true],["medium",true,false],["long",true,false]]){
+  state.refineSelected={ligule_length:choice};
+  assert.equal(vm.runInContext("hasAllDocumentedRefinements({id:'muhlenbergia-dubia'})",ctx),supported,"pine ligule "+choice);
+  assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'muhlenbergia-dubia'}).length",ctx),excluded?1:0,"pine ligule conflict "+choice);
+ }
+ state.refineSelected={blade_width:"narrow",blade_shape:"folded",ligule_length:"long"};
+ assert.equal(vm.runInContext("hasAllDocumentedRefinements({id:'muhlenbergia-dubia'})",ctx),false,
+  "Pine remains unresolved for Lindheimer's V-fold, not a sourced positive match");
+ assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'muhlenbergia-dubia'}).length",ctx),0,
+  "Do not falsely exclude pine from coarse 2–5 mm, V-fold and >8 mm picks");
+ assert.deepEqual(srcWidth.states,["thread"],"Original FNA width state unchanged");
+ assert.deepEqual(srcLigule.length_mm,[4,10],"Original FNA ligule measurement unchanged");
+}
+console.log("PASS: Gould pine p265 overlap, shared 2-mm endpoint, metcalfei taxonomy hold and no false exclusion");
+
 // Texas grama Gould pp.342–343: preserve printed unit conflict and proper adjacent account boundary.
 const texasGramaGould342=source.additional_species_treatments.find(x=>x.species_id==="bouteloua-rigidiseta");
 const texasGramaCard342=read("species-c1.json").find(x=>x.id==="bouteloua-rigidiseta");

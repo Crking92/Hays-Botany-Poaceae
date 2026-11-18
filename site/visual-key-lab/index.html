@@ -4322,6 +4322,46 @@ try{
   };
  }
 }
+/* Pine muhly field follow-up: Gould 1975 p.265 confirms blades 1–2 mm
+   and ligules 4–12 mm. The width's exact 2 mm endpoint supports BOTH
+   approximate 'up to 2' and '2–5 mm' beginner buttons, but NOT 3–5 mm.
+   Gould's primary ligule 4–12 mm and earlier FNA 4–10 mm BOTH permit
+   the 'over 8 mm' button. Preserve all historical JSON source evidence;
+   never invent a folded-blade state or infer Hays County native status. */
+{
+ const gould=state.gouldSource?.additional_species_treatments?.find(
+   x=>x.species_id==="muhlenbergia-dubia"&&x.printed_pages?.length===1&&x.printed_pages[0]===265);
+ const blade=gould?.observations?.find(x=>x.character==="blade");
+ const membrane=gould?.observations?.find(x=>x.character==="ligule");
+ const records=state.refineEvidenceMap["muhlenbergia-dubia"]||[];
+ const width=records.find(e=>e.character==="blade_width");
+ const length=records.find(e=>e.character==="ligule_length");
+ if(blade?.width_mm?.[0]===1&&blade.width_mm[1]===2&&
+    membrane?.length_mm?.[0]===4&&membrane.length_mm[1]===12&&
+    width?.width_mm?.[0]===1&&width.width_mm[1]===2&&
+    width.states?.includes("thread")&&length?.length_mm?.[0]===4&&
+    length.length_mm[1]===10&&length.states?.includes("long")){
+   width.states=[...new Set([...width.states,"narrow"])];
+   width.additional_state_sources??={};
+   width.additional_state_sources.narrow={
+     source:"Gould (1975), The Grasses of Texas, p.265, Muhlenbergia dubia",
+     source_url:"https://archive.org/details/grassesoftexas0000goul",
+     note:"Gould gives 1–2 mm expanded blades. Narrow 2–5 mm is compatible ONLY at the shared 2 mm endpoint; 3–5 mm is NOT documented for pine muhly.",
+     organ_scope:"fresh expanded leaf blade",conditional:true
+   };
+   length.length_mm=[4,12];
+   length.additional_state_sources??={};
+   length.additional_state_sources.long={
+     source:"Gould (1975), The Grasses of Texas, p.265, Muhlenbergia dubia",
+     source_url:"https://archive.org/details/grassesoftexas0000goul",
+     note:"Gould 4–12 mm true ligule, lower blades may have shorter ligules; historical FNA 4–10 mm separately preserved. Both permit >8 mm.",
+     organ_scope:"true inner collar membrane",conditional:true
+   };
+   length.source="Gould (1975), The Grasses of Texas, p.265, Muhlenbergia dubia";
+   length.source_url="https://archive.org/details/grassesoftexas0000goul";
+   length.note="Gould 1975 p.265: 4–12 mm; separate FNA description reports 4–10 mm; overlapping measurements, neither contradicts the over-8-mm beginner option.";
+ }
+}
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
  rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
