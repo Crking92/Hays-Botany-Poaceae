@@ -942,6 +942,30 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Exact owner's Gould Cortaderia p.56: ligule a 3–5 mm tuft of HAIRS.
+    FNA1–2mm and NSW2–3mm hair heights differ, but all reported
+    true ligules are well below >8mm. Preserve disagreement at lower
+    bands and don't conflate collar hair rings with true ligule. */
+ if(s.id==="cortaderia-selloana"&&selectedRefinementStates("ligule_length").includes("long")){
+   const record=(state.refineEvidenceMap[s.id]||[]).find(e=>e.character==="ligule_length");
+   const gould=record?.additional_state_sources?.medium;
+   const comparison=state.candidateManifest?.find(x=>x.id==="cortaderia-selloana")
+     ?.details?.find(x=>x.part==="ligule");
+   if(s.exact_pampas_glume_hair_absence?.printed_page===56&&
+      gould?.length_mm?.[0]===3&&gould.length_mm[1]===5&&
+      gould.pdf_printed_page===56&&gould.source?.includes("Gould")&&
+      gould.source_disagreement&&comparison?.description?.includes("FNA gives 1–2 mm")&&
+      comparison.description.includes("3–5 mm")){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Gould: dense 3–5-mm hair ligule; FNA: 1–2 mm; NSW: 2–3 mm",
+       source:"Gould (1975), The Grasses of Texas p.56; FNA vol.25 p.299; NSW Cortaderia selloana",
+       source_url:"https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+       note:"All published lengths here are far below a correctly measured >8-mm true ligule. Gould reports a 3–5-mm HAIR TUFT, not a papery membrane. Measure the actual inner collar, not an outer collar hair ring, leaf edge prickle or long silky female lemma hair. Keep source differences for short/medium bands.",
+       policy:"EXACT_PAMPAS_SOURCE_UPPER5_VS_LONG8"
+     });
+   }
+ }
  /* Gould 1975 Panicum hians (=Steinchisma hians), printed p.458
     and continuation, reports a fringed true ligule about 0.5 mm.
     Independent H&L 2015 p.65 reports an upper limit of 0.5 mm.

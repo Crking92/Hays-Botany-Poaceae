@@ -781,6 +781,45 @@ console.log("PASS: Gould pine p265 overlap, shared 2-mm endpoint, metcalfei taxo
 }
 console.log("PASS: Steinchisma 0.5-mm true ligule excludes long-only with preserved source provenance");
 
+// Owner's photographed Gould p.56 account, previously extracted in the
+// pampas character supplement. Compare full true hair ligule height
+// against >8 mm only, preserving shorter-band source disagreements.
+{
+ const src=read("gould-pampasgrass-character-supplement.json");
+ const gould=src.evidence.find(e=>e.id==="cortaderia-selloana"&&e.character==="ligule_length");
+ const candidate=read("hays-candidates.json").candidates.find(e=>e.id==="cortaderia-selloana");
+ assert.equal(src.printed_page,56);
+ assert.deepEqual(gould.length_mm,[3,5]);
+ assert(gould.source_disagreement);
+ assert(candidate.details.find(e=>e.part==="ligule").description.includes("FNA gives 1–2 mm"));
+ const vm=require("node:vm");
+ const state={candidateManifest:[candidate],refineEvidenceMap:{"cortaderia-selloana":[
+  {...gould,additional_state_sources:{medium:structuredClone(gould)}}
+ ]},refineCharacters:[],refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const sourceSpecies={id:"cortaderia-selloana",
+   exact_pampas_glume_hair_absence:structuredClone(src.exact_glume_hair_absence)};
+ const start=html.indexOf("function refinementEvidence(");
+ const finish=html.indexOf("function refinementSection(",start);
+ assert(start>0&&finish>start);
+ const ctx=vm.createContext({state,sourceSpecies});
+ vm.runInContext(html.slice(start,finish),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+  state.refineSelected.ligule_length=choice;
+  const conflicts=vm.runInContext("verifiedAdvancedConflict(sourceSpecies)",ctx);
+  assert.equal(conflicts.length,choice==="long"?1:0,"Pampas true ligule "+choice);
+  if(choice==="long")assert.equal(conflicts[0].policy,"EXACT_PAMPAS_SOURCE_UPPER5_VS_LONG8");
+ }
+ state.refineSelected.ligule_length="long";
+ state.candidateManifest=[];
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(sourceSpecies)",ctx).length,0,
+   "Do not exclude without independent comparison source");
+ state.candidateManifest=[candidate];
+ sourceSpecies.exact_pampas_glume_hair_absence=null;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(sourceSpecies)",ctx).length,0,
+   "Do not exclude without Gould p56 source overlay");
+}
+console.log("PASS: Pampas hair-ligule source extrema reject only long >8 mm");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
