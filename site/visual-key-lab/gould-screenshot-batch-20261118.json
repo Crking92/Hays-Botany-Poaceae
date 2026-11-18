@@ -102,13 +102,6 @@
           "note": "6–12 florets per spikelet."
         },
         {
-          "character": "true_lemma_awn",
-          "states": [
-            "short"
-          ],
-          "note": "Short straight/curved awn only sometimes present."
-        },
-        {
           "character": "blade_shape",
           "states": [
             "inrolled"
@@ -135,6 +128,13 @@
             "hairy"
           ],
           "note": "Long-ciliate lemma nerves."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "short"
+          ],
+          "note": "Stout straight/curved lemma awn slightly shorter to slightly longer than the apical lobes."
         }
       ],
       "cautions": [
@@ -258,13 +258,6 @@
       },
       "evidence": [
         {
-          "character": "culm_posture",
-          "states": [
-            "erect"
-          ],
-          "note": "Coarse upright aquatic perennial."
-        },
-        {
           "character": "underground_stems",
           "states": [
             "rhizome_present"
@@ -385,13 +378,6 @@
             "rough_surface"
           ],
           "note": "Sheaths usually strongly scabrous."
-        },
-        {
-          "character": "blade_shape",
-          "states": [
-            "flat"
-          ],
-          "note": "Flat blades."
         },
         {
           "character": "blade_width",
@@ -622,13 +608,6 @@
           "note": "Mostly 2–4 florets."
         },
         {
-          "character": "spikelet_position",
-          "states": [
-            "short_pedicelled_spikelets"
-          ],
-          "note": "Short pedicels."
-        },
-        {
           "character": "lemma_texture",
           "states": [
             "hairy"
@@ -665,7 +644,7 @@
       ],
       "observations": {
         "habit": "Stout perennial; culms 2–4 m from thick creeping rhizomes, with stolons also often produced. Culms/leaves glabrous.",
-        "collar_blade": "Leafy culms, no inflorescence-base sheath. Ciliate ligule membrane with hairs longer than membrane base. Flat elongate blades, rough margins, mostly 1.5–5.5 cm wide.",
+        "collar_blade": "Smooth rounded sheaths; minute ciliate ligules, hairs longer than membranous base. Flat elongate blades with finely rough margins, main-culm blades mostly 1.5–5 cm wide.",
         "flowers": "Dense contracted much-branched panicle; spikelets on slender wiry pedicels/branchlets. Disarticulation above glumes and between florets. Spikelets 10–15 mm, mostly 4–8-flowered. Rachilla hairs 1 cm OR LONGER; glumes, lemmas and paleas glabrous. First glume 3-nerved, half to two-thirds second. Second glume 3–5-nerved, mostly 6–8 mm, acute/mucronate. Lower floret infertile; its 3-nerved pointed lemma mostly 11–14 mm, much longer than upper lemmas.",
         "context": "July–November, sometimes throughout year. Gould describes the broad historical species and notes competing communis/australis usage. This does not identify native/introduced North American lineage."
       },
@@ -704,13 +683,6 @@
             "flat"
           ],
           "note": "Flat blades."
-        },
-        {
-          "character": "blade_width",
-          "states": [
-            "broad"
-          ],
-          "note": "Mostly 15–55 mm."
         },
         {
           "character": "blade_hairs",
@@ -753,6 +725,13 @@
             "lower_glume_present_shorter"
           ],
           "note": "First glume 1/2–2/3 second."
+        },
+        {
+          "character": "blade_width",
+          "states": [
+            "broad"
+          ],
+          "note": "Mostly 15–50 mm on main culms."
         }
       ],
       "cautions": [
@@ -844,13 +823,6 @@
             "wrinkled"
           ],
           "note": "Minutely rugose/rough, not invented hairs."
-        },
-        {
-          "character": "true_lemma_awn",
-          "states": [
-            "none"
-          ],
-          "note": "Awnless lemma tips."
         }
       ],
       "cautions": []
@@ -886,15 +858,6 @@
           "note": "Appressed pubescence, becoming glabrate."
         },
         {
-          "character": "sheath_surface",
-          "states": [
-            "sometimes_hairy",
-            "glabrous",
-            "pilose_sheath_throat"
-          ],
-          "note": "Hair variable, long hairs at collar."
-        },
-        {
           "character": "ligule_length",
           "states": [
             "tiny",
@@ -909,13 +872,6 @@
             "inrolled"
           ],
           "note": "Flat or strongly inrolled."
-        },
-        {
-          "character": "blade_hairs",
-          "states": [
-            "blade_hairy"
-          ],
-          "note": "Both surfaces pilose/hispid."
         },
         {
           "character": "glume_marks",
@@ -961,6 +917,21 @@
             "truncate"
           ],
           "note": "Absent/minute or thin truncate membrane; erose not asserted here."
+        },
+        {
+          "character": "sheath_surface",
+          "states": [
+            "sometimes_hairy",
+            "glabrous"
+          ],
+          "note": "Sheath pubescence variable; long collar hairs are recorded separately, not assigned to sheath throat."
+        },
+        {
+          "character": "blade_hairs",
+          "states": [
+            "blade_hairy"
+          ],
+          "note": "Usually short stiff hairs on one or both blade faces."
         }
       ],
       "cautions": []
@@ -1224,13 +1195,6 @@
           "note": "Variety-specific pubescence; both variants retained."
         },
         {
-          "character": "true_lemma_awn",
-          "states": [
-            "long"
-          ],
-          "note": "Awn 9–18 mm, qualify numeric range rather than universal length threshold."
-        },
-        {
           "character": "blade_width",
           "states": [
             "narrow",
@@ -1245,6 +1209,13 @@
             "unequal_glumes_both_present"
           ],
           "note": "First 1–3 nerves, not invariably one; second 3-nerved."
+        },
+        {
+          "character": "true_lemma_awn",
+          "states": [
+            "long"
+          ],
+          "note": "Lemma awn 12–18 mm."
         }
       ],
       "cautions": []
