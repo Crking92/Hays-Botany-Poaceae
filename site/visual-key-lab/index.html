@@ -69,11 +69,16 @@ dialog{border:0;border-radius:18px;width:min(830px,calc(100vw - 20px));max-heigh
 .head-extra-examples>summary{cursor:pointer;color:var(--forest2);font-size:.86rem;font-weight:800;list-style-position:inside;padding:3px 1px;text-decoration:underline;text-underline-offset:3px}
 .head-extra-examples>summary:focus-visible{outline:3px solid #dea94e;outline-offset:3px}
 .head-extra-intro{font-size:.78rem;color:var(--muted);line-height:1.5;margin:10px 0}
-.head-extra-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:9px 0}
-.head-extra-item{margin:0;min-width:0}
-.head-extra-item img{width:100%;height:145px;object-fit:contain;background:var(--pale);border-radius:8px}
-.head-extra-item figcaption{display:grid;gap:3px;font-size:.73rem;line-height:1.35;overflow-wrap:anywhere}
-.head-extra-item figcaption span,.head-extra-item figcaption small{color:var(--muted)}
+.head-extra-slider{display:grid;gap:7px;margin:8px 0}
+.head-extra-slide{margin:0;min-width:0}
+.head-extra-slide img{display:block;width:100%;height:190px;object-fit:contain;background:var(--pale);border-radius:8px}
+.head-extra-caption{display:grid;gap:2px;font-size:.75rem;line-height:1.35;overflow-wrap:anywhere;margin-top:6px}
+.head-extra-caption span,.head-extra-caption small{color:var(--muted)}
+.head-extra-nav{display:flex;justify-content:space-between;align-items:center;gap:5px}
+.head-extra-nav-btn{border:1px solid var(--line);border-radius:8px;background:var(--pale);color:var(--ink);padding:6px 8px;font-size:.78rem;font-weight:700}
+.head-extra-nav-btn:disabled{opacity:.45;cursor:default}
+.head-extra-count{font-size:.76rem;white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums}
+@media(max-width:560px){.head-extra-slide img{height:160px}.head-extra-intro{font-size:.74rem}}
 html[data-theme="dark"] .head-extra-examples{background:#1a2a21}
 html[data-theme="dark"] .head-extra-examples>summary{color:#b9e5c7}
 /* Flowerhead line drawings supplement, never replace, credited real-world photographs. */
@@ -2697,23 +2702,51 @@ function flowerheadExampleGallery(key,title,refId,primaryPhoto){
   if(spec.id===refId||spec.trial||!Array.isArray(spec.traits?.head)||!spec.traits.head.includes(key))continue;
   addHeadPhotos(spec);
  }
- const gallery=node("div","head-extra-grid");
- for(const {spec,p,primary} of candidates){
-  const fig=node("figure","head-extra-item");
-  const img=document.createElement("img");img.src=p.src;img.loading="lazy";img.decoding="async";
+ const gallery=node("div","head-extra-slider");
+ const display=node("figure","head-extra-slide");
+ const img=document.createElement("img");img.loading="lazy";img.decoding="async";
+ const caption=node("figcaption","head-extra-caption");
+ const titleLine=node("strong","");
+ const description=node("span","");
+ const attribution=node("small","");
+ const source=document.createElement("a");source.textContent="Photo source";source.target="_blank";source.rel="noopener noreferrer";
+ caption.append(titleLine,description,attribution,source);
+ display.append(img,caption);
+ const nav=node("div","head-extra-nav");
+ const previous=node("button","head-extra-nav-btn","← Previous"),next=node("button","head-extra-nav-btn","Next →");
+ previous.type="button";next.type="button";
+ const counter=node("span","head-extra-count","");
+ counter.setAttribute("aria-live","polite");
+ nav.append(previous,counter,next);
+ let index=0;
+ function show(n){
+  if(!candidates.length)return;
+  index=(n+candidates.length)%candidates.length;
+  const {spec,p,primary}=candidates[index];
+  img.src=p.src;
   img.alt=(spec.common||spec.scientific||"Grass")+" — "+(p.label||"published reference photo");
-  img.addEventListener("error",()=>fig.remove());
-  const caption=node("figcaption","");
-  caption.append(node("strong","",spec.common||spec.scientific||"Grass"),
-    node("span","",primary?"Card reference view":(p.label||"Additional photographed view")),
-    node("small","","Photo: "+credit(p)));
-  const source=document.createElement("a");source.href=p.source_page;source.textContent="Photo source";
-  source.target="_blank";source.rel="noopener noreferrer";caption.append(source);
-  fig.append(img,caption);gallery.append(fig);
+  titleLine.textContent=spec.common||spec.scientific||"Grass";
+  description.textContent=primary?"Card reference view":(p.label||"Additional photographed view");
+  attribution.textContent="Photo: "+credit(p);
+  source.href=p.source_page;
+  counter.textContent=(index+1)+" of "+candidates.length;
+  previous.disabled=next.disabled=candidates.length<2;
  }
+ previous.addEventListener("click",()=>show(index-1));
+ next.addEventListener("click",()=>show(index+1));
+ gallery.tabIndex=0;
+ gallery.setAttribute("aria-label",title+" photo gallery; use arrow keys or previous and next buttons");
+ gallery.addEventListener("keydown",event=>{
+  if(event.key==="ArrowLeft"){event.preventDefault();show(index-1)}
+  if(event.key==="ArrowRight"){event.preventDefault();show(index+1)}
+ });
+ img.addEventListener("error",()=>{img.removeAttribute("src");img.alt="Photograph unavailable; open the source link for this reference."});
+ gallery.append(display,nav);
  wrap.append(gallery);
+ // Only load a gallery image after the user opens this section.
+ wrap.addEventListener("toggle",()=>{if(wrap.open&&!img.getAttribute("src"))show(index)});
  if(candidates.length<2){
-  wrap.append(node("p","head-extra-intro","Only one clearly captioned example is available here. For more angles, open the example species in the Learner gallery; do not assume a foliage photo shows this flowerhead shape."));
+  wrap.append(node("p","head-extra-intro","Only one captioned example is available here; other views still need verification."));
  }
  return wrap;
 }
