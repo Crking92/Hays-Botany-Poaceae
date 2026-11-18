@@ -406,8 +406,8 @@ const qs=[
 {id:"head",short:"Flowerhead",title:"What does the flowering head look like?",hint:"Begin with its overall architecture: an open panicle, contracted plume, distinct racemes, or spike. Use the categories below to compare whole heads; skip if yours is not flowering.",options:[
 ["short_racemes","Separate short silky racemes","Short plumes appear at the ends of separate leafy branches.","schizachyrium-scoparium",3],
 ["fingers","Fingers clustered near the tip","Several narrow flowering branches arise close together at the top.","bothriochloa-ischaemum",0],
-["side_oats","Many little hanging side branches","Small lateral units line a long flowering axis.","bouteloua-curtipendula",1],
-["short_side_racemes","Short bristly racemes — not combs","Several small flowering branches spaced along one upper axis, lacking the regular pectinate eyebrow shape. Compare Texas grama with red grama.","bouteloua-rigidiseta",2],
+["side_oats","Dangling oat-like branches along a long stalk","Look for little oat-like units that hang downward along an elongated main flowering axis, as in sideoats grama. Do not choose this just because a grass has side branches: the short bristly Texas grama clusters belong under the next choice.","bouteloua-curtipendula",1],
+["short_side_racemes","Short, bristly, bell-shaped branches","Look for small wedge- or bell-shaped bristly groups along a short upper flowering axis. Texas grama commonly has 6–10 short branches; red grama can have slimmer, less flared branches. These are not dangling oats or long eyebrow combs. Count whole branches, not their tiny spikelets.","bouteloua-rigidiseta",2],
 ["combs","Comb-shaped flowering branches","One or several one-sided eyebrow combs with regular spikelets. Short, upright red grama combs can look like Texas grama bristles from a distance.","bouteloua-gracilis",3],
 ["whorls","Windmill spokes in tiers","Branches may arise in tight or widely separated levels. Widely separated whorls favor tumble windmillgrass; examine sterile florets to exclude hooded or hybrid plants.","chloris-verticillata",2],
 ["flat_oats","Flat dangling oat-like spikelets","Flattened hanging spikelets suspended on fine stalks.","chasmanthium-latifolium",0],
@@ -420,8 +420,8 @@ const qs=[
 ["reed_plume","Tall reed-like flowering plume","A tall, elongated, repeatedly branched plume above stout cane-like stems; open spaces remain between branches.","arundo-donax",2],
 ["branched_oat","Loose, dangling oat-like spikelets","Large multi-flowered spikelets hang from slender panicle branches.","bromus-japonicus",0],
 ["burrs","Spiny burs or hard seed clusters","Cenchrus has fused spiny bristle burs. Female buffalograss has non-spiny hard clusters made from glumes and branch tissue. Inspect closely; these are not the same structure.","cenchrus-spinifex",0],
-["one_sided","Spikelets on one side of spreading branches","Slender racemes with a mainly one-sided row of spikelets.","disakisperma-dubium",1],
-["many_one_sided","Seven or more one-sided branches","Count the attached racemes. Vaseygrass commonly has many, but Dallisgrass and P. pubiflorum may reach seven or eight; confirm spikelet hair and vein patterns.","paspalum-urvillei",0],
+["one_sided","Spikelets on one side of each branch","Inspect an individual flowering branch: its spikelets sit mainly along one side of that branch's own axis. Branches can be long or very short; this is not the same as all branches attaching on one side of the main stalk. Texas grama and sideoats can both fit.","disakisperma-dubium",1],
+["many_one_sided","Seven or more one-sided branches","Count seven or more attached whole branches, each bearing spikelets along one side of its own axis. Even very short branches count. Texas grama can have 7–10; vaseygrass and some other paspalums also fit. Do not count spikelets as separate branches.","paspalum-urvillei",0],
 ["spike","Wheat-like upright or nodding spike","A single axis with directly attached spikelets; awns can make it look densely bristly. Virginia wildrye typically stays stiffly upright; Canada wildrye often nods. Awns are not separate foxtail bristles.","elymus-virginicus",1],
 ["tangled_awns","Dark awns twisted into a tangle","A narrow flowering raceme whose long dark awns twist together at maturity (tanglehead example).","heteropogon-contortus",0],
 ["long_narrow_panicle","Long, narrow panicle","A relatively contracted and elongated head, not a broad cloud.","sporobolus-compositus",0],
@@ -2103,20 +2103,20 @@ function headIcon(key){
   }
   break;
  case "short_side_racemes":
-  // Few lateral racemes of bristly grama: distinguish separate branches from combs.
-  main();
-  for(const row of [
-    [28,1,23,-8],[46,-1,22,-7],[64,1,25,-9],[82,-1,21,-8]
-  ]){
-    const [y,dir,len,dy]=row,endX=55+dir*len,endY=y+dy;
-    path("M55 "+y+" L"+endX+" "+endY,1.7);
-    for(let j=1;j<=4;j++){
-      const t=j/5,bx=55+dir*len*t,by=y+dy*t;
-      // Tiny aligned spikelets and their fine awns rather than fuzzy hairs.
-      path("M"+bx.toFixed(1)+" "+by.toFixed(1)+" l"+(dir*4)+" "+(j%2?3:2),1.25,olive);
-      path("M"+(bx+dir*4).toFixed(1)+" "+(by+(j%2?3:2)).toFixed(1)+" l"+(dir*3)+" -"+(j%2?7:5),.9,gold);
+  // Texas grama-inspired schematic: seven separate short wedge-shaped,
+  // awned lateral units on a short upper axis. Not an exact specimen or scale.
+  path("M38 108 Q40 67 45 13",2.2);
+  for(let j=0;j<7;j++){
+    const y=25+j*8.2,x=45-(y-13)*.075;
+    const ex=x+18,ey=y-8;
+    path("M"+x+" "+y+" L"+ex+" "+ey,1.4,green);
+    // Four spreading spikelet units make a fan/wedge (not an eyebrow row).
+    for(let k=0;k<4;k++){
+      const t=(k+1)/5,bx=x+18*t,by=y-8*t;
+      const dx=4+k*2.1,dy=6+k*1.1;
+      path("M"+bx.toFixed(1)+" "+by.toFixed(1)+" l"+dx.toFixed(1)+" -"+dy.toFixed(1),1.15,olive);
+      path("M"+(bx+dx).toFixed(1)+" "+(by-dy).toFixed(1)+" l"+(2+k*.8).toFixed(1)+" -"+(4+k*.7).toFixed(1),.75,gold);
     }
-    path("M"+endX+" "+endY+" l"+(dir*7)+" -5",1.05,gold);
   }
   break;
  case "short_racemes":{
