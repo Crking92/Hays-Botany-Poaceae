@@ -654,6 +654,40 @@ assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
 }
 console.log("PASS: Lindheimer 2–5 mm leaf supports narrow and medium at 5 mm only");
 
+// Lindheimer's muhly 2026-11-18 leaf-vein pilot: no source-verified vein
+// option exists in the published exact-species description (H&L p.54).
+// Every vein selection must remain an UNKNOWN evidence gap rather than a
+// conflict. UI must tell a beginner why Supported can drop to zero.
+{
+ const vm=require("node:vm");
+ const master=read("optional-refinement-evidence.json");
+ const species=read("species-c3.json").find(x=>x.id==="muhlenbergia-lindheimeri");
+ const evidence=master.evidence.filter(x=>x.id===species.id);
+ assert(!evidence.some(x=>x.character==="blade_venation"),
+  "Do not invent Lindheimer blade veins without verified exact-source evidence");
+ const state={refineEvidenceMap:{[species.id]:structuredClone(evidence)},refineSelected:{},
+  refineCharacters:master.characters,selected:{},refineEvidenceOptionKeys:new Set()};
+ const start=html.indexOf("function refinementEvidence(");
+ const end=html.indexOf("function refinementSection(",start);
+ const advStart=html.indexOf("const advancedExclusionPolicy=");
+ assert(start>=0&&advStart>start&&end>advStart);
+ const ctx=vm.createContext({state});
+ vm.runInContext(html.slice(start,end),ctx);
+ assert.equal(vm.runInContext("hasAllDocumentedRefinements({id:'muhlenbergia-lindheimeri'})",ctx),true);
+ for(const v of ["pale_midvein","prominent_midvein","raised_midvein","raised_ribs"]){
+  state.refineSelected.blade_venation=v;
+  assert.equal(vm.runInContext("hasAllDocumentedRefinements({id:'muhlenbergia-lindheimeri'})",ctx),false,
+   "Missing verified vein evidence must remain unknown: "+v);
+  assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'muhlenbergia-lindheimeri'}).length",ctx),0,
+   "Missing vein evidence cannot rule out Lindheimer: "+v);
+ }
+ assert(html.includes("Vein descriptions are incomplete for many grasses."),
+  "Vein question must explain optional evidence gaps");
+ assert(html.includes("they moved to Still possible, NOT ruled out."),
+  "Zero-supported results must distinguish missing vein evidence from a contradiction");
+}
+console.log("PASS: four Lindheimer vein options remain unknown, never exclusions; beginner gap notice visible");
+
 // Field pilot 2026-11-18: Texas grama's short wedge-shaped flowerhead is a
 // source-documented architectural contradiction for three research additions.
 // All other flowerhead choices retain historical positive-only safeguards.
