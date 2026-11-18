@@ -1,0 +1,368 @@
+{
+  "schema": "HAYS_GOULD_SILKY_BLUESTEM_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "dichanthium-sericeum",
+  "scientific": "Dichanthium sericeum",
+  "printed_page": 588,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "historical_synonym": "Andropogon sericeus R.Br.",
+  "source_material": "Owner screenshot: silky exact entry p.588 and same-taxon Fig310. Facing p.589 Angleton/Kleberg and continuation distribution kept separate. No figures republished.",
+  "option_additions": [
+    {
+      "character": "stem_nodes",
+      "option": {
+        "id": "silvery_spreading_node_beard",
+        "label": "Culm node densely bearded with spreading silvery hairs",
+        "detail": "Inspect the actual culm node. Gould describes a dense silvery spreading beard; do not call these hairs the inner ligule. Uncertain printed hair-length unit is not used for scoring."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "blade_hairs",
+      "option": {
+        "id": "both_blade_surfaces_villous",
+        "label": "BOTH blade faces sometimes long-spreading-hairy",
+        "detail": "Gould permits infrequent villosity on both blade surfaces; common plants are hairless or nearly so. This does not establish raised hair bases or a mandatory basal tuft."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "sheath_surface",
+      "option": {
+        "id": "spreading_villous_sheath",
+        "label": "Sheath sometimes villous with spreading hairs",
+        "detail": "Gould permits infrequent long-spreading hairs on sheaths. Preserve the frequent hairless condition; do not require every plant to have hairy sheaths."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "dense_erect_villous_branch_cluster",
+        "label": "Dense erect cluster of silky-hairy flowering branches",
+        "detail": "Gould describes2–7 conspicuously villous branches,2.5–6 cm, densely clustered and erect at the culm apex. Not a leaf hair tuft or culm-node beard."
+      },
+      "subgroup": "Flowering branch architecture"
+    },
+    {
+      "character": "floral_hair_position",
+      "option": {
+        "id": "rachis_pedicels_densely_villous",
+        "label": "Rachis and pedicels densely long-hairy",
+        "detail": "Inspect flowering rachis and pedicels: narrow, densely villous, slightly flattened in Gould. Do not infer KR marginal cilia or a medial groove from general hairiness."
+      },
+      "subgroup": "Flowering axis and pedicels"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "outer_sessile_glume_thin_rounded_apex",
+        "label": "Sessile OUTER glume thin with rounded apex",
+        "detail": "Locate the outer glume of the sessile spikelet. The thin rounded apex is not a lemma tip, glandular pit or automatic first-glume vein count."
+      },
+      "subgroup": "Sessile versus pedicelled outer glume"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "outer_sessile_glume_apical_hair_line",
+        "label": "Sessile OUTER glume: long hair line below apex",
+        "detail": "Gould describes the rounded thin apex delimited by a line of long usually papilla-based hairs. Trace the hairs to the outer glume, not an adjacent blade or lemma."
+      },
+      "subgroup": "Sessile versus pedicelled outer glume"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "outer_sessile_glume_dorsal_side_hairs",
+        "label": "Sessile OUTER glume: hairs down both back sides",
+        "detail": "Gould continues the apical hair line down both sides of the dorsal surface. Do not recode this as KR stiff hairs only on the lower back."
+      },
+      "subgroup": "Sessile versus pedicelled outer glume"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "outer_pedicelled_glume_tip_side_hairs",
+        "label": "Stalked OUTER glume: hair line across tip/down sides",
+        "detail": "The awnless pedicelled companion is about as large as sessile one; its outer glume often has a line of hairs across the tip and down the sides. Keep both spikelets distinct."
+      },
+      "subgroup": "Sessile versus pedicelled outer glume"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "note": "Blades mostly2–5 mm wide,5–25 cm long. The5-mm shared band boundary supports medium as an overlapping endpoint, not an entire usual5–10 mm range.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification.",
+      "width_mm": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "blade_hairs",
+      "states": [
+        "hairless",
+        "blade_hairy",
+        "both_blade_surfaces_villous"
+      ],
+      "note": "Leaves commonly hairless or nearly so; infrequently both blade surfaces villous with spreading hairs. No blade papilla bases inferred from outer-glume papilla-based hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "sheath_surface",
+      "states": [
+        "glabrous",
+        "sometimes_hairy",
+        "spreading_villous_sheath"
+      ],
+      "note": "Leaves commonly hairless; infrequently sheath and both blade surfaces spreading-villous. Preserve common/rare alternatives; no glume hair is transferred to sheath.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "note": "Erose membranous ligule1–2 mm. Older AusGrass/Kew shorter intervals are retained separately; do not measure the long node beard as ligule.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification.",
+      "length_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "ligule_edge",
+      "states": [
+        "erose"
+      ],
+      "note": "True ligule an erose MEMBRANE; no ciliate hair-only ligule inferred from nearby silky hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "note": "Tufted perennial with erect culms mostly50–100 cm; preserve supplementary slightly decumbent reports separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes",
+        "silvery_spreading_node_beard"
+      ],
+      "note": "Culm nodes densely bearded with silvery spreading hairs. Image appears to print1–5 cm for hairs; unit requires original-print confirmation and is not used as a scoring measurement.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "spikelet_position",
+      "states": [
+        "paired",
+        "dense_erect_villous_branch_cluster"
+      ],
+      "note": "Inflorescence2–7 villous densely clustered erect branches2.5–6 cm. Pedicelled spikelets about as large as sessile ones, but awnless. No KR medial-groove state established.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "floral_hair_position",
+      "states": [
+        "rachis_pedicels_densely_villous"
+      ],
+      "note": "Branch rachis/pedicels narrow, densely villous, slightly flattened. General villosity is not automatically a hair-position claim restricted to rachis/pedicel margins.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "glume_marks",
+      "states": [
+        "outer_sessile_glume_thin_rounded_apex",
+        "outer_sessile_glume_apical_hair_line",
+        "outer_sessile_glume_dorsal_side_hairs",
+        "outer_pedicelled_glume_tip_side_hairs"
+      ],
+      "note": "Sessile outer glume thin rounded apex, delimited by long usually papilla-based hairs continuing down both dorsal sides. Pedicelled outer glume often has hair line across tip/down sides. No first-glume gland-pit absence or nerve count supplied.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    },
+    {
+      "id": "dichanthium-sericeum",
+      "scientific": "Dichanthium sericeum",
+      "character": "true_lemma_awn",
+      "states": [
+        "bent_twisted",
+        "pedicelled_awnless"
+      ],
+      "note": "Sessile dark lemma awn twisted and TWICE geniculate; pedicelled companion awnless. Image appears to print2–3.5 mm for awn, conflicting with modern Australian subspecies cm-scale accounts. Preserve reading/unit hold; do not convert or map exact short-awn bands from it.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 588,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact-species account with common/rare alternatives. Numeric awn/node-hair units held separately; no original-unit correction, local voucher, subspecies or county nativity certification."
+    }
+  ],
+  "secondary_evidence": {
+    "id": "dichanthium-sericeum",
+    "scientific": "Dichanthium sericeum",
+    "taxon_as_treated": "Dichanthium sericeum subsp. sericeum",
+    "character": "true_lemma_awn",
+    "states": [
+      "long"
+    ],
+    "source": "VicFlora, Royal Botanic Gardens Victoria, exact Dichanthium sericeum subsp. sericeum, online unpaginated",
+    "source_url": "https://vicflora.rbg.vic.gov.au/flora/taxon/4b5a18dd-783f-4ab6-b1ac-75181b1c6878",
+    "source_status": "READY_SUPPLEMENTAL_CONDITIONAL",
+    "source_priority_status": "supplemental_not_overriding_primary",
+    "source_scope_caution": "Australian subspecies account supports a positive long-awn state in the species aggregate. Not Texas subspecies or specimen certification; does not silently correct Gould printed units.",
+    "note": "VicFlora reports brown twice-bent twisting awns2–3 cm. Gould image reading2–3.5 mm remains separately flagged; no numeric awn exclusion is introduced.",
+    "awn_length_mm": [
+      20,
+      30
+    ]
+  },
+  "learner_diagnostic_checks": [
+    {
+      "look": "Follow the sessile outer-glume hair line",
+      "check": "Gould describes a thin rounded outer-glume apex edged by long usually papilla-based hairs, continuing down both sides of the back. The pedicelled outer glume often has a hair line across tip and down sides too.",
+      "compare": "This exact pattern is more useful than a generic hairy head. KR first-glume lower-back hairs and blade papilla hairs are different positions; gland-pit or groove absence is not inferred.",
+      "certainty": "Exact Gould p.588 organ/position mapping, not a new photograph identity certificate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Separate node beard, ligule and flowering-axis villosity",
+      "check": "Nodes have dense spreading silvery hairs; true ligule is an erose1–2 mm membrane. Flowering rachis and pedicels are densely villous and slightly flattened;2–7 hairy branches cluster erect at the tip.",
+      "compare": "The node beard is not a ligule. Sheaths and both blade faces can be hairless or infrequently spreading-villous. Node-hair length unit is held for confirmation.",
+      "certainty": "Gould p.588; variation and distinct anatomical sites preserved.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Compare the paired spikelets and keep the awn-unit hold visible",
+      "check": "Sessile spikelets2.5–3.5 mm, with dark twisted twice-geniculate lemma awns; similar-sized stalked partners awnless. The supplied image appears to print2–3.5 mm for awn length, while VicFlora subsp.sericeum reports2–3 cm.",
+      "compare": "Do not silently turn mm into cm or use this discrepancy to certify an exact short-awn match/exclusion. Australian subspecies evidence does not certify a Texas plant.",
+      "certainty": "Book measurement-unit discrepancy unresolved; structural book path can still be tested.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Dichanthium sericeum, printed p.588",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "measurement_holds": {
+    "awn": {
+      "image_reading": "2–3.5 mm",
+      "status": "IMAGE_UNIT_NEEDS_ORIGINAL_PRINT_CONFIRMATION",
+      "modern_subspecies_report": "VicFlora subsp.sericeum2–3 cm",
+      "scoring": "No exact short/long interval derived from ambiguous Gould unit; preserve long state under explicitly scoped supplemental source."
+    },
+    "node_hairs": {
+      "image_reading": "1–5 cm",
+      "status": "IMAGE_UNIT_NEEDS_ORIGINAL_PRINT_CONFIRMATION",
+      "modern_subspecies_report": "VicFlora nodes spreading hairs to c.3 mm",
+      "scoring": "Hair presence/color/position only; no numeric threshold."
+    }
+  },
+  "secondary_reference_review": {
+    "diggs": "Cached regional text searched; no named D.sericeum treatment found. The exact D.annulatum account is not substituted.",
+    "supplement": "VicFlora, Royal Botanic Gardens Victoria, exact Dichanthium sericeum subsp. sericeum, online unpaginated",
+    "url": "https://vicflora.rbg.vic.gov.au/flora/taxon/4b5a18dd-783f-4ab6-b1ac-75181b1c6878",
+    "review": "Official account directly opened; positive long awn, dense silky racemes, marginal lower-glume fringe corroboration, Australian subspecies scope retained."
+  },
+  "non_scoring_context": {
+    "culm_cm": [
+      50,
+      100
+    ],
+    "blade_cm": [
+      5,
+      25
+    ],
+    "blade_width_mm": [
+      2,
+      5
+    ],
+    "ligule_mm": [
+      1,
+      2
+    ],
+    "branches": [
+      2,
+      7
+    ],
+    "branch_cm": [
+      2.5,
+      6
+    ],
+    "sessile_spikelet_mm": [
+      2.5,
+      3.5
+    ],
+    "chromosome_2n": 20,
+    "distribution": "Species continuation at top589: introduced Australian forage grass, Texas regions2/6 coastal south. No county status change.",
+    "flowering": "Mostly May–September, occasionally late autumn (top589 continuation)."
+  }
+}
+

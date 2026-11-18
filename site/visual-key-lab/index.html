@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -3131,6 +3131,14 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applySilkyBluestemGouldSupplement(pack){
+ const r=pack.secondary_evidence;
+ if(!pack.measurement_holds?.awn||!pack.measurement_holds?.node_hairs||pack.evidence?.some(e=>e.character==="true_lemma_awn"&&e.awn_length_mm)||r?.id!=="dichanthium-sericeum"||r.character!=="true_lemma_awn"||r.states?.join(",")!=="long"||r.taxon_as_treated!=="Dichanthium sericeum subsp. sericeum"||r.source_status!=="READY_SUPPLEMENTAL_CONDITIONAL"||!r.source_url?.startsWith("https://vicflora.rbg.vic.gov.au/")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid silky source/measurement hold");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_SILKY_BLUESTEM_SUPPLEMENT_V1",id:"dichanthium-sericeum",scientific:"Dichanthium sericeum",page:588});
+ const row=state.refineEvidenceMap[r.id].find(e=>e.character===r.character);row.states=[...new Set([...row.states,...r.states])];row.additional_state_sources??={};row.additional_state_sources.long=structuredClone(r);
+ const s=state.species.find(s=>s.id===r.id);s.silky_measurement_holds=structuredClone(pack.measurement_holds);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.588: SILKY has dense silvery node beards, erose1–2 mm membrane, densely villous rachis/pedicels and exact outer-glume apical/dorsal-side hair lines. Sheaths and blade faces are often hairless but can be spreading-villous. Printed awn/node-hair units remain held for confirmation; structural matching is not a certified Texas specimen ID.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3859,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-silky-bluestem-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Silky bluestem Gould supplement unavailable");
+ applySilkyBluestemGouldSupplement(await response.json());
+}catch(err){console.warn("Silky bluestem Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3949,3 +3962,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
