@@ -612,3 +612,46 @@ assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
   assert(html.includes("Thread-thin · up to 2 mm"));
  }
  console.log("PASS: Texas grama 1–2 mm blade supports shared boundary; wider intervals remain conflicts");
+
+
+// Field pilot 2026-11-18: Texas grama's short wedge-shaped flowerhead is a
+// source-documented architectural contradiction for three research additions.
+// All other flowerhead choices retain historical positive-only safeguards.
+{
+ const oldFinal=read("source-scored-final-three-20261116.json");
+ const oldFocused=read("focused-identity-review-20261116.json");
+ const pampas=oldFinal.admissions.find(x=>x.id==="cortaderia-selloana");
+ const proso=oldFocused.admissions.find(x=>x.id==="panicum-miliaceum");
+ const hybrid=read("hays-candidates.json").candidates.find(x=>x.id==="lolium-x-boucheanum");
+ const texas=read("species-c1.json").find(x=>x.id==="bouteloua-rigidiseta");
+ assert(pampas&&proso&&hybrid&&texas);
+ assert.deepEqual(pampas.core_traits.head,["pampas_plume"]);
+ assert.deepEqual(proso.core_traits.head,["compact","airy"]);
+ assert.equal(hybrid.status,"RESEARCH_CANDIDATE_NOT_RELEASED");
+ assert(/TAXONOMIC CONCEPT HOLD/.test(hybrid.unresolved),"Hybrid taxonomic hold must remain");
+ const begin=html.indexOf("const texasGramaShortBranchContrasts=");
+ const finish=html.indexOf("// Progressive key display:",begin);
+ assert(begin>=0&&finish>begin,"Exact-source contrast runtime not found");
+ const make=new Function("state","refinementMatches",
+  html.slice(begin,finish)+";return {coreChoiceStatus,currentResults};");
+ const records=[
+  {id:texas.id,common:texas.common,scientific:texas.scientific,traits:texas.traits,range:texas.range},
+  ...[pampas,proso].map(x=>({id:x.id,common:x.common||x.scientific,
+   scientific:x.scientific,traits:x.core_traits,positiveOnlyCoreKeys:x.positive_only_core_keys,range:"FAIL"})),
+  {id:hybrid.id,common:hybrid.common,scientific:hybrid.scientific,traits:{head:[],habit:[],ligule:[],awns:[]},range:"UNVERIFIED",trial:true}
+ ];
+ const state={species:records,selected:{head:"short_side_racemes",habit:null,ligule:null,awns:null},
+  refineSelected:{},refineOnlyDocumented:false,range:"all",query:""};
+ const key=make(state,()=>[]);
+ assert.deepEqual(key.currentResults().map(x=>x.s.id),["bouteloua-rigidiseta"]);
+ for(const species of records.slice(1)){
+  assert.equal(key.coreChoiceStatus(species,"head","short_side_racemes"),"conflict",species.id);
+ }
+ state.selected.head="airy";
+ assert.equal(key.coreChoiceStatus(records[2],"head","airy"),"match");
+ assert.equal(key.coreChoiceStatus(records[1],"head","airy"),"unknown",
+  "Pampas retains positive-only handling outside exact Texas grama contrast");
+ state.selected.head=null;
+ assert.equal(key.currentResults().length,4,"No exclusion without the specific flowerhead");
+}
+console.log("PASS: only exact short grama branch contrast excludes pampas, proso and hybrid ryegrass; hold retained");
