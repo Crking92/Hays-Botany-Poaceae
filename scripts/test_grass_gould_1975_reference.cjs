@@ -577,7 +577,7 @@ assert(texasGramaCard342.traits.ligule.includes("hairs"));
 assert.deepEqual(texasGramaCard342.traits.head,["short_side_racemes","one_sided","many_one_sided"]);
 assert(!texasGramaCard342.traits.head.includes("side_oats"));
 assert(texasGramaCard342.character_evidence.flowerhead_field_pilot_20261117.source_url.includes("powo.science.kew.org"));
-assert(texasGramaGould342.field_pilot_resolution.scope.includes("seven-plus")||texasGramaGould342.field_pilot_resolution.scope.includes("seven"));
+assert(/seven-plus|seven/i.test(texasGramaGould342.field_pilot_resolution.scope));
 assert(html.includes('["side_oats","Dangling oat-like branches along a long stalk"'));
 assert(html.includes('["short_side_racemes","Short, bristly, bell-shaped branches"'));
 assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
