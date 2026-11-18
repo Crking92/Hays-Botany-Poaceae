@@ -1,0 +1,18 @@
+# Fringed chloris: complete option comparison
+
+> Historical standalone review. Its options and source decisions are integrated in the combined November18 release; current combined counts and verification are recorded in [COMBINED_GOULD_RELEASE.md](COMBINED_GOULD_RELEASE.md). Earlier standalone counts and deployment notes below describe the proposal at that time.
+
+Gould printed327 treats Chloris ciliata, mapped to the already admitted Stapfochloa ciliata profile (Fringed Windmill Grass). The preceding C.inflata account and hybrid C.subdolichostachya discussion are not this species’ evidence. No copyrighted scans, figures or media are copied or edited.
+
+Ten source-covered choices record the absent/short-ciliate ligule crown, few flexuous digitate branches, hairless glumes with rough midnerves and hyaline margins, strongly flattened elliptic fringed lower fertile lemma, its0.9–2.7mm awn, and the two sterile florets above it. Lower sterile is truncate/glabrous,1.3–1.8mm, encloses upper and has0.9–1.4mm awn; upper sterile is smaller and awnless. These positions and ranges are not interchanged. Existing Kew/2015 sources, smaller fertile-awn endpoints and higher rudimentary floret counts remain separately attributed.
+
+Gould’s hairless glumes except scabrous midnerves permit a narrow ordinary-glume-hair conflict for verified hairs on the actual outer glumes. This does not apply to a hirsute rachis, rough nerve or inner lemma cilia. FullKR includes a confirmed stiff-haired outer glume, so fringed chloris is set aside with this exact citation. Overlapping awn lengths alone do not exclude it. Remove the glume observation and the remaining KR gaps restore unresolved status.
+
+Eleven primary evidence groups add source-scoped positive matches. Existing fingers/tuft/hairs-or-absent ligule and none_obvious awn core states remain; short_single is added for the actual short fertile awn. No membranous ligule height, stolon/rhizome, node-hair or vein/pit claim is inferred from omitted details. Gould about5mm blade width lies at the shared narrow/medium boundary, not an invented5–10mm measurement range.
+
+No exact Chloris ciliata/Stapfochloa ciliata treatment was found in the recovered Diggs excerpt. Scleria ciliata is unrelated and not substituted. Existing supplementary Kew,2015 and FNA references retain their conditional provenance and identification limits. Historic Texas distribution is not a local voucher or county-nativity update.
+
+Validation: dedicated test audits45 actual core choices and158 advanced choices in24 groups, rejects neighbor/wrong-page/fabricated ligule-length imports atomically, preserves both ligule forms, separates fertile/sterile awns and prevents sterile anatomy choices causing false numeric-floret exclusions.169-universe, optional-refinement, three-way key, Gould-reference and KR/Johnsongrass/Virginia regressions pass. Browser: own book path gives one supported fringed windmillgrass (14possible/155ruled out); fullKR supports KR and excludes fringed windmillgrass on ordinary glume hairs (19possible/150ruled out). All169 runtime profiles remain.
+
+Independent proposal against main1bd002a6e657fdf0a57c63a2e349a519bae64a80, retaining the latest Texas grama2mm boundary fix. Not merged/deployed. Integrate shared loaders/options/counts with other pending species proposals before publication; glabrous-rough-midnerve and hyaline-glume-margin option IDs are intentionally shared with the pending Canter proposal and must be deduplicated during integration. Existing admissions, photos, captions, diagrams and credits remain unchanged.
+

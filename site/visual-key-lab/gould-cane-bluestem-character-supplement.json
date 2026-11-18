@@ -1,0 +1,373 @@
+{
+  "schema": "HAYS_GOULD_CANE_BLUESTEM_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "bothriochloa-barbinodis",
+  "scientific": "Bothriochloa barbinodis",
+  "taxon_as_printed": "Bothriochloa barbinodis",
+  "printed_page": 600,
+  "source_pages": [
+    600,
+    601
+  ],
+  "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "option_additions": [
+    {
+      "character": "stem_nodes",
+      "option": {
+        "id": "node_beard_erect_1_to_3mm",
+        "label": "Node beard hairs usually erect, mostly 1–3 mm",
+        "detail": "Inspect actual culm nodes. Gould gives hairs mostly1–3mm, occasionally longer, typically erect and not widely spreading. Diggs calls the ring spreading; preserve this source difference."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "sheath_margins",
+      "option": {
+        "id": "upper_sheath_margin_long_hairs",
+        "label": "Long hairs on UPPER sheath margins / near ligule",
+        "detail": "Leaves are otherwise essentially hairless in Gould. Locate hairs on upper sheath margins and near the ligule, not the blade surface or node beard."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "numerous_branches_straight_axis",
+        "label": "Straight main axis; many branches, basal ones rebranched",
+        "detail": "Gould gives numerous primary branches4–9cm, erect or loosely spreading at tips; basal ones moderately rebranched. Panicle7–13cm, often partly enclosed by upper sheath."
+      },
+      "subgroup": "Flowering branch architecture"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "broad_membranous_axis_center",
+        "label": "Branch joints / pedicels have broad membranous center",
+        "detail": "Inspect the branch internodes and pedicels: thickened hairy margins surround a broad membranous central region. Do not equate this with a narrow terminal groove or a round branch base."
+      },
+      "subgroup": "Flowering axis structure"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_sparse_hairs_below_middle",
+        "label": "SESSILE first glume sparsely hairy below middle",
+        "detail": "Inspect the first glume of a sessile spikelet. Gould says usually sparsely hairy below middle; this is not second-glume pubescence or a papilla-based stiff-hair claim."
+      },
+      "subgroup": "Precisely located glume hairs"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "sessile_first_glume_pitted",
+        "label": "SESSILE first glume with glandular pit near middle",
+        "detail": "Gould var.perforata has a pit or depression at or above middle on most/all sessile first glumes. Typical var.barbinodis is mostly/all unpitted. The broad species profile retains both."
+      },
+      "subgroup": "First-glume glandular pit"
+    },
+    {
+      "character": "true_lemma_awn",
+      "option": {
+        "id": "fertile_awn_at_least_20mm",
+        "label": "FERTILE lemma awn 20–30 mm or longer",
+        "detail": "Measure the true lemma awn on a sessile fertile spikelet from its attachment, excluding body and hairs. The source gives a lower bound20mm, not a maximum30mm."
+      },
+      "subgroup": "Awn attachment, length and persistence"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes",
+        "node_beard_erect_1_to_3mm"
+      ],
+      "note": "Culm nodes bearded; hairs mostly1–3mm, occasionally longer, typically erect and not widely spreading. Diggs1247 says conspicuous short spreading white ring. Both statements preserved; do not use hair orientation as a rigid exclusion.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification.",
+      "source_disagreement": "Gould erect/not widely spreading versus Diggs spreading; retain organ and source scope."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "blade_width",
+      "states": [
+        "narrow",
+        "medium"
+      ],
+      "note": "Firm linear blades2–7mm wide, often25–30cm or longer, upper blades greatly reduced.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification.",
+      "width_mm": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "blade_hairs",
+      "states": [
+        "hairless"
+      ],
+      "note": "Leaves essentially glabrous except long hairs on upper sheath margins and near ligule. Those hairs are not automatically blade-wide or papilla-based blade hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "sheath_surface",
+      "states": [
+        "glabrous"
+      ],
+      "note": "Leaves essentially glabrous except separately located upper sheath margin and ligule-vicinity hairs. Prior H&L sparse-pilose sheath variation remains separately attributed.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "sheath_margins",
+      "states": [
+        "upper_sheath_margin_long_hairs"
+      ],
+      "note": "Few to numerous long hairs on upper sheath margins and near ligule; do not transfer node-beard lengths to these hairs. Existing open sheath evidence from H&L remains.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "ligule_length",
+      "states": [
+        "short"
+      ],
+      "note": "Ligule1–2mm long; source has no below1mm value. UI tiny boundary may overlap1mm; no automatic tiny exclusion.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification.",
+      "length_mm": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "ligule_edge",
+      "states": [
+        "erose",
+        "lacerate"
+      ],
+      "note": "Ligule becoming erose and lacerate; no truncation or ciliation inferred from nearby long hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "geniculate",
+        "decumbent"
+      ],
+      "note": "Cespitose perennial60–120cm, culms erect or geniculate at base, becoming decumbent and much branched below in age. No stolon/rhizome inference from old decumbent stems.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "spikelet_position",
+      "states": [
+        "numerous_branches_straight_axis",
+        "broad_membranous_axis_center"
+      ],
+      "note": "Panicle mostly7–13cm, often partly included by upper sheath; straight main axis, numerous primary branches4–9cm, erect or loosely spreading at tips, basal moderately rebranched. Branch internodes/pedicels have thickened villous margins and broad membranous center.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "glume_marks",
+      "states": [
+        "sessile_first_glume_sparse_hairs_below_middle",
+        "sessile_first_glume_unpitted",
+        "sessile_first_glume_pitted"
+      ],
+      "note": "First glume usually sparsely hairy below middle. Species includes mostly/all unpitted sessile first glumes in var.barbinodis and mostly/all pitted (at/above middle) in var.perforata. Neither state excludes the broad profile.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification.",
+      "taxon_scope": "Both Gould varieties retained in one existing species profile; not all spikelets on all individuals share one pit state."
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "true_lemma_awn",
+      "states": [
+        "long",
+        "bent_twisted",
+        "fertile_awn_at_least_20mm"
+      ],
+      "note": "Lemma awn20–30mm or longer, geniculate and twisted. Diggs1247 confirms20–30mm or longer and geniculate. Lower bound applies to sessile fertile lemma, not hairs, body or pedicelled companion.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification.",
+      "awn_minimum_mm": 20,
+      "awn_upper_bound": null
+    },
+    {
+      "id": "bothriochloa-barbinodis",
+      "scientific": "Bothriochloa barbinodis",
+      "character": "floral_hair_position",
+      "states": [
+        "rachis_margin_cilia",
+        "pedicel_margin_cilia"
+      ],
+      "note": "Branch internodes and pedicels more or less densely villous on thickened margins. Existing margin-hair choices are scoped to those margins; no callus or lemma hairs inferred.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 600,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact Gould species/variety/organ and age; preserve supplemental variation. No local identity, nativity or media certification."
+    }
+  ],
+  "exact_fertile_awn_minimum": {
+    "schema": "EXACT_CANE_FERTILE_AWN_MINIMUM_V1",
+    "id": "bothriochloa-barbinodis",
+    "printed_page": 600,
+    "minimum_mm": 20,
+    "maximum_mm": null,
+    "conflicting_states": [
+      "fertile_awn_1_to_1_5mm",
+      "fertile_awn_2_to_5mm"
+    ],
+    "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+    "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+    "confirmation": "Diggs et al.1999, printed1247, B.barbinodis key and named account: lemma awn20–30mm or more, geniculate.",
+    "note": "Only a confirmed intact true sessile fertile lemma awn in the selected measured interval. Exclude spikelet body, floral hairs, glume awns and broken tips. Generic short/bent/awnless choices alone do not invoke this minimum."
+  },
+  "learner_diagnostic_checks": [
+    {
+      "look": "Measure the actual sessile fertile lemma awn",
+      "check": "Gould and Diggs give20–30mm or longer; Gould explicitly says bent and twisted. This is a lower bound, not a30mm maximum.",
+      "compare": "A verified1–1.5mm or2–5mm fertile lemma awn conflicts with this published cane range. A generic short/long impression, broken awn, hair or wrong spikelet is insufficient.",
+      "certainty": "Gould600 and Diggs1247, same organ; preserved source disagreement for KR awn ranges.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Inspect several sessile first glumes for a pit",
+      "check": "Typical var.barbinodis is mostly/all unpitted; var.perforata mostly/all pitted at or above middle. The first glume is usually sparsely hairy below middle.",
+      "compare": "Unpitted alone cannot rule out broad cane or prove KR; a pit separates Gould varieties, not a new profile admission.",
+      "certainty": "Gould600–601 and Diggs1247 explicitly retain both varieties.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Separate node beard, sheath-edge hairs and flowering-axis hairs",
+      "check": "Gould node hairs mostly1–3mm, occasionally longer, typically erect. Upper sheath edges and ligule vicinity bear separate long hairs. Branch joints/pedicels have hairy thickened margins and a broad membranous center.",
+      "compare": "Diggs calls node hairs spreading, unlike Gould. Do not force that disagreement or presume long runners from age-related decumbency.",
+      "certainty": "Exact source/organ/age scope preserved; photos and local specimen status unchanged.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, Bothriochloa barbinodis and varieties, printed pp.600–601",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "secondary_reference_review": {
+    "diggs": {
+      "named_account_key_printed_page": 1247,
+      "genus_continued_page": 1247,
+      "prior_citation": 1246,
+      "correction": "Page1246 is an illustration plate; the Bothriochloa genus continuation, key, species and varieties are on1247. Earlier1246 labels retained as history, corrected confirmation recorded here.",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "agreement": "Awn20–30mm or longer; sessile spikelets4.5–7.3mm; pit present/absent by variety; small narrow pedicelled partners. Genus supplies paired spikelets/two florets/awnless pedicelled partners.",
+      "disagreement": "Node hairs called short spreading in Diggs versus typically erect/not widely spreading in Gould."
+    },
+    "hill_country": {
+      "page": 36,
+      "end_page": 37,
+      "retained": "Flat blades, prominent abaxial midnerve, open sheath, sparse pilose sheath variation, ligule1–2mm; no free-runner inference."
+    },
+    "prior_core": "Existing bushy/narrow-panicle/conditional finger-like, tuft, membrane and long-awn core traits retained unchanged. Broad fingers compatibility is conditional, not universal digitate origin."
+  },
+  "non_scoring_context": {
+    "culm_cm": [
+      60,
+      120
+    ],
+    "node_hair_mm_usual": [
+      1,
+      3
+    ],
+    "node_hair_occasionally_longer": true,
+    "blade_mm": [
+      2,
+      7
+    ],
+    "panicle_cm": [
+      7,
+      13
+    ],
+    "primary_branch_cm": [
+      4,
+      9
+    ],
+    "sessile_spikelet_mm_excluding_awn": [
+      4.5,
+      7.3
+    ],
+    "awn_min_mm": 20,
+    "awn_upper_bound": null,
+    "chromosome_2n": 180,
+    "flowering": "MostlyMay–October; throughout year under favorable conditions; same for both varieties",
+    "historical_names": [
+      "Andropogon barbinodis",
+      "Andropogon perforatus"
+    ],
+    "varieties": [
+      "barbinodis (unpittted on most/all sessile first glumes)",
+      "perforata (pitted on most/all sessile first glumes)"
+    ],
+    "source_continuation_page": 601,
+    "media": "Fig318 var.barbinodis identified, no figure copied",
+    "local_status": "No new Hays voucher, county-nativity or specimen claims"
+  }
+}
+
