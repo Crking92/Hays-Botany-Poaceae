@@ -820,6 +820,53 @@ console.log("PASS: Steinchisma 0.5-mm true ligule excludes long-only with preser
 }
 console.log("PASS: Pampas hair-ligule source extrema reject only long >8 mm");
 
+// Owner photograph Gould p269: Muhlenbergia schreberi vs adjacent M. repens.
+// Preserve all printed differential structures and exclude only measured
+// true ligule >8 mm when exact Gould + H&L p55 source records are present.
+{
+ const nimble=source.additional_species_treatments.filter(x=>x.species_id==="muhlenbergia-schreberi");
+ const creeping=source.additional_species_treatments.filter(x=>x.species_id==="muhlenbergia-repens");
+ assert.equal(nimble.length,1);assert.equal(creeping.length,1);
+ assert.deepEqual(nimble[0].observations.find(x=>x.character==="leaf_blades").width_mm_mostly,[1,3]);
+ assert.equal(nimble[0].observations.find(x=>x.character==="ligule").max_mm,0.5);
+ assert.deepEqual(nimble[0].observations.find(x=>x.character==="lemmas_and_awns").awn_length_mm,[1.5,5]);
+ assert.deepEqual(creeping[0].observations.find(x=>x.character==="ligule").length_mm,[0.5,1]);
+ assert(creeping[0].observations.find(x=>x.character==="growth").details.includes("SCALY CREEPING RHIZOMES"));
+ assert.equal(creeping[0].classification_decision.action,"SOURCE_ARCHIVE_ONLY_NOT_CURRENT_LAB_169_ROSTER");
+ const original=read("species-d2.json").filter(x=>x.id==="muhlenbergia-schreberi");
+ assert.equal(original.length,1);
+ const nimbleS=original[0];
+ assert.equal(nimbleS.photos.length,4,"Preserve original nimblewill photos");
+ assert.equal(nimbleS.character_evidence.gould_1975_p269.status,
+    "EXACT_OWNER_PHOTOGRAPHED_PRIMARY_PUBLISHED_DESCRIPTION_NOT_SPECIMEN");
+ assert(!read("hays-candidates.json").candidates.some(x=>x.id==="muhlenbergia-repens"));
+ const vm=require("node:vm");
+ const state={gouldSource:source,refineEvidenceMap:{},refineCharacters:[],
+   refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const begin=html.indexOf("function refinementEvidence(");
+ const end=html.indexOf("function refinementSection(",begin);
+ assert(begin>0&&end>begin);
+ const ctx=vm.createContext({state,nimbleS});
+ vm.runInContext(html.slice(begin,end),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+   state.refineSelected.ligule_length=choice;
+   const found=vm.runInContext("verifiedAdvancedConflict(nimbleS)",ctx);
+   assert.equal(found.length,choice==="long"?1:0,"Nimblewill ligule "+choice);
+   if(choice==="long")assert.equal(found[0].policy,"EXACT_NIMBLEWILL_MAX_HALF_MM_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ state.gouldSource={additional_species_treatments:[]};
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(nimbleS)",ctx).length,0,
+    "Cannot hard exclude when exact Gould evidence is absent");
+ state.gouldSource=source;
+ const copied=structuredClone(nimbleS);
+ copied.character_evidence.ligule_ciliate_membrane_visual_choice=null;
+ ctx.nimbleS=copied;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(nimbleS)",ctx).length,0,
+    "Cannot hard exclude without independent H&L evidence");
+}
+console.log("PASS: Gould p269 nimblewill/creeping muhly kept distinct; nimblewill long-only ligule conflict proven");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
