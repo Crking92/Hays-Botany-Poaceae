@@ -1,4 +1,4 @@
-# Angleton and Kleberg bluestem — Gould p.559
+# Angleton and Kleberg bluestem — Gould p.589
 
 Owner supplied two separate named treatments: Dichanthium aristatum (Angleton) and D. annulatum (Kleberg). The preceding distribution fragment belongs to a previous taxon and is not imported. No page scan, figure, photo, caption, credit, arrow or diagram changes. Existing historical synonyms are retained without adding taxa or revising county nativity.
 

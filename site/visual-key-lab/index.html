@@ -3135,12 +3135,12 @@ function applyKRGouldSupplement(pack){
 }
 function applyDichanthiumGouldSupplement(pack){
  const p=pack.exact_ungrooved_proof;
- if(pack.schema!=="HAYS_GOULD_DICHANTHIUM_PAIR_V1"||pack.printed_page!==559||p?.schema!=="EXACT_KLEBERG_UNGROOVED_V1"||p.species_id!=="dichanthium-annulatum"||p.character!=="spikelet_position"||p.conflicting_state!=="terminal_medial_groove"||p.pdf_printed_page!==1263||!p.source?.includes("exact Dichanthium annulatum")||!p.source?.includes("Diggs")||!p.source_url?.startsWith("https://")||!p.note||!Array.isArray(pack.secondary_evidence)||pack.secondary_evidence.length!==3)throw Error("Invalid Dichanthium exact-source proof");
+ if(pack.schema!=="HAYS_GOULD_DICHANTHIUM_PAIR_V1"||pack.printed_page!==589||p?.schema!=="EXACT_KLEBERG_UNGROOVED_V1"||p.species_id!=="dichanthium-annulatum"||p.character!=="spikelet_position"||p.conflicting_state!=="terminal_medial_groove"||p.pdf_printed_page!==1263||!p.source?.includes("exact Dichanthium annulatum")||!p.source?.includes("Diggs")||!p.source_url?.startsWith("https://")||!p.note||!Array.isArray(pack.secondary_evidence)||pack.secondary_evidence.length!==3)throw Error("Invalid Dichanthium exact-source proof");
  for(const b of [pack.angleton,pack.kleberg])if(!Array.isArray(b?.learner_diagnostic_checks)||b.learner_diagnostic_checks.length!==3)throw Error("Invalid pair diagnostics");
  const chars=state.refineCharacters,records=state.refineEvidenceMap;
  try{
- applyGouldCharacterSupplement(pack.angleton,{schema:"HAYS_GOULD_ANGLETON_SUPPLEMENT_V1",id:"dichanthium-aristatum",scientific:"Dichanthium aristatum",page:559});
- applyGouldCharacterSupplement(pack.kleberg,{schema:"HAYS_GOULD_KLEBERG_SUPPLEMENT_V1",id:"dichanthium-annulatum",scientific:"Dichanthium annulatum",page:559});
+ applyGouldCharacterSupplement(pack.angleton,{schema:"HAYS_GOULD_ANGLETON_SUPPLEMENT_V1",id:"dichanthium-aristatum",scientific:"Dichanthium aristatum",page:589});
+ applyGouldCharacterSupplement(pack.kleberg,{schema:"HAYS_GOULD_KLEBERG_SUPPLEMENT_V1",id:"dichanthium-annulatum",scientific:"Dichanthium annulatum",page:589});
  if(!Array.isArray(pack.secondary_option_additions)||pack.secondary_option_additions.length!==3)throw Error("Invalid secondary option count");
  for(const a of pack.secondary_option_additions){
   const c=state.refineCharacters.find(c=>c.id===a.character),o=a.option;
@@ -3157,7 +3157,7 @@ function applyDichanthiumGouldSupplement(pack){
  }catch(e){state.refineCharacters=chars;state.refineEvidenceMap=records;throw e;}
  for(const [id,b]of [["dichanthium-aristatum",pack.angleton],["dichanthium-annulatum",pack.kleberg]]){
   const s=state.species.find(s=>s.id===id);s.diagnostic_checks=[...b.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
-  s.field_rule="Gould p.559: "+(id==="dichanthium-aristatum"?"Angleton has pubescent flowering axis/branch bases and often becomes hairless at culm nodes with age. Do not borrow Kleberg’s explicit groove absence.":"Kleberg has hairless flowering axis/branch bases. Diggs exact text p.1263 explicitly reports ungrooved branches/pedicels; a verified KR groove conflicts. Basal pairs and upper fertile spikelets differ in awns.")+"\n\n"+s.field_rule;
+  s.field_rule="Gould p.589: "+(id==="dichanthium-aristatum"?"Angleton has pubescent flowering axis/branch bases and often becomes hairless at culm nodes with age. Do not borrow Kleberg’s explicit groove absence.":"Kleberg has hairless flowering axis/branch bases. Diggs exact text p.1263 explicitly reports ungrooved branches/pedicels; a verified KR groove conflicts. Basal pairs and upper fertile spikelets differ in awns.")+"\n\n"+s.field_rule;
  }
  state.species.find(s=>s.id==="dichanthium-annulatum").exact_ungrooved_proof=structuredClone(p);
 }
