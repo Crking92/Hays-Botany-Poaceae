@@ -1905,6 +1905,8 @@ function renderIllustratedQuestion(cfg){
  tip.append(node("summary","","Field tip: where to look"),node("p","",c.hint||cfg.hint));
  area.append(tip,node("p","diagram-question-note",
    "Each card shows an existing field diagram, not a photograph, an exact scale, or proof of a local specimen. Skip any feature you cannot observe."));
+ if(cfg.id==="blade_venation")area.append(node("p","diagram-question-note",
+   "Vein descriptions are incomplete for many grasses. Choosing a visible vein may move an otherwise supported grass into Still possible when its published vein pattern is unknown. This is NOT a contradiction or a reason to rule it out; you can skip this question."));
  const grid=node("div","answer-grid diagram-answer-grid");
  for(const o of c.options.filter(o=>Object.hasOwn(cfg.labels,o.id)&&(!cfg.optionIds||cfg.optionIds.includes(o.id)))){
    const b=node("button","answer diagram-answer");
@@ -3128,7 +3130,13 @@ if(groups.active){
  root.append(node("p","progressive-status",groups.confirmed.length+" supported match"+(groups.confirmed.length===1?"":"es")+" · "+groups.unresolved.length+" unresolved · "+groups.excluded.length+" advanced source conflict"+(groups.excluded.length===1?"":"s")));
 }
 if(!rows.length)root.append(node("p","smallmuted","No currently coded match. Try clearing an uncertain choice; all character coding is still provisional."));
-else if(groups.active&&!groups.confirmed.length&&groups.unresolved.length)root.append(node("p","smallmuted","No fully documented match yet. That does not prove no grass fits. Expand 'Still possible' to inspect the unresolved species."));
+else if(groups.active&&!groups.confirmed.length&&groups.unresolved.length){
+ const veinChosen=selectedRefinementStates("blade_venation").length>0;
+ const missingVein=veinChosen&&groups.unresolved.some(x=>!refinementEvidence(x.s,"blade_venation"));
+ root.append(node("p","smallmuted",missingVein?
+   "No fully documented match with this vein choice yet: some remaining grasses lack published vein-pattern records, so they moved to Still possible, NOT ruled out. Expand Still possible or clear/skip Leaf veins to restore the previous supported list.":
+   "No fully documented match yet. That does not prove no grass fits. Expand 'Still possible' to inspect the unresolved species."));
+}
 else if(groups.active&&!groups.confirmed.length&&!groups.unresolved.length)root.append(node("p","smallmuted","All remaining candidates conflict with at least one documented characteristic. Open 'Ruled out' to review the sources or start over."));
 const unresolvedIds=new Set(groups.unresolved.map(x=>x.s.id));
 const excludedIds=new Set(groups.excluded.map(x=>x.s.id));
