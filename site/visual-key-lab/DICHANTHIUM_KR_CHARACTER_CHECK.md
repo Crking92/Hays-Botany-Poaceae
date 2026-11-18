@@ -32,3 +32,8 @@ Browser preview: KR + terminal-groove route yields 1 supported KR / 18 unresolve
 
 Standalone current-main branch, separate from the unmerged species updates. Preserve every overlay and reconcile cumulative option counts when combining. No deployment performed.
 
+
+## Clear-page recheck
+
+Two new screenshots confirm Gould printed589. Kleberg stoloniferous culms exceed1m (no upper bound), correcting the earlier to1m paraphrase. Angleton explicitly says only sessile spikelets are awned, so pedicelled_awnless now has its own exact primary evidence. This corrects the earlier claim that Gould did not state it. Kleberg’s merely relative shorter dimensions are not copied from Angleton. Core-option audit now reads actual array IDs rather than undefined object properties; all45 choices are tested correctly. Nine added options and157 advanced choices are unchanged. This updates the existing proposal, not a duplicate species PR or a live release.
+

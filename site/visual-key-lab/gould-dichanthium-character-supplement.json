@@ -222,9 +222,10 @@
         "character": "true_lemma_awn",
         "states": [
           "long",
-          "bent_twisted"
+          "bent_twisted",
+          "pedicelled_awnless"
         ],
-        "note": "Perfect-floret lemma bears a twisted, weakly twice-geniculate brownish awn 1.5–2.5 cm (15–25 mm). Gould does not state that Angleton’s pedicelled partner is awnless here.",
+        "note": "Perfect-floret lemma bears a twisted, weakly twice-geniculate brownish awn1.5–2.5cm (15–25mm). The exact Angleton account says only sessile spikelets are awned, supporting an awnless pedicelled companion. No groove absence is inferred.",
         "source": "Frank W. Gould (1975), The Grasses of Texas, printed p.589, exact Dichanthium aristatum",
         "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
         "pdf_printed_page": 589,
@@ -269,8 +270,8 @@
       },
       {
         "look": "Measure a perfect-floret lemma awn",
-        "check": "Gould gives a weakly twice-geniculate, twisted brownish awn 15–25 mm. Inflorescence has 3–5(2–8) spicate branches mostly 4–7 cm long; sessile spikelets 4–5 mm.",
-        "compare": "Retain source ranges and organ identity. No Angleton groove absence or pedicelled awnlessness is inferred from the neighboring Kleberg treatment.",
+        "check": "Gould gives a weakly twice-geniculate, twisted brownish awn 15–25 mm. Inflorescence has 3–5(2–8) spicate branches mostly 4–7 cm long; sessile spikelets 4–5 mm. Only the sessile spikelets are awned; the pedicelled companions are awnless.",
+        "compare": "Retain source ranges and organ identity. Pedicelled awnlessness is explicit in Angleton’s own account; no groove absence is borrowed from Kleberg.",
         "certainty": "Published exact-taxon evidence, with age/organ/source scope; no specimen or county-occurrence certification.",
         "source": "Frank W. Gould (1975), The Grasses of Texas, printed p.589, Dichanthium aristatum",
         "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
@@ -302,7 +303,7 @@
         "states": [
           "erect"
         ],
-        "note": "Perennial with both erect and stoloniferous culms; latter to 1 m.",
+        "note": "Perennial with both erect and stoloniferous culms, the latter OVER1m long; this is not a1m maximum or a measurement of every erect culm.",
         "source": "Frank W. Gould (1975), The Grasses of Texas, printed p.589, exact Dichanthium annulatum",
         "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
         "pdf_printed_page": 589,
@@ -465,7 +466,8 @@
       "historical_synonym": "Andropogon annulatus Forsk.",
       "chromosome_2n": 40,
       "quantitative_tendency": "Spikelets, awns and branches tending shorter than Angleton; no exact Gould Kleberg measurements supplied.",
-      "historical_flowering": "Throughout year under favorable conditions."
+      "historical_flowering": "Throughout year under favorable conditions.",
+      "stoloniferous_culm_length": "over1m; no upper bound supplied"
     },
     "county_nativity": "No changes inferred from historical regional distributions."
   },
@@ -497,6 +499,12 @@
       },
       "subgroup": null
     }
-  ]
+  ],
+  "clear_page_recheck": {
+    "date": "2026-11-17",
+    "printed_page": 589,
+    "confirmation": "Two clearer owner screenshots confirm the same exact species treatments and page589. Corrected Kleberg stolon culms from to1m to over1m; Angleton only sessile spikelets awned explicitly supports pedicelled_awnless. Relative shorter Kleberg awns/spikelets/branches still not exact intervals.",
+    "unchanged": "Hairless Kleberg flowering axis/branch bases versus hairy Angleton; Diggs1263 ungrooved Kleberg; no trait transfer by similarity, media or admission changes."
+  }
 }
 
