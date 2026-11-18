@@ -942,6 +942,27 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Lindheimer's muhly 2026-11-18 field pilot: the owner's Gould
+    (1975) p.127 Koeleria gerardii account (now Rostraria cristata)
+    gives a ligule ABOUT 1 mm long. Independent exact-species NSW/Vic
+    Flora evidence records 0.5–1.5 mm. Thus a TRUE ligule over 8 mm
+    is a verified contradiction, not an unknown. Narrow this specific
+    exception to LONG ONLY: do not extend a historical approximate
+    measurement into unverified hard maxima for other choices. */
+ if(s.id==="rostraria-cristata"&&selectedRefinementStates("ligule_length").includes("long")){
+   const ligule=refinementEvidence(s,"ligule_length");
+   if(ligule?.length_mm?.[0]===0.5&&ligule.length_mm[1]===1.5&&
+      ligule.states?.includes("tiny")&&ligule.states.includes("short")){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"About 1 mm (Gould p.127 under Koeleria gerardii); 0.5–1.5 mm (NSW/Vic Flora)",
+       source:"Gould (1975), The Grasses of Texas p.127; NSW Flora Online and VicFlora",
+       source_url:"https://archive.org/details/grassesoftexas0000goul",
+       note:"Rostraria cristata (syn. Koeleria gerardii): published true ligule is far shorter than >8 mm. Verify the actual collar membrane, not the pointed end of a sheath or blade.",
+       policy:"EXACT_ROSTRARIA_SHORT_LIGULE_VS_LONG"
+     });
+   }
+ }
  {
 const proof=s.exact_lemma_awn_absence;
  if(s.id==="eleusine-indica"&&proof?.schema==="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"&&proof.pdf_printed_page===1269&&selectedRefinementStates("true_lemma_awn").some(v=>proof.conflicting_states.includes(v)))

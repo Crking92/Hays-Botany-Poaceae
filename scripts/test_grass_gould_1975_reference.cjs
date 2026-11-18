@@ -634,6 +634,39 @@ console.log("PASS: Gould p261 Lindheimer blade hairs, dimensions, flora provenan
  assert(row.learner_diagnostic_checks.every(x=>x.source.includes("Gould")&&x.url.startsWith("https://")));
 }
 console.log("PASS: Gould p127 old Koeleria names mapped to Rostraria, Sphenopholis separated, anther held");
+ 
+// Rostraria exact ligule (>8 mm) contradiction in Lindheimer's muhly
+// field walk: execute production advanced-exclusion helper and verify
+// only this species + this answer is affected. Approximate Gould p.127
+// ligule 1 mm corroborated by NSW/Vic Flora 0.5–1.5 mm; other options
+// remain positive-only. Existing research candidate/credits untouched.
+{
+ const vm=require("node:vm");
+ const master=read("optional-refinement-evidence.json");
+ const sourceRow=master.evidence.find(e=>e.id==="rostraria-cristata"&&e.character==="ligule_length");
+ assert(sourceRow&&sourceRow.length_mm[0]===0.5&&sourceRow.length_mm[1]===1.5);
+ assert.equal(sourceRow.source_status,"READY_SUPPLEMENTAL_CONDITIONAL");
+ const state={refineEvidenceMap:{"rostraria-cristata":[structuredClone(sourceRow)],
+    "muhlenbergia-lindheimeri":[...master.evidence.filter(e=>e.id==="muhlenbergia-lindheimeri"&&e.character==="ligule_length").map(e=>structuredClone(e))]},
+    refineSelected:{},refineCharacters:master.characters,selected:{},
+    refineEvidenceOptionKeys:new Set(master.evidence.flatMap(e=>e.states.map(v=>e.character+":"+v)))};
+ const helperStart=html.indexOf("function refinementEvidence(");
+ const helperEnd=html.indexOf("function refinementSection(",helperStart);
+ assert(helperStart>0&&helperEnd>helperStart);
+ const ctx=vm.createContext({state});
+ vm.runInContext(html.slice(helperStart,helperEnd),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+  state.refineSelected.ligule_length=choice;
+  const r=vm.runInContext("verifiedAdvancedConflict({id:'rostraria-cristata'})",ctx);
+  assert.equal(r.length,choice==="long"?1:0,"Rostraria "+choice);
+  if(choice==="long")assert.equal(r[0].policy,"EXACT_ROSTRARIA_SHORT_LIGULE_VS_LONG");
+  assert.equal(vm.runInContext("verifiedAdvancedConflict({id:'muhlenbergia-lindheimeri'}).length",ctx),choice==="tiny"||choice==="short"?1:0,
+    "Lindheimer separate published 8–15 mm interval, "+choice);
+ }
+ assert.deepEqual(sourceRow.states,["tiny","short"],"Master refinements preserved");
+}
+console.log("PASS: exact Rostraria 1-mm ligule excludes only >8 mm, without changing source master");
+
 
 // Texas grama Gould pp.342–343: preserve printed unit conflict and proper adjacent account boundary.
 const texasGramaGould342=source.additional_species_treatments.find(x=>x.species_id==="bouteloua-rigidiseta");
