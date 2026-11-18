@@ -114,8 +114,8 @@ def sweep_all_optional_options(page, name):
                 assert page.locator("#count").inner_text() == "169 possible", (
                     f"{name}/{character}/{option}: clearing did not restore every grass")
                 inspected_choices += 1
-    assert (inspected_groups, inspected_choices) == (24, 148), (
-        f"{name}: expected all 24 groups and 148 options, got {inspected_groups}/{inspected_choices}")
+    assert (inspected_groups, inspected_choices) == (24, 158), (
+        f"{name}: expected all 24 groups and 158 options, got {inspected_groups}/{inspected_choices}")
     return {"groups": inspected_groups, "options_clicked_and_cleared": inspected_choices}
 
 
@@ -874,3 +874,5 @@ if __name__ == "__main__":
     print("PASS HAYS_GRASS_VISITOR_BROWSER", json.dumps({
         "live_pages": LIVE, "source_url":URL,"results":results,
     },sort_keys=True),flush=True)
+
+

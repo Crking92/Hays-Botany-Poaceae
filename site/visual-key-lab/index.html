@@ -856,7 +856,7 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ return newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
@@ -919,6 +919,8 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ const p=s.exact_fringed_glume_hair_absence;
+ if(s.id==="stapfochloa-ciliata"&&p?.schema==="EXACT_FRINGED_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===327&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Glumes hairless except rough midnerves",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_FRINGED_GLUME_HAIR_ABSENCE"});
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
@@ -950,6 +952,7 @@ function verifiedAdvancedConflict(s){
    });
    if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(observed.some(v=>!["one","two","several"].includes(v)))continue; // sterile anatomy is not total floret count
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||
       !/exact/i.test(evidence.source||"")||
@@ -3131,6 +3134,13 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyFringedChlorisGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence;
+ if(pack.taxon_as_printed!=="Chloris ciliata"||pack.core_awn_addition!=="short_single"||p?.schema!=="EXACT_FRINGED_GLUME_HAIR_ABSENCE_V1"||p.id!=="stapfochloa-ciliata"||p.printed_page!==327||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||!p.note||pack.evidence?.some(r=>r.character==="ligule_length")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid fringed chloris source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_FRINGED_CHLORIS_SUPPLEMENT_V1",id:"stapfochloa-ciliata",scientific:"Stapfochloa ciliata",page:327});
+ const s=state.species.find(s=>s.id===p.id);s.exact_fringed_glume_hair_absence=structuredClone(p);s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];s.field_rule="Gould p.327, Chloris ciliata: glumes HAIRLESS except rough midnerves; strong fringes on LOWER FERTILE lemma margins/keel. Fertile awn0.9–2.7mm; lower sterile awn0.9–1.4mm; upper sterile smaller/awnless. Ligule absent or short ciliate crown. Do not copy preceding C.inflata.\n\n"+s.field_rule;
+}
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3851,6 +3861,11 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+try{
+ const response=await fetch("gould-fringed-chloris-character-supplement.json",{cache:"no-store"});
+ if(!response.ok)throw Error("Fringed chloris Gould supplement unavailable");
+ applyFringedChlorisGouldSupplement(await response.json());
+}catch(err){console.warn("Fringed chloris Gould supplement held; prior evidence preserved",err)}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3967,3 +3982,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+
