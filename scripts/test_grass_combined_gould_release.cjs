@@ -5,7 +5,7 @@ const walk=x=>!x||typeof x!=='object'?[]:x.id&&x.character&&Array.isArray(x.stat
 const simplify=g=>JSON.parse(JSON.stringify({supported:g.confirmed.map(x=>x.s.id),unresolved:g.unresolved.map(x=>x.s.id),advanced_excluded:g.excluded.map(x=>({id:x.s.id,reasons:x.contradictions.map(c=>c.policy)})),possible:g.confirmed.length+g.unresolved.length,ruled_out:169-g.confirmed.length-g.unresolved.length}));
 (async()=>{
  const a=await loadApp(path.join(d,'index.html'));assert.equal(a.warnings.length,0,a.warnings.join('\n'));assert.equal(a.state.species.length,169);assert.equal(a.state.species.filter(s=>!s.trial).length,168);assert.equal(a.state.reviewedGouldLoadStatus.length,18);assert(a.state.reviewedGouldLoadStatus.every(x=>x.loaded));
- assert.equal(a.state.refineCharacters.length,24);assert.equal(a.state.refineCharacters.reduce((n,c)=>n+c.options.length,0),296);
+ assert.equal(a.state.refineCharacters.length,24);assert.equal(a.state.refineCharacters.reduce((n,c)=>n+c.options.length,0),294);
  for(const c of a.state.refineCharacters){assert.equal(new Set(c.options.map(o=>o.id)).size,c.options.length,'duplicate button '+c.id);if(c.subgroups){const ids=c.subgroups.flatMap(g=>g.options);for(const o of c.options)assert.equal(ids.filter(id=>id===o.id).length,1,'subgroup coverage '+c.id+':'+o.id);}}
  const run=()=>a.progressiveResultGroups(a.currentResults());let advanced=0,coreChoices=0,sourceStates=0;
  for(const c of a.state.refineCharacters)for(const o of c.options){a.state.selected={head:null,habit:null,ligule:null,awns:null};a.state.refineSelected={[c.id]:[o.id]};const g=run();assert.equal(g.confirmed.length+g.unresolved.length+g.excluded.length,169,'lost profile '+c.id+':'+o.id);advanced++;}

@@ -46,7 +46,6 @@
             "inrolled"
           ],
           "gould_states": [
-            "flat",
             "inrolled"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
@@ -121,11 +120,8 @@
             "lower_blade_gland_pits",
             "both_blade_surfaces_villous"
           ],
-          "gould_states": [
-            "hairless",
-            "rough_surface"
-          ],
-          "decision": "Positive exact-organ mapping; retain prior source states."
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
         },
         {
           "character": "leaf_base",
@@ -226,8 +222,10 @@
             "hairy_runner_nodes",
             "management_stolons"
           ],
-          "gould_states": [],
-          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+          "gould_states": [
+            "stolon"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
         },
         {
           "character": "underground_stems",
@@ -274,10 +272,8 @@
             "succulent_stems",
             "rooting_lower_nodes"
           ],
-          "gould_states": [
-            "basal_branching"
-          ],
-          "decision": "Positive exact-organ mapping; retain prior source states."
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
         },
         {
           "character": "stem_nodes",
@@ -458,8 +454,10 @@
             "lower_lemma_usually_nine_veins",
             "upper_lemma_smooth_shiny_colored"
           ],
-          "gould_states": [],
-          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+          "gould_states": [
+            "hairy"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
         },
         {
           "character": "true_lemma_awn",
@@ -576,6 +574,7 @@
             "broad"
           ],
           "gould_states": [
+            "medium",
             "broad"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
@@ -1122,8 +1121,10 @@
             "marginal_papilla_hairs",
             "lower_margin_papilla_hairs"
           ],
-          "gould_states": [],
-          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+          "gould_states": [
+            "serrate"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
         },
         {
           "character": "blade_midnerve",
@@ -1397,7 +1398,7 @@
             "branch_axils_glabrous_no_pulvini"
           ],
           "gould_states": [
-            "female_below_male_above"
+            "male_below_female_same_branch"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -1462,8 +1463,10 @@
             "upper_glume_usually_nine_veins",
             "lower_glume_half_to_three_quarters"
           ],
-          "gould_states": [],
-          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+          "gould_states": [
+            "glumes_absent_irregular_cup"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
         },
         {
           "character": "lemma_texture",
@@ -1500,10 +1503,8 @@
             "lower_lemma_usually_nine_veins",
             "upper_lemma_smooth_shiny_colored"
           ],
-          "gould_states": [
-            "female_single_hardened_lemma_no_palea"
-          ],
-          "decision": "Positive exact-organ mapping; retain prior source states."
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
         },
         {
           "character": "true_lemma_awn",
@@ -1530,7 +1531,9 @@
             "lower_fertile_awn_0_9_to_2_7mm"
           ],
           "gould_states": [
-            "none"
+            "none",
+            "apical_mucro",
+            "short"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -2282,8 +2285,7 @@
             "sheath_pustulate_hispid"
           ],
           "gould_states": [
-            "glabrous",
-            "pilose_sheath_throat"
+            "glabrous"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -4244,8 +4246,7 @@
           ],
           "gould_states": [
             "thread",
-            "narrow",
-            "medium"
+            "narrow"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -4350,8 +4351,7 @@
             "fringed_ligule_1_5_to_3mm_including_hairs"
           ],
           "gould_states": [
-            "truncate",
-            "erose"
+            "truncate"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -4857,11 +4857,8 @@
             "medium",
             "long"
           ],
-          "gould_states": [
-            "medium",
-            "short"
-          ],
-          "decision": "Positive exact-organ mapping; retain prior source states."
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
         },
         {
           "character": "ligule_edge",
@@ -5374,10 +5371,8 @@
             "medium",
             "long"
           ],
-          "gould_states": [
-            "short"
-          ],
-          "decision": "Positive exact-organ mapping; retain prior source states."
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
         },
         {
           "character": "ligule_edge",
@@ -5428,10 +5423,8 @@
             "lower_sheaths_felty",
             "sheath_pustulate_hispid"
           ],
-          "gould_states": [
-            "sometimes_hairy"
-          ],
-          "decision": "Positive exact-organ mapping; retain prior source states."
+          "gould_states": [],
+          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
         },
         {
           "character": "culm_posture",
@@ -5646,8 +5639,7 @@
             "lower_glume_half_to_three_quarters"
           ],
           "gould_states": [
-            "lower_one_vein",
-            "glabrous"
+            "lower_one_vein"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -6199,8 +6191,8 @@
             "upper_lemma_smooth_shiny_colored"
           ],
           "gould_states": [
-            "smooth",
-            "sparsely_hairy"
+            "hairy",
+            "smooth"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -6315,7 +6307,8 @@
             "broad"
           ],
           "gould_states": [
-            "narrow"
+            "narrow",
+            "medium"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
@@ -6897,7 +6890,6 @@
             "both_blade_surfaces_villous"
           ],
           "gould_states": [
-            "hairless",
             "blade_hairy"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
@@ -7191,8 +7183,10 @@
             "upper_glume_usually_nine_veins",
             "lower_glume_half_to_three_quarters"
           ],
-          "gould_states": [],
-          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+          "gould_states": [
+            "glabrous"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
         },
         {
           "character": "lemma_texture",
@@ -7229,8 +7223,10 @@
             "lower_lemma_usually_nine_veins",
             "upper_lemma_smooth_shiny_colored"
           ],
-          "gould_states": [],
-          "decision": "No new option mapping from supplied text; preserve existing evidence/unknown."
+          "gould_states": [
+            "smooth"
+          ],
+          "decision": "Positive exact-organ mapping; retain prior source states."
         },
         {
           "character": "true_lemma_awn",
@@ -7257,8 +7253,7 @@
             "lower_fertile_awn_0_9_to_2_7mm"
           ],
           "gould_states": [
-            "long",
-            "mature_brome_awns_divergent"
+            "long"
           ],
           "decision": "Positive exact-organ mapping; retain prior source states."
         },
