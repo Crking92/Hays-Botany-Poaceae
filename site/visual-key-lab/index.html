@@ -942,6 +942,31 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Exact photographed Gould 1975 p.269 (M. schreberi, NOT adjacent
+    M. repens) says TRUE minute ciliolate erose ligule NOT OVER 0.5 mm.
+    Independently H&L 2015 p.55 describes a ciliate membrane <0.5 mm.
+    Contradict ONLY the measured true ligule >8 mm field choice, not
+    overlapping 2–5 mm blade width or uncertain awn visibility. */
+ if(s.id==="muhlenbergia-schreberi"&&selectedRefinementStates("ligule_length").includes("long")){
+   const gould=state.gouldSource?.additional_species_treatments?.find(x=>
+     x.species_id==="muhlenbergia-schreberi"&&x.printed_page===269&&
+     x.observations?.some(o=>o.character==="ligule"&&o.max_mm===0.5&&
+       o.structure?.includes("ciliolate")));
+   const hill=s.character_evidence?.ligule_ciliate_membrane_visual_choice;
+   if(gould&&s.character_evidence?.gould_1975_p269?.status===
+      "EXACT_OWNER_PHOTOGRAPHED_PRIMARY_PUBLISHED_DESCRIPTION_NOT_SPECIMEN"&&
+      hill?.source?.includes("Hagenbuch & Lemke (2015)")&&
+      hill.reported_states?.some(v=>v.includes("under 0.5 mm"))){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Very short ciliolate/erose ligule, not over 0.5 mm",
+       source:"Gould (1975), The Grasses of Texas p.269, Fig.142; Hagenbuch & Lemke (2015), p.55",
+       source_url:"https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+       note:"Nimblewill has a tiny <0.5-mm membranous/erose ciliate ligule; a correctly measured true membrane >8 mm contradicts both exact-species sources. Do not mistake longer external throat hairs for the ligule, or conflate the following Muhlenbergia repens entry with this one.",
+       policy:"EXACT_NIMBLEWILL_MAX_HALF_MM_VS_LONG"
+     });
+   }
+ }
  /* Exact owner's Gould Cortaderia p.56: ligule a 3–5 mm tuft of HAIRS.
     FNA1–2mm and NSW2–3mm hair heights differ, but all reported
     true ligules are well below >8mm. Preserve disagreement at lower
