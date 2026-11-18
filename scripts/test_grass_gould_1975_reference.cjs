@@ -616,6 +616,44 @@ assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
  console.log("PASS: Texas grama 1–2 mm blade supports shared boundary; wider intervals remain conflicts");
 
 
+// Lindheimer's muhly 5 mm field estimate: the primary Hill Country
+// interval [2,5] overlaps both beginner bands exactly at 5 mm.
+// Test the *real runtime overlay and ranking helpers*, not just text.
+{
+ const vm=require("node:vm");
+ const master=read("optional-refinement-evidence.json");
+ const original=master.evidence.find(e=>e.id==="muhlenbergia-lindheimeri"&&e.character==="blade_width");
+ assert(original,"Lindheimer blade-width record is missing");
+ assert.deepEqual(original.width_mm,[2,5]);
+ assert.deepEqual(original.states,["narrow"]);
+ assert(/usually 2–3 mm, occasionally about 5 mm/i.test(original.note));
+ const state={
+  refineEvidenceMap:{"muhlenbergia-lindheimeri":[structuredClone(original)]},
+  refineSelected:{blade_width:"narrow"},refineCharacters:master.characters,
+  selected:{}
+ };
+ const start=html.indexOf("/* Texas grama field pilot: Gould 1975 pp.342–343");
+ const end=html.indexOf("state.refineEvidenceOptionKeys=new Set",start);
+ const helperStart=html.indexOf("function refinementEvidence(");
+ const helperEnd=html.indexOf("function refinementSection(",helperStart);
+ assert(start>=0&&end>start&&helperEnd>helperStart);
+ const ctx=vm.createContext({state});
+ vm.runInContext(html.slice(start,end)+html.slice(helperStart,helperEnd),ctx);
+ const row=state.refineEvidenceMap["muhlenbergia-lindheimeri"][0];
+ assert.deepEqual(Array.from(row.states),["narrow","medium"]);
+ assert.equal(row.additional_state_sources.medium.conditional,true);
+ assert(/ONLY at the shared 5 mm endpoint/.test(row.additional_state_sources.medium.note));
+ for(const choice of ["thread","narrow","medium","broad"]){
+  state.refineSelected.blade_width=choice;
+  const supported=vm.runInContext('hasAllDocumentedRefinements({id:"muhlenbergia-lindheimeri"})',ctx);
+  const conflicts=vm.runInContext('verifiedAdvancedConflict({id:"muhlenbergia-lindheimeri"}).length',ctx);
+  assert.equal(supported,["narrow","medium"].includes(choice),"Lindheimer width "+choice);
+  assert.equal(conflicts,choice==="broad"?1:0,"Lindheimer width conflict "+choice);
+ }
+ assert.deepEqual(original.states,["narrow"],"Historical source evidence master untouched");
+}
+console.log("PASS: Lindheimer 2–5 mm leaf supports narrow and medium at 5 mm only");
+
 // Field pilot 2026-11-18: Texas grama's short wedge-shaped flowerhead is a
 // source-documented architectural contradiction for three research additions.
 // All other flowerhead choices retain historical positive-only safeguards.

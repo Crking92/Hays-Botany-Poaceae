@@ -4258,6 +4258,27 @@ try{
   width.width_mm=[1,2];
  }
 }
+/* Lindheimer's muhly field pilot (2026-11-18): H&L 2015 p.54 documents
+   blades usually 2–3 mm, occasionally about 5 mm. The 5 mm endpoint is
+   shared by the approximate 2–5 and 5–10 mm beginner answer bands.
+   Credit BOTH options at that single boundary, not a general 6–10 mm
+   width claim. Keep the historical master evidence unchanged. */
+{
+ const width=(state.refineEvidenceMap["muhlenbergia-lindheimeri"]||[]).find(e=>e.character==="blade_width");
+ if(width?.states?.includes("narrow")&&Array.isArray(width.width_mm)&&
+    width.width_mm[0]===2&&width.width_mm[1]===5&&
+    width.source?.includes("Hagenbuch")){
+  width.states=[...new Set([...width.states,"medium"])];
+  width.additional_state_sources??={};
+  width.additional_state_sources.medium={
+   source:width.source,
+   source_url:width.source_url,
+   note:"Usually 2–3 mm, occasionally about 5 mm (Hagenbuch & Lemke 2015 p.54). The medium 5–10 mm option is compatible ONLY at the shared 5 mm endpoint, not as evidence of 6–10 mm blades.",
+   organ_scope:"fresh opened blade measured at its widest point",
+   conditional:true
+  };
+ }
+}
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
  rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
