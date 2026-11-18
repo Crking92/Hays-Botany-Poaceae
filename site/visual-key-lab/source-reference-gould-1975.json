@@ -6903,6 +6903,147 @@
       ],
       "learner_diagnostic_checks": [],
       "intake_batch": "20261118"
+    },
+    {
+      "taxon": "Eriochloa sericea (Scheele) Munro",
+      "species_id": "eriochloa-sericea",
+      "common_name_as_printed": "TEXAS CUPGRASS",
+      "historical_species_citation": "in Vasey, U.S.D.A. Div. Bot. Bull. 12, pl. 1 (1890)",
+      "printed_pages": [
+        433
+      ],
+      "printed_figure": 232,
+      "added_on": "2026-11-18",
+      "evidence_level": "AUTHORITATIVE_PUBLISHED_SPECIES_DESCRIPTION_NOT_LOCAL_VOUCHER",
+      "material": "Owner-supplied photographed Gould p. 433; exact species facts paraphrased for records, original copyrighted page image not republished",
+      "observations": [
+        {
+          "character": "growth",
+          "source_statement": "Perennial with a firm NONRHIZOMATOUS, strongly cespitose base and strictly erect 50–100 cm culms.",
+          "height_cm": [
+            50,
+            100
+          ],
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "culm_nodes_and_sheaths",
+          "source_statement": "Stem nodes pubescent; leaf sheaths, especially lower ones, finely pubescent. Do not treat these as blade hairs.",
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "leaf_blades",
+          "source_statement": "Blades elongated, usually 2–3 mm wide, flat or (more often) inward-rolled; glabrous or finely pubescent.",
+          "width_mm": [
+            2,
+            3
+          ],
+          "states": [
+            "flat",
+            "inrolled"
+          ],
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "flowering_branches",
+          "source_statement": "Narrow contracted panicle usually with 4–10 widely separated, strictly erect branches, each about 1.5–3 cm long.",
+          "branch_count": [
+            4,
+            10
+          ],
+          "branch_length_cm": [
+            1.5,
+            3
+          ],
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "inflorescence_axis_hairs",
+          "source_statement": "Panicle axis and branches ciliate/villous; some axis/branch hairs reach about 2–4 mm. These are not leaf hairs and not proof of long lemma awns.",
+          "hair_length_mm": [
+            2,
+            4
+          ],
+          "organ": "panicle axis and branches",
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "spikelet_floral",
+          "source_statement": "Spikelets ovate, 3.6–4.2 mm; glume and lemma of LOWER floret appressed-hirsute and awnless; lemma of UPPER floret firm and finely rugose, with minute awn tip. Do not combine lower and upper floret surfaces.",
+          "spikelet_length_mm": [
+            3.6,
+            4.2
+          ],
+          "status": "POSITIVE_ONLY_SOURCE_SUPPLEMENT"
+        },
+        {
+          "character": "chromosome",
+          "source_statement": "Chromosome number 2n=54.",
+          "chromosome_2n": 54,
+          "status": "PUBLISHED_HISTORICAL_CYTOLOGY"
+        },
+        {
+          "character": "historical_distribution",
+          "source_statement": "Gould lists Texas Regions 2, 4, 5, 6, 7, 8 (prairies and grassy openings); general range Oklahoma, Texas and northern Mexico; April (occasionally March) through November flowering. A natural-history range description is NOT a BONAP county record.",
+          "texas_regions": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "flowering": "April (occasionally March) through November",
+          "status": "HISTORICAL_DISTRIBUTION_NOT_COUNTY_VOUCHER"
+        },
+        {
+          "character": "grazing",
+          "source_statement": "Gould describes it as palatable forage persisting under moderate grazing and remaining on heavily grazed pasture chiefly where shrubs provide protection.",
+          "status": "SOURCE_ECOLOGY_CONTEXT_NOT_KEY_SCORE"
+        },
+        {
+          "character": "true_ligule",
+          "source_statement": "The photographed Gould p. 433 species treatment does NOT supply a true ligule length or margin description. Do not invent it from the book page. Independently, Hagenbuch & Lemke (2015), exact Eriochloa sericea account, printed p.50, reports a CILIATE ligule to 1 mm with minute membranous base.",
+          "source_separation": "GOULD_UNREPORTED_HAGENBUCH_LEMKE_VERIFIED_INDEPENDENT_SOURCE",
+          "regional_source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50",
+          "status": "SOURCE_BOUNDARY_EXACT_MEASURE_CONTRAST"
+        }
+      ],
+      "cautions": [
+        "The genus Panicum starts lower on the photographed p.433; its generic anatomy and other Panicum species do not belong to Eriochloa sericea.",
+        "No ligule length is described by Gould p.433 itself; 1 mm MAX is verified separately from Hagenbuch & Lemke (2015) p.50.",
+        "Do not confuse 2–4 mm hairs on the panicle branches with awns, true ligule cilia, or the (sometimes absent) hairs on leaf blades.",
+        "Lower floret glume/lemma hairs and upper fertile floret roughened minute awn belong to distinct floral structures.",
+        "A tiny ciliate membrane base may look like a hair fringe to a beginner; do not infer a long papery membrane from the `membrane` conditional visual core state.",
+        "Earlier hosted photos, creators and reuse status remain unchanged; page image must not be republished."
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "look": "Open and inspect the TRUE ligule at the leaf collar",
+          "check": "Gould p.433 leaves ligule length undescribed. Hagenbuch & Lemke (2015) printed p.50 independently document a CILIATE ligule to 1 mm, with a minute membranous base. A verified true ligule >8 mm conflicts with Texas cupgrass; do not mistake panicle-axis hairs for ligule hairs.",
+          "compare": "Lindheimer's muhly bears a conspicuous 8–15 mm membranous ligule (Gould p.261; H&L p.54). If the owner's field estimate is uncertain, magnify several intact collars.",
+          "certainty": "Gould original p.433 and H&L exact 2015 p.50 independently checked; not a local specimen voucher",
+          "source": "Gould 1975 p.433; Hagenbuch & Lemke 2015 p.50",
+          "url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=50"
+        },
+        {
+          "look": "Count branches and examine the HAIRS on the inflorescence",
+          "check": "Gould describes 4–10 upright short 1.5–3 cm branches on a narrow contracted head; the main flowering axis and branches are ciliate or villous, including hairs about 2–4 mm long. Those hairs are not lemma awns or pubescent blades.",
+          "compare": "Look for the true cup-shaped lower-glume/callus near actual spikelet attachment. Do not mistake it for an awn or bristle.",
+          "certainty": "Owner photographed exact Gould p.433 species account; source-level character, no specimen-level certainty",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, printed p. 433, Eriochloa sericea (Scheele) Munro (Texas cupgrass)",
+          "url": "https://archive.org/details/grassesoftexas0000goul"
+        },
+        {
+          "look": "Check leaves and lower vs upper florets",
+          "check": "Gould reports flat or more often inrolled 2–3 mm blades, sometimes finely hairy. The glume and lemma of LOWER floret are hairy and awnless, but the UPPER floret lemma is firm, finely wrinkled, with minute awn tip.",
+          "compare": "A visual V-shaped leaf fold is not established by this source. Treat an unexamined fold as UNKNOWN unless an exclusive published contradiction is certified.",
+          "certainty": "Exact photographed Gould p.433, historical primary description",
+          "source": "Frank W. Gould (1975), The Grasses of Texas, printed p. 433, Eriochloa sericea (Scheele) Munro (Texas cupgrass)",
+          "url": "https://archive.org/details/grassesoftexas0000goul"
+        }
+      ],
+      "intake_batch": "20261118"
     }
   ],
   "additional_source_image_notes": [
