@@ -581,3 +581,34 @@ assert(/seven-plus|seven/i.test(texasGramaGould342.field_pilot_resolution.scope)
 assert(html.includes('["side_oats","Dangling oat-like branches along a long stalk"'));
 assert(html.includes('["short_side_racemes","Short, bristly, bell-shaped branches"'));
 assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
+
+ // Field pilot: the same measured interval supports BOTH adjacent options
+ // at exactly 2 mm. Execute the actual runtime overlay and scorer helpers.
+ {
+  const vm=require("node:vm");
+  const master=read("optional-refinement-evidence.json");
+  const original=master.evidence.find(e=>e.id==="bouteloua-rigidiseta"&&e.character==="blade_width");
+  assert.deepEqual(original.width_mm,[1,2]);
+  const state={
+   refineEvidenceMap:{"bouteloua-rigidiseta":[structuredClone(original)]},
+   refineSelected:{},refineCharacters:master.characters,selected:{}
+  };
+  const start=html.indexOf("/* Texas grama field pilot: Gould 1975 pp.342–343");
+  const end=html.indexOf("state.refineEvidenceOptionKeys=new Set",start);
+  assert(start>=0&&end>start);
+  const helperStart=html.indexOf("function refinementEvidence(");
+  const helperEnd=html.indexOf("function refinementSection(",helperStart);
+  const ctx=vm.createContext({state});
+  vm.runInContext(html.slice(start,end)+html.slice(helperStart,helperEnd),ctx);
+  assert.deepEqual(Array.from(state.refineEvidenceMap["bouteloua-rigidiseta"][0].states),["thread","narrow"]);
+  for(const choice of ["thread","narrow","medium","broad"]){
+   state.refineSelected.blade_width=choice;
+   const supported=vm.runInContext('hasAllDocumentedRefinements({id:"bouteloua-rigidiseta"})',ctx);
+   const conflicts=vm.runInContext('verifiedAdvancedConflict({id:"bouteloua-rigidiseta"}).length',ctx);
+   assert.equal(supported,["thread","narrow"].includes(choice),choice);
+   assert.equal(conflicts,["medium","broad"].includes(choice)?1:0,choice);
+  }
+  assert.deepEqual(original.states,["thread"],"Historical master untouched");
+  assert(html.includes("Thread-thin · up to 2 mm"));
+ }
+ console.log("PASS: Texas grama 1–2 mm blade supports shared boundary; wider intervals remain conflicts");
