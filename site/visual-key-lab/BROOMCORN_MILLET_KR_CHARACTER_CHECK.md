@@ -1,0 +1,16 @@
+# Broomcorn millet: complete option comparison
+
+> Historical standalone review. Its options and source decisions are integrated in the combined November18 release; current combined counts and verification are recorded in [COMBINED_GOULD_RELEASE.md](COMBINED_GOULD_RELEASE.md). Earlier standalone counts and deployment notes below describe the proposal at that time.
+
+Gould printed448 describes Panicum miliaceum, already source-scored in the Lab as Proso Millet. Existing focused identity admission and crop/cultivar/seed-spill/local-identity cautions are reused, not a new admission. No photographs, diagrams, captions or rights metadata change.
+
+Nine precise choices cover pustulate-hispid sheaths; fringed ligule1.5–3mm INCLUDING hairs; branches not strongly spreading; hairless panicle branch axils without pulvini; five-veined lower glume; usually nine-veined upper glume; lower-glume length ratio1/2–3/4; usually nine-veined lower lemma; smooth shiny yellowish-to-reddish-brown upper lemma. Nine primary evidence groups preserve exact organs and variation. Usual9 (7–11) veins are not an invariant9 count. Glume/lemma veins, sheath hairs and ligule fringe are not interchangeable structures.
+
+Gould gives variable culm node/internode hairs, blades6–15mm wide to20mm and pubescent/hispid to nearly glabrous, mostly4.5–5mm plump spikelets and upper lemma3–3.5mm. Combined ligule+hair height is not mapped to numeric membrane height. Branch axil pads/hairs do not establish a medial groove absence. Existing cultivar-dependent compact/airy core appearances and supplemental blade7–25mm range remain; no panicle-outline exclusion is introduced.
+
+Re-read Diggs named account is on printed1301 and Panicum genus on1292, correcting new confirmation from old1300/1291 labels while preserving original records. Diggs confirms long papilla-based sheath hairs, variable-to-glabrous blades, fringed membrane ca.1–3mm INCLUDING hairs and plump oval spikelets. Genus supplies two florets, awnless spikelets and firm shiny upper fertile lemma; these remain existing independently sourced states. Neighboring vine-mesquite rhizomes are not imported. No flowering period appears on the supplied Gould page; Diggs July–November stays secondary.
+
+Validation: dedicated test audits all45 actual core choices and157 advanced choices in24 groups, rejects wrong page/species and fabricated membrane height atomically, tests each new source state, preserves compact/airy and collar alternatives, and keeps all prior traits/media unchanged.169-universe, three-way key, optional-refinement, KR, focused-identity-admission and current Gould/Texas-grama-boundary regressions pass. Browser shows one supported Proso Millet under its own characters (17possible/152ruled out). FullKR supports KR and leaves millet unresolved (20possible/149ruled out); selected first-glume/groove/fertile-awn details are not invented. All169 runtime profiles remain.
+
+Independent proposal against main1bd002a6e657fdf0a57c63a2e349a519bae64a80, retaining the latest Texas grama boundary work. Not merged or deployed. Integrate shared loaders/options/counts with other pending species proposals before publication. No local occurrence, nativity, voucher or exact-media identity certification changes.
+

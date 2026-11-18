@@ -1,0 +1,363 @@
+{
+  "schema": "HAYS_GOULD_CANTER_WINDMILL_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "stapfochloa-canterae",
+  "scientific": "Stapfochloa canterae",
+  "taxon_as_printed": "Chloris canterai",
+  "printed_page": 328,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "source_material": "Owner full p.328 confirms page of already archived treatment. Fig173 C.ciliata and incomplete C.divaricata entry excluded. No scan/figure republished.",
+  "option_additions": [
+    {
+      "character": "ligule_edge",
+      "option": {
+        "id": "long_cilia_to_7mm",
+        "label": "True ligule cilia may reach7 mm",
+        "detail": "Measure actual hairs of the inner ligule, not a membranous base, collar hairs or culm-node beard. Gould gives a maximum hair length, not a7-mm membrane or lower endpoint."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "digitate_erect_arcuate_branches",
+        "label": "Fingerlike branches erect to arching",
+        "detail": "Gould gives usually3–6 (occasionally2–9) digitate branches4–14 cm, erect to arcuate. Curved branches do not establish a bent lemma awn."
+      },
+      "subgroup": "Flowering branch architecture"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "glume_glabrous_rough_midnerve",
+        "label": "Outer glumes hairless except rough midnerve",
+        "detail": "Inspect the OUTER glumes. Scabrous midnerve is roughness, not ordinary stiff hairs or the dense hairs of the inner fertile lemma keel."
+      },
+      "subgroup": "Glume surface and nerve"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "hyaline_glume_margins",
+        "label": "Outer glume margins thin and translucent",
+        "detail": "Gould describes hyaline glume margins. Do not transfer this state to sheath margins, a ligule or the sterile florets."
+      },
+      "subgroup": "Glume margins"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lower_fertile_flat_ovate_ciliate_keel",
+        "label": "LOWER fertile lemma flattened, narrow-ovate, hairy keel",
+        "detail": "Gould describes the lower fertile lemma with densely ciliate keel and2.4–5.5 mm awn. Keep the leaflet-like outer glumes and sterile florets separate."
+      },
+      "subgroup": "Precisely located fertile lemma"
+    },
+    {
+      "character": "florets_per_spikelet",
+      "option": {
+        "id": "two_to_three_upper_sterile",
+        "label": "Two or three STERILE florets above fertile floret",
+        "detail": "These are sterile florets ABOVE the one fertile lower floret:3–4 total in Gould, not two total. Broader modern accounts remain separately recorded."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "florets_per_spikelet",
+      "option": {
+        "id": "sterile_turbinate_flat_glabrous",
+        "label": "Sterile florets top-shaped, flattened and hairless",
+        "detail": "Inspect the upper sterile florets; Gould calls them turbinate, flattened, glabrous,1.1–1.8 mm. This does not describe the densely hairy fertile lemma keel."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "florets_per_spikelet",
+      "option": {
+        "id": "lowest_sterile_awn_1_5_to_3_5mm",
+        "label": "LOWEST sterile floret awn1.5–3.5 mm",
+        "detail": "Find the lowest of the sterile florets ABOVE the fertile floret. Its awn is not the fertile lemma’s2.4–5.5 mm awn, and not an arbitrary lower sterile lemma of another grass."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "florets_per_spikelet",
+      "option": {
+        "id": "upper_steriles_smaller_enclosed",
+        "label": "Upper sterile florets smaller and enclosed by lower",
+        "detail": "Gould describes the upper sterile floret or florets as similar but smaller, enclosed by the lowermost sterile floret. Do not count the enclosing glumes as florets."
+      },
+      "subgroup": null
+    }
+  ],
+  "evidence": [
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "blade_width",
+      "states": [
+        "thread",
+        "narrow"
+      ],
+      "note": "Blades narrow1–5 mm, to25 cm. Preserve original broader exact-species supplementary measurements separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence.",
+      "width_mm": [
+        1,
+        5
+      ]
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "blade_shape",
+      "states": [
+        "inrolled"
+      ],
+      "note": "Gould often inrolled and appearing filiform. Prior Flora do Brasil flat/folded states remain; no rigid single shape required.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "sheath_surface",
+      "states": [
+        "glabrous"
+      ],
+      "note": "Sheaths hairless. Culm glabrousness is not assigned to actual culm nodes or collar hairs.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate",
+        "long_cilia_to_7mm"
+      ],
+      "note": "Long-ciliate ligule, HAIRS to7 mm. This is an upper bound on cilia, not a measured membrane height or basis for numeric ligule-length exclusions.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "culm_posture",
+      "states": [
+        "erect"
+      ],
+      "note": "Tufted perennial with erect slender hairless culms to1 m. No stolon/rhizome presence or absence inferred from tufting.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "spikelet_position",
+      "states": [
+        "digitate_erect_arcuate_branches"
+      ],
+      "note": "Usually3–6 (occasionally2–9) erect/arcuate digitate branches4–14 cm, approximately11 spikelets/cm; spikelets brown densely imbricate. Not a bluestem sessile/stalked pair or groove absence.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "glume_marks",
+      "states": [
+        "glabrous",
+        "glume_glabrous_rough_midnerve",
+        "hyaline_glume_margins"
+      ],
+      "note": "Glumes narrowly lanceolate, glabrous except scabrous midnerve, margins hyaline. First1.6–2.4 mm, second2.3–3.8 mm. No vein count or pit state supplied.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "lemma_texture",
+      "states": [
+        "lower_fertile_flat_ovate_ciliate_keel"
+      ],
+      "note": "Lower FERTILE lemma flattened, narrowly ovate, densely ciliate on keel, printed length notation approximately3(2.7)–3.7 mm. No universal hairs on sterile florets or glumes.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "true_lemma_awn",
+      "states": [
+        "short",
+        "fertile_awn_2_to_5mm"
+      ],
+      "note": "Actual lower fertile lemma awn2.4–5.5 mm. The existing2–5 mm choice overlaps part of the interval;5.5 mm individuals also occur. LOWEST sterile floret awn1.5–3.5 mm is separate; never used for fertile1–1.5 mm state.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence.",
+      "awn_length_mm": [
+        2.4,
+        5.5
+      ]
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "florets_per_spikelet",
+      "states": [
+        "several",
+        "two_to_three_upper_sterile",
+        "sterile_turbinate_flat_glabrous",
+        "lowest_sterile_awn_1_5_to_3_5mm",
+        "upper_steriles_smaller_enclosed"
+      ],
+      "note": "One fertile plus2–3 sterile florets =3–4 total in Gould. Steriles top-shaped, flattened, glabrous1.1–1.8 mm; lowest sterile awn1.5–3.5 mm; upper one(s) smaller/enclosed by lower. Modern Cerros-Tlatilpa report one fertile+3(4) sterile =4(5) total remains separate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence.",
+      "source_disagreement": "Gould2–3 sterile versus modern Mexican treatment3(4) sterile. Both remain several in broad numeric UI; do not discard source/taxon/stage variation."
+    },
+    {
+      "id": "stapfochloa-canterae",
+      "scientific": "Stapfochloa canterae",
+      "character": "floral_hair_position",
+      "states": [
+        "lemma"
+      ],
+      "note": "Dense cilia specifically on the LOWER fertile lemma keel; no transfer to glumes, callus, pedicel or sterile floret.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 328,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive historical-name crosswalk evidence with fertile/sterile and hair/membrane scope. Existing admission and modern source variation retained. No local voucher or invented source absence."
+    }
+  ],
+  "exact_glume_hair_absence": {
+    "schema": "EXACT_CANTER_GLUME_HAIR_ABSENCE_V1",
+    "id": "stapfochloa-canterae",
+    "printed_page": 328,
+    "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+    "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+    "conflicting_states": [
+      "sessile_first_glume_hispid_back",
+      "sessile_glume_margin_hairs",
+      "pedicelled_first_glume_hairy_lower"
+    ],
+    "note": "Exact Gould outer glumes glabrous except scabrous midnerve. Confirm ordinary hairs on actual outer glume, not a rough nerve or dense cilia on inner fertile keel."
+  },
+  "learner_diagnostic_checks": [
+    {
+      "look": "Find the true inner ligule and separate hairs from membrane",
+      "check": "Gould describes long cilia with hairs to7 mm, not a7-mm membranous flap. The already admitted membrane state and regional/supplemental descriptions remain; no new minimum hair height or membrane length is invented.",
+      "compare": "Long ligule hairs are not automatically the blade-base or culm-node hairs used in KR observations.",
+      "certainty": "Exact Gould p.328 hair maximum; existing historical name crosswalk preserved.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Measure the fertile awn and then the lowest sterile awn",
+      "check": "The LOWER fertile lemma bears2.4–5.5 mm awn. Above it are2–3 sterile florets; the lowest sterile awn is1.5–3.5 mm, upper sterile florets smaller and enclosed by lower. Sterile bodies are hairless while fertile keel densely ciliate.",
+      "compare": "Do not score a sterile awn as a fertile1–1.5 mm awn or count only fertile florets. Source floret counts differ and remain recorded.",
+      "certainty": "Exact primary organ/sex/position ranges; no forced hard numerical awn cutoff.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Inspect the outer glumes and use the correct illustration identity",
+      "check": "Gould calls outer glumes hairless except rough midnerve, with hyaline margins. Actual ordinary hairs on the glume conflict, but dense hairs on the inner fertile keel do not. The Fig173 drawing above is C.ciliata, not Canter’s.",
+      "compare": "KR ordinary stiff first-glume hairs are a different structure from Canter’s fertile keel cilia. The partial C.divaricata entry below is separate.",
+      "certainty": "Exact Canter treatment p.328, no adjacent-image or plant-part transfer.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Chloris canterai, printed p.328",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "secondary_reference_review": {
+    "diggs": "No exact canterai/canterae/polydactyla or Stapfochloa treatment found in cached regional text. Neighboring Chloris entries are not substituted.",
+    "recovered": "Existing Gould archive, source-scored followup and organ-specific2–5 mm targeted evidence reused; not a new admission.",
+    "supplemental": "Flora do Brasil flat/folded, conditional sheath hair and modern Mexican one-fertile+3(4)-sterile report preserved with original citations."
+  },
+  "non_scoring_context": {
+    "culm_m_max": 1,
+    "blade_cm_max": 25,
+    "blade_width_mm": [
+      1,
+      5
+    ],
+    "branches_usual": [
+      3,
+      6
+    ],
+    "branches_occasional": [
+      2,
+      9
+    ],
+    "branch_cm": [
+      4,
+      14
+    ],
+    "spikelets_per_cm": 11,
+    "first_glume_mm": [
+      1.6,
+      2.4
+    ],
+    "second_glume_mm": [
+      2.3,
+      3.8
+    ],
+    "fertile_lemma_printed_notation": "3-(2.7)-3.7 mm; unusual notation retained",
+    "fertile_awn_mm": [
+      2.4,
+      5.5
+    ],
+    "sterile_florets": [
+      2,
+      3
+    ],
+    "sterile_body_mm": [
+      1.1,
+      1.8
+    ],
+    "lowest_sterile_awn_mm": [
+      1.5,
+      3.5
+    ],
+    "chromosome_2n": 36,
+    "flowering": "April–September",
+    "historical_note": "Texas plants formerly referred to C.polydactyla by Gould & Box1965, not an automatic synonym-specimen identification.",
+    "county_nativity": "No changes; source archive historical localities not a Hays voucher."
+  }
+}
+

@@ -1,0 +1,162 @@
+{
+  "schema": "HAYS_GOULD_SOUTHERN_CRABGRASS_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "digitaria-ciliaris",
+  "scientific": "Digitaria ciliaris",
+  "taxon_as_printed": "Digitaria ciliaris",
+  "printed_page": 410,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "option_additions": [
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "upper_glume_1_6_to_2_7mm",
+        "label": "UPPER glume 1.6–2.7 mm long",
+        "detail": "Identify the second outer glume and measure its body. Gould gives1.6–2.7mm; Diggs gives1.5–2.7mm. Do not measure the lower glume, whole spikelet or a hair."
+      },
+      "subgroup": "Precisely located glume measurements"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lower_lemma_lateral_nerves_smooth",
+        "label": "LOWER lemma lateral nerves not roughened",
+        "detail": "Inspect the lateral nerves of the lower floret lemma with magnification. Gould says not scabrous here; Diggs calls these nerves smooth. This does not prove the whole lemma is hairless, shiny or smooth, or that the glumes are smooth."
+      },
+      "subgroup": "Precisely located lower lemma"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "digitaria-ciliaris",
+      "scientific": "Digitaria ciliaris",
+      "character": "blade_hairs",
+      "states": [
+        "hairless",
+        "blade_hairy",
+        "papilla_based_hairs"
+      ],
+      "note": "Leaves glabrous or sparsely pubescent with papilla-based hairs. Optional blade-hair matches require actually observed blade hairs; do not require dense pubescence or transfer these hairs to nodes/glumes.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 410,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact southern crabgrass account only; organ-specific positive evidence, unreported states remain possible. Prior sources and local-identity limits retained."
+    },
+    {
+      "id": "digitaria-ciliaris",
+      "scientific": "Digitaria ciliaris",
+      "character": "culm_posture",
+      "states": [
+        "decumbent"
+      ],
+      "note": "Decumbent, spreading annual. Similarity to D.sanguinalis does not by itself document erect posture, true stolons, rhizomes or rooted nodes in this account. Existing separately sourced rooted-culm evidence remains.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 410,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact southern crabgrass account only; organ-specific positive evidence, unreported states remain possible. Prior sources and local-identity limits retained."
+    },
+    {
+      "id": "digitaria-ciliaris",
+      "scientific": "Digitaria ciliaris",
+      "character": "glume_marks",
+      "states": [
+        "upper_glume_1_6_to_2_7mm"
+      ],
+      "note": "SECOND glume1.6–2.7mm in Gould; Diggs1264 gives1.5–2.7mm. This is not first-glume length/vein/hair evidence. Existing genus lower-glume reduction is separate.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 410,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact southern crabgrass account only; organ-specific positive evidence, unreported states remain possible. Prior sources and local-identity limits retained.",
+      "glume_side": "upper",
+      "glume_length_mm": [
+        1.6,
+        2.7
+      ],
+      "source_variation": "Diggs exact key1264 gives1.5–2.7mm; retain both lower bounds."
+    },
+    {
+      "id": "digitaria-ciliaris",
+      "scientific": "Digitaria ciliaris",
+      "character": "lemma_texture",
+      "states": [
+        "lower_lemma_lateral_nerves_smooth"
+      ],
+      "note": "Lemma of LOWER floret not scabrous on lateral nerves. No generic whole-lemma smooth/hairless state inferred; lower lemma and upper fertile lemma remain distinct. Diggs1264 confirms smooth lower lateral nerves.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 410,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Exact southern crabgrass account only; organ-specific positive evidence, unreported states remain possible. Prior sources and local-identity limits retained."
+    }
+  ],
+  "learner_diagnostic_checks": [
+    {
+      "look": "Inspect the LOWER lemma’s lateral nerves",
+      "check": "Gould says these lateral nerves are not scabrous. Diggs confirms smooth nerves, contrasting rough lateral nerves in D.sanguinalis. Magnification is needed.",
+      "compare": "A smooth nerve is not proof that the whole lemma, its margins or the outer glumes are hairless. Vegetative traits alone do not reliably separate these crabgrasses.",
+      "certainty": "Exact Gould410 and Diggs1264 organ-specific distinction; local specimen identity not certified.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Measure the second glume and the whole spikelet separately",
+      "check": "Gould second glume1.6–2.7mm; spikelets usually2.8–3.5mm, occasionally2.5mm. Diggs key gives second glume1.5–2.7mm and spikelets2.8–3.6mm.",
+      "compare": "Preserve each source range; do not turn2.8mm into an absolute minimum or borrow the neighboring D.violascens measurements.",
+      "certainty": "Direct named treatments/key, no unsupported closed interval exclusion.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Separate leaf hairs and sprawling culms from runners",
+      "check": "Gould describes a spreading decumbent annual with hairless or sparsely papilla-hairy leaves. Existing H&L evidence describes rooting lower culms but distinguishes these from true stolons.",
+      "compare": "D.bicornis beside this account has its own stoloniferous wording. Similarity to D.sanguinalis does not transfer every character; branch shape and leaf hairs alone are insufficient for a definite ID.",
+      "certainty": "Gould primary; existing regional vegetative evidence retained as supplementary.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Digitaria ciliaris, printed p.410",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "secondary_reference_review": {
+    "diggs": {
+      "named_account_key_page": 1264,
+      "genus_page": 1263,
+      "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "confirmation": "Exact key: leaf blades glabrous/sparsely pubescent; lower lemma lateral nerves smooth; spikelets2.8–3.6mm; second glume1.5–2.7mm. Key path has winged flowering branches and light brown/grayish fertile lemma at maturity. Genus supplies membranous ligule, two florets and minute/absent first glume.",
+      "citation_history": "Existing records label exact key1263; preserve originals. Genus starts1263; named key/account is on1264, before footer DIGITARIA/POACEAE1264."
+    },
+    "hill_country": {
+      "page": 44,
+      "retained": "Flat5–10mm blades, whitish undulate margins, open sheath, variable hairs, erose0.5–2.5mm membrane and rooted decumbent culms. No reliable vegetative separation from D.sanguinalis. No true-stolon inference."
+    },
+    "other_sources": "Existing FNA/UT/GrassBase branch tiers/count/one-sided variants remain; no head/core changes or new specimen/media certification."
+  },
+  "non_scoring_context": {
+    "historical_names_as_printed": [
+      "Digitaria adscendens (H.B.K.) Henrard",
+      "Digitaria sanguinalis var.ciliaris (Retz.) Parl."
+    ],
+    "taxonomy": "Historic placement under D.sanguinalis discussed by Gould; current existing D.ciliaris profile retained. Neighboring D.bicornis and D.violascens kept separate.",
+    "spikelet_mm_usual": [
+      2.8,
+      3.5
+    ],
+    "spikelet_mm_occasional_min": 2.5,
+    "second_glume_mm": [
+      1.6,
+      2.7
+    ],
+    "pollen_mean_size_microns": [
+      36.2,
+      40.9
+    ],
+    "chromosome_2n": 54,
+    "flowering": "June–November",
+    "habitat": "Historic Texas roadside/lawn/garden/field weed context; not a verified Hays occurrence or county-nativity update",
+    "gaps": "No explicit new Gould ligule size, blade width, rhizome/stolon absence, awn range, branch groove or first-glume pit description in this screenshot."
+  }
+}
+

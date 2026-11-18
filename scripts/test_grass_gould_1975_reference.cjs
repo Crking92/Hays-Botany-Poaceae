@@ -364,7 +364,9 @@ const [canterae,nitida,interrupta,gymnocarpon,hians,mutica]=newRefs;
 assert.equal(canterae.taxon_as_printed,"Chloris canterai");
 assert.equal(canterae.taxonomy.currently_accepted,"Stapfochloa canterae (Arechav.) P.M.Peterson");
 assert.equal(canterae.taxonomy.original_corrected_spelling,"Chloris canterae Arechav.");
-assert.equal(canterae.printed_page,"NOT_VISIBLE_IN_USER_PHOTO");
+assert.equal(canterae.printed_page,328);
+assert.equal(canterae.original_unconfirmed_page_status,"NOT_VISIBLE_IN_USER_PHOTO");
+assert.equal(canterae.current_verified_printed_page,328);
 assert(canterae.adjacent_page_material.some(x=>x.taxon==="Chloris ciliata"&&x.description.includes("NOT")));
 const co=new Map(canterae.observations.map(x=>[x.character,x]));
 assert.equal(co.get("ligule").hair_length_mm_max,7);
@@ -655,3 +657,5 @@ assert(html.includes('["one_sided","Spikelets on one side of each branch"'));
  assert.equal(key.currentResults().length,4,"No exclusion without the specific flowerhead");
 }
 console.log("PASS: only exact short grama branch contrast excludes pampas, proso and hybrid ryegrass; hold retained");
+
+

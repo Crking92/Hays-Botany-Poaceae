@@ -856,11 +856,14 @@ function refinementEvidence(s,character){
  // state's source instead of the original record's unrelated character source.
  const selected=selectedRefinementStates(character);
  const newlySelected=selected.find(v=>record.additional_state_sources?.[v]);
- return newlySelected?{...record,...record.additional_state_sources[newlySelected]}:record;
+ const result=newlySelected?{...record,...record.additional_state_sources[newlySelected],states:record.states}:record;
+ if(s.gould_hairy_rachilla_hold&&character==="floral_hair_position")return {...result,states:result.states.filter(v=>v!=="rachilla"),source_disagreement:s.gould_hairy_rachilla_hold};
+ return result;
 }
 // Keep a group to one positive ranking point even if several independent
 // observations (for example lower + upper glume) are selected together.
 // Old one-value share links are still accepted.
+function heldRefinementStates(s,character){return s.gould_character_holds?.[character]||[]}
 function selectedRefinementStates(id){
  const value=state.refineSelected[id];
  return Array.isArray(value)?value:(typeof value==="string"&&value?[value]:[]);
@@ -869,7 +872,7 @@ function refinementMatches(s){
  const supported=Object.keys(state.refineSelected).flatMap(id=>{
    const observed=selectedRefinementStates(id),evidence=refinementEvidence(s,id);
    if(!observed.length||!evidence)return[];
-   const matched=observed.filter(value=>evidence.states.includes(value));
+   const matched=observed.filter(value=>evidence.states.includes(value)&&!heldRefinementStates(s,id).includes(value));
    return matched.length?[{character:id,value:matched[0],matched}]:[];
  });
  // Two separate UI buttons must not award two points for one physical organ.
@@ -905,7 +908,7 @@ function hasAllDocumentedRefinements(s){
   const values=selectedRefinementStates(id);
   if(!values.length)return true;
   const evidence=refinementEvidence(s,id);
-  return Boolean(evidence&&values.every(value=>evidence.states.includes(value)));
+  return Boolean(evidence&&values.every(value=>evidence.states.includes(value)&&!heldRefinementStates(s,id).includes(value)));
  });
 }
 
@@ -919,9 +922,46 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ {
+const proof=s.exact_lemma_awn_absence;
+ if(s.id==="eleusine-indica"&&proof?.schema==="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"&&proof.pdf_printed_page===1269&&selectedRefinementStates("true_lemma_awn").some(v=>proof.conflicting_states.includes(v)))
+  conflicts.push({character:"true_lemma_awn",label:"True lemma awn",reported:"Awnless; a minute mucro permitted",source:proof.source,source_url:proof.source_url,note:proof.note+" "+proof.stage_caution,policy:"EXACT_SPECIES_EXPLICIT_AWNLESS"});
+ }
+ {
+const proof=s.exact_ungrooved_proof;
+ if(s.id==="dichanthium-annulatum"&&proof?.schema==="EXACT_KLEBERG_UNGROOVED_V1"&&proof.pdf_printed_page===1263&&selectedRefinementStates("spikelet_position").includes("terminal_medial_groove"))conflicts.push({character:"spikelet_position",label:"Flowering branch / pedicel groove",reported:"Branches and pedicels without groove or membranous area",source:proof.source,source_url:proof.source_url,note:proof.note,policy:"EXACT_KLEBERG_EXPLICIT_UNGROOVED"});
+ }
+ {
+const p=s.green_sprangletop_absences;
+ if(s.id==="disakisperma-dubium"&&p?.schema==="EXACT_GREEN_SPRANGLETOP_ABSENCES_V1"){
+  for(const [id,values]of Object.entries(p.root_states))if(selectedRefinementStates(id).some(v=>values.includes(v)))conflicts.push({character:id,label:id==="underground_stems"?"Underground stems":"Surface stolons",reported:"Without stolons or rhizomes",source:p.root_source,source_url:p.root_url,note:"Explicit Gould absence. Confirm an actual connected stem, not a root or reclining culm.",policy:"EXACT_GREEN_ROOT_ABSENCE"});
+  if(selectedRefinementStates("true_lemma_awn").some(v=>p.awn_states.includes(v)))conflicts.push({character:"true_lemma_awn",label:"True lemma awn",reported:"Glumes and lemmas awnless",source:p.awn_source,source_url:p.awn_url,note:"Exact Diggs species account; minute mucro or notch is not a true awn.",policy:"EXACT_GREEN_LEMMA_AWN_ABSENCE"});
+ }
+ }
+ {
+const p=s.exact_hooded_glume_hair_absence;
+ if(s.id==="chloris-cucullata"&&p?.schema==="EXACT_HOODED_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===325&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Glumes hairless except rough midnerve",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_HOODED_GLUME_HAIR_ABSENCE"});
+ }
+ {
+const p=s.exact_pampas_glume_hair_absence;
+ if(s.id==="cortaderia-selloana"&&p?.schema==="EXACT_PAMPAS_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===56&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Outer glumes hairless; female silky hairs on lemmas",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_PAMPAS_GLUME_HAIR_ABSENCE"});
+ }
+ {
+const p=s.exact_canter_glume_hair_absence;
+ if(s.id==="stapfochloa-canterae"&&p?.schema==="EXACT_CANTER_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===328&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Glumes hairless except rough midnerve",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_CANTER_GLUME_HAIR_ABSENCE"});
+ }
+ {
+const p=s.exact_cane_fertile_awn_minimum;
+ if(s.id==="bothriochloa-barbinodis"&&p?.schema==="EXACT_CANE_FERTILE_AWN_MINIMUM_V1"&&p.minimum_mm===20&&p.printed_page===600&&selectedRefinementStates("true_lemma_awn").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"true_lemma_awn",label:"Measured fertile lemma awn",reported:"20–30 mm or longer (minimum20mm)",source:p.source,source_url:p.source_url,note:p.note+" "+p.confirmation,policy:"EXACT_CANE_FERTILE_AWN_MINIMUM"});
+ }
+ {
+const p=s.exact_fringed_glume_hair_absence;
+ if(s.id==="stapfochloa-ciliata"&&p?.schema==="EXACT_FRINGED_GLUME_HAIR_ABSENCE_V1"&&p.printed_page===327&&selectedRefinementStates("glume_marks").some(v=>p.conflicting_states.includes(v)))conflicts.push({character:"glume_marks",label:"Ordinary outer-glume hairs",reported:"Glumes hairless except rough midnerves",source:p.source,source_url:p.source_url,note:p.note,policy:"EXACT_FRINGED_GLUME_HAIR_ABSENCE"});
+ }
  for(const character of state.refineCharacters){
   const observed=selectedRefinementStates(character.id);
   if(!observed.length)continue;
+  if(observed.some(v=>heldRefinementStates(s,character.id).includes(v)))continue;
   const evidence=refinementEvidence(s,character.id);
   if(!evidence?.states?.length||observed.some(value=>evidence.states.includes(value)))continue;
   if(observed.some(v=>state.refineEvidenceOptionKeys?
@@ -950,6 +990,7 @@ function verifiedAdvancedConflict(s){
    });
    if(canOverlap)continue; // UNKNOWN/possible, never a documented contradiction
   }else if(policy==="EXACT_SPECIES_PRIMARY_FLORET_COUNT"){
+   if(observed.some(v=>!["one","two","several"].includes(v)))continue; // anatomy is not total floret count
    if(evidence.source_status!=="READY_PRIMARY"||
       !Number.isInteger(evidence.pdf_printed_page)||
       !/exact/i.test(evidence.source||"")||
@@ -1627,12 +1668,13 @@ function renderOptionalCharacters(){
        guide.replaceChildren();
        const selectedIds=selectedRefinementStates(c.id);const selected=c.options.find(o=>o.id===selectedIds[selectedIds.length-1]);
        if(!selected){guide.append(node("p","venation-field-prompt","Choose a vein or rib detail to see a simplified diagram and what to examine."));return;}
-       const tip=venationFieldTips[selected.id];
+       const tip=venationFieldTips[selected.id]||{where:selected.label,tip:selected.detail||"Inspect the selected blade feature and source description."};
        const count=Object.values(state.refineEvidenceMap).filter(rows=>rows.some(e=>e.character===c.id&&e.states.includes(selected.id))).length;
        const info=node("div","venation-field-text");
        info.append(node("strong","",tip.where),node("p","",tip.tip),
          node("p","venation-field-source",count?("Recorded in "+count+" published grass description"+(count===1?"":"s")+". Other grasses with unknown vein data remain possible."):"No species-level ranking evidence linked yet. The selection is saved, but cannot favor or exclude any grass."));
-       guide.append(venationSketch(selected.id),info);
+       if(venationFieldTips[selected.id])guide.append(venationSketch(selected.id));
+       guide.append(info);
      };
      refreshVeinGuide();content.append(guide);
    }
@@ -1758,6 +1800,7 @@ function choose(qid,choice){
    Record source material remains unchanged; this is a cross-taxon field
    architecture contrast, not proof of a specimen or hybrid parentage. */
 function coreChoiceStatus(s,key,val){
+ if(s.gould_core_holds?.[key]?.includes(val))return "unknown";
  if(key==="head"&&val==="short_side_racemes"&&
   !s.traits?.head?.includes(val)&&
   ["cortaderia-selloana","panicum-miliaceum","lolium-x-boucheanum"].includes(s.id))return "conflict";
@@ -1778,6 +1821,7 @@ function currentResults(){
 const picks=Object.entries(state.selected).filter(([k,v])=>v);
 return state.species.map(s=>{let conflict=0,unknown=0,confirmed=0;
 for(const [key,val] of picks){
+ if(s.gould_core_holds?.[key]?.includes(val)){unknown++;continue}
  if(key==="head"&&val==="short_side_racemes"&&
   !s.traits?.head?.includes(val)&&
   ["cortaderia-selloana","panicum-miliaceum","lolium-x-boucheanum"].includes(s.id)){conflict++;continue;}
@@ -2993,7 +3037,10 @@ const disputedRhizome=state.selected.habit==="rhizome"&&[
 ].includes(s.id);
 if(disputedRhizome)info.append(node("div","smallmuted",
  "Rhizome status unresolved — regional references disagree. Keep possible until the book and a connected underground stem are checked."));
-if(x.unknown)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
+const selectedSourceHold=Object.entries(state.selected).some(([key,value])=>value&&s.gould_core_holds?.[key]?.includes(value))||Object.keys(state.refineSelected).some(id=>selectedRefinementStates(id).some(v=>heldRefinementStates(s,id).includes(v)));
+if(selectedSourceHold)info.append(node("div","smallmuted","Source disagreement — selected rhizome or lower-glume evidence is unresolved. Open details to compare the books."));
+if(s.gould_hairy_rachilla_hold&&selectedRefinementStates("floral_hair_position").includes("rachilla"))info.append(node("div","smallmuted","Rachilla hairs unresolved — Gould and the broader FNA account differ; inspect the exact segment."));
+if(x.unknown&&!selectedSourceHold)info.append(node("div","smallmuted","Missing "+x.unknown+" selected character"+(x.unknown===1?"":"s")+" — keep as possible"));if(x.refinementMatches.length)info.append(node("span","refinement-match",x.refinementMatches.length+" extra documented feature"+(x.refinementMatches.length===1?"":"s")+" matches"));
 if(state.selected.ligule&&supportedLiguleEdge(s))info.append(node("div","smallmuted","Source-supported ligule edge (same collar observation, not another score)."));
 b.append(info);b.addEventListener("click",()=>detail(s));const row=node("div","result-row");row.append(b);
 if(state.comparing){const on=state.compareIds.includes(s.id),pick=node("button","compare-pick",on?"Selected ✓":"Add");pick.type="button";pick.setAttribute("aria-pressed",String(on));pick.setAttribute("aria-label",(on?"Remove ":"Add ")+s.common+(on?" from comparison":" to comparison"));pick.disabled=!on&&state.compareIds.length>=3;pick.addEventListener("click",()=>{state.compareIds=on?state.compareIds.filter(id=>id!==s.id):[...state.compareIds,s.id];renderResults()});row.append(pick)}
@@ -3152,6 +3199,175 @@ function applyKRGouldSupplement(pack){
  species.diagnostic_checks=[...(species.diagnostic_checks||[]),...pack.learner_diagnostic_checks];
  state.refineCharacters.find(c=>c.id==="spikelet_position").label="Spikelets / flowering axes";
 }
+function applyKleingrassGouldSupplement(pack){
+ const expectedHolds={core:{habit:["rhizome"]},refinements:{underground_stems:["short_knotty","short_rhizome","rhizome_present","long_scaly","slender_long","long_rhizome","short_scaly","thick_rhizome","scaly_rhizome","creeping_rhizomes","management_rhizomes"],glume_marks:["lower_reduced"]}};
+ if(pack.taxon_as_printed!=="Panicum coloratum L."||JSON.stringify(pack.holds?.core)!==JSON.stringify(expectedHolds.core)||
+    JSON.stringify(pack.holds?.refinements)!==JSON.stringify(expectedHolds.refinements)||!pack.preferred_field_rule||
+    !Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||
+    pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid Kleingrass taxon/source-hold scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_KLEINGRASS_CHARACTER_SUPPLEMENT_V1",id:"panicum-coloratum",scientific:"Panicum coloratum",page:452,pages:[452,453]});
+ const species=state.species.find(s=>s.id==="panicum-coloratum");
+ species.gould_core_holds=structuredClone(pack.holds.core);
+ species.gould_character_holds=structuredClone(pack.holds.refinements);
+ species.gould_prior_field_rule=species.field_rule;
+ species.field_rule=pack.preferred_field_rule;
+ species.gould_character_source={source:pack.source,printed_pages:[452,453],holds:pack.holds.reasons};
+ const earlier=(species.diagnostic_checks||[]).map(c=>/rhizom/i.test(c.check||"")?
+   {...c,certainty:"SOURCE DISAGREEMENT — Gould says rhizomes not developed; older rhizome report retained below. "+c.certainty}:c);
+ species.diagnostic_checks=[...pack.learner_diagnostic_checks,...earlier];
+ state.refineCharacters.find(c=>c.id==="florets_per_spikelet").label="Florets / palea within one spikelet";
+}
+function applyChlorisVirgataGouldSupplement(pack){
+ if(!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid Chloris diagnostics");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CHLORIS_VIRGATA_SUPPLEMENT_V1",id:"chloris-virgata",scientific:"Chloris virgata",page:321});
+ const s=state.species.find(s=>s.id==="chloris-virgata");
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.321: tufted ANNUAL, with 4–20 upright terminal fingers; the lower fertile lemma has long upper-margin hairs and an awn usually 5–15 mm. Its upper sterile floret is similar in shape but smaller and separately awned. Shared tuft, ligule and basal hair observations do not distinguish KR. Missing KR-specific organ evidence keeps this species possible, not confirmed.\n\n"+s.field_rule;
+}
+function applyGoosegrassGouldSupplement(pack){
+ const proof=pack.exact_awn_absence;
+ const expected=["three","long","short","bent_twisted","straight_or_bent","fertile_awn_2_to_5mm","fertile_awn_1_to_1_5mm"];
+ if(!proof||proof.schema!=="EXACT_SPECIES_EXPLICIT_AWNLESS_V1"||proof.species_id!=="eleusine-indica"||proof.organ!=="true_lemma_awn"||proof.pdf_printed_page!==1269||!proof.source?.includes("Diggs")||!proof.source?.includes("exact Eleusine indica")||proof.conflicting_states?.join(",")!==expected.join(",")||!proof.source_url?.startsWith("https://")||!proof.note||!proof.stage_caution||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid goosegrass explicit absence proof");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_GOOSEGRASS_SUPPLEMENT_V1",id:"eleusine-indica",scientific:"Eleusine indica",page:222,pages:[222,223]});
+ const s=state.species.find(s=>s.id==="eleusine-indica");s.exact_lemma_awn_absence=structuredClone(proof);
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould pp.222–223 / Diggs p.1269: leafy tufted ANNUAL, occasionally with basal stolons; flattened winged flowering axes, several florets per spikelet and awnless lemmas that may have a tiny mucro. A verified true lemma awn conflicts with goosegrass; a minute pointed tip does not.\n\n"+s.field_rule;
+}
+function applyBigBluestemGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Andropogon gerardii"||pack.core_awn_addition!=="short_single"||!Array.isArray(pack.variety_key)||pack.variety_key.length!==3||pack.variety_key.map(v=>v.taxon_as_printed).join("|")!=="A. gerardii var. chrysocomus|A. gerardii var. gerardii|A. gerardii var. paucipilus"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid big bluestem variety scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_BIG_BLUESTEM_SUPPLEMENT_V1",id:"andropogon-gerardi",scientific:"Andropogon gerardi",page:550});
+ const s=state.species.find(s=>s.id==="andropogon-gerardi");s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.gould_variety_key=structuredClone(pack.variety_key);
+ s.field_rule="Gould p.550: perennial with or without rhizomes; sessile spikelets 7–11 mm with a usually equally large awnless staminate pedicelled companion. Short or absent sessile awns are permitted in historical var. paucipilus. Flowering rachis-node tufts are not culm-node hairs, and a single glume keel is not a vein count. Keep historical variety differences separate from Diggs subspecies/hybrid treatment.\n\n"+s.field_rule;
+}
+function applyStinkgrassGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Eragrostis cilianensis (All.) E. Mosher"||pack.historical_synonym_as_printed!=="Eragrostis megastachya Link"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid stinkgrass source identity");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_STINKGRASS_SUPPLEMENT_V1",id:"eragrostis-cilianensis",scientific:"Eragrostis cilianensis",page:200});
+ const s=state.species.find(s=>s.id==="eragrostis-cilianensis");s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.200: tufted ANNUAL with dense-to-open ovate/oblong panicle, pedicellate spikelets containing 12–40 florets, and separately located gland pits on vegetative and floral parts. The pilose sheath throat is not proof of ligule type; usually/sometimes glands are not universal requirements.\n\n"+s.field_rule;
+}
+function applyDichanthiumGouldSupplement(pack){
+ const p=pack.exact_ungrooved_proof;
+ if(pack.schema!=="HAYS_GOULD_DICHANTHIUM_PAIR_V1"||pack.printed_page!==589||p?.schema!=="EXACT_KLEBERG_UNGROOVED_V1"||p.species_id!=="dichanthium-annulatum"||p.character!=="spikelet_position"||p.conflicting_state!=="terminal_medial_groove"||p.pdf_printed_page!==1263||!p.source?.includes("exact Dichanthium annulatum")||!p.source?.includes("Diggs")||!p.source_url?.startsWith("https://")||!p.note||!Array.isArray(pack.secondary_evidence)||pack.secondary_evidence.length!==3)throw Error("Invalid Dichanthium exact-source proof");
+ for(const b of [pack.angleton,pack.kleberg])if(!Array.isArray(b?.learner_diagnostic_checks)||b.learner_diagnostic_checks.length!==3)throw Error("Invalid pair diagnostics");
+ const chars=state.refineCharacters,records=state.refineEvidenceMap;
+ try{
+ applyGouldCharacterSupplement(pack.angleton,{schema:"HAYS_GOULD_ANGLETON_SUPPLEMENT_V1",id:"dichanthium-aristatum",scientific:"Dichanthium aristatum",page:589});
+ applyGouldCharacterSupplement(pack.kleberg,{schema:"HAYS_GOULD_KLEBERG_SUPPLEMENT_V1",id:"dichanthium-annulatum",scientific:"Dichanthium annulatum",page:589});
+ if(!Array.isArray(pack.secondary_option_additions)||pack.secondary_option_additions.length!==3)throw Error("Invalid secondary option count");
+ for(const a of pack.secondary_option_additions){
+  const c=state.refineCharacters.find(c=>c.id===a.character),o=a.option;
+  if(!c||!o?.id||!o.label||!o.detail||c.options.some(x=>x.id===o.id)||!pack.secondary_evidence.some(r=>r.character===c.id&&r.states.includes(o.id)))throw Error("Invalid secondary option source");
+  c.options.push(structuredClone(o));c.multi_select=true;
+  if(Array.isArray(c.subgroups)){if(!a.subgroup)throw Error("Missing secondary subgroup");let group=c.subgroups.find(g=>g.label===a.subgroup);if(!group){group={label:a.subgroup,options:[]};c.subgroups.push(group)}group.options.push(o.id)}
+ }
+ for(const r of pack.secondary_evidence){
+  const c=state.refineCharacters.find(c=>c.id===r.character);
+  if(r.id!=="dichanthium-annulatum"||r.scientific!=="Dichanthium annulatum"||r.pdf_printed_page!==1263||!r.source?.includes("Diggs")||!r.source?.includes("exact Dichanthium annulatum")||!r.source_url?.startsWith("https://")||r.source_status!=="READY_PRIMARY"||!r.note||!r.source_scope_caution||!c||!Array.isArray(r.states)||!r.states.length||r.states.some(v=>!c.options.some(o=>o.id===v)))throw Error("Invalid Kleberg secondary evidence");
+  const bucket=state.refineEvidenceMap[r.id]??=[],old=bucket.find(e=>e.character===r.character);
+  if(old){old.states=[...new Set([...old.states,...r.states])];old.additional_state_sources??={};for(const v of r.states)old.additional_state_sources[v]=structuredClone(r)}else bucket.push(structuredClone(r));
+ }
+ }catch(e){state.refineCharacters=chars;state.refineEvidenceMap=records;throw e;}
+ for(const [id,b]of [["dichanthium-aristatum",pack.angleton],["dichanthium-annulatum",pack.kleberg]]){
+  const s=state.species.find(s=>s.id===id);s.diagnostic_checks=[...b.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+  s.field_rule="Gould p.589: "+(id==="dichanthium-aristatum"?"Angleton has pubescent flowering axis/branch bases and often becomes hairless at culm nodes with age. Do not borrow Kleberg’s explicit groove absence.":"Kleberg has hairless flowering axis/branch bases. Diggs exact text p.1263 explicitly reports ungrooved branches/pedicels; a verified KR groove conflicts. Basal pairs and upper fertile spikelets differ in awns.")+"\n\n"+s.field_rule;
+ }
+ state.species.find(s=>s.id==="dichanthium-annulatum").exact_ungrooved_proof=structuredClone(p);
+}
+function applyCrowfootgrassGouldSupplement(pack){
+ const r=pack.secondary_evidence;
+ if(r?.id!=="dactyloctenium-aegyptium"||r.character!=="spikelet_position"||r.states?.join(",")!=="one_side"||r.pdf_printed_page!==1260||!r.source?.includes("exact Dactyloctenium aegyptium")||!r.source?.includes("Diggs")||!r.source_url?.startsWith("https://"))throw Error("Invalid crowfootgrass secondary source");
+ if(pack.core_awn_addition!=="short_single"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid crowfootgrass source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CROWFOOTGRASS_SUPPLEMENT_V1",id:"dactyloctenium-aegyptium",scientific:"Dactyloctenium aegyptium",page:223});
+ const prior=state.refineEvidenceMap["dactyloctenium-aegyptium"].find(e=>e.character==="spikelet_position");prior.states=[...new Set([...prior.states,...r.states])];prior.additional_state_sources??={};prior.additional_state_sources.one_side=structuredClone(r);
+ const s=state.species.find(s=>s.id==="dactyloctenium-aegyptium");s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.223: annual with often-rooting lower culms, 3–5-flowered comb-like spikelets on fingerlike branches, and bare sharp branch tips. Glume awns, usually short crooked lemma awns and bare rachis points are different structures. No exact KR awn length, lower-segment twist or medial groove absence is inferred.\n\n"+s.field_rule;
+}
+function applyGreenSprangletopGouldSupplement(pack){
+ const p=pack.absence_proof,r=pack.secondary_evidence;
+ const roots={"underground_stems":["long_scaly","slender_long","short_knotty","short_rhizome","long_rhizome","short_scaly","thick_rhizome","scaly_rhizome","rhizome_present","creeping_rhizomes","management_rhizomes"],"surface_runners":["stolon","wiry_stolon","management_stolons"]},awns=["three","long","short","bent_twisted","straight_or_bent","fertile_awn_2_to_5mm","fertile_awn_1_to_1_5mm"];
+ if(pack.taxon_as_printed!=="Leptochloa dubia"||p?.schema!=="EXACT_GREEN_SPRANGLETOP_ABSENCES_V1"||p.id!=="disakisperma-dubium"||p.root_page!==226||!p.root_source?.includes("Gould")||p.awn_page!==1282||!p.awn_source?.includes("exact Leptochloa dubia")||!p.awn_source?.includes("Diggs")||!p.root_url?.startsWith("https://")||!p.awn_url?.startsWith("https://")||JSON.stringify(p.root_states)!==JSON.stringify(roots)||JSON.stringify(p.awn_states)!==JSON.stringify(awns)||r?.id!==p.id||r.character!=="true_lemma_awn"||r.states?.join(",")!=="none"||r.pdf_printed_page!==1282||r.source!==p.awn_source||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid green sprangletop explicit source proof");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_GREEN_SPRANGLETOP_SUPPLEMENT_V1",id:"disakisperma-dubium",scientific:"Disakisperma dubium",page:226});
+ const prior=state.refineEvidenceMap[p.id].find(e=>e.character==="true_lemma_awn");if(prior){prior.states=[...new Set([...prior.states,...r.states])];prior.additional_state_sources??={};prior.additional_state_sources.none=structuredClone(r)}else state.refineEvidenceMap[p.id].push(structuredClone(r));
+ const s=state.species.find(s=>s.id===p.id);s.green_sprangletop_absences=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.226, Leptochloa dubia: firm-based tufted perennial WITHOUT stolons or rhizomes; solitary nearly sessile spikelets and hidden closed-flowering spikelets in lower sheath axils. Diggs exact text p.1282 explicitly reports awnless lemmas. Actual runners or true lemma awns conflict; a tiny tip or unexamined structure does not.\n\n"+s.field_rule;
+}
+function applyHairyGramaGouldSupplement(pack){
+ if(!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.evidence?.some(r=>r.character==="true_lemma_awn"))throw Error("Invalid hairy grama organ scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_HAIRY_GRAMA_SUPPLEMENT_V1",id:"bouteloua-hirsuta",scientific:"Bouteloua hirsuta",page:353});
+ const group=state.refineCharacters.find(c=>c.id==="florets_per_spikelet");group.hint+=" Count florets first; lower/upper rudiment details are separate observations. Three awns do not mean three florets.";
+ const s=state.species.find(s=>s.id==="bouteloua-hirsuta");s.gould_hairy_rachilla_hold="Gould p.353: rachilla below lower rudiment not hairy; broader FNA report allows hairs. Segment/taxon scope unresolved; original report retained.";s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.353: hairy grama has a projecting bare branch rachis, hairless culm nodes, long papilla-based hairs on SECOND-glume midnerve, and one perfect plus two rudimentary florets. Three rough awns belong to the LOWER rudiment; rachilla below it is described as hairless, with broader FNA variation preserved separately.\n\n"+s.field_rule;
+}
+function applyHoodedWindmillGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence,r=pack.secondary_floret_evidence;
+ if(pack.core_awn_addition!=="short_single"||pack.source_pages?.join(",")!=="324,325"||p?.schema!=="EXACT_HOODED_GLUME_HAIR_ABSENCE_V1"||p.id!=="chloris-cucullata"||p.printed_page!==325||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.note||r?.id!==p.id||r.character!=="florets_per_spikelet"||r.states?.join(",")!=="two"||r.pdf_printed_page!==1257||!r.source?.includes("exact Chloris cucullata")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid hooded windmill source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_HOODED_WINDMILL_SUPPLEMENT_V1",id:"chloris-cucullata",scientific:"Chloris cucullata",page:324,pages:[324,325]});
+ const prior=state.refineEvidenceMap[p.id].find(e=>e.character==="florets_per_spikelet");prior.additional_state_sources??={};prior.additional_state_sources.two=structuredClone(r);
+ const s=state.species.find(s=>s.id===p.id);s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];s.exact_hooded_glume_hair_absence=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould pp.324–325: HOOD is the inflated UPPER sterile floret, not a glume. LOWER fertile lemma awn0.3–1.5 mm overlaps short KR awns; glumes are hairless except a rough midnerve. Verify ordinary glume hairs separately from inner-lemma hairs. Hybrid intermediates and differing whorl accounts require review.\n\n"+s.field_rule;
+}
+function applySilkyBluestemGouldSupplement(pack){
+ const r=pack.secondary_evidence;
+ if(!pack.measurement_holds?.awn||!pack.measurement_holds?.node_hairs||pack.evidence?.some(e=>e.character==="true_lemma_awn"&&e.awn_length_mm)||r?.id!=="dichanthium-sericeum"||r.character!=="true_lemma_awn"||r.states?.join(",")!=="long"||r.taxon_as_treated!=="Dichanthium sericeum subsp. sericeum"||r.source_status!=="READY_SUPPLEMENTAL_CONDITIONAL"||!r.source_url?.startsWith("https://vicflora.rbg.vic.gov.au/")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid silky source/measurement hold");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_SILKY_BLUESTEM_SUPPLEMENT_V1",id:"dichanthium-sericeum",scientific:"Dichanthium sericeum",page:588});
+ const row=state.refineEvidenceMap[r.id].find(e=>e.character===r.character);row.states=[...new Set([...row.states,...r.states])];row.additional_state_sources??={};row.additional_state_sources.long=structuredClone(r);
+ const s=state.species.find(s=>s.id===r.id);s.silky_measurement_holds=structuredClone(pack.measurement_holds);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.588: SILKY has dense silvery node beards, erose1–2 mm membrane, densely villous rachis/pedicels and exact outer-glume apical/dorsal-side hair lines. Sheaths and blade faces are often hairless but can be spreading-villous. Printed awn/node-hair units remain held for confirmation; structural matching is not a certified Texas specimen ID.\n\n"+s.field_rule;
+}
+function applyPampasgrassGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence;
+ if(p?.schema!=="EXACT_PAMPAS_GLUME_HAIR_ABSENCE_V1"||p.id!=="cortaderia-selloana"||p.printed_page!==56||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.note||pack.evidence?.some(r=>r.character==="true_lemma_awn")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid pampasgrass source/sex/awn scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_PAMPASGRASS_SUPPLEMENT_V1",id:"cortaderia-selloana",scientific:"Cortaderia selloana",page:56});
+ const s=state.species.find(s=>s.id===p.id);s.exact_pampas_glume_hair_absence=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.56: outer glumes HAIRLESS and one-veined. Long silky lemma hairs are PISTILLATE; STAMINATE lemmas are hairless. Ligule tuft, collar ring and blade prickles are distinct structures. Preserve the existing uncertain true-awn field and source-reported ligule length differences.\n\n"+s.field_rule;
+}
+function applyCanterWindmillGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence;
+ if(pack.taxon_as_printed!=="Chloris canterai"||p?.schema!=="EXACT_CANTER_GLUME_HAIR_ABSENCE_V1"||p.id!=="stapfochloa-canterae"||p.printed_page!==328||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.note||pack.evidence?.some(r=>r.character==="ligule_length")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3)throw Error("Invalid Canter source/name/organ scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CANTER_WINDMILL_SUPPLEMENT_V1",id:"stapfochloa-canterae",scientific:"Stapfochloa canterae",page:328});
+ const s=state.species.find(s=>s.id===p.id);s.exact_canter_glume_hair_absence=structuredClone(p);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.328, Chloris canterai: long ligule CILIA to7 mm, not membrane height. Lower fertile awn2.4–5.5 mm and lowest sterile awn1.5–3.5 mm are distinct. Outer glumes hairless except rough midnerve; inner fertile keel densely ciliate. Fig173 above is C.ciliata, not this species.\n\n"+s.field_rule;
+}
+function applyCaliforniaCottontopGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Digitaria californica"||pack.core_awn_addition!=="short_single"||pack.source_pages?.join(",")!=="411,412"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid California cottontop source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CALIFORNIA_COTTONTOP_SUPPLEMENT_V1",id:"digitaria-californica",scientific:"Digitaria californica",page:411,pages:[411,412]});
+ const s=state.species.find(s=>s.id===pack.species_id);
+ s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];
+ s.gould_character_source={source:pack.source,printed_pages:[411,412],note:pack.secondary_reference_review.awn_disagreement};
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould pp.411–412: long SILKY HAIRS on second glume and lower lemma margins are separate from the SHORT AWN TIP of the upper lemma. Lower lemma back is hairless. Older awnless reports remain recorded. Firm knotty crown with hairy scale leaves, not demonstrated free underground runners.\n\n"+s.field_rule;
+}
+function applyCaneBluestemGouldSupplement(pack){
+ const p=pack.exact_fertile_awn_minimum;
+ if(pack.taxon_as_printed!=="Bothriochloa barbinodis"||pack.source_pages?.join(",")!=="600,601"||p?.schema!=="EXACT_CANE_FERTILE_AWN_MINIMUM_V1"||p.id!=="bothriochloa-barbinodis"||p.printed_page!==600||p.minimum_mm!==20||p.maximum_mm!==null||p.conflicting_states?.join(",")!=="fertile_awn_1_to_1_5mm,fertile_awn_2_to_5mm"||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||!p.confirmation?.includes("1247")||!p.note||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid cane source/awn/variety scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_CANE_BLUESTEM_SUPPLEMENT_V1",id:"bothriochloa-barbinodis",scientific:"Bothriochloa barbinodis",page:600,pages:[600,601]});
+ const s=state.species.find(s=>s.id===p.id);s.exact_cane_fertile_awn_minimum=structuredClone(p);
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould pp.600–601: cane fertile lemma awn20–30mm OR LONGER, bent and twisted; not the hairs or spikelet body. Broad B.barbinodis retains BOTH unpitted typical variety and pitted var.perforata. Node hairs mostly1–3mm, occasionally longer, typically erect; Diggs1247 says spreading and remains recorded.\n\n"+s.field_rule;
+}
+function applySouthernCrabgrassGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Digitaria ciliaris"||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid southern crabgrass source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_SOUTHERN_CRABGRASS_SUPPLEMENT_V1",id:"digitaria-ciliaris",scientific:"Digitaria ciliaris",page:410});
+ const s=state.species.find(s=>s.id===pack.species_id);
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.410: LOWER lemma lateral nerves NOT scabrous; second glume1.6–2.7mm; spikelets usually2.8–3.5mm, occasionally2.5mm. Leaves hairless or sparsely papilla-hairy; decumbent annual. Diggs exact key1264 has slightly different size endpoints. Do not copy traits from adjacent D.bicornis/D.violascens or infer whole-lemma smoothness.\n\n"+s.field_rule;
+}
+function applyFringedChlorisGouldSupplement(pack){
+ const p=pack.exact_glume_hair_absence;
+ if(pack.taxon_as_printed!=="Chloris ciliata"||pack.core_awn_addition!=="short_single"||p?.schema!=="EXACT_FRINGED_GLUME_HAIR_ABSENCE_V1"||p.id!=="stapfochloa-ciliata"||p.printed_page!==327||p.conflicting_states?.join(",")!=="sessile_first_glume_hispid_back,sessile_glume_margin_hairs,pedicelled_first_glume_hairy_lower"||!p.source?.includes("Gould")||!p.source_url?.startsWith("https://")||!p.note||pack.evidence?.some(r=>r.character==="ligule_length")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid fringed chloris source scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_FRINGED_CHLORIS_SUPPLEMENT_V1",id:"stapfochloa-ciliata",scientific:"Stapfochloa ciliata",page:327});
+ const s=state.species.find(s=>s.id===p.id);s.exact_fringed_glume_hair_absence=structuredClone(p);s.traits.awns=[...new Set([...s.traits.awns,pack.core_awn_addition])];
+ s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];s.field_rule="Gould p.327, Chloris ciliata: glumes HAIRLESS except rough midnerves; strong fringes on LOWER FERTILE lemma margins/keel. Fertile awn0.9–2.7mm; lower sterile awn0.9–1.4mm; upper sterile smaller/awnless. Ligule absent or short ciliate crown. Do not copy preceding C.inflata.\n\n"+s.field_rule;
+}
+function applyBroomcornMilletGouldSupplement(pack){
+ if(pack.taxon_as_printed!=="Panicum miliaceum"||pack.evidence?.some(r=>r.character==="ligule_length")||!Array.isArray(pack.learner_diagnostic_checks)||pack.learner_diagnostic_checks.length!==3||pack.learner_diagnostic_checks.some(c=>!c.look||!c.check||!c.compare||!c.certainty||!c.source?.includes("Gould")||!c.url?.startsWith("https://")))throw Error("Invalid broomcorn millet source/ligule scope");
+ applyGouldCharacterSupplement(pack,{schema:"HAYS_GOULD_BROOMCORN_MILLET_SUPPLEMENT_V1",id:"panicum-miliaceum",scientific:"Panicum miliaceum",page:448});
+ const s=state.species.find(s=>s.id===pack.species_id);s.diagnostic_checks=[...pack.learner_diagnostic_checks,...(s.diagnostic_checks||[])];
+ s.field_rule="Gould p.448: lower glume5-veined; upper glume/lower lemma usually9 (7–11) veins. Upper fertile lemma SMOOTH/SHINY3–3.5mm, yellowish to reddish-brown. Fringed membrane1.5–3mm INCLUDING hairs; pustulate-hispid sheaths, variably hairy blades. Crop/cultivar and local-identity cautions remain.\n\n"+s.field_rule;
+}
+const reviewedGouldSupplements=[{"pr":433,"file":"gould-kleingrass-character-supplement.json","apply":"applyKleingrassGouldSupplement"},{"pr":435,"file":"gould-chloris-virgata-character-supplement.json","apply":"applyChlorisVirgataGouldSupplement"},{"pr":436,"file":"gould-goosegrass-character-supplement.json","apply":"applyGoosegrassGouldSupplement"},{"pr":437,"file":"gould-big-bluestem-character-supplement.json","apply":"applyBigBluestemGouldSupplement"},{"pr":439,"file":"gould-stinkgrass-character-supplement.json","apply":"applyStinkgrassGouldSupplement"},{"pr":441,"file":"gould-dichanthium-character-supplement.json","apply":"applyDichanthiumGouldSupplement"},{"pr":442,"file":"gould-crowfootgrass-character-supplement.json","apply":"applyCrowfootgrassGouldSupplement"},{"pr":443,"file":"gould-green-sprangletop-character-supplement.json","apply":"applyGreenSprangletopGouldSupplement"},{"pr":444,"file":"gould-hairy-grama-character-supplement.json","apply":"applyHairyGramaGouldSupplement"},{"pr":445,"file":"gould-hooded-windmill-character-supplement.json","apply":"applyHoodedWindmillGouldSupplement"},{"pr":446,"file":"gould-silky-bluestem-character-supplement.json","apply":"applySilkyBluestemGouldSupplement"},{"pr":447,"file":"gould-pampasgrass-character-supplement.json","apply":"applyPampasgrassGouldSupplement"},{"pr":448,"file":"gould-canter-windmill-character-supplement.json","apply":"applyCanterWindmillGouldSupplement"},{"pr":450,"file":"gould-california-cottontop-character-supplement.json","apply":"applyCaliforniaCottontopGouldSupplement"},{"pr":452,"file":"gould-cane-bluestem-character-supplement.json","apply":"applyCaneBluestemGouldSupplement"},{"pr":454,"file":"gould-southern-crabgrass-character-supplement.json","apply":"applySouthernCrabgrassGouldSupplement"},{"pr":455,"file":"gould-fringed-chloris-character-supplement.json","apply":"applyFringedChlorisGouldSupplement"},{"pr":457,"file":"gould-broomcorn-millet-character-supplement.json","apply":"applyBroomcornMilletGouldSupplement"}];
 function applyGouldCharacterSupplement(pack,expected){
  if(pack.schema!==expected.schema||
     pack.mode!=="NON_EXCLUDING_POSITIVE_RANKING"||pack.species_id!==expected.id||
@@ -3161,9 +3377,11 @@ function applyGouldCharacterSupplement(pack,expected){
  const groups=new Map(characters.map(c=>[c.id,c])),newKeys=new Set();
  for(const addition of pack.option_additions){
   const group=groups.get(addition.character),option=addition.option;
-  if(!group||!option?.id||!option.label||!option.detail||group.options.some(o=>o.id===option.id)||
+  if(!group||!option?.id||!option.label||!option.detail||
      newKeys.has(group.id+":"+option.id))throw Error("Duplicate/invalid Virginia option");
-  newKeys.add(group.id+":"+option.id);group.options.push(option);group.multi_select=true;
+  newKeys.add(group.id+":"+option.id);
+  if(group.options.some(o=>o.id===option.id)){group.multi_select=true;continue}
+  group.options.push(option);group.multi_select=true;
   if(Array.isArray(group.subgroups)){
    if(!addition.subgroup)throw Error("Missing option subgroup");
    let subgroup=group.subgroups.find(g=>g.label===addition.subgroup);
@@ -3872,6 +4090,15 @@ try{
  if(!response.ok)throw Error("KR Gould supplement unavailable");
  applyKRGouldSupplement(await response.json());
 }catch(err){console.warn("KR Gould character supplement held; prior evidence preserved",err)}
+state.reviewedGouldLoadStatus=[];
+for(const entry of reviewedGouldSupplements){
+ try{
+  const response=await fetch(entry.file,{cache:"no-store"});
+  if(!response.ok)throw Error("Reviewed supplement unavailable: "+entry.file);
+  const apply=({applyKleingrassGouldSupplement,applyChlorisVirgataGouldSupplement,applyGoosegrassGouldSupplement,applyBigBluestemGouldSupplement,applyStinkgrassGouldSupplement,applyDichanthiumGouldSupplement,applyCrowfootgrassGouldSupplement,applyGreenSprangletopGouldSupplement,applyHairyGramaGouldSupplement,applyHoodedWindmillGouldSupplement,applySilkyBluestemGouldSupplement,applyPampasgrassGouldSupplement,applyCanterWindmillGouldSupplement,applyCaliforniaCottontopGouldSupplement,applyCaneBluestemGouldSupplement,applySouthernCrabgrassGouldSupplement,applyFringedChlorisGouldSupplement,applyBroomcornMilletGouldSupplement})[entry.apply];
+  apply(await response.json());state.reviewedGouldLoadStatus.push({file:entry.file,loaded:true});
+ }catch(err){state.reviewedGouldLoadStatus.push({file:entry.file,loaded:false});console.warn("Reviewed Gould supplement held; earlier evidence preserved",entry.file,err)}
+}
 /* Organ-faithful correction of nine historical callus-beard states previously
    grouped with Setaria's INDEPENDENT subtending bristles. This runtime overlay
    leaves the immutable 1,815-row source master and original source notes intact.
@@ -3988,3 +4215,4 @@ boot();
 <script src="grass-glossary-bridge.js?v=4" defer></script>
 </body>
 </html>
+

@@ -114,8 +114,8 @@ def sweep_all_optional_options(page, name):
                 assert page.locator("#count").inner_text() == "169 possible", (
                     f"{name}/{character}/{option}: clearing did not restore every grass")
                 inspected_choices += 1
-    assert (inspected_groups, inspected_choices) == (24, 148), (
-        f"{name}: expected all 24 groups and 148 options, got {inspected_groups}/{inspected_choices}")
+    assert (inspected_groups, inspected_choices) == (24, 288), (
+        f"{name}: expected all 24 groups and 288 options, got {inspected_groups}/{inspected_choices}")
     return {"groups": inspected_groups, "options_clicked_and_cleared": inspected_choices}
 
 
@@ -456,7 +456,8 @@ def check_view(browser, name, width, height):
         assert "no verified species-level match yet" not in guide.inner_text().lower(), (
             f"{name}/{character}/{choice}: source-linked teaching choice fell back")
         m,u,e=buckets(page)
-        assert m >= 1 and u > 0 and e == 0 and m+u+e == 169, (
+        expected_conflicts = 3 if character == "true_lemma_awn" and choice == "fertile_awn_2_to_5mm" else 0
+        assert m >= 1 and u > 0 and e == expected_conflicts and m+u+e == 169, (
             f"{name}/{character}/{choice}: positive-only evidence or unknowns changed")
         page.locator("#reset-field-key").click()
         assert page.locator("#count").inner_text() == "169 possible"
@@ -768,16 +769,16 @@ def check_view(browser, name, width, height):
     # Eragrostis spectabilis, Kew GrassBase. Other grasses remain unknown.
     choose_extra(page, "Flowers / spikelets", "glume_marks", "upper_one_vein")
     m, u, e = buckets(page)
-    assert (m, u, e) == (1, 168, 0), f"{name}: cited upper-glume evidence not integrated {m,u,e}"
+    assert (m, u, e) == (2, 167, 0), f"{name}: cited upper-glume evidence not integrated {m,u,e}"
     assert page.locator("#count").inner_text() == "169 possible"
     assert "Eragrostis spectabilis" in page.locator("#results").inner_text()
     assert page.locator("#unresolved-candidates").count() == 1, "Unresolved list inaccessible"
     page.locator("#unresolved-candidates > summary").click()
-    assert page.locator("#unresolved-candidates .result").count() == 168
+    assert page.locator("#unresolved-candidates .result").count() == 167
 
     # Explicit documented-only mode suppresses unknowns reversibly (not exclusion).
     page.locator("#optional-documented-only").click()
-    assert page.locator("#count").inner_text() == "1 possible", "Documented-only mode should focus exactly the cited glume match"
+    assert page.locator("#count").inner_text() == "2 possible", "Documented-only mode should focus the two cited upper-glume matches"
     page.locator("#optional-documented-only").click()
     assert page.locator("#count").inner_text() == "169 possible"
 
@@ -874,3 +875,5 @@ if __name__ == "__main__":
     print("PASS HAYS_GRASS_VISITOR_BROWSER", json.dumps({
         "live_pages": LIVE, "source_url":URL,"results":results,
     },sort_keys=True),flush=True)
+
+

@@ -1,0 +1,325 @@
+{
+  "schema": "HAYS_GOULD_BROOMCORN_MILLET_SUPPLEMENT_V1",
+  "mode": "NON_EXCLUDING_POSITIVE_RANKING",
+  "species_id": "panicum-miliaceum",
+  "scientific": "Panicum miliaceum",
+  "taxon_as_printed": "Panicum miliaceum",
+  "printed_page": 448,
+  "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+  "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+  "option_additions": [
+    {
+      "character": "sheath_surface",
+      "option": {
+        "id": "sheath_pustulate_hispid",
+        "label": "Sheath bristles arise from small raised bases",
+        "detail": "Gould calls sheaths pustulate-hispid. Inspect hairs and raised bases on the sheath, not the blade or a flowering glume. Diggs confirms long papilla-based sheath hairs."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "ligule_edge",
+      "option": {
+        "id": "fringed_ligule_1_5_to_3mm_including_hairs",
+        "label": "Fringed membrane 1.5–3 mm INCLUDING hairs",
+        "detail": "Measure the whole ligule including its fringe. This is not a1.5–3mm membrane-height interval. Gould says commonly; Diggs gives ca.1–3mm including hairs."
+      },
+      "subgroup": null
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "panicle_branches_not_strongly_spreading",
+        "label": "Panicle branches never strongly spreading",
+        "detail": "Gould account: more-or-less contracted, usually somewhat drooping panicle, short-pedicelled crowded spikelets at branchlets/tips. Preserve broader cultivar silhouettes in existing sources."
+      },
+      "subgroup": "Flowering branch architecture"
+    },
+    {
+      "character": "spikelet_position",
+      "option": {
+        "id": "branch_axils_glabrous_no_pulvini",
+        "label": "Branch axils hairless, without pulvini",
+        "detail": "Inspect the PANICLE branch axils for hair tufts and swollen joint pads. This does not establish absence of a medial groove on a branch or pedicel."
+      },
+      "subgroup": "Flowering branch axils"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "lower_glume_five_veins",
+        "label": "LOWER glume has five veins",
+        "detail": "Identify the first outer glume, then count five nerves. Do not apply this count to the upper glume or a lemma."
+      },
+      "subgroup": "Which glume and its veins?"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "upper_glume_usually_nine_veins",
+        "label": "UPPER glume usually nine veins (7–11)",
+        "detail": "Gould gives second glume9-(7–11)-nerved. Record the upper glume separately from lower lemma, which has the same reported vein range."
+      },
+      "subgroup": "Which glume and its veins?"
+    },
+    {
+      "character": "glume_marks",
+      "option": {
+        "id": "lower_glume_half_to_three_quarters",
+        "label": "LOWER glume half to three-quarters as long",
+        "detail": "Compare first glume with second glume and lower lemma; Gould gives length1/2–3/4, acute/acuminate apex. This is not a minute/missing first glume."
+      },
+      "subgroup": "Glume size and shape"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "lower_lemma_usually_nine_veins",
+        "label": "LOWER lemma usually nine veins (7–11)",
+        "detail": "The lower floret lemma is thin and strongly nerved, usually9 (7–11). Separate it from both outer glumes and the smooth shiny upper fertile lemma."
+      },
+      "subgroup": "Precisely located lower lemma"
+    },
+    {
+      "character": "lemma_texture",
+      "option": {
+        "id": "upper_lemma_smooth_shiny_colored",
+        "label": "UPPER lemma smooth/shiny, yellowish to reddish-brown",
+        "detail": "Gould gives upper floret lemma3–3.5mm, smooth/shiny and yellowish to reddish-brown. Existing firm/shiny genus evidence remains separate."
+      },
+      "subgroup": "Precisely located upper lemma"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "culm_posture",
+      "states": [
+        "erect",
+        "decumbent"
+      ],
+      "note": "Coarse annual20–100cm; culms erect or decumbent at base. No perennial rhizome or separate stolon inferred.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "stem_nodes",
+      "states": [
+        "hairy_nodes",
+        "glabrous_nodes"
+      ],
+      "note": "Culms glabrous OR lower nodes/internodes pubescent or hispid. The hairiness is optional and localized; no age-related loss asserted.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "sheath_surface",
+      "states": [
+        "sometimes_hairy",
+        "sheath_pustulate_hispid"
+      ],
+      "note": "Sheaths pustulate-hispid; raised hair bases belong to sheath, not necessarily blade. Existing sparse-hair label retained as a broad legacy match, precise new choice gives actual texture.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "blade_hairs",
+      "states": [
+        "blade_hairy"
+      ],
+      "note": "Blades variously pubescent or hispid to nearly glabrous. Do not infer papilla-based blade hairs from the explicitly pustulate sheath; secondary Diggs fully glabrous blade wording remains recorded.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "blade_width",
+      "states": [
+        "medium",
+        "broad"
+      ],
+      "note": "Blades commonly6–15mm wide, up to20mm; usually10–20cm long, up to30cm. Existing supplementary7–25mm interval retained separately.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification.",
+      "width_mm": [
+        6,
+        20
+      ],
+      "usual_width_mm": [
+        6,
+        15
+      ]
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "ligule_edge",
+      "states": [
+        "ciliate",
+        "fringed_ligule_1_5_to_3mm_including_hairs"
+      ],
+      "note": "Fringed membrane commonly1.5–3mm INCLUDING HAIRS. Do not populate a membrane-only numeric ligule-length group from this combined measurement. Diggs ca.1–3mm including hairs retained.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "spikelet_position",
+      "states": [
+        "panicle_branches_not_strongly_spreading",
+        "branch_axils_glabrous_no_pulvini"
+      ],
+      "note": "Panicle more-or-less contracted,5–20(–30)cm,1/3–1/4 as broad, usually drooping; spikelets short-pedicelled/crowded at branchlets/tips. Branches never strongly spreading, no pulvini and hairless axils in Gould account. Existing broader cultivar/head variants retained, not hard exclusions.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "glume_marks",
+      "states": [
+        "lower_glume_five_veins",
+        "upper_glume_usually_nine_veins",
+        "lower_glume_half_to_three_quarters"
+      ],
+      "note": "Glumes and lower lemma thin/strongly nerved. Lower glume5-veined, acute/acuminate,1/2–3/4 as long as upper glume/lower lemma. Second glume usually9 (7–11) veins, acute/acuminate. No one-vein or minute-lower-glume state inferred.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    },
+    {
+      "id": "panicum-miliaceum",
+      "scientific": "Panicum miliaceum",
+      "character": "lemma_texture",
+      "states": [
+        "smooth",
+        "upper_lemma_smooth_shiny_colored",
+        "lower_lemma_usually_nine_veins"
+      ],
+      "note": "LOWER lemma thin, strongly nerved, usually9 (7–11), acute/acuminate. UPPER floret lemma3–3.5mm, smooth/shiny, yellowish to reddish-brown. Generic smooth refers only to upper lemma, not lower lemma or glumes.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "pdf_printed_page": 448,
+      "source_status": "READY_PRIMARY",
+      "source_scope_caution": "Positive exact Gould species/organ account; cultivar and supplemental variation retained. Unknown states are not absence. No local voucher, nativity or media certification."
+    }
+  ],
+  "learner_diagnostic_checks": [
+    {
+      "look": "Count veins on each outer scale separately",
+      "check": "Gould first/lower glume has5 veins and is1/2–3/4 as long as the second glume/lower lemma. Upper glume and lower lemma each usually9 (7–11) veins, but are distinct organs.",
+      "compare": "Do not count a lower lemma as a third glume or transfer its vein count onto the first glume.",
+      "certainty": "Exact Gould448, organ-specific. Vein count is not a hair or gland observation.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Open the lower floret and then inspect the upper fertile lemma",
+      "check": "The lower lemma is thin and strongly nerved; upper lemma3–3.5mm, smooth/shiny and yellowish to reddish-brown. Panicle spikelets plump broadly ovate/elliptic, mostly4.5–5mm.",
+      "compare": "Raised-base sheath hairs do not establish floral hairs; panicle shape and cultivation context alone are not specimen identity.",
+      "certainty": "Exact Gould448 with existing Diggs genus evidence retained.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    },
+    {
+      "look": "Measure the whole ligule and locate the hairs",
+      "check": "Fringed membrane commonly1.5–3mm INCLUDING its hairs. Sheaths pustulate-hispid; lower nodes/internodes may be hairy or culms glabrous. Blades vary to nearly glabrous.",
+      "compare": "Do not treat combined ligule height as membrane length, sheath bristles as lemma awns, or optional node hairiness as mandatory.",
+      "certainty": "Gould448; Diggs1301 confirms fringe measurement including hairs and variable blades.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, exact Panicum miliaceum, printed p.448",
+      "url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/"
+    }
+  ],
+  "secondary_reference_review": {
+    "diggs": {
+      "named_account_page": 1301,
+      "genus_page": 1292,
+      "source": "Diggs, Lipscomb & O’Kennon (1999), Illustrated Flora of North Central Texas",
+      "source_url": "https://fwbg.org/wp-content/uploads/2025/04/FNCT_1077-1352-Acor-Zanni.pdf",
+      "confirmation": "Named account confirms coarse20–100cm annual, papilla-based sheath hairs, variable pubescent-to-glabrous blades, fringed membrane ca.1–3mm including hairs and plump ovate/elliptic spikelets. Panicum genus supplies two florets, awnless spikelets and firm/shiny upper fertile lemma.",
+      "citation_history": "Re-read page footers place named species on1301, genus on1292; old1300/1291 labels remain historical in originals. No borrowed neighboring P.obtusum rhizomes."
+    },
+    "supplemental": "Existing broader crop/cultivar panicle silhouettes and7–25mm blade range retain original sources and conditional roles. H&L not used to override the two primary books.",
+    "prior_admission": "Existing focused-identity-review-20261116.json source-scored profile reused, not admitted anew; prior specimen/seed-spill/crop cautions remain."
+  },
+  "non_scoring_context": {
+    "culm_cm": [
+      20,
+      100
+    ],
+    "blade_usual_cm": [
+      10,
+      20
+    ],
+    "blade_max_cm": 30,
+    "blade_usual_width_mm": [
+      6,
+      15
+    ],
+    "blade_max_width_mm": 20,
+    "ligule_including_hairs_mm_common": [
+      1.5,
+      3
+    ],
+    "panicle_usual_cm": [
+      5,
+      20
+    ],
+    "panicle_max_cm": 30,
+    "panicle_width_fraction": [
+      0.25,
+      0.3333333333333333
+    ],
+    "spikelet_mm": [
+      4.5,
+      5
+    ],
+    "upper_lemma_mm": [
+      3,
+      3.5
+    ],
+    "lower_glume_veins": 5,
+    "upper_glume_lower_lemma_veins_usual": 9,
+    "upper_glume_lower_lemma_vein_range": [
+      7,
+      11
+    ],
+    "chromosome_2n": 36,
+    "gould_flowering": "Not given in this screenshot",
+    "diggs_flowering": "July–November",
+    "local_status": "No local establishment, county nativity, voucher or exact-media identity certification"
+  }
+}
+
