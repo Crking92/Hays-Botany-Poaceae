@@ -247,7 +247,12 @@ assert(texasCupgrass?.traits.ligule.includes('hairs') &&
 // choices × 2 ligule choices × 1 awn choice expands from 4 to 12 paths:
 // an additive +8 combinations, not a changed species/photo inventory.
 // 504 + 8 = 512. See PR #421 and its exact positive integration cases.
-assert.equal(scoredPaths,512,'Reviewed scored character-combination total changed');
+// Texas grama field pilot: two documented unilateral head choices × two
+// habit choices × two ligule choices × two awn choices = 16 additive paths.
+// The existing short_side_racemes path remains supported; 512 + 16 = 528.
+const texasGramaHeadPilot=scored.find(x=>x.id==='bouteloua-rigidiseta');
+assert.deepEqual(texasGramaHeadPilot.traits.head,['short_side_racemes','one_sided','many_one_sided']);
+assert.equal(scoredPaths,528,'Reviewed scored character-combination total changed');
 
 // Because all new entries have UNVERIFIED range, all 11 are omitted from both
 // native and introduced filters. No county-level native approval is inferred.
