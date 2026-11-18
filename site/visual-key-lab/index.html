@@ -1049,7 +1049,7 @@ const leafDetailGuides={
   folded:["View blade edge-on","The two sides meet at a central V-shaped fold. A fold is different from margins curled inward."],
   inrolled:["View blade edge-on","The margins curl inward toward the center, sometimes forming a tube. Check fresh blades, not only drought-curled leaves."]},
  blade_width:{
-  thread:["Measure expanded blade","Under 2 mm wide. The sketch compares widths but is not a ruler; unroll the blade before measuring."],
+  thread:["Measure expanded blade","Up to 2 mm wide (overlaps narrow at 2 mm). The sketch compares widths but is not a ruler; unroll the blade before measuring."],
   narrow:["Measure expanded blade","About 2–5 mm wide at its broadest point. Width categories overlap natural published ranges."],
   medium:["Measure expanded blade","About 5–10 mm wide. Use a small ruler on a fresh, opened leaf."],
   broad:["Measure expanded blade","Over 10 mm wide. Measure the widest intact part of the unfolded leaf."]},
@@ -1791,7 +1791,7 @@ function progressiveResultGroups(rows){
 /* Surface FOUR easy existing advanced groups alongside the four photo questions.
    No new scores/options/photos. One shared state/URL and conservative evidence policy. */
 const beginnerCheckGroups=[
- {id:"blade_width",title:"How wide is a leaf?",hint:"Measure the widest part of a fresh, opened blade. The ranges are approximate.",labels:{thread:"Thread-thin · under 2 mm",narrow:"Narrow · 2–5 mm",medium:"Medium · 5–10 mm",broad:"Broad · over 10 mm"}},
+ {id:"blade_width",title:"How wide is a leaf?",hint:"Measure the widest part of a fresh, opened blade. The ranges are approximate.",labels:{thread:"Thread-thin · up to 2 mm",narrow:"Narrow · 2–5 mm",medium:"Medium · 5–10 mm",broad:"Broad · over 10 mm"}},
  {id:"blade_shape",title:"Flat, folded, or rolled?",hint:"Look across a fresh blade, not a drought-curled or dried leaf.",labels:{flat:"Mostly flat",folded:"V-shaped fold",inrolled:"Rolled inward"}},
  {id:"blade_venation",title:"What do the veins look like?",hint:"Hold a fresh leaf toward the light, then look across it. A pale line is different from a raised ridge. Pick only what you can clearly see.",optionIds:["pale_midvein","prominent_midvein","raised_midvein","raised_ribs"],labels:{pale_midvein:"Pale center line",prominent_midvein:"Obvious center vein",raised_midvein:"Raised center ridge",raised_ribs:"Several raised parallel ribs"}},
  {id:"blade_hairs",title:"Hairs on the leaf?",hint:"Inspect the blade, not the stem or the sheath below it. No hairs noticed? Just skip.",labels:{base_hairs:"Near the leaf base",blade_hairy:"Along the blade"}},
@@ -3884,6 +3884,24 @@ try{
     " Corrected legacy below_spikelet bristle mapping: true callus pubescence; no negative exclusion.";
  }
 }catch(err){console.warn("Callus organ remap held; unverified evidence left unchanged",err)}
+/* Texas grama field pilot: Gould 1975 pp.342–343 describes blades 1–2 mm
+   wide. Exactly 2 mm belongs to both approximate beginner width bands.
+   Preserve the historical master and distinguish an overlapping endpoint
+   from a claim of the entire 2–5 mm range. */
+{
+ const width=(state.refineEvidenceMap["bouteloua-rigidiseta"]||[]).find(e=>e.character==="blade_width");
+ if(width?.states?.includes("thread")){
+  width.states=[...new Set([...width.states,"narrow"])];
+  width.additional_state_sources??={};
+  width.additional_state_sources.narrow={
+   source:"Gould, F. W. (1975), The Grasses of Texas, printed pp.342–343, Bouteloua rigidiseta",
+   source_url:"https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+   note:"Blade width 1–2 mm. Narrow is supported at the shared 2 mm endpoint only; 3–5 mm is not documented by this treatment.",
+   organ_scope:"fresh expanded leaf blade",conditional:true
+  };
+  width.width_mm=[1,2];
+ }
+}
 state.refineEvidenceOptionKeys=new Set(Object.values(state.refineEvidenceMap).flatMap(rows=>
  rows.flatMap(e=>e.states.map(v=>e.character+":"+v))));
 if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("Repeated species ID");$("coded-total").textContent=state.species.length;$("coded-subtitle").textContent="grasses in this key · "+state.species.filter(s=>!s.trial).length+" source-scored, "+state.species.filter(s=>s.trial).length+" research-only";renderPending();const url=new URL(location.href);for(const q of qs){const val=url.searchParams.get(q.id);if(q.options.some(x=>x[0]===val))state.selected[q.id]=val}for(const c of state.refineCharacters){const val=url.searchParams.get("more_"+c.id);if(val){const choices=val.split(",").filter(id=>c.options.some(o=>o.id===id));if(choices.length)state.refineSelected[c.id]=c.multi_select?[...new Set(choices)]:choices[0]}}state.refineOnlyDocumented=url.searchParams.get("more_mode")==="documented";state.focusConfirmed=url.searchParams.get("focus")==="documented";
