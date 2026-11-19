@@ -26,3 +26,8 @@ jobs:
           python -m http.server 8772 --directory . >/tmp/lindheimer-replay-http.log 2>&1 &
           sleep 2
           python scripts/replay_lindheimers_muhly_20261119.py
+      - name: Independently replay current public GitHub Pages results
+        env:
+          HAYS_GRASS_TEST_URL: 'https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/index.html'
+          HAYS_GRASS_BROWSER_CHANNEL: chrome
+        run: python scripts/replay_lindheimers_muhly_20261119.py
