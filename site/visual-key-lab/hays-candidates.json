@@ -6403,6 +6403,157 @@
         "review_date": "2026-11-15",
         "original_files": "External unchanged original JPG image endpoints. No new local copies.",
         "remaining_targets": "Independent voucher/genetic or specialist hybrid ID confirmation, local wild provenance and direct flower/spikelet/collar diagnostic macro photographs. DO NOT substitute Lolium × hybridum photos under the currently conflicting taxonomic treatments."
+      },
+      "authoritative_morphology_review_20261119": {
+        "reviewed_on": "2026-11-19",
+        "status": "AUTHORITIES_REVIEWED_NONSCORING_EXACT_CROSS_HOLD",
+        "intended_use": "Help future specimen examinations and label source-specific characters for Hybrid Ryegrass without changing matching, species admission, photographed identity, nativity or scores.",
+        "taxonomy_concept_conflict": {
+          "status": "UNRESOLVED_CONFLICT_ACROSS_AUTHORITIES",
+          "kew_boucheanum": {
+            "name": "Lolium × boucheanum Kunth",
+            "formula": "L. perenne × L. rigidum",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407425-1",
+            "status": "Kew POWO currently accepts this separate hybrid name/concept"
+          },
+          "kew_hybridum": {
+            "name": "Lolium × hybridum Hausskn.",
+            "formula": "L. multiflorum × L. perenne",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:407468-1",
+            "status": "Kew POWO currently accepts this as a separate name/concept"
+          },
+          "eppo_boucheanum": {
+            "name": "Lolium × boucheanum Kunth",
+            "formula": "L. multiflorum × L. perenne",
+            "url": "https://gd.eppo.int/taxon/LOLBO",
+            "status": "EPPO calls L. × hybridum a synonym"
+          },
+          "cpvo_usage": {
+            "name": "Lolium boucheanum Kunth / Lolium × hybridum Hausskn.",
+            "formula": "Agricultural hybrid ryegrass testing; describes nomenclatural equivalence, not a unique local voucher",
+            "url": "https://coboru.gov.pl/Publikacje_coboru/Metodyki/CPVO/TP0041%20z%2023.06.2011.pdf"
+          },
+          "rule": "NEVER silently copy an L. × hybridum Italian×perennial character into Kew's L. × boucheanum perennial×rigidum concept. Show the name-concept hold until independent taxonomic resolution."
+        },
+        "hybrid_specific_evidence": [
+          {
+            "character": "auricles",
+            "source": "DSV hybrid ryegrass grass-identification guide",
+            "url": "https://www.dsv-seeds.com/apps/gs/start/grass-identification-guide/emerging-leaf-rolled/with-auricles/hairless/hybrid-ryegrass",
+            "source_concept": "Agronomic Lolium hybridum = Italian/perennial ryegrass interspecific hybrid in DSV usage",
+            "observation": "Broad, evident auricles enclosing the stem in pictured crop type; leaf sheath open",
+            "limits": "Cultivar/example morphology, not proven mandatory; no hard conflict for absent auricles",
+            "key_action": "DISPLAY_SOURCE_ONLY_NO_SCORING"
+          },
+          {
+            "character": "ligule_edge",
+            "source": "DSV hybrid ryegrass grass-identification guide",
+            "url": "https://www.dsv-seeds.com/apps/gs/start/grass-identification-guide/emerging-leaf-rolled/with-auricles/hairless/hybrid-ryegrass",
+            "source_concept": "DSV agricultural L. hybridum",
+            "observation": "Short white smooth-edged true ligule, consistent with a membrane; page gives NO quantitative mm interval",
+            "limits": "Do not invent a numeric ceiling or use this alone to exclude the owner's >8-mm selection; not independently verified for Kew's competing L. × boucheanum concept",
+            "key_action": "DISPLAY_SOURCE_ONLY_NO_SCORING"
+          },
+          {
+            "character": "leaf_bud_and_upper_veins",
+            "source": "DSV hybrid ryegrass grass-identification guide",
+            "url": "https://www.dsv-seeds.com/apps/gs/start/grass-identification-guide/emerging-leaf-rolled/with-auricles/hairless/hybrid-ryegrass",
+            "source_concept": "DSV agricultural L. hybridum",
+            "observation": "Emerging leaf shown rolled; shiny blade underside; pronounced ribs on upper side; approximately 10-mm blades in the described crop phenotype",
+            "limits": "DSV expressly says expression varies with parental contribution and cultivar; do not infer all hybrids are rolled or 10-mm wide, and don't force a Lindheimer's muhly leaf-vein match/contradiction",
+            "key_action": "DISPLAY_SOURCE_ONLY_NO_SCORING"
+          },
+          {
+            "character": "inflorescence_spikelets",
+            "source": "DSV hybrid ryegrass grass-identification guide",
+            "url": "https://www.dsv-seeds.com/apps/gs/start/grass-identification-guide/emerging-leaf-rolled/with-auricles/hairless/hybrid-ryegrass",
+            "source_concept": "DSV agricultural L. hybridum",
+            "observation": "Long spike with lateral spikelets attached edge-on to the rachis; upper terminal spikelet has two glumes, lateral spikelets usually lack the inner/lower glume; example gives about 20–30 multiflorous spikelets",
+            "limits": "This is ryegrass spike architecture/genus-level support, not proof of the interspecific hybrid. Example spikelet count cannot be imposed on all cultivars or Kew's competing cross",
+            "key_action": "DISPLAY_SOURCE_ONLY_NO_SCORING"
+          },
+          {
+            "character": "lemma_awns",
+            "source": "Kemešytė, Lemežienė, Stukonis & Kanapeckas (2013), Morphological and Anatomical Traits of Short-Lived Ryegrass",
+            "url": "https://reference-global.com/article/10.2478/prolas-2013-0050?tab=abstract",
+            "source_concept": "Explicit Lolium × hybridum, parental cross L. perenne × L. multiflorum",
+            "observation": "Study found short lemma awns or absent awns in L. × hybridum; awn state overlaps parent taxa and isn't sufficient for identification",
+            "limits": "Do not force awned nor awnless; DSV describes awned commercial exemplars. Source differences and cultivar effects are legitimate, not automatic contradictions",
+            "key_action": "DISPLAY_SOURCE_ONLY_NO_SCORING"
+          },
+          {
+            "character": "leaf_anatomy",
+            "source": "Kemešytė et al. (2013), peer-reviewed short-lived Lolium comparison",
+            "url": "https://reference-global.com/article/10.2478/prolas-2013-0050?tab=abstract",
+            "source_concept": "Lolium × hybridum (Italian×perennial)",
+            "observation": "Leaf cross-sections compared sclerenchyma patterns; hybrid contrasts with L. multiflorum subsp. multiflorum at inflorescence emergence in study population",
+            "limits": "Microscopic/sectioned anatomy, stage-dependent, not one of beginner visual field choices; findings are not a local hybrid identity certificate",
+            "key_action": "RESEARCH_ONLY"
+          },
+          {
+            "character": "population_variation",
+            "source": "Maity et al. (2021), Weed Science, Texas Blackland Prairies Lolium population morphology",
+            "url": "https://www.cambridge.org/core/journals/weed-science/article/species-identification-and-morphological-trait-diversity-assessment-in-ryegrass-lolium-spp-populations-from-the-texas-blackland-prairies/5A683DE517E45D8834C4CCF2A3EA16D8",
+            "source_concept": "Texas Lolium variation; mostly L. perenne subsp. multiflorum, not separately authenticated L. × boucheanum specimens",
+            "observation": "Leaf width, growth habit, spikelet/awn variation and probable hybrids can overlap: authors warn that isolated morphology is not enough to identify closely related ryegrasses",
+            "limits": "Supports hold and field-method caution only, NOT quantitative values for this named hybrid",
+            "key_action": "RESEARCH_ONLY"
+          }
+        ],
+        "official_trait_protocols": [
+          {
+            "name": "Community Plant Variety Office CPVO-TP/004/1 Final (23 June 2011)",
+            "url": "https://coboru.gov.pl/Publikacje_coboru/Metodyki/CPVO/TP0041%20z%2023.06.2011.pdf",
+            "concept": "Includes hybrid ryegrass and L. × hybridum in the scope",
+            "traits": [
+              "vegetative growth habit",
+              "leaf width",
+              "leaf green color",
+              "height",
+              "flag leaf length and width",
+              "spike emergence timing",
+              "inflorescence length",
+              "spikelet number",
+              "basal glume length",
+              "presence/absence of awns",
+              "ploidy"
+            ],
+            "caution": "DUS cultivar measurement protocol, not a wild species or verified hybrid identification key; scores and example varieties do not establish universal ranges."
+          },
+          {
+            "name": "OECD TAD/CA/S/RD(2008)12/REV2, p.8",
+            "url": "https://one.oecd.org/document/TAD/CA/S/RD(2008)12/REV2/en/pdf",
+            "concept": "Explicitly covers perennial, Italian and hybrid ryegrass; calls L. × boucheanum synonymous in its protocol with L. × hybridum",
+            "traits": [
+              "vegetative growth habit",
+              "leaf width",
+              "leaf color",
+              "plant height",
+              "head emergence",
+              "awn presence",
+              "flag leaf dimensions",
+              "ploidy"
+            ],
+            "caution": "Use as character taxonomy, not source for universal morphological states or exact field specimen parentage."
+          }
+        ],
+        "next_diagnostic_views": [
+          "opened inner blade–sheath collar and auricles, calibrated mm view",
+          "emerging young leaf cross-section for rolled/folded state",
+          "fully attached flowering spike with lateral spikelets and rachis",
+          "several mature florets with intact lemma awns and glumes under scale",
+          "local voucher and independent specialist review of parental cross"
+        ],
+        "no_change_confirmation": {
+          "key_traits": "UNALTERED",
+          "candidate_status": "RESEARCH_CANDIDATE_NOT_RELEASED",
+          "photographs": "UNALTERED",
+          "attribution": "UNALTERED",
+          "nativity": "UNVERIFIED",
+          "original_taxon_hold": "PRESERVED",
+          "hard_exclusions": "NONE_ADDED",
+          "reason": "Explicit conflict between Kew and EPPO/CPVO concepts and observed cultivar variation."
+        }
       }
     },
     {
