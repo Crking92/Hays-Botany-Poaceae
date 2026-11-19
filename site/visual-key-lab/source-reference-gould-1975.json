@@ -3209,6 +3209,33 @@
         "score_change": "NONE—original rough-tridens trial and slim-tridens scores unchanged",
         "media_changes": "NONE—no images, photographer credit or license changed",
         "source_image_policy": "Copyrighted photographed Gould spread used for reading; original image not republished."
+      },
+      "modern_exact_taxonomy_table_2022": {
+        "source": "Wipff & Weakley (2022), Taxonomic adjustment in Tridentopsis, Table 1, printed p.2",
+        "url": "https://www.phytoneuron.net/wp-content/uploads/2022/04/29PhytoN-Tridentopsiselongata.pdf",
+        "species_specific": "Tridentopsis elongata",
+        "key_difference": "T. elongata mostly FLAT rather than T. mutica mostly folded/rolled; upper glume 3–7 veined rather than 1; rough tridens taller, broader blades and longer flowering head on average",
+        "leaf_blades": "mostly flat; widest commonly 3–4 mm with occasional 2-mm leaves; does not establish an exclusive absence of folded blades",
+        "panicle_length_cm": [
+          12,
+          25
+        ],
+        "culm_cm": [
+          40,
+          80
+        ],
+        "upper_glume_length_mm": [
+          5.5,
+          10
+        ],
+        "upper_glume_veins": [
+          3,
+          7
+        ],
+        "ligule_length": "NOT REPORTED in modern species comparison; preserve Gould parent-species 0.5–1-mm record as taxon-aggregate reference only",
+        "taxonomy": "Named in the 2022 paper as a separate species, previously T. muticus var. elongatus",
+        "scoring_decision": "SOURCE_ONLY_NONEXCLUDING_NO_CORE_CHANGE",
+        "observational_hold": "Leaf shape mostly flat is an expectation not an obligate state; no photo of field specimen or precise ligule measure established"
       }
     },
     {
@@ -8262,6 +8289,167 @@
           "field_action": "If whole rooted plant is safely available, distinguish an annual fibrous-rooted millet from the perennial switchgrass with stout scaly rhizomes; do not infer from a photo of an isolated stem.",
           "certainty": "GOULD_GENUS_KEY_PATHWAY"
         }
+      ],
+      "intake_batch": "20261119"
+    },
+    {
+      "genus": "Tridens",
+      "taxon_heading_as_printed": "51. TRIDENS Roem. & Schult.",
+      "printed_pages": [
+        203,
+        204,
+        205
+      ],
+      "added_on": "2026-11-19",
+      "evidence_level": "EXACT_OWNER_PHOTOGRAPHED_GOULD_HISTORICAL_GENUS_KEY_NOT_MODERN_SPECIES_ACCOUNT",
+      "material": "Two owner-provided photographed spreads: printed pp.203–204 and 204–205; printed p.205 is species treatment of T. flavus, not modern Tridentopsis elongata. Source content paraphrased, copyrighted scanned pages not republished.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, genus Tridens key pp.203–204, adjacent species accounts pp.204–205",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "historical_genus_diagnosis": {
+        "habit": "Stiff-culmed perennials, spikelets several-flowered, panicles open or contracted. Broad genus traits, not unique to modern Tridentopsis elongata.",
+        "ligule": "Gould p.203 says a ciliate membranous ligule for the historical genus; does not supply a modern Tridentopsis elongata-specific millimeter measurement.",
+        "spikelet": "Glumes thin, first 1-nerved, second commonly 1–3 (occasionally 5–7) nerved, lemmas broadly 3-nerved and usually hairy on nerves below, often with minute apical mucros.",
+        "taxonomic_scope": "Tridens in Gould 1975 includes names now assigned to Tridentopsis; other Tridens species remain Tridens, so the entire genus is NOT a single taxonomic synonym."
+      },
+      "decision_groups": [
+        {
+          "printed_page": 203,
+          "decision": "Open loosely flowered panicle rather than spikelike",
+          "examples": [
+            "T. ambiguus follows the branch with lateral spikelet pedicels less than 1 mm.",
+            "T. texanus and T. flavus are separated by leaf blade width and panicle size (mostly 1–3 mm and 5–16 cm vs. mostly 3–10 mm and 15–35 cm)."
+          ],
+          "source_scope": "Historical genus-key decisions; do not attach T. texanus or T. flavus states to rough tridens."
+        },
+        {
+          "printed_page": 204,
+          "decision": "Nonspikelike lateral-lemma-nerve branches",
+          "examples": [
+            "T. buckleyanus is described with 4–6-mm lemmas and a minute, less-than-0.5-mm ciliate membrane.",
+            "T. eragrostoides is described with 2–3.2-mm lemmas and a membranous ligule 1.2–3 mm long."
+          ],
+          "source_scope": "The 0.5 mm and 1.2–3 mm ligule measurements are for named OTHER species. Do not apply to T. muticus or modern T. elongata."
+        },
+        {
+          "printed_page": 204,
+          "decision": "Contracted, densely flowered or elongate, spikelike panicles",
+          "examples": [
+            "T. albescens: lemma nerves hairy only near extreme base or hairless.",
+            "T. congestus: lemma midvein hairy over lower third to half and protruding as a short point or awn.",
+            "T. muticus: lemma midvein commonly hairy well above middle but not protruding into an apical awn; glumes shorter than spikelet.",
+            "T. strictus: glumes approximately as long as whole spikelet, much longer than lemmas."
+          ],
+          "source_scope": "The T. muticus path is the HISTORICAL parent species aggregate including the former var. elongatus. This is not an exact modern T. elongata-specific statement."
+        }
+      ],
+      "confirmed_historical_key_route": {
+        "printed_page": 204,
+        "gould_key_endpoint": "T. muticus",
+        "historical_taxon_as_printed": "Tridens muticus (Torr.) Nash",
+        "modern_taxa_in_historical_concept": [
+          "Tridentopsis mutica (Torr.) P.M.Peterson",
+          "Tridentopsis elongata (Buckley) Wipff & Weakley"
+        ],
+        "variety_crosswalk": "Gould p.213 treats rough tridens as T. muticus var. elongatus; modern Kew accepts Tridentopsis elongata as a separate species, verified by Wipff & Weakley 2022.",
+        "input_path": [
+          "Perennial historical Tridens concept",
+          "Panicle contracted, densely flowered or elongate and spikelike",
+          "Glumes much shorter than whole spikelet",
+          "Lemma midnerve hairy well above middle and not excurrent as a conspicuous awn"
+        ],
+        "status": "HISTORICAL_PARENT_AGGREGATE_NOT_EXACT_MODERN_ELONGATA_LIGULE_DATA"
+      },
+      "modern_taxon_comparison": {
+        "reference": "Wipff, J.K. & A.S. Weakley (2022), Taxonomic adjustment in Tridentopsis, Phytoneuron 2022-29, p.2, Table 1",
+        "url": "https://www.phytoneuron.net/wp-content/uploads/2022/04/29PhytoN-Tridentopsiselongata.pdf",
+        "modern_tridentopsis_elongata": {
+          "culm_cm": [
+            40,
+            80
+          ],
+          "blade_flatness": "mostly flat",
+          "blade_width_mm_widest_typically": [
+            3,
+            4
+          ],
+          "panicle_length_cm": [
+            12,
+            25
+          ],
+          "upper_glume_length_mm": [
+            5.5,
+            10
+          ],
+          "upper_glume_veins": [
+            3,
+            7
+          ],
+          "upper_glume_relative_to_lower_floret": "longer than lower floret",
+          "upper_glume_substance": "relatively firm",
+          "lemma_hair_length_mm_approx": 1,
+          "palea_relative_length": "about three quarters of lemma",
+          "palea_keels": "pubescent",
+          "habitat": "prairies on well-drained, sometimes seasonally moist sandy or gravelly clay soils"
+        },
+        "modern_tridentopsis_mutica": {
+          "culm_cm": [
+            20,
+            50
+          ],
+          "blade_flatness": "mostly folded or involute",
+          "blade_width_mm": [
+            1,
+            2
+          ],
+          "panicle_length_cm": [
+            6,
+            15
+          ],
+          "upper_glume_length_mm_typical": [
+            4,
+            5
+          ],
+          "upper_glume_length_mm_occasional_max": 6,
+          "upper_glume_veins": 1,
+          "upper_glume_relative_to_lower_floret": "shorter than or equal to lower floret",
+          "upper_glume_substance": "relatively thin",
+          "lemma_hair_length_mm_typical": [
+            1.5,
+            2
+          ],
+          "lemma_hair_length_mm_occasional_min": 1,
+          "palea_relative_length": "about half of lemma",
+          "palea_keels": "long-ciliate",
+          "habitat": "dry open rocky calcareous slopes and glades"
+        },
+        "diagnostic_priority": "Most discriminating in a mature head: 3–7 versus 1 upper-glume veins, glume firmness/length, palea and lemma hair details. 'Mostly flat' does not mean ALWAYS flat; a field-selected folded blade alone does not establish an exclusion.",
+        "ligule_limit": "Wipff & Weakley Table 1 does NOT state a ligule length for either modern species. Do not backfill 0.5–1 mm from pre-split broad historical T. muticus as a strict exact modern T. elongata limit."
+      },
+      "independent_broad_treatment_ligule_not_modern_species_proof": {
+        "gould": "Gould p.212 historical Tridens muticus broad account reported a ciliate membrane 0.5–1 mm, already archived under the exact var. elongatus record as PARENT_AGGREGATE.",
+        "hill_country": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p.66, historical Tridens muticus broad concept, 0.5–1 mm ciliate membrane with minute base",
+        "hill_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=66",
+        "diggs": "Diggs et al. (1999), Flora of North Central Texas p.1330, exact var. elongatus versus var. muticus upper-glume and blade widths, NOT separately measured ligules",
+        "current_decision": "NO verifiedAdvancedConflict for exact modern T. elongata true ligule over 8 mm until a clear taxon-specific measured range is available."
+      },
+      "expected_lindheimer_field_replay": {
+        "core_picks": "Long narrow panicle, tuft, membranous ligule, inconspicuous awns; blade 2–5 mm, lengthwise V fold, hairy blade, true ligule >8 mm.",
+        "expected_supported_species": "Muhlenbergia lindheimeri",
+        "expected_unresolved_species": [
+          "Muhlenbergia dubia",
+          "Tridentopsis elongata",
+          "Lolium × boucheanum"
+        ],
+        "source_only_no_exclusion_change": true,
+        "note": "T. elongata remains still possible despite 'mostly flat' because 'mostly' is nonexclusive, and no reliable separate modern species-specific ligule range has yet been established."
+      },
+      "cautions": [
+        "Do not use T. texanus, T. flavus, T. buckleyanus or T. eragrostoides ligule measurements for modern Tridentopsis elongata.",
+        "Do not equate the entirety of historical Tridens with Tridentopsis. The genus split only moved specified species.",
+        "Don't treat mostly-flat as an absolute exclusion for folded-blade choice; field curvature or atypical blades remain possible.",
+        "Gould T. muticus p.204 and p.212 is historical species aggregate; exact elongatus variety differentiation already archived from p.213.",
+        "No BONAP nativity inference, photograph changes, licensing changes, or additional scored states from this intake.",
+        "Do not use a long collar tuft of hairs as a measured true membranous ligule."
       ],
       "intake_batch": "20261119"
     }
