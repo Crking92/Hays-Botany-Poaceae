@@ -942,6 +942,32 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Owner's Gould p209 exact T. albescens: ligule a tiny fringed
+    MEMBRANE usually <=0.5 mm, not an exposed leaf tip. Independent
+    Hill Country H&L 2015 p65: minute ciliate membrane under 0.5 mm.
+    Contradict ONLY a correctly observed true ligule >8mm; preserve
+    other source-supported widths, folding and cilia classifications. */
+ if(s.id==="tridens-albescens"&&selectedRefinementStates("ligule_length").includes("long")){
+   const gould=state.gouldSource?.additional_species_treatments?.find(x=>
+     x.species_id==="tridens-albescens"&&x.printed_pages?.join(",")==="209"&&
+     x.observations?.some(o=>o.character==="true_ligule"&&
+       o.length_mm_usual_max===0.5&&o.structure==="minute fringed membrane"));
+   const hill=s.character_evidence?.ligule_ciliate_minute_membrane_regional;
+   const owner=s.character_evidence?.gould_1975_p209;
+   if(gould&&owner?.status==="EXACT_OWNER_PHOTOGRAPHED_PUBLISHED_SPECIES_ACCOUNT_NOT_SPECIMEN"&&
+      hill?.source?.includes("Hagenbuch & Lemke (2015)")&&
+      hill.reported_states?.includes("tiny ligule under 0.5 mm")&&
+      hill.reported_states?.includes("minute membranous base")){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Minute fringed membrane usually <=0.5 mm (Gould p.209); under 0.5 mm (H&L p.65)",
+       source:"Gould (1975), The Grasses of Texas p.209; Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p.65",
+       source_url:"https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=65",
+       note:"White tridens has a very short true inner ciliate membranous ligule. An actually measured >8-mm true ligule conflicts with both exact species accounts. Confirm the structure is not an inrolled blade tip, sheath extension or neighboring hairs. Its 1–4-mm leaves do overlap 2–5 mm.",
+       policy:"EXACT_TRIDENS_ALBESCENS_MAX_HALF_MM_VS_LONG"
+     });
+   }
+ }
  /* Gould p.304 is S. asper VAR. drummondii (modern S. compositus
     var. drummondii) and says nothing about ligule length. Independently,
     H&L 2015 p.64 species-level S. compositus reports a true inner
