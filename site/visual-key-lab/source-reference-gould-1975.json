@@ -7939,5 +7939,161 @@
   "screenshot_intake_rule": {
     "instruction": "For each newly supplied owner screenshot of The Grasses of Texas: check the species identity and printed page; paraphrase the botanical facts and measurements into the matching additional_species_treatments species record, noting any historical synonym/name differences. Also link page-specific facts in that exact species' character_evidence/diagnostic_checks when practical. Keep unreported characters unknown, do not apply neighboring treatment text to the wrong species, preserve alternative or overlapping states without forcing one selection, and do not silently change source-scored key filters. Record the source and page. Never republish copyrighted page photos. Do not change photographs or credits while photo work is paused.",
     "status": "PROJECT_WORKFLOW_OWNER_REQUESTED_2026-11-16"
-  }
+  },
+  "additional_genus_keys": [
+    {
+      "genus": "Sporobolus",
+      "taxon_heading_as_printed": "65. SPOROBOLUS R. Br.",
+      "printed_pages": [
+        286,
+        287,
+        288,
+        289
+      ],
+      "added_on": "2026-11-19",
+      "evidence_level": "EXACT_OWNER_PHOTOGRAPHED_GOULD_GENUS_DICHOTOMOUS_KEY_SOURCE_NOT_A_SINGLE_SPECIES_ACCOUNT",
+      "material": "Two complete user-supplied two-page spread photographs (printed pp.286–287 and 288–289); data paraphrased from original copyrighted Gould key, scans not republished.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, genus Sporobolus, printed pp.286–289",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "genus_diagnosis": {
+        "growth": "Annual or perennial; cespitose or rhizomatous forms, diverse habit.",
+        "leaves": "Blades primarily basal, linear and flat, folded or involute.",
+        "ligule": "Usually minute, densely pilose or ciliate membranous structure. GENUS LEVEL only: no species length measurement implied.",
+        "inflorescences": "Panicles of one-flowered, awnless spikelets; panicles may be diffuse or contracted.",
+        "lemma_palea": "Lemmas 1-nerved and consistently awnless in Gould's genus distinction; paleas developed, often splitting at maturity.",
+        "grains": "Flattened grains, frequently with pericarp becoming gelatinous when moist. Frequency statement is genus-level, not universal; p.289 explicitly gives an exception for S. clandestinus.",
+        "scope": "Do not overwrite species-level flowerhead, organ or chromosome records; this is an identification key with historical 1975 nomenclature."
+      },
+      "decision_groups": [
+        {
+          "printed_page": 286,
+          "decision": "Annual vs perennial and spikelet size",
+          "examples": [
+            "S. pulvinatus: annual with spikelets <2 mm, unequal glumes",
+            "S. neglectus: annual larger spikelets, glabrous florets, lemmas one-nerved 2–3 mm",
+            "S. ozarkanus: annual route differentiated by lemma nerves and pubescence"
+          ],
+          "source_scope": "Historical key context; named species routes not newly verified field specimen descriptions."
+        },
+        {
+          "printed_pages": [
+            287,
+            288
+          ],
+          "decision": "Perennial routes use pedicel length, scaly creeping rhizomes, culm base, sheath cross section, panicle width and open/contracted branches",
+          "examples": [
+            "S. texanus and S. silveanus: pedicels 5–25 mm",
+            "S. asper var. macer: historically keyed under evident scaly creeping rhizomes; accepted crosswalk not established here",
+            "S. buckleyi: low sheath strongly compressed and keeled",
+            "S. indicus: lower sheaths rounded, glumes subequal",
+            "S. contractus and S. giganteus: contracted spikelike panicles separated by robustness and basal culm diameter",
+            "S. cryptandrus: open upper panicle, long sheath-corner hairs",
+            "S. airoides and S. wrightii: large open panicle routes"
+          ],
+          "source_scope": "Historical branching states; some route branches reflect species complexes and should not be silently converted into current exclusive scored states."
+        },
+        {
+          "printed_page": 289,
+          "decision": "For spikelets at least some >=3 mm: branches in whorls vs not, condensed spikelike vs open; short often sheathed terminal/axillary panicles vs elongated",
+          "examples": [
+            "S. purpurascens and S. junceus: distinct-whorl panicle options",
+            "S. giganteus and S. contractus: long narrow spikelike panicles, typically 15–50 cm, differing in robustness",
+            "S. clandestinus and S. asper: shorter panicles usually <10 cm, terminal and axillary, mostly hidden in inflated upper sheath, corners conspicuously hairy",
+            "S. tharpii and S. heterolepis: open panicles with different spikelet and blade width examples"
+          ],
+          "source_scope": "Visible source p.289; <10 cm is qualified as USUALLY and not a strict exclusion against every >10-cm observation."
+        },
+        {
+          "printed_page": 289,
+          "decision": "Exact final pair under short upper-sheath-enclosed panicles",
+          "taxa": [
+            {
+              "taxon_as_printed": "S. clandestinus",
+              "modern_species": "Sporobolus clandestinus",
+              "lemma": "pubescent",
+              "fruit_pericarp_moistened": "loose",
+              "reproductive_note": "Loose wet pericarp is not necessarily a gelatinous pericarp; confirm anatomy with several mature grains.",
+              "status": "SPECIES_BRANCH_REPRODUCTIVE_CHARACTERS"
+            },
+            {
+              "taxon_as_printed": "S. asper",
+              "modern_taxonomic_scope": "historical asper aggregate; commonly mapped into modern Sporobolus compositus concepts, exact infraspecific concept must be checked",
+              "lemma": "glabrous",
+              "fruit_pericarp_moistened": "gelatinous",
+              "status": "HISTORICAL_COMPLEX_NOT_ALL_MODERN_VARIETIES"
+            }
+          ],
+          "scope": "Gould's key directly separates the pair using lemma surface and moist fruit pericarp. No ligule-length measurement occurs in this final pair. Wet-grain tests may be ambiguous in field and must not be treated as a simple visual selection."
+        }
+      ],
+      "confirmed_species_key": {
+        "species_id": "sporobolus-clandestinus",
+        "printed_page": 289,
+        "incoming_path": [
+          "Some spikelets at least 3 mm",
+          "Panicle branches not in whorls",
+          "Panicles contracted and spikelike, branches appressed along main axis",
+          "Usually under 10 cm, terminal and axillary, often sheathed",
+          "Lemma pubescent rather than glabrous; wet pericarp loose rather than gelatinous"
+        ],
+        "independent_ligule_evidence": {
+          "gould_genus": "Usually minute and ciliate as genus tendency, BUT no numerical S. clandestinus ligule in pp.286–289",
+          "hill_country": {
+            "reference": "Hagenbuch & Lemke (2015), printed p.63 continuing p.64, exact S. clandestinus",
+            "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+            "upper_bound_mm_exclusive": 0.5,
+            "structure": "short cilia with minute membranous base"
+          },
+          "kew": {
+            "reference": "Kew POWO / GrassBase, exact Sporobolus clandestinus",
+            "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:242956-2/general-information",
+            "length_mm": [
+              0.2,
+              0.3
+            ],
+            "structure": "ligule a fringe of hairs"
+          },
+          "fna": {
+            "reference": "Peterson, Hatch & Weakley, Flora of North America exact S. clandestinus",
+            "source_url": "https://biorepo.neonscience.org/portal/taxa/index.php?tid=59779",
+            "length_mm": [
+              0.1,
+              0.4
+            ]
+          },
+          "conclusion": "A confirmed true inner ligule longer than 8 mm contradicts all three independent species-specific measurements; false leaf-throat/outer-collar hair lengths must not trigger exclusion."
+        }
+      },
+      "cautions": [
+        "Gould pp.286–289 does NOT independently report the numeric S. clandestinus ligule length. Those measurements are from three separately identified species-level authorities.",
+        "Gould p.289 printed 'S. asper' is an OLD taxonomic concept and NOT an instruction to overwrite modern S. compositus var. drummondii with glabrous lemmas or all fruit-test states.",
+        "Gould's short <10-cm panicle is qualified by 'usually'; do not hard-exclude by a broad beginner long narrow panicle silhouette alone.",
+        "Hagenbuch & Lemke (2015) explicitly state no reliable vegetative separation for S. clandestinus versus S. compositus; do not use tiny ligules to distinguish those two from one another.",
+        "Flora of North America rhizome report and Hill Country no-rhizome observation remain a hold; this genus key does not settle rhizome variation.",
+        "Pericarp gelatinization versus loosening can be difficult to interpret; UT Austin cautions about single wet grain tests. Reproductive character notes are not an auto scored choice unless actually observed and independently source verified.",
+        "Historical genus route descriptions are not BONAP Hays County native range evidence. No photo captions, credit records or rights changed."
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "question": "Is this a very short true inner ligule?",
+          "field_action": "Open the leaf–sheath collar with a hand lens; look for cilia on a minute membrane under 0.5 mm, then measure only the actual ligule, not sheath throat hairs.",
+          "comparison": ">8 mm measured on Lindheimer's muhly is incompatible with S. clandestinus (H&L <0.5; Kew 0.2–0.3; FNA 0.1–0.4 mm).",
+          "certainty": "THREE_INDEPENDENT_SPECIES_SOURCES_WITH_EXACT_MM"
+        },
+        {
+          "question": "Does the mature lemma have hairs?",
+          "field_action": "Dissect multiple complete spikelets and inspect the lemma at magnification; Gould keys hidden dropseed toward pubescent lemmas versus old S. asper glabrous lemmas.",
+          "comparison": "The current S. compositus complex requires variety/taxonomic review; not a shortcut from flowerhead silhouette.",
+          "certainty": "GOULD_KEY_REPRODUCTIVE_1975_TAXON_SCOPE"
+        },
+        {
+          "question": "What happens to the mature grain covering when moistened?",
+          "field_action": "If spare mature grains are available, examine several under a lens, distinguishing loose pericarp from gelatinous swelling.",
+          "comparison": "Gould's contrast is informative but UT's field test critique prevents automatic binary scoring.",
+          "certainty": "GOULD_KEY_CHARACTER_UT_TEST_CAUTION"
+        }
+      ],
+      "intake_batch": "20261119"
+    }
+  ]
 }
