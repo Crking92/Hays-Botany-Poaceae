@@ -942,6 +942,38 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Gould genus key pp.286–289 contrasts S. clandestinus by SHORT
+    sheathed heads, pubescent lemma and loose pericarp; genus key does
+    NOT assign ligule mm. Three exact SPECIES sources independently
+    establish the tiny true inner ligule: Hill Country H&L 2015 p.63
+    <0.5 mm; Kew GrassBase 0.2–0.3 mm; FNA 0.1–0.4 mm.
+    Only conflict a correctly measured true ligule >8 mm; do not
+    eliminate by head length (Gould says 'usually'), leaf hairs or
+    composite dropseed historical taxon concept. */
+ if(s.id==="sporobolus-clandestinus"&&selectedRefinementStates("ligule_length").includes("long")){
+   const gould=state.gouldSource?.additional_genus_keys?.find(x=>
+     x.genus==="Sporobolus"&&x.printed_pages?.join(",")==="286,287,288,289"&&
+     x.confirmed_species_key?.species_id==="sporobolus-clandestinus"&&
+     x.confirmed_species_key?.printed_page===289&&
+     x.confirmed_species_key?.independent_ligule_evidence?.gould_genus?.includes("no numerical"));
+   const hill=s.character_evidence?.ligule_minute_ciliate_base_hill_country;
+   const kew=s.character_evidence?.ligule;
+   const keys=s.character_evidence?.gould_1975_sporobolus_genus_key_pp286_289;
+   if(gould&&keys?.status==="EXACT_OWNER_PHOTOGRAPHED_HISTORICAL_GENUS_KEY_REPRODUCTIVE_SOURCE"&&
+      hill?.source?.includes("Hagenbuch & Lemke (2015)")&&
+      hill.reported_states?.some(x=>x.includes("ligule under 0.5 mm, ciliate with a minute membranous base"))&&
+      hill.source_url?.includes("04PhytoN-HillCountryGrasses.pdf")&&
+      kew?.reference?.includes("0.2–0.3 mm")&&kew.source?.includes("GrassBase")){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Hagenbuch & Lemke: <0.5 mm; Kew GrassBase: 0.2–0.3 mm; FNA: 0.1–0.4 mm",
+       source:"Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country pp.63–64; Kew GrassBase Sporobolus clandestinus; FNA species account; Gould (1975) genus key pp.286–289 (no ligule mm)",
+       source_url:"https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=63",
+       note:"A true inner ligule >8 mm conflicts with the species-specific <0.5-mm ligule, corroborated by Kew and FNA. Gould's genus key only identifies the route with short, sheathed panicles and hairy lemmas; it does NOT supply this ligule measurement. Check with magnification; outer sheath hairs are not the ligule. Do not exclude by usually-short head alone.",
+       policy:"EXACT_CLANDESTINUS_THREE_LIGULE_SOURCES_VS_LONG"
+     });
+   }
+ }
  /* Owner's Gould p209 exact T. albescens: ligule a tiny fringed
     MEMBRANE usually <=0.5 mm, not an exposed leaf tip. Independent
     Hill Country H&L 2015 p65: minute ciliate membrane under 0.5 mm.
