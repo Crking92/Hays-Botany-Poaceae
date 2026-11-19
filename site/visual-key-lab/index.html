@@ -942,6 +942,34 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Gould p.304 is S. asper VAR. drummondii (modern S. compositus
+    var. drummondii) and says nothing about ligule length. Independently,
+    H&L 2015 p.64 species-level S. compositus reports a true inner
+    ciliate membranous ligule <0.5 mm. Only that independent species
+    measurement supports an over-8-mm conflict; do not propagate
+    Gould's 1–2-mm var. leaf width to all S. compositus. */
+ if(s.id==="sporobolus-compositus"&&selectedRefinementStates("ligule_length").includes("long")){
+   const gould=state.gouldSource?.additional_species_treatments?.find(x=>
+     x.species_id==="sporobolus-compositus"&&x.printed_pages?.join(",")==="304"&&
+     x.taxonomy_crosswalk?.modern_name==="Sporobolus compositus var. drummondii"&&
+     x.observations?.some(o=>o.character==="ligule"&&o.gould_status==="NOT_REPORTED_IN_THIS_VARIETY_ACCOUNT"));
+   const hill=s.character_evidence?.hagenbuch_lemke_2015_p64_exact_ligule;
+   if(gould&&s.character_evidence?.gould_1975_p304_var_drummondii?.status===
+      "EXACT_PHOTOGRAPHED_HISTORICAL_VARIETY_ONLY_NOT_FULL_SPECIES"&&
+      hill?.status==="INDEPENDENT_EXACT_SPECIES_VEGETATIVE_ACCOUNT"&&
+      hill.true_ligule_max_mm_exclusive===0.5&&
+      hill.source?.includes("Hagenbuch & Lemke (2015)")&&
+      hill.source_url?.includes("04PhytoN-HillCountryGrasses.pdf")){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Hagenbuch & Lemke p.64: ciliate true ligule <0.5 mm; Gould var. drummondii p.304: ligule unreported",
+       source:"Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p.64; Gould (1975), The Grasses of Texas p.304 (historical variety, no ligule measurement)",
+       source_url:"https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=64",
+       note:"A correctly examined true ligule >8 mm contradicts the independently measured <0.5-mm S. compositus ligule. Do not confuse the folded terminal SHEATH width (0.8–2 mm) in Gould with a ligule, or infer the historical variety from the book page alone. All other S. compositus and hidden dropseed vegetative distinctions remain held.",
+       policy:"EXACT_COMPOSITUS_HILL_COUNTRY_TINY_LIGULE_VS_LONG"
+     });
+   }
+ }
  /* Red lovegrass exact Gould pp.190-191 reports long BLADE-BASE
     and sheath THROAT hairs, NOT a measured ligule. Independent
     Hagenbuch & Lemke 2015 printed p.49 confirms a true ciliate
