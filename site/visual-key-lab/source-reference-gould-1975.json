@@ -8094,6 +8094,176 @@
         }
       ],
       "intake_batch": "20261119"
+    },
+    {
+      "genus": "Panicum",
+      "taxon_heading_as_printed": "96. PANICUM L.",
+      "printed_pages": [
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439
+      ],
+      "added_on": "2026-11-19",
+      "evidence_level": "EXACT_OWNER_PHOTOGRAPHED_GOULD_GENUS_DICHOTOMOUS_KEY_NOT_SPECIES_ACCOUNT",
+      "material": "Four owner-uploaded screenshots containing printed p.433 and successive pp.434–439, including Eriochloa illustration on p.434. Key pathways paraphrased; book-image files not republished.",
+      "source": "Frank W. Gould (1975), The Grasses of Texas, genus Panicum key, printed pp.433–439",
+      "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+      "genus_diagnosis": {
+        "habit": "Gould divides this historical Panicum genus key first into annuals versus perennials.",
+        "ligule": "P.433 says a membrane, a hair fringe, or absent at GENUS level; NO numeric ligule length for P. virgatum or P. miliaceum in these genus-key pages.",
+        "inflorescence": "Open or contracted panicle, spikelets commonly 2-flowered with the lower sterile or staminate and the upper perfect.",
+        "species_scope": "Historical taxonomy: numerous species have since transferred from Panicum; never apply a Panicum generalization to a modern segregate without an exact name crosswalk."
+      },
+      "decision_groups": [
+        {
+          "printed_pages": [
+            435,
+            436
+          ],
+          "decision": "Annual species pathway",
+          "examples": [
+            "P. miliaceum is on the annual route. The first glume is more than one-quarter as long as the spikelet and acute or acuminate; spikelets mostly 4.5–5.5 mm long (p.436).",
+            "P. trichoides on the annual route has 1–1.4-mm spikelets (p.435)."
+          ],
+          "source_scope": "Reproductive key states and life-cycle distinction only; do not substitute spikelet length for ligule length."
+        },
+        {
+          "printed_pages": [
+            437,
+            439
+          ],
+          "decision": "Perennial rhizome and spikelet pathway",
+          "examples": [
+            "P. virgatum is a perennial with culms in dense clumps and 4–5-mm spikelets (p.437); p.439 identifies stout, scaly rhizomes and a first glume acute and more than half as long as the spikelet.",
+            "P. hardii (as printed) differs within Gould's perennial branches by 6–8-mm spikelets, long stout rhizomes and a ciliate ligule with 1–3-mm hairs (p.437); those hairs are NOT a P. virgatum measurement."
+          ],
+          "source_scope": "Gould p.437 and p.439 exact Panicum key branches, not a photograph-backed field specimen diagnosis."
+        }
+      ],
+      "confirmed_species_keys": [
+        {
+          "species_id": "panicum-virgatum",
+          "taxon_as_printed": "P. virgatum",
+          "printed_pages": [
+            437,
+            439
+          ],
+          "incoming_path": [
+            "Perennial",
+            "Spikelets 4–5 mm; dense clumps",
+            "Stout, scaly rhizomes",
+            "First glume acute and more than half the spikelet"
+          ],
+          "independent_ligule_evidence": {
+            "gould_genus": "Gould genus key pp.433–439 gives NO species-specific numerical ligule length.",
+            "diggs": {
+              "reference": "Diggs, Lipscomb & O'Kennon (1999), Illustrated Flora of North Central Texas, printed p.1302; already documented in original species-c3.json evidence",
+              "length_mm": [
+                1.5,
+                3
+              ],
+              "structure": "fringed membrane"
+            },
+            "hill_country": {
+              "reference": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, printed p.57, exact P. virgatum",
+              "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf",
+              "fringe_mm_approx": 1,
+              "additional_hairs_mm": [
+                3,
+                5
+              ],
+              "structure": "hair fringe; interspersed longer soft hairs"
+            },
+            "fna": {
+              "reference": "Flora of North America treatment, reproduced by Burke Herbarium, exact P. virgatum",
+              "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Panicum+virgatum",
+              "length_mm": [
+                2,
+                6
+              ]
+            },
+            "kew": {
+              "reference": "Kew POWO / GrassBase, exact P. virgatum",
+              "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:413537-1/general-information",
+              "length_mm": [
+                1.5,
+                3
+              ]
+            },
+            "longest_corroborated_mm": 6,
+            "conclusion": "True ligule >8 mm contradicts the cited exact species measurements, including the longer 3–5-mm H&L fringe hairs. Distinguish ligule from nearby throat hairs."
+          },
+          "status": "EXACT_GOULD_REPRODUCTIVE_ROUTE_WITH_INDEPENDENT_SPECIES_VEGETATIVE_LIGULE"
+        },
+        {
+          "species_id": "panicum-miliaceum",
+          "taxon_as_printed": "P. miliaceum",
+          "printed_page": 436,
+          "incoming_path": [
+            "Annual",
+            "First glume > one-quarter spikelet, acute or acuminate",
+            "Spikelets mostly 4.5–5.5 mm"
+          ],
+          "independent_ligule_evidence": {
+            "gould_genus": "Gould genus key pp.433–439 gives NO species-specific numerical ligule length.",
+            "kew": {
+              "reference": "Kew POWO / GrassBase, exact P. miliaceum",
+              "source_url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:412217-1/general-information",
+              "length_mm": [
+                1.5,
+                3
+              ],
+              "structure": "ciliate membrane"
+            },
+            "fna": {
+              "reference": "Flora of North America treatment reproduced by Burke Herbarium, exact P. miliaceum",
+              "source_url": "https://burkeherbarium.org/imagecollection/taxon.php?Taxon=Panicum+miliaceum",
+              "cilia_mm": [
+                1,
+                3
+              ],
+              "structure": "membranous ciliate ligule"
+            },
+            "cornell": {
+              "reference": "Cornell CALS Wild-proso millet description, P. miliaceum",
+              "source_url": "https://cals.cornell.edu/weed-science/weed-profiles/wild-proso-millet",
+              "fringe_mm": [
+                2,
+                4
+              ]
+            },
+            "longest_corroborated_mm": 4,
+            "conclusion": "True inner ligule >8 mm contradicts multiple independent exact P. miliaceum descriptions; no annual/perennial score applied unless observed."
+          },
+          "status": "EXACT_GOULD_ANNUAL_REPRODUCTIVE_ROUTE_WITH_INDEPENDENT_SPECIES_VEGETATIVE_LIGULE"
+        }
+      ],
+      "cautions": [
+        "Original pp.433–439 are a GENUS key, not species accounts. Numeric ligules come from the specifically cited independent sources, not Gould.",
+        "Gould's 4–5-mm switchgrass spikelets and 4.5–5.5-mm millet spikelets overlap, so spikelet size ALONE does not reliably separate them.",
+        "H&L's 3–5-mm soft hairs for switchgrass are interspersed with the approximately 1-mm true ligule fringe; do not misinterpret collar or throat hairs as a >8-mm ligule.",
+        "Broomcorn millet's candidate gallery has an existing potential-identification warning; no photos or identities are approved by this source intake.",
+        "No nativity claim from genus key; do not conflate a Texas mention with BONAP Hays County presence.",
+        "Only apply the guarded long-ligule exclusion when a user selects the actual >8-mm ligule answer. Unknown/skipped ligule leaves both species possible.",
+        "Original species photos, credits, genus crosswalks and previous scored evidence remain unchanged."
+      ],
+      "learner_diagnostic_checks": [
+        {
+          "question": "Is the true ligule over 8 mm?",
+          "field_action": "Open the collar and measure the true membrane or fringe; exclude P. virgatum and P. miliaceum only if the actual ligule exceeds 8 mm.",
+          "certainty": "CONVERGENT_EXACT_SPECIES_MEASUREMENTS"
+        },
+        {
+          "question": "Annual or persistent perennial?",
+          "field_action": "If whole rooted plant is safely available, distinguish an annual fibrous-rooted millet from the perennial switchgrass with stout scaly rhizomes; do not infer from a photo of an isolated stem.",
+          "certainty": "GOULD_GENUS_KEY_PATHWAY"
+        }
+      ],
+      "intake_batch": "20261119"
     }
   ]
 }
