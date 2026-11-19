@@ -942,6 +942,32 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Red lovegrass exact Gould pp.190-191 reports long BLADE-BASE
+    and sheath THROAT hairs, NOT a measured ligule. Independent
+    Hagenbuch & Lemke 2015 printed p.49 confirms a true ciliate
+    ligule LESS THAN 0.5 mm long, distinct from those longer hairs.
+    Conflict ONLY with a correctly observed true ligule >8mm. */
+ if(s.id==="eragrostis-secundiflora"&&selectedRefinementStates("ligule_length").includes("long")){
+   const gould=state.gouldSource?.additional_species_treatments?.find(x=>
+     x.species_id==="eragrostis-secundiflora"&&
+     x.printed_pages?.join(",")==="190,191"&&
+     x.observations?.some(o=>o.character==="ligule"&&
+       o.gould_status==="NOT_REPORTED"&&o.independent_regional_upper_bound_mm===0.5));
+   const hill=s.character_evidence?.gould_1975_pp190_191;
+   if(gould&&hill?.status==="EXACT_OWNER_PHOTOGRAPHED_PUBLISHED_MORPHOLOGY_NOT_LOCAL_SPECIMEN"&&
+      hill.distinct_source_ligule?.includes("Hagenbuch & Lemke (2015)")&&
+      hill.distinct_source_ligule.includes("<0.5 mm")&&
+      hill.independent_source_url?.includes("04PhytoN-HillCountryGrasses.pdf")){
+     conflicts.push({
+       character:"ligule_length",label:"True ligule length",
+       reported:"Hagenbuch & Lemke p.49: true ligule fringe <0.5 mm; Gould pp.190–191: length not reported",
+       source:"Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country p.49; Gould (1975), The Grasses of Texas pp.190–191 (throat hairs only)",
+       source_url:"https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=49",
+       note:"Only a correctly observed true inner ligule >8 mm is incompatible with red lovegrass. Long hairs ABOVE the ligule or at the sheath throat are a different structure. Preserve overlapping blade widths, variable panicle shape and regional subsp. oxylepis lemma differences.",
+       policy:"EXACT_RED_LOVEGRASS_TINY_LIGULE_VS_LONG"
+     });
+   }
+ }
  /* Exact photographed Gould 1975 p.269 (M. schreberi, NOT adjacent
     M. repens) says TRUE minute ciliolate erose ligule NOT OVER 0.5 mm.
     Independently H&L 2015 p.55 describes a ciliate membrane <0.5 mm.

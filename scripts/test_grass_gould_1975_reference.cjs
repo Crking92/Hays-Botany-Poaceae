@@ -867,6 +867,48 @@ console.log("PASS: Pampas hair-ligule source extrema reject only long >8 mm");
 }
 console.log("PASS: Gould p269 nimblewill/creeping muhly kept distinct; nimblewill long-only ligule conflict proven");
 
+// Gould pp.190-191: red lovegrass is separate from purple and silver
+// lovegrasses; true ligule NOT measured by Gould, but H&L p.49 gives
+// <0.5 mm ciliate fringe. Exclude ONLY >8 mm true ligule.
+{
+ const gould=source.additional_species_treatments.filter(x=>x.species_id==="eragrostis-secundiflora");
+ assert.equal(gould.length,1,"No duplicate Gould red lovegrass treatment");
+ assert.deepEqual(gould[0].printed_pages,[190,191]);
+ const obs=new Map(gould[0].observations.map(x=>[x.character,x]));
+ assert.deepEqual(obs.get("leaf_blades").width_mm,[2,2.5]);
+ assert.deepEqual(obs.get("spikelets").floret_count,[10,24]);
+ assert.deepEqual(obs.get("lemmas").length_mm,[1.6,2.4]);
+ assert.equal(obs.get("ligule").gould_status,"NOT_REPORTED");
+ assert(gould[0].cautions.some(x=>x.includes("Eragrostis spectabilis")));
+ const s=read("species-d2.json").find(x=>x.id==="eragrostis-secundiflora");
+ assert(s&&s.photos.length===5,"Preserve five existing red lovegrass photographs");
+ assert(s.character_evidence.gould_1975_pp190_191.distinct_source_ligule.includes("<0.5 mm"));
+ assert(s.character_evidence.lemma.disagreement.includes("1.6–2.4"),"Preserve lemma concept hold");
+ const vm=require("node:vm");
+ const state={gouldSource:source,refineEvidenceMap:{},refineCharacters:[],
+   refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const begin=html.indexOf("function refinementEvidence(");
+ const end=html.indexOf("function refinementSection(",begin);
+ assert(begin>0&&end>begin);
+ const ctx=vm.createContext({state,s});
+ vm.runInContext(html.slice(begin,end),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+   state.refineSelected.ligule_length=choice;
+   const conflicts=vm.runInContext("verifiedAdvancedConflict(s)",ctx);
+   assert.equal(conflicts.length,choice==="long"?1:0,"Red lovegrass true ligule "+choice);
+   if(choice==="long")assert.equal(conflicts[0].policy,"EXACT_RED_LOVEGRASS_TINY_LIGULE_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ state.gouldSource={additional_species_treatments:[]};
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(s)",ctx).length,0,"No Gould means no exclusion");
+ state.gouldSource=source;
+ const copy=structuredClone(s);
+ delete copy.character_evidence.gould_1975_pp190_191;
+ ctx.s=copy;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(s)",ctx).length,0,"No independent H&L guard means no exclusion");
+}
+console.log("PASS: Gould red lovegrass pp190-191 and H&L p49 long-only ligule exclusion");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
