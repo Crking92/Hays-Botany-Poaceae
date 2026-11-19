@@ -995,6 +995,32 @@ console.log("PASS: Gould p304 historical variety correctly scoped; independent H
 }
 console.log("PASS: Gould Tridens p209 true ligule excludes over8mm only, other states intact");
 
+
+// Gould photographed p212 historical parent Tridens muticus account now
+// preserves its non-scoring context separately from modern T. elongata.
+{
+ const rough=source.additional_species_treatments.filter(x=>x.species_id==="tridentopsis-elongata"&&x.printed_page===213);
+ assert.equal(rough.length,1,"Do not duplicate the existing p213 rough tridens species source");
+ const parent=rough[0].historical_parent_aggregate_addendum_p212;
+ assert.equal(parent.printed_page,212);
+ assert.equal(parent.strict_scope,"PARENT_AGGREGATE_ACCOUNT_NOT_INDEPENDENT_MODERN_ELONGATA_DIAGNOSIS");
+ assert.equal(parent.source_status,"OWNER_PHOTOGRAPHED_GOULD_P212_COMPLETE_HISTORICAL_PARENT_ACCOUNT_NON_SCORING");
+ const o=new Map(parent.observations.map(x=>[x.character,x]));
+ assert.deepEqual(o.get("ligule").length_mm,[0.5,1]);
+ assert.deepEqual(o.get("panicle").width_mm,[3,8]);
+ assert.deepEqual(o.get("spikelets").floret_count,[5,11]);
+ assert(rough[0].historical_couplet_comparison.elongatus_variety.second_glume_veins.includes(7));
+ assert(parent.neighboring_account_boundary.p212_above.includes("LONGSPIKE TRIDENS"));
+ assert(parent.neighboring_account_boundary.p213_variety_key.includes("ROUGH TRIDENS"));
+ assert.equal(parent.score_change.startsWith("NONE"),true);
+ assert.equal(parent.media_changes.startsWith("NONE"),true);
+ const trial=read("hays-candidates.json").candidates.find(x=>x.id==="tridentopsis-elongata");
+ assert(trial&&trial.status==="RESEARCH_CANDIDATE_NOT_RELEASED");
+ const scored=read("species-d4.json");
+ assert(!scored.some(x=>x.id==="tridentopsis-elongata"),"Preserve rough tridens trial boundary");
+}
+console.log("PASS: Gould p212 historic muticus parent kept distinct from rough tridens p213 and longspike tridens");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
