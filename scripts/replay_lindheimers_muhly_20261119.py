@@ -51,10 +51,10 @@ def inspect(page):
     supported, unresolved, conflicts = map(int, found.groups())
     assert supported + unresolved + conflicts <= 169, "Active source conflicts exceed roster"
     # Report ONLY actual names rendered in the result groups.
-    supported_names = page.locator("#results > .result-row .result .latin").all_inner_texts()
-    unresolved_names = page.locator("#unresolved-candidates .result .latin").all_inner_texts()
+    supported_names = page.locator("#results > .result-row .result .latin").all_text_contents()
+    unresolved_names = page.locator("#unresolved-candidates .result .latin").all_text_contents()
     assert len(supported_names) == supported, (supported_names, supported, summary)
-    assert len(unresolved_names) == unresolved, (unresolved_names, unresolved, summary)
+    assert len(unresolved_names) == unresolved and all(name.strip() for name in unresolved_names), (unresolved_names, unresolved, summary)
     assert sum([supported, unresolved]) == int(
         page.locator("#count").inner_text().split()[0]), "Possible counter disagrees with DOM"
     for k, v in PICKS.items():
