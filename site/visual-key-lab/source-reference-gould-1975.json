@@ -3028,7 +3028,8 @@
         {
           "character": "inflorescence_structure_unknown",
           "details": "Provided page does not include full heading and panicle description of parent species; do not invent a panicle length or assign general adjacent account detail to this modern species.",
-          "status": "HOLD_PARTIAL_PARENT_TREATMENT"
+          "status": "HOLD_PARTIAL_PARENT_TREATMENT",
+          "historical_intake_note": "Previous 2026-11-16 screenshot only captured p213 variety; as of 2026-11-19 newly provided p212 historical parent aggregate is archived separately under historical_parent_aggregate_addendum_p212. This historical aggregate is not a modern T. elongata-specific character score."
         }
       ],
       "historical_couplet_comparison": {
@@ -3099,7 +3100,116 @@
         "status": "RESEARCH_CANDIDATE_NOT_RELEASED",
         "taxonomy_hold": "Kew treats elongata as species, ITIS retains variety; modern species-level mapping explicit."
       },
-      "audit_hold": "Historical comparison is NOT a verified Hays specimen; do not score second-glume subtype for all Tridentopsis taxa without local source review. Protect existing 57 trial species and all 112 original scored grasses."
+      "audit_hold": "Historical comparison is NOT a verified Hays specimen; do not score second-glume subtype for all Tridentopsis taxa without local source review. Protect existing 57 trial species and all 112 original scored grasses.",
+      "additional_user_photo_received_on": "2026-11-19",
+      "historical_parent_aggregate_addendum_p212": {
+        "printed_page": 212,
+        "historical_taxon": "Tridens muticus (Torr.) Nash",
+        "associated_modern_names": [
+          "Tridentopsis mutica (Torr.) P.M.Peterson",
+          "Tridentopsis elongata (Buckley) Wipff & Weakley"
+        ],
+        "strict_scope": "PARENT_AGGREGATE_ACCOUNT_NOT_INDEPENDENT_MODERN_ELONGATA_DIAGNOSIS",
+        "source_status": "OWNER_PHOTOGRAPHED_GOULD_P212_COMPLETE_HISTORICAL_PARENT_ACCOUNT_NON_SCORING",
+        "anatomical_provenance": "Historical Tridens muticus broad account preceding Gould p.213 var. muticus and var. elongatus key. Do not transfer all parent characters or exact ligule upper limit as newly verified modern Tridentopsis elongata-specific characters.",
+        "observations": [
+          {
+            "character": "habit_and_culms",
+            "height_cm_mostly": [
+              20,
+              80
+            ],
+            "details": "Tufted perennial; stiffly erect culms, lower stem nodes often soft long-bearded. Broad historical aggregate, not a verified exact modern species."
+          },
+          {
+            "character": "sheath",
+            "details": "Rounded behind; upper sheath often glabrous or scabrous, lower strigose/pilose, usually longer than internode."
+          },
+          {
+            "character": "ligule",
+            "length_mm": [
+              0.5,
+              1
+            ],
+            "structure": "ciliate membrane",
+            "scope": "Gould's historical parent aggregate; does not alone establish modern T. elongata-specific measured range."
+          },
+          {
+            "character": "leaf_blade",
+            "length_cm": [
+              6,
+              25
+            ],
+            "width_mm": [
+              1,
+              4
+            ],
+            "details": "Generally rolled or loosely infolded when drying; glabrous, scabrous or sparsely pilose; long attenuate apex. Historical parent aggregate."
+          },
+          {
+            "character": "panicle",
+            "length_cm_mostly": [
+              7,
+              20
+            ],
+            "length_cm_occasional_max": 25,
+            "width_mm": [
+              3,
+              8
+            ],
+            "details": "Elongate, narrow; spikelets short-pedicelled, overlapping but usually not crowded or congested. Historical parent aggregate."
+          },
+          {
+            "character": "spikelets",
+            "length_mm": [
+              8,
+              13
+            ],
+            "floret_count": [
+              5,
+              11
+            ],
+            "details": "Usually purple tinged; historical parent aggregate, not all variety-specific."
+          },
+          {
+            "character": "glumes",
+            "vein_count_general": [
+              1,
+              7
+            ],
+            "details": "Glumes glabrous, acute, equal or first shorter; second slightly shorter to longer than lower lemma. THIS general 1–7 aggregate includes both varieties; for modern rough tridens use p.213 elongatus-specific upper-glume 3–7 nerves."
+          },
+          {
+            "character": "lemmas",
+            "length_mm": [
+              3.5,
+              5.5
+            ],
+            "details": "Hairy on nerves, obtuse or slightly notched, midnerve frequently ending in minute mucro, not automatically a long awn."
+          },
+          {
+            "character": "paleas",
+            "details": "1–2 mm shorter than lemmas, pubescent on margins"
+          },
+          {
+            "character": "caryopsis",
+            "length_mm_typical": [
+              2,
+              2.3
+            ],
+            "details": "Oblong, finely reticulate"
+          }
+        ],
+        "neighboring_account_boundary": {
+          "p212_above": "Tridens strictus (Nutt.) Nash = LONGSPIKE TRIDENS; NOT Tridentopsis elongata or Tridens muticus; its 0.5-mm ciliate tissue rim is separate.",
+          "p213_variety_key": "9A is Tridens muticus var. muticus (modern Tridentopsis mutica); 9B is Tridens muticus var. elongatus (modern Tridentopsis elongata), labeled ROUGH TRIDENS.",
+          "p213_differential": "Rough tridens usually second glume 3–7 nerved, typically 6–8 mm in key and 5.5–10 mm in variety account, versus one-veined ca.5 mm or less typical var. muticus"
+        },
+        "taxonomic_review": "Kew POWO (accepted 2022 combination) separates Tridentopsis elongata as species; historical Gould broad parent description cannot by itself prove the separate species' modern ligule length.",
+        "score_change": "NONE—original rough-tridens trial and slim-tridens scores unchanged",
+        "media_changes": "NONE—no images, photographer credit or license changed",
+        "source_image_policy": "Copyrighted photographed Gould spread used for reading; original image not republished."
+      }
     },
     {
       "added_on": "2026-11-16",
