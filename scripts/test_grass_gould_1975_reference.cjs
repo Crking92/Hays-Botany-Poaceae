@@ -1021,6 +1021,59 @@ console.log("PASS: Gould Tridens p209 true ligule excludes over8mm only, other s
 }
 console.log("PASS: Gould p212 historic muticus parent kept distinct from rough tridens p213 and longspike tridens");
 
+// Owner photographed full Gould genus Sporobolus pp286–289, whose
+// final hidden-dropseed branch distinguishes PUBESCENT lemma / LOOSE
+// wet pericarp from historical S. asper GLABROUS / GELATINOUS.
+// Gould genus key has no numeric S. clandestinus ligule; independent
+// H&L p63–64, Kew and FNA yield actual tiny species-level intervals.
+{
+ const keys=source.additional_genus_keys.filter(x=>x.genus==="Sporobolus");
+ assert.equal(keys.length,1,"No duplicate photographed Gould Sporobolus genus key");
+ assert.deepEqual(keys[0].printed_pages,[286,287,288,289]);
+ const k=keys[0].confirmed_species_key;
+ assert.equal(k.species_id,"sporobolus-clandestinus");
+ assert.equal(k.printed_page,289);
+ assert(k.independent_ligule_evidence.gould_genus.includes("no numerical"));
+ assert.equal(keys[0].decision_groups.find(x=>x.printed_page===289&&x.taxa).taxa[0].lemma,"pubescent");
+ assert.equal(keys[0].decision_groups.find(x=>x.printed_page===289&&x.taxa).taxa[1].lemma,"glabrous");
+ const species=read("species-d4.json").find(x=>x.id==="sporobolus-clandestinus");
+ const comparison=read("species-c3.json").find(x=>x.id==="sporobolus-compositus");
+ assert(species&&comparison);
+ assert.equal(species.photos.length,3,"Original hidden dropseed galleries unchanged");
+ assert.equal(comparison.photos.length,1,"Original composite dropseed gallery unchanged");
+ assert(species.character_evidence.gould_1975_sporobolus_genus_key_pp286_289.status.includes("HISTORICAL_GENUS_KEY"));
+ assert(comparison.character_evidence.gould_1975_sporobolus_genus_key_pp289_comparison.uncertainty.includes("Historical S. asper"));
+ const vm=require("node:vm");
+ const state={gouldSource:source,refineEvidenceMap:{},refineCharacters:[],refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const begin=html.indexOf("function refinementEvidence(");
+ const end=html.indexOf("function refinementSection(",begin);
+ assert(begin>0&&end>begin);
+ const ctx=vm.createContext({state,species});
+ vm.runInContext(html.slice(begin,end),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+   state.refineSelected.ligule_length=choice;
+   const found=vm.runInContext("verifiedAdvancedConflict(species)",ctx);
+   assert.equal(found.length,choice==="long"?1:0,"Hidden dropseed true ligule "+choice);
+   if(choice==="long")assert.equal(found[0].policy,"EXACT_CLANDESTINUS_THREE_LIGULE_SOURCES_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ state.gouldSource={additional_genus_keys:[]};
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(species)",ctx).length,0,
+   "Genus-key provenance missing must preserve an unresolved match");
+ state.gouldSource=source;
+ const missingRegional=structuredClone(species);
+ delete missingRegional.character_evidence.ligule_minute_ciliate_base_hill_country;
+ ctx.species=missingRegional;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(species)",ctx).length,0,
+   "H&L corroboration missing must preserve unresolved");
+ const missingKew=structuredClone(species);
+ delete missingKew.character_evidence.ligule;
+ ctx.species=missingKew;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(species)",ctx).length,0,
+   "Kew corroboration missing must preserve unresolved");
+}
+console.log("PASS: Gould full Sporobolus genus key exact source and S clandestinus guarded true >8-mm ligule exclusion");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
