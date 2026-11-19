@@ -942,6 +942,49 @@ const advancedExclusionPolicy={
 };
 function verifiedAdvancedConflict(s){
  const conflicts=[];
+ /* Panicum owner scans: Gould (1975), genus key pp.433–439, supports
+    annual P. miliaceum vs perennial rhizomatous P. virgatum, but DOES
+    NOT MEASURE the true ligule for either species. The numeric long-
+    ligule contradiction comes instead from EXACT species sources:
+    P. virgatum — Diggs p.1302 1.5–3 mm, H&L p.57 ±1 mm hair fringe
+    with 3–5 mm longer hairs, FNA 2–6 mm and Kew 1.5–3 mm;
+    P. miliaceum — Kew 1.5–3 mm, FNA cilia 1–3 mm, Cornell 2–4 mm.
+    Skipped ligules, blade folding, crown hairs and other unanswered
+    structures must NEVER trigger this exclusion. */
+ if(selectedRefinementStates("ligule_length").includes("long")&&
+    ["panicum-virgatum","panicum-miliaceum"].includes(s.id)){
+   const gould=state.gouldSource?.additional_genus_keys?.find(x=>
+     x.genus==="Panicum"&&x.printed_pages?.join(",")==="433,434,435,436,437,438,439");
+   const exact=gould?.confirmed_species_keys?.find(x=>x.species_id===s.id);
+   const e=exact?.independent_ligule_evidence;
+   const genuine=Boolean(e&&Number.isFinite(e.longest_corroborated_mm)&&e.longest_corroborated_mm<8&&
+     e.gould_genus?.includes("NO species-specific numerical ligule"));
+   const switchgrass=Boolean(s.id==="panicum-virgatum"&&
+     exact?.printed_pages?.join(",")==="437,439"&&
+     e.diggs?.length_mm?.join(",")==="1.5,3"&&
+     e.hill_country?.additional_hairs_mm?.join(",")==="3,5"&&
+     e.fna?.length_mm?.join(",")==="2,6"&&
+     s.character_evidence?.ligule?.source?.includes("Diggs"));
+   const millet=Boolean(s.id==="panicum-miliaceum"&&
+     exact?.printed_page===436&&
+     e.kew?.length_mm?.join(",")==="1.5,3"&&
+     e.fna?.cilia_mm?.join(",")==="1,3"&&
+     e.cornell?.fringe_mm?.join(",")==="2,4");
+   if(genuine&&(switchgrass||millet))conflicts.push({
+     character:"ligule_length",label:"True ligule length",
+     reported:switchgrass?"Diggs: 1.5–3 mm; H&L: ~1 mm with 3–5-mm hairs; FNA: 2–6 mm":
+       "Kew: 1.5–3 mm; FNA cilia: 1–3 mm; Cornell: 2–4 mm",
+     source:switchgrass?
+       "Diggs et al. (1999), Flora of North Central Texas p.1302; Hagenbuch & Lemke (2015) p.57; FNA Panicum virgatum; Gould (1975) key pp.433–439 (no ligule length)":
+       "Kew GrassBase Panicum miliaceum; FNA Panicum miliaceum; Cornell CALS wild-proso millet; Gould (1975) key pp.433–439 (no ligule length)",
+     source_url:switchgrass?
+       "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf":
+       "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:412217-1/general-information",
+     note:"Measured true inner ligule over 8 mm conflicts with exact-species references. Check the true membranous base/hair fringe; longer sheath-throat or collar hairs are not the ligule. No other key selection was excluded.",
+     policy:"EXACT_PANICUM_GT8_MM_LIGULE"
+   });
+ }
+
  /* Gould genus key pp.286–289 contrasts S. clandestinus by SHORT
     sheathed heads, pubescent lemma and loose pericarp; genus key does
     NOT assign ligule mm. Three exact SPECIES sources independently
