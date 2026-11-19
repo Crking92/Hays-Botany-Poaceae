@@ -46,7 +46,7 @@ def inspect(page):
         document.querySelector('#results .progressive-status').textContent.includes('unresolved')""",
         timeout=85000)
     summary = page.locator("#results .progressive-status").inner_text()
-    found = re.search(r"(\d+) supported matches? · (\d+) unresolved · (\d+) advanced source conflicts?", summary)
+    found = re.search(r"(\d+) supported match(?:es)? · (\d+) unresolved · (\d+) advanced source conflict(?:s)?", summary)
     assert found, "Cannot read authoritative three-bucket result: " + summary
     supported, unresolved, conflicts = map(int, found.groups())
     assert supported + unresolved + conflicts <= 169, "Active source conflicts exceed roster"
