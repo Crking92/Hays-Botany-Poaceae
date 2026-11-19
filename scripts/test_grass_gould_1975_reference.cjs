@@ -909,6 +909,51 @@ console.log("PASS: Gould p269 nimblewill/creeping muhly kept distinct; nimblewil
 }
 console.log("PASS: Gould red lovegrass pp190-191 and H&L p49 long-only ligule exclusion");
 
+// Gould photographed p304 S. asper var drummondii vs other varieties
+// and following separate S. neglectus. Only independent H&L p64
+// species ligule <0.5 mm contradicts >8 mm true ligule choice.
+{
+ const rows=source.additional_species_treatments.filter(x=>x.species_id==="sporobolus-compositus"&&x.printed_pages?.includes(304));
+ assert.equal(rows.length,1,"No duplicate Gould p304 variety intake");
+ const row=rows[0],obs=new Map(row.observations.map(x=>[x.character,x]));
+ assert.equal(row.current_variety,"Sporobolus compositus var. drummondii (Trin.) Kartesz & Gandhi");
+ assert.deepEqual(obs.get("culm_base_diameter").width_mm_typical,[1,2]);
+ assert.deepEqual(obs.get("terminal_sheath_width_folded").width_mm_typical,[0.8,2]);
+ assert.deepEqual(obs.get("leaf_blades").width_mm_mostly,[1,2]);
+ assert.deepEqual(obs.get("flowerhead").primary_branches,[8,18]);
+ assert.deepEqual(obs.get("spikelets").length_mm,[4,5]);
+ assert.equal(obs.get("ligule").gould_status,"NOT_REPORTED_IN_THIS_VARIETY_ACCOUNT");
+ assert(row.cautions.some(x=>x.includes("Sporobolus neglectus")));
+ const all=read("species-c3.json"),one=all.filter(x=>x.id==="sporobolus-compositus");
+ assert.equal(one.length,1);
+ assert.equal(one[0].photos.length,1,"Preserve pre-existing gallery untouched");
+ assert(one[0].traits.head.includes("long_narrow_panicle"));
+ assert(one[0].character_evidence.hagenbuch_lemke_2015_p64_exact_ligule.true_ligule_max_mm_exclusive===0.5);
+ assert(one[0].character_evidence.gould_1975_p304_var_drummondii.taxon_scope_hold.includes("cannot hard-exclude"));
+ const vm=require("node:vm");
+ const state={gouldSource:source,refineEvidenceMap:{},refineCharacters:[],refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const begin=html.indexOf("function refinementEvidence(");
+ const end=html.indexOf("function refinementSection(",begin);
+ assert(begin>0&&end>begin);
+ const ctx=vm.createContext({state,oneSpecies:one[0]});
+ vm.runInContext(html.slice(begin,end),ctx);
+ for(const pick of ["tiny","short","medium","long"]){
+   state.refineSelected.ligule_length=pick;
+   const conflicts=vm.runInContext("verifiedAdvancedConflict(oneSpecies)",ctx);
+   assert.equal(conflicts.length,pick==="long"?1:0,"Composite dropseed true ligule "+pick);
+   if(pick==="long")assert.equal(conflicts[0].policy,"EXACT_COMPOSITUS_HILL_COUNTRY_TINY_LIGULE_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ state.gouldSource={additional_species_treatments:[]};
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(oneSpecies)",ctx).length,0,"Missing exact historic variety crosswalk must preserve unresolved");
+ state.gouldSource=source;
+ const dropped=structuredClone(one[0]);
+ delete dropped.character_evidence.hagenbuch_lemke_2015_p64_exact_ligule;
+ ctx.oneSpecies=dropped;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(oneSpecies)",ctx).length,0,"Missing independent vegetative source cannot hard-exclude");
+}
+console.log("PASS: Gould p304 historical variety correctly scoped; independent H&L p64 true ligule rules out >8 mm only");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower

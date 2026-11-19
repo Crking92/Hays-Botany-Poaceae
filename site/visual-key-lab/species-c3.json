@@ -2238,6 +2238,29 @@
         "status": "SOURCE_SUPPORTED_CONDITIONAL_RHIZOME_STATE",
         "review_date": "2026-11-12",
         "photo_voucher_support": "No newly authenticated source or local specimen image verified for rhizome visibility. Taxonomic complex and grain/pericarp uncertainty retained."
+      },
+      "gould_1975_p304_var_drummondii": {
+        "source": "Frank W. Gould (1975), The Grasses of Texas, p.304, 15c Sporobolus asper var. drummondii",
+        "source_url": "https://www.tamupress.com/book/9781585440061/grasses-of-texas/",
+        "source_record": "source-reference-gould-1975.json :: sporobolus-compositus :: p304 var drummondii",
+        "review_date": "2026-11-19",
+        "status": "EXACT_PHOTOGRAPHED_HISTORICAL_VARIETY_ONLY_NOT_FULL_SPECIES",
+        "modern_taxon": "Sporobolus compositus var. drummondii",
+        "synonym_url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=531125",
+        "diagnostics": "Slender basal culms 1–2(–2.5) mm; folded terminal sheaths 0.8–2(–2.5) mm; mostly 1–2 mm blades; 8–18 lax panicle branches; 4–5 mm spikelets; 2–3 mm purple anthers. Gould p304 DOES NOT describe the ligule.",
+        "independent_species_ligule": "Hagenbuch & Lemke 2015 exact S. compositus species account p64: true ligule <0.5 mm, ciliolate minute membranous base.",
+        "hill_country_source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=64",
+        "taxon_scope_hold": "Variety-specific morphology cannot hard-exclude other S. compositus varieties or overwrite broad scored states; no new species/variety admitted.",
+        "photography": "Existing credited gallery unchanged"
+      },
+      "hagenbuch_lemke_2015_p64_exact_ligule": {
+        "source": "Hagenbuch & Lemke (2015), Grasses of the Texas Hill Country, p.64, exact S. compositus",
+        "source_url": "https://www.phytoneuron.net/2015Phytoneuron/04PhytoN-HillCountryGrasses.pdf#page=64",
+        "review_date": "2026-11-19",
+        "status": "INDEPENDENT_EXACT_SPECIES_VEGETATIVE_ACCOUNT",
+        "true_ligule_max_mm_exclusive": 0.5,
+        "structure": "ciliate with minute membranous base",
+        "caution": "Source species concept includes historical S. asper; independent of Gould's var. drummondii account and the distinct following S. neglectus. Vegetatively indistinguishable from S. clandestinus; requires floral verification."
       }
     },
     "character_review": "PARTIAL_REGIONAL_FLORA_CHECK",
