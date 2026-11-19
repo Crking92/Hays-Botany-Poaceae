@@ -1,0 +1,201 @@
+{
+  "schema": "grass-lab-historical-evidence-recovery-v2",
+  "date": "2026-11-16",
+  "purpose": "Second recovery batch: corrected historical issue status plus indexed source-photo audit packets",
+  "supersedes_findings": [
+    {
+      "prior_id": "F01",
+      "species": "dichanthium-sericeum",
+      "old": "HISTORICAL_ACTIONABLE_BUG_RECHECK_CURRENT_MAIN",
+      "new": "HISTORICAL_BUG_FIXED_AND_PUBLIC_BROWSER_PASS",
+      "reason": "PR403 corrected ligule pointer from x48,y55 to x48,y45 in canonical Learner and main manifest; public desktop/mobile verification green. Do not reopen as an outstanding defect solely from original Chat B report.",
+      "sources": [
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6932770978",
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6932843943"
+      ]
+    }
+  ],
+  "other_resolved_findings": [
+    {
+      "id": "R02",
+      "finding": "Nine callus-hair states erroneously assigned to sterile bristles",
+      "resolution": "PR402 merged runtime correction and regression; 1815 master records unchanged; keep original issue as discovery provenance.",
+      "sources": [
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6932199328",
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6932770978"
+      ]
+    },
+    {
+      "id": "R03",
+      "finding": "Seven missing reproductive field-guide fallbacks despite positive source evidence",
+      "resolution": "PR405 merged seven original SVG teaching guides and public desktop/mobile tests passed; illustrations are not species-photo/arrow certifications.",
+      "sources": [
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6932199328",
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6933536394",
+        "https://github.com/Crking92/Hays-Botany-Poaceae/issues/368#issuecomment-6933612549"
+      ]
+    }
+  ],
+  "photo_source_audit_index": [
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839035937",
+      "heading": "## Chat 4 Group C FINAL one-photo grass recovery — *Paspalum langei* exact-photo CC BY 4.0 cleared (2026-11-12)",
+      "chars": 6965,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839228866",
+      "heading": "## Chat 3 — FINAL Group B remaining one-photo species: FIVE fully verified exact original image sources, publisher handoff (12 Nov 2026)",
+      "chars": 6239,
+      "classification": "IMAGE_SOURCE_OR_PIXEL_AUDIT",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839113036",
+      "heading": "### Chat 1 Group A: *Sphenopholis interrupta* — EXACT-IMAGE CC BY 4.0 + ORIGINAL BYTES HOLD **CLEARED** (2026-11-12)",
+      "chars": 4588,
+      "classification": "IMAGE_SOURCE_OR_PIXEL_AUDIT",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839714204",
+      "heading": "## Chat 5 continuation — four *Melica nitens* source-cleared supplementary photographs (Nov 12 2026)",
+      "chars": 4411,
+      "classification": "SOURCE_LEAD_OR_NONPUBLISHING_QA",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839390441",
+      "heading": "## Chat 1 public release checkpoint — **144/144 real live credited photo pixels** (2026-11-12)",
+      "chars": 4728,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6837603831",
+      "heading": "## Chat 5 — four NEW exact-file, complementary Group D photo sources (post-B10; 2026-11-12)",
+      "chars": 5471,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838795727",
+      "heading": "### Chat 1 targeted photo-first source scout — remaining Group A zero-photo grasses (2026-11-12)",
+      "chars": 4423,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839107736",
+      "heading": "## Chat 5 Group D pixel-first publication/label QA — TWO NEW exact licensed macros + FIVE corrective role/caption edits (Nov 12, 2026)",
+      "chars": 7856,
+      "classification": "SOURCE_LEAD_OR_NONPUBLISHING_QA",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838900434",
+      "heading": "## Chat 4 Group C — SIX exact source-original checks PASS; handoff to sole publisher Chat 2 (Nov 12, 2026)",
+      "chars": 6479,
+      "classification": "IMAGE_SOURCE_OR_PIXEL_AUDIT",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839464304",
+      "heading": "## Chat 5 owner-directed Group D two-macro + six-caption publication — COMPLETE, live checked (2026-11-12)",
+      "chars": 5281,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6834975869",
+      "heading": "## Chat 1 coordinator — publisher-ready photo handoff / release checkpoint (Nov 12, Batch 43–45)",
+      "chars": 4807,
+      "classification": "SOURCE_LEAD_OR_NONPUBLISHING_QA",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839395311",
+      "heading": "## B19 + concurrent Group D = **144/144 LIVE** photo-publisher checkpoint (2026-11-12)",
+      "chars": 4328,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6837090785",
+      "heading": "**Chat 3 Group B publication checkpoint / next specific photo targets (Nov 12):** Independent actual Chromium public run [43315171421](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/43315171421) PASS: **91/91 provisional photos visible with credits across 44 taxa**, exact image src, creator/CC license, source page, linked license terms and visible photo-role labels checked. **Group B LIVE: 12/12 photos across FOUR species**: *Dichanthelium acuminatum* **3/3**, *Nassella tenuissima* **4/4**, *Digitaria californica* **2/2**, *Janochloa antidotalis* **3/3**. New publisher #189 has since merged **2 more source-licensed *Stapfochloa canterae*** (Dick Culbert CC BY 2.0 flowerhead, Jose Hernandez USDA-ARS public-domain scaled spikelets), so **current main is 93 CONFIGURED provisional photo refs across 45 species; Group B 14 configured across 5 species**, but **last 2 are NOT yet independently visible-verified**. Need coordinator next **93/93 exact public Pages parity + decoded pixel/credit test**, do not overcount.",
+      "chars": 2871,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838530514",
+      "heading": "## Chat 1 integration release checkpoint — 2026-11-12, B13 + Group D and Batch 4 LIVE VERIFIED",
+      "chars": 4790,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839206034",
+      "heading": "## Chat 5 — Group D NEXT TWO diagnostic macros: full ORIGINAL bytes and licenses verified, publisher-ready source packet (2026-11-12)",
+      "chars": 5617,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6834909766",
+      "heading": "**Group C — 15/15 one-photo species source review FINISHED; photo-publication handoff (2026-11-12).**",
+      "chars": 3587,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838217438",
+      "heading": "## Chat 5 new actionable Group D hardgrass source leads — exact CC0 and US-federal-PD files (2026-11-12)",
+      "chars": 4825,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6837385835",
+      "heading": "## Chat 1 release checkpoint — 2026-11-12, after B10 (public browser confirmed)",
+      "chars": 3513,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838312150",
+      "heading": "**Group B *Tridentopsis elongata* — complete EXACT-PHOTO LICENSE-VERSION AND ORIGINAL-BYTES HOLD CLEARANCE, ready for Chat 2 final species/duplicate check.** No need to guess from iNaturalist's observation-level CC BY-NC. Independent **GBIF occurrence media** [6430781460](https://www.gbif.org/occurrence/6430781460) is exact original iNat [observation 377001623](https://www.inaturalist.org/observations/377001623), rights-holder / photographer **Eric Knight**. Each original source photo's separate GBIF media `license` explicitly says [CC BY 4.0 International](https://creativecommons.org/licenses/by/4.0/); original observation's CC BY-NC 4.0 applies to **the observation**, not these photos. Independent original API also agrees each photo `cc-by`. Direct full original photo image pixels were downloaded, decoded and SHA256 hashed by successful [PR #209 read-only Actions run #43324761173](https://github.com/Crking92/Hays-Botany-Poaceae/actions/runs/43324761173). Exact source IDs:",
+      "chars": 2856,
+      "classification": "IMAGE_SOURCE_OR_PIXEL_AUDIT",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838510489",
+      "heading": "**Chat 4 Group C continuation / next photo-first publisher handoff, Nov 12 2026.** Re-read MAIN manifest blob 732d4f85ba532606b1b640ca3d41bd2715fe054a: **118 configured provisional refs, 52/57 photographed species**. These are CONFIGURED, not independently live verified after the newest merges. Group C is **9/15 with >=2 configured photos**. One-photo remainder: Paspalum langei; Sphenopholis obtusata; Muhlenbergia capillaris; Eragrostis minor; Cenchrus setaceus; Miscanthus sinensis. **Chat 2 sole publisher; Chat 1 releases/verifies Pages; Chat 4 does not edit shared gallery files.**",
+      "chars": 6336,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6838700629",
+      "heading": "## B14 sole photo publisher — **120/120 LIVE**, one more blank gallery filled (Nov 12, 2026)",
+      "chars": 3403,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    },
+    {
+      "source": "https://github.com/Crking92/Hays-Botany-Poaceae/issues/70#issuecomment-6839163459",
+      "heading": "## Sole Publisher checkpoint — B15 + B16 + B17 all LIVE (Nov 12, 2026)",
+      "chars": 4372,
+      "classification": "PUBLIC_CHECKPOINT_REVIEW",
+      "note": "Retain original comment as authoritative detail; no per-image certification inferred from comment alone"
+    }
+  ],
+  "still_needs": "Extract exact per-photo identities and statuses from indexed comments and reconcile with current main manifests, PR merges, image hash and pixel/rights holds; avoid treating source scout as publication or final taxonomic certification",
+  "counts": {
+    "issue70_total_comments": 184,
+    "photo_relevant_comments": 169,
+    "selected_packet_index": 22
+  }
+}
