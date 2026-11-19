@@ -5,6 +5,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'site/visual-key-lab/main-question-existing-arrows-batch1.json'
       - 'scripts/smoke_grass_key_visitor_browser.py'
+      - 'scripts/replay_lindheimers_muhly_20261119.py'
       - 'site/visual-key-lab/source-scored-admissions.json'
       - 'site/visual-key-lab/promotion-review-37-20261116.json'
       - 'site/visual-key-lab/ready-core-gap-assignments.json'
@@ -15,6 +16,7 @@ on:
       - 'site/visual-key-lab/index.html'
       - 'site/visual-key-lab/main-question-existing-arrows-batch1.json'
       - 'scripts/smoke_grass_key_visitor_browser.py'
+      - 'scripts/replay_lindheimers_muhly_20261119.py'
       - 'site/visual-key-lab/source-scored-admissions.json'
       - 'site/visual-key-lab/promotion-review-37-20261116.json'
       - 'site/visual-key-lab/ready-core-gap-assignments.json'
@@ -42,6 +44,7 @@ jobs:
           mkdir -p qa-report
           python -m http.server 8772 --directory . >/tmp/hays-grass-key-http.log 2>&1 &
           sleep 2
+          python scripts/replay_lindheimers_muhly_20261119.py
           python scripts/smoke_grass_key_visitor_browser.py
       - name: Upload visitor screenshots
         if: always()
@@ -69,7 +72,9 @@ jobs:
         env:
           HAYS_GRASS_TEST_URL: https://crking92.github.io/Hays-Botany-Poaceae/site/visual-key-lab/index.html
           HAYS_GRASS_TEST_LIVE: '1'
-        run: python scripts/smoke_grass_key_visitor_browser.py
+        run: |
+          python scripts/smoke_grass_key_visitor_browser.py
+          python scripts/replay_lindheimers_muhly_20261119.py
       - name: Upload verified public-site screenshots
         if: always()
         uses: actions/upload-artifact@v4
