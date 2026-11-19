@@ -954,6 +954,47 @@ console.log("PASS: Gould red lovegrass pp190-191 and H&L p49 long-only ligule ex
 }
 console.log("PASS: Gould p304 historical variety correctly scoped; independent H&L p64 true ligule rules out >8 mm only");
 
+// Gould p209 exact Tridens albescens account: <=0.5mm true inner
+// fringed membrane, corroborated independently by H&L p65. Test
+// only long >8mm conflict; avoid false exclusions for 1–4mm blades.
+{
+ const rows=source.additional_species_treatments.filter(x=>x.species_id==="tridens-albescens");
+ assert.equal(rows.length,1,"Exactly one Gould white tridens p209 account");
+ const g=rows[0];assert.deepEqual(g.printed_pages,[209]);
+ const obs=new Map(g.observations.map(x=>[x.character,x]));
+ assert.equal(obs.get("true_ligule").length_mm_usual_max,0.5);
+ assert.equal(obs.get("true_ligule").structure,"minute fringed membrane");
+ assert.deepEqual(obs.get("leaf_blades").width_mm,[1,4]);
+ assert.deepEqual(obs.get("spikelets").floret_count,[4,11]);
+ assert.deepEqual(obs.get("lemmas").lower_lemma_length_mm,[3,4]);
+ const existing=read("species-d4.json").filter(x=>x.id==="tridens-albescens");
+ assert.equal(existing.length,1,"White tridens scored item preserved");
+ assert.equal(existing[0].photos.length,2,"Both pre-existing photos preserved");
+ assert(existing[0].traits.habit.includes("rhizome"),"Prior rhizome scoring kept");
+ assert(existing[0].character_evidence.ligule_ciliate_minute_membrane_regional.reported_states.includes("tiny ligule under 0.5 mm"));
+ const vm=require("node:vm");
+ const state={gouldSource:source,refineEvidenceMap:{},refineCharacters:[],
+   refineSelected:{},selected:{},refineEvidenceOptionKeys:new Set()};
+ const begin=html.indexOf("function refinementEvidence("),end=html.indexOf("function refinementSection(",begin);
+ assert(begin>0&&end>begin);
+ const ctx=vm.createContext({state,species:existing[0]});
+ vm.runInContext(html.slice(begin,end),ctx);
+ for(const choice of ["tiny","short","medium","long"]){
+   state.refineSelected.ligule_length=choice;
+   const found=vm.runInContext("verifiedAdvancedConflict(species)",ctx);
+   assert.equal(found.length,choice==="long"?1:0,"White tridens true ligule "+choice);
+   if(choice==="long")assert.equal(found[0].policy,"EXACT_TRIDENS_ALBESCENS_MAX_HALF_MM_VS_LONG");
+ }
+ state.refineSelected.ligule_length="long";
+ state.gouldSource={additional_species_treatments:[]};
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(species)",ctx).length,0,"Gould p209 absent means no exclusion");
+ state.gouldSource=source;
+ const other=structuredClone(existing[0]);delete other.character_evidence.ligule_ciliate_minute_membrane_regional;
+ ctx.species=other;
+ assert.equal(vm.runInContext("verifiedAdvancedConflict(species)",ctx).length,0,"H&L corroboration absent means no exclusion");
+}
+console.log("PASS: Gould Tridens p209 true ligule excludes over8mm only, other states intact");
+
 // Eriochloa sericea 2026-11-18 Gould p.433 species account + exact
 // H&L p.50 CILIATE LIGULE upper bound of 1 mm. Gould itself DOES NOT
 // state the ligule length. The neighboring Panicum genus starts lower
