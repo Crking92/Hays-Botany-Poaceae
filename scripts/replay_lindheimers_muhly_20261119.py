@@ -83,7 +83,11 @@ def inspect(page):
 
 if __name__ == "__main__":
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        launch_options = {"headless": True}
+        chrome_channel = os.environ.get("HAYS_GRASS_BROWSER_CHANNEL")
+        if chrome_channel:
+            launch_options["channel"] = chrome_channel
+        browser = p.chromium.launch(**launch_options)
         try:
             page = browser.new_page(viewport={"width": 1280, "height": 900})
             result = inspect(page)
