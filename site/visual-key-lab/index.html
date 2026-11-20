@@ -381,13 +381,33 @@ html[data-theme="dark"] .stem-field-guide{background:#23372b}
 html[data-theme="dark"] .ligule-edge-choice[aria-pressed="true"]{background:#2b5239;border-color:#a3d9b2}
 html[data-theme="dark"] .ligule-edge-choice svg{background:#dcebd7}
 @media(max-width:530px){.ligule-part{padding:11px}.ligule-edge-grid,.ligule-key-terms{grid-template-columns:1fr}.ligule-edge-choice{min-height:90px}.ligule-edge-choice svg{width:78px;height:64px;flex-basis:78px}}
+
+/* Beta issue reporting: no backend, user controls screenshot and email send. */
+.feedback-launch{color:var(--ink);background:var(--white);border:1px solid var(--line)}
+.feedback-launch:hover{background:var(--pale)}
+.feedback-results-button{display:inline-flex;justify-content:center;align-items:center;margin-top:8px;min-height:42px}
+#feedback-dialog{border:1px solid var(--line);background:var(--white);color:var(--ink);border-radius:18px;width:min(560px,calc(100vw - 24px));max-height:calc(100dvh - 26px);padding:0;box-shadow:0 14px 48px #0005}
+#feedback-dialog::backdrop{background:#0009}
+.feedback-modal{padding:22px;display:grid;gap:12px}
+.feedback-modal-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.feedback-modal-header h2{font-family:Georgia,serif;font-size:1.43rem;line-height:1.2;margin:0}
+.feedback-close{border:1px solid var(--line);background:var(--pale);color:var(--ink);width:36px;height:36px;border-radius:10px;font-size:1.4rem}
+.feedback-modal p{font-size:.88rem;line-height:1.45;color:var(--muted);margin:0}
+.feedback-modal label{font-size:.86rem;font-weight:750}
+.feedback-modal textarea{width:100%;min-height:110px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:10px;padding:11px;font:inherit;resize:vertical}
+.feedback-modal textarea:focus-visible{outline:3px solid #dea94e;outline-offset:2px}
+.feedback-actions{display:flex;flex-wrap:wrap;gap:8px}
+.feedback-actions .btn{flex:1 1 145px;min-height:44px;white-space:normal;text-align:center}
+.feedback-modal .feedback-caption{font-size:.79rem}
+.feedback-modal .feedback-status{color:var(--ink);font-weight:700}
+@media(max-width:560px){.feedback-modal{padding:16px}.feedback-actions .btn{flex:1 1 100%}}
 </style>
 <link rel="stylesheet" href="grass-glossary.css?v=2">
 </head>
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="photo-review.html">Review photos</a><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
 <main class="wrap">
-  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs or illustrated traits that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p><button type="button" class="btn btn-secondary hero-reset" id="reset-field-key-top" aria-label="Start over: clear all grass observations and filters"><span class="reset-symbol" aria-hidden="true">↺</span> Start over · clear all choices</button></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
+  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs or illustrated traits that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p><button type="button" class="btn btn-secondary hero-reset" id="reset-field-key-top" aria-label="Start over: clear all grass observations and filters"><span class="reset-symbol" aria-hidden="true">↺</span> Start over · clear all choices</button><button type="button" class="btn btn-secondary hero-reset feedback-launch" id="feedback-report-top">✉ Report an error</button></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
   <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
   <details class="source-decision-note" id="source-disagreement-policy">
     <summary>Botanical source note: how disagreements are handled</summary>
@@ -411,13 +431,29 @@ html[data-theme="dark"] .ligule-edge-choice svg{background:#dcebd7}
       </details>
     </section>
     <aside class="panel results" aria-label="Candidate grasses">
-      <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">169 grasses</span></div><p id="results-note">All 169 grasses appear together. Newer profiles are labeled when their identity or traits still need verification.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><button type="button" class="btn btn-secondary key-reset" id="reset-field-key" aria-label="Clear all grass observations, search, and filters">Start over</button><button type="button" class="btn btn-secondary evidence-focus" id="focus-confirmed" aria-pressed="false" aria-label="Show only fully documented grass matches for selected characteristics">Show documented matches only</button><p id="focus-note" class="smallmuted">Unknown evidence stays possible. Use the documented-only view to focus your comparisons without ruling out unstudied grasses.</p><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
+      <div class="results-head"><div class="results-title"><h2>Possible grasses</h2><span class="count" id="count">169 grasses</span></div><p id="results-note">All 169 grasses appear together. Newer profiles are labeled when their identity or traits still need verification.</p><div class="filterline" id="filters"><button data-range="all" aria-pressed="true">All</button><button data-range="native" aria-pressed="false">Regional native set</button><button data-range="introduced" aria-pressed="false">Introduced comparisons</button></div><input class="search" id="species-search" type="search" placeholder="Search remaining grasses…" aria-label="Search remaining grasses"><button type="button" class="btn btn-secondary key-reset" id="reset-field-key" aria-label="Clear all grass observations, search, and filters">Start over</button><button type="button" class="btn btn-secondary feedback-results-button feedback-launch" id="feedback-report-results">✉ Report an error</button><button type="button" class="btn btn-secondary evidence-focus" id="focus-confirmed" aria-pressed="false" aria-label="Show only fully documented grass matches for selected characteristics">Show documented matches only</button><p id="focus-note" class="smallmuted">Unknown evidence stays possible. Use the documented-only view to focus your comparisons without ruling out unstudied grasses.</p><div class="compare-controls" id="compare-controls" hidden><button type="button" class="btn btn-secondary" id="compare-toggle">Compare matches</button><span class="compare-help" id="compare-help" hidden>Choose 2–3 grasses below</span><button type="button" class="btn btn-primary" id="compare-open" hidden disabled>Compare selected</button></div></div>
       <div class="results-list" id="results" aria-live="polite"></div>
       <div class="results-footer" id="results-footer">Unknown characters never eliminate a grass automatically.</div><details class="pending" id="caution-details" hidden><summary id="caution-summary">Other provisional matches to review</summary><div id="caution-list" class="pending-list caution-list"></div></details><details class="pending"><summary id="pending-summary">Other species from our catalog</summary><div id="pending-items" class="pending-list"></div></details>
     </aside>
   </div>
   <footer class="footer"><div>Compare several visible features before deciding on an identification. Each photograph keeps its original creator and license credit.</div></footer>
 </main>
+
+<dialog id="feedback-dialog" aria-label="Report an issue with the Grass ID Lab">
+  <div class="feedback-modal">
+    <div class="feedback-modal-header"><h2>Report a Grass Lab issue</h2><button type="button" class="feedback-close" id="feedback-close" aria-label="Close feedback">×</button></div>
+    <p>Tell us what was confusing or incorrect. Your selected characteristics and a link to these exact selections will be included in the email draft to <strong>info@glassrootgarden.com</strong>.</p>
+    <label for="feedback-description">What happened? (optional)</label>
+    <textarea id="feedback-description" rows="4" placeholder="For example: I selected a folded blade, but this grass still appeared under supported matches."></textarea>
+    <div class="feedback-actions">
+      <button type="button" class="btn btn-primary" id="feedback-screenshot-email">Screenshot + email</button>
+      <button type="button" class="btn btn-secondary" id="feedback-email-only">Email without screenshot</button>
+      <button type="button" class="btn btn-secondary" id="feedback-copy-report">Copy report</button>
+    </div>
+    <p class="feedback-caption">Screenshot + email: your browser may ask you to share a screen or tab. Choose this Grass Lab tab. The image stays on your device until you attach the downloaded PNG (or paste the copied image) into the email. The button opens a draft; <strong>you decide whether to send it</strong>. On phones without screen-capture support, use your usual screenshot shortcut and choose Email without screenshot.</p>
+    <p id="feedback-status" class="feedback-status" role="status" aria-live="polite"></p>
+  </div>
+</dialog>
 <dialog id="detail-dialog" aria-label="Grass details"><div id="detail-body"></div></dialog><dialog class="compare-dialog" id="compare-dialog" aria-label="Compare possible grasses"><div id="compare-body"></div></dialog>
 <script>
 (function(){
@@ -4641,7 +4677,117 @@ function resetFieldKey(){
  // existing button while far down in the results list.
  $("steps").scrollIntoView({block:"start",behavior:"smooth"});
 }
-["reset-field-key-top","reset-field-key"].forEach(id=>$(id).addEventListener("click",resetFieldKey));$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+["reset-field-key-top","reset-field-key"].forEach(id=>$(id).addEventListener("click",resetFieldKey));
+/* Anonymous beta feedback by email, with optional consent-based tab capture.
+   No uploads, tracking, server calls, or automatic email sending. */
+const feedbackDialog=$("feedback-dialog");
+const feedbackStatus=$("feedback-status");
+function feedbackReport(screenshotAdded=false){
+ const core=qs.map(q=>{
+  const selected=state.selected[q.id];
+  const option=q.options.find(o=>o[0]===selected);
+  return q.short+": "+(option?option[1]:"Skipped / unknown");
+ });
+ const extras=state.refineCharacters.flatMap(c=>{
+  const selected=selectedRefinementStates(c.id);
+  if(!selected.length)return[];
+  return[c.label+": "+selected.map(id=>c.options.find(o=>o.id===id)?.label||id).join(", ")];
+ });
+ const details=$("feedback-description").value.trim()||"[Please describe the error or confusion here]";
+ const params=[
+  "Hi Glass Root Garden,",
+  "",
+  "I have feedback about the Hays Grass ID Lab beta:",
+  details,
+  "",
+  "My current selections:",
+  ...core,
+  ...(extras.length?["","Other selected details:",...extras]:[]),
+  "",
+  "Range filter: "+state.range,
+  ...(state.query?["Results search: "+state.query]:[]),
+  "Source-documented mode: "+(state.refineOnlyDocumented||state.focusConfirmed?"On":"Off"),
+  "",
+  "Reopen these selected characteristics:",
+  location.href,
+  "",
+  screenshotAdded?
+   "Screenshot: A PNG was saved to my device. I will attach it to this email or paste it before sending.":
+   "Screenshot: I can attach one if helpful.",
+  "",
+  "Sent by a volunteer beta tester. Please reply to the email sender if follow-up is needed."
+ ];
+ return params.join("\n");
+}
+function openFeedbackDraft(withScreenshot=false){
+ // mailto can prefill subject/body but cannot attach an image or send.
+ const subject="Hays Grass ID Lab beta — error or suggestion";
+ const body=feedbackReport(withScreenshot);
+ const mailto="mailto:info@glassrootgarden.com?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+ feedbackStatus.textContent="Opening an email draft. Your email app must be configured; press Send yourself.";
+ window.location.href=mailto;
+}
+["feedback-report-top","feedback-report-results"].forEach(id=>$(id).addEventListener("click",()=>{
+ feedbackStatus.textContent="";
+ feedbackDialog.showModal();
+ $("feedback-description").focus();
+}));
+$("feedback-close").addEventListener("click",()=>feedbackDialog.close());
+feedbackDialog.addEventListener("click",event=>{if(event.target===feedbackDialog)feedbackDialog.close()});
+$("feedback-email-only").addEventListener("click",()=>openFeedbackDraft(false));
+$("feedback-copy-report").addEventListener("click",async()=>{
+ const report=feedbackReport();
+ try{
+  if(!navigator.clipboard?.writeText)throw Error("Clipboard API unavailable");
+  await navigator.clipboard.writeText(report);
+  feedbackStatus.textContent="Report copied! Paste it into an email to info@glassrootgarden.com.";
+ }catch(_e){
+  feedbackStatus.textContent="Copy isn't available in this browser. Choose Email without screenshot, or email info@glassrootgarden.com directly with your selected URL.";
+ }
+});
+$("feedback-screenshot-email").addEventListener("click",async()=>{
+ const button=$("feedback-screenshot-email");
+ if(button.disabled)return;
+ button.disabled=true;
+ let stream=null,created=false;
+ try{
+  if(!navigator.mediaDevices?.getDisplayMedia)throw Error("Screen capture unsupported");
+  // Request capture only after the visitor explicitly asks; the browser's
+  // built-in picker provides consent and lets them choose the current tab.
+  stream=await navigator.mediaDevices.getDisplayMedia({video:true,audio:false,preferCurrentTab:true});
+  feedbackDialog.close(); // Don't put the feedback modal in the screenshot.
+  const video=document.createElement("video");
+  video.muted=true;video.playsInline=true;video.srcObject=stream;
+  await video.play();
+  await new Promise(resolve=>setTimeout(resolve,180)); // Paint page after close.
+  if(!video.videoWidth||!video.videoHeight)throw Error("No video frame received");
+  const canvas=document.createElement("canvas");
+  canvas.width=video.videoWidth;canvas.height=video.videoHeight;
+  canvas.getContext("2d").drawImage(video,0,0);
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+  if(!blob)throw Error("Screenshot encoding failed");
+  // Download remains local. Standard mailto does not support attachments.
+  const downloadUrl=URL.createObjectURL(blob);
+  const link=document.createElement("a");link.href=downloadUrl;
+  link.download="hays-grass-lab-feedback-"+new Date().toISOString().slice(0,10)+".png";
+  document.body.append(link);link.click();link.remove();
+  setTimeout(()=>URL.revokeObjectURL(downloadUrl),1200);
+  created=true;
+  // Best-effort clipboard convenience; download always remains fallback.
+  if(navigator.clipboard?.write&&typeof ClipboardItem!=="undefined"){
+   try{await navigator.clipboard.write([new ClipboardItem({"image/png":blob})]);}catch(_e){}
+  }
+ }catch(_e){
+  // Permission denied or unsupported mobile browsers: open useful report
+  // anyway rather than making the feedback route unusable.
+  feedbackStatus.textContent="No screenshot captured. You can take one manually and attach it to the email.";
+ }finally{
+  if(stream)stream.getTracks().forEach(track=>track.stop());
+  button.disabled=false;
+ }
+ openFeedbackDraft(created);
+});
+$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 
 /* Reuse existing hand-drawn field diagrams for glossary education.
    These are visual explanations only, never species-level scoring evidence. */
