@@ -706,6 +706,17 @@ function applyApprovedGeneralPhotos(scored,manifest){
   return installed;
 }
 function credit(p){return p?[p.creator,p.license].filter(Boolean).join(" · "):"Source image pending"}
+/* Link to a CC deed only when the source record states an unambiguous
+   version. Unversioned CC BY is intentionally not guessed. */
+function photoLicenseTermsUrl(photo){
+ if(photo?.license_url?.startsWith("https://"))return photo.license_url;
+ const t=(photo?.license||"").trim().toUpperCase();
+ if(t==="CC0"||t==="CC0 1.0")return "https://creativecommons.org/publicdomain/zero/1.0/";
+ const m=t.match(/^CC (BY(?:-SA|-NC|-NC-SA)?) (2\.0|2\.5|3\.0|4\.0)( US)?$/);
+ if(!m)return null;
+ return "https://creativecommons.org/licenses/"+m[1].toLowerCase()+"/"+m[2]+(m[3]?"/us":"")+"/";
+}
+
 
 /* Eight pinned, previously-reviewed photo examples. These don't create evidence
    states, award points, certify local vouchers, or grant reuse rights. */
@@ -3310,10 +3321,10 @@ function compareCandidates(){
         a.href=p.source_page;a.target="_blank";a.rel="noopener noreferrer";
         caption.append(a);
       }
-      if(p?.license_url?.startsWith("https://")){
+      if(photoLicenseTermsUrl(p)){
         const terms=node("a","mini-credit",
           p.license.startsWith("Copyright Tom Chester")?"Author's reuse permission":"Photo license terms");
-        terms.href=p.license_url;terms.target="_blank";terms.rel="noopener noreferrer";
+        terms.href=photoLicenseTermsUrl(p);terms.target="_blank";terms.rel="noopener noreferrer";
         caption.append(terms);
       }
       figure.append(image(p,s.common+" — "+(p.label||"photograph")),caption);
@@ -3512,7 +3523,9 @@ $("pending-summary").textContent=pending.length?pending.length+" grasses not yet
 const box=$("pending-items");box.replaceChildren();
 for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";box.append(a)}
 }
-function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)];const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photo.license_url?.startsWith("https://")){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photo.license_url;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));
+function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)].filter(Boolean);const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);
+if(!picks.length)gallery.append(node("p","photo-bad","Photograph pending rights and identity verification"));
+for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photoLicenseTermsUrl(photo)){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photoLicenseTermsUrl(photo);a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));
 if(["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id))
  copy.append(node("p","smallmuted",
  "Rhizome status unresolved under Gould/Flora source priority: neither top-priority exact species treatment explicitly establishes rhizome absence or presence. Hagenbuch & Lemke describe absence, while other accounts report occurrence. Keep the plant Still possible when choosing rhizomes; verify a connected underground stem."));
@@ -3859,6 +3872,34 @@ function applyGouldScreenshotBatch(pack){
  state.refineCharacters=characters;state.refineEvidenceMap=records;
 }
 
+/* Public beta rights gate. Preserve archive and source-scored traits, but never
+   display these three Larry Allain/USGS Texas grama images until their exact
+   individual reuse rights are established. The published family gallery already
+   holds these photos (issue #81, PR #260); apply the same gate here. */
+function suppressUnverifiedLarryAllainPhotos(species){
+ // The three Texas grama files are rights-held in issue #81. Two source-labeled
+ // trial examples have the same copyright uncertainty: a USGS hosting/credit
+ // line is not an exact-image public domain license (USGS policy).
+ const heldBySpecies={
+  "bouteloua-rigidiseta":[
+   "larry-allain-usgs-texas-grama-field-habit.jpg",
+   "larry-allain-usgs-texas-grama-flower-head-1.jpg",
+   "larry-allain-usgs-texas-grama-flower-head-2.jpg"
+  ],
+  "paspalum-langei":["Paspalum+Langei_infl+3.JPG"],
+  "bothriochloa-longipaniculata":["Bothriochloa+longipaniculata_0001.JPG"]
+ };
+ for(const plant of species){
+  const held=heldBySpecies[plant.id];
+  if(!held||!Array.isArray(plant.photos))continue;
+  plant.photos=plant.photos.filter(photo=>{
+   const url=photo?.src||"";
+   if(plant.id==="bouteloua-rigidiseta")
+    return !held.some(filename=>url.endsWith("/bouteloua-rigidiseta/images/"+filename));
+   return !held.some(filename=>url.includes("/PlantID/Image/GivenFile?file="+filename));
+  });
+ }
+}
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
 // Supplementary Gould text augments the displayed species lessons without mutating scored records.
 try{const res=await fetch("source-reference-gould-1975.json",{cache:"no-store"});if(res.ok){const ref=await res.json();if(ref.source?.id==="gould-1975-grasses-of-texas"&&Array.isArray(ref.learner_diagnostic_checks))state.gouldSource=ref;}}
@@ -3867,6 +3908,7 @@ catch(_e){ /* Missing literature supplement never blocks the scored key. */ }
 // If this optional manifest is unavailable, the 112 original galleries still work.
 try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
 catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
+suppressUnverifiedLarryAllainPhotos(state.species);
 // Existing, source-matched numbered pointers from the 112-grass Learner:
  // must match original photo source/creator/license/filename exactly.
  // This is non-scoring teaching media; any error leaves regular photos intact.
@@ -4661,6 +4703,7 @@ if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("
   state.focusConfirmed=!state.focusConfirmed;
   updateUrl();renderResults();
  });
+ suppressUnverifiedLarryAllainPhotos(state.species); // Recheck after loading provisional trials.
  renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});
 function resetFieldKey(){
  // Same action for the top and results-panel buttons. Keep the visitor's
