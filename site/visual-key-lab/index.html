@@ -706,6 +706,17 @@ function applyApprovedGeneralPhotos(scored,manifest){
   return installed;
 }
 function credit(p){return p?[p.creator,p.license].filter(Boolean).join(" · "):"Source image pending"}
+/* Link to a CC deed only when the source record states an unambiguous
+   version. Unversioned CC BY is intentionally not guessed. */
+function photoLicenseTermsUrl(photo){
+ if(photo?.license_url?.startsWith("https://"))return photo.license_url;
+ const t=(photo?.license||"").trim().toUpperCase();
+ if(t==="CC0"||t==="CC0 1.0")return "https://creativecommons.org/publicdomain/zero/1.0/";
+ const m=t.match(/^CC (BY(?:-SA|-NC|-NC-SA)?) (2\.0|2\.5|3\.0|4\.0)( US)?$/);
+ if(!m)return null;
+ return "https://creativecommons.org/licenses/"+m[1].toLowerCase()+"/"+m[2]+(m[3]?"/us":"")+"/";
+}
+
 
 /* Eight pinned, previously-reviewed photo examples. These don't create evidence
    states, award points, certify local vouchers, or grant reuse rights. */
@@ -3310,10 +3321,10 @@ function compareCandidates(){
         a.href=p.source_page;a.target="_blank";a.rel="noopener noreferrer";
         caption.append(a);
       }
-      if(p?.license_url?.startsWith("https://")){
+      if(photoLicenseTermsUrl(p)){
         const terms=node("a","mini-credit",
           p.license.startsWith("Copyright Tom Chester")?"Author's reuse permission":"Photo license terms");
-        terms.href=p.license_url;terms.target="_blank";terms.rel="noopener noreferrer";
+        terms.href=photoLicenseTermsUrl(p);terms.target="_blank";terms.rel="noopener noreferrer";
         caption.append(terms);
       }
       figure.append(image(p,s.common+" — "+(p.label||"photograph")),caption);
@@ -3514,7 +3525,7 @@ for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?
 }
 function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)].filter(Boolean);const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);
 if(!picks.length)gallery.append(node("p","photo-bad","Photograph pending rights and identity verification"));
-for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photo.license_url?.startsWith("https://")){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photo.license_url;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));
+for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photoLicenseTermsUrl(photo)){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photoLicenseTermsUrl(photo);a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));
 if(["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id))
  copy.append(node("p","smallmuted",
  "Rhizome status unresolved under Gould/Flora source priority: neither top-priority exact species treatment explicitly establishes rhizome absence or presence. Hagenbuch & Lemke describe absence, while other accounts report occurrence. Keep the plant Still possible when choosing rhizomes; verify a connected underground stem."));
