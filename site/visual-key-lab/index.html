@@ -10,7 +10,9 @@
 :root{--ink:#1e352b;--forest:#153e30;--forest2:#285c48;--muted:#65786e;--paper:#f5f6f0;--white:#fff;--line:#dae3d9;--mint:#e3efe5;--pale:#f0f3ec;--amber:#7b5927;--shadow:0 7px 22px rgba(17,51,31,.07)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:#226b4d}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #dea94e;outline-offset:3px}
 .sitebar{background:var(--forest);color:#fff;padding:13px max(18px,calc((100vw - 1220px)/2));display:flex;justify-content:space-between;gap:15px;align-items:center}.brand{font-size:.78rem;font-weight:800;letter-spacing:.14em}.sitebar a{color:#d9efdd;text-decoration:none;font-size:.86rem}.sitebar a:hover{text-decoration:underline}
-.wrap{width:min(1210px,calc(100% - 32px));margin:0 auto}.hero{padding:34px 0 23px;display:grid;gap:17px;grid-template-columns:1fr auto;align-items:end}.eyebrow{margin:0 0 8px;color:#527d5f;letter-spacing:.13em;text-transform:uppercase;font-weight:800;font-size:.73rem}.hero h1{font-family:Georgia,serif;font-size:clamp(2rem,4.7vw,3.7rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 11px}.hero p{max-width:745px;margin:0;color:#52675a;font-size:1.05rem}.hero-stamp{background:#e4ecdc;border:1px solid #cddcc8;border-radius:18px;padding:18px;text-align:center;min-width:154px}.hero-stamp b{display:block;font-family:Georgia,serif;font-size:2.3rem;color:var(--forest)}.hero-stamp small{color:var(--muted)}
+.wrap{width:min(1210px,calc(100% - 32px));margin:0 auto}.hero{padding:34px 0 23px;display:grid;gap:17px;grid-template-columns:1fr auto;align-items:end}.eyebrow{margin:0 0 8px;color:#527d5f;letter-spacing:.13em;text-transform:uppercase;font-weight:800;font-size:.73rem}.hero h1{font-family:Georgia,serif;font-size:clamp(2rem,4.7vw,3.7rem);line-height:1.08;letter-spacing:-.03em;margin:0 0 11px}.hero p{max-width:745px;margin:0;color:#52675a;font-size:1.05rem}.hero-reset{display:inline-flex;align-items:center;gap:8px;margin-top:15px;min-height:44px;padding:10px 16px}
+.hero-reset .reset-symbol{font-size:1.15rem;line-height:1}
+.hero-stamp{background:#e4ecdc;border:1px solid #cddcc8;border-radius:18px;padding:18px;text-align:center;min-width:154px}.hero-stamp b{display:block;font-family:Georgia,serif;font-size:2.3rem;color:var(--forest)}.hero-stamp small{color:var(--muted)}
 .notice{margin:0 0 20px;padding:13px 16px;background:#f2efde;border:1px solid #e1dcc1;border-radius:11px;font-size:.88rem;color:#655b3c}
 .workspace{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(310px,.92fr);gap:23px;align-items:start;padding-bottom:35px}.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}.panel-head{padding:22px 22px 10px}.section-kicker{text-transform:uppercase;color:#648673;letter-spacing:.14em;font-size:.72rem;font-weight:800}.panel h2{font-family:Georgia,serif;line-height:1.2;font-size:1.62rem;margin:6px 0 8px}.sub{color:var(--muted);font-size:.92rem;margin:0}.progress-track{height:8px;background:#e5ede4;border-radius:30px;overflow:hidden;margin:15px 0 7px}.progress-fill{height:100%;width:0%;background:#599e75;border-radius:30px;transition:width .2s}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem}
 .steps{display:flex;gap:8px;overflow:auto;padding:15px 20px;border-bottom:1px solid var(--line)}.step{white-space:nowrap;border:1px solid #d4e0d2;background:#f8faf6;color:#486151;border-radius:25px;padding:9px 14px;font-size:.85rem;font-weight:700}.step[aria-current=true]{background:var(--forest);color:white;border-color:var(--forest)}.step.done:before{content:"✓ ";font-weight:900}
@@ -385,7 +387,7 @@ html[data-theme="dark"] .ligule-edge-choice svg{background:#dcebd7}
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="photo-review.html">Review photos</a><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
 <main class="wrap">
-  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs or illustrated traits that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
+  <section class="hero"><div><p class="eyebrow">Picture-first grass identification</p><h1>Find a grass by what you see.</h1><p>Choose photographs or illustrated traits that resemble your plant. Add a leaf, stem, or seedhead detail to narrow the possibilities. The text tells you what to look for, without making you memorize botanical words first.</p><button type="button" class="btn btn-secondary hero-reset" id="reset-field-key-top" aria-label="Start over: clear all grass observations and filters"><span class="reset-symbol" aria-hidden="true">↺</span> Start over · clear all choices</button></div><div class="hero-stamp"><b id="coded-total">169</b><small id="coded-subtitle">grasses in this key</small></div></section>
   <nav class="practice-links" aria-label="Grass photo lessons"><span>Practice with photo lessons:</span><a href="johnsongrass.html">Johnsongrass</a><a href="compare-bluestems.html">Bluestems</a><a href="compare-gramas-paspalums.html">Gramas and paspalums</a></nav>
   <details class="source-decision-note" id="source-disagreement-policy">
     <summary>Botanical source note: how disagreements are handled</summary>
@@ -4624,15 +4626,22 @@ if(new Set(state.species.map(s=>s.id)).size!==state.species.length)throw Error("
   updateUrl();renderResults();
  });
  renderOptionalCharacters();state.question=qs.findIndex(q=>!state.selected[q.id]);if(state.question<0)state.question=0;document.querySelectorAll("#filters button").forEach(b=>b.addEventListener("click",()=>{state.range=b.dataset.range;document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderResults()}));$("species-search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();renderResults()});
-$("reset-field-key").addEventListener("click",()=>{
+function resetFieldKey(){
+ // Same action for the top and results-panel buttons. Keep the visitor's
+ // theme and tip-display preference, but clear every identification choice.
  state.selected={head:null,habit:null,ligule:null,awns:null};
  state.refineSelected={};state.refineOnlyDocumented=false;state.focusConfirmed=false;
  state.range="all";state.query="";state.question=0;
  state.comparing=false;state.compareIds=[];state.refineSection="blade";
  $("species-search").value="";
  document.querySelectorAll("#filters button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.range==="all")));
+ const details=$("optional-character-wrap");if(details)details.open=false;
  updateUrl();renderOptionalCharacters();render();
-});$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+ // Make the first question visible, including for someone who pressed the
+ // existing button while far down in the results list.
+ $("steps").scrollIntoView({block:"start",behavior:"smooth"});
+}
+["reset-field-key-top","reset-field-key"].forEach(id=>$(id).addEventListener("click",resetFieldKey));$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 
 /* Reuse existing hand-drawn field diagrams for glossary education.
    These are visual explanations only, never species-level scoring evidence. */
