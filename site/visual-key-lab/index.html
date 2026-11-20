@@ -3859,6 +3859,24 @@ function applyGouldScreenshotBatch(pack){
  state.refineCharacters=characters;state.refineEvidenceMap=records;
 }
 
+/* Public beta rights gate. Preserve archive and source-scored traits, but never
+   display these three Larry Allain/USGS Texas grama images until their exact
+   individual reuse rights are established. The published family gallery already
+   holds these photos (issue #81, PR #260); apply the same gate here. */
+function suppressHeldTexasGramaPhotos(species){
+ const held=new Set([
+  "larry-allain-usgs-texas-grama-field-habit.jpg",
+  "larry-allain-usgs-texas-grama-flower-head-1.jpg",
+  "larry-allain-usgs-texas-grama-flower-head-2.jpg"
+ ]);
+ for(const plant of species){
+  if(plant.id!=="bouteloua-rigidiseta"||!Array.isArray(plant.photos))continue;
+  plant.photos=plant.photos.filter(photo=>{
+   const url=photo?.src||"";
+   return !([...held].some(filename=>url.endsWith("/bouteloua-rigidiseta/images/"+filename)));
+  });
+ }
+}
 async function boot(){try{const responses=await Promise.all(["species-a.json","species-b.json","species-c1.json","species-c2.json","species-c3.json","species-d1.json","species-d2.json","species-d3.json","species-d4.json","../data/poaceae-index.json"].map(x=>fetch(x,{cache:"no-store"})));if(responses.some(x=>!x.ok))throw Error("One or more expanded key data files are unavailable");const parts=await Promise.all(responses.map(x=>x.json()));state.species=parts.slice(0,9).flat();state.catalog=parts[9];if(state.species.length!==112)throw Error("Original 112-scored inventory did not load");
 // Supplementary Gould text augments the displayed species lessons without mutating scored records.
 try{const res=await fetch("source-reference-gould-1975.json",{cache:"no-store"});if(res.ok){const ref=await res.json();if(ref.source?.id==="gould-1975-grasses-of-texas"&&Array.isArray(ref.learner_diagnostic_checks))state.gouldSource=ref;}}
@@ -3867,6 +3885,7 @@ catch(_e){ /* Missing literature supplement never blocks the scored key. */ }
 // If this optional manifest is unavailable, the 112 original galleries still work.
 try{const res=await fetch("photo-general-archive-extras.json",{cache:"no-store"});if(res.ok)applyApprovedGeneralPhotos(state.species,await res.json());}
 catch(_e){ /* Optional photo supplement failure never blocks the field key. */ }
+suppressHeldTexasGramaPhotos(state.species);
 // Existing, source-matched numbered pointers from the 112-grass Learner:
  // must match original photo source/creator/license/filename exactly.
  // This is non-scoring teaching media; any error leaves regular photos intact.
