@@ -403,6 +403,7 @@ html[data-theme="dark"] .ligule-edge-choice svg{background:#dcebd7}
 @media(max-width:560px){.feedback-modal{padding:16px}.feedback-actions .btn{flex:1 1 100%}}
 </style>
 <link rel="stylesheet" href="grass-glossary.css?v=2">
+<link rel="stylesheet" href="inat-observation-map.css?v=1">
 </head>
 <body>
 <header class="sitebar"><span class="brand">HAYS BOTANY / FIELD LAB</span><div class="sitebar-actions"><a href="photo-review.html">Review photos</a><a href="../">Browse all grasses</a><button type="button" id="preview-toggle" class="preview-toggle" aria-pressed="false">Fewer tips</button><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button></div></header>
@@ -455,6 +456,7 @@ html[data-theme="dark"] .ligule-edge-choice svg{background:#dcebd7}
   </div>
 </dialog>
 <dialog id="detail-dialog" aria-label="Grass details"><div id="detail-body"></div></dialog><dialog class="compare-dialog" id="compare-dialog" aria-label="Compare possible grasses"><div id="compare-body"></div></dialog>
+<script src="inat-observation-map.js?v=1" defer></script>
 <script>
 (function(){
 "use strict";
@@ -3523,7 +3525,9 @@ $("pending-summary").textContent=pending.length?pending.length+" grasses not yet
 const box=$("pending-items");box.replaceChildren();
 for(const s of pending){const a=node("a","",s.common||s.scientific);a.href="../?species="+encodeURIComponent(s.id);a.target="_blank";a.rel="noopener noreferrer";box.append(a)}
 }
-function detail(s){const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>dlg.close());head.append(lhs,close);area.append(head);const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)].filter(Boolean);const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);
+function detail(s){window.HaysINatObservationMap?.close();const p=pic(s,s.hero_i),dlg=$("detail-dialog"),area=$("detail-body");area.replaceChildren();const head=node("div","detail-head"),lhs=node("div");lhs.append(node("div","section-kicker","Hays Botany grass profile"),node("h2","",s.common),node("span","latin",s.scientific));if(s.trial)lhs.append(node("span","tag warn","Research trial · unverified"));if(s.source_scored)lhs.append(node("span","tag review","Source-scored · not a local voucher"));const close=node("button","close","×");close.type="button";close.setAttribute("aria-label","Close species detail");close.addEventListener("click",()=>{window.HaysINatObservationMap?.close();dlg.close()});head.append(lhs,close);area.append(head);
+const inatPanel=node("section","inat-observations");inatPanel.append(node("h3","","iNaturalist observations · Hays area / Texas"));area.append(inatPanel);
+const gallery=node("div","detail-grid");const allPicks=[p,...s.photos.filter(x=>!p||x.src!==p.src)].filter(Boolean);const picks=(s.trial||s.source_scored)?allPicks:allPicks.slice(0,4);
 if(!picks.length)gallery.append(node("p","photo-bad","Photograph pending rights and identity verification"));
 for(const photo of picks){const figure=node("div");figure.append(image(photo,photo.label),node("p","mini-credit",photo.label),node("p","mini-credit",credit(photo)));if(photo.source_page&&photo.source_page.startsWith("https://")){const a=node("a","mini-credit","Photo source");a.href=photo.source_page;a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}if(photoLicenseTermsUrl(photo)){const a=node("a","mini-credit",photo.license.startsWith("Copyright Tom Chester")?"Author reuse permission":"Photo license terms");a.href=photoLicenseTermsUrl(photo);a.target="_blank";a.rel="noopener noreferrer";figure.append(a)}gallery.append(figure)}area.append(gallery);const copy=node("div","detail-copy");const st=status(s)[0];if(s.trial)copy.append(node("p","smallmuted","Identification data still being checked. Compare more than one feature before deciding."));else copy.append(node("p","smallmuted",st));
 if(["bouteloua-dactyloides","eragrostis-intermedia"].includes(s.id))
@@ -3598,7 +3602,10 @@ if(displayedChecks.length){
     panel.append(block);
   }
   copy.append(panel);
-}copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail";a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal()}
+}copy.append(node("p","smallmuted","This is a pilot character match, not a specimen verification. Check more than one structure and use the original gallery for full source details."));const a=node("a","linkbutton","Open full Hays Botany lesson");a.href=BASE+"?species="+encodeURIComponent(s.id)+"#species-detail";a.target="_blank";a.rel="noopener noreferrer";copy.append(a);area.append(copy);dlg.showModal();
+if(window.HaysINatObservationMap)window.HaysINatObservationMap.mount(s,inatPanel);
+else{const link=node("a","inat-external","View observations on iNaturalist");link.href="https://www.inaturalist.org/observations?place_id=18&subview=map&taxon_name="+encodeURIComponent(s.scientific);link.target="_blank";link.rel="noopener noreferrer";inatPanel.append(node("p","inat-note","Interactive map unavailable; use the iNaturalist website."),link)}
+}
 function render(){renderTabs();renderQuestion();renderResults()}
 function appendPublishedChoiceGuide(character,option,guide){
  if(!option.detail)return;
@@ -4830,7 +4837,7 @@ $("feedback-screenshot-email").addEventListener("click",async()=>{
  }
  openFeedbackDraft(created);
 });
-$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog")e.target.close()});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog"){window.HaysINatObservationMap?.close();e.target.close()}});$("detail-dialog").addEventListener("close",()=>window.HaysINatObservationMap?.close());render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 
 /* Reuse existing hand-drawn field diagrams for glossary education.
    These are visual explanations only, never species-level scoring evidence. */
