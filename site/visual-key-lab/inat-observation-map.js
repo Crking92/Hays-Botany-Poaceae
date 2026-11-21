@@ -30,14 +30,17 @@
    const css=document.createElement("link");
    css.rel="stylesheet";css.href=LEAFLET_CSS;
    css.integrity=LEAFLET_CSS_HASH;css.crossOrigin="anonymous";
+   css.onload=()=>resolve();
+   css.onerror=()=>reject(new Error("Map stylesheet could not load"));
    document.head.append(css);
+  }).then(()=>new Promise((resolve,reject)=>{
    const script=document.createElement("script");
    script.src=LEAFLET_JS;script.async=true;
    script.integrity=LEAFLET_JS_HASH;script.crossOrigin="anonymous";
    script.onload=()=>window.L?.map?resolve(window.L):reject(new Error("Leaflet unavailable"));
    script.onerror=()=>reject(new Error("Map library could not load"));
    document.head.append(script);
-  }).catch(error=>{leafletPromise=null;throw error});
+  })).catch(error=>{leafletPromise=null;throw error});
   return leafletPromise;
  }
  function norm(name){
