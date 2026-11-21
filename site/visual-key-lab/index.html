@@ -4837,7 +4837,7 @@ $("feedback-screenshot-email").addEventListener("click",async()=>{
  }
  openFeedbackDraft(created);
 });
-$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog"){window.HaysINatObservationMap?.close();e.target.close()}});render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
+$("detail-dialog").addEventListener("click",e=>{if(e.target.id==="detail-dialog"){window.HaysINatObservationMap?.close();e.target.close()}});$("detail-dialog").addEventListener("close",()=>window.HaysINatObservationMap?.close());render()}catch(err){$("question").replaceChildren(node("p","help","Could not load the pilot: "+err.message));$("results").replaceChildren(node("p","help","The species data may still be publishing; the existing learner remains available above."))}}
 
 /* Reuse existing hand-drawn field diagrams for glossary education.
    These are visual explanations only, never species-level scoring evidence. */
