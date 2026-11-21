@@ -1,0 +1,30 @@
+name: Grass ID Lab iNaturalist occurrence map — exact taxon and local/Texas QA
+on:
+  pull_request:
+    paths:
+      - site/visual-key-lab/index.html
+      - site/visual-key-lab/inat-observation-map.js
+      - site/visual-key-lab/inat-observation-map.css
+      - scripts/test_grass_inat_observation_map.cjs
+      - .github/workflows/qa_grass_inat_map.yml
+  push:
+    branches: [main]
+    paths:
+      - site/visual-key-lab/index.html
+      - site/visual-key-lab/inat-observation-map.js
+      - site/visual-key-lab/inat-observation-map.css
+      - scripts/test_grass_inat_observation_map.cjs
+      - .github/workflows/qa_grass_inat_map.yml
+permissions:
+  contents: read
+jobs:
+  qa-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check site/visual-key-lab/inat-observation-map.js
+      - run: node scripts/test_grass_inat_observation_map.cjs
