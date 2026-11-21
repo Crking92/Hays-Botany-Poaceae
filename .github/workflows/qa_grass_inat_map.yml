@@ -6,6 +6,7 @@ on:
       - site/visual-key-lab/inat-observation-map.js
       - site/visual-key-lab/inat-observation-map.css
       - scripts/test_grass_inat_observation_map.cjs
+      - scripts/check_grass_inat_live.cjs
       - .github/workflows/qa_grass_inat_map.yml
   push:
     branches: [main]
@@ -28,3 +29,5 @@ jobs:
           node-version: '22'
       - run: node --check site/visual-key-lab/inat-observation-map.js
       - run: node scripts/test_grass_inat_observation_map.cjs
+      - name: Check real iNaturalist taxon, Texas observation count and tile
+        run: node scripts/check_grass_inat_live.cjs
