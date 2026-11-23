@@ -48,10 +48,10 @@ Gould historical intro: about eight species native to Europe/Africa, two adventi
 - Chromosome number 2n=14.
 - Gould Texas distribution regions 1 and 2, no voucher specimens located by author; general adventive European grass, widely distributed US except some southern states. Flowering May–June. Treat this as historical distribution reporting, not verified Hays occurrence.
 
-## Limnodea L. H. Dewey — p.135, **account incomplete**
+## Limnodea L. H. Dewey — pp.135–136, **account completed by owner-supplied p.136**
 Gould: monotypic North American genus.
-### Limnodea arkansana (Nutt.) L. H. Dewey — p.135
-Historical citation: Contr. U.S. Natl. Herb. 2:518 (1894); OZARKGRASS. Fig.67 [figure NOT supplied].
+### Limnodea arkansana (Nutt.) L. H. Dewey — pp.135–136
+Historical citation: Contr. U.S. Natl. Herb. 2:518 (1894); OZARKGRASS. Fig.67 [figure supplied on p.136; botanical evidence only, no image republication].
 - Short-lived annual, weak culms thin and flattened; flat blades and contracted panicle of 1-flowered spikelets.
 - Culms small clumps, mostly 20–60 cm tall.
 - Sheaths rounded on back, often hispid.
@@ -62,7 +62,14 @@ Historical citation: Contr. U.S. Natl. Herb. 2:518 (1894); OZARKGRASS. Fig.67 [f
 - Glumes equal, as long as spikelet, firm, obscurely 3–5-nerved, rounded and minutely rugose on back, usually hispid but becoming glabrous or scabrous, acute and awnless at apex.
 - Lemmas about as long as glumes but thinner, glabrous and minutely rugose, subacute with twisted and geniculate awn just below acute/minutely bifid apex; lemmas mostly 8–11 mm long [**check source's organ referent here; pictured text says 'Lemmas are mostly 8–11 mm long' but likely awns — do NOT score until rechecked**]. Paleas hyaline, narrow, shorter than lemmas, nerved only at base.
 - Chromosome number 2n=14.
-- **Treatment continues after p.135**; do not infer end, distribution, or flowering period.
+- **Continuation on owner-supplied p.136:** Gould reports distribution throughout Texas except regions 9 and 10; common grass of open woodlands, streambanks and ditchbanks of brushy grasslands. General range Arkansas and Oklahoma to Florida, Texas and northern Mexico. Flowering mostly late March to early June. Figure 67, inflorescence and spikelet, credited within book to Gould and Box (1965). This completes the visible treatment.
+
+## Agrostis L. — p.136 (GENUS BEGINS, description possibly continues)
+- Annuals and perennials, several with rhizomes. Ligule membranous. Blades flat or involute.
+- Inflorescence open or contracted panicle; spikelets small, one-flowered, disarticulating above glumes (except in *A. semiverticillata*).
+- Glumes thin, lanceolate, acute to acuminate, nearly equal; first glume usually 1-nerved, second 1–3-nerved.
+- Lemmas thin, broad, 3- or 5-nerved, acute to obtuse or truncate at apex, awnless or awned from middle or below. Paleas present or absent.
+- Page stops at genus description. Species treatments require later pages. Do not extrapolate to each species.
 
 ## Safeguards
 Do not reuse the neighboring *Aira elegans* Fig.65 for Avena. Preserve variety vs species distinctions and source's “annual in Texas?” uncertainty. Do not resolve ambiguous Limnodea 8–11 mm phrase by botanical guess. Exact-source evidence not yet species-filter verification; no automatic selection changes, BONAP or images.
