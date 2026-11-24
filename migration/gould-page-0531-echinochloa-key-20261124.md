@@ -1,0 +1,10 @@
+# Gould, Grasses of Texas, p. 531 — Echinochloa
+Source: user photograph IMG_7452.jpeg, supplied 2026-11-24. Paraphrased extraction, not a full page reproduction. Key begins on preceding page and continues on p. 532. Taxon names as printed; no nativity reconciliation.
+
+- E. polystachya: perennial; stiff-hair ligules at least on lower leaves.
+- Annual key branch: ligules absent. E. walteri can have hirsute/hispid sheaths (usually papillate-based hairs) OR glabrous sheaths.
+- Glabrous-sheath branch, some or all spikelets awned >=15 mm: E. muricata and E. walteri have narrowly acute/acuminate leathery fertile lemma apex grading into stiff membranous usually mucronate tip. E. muricata fertile lemma broadly ovate, spikelets usually with some papillate-based hairs; E. walteri fertile lemma narrowly ovate or oblong, spikelets typically lacking such hairs in this branch. E. crusgalli (printed spelling): leathery apex obtuse or broadly acute, abruptly distinct withering membranous tip; fertile lemma broadly oblong or ovate.
+- Short-awn/awnless branch: E. colona spikelets awnless, 2.5–3 mm, four regular rows on branch rachis; primary branches simple and usually <=2 cm; lower floret palea well developed; hairs on axis, branches and spikelets not papillate-based.
+- Alternative short-awn branch continues on p. 532: primary branches often rebranched, lower branches commonly >2 cm; spikelets variable; lower palea present or absent; when present, papillate-based hairs on spikelets or branches.
+
+Integration caution: branch-specific awn thresholds are not unconditional species-wide minimums. Preserve sheath polymorphism for E. walteri. Do not assign unresolved short-awn branch to species without next page. This record stages source evidence only; no live key changes. Raw photo not uploaded to public repository.
